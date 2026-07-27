@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open document by address in React Document editor component | Syncfusion
-description: Learn here all about Open document by address in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Open document by address 
+title: Open document by address in React DOCX Editor | Syncfusion
+description: Learn here all about Open document by address in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Open document by address
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in React Document editor component
+# Open document by address in React Document Editor component
 
 ## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor)
+In this article, we are going to see how to open a document from URL in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
 
-please refer below example for client-side code
+Please refer to the example below for the client-side code.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -29,7 +29,7 @@ function App() {
     let contentChanged: boolean = false;
     function onClick() {
         let http: XMLHttpRequest = new XMLHttpRequest();
-        //add your url in which you want to open document inside the ""
+        //add your URL from which you want to open the document inside the ""
         let content = { fileUrl: "" };
         let baseurl: string = "/api/documenteditor/ImportFileURL";
         http.open("POST", baseurl, true);
@@ -60,9 +60,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-please refer below example for server-side code
+Please refer to the example below for the server-side code.
 
 ```csharp
     [AcceptVerbs("Post")]

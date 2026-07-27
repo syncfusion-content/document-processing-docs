@@ -1,24 +1,24 @@
 ---
 title: Working with Tables using PdfLightTable | Syncfusion
-description: Learn how to create a table to PDF, apply cell & built-in table styles, automatic pagination, customize the rows and columns, and more using the PdfLightTable.  
+description: Learn how to create a table in a PDF, apply cell and built-in table styles, automatic pagination, customize rows and columns, and more using PdfLightTable.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with .NET PDF Tables using PdfLightTable model
+# Working with .NET PDF Tables using the PdfLightTable model
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or by directly binding data in a tabular format. Here, you will see the creation of a PDF table using the `PdfLightTable` model.
+The [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or by directly binding data in a tabular format. This section demonstrates how to create a PDF table using the `PdfLightTable` model.
 
 ## Creating a simple table 
 
-The Syncfusion<sup>&reg;</sup> .NET PDF library allows you to create a table with a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from a DataSet, DataTable, arrays, or IEnumerable objects using the `PdfLightTable` class. It supports simple formatting.
+The .NET PDF library allows you to create a table with a [DataSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Tables.PdfLightTable.html#Syncfusion_Pdf_Tables_PdfLightTable_DataSource) from a DataSet, DataTable, arrays, or IEnumerable objects using the `PdfLightTable` class. It supports simple formatting.
 
 N> In Silverlight, Windows Store apps, and Xamarin, only strongly-typed IEnumerable objects are supported.
 
 ### Create a simple table from a data source 
 
-The following code sample illustrates how to create a simple table from a data source using the ``PdfLightTable``.
+The following code sample illustrates how to create a simple table from a data source using `PdfLightTable`.
 
 {% tabs %}
 
@@ -327,7 +327,7 @@ Dim graphics As PdfGraphics = page.Graphics
 
 'Create a PdfLightTable.
 Dim pdfLightTable As New PdfLightTable()
-'Initialize DataTable to assign as DateSource to the light table.
+'Initialize DataTable to assign as DataSource to the light table.
 Dim table As New DataTable()
 'Include columns to the DataTable.
 table.Columns.Add("Name")
@@ -1265,8 +1265,8 @@ dataTable.Columns.Add("Name")
 dataTable.Rows.Add(New Object() {"E01", "Clay"})
 dataTable.Rows.Add(New Object() {"E02", "Thomas"})
 dataTable.Rows.Add(New Object() {"E03", "George"})
-dataTable.Rows.Add(new object() { "E04", "Stefan"})
-dataTable.Rows.Add(new object() { "E05", "Mathew"})
+dataTable.Rows.Add(New Object() { "E04", "Stefan"})
+dataTable.Rows.Add(New Object() { "E05", "Mathew"})
 'Assign data source.
 pdfLightTable.DataSource = dataTable
 'Apply built-in table style.
@@ -1345,7 +1345,7 @@ PdfPage page = document.Pages.Add();
 
 //Create a PdfLightTable.
 PdfLightTable pdfLightTable = new PdfLightTable();
-//Initialize DataTable to assign as Date Source to the light table.
+//Initialize DataTable to assign as DataSource to the light table.
 DataTable table = new DataTable();
 //Include columns in the Data Table.
 table.Columns.Add("Name");

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Primary Toolbar in React PDF Viewer
+# Customize the Primary Toolbar in React PDF Viewer
 
 ## Overview
 
@@ -73,7 +73,7 @@ Provide the [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/
 
 ### 4. Add a custom primary toolbar item
 
-Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization.
+Add a custom item by including an object in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and handling its action via [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#toolbarclick). The following example shows adding a simple custom button at initialization and wiring its `toolbarClick` handler.
 
 {% highlight ts %}
 {% raw %}

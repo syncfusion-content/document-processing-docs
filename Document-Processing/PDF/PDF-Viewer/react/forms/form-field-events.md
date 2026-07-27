@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Form Field Events in React Pdfviewer control | Syncfusion
-description: Learn here all about different form field in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Form Field Events
+title: Form Field Events in React PDF Viewer control | Syncfusion
+description: Learn here all about different form fields in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
@@ -18,7 +17,7 @@ Validation‑related events are emitted when the viewer performs operations that
 
 The following table lists all supported form field events and their descriptions:
 
-| Form Field events | Description | Arguments |
+| Form Field Events | Description | Arguments |
 |---|---|---|
 | [`formFieldAdd`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#formfieldadd) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. | [`formFieldAddArgs`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formFieldAddArgs) |
 | [`formFieldClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#formfieldclick) | Fired when a form field is clicked in the viewer. | [`formFieldClickArgs`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formFieldClickArgs) |
