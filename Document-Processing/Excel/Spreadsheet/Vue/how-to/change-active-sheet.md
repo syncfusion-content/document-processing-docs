@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change active sheet while importing a file in Vue Spreadsheet | Syncfusion
+title: Change active sheet when import file in Spreadsheet|Syncfusion
 description: Learn here all about changing the active sheet index while importing a file in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet 
 platform: document-processing
