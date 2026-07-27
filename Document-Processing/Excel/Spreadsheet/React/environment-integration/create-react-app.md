@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the React Spreadsheet Editor in Create React App
 
-This article provides a step-by-step guide for setting up a React application using Create React App and integrating React Spreadsheet Editor.
+This article provides a step-by-step guide for setting up a React application using Create React App(CRA) and integrating React Spreadsheet Editor.
 
 > **Note:** Create React App (CRA) is no longer actively maintained, and the React team recommends modern build tools such as [Vite](https://vitejs.dev/) or [Next.js](https://nextjs.org/) for new projects. This guide remains available for existing CRA-based projects. To start a new project with Next.js, see [Getting Started with the React Spreadsheet Component in a Next.js Project](./nextjs-getting-started).
 
