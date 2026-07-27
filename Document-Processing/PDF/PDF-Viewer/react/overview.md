@@ -1,6 +1,6 @@
 ---
 title: Overview of React PDF Viewer Component | Syncfusion
-description: Learn here all about the Syncfusion React PDF Viewer, features, its capabilities, and supported platforms.
+description: Learn all about the Syncfusion React PDF Viewer, its features, capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
@@ -32,8 +32,8 @@ The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation)
-* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar-customization/overview) - Built-in toolbar and custom toolbars for common viewer actions.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/localization/default-language) - Localize the UI.
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar-customization/overview): Built-in toolbar and custom toolbars for common viewer actions.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/localization/default-language): Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 
 ## Supported Web platforms
