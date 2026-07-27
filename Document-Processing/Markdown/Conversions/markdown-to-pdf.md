@@ -8,18 +8,18 @@ documentation: UG
 
 # Markdown to PDF Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word library supports the conversion of Markdown to a PDF document.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) supports the conversion of Markdown to a PDF document.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a PDF document using the .NET Word Library.
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to a PDF document using the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 * [Markdown to PDF assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Markdown to PDF NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
 ## Convert Markdown to PDF
 
-Convert an existing markdown file to a PDF document using the .NET Word library.
+Convert an existing markdown file to a PDF document using the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 The following code example shows how to convert a Markdown file to a PDF document.
 
@@ -84,11 +84,11 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 ## Load Options
 
-When opening an existing Markdown document, the .NET Word library provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported before converting to PDF.
+When opening an existing Markdown document, the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported before converting to PDF.
 
 ### Customize image data
 
-The .NET Word library provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
+The [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown file.
 
@@ -230,7 +230,7 @@ N> Hook the event handler before opening a Markdown document as per the above co
  
 ### Encoding
 
-The .NET Word library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+The  [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
 
 The following code example shows how to open a Markdown file with a specific encoding.
 
