@@ -2,7 +2,7 @@
 layout: post
 title: Illustrations in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Illustrations 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
@@ -13,7 +13,7 @@ Illustrations help you to insert an image, shapes, and graphic objects in the Es
 
 ## Image
 
-Adding images to a spreadsheet can enhance the visual appeal and help to convey information more clearly.
+Adding images to a spreadsheet can enhance visual appeal and convey information more clearly.
 
 >* The default value for the `allowImage` property is `true`.
 
@@ -83,14 +83,14 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 The following features have some limitations in Image:
 
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+* Corner resizing option in the image element is not supported.
+* Copying and pasting external images is not supported.
 
 ## Chart
 
-A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowchart) property to enable or disable the chart functionality.
 
->* The default value for the [`allowChart`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowchart) property is `true`.
+>* The default value for the [`allowChart`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowchart) property is `true`.
 
 ### Types of chart
 
@@ -108,9 +108,9 @@ The following types of charts are available in the Spreadsheet.
 You can insert the chart by using one of the following ways,
 
 * Select the chart icon in the Ribbon toolbar under the Insert Tab.
-* Use the [`insertChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertchart) method programmatically.
+* Use the [`insertChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#insertchart) method programmatically.
 
-The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#insertchart) method is,
+The available parameter in the [`insertChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#insertchart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -139,9 +139,9 @@ The available arguments in the `ChartModel` are:
 ### Delete Chart
 
 * If you want to delete the chart, just select the chart, and then press the Delete key.
-* Use the [`deleteChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#deletechart) method programmatically.
+* Use the [`deleteChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#deletechart) method programmatically.
 
-The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#deletechart) method is,
+The available parameter in the [`deleteChart()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#deletechart) method is,
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -168,7 +168,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 #### Customization of line chart markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+Using the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
