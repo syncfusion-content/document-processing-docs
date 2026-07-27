@@ -13,7 +13,7 @@ The Freeze Panes feature helps you to keep particular rows or columns visible wh
 
 > * The `frozenRows` and `frozenColumns` properties accept numeric values that represent the count of rows or columns to freeze.
 
-## Apply freezepanes on UI
+## Apply freeze panes on UI
 
 **User Interface**:
 
