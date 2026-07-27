@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Context Menu in React PDF Viewer
 
-The React PDF Viewer provides a built-in context menu for interacting with text, annotations, form fields, and document elements. This feature enhances the user experience by offering quick access to relevant actions based on the current selection or the specific area of the document being interacted with.
+The React PDF Viewer provides a built-in context menu for interacting with text, annotations, form fields, and document elements. This feature enhances the user experience by offering quick access to relevant actions based on the current selection or the right-clicked area of the document
 
 ## Understanding the Context Menu
 
-The context menu is designed to be context-aware, meaning it dynamically updates its items based on the target element. For instance, right-clicking on selected text will show annotation options, while right-clicking on an annotation will display management options like copy, cut, and delete.
+The context menu is designed to be context-sensitive, meaning it dynamically updates its items based on the target element. For instance, right-clicking on selected text will show annotation options; right-clicking on an annotation will display management options such as copy, cut, paste, delete, and comments. Form-field and empty-space menus are also supported, with form-field items appearing only in Form Designer mode.
 
 ### Core Capabilities
 

@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in ASP.NET Core**.
 
-## Steps to open and save Word document programmatically:
+## Steps to open and save Word document programmatically
 
 Step 1: Create a new ASP.NET Core Web application (Model-View-Controller) project.
 
@@ -20,7 +20,7 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the HomeController.cs file.
 
@@ -56,14 +56,13 @@ Html.EndForm();
 
 {% endtabs %}
 
-Step 6: Add a new action method **OpenAndSaveDocument** in HomeController.cs and include the below code snippet to **open an existing Word document in ASP.NET Core**.
+Step 6: Add a new action method **OpenAndSaveDocument** in HomeController.cs and include the below code snippet to **open an existing Word document in ASP.NET Core**. Place the **Input.docx** file in the project's `wwwroot` folder (or a path accessible to the application) before running.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing Word document.
 WordDocument document = new WordDocument(new FileStream("Input.docx", FileMode.Open, FileAccess.Read), FormatType.Automatic);
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -94,6 +93,8 @@ Step 8: Add below code example to **save the Word document in ASP.NET Core**.
 //Save the Word document to MemoryStream.
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
+//Closes the Word document.
+document.Close();
 stream.Position = 0;
 
 //Download Word document in the browser.
@@ -102,10 +103,10 @@ return File(stream, "application/msword", "Sample.docx");
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/ASP.NET-Core)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/ASP.NET-Core).
 
 By executing the program, you will get the **Word document** as follows.
 
-![ASP.Net Core output Word document](ASP-NET-Core_images/OpenAndSaveOutput.png)
+![ASP.NET Core output Word document](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
 Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

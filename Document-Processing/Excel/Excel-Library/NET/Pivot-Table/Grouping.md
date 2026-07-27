@@ -22,7 +22,7 @@ XlsIO supports grouping pivot data based on the following categories.
 
 ## Group
 
-The pivot fields can be grouped by using the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property in the IPivotField.FieldGroup.
+Use the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property of the `IPivotField.FieldGroup` instance to apply a date/time grouping to a pivot field. The field must contain a date or time value in the source data.
 
 The following code example illustrates how to group pivot fields based on a period.
 
@@ -32,17 +32,15 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("InputTemplate.xlsx");
+  IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
   IWorksheet pivotSheet = workbook.Worksheets.Create();
 
   IPivotCache cache = workbook.PivotCaches.Add(worksheet["A1:B16"]);
-  pivotSheet.PivotTables.Add("PivotTable", pivotSheet["A2"], cache);
-  IPivotTable pivotTable = pivotSheet.PivotTables[0];
+  IPivotTable pivotTable = pivotSheet.PivotTables.Add("PivotTable1", pivotSheet["A2"], cache);
   pivotTable.Fields[1].Axis = PivotAxisTypes.Row;
   pivotTable.Fields[1].Subtotals = PivotSubtotalTypes.None;
   var field1 = pivotTable.Fields[1].FieldGroup;
-
 
   //Apply pivot table grouping
   field1.GroupBy = PivotFieldGroupType.Seconds | PivotFieldGroupType.Years | PivotFieldGroupType.Quarters;
@@ -51,7 +49,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;
 
   //Saving the workbook
-  workbook.SaveAs("PivotTableGrouping.xlsx");             
+  workbook.SaveAs(Path.GetFullPath("Output/PivotTableGrouping.xlsx"));
 }
 {% endhighlight %}
 
@@ -78,7 +76,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   pivotTable.Options.RowLayout = PivotTableRowLayout.Tabular;             
 
   //Saving the workbook   
-  workbook.SaveAs("PivotTableGrouping.xlsx");              
+  workbook.SaveAs("PivotTableGrouping.xlsx");
 }
 {% endhighlight %}
 
@@ -116,9 +114,7 @@ By executing the program, you will get the Excel file as below
 
 ## Ungroup
 
-The grouping in the pivot table can be removed by making the [GroupBy](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldGroup.html#Syncfusion_XlsIO_IPivotFieldGroup_GroupBy) property value None.
-
-The following code example illustrates how to remove grouping from the pivot table.
+To remove grouping from a pivot field, set `GroupBy` on its `FieldGroup` to `PivotFieldGroupType.None`, as shown in the following example.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -137,8 +133,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Remove pivot table grouping
   field1.GroupBy = PivotFieldGroupType.None;
 
-  //Saving the workbook 
-  workbook.SaveAs("PivotTableUnGrouping.xlsx");             
+  //Saving the workbook
+  workbook.SaveAs("PivotTableUnGrouping.xlsx");
 }
 {% endhighlight %}
 
@@ -159,7 +155,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   field1.GroupBy = PivotFieldGroupType.None;
 
   //Saving the workbook
-  workbook.SaveAs("PivotTableUnGrouping.xlsx");                
+  workbook.SaveAs("PivotTableUnGrouping.xlsx");
  }
 {% endhighlight %}
 
@@ -186,9 +182,9 @@ End Using
 
 ## Expand or collapse
 
-XlsIO allows you to expand and collapse the [PivotFieldItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldItems.html) or simply the pivot table rows using [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) of [PivotItemOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html).
+Use the [IsHiddenDetails](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html#Syncfusion_XlsIO_Implementation_PivotTables_PivotItemOptions_IsHiddenDetails) property of [PivotItemOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PivotTables.PivotItemOptions.html) together with `IPivotFieldImpl.AddItemOption` (the `PivotFieldImpl` type lives in `Syncfusion.XlsIO.Implementation.PivotTables`) to expand or collapse the detail rows of the [PivotFieldItems](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotFieldItems.html). The first argument to `AddItemOption` is the 0-based item index and the second is the `PivotItemOptions` to apply.
 
-The following code example illustrates how to expand or collapse rows in the pivot table.
+The following code example illustrates how to expand rows in the pivot table by setting `IsHiddenDetails = false` for the first two items of the first row field.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Table/Expand%20or%20Collapse%20Pivot%20Rows/.NET/Expand%20or%20Collapse%20Pivot%20Rows/Expand%20or%20Collapse%20Pivot%20Rows/Program.cs,180" %}
@@ -218,7 +214,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	PivotItemOptions options = new PivotItemOptions();
 	options.IsHiddenDetails = false;
 
-	//Collapsing the first and second items of the first pivot field using PivotItemOptions
+	//Expanding the first and second items of the first pivot field using PivotItemOptions
 	(pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(0, options);
 	(pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(1, options);
 
@@ -255,7 +251,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   PivotItemOptions options = new PivotItemOptions();
   options.IsHiddenDetails = false;
 
-  //Collapsing the first and second items of the first pivot field using PivotItemOptions
+  //Expanding the first and second items of the first pivot field using PivotItemOptions
   (pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(0, options);
   (pivotTable.Fields[0] as PivotFieldImpl).AddItemOption(1, options);
 
@@ -288,7 +284,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim options As PivotItemOptions = New PivotItemOptions
   options.IsHiddenDetails = False
 
-  'Collapsing the first and second items of the first pivot field using PivotItemOptions
+  'Expanding the first and second items of the first pivot field using PivotItemOptions
   CType(pivotTable.Fields(0), PivotFieldImpl).AddItemOption(0, options)
   CType(pivotTable.Fields(0), PivotFieldImpl).AddItemOption(1, options)
 

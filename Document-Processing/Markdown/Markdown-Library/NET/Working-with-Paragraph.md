@@ -54,7 +54,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-paragraph/.NET).
 
 ## Modifying an existing paragraph
 	
@@ -122,7 +122,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Modify-an-existing-paragraph/.NET).
 
 ## Removing an existing paragraph
 	
@@ -174,11 +174,11 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Removing-an-existing-paragraph/.NET).
 
 ## Applying paragraph styles
 
-Paragraph styles define the visual appearance of a paragraph in a Markdown document. The Syncfusion Markdown library supports heading styles (Heading 1 through Heading 6), blockquote style, and the default normal paragraph style. You can apply a style to a paragraph by using the `ApplyParagraphStyle` method of the `MdParagraph` class.
+Paragraph styles define the visual appearance of a paragraph in a Markdown document. The Syncfusion<sup>&reg;</sup> .NET Markdown library supports heading styles (Heading 1 through Heading 6), the blockquote style, and the default paragraph style (Normal). You can apply a style to a paragraph by using the `ApplyParagraphStyle` method of the `MdParagraph` class. Omitting the call leaves the paragraph in the default Normal style.
 
 The following are the supported paragraph styles in the Syncfusion Markdown library:
 
@@ -271,7 +271,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Apply-paragraph-style/.NET).
 
 ## Working with text
 
@@ -317,7 +317,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-text-to-paragraph/.NET).
 
 ## Appending a line break
 
@@ -371,7 +371,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Append-line-break/.NET).
 
 ## Applying text formatting
 
@@ -499,12 +499,12 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Apply-text-formatting/.NET).
 
 
 ## Working with hyperlinks
 
-Hyperlink is a reference to data that can link to external content like images, files, webpage, and more. In a Markdown document, a hyperlink may target to any one of the following sources:
+A hyperlink is a reference to data that can link to external content such as images, files, webpages, and more. In a Markdown document, a hyperlink may target any one of the following sources:
 
 * Webpage: Represents the web content.
 * File: Represents the file in some location.
@@ -554,7 +554,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-hyperlink/.NET).
 
 ### Link with screen tip
 
@@ -606,7 +606,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](http://help.syncfusion.com/document-processing/markdown/markdown-library/net/working-with-paragraph#link-with-screen-tip).
 
 ### Applying formatting for the display text
 
@@ -658,7 +658,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Apply-formatting-for-hyperlink-display-text/.NET).
 
 ## Working with task lists
 
@@ -730,7 +730,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-task-lists/.NET).
 
 ## Adding a thematic break
 
@@ -780,3 +780,4 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-thematic-break/.NET).
