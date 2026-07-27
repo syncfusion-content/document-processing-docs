@@ -36,32 +36,6 @@ PDF documents can be created using a flow layout (also referred to as the flow m
 </tr>
 </table>
 
-> **NOTE:** The table lists both the legacy assembly names and the recommended NuGet packages. For modern .NET (Core, .NET 5+, .NET Standard) projects, install the corresponding NuGet package using the NuGet Package Manager or the `Install-Package` command in the Package Manager Console. For traditional .NET Framework projects, you can continue to reference the assemblies directly.
-
-Include the following namespaces in your .cs or .vb file as shown below.
-{% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-using Syncfusion.Pdf;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocIORenderer;
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Imports Syncfusion.Pdf
-Imports Syncfusion.DocIO.DLS
-Imports Syncfusion.DocToPDFConverter
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Working with Text
 
 You can create a PDF document with multiple paragraph text using flow model with the following code snippet.

@@ -20,10 +20,10 @@ N> * The default value for [`allowImage`](https://help.syncfusion.com/cr/aspnetc
 
 ### Insert Image
 
-You can insert the image by using one of the following ways,
+You can insert an image in one of the following ways:
 
-* Selecting the Insert tab in the Ribbon toolbar, and then choose the Image tab.
-* Use the `insertImage()` method programmatically.
+* Open the **Insert** tab in the Ribbon, choose **Image**, and select the image to insert.
+* Use the `insertImage()` method to insert an image programmatically.
 
 The available parameters in `insertImage()` method are,
 
@@ -38,15 +38,17 @@ The available arguments in `ImageModel` are:
 * id: Specifies image element id.
 * height: Specifies the height of the image.
 * width: Specifies the width of the image.
-* top: Specifies the height of the image.
-* left: Specifies the width of the image.
+* top: Specifies the top position of the image.
+* left: Specifies the left position of the image.
 
-N> * In spreadsheet, you can add many types of image files, including IMAGE, JPG, PNG, GIF and JPEG files.
+N> * The Spreadsheet supports image formats such as JPG, JPEG, PNG, and GIF.
 
 ### Delete Image
 
-* If you want to delete the image, just select the image firstly, and then press the Delete key.
-* Use the `deleteImage()` method programmatically.
+You can delete an image in one of the following ways:
+
+* Select the image and press the `Delete` key.
+* Use the `deleteImage()` method to delete the image programmatically.
 
 The available parameters in `deleteImage()` method are,
 
@@ -57,17 +59,17 @@ The available parameters in `deleteImage()` method are,
 
 ### Image Customization
 
-Image feature allows you to view and insert a image in a spreadsheet and you can change the height and width of the image by resizing and move it to another position.
+The Image feature allows you to insert, resize, and reposition an image in the Spreadsheet.
 
 #### Height and Width
 
-* You can change the height and width of the image by resizing.
-* Use the `height` and `width` property in the `insertImage()` method programmatically.
+* Resize the image to change its height and width.
+* Use the `height` and `width` properties with the `insertImage()` method to configure the image dimensions programmatically.
 
 #### Top and Left
 
-* You can change the position of the image by drag and drop.
-* Use the `top` and `left` property in the `insertImage()` method programmatically.
+* Drag and drop the image to change its position.
+* Use the `top` and `left` properties with the `insertImage()` method to configure the image position programmatically.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -78,18 +80,19 @@ Image feature allows you to view and insert a image in a spreadsheet and you can
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the image is inserted at the specified position with the configured height and width.
 
 
 ### Limitations of Image
 
-The following features have some limitations in Image:
+The Image feature has the following limitations:
 
-* Corner resizing option in the image element.
-* Copy and paste the external image.
+* Images cannot be resized using the corner handles.
+* Copying and pasting images from external sources has limited support.
 
 ## Chart
 
-A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property to enable or disable the chart functionality.
+A chart provides a graphical representation of numerical or qualitative data. It displays the selected data range using the x-axis and y-axis. Use the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property to enable or disable chart functionality.
 
 N> * The default value for the [`allowChart`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowChart) property is `true`.
 
@@ -106,10 +109,10 @@ N>* Column Chart
 
 ### Insert Chart
 
-You can insert the chart by using one of the following ways,
+You can insert a chart in one of the following ways:
 
-* Select the chart icon in the Ribbon toolbar under the Insert Tab.
-* Use the `insertChart()`method programmatically.
+* Select the data range, open the **Insert** tab in the Ribbon, and choose the required chart type.
+* Use the `insertChart()` method to insert a chart programmatically.
 
 The available parameter in the `insertChart()` method is,
 
@@ -135,10 +138,14 @@ The available arguments in the `ChartModel` are:
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the chart displays the values from the selected data range.
+
 ### Delete Chart
 
-* If you want to delete the chart, just select the chart, and then press the Delete key.
-* Use the `deleteChart()`method programmatically.
+You can delete a chart in one of the following ways:
+
+* Select the chart and press the `Delete` key.
+* Use the `deleteChart()` method to delete the chart programmatically.
 
 The available parameter in the `deleteChart()` method is,
 
@@ -148,11 +155,10 @@ The available parameter in the `deleteChart()` method is,
 
 ### Chart Customization
 
-Chart feature allows you to view and insert a chart in a spreadsheet, and you can change the height and width of the chart by resizing and moving it to another position.
+The Chart feature allows you to insert, resize, and reposition a chart in the Spreadsheet.
 
-* You can change the height and width of the chart by resizing.
-
-* You can change the position of the chart by drag and drop.
+* Resize the chart to change its height and width.
+* Drag and drop the chart to change its position.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -165,7 +171,9 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 
 #### Customization of line chart markers
 
-Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
+Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActionBegin) event to customize the shape, size, fill color, and border of line chart markers. In the event handler, identify the chart-creation action and update the corresponding marker settings before the chart is rendered.
+
+The following example demonstrates how to customize the shape and size of markers while creating a line chart through the UI.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -176,13 +184,15 @@ Using the [`actionBegin`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, create a line chart and verify that the configured marker shape and size are applied.
+
 ### Limitations of Chart
 
-The following features have some limitations in the Chart:
+The Chart feature has the following limitations:
 
-* Insert row/delete row between the chart data source will not reflect the chart.
-* Copy/paste into the chart data source will not reflect the chart.
-* Corner resizing option in chart element.
+* Inserting or deleting rows within the chart data source does not automatically update the chart.
+* Copying and pasting values into the chart data source does not automatically update the chart.
+* Charts cannot be resized using the corner handles.
 
 ## See Also
 
