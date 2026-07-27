@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save PDF files to Box cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion Angular PDF Viewer component
+description: Learn how to save PDF files to Box cloud storage using the Syncfusion Angular PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF files to Box cloud storage in Angular
 
 The Angular PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
@@ -39,8 +39,6 @@ using Box.V2.Models;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string _accessToken;
 public readonly string _clientID;
 public readonly string _clientSecret;
@@ -59,7 +57,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -151,7 +149,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
+N> Install the Box .NET SDK in the web service project: `dot net add package Box.V2`.
 
 N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `Angular PDF Viewer` component.
 

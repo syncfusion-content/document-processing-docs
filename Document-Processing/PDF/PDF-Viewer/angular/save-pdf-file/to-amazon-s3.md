@@ -145,8 +145,6 @@ using Amazon.S3.Model;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string _accessKey;
 public readonly string _secretKey;
 public readonly string _bucketName;

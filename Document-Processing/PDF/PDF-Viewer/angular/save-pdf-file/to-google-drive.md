@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in Angular PDF Viewer Component | Syncfusion
+title: Save PDF files to Google Drive in Angular PDF Viewer | Syncfusion
 description: Learn here all about how to save PDF files to Google Drive in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save PDF files to Google Drive
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Drive
+# Save PDF files to Google Drive in Angular
 
 This article describes how to save a PDF file to Google Drive from the Syncfusion Angular PDF Viewer using a server-side web service. Follow the steps below.
 
@@ -38,8 +38,6 @@ using Google.Apis.Util.Store;
 
 ```csharp
 private IConfiguration _configuration;
-private IWebHostEnvironment _hostingEnvironment;
-private IMemoryCache _cache;
 public readonly string folderId;
 public readonly string applicationName;
 public readonly string credentialPath;
@@ -56,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the configured Google Drive folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the configured Google Drive folder.
 
 ```csharp
 [HttpPost("Download")]
