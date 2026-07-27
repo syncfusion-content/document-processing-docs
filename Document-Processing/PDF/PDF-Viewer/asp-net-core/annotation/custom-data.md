@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Data in annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to use add custom Data in annotation in Syncfusion ASP.NET Core PDF Viewer Component.
+description: Learn how to add and use custom data in annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -48,7 +48,7 @@ window.onload = function() {
 {% endhighlight %}
 {% endtabs %}
 
-## Custom data for Individual Annotation
+## Custom data for individual annotation
 
 Provide customData inside individual annotation-type settings when you want specific payloads for different tools.
 
@@ -132,12 +132,12 @@ window.onload = function() {
 - [Annotation Overview](../overview)
 - [Annotation Types](../annotations/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Handwritten Signature](../annotation/signature-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation Permission](../annotation/annotation-permission)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)
