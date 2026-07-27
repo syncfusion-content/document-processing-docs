@@ -3,7 +3,7 @@ layout: post
 title: Editing in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Editing in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Editing 
+control: Editing
 documentation: ug
 ---
 
@@ -13,13 +13,13 @@ You can edit the contents of a cell directly in the cell or by typing in the for
 
 ## Edit cell
 
-You can start editing by one of the following ways,
+You can start editing by one of the following ways:
 
-* Double click a cell to start the edit mode.
-* Press `F2` key to edit the active cell.
-* Use formula bar to perform editing.
-* Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the [`startEdit`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#startedit) method.
+* Double-click a cell to start the edit mode.
+* Press the `F2` key to edit the active cell.
+* Use the formula bar to perform editing.
+* Press the `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
+* Use the [`startEdit`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#startedit) method.
 
 ## Save cell
 
@@ -31,7 +31,7 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 
 ## Cancel editing
 
-To cancel the editing without saving the changes, you can use one of the following ways,
+To cancel editing without saving the changes, you can use one of the following ways:
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
 * Using the [`closeEdit`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#closeedit) method.

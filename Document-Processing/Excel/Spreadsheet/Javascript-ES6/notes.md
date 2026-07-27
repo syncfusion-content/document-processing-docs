@@ -3,13 +3,13 @@ layout: post
 title: Notes in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about the notes feature in EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Notes 
+control: Notes
 documentation: ug
 ---
 
 # Notes in EJ2 TypeScript Spreadsheet control
 
-The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
+The **Notes** feature is used to insert comments, provide feedback, suggest changes, and leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
@@ -30,7 +30,7 @@ In the below example, you can add, edit, save, and delete notes.
 
 ## Adding a note
 
-In the active worksheet, you can add a note in the following ways:
+In the active worksheet, you can add a note using any of the following approaches:
 
 * **Context Menu**: Right-click the desired cell and select **Add Note**.
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
@@ -92,8 +92,8 @@ The **Show/Hide Note** option allows you to toggle the visibility of individual 
 
 To toggle the visibility of a note:
 
-* **Context Menu**: Right-click the cell containing the note and select **Show/Hide Note**.
-* **Ribbon**: Select the cell, go to the **Review** tab, click the **Notes** dropdown, and choose **Show/Hide Note**.
+* **Context menu**: Right-click the cell containing the note and select **Show/Hide Note**.
+* **Ribbon**: Select the cell, go to the **Review** tab, open the **Notes** dropdown, and choose **Show/Hide Note**.
 
 **Behavior:**
 
@@ -104,7 +104,7 @@ To toggle the visibility of a note:
 
 ## Show All Notes
 
-The **Show All Notes** option enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
+The **Show All Notes** option displays all notes in the current worksheet simultaneously as sticky notes. This simplifies reviewing multiple comments at a glance.
 
 To activate:
 

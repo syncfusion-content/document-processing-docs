@@ -3,7 +3,7 @@ layout: post
 title: Data binding in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Data binding in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Data binding 
+control: Data binding
 documentation: ug
 ---
 
@@ -87,7 +87,7 @@ Refer to the following code example for remote data binding.
 
 ### Web API
 
-You can use WebApiAdaptor to bind spreadsheet with Web API created using OData endpoint.
+You can use the `WebApiAdaptor` to bind the Spreadsheet to a general Web API using OData endpoint. 
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -149,7 +149,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 ## Dynamic data binding using updateRange method
 
-The [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet/#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel/#datasource) in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
+The [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet/#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel/#datasource) in a Spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the Spreadsheet.
 
 To use the [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet/#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel/#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel/#startcell) property of the `RangeModel`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
 
@@ -171,4 +171,3 @@ The following code example demonstrates how to dynamically update data using the
 * [Filtering](./filter)
 * [Sorting](./sort)
 * [Hyperlink](./link)
-* [`Collaborative Editing`](use-cases/collaborative-editing)

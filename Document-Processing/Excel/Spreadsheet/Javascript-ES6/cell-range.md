@@ -3,7 +3,7 @@ layout: post
 title: Cell range in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Cell range in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Cell range 
+control: Cell range
 documentation: ug
 ---
 
@@ -36,7 +36,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 ### Limitations of Wrap text
 
-The following features have some limitations in wrap text:
+The following features have some limitations when wrap text is applied:
 
 * Sorting with wrap text applied data.
 * Merge with wrap text.
@@ -52,7 +52,7 @@ You can merge the range of cells in the following ways,
 
 * Use [`merge`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#merge) method to merge the range of cells, once the component is loaded.
 
-The available merge options in spreadsheet are,
+The available merge options in the Spreadsheet are:
 
 | Type | Action |
 |-------|---------|
@@ -91,36 +91,34 @@ Data Validation is used to restrict the user from entering the invalid data. You
 
 You can apply data validation to restrict the type of data or the values that users enter into a cell.
 
-You can apply data validation by using one of the following ways,
-
-* Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
+* Select the **Data** tab in the ribbon toolbar, and then choose **Data Validation**.
 * Use the [`addDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
 
 ### Clear Validation
 
 Clear validation feature is used to remove data validations from the specified ranges or the whole worksheet.
 
-You can clear data validation rule by one of the following ways,
+Clear data validation in one of the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
+* Select the **Data** tab in the ribbon toolbar, and then choose **Clear Validation**.
 * Use the [`removeDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
 
 ### Highlight Invalid Data
 
 Highlight invalid data feature is used to highlight the previously entered invalid values.
 
-You can highlight an invalid data by using one of the following ways,
+Highlight invalid data in one of the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
+* Select the **Data** tab in the ribbon toolbar, and then choose **Highlight Invalid Data**.
 * Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
 
 ### Clear Highlighted Invalid Data
 
 Clear highlight feature is used to remove the highlight from invalid cells.
 
-You can clear the highlighted invalid data by using the following ways,
+Clear the highlighted invalid data in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
+* Select the **Data** tab in the ribbon toolbar, and then choose **Clear Highlight**.
 * Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
@@ -146,7 +144,7 @@ When this rule is applied, the Spreadsheet evaluates the entered value against t
 
 You can apply custom data validation using two methods.
 
-* The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
+* The first is through the Data Validation dialog in the ribbon toolbar. Navigate to the **Data** tab, select the **Data Validation** option, and choose the **Custom** type from the **Allow** dropdown menu.
 * The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
 The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
@@ -265,12 +263,12 @@ You can apply clear feature by using one of the following ways,
  
 Clear has the following types in the spreadsheet,
 
-| Options | Uses |
+| Option | Description |
 |-----|------|
-| `Clear All` | Used to clear all contents, formats, and hyperlinks.  |
-| `Clear Formats` | Used to clear the formats (including number formats, conditional formats, and borders) in a cell. |
-| `Clear Contents` | Used to clear the contents (formulas and data) in a cell. |
-| `Clear Hyperlinks` | Used to clear the hyperlink in a cell. |
+| `Clear All` | Clears all contents, formats, and hyperlinks. |
+| `Clear Formats` | Clears the formats (including number formats, conditional formats, and borders) in a cell. |
+| `Clear Contents` | Clears the contents (formulas and data) in a cell. |
+| `Clear Hyperlinks` | Clears the hyperlink in a cell. |
 
 ### Methods
 

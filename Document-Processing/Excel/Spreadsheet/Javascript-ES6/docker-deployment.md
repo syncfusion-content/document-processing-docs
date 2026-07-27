@@ -3,7 +3,7 @@ layout: post
 title: Docker image deployment in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Docker image deployment in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Docker deployment 
+control: Docker deployment
 documentation: ug
 ---
 
@@ -24,7 +24,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 * On Windows, install [`Docker for Windows`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 * On macOS, install [`Docker for Mac`](https://docs.docker.com/desktop/install/mac-install/).
 
-## How to deploy the Spreadsheet Docker Image
+## How to deploy the Spreadsheet Docker image
 
 **Step 1:** Pull the spreadsheet-server image from Docker Hub.
 
@@ -32,7 +32,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 docker pull syncfusion/spreadsheet-server
 ```
 
-**Step 2:** Create the `docker-compose.yml` file with the following code in your file system.
+**Step 2:** Create a `docker-compose.yml` file in your project directory with the following content
 
 ```yaml
 version: '3.4' 

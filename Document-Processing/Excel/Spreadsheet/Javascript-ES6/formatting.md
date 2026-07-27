@@ -3,7 +3,7 @@ layout: post
 title: Formatting in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Formatting in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Formatting 
+control: Formatting
 documentation: ug
 ---
 
@@ -38,11 +38,11 @@ Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
 
 * Using the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
-* Selecting the number format option from ribbon toolbar.
+* Selecting the number format option from the ribbon toolbar.
 
 ### Custom Number Formatting
 
-Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
+Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using the custom number format dialog or the [`numberFormat`](https://ej2.syncfusion.com/documentation/api/spreadsheet#numberformat) method.
 
 The different types of custom number format populated in the custom number format dialog are,
 
@@ -167,19 +167,19 @@ Text and cell formatting enhances the look and feel of your cell. It helps to hi
 
 ### Fonts
 
-Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline and font color.
+Various font formats supported in the spreadsheet are `font-family`, `font-size`, `bold`, `italic`, `strike-through`, `underline`, and `font color`.
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the [`textAlign`](https://ej2.syncfusion.com/documentation/api/spreadsheet/cellStyleModel#textalign) and [`verticalAlign`](https://ej2.syncfusion.com/documentation/api/spreadsheet/cellStyleModel#verticalalign) properties.
 
 ### Indents
 
-To enhance the appearance of text in a cell, you can change the indentation of a cell content using `textIndent` property.
+To enhance the appearance of text in a cell, you can change the indentation of a cell's content using the [`textIndent`](https://ej2.syncfusion.com/documentation/api/spreadsheet/cellStyleModel#textindent) property.
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, you can apply a background color for a cell using the [`backgroundColor`](https://ej2.syncfusion.com/documentation/api/spreadsheet/cellStyleModel#backgroundcolor) property.
 
 ### Borders
 
@@ -313,9 +313,9 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 You can clear the defined rules by using one of the following ways,
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the **Clear Rules** option in the Conditional Formatting button on the Home Tab in the ribbon to clear the rule from selected cells.
 
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearConditionalFormat) method to clear the defined rules.
+* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

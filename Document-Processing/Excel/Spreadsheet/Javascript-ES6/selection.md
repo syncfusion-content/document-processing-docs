@@ -3,7 +3,7 @@ layout: post
 title: Selection in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Selection in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Selection 
+control: Selection
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ Selection provides interactive support to highlight the cell, row, or column tha
 
 > * The default value for `mode` in  `selectionSettings` is `Multiple`.
 
-You have the following options in Selection,
+The following selection types are supported:
 
 * Cell selection
 * Row selection
@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single cell or a range of cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method.
 
 **User Interface**:
 
@@ -33,7 +33,7 @@ You can quickly locate and select specific cells or ranges by entering their nam
 
 ## Row selection
 
-Row selection is used to select a single or multiple rows.
+Row selection is used to select a single row or multiple rows.
 
 **User Interface**:
 

@@ -3,21 +3,21 @@ layout: post
 title: Formulas in EJ2 TypeScript Spreadsheet Control | Syncfusion
 description: Learn here all about Formulas in Syncfusion Essential EJ2 TypeScript Spreadsheet control, its elements and more.
 platform: document-processing
-control: Formulas 
+control: Formulas
 documentation: ug
 ---
 
 # Formulas in EJ2 TypeScript Spreadsheet Control
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
+Formulas are used for calculating the data in a worksheet. You can refer to a cell reference from the same sheet or from a different sheet.
 
 ## Usage
 
-You can set formula for a cell in the following ways,
+You can set a formula for a cell in the following ways:
 
 * Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
 * Set the formula or expression through data binding.
-* You can set formula for a cell by [`editing`](./editing).
+* You can set a formula for a cell by [`editing`](./editing).
 * Using the [`updateCell`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#updatecell) method, you can set or update the cell formula.
  
 
@@ -61,7 +61,7 @@ The following code example shows an unsupported formula in the spreadsheet.
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs1" %}
 
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and used-defined/custom formula.
+Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/documentation/api/spreadsheet/#computeexpression) method. This method will work for both built-in and user-defined/custom formula.
  
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
@@ -256,7 +256,7 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 | We found that you typed a formula which is improper | Occurs when passing a single reference but a range was needed. |
 | We found that you typed a formula with a wrong number of arguments | Occurs when the required arguments were not passed. |
 | We found that you typed a formula which requires 3 arguments | Occurs when the required 3 arguments were not passed. |
-| We found that you typed a formula with a mismatched quotes | Occurs when passing an argument with mismatched quotes. |
+| We found that you typed a formula with mismatched quotes | Occurs when passing an argument with mismatched quotes. |
 | We found that you typed a formula with a circular reference | Occurs when passing a formula with circular cell reference. |
 | We found that you typed a formula which is invalid | Except in the cases mentioned above, all other errors will fall into this broad category. |
 

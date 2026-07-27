@@ -3,13 +3,13 @@ layout: post
 title: Filter in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Filter in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Filter 
+control: Filter
 documentation: ug
 ---
 
 # Filter in EJ2 TypeScript Spreadsheet control
 
-Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property to enable or disable filtering functionality.
+Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property (`boolean`, default `true`) to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 
@@ -20,7 +20,7 @@ By default, the `Filter` module is injected internally into Spreadsheet to perfo
 In the active sheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
 
 * Select the filter item in the Ribbon toolbar.
-* Right-click the sheet, select the filter item in the context menu.
+* Right-click the sheet, and then select the filter item in the context menu.
 * Use the [`applyFilter()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method programmatically.
 
 * Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
@@ -53,7 +53,7 @@ To apply a filter for a cell value, right-click the cell and choose filter -> `F
 
 ## Clear filter
 
-After applying filter to a certain column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways,
+After applying a filter to a column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways:
 
 * Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
 
@@ -63,10 +63,9 @@ After applying filter to a certain column, you may want to clear it to make all 
 
 After filtering, you can clear/reset the filter for a field alone. It can be done in the following ways,
 
-* Click filter icon in the column’s header and then choose `Clear Filter` option from the filter dialog.
-* You can right-click on a filtered column cell and choose `Clear Filter from <Column Name>.` option from the context menu.
-
-* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearfilter) method programmatically, to clear the filter in a particular column.
+* Click the filter icon in the column's header and then choose the `Clear Filter` option from the filter dialog.
+* Right-click a filtered column cell and choose the `Clear Filter from <Column Name>` option from the context menu.
+* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#clearfilter) method programmatically to clear the filter on a particular column. The `field` argument accepts the column key (for example, `'A'`) or the column header name.
 
 ## Reapply filter
 

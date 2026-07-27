@@ -3,13 +3,13 @@ layout: post
 title: Rows and columns in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Rows and columns in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Rows and columns 
+control: Rows and columns
 documentation: ug
 ---
 
 # Rows and columns in EJ2 TypeScript Spreadsheet control
 
-Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called cells. The list of operations that you can perform in rows and columns are,
 
 * Insert
 * Delete
@@ -44,7 +44,7 @@ The following code example shows the options for inserting rows in the spreadshe
 The columns can be inserted in the following ways,
 
 * Using [`insertColumn`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertcolumn) method, you can insert the columns once the component is loaded.
-* Using context menu, insert the empty columns in the desired position.
+* Using the context menu, insert empty columns in the desired position.
  
 The following code example shows the options for inserting columns in the spreadsheet.
 
@@ -104,7 +104,7 @@ The rows can be hidden or shown through the following ways,
 
 ### Column
 
-The columns can be hidden or shown through following ways,
+The columns can be hidden or shown through the following ways,
 
 * Using `hidden` property in columns, you can hide/show the columns at initial load.
 * Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
@@ -153,7 +153,7 @@ The following code example shows how to change the height for single/multiple ro
 
 ### Column
 
-You can change the width of single or multiple columns by using the [setColumnsWidth](.https://ej2.syncfusion.com/documentation/api/spreadsheet/#setcolumnswidth) method.
+You can change the width of single or multiple columns by using the [setColumnsWidth](https://ej2.syncfusion.com/documentation/api/spreadsheet/#setcolumnswidth) method.
 
 You can provide the following type of ranges to the method:
 

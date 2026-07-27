@@ -56,8 +56,8 @@ After posting, the replies appear under the first comment in the comment editor.
 ## Editing a comment
 You can edit the content of a comment or its replies directly within the comment editor.
 
-* **Edit first comment**: In the comment editor. Click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
-* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)**, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit first comment**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header, select **Edit Comment**, modify the text, and click **Post**.
+* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)** menu, select **Edit Comment**, modify the text, and click **Post**.
 
 ![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 
@@ -133,7 +133,7 @@ The "Comments" review pane is rendered within the spreadsheet interface to provi
 
 The "Comments" review pane allows you to:
 
-* Add new comment using the **New** button.
+* Add a new comment using the **New** button.
 * Filter comments by **All**, **Active**, or **Resolved** to view specific comment threads.
 * Navigate between comments and synchronize selection with the corresponding cells.
 * Perform actions such as:
@@ -186,7 +186,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains a comment, notes cannot be added. Similarly, if a cell already has a note, a comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 

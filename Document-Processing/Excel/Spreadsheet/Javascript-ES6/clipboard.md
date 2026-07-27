@@ -3,15 +3,15 @@ layout: post
 title: Clipboard in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Clipboard in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Clipboard 
+control: Clipboard
 documentation: ug
 ---
 
 # Clipboard in EJ2 TypeScript Spreadsheet control
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
+The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#enableclipboard) boolean property in Spreadsheet.
  
-> By default, the `enableClipboard` property is true.
+> By default, the `enableClipboard` property is `true`.
 
 ## Cut
 
@@ -21,9 +21,9 @@ It is used to cut the data from selected range of cells, rows or columns in a sp
 
 Cut can be done in one of the following ways.
 
-* Using Cut button in the Ribbon’s HOME tab to perform cut operation.
-* Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using the Cut button in the Ribbon's Home tab to perform the cut operation.
+* Using the Cut option in the Context Menu.
+* Using the `Ctrl + X` | `Command + X` keyboard shortcut.
 * Using the [`cut`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#cut) method.
  
 ## Copy
@@ -34,9 +34,9 @@ It is used to copy the data from selected range of cells, rows or columns in a s
 
 Copy can be done in one of the following ways.
 
-* Using Copy button in the Ribbon’s HOME tab to perform copy operation.
-* Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using the Copy button in the Ribbon's Home tab to perform the copy operation.
+* Using the Copy option in the Context Menu.
+* Using the `Ctrl + C` | `Command + C` keyboard shortcut.
 * Using the [`copy`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#copy) method.
 
 ## Paste
@@ -52,9 +52,9 @@ It also performs for external clipboard operation. If you perform cut and paste,
 
 Paste can be done in one of the following ways.
 
-* Using Paste button in the Ribbon’s HOME tab to perform paste operation.
-* Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using the Paste button in the Ribbon's Home tab to perform the paste operation.
+* Using the Paste option in the Context Menu.
+* Using the `Ctrl + V` | `Command + V` keyboard shortcut.
 * Using the [`paste`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#paste) method.
 
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.

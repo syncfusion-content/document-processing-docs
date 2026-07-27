@@ -3,15 +3,15 @@ layout: post
 title: Sort in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Sort in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Sort 
+control: Sort
 documentation: ug
 ---
 
 # Sort in EJ2 TypeScript Spreadsheet control
 
-Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
+Sorting helps arrange the data in a specific order within a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
 
-> * The default value for `allowSorting` property is `true`.
+> * The default value for the `allowSorting` property is `true`.
 
 By default, the `sort` module is injected internally into Spreadsheet to perform sorting.
 
@@ -75,7 +75,7 @@ Case sensitive sorting is applicable only for cells with alphabets. In ascending
 
 > * The default value for the `caseSensitive` property is `false`.
 
-You can also enable or disable this property using `beforeSort` event arguments,
+You can also enable or disable this property using the `beforeSort` event arguments:
 
 ```ts
 

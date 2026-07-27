@@ -3,7 +3,7 @@ layout: post
 title: Context menu in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Context menu in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Context menu 
+control: Context menu
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ Context Menu is used to improve user interaction with Spreadsheet using the popu
 
 ## Context Menu Items in Row Cell
 
-Please find the table below for default context menu items and their actions.
+The following table lists the default context menu items available when right-clicking a cell.
 
 | Context Menu items | Action |
 |-------|---------|
@@ -29,7 +29,7 @@ Please find the table below for default context menu items and their actions.
  
 ## Context Menu Items in Row Header / Column Header
 
-Please find the table below for default context menu items and their actions.
+The following table lists the default context menu items available when right-clicking a row or column header.
 
 | Context Menu items | Action |
 |-------|---------|
@@ -44,12 +44,12 @@ Please find the table below for default context menu items and their actions.
 
 ## Context Menu Items in Pager
 
-Please find the table below for default context menu items and their actions.
+The following table lists the default context menu items available when right-clicking the Pager (sheet tab area).
 
 | Context Menu items | Action |
 |-------|---------|
-| `Insert` | Insert a new worksheet in front of an existing worksheet in the spreadsheet. |
-| `Delete` | Delete the selected worksheet from the spreadsheet. |
+| `Insert` | Insert a new worksheet in front of the existing worksheet. |
+| `Delete` | Delete the selected worksheet from the Spreadsheet. |
 | `Rename` | Rename the selected worksheet. |
 | [`Protect Sheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#protectsheet) | Prevent unwanted changes from others by limiting their ability to edit. |
 | [`Hide`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#hide) |Hide the selected worksheet. |
@@ -66,7 +66,7 @@ You can perform the following context menu customization options in the spreadsh
 
 You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#addcontextmenuttems) in `contextmenuBeforeOpen` event
 
-In this demo, Custom Item is added after the Paste item in the context menu.
+In this demo, a Custom Item is added after the Paste item in the cell context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
