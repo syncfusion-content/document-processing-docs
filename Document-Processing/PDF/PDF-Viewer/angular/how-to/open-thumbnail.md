@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open the thumbnail pane programmatically
+# Open the thumbnail pane programmatically in Angular
 
 The PDF Viewer exposes an `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 

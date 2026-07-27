@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change the selection border in Angular PDF Viewer component | Syncfusion
-description: Learn how to change the selection border in the Syncfusion Angular PDF Viewer component.
+title: Change the selection border in Angular | Syncfusion
+description: Learn how to change the selection border in the Syncfusion Angular PDF Viewer component using the annotationSelectorSettings property, with step-by-step code samples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Include authorization token in Angular PDF Viewer component | Syncfusion
+title: Include authorization token in Angular | Syncfusion
 description: Learn here all about Include authorization token in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Include authorization token

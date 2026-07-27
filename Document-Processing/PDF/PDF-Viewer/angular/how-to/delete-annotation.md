@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delete a specific annotation in Angular PDF Viewer component | Syncfusion
+title: Delete a specific annotation in Angular PDF Viewer | Syncfusion
 description: Learn here all about Delete a specific annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Delete a specific annotation

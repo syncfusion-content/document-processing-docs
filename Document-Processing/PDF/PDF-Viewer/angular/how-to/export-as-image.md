@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Export as image in Angular PDF Viewer component
+# Export as image in Angular PDF Viewer component
 
 The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 

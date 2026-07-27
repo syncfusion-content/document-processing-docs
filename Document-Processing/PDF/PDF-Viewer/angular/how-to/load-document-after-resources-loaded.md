@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load a Document After Resources Are Loaded in Angular PDF Viewer | Syncfusion
+title: Load a Document After Resources Are Loaded in Angular | Syncfusion
 description: Learn how to load a document in the Syncfusion Angular PDF Viewer only after PDFium assets have finished loading.
 platform: document-processing
 control: PDF Viewer 
