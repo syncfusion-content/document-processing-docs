@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion DocumentSDK MCP Server Setup – Syncfusion
-description: Accelerate DocumentSDK development with Syncfusion MCP Server—access docs, APIs and code snippets in your AI IDE.
+description: Explore the MCP server’s benefits, setup needs, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
 documentation: ug

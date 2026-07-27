@@ -71,7 +71,7 @@ markdownDocument.Dispose();
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Add-fenced-code-blocks/.NET).
 
 ## Creating indented code blocks
 
@@ -123,6 +123,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Add-indented-code-block/.NET).
 
 ## Modifying an existing code block
 
@@ -180,6 +181,6 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Code-Blocks/Modifying-an-existing-code-block/.NET).
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find Text in React PDF Viewer control | Syncfusion
+title: Find Text in React PDF Viewer component | Syncfusion
 description: Learn how to configure text search using find text and run programmatic searches in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: Text search
@@ -16,7 +16,7 @@ Use the [`findText`](https://ej2.syncfusion.com/react/documentation/api/pdfviewe
 
 ### Find and get the bounds of a text
 
-Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter and returns matches from all pages in the document. The following code snippet shows how to get the bounds of the specified text:
+This example searches the document for the text `pdf` (case-insensitive) and returns the bounding rectangles of every match across all pages. The following code snippet shows how to get the bounds of the specified text:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -56,9 +56,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of a text on the desired page
+### Find and get the bounds of a text on a specific page
 
-Searches for the specified text within the document and returns the bounding rectangles of the matched text on a specific page. The search can be case-sensitive based on the provided parameter and returns matches only from the selected page. The following code snippet shows how to retrieve bounds for the specified text on a selected page:
+This example searches the document for the text `pdf` and returns the bounding rectangles of every match on page index `7` only. The search is case-insensitive. The following code snippet shows how to retrieve bounds for the specified text on a specific page:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -100,7 +100,7 @@ export default function App() {
 
 ### Find and get the bounds of the list of text
 
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters and returns matches from all pages in the document where the strings were found.
+This example searches the document for the array of strings `['adobe', 'pdf']` (case-insensitive) and returns the bounding rectangles for each occurrence across all pages where the strings are found.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -140,9 +140,9 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on desired page
+### Find and get the bounds of the list of text on the desired page
 
-Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
+This example searches the document for the array of strings `['adobe', 'pdf']` and returns the bounding rectangles for each occurrence on page index `7` only. The search is case-insensitive.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -186,7 +186,7 @@ export default function App() {
 
 ## Find text with findTextAsync
 
-The [`findTextAsync`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#findtextasync) method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
+The [`findTextAsync`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#findtextasync) method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed. Use `findTextAsync` instead of the synchronous [`findText`](#find-text-and-get-bounds-findtext) when you want to avoid blocking the UI thread, when the document is large, or when you need to `await` the result before chaining further logic.
 
 ### Find text with findTextAsync in React PDF Viewer
 

@@ -270,7 +270,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Create-Markdown-document/.NET).
 
 The resultant Markdown document looks as follows.
 

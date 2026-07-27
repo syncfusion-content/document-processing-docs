@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Create Custom Cell Templates
+# Create Custom Cell Templates in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component lets you display custom templates inside cells.You can insert icons, labels, buttons, or any custom templates. This is useful when you need custom functionality inside cells. You can add templates to cells by dynamically assigning a custom template property directly to individual cells. When a cell has this custom template property, you can use the [beforeCellRender](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforecellrender) event to append the desired template element to the cell.
 
