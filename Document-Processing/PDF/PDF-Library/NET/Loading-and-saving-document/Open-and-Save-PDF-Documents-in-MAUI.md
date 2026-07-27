@@ -12,7 +12,7 @@ keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
 The [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
 
 **Prerequisites:**
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 ## Steps to open and save PDF documents programmatically in .NET MAUI
 
@@ -220,5 +220,3 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
 </table>
 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-
