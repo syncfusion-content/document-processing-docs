@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in Angular Spreadsheet component | Syncfusion
+title: AI Assist Integration in Angular Spreadsheet Component | Syncfusion
 description: Learn how to set up and configure AI Assist in the Syncfusion Angular Spreadsheet component for AI-powered features.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in Angular Spreadsheet component
+# AI Assist Integration in Angular Spreadsheet Component
 
 ## Integration
 
@@ -24,7 +24,7 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `src/styles.css` file.
+Add the following AI Assist dependent style references to the `src/styles.css` file:
 
 ```css
 @import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
