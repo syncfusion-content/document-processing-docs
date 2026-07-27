@@ -181,7 +181,7 @@ Change **stroke color**, **thickness**, and **opacity** using the annotation too
   ![Thickness](../../images/calibrate_thickness.png)
 - Edit the **opacity** using the Edit Opacity tool.
   ![Opacity](../../images/calibrate_opacity.png)
-- Open **Right Click → Properties** for additional line-based options.
+- Right-click and select **Properties** for additional line-based options.
 ![Line properties](../../images/calibrate_lineprop.png)
 
 #### Edit Distance Programmatically

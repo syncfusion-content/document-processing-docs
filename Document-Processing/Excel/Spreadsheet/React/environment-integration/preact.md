@@ -144,7 +144,6 @@ or
 ```bash
 yarn run dev
 ```
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 

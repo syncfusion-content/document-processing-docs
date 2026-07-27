@@ -1,6 +1,6 @@
 ---
 title: Fallback fonts in Word to PDF Conversion in C# | DocIO | Syncfusion
-description: Learn about how to specify fallback fonts during Word to PDF conversion using the .NET Word (DocIO) library..
+description: Learn how to specify fallback fonts during Word to PDF conversion using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -8,18 +8,32 @@ documentation: UG
 
 # Fallback fonts in Word to PDF Conversion
 
-During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document.
+During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows developers to specify fallback fonts. When a glyph is missing, the library uses one of the fallback fonts to render the text correctly in the output PDF document.
 
 Users can configure fallback fonts in the following ways:
 * Initialize default fallback fonts.
-* Set custom fonts as fallback fonts for specific script types, including Arabic, Hebrew, Chinese, Japanese, and more.
+* Set custom fonts as fallback fonts for specific script types, including Arabic, Hebrew, Chinese, Japanese, Tamil, Korean, and more.
+* Set custom fonts as fallback fonts for symbols, mathematics, and emoji.
 * Set custom fonts as fallback fonts for a particular range of Unicode text.
 
-N> DocIO internally uses user-initialized or specified fallback fonts for Unicode characters during Word to PDF conversion. Therefore, the specified fallback fonts must be installed in the production environment or embedded in the input Word document (DOCX). Otherwise, it will not render the text properly using the fallback fonts.
+N> DocIO internally uses the specified fallback fonts for Unicode characters during Word to PDF conversion. Therefore, the specified fallback fonts must be installed in the production environment or embedded in the input Word document (DOCX). Otherwise, the text will not render properly using the fallback fonts.
+
+## Prerequisites
+
+To use fallback fonts during Word to PDF conversion, install the required Syncfusion NuGet packages. For more information on NuGet packages and assemblies, refer to the [NuGet packages required for Word to PDF](Nuget-packages-required-word-to-pdf) and [Assemblies required for Word to PDF](./Assemblies-required-word-to-pdf) documentation.
+
+The following namespaces are used in the code examples throughout this document:
+
+```csharp
+using Syncfusion.DocIO.DLS;
+using Syncfusion.DocIORenderer;
+using Syncfusion.Office;
+using Syncfusion.Pdf;
+```
 
 ## Initialize default fallback fonts
 
-The following code example demonstrates how to initialize a default fallback fonts while converting a Word document to PDF. The *InitializeDefault* API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese etc.
+The following code example demonstrates how to initialize the default fallback fonts while converting a Word document to PDF. The `InitializeDefault` API sets the default fallback fonts for specific script types like Arabic, Hebrew, Chinese, Japanese, and others.
 
 {% tabs %}
 
@@ -197,7 +211,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Fallback fonts for symbols
 
-The following code example demonstrates how a user can add fallback fonts for Symbols and Emojis, which DocIO considers internally when converting a Word document to PDF.
+The following code example demonstrates how users can add fallback fonts for symbols, mathematics, and emojis, which DocIO considers internally when converting a Word document to PDF.
 
 {% tabs %}
 
@@ -257,7 +271,7 @@ using (WordDocument wordDocument = new WordDocument("Template.docx", Syncfusion.
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing Word document.
 Using wordDocument As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
-    'Adds fallback font for basic symbols Like bullet characters.
+    'Adds fallback font for basic symbols like bullet characters.
     wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings")
     'Adds fallback font for mathematics symbols.
     wordDocument.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS")
@@ -276,13 +290,15 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Fallback-symbol-based-on-scripttype/)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Fallback-symbol-based-on-scripttype).
 
 ## Fallback fonts for range of Unicode text
 
-Users can set fallback fonts for specific Unicode range of text to be used in Word to PDF conversion.
+Users can set fallback fonts for a specific range of Unicode characters to be used in Word to PDF conversion.
 
-The following code example demonstrates how users can add fallback fonts by using a specific Unicode range of text that DocIO considers internally while converting a Word document to PDF.
+The following code example demonstrates how developers can add fallback fonts by using a specific Unicode range that DocIO considers internally while converting a Word document to PDF.
+
+N> The `FallbackFont` constructor accepts the start and end of the Unicode range (inclusive) and the font name: `new FallbackFont(rangeStart, rangeEnd, "FontName")`.
 
 {% tabs %}
 
@@ -387,9 +403,11 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Fallback-fonts-for-Unicode-range).
 
-## Modify the exiting fallback fonts
+## Modify the existing fallback fonts
 
-The following code example demonstrates how user can modify or customize the existing fallback fonts using *FontNames* API while converting a Word document to PDF.
+The following code example demonstrates how users can modify or customize the existing fallback fonts using the `FontNames` API while converting a Word document to PDF.
+
+N> Calling `InitializeDefault()` populates the `FallbackFonts` collection with the default entries shown in the [Supported script types](#supported-script-types) table. Modifying the `FontNames` property of a `FallbackFont` instance overrides the default font list for that script type only.
 
 {% tabs %}
 
@@ -571,7 +589,7 @@ Yu Mincho, MS Mincho
 </tr>
 <tr>
 <td>
-Thai 
+Thai
 </td>
 <td>
 0x0E00 - 0x0E7F
@@ -582,7 +600,7 @@ Tahoma, Microsoft Sans Serif
 </tr>
 <tr>
 <td>
-Korean 
+Korean
 </td>
 <td>
 0xAC00 - 0xD7A3<br>
@@ -806,3 +824,13 @@ Malgun Gothic, Batang
   <td>Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS</td>
 </tr>
 </table>
+
+N> The Unicode ranges in the table are inclusive on both ends. A character belongs to the script type if its code point falls within any listed range. If a character matches multiple script types, DocIO uses the first matching entry when resolving fallback fonts.
+
+## See also
+
+* [Font substitution in Word to PDF conversion](Font-substituion-word-to-pdf)
+* [NuGet packages required for Word to PDF conversion](Nuget-packages-required-word-to-pdf)
+* [Assemblies required for Word to PDF conversion](Assemblies-required-word-to-pdf)
+* [Word to PDF conversion settings](Word-to-pdf-settings)
+* [Frequently asked questions about Word to PDF conversion](Faqs-word-to-pdf)
