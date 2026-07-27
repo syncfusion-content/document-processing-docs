@@ -54,7 +54,7 @@ Below are concise instructions and short snippets for loading PDFs from several 
 
 ### Open PDF from URL
 
-- Set  [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) to the external URL (see example above).
+- Set [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) to the external URL (see example above).
 - Note: the remote server must permit cross-origin requests (CORS); the external file must allow CORS if hosted on a different domain.
 
 ### Open PDF from a Base64 string

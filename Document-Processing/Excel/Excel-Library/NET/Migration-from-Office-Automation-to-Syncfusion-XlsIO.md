@@ -10,14 +10,14 @@ documentation: UG
 
 ## Why Syncfusion<sup>&reg;</sup>'s XlsIO over Office Automation?
 
-* Office automation can be extremely slow when deployed on a server. It is highly unstable when multiple Excel objects are instantiated on the server. However, XlsIO is designed to work under these circumstances and is a 100% native .NET component, so, it can easily handle concurrent requests from multiple users.
-* XlsIO has a very intuitive and easy to use object model. You can create richly formatted spreadsheets in just a few minutes.
-* Essential<sup>&reg;</sup> XlsIO has a royalty free licensing model compared to office automation, where the users are expected to have Microsoft Excel licenses when deployed on the server.
+* Office automation can be extremely slow when deployed on a server, and it is highly unstable when multiple Excel objects are instantiated concurrently on the server. XlsIO is designed to work under these conditions as a 100% native .NET component, so it can easily handle concurrent requests from multiple users.
+* XlsIO has a very intuitive and easy-to-use object model. You can create richly formatted spreadsheets in just a few minutes.
+* Essential<sup>&reg;</sup> XlsIO has a royalty-free licensing model, so you do not need a Microsoft Excel license on the server, unlike Office Automation.
 
-To migrate from Microsoft's Interop to Syncfusion<sup>&reg;</sup>'s XlsIO due to its stunning performance, it is an easy way. If you don't know how to use the features, this section provides some important Excel features, which are listed below. When you click a topic, it navigates to the particular page. Each topic contains:
+Migrating from Microsoft Interop to Syncfusion<sup>&reg;</sup> XlsIO is straightforward. The following section lists common Excel features. Each topic links to a dedicated migration guide and includes:
 
-* Feature description
-* Interop and XlsIO codes(both in C# and VB.NET) for comparison and easy migration.
+* A description of the feature.
+* Interop and XlsIO code (in both C# and VB.NET) for comparison and easy migration.
 
 ## Topic links
 
