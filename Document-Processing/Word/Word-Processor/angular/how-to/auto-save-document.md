@@ -112,4 +112,4 @@ public string AutoSave()
 Explore how to automatically save Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/auto-save).
 
 ## See Also
-* [AutoSave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
+* [Auto Save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
