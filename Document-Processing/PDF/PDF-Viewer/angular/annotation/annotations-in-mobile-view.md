@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations mobileView in Angular PDF Viewer | Syncfusion
+title: Annotations in mobile view in Angular PDF Viewer | Syncfusion
 description: Learn here all about how to use annotations in mobile view with the Syncfusion Angular PDF Viewer Component.
 platform: document-processing
 control: PDF Viewer
@@ -83,7 +83,7 @@ This article describes how to use annotation tools in the Angular PDF Viewer on 
 
 **Step 2:** The ink annotation is rendered on the page.
 
-![Ink annotation drawn on the page](../../javascript-es6/how-to/images/ink-annotation.png)
+![Ink annotation drawn on the page](../images/ink-annotation.png)
 
 ## Change annotation properties (before adding)
 

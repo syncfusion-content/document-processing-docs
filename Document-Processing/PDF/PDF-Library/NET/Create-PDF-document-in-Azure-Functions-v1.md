@@ -10,25 +10,51 @@ documentation: UG
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure Functions v1**.
 
+## Prerequisites
+
+* An active **Microsoft Azure subscription**.
+* Visual Studio 2019 or later with the **Azure development** workload installed.
+* Azure Functions runtime **v1** with the **.NET Framework** worker.
+* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+
 ## Steps to create a PDF document in Azure Functions v1
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure_images/Azure-Functions-V1/Project_creation.png) 
+![Create a Azure Functions project](Azure_images/Azure-Functions-V1/Project_creation.png)
 
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure_images/Azure-Functions-V1/Configuration_project.png)
 
-Step 3: Select function worker as **.NET Framework**. 
+Step 3: Select function worker as **.NET Framework**.
 ![Select function worker](Azure_images/Azure-Functions-V1/Additional_information.png)
 
 Step 4: Install the [Syncfusion.PDF.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.AspNet NuGet package](Azure_images/Azure-Functions-V1/NuGet_package_reference.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Function1.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+[FunctionName("Function1")]
+public static async Task<HttpResponseMessage> Run([HttpTrigger] HttpRequestMessage req, ...)
+{
+    // Register the Syncfusion license
+    SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+    // ... rest of the function body ...
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. For security, store the key in `local.settings.json` (local development) or in the Function App's **Configuration > Application settings** (Azure portal) rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
 
 N> Add the sample image *AdventureCycle.jpg* as an embedded resource in the project so it can be loaded using `Assembly.GetManifestResourceStream` in the code sample.
 
-Step 5: Include the following namespaces in the **Function1.cs** file.
+Step 6: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -41,7 +67,7 @@ using System.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
+Step 7: Add the following code example in **Run** method of **Function1** class to perform **create a PDF document** in Azure Functions and return the resultant **PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -108,28 +134,28 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 8: Right-click the project and select **Publish**. Then, create a new profile in the Publish Window.
 ![Create a new profile in the Publish Window](Azure_images/Azure-Functions-V1/Publish_button.png)
 
-Step 8: Select the target as **Azure** and click **Next** button.
+Step 9: Select the target as **Azure** and click **Next** button.
 ![Select the target as Azure](Azure_images/Azure-Functions-V1/Set_Azure_target.png)
 
-Step 9: Select the **Create new** button.
+Step 10: Select the **Create new** button.
 ![Configure Hosting Plan](Azure_images/Azure-Functions-V1/Function_insane.png)
 
-Step 10: Click **Create** button. 
+Step 11: Click **Create** button.
 ![Select the plan type](Azure_images/Azure-Functions-V1/Hosting_sample.png)
 
-Step 11: After creating app service then click **Finish** button. 
+Step 12: After creating app service then click **Finish** button.
 ![Creating app service](Azure_images/Azure-Functions-V1/Finish_function.png)
 
-Step 12: Click the **Publish** button.
+Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure_images/Azure-Functions-V1/Click_publish_button.png)
 
-Step 13: Publish has been succeeded.
+Step 14: Publish has been succeeded.
 ![Publish succeeded](Azure_images/Azure-Functions-V1/Successful_publish.png)
 
-Step 13: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 
+Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows.
 ![Output document](Azure_Images/Azure-Functions-V4/Final_output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Azure/Azure%20Function%20V1).
@@ -137,3 +163,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample link to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure App Service on Linux](Create-PDF-document-in-Azure-App-Service-Linux.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

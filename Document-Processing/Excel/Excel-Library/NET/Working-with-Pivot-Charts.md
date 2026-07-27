@@ -8,13 +8,13 @@ documentation: UG
 
 # Working with Pivot Charts in Excel Library
 
-**PivotCharts** are interactive graphical representations of **PivotTable** data that allows rapid analysis of the displayed data. In XlsIO, **PivotCharts** are created by [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface by setting its pivot source as **PivotTable**.
+Pivot charts are interactive graphical representations of pivot table data that allow rapid analysis of the displayed data. In XlsIO, a pivot chart is created by instantiating an [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) and setting its `PivotSource` to the pivot table.
 
-N> XlsIO supports PivotCharts only for XLSX format.
+N> XlsIO supports pivot charts only for the XLSX format.
 
-To create a pivot table, refer [Create Pivot Table](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables#create). 
+To create a pivot table, refer to [Create Pivot Table](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables#create). The examples in this topic assume that the input workbook already contains a pivot table.
 
-The following code snippet illustrates how to create a PivotChart.
+The following code snippet illustrates how to create a pivot chart.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -66,7 +66,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Using excelEngine As ExcelEngine = New ExcelEngine()
-  Dim application As IApplication = ExcelEngine.Excel
+  Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
   Dim workbook As IWorkbook = application.Workbooks.Open("PivotTable.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
@@ -84,13 +84,13 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("PivotChart.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-## PivotChart Options
+## Pivot chart options
 
-The following code snippet shows how to set field buttons in a pivot chart.
+The following snippet hides all five field-button groups on the pivot chart (`ShowAllFieldButtons` and the four individual toggles, which default to `true`). All buttons are members of the [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface and operate at runtime on the chart object created above.
 
-N> The PivotChart properties are supported exclusively from Excel 2010 onwards.
+N> The pivot chart field-button properties are supported exclusively from Excel 2010 onwards.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pivot%20Charts/Create%20Pivot%20Chart/.NET/Create%20Pivot%20Chart/Create%20Pivot%20Chart/Program.cs,180" %}
@@ -118,38 +118,40 @@ pivotChart.ShowValueFieldButtons = false;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Insert the PivotChart sheet to the workbook
-Dim pivotChartSheet As IChart = workbook.Charts.Add()
+'Insert the pivot chart into the workbook
+Dim pivotChart As IChart = workbook.Charts.Add()
 
 'Set Field Buttons
-pivotChartSheet.ShowAllFieldButtons = False
-pivotChartSheet.ShowAxisFieldButtons = False
-pivotChartSheet.ShowLegendFieldButtons = False
-pivotChartSheet.ShowReportFilterFieldButtons = False
-pivotChartSheet.ShowValueFieldButtons = False
+pivotChart.ShowAllFieldButtons = False
+pivotChart.ShowAxisFieldButtons = False
+pivotChart.ShowLegendFieldButtons = False
+pivotChart.ShowReportFilterFieldButtons = False
+pivotChart.ShowValueFieldButtons = False
 {% endhighlight %}
-{% endtabs %}  
-  
-A complete working example to create pivot chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Create%20Pivot%20Chart/.NET/Create%20Pivot%20Chart). 
+{% endtabs %}
+A complete working example to create a pivot chart in C# is present on [GitHub: Create Pivot Chart example](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Charts/Create%20Pivot%20Chart/.NET/Create%20Pivot%20Chart).
 
-## PivotChart Series
+## Pivot chart series
 
-When pivot chart is created with pivot table as data source, Syncfusion<sup>&reg;</sup> XlsIO cannot create the series because the range of the pivot table is different from normal worksheet range. This is the limitation of XlsIO. To use any chart series formatting, the series should be added manually.
+When a pivot chart is created with a pivot table as its data source, XlsIO does not auto-generate the underlying chart series, because the pivot range cannot be expressed as a regular worksheet range. To customize series-level formatting, add series manually using `IChart.Series.Add(ExcelChartType)`.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-pivotChartSheet.Series.Add(ExcelChartType.Column_Stacked);
-pivotChartSheet.Series[0].SerieFormat.CommonSerieOptions.Overlap = 100;
+//Uses the pivotChart variable from the Create chart sample.
+pivotChart.Series.Add(ExcelChartType.Column_Stacked);
+pivotChart.Series[0].SerieFormat.CommonSerieOptions.Overlap = 100;
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-pivotChartSheet.Series.Add(ExcelChartType.Column_Stacked);
-pivotChartSheet.Series[0].SerieFormat.CommonSerieOptions.Overlap = 100;
+//Uses the pivotChart variable from the Create chart sample.
+pivotChart.Series.Add(ExcelChartType.Column_Stacked);
+pivotChart.Series[0].SerieFormat.CommonSerieOptions.Overlap = 100;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-pivotChartSheet.Series.Add(ExcelChartType.Column_Stacked)
-pivotChartSheet.Series(0).SerieFormat.CommonSerieOptions.Overlap = 100
+'Uses the pivotChart variable from the Create chart sample.
+pivotChart.Series.Add(ExcelChartType.Column_Stacked)
+pivotChart.Series(0).SerieFormat.CommonSerieOptions.Overlap = 100
 {% endhighlight %}
 {% endtabs %} 
 

@@ -3,7 +3,7 @@ layout: post
 title: Context menu in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Context menu in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Context menu 
+control: Context menu
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablecontextmenu) property to enable/disable context menu.
 
-> The default value for the `enableContextMenu` property is `true`.
+> The default value of the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
 
@@ -52,11 +52,11 @@ Please find the table below for default context menu items and their actions.
 | `Delete` | Delete the selected worksheet from the spreadsheet. |
 | `Rename` | Rename the selected worksheet. |
 | [`Protect Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#protectsheet) | Prevent unwanted changes from others by limiting their ability to edit. |
-| [`Hide`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#hide) |Hide the selected worksheet. |
+| [`Hide`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#hide) | Hide the selected worksheet. |
 
 ## Context Menu Customization
 
-You can perform the following context menu customization options in the spreadsheet
+You can perform the following context menu customization options in the spreadsheet:
 
 * Add Context Menu Items
 * Remove Context Menu Items
