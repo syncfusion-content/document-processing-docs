@@ -34,7 +34,7 @@ Our 30-days trial can be downloaded in two ways.
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. After downloading, the Syncfusion<sup>&reg;</sup>  Document SDK web installer can be unlocked using the Syncfusion<sup>&reg;</sup> registered login credentials. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article. 
-5. You can [Generate](https://help.syncfusion.com/document-processing/licensing/how-to-generate) and [register](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) your license key in your application anytime before the trial period expires.
+5. You can [Generate](https://help.syncfusion.com/document-processing/licensing/how-to-generate) and [Register](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) your license key in your application anytime before the trial period expires.
 6. Download the trial installer anytime before the trial expires from your Syncfusion account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
 7. Click the Download (element 1 in the screenshot below) button to get the Syncfusion<sup>&reg;</sup> Essential Studio Document SDK web installer.
  
