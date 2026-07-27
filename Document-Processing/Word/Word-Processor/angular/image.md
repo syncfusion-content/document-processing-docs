@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Image in Angular Document editor component | Syncfusion
-description: Learn here all about Image in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Image in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Image in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in Angular Document editor component
+# Image in Angular Document Editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertimage/) method. Refer to the following sample code.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or an online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertimage/) method. Refer to the following sample code.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -24,26 +24,26 @@ domainurl: ##DomainURL##
   
 {% previewsample "/document-processing/samples/document-editor/angular/link-cs1" %}
 
-Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
+Image files are internally converted to base64 strings, whereas online images are preserved as URLs.
 
->Note: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N>: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 
 ## Image resizing
 
-Document Editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using a mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.png)
 
 ## Changing size
 
-Document Editor expose API to get or set the size of the selected image. Refer to the following sample code.
+Document Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.selection.imageFormat.width = 800;
 this.documentEditor.selection.imageFormat.height = 800;
 ```
 
->Note: Images are stored and processed(read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in Document Editor upon saving.
+N>: Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
 
 ## Text wrapping style
 
@@ -51,7 +51,7 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 ## Positioning the image
 
-DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+DocumentEditor preserves the position properties of the image and displays the image based on these position properties. It does not support modifying the position properties. The image will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
 
 ## See Also
 
