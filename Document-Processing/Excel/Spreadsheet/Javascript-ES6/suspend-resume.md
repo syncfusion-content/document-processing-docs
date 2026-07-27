@@ -29,7 +29,7 @@ For a few operations, this feature is usually not required.
 
 ## How to use
 
-Use the following methods:
+Use the following public instance methods on the Spreadsheet:
 
 - `suspendRefresh` — pauses UI rendering
 - `resumeRefresh` — applies all pending visual updates
@@ -79,7 +79,7 @@ Suspends visual updates in the Spreadsheet.
 Resumes visual updates and applies all pending changes.
 
 **Behavior:**
-- Applies all operations performed after `suspendRefresh`
+- Applies all operations performed after `suspendRefresh` in single refresh
 - Refreshes the Spreadsheet UI once
 - Improves rendering efficiency for bulk operations
 
@@ -120,9 +120,9 @@ The following types of operations can be performed between `suspendRefresh` and 
 ## Notes
 
 - Use suspend and resume UI refresh when multiple operations are executed together.
-- Avoid using it for few or simple operations.
+- This feature is useful during initialization and large data updates.
 - Useful during initialization and large data updates.
-- Data and model changes are processed during the suspended state; only visual refresh is delayed.
+- Data and model changes are processed during the suspended state; only the visual refresh is delayed.
 
 ## See Also
 
