@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort in Angular Spreadsheet component
 
-Sorting helps arrange the data in a specific order within a selected range of cells. Use the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/#allowsorting) property to enable or disable sorting functionality.
+Sorting helps arrange the data in a specific order within a selected range of cells. Use the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 
 > * The default value for `allowSorting` property is `true`.
 
