@@ -171,7 +171,115 @@ doc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-vector-image-in-a-PDF-document/). 
 
-N> EMF and WMF images are not supported on the ASP.NET Core platform.
+N> The [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) and [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) classes rely on GDI+ are **only supported on the .NET Framework (Windows-specific)**. For cross-platform .NET applications, use the [MetafileRenderer](https://help.syncfusion.com/cr/document-processing/Syncfusion.MetafileRenderer.MetafileRenderer.html) library as described in the next section.
+
+## Converting a Vector Image to PDF in cross-platform
+
+The Syncfusion<sup>&reg;</sup> .NET [MetafileRenderer](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core) library is used for converting Metafile (EMF, EMF+, EMF+ dual, and WMF) formats to [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html), which can then be drawn on a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) using [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html).
+
+The following types of Metafiles are supported:
+
+* EMF only
+* EMF plus
+* EMF plus dual
+* WMF
+
+### NuGet Packages Required
+
+Install the Metafile Renderer library along with the Syncfusion PDF library that matches your project target.
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET Framework (Windows-specific)" %}
+
+```bash
+Install-Package Syncfusion.Pdf.NET
+Install-Package Syncfusion.MetafileRenderer.NET
+```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Cross-platform (.NET Core / .NET 8 / .NET 9 / .NET 10)" %}
+
+```bash
+Install-Package Syncfusion.Pdf.Net.Core
+Install-Package Syncfusion.MetafileRenderer.Net.Core
+```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 
+The following code example shows how to convert an  Metafile to a PDF document using the [MetafileRenderer](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.NET).
 
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Open the EMF file as a stream.
+using (FileStream metafileStream = new FileStream("MetaChart.emf", FileMode.Open, FileAccess.Read))
+{
+    //Create a new instance of the MetafileRenderer class.
+    MetafileRenderer renderer = new MetafileRenderer();
+    //Convert the Metafile stream to a PdfTemplate.
+    PdfTemplate template = renderer.ConvertToPdfTemplate(metafileStream);
+    //Set the page size to match the template size.
+    document.PageSettings.Size = new Syncfusion.Drawing.SizeF(template.Size);
+    //Remove page margins.
+    document.PageSettings.Margins.All = 0;
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Get the PDF page graphics.
+    PdfGraphics graphics = page.Graphics;
+    //Draw the template on the PDF page.
+    graphics.DrawPdfTemplate(template, PointF.Empty);
+}
+
+//Save the PDF document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Open the EMF file as a stream.
+using (FileStream metafileStream = new FileStream("MetaChart.emf", FileMode.Open, FileAccess.Read))
+{
+    //Create a new instance of the MetafileRenderer class.
+    MetafileRenderer renderer = new MetafileRenderer();
+    //Convert the Metafile stream to a PdfTemplate.
+    PdfTemplate template = renderer.ConvertToPdfTemplate(metafileStream);
+    //Set the page size to match the template size.
+    document.PageSettings.Size = new Syncfusion.Drawing.SizeF(template.Size);
+    //Remove page margins.
+    document.PageSettings.Margins.All = 0;
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Get the PDF page graphics.
+    PdfGraphics graphics = page.Graphics;
+    //Draw the template on the PDF page.
+    graphics.DrawPdfTemplate(template, PointF.Empty);
+}
+
+//Save the PDF document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-vector-image-in-a-PDF-document/). 
+
+N> The [MetafileRenderer](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core).ConvertToPdfTemplate method auto-detects the metafile format (EMF, EMF+, EMF+ dual, or WMF) from the supplied stream. The output PDF preserves the original metafile dimensions and supports text selection and search.
