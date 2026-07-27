@@ -59,7 +59,7 @@ export class AppComponent {
 
 ![Strikethrough tool](../../../javascript-es6/annotations/annotation-images/strikethrough-tool.gif)
 
-### Add strikethrough using Context Menu
+### Add Strikethrough Using Context Menu
 Right-click a selected text region → select **Strikethrough**.
 
 ![Strikethrough Context](../../../javascript-es6/annotations/annotation-images/strikethrough-context.gif)
@@ -262,5 +262,5 @@ The PDF Viewer supports exporting and importing annotations, allowing you to sav
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import Annotations](../import-export-annotation)
+- [Delete Annotations](../delete-annotation)

@@ -43,7 +43,7 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will prompt for project configuration options.
+One of the above commands will prompt you to configure the new project. Provide the values shown below.
 
 - Define the project name. For example: `ej2-next-js-pdfviewer`.
 {% tabs %}
@@ -54,7 +54,7 @@ Using one of the above commands will prompt for project configuration options.
 {% endhighlight %}
 {% endtabs %}
 
-- Select the required packages.
+- Select the required project options.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -79,13 +79,13 @@ cd ej2-next-js-pdfviewer
 {% endhighlight %}
 {% endtabs %}
 
-The application is ready to run with default settings. Next, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+The application is ready to run with the default settings. After that, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are available on npm. Install the package for the component required by the project.
 
-This guide uses the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) component as an example. Install it with:
+This guide uses the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install it with:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -146,8 +146,8 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
-            style={{ 'height': '640px' }}>
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
                                    Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -194,7 +194,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
+To learn more about the PDF Viewer component, see the [getting started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started).
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
 
