@@ -54,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the configured Google Drive folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the configured Google Drive folder.
 
 ```csharp
 [HttpPost("Download")]
