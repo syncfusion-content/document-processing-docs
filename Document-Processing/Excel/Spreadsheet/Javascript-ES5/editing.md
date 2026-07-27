@@ -9,16 +9,16 @@ documentation: ug
 
 # Editing in EJ2 JavaScript Spreadsheet control
 
-The Spreadsheet control lets you edit a cell's content directly in the cell or through the formula bar. By default, the editing feature is enabled in the Spreadsheet. To enable or disable the editing feature, set the [`allowEditing`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowediting) property to `true` or `false`. For information about related keyboard shortcuts, method signatures, and events, see [Editing in EJ2 Spreadsheet control](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowediting) in the API reference.
+You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowediting) property to enable or disable the editing feature.
 
 ## Edit cell
 
 You can start editing by one of the following ways,
 
-* Double-click a cell to enter edit mode.
-* Press `F2` to edit the active cell.
+* Double-click a cell to start the edit mode.
+* Press `F2` key to edit the active cell.
 * Use the formula bar to perform editing.
-* Press `Backspace` or `Space` to clear the cell content and start edit mode.
+* Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
 
 * Using the [`startEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#startedit) method.
 
@@ -26,14 +26,14 @@ You can start editing by one of the following ways,
 
 If the cell is in editable state, you can save the edited cell by one of the following ways,
 
-* Click any other cell to commit the current edit and move the selection.
-* Press `Enter` or `Tab` to save the current cell. `Enter` moves the active selection down by one row; `Tab` moves the active selection to the right.
+* Perform mouse click on any other cell rather than the current editing cell.
+* Press `Enter` or `Tab` keys to save the edited cell content.
 
 * Using the [`endEdit`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#endedit) method.
 
 ## Cancel editing
 
-To discard in-progress changes without saving, use either a UI action or a programmatic method.
+To cancel the editing without saving the changes, you can use one of the following ways,
 
 * Press `Escape`. This exits edit mode and restores the cell's previous value.
 

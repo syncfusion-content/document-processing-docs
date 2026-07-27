@@ -18,7 +18,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-Number formatting lets you define how data is displayed in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are,
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are,
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -35,7 +35,7 @@ Number formatting lets you define how data is displayed in the Spreadsheet. Use 
 | Text | `@` | 49 |
 
 Number formatting can be applied in the following ways:
-* Using the `format` property in `cell`, you can set the desired format to each cell at initial load.For example, `cells: [{ value: '1000', format: '$#,##0.00' }]`.
+* Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
 
 * Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 
@@ -117,6 +117,33 @@ Compared to Excel, the date, time, currency, and accounting formats vary across 
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
+```js
+var deLocaleFormats = [
+    { id: 14, code: 'dd.MM.yyyy' },
+    { id: 15, code: 'dd. MMM yy' },
+    { id: 16, code: 'dd. MMM' },
+    { id: 17, code: 'MMM yy' },
+    { id: 20, code: 'hh:mm' },
+    { id: 21, code: 'hh:mm:ss' },
+    { id: 22, code: 'dd.MM.yyyy hh:mm' },
+    { id: 37, code: '#,##0;-#,##0' },
+    { id: 38, code: '#,##0;[Red]-#,##0' },
+    { id: 39, code: '#,##0.00;-#,##0.00' },
+    { id: 40, code: '#,##0.00;[Red]-#,##0.00' },
+    { id: 5, code: '#,##0 "€";-#,##0 "€"' },
+    { id: 6, code: '#,##0 "€";[Red]-#,##0 "€"' },
+    { id: 7, code: '#,##0.00 "€";-#,##0.00 "€"' },
+    { id: 8, code: '#,##0.00 "€";[Red]-#,##0.00 "€"' },
+    { id: 41, code: '_-* #,##0_-;-* #,##0_-;_-* "-"_-;_-@_-' },
+    { id: 42, code: '_-* #,##0 "€"_-;-* #,##0 "€"_-;_-* "-" "€"_-;_-@_-' },
+    { id: 43, code: '_-* #,##0.00_-;-* #,##0.00_-;_-* "-"??_-;_-@_-' },
+    { id: 44, code: '_-* #,##0.00 "€"_-;-* #,##0.00 "€"_-;_-* "-"?? "€"_-;_-@_-' }
+];
+
+// Mapping culture-based number formats for the "de" culture: The "spreadsheetObj" parameter is an instance of the spreadsheet component, and the "deLocaleFormats" parameter is an array containing format codes and their corresponding format IDs for the "de" culture.
+ej.spreadsheet.configureLocalizedFormat(spreadsheetObj, deLocaleFormats);
+```
+
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
 
 {% tabs %}
@@ -164,7 +191,7 @@ You can add borders around a cell or range of cells to define a section of works
 | Left Border | Specifies the left border of a cell or range of cells.|
 | Right Border | Specifies the right border of a cell or range of cells.|
 | Bottom Border | Specifies the bottom border of a cell or range of cells.|
-| No Border | Specifies the clearing of the border from a cell or range of cells.|
+| No Border | Used to clear the border from a cell or range of cells.|
 | All Border | Specifies all borders of a cell or range of cells.|
 | Horizontal Border | Specifies the top and bottom borders of a cell or range of cells.|
 | Vertical Border | Specifies the left and right borders of a cell or range of cells.|
@@ -335,7 +362,7 @@ Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subs
 
 You can apply subscript and superscript formatting in the following ways:
 
-1. Double-click the cell to enter edit mode, select the desired portion of text within the cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
 
 ![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
 
@@ -357,13 +384,10 @@ cells: [
 3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method.
 
 ```js
-spreadsheet.updateCell({
-    value: 'X2',
-    richText: [
-        { text: 'X' },
-        { text: '2', style: { verticalAlign: 'super' } }
-    ]
-}, 'A5');
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
 ```
 
 The following code example shows the subscript and superscript formatting in cells of the spreadsheet.

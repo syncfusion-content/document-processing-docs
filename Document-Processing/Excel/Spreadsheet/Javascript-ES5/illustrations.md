@@ -9,7 +9,7 @@ documentation: ug
 
 # Illustrations in EJ2 JavaScript Spreadsheet control
 
-Illustrations let you insert images and graphic objects such as charts in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet to enhance the visual appeal of your data.
+Illustrations help you to insert an image, shapes, and graphic objects in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet.
 
 ## Image
 
@@ -29,7 +29,7 @@ The available parameters in the `insertImage()` method are:
 | Parameter | Type | Description |
 |-----|------|----|
 | images | `ImageModel` | Specifies the options to insert an image in the spreadsheet. |
-| range (optional) | `string` | Specifies the range in the spreadsheet where the image is anchored. |
+| range(optional) | `string` | Specifies the range in spreadsheet. |
 
 The `insertImage()` method returns `void`.
 
@@ -54,7 +54,7 @@ The available parameters in the `deleteImage()` method are:
 | Parameter | Type | Description |
 |-----|------|----|
 | id | `string` | Specifies the id of the image element to be deleted. |
-| range (optional) | `string` | Specifies the range in the spreadsheet from which the image is removed. |
+| range(optional) | `string` | Specifies the range in spreadsheet. |
 
 ### Image Customization
 
@@ -85,7 +85,7 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 
 The following features have some limitations in Image:
 
-* Corner resizing is not supported on the image element.
+* Corner resizing option in the image element.
 * Copying and pasting external images is not supported.
 
 ## Chart

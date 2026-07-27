@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sort in EJ2 JavaScript Spreadsheet Control | Syncfusion
-description: Learn how to sort data in the Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Sort in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Sort
 documentation: ug
@@ -65,7 +65,7 @@ var spreadsheet: Spreadsheet = new Spreadsheet({
 });
 ```
 
-In the custom sort dialog, the `Data contains header` checkbox is checked on load, since the default value for `containsHeader` is `true`.
+In the custom sort dialog, the `Data contains header` checkbox is checked on load. Thus, the default value for `containsHeader` is `true` in custom sort dialog.
 
 ## Case sensitive sort
 
@@ -88,7 +88,7 @@ var spreadsheet: Spreadsheet = new Spreadsheet({
 });
 ```
 
-In the custom sort dialog, the `Case sensitive` checkbox is unchecked on load, since the default value is `false`.
+In the custom sort dialog, the `Case sensitive` checkbox is unchecked on load as the default value is `false`.
 
 ## Sort multiple columns
 
@@ -100,15 +100,15 @@ When you want to perform sorting on multiple columns, it can be done by any of t
 
 ### Custom sort dialog
 
-The custom sort dialog sorts multiple columns in the selected range using a rich UI. This dialog appears when you choose **Custom sort…** from the Ribbon item or the context menu. By default, a sort criterion using the first column name from the selected range appears on initial load, and it cannot be removed.
+The custom sort dialog helps sorting multiple columns in the selected range by utilizing the rich UI. This dialog will be appeared while choosing the `Custom sort…` from the Ribbon item or context menu item. By default, sort criteria with the first column name from the selected range will be appeared in the dialog on initial load and it cannot be removed.
 
-You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Each criterion can specify a different sort order. The newly added criteria items can be removed using the delete icon at the end of each item.
+You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Thus, multiple columns can be specified with different sort order. The newly added sort criteria items can be removed using the `delete` icons at the end of each items.
 
 You can refer to the [`Data contains header`](./sort#data-contains-header) topic to learn more about `Data contains header` checkbox. To learn more about `Case sensitive` checkbox, you can refer to [`Case sensitive sort`](./sort#case-sensitive-sort) topic.
 
 ### Passing sort criteria manually
 
-Multi-column sorting can also be performed programmatically by passing sort options to the `sort()` method. The `SortOptions` argument has the following properties:
+The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` have the following arguments:
 
 * [`sortDescriptors`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sortcomparer).
 

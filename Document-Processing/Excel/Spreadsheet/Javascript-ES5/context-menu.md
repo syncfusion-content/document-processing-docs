@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Syncfusion JavaScript Spreadsheet Control | Syncfusion
-description: Learn about the built-in context menu items and how to customize the context menu in the Syncfusion JavaScript Spreadsheet control.
+description: Learn here all about Context menu in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Context Menu
 documentation: ug
@@ -9,9 +9,8 @@ documentation: ug
 
 # Context Menu in Syncfusion JavaScript Spreadsheet Control
 
-The context menu is a popup menu that improves user interaction with the Spreadsheet. It opens when you right-click a cell, column header, row header, or pager (sheet tab).
+The context menu is a popup menu that improves user interaction with the Spreadsheet. It opens when you right-click a cell, column header, row header, or pager (sheet tab). You can use [`enableContextMenu`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablecontextmenu) property to enable/disable context menu.
 
-Use the [`enableContextMenu`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablecontextmenu) property to enable or disable the context menu. The default value of `enableContextMenu` is `true`.
 > The default value for the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
@@ -61,9 +60,7 @@ You can customize the context menu by performing the following actions:
 
 - Add context menu items
 - Remove context menu items
-- Enable or disable context menu items
-
-All customization methods are typically called inside the `contextmenuBeforeOpen` event so that the changes apply before the menu is shown.
+- Enable/disable context menu items
 
 ### Add Context Menu Items
 
@@ -99,7 +96,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/contextmenu/removeContextMenu-cs1" %}
 
-### Enable or Disable Context Menu Items
+### Enable/Disable Context Menu Items
 
 You can enable/disable the items in context menu using the [`enableContextMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablecontextmenuitems) in `contextmenuBeforeOpen` event
 

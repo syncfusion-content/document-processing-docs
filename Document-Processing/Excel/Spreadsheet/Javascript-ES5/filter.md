@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filter in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn how to apply, clear, and reapply filters in the Syncfusion EJ2 JavaScript Spreadsheet control.
+title: Filter in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn here all about Filter in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Filter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter in EJ2 JavaScript Spreadsheet control
 
-The Filter feature lets you view specific rows in the spreadsheet by hiding the rest. The [`allowFiltering`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowfiltering) property enables or disables this functionality. By default, the `Filter` module is injected internally into the Spreadsheet.
+Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 
@@ -30,7 +30,7 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 
 ## Filter by criteria
 
-The [`applyFilter()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#applyfilter) method applies the filter UI based on the predicate and range passed as arguments.
+The [`applyFilter()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#applyfilter) method will apply the filter UI, based on the predicate and range given in the arguments.
 
 > * The [`beforeFilter`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforefilter) event is triggered before filtering the specified range.
 > * The [`filterComplete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#filtercomplete) event is triggered after the filter action completes successfully.
@@ -54,7 +54,7 @@ To apply a filter for a cell value, right-click the cell and choose filter -> `F
 
 ## Clear filter
 
-After applying a filter to one or more columns, you may want to clear it to make all filtered rows visible again. This can be done in the following ways:
+After applying filter to one or more columns, you may want to clear it to make all filtered rows visible again. This can be done in the following ways:
 
 * Choose the **Clear** option in the ribbon toolbar under **Filter and Sort**. This clears the filters applied in the spreadsheet for all fields.
 * Use the [`clearFilter()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clearfilter) method programmatically to clear the applied filters in the spreadsheet for all fields.
@@ -69,7 +69,7 @@ After filtering, you can clear/reset the filter for a single field. This can be 
 
 ## Reapply filter
 
-When you want to reapply the filter after changes have been made to the rows, do one of the following:
+When you want to reapply the filter after some changes have been made to the rows. It can be done in the following ways,
 
 * You can choose `Reapply` option in the ribbon toolbar under `Filter and Sort` to reapply the filtered columns again.
 * You can right-click on a filtered cell and choose `Reapply` option from the context menu. It reapplies the filters again in the Spreadsheet for all the fields.
@@ -98,7 +98,7 @@ The following code example shows how to get the filtered rows.
 
 ## Limitations
 
-The following features have limitations in the Filter module:
+The following features have some limitations in Filter:
 
 * Insert/delete row/column between the filter applied cells.
 * Merge cells with filter.
