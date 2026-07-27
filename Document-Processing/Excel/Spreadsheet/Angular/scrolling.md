@@ -44,7 +44,7 @@ You can scroll through the worksheet using one of the following ways:
 * Using the Horizontal and Vertical`scroll` bars.
 * Using the `mouse` wheel.
 
-## Finite ccrolling with defined rows and columns
+## Finite scrolling with defined rows and columns
 
 If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
 
