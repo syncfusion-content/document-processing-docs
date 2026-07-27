@@ -2,7 +2,7 @@
 layout: post
 title: Freeze pane in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Freeze pane in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Freeze pane 
+control: Freeze pane
 platform: document-processing
 documentation: ug
 ---
