@@ -90,9 +90,8 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 ### Open and Close the AI Panel
 
 * **Open**: Click the **AI Assist** button in the ribbon toolbar.
-* **Close**: Click the **Close (✕)** button inside the panel header, or click the **AI Assist** ribbon button again.
-* **Start a new conversation**: Click the **Refresh (↺)** button in the panel header.
-* **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
+* **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
+* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.* **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
 
@@ -181,7 +180,7 @@ If the AI panel displays an error message:
 
 Type your request in plain English — no formulas or technical knowledge needed.
 
-#### Data analysis
+#### Data Analysis
 
 | What to say | What it does |
 |---|---|
@@ -189,7 +188,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"What are the top 5 rows by sales?"* | Picks out the highest-performing records from your data |
 | *"Generate a full report for this sheet"* | Creates a structured report with KPIs, top records, and chart suggestions |
 
-#### Data operations
+#### Data Operations
 
 | What to say | What it does |
 |---|---|
@@ -206,7 +205,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Make the text italic and red in column C"* | Applies italic style and red font color to the column |
 | *"Make the text fit inside the cells in column D"* | Turns on text wrapping so long text does not overflow |
 
-#### Rules and validation
+#### Rules & Validation
 
 | What to say | What it does |
 |---|---|
@@ -215,7 +214,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Only allow values between 1 and 100 in column B"* | Adds a data validation rule to restrict input |
 | *"Add a dropdown list with Yes and No options to column C"* | Creates a dropdown for easy, consistent data entry |
 
-#### Structure management
+#### Structure Management
 
 | What to say | What it does |
 |---|---|
@@ -232,7 +231,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Show me only the rows where the region is India"* | Applies a filter so only matching rows are visible |
 | *"Find all cells that say 'Pending' and change them to 'Done'"* | Runs a find and replace across the sheet |
 
-#### Clipboard actions
+#### Clipboard Actions
 
 | What to say | What it does |
 |---|---|

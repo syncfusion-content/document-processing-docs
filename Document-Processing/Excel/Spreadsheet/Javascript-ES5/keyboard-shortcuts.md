@@ -9,16 +9,16 @@ documentation: ug
 
 # Keyboard shortcuts in EJ2 JavaScript Spreadsheet control
 
-The following tables list the built-in keyboard shortcuts supported by the Syncfusion EJ2 JavaScript Spreadsheet control. Use this page as a quick reference while working in the spreadsheet UI.
+The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
 |-------|---------|
-| Ctrl + O | Displays the **Open** dialog to open a file. |
+| Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
 | Ctrl + P | Prints the active worksheet when the spreadsheet is in focus. |
-| F2 | Enables Edit mode for the active cell. |
-| ESC | Cancels Edit mode and discards the changes. |
-| Backspace | Clears the content of the active cell and enables Edit mode. |
+| F2 | Enables edit mode. |
+| ESC | Cancel edit mode and discard the changes. |
+| Backspace and SPACE | Clears content of the active cell and enables edit mode. |
 | Ctrl + C | Copies the selected cells. |
 | Ctrl + X | Cuts the selected cells. |
 | Ctrl + V | Paste the clipboard(cut or copied) content in the new selected range. |

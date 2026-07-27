@@ -201,7 +201,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the JavaScript Spreadsheet
 
-After the server is running, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint.
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);

@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Mobile responsiveness in EJ2 JavaScript Spreadsheet | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Mobile responsiveness in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
 ---
 
-# Mobile responsiveness in EJ2 JavaScript Spreadsheet control
+# Mobile responsiveness in EJ2 JavaScript Spreadsheet Control
 
-The Spreadsheet control rendered in desktop mode is adaptive on supported mobile devices, where the layout adjusts based on its parent element’s dimensions to fit different screen resolutions.
+The spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
-You can view the overflow items in the ribbon header, ribbon content, and sheet tabs using touch and swipe actions. A right navigation arrow appears at the end of the ribbon content, allowing you to navigate to the overflow items. Once you reach the rightmost end of the ribbon content, the right navigation arrow changes to a left navigation arrow, allowing you to navigate back toward the start of the ribbon content.
+You can see the overflowed items of ribbon header, ribbon content, and sheet tab using touch and swipe action. The right navigation arrow is added at the end of the ribbon content through which the user can navigate towards overflowed items. Once you reached the rightmost end of the ribbon content, the right navigation arrow will change to left navigation arrow through which you can navigate to the left of the ribbon content.
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)
 

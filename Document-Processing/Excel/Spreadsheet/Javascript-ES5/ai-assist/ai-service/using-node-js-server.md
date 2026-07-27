@@ -80,7 +80,7 @@ Ensure your `package.json` includes `"type": "module"` to support ES module impo
 
 Create a `.env` file in the project root and add your Azure OpenAI credentials:
 
-```ini
+```csharp
 apiKey      = Your_Azure_OpenAI_API_Key
 endpoint    = https://your-resource.openai.azure.com/
 deployment  = Your_Deployment_Name
@@ -91,7 +91,7 @@ apiVersion  = Your_Azure_OpenAI_API_Version
 
 ## Configure required modules
 
-Create `ai-model.js` in the project root to initialize the Azure OpenAI client using the credentials from `.env`. The client is created once and reused for every request.
+Create `ai-model.js` to initialize the Azure OpenAI client using the credentials from `.env`:
 
 ```js
 import { AzureOpenAI } from "openai";
@@ -157,13 +157,13 @@ app.listen(PORT, () => {
 
 ## Run the server
 
-From the project root, start the server:
+Run the following command to start the server:
 
 ```bash
 npm start
 ```
 
-The AI Assist chat endpoint exposed by this server is:
+The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
 
 ```
 http://localhost:3000/api/AIAssist/Chat

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global local in EJ2 JavaScript Spreadsheet control | Syncfusion
+title: Global local in EJ2 JavaScript Spreadsheet Control | Syncfusion
 description: Learn here all about Global local in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global local 
 documentation: ug
 ---
 
-# Globalization and Localization in EJ2 JavaScript Spreadsheet control
+# Globalization and Localization in EJ2 JavaScript Spreadsheet Control
 
 ## Localization
 

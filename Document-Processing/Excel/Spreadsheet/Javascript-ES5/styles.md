@@ -37,7 +37,7 @@ Use the following CSS to customize the Spreadsheet Ribbon.
 
 ```
 
-### Customizing the Spreadsheet Formula Bar Panel
+### Customizing the Spreadsheet formula bar panel
 
 Use the following CSS to customize the Spreadsheet formula bar panel.
 
@@ -49,7 +49,7 @@ Use the following CSS to customize the Spreadsheet formula bar panel.
 
 ```
 
-### Customizing the Spreadsheet Formula Bar Text
+### Customizing the Spreadsheet formula bar tanel
 
 You can customize the Spreadsheet formula bar text by using this CSS.
 
@@ -63,7 +63,7 @@ You can customize the Spreadsheet formula bar text by using this CSS.
 
 ## Sheet
 
-### Customizing the Spreadsheet Sheet Element
+### Customizing the Spreadsheet sheet element
 
 Use the following CSS to customize the Spreadsheet sheet element.
 
@@ -75,7 +75,7 @@ Use the following CSS to customize the Spreadsheet sheet element.
 
 ```
 
-### Customizing the Spreadsheet Sheet Header
+### Customizing the Spreadsheet sheet header
 
 Use the following CSS to customize the Spreadsheet sheet header.
 
@@ -87,7 +87,7 @@ Use the following CSS to customize the Spreadsheet sheet header.
 
 ```
 
-### Customizing the Spreadsheet Row Header
+### Customizing the Spreadsheet row header
 
 Use the following CSS to customize the Spreadsheet row header.
 
@@ -98,7 +98,7 @@ Use the following CSS to customize the Spreadsheet row header.
 
 ```
 
-### Customizing the Spreadsheet Column Header
+### Customizing the Spreadsheet column header
 
 Use the following CSS to customize the Spreadsheet column header.
 
@@ -109,7 +109,7 @@ Use the following CSS to customize the Spreadsheet column header.
 
 ```
 
-### Customizing the Spreadsheet Selection Element
+### Customizing the Spreadsheet selection element
 
 The selection element is the highlighted range when one or more cells are selected. Use the following CSS to customize it.
 
@@ -121,7 +121,7 @@ The selection element is the highlighted range when one or more cells are select
 
 ```
 
-### Customizing the Spreadsheet Active Cell Element
+### Customizing the Spreadsheet active cell element
 
 The active cell element is the focused single cell within the selection. Use the following CSS to customize it.
 
@@ -133,7 +133,7 @@ The active cell element is the focused single cell within the selection. Use the
 
 ```
 
-### Customizing the Spreadsheet Cell Element
+### Customizing the Spreadsheet cell element
 
 Use the following CSS to customize the Spreadsheet cell element.
 
@@ -147,7 +147,7 @@ Use the following CSS to customize the Spreadsheet cell element.
 
 ## Ribbon Items
 
-### Customizing the Spreadsheet Sorting Icon
+### Customizing the Spreadsheet sorting icon
 
 Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons#material) based on your theme.
 
@@ -160,7 +160,7 @@ Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet r
 
 ```
 
-### Customizing the Filter Dialog Content
+### Customizing the filter dialog content
 
 Use the following CSS to customize the Spreadsheet filter dialog content element.
 
@@ -172,7 +172,7 @@ Use the following CSS to customize the Spreadsheet filter dialog content element
 
 ```
 
-### Customizing the Filter Dialog Footer
+### Customizing the filter dialog footer
 
 Use the following CSS to customize the Spreadsheet filter dialog footer element.
 
@@ -184,7 +184,7 @@ Use the following CSS to customize the Spreadsheet filter dialog footer element.
 
 ```
 
-### Customizing the Filter Dialog Input Element
+### Customizing the filter dialog input element
 
 Use the following CSS to customize the Spreadsheet filter dialog input element.
 
@@ -196,7 +196,7 @@ Use the following CSS to customize the Spreadsheet filter dialog input element.
 
 ```
 
-### Customizing the Filter Dialog Button Element
+### Customizing the filter dialog button element
 
 Use the following CSS to customize the Spreadsheet filter dialog button element.
 
@@ -208,7 +208,7 @@ Use the following CSS to customize the Spreadsheet filter dialog button element.
 
 ```
 
-### Customizing the Excel Filter Dialog Number Filters Element
+### Customizing the Excel filter dialog number filters element
 
 Use the following CSS to customize the Spreadsheet Excel filter dialog number filters element.
 
@@ -222,7 +222,7 @@ Use the following CSS to customize the Spreadsheet Excel filter dialog number fi
 
 ## Footer
 
-### Customizing the Spreadsheet Sheet Tab Panel
+### Customizing the Spreadsheet sheet tab panel
 
 Use the following CSS to customize the Spreadsheet sheet tab panel.
 
@@ -234,7 +234,7 @@ Use the following CSS to customize the Spreadsheet sheet tab panel.
 
 ```
 
-### Customizing the Spreadsheet Sheet Tab
+### Customizing the Spreadsheet sheet tab
 
 Spreadsheet sheet tab element can be customized by using the below CSS.
 

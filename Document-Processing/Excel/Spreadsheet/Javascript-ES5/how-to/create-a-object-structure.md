@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create object structure in EJ2 Javascript Spreadsheet | Syncfusion
-description: Learn here all about creating an object structure in the Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Create a object structure in EJ2 Javascript Spreadsheet Control | Syncfusion
+description: Learn here all about Create a object structure in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create a object structure 
 documentation: ug
 ---
 
-# Create a object structure in EJ2 Javascript Spreadsheet control
+# Create a object structure in EJ2 Javascript Spreadsheet Control
 
-This topic describes the JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to render the Spreadsheet. The JSON structure is an object with the key `Workbook` whose value contains the [`properties`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#properties) of the spreadsheet.
+This topic describes the JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to render the Spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 
 ```js
@@ -72,7 +72,7 @@ The following table defines each property of the `Cell`.
 | rowSpan | number | Specifies the row-wise cell merge count. |
 | style | `CellStyle` | Specifies the cell style options. |
 | validation | `Validation` | Specifies the validation of the cell. |
-| image | `Image[]` | Specifies the images anchored to the cell. |
+| image | `Image[]` | Specifies the image of the cell. |
 
 The following table defines each property of the `CellStyle`.
 
