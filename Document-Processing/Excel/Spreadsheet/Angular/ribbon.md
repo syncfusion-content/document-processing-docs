@@ -3,7 +3,7 @@ layout: post
 title: Ribbon in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Ribbon in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Ribbon 
+control: Ribbon
 documentation: ug
 ---
 

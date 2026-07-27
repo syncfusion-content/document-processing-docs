@@ -14,8 +14,6 @@ A JavaScript action allows execution of JavaScript code embedded in a PDF docume
 * JavaScript action on form fields
 * JavaScript in 3D annotations
 
-> **Note:** PDF JavaScript uses the Acrobat JavaScript API (such as `app.alert`, `this.print`, and `host.getURL`) rather than the standard browser JavaScript API. Refer to the [Acrobat JavaScript API Reference](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) for the complete list of supported objects and methods.
-
 ## Document-level JavaScript action
 
 You can add a JavaScript action to the PDF document by using the [PdfJavaScriptAction](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfJavaScriptAction.html) class and assigning it to the [Actions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_Actions) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The following code example shows how to add an `AfterOpen` action that displays an alert when the document is opened.
@@ -92,8 +90,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/JavaScript/Add-the-JavaScript-action-to-the-PDF-document).
-
-> **Note:** The [PdfDocumentActions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html) class also exposes the [BeforeClose](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html#Syncfusion_Pdf_PdfDocumentActions_BeforeClose) and [BeforeSave](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentActions.html#Syncfusion_Pdf_PdfDocumentActions_BeforeSave) properties, which allow you to trigger JavaScript code before the document is closed or saved.
 
 ## JavaScript action on form fields
 
@@ -309,8 +305,6 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/JavaScript/Add-JavaScript-to-3D-annotation-in-a-PDF-document).
-
-> **Note:** 3D annotations require a U3D-formatted file as input. The U3D file must be available in the application directory or supplied through a stream. To view 3D content, the PDF reader must support the PDF 3D specification; the standard Acrobat Reader provides this support.
 
 ## Add/Modify JavaScript actions to the PDF
 
