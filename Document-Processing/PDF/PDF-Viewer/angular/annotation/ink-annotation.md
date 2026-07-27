@@ -24,8 +24,6 @@ Ink annotations can be added to the PDF document using the annotation toolbar.
 
 ![Ink tool in the annotation toolbar](../images/ink_tool.png)
 
-Ink tool in the annotation toolbar
-
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
@@ -243,7 +241,7 @@ export class AppComponent implements OnInit {
           var height = viewer.annotationCollection[i].bounds.height;
           viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
           viewer.annotationCollection[i].strokeColor = "#0000FF";
-          viewer.annotationCollection[i].thickness = 2 ;
+          viewer.annotationCollection[i].thickness = 2;
           viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
         }
@@ -292,7 +290,7 @@ export class AppComponent implements OnInit {
           var height = viewer.annotationCollection[i].bounds.height;
           viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
           viewer.annotationCollection[i].strokeColor = "#0000FF";
-          viewer.annotationCollection[i].thickness = 2 ;
+          viewer.annotationCollection[i].thickness = 2;
           viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
         }

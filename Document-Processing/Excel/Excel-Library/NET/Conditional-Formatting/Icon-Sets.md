@@ -1,6 +1,6 @@
 ---
 title: Icon Sets | Excel library | Syncfusion
-description: In this section, you can learn how to apply Icon sets uisng conditional formatting in an Excel document with XlsIO
+description: Learn how to apply icon-set conditional formatting rules in an Excel document using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,11 +8,18 @@ documentation: UG
 
 # Icon Sets in Conditional Formatting
 
-Icon sets present data in three to five categories that are distinguished by a threshold value. Each icon represents a range of values and each cell is annotated with the icon that represents that range.
+Icon sets annotate each cell with an icon chosen from three to five categories that are distinguished by threshold values. Each icon represents a range of values, and each cell is annotated with the icon whose range contains the cell value.
 
-The following code example illustrates how to apply Icon sets using [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconSet.html) interface in XlsIO.
+The following code example illustrates how to apply icon sets using the [IIconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconSet.html) interface in XlsIO. Key members are:
 
-{% tabs %}  
+* **IconSet** – selects the icon family using the [ExcelIconSetType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelIconSetType.html) enumerator (for example, `ThreeSymbols`, `ThreeFlags`, `ThreeSigns`, `FourRating`, `FiveBoxes`).
+* **IconCriteria** – the array of IIconCriteria (3, 4, or 5 entries depending on the icon family) that defines each icon's threshold.
+* **ShowIconOnly** – when `true`, hides the cell value and shows only the icon.
+* **ReverseIconOrder** – when `true`, reverses the order in which the icons are assigned.
+
+N> Icon-set conditional formatting is supported in Excel 2007 and later formats (`.xlsx`, `.xlsm`).
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Icon%20Sets/.NET/Icon%20Sets/Icon%20Sets/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -27,7 +34,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	conditionalFormat.FormatType = ExcelCFType.IconSet;
 	IIconSet iconSet = conditionalFormat.IconSet;
 
-	//Apply three symbols icon and hide the data in the specified range
+	//Apply a three-symbol icon set and hide the cell values
 	iconSet.IconSet = ExcelIconSetType.ThreeSymbols;
 	iconSet.IconCriteria[1].Type = ConditionValueType.Percent;
 	iconSet.IconCriteria[1].Value = "50";
@@ -56,7 +63,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     conditionalFormat.FormatType = ExcelCFType.IconSet;
     IIconSet iconSet = conditionalFormat.IconSet;
 
-    //Apply three symbols icon and hide the data in the specified range
+    //Apply a three-symbol icon set and hide the cell values
     iconSet.IconSet = ExcelIconSetType.ThreeSymbols;
     iconSet.IconCriteria[1].Type = ConditionValueType.Percent;
     iconSet.IconCriteria[1].Value = "50";
@@ -82,7 +89,7 @@ Using excelEngine As New ExcelEngine()
     conditionalFormat.FormatType = ExcelCFType.IconSet
     Dim iconSet As IIconSet = conditionalFormat.IconSet
 
-    ' Apply three symbols icon and hide the data in the specified range
+    ' Apply a three-symbol icon set and hide the cell values
     iconSet.IconSet = ExcelIconSetType.ThreeSymbols
     iconSet.IconCriteria(1).Type = ConditionValueType.Percent
     iconSet.IconCriteria(1).Value = "50"
@@ -100,11 +107,11 @@ A complete working example to apply Icon sets in C# is present on [this GitHub p
 
 ## Custom Icon Sets
 
-You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet) and [Index](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index) properties for each icon criteria.
+You can customize the icon set by changing the [IconSet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_IconSet), [Index](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Index), and [Operator](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html#Syncfusion_XlsIO_IIconConditionValue_Operator) properties of each icon criterion. To access these properties, cast each `IconCriteria` entry to [IIconConditionValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IIconConditionValue.html). The **Index** is the zero-based position of the icon within the selected **IconSet** family (for example, `Index = 0` selects the first icon in that family, `Index = 3` the fourth).
 
-Custom Icon sets can be created and customized in XlsIO as follows.
+Custom icon sets can be created and customized in XlsIO as follows.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 // Create icon sets for the data in specified range
 IConditionalFormats conditionalFormats = sheet.Range["H1:K6"].ConditionalFormats;
@@ -167,32 +174,32 @@ iconValue3.Operator = ConditionalFormatOperator.GreaterThan;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Dim conditionalFormats As IConditionalFormats = sheet.Range("H1:K6").ConditionalFormats
-Dim conditionalFormat As IConditionalFormat = conditionalFormats.AddCondition
+Dim conditionalFormat As IConditionalFormat = conditionalFormats.AddCondition()
 conditionalFormat.FormatType = ExcelCFType.IconSet
 Dim iconSet As IIconSet = conditionalFormat.IconSet
 iconSet.IconSet = ExcelIconSetType.ThreeFlags
 
-Dim iconValue1 As IIconConditionValue = CType(iconSet.IconCriteria(0),IIconConditionValue)
+Dim iconValue1 As IIconConditionValue = CType(iconSet.IconCriteria(0), IIconConditionValue)
 iconValue1.IconSet = ExcelIconSetType.FiveBoxes
 iconValue1.Index = 3
 iconValue1.Type = ConditionValueType.Percent
 iconValue1.Value = "25"
 iconValue1.Operator = ConditionalFormatOperator.GreaterThan
 
-Dim iconValue2 As IIconConditionValue = CType(iconSet.IconCriteria(1),IIconConditionValue)
+Dim iconValue2 As IIconConditionValue = CType(iconSet.IconCriteria(1), IIconConditionValue)
 iconValue2.IconSet = ExcelIconSetType.ThreeSigns
 iconValue2.Index = 2
 iconValue2.Type = ConditionValueType.Percent
 iconValue2.Value = "50"
 iconValue2.Operator = ConditionalFormatOperator.GreaterThan
 
-Dim iconValue3 As IIconConditionValue = CType(iconSet.IconCriteria(2),IIconConditionValue)
+Dim iconValue3 As IIconConditionValue = CType(iconSet.IconCriteria(2), IIconConditionValue)
 iconValue3.IconSet = ExcelIconSetType.FourRating
 iconValue3.Index = 0
 iconValue3.Type = ConditionValueType.Percent
 iconValue3.Value = "75"
 iconValue3.Operator = ConditionalFormatOperator.GreaterThan
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-N> XlsIO visualization has been enhanced with backward compatibility for Advanced Conditional Formatting.
+N> The custom icon-set feature is available in newer XlsIO versions with backward compatibility for advanced conditional formatting.

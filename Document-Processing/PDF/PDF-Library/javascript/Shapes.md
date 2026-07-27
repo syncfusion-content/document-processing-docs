@@ -1,13 +1,14 @@
 ---
 title: Shapes in JavaScript PDF Library | Syncfusion
-description: This section explains how to add shapes such as lines, curves, paths, text, rectangles, pies, arcs, Beziers, and ellipses by using the JavaScript PDF Library
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to add lines, paths, rectangles, rounded rectangles, pies, arcs, Bezier curves, polygons, and ellipses to PDF documents using JavaScript PDF Library
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 # Shapes in JavaScript PDF Library
 
-The PDF has support for adding the below shapes.
+The JavaScript PDF Library supports adding the following shapes.
 
 * Line
 * Rectangle
@@ -21,11 +22,11 @@ The PDF has support for adding the below shapes.
 
 ## Adding Shapes to a PDF document
 
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports shape rendering exclusively with PDF solid brushes.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports shape rendering with PDF pens (outlines) and solid `PdfBrush` fills.
 
 ### Line
 
-This example demonstrates how to draw a straight line in a PDF document using the [drawLine](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawLine_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a straight line in a PDF document using the [drawLine](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawline) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -45,8 +46,10 @@ graphics.drawLine(pen, { x: 10, y: 200}, { x: 100, y: 100});
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -61,12 +64,13 @@ graphics.drawLine(pen, { x: 10, y: 200 }, { x: 100, y: 100 });
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Rectangle
 
-This example demonstrates how to draw a rectangle in a PDF document using the [drawRectangle](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawRectangle_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a rectangle in a PDF document using the [drawRectangle](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawrectangle) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -86,8 +90,10 @@ graphics.drawRectangle({ x: 10, y: 20, width: 100, height: 200}, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -102,15 +108,17 @@ graphics.drawRectangle({ x: 10, y: 20, width: 100, height: 200 }, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Rounded rectangle
 
-This example demonstrates how to draw a rounded rectangle in a PDF document using the `drawRoundedRectangle` method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a rounded rectangle in a PDF document using the `drawRoundedRectangle` method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawroundedrectangle) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen, PdfBrush, drawRoundedRectangle } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
@@ -165,10 +173,12 @@ document.destroy();
 
 ### Ellipse
 
-This example demonstrates how to draw a ellipse in a PDF document using the [drawEllipse](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawEllipse_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw an ellipse in a PDF document using the [drawEllipse](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawellipse) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -185,8 +195,10 @@ graphics.drawEllipse({ x: 10, y: 20, width: 100, height: 200}, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -201,15 +213,17 @@ graphics.drawEllipse({ x: 10, y: 20, width: 100, height: 200 }, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Polygon
 
-This example demonstrates how to draw a polygon shape in a PDF document using the [drawPolygon](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPolygon_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF___) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a polygon shape in a PDF document using the [drawPolygon](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawpolygon) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -228,8 +242,10 @@ graphics.drawPolygon(points, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -246,15 +262,17 @@ graphics.drawPolygon(points,pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Pie
 
-This example demonstrates how to draw a pie in a PDF document using the [drawPie](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawPie_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a pie in a PDF document using the [drawPie](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawpie) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -271,8 +289,10 @@ graphics.drawPie({ x: 10, y: 50, width: 200, height: 200}, 180, 60, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -287,15 +307,17 @@ graphics.drawPie({ x: 10, y: 50, width: 200, height: 200 }, 180, 60, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Arc
 
-This example demonstrates how to draw a arc in a PDF document using the [drawArc](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawArc_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw an arc in a PDF document using the [drawArc](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawarc) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -312,8 +334,10 @@ graphics.drawArc({ x: 10, y: 20, width: 100, height: 200}, 20, 30, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -328,15 +352,17 @@ graphics.drawArc({ x: 10, y: 20, width: 100, height: 200 }, 20, 30, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
 ### Bezier
 
-This example demonstrates how to draw a bezier in a PDF document using the [drawBezier](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#Syncfusion_Pdf_Graphics_PdfGraphics_DrawBezier_Syncfusion_Pdf_Graphics_PdfPen_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
+This example demonstrates how to draw a Bezier in a PDF document using the [drawBezier](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawbezier) method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -353,8 +379,10 @@ graphics.drawBezier({ x: 50, y: 100}, { x: 200, y: 50}, { x: 100, y: 150}, { x: 
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -369,6 +397,7 @@ graphics.drawBezier({ x: 50, y: 100 }, { x: 200, y: 50 }, { x: 100, y: 150 }, { 
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -378,6 +407,7 @@ This example demonstrates how to draw a path in a PDF document using the [drawPa
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+
 import { PdfDocument, PdfPage, PdfPen, PdfPath } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
@@ -400,8 +430,10 @@ graphics.drawPath(path, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+
 // Create a new PDF document
 var document = new ej.pdf.PdfDocument();
 // Add a page
@@ -422,5 +454,13 @@ graphics.drawPath(path, pen);
 document.save('Output.pdf');
 // Close the document
 document.destroy();
+
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
