@@ -3,7 +3,7 @@ layout: post
 title: Data validation in EJ2 React Spreadsheet control | Syncfusion
 description: Learn here all about Data validation in Syncfusion EJ2 React Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Data validation 
+control: Data validation
 documentation: ug
 ---
 
@@ -32,7 +32,7 @@ Clear validation using one of these methods:
 
 ## Highlight Invalid Data
 
-Highlight invalid data feature is used to highlight the previously entered invalid values.
+Use the Highlight Invalid Data feature to highlight the previously entered invalid values.
 
 * **Ribbon UI:** Select the **Data** tab, then choose **Highlight Invalid Data**.
 * **Programmatically:** Use the [`addInvalidHighlight`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#addinvalidhighlight) method.
@@ -57,11 +57,11 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs1" %}
 
-## Custom Data validation
+## Custom Data Validation
 
 The Spreadsheet supports custom data validation, allowing users to define their own validation rules for specific cells or ranges. This feature enables you to set conditions that the entered data must meet, making it particularly useful when predefined validation options, such as numbers, dates, or lists, are insufficient.
 
-With custom validation, you can enforce rules using logical expressions or formulas, ensuring that only valid data is entered into the Spreadsheet.
+With custom validation, you can enforce rules using logical expressions or formulas to ensure that only valid data is entered into the Spreadsheet.
 
 **Example:** Validate a number between 10 and 100 using the formula `=AND(A1>10, A1<100)`, where A1 is the cell being validated. The Spreadsheet evaluates entered values against the formula and displays an alert if validation fails.
 
@@ -83,7 +83,7 @@ The following code example demonstrates how to add custom data validation with a
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/data-validation-cs2" %}
 
-## Limitations of Data validation
+## Limitations of Data Validation
 
 The following features have some limitations in Data Validation:
 
@@ -95,6 +95,6 @@ The following features have some limitations in Data Validation:
 ## See Also
 
 * [Formatting](./formatting)
-* [Rows and columns](./rows-and-columns/overview)
+* [Rows and Columns](./rows-and-columns/overview)
 * [Hyperlink](./link)
 * [Sorting](./sort)

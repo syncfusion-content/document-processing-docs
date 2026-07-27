@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Events in React Spreadsheet component | Syncfusion
+title: Events in React Spreadsheet Component | Syncfusion
 description: Learn here all about the events in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Events 
+control: Events
 platform: document-processing
 documentation: ug
 ---
