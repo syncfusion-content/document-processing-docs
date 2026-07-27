@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Table in Angular Document editor component | Syncfusion
-description: Learn here all about Table in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Table in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Table in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in Angular Document editor component
+# Table in Angular Document Editor component
 
-Tables are an efficient way to present information. [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
-You can create and insert a table at cursor position by specifying the required number of rows and columns.
+You can create and insert a table at the cursor position by specifying the required number of rows and columns.
 
 Refer to the following sample code.
 
@@ -37,11 +37,11 @@ export class AppComponent {
 }
 ```
 
-When the maximum row limit is reached, an alert will appear, as follow 
+When the maximum row limit is reached, an alert will appear, as follows
 
-![Row Limit Alert](images/Row_Limit_Alert.PNG) 
+![Row Limit Alert](images/Row_Limit_Alert.PNG)
 
->Note: The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
+N> The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
 
 ## Set the maximum number of Columns when inserting a table
 
@@ -60,11 +60,11 @@ export class AppComponent {
 }
 ```
 
-When the maximum column limit is reached, an alert will appear, as follow 
+When the maximum column limit is reached, an alert will appear, as follows
 
-![Column Limit Alert](images/Column_Limit_Alert.PNG) 
+![Column Limit Alert](images/Column_Limit_Alert.PNG)
 
->Note: The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
+N> The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
 
 ## Insert rows
 
@@ -81,9 +81,9 @@ Refer to the following sample code.
 //Inserts a row below the row at cursor position
 this.documentEditor.editor.insertRow();
 //Inserts a row above the row at cursor position
-this.documentEditor.editor.insertRow(false);
+this.documentEditor.editor.insertRow(true);
 //Inserts three rows below the row at cursor position
-this.documentEditor.editor.insertRow(true, 3);
+this.documentEditor.editor.insertRow(false, 3);
 ```
 
 ## Insert columns
@@ -101,9 +101,9 @@ Refer to the following sample code.
 //Insert a column to the right of the column at cursor position.
 this.documentEditor.editor.insertColumn();
 //Insert a column to the left of the column at cursor position.
-this.documentEditor.editor.insertColumn(false);
+this.documentEditor.editor.insertColumn(true);
 //Insert two columns to the left of the column at cursor position.
-this.documentEditor.editor.insertColumn(false, 2);
+this.documentEditor.editor.insertColumn(true, 2);
 ```
 
 ### Select an entire table
@@ -122,7 +122,7 @@ You can select the entire row at cursor position by using the following sample c
 this.documentEditor.selection.selectRow();
 ```
 
-If current selection spans across cells of different rows, all these rows will be selected.
+If the current selection spans across cells of different rows, all these rows will be selected.
 
 ### Select column
 
@@ -132,7 +132,7 @@ You can select the entire column at cursor position by using the following sampl
 this.documentEditor.selection.selectColumn();
 ```
 
-If current selection spans across cells of different columns, all these columns will be selected.
+If the current selection spans across cells of different columns, all these columns will be selected.
 
 ### Select cell
 
@@ -168,11 +168,11 @@ this.documentEditor.editor.deleteColumn();
 
 ## Merge cells
 
-You can merge cells vertically, horizontally, or combination of both to a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
+You can merge cells vertically, horizontally, or a combination of both, into a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
 Refer to the following sample code.
 
 ```typescript
-this.documentEditor.editor.mergeCells()
+this.documentEditor.editor.mergeCells();
 ```
 
 ## Positioning the table

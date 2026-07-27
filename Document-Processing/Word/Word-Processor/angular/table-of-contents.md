@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Table of contents in Angular Document editor component | Syncfusion
-description: Learn here all about Table of contents in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Table of contents in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Table of contents in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table of contents 
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Table of contents in Angular Document editor component
 
-The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
+The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where that heading starts, with various options to customize the appearance.
 
 ## Inserting table of contents
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -25,7 +25,7 @@ The table of contents in a document is same as the list of chapters at the begin
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert table of content in document editor.
+The following code illustrates how to insert a table of contents in the document editor.
 
 ```typescript
 let tocSettings: TableOfContentsSettings =
@@ -49,11 +49,11 @@ this.documentEditor.editor.insertTableOfContents(tocSettings);
 
 ## Update or edit table of contents
 
-You can update or edit the table of contents using the built-in context menu shown up by right-clicking it. Refer to the following screenshot.
+You can update or edit the table of contents using the built-in context menu shown by right-clicking it. Refer to the following screenshot.
 
 ![Table of Contents](images/table-of-contents.png)
 
-* **Update Field**: Updates the headings in table of contents with same settings by searching the entire document.
+* **Update Field**: Updates the headings in the table of contents with the same settings by searching the entire document.
 * **Edit Field**: Opens the built-in table of contents dialog and allows you to modify its settings.
 
 You can also do it programmatically by using the exposed API. Refer to the following sample code.
@@ -67,7 +67,7 @@ You can also do it programmatically by using the exposed API. Refer to the follo
 
 ```
 
->Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
 ## Online Demo
 
