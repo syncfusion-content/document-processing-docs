@@ -24,7 +24,7 @@ Form field validation follows this flow:
 
 ## Enable PDF Form Field Validation
 
-Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) property to `true` and handling the `validateFormFields` event.
+Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property to `true` and handling the `validateFormFields` event.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

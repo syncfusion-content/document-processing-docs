@@ -61,7 +61,7 @@ This guide explains how to rotate individual or multiple pages using the **Organ
 
 ## Enable or disable Rotate Pages button
 
-To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rotate-option) for the guidelines
+To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rotate-option) for the guidelines.
 
 ## Troubleshooting
 
@@ -70,5 +70,5 @@ To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, 
 
 ## Related topics
 
-- [Organize page toolbar customization](./toolbar.md)
+- [Organize page toolbar customization](./toolbar)
 - [Organize pages event reference](./events)
