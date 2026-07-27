@@ -17,10 +17,10 @@ To convert a Markdown document to PDF, send a request to the /v1/conversion/mark
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/markdown-to-pdf' \
---form 'file=@"Input.md"' \
+ curl --location "http://localhost:8003/v1/conversion/markdown-to-pdf" \
+  --form 'file=@"Input.md"' \
   --form 'settings={
-    "InputFile": "file",
+    "File": "file",
     "PdfCompliance": "PDF/A-1B",
     "EnableAccessibility": false
   }'
@@ -34,7 +34,7 @@ formdata.append("file", fileInput.files[0], "Input.md");
 formdata.append(
     "settings",
     JSON.stringify({
-      InputFile: "file",
+      File: "file",
       PdfCompliance: "PDF/A-1B",
       EnableAccessibility: false
     })
@@ -60,7 +60,7 @@ var content = new MultipartFormDataContent();
 content.Add(new StreamContent(File.OpenRead("Input.md")), "file", "Input.md");
 var settings = new
 {
-    InputFile = "file",
+    File = "file",
     PdfCompliance = "PDF/A-1B",
     EnableAccessibility = false
 };

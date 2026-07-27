@@ -17,7 +17,7 @@ To convert a Word document to Markdown, send a request to the /v1/conversion/wor
 
 {% highlight c# tabtitle="Curl" %}
 
-curl -v --location 'http://localhost:8003/v1/conversion/word-to-md' \
+curl -v --location 'http://localhost:8003/v1/conversion/word-to-markdown' \
   --form 'file=@"Input.docx"' \
   --form 'settings={
     "File": "file",
@@ -43,7 +43,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8003/v1/conversion/word-to-md", requestOptions)
+fetch("http://localhost:8003/v1/conversion/word-to-markdown", requestOptions)
   .then((response) => response.text())
   .then((result) => console.log(result))
 
@@ -52,7 +52,7 @@ fetch("http://localhost:8003/v1/conversion/word-to-md", requestOptions)
 {% highlight c# tabtitle="C#" %}
 
 var client = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-md");
+var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/word-to-markdown");
 var content = new MultipartFormDataContent();
 content.Add(new StreamContent(File.OpenRead("Input.docx")), "file", "Input.docx");
 var settings = new

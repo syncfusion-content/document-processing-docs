@@ -17,10 +17,11 @@ To convert an HTML document to Markdown, send a request to the /v1/conversion/ht
 
 {% highlight c# tabtitle="Curl" %}
 
-curl --location 'http://localhost:8003/v1/conversion/html-to-markdown' \
-  --form-string 'settings={
-    "JobID": "job-123",
-    "InputFile":"",
+curl --location "http://localhost:8003/v1/conversion/html-to-markdown" \
+  --form 'file=@"Input.html"' \
+  --form 'settings={
+    "File":"file",
+    "JobID":"job-123"
   }'
 
 {% endhighlight %}
@@ -28,11 +29,12 @@ curl --location 'http://localhost:8003/v1/conversion/html-to-markdown' \
 {% highlight javaScript tabtitle="JavaScript" %}
 
 const formdata = new FormData();
+formdata.append("file", fileInput.files[0], "Input.html");
 formdata.append(
     "settings",
     JSON.stringify({
       JobID: "job-200",
-      "InputFile":""
+      InputFile: "file"
     })
   );
 
@@ -54,11 +56,11 @@ fetch("http://localhost:8003/v1/conversion/html-to-markdown", requestOptions)
 var client = new HttpClient();
 var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:8003/v1/conversion/html-to-markdown");
 var content = new MultipartFormDataContent();
-
+content.Add(new StreamContent(File.OpenRead("Input.md")), "file", "Input.html");
 var settings = new
 {
     JobID = "job-300",
-    "InputFile":"",
+    InputFile = "file"
 };
 
 content.Add(new StringContent(JsonSerializer.Serialize(settings)), "settings");
