@@ -3067,8 +3067,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Frequently asked questions
 
 ### Why are German culture-specific characters (like € or umlauts) not printing correctly in the PDF when exporting the Grid?
-
-### Why are German culture-specific characters (like € or umlauts) not printing correctly in the PDF when exporting the Grid?
 <table>
 <th style="font-size:14px" width="100px">Exception
 </th>
