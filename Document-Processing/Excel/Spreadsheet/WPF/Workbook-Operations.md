@@ -74,5 +74,3 @@ spreadsheet.SaveAs();
 {% endhighlight %}
 {% endtabs %}
 
-
-N> Looking for the full WPF Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) page.

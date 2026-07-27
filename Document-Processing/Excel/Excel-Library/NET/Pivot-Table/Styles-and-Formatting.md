@@ -10,7 +10,7 @@ documentation: UG
 
 ## Pivot Table Style
 
-XlsIO supports 85 built-in styles of Microsoft Excel used to create a table with rich formatting using the [PivotBuiltInStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotBuiltInStyles.html) property as follows.
+XlsIO supports 85 built-in pivot table styles in Microsoft Excel that can be applied using the [PivotBuiltInStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotBuiltInStyles.html) property as follows.
 
 The following code example illustrates how to apply built-in style to pivot table.
 
@@ -76,7 +76,7 @@ A complete working example to apply built-in style to pivot table in C# is prese
 
 ## Pivot Cell Formatting
 
-When you apply the cell formatting to pivot table cells, Microsoft Excel maintains the formatting information in pivot table and shows the cell formatting on pivot table cells from that pivot formats. XlsIO supports to apply cell formatting to pivot table range cells. You can apply all the cell formatting using [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) [GetCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method and [IPivotCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCellFormat.html) interface.
+When you apply cell formatting to pivot table cells, Microsoft Excel stores the formatting information with the pivot table and renders the same formatting on those pivot table cells. XlsIO supports applying cell formatting to a range of pivot table cells. You can apply the cell formatting using the [IPivotTable.GetCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_GetCellFormat_System_String_) method, which returns an [IPivotCellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotCellFormat.html) instance that exposes the formatting properties.
 
 The following code example illustrates how to apply cell formatting to pivot table cells.
 
@@ -123,8 +123,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("InputTemplate.xlsx")
   Dim pivotSheet As IWorksheet = workbook.Worksheets(0)
 
-  Dim pivotTable As IPivotTable = worksheet.PivotTables(0)
-  'Get the cell format for "A1" pivot range.
+  Dim pivotTable As IPivotTable = pivotSheet.PivotTables(0)
+  'Get the cell format for "A3:C4" pivot range.
   Dim cellFormat As IPivotCellFormat = pivotTable.GetCellFormat("A3:C4")
   cellFormat.BackColor = ExcelKnownColors.Green
 
@@ -135,6 +135,6 @@ End Using
 
 A complete working example to apply cell formatting to pivot table cells in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Pivot%20Table/Format%20Pivot%20Cell/.NET/Format%20Pivot%20Cell). 
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the output Excel file as below.
 
-![Pivot Tables inline format](../Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img5.png)
+![Pivot table with applied built-in style and cell formatting](../Working-with-Pivot-Tables_images/Working-with-Pivot-Tables_img5.png)

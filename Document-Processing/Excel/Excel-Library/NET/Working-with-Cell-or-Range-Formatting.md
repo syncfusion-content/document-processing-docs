@@ -1,10 +1,11 @@
 ---
 title: Cell or Range Formatting | Syncfusion
-description: Briefs about various formatting options in a cell or a range formatting in XlsIO. It supports adding HTML Rich-Text to a range of cells in worksheet.
+description: This section covers various formatting options for a cell or a range in XlsIO, including styles, alignment, borders, fonts, colors, number formats, wrap text, auto-fit, and HTML/Rich-Text formatting.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
+
 # Working with Cell or Range Formatting
 
 This section covers the various formatting options in a cell or a range.
@@ -78,9 +79,9 @@ End Using
 
 A complete working example to create style in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cell-styles/Create%20Style/.NET/Create%20Style).
 
-## Set Default Style for row or column
+## Set Default Style for Row or Column
 
-It is the recommended and optimized approach to format entire row or column with same styles instead of formatting each and every cell individually. Use the following code to set default style.
+It is the recommended and optimized approach to format an entire row or column with the same styles instead of formatting each and every cell individually. Use the following code to set a default style.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Row%20and%20Column%20Style/.NET/Row%20and%20Column%20Style/Row%20and%20Column%20Style/Program.cs,180" %}
@@ -165,7 +166,7 @@ T> To apply styles for whole column instead of applying in each cell, use defaul
 
 ## Apply Global Style
 
-The XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
+XlsIO supports adding global styles that can be applied to one or more cells in a workbook. This is the recommended approach to apply a single style across different rows and columns, which improves memory and performance considerably. Use [SetPaletteColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SetPaletteColor_System_Int32_System_Drawing_Color_) to add custom colors to the palette before referencing them.
 
 To learn more about performance, refer to the [Improving Performing section for better performance in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/improving-performance).
 
@@ -354,10 +355,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("C3").Text = "Ana Trujillo"
   worksheet.Range("C4").Text = "Laurence Lebihan"
   worksheet.Range("C5").Text = "Victoria Ashworth"
-  worksheet.Range["D2"].Number = 15000.107
-  worksheet.Range["D3"].Number = 27000.208
-  worksheet.Range["D4"].Number = 18700.256
-  worksheet.Range["D5"].Number = 25000.450
+  worksheet.Range("D2").Number = 15000.107
+  worksheet.Range("D3").Number = 27000.208
+  worksheet.Range("D4").Number = 18700.256
+  worksheet.Range("D5").Number = 25000.450
 
   'Formatting
   'Global styles should be used when the same style needs to be applied to more than one cell. This usage of a global style reduces memory usage.
@@ -387,7 +388,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   bodyStyle.EndUpdate()
 
   'Defining number format style
-  IStyle numberformatStyle = workbook.Styles.Add("NumberFormatStyle")
+  Dim numberformatStyle As IStyle = workbook.Styles.Add("NumberFormatStyle")
   numberformatStyle.BeginUpdate()
   numberformatStyle.NumberFormat = "0.00"
   numberformatStyle.EndUpdate()
@@ -414,7 +415,7 @@ __Excel__ __document__ __with__ __Global__ __Styles__
 
 ## Apply Number Formats 
 
-Number Formats are codes that helps to control the appearance of cell values especially numbers in an Excel document. Excel recognizes the numbers in various formats like:
+Number formats are codes that help to control the appearance of cell values, especially numbers, in an Excel document. Excel recognizes numbers in various formats, such as:
 
 * Number
 * Currency
@@ -432,7 +433,7 @@ This number format can be of maximum 4 parts, separated by semicolons. They are:
 * Zeros
 * Text
 
-Each part is an individual number format.  Default format is “General”, it means anything that will fit. 
+Each part is an individual number format. The default format is "General", which displays the value in whatever format fits.
 
 The following table shows various custom formatting codes:
 
@@ -659,6 +660,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	worksheet.Range["C12"].Number = 1.20;
 
 	//Applying accounting format
+	//A12 and B12 are reassigned for the accounting example; the previous currency row used the same cells
 	worksheet.Range["A12"].Text = "234";
 	worksheet.Range["B12"].Text = "_($* #,##0_)";
 	worksheet.Range["C12"].NumberFormat = "_($* #,##0_)";
@@ -919,7 +921,7 @@ workbook.DetectDateTimeInValue = False
 {% endhighlight %}
 {% endtabs %}  
 
-N> To display the **$** symbol, apply a currency or accounting number format. Using a number format without any currency symbol does not show any currency symbol in the value.
+N> To display the **$** symbol, apply a currency or accounting number format. A number format without any currency symbol shows no currency symbol in the value.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1043,7 +1045,7 @@ A complete working example to hide cell content by applying number format in C# 
 
 ## Apply Cell Text Alignment
 
-The XlsIO supports the following alignment options:
+XlsIO supports the following alignment options:
 
 * Horizontal Alignment
 * Vertical Alignment
@@ -1051,7 +1053,7 @@ The XlsIO supports the following alignment options:
 * Orientation
 * Text Direction
 
-**Horizontal** **Alignment**
+### Horizontal Alignment
 
 This code snippet aligns the cell content horizontally.
 
@@ -1072,7 +1074,7 @@ worksheet.Range("A2").CellStyle.HorizontalAlignment = ExcelHAlign.HAlignCenter
 {% endhighlight %}
 {% endtabs %}    
 
-**Vertical** **Alignment**
+### Vertical Alignment
 
 This code snippet aligns the cell content vertically.
 
@@ -1093,9 +1095,9 @@ worksheet.Range("B2").CellStyle.VerticalAlignment = ExcelVAlign.VAlignBottom
 {% endhighlight %}
 {% endtabs %}    
 
-**Indentation**
+### Indentation
 
-This allows to set the cell content either to move it closer to the cell border or to move it farther away from cell border. 
+This allows you to set the cell content either to move it closer to the cell border or to move it farther away from the cell border.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1114,9 +1116,9 @@ worksheet.Range("C6").CellStyle.IndentLevel = 6
 {% endhighlight %}
 {% endtabs %}    
 
-**Orientation**
+### Orientation
 
-This helps to rotate the cell text diagonally or vertically. The text orientation can be set by using the [Rotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Rotation) property as shown as follows. 
+This allows you to rotate the cell text diagonally or vertically. The text orientation can be set by using the [Rotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Rotation) property as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1135,9 +1137,9 @@ worksheet.Range("C2").CellStyle.Rotation = 60
 {% endhighlight %}
 {% endtabs %}    
 
-**Text** **Direction**
+### Text Direction
 
-You can specify the text direction by using the [ReadingOrder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ReadingOrder) property as shown as follows.
+You can specify the text direction by using the [ReadingOrder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ReadingOrder) property as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -1437,9 +1439,9 @@ A complete working example to merge and unmerge cells in C# is present on [this 
 
 ## Apply Wrap Text
 
-If a cell content is too wide to fit a column and do not want to split over into adjacent cells, you can use the [WrapText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. This will set the content within the cell border. The following code snippet illustrates this behavior.
+If a cell content is too wide to fit a column and you do not want it to spill over into adjacent cells, you can use the [WrapText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_WrapText) property. This sets the content within the cell border. The following code snippet illustrates this behavior.
 
-N> Applying wrap-text will not auto-fit the rows by default. It is recommended to [auto-fit](#_AutoFit_Rows_or "") manually.
+N> Applying wrap-text will not auto-fit the rows by default. It is recommended to call [AutofitRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_AutofitRows) manually after enabling wrap text. See the [Auto-Fit Rows or Columns](#auto-fit-rows-or-columns) section for details.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Wrap%20Text/.NET/Wrap%20Text/Wrap%20Text/Program.cs,180" %}
@@ -1749,11 +1751,11 @@ The output of the previous code is shown as follows.
 
 ## Apply Color Settings
 
-Colors give enhancement to cell values to highlight the data. These color settings in a cell are differentiated as **BackColor**, **ForeColor**, and **PatternColor**.
+Colors add enhancement to cell values to highlight the data. Color settings in a cell are categorized as **BackColor**, **ForeColor**, and **PatternColor**.
 
-**Back** **Color** **settings**
+### Back Color
 
-Back color of a cell can be set using the [ColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+The back color of a cell can be set using the [ColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex) (or [Color](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Color) for an `RGB` value) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Color%20Settings/.NET/Color%20Settings/Color%20Settings/Program.cs,180" %}
@@ -1772,9 +1774,9 @@ worksheet.Range("A1").CellStyle.ColorIndex = ExcelKnownColors.Aqua
 {% endhighlight %}
 {% endtabs %}    
 
-**Fore** **Color** **Settings**
+### Fore Color
 
-Fore color of a cell can be set using the [PatternColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+The fore color of a cell can be set using the [PatternColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex) (or [PatternColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColor) for an `RGB` value) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Color%20Settings/.NET/Color%20Settings/Color%20Settings/Program.cs,180" %}
@@ -1793,9 +1795,9 @@ worksheet.Range("A2").CellStyle.PatternColorIndex = ExcelKnownColors.Green
 {% endhighlight %}
 {% endtabs %}    
 
-**Pattern** **Settings**
+### Pattern Settings
 
-Excel provides various pattern styles for highlighting the cells. These patterns can be applied using the [FillPattern](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillPattern) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown as follows.
+Excel provides various pattern styles for highlighting the cells. These patterns can be applied using the [FillPattern](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillPattern) property of [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html) as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Color%20Settings/.NET/Color%20Settings/Color%20Settings/Program.cs,180" %}
@@ -1818,7 +1820,7 @@ A complete working example to apply different color settings in C# is present on
 
 ## Apply Border Settings
 
-The XlsIO applies cell borders and format it through [IBorder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IBorder.html)Applying HTML String interface as shown as follows. 
+XlsIO applies cell borders and formats them through the [IBorder](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IBorder.html) interface, as shown below.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cell-styles/Border%20Settings/.NET/Border%20Settings/Border%20Settings/Program.cs,180" %}

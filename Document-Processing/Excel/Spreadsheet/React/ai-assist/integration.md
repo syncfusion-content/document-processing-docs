@@ -17,14 +17,16 @@ AI Assist integrates seamlessly into your React Spreadsheet application, enablin
 
 Ensure the following before integrating AI Assist:
 
+* Syncfusion React Spreadsheet package: The `@syncfusion/ej2-react-spreadsheet` package must be installed in your application.
+* Front-end prerequisites: A React project (React 16.8 or later for hooks support) with the base Spreadsheet component already integrated. See the [Spreadsheet getting started](../getting-started) guide if you have not yet set up the Spreadsheet control.
 * Backend Server: A running backend AI service (Node.js or Web API) with AI credentials configured on the server.
-* For setup instructions, see the:
+* For server setup instructions, see the:
     * [ASP.NET Web API Server](./ai-service/using-web-api)
     * [Node.js Server](./ai-service/using-node-js-server)
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `src/index.css` file.
+Add the following AI Assist dependent style references to the `src/index.css` file. The base Spreadsheet theme must already be imported; these references are additional styles required by the AI Assist UI.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
@@ -57,11 +59,11 @@ function App() {
 }
 ```
 
-This enables the AI Assist into the spreadsheet.
+This enables AI Assist in the Spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the Spreadsheet to the backend server and customize the AI Assist.
 
 ```ts
 import * as React from 'react';
@@ -71,6 +73,7 @@ Spreadsheet.Inject(AIAssist);
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+    // Replace {port} with your server's actual port, e.g. 3000 (Node.js) or 5001 (Web API).
     const aiAssistSettings: AIAssistSettingsModel = {
         requestUrl: 'https://localhost:{port}/api/AIAssist/Chat',
         placeholder: 'Ask the AI about this sheet...',
@@ -83,7 +86,7 @@ function App() {
 }
 ```
 
-Your Spreadsheet is now integrated with AI Assist and ready to use.
+Your Spreadsheet is now integrated with AI Assist and ready to use. To verify, run the application, open the Spreadsheet, click the **AI Assist** button in the ribbon toolbar, and send a test prompt — a response should appear in the panel.
 
 ## How-To Guides
 
@@ -91,7 +94,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 * **Open**: Click the **AI Assist** button in the ribbon toolbar.
 * **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
-* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.
+* **Start a new conversation**: Click the **↺ (Refresh)** button in the panel header.
 * **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
@@ -109,7 +112,8 @@ import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, Pro
 Spreadsheet.Inject(AIAssist);
 
 function App() {
-    const aiAssistSettings = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
+    // Replace {port} with your server's actual port, e.g. 3000 (Node.js) or 5001 (Web API).
+    const aiAssistSettings: AIAssistSettingsModel = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
 
     function onPromptRequest(args: PromptRequestEventArgs): void {
         if (args.requestData) {
@@ -138,7 +142,8 @@ import { Spreadsheet, SpreadsheetComponent, AIAssist, AIAssistSettingsModel, Pro
 Spreadsheet.Inject(AIAssist);
 
 function App() {
-    const aiAssistSettings = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
+    // Replace {port} with your server's actual port, e.g. 3000 (Node.js) or 5001 (Web API).
+    const aiAssistSettings: AIAssistSettingsModel = { requestUrl: 'https://localhost:{port}/api/AIAssist/Chat' };
 
     function onPromptResponse(args: PromptResponseEventArgs): void {
         console.log('AI Response received:', args.response);
@@ -152,7 +157,7 @@ function App() {
 }
 ```
 
-### Troubleshoot server connection issues
+### Troubleshoot Server Connection Issues
 
 If the AI panel displays an error message:
 
@@ -164,6 +169,7 @@ If the AI panel displays an error message:
     * For local development:
         * Node.js: http://localhost:3000/api/AIAssist/Chat
         * Web API (.NET): https://localhost:5001/api/AIAssist/Chat
+    * If your server runs Create React App on port 3000, change the Node.js server or the React dev server to a different port to avoid a conflict.
 3. Verify CORS is enabled
     * Your React app origin must be allowed in the server's CORS policy
     * Default React dev server: http://localhost:5173 (Vite) or http://localhost:3000 (Create React App)
