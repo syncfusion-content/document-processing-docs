@@ -627,8 +627,8 @@ public IActionResult Open(IFormCollection openRequest)
 
 The following list of Excel file formats are supported in the Spreadsheet for the **open** action:
 
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Excel Macro-Enabled Workbook (.xlsm)
 * Excel Binary Workbook(.xlsb)
@@ -1121,8 +1121,8 @@ The possible values are:
 
 The following list of Excel file formats are supported by the Spreadsheet for the **save** action:
 
-* MS Excel (.xlsx)
-* MS Excel 97-2003 (.xls)
+* Microsoft Excel (.xlsx)
+* Microsoft Excel 97-2003 (.xls)
 * Comma Separated Values (.csv)
 * Portable Document Format (.pdf)
 
