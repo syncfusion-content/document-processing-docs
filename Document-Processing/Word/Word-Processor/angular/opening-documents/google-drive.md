@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Open Google Drive Files in Angular Document Editor | Syncfusion
-description: Learn about how to Open document from Google Drive in Angular Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Google Drive Files in Angular DOCX Editor | Syncfusion
+description: Learn about how to Open document from Google Drive in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Drive in Angular Document editor
+# Open document from Google Drive in Angular Document Editor
 
-To load a document from Google Drive in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below
+To load a document from Google Drive in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Set up Google Drive API
+**Step 1:** Set up the Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, refer to the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple Document Editor Sample in angular
+**Step 2:** Create a simple Document Editor sample in Angular
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in angular. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
 
-**Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
@@ -34,7 +34,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -113,7 +113,7 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -130,13 +130,13 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 }
 ```
 
-> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
 
 > The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:** Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
