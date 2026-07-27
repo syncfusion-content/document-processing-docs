@@ -53,6 +53,8 @@ public App()
 {% endhighlight %}
 {% endtabs %}
 
+Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as **Azure Key Vault**, the platform **Secure Storage** plugin, or a configuration provider. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+
 Step 5: Add a new Forms XAML page in the portable project if no XAML page is defined in the App class. Otherwise, proceed to the next step.
 
 a. To add the new XAML page, right-click the project and select **Add > New Item** and add a Forms XAML Page from the list. Name it as **MainXamlPage**.

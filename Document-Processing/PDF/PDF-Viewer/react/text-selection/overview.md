@@ -18,33 +18,33 @@ This overview explains the behavior of text selection, how copy actions work, an
 
 Text selection allows users to:
 
-- Highlight text using mouse or touch  
-- Copy the selected text to the clipboard  
-- Access contextual commands such as Copy through the built‑in context menu  
-- Use keyboard shortcuts such as Ctrl+C or Cmd+C to copy text  
-- Trigger application behavior through selection events  
+- Highlight text using mouse or touch
+- Copy the selected text to the clipboard
+- Access contextual commands through the built-in context menu
+- Use keyboard shortcuts such as Ctrl+C or Cmd+C to copy text
+- Trigger application behavior through selection events
 
 The feature behaves consistently across single-page and multi-page documents.
 
 ## Copying text
 
-Copying is available through several user interaction methods.
+Copying is available through user interaction and through code.
 
 ### Using the context menu
 
-When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for further explanation.
+When text is selected, the built-in context menu shows a Copy option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for the complete list of text menu items.
 
 ### Using keyboard shortcuts
 
 The following keyboard shortcuts copy the selected text:
 
-- Ctrl+C (Windows and Linux)  
+- Ctrl+C (Windows and Linux)
 - Cmd+C (macOS)
 
 ## Related topics
 
-These topics describe how selection interacts with other features or how copy behavior may be limited depending on viewer configuration or PDF security settings.
+- **Security** - [Restricting copy operations (permissions)](../security/prevent-copy-and-print)
+- **Configuration** - [Toggle text selection](./toggle-text-selection)
+- **API** - [Text selection API and events](./text-selection-api-events)
 
-- [Restricting copy operations (permissions)](../security/prevent-copy-and-print)
-- [Toggle text selection](./toggle-text-selection)
-- [Text selection API reference](./reference)
+Setting [`enableTextSelection`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextselection) to `false` overrides any copy permission granted by the PDF's security settings and prevents both selection and copy in the viewer UI.

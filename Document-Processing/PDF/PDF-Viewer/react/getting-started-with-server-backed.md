@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This section explains how to create a simple React application and add the server-backed [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component with the minimum required setup.
 
-N> Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
+N> Starting with the 2026 Vol 2 main release (July 6, 2026), no new features will be added to the Server PDF Viewer, as almost all of the PDF Viewer functionalities are now available in the Standalone PDF Viewer. If you are currently using the server-backed PDF Viewer, please refer to the [migration documentation](./server-to-standalone) to transition to the Standalone PDF Viewer.
 
 ## Prerequisites
 
@@ -159,7 +159,7 @@ N> When configuring the server-backed PDF viewer, it's essential to understand t
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Getting%20Started).
 
-N> For hosting the web service on Linux, the server-side PDF rendering pipeline uses Skia (via SkiaSharp), which requires platform-specific native assets. Include [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) for standard Linux hosts. Additionally, for AWS environments, utilize the following packages:
+N> For hosting the web service on Linux, the server-side PDF rendering pipeline uses SkiaSharp, which requires platform-specific native assets. Include [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) for standard Linux hosts. Additionally, for AWS environments, utilize the following packages:
 
 | **Amazon Web Services (AWS)** |**NuGet package name** |
 | --- | --- |
