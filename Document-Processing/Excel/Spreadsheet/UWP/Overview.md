@@ -9,55 +9,55 @@ documentation: ug
 
 # UWP Spreadsheet (SfSpreadsheet) Overview
 
-The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) is an Excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without Excel installed. It provides absolute ease of use UI experience with integrated ribbon to cover any possible business scenario. SfSpreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas. 
+The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) is an Excel-inspired control that allows you to create, edit, view, and format Microsoft Excel files without Excel installed. It provides an easy-to-use UI experience with an integrated ribbon to cover common business scenarios. SfSpreadsheet comes with a built-in calculation engine that supports 400+ widely used formulas.
 
 ## Key Features
 
 `UWP Spreadsheet` includes several advanced features like 
 
-* [Ribbon](Ribbon-Customization) – Ribbon integrated with organically enhanced UI experience.
+* [Ribbon](Ribbon-Customization) – Provides a ribbon with an enhanced UI experience.
 
-* [Editing](Editing) **and** [Selection](Selection) – Interactive support for editing and cell selection in workbook.
+* [Editing](Editing) and [Selection](Selection) – Provides interactive support for editing and cell selection in a workbook.
 
-* [Formulas](Formulas) - Provides support for 400+ most widely used formulas which any business user needs and allows you to add, remove and edit the formulas like in excel.
+* [Formulas](Formulas) - Provides support for 400+ widely used formulas and allows you to add, remove, and edit formulas as in Excel.
 
-* [Name Manager](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/formulas#named-ranges) – Supports the name ranges in the formulas. By using the name ranges, you can specify the name of the cell range, and then you can use it in the formula more easily without hassling of remembering cell locations.
+* [Name Manager](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/formulas#named-ranges) – Supports named ranges in formulas. By using a named range, you can refer to a cell range by name and use it in formulas without the hassle of remembering cell locations.
 
-* **Floating Cells** - Provides support for floating cell mode that is when the text exceeds the length of the cell, it will float the text to the adjacent cell.
+* **Floating Cells** - Provides support for floating cell mode, in which text that exceeds the cell width floats into the adjacent cell.
 
-* [Merge Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/formatting#merge-cells) - Merge two or more adjacent cells into a single cell and display the contents of one cell in the merged cell.
+* [Merge Cells](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/formatting#merge-cells) - Provides support to merge two or more adjacent cells into a single cell and display the contents of one cell in the merged cell.
 
-* [Conditional Formatting](Conditional-Formatting) - Provides support for excel compatible conditional formatting and allows you to apply formats to a cell or range of cells depending on the value of cells or formulas that meet specific criteria. Also provides support to define and import the conditional formatting rules such as Data Bars, Icon Sets and Color Scales options which are used to visualize the data.
+* [Conditional Formatting](Conditional-Formatting) - Provides support for Excel-compatible conditional formatting and allows you to apply formats to a cell or range of cells based on the value of cells or formulas that meet specific criteria. Also provides support to define and import conditional formatting rules such as Data Bars, Icon Sets, and Color Scales, which are used to visualize the data.
 
-* [Data Validation](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/editing#data-validation) – Provides support to ensure the data integrity by enforcing end users to enter valid data into the cells and if entered data does not meet the specified criteria, and error message is displayed. 
+* [Data Validation](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/editing#data-validation) – Provides support to ensure data integrity by enforcing end users to enter valid data into cells. If the entered data does not meet the specified criteria, an error message is displayed.
 
-* [Cell Comments](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#cell-comments) - Supports comments that provide additional information about a cell such as what the value represents. And it would be useful if you want the end users to understand the data in the cells more deeply.
+* [Cell Comments](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#cell-comments) - Supports comments that provide additional information about a cell, such as what the value represents. This is useful for giving end users additional context about the data.
 
-* [Undo/Redo](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#undoredo) - Provides support to undo or redo the changes that you have made in the workbook.
+* [Undo/Redo](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#undoredo) - Provides support to undo or redo the changes made in the workbook.
 
-* [Clipboard Operations](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#clipboard-operations) – Provides support for Cut/Copy/Paste Operations in Spreadsheet.
+* [Clipboard Operations](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/interactive-features#clipboard-operations) – Provides support for Cut, Copy, and Paste operations in the Spreadsheet.
 
 * **Fill Series** – Provides support to automatically fill cells with data that follows or completes a pattern.
 
-* [Charts, Pictures and Textboxes](Shapes) - Provides support to import Charts, Pictures and Textboxes.
+* [Charts, Pictures, and Textboxes](Shapes) - Provides support to import Charts, Pictures, and Textboxes.
 
 * [Sparklines](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/shapes#sparklines) – Provides support to import sparklines.
 
-* [Hyperlinks](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/editing#hyperlink) - Supports the hyperlink navigation. The hyperlink is a convenient way to navigate or browse data within a worksheet or other worksheets in a workbook.
+* [Hyperlinks](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/editing#hyperlink) - Supports hyperlink navigation. A hyperlink is a convenient way to navigate or browse data within a worksheet or to other worksheets in a workbook.
 
-* [Freeze Panes](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/rows-and-columns#freeze-rows-and-columns) – Provides support to freeze rows/ freeze columns.
+* [Freeze Panes](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/rows-and-columns#freeze-rows-and-columns) – Provides support to freeze rows and columns.
 
-* [Resizing and Hiding](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/rows-and-columns#hide-rows-and-columns) – Provides interactive support to resize or hide/unhide the rows and columns.
+* [Resizing and Hiding](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/rows-and-columns#hide-rows-and-columns) – Provides interactive support to resize and hide or unhide rows and columns.
 
-* [Grouping](Outline) - Provides support to group or ungroup rows and columns.
+* [Grouping](Outline) - Provides support to group and ungroup rows and columns.
 
-* [Workbook and Worksheet Protection](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/worksheet-management#protection) - Provides support to protect the worksheet and also supports to lock-down the structure and window of workbook, which enables you to prevent workbook from any structural change or from any change in size.
+* [Workbook and Worksheet Protection](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/worksheet-management#protection) - Provides support to protect the worksheet and supports locking down the structure and window of the workbook, preventing structural changes or changes in size.
 
 * [Import](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/getting-started#opening-an-existing-excel-workbook) – Provides support to import from excel file.
 
 * [Zooming](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/worksheet-management#zooming) – Provides support to zoom in and zoom out of the worksheet view.
 
-* [Localization](Localization) - Provides support to localize all the static text in a Ribbon and all dialogs to any desired language.
+* [Localization](Localization) - Provides support to localize all static text in the Ribbon and all dialogs to any desired language.
 
 * **Supported File Types** - Ability to import the different types of excel which are XLS, XLSX, XLSM, XLT, XLTX, CSV (Comma delimited) respectively.
 

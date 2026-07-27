@@ -9,11 +9,11 @@ keywords: c#, vb.net, excel, syncfusion, xlsio, read excel, extract data, data f
 
 # Working with Excel Worksheet 
 
-A workbook contains a collection of worksheets where the actual contents resides. It is possible to add and manipulate worksheets and [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance represents an Excel worksheet.
+A workbook contains a collection of worksheets where the actual contents reside. You can add and manipulate worksheets programmatically, and an [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance represents an Excel worksheet.
 
 ## Create
 
-A new worksheet can be added into the workbook through [Create](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html#Syncfusion_XlsIO_IWorksheets_Create) method of [IWorksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html) interface. It is also possible to specify the required number of worksheets and if not specified, XlsIO creates three worksheets by default.
+A new worksheet can be added to the workbook through the [Create](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html#Syncfusion_XlsIO_IWorksheets_Create) method of the [IWorksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheets.html) interface. You can also specify the required number of worksheets. If the count is not specified, XlsIO creates three worksheets by default.
 
 The following code example illustrates how to create worksheets within a workbook.
 
@@ -29,7 +29,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Create(5);
 	//Creating a new sheet
 	IWorksheet worksheet = workbook.Worksheets.Create();
-	//Creating a new sheet with name “Sample”
+	//Creating a new sheet with name "Sample"
 	IWorksheet namedSheet = workbook.Worksheets.Create("Sample");
 	#endregion
 
@@ -82,10 +82,10 @@ A complete working example for creating Excel worksheets in C# is present on [th
 
 ## Access
 
-[Worksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_Worksheets) collection holds one or more worksheets present in a workbook. Accessing a particular worksheet can be done by the following ways. 
+The [Worksheets](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_Worksheets) collection holds one or more worksheets present in a workbook. A particular worksheet can be accessed in either of the following ways.
 
-1. Specifying the index 
-2. Specifying the sheet name. 
+1. By specifying the index.
+2. By specifying the sheet name.
 
 The following code example illustrates how to access a worksheet from its worksheets collection.
 
@@ -279,8 +279,6 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
-
-A complete working example for setting an Excel worksheet name in C# is present on [this GitHub page]().
 
 ## Highlight Worksheet Tabs 
 

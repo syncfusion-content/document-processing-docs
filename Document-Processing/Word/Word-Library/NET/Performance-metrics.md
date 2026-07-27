@@ -1,5 +1,5 @@
 ---
-title: Word library Performance benchmark results | Syncfusion
+title: Word Library performance benchmark results | Syncfusion
 description: Know about the performance benchmark results of the .NET Word library with different document sizes
 platform: document-processing
 control: DocIO
@@ -22,7 +22,7 @@ The following system configurations were used for benchmarking:
 
 ## Benchmark Results
 
-The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
+The table below shows the performance results of various Word document operations. Each operation was executed using the input document described in the **Input Details** column, and the reported time is the elapsed time for a single run in the environment described above.
 
 <table>
 <tr>

@@ -1,5 +1,5 @@
 ---
-title: Word to PDF Performance benchmark results | Syncfusion
+title: Word to PDF performance benchmark results | Syncfusion
 description: Explore the performance benchmark results of Word to PDF conversion using the .NET Word Library with different page counts
 platform: document-processing
 control: DocIO
@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to PDF performance benchmarks using .NET Word Library
 
-The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including conversion to PDF. This performance benchmark report highlights the speed and efficiency of Word to PDF conversion, demonstrating how our library performs across varying document sizes in real-world scenarios.
+The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including conversion to PDF. This performance benchmark report highlights the speed and efficiency of Word to PDF conversion, demonstrating how our library performs across different conversion operations on representative workloads.
 
 ## Environment
 
@@ -20,10 +20,18 @@ The following system configurations were used for benchmarking:
 * **.NET Version:** .NET 8.0  
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
 
+## Test methodology
+
+* All measurements were taken on an idle system with no other significant background processes running.
+* Each operation was executed for **3 iterations** after a warm-up run, and the reported time is the **average** of the measured iterations.
+* Conversions were run **single-threaded** with default garbage collection settings.
+* Time values are reported in **seconds (sec)** and rounded to two decimal places for consistency.
+
 ## Benchmark Results
 
-The table below shows the performance results of various Word document operations, evaluated using predefined input conditions in the previously described environment. 
+The table below shows the performance results of various Word to PDF conversion operations, evaluated using predefined input conditions in the previously described environment. Each row lists the operation, the number of pages in the sample document, the average conversion time, and a link to the corresponding GitHub example.
 
+> **Note:** The "Word to PDF" baseline row uses a 100-page sample to reflect a realistic large-document workload, while the other rows use small (1–2 page) sample documents to isolate the overhead of each individual option. Times are therefore **not directly comparable across rows**; they are intended to illustrate the relative cost of enabling each option on a similar small document.
 <table>
 <tr>
     <th>Operation</th>

@@ -8,30 +8,30 @@ documentation: UG
 ---
 # Overview of Word library (DocIO)
 
-Essential<sup>&reg;</sup> DocIO is a native [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) that is used by developers to create, read, write, and convert Microsoft Word documents by using C#, VB.NET, and managed C++ code from any of the following .NET platforms - [Windows Forms](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-blazor), [WPF](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-wpf), [Xamarin](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-winui) and [.NET MAUI applications](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-maui). 
+Essential<sup>&reg;</sup> DocIO is a native [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used by developers to create, read, write, and convert Microsoft Word documents using C#, VB.NET, and managed C++ code from any of the following .NET platforms: [Windows Forms](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-blazor), [WPF](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-wpf), [Xamarin](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-winui), and [.NET MAUI applications](https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-maui).
 
-It is a non-UI component that provides a full-fledged document instance model similar to the Microsoft Office COM libraries to iterate with the document elements explicitly and perform necessary manipulation. It is built from scratch in C# and does not require Microsoft Word to be installed in the machine. It supports Word 97-2003 and later version documents.
+It is a non-UI component that provides a full-fledged document instance model similar to the Microsoft Office COM libraries, allowing you to iterate over the document elements explicitly and perform necessary manipulations. It is built from scratch in C# and does not require Microsoft Word to be installed on the machine. It supports Word 97-2003 and later version documents. The minimum framework requirement is .NET Framework 4.0, .NET Core 2.0, or .NET 5.0 and later.
 
 T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
 
 **Key Features**
 
-* Support to [create Word document](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started) from scratch.
-* Support to open, modify and save existing Word documents.
+* Support to [create Word documents](https://help.syncfusion.com/document-processing/word/word-library/net/getting-started) from scratch.
+* Support to open, modify, and save existing Word documents.
 * Advanced [Mail merge](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge) support with different data sources.
-* Ability to create or edit Word 97-2003 and later version documents, and convert them to commonly used file formats such as [RTF](https://help.syncfusion.com/document-processing/word/conversions/rtf-conversions), [WordML](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-processing-xml-xml), [TXT](https://help.syncfusion.com/document-processing/word/conversions/text-conversions), [HTML](https://help.syncfusion.com/document-processing/word/conversions/html-conversions) and vice versa.
+* Ability to create or edit Word 97-2003 and later version documents, and convert them to commonly used file formats such as [RTF](https://help.syncfusion.com/document-processing/word/conversions/rtf-conversions), [WordML](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-processing-xml-xml), [TXT](https://help.syncfusion.com/document-processing/word/conversions/text-conversions), and [HTML](https://help.syncfusion.com/document-processing/word/conversions/html-conversions), and vice versa.
 * Ability to export a Word document as an [Image](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image), [PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf) file, and [EPUB](https://help.syncfusion.com/document-processing/word/conversions/word-to-epub-conversion) in high quality.
 * Ability to [merge](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/merging-word-documents) and [split](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/split-word-documents) Word documents.
 * Support to [compare](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/compare-word-documents) two DOCX format documents.
-* Ability to create and manipulate [charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts), [Shapes](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-shapes), and [Group shape](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-shapes#grouping-shapes) in DOCX and WordML format documents.
+* Ability to create and manipulate [charts](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-charts), [Shapes](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-shapes), and [Group Shape](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-shapes#grouping-shapes) in DOCX and WordML format documents.
 * Ability to read and write [Built-In and Custom Document Properties](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-word-document#working-with-word-document-properties).
 * Ability to [find and replace](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-find-and-replace) text with its original formatting.
 * Ability to insert [Bookmarks](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-bookmarks) and navigate corresponding bookmarks to insert, replace, and delete content.
 * Support to insert and edit the [form fields](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-form-fields).
 * Support to protect the document to [restrict access](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-security#protecting-word-document-from-editing) to the elements present within the document.
 * Ability to [encrypt and decrypt](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-security) Word documents.
-* Support to insert and extract OLE objects.
-* Support to run the DocIO applications in multi-thread and its thread safe.
+* Ability to insert and extract [OLE objects](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-ole-objects).
+* Support to run DocIO applications in multi-threaded environments; the library is thread-safe.
 
 **Compatible Microsoft Word Versions**
 
@@ -41,6 +41,8 @@ T> If you encounter issues while using the .NET Word library in ASP.NET Core, re
 * Microsoft Word 2013
 * Microsoft Word 2016
 * Microsoft Word 2019
+* Microsoft Word 2021
+* Microsoft Word 2024
 * Microsoft 365
 
 ## See Also
@@ -49,3 +51,4 @@ T> If you encounter issues while using the .NET Word library in ASP.NET Core, re
 * [Assemblies required](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [NuGet packages required](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

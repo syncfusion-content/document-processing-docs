@@ -1,7 +1,7 @@
 ---
 title: Extract Structured Data in .NET | Syncfusion
 canonical_url: "https://www.syncfusioninternal.com/document-sdk/net-pdf-data-extraction"
-description: Syncfusion® Data Extraction is a .NET library that extracts tables, forms, text, and images from documents, outputing PDFs and JSON.
+description: Syncfusion® Data Extraction is a .NET library that extracts tables, forms, text, and images from PDF documents.
 platform: document-processing
 control: DataExtraction
 documentation: UG
@@ -219,7 +219,7 @@ The Cell Object represents an individual table entry, containing text values, sp
 
 #### FormObjects
 
-FormObjects represent interactive form fields detected on the page, such as text boxes, checkboxes, radio buttons, and signature regions.Each object includes positional data, dimensions, field type, and a confidence score that indicates detection reliability.
+FormObjects represent interactive form fields detected on the page, such as text boxes, checkboxes, radio buttons, and signature regions. Each object includes positional data, dimensions, field type, and a confidence score that indicates detection reliability.
 
 <table>
 <thead>
