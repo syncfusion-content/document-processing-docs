@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in React DOCX Editor to allow multiple users to work on a document simultaneously.
+description: Learn how to enable collaborative editing in React Document Editor to allow multiple users to work on a document simultaneously.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React with Redis in ASP.NET Core
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ SignalR enables real-time communication by instantly sending and receiving docum
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
 The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
 
@@ -249,7 +249,7 @@ public connectToRoom(data: any) {
   }
 };
 
-//other code snippets
+// Other code snippets
 
 {% endhighlight %}
 {% endtabs %}
@@ -419,14 +419,14 @@ public async Task JoinGroup(ActionInfo info)
   // Add the connection ID to the group
   await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
 
-  //To ensure whether the room exixts in the Redis cache
+  // To ensure whether the room exists in the Redis cache
   bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
   if (roomExists) {
     // Fetch all connected users from Redis
     var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
     var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
 
-    //Send the exisiting user details to the newly joined user. 
+    // Send the existing user details to the newly joined user. 
     await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
   }
 
@@ -436,7 +436,7 @@ public async Task JoinGroup(ActionInfo info)
   // Store the room name with the connection ID
   await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
 
-  // Notify all the exsisiting users in the group about the new user
+  // Notify all the existing users in the group about the new user
   await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
 }
 
@@ -452,12 +452,12 @@ The following code snippet demonstrates how to disconnect a connection using Sig
 
 public override async Task OnDisconnectedAsync(Exception ? e)
 {
-  //Get the room name associated with the connection ID
+  // Get the room name associated with the connection ID
   string roomName = await _db.HashGetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-  //  Remove user from Redis       
+  // Remove user from Redis       
   await _db.HashDeleteAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId);
 
-  //// Fetch all connected users from Redis
+  // Fetch all connected users from Redis
   var allUsers = await _db.HashGetAllAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix);
   var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
 
@@ -469,7 +469,7 @@ public override async Task OnDisconnectedAsync(Exception ? e)
     RedisValue[] pendingOps = await _db.ListRangeAsync(roomName, 0, -1);
     if (pendingOps.Length > 0) {
       List < ActionInfo > actions = new List<ActionInfo>();
-      // Prepare the message fir adding it in background service queue.
+      // Prepare the message for adding it in background service queue.
       foreach(var element in pendingOps)
       {
         actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
@@ -594,7 +594,7 @@ private async Task < ActionInfo > AddOperationsToCache(ActionInfo action)
   action.Version = version;
   action.IsTransformed = true;
 
-  //Other code snippets
+  // Other code snippets
 
   // Return the updated action
   return action;

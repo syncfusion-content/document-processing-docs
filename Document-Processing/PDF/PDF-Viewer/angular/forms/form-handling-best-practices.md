@@ -47,7 +47,7 @@ Validation ensures data quality and prevents errors downstream. Always:
 - Use custom validation logic for business rules.
 - Prevent submission or export if validation fails.
 
-You can refer to [Form Validation](../forms/form-validation) in Angular PDF Viewer to know more about form fields Validation.
+You can refer to [Form Validation](../forms/form-validation) in Angular PDF Viewer to know more about form fields validation.
 
 ## 4. Pre-Fill Known Values
 
@@ -69,7 +69,7 @@ Automate workflows by importing/exporting form data. Recommendations:
 - Use **XML** for legacy systems.
 - Ensure field names match exactly for successful mapping.
 
-You can refer to [Export/Import Form fields](../forms/import-export-form-fields/export-form-fields) in Angular PDF Viewer to know more about Export and Import form fields.
+You can refer to [Export/Import Form fields](../forms/import-export-form-fields/export-form-fields) in Angular PDF Viewer to know more about export and import form fields.
 
 ## 6. Group Related Fields for Complex Forms
 
@@ -100,7 +100,7 @@ Good design improves usability and accessibility. Tips:
 
 ![Form Fields](../../javascript-es6/images/FormFill.png)
 
-You can refer to [Group Form Fields](../forms/group-form-fields) in Angular PDF Viewer to know more about grouping form fields.
+You can refer to [Style Form Fields](../forms/manage-form-fields/customize-form-fields) in Angular PDF Viewer to know more about styling form fields.
 
 ## See Also
 

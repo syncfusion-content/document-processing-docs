@@ -41,9 +41,9 @@ const radioButtons = formFields.filter(field => field.type === 'RadioButton' && 
 const checkedField = (radioButtons.find(field => field.isChecked)).name;
 ```
 
-## Read Dropdown values
+## Read Dropdown Values
 
-Read the dropdown's selected option by accessing `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
+Read the dropdown's selected option by accessing the `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -68,8 +68,7 @@ const formFields = this.pdfViewer.formFieldCollections;
 formFields.forEach(field => {
     if (field.type === 'RadioButton' || field.type === 'Checkbox') {
         console.log(`${field.name}: ${field.isChecked}`);
-    }
-    else {
+    } else {
         console.log(`${field.name}: ${field.value}`);
     }
 });

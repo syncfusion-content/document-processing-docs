@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Perimeter Measurement Annotations in React PDF Viewer \ Syncfusion
+title: Add Perimeter Measurement Annotations in React PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -107,7 +107,7 @@ function addPerimeter() {
 {% endtabs %}
 
 ## Customize Perimeter Appearance
-Configure default properties using the [`Perimeter Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#perimetersettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`perimeterSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#perimetersettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -116,7 +116,7 @@ Configure default properties using the [`Perimeter Settings`](https://ej2.syncfu
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  distanceSettings={{ fillColor: 'blue', strokeColor: 'green', opacity: 0.6 }}
+  perimeterSettings={{ fillColor: 'blue', strokeColor: 'green', opacity: 0.6 }}
   style={{ height: '650px' }}
 >
   <Inject services={[Toolbar, Annotation]} />
@@ -166,9 +166,9 @@ function editPerimeterProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Perimeter Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`perimeterSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#perimetersettings) property.
@@ -189,7 +189,7 @@ Apply defaults for Perimeter using the [`perimeterSettings`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Set Properties While Adding Individual Annotation
+## Set Properties While Adding Individual Annotations
 Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}

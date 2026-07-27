@@ -2,7 +2,7 @@
 layout: post
 title: Named Ranges in React Spreadsheet component | Syncfusion
 description: Learn here all about named ranges in React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formulas 
+control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
