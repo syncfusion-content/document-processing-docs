@@ -80,6 +80,8 @@ End Using
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Markdown-to-PDF-conversion/Convert-Markdown-to-PDF/.NET).
+
 ## Load Options
 
 When opening an existing Markdown document, the .NET Word library provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported before converting to PDF.
@@ -222,6 +224,8 @@ End Sub
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Markdown-to-PDF-conversion/Customize-image-data/.NET).
+
 N> Hook the event handler before opening a Markdown document as per the above code example.
  
 ### Encoding
@@ -294,5 +298,7 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Markdown-to-PDF-conversion/Load-Options-Encoding/.NET).
 
 N> Provide the encoding values before opening a Markdown document as per the above code example.

@@ -55,6 +55,8 @@ End Using
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Convert-Markdown-to-HTML/.NET).
+
 ## Load Options
 
 When opening an existing Markdown document, the .NET Word library provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported.
@@ -172,6 +174,8 @@ End Sub
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Customize-image-data/.NET).
+
 N> Hook the event handler before opening a Markdown document as shown in the above code example.
  
 ### Encoding
@@ -220,6 +224,8 @@ document.Close()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Load-Options-Encoding/.NET).
+
 N> Provide the encoding values before opening a Markdown document as per the above code example.
 
 ## Convert HTML to Markdown
@@ -257,6 +263,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Convert-HTML-to-Markdown/.NET).
 
 ## Save Options
 
@@ -303,6 +311,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Customize-image/.NET).
 
 The following code examples show the event handler to customize the image path and save the image in an external folder.
 
@@ -389,5 +399,7 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Save-Options-Encoding/.NET).
 
 N> Set the encoding value before saving the document as per the above code example.

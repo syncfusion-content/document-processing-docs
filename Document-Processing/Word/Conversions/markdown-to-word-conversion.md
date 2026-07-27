@@ -252,6 +252,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Encoding).
+
 N> Provide the encoding value before opening the Markdown file, as shown in the above code example.
 
 ## Supported Markdown Syntax
