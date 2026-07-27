@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Extract Text in Vue PDF Viewer component | Syncfusion
-description: Learn about the Extract Text in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Extract Text
-platform: ej2-vue
+title: Extract Text in Angular PDF Viewer component | Syncfusion
+description: Learn about the Extract Text in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+control: PDF Viewer
+platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -48,8 +48,8 @@ import {
   selector: 'app-root',
   template: `
     <div class="content-wrapper">
-    <button #btn1 (click)="extrctText()">extrctText</button>
-    <button #btn2 (click)="extrctsText()">extrctsText</button>
+    <button #btn1 (click)="extractText()">extractText</button>
+    <button #btn2 (click)="extractTexts()">extractTexts</button>
       <ejs-pdfviewer 
         id="pdfViewer"
         [resourceUrl]="resourceUrl"
@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void { }
   // Function to extract text from a specific page (page 1)
- extrctText(): void {   
+ extractText(): void {
   const viewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
   viewer.extractText(1, 'TextOnly').then((val: any) => {
      console.log('Extracted Text from Page 1:');
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
 }
 
 // Function to extract text from a range of pages (pages 0 to 2)
-extrctsText(): void {    
+extractTexts(): void {
   const viewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
   viewer.extractText(0, 2, 'TextOnly').then((val: any) => {
      console.log('Extracted Text from Pages 0 to 2:');
@@ -102,6 +102,6 @@ extrctsText(): void {
 #### Explanation:
 **Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.
 
-**Multiple Pages Extraction:** The second extractText call extracts text from pages 0 through 2 (`startIndex = 0, endIndex = 2`), using the `TextOnly` option for plain text extraction.
+**Multiple Pages Extraction:** The second `extractText` call extracts text from pages 0 through 2 (`startIndex = 0, endIndex = 2`), using the `TextOnly` option for plain text extraction.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

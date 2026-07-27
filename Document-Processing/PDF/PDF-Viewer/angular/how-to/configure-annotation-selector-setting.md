@@ -18,7 +18,7 @@ Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/document
 
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
-Steps to configure annotation selector settings
+Steps to configure annotation selector settings:
 
 - Step 1: Create a PDF Viewer instance and initialize it.
 - Step 2: Set the annotationSelectorSettings property to customize selector behavior.
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-#### Key properties
+### Key properties
 
 - selectionBorderColor: Sets the color for the border around selected annotations.
 - resizerBorderColor: Sets the color for the border of the resizer handles.

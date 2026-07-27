@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# supported PDF conformance in Anglar PDF Viewer component
+# Supported PDF Conformance in an Angular PDF Viewer Component
 
 The Angular PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 

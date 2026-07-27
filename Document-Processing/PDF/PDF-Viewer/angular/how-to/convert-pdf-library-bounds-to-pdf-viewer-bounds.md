@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 
-Steps to convert bounds values
+Steps to convert bounds values:
 
 **Step 1:** Initialize the PDF Viewer instance
 
@@ -86,7 +86,7 @@ Fetch the blob data and convert it into a JSON object.
   }
 ```
 
-**Conclusion**
+## Conclusion
 
 These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, helping maintain accurate annotation placement.
 

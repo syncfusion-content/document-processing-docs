@@ -3,7 +3,7 @@ layout: post
 title: Extract text Option in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Extract text Option in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Extract text Option
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -20,7 +20,6 @@ The `extractTextOption` property controls the amount of text and layout informat
 The following example demonstrates how to configure the `extractTextOption` property to control the level of text extraction:
 
 ```ts
-
 import { Component, OnInit } from '@angular/core';
 import {
   LinkAnnotationService,
@@ -84,6 +83,6 @@ export class AppComponent implements OnInit {
 
 **extractTextOption.None:** This option does not extract or return any text or layout information. It is used to optimize memory usage when no text extraction is necessary. This setting is only relevant for the `extractTextCompleted` event and cannot be used with the `ExtractText` method.
 
-N> Text Search: When using the `extractTextOption.TextOnly` and `extractTextOption.None` option, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
+N> Text Search: When using the `extractTextOption.TextOnly` and `extractTextOption.None` options, the findText method will not work. Instead, you should use the findTextAsync method to perform text searches asynchronously.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)
