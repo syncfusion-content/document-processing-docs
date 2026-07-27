@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Preprocess PDF Document Before Displaying in ASP.NET Core PDF Viewer
+# Preprocessed PDF Document Before Displaying in ASP.NET Core PDF Viewer
 
 This section explains why preprocessing is useful, what operations you can perform using the Syncfusion PDF Library, and how to load the processed document in the ASP.NET Core PDF Viewer.
 
