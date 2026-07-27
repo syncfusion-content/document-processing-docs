@@ -3,23 +3,23 @@ layout: post
 title: Searching in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Searching in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Searching 
+control: Searching
 documentation: ug
 ---
 
 # Searching in EJ2 TypeScript Spreadsheet control
 
-Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
- 
+The Find and Replace feature helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable the Find and Replace functionality.
+
 > * The default value for `allowFindAndReplace` property is `true`.
 
 ## Find
 
-Find feature is used to select the matched contents of a cell within the sheet or workbook. It is extremely useful when working with large set of data source.
+The Find feature is used to select the matched contents of a cell within the sheet or workbook. It is extremely useful when working with large sets of data sources.
 
 **User Interface**:
 
-Find can be done by any of the following ways:
+Find can be done in any of the following ways:
 
 * Select the Search icon in the Ribbon toolbar or use `Ctrl + F` key to open the Find dialog.
 * Use find Next and find Previous buttons to search the given value in the workbook.
@@ -30,7 +30,7 @@ Find can be done by any of the following ways:
 > * `Match case`: To find the matched value with case sensitive.
 > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-* Using [`find()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#find) method to perform find operation.
+* Using [`find()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#find) method to perform find operation.
 
 ## Replace
 
@@ -38,22 +38,22 @@ Replace feature is used to change the find contents of a cell within sheet or wo
 
 **User Interface**:
 
-Replace can be done by any of the following ways:
+Replace can be done in any of the following ways:
 
 * Use `Ctrl + H` key to open the Find and Replace dialog.
 * Use Replace button to change the found value in sheet or workbook.
 * Using Replace All button, all the matched criteria can be replaced with find value based on sheet or workbook.
-* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
+* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
+* Using [`replace()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
 
 ## Go to
 
-Go to feature is used to navigate to a specific cell address in the sheet or workbook.
+Go to feature is used to navigate to a specific cell address in a sheet or workbook.
 
 **User Interface**:
 
 * Use `Ctrl + G` key to open the Go To dialog.
-* Use [`goTo()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#goto) method to perform Go To operation.
+* Use [`goTo()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#goto) method to perform Go To operation.
 In the following sample, searching can be done by following ways:
 
 * Select the Home tab in the Ribbon toolbar, and then select the Search icon.
