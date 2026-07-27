@@ -11,6 +11,8 @@ documentation: ug
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 
+> Before working with worksheet APIs, you must have a Spreadsheet control initialized in your application. For setup details, refer to the [getting started](https://ej2.syncfusion.com/javascript/documentation/spreadsheet/getting-started) documentation.
+
 ## Add sheet
 
 You can dynamically add or insert a sheet in one of the following ways:

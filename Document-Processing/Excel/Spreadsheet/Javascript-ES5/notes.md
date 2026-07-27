@@ -130,7 +130,7 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-To disable the note functionality, set the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablenotes) property to **false**. After disabling, the Spreadsheet does not show notes in opened documents. The **"Add Note"** option does not appear in the context menu, and the keyboard shortcuts for note functionality do not work.
+To disable the note functionality, set the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the Spreadsheet does not show notes in opened documents. The **"Add Note"** option does not appear in the context menu, and the keyboard shortcuts for note functionality do not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
