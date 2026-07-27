@@ -115,7 +115,7 @@ The Syncfusion<sup>&reg;</sup> .NET PDF library supports adding vector images in
 * EMF plus dual
 * WMF
 
-For cross-platform .NET applications, install the [Syncfusion.MetafileRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/). This package provides the MetafileRenderer class, which converts EMF and WMF streams into PDF templates that can be rendered in PDF documents.
+For cross-platform .NET applications, install the [Syncfusion.MetafileRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/). This package provides the `MetafileRenderer` class, which converts EMF and WMF streams into PDF templates that can be rendered in PDF documents.
 
 For Windows-specific applications, The [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) class loads EMF images, and the [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class allows you to control how text and images are split across pages in the PDF document. The following code example illustrates this.
 
