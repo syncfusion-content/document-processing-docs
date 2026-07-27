@@ -3,7 +3,7 @@ layout: post
 title: Editing in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Editing in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Editing 
+control: Editing
 documentation: ug
 ---
 
@@ -31,7 +31,7 @@ If the cell is in editable state, you can save the edited cell by one of the fol
 
 ## Cancel editing
 
-To cancel the editing without saving the changes, you can use one of the following ways,
+To cancel editing without saving the changes, use one of the following:
 
 * Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
 * Using the [`closeEdit`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#closeedit) method.

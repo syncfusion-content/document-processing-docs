@@ -9,7 +9,7 @@ keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in Blazor
 
-The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Blazor**. 
+The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Blazor**.
 
 **Prerequisites:**
 
@@ -115,7 +115,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-Step 10: Create a new MemoryStream method with name as **LoadAndSavePDF** in **ExportService** class and include the following code snippet to **open an existing PDF document in Blazor** Server app.
+Step 10: Create a new MemoryStream method named **LoadAndSavePDF** in the **ExportService** class and include the following code snippet to **open an existing PDF document in the Blazor Server app**.
 
 {% tabs %}
 
@@ -125,7 +125,8 @@ public static MemoryStream LoadAndSavePDF()
 {
     //Open an existing PDF document
     FileStream fileStream = new FileStream("Input.pdf", System.IO.FileMode.Open, System.IO.FileAccess.Read);
-    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);    
+    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);
+    return new MemoryStream();
 }
 {% endhighlight %}
 

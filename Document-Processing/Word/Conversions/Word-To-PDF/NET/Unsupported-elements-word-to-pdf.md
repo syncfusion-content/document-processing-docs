@@ -261,7 +261,7 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 
 ## Show Warning for Unsupported Elements
 
-> **Prerequisites:** Refer to the [NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf.md) and ensure the required assemblies are referenced in your project.
+> **Prerequisites:** Refer to the [NuGet packages required for Word to PDF conversion](nuget-packages-required-word-to-pdf) and ensure the required assemblies are referenced in your project.
 
 When converting a Word document to a PDF, the presence of unsupported elements in the input Word document can lead to preservation issues in the converted PDF. The .NET Word library (DocIO) provides the [Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverterSettings.html#Syncfusion_DocToPDFConverter_DocToPDFConverterSettings_Warning) API (and the equivalent [DocIORenderer.Settings.Warning](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIORenderer.DocIORendererSettings.html#Syncfusion_DocIORenderer_DocIORendererSettings_Warning) for cross-platform scenarios), which helps to detect and handle these unsupported elements during the conversion process. This API holds the information of unsupported elements found in the input Word document.
 

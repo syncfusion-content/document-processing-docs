@@ -20,7 +20,7 @@ N> DocIO internally uses the specified fallback fonts for Unicode characters dur
 
 ## Prerequisites
 
-To use fallback fonts during Word to PDF conversion, install the required Syncfusion NuGet packages. For more information on NuGet packages and assemblies, refer to the [NuGet packages required for Word to PDF](Nuget-packages-required-word-to-pdf.md) and [Assemblies required for Word to PDF](Assemblies-required-word-to-pdf.md) documentation.
+To use fallback fonts during Word to PDF conversion, install the required Syncfusion NuGet packages. For more information on NuGet packages and assemblies, refer to the [NuGet packages required for Word to PDF](Nuget-packages-required-word-to-pdf) and [Assemblies required for Word to PDF](./Assemblies-required-word-to-pdf) documentation.
 
 The following namespaces are used in the code examples throughout this document:
 
@@ -829,8 +829,8 @@ N> The Unicode ranges in the table are inclusive on both ends. A character belon
 
 ## See also
 
-* [Font substitution in Word to PDF conversion](Font-substituion-word-to-pdf.md)
-* [NuGet packages required for Word to PDF conversion](Nuget-packages-required-word-to-pdf.md)
-* [Assemblies required for Word to PDF conversion](Assemblies-required-word-to-pdf.md)
-* [Word to PDF conversion settings](Word-to-pdf-settings.md)
-* [Frequently asked questions about Word to PDF conversion](Faqs-word-to-pdf.md)
+* [Font substitution in Word to PDF conversion](Font-substituion-word-to-pdf)
+* [NuGet packages required for Word to PDF conversion](Nuget-packages-required-word-to-pdf)
+* [Assemblies required for Word to PDF conversion](Assemblies-required-word-to-pdf)
+* [Word to PDF conversion settings](Word-to-pdf-settings)
+* [Frequently asked questions about Word to PDF conversion](Faqs-word-to-pdf)
