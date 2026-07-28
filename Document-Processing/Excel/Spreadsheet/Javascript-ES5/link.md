@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Link in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Link in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Link in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn here all about Link in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Link 
+control: Link
 documentation: ug
 ---
 
-# Link in EJ2 Javascript Spreadsheet control
+# Link in EJ2 JavaScript Spreadsheet Control
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowhyperlink) property to enable or disable hyperlink functionality.
+Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 
 > * The default value for `allowHyperlink` property is `true`.
 
@@ -22,9 +22,9 @@ You can insert a hyperlink in a worksheet cell for quick access to related infor
 In the active spreadsheet, click the cell where you want to create a hyperlink. Insert hyperlink can be done by any of the following ways:
 
 * Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
-* Right-click the cell and then click Hyperlink item in the context menu.
+* Right-click the cell and select **Hyperlink** in the context menu.
 * Use `Ctrl + K` keyboard shortcut to apply the hyperlink.
-* Use the [`addHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#addhyperlink) method programmatically.
+* Use the [`addHyperlink`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#addhyperlink) method programmatically.
  
 ## Edit Hyperlink
 
@@ -32,27 +32,27 @@ You can change an existing hyperlink in your workbook by changing its destinatio
 
 **User Interface**:
 
-In the active spreadsheet, Select the cell that contains the hyperlink that you want to change. Editing the hyperlink while opening the dialog can be done by any one of the following ways:
+In the active spreadsheet, select the cell that contains the hyperlink that you want to change. The Edit Hyperlink dialog can be opened by any one of the following ways:
 
 * Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
-* Right-click the cell and then click Edit Hyperlink item in the context menu, or you can press Ctrl+K.
+* Right-click the cell and select **Edit Hyperlink** in the context menu, or press `Ctrl+K`.
 
-In the Edit Link dialog box, make the changes that you want, and click UPDATE.
+In the Edit Link dialog box, make the changes that you want, and click **Update**.
 
 ## Remove Hyperlink
 
-Performing this operation remove a single hyperlink without losing the display text.
+Performing this operation removes a single hyperlink without losing the display text.
 
 **User Interface**:
 
-In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
+In the active spreadsheet, click the cell where you want to remove a hyperlink. Remove hyperlink can be done by any of the following ways:
 
-* Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#removehyperlink) method programmatically.
+* Right-click the cell and select **Remove Hyperlink** in the context menu.
+* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#removehyperlink) method programmatically.
 
 ## How to change target attribute
 
-There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
+There is an event named `beforeHyperlinkClick` which triggers only when a hyperlink is clicked. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

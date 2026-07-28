@@ -3,7 +3,7 @@ layout: post
 title: Scrolling in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Scrolling in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet
+control: Index
 documentation: ug
 ---
 
@@ -44,7 +44,7 @@ You can scroll through the worksheet using one of the following ways:
 * Using the Horizontal and Vertical`scroll` bars.
 * Using the `mouse` wheel.
 
-## Finite Scrolling with Defined Rows and Columns
+## Finite scrolling with defined rows and columns
 
 If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
 
