@@ -26,7 +26,7 @@ Create a new Nx workspace with Angular as the starter preset:
 npx create-nx-workspace@latest org
 ```
 
-N> To verify Nx installation navigate into you workspace directory and use `npx nx --version`
+N> To verify Nx installation navigate into your workspace directory and use `npx nx --version`
 
 ## Step 2: Create an Angular Application
 

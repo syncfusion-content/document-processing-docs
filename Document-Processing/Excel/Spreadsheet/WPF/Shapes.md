@@ -8,33 +8,34 @@ documentation: ug
 ---
 
 # Shapes in WPF Spreadsheet (SfSpreadsheet)
- This section explains how to import charts, sparklines, pictures and textboxes in SfSpreadsheet.
+
+This section explains how to import charts, sparklines, pictures, and text boxes in SfSpreadsheet.
 
 ## Charts
 
-SfSpreadsheet provides support to import charts from excel which are used to represent numeric data in graphical format to make it easier to understand large quantities of data.
+SfSpreadsheet provides support to import charts from Excel, which represent numeric data graphically to make it easier to understand large quantities of data.
 
-For importing charts in SfSpreadsheet, add the following assembly as reference into the application.
+For importing charts in SfSpreadsheet, add the following assembly as a reference in the application.
  
 Assembly: **Syncfusion.SfSpreadsheetHelper.WPF.dll**
 
-Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[GraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRenderer.html) and add that renderer into [GraphicCellRenderers](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicModel_GraphicCellRenderers) collection by using the helper method [AddGraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddGraphicChartCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_IGraphicCellRenderer_) which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`. 
+Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[GraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRenderer.html) and add that renderer to the [GraphicCellRenderers](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicModel_GraphicCellRenderers) collection by using the helper method [AddGraphicChartCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddGraphicChartCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_IGraphicCellRenderer_), which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
 
 {% tabs %}
 {% highlight c# %}
 public MainWindow()
 {
-  InitializeComponent();
-  
-  //For importing charts,
-  this.spreadsheet.AddGraphicChartCellRenderer(new GraphicChartCellRenderer());
+    InitializeComponent();
+
+    // For importing charts
+    this.spreadsheet.AddGraphicChartCellRenderer(new GraphicChartCellRenderer());
 }
 {% endhighlight %}
 {% endtabs %}
 
 ### Adding the Charts at Runtime
 
-For adding the Charts in SfSpreadsheet at runtime, use [AddChart](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddChart_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_) method, also you can resize and reposition the chart.
+For adding charts in SfSpreadsheet at runtime, use the [AddChart](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddChart_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_) method. You can also resize and reposition the chart.
 
 {% tabs %}
 {% highlight c# %}
@@ -43,16 +44,16 @@ object[] Y_values = new object[] { 200, 100, 100 };
 object[] X_values = new object[] { "Total Income", "Expenses", "Profit" };
 IChartSerie series = chart.Series.Add(ExcelChartType.Pie);
 
-// Enters the X and Y values directly
+// Enter the X and Y values directly
 series.EnteredDirectlyValues = Y_values;
 series.EnteredDirectlyCategoryLabels = X_values;
 var shape = chart as ShapeImpl;
 
-// Re-Positioning Chart
+// Reposition the chart
 shape.Top = 200;
 shape.Left = 200;
 
-//Re-sizing a Chart
+// Resize the chart
 shape.Height = 300;
 shape.Width = 300;
 {% endhighlight %}
@@ -64,23 +65,23 @@ For importing sparklines in SfSpreadsheet, add the following assembly as referen
  
 Assembly: **Syncfusion.SfSpreadsheetHelper.WPF.dll**
 
-Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[SparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRenderer.html) and add that renderer into the Spreadsheet by using the helper method [AddSparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddSparklineCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_CellRenderer_ISpreadsheetCellRenderer_) which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
+Create an instance of Syncfusion.UI.Xaml.SpreadsheetHelper.[SparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRenderer.html) and add that renderer to the spreadsheet by using the helper method [AddSparklineCellRenderer](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddSparklineCellRenderer_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_UI_Xaml_Spreadsheet_CellRenderer_ISpreadsheetCellRenderer_), which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
 
 {% tabs %}
 {% highlight c# %}
 public MainWindow()
 {
-  InitializeComponent();
-      
-  //For importing sparklines,
-  this.spreadsheet.AddSparklineCellRenderer(new SparklineCellRenderer());
+    InitializeComponent();
+
+    // For importing sparklines
+    this.spreadsheet.AddSparklineCellRenderer(new SparklineCellRenderer());
 }
 {% endhighlight %}
 {% endtabs %}
 
 ## Pictures
 
-SfSpreadsheet provides support to import images in SpreadsheetGrid and to add an image at run time, use [AddImage](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddImage_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_System_IO_Stream_) method and also you can resize and reposition the image.
+SfSpreadsheet provides support to import images in `SpreadsheetGrid`. To add an image at runtime, use the [AddImage](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddImage_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_System_IO_Stream_) method. You can also resize and reposition the image.
 
 {% tabs %}
 {% highlight c# %}
@@ -88,11 +89,11 @@ var worksheet = spreadsheet.ActiveSheet;
 var stream = typeof(MainWindow).Assembly.GetManifestResourceStream("GraphicCellDemo.Data.Sample.jpg");
 var shape = spreadsheet.AddImage(worksheet, new RowColumnIndex(5, 5), stream);
 
-// Re-Positioning Picture
+// Reposition the picture
 shape.Top = 200;
 shape.Left = 200;
 
- //Re-sizing a Picture
+ // Resize the picture
 shape.Height = 200;
 shape.Width = 200;
 {% endhighlight %}
@@ -100,14 +101,14 @@ shape.Width = 200;
 
 ## TextBoxes
 
-SfSpreadsheet provides support to import RichText Box in `SpreadsheetGrid` and to add the rich text box at run time, use [AddTextBox](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddTextBox_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_System_Windows_Size_System_String_) method
+SfSpreadsheet provides support to import RichTextBox content in `SpreadsheetGrid`. To add a rich text box at runtime, use the [AddTextBox](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicCellHelper_AddTextBox_Syncfusion_UI_Xaml_Spreadsheet_SfSpreadsheet_Syncfusion_XlsIO_IWorksheet_Syncfusion_UI_Xaml_Grid_ScrollAxis_RowColumnIndex_System_Windows_Size_System_String_) method. You can also resize and reposition the text box.
 
 {% tabs %}
 {% highlight c# %}
 var rtfText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset1 Calibri;}{\\f1\\fnil\\fcharset1 Calibri;}}{\\colortbl;\\red0\\green0\\blue0;\\red255\\green0\\blue0;}{\\f0\\fs22\\b\\cf1\\u83*\\u121*\\u110*\\u99*\\u102*\\u117*\\u115*\\u105*\\u111*\\u110*\\u32*\\b0}                           {\\f1\\fs22\\cf2\\u83*\\u111*\\u102*\\u116*\\u119*\\u97*\\u114*\\u101*\\u32*}{\\f1\\fs22\\cf1\\u80*\\u118*\\u116*\\u46*\\u32*\\u76*\\u116*\\u100*}}";
 var textBox = spreadsheet.AddTextBox(spreadsheet.ActiveSheet, new RowColumnIndex(5, 5), new Size(200, 200), rtfText) as TextBoxShapeImpl;
 
-// Re-positioning RichTextBox
+// Reposition the RichTextBox
 textBox.Left = 200;
 textBox.Top = 200;
 {% endhighlight %}
@@ -115,7 +116,7 @@ textBox.Top = 200;
 
 ## Accessing the selected Shapes
 
-SfSpreadsheet allows the user to access the selected shapes and modify the properties associated with it in `SpreadsheetGrid`.
+SfSpreadsheet allows the user to access the selected shapes and modify their properties within `SpreadsheetGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -145,11 +146,11 @@ spreadsheet.ActiveGrid.GraphicModel.InvalidateGraphicVisual();
 
 ## Select a Shape Programmatically
 
-Users can select a shape programmatically by using [AddSelectedShapes](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicModel_AddSelectedShapes_Syncfusion_XlsIO_Implementation_Shapes_ShapeImpl_) method of [GraphicModel](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html) class.
+Users can select a shape programmatically by using the [AddSelectedShapes](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_UI_Xaml_Spreadsheet_GraphicCells_GraphicModel_AddSelectedShapes_Syncfusion_XlsIO_Implementation_Shapes_ShapeImpl_) method of the [GraphicModel](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.GraphicCells.GraphicModel.html) class.
 
 {% tabs %}
 {% highlight c# %}
-var shape = spreadsheet.ActiveSheet.Shapes[2] as ShapeImpl;          
+var shape = spreadsheet.ActiveSheet.Shapes[2] as ShapeImpl;
 spreadsheet.ActiveGrid.GraphicModel.AddSelectedShapes(shape);
 {% endhighlight %}
 {% endtabs %}
@@ -165,4 +166,7 @@ spreadsheet.ActiveGrid.GraphicModel.ClearSelection();
 {% endtabs %}
 
 
-N> You can refer to our [WPF Spreadsheet Editor](https://www.syncfusion.com/wpf-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [WPF Spreadsheet example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the spreadsheet.
+## See Also
+
+- [WPF Spreadsheet Editor feature tour](https://www.syncfusion.com/wpf-controls/spreadsheet)
+- [WPF Spreadsheet examples on GitHub](https://github.com/syncfusion/wpf-demos)

@@ -10,26 +10,27 @@ documentation: ug
 
 # Sorting in ASP.NET Core Spreadsheet control
 
-Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
+Sorting helps arrange data in a specific order within a selected range of cells. Use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
 
-N> * The default value for `allowSorting` property is `true`.
+N> * The default value of the `allowSorting` property is `true`.
 
-By default, the `sort` module is injected internally into Spreadsheet to perform sorting.
+By default, the `sort` module is injected internally into the Spreadsheet to provide sorting functionality.
 
 ## Sort by cell value
 
-In the active Spreadsheet, select a range of cells to sort by cell value. The range sort can be done by any of the following ways:
-* Select the sort item in the Ribbon toolbar and choose the ascending or descending item.
-* Right-click the sheet, select the sort item in the context menu and choose the ascending/descending item.
-* Use the `sort()` method programmatically.
+To sort a selected range by cell value:
 
-The cell values can be sorted in the following orders:
-* Ascending
-* Descending
+* Select the range of cells to sort.
+* Choose the required sorting option in one of the following ways:
+   * Open the sorting options in the Ribbon and choose **Ascending** or **Descending**.
+   * Right-click the selected range, open the sorting options in the context menu, and choose **Ascending** or **Descending**.
 
-N> * Ascending is the default order for sorting.
 
-The `sort()` method with empty arguments will sort the selected range by active cell’s column as sort column in ascending order.
+You can also use the `sort()` method to sort a range programmatically.
+
+N> * Ascending is the default sorting order.
+
+When the `sort()` method is called without arguments, it sorts the selected range in ascending order using the active cell's column as the sort column.
 
 N> * The `beforeSort` event will be triggered before sorting the specified range.
 <br/> * The `sortComplete` event will be triggered after the sort action is completed successfully.
@@ -70,7 +71,7 @@ The default sort functionality of Spreadsheet is a case insensitive sorting. Whe
 
 Case sensitive sorting is applicable only for cells with alphabets. In ascending order sorting with case sensitive enabled, the cells with lower case text will be placed above the cells with upper case text.
 
-N> * The default value for the `caseSensitive` property is `false`.
+N> The default value of the `caseSensitive` property is `false`.
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
@@ -86,7 +87,7 @@ In the custom sort dialog, the `Case sensitive` checkbox is unchecked on load as
 
 ## Sort multiple columns
 
-When you want to perform sorting on multiple columns, it can be done by any of the following ways:
+You can sort multiple columns in one of the following ways:
 * Select the `Custom sort…` menu item from the Ribbon toolbar item or context menu item.
 * Use the `sort()` method programmatically by providing sort criteria.
 
@@ -94,7 +95,7 @@ N> * The current sorting functionality supports sorting based on cell values onl
 
 ### Custom sort dialog
 
-The custom sort dialog helps sorting multiple columns in the selected range by utilizing the rich UI. This dialog will be appeared while choosing the `Custom sort…` from the Ribbon item or context menu item. By default, sort criteria with the first column name from the selected range will be appeared in the dialog on initial load and it cannot be removed.
+The custom sort dialog allows you to sort multiple columns in the selected range. The dialog appears when you select **Custom Sort** from the Ribbon or context menu. By default, the first column in the selected range is added as a sort criterion and cannot be removed. Use **Add Column** to add criteria with different sort orders. To remove an added criterion, select its delete icon.
 
 You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Thus, multiple columns can be specified with different sort order. The newly added sort criteria items can be removed using the `delete` icons at the end of each items.
 
@@ -146,9 +147,9 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% endhighlight %}
 {% endtabs %}
 
-## Known error validations
+## Sorting validation errors
 
-The following errors have been handled for sorting,
+The Spreadsheet handles the following sorting validation errors:
 * *Out of range validation:* When the selected range is not a used range of the active sheet, it is considered as invalid and the out of range alert with the message `Select a cell or range inside the used range and try again` will be displayed. No sort will be performed if the range is invalid.
 
 * *Empty field validation:* When the sort criteria does not have a column selected (empty) in the custom sort dialog, it will become invalid, and an error message `Sort criteria column should not be empty` will be displayed on `OK` button click.
@@ -157,7 +158,7 @@ The following errors have been handled for sorting,
 
 ## Limitations
 
-* Sorting is not supported with formula contained cells.
+* Sorting cells that contain formulas is not supported.
 
 ## See Also
 

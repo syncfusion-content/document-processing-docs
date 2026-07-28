@@ -9,11 +9,11 @@ documentation: ug
 
 # Find and Replace in Windows Forms Spreadsheet
 
-This section explains about Find and Replace operations in Spreadsheet. 
+This section explains Find and Replace operations in the Spreadsheet control.
 
-## Find 
+## Find
 
-Searches for specific data such as particular number or text according to specified options and returns an IRange representing the cell or null if no cell is found. The various options in Find operation are
+Searches for specific data, such as a particular number or text, according to the specified options and returns an `IRange` representing the cell, or `null` if no cell is found. The various Find options are:
 
 * [FindAll](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_FindAll_Syncfusion_XlsIO_IWorkbook_System_String_Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchBy_Syncfusion_XlsIO_ExcelFindType_System_Boolean_System_Boolean_)
 * [FindNext](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_FindNext_Syncfusion_XlsIO_IWorkbook_System_String_Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchBy_Syncfusion_XlsIO_ExcelFindType_System_Boolean_System_Boolean_)
@@ -22,18 +22,18 @@ Searches for specific data such as particular number or text according to specif
 * [FindFormulas](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_FindFormulas_Syncfusion_XlsIO_IWorksheet_)
 * [FindDataValidation](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_FindDataValidation_Syncfusion_XlsIO_IWorksheet_)
 
-The common parameters to be passed in Find functions are,
+The common parameters passed to Find functions are:
 
-* The option to specify whether the search can be done within the Workbook([IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html)) or Worksheet([IWorksheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html)).
-* The text to be searched.
-* The option to specify the direction whether the search can be done either by row wise or column wise using [SearchBy](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchBy.html) enum.
-* The type to specify whether the search can be done either in formulas or values using [ExcelFindType](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelFindType.html) enum.
-* For a case sensitive search, pass the parameter as true otherwise you can pass the parameter as false.
-* For matching the entire cell content with the search text, pass the parameter as true otherwise you can pass the parameter as false.
+* The option that specifies whether the search is performed within the [IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html) or [IWorksheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html).
+* The text to search for.
+* The [SearchBy](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchBy.html) enum that specifies whether the search proceeds by row or by column.
+* The [ExcelFindType](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.ExcelFindType.html) enum that specifies whether the search is performed in text, numbers, or formulas.
+* For a case-sensitive search, pass `true`; otherwise pass `false`.
+* To match the entire cell content with the search text, pass `true`; otherwise pass `false`.
 
 ### Find All
 
-Searches every occurrence of specific data based on the criteria that you are searching for and returns an `IRange` list representing the cells in `Spreadsheet`
+Searches every occurrence of specific data that matches the criteria and returns an `IRange` list representing the matched cells in the `Spreadsheet`.
 
 {% tabs %}
 {% highlight c# %}
@@ -44,18 +44,18 @@ var list = spreadsheet.SearchManager.FindAll(spreadsheet.Workbook, "sample", Sea
 // To select the matched cell content ranges,
 
 foreach (var cell in list)
-{  
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+{
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
-//Search the particular worksheet
+//Search the specified worksheet
 var list = spreadsheet.SearchManager.FindAll(spreadsheet.Workbook.Worksheets[0], "sample", SearchBy.ByRows, ExcelFindType.Text, false, true);
 
 // To select the matched cell content ranges,
 
 foreach (var cell in list)
 {
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -63,29 +63,29 @@ foreach (var cell in list)
 
 ### Find Next
 
-Searches the first occurrence of specific data which matches the conditions and returns the matched `IRange` from the current range that represents the cell.
+Searches for the first occurrence of specific data that matches the conditions and returns the matched `IRange` from the current range.
 
 {% tabs %}
 {% highlight c# %}
 
-//Search the text in entire workbook in column wise,
+//Search the text in the entire workbook by column
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook, "sample", SearchBy.ByColumns, ExcelFindType.Text, false, true);
 
-// To move the current cell to matched cell content range,
-spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);          
+// To move the current cell to the matched cell,
+spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);
 
-//Search the formula in particular worksheet in row wise,
+//Search the text in the specified worksheet by row
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook.Worksheets[0], "sum", SearchBy.ByRows, ExcelFindType.Text, false, false);
 
-// To move the current cell to matched cell content range,
-spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);          
+// To move the current cell to the matched cell,
+spreadsheet.ActiveGrid.CurrentCell.MoveCurrentCell(cell.Row,cell.Column);
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Finding conditional formatting
 
-Searches and returns the `IRange` list which have conditional formatting within the specified worksheet.
+Searches and returns the `IRange` list of cells that have conditional formatting in the specified worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -97,7 +97,7 @@ var list = spreadsheet.SearchManager.FindConditionalFormatting(spreadsheet.Workb
 
 foreach (var cell in list)
 {
-  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+  spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -105,7 +105,7 @@ foreach (var cell in list)
 
 ### Finding constants
 
-Searches and returns the `IRange` list which have constants within the specified worksheet.
+Searches and returns the `IRange` list of cells that contain constants in the specified worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -117,7 +117,7 @@ var list = spreadsheet.SearchManager.FindConstants(spreadsheet.Workbook.Workshee
 
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));         
+   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -125,7 +125,7 @@ foreach (var cell in list)
 
 ### Finding formulas
 
-Searches and returns the `IRange` list which have formulas within the specified worksheet.
+Searches and returns the `IRange` list of cells that contain formulas in the specified worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -137,7 +137,7 @@ var list = spreadsheet.SearchManager.FindFormulas(spreadsheet.Workbook.Worksheet
 
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));          
+   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -145,7 +145,7 @@ foreach (var cell in list)
 
 ### Finding data validation
 
-Searches and returns the `IRange` list which have data validation within the specified worksheet.
+Searches and returns the `IRange` list of cells that have data validation in the specified worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -157,7 +157,7 @@ var list = spreadsheet.SearchManager.FindDataValidation(spreadsheet.Workbook.Wor
 
 foreach (var cell in list)
 {
-   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));        
+   spreadsheet.ActiveGrid.SelectionController.AddSelection(GridRangeInfo.Cell(cell.Row, cell.Column));
 }
 
 {% endhighlight %}
@@ -165,15 +165,15 @@ foreach (var cell in list)
 
 ## Replace All
 
-Searches and replaces all the texts either in the workbook or worksheet based on the given option.
+Searches and replaces all occurrences of the text in the workbook or in a specified worksheet.
 
-The parameters to be passed in [ReplaceAll](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_ReplaceAll_Syncfusion_XlsIO_IWorkbook_System_String_System_String_System_Boolean_System_Boolean_) function is,
+The parameters passed to the [ReplaceAll](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Commands.SearchManager.html#Syncfusion_Windows_Forms_Spreadsheet_Commands_SearchManager_ReplaceAll_Syncfusion_XlsIO_IWorkbook_System_String_System_String_System_Boolean_System_Boolean_) method are:
 
-* The option to specify whether the search can be done within the Workbook([IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html)) or Worksheet([IWorksheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html)) in Spreadsheet.
-* The text to be searched.
-* The text to be replaced.
-* For a case sensitive search, pass the parameter as true otherwise you can pass the parameter as false.
-* For matching the entire cell content with the search text, pass the parameter as true otherwise you can pass the parameter as false.
+* The option that specifies whether the search is performed within the [IWorkbook](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorkbook.html) or [IWorksheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html) in the Spreadsheet.
+* The text to search for.
+* The replacement text.
+* For a case-sensitive search, pass `true`; otherwise pass `false`.
+* To match the entire cell content with the search text, pass `true`; otherwise pass `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -181,7 +181,7 @@ The parameters to be passed in [ReplaceAll](https://help.syncfusion.com/cr/windo
 //Replaces the text in the entire workbook
 spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook, "sample","Sync", false, false);
 
-//Replaces the text in the particular worksheet
+//Replaces the text in the specified worksheet
 spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook.Worksheets[0], "sample", "sync", false, true);
 
 {% endhighlight %}
@@ -189,12 +189,12 @@ spreadsheet.SearchManager.ReplaceAll(spreadsheet.Workbook.Worksheets[0], "sample
 
 ## Replace
 
-Searches for the text or numbers that you want to change using `FindNext` method and once the immediate matched cell has been found, use [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) method to replace it with specified text or numbers in `Spreadsheet`.
+Searches for the text or number to change using `FindNext`; once a match is found, use [SetCellValue](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetGrid.html#Syncfusion_Windows_Forms_Spreadsheet_SpreadsheetGrid_SetCellValue_Syncfusion_XlsIO_IRange_System_String_) to replace it with the specified text or number in the `Spreadsheet`.
 
 {% tabs %}
 {% highlight c# %}
 
-//Searches the given text and replaces it with specified text
+//Searches the given text and replaces it with the specified text
 var cell = spreadsheet.SearchManager.FindNext(spreadsheet.Workbook, "sample", SearchBy.ByColumns, ExcelFindType.Text, false, true);
 spreadsheet.ActiveGrid.SetCellValue(cell, "sync");
 
