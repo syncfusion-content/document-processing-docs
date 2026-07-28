@@ -39,6 +39,10 @@ The **isReadOnly** property prevents users from modifying a form field through t
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -75,6 +79,10 @@ When required fields are empty, validation can prevent further actions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -110,6 +118,10 @@ The **isPrint** property controls whether a form field appears in the printed ou
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -196,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Update Flags on Existing Fields Programmatically
 
-The [updateFormField()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html) method modifies constraint values on existing form fields.
+The [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) method modifies constraint values on existing form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
