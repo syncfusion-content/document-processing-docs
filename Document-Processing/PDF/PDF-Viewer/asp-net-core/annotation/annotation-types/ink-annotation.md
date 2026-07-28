@@ -39,7 +39,7 @@ In the ASP.NET Core PDF Viewer, annotation modules such as Ink are enabled by de
 ![Ink tool](../../images/ink_tool.png)
 
 ### Enable Ink Mode
-Switch the viewer into a ink annotation mode programmatically.
+Switch the viewer into an ink annotation mode programmatically.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -154,7 +154,7 @@ function editInkProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Stamp
+### Delete Ink
 
 Delete Ink via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
