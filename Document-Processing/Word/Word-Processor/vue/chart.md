@@ -27,7 +27,8 @@ The following example shows chart preservation in Document Editor.
 
 # Supported Chart Types
 
-The following chart types are supported in Document Editor
+The following chart types are supported in Document Editor:
+
 * Scatter_Markers
 * Bubble
 * Area
@@ -51,3 +52,8 @@ The following chart types are supported in Document Editor
 ## Online Demo
 
 Explore how to preserve charts in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/chart.html).
+
+## See Also
+
+* [Feature modules](./feature-module)
+* [Getting started](./getting-started)

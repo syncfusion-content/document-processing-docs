@@ -30,17 +30,17 @@ Cut a portion of document to system clipboard using built-in context menu of Doc
 
 ## Paste
 
-Due to limitations, you can paste contents from system clipboard as plain text in Document Editor only using the ‘CTRL + V’ keyboard shortcut.
+Due to browser limitations, you can paste contents from system clipboard as plain text in Document Editor only using the ‘CTRL + V’ keyboard shortcut.
 
 ## Local paste
 
-Document Editor expose API to enable local paste within the control. On enabling this, the following is performed:
+Document Editor exposes an API to enable local paste within the control. On enabling this, the following is performed:
 * Selected contents will be stored to an internal clipboard in addition to system clipboard.
 * Clipboard paste will be overridden, and internally stored data that has formatted text will be pasted.
 Refer to the following sample code.
 
-```
- <ejs-documenteditor ref="documenteditor" :enableLocalPaste='true' :enableEditor='true' :isReadOnly=false style="width: 100%;height: 100%;"></ejs-documenteditor>
+```html
+ <ejs-documenteditor ref="documenteditor" :enableLocalPaste='true' :enableEditor='true' :isReadOnly='false' style="width: 100%;height: 100%;"></ejs-documenteditor>
 ```
 
 By default, **enableLocalPaste** is false.
@@ -63,7 +63,7 @@ Note:
 
 ## Paste with formatting
 
-Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in Document Editor to false and use this .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to paste the system clipboard data with formatting.
+Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in Document Editor to false and use this .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. For more information on setting up the web API service, refer to [Web services overview](./web-services-overview). This library helps you to paste the system clipboard data with formatting.
 
 You can paste your system clipboard data in the following ways:
 * **Keep Source Formatting** This option retains the character styles and direct formatting applied to the copied text. Direct formatting includes characteristics such as font size, italics, or other formatting that is not included in the paragraph style.
