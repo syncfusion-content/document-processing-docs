@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Data Management in WPF Spreadsheet (SfSpreadsheet)
-This section explains about how to import and export the DataTable in `SfSpreadsheet`.
+SfSpreadsheet supports importing and exporting worksheet data to and from a `DataTable`.
 
 ## Import from DataTable
 
@@ -30,7 +30,7 @@ spreadsheet.ActiveGrid.InvalidateCells();
 {% endhighlight %}
 {% endtabs %}
 
-For more details regarding importing of data, please refer the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#importing-data-to-worksheets)
+For more details regarding importing data, please refer to the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#importing-data-to-worksheets).
 
 ## Export to DataTable
 
@@ -45,5 +45,8 @@ DataTable data_table = sheet.ExportDataTable(range, ExcelExportDataTableOptions.
 {% endhighlight %}
 {% endtabs %}
 
-For more details regarding exporting of data, please refer the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#exporting-from-worksheet-to-data-table)
+For more details regarding exporting data, please refer to the [XlsIO UG](http://help.syncfusion.com/file-formats/xlsio/working-with-data#exporting-from-worksheet-to-data-table).
+
+## See also
+* [Formulas in SfSpreadsheet](formulas)
 

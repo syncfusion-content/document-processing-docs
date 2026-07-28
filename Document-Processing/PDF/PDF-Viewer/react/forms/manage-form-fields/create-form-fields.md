@@ -134,7 +134,7 @@ root.render(<App />);
 
 ### Password
 
-**Add via UI**: Open form designer toolbar → Select Password → place → configure properties
+**Add via UI**: Open Form Designer toolbar → Select Password → place → configure properties
 
 ![Password Properties Panel](../../../javascript-es6/images/ui-password-edit.png)
 
@@ -184,7 +184,7 @@ root.render(<App />);
 
 ### CheckBox
 
-**Add via UI**: Open form designer toolbar → Select CheckBox → click to place → duplicate for options.
+**Add via UI**: Open Form Designer toolbar → Select CheckBox → click to place → duplicate for options.
 
 ![CheckBox Properties Panel](../../../javascript-es6/images/ui-checkbox-edit.png)
 
@@ -233,7 +233,7 @@ root.render(<App />);
 
 ### RadioButton
 
-**Add via UI**: Open form designer toolbar → Select RadioButton → place buttons using the same `name` to group them.
+**Add via UI**: Open Form Designer toolbar → Select RadioButton → place buttons using the same `name` to group them.
 
 ![Radio Button Properties Panel](../../../javascript-es6/images/ui-radiobutton-edit.png)
 
@@ -254,14 +254,14 @@ export function App() {
     viewerRef.current?.formDesignerModule.addFormField('RadioButton', {
       name: 'Gender',
       value: 'Male',
-      pageNumber: 0,
+      pageNumber: 1,
       bounds: { X: 100, Y: 270, Width: 16, Height: 16 }
     });
 
     viewerRef.current?.formDesignerModule.addFormField('RadioButton', {
       name: 'Gender',
       value: 'Female',
-      pageNumber: 0,
+      pageNumber: 1,
       bounds: { X: 160, Y: 270, Width: 16, Height: 16 }
     });
   };
@@ -289,7 +289,7 @@ root.render(<App />);
 
 ### ListBox
 
-**Add via UI**: Open form designer toolbar → Select ListBox → place → add items in Properties.
+**Add via UI**: Open Form Designer toolbar → Select ListBox → place → add items in Properties.
 
 ![ListBox Properties Panel](../../../javascript-es6/images/ui-listbox-edit.png)
 
@@ -343,7 +343,7 @@ root.render(<App />);
 
 ### DropDown
 
-**Add via UI**: Open form designer toolbar → Select DropDown → place → add items → set default value.
+**Add via UI**: Open Form Designer toolbar → Select DropDown → place → add items → set default value.
 
 ![DropDown Properties Panel](../../../javascript-es6/images/ui-dropdown-edit.png)
 
@@ -396,7 +396,7 @@ root.render(<App />);
 
 ### Signature Field
 
-**Add via UI**: Open form designer toolbar → select Signature Field → place where signing is required → configure indicator text/thickness/tooltip/isRequired.
+**Add via UI**: Open Form Designer toolbar → select Signature Field → place where signing is required → configure indicator text/thickness/tooltip/isRequired.
 
 ![Signature Field](../../../javascript-es6/images/ui-signature-edit.png)
 
@@ -416,7 +416,7 @@ export function App() {
     viewerRef.current?.formDesignerModule.addFormField('SignatureField', {
       name: 'Sign',
       bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      tooltip: 'sign Here',
+      tooltip: 'Sign here',
       isRequired: true,
     });
   };
@@ -444,7 +444,7 @@ root.render(<App />);
 
 ### Initial Field
 
-**Add via UI**: Open form designer toolbar → select Initial Field → place where initials are needed → configure text/isRequired.
+**Add via UI**: Open Form Designer toolbar → select Initial Field → place where initials are needed → configure text/isRequired.
 
 ![Initial field Properties Panel](../../../javascript-es6/images/ui-initial-edit.png)
 

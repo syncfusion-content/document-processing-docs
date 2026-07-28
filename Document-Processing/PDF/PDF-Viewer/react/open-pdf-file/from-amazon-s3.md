@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from AWS S3
+# Open and View PDFs Stored in AWS S3
 
 The React PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -21,7 +21,7 @@ Follow the instructions in the getting started guide (React) to create a basic P
 
 **Step 2:** Modify the `src/index.js` File in the React Project
 
-1. Import the required namespaces at the top of the file:
+1. Import the required modules at the top of the file:
 
 ```typescript
 import AWS from 'aws-sdk';
@@ -96,7 +96,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -115,7 +115,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
+5. Modify the [Load()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
 
 ```csharp
 
@@ -162,7 +162,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -183,7 +183,7 @@ N> Replace the placeholders with the actual AWS credentials and bucket name. Whe
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
+Set the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
 
 {% raw %}
 

@@ -3,7 +3,7 @@ layout: post
 title: Keyboard shortcuts in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Keyboard shortcuts in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Keyboard shortcuts 
+control: Keyboard shortcuts
 documentation: ug
 ---
 
