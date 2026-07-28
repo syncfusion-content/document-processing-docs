@@ -2,7 +2,7 @@
 layout: post
 title: Illustrations in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Spreadsheet
+control: Illustrations
 platform: document-processing
 documentation: ug
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Performance practices in React Spreadsheet component | Syncfusion
 description: Learn here all about performance best practices in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet
+control: Performance
 documentation: ug
 ---
 
