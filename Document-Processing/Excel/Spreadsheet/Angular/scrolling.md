@@ -3,7 +3,7 @@ layout: post
 title: Scrolling in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Scrolling in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet
+control: Index
 documentation: ug
 ---
 
