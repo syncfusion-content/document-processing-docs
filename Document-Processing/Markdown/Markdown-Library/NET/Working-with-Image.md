@@ -8,11 +8,11 @@ documentation: UG
 
 # Working with Images in Markdown Library
 
-Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which is an inline element that can be added to a `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document.
+Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> .NET Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which can be added to the inline collection of an `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document. Supported image formats include PNG, JPEG, BMP, GIF, WebP, and SVG.
 
-When saving a Markdown document using the `Save(fileName)` overloads, the library creates a new folder parallel to the output file name and exports all the images into it as default. 
+When saving a Markdown document using the `Save(fileName)` overloads, the library creates a new folder parallel to the output file name and exports all the images into it by default.
 
-When using the `Save(Stream)` overloads, the library preserves the images as base64 format in the output Markdown file as default. 
+When using the `Save(Stream)` overloads, the library preserves the images as base64 data URIs in the output Markdown file by default.
 
 If the image contains both a URL and stream values, or contains only a URL, the URL will be used in the output document.
 
@@ -68,7 +68,7 @@ markdownDocument.Dispose()
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Image/Add-image-from-URL/.NET).
 
-## Adding image from file path
+## Adding an image from a file path
 
 The Syncfusion Markdown library supports adding images from file paths. The following code example demonstrates how to add an image from a file path.
 
@@ -118,9 +118,9 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 ## Adding image from image bytes
 
-The Syncfusion Markdown library allows embedding images directly into a Markdown document using byte arrays. This is particularly useful when you need to include images that are dynamically generated, retrieved from a database, or loaded from memory.
+The Syncfusion<sup>&reg;</sup> .NET Markdown library allows embedding images directly into a Markdown document using byte arrays. This is useful when you need to include images that are dynamically generated, retrieved from a database, or loaded from memory. When the document is saved with the `Save(fileName)` overload, the bytes are written to the auto-generated images folder; when saved with the `Save(Stream)` overload, the bytes are embedded as a base64 data URI.
 
-The following code example demonstrates how to add an image from a image bytes.
+The following code example demonstrates how to add an image from a byte array.
 
 {% tabs %}
 
@@ -311,7 +311,7 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 
 Alternative text (alt text) is essential for accessibility, providing textual descriptions of images for screen readers and situations where images cannot be displayed. The Syncfusion Markdown library allows you to set and modify alternative text for images using the `AltText` property.
 
-The following code example demonstrates how to add descriptive alternative text to images.
+The following code example demonstrates how to add descriptive alternative text to an image.
 
 {% tabs %}
 

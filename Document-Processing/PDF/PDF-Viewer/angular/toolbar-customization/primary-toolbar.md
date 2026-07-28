@@ -111,7 +111,7 @@ import { ToolbarClickEventArgs } from '@syncfusion/ej2-navigations';
     PageOrganizerService
   ],
   template: `<div>
-    <button (click)="hideToolbar()">{{ showTool ? 'Hide' : 'Show' }} toolbar</button>
+    <button (click)="hideToolbar()">{{ showTool ? 'Hide' : 'Show' }} Toolbar</button>
     <ejs-pdfviewer #pdfviewer
       id="PdfViewer"
       style="height:500px;width:100%;"
@@ -157,7 +157,7 @@ export class AppComponent {
 ## Expected result
 
 - The primary toolbar shows only the items you list in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#toolbaritems).
-- Clicking the `Hide toolbar` / `Show toolbar` button calls [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showtoolbar) and hides or shows the toolbar at runtime.
+- Clicking the `Hide Toolbar` / `Show Toolbar` button calls [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showtoolbar) and hides or shows the toolbar at runtime.
 - Clicking the custom `Fit to Width` button calls `fitToWidth()` method.
 
 ## Troubleshooting

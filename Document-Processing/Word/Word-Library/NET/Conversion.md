@@ -9,34 +9,34 @@ documentation: UG
 
 ## Working with Document Conversions
 
-The Essential<sup>&reg;</sup> DocIO converts documents from one format to another format. Each file format document can be categorized as flow layout document or fixed layout document.
+Essential<sup>&reg;</sup> DocIO converts documents from one format to another. Each file format document can be categorized as a flow layout document or a fixed layout document.
 
 **Flow layout document**
 
 * A flow document is designed to "reflow content" depending on the application.
 * Does not contain any information about the position of its content.
-* Dynamically renders the content by application at run time.
+* Dynamically renders the content by the application at run time.
 * Example: DOC, DOCX, HTML, EPUB, RTF, and TEXT file formats.
 
 **Fixed layout document**
 
-* This format of fixed document is like "what you see is what you get".
-* Maintains the fixed position for each content.
-* Statically preserves the content in specified position.
+* This type of fixed document is "what you see is what you get".
+* Maintains a fixed position for each content element.
+* Statically preserves the content at a specified position.
 * Example: Image and PDF.
 
 
-Essential<sup>&reg;</sup> DocIO can convert various flow document as fixed document by using our layout engine. The following conversions are supported by Essential<sup>&reg;</sup> DocIO:
+Essential<sup>&reg;</sup> DocIO can convert various flow documents into fixed documents by using the layout engine. The following conversions are supported by Essential<sup>&reg;</sup> DocIO:
 
 * Word document to PDF
 * Word document to Image
-* HTML Conversions
-* Markdown Conversions
-* RTF Conversions
-* Text Conversions
+* HTML conversions
+* Markdown conversions
+* RTF conversions
+* Text conversions
 * Word document to ODT
 * Word document to EPUB
-* Microsoft Word file format Conversions
+* Microsoft Word file format conversions
 
 ## Converting Word document to PDF
 
@@ -66,7 +66,7 @@ Essential<sup>&reg;</sup> DocIO supports converting Word documents to images usi
 
 ## HTML conversion
 
-Essential<sup>&reg;</sup> DocIO supports converting the HTML file into Word document and vice versa. It supports only HTML files that meet the validation against the either XHTML 1.0 strict or XHTML 1.0 Transitional schema. 
+Essential<sup>&reg;</sup> DocIO supports converting an HTML file into a Word document and vice versa. It supports only HTML files that validate against either the XHTML 1.0 Strict or XHTML 1.0 Transitional schema. 
 
 For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions).
 
@@ -87,7 +87,7 @@ You can customize the Word to HTML conversion with the following options:
 
 * Extract the images used in the HTML document at the specified file directory 
 * Specify to export the header and footer of the Word document in the HTML 
-* Specify to consider Text Input field as a editable fields or text 
+* Specify whether to consider Text Input fields as editable fields or text 
 * Specify the CSS style sheet type and its name
 
 N> 
@@ -95,11 +95,11 @@ While exporting the header and footer, DocIO exports the first section's header 
 
 For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#customizing-the-word-to-html-conversion).
 
-### Supported Document elements
+### Supported document elements
 
-Kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#supported-and-unsupported-items) for the document elements and attributes are supported by DocIO in Word to HTML and HTML to Word conversions.
+Kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/html-conversions#supported-and-unsupported-items) for the document elements and attributes that are supported by DocIO in Word to HTML and HTML to Word conversions.
 
-## Markdown conversion 
+## Markdown Conversion
 
 Essential<sup>&reg;</sup> DocIO supports converting Markdown files to Word documents and vice versa.
 
@@ -107,11 +107,11 @@ For further information, kindly refer to the following links:
 * [Markdown to Word conversion](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 * [Word to Markdown conversion](https://help.syncfusion.com/document-processing/word/conversions/word-to-markdown-conversion)
 
-## RTF conversion 
+## RTF Conversion 
 
 Essential<sup>&reg;</sup> DocIO supports converting RTF documents to Word documents and vice versa. For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/rtf-conversions).
 
-## Text conversion
+## Text Conversion
 
 Essential<sup>&reg;</sup> DocIO supports converting Word documents to text files and vice versa. For further information, kindly refer [here](https://help.syncfusion.com/document-processing/word/conversions/text-conversions).
 

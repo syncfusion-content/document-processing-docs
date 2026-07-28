@@ -46,7 +46,7 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('sample')!).render(<App />);
+ReactDOM.createRoot(document.getElementById('container')!).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +153,7 @@ N> To preview visual differences, check the [Invisible Signature](https://docume
 
 After collecting all signatures and passing validations, **[Lock](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** the PDF (and optionally restrict permissions) to prevent further edits.
 
-## Signature Workflow Best Practices (Explanation)
+## Signature Workflow Best Practices
 
 Designing a well‑structured signature workflow ensures clarity, security, and efficiency when working with PDF documents. Signature workflows typically involve multiple participants—reviewers and approvers each interacting with the document at different stages.
 
@@ -187,15 +187,15 @@ To prevent rework, validate the PDF before enabling signatures:
   ![Reviewer using highlights and comments](../images/highlight-comments.png)
 - **Approver** – Ensures feedback is addressed and signs when finalized.  
   ![Signature Image](../images/handwritten-sign.png)
-- **Final Approver** – Verifies requirements, then [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and may restrict further edits.
+- **Final Approver** – Verifies requirements, then [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature) to make signatures permanent and restrict further edits.
 
-N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make annotations and form fields permanent before the last signature. 
+N> **Implementation tip:** Use the PDF Library’s `flatten` when saving to make [annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/annotations#flatten-annotation) and [form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/formfields#flattening-form-fields-in-a-pdf) permanent before the last signature.
 
 ### Multi‑signer patterns and iterative approvals
 - Route the document through a defined **sequence of signers**.  
 - Use [comments and replies](../annotation/comments#add-comments-and-replies) for feedback without altering document content.  
 - For external participants, share only annotation data (XFDF/JSON) when appropriate instead of the full PDF.  
-- After all signatures, **[Lock](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** to lock the file. 
+- After all signatures, **[Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** to make the file read-only.
 
 N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/esigning-pdf-forms) sample that shows two signers filling only their designated fields and finalizing the document.
 
@@ -212,7 +212,7 @@ N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewe
 - [Customize Annotation](../annotation/customize-annotation)
 - [Digital Signature - JavaScript PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature)
 - [Handwritten Signature](../annotation/signature-annotation)
-- [Form Fields API](../form-fields-api)
+- [Form Fields API](../forms/form-fields-api)
 - [Add Digital Signature](./add-digital-signature-react)
 - [Customize Signature Appearance](./customize-signature-appearance)
-- [Signature workflows](./signature-workflow)
+- [Validate Digital Signatures](./validate-digital-signatures)

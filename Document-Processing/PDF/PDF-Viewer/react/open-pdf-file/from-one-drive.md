@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from OneDrive
+# Open PDFs Stored in OneDrive
 
 These steps describe how to load a PDF stored in OneDrive into the React PDF Viewer using a server-backed web service.
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Load()` method to load the PDF from One Drive.
+5. Modify the `Load()` method to load the PDF from OneDrive.
 
 ```csharp
 
@@ -143,7 +143,7 @@ N> Replace the placeholders with your actual values: Tenant ID, Application ID, 
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
 
 {% raw %}
 
@@ -185,6 +185,6 @@ N> The following NuGet packages are commonly required by the example and can be 
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-N> Install packages using the NuGet Package Manager or `dotnet` CLI and confirm package versions match target framework compatibility.
+N> Install packages using the NuGet Package Manager or `dot net` CLI and confirm package versions match target framework compatibility.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

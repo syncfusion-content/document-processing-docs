@@ -8,7 +8,7 @@ documentation: UG
 
 # Markdown to PDF Conversion
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word library supports the conversion of Markdown to PDF document.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word library supports the conversion of Markdown to a PDF document.
 
 ## Assemblies and NuGet packages required
 
@@ -21,7 +21,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 Convert an existing markdown file to a PDF document using the .NET Word library.
 
-The following code example shows how to convert Markdown to PDF document.
+The following code example shows how to convert a Markdown file to a PDF document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -88,7 +88,7 @@ When opening an existing Markdown document, the .NET Word library provides custo
 
 The .NET Word library provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
 
-The following code example shows how to load image data based on the image source path when importing the Markdown files.
+The following code example shows how to load image data based on the image source path when importing the Markdown file.
 
 {% tabs %}
 

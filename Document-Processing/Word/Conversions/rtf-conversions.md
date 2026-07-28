@@ -1,6 +1,6 @@
 ---
-title: RTF conversions in C# | DocIO | Syncfusion
-description: Learn how to convert Word document to RTF and vice versa using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: RTF conversions in C#| DocIO | Syncfusion
+description: Learn how to convert a Word document to RTF and vice versa using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -9,16 +9,18 @@ documentation: UG
 # RTF Conversions in Word Library
 
 ## RTF
-The [Rich Text Format (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) is one of the document formats supported by Microsoft Word and many other Word processing applications. RTF is human readable file format invented for interchanging formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.
+The [Rich Text Format (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) is one of the document formats supported by Microsoft Word and many other Word processing applications. RTF is a human-readable file format designed to interchange formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.
 
-Most of the Word processors (including Microsoft Word) uses the XML-based file formats, Microsoft has discontinued enhancements to the RTF and still supporting it. The last version was 1.9.1 released in 2008.
+Most word processors (including Microsoft Word) use XML-based file formats. Microsoft has discontinued enhancements to RTF but still supports it. The last version was 1.9.1, released in 2008.
 
 To quickly start converting a Word document to RTF and vice versa, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=U5JRWJ42U3s" %}
 
-## Assemblies and NuGet packages required
+## Prerequisites
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert the RTF document into Word document and vice versa using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+### Assemblies and NuGet packages
+
+Refer to the following links for assemblies and NuGet packages required based on platforms to convert an RTF document into a Word document and vice versa using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [RTF conversions assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [RTF conversions NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
@@ -44,27 +46,32 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Rtf))
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing document
-WordDocument document = new WordDocument("Input.rtf", FormatType.Rtf);
-//Saves the Word document as RTF file
-document.Save("RtfToWord.docx", FormatType.Docx);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument("Input.rtf", FormatType.Rtf))
+{
+    //Saves the Word document as DOCX file
+    document.Save("RtfToWord.docx", FormatType.Docx);
+    //Closes the document
+    document.Close();
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing document
-Dim document As New WordDocument("Input.rtf", FormatType.Rtf)
-'Saves the Word document as RTF file
-document.Save("RtfToWord.docx", FormatType.Docx)
-'Closes the document
-document.Close()
+Using document As New WordDocument("Input.rtf", FormatType.Rtf)
+    'Saves the Word document as DOCX file
+    document.Save("RtfToWord.docx", FormatType.Docx)
+    'Closes the document
+    document.Close()
+End Using
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/RTF-conversions/Convert-RTF-to-Word).
 
-The following code example shows how to convert Word document into RTF document.
+## Convert Word to RTF
+
+The following code example shows how to convert a Word document into an RTF document using the `FormatType.Rtf` save option.
 
 {% tabs %}
 
@@ -83,20 +90,23 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing document
-WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Saves the Word document as RTF file
-document.Save("WordToRtf.rtf", FormatType.Rtf);
-//Closes the document
-document.Close();
+using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx))
+{
+    //Saves the Word document as RTF file
+    document.Save("WordToRtf.rtf", FormatType.Rtf);
+    //Closes the document
+    document.Close();
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing document
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Saves the Word document as RTF file
-document.Save("WordToRtf.rtf", FormatType.Rtf)
-'Closes the document
-document.Close()
+Using document As New WordDocument("Template.docx", FormatType.Docx)
+    'Saves the Word document as RTF file
+    document.Save("WordToRtf.rtf", FormatType.Rtf)
+    'Closes the document
+    document.Close()
+End Using
 {% endhighlight %}
 
 {% endtabs %}
@@ -104,12 +114,12 @@ document.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/RTF-conversions/Convert-Word-to-RTF).
 
 ## Supported and Unsupported features
-The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features)
+Refer to the following link for supported and unsupported features of DocIO by file format: [Supported and Unsupported features](https://help.syncfusion.com/document-processing/word/word-library/net/supported-and-unsupported-features).
 
 ## Online Demo
 
-* Explore how to convert the RTF file to Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtftodoc#/tailwind).
-* See how to convert a Word document to an RTF file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtortf#/tailwind).
+* Explore the [RTF to Word live demo](https://document.syncfusion.com/demos/word/rtftodoc#/tailwind) to see how to convert an RTF file to a Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+* See the [Word to RTF live demo](https://document.syncfusion.com/demos/word/wordtortf#/tailwind) to see how to convert a Word document to an RTF file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 ## See Also
 
