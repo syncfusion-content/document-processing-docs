@@ -1,6 +1,6 @@
 ---
-title: Document Object Model of the Essential<sup>&reg;</sup> Presentation library| Syncfusion
-description: Learn here about the document object model of the PowerPoint Presentation library and more.
+title: Essential® Presentation Document Object Model | Syncfusion
+description: Learn about the Essential® Presentation document object model and how it helps create, manage, and customize PowerPoint presentations programmatically.
 platform: document-processing
 control: Presentation
 documentation: UG

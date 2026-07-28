@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>&reg;</sup> PowerPoint web installer - Syncfusion<sup>&reg;</sup>
+title: Download Syncfusion® PowerPoint Web Installer (46 characters)
 description: Learn here about how to download Syncfusion<sup>&reg;</sup> PowerPoint web installer from our Syncfusion<sup>&reg;</sup> website with license.
 platform: document-processing
 control: Installation and Deployment

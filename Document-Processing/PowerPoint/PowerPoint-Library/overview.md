@@ -1,7 +1,7 @@
 ---
 title: Syncfusion PowerPoint Presentation Processing Library | .NET
 canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
-description: The .NET PowerPoint Presentation library enables developers to create, read, edit, convert, and save PowerPoint presentations programmatically without Microsoft Office dependencies.
+description: The .NET PowerPoint Presentation library enables creating, editing, converting, reading, and saving PowerPoint files in .NET without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
