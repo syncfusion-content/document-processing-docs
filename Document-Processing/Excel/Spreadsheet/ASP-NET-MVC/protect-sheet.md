@@ -14,7 +14,7 @@ Sheet protection helps you to prevent the users from modifying the data in the s
 
 ## Protect Sheet
 
-The Protect Sheet feature prevents users from accidentally changing, editing, moving, or deleting data in a worksheet. You can also protect the sheet with a password.
+The **Protect Sheet** feature prevents users from accidentally changing, editing, moving, or deleting data in a worksheet. You can also protect the sheet with a password.
 
 Use the [`isProtected`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_IsProtected) property to enable or disable sheet protection.
 
@@ -40,7 +40,7 @@ By default, the `Protect Sheet` module is injected internally into the Spreadshe
 
 To protect a sheet through the user interface:
 
-* Open the **Data** tab in the Ribbon and choose **Protect Sheet**. Alternatively, right-click the sheet tab and choose **Protect Sheet** from the context menu.
+* Open the **Data** tab in the ribbon and choose **Protect Sheet**. Alternatively, right-click the sheet tab and choose **Protect Sheet** from the context menu.
 * Select the operations that users are allowed to perform on the protected sheet.
 * Enter and confirm the password, if required.
 * Apply the protection settings.
@@ -70,7 +70,7 @@ Unprotecting a sheet re-enables the functionality that was disabled when the she
 
 To unprotect a sheet:
 
-* Open the **Data** tab in the Ribbon and choose **Unprotect Sheet**. Alternatively, right-click the sheet tab and choose **Unprotect Sheet** from the context menu.
+* Open the **Data** tab in the ribbon and choose **Unprotect Sheet**. Alternatively, right-click the sheet tab and choose **Unprotect Sheet** from the context menu.
 * Enter the password, if the sheet is password-protected.
 * Confirm the operation.
 
