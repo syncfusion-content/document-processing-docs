@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Vue PDF Viewer Control | Syncfusion
-description: Learn to fill, import, export, and validate PDF form fields in the Syncfusion Vue PDF Viewer.
+description: Learn to fill, import, export, and validate PDF form fields in the Syncfusion Vue PDF Viewer with built-in support.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
