@@ -24,7 +24,7 @@ A selected annotation can be deleted in three ways:
 
 ## Delete programmatically
 
-Annotations can be deleted programmatically either by removing the currently selected annotation or by specifying an annotation id.
+Annotations can be deleted programmatically either by removing the currently selected annotation or by specifying an annotation `id`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -63,7 +63,7 @@ function deleteAnnotationById() {
 {% endhighlight %}
 {% endtabs %}
 
-N> Deleting via the API requires the annotation to exist in the current document. Ensure an annotation is selected when using `deleteAnnotation()`, or pass a valid id to `deleteAnnotationById()`.
+N> Deleting via the API requires the annotation to exist in the current document. Ensure an annotation is selected when using `deleteAnnotation()`, or pass a valid `id` to `deleteAnnotationById()`.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/aspnet-core-pdf-viewer-examples)
 
