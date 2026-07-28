@@ -14,7 +14,7 @@ The Angular PDF Viewer triggers events during text search operations, allowing y
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#textsearchstart) event fires as soon as a search begins from the toolbar interface or through the [`textSearch.searchText`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textsearch#searchtext) method. Use to reset UI state, log analytics, or cancel the default search flow before results are processed.
+The [textSearchStart](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#textsearchstart) event fires as soon as a search begins from the toolbar interface or through the [`textSearch.searchText`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textsearch#searchtext) method. Use this event to reset UI state, log analytics, or cancel the default search flow before results are processed.
 
 - Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearchStartEventArgs) exposes:
   - `searchText`: the term being searched.
@@ -87,7 +87,7 @@ export class AppComponent {
 
 ## textSearchHighlight
 
-The [textSearchHighlight](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#textsearchhighlight) event triggers whenever a search result is brought into view, including navigation between matches. Use to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
+The [textSearchHighlight](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#textsearchhighlight) event triggers whenever a search result is brought into view, including navigation between matches. Use this event to draw custom overlays or synchronize adjacent UI elements when a match is highlighted.
 
 - Event arguments: [TextSearchHighlightEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textSearchHighlightEventArgs) exposes:
   - `bounds`: `RectangleBoundsModel` representing the highlighted match.

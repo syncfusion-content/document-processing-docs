@@ -26,7 +26,7 @@ selectTextRegion(pageNumber: number, bounds: IRectangle[]): void
 
 **Parameters:**
 
-- pageNumber: number indicating the target page (1 based indexing)
+- pageNumber: number indicating the target page (1-based indexing)
 - bounds: `IRectangle` array defining the selection region
 
 **Example:**
@@ -199,7 +199,7 @@ export class AppComponent {
 
   onTextSelectionEnd(args: TextSelectionEndEventArgs): void {
     // custom logic
-     console.log(args);
+    console.log(args);
   }
 }
 {% endhighlight %}

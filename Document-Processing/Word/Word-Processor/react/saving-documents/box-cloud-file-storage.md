@@ -1,24 +1,27 @@
 ---
 layout: post
-title: Save document to Box cloud file storage in React Document editor control | Syncfusion
-description:  Learn about how to Save document to Box cloud file storage in React Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Box cloud file storage in React DOCX Editor | Syncfusion
+description: Learn how to save a document to Box cloud file storage in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Box cloud file storage
+# Save document to Box cloud file storage using React DOCX Editor
 
-To save a document to Box cloud file storage, you can follow the steps below
+To save a document to Box cloud file storage, you can follow the steps below.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials — Client ID and Client Secret — to authenticate and access Box APIs.
+
+N> 1. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+N> 2. After creating the Box application, grant it access to the specific folder where documents will be saved. In the Box Developer Console, navigate to your application's configuration and add the target folder under the authorized folders. This folder authorization is required for App Tokens/JWT authentication to access files.
 
 **Step 2:** Create a Simple Document Editor sample in React
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in react. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -29,13 +32,15 @@ Follow the instructions provided in this [link](../getting-started) to create a 
 * Import the required namespaces at the top of the file:
 
 ```csharp
+// Imports required for Box cloud file storage access
 using Box.V2;
 using Box.V2.Auth;
 using Box.V2.Config;
 using Box.V2.Models;
+using System.IO;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -63,9 +68,9 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToBoxCloud")]
-//Post action for downloading the document
+//Post action for uploading the document to Box
 
-public void SaveToBoxCloud(IFormCollection data)
+public async Task SaveToBoxCloud(IFormCollection data)
 {
   if (data.Files.Count == 0)
     return;
@@ -87,6 +92,7 @@ public void SaveToBoxCloud(IFormCollection data)
 
   Stream stream = new MemoryStream();
   file.CopyTo(stream);
+  stream.Position = 0;
 
   var boxFile = await client.FilesManager.UploadAsync(fileRequest, stream);
 } 
@@ -105,7 +111,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -127,7 +133,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Box cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Box cloud file storage.
 
 ```typescript
 import * as ReactDOM from 'react-dom';
@@ -157,7 +163,7 @@ function App() {
         req.onreadystatechange = () => {
             if (req.readyState === 4) {
                 if (req.status === 200 || req.status === 304) {
-                    console.log('Saved sucessfully');
+                    console.log('Saved successfully');
                 }
             }
         };
@@ -180,4 +186,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
+N> The **Box.V2.Core** NuGet package (version 5.x or later) must be installed in your application to use the previous code example.

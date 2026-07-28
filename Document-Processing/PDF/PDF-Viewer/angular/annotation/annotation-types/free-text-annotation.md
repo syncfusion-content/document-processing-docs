@@ -62,9 +62,9 @@ export class AppComponent {
 2. Click **Free Text** to enable Free Text mode.
 3. Click on the page to place the text box and start typing.
 
-![Free Text tool](../../../javascript-es6/images/freetext_tool.png)
+![Free Text tool](../../images/freetext_tool.png)
 
-N> When Pan mode is active, choosing Free Text switches the viewer into the appropriate selection/edit workflow for a smoother experience.
+N> When Pan mode is active, selecting Free Text switches the viewer into the appropriate selection/edit workflow for a smoother experience.
 
 ### Enable Free Text Mode
 

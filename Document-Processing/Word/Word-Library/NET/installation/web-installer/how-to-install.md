@@ -110,12 +110,12 @@ The steps below show how to install Essential Studio<sup>&reg;</sup> Word Web In
 	
 ## Uninstallation
 
-Syncfusion<sup>&reg;</sup> Word installer can be uninstalled in two ways.
+The Syncfusion<sup>&reg;</sup> Word installer can be uninstalled in two ways:
 
-   * Uninstall the Word using the Syncfusion<sup>&reg;</sup> Word web installer
-   * Uninstall the Word from Windows Control Panel
+   * Uninstall Syncfusion<sup>&reg;</sup> Word using the Syncfusion<sup>&reg;</sup> Word web installer.
+   * Uninstall Syncfusion<sup>&reg;</sup> Word from the Windows Control Panel.
 
-Follow either one of the option below to uninstall Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word installer.
+Follow either one of the options below to uninstall the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word installer.
   
 **Option 1: Uninstall the Word using the Syncfusion<sup>&reg;</sup> Word web installer**
 
@@ -133,7 +133,7 @@ You can uninstall all the installed products by selecting the **Syncfusion<sup>&
 N> If the **Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> for Word {version}** entry is selected from the Windows control panel, the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Word alone will be removed and the below default MSI uninstallation window will be displayed.	
 
 1.  The Syncfusion<sup>&reg;</sup> Word Web Installer's welcome wizard will be displayed. Click the Next button
-	
+
     ![Welcome wizard uninstall](images/Step-by-Step-Installation_img2.png)
 	
 2.  The Platform Selection Wizard will appear. From the **Installed** tab, select the products to be uninstalled. To select all products, check the **Uninstall All** checkbox. Click the Next button.

@@ -1,21 +1,21 @@
 ---
-title: Hyperlink | Excel library | Syncfusion
-description: In this section, you can learn about how to add hyperlink in an Excel document using .NET Excel Library.
+title: Hyperlink | Excel Library | Syncfusion
+description: In this section, you can learn how to add, modify, and remove hyperlinks in an Excel worksheet using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Hyperlink in Excel Document
+# Hyperlink in Excel Worksheet
 
 ## Create Hyperlink
 
-Hyperlinks can be created in a workbook to provide quick access to web pages, locations within your document, and files. A hyperlink may target any one of the following
+Hyperlinks can be created in a workbook to provide quick access to web pages, locations within the workbook, and external files. A hyperlink can target any of the following targets through the [ExcelHyperLinkType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelHyperLinkType.html) enum:
 
-* Worksheet range
-* Web URL
-* E-mail
-* External files
+* [Worksheet range](#worksheet-cell-hyperlink) (`Workbook`)
+* [Web URL](#website-url-hyperlink) (`Url`)
+* [E-mail](#e-mail-hyperlink) (`Url` with `mailto:` prefix)
+* [External files](#file-opening-hyperlink) (`File` or `Unc`)
 
 ### Website URL Hyperlink
 
@@ -45,7 +45,9 @@ hyperlink.ScreenTip = "To know more about Syncfusion products, go through this l
 {% endhighlight %}
 {% endtabs %}
 
-### E-mail hyperlink
+### E-mail Hyperlink
+
+Use the `Url` hyperlink type with a `mailto:` prefix to create an e-mail hyperlink. The address must follow the `mailto:user@domain` format.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -74,6 +76,8 @@ hyperlink1.ScreenTip = "Send Mail"
 {% endtabs %}
 
 ### File Opening Hyperlink
+
+Use the `File` hyperlink type to open a file at a local path. The `Address` must be a fully qualified file path. Use the `Unc` type for files on a network share (Universal Naming Convention path, e.g., `\\server\share\folder`).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -106,6 +110,8 @@ hyperlink2.TextToDisplay = "Hyperlink for files using File as type"
 
 ### File Opening Hyperlink with Unc
 
+Use the `Unc` hyperlink type for files on a network share, with the address in Universal Naming Convention format (e.g., `\\server\share\folder`).
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creating a Hyperlink for Opening Files using type as Unc
@@ -136,6 +142,8 @@ hyperlink3.TextToDisplay = "Hyperlink for files using Unc as type"
 {% endtabs %}
 
 ### Worksheet Cell Hyperlink
+
+Use the `Workbook` hyperlink type to navigate to a cell or range within the workbook. The `Address` must follow the `SheetName!CellAddress` format (for example, `Sheet1!A15`); to target a different workbook, use `'[FileName.xlsx]SheetName!CellAddress'`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -173,7 +181,7 @@ The complete code example illustrating the above options is shown below.
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Excel2013;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet sheet = workbook.Worksheets[0];
 
@@ -313,7 +321,7 @@ A complete working example to add hyperlinks in C# is present on [this GitHub pa
 
 ## Modifying Existing Hyperlink
 
-The properties of existing hyperlink can be modified by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
+The properties of an existing hyperlink can be modified by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. Use the `IRange.Hyperlinks` indexer to retrieve the hyperlink at a given position; the index is zero-based and applies to the first hyperlink found on that range.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Modify%20Hyperlink/.NET/Modify%20Hyperlink/Modify%20Hyperlink/Program.cs,180" %}
@@ -373,7 +381,7 @@ A complete working example to modify existing hyperlink in C# is present on [thi
 
 ## Removing Hyperlink
 
-Similarly, a hyperlink can also be removed from a range by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance.
+Similarly, a hyperlink can be removed from a cell or range by accessing it through the [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) instance. The example below removes the first hyperlink from the range `C7`.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Hyperlink/.NET/Remove%20Hyperlink/Remove%20Hyperlink/Program.cs,180" %}
@@ -430,9 +438,9 @@ A complete working example to remove existing hyperlink in C# is present on [thi
 
 ## Hyperlinks on Shapes
 
-### Adding Hyperlinks om Shapes
+### Adding Hyperlinks on Shapes
 
-Hyperlink can be added to the following shapes.
+A hyperlink can be added to the following shapes:
 
 * Picture
 * AutoShape
@@ -607,7 +615,7 @@ A complete working example to modify shape hyperlink in C# is present on [this G
 
 ### Removing Hyperlinks from Shapes
 
-The following code snippet explains how to remove hyperlink of shape.
+The following code snippet explains how to remove a hyperlink from a shape. To remove a shape's hyperlink, access the shape through the [IShape.Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IShape.html#Syncfusion_XlsIO_IShape_Hyperlink) property and call `Remove` on the worksheet's hyperlink collection, or remove the hyperlink at the sheet level using `worksheet.HyperLinks.RemoveAt(index)` (as shown in the example).
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Remove%20Shape%20Hyperlink/.NET/Remove%20Shape%20Hyperlink/Remove%20Shape%20Hyperlink/Program.cs,180" %}
