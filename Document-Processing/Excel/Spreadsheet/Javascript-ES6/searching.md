@@ -15,7 +15,7 @@ The Find and Replace feature helps you to search for the target text and replace
 
 ## Find
 
-The Find feature is used to select the matched contents of a cell within the sheet or workbook. It is extremely useful when working with large sets of data sources.
+The Find feature is used to select the matched contents of a cell within the sheet or workbook. It is extremely useful when working with large sets of data source.
 
 **User Interface**:
 

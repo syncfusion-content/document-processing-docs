@@ -13,7 +13,7 @@ Selection provides interactive support to highlight the cell, row, or column tha
 
 > * The default value for `mode` in  `selectionSettings` is `Multiple`.
 
-The available selection types are:
+You have the following options in Selection,
 
 * Cell selection
 * Row selection

@@ -29,7 +29,7 @@ The following table lists the default context menu items and their actions when 
  
 ## Context Menu Items in Row Header / Column Header
 
-The following table lists the default context menu items and their actions when right-clicking a row or column header.
+The following table lists the default context menu items and their actions when right-clicking a row/column header.
 
 | Context Menu items | Action |
 |-------|---------|

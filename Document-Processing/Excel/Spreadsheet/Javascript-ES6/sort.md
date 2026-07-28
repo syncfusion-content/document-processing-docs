@@ -110,7 +110,7 @@ You can refer to the [`Data contains header`](./sort#data-contains-header) topic
 
 The multi-column sorting can also be performed manually by passing sort options to the `sort()` method programmatically. The `sortOption` have the following arguments:
 
-* [`sortDescriptors`](https://ej2.syncfusion.com/documentation/api/spreadsheet#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/documentation/api/spreadsheet#sortcomparer).
+* [`sortDescriptors`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#sortdescriptors) – Sort criteria collection that holds the collection of field name, sort order, and [`sortComparer`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#sortcomparer).
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
 
@@ -130,7 +130,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 
 ## Custom sort comparer
 
-The [`sortDescriptor`](https://ej2.syncfusion.com/documentation/api/spreadsheet#sortdescriptors) holds the [`sortComparer`](https://ej2.syncfusion.com/documentation/api/spreadsheet#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
+The [`sortDescriptor`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#sortdescriptors) holds the [`sortComparer`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#sortcomparer) property, which is a function and it is used to customize the sort comparer for specific sort criteria. Each `sortDescriptor` can be customized using the custom sort comparer function.
  
 By customizing sort comparer, you can define the sort action as desired.
 
