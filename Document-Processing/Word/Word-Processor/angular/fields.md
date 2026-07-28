@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Fields in Angular Document editor component | Syncfusion
-description: Learn here all about Fields in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Fields in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Fields in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Fields 
+control: Fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in Angular Document editor component
+# Fields in Angular Document Editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 
@@ -24,11 +24,11 @@ let fieldResult: string = '«First Name»';
 this.documentEditor.editor.insertField(fieldCode, fieldResult);
 ```
 
->Note: Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
+N> Document Editor does not validate/process the field code/field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
-Document Editor provides support for updating bookmark cross reference field. The following example code illustrates how to update bookmark cross reference field.
+Document Editor provides support for updating bookmark cross reference fields. The following example code illustrates how to update bookmark cross reference fields.
 
 ```typescript
 //Update all the bookmark cross reference field in the document.
@@ -54,7 +54,7 @@ You can get field code and field result of the current selected field by using [
 let fieldInfo: FieldInfo = this.documentEditor.selection.getFieldInfo();
 ```
 
->Note: For nested fields, this method returns combined field code and result.
+N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
@@ -74,7 +74,7 @@ fieldInfo.result = '«First Name»';
 this.documentEditor.editor.setFieldInfo(fieldInfo);
 ```
 
->Note: For nested field, entire field gets replaced completely with the specified field information.
+N> For nested field, entire field gets replaced completely with the specified field information.
 
 ## See Also
 
