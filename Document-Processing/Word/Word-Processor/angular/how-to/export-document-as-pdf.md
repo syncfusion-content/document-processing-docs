@@ -1,31 +1,30 @@
 ---
 layout: post
-title: Export document as pdf in Angular| Syncfusion
-description: Learn here all about Export document as pdf in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Export document as PDF in Angular DOCX Editor | Syncfusion
+description: Learn here all about Export document as PDF in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Export document as pdf 
+control: Export document as PDF
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export document as pdf in Angular Document editor component
+# Export document as PDF in Angular Document Editor component
 
-In this article, we are going to see how to export the document as PDF format. You can export the document as PDF in following ways:
+In this article, we are going to see how to export the document to PDF format. You can export the document as PDF in the following ways:
 
-To quickly get started with exporting to PDF in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor), please check out the video below.
+To quickly get started with exporting to PDF in the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor), check out the video below.
 
 {% youtube "https://www.youtube.com/watch?v=JVRSc865Pa4" %}
 
-## Export the document as pdf in client-side
+## Export the document as PDF on the client side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as pdf using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as pdf pages(works like print as PDF).
+Use [`PDF export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
 
->Note: 
-* The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
-* Text search is not supported in the exported PDF, as the content is stored as images.
-* You can install the pdf export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
+N> 1. The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
+N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
+N> 3. You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 
-The following example code illustrates how to export the document as pdf in client-side.
+The following example code illustrates how to export the document as PDF on the client side.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -116,17 +115,17 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-## Export document as pdf in server-side using Syncfusion DocIO
+## Export document as PDF on the server side using Syncfusion DocIO
 
-With the help of [DocIO](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF in server-side. Here, you can search the text.
+With the help of [DocIO](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF on the server side. Here, you can search the text.
 
 The following way illustrates how to convert the document as PDF:
 
-* Using [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to server-side.
+* Using [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to the server side.
 
-The following example code illustrates how to convert the document to sfdt and pass it to server-side.
+The following example code illustrates how to convert the document to sfdt and pass it to the server side.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -167,12 +166,12 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-* Using Save API in server-side, you can convert the sfdt to stream.
+* Using the Save API on the server side, you can convert the sfdt to stream.
 * Finally, convert the stream to PDF using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
 
-The following example code illustrates how to process the sfdt in server-side.
+The following example code illustrates how to process the sfdt on the server side.
 
 ```c#
 [AcceptVerbs("Post")]

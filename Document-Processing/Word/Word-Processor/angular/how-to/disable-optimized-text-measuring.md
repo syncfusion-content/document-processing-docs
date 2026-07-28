@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Optimized Text Measuring in Angular Document Editor | Syncfusion
-description: Learn here all about Disable optimized text measuring in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Disable optimized text measuring in Angular DOCX Editor | Syncfusion
+description: Learn here all about Disable optimized text measuring in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Disable optimized text measuring 
+control: Disable optimized text measuring
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable optimized text measuring in Angular Document editor component
+# Disable optimized text measuring in Angular Document Editor component
 
-Starting from v19.3.0.x, the accuracy of text size measurements in Document editor is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#enableoptimizedtextmeasuring) in Document editor settings.  
+Starting from v19.3.0.x, the accuracy of text size measurements in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) is improved to match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#enableoptimizedtextmeasuring) in Document Editor settings.
 
-If you want the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#enableoptimizedtextmeasuring) property of  Angular Document Editor component.
+If you want the Document Editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions, then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#enableoptimizedtextmeasuring) property of Angular Document Editor component.
 
 ## Disable optimized text measuring in `DocumentEditorContainer` instance
 
@@ -31,7 +31,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      template: `<ejs-documenteditor id="container" [documentEditorSettings]= "settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
+      template: `<ejs-documenteditor id="container" [documentEditorSettings]="settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
       [enablePrint]=true [enableSfdtExport]=true [enableWordExport]=true [enableOptionsPane]=true [enableContextMenu]=true
       [enableHyperlinkDialog]=true [enableBookmarkDialog]=true [enableTableOfContentsDialog]=true [enableSearch]=true
       [enableParagraphDialog]=true [enableListDialog]=true [enableTablePropertiesDialog]=true [enableBordersAndShadingDialog]=true
@@ -48,11 +48,10 @@ import {
 
 export class AppComponent {
   public settings = { enableOptimizedTextMeasuring: false };
-
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Disable optimized text measuring in `DocumentEditor` instance
 
@@ -64,7 +63,7 @@ import { ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
       selector: 'app-container',
       // specifies the template string for the DocumentEditorContainer component
-      template: `<ejs-documenteditorcontainer [documentEditorSettings]= "settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+      template: `<ejs-documenteditorcontainer [documentEditorSettings]="settings" serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
       providers: [ToolbarService]
 })
 export class AppComponent {
@@ -74,4 +73,4 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
