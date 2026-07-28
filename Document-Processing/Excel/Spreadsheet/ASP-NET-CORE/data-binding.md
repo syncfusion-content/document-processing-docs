@@ -10,7 +10,7 @@ documentation: ug
 
 # Data Binding in ASP.NET Core Spreadsheet Control
 
-The Spreadsheet uses `DataManager`, which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
+The Spreadsheet supports binding data to a range from RESTful JSON services and local JavaScript object arrays through `DataManager`. The `dataSource` property accepts either a `DataManager` instance or a JavaScript object array collection.
 
 N> To bind data to a cell, use `cell data binding` support.
 
@@ -31,11 +31,11 @@ Refer to the following code example for local data binding.
 
 
 
-N> The local data source can also be provided as an instance of the `DataManager`. By default, `DataManager` uses `JsonAdaptor` for local data-binding.
+N> The local datasource can also be provided as an instance of the `DataManager`. By default, `DataManager` uses `JsonAdaptor` for local data-binding.
 
 ### Customizing column data mapping
 
-By default, when a data source is bound to a sheet, columns are auto-assigned from the data source fields sequentially. This means that the first field in the data source is assigned to Column A, the second to Column B, and so on, sequentially. However, now you can customize the column assignments by specifying the appropriate field names in the desired order using the `fieldsOrder` property.
+By default, datasource fields are mapped sequentially to worksheet columns. The first field is assigned to column A, the second field to column B, and so on. You can customize the column mapping by specifying the field names in the required order using the `fieldsOrder` property.
 
 > You can customize the mapping of column data only in the local data binding support.
 
@@ -53,7 +53,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To bind remote data to the Spreadsheet control, assign service data as an instance of `DataManager` to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
+To bind remote data to the Spreadsheet, assign a `DataManager` instance configured with the service endpoint URL to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
 
 Refer to the following code example for remote data binding.
 
@@ -72,7 +72,7 @@ N> By default, `DataManager` uses **ODataAdaptor** for remote data-binding.
 
 ### Binding with OData services
 
-`OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
+`OData` is a standardized protocol for creating and consuming data. You can use `DataManager` to retrieve data from an OData service. The following code example demonstrates remote data binding using an OData service.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -102,7 +102,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 
 ## Cell data binding
 
-The Spreadsheet control can bind the data to individual cell in a sheet . To achieve this you can use the `value` property.
+The Spreadsheet can bind data to an individual cell in a worksheet. To achieve this, use the `value` property.
 
 Refer to the following code example for cell data binding.
 
@@ -119,21 +119,26 @@ Refer to the following code example for cell data binding.
 
 N> The cell data binding also supports formula, style, number format, and more.
 
-## Dynamic data binding and Datasource change event
+## Dynamic data binding and data source change event
 
-You can dynamically change the datasource of the spreadsheet by changing the `dataSource` property of the `range` object of the `sheet`. The `dataSourceChanged` event handler will be triggered when editing, inserting, and deleting a row in the datasource range. This event will be triggered with a parameter named `action` which indicates the `edit`, `add` and `delete` actions for the respective ones.
+You can dynamically change the data source by updating the `dataSource` property of a range in the worksheet. The `dataSourceChanged` event is triggered when a row in the data source range is edited, inserted, or deleted. The event provides an `action` argument that indicates whether the performed action is `edit`, `add`, or `delete`.
 
 The following table defines the arguments of the `dataSourceChanged` event.
 
 | Property | Type | Description |
 |-----|-----|-------|
-| action | string | Indicates the type of action such as `edit`, `add`, and `delete` performed in the datasource range. |
-| data | object[] | Modified data for `edit` action; New data for `add` action; Deleted data for `delete` action. |
-| rangeIndex | number | Specifies the range index of the datasource. |
-| sheetIndex | number | Specifies the sheet index of the datasource. |
+| action | string | Indicates the type of action, such as `edit`, `add`, or `delete`, performed in the data source range. |
+| data | object[] | Specifies the modified data for an `edit` action, new data for an `add` action, or deleted data for a `delete` action. |
+| rangeIndex | number | Specifies the index of the data source range. |
+| sheetIndex | number | Specifies the index of the worksheet that contains the data source. |
 
-N> For `add` action, the value for all the fields will be `null` in the data. In the case that you do not want the primary key field to be null which needs to be updated in the backend service, you can use `edit` action after updating the primary key field to update in the backend service. <br><br>
-<br/> For inserting a row at the end of the datasource range, you should insert a row below at the end of the range to trigger the `dataSourceChanged` event with action `add`.
+N> During an add action, all field values in the event data are initially `null`. If the primary key must contain a value before the data is sent to the backend service, assign the primary key and then process the change as an edit action.
+
+To trigger the `dataSourceChanged` event with the `add` action, insert a row immediately below the end of the data source range.
+
+Bind the `dataSourceChanged` event to the Spreadsheet and use its event arguments to identify whether an edit, add, or delete action occurred in the data source range.
+
+After running the sample, edit, insert, or delete a row in the data source range and verify that the `dataSourceChanged` event is triggered with the corresponding action.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -146,9 +151,9 @@ N> For `add` action, the value for all the fields will be `null` in the data. In
 
 ## Dynamic data binding using updateRange method
 
-The `updateRange` method allows you to dynamically update the `dataSource` in a spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
+The `updateRange` method dynamically updates the `dataSource` in the Spreadsheet without updating each cell individually. This method is especially useful for efficiently applying bulk updates to a specific range within the spreadsheet.
 
-To use the `updateRange` method, provide the new `dataSource` and specify the starting cell for the update using the `startCell` property of the `RangeModel`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
+To use the `updateRange` method, provide the new `dataSource`, specify the starting cell using the `startCell` property of `RangeModel`, and set `sheetIndex` to identify the worksheet to update.
 
 The following code example demonstrates how to dynamically update data using the `updateRange` method.
 

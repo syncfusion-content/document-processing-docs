@@ -32,7 +32,7 @@ In autofill we have following options,
 * Fill Formatting Only
 * Fill Without Formatting
 
->* The default autofill option is “FillSeries” which can be referred from `fillType` property.
+> The default autofill option is `FillSeries`, which can be referred from `fillType` property.
 
 ### Copy Cells
 
@@ -90,4 +90,4 @@ In the following sample, you can enable/disable the fill option on the button cl
 ### Limitations
 
 - The Flash Fill feature is not supported in the autofill workflow.
-- There is limitation for autofill with conditional formatting applied cells.
+- When conditional formatting is applied to a range, autofill may not carry the conditional formatting rules to the filled cells. Review the conditional formatting rules on the target range after autofill.

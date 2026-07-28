@@ -54,9 +54,7 @@ addRedactionProgrammatically(): void {
   });
 }
 {% endhighlight %}
-{% endtabs %}  
-
-Track additions using the `annotationAdd` event (wired above as a component prop).
+{% endtabs %}
 
 ## Edit Redaction Annotations
 
@@ -199,7 +197,7 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}  
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master)
 
 ## See also
 - [Annotation Overview](../overview)

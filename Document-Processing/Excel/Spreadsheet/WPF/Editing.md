@@ -15,10 +15,13 @@ This section explains about the Editing behavior, Data Validation and Hyperlinks
 
 The SfSpreadsheet control provides support for editing, you can modify and commit the cell values in the workbook.
 
-By default, Editing will be enabled in `SfSpreadsheet`,but if you want to disable the editing in SfSpreadsheet, then set the [AllowEditing](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_AllowEditing) Property to be false.
+By default, editing is enabled in `SfSpreadsheet`. To disable it, set the [AllowEditing](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_AllowEditing) property to `false`.
 
 {% tabs %}
 {% highlight c# %}
+// Subscribe to the event (typically in the constructor or page load).
+spreadsheet.WorkbookLoaded += spreadsheet_WorkbookLoaded;
+
 void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 {
     spreadsheet.ActiveGrid.AllowEditing = false;
@@ -30,7 +33,7 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 
 #### Start Editing
     
-User can edit a cell programmatically by using [BeginEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetCurrentCell_BeginEdit_System_Boolean_) method.
+You can edit a cell programmatically by using the [BeginEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Spreadsheet.SpreadsheetCurrentCell.html#Syncfusion_UI_Xaml_Spreadsheet_SpreadsheetCurrentCell_BeginEdit_System_Boolean_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -40,11 +43,11 @@ spreadsheet.ActiveGrid.CurrentCell.BeginEdit(true);
 
 #### End Editing
 
-User can end the editing of a cell programmatically in any of the following way,
+You can end the editing of a cell programmatically in any of the following ways:
 
-* [ValidateAndEndEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_ValidateAndEndEdit) - Validates and ends the edit operation for the current cell. if the cancel is "true", then the current cell remains in edit mode else if the validation is true, commits the new value and moved to next cell or else if the validation is false, it reverts the old value and moved to next cell.
+* [ValidateAndEndEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_ValidateAndEndEdit) - Validates and ends the edit operation for the current cell. If the `cancel` parameter is `true`, the current cell remains in edit mode; if validation succeeds, the new value is committed and the focus moves to the next cell; if validation fails, the old value is restored and the focus moves to the next cell.
 
-* [EndEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_EndEdit_System_Boolean_)   - Commits and ends the edit operation for the current cell, if it is passed with parameter _"true"_, commits the new changes for the cell, else reverts the old value.
+* [EndEdit](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_EndEdit_System_Boolean_) - Commits and ends the edit operation for the current cell. If passed with the parameter `true`, the new value is committed; otherwise, the old value is restored.
 
 {% tabs %}
 {% highlight c# %}
@@ -58,8 +61,10 @@ spreadsheet.ActiveGrid.CurrentCell.EndEdit(true);
 
 ### Locking or Unlocking a cell
 
-Locking cells allows you to disable editing and formatting the cells when the sheet is protected. By default, every cells are locked in the worksheet.
-But while in protect mode, if you want to edit or format a cell, you can unlock the cells.
+Locking cells disables editing and formatting of those cells when the sheet is protected. By default, all cells are locked in the worksheet.
+However, when the sheet is protected, you can still edit or format a cell by unlocking it first.
+
+> **Note:** A cell's lock state has no effect unless the worksheet is also protected (for example, by calling `Worksheet.Protect("password")`).
 
 {% tabs %}
 {% highlight c# %}
@@ -105,7 +110,7 @@ Occurs after the current cell is validated.</td></tr>
 Occurs when the current cell leaves from edit mode.</td></tr>
 </table>
 
-Below table list the properties associated with Editing.
+The following table lists the properties associated with editing.
 
 <table>
 <tr>
@@ -115,22 +120,22 @@ Description</th></tr>
 <tr>
 <td>
 {{ '[AllowEditing](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_AllowEditing)' | markdownify }}</td><td>
-Gets or sets the value indicating whether to allow the editing operation or not.</td></tr>
+Gets or sets a value indicating whether the editing operation is allowed. **Default:** `true`.</td></tr>
 <tr>
 <td>
 {{ '[EditorSelectionBehavior](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_EditorSelectionBehavior)' | markdownify }}</td><td>
-Gets or sets a value indicating whether editor select all the value or move last position.</td></tr>
+Gets or sets a value indicating whether the editor selects all the text or places the caret at the end of the existing value when entering edit mode.</td></tr>
 <tr>
 <td>
 {{ '[EditTrigger](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_EditTrigger)' | markdownify }}</td><td>
-Gets or sets a value indicating any of the trigger options will cause cells to enter Edit Mode.</td></tr>
+Gets or sets a value that indicates which user action causes a cell to enter Edit Mode.</td></tr>
 <tr>
 <td>
 {{ '[IsEditing](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_isEditing)' | markdownify }}</td><td>
-Gets  whether the current cell is in edit mode or not.</td></tr>
+Gets whether the current cell is in edit mode.</td></tr>
 </table>
 
-Below table list the methods associated with Editing.
+The following table lists the methods associated with editing.
 
 <table>
 <tr>
@@ -152,78 +157,79 @@ Validates and ends the edit operation of the current cell.</td></tr>
 <tr>
 <td>
 {{ '[Validate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.GridCurrentCell.html#Syncfusion_UI_Xaml_CellGrid_GridCurrentCell_Validate_System_Boolean__)' | markdownify }}</td><td>
-Validates the current cell in the SpreadsheetGrid.</td></tr>
+Validates the current cell in SfSpreadsheet.</td></tr>
 </table>
 
 ## Fill neighboring cells with formula or data
 
-Fill command allows you to fill adjacent groups of cells with the same text, numbers, formulas, or any formatted data. This can be achieved by following these steps:
- 
-* Select a cell or a range of cells to fill with data or formulas from nearby cells.
-* Then go to Home > Fill and choose your fill selections (Down, Right, Up and Left).
+The fill command fills adjacent cells with the same text, numbers, formulas, or formatted data. To do this:
+
+* Select a cell or range of cells to fill.
+* Go to **Home** > **Fill** and choose the fill direction (**Down**, **Right**, **Up**, or **Left**).
 
 ![WPF Spreadsheet Fill](Fill_images/wpf-spreadsheet-fill.png)
 
 ## Data Validation
 
-Data Validation is a list of rules to limit the type of data or the values that can be entered in the cell.
+Data validation restricts the type or range of values that can be entered in a cell.
 
 ### Applying Data Validation at runtime
 
-SfSpreadsheet allows the user to apply the data validation rules at runtime for particular cell or range using `IDataValidation` interface.
+SfSpreadsheet allows you to apply data validation rules at runtime for a particular cell or range using the `IDataValidation` interface.
 
 {% tabs %}
 {% highlight c# %}
 //Number Validation
-IDataValidation validation = spreadsheet.ActiveSheet.Range["A5"].DataValidation;
-validation.AllowType = ExcelDataType.Integer;
-validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
-validation.FirstFormula = "4";
-validation.SecondFormula = "15";
-validation.ShowErrorBox = true;
-validation.ErrorBoxText = "Accepts values only between 4 to 15";
+IDataValidation numberValidation = spreadsheet.ActiveSheet.Range["A5"].DataValidation;
+numberValidation.AllowType = ExcelDataType.Integer;
+numberValidation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
+numberValidation.FirstFormula = "4";
+numberValidation.SecondFormula = "15";
+numberValidation.ShowErrorBox = true;
+numberValidation.ErrorBoxText = "Accepts values only between 4 to 15";
 
 //Date Validation
-IDataValidation validation = spreadsheet.ActiveSheet.Range["B4"].DataValidation;
-validation.AllowType = ExcelDataType.Date;
-validation.CompareOperator = ExcelDataValidationComparisonOperator.Greater;
-validation.FirstDateTime = new DateTime(2016,5,5);
-validation.ShowErrorBox = true;
-validation.ErrorBoxText = "Enter the date value which is greater than 05/05/2016";
+IDataValidation dateValidation = spreadsheet.ActiveSheet.Range["B4"].DataValidation;
+dateValidation.AllowType = ExcelDataType.Date;
+dateValidation.CompareOperator = ExcelDataValidationComparisonOperator.Greater;
+dateValidation.FirstDateTime = new DateTime(2016,5,5);
+dateValidation.ShowErrorBox = true;
+dateValidation.ErrorBoxText = "Enter the date value which is greater than 05/05/2016";
 
 //TextLength Validation
-IDataValidation validation = spreadsheet.ActiveSheet.Range["A3:B3"].DataValidation;
-validation.AllowType = ExcelDataType.TextLength;
-validation.CompareOperator = ExcelDataValidationComparisonOperator.LessOrEqual;
-validation.FirstFormula = "4";
-validation.ShowErrorBox = true;
-validation.ErrorBoxText = "Text length should be lesser than or equal 4 characters";
+IDataValidation textLengthValidation = spreadsheet.ActiveSheet.Range["A3:B3"].DataValidation;
+textLengthValidation.AllowType = ExcelDataType.TextLength;
+textLengthValidation.CompareOperator = ExcelDataValidationComparisonOperator.LessOrEqual;
+textLengthValidation.FirstFormula = "4";
+textLengthValidation.ShowErrorBox = true;
+textLengthValidation.ErrorBoxText = "Text length should be lesser than or equal 4 characters";
 
 //List Validation
-IDataValidation validation = spreadsheet.ActiveSheet.Range["D4"].DataValidation;
-validation.ListOfValues = new string[] { "10", "20", "30" };
+IDataValidation listValidation = spreadsheet.ActiveSheet.Range["D4"].DataValidation;
+listValidation.ListOfValues = new string[] { "10", "20", "30" };
 
 //Custom Validation
-IDataValidation validation = spreadsheet.ActiveSheet.Range["D4"].DataValidation;
-validation.AllowType = ExcelDataType.Formula;
-validation.FirstFormula = "=A1+A2>0";
-validation.ErrorBoxText = "Sum of the values in A1 and A2 should be greater than zero";
+IDataValidation customValidation = spreadsheet.ActiveSheet.Range["D4"].DataValidation;
+customValidation.AllowType = ExcelDataType.Formula;
+customValidation.FirstFormula = "=A1+A2>0";
+customValidation.ErrorBoxText = "Sum of the values in A1 and A2 should be greater than zero";
 {% endhighlight %}
 {% endtabs %}
 
-For more reference, please go through the [XlsIO](http://help.syncfusion.com/file-formats/xlsio/working-with-data-validation) UG.
+For more reference, see the [XlsIO](http://help.syncfusion.com/file-formats/xlsio/working-with-data-validation) UG.
 
-T> If you want to load ComboBox to a cell in SfSpreadsheet, you can apply List Validation to that cell.
+
+> **Tip:** To load a ComboBox in a cell of SfSpreadsheet, apply list validation to that cell.
 
 ## Hyperlink
 
-The Hyperlink is a convenient way to access the web pages, files and browse the data within a worksheet or other worksheets in a workbook. SfSpreadsheet provides support to add, edit and remove the Hyperlinks in the workbook.
+A hyperlink is a convenient way to access web pages, files, and data within a worksheet or other worksheets in a workbook. SfSpreadsheet supports adding, editing, and removing hyperlinks in the workbook.
 
 ### Add a Hyperlink to a cell
 
-SfSpreadsheet provides support to add hyperlink to a cell and it can be added in the hyperlinks collection using `IHyperlinks` interface. 
+SfSpreadsheet supports adding a hyperlink to a cell through the hyperlinks collection using the `IHyperLink` interface.
 
-SfSpreadsheet allows you to add below types of the hyperlink.
+SfSpreadsheet supports the following hyperlink types:
 
 * Web URL
 * Cell or range in workbook
@@ -250,7 +256,7 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 4));
 
 //Creating a Hyperlink to refer another cell in the workbook,
 var range2 = spreadsheet.ActiveSheet.Range["C13"];
-IHyperLink hyperlink3 = spreadsheet.ActiveSheet.HyperLinks.Add(range);
+IHyperLink hyperlink3 = spreadsheet.ActiveSheet.HyperLinks.Add(range2);
 hyperlink3.Type = ExcelHyperLinkType.Workbook;
 hyperlink3.Address = "Sheet2!C23";
 hyperlink3.TextToDisplay = "Sample";
