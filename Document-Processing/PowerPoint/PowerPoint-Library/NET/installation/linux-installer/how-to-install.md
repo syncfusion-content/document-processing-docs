@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> PowerPoint Linux Installer - Syncfusion<sup>&reg;</sup>
+title: Installing Syncfusion® PowerPoint Linux Installer
 description: Learn how to install the Syncfusion<sup>&reg;</sup> PowerPoint Linux Installer after downloading it from the Syncfusion<sup>&reg;</sup> website.
 platform: document-processing
 control: Installation and Deployment

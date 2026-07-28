@@ -1,6 +1,6 @@
 ---
 title: Working with Animations in PowerPoint presentation | Syncfusion
-description: Learn here all about working with animations of PowerPoint Presentation.NET  Library and more.
+description: Learn here all about working with animations of PowerPoint Presentation .NET  Library and more using Syncfusion Presentation library.
 platform: document-processing
 control: Essential<sup>&reg;</sup> Presentation
 documentation: UG

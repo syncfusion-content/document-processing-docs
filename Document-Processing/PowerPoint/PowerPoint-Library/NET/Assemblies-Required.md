@@ -320,5 +320,5 @@ Syncfusion.SfChart.WPF<br/></td></tr>
 
 N> The “Syncfusion.OfficeChartToImageConverter.WPF” assembly is supported from .NET Framework 4.0 onwards.
 
-N> On Linux and macOS, the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp) NuGet package may require additional native runtime libraries (e.g., `libSkiaSharp`) to be installed on the host. Refer to the [SkiaSharp platform notes](https://github.com/dotnet/SkiaSharp#readme) for the required dependencies per distribution.
+N> On Linux and macOS, the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp) NuGet package may require additional native runtime libraries (e.g., `libSkiaSharp`) to be installed on the host.
 

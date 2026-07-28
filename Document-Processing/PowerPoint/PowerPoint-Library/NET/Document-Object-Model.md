@@ -1,11 +1,11 @@
 ---
-title: Document Object Model of the Essential® Presentation Library | Syncfusion
-description: Learn about the Document Object Model (DOM) hierarchy of the PowerPoint Presentation library, including Presentation, Slide, Shape, TextBody, and Paragraph elements.
+title: Document Object Model of the Essential<sup>&reg;</sup> Presentation library| Syncfusion
+description: Learn here about the document object model of the PowerPoint Presentation library and more.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Document Object Model
+# Document Object Model representation
 
 To create or modify a PowerPoint Presentation, you need to understand how elements are organized in the Essential<sup>&reg;</sup> Presentation Document Object Model (DOM). The following figure illustrates the hierarchy of the major DOM elements.
 

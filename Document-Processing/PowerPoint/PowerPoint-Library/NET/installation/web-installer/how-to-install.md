@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Web Installer - Syncfusion<sup>&reg;</sup>
-description: Learn how to install the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Web Installer after downloading it from the Syncfusion<sup>&reg;</sup> website.
+title: Installing Syncfusion® Essential Studio® PowerPoint Web Installer
+description: Learn how to install the Syncfusion® Essential Studio® PowerPoint Web Installer after downloading it from the Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
@@ -132,7 +132,7 @@ Follow either of the options below to uninstall the Syncfusion<sup>&reg;</sup> E
 
 Syncfusion<sup>&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and the Web Installer will uninstall them one by one. To use this option, double-click the Web Installer executable again, then follow **Uninstall Steps 1–2** below, and then complete the wizard to finish.
 
-![Uninstall — Platform Selection wizard](images/Step-by-Step-Installation_img4.png)
+![Uninstall Platform Selection wizard](images/Step-by-Step-Installation_img4.png)
 
 ### Option 2: Uninstall the PowerPoint from the Windows Control Panel
 
@@ -150,7 +150,7 @@ Step 2: The **Platform Selection** wizard will appear. From the **Installed** ta
 
 	*Installed*
 
-	![Uninstall — Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
+	![Uninstall Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 
 	You can also select the products to be installed from the **Available** tab. Click the **Next** button.
 
