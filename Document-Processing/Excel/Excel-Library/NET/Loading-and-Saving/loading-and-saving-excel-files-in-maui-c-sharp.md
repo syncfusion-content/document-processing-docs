@@ -7,26 +7,39 @@ documentation: UG
 ---
 # Loading and saving workbook in .NET MAUI
 
+## Prerequisites
+
+* Visual Studio 2022 (17.3 or later) on Windows with the **Mobile development with .NET** workload (which includes the .NET MAUI workload) installed.
+* Create a .NET MAUI App project.
+* Install the [Syncfusion.XlsIO.NET](https://www.nuget.org/packages/Syncfusion.XlsIO.NET) NuGet package in your project.
+* Register your Syncfusion<sup>&reg;</sup> license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
+
+N> Before proceeding, add `Sample.xlsx` to the project and set its **Build Action** to **Embedded Resource** in the file properties so it can be loaded with `GetManifestResourceStream`.
+
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+
 ## Opening an existing workbook from stream
 
 You can open an existing workbook from stream by using the overloads of [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_IO_Stream_) methods of [IWorkbooks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html) interface.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
+// Create a new instance of ExcelEngine
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    // Initialize IApplication
+    IApplication application = excelEngine.Excel;
 
-//Initialize IApplication
-IApplication application = excelEngine.Excel;
-
-//Load the file into stream
-Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = executingAssembly.GetManifestResourceStream("MAUISample.Sample.xlsx");
-
-//Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+    // Load the embedded resource into a stream
+    Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
+    using (Stream inputStream = executingAssembly.GetManifestResourceStream("MAUISample.Sample.xlsx"))
+    {
+        // Open the workbook through the Open method of IWorkbooks
+        IWorkbook workbook = application.Workbooks.Open(inputStream);
+    }
+}
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## Saving an Excel workbook to stream
 
@@ -34,37 +47,38 @@ You can also save the created or manipulated workbook to stream using overloads 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Creates a new instance for ExcelEngine
-ExcelEngine excelEngine = new ExcelEngine();
+// Create a new instance of ExcelEngine
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    // Initialize IApplication
+    IApplication application = excelEngine.Excel;
 
-//Initialize IApplication
-IApplication application = excelEngine.Excel;
+    // Load the embedded resource into a stream
+    Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
+    using (Stream inputStream = executingAssembly.GetManifestResourceStream("MAUISample.Sample.xlsx"))
+    {
+        // Open the workbook
+        IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-//Load the file into stream
-Assembly executingAssembly = typeof(App).GetTypeInfo().Assembly;
-Stream inputStream = executingAssembly.GetManifestResourceStream("MAUISample.Sample.xlsx");
+        // To-Do: some manipulation
 
-//Loads or open an existing workbook through Open method of IWorkbooks
-IWorkbook workbook = application.Workbooks.Open(inputStream);
+        // Set the version of the workbook
+        workbook.Version = ExcelVersion.Xlsx;
 
-//To-Do some manipulation
-//To-Do some manipulation
+        // Save the workbook to a memory stream
+        using (MemoryStream outputStream = new MemoryStream())
+        {
+            workbook.SaveAs(outputStream);
+            outputStream.Position = 0;
 
-//Set the version of the workbook
-workbook.Version = ExcelVersion.Xlsx;
-
-//Saving the workbook as stream
-MemoryStream outputStream = new MemoryStream();
-workbook.SaveAs(outputStream);
-outputStream.Position = 0;
-
-//Saves the memory stream as a file.
-SaveService saveService = new SaveService();
-saveService.SaveAndView("Output.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", ms);
+            // Hand the memory stream to the platform-specific SaveService
+            SaveService saveService = new SaveService();
+            saveService.SaveAndView("Output.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", outputStream);
+        }
+    }
+}
 {% endhighlight %}
-{% endtabs %} 
-
-## Helper Class
+{% endtabs %}
 
 ## Save Service class in portable project
 
@@ -232,7 +246,7 @@ namespace MAUISample.Services
 {% endhighlight %}
 {% endtabs %}
 
-N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated PDF document.
+N> Introduced a new runtime permission model for the Android SDK version 23 and above. So, include the following code for enabling the Android file provider to save and view the generated Excel document.
 
 Create a new XML file with the name of **provider_path.xml** under the **Resources-> xml** folder of **Android project** and add the following code in it. Eg: Resources/xml/provider_path.xml
 
@@ -429,3 +443,10 @@ public class PreviewControllerDS : QLPreviewControllerDataSource
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [Create, read, and edit Excel files in .NET MAUI](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-maui-c-sharp)
+* [Assemblies Required for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
+* [NuGet Packages for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)

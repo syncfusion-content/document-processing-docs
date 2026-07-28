@@ -13,7 +13,7 @@ AI Assist requires a backend service to process prompts and return AI-generated 
 
 ## Prerequisites
 
-Ensure the following are available before you begin.
+Before you begin, ensure that the following prerequisites are available.
 
 ### Azure OpenAI credentials
 
@@ -193,7 +193,7 @@ Run the following command to start the Web API server:
 dotnet run
 ```
 
-The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint like below:
+The server runs on the HTTPS URL configured in `Properties/launchSettings.json`. Replace `{port}` with the configured port and use the following AI Assist endpoint:
 
 ```
 https://localhost:{port}/api/AIAssist/Chat
@@ -256,6 +256,6 @@ dotnet run
 
 * [Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
 
-## See also
+## See Also
 
 * [Node.js server setup](./using-node-js-server)

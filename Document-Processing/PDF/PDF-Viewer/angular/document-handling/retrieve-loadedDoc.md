@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Retrieve the Loaded Document in Angular PDF Viewer | syncfusion
+title: Retrieve the Loaded Document in Angular PDF Viewer | Syncfusion
 description: Learn how to access the loaded PDF document instance in the Angular PDF Viewer using ViewChild and the documentLoad event.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

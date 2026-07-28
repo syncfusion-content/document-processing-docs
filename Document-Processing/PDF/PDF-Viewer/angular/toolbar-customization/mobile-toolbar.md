@@ -85,7 +85,7 @@ import { PdfViewerModule, ToolbarService, MagnificationService, NavigationServic
 })
 export class AppComponent {
   public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+  public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
 }
 {% endhighlight %}
 {% endtabs %}

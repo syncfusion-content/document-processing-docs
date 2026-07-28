@@ -22,7 +22,7 @@ Each event provides detailed context through typed event arguments such as [Impo
 ## Import Events
 - [importStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importstart) — Fires when an import begins.
 - [importSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importsuccess) — Fires when form fields are successfully imported.
-- [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importfailed) — Fires if the import fails.
+- [importFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importfailed) — Fires when an import fails.
 
 **Example: Handle Import Events**
 
@@ -45,7 +45,7 @@ viewer.importFailed = (args) => {
 ## Export Events
 - [exportStart](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportstart) — Fires when an export begins.
 - [exportSuccess](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportsuccess) — Fires when form fields are successfully exported.
-- [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportfailed) — Fires if the export fails.
+- [exportFailed](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportfailed) — Fires when an export fails.
 
 **Example: Handle Export Events**
 
@@ -79,6 +79,4 @@ viewer.exportFailed = (args) => {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
-- [Form fields API](../form-fields-api)
 - [Form fields API](../form-fields-api)
