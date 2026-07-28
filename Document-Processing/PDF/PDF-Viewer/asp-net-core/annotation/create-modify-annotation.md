@@ -28,7 +28,7 @@ Shape annotations:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 Measurement annotations:
@@ -61,7 +61,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 Note:
 - When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically.
-- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing
+- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
 
 ### Create programmatically
 

@@ -169,7 +169,7 @@ The following code example demonstrates how to add custom data validation with a
 
 The following features have some limitations in Data Validation:
 
-* Applying validation to an entire row.
+* Applying data validation to an entire row.
 * Insert row between the data validation.
 * Copy/paste with data validation.
 * Delete cells between data validation applied range.
