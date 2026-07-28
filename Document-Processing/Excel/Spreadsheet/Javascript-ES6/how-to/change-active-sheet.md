@@ -3,7 +3,7 @@ layout: post
 title: Change active sheet in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about changing active sheet index when import a file in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet 
+control: Spreadsheet
 documentation: ug
 ---
 
