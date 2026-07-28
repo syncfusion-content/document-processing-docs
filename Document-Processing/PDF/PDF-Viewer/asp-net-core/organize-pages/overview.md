@@ -16,7 +16,7 @@ The Organize Pages feature provides the following options:
 
 * **Rotate Pages:** Adjust page orientation in 90-degree increments.
 * **Rearrange Pages:** Change page sequence with drag-and-drop.
-* **Insert New:ages** — Add blank pages at desired positions.
+* **Insert New Pages:** Add blank pages at desired positions.
 * **Delete Pages:** Remove unnecessary pages.
 * **Copy Pages:** Duplicate pages to reuse content.
 * **Import PDF Document:** Merge pages from another PDF.
