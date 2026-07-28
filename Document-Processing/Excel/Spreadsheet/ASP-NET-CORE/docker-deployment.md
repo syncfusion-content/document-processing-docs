@@ -14,13 +14,13 @@ The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known 
 
 This Docker image is the pre-defined Docker container for Syncfusion's Spreadsheet back-end functionalities. This server-side Web API project targets ASP.NET Core 8.0.
 
-You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Docker file by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
+You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Dockerfile by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
 
 The Spreadsheet is supported on the [JavaScript](https://www.syncfusion.com/javascript-ui-controls), [Angular](https://www.syncfusion.com/angular-ui-components), [React](https://www.syncfusion.com/react-ui-components), [Vue](https://www.syncfusion.com/vue-ui-components), [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls), and [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls) platforms.
 
 ## Prerequisites
 
-Have [`Docker`](https://www.docker.com/products/container-runtime#/download) installed in your environment:
+Ensure that [`Docker`](https://www.docker.com/products/container-runtime#/download) is installed in your environment:
 
 * On Windows, install [`Docker for Windows`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 * On macOS, install [`Docker for Mac`](https://docs.docker.com/desktop/install/mac-install/).
@@ -48,7 +48,7 @@ services:
       - "6002:8080"
 ```
 
-**Note:** The Spreadsheet is a commercial product. It requires a valid [license key](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key) to use in a production environment. Please replace `YOUR_LICENSE_KEY` with the valid license key in the `docker-compose.yml` file.
+**Note:** The Spreadsheet is a commercial product and requires a valid [license key](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key) for use in a production environment. Pleas replace `YOUR_LICENSE_KEY` with a valid license key in the `docker-compose.yml` file.
 
 **Step 3:** In a terminal tab, navigate to the directory where you've placed the `docker-compose.yml` file and execute the following:
 
@@ -56,9 +56,16 @@ services:
 docker-compose up
 ```
 
-Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
+The Spreadsheet server is now available at `http://localhost:6002`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/getting-started-core)
+Use the following endpoints for Spreadsheet file operations:
+
+* Open service: `http://localhost:6002/api/spreadsheet/open`
+* Save service: `http://localhost:6002/api/spreadsheet/save`
+
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/getting-started-core).
+
+Add the following Spreadsheet configuration to the Razor view in which the Spreadsheet component is rendered. Configure the `OpenUrl` and `SaveUrl` properties to use the open and save endpoints exposed by the Docker container.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -69,9 +76,11 @@ Now the Spreadsheet server Docker instance runs on localhost with the provided p
 {% endhighlight %}
 {% endtabs %}
 
-## How to configure different cultures using a Docker compose file
+Run the ASP.NET Core application and verify that the Spreadsheet can open and save Excel files using the configured Docker service endpoints.
 
-By default, the Spreadsheet Docker container is generated in the `en_US` culture. You can configure different cultures using the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are replaced in the Docker file to set the specified culture for the Spreadsheet server.
+## How to configure different cultures using a Docker Compose file
+
+By default, the Spreadsheet Docker container uses the `en_US` culture. You can configure different cultures using the `LC_ALL`, `LANGUAGE`, and `LANG` environment variables in the `docker-compose.yml` file. These environment variables are replaced in the Dockerfile to set the specified culture for the Spreadsheet server.
 
 ```yaml
 version: '3.4' 
