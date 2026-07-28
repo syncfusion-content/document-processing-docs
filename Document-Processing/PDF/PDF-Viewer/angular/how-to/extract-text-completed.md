@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text using the extractTextCompleted event in Angular PDF Viewer
+# Extract text using extractTextCompleted event in Angular PDF Viewer
 
 The PDF Viewer can extract page text along with bounding information. Enable text extraction using the `isExtractText` property and handle the `extractTextCompleted` event to receive extracted text and bounds for the document.
 
