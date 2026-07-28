@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to view, fill, export, and import PDF form fields seamlessly using the Syncfusion ASP.NET Core PDF Viewer for efficient form management.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,7 @@ The Syncfusion PDF Viewer supports three form-filling methods:
 3. [Importing form field data](#import-pdf-form-data)
 
 
-  The PDF Viewer supports importing form field data into an existing document to prefill forms from external data sources.
+  The PDF Viewer supports importing form field data into an existing document to fill forms from external data sources.
 
 ## Fill PDF forms programmatically 
 

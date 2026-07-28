@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize PDF Pages in Syncfusion ASP.NET Core PDF Viewer
+description: Organize, reorder, rotate, insert, and delete PDF pages with ease using the Syncfusion ASP.NET Core PDF Viewer for efficient document management.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
