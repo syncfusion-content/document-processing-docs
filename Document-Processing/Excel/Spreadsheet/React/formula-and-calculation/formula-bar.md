@@ -2,7 +2,7 @@
 layout: post
 title: Formula Bar in React Spreadsheet component | Syncfusion
 description: Learn here all about formula bar in React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Formulas 
+control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---

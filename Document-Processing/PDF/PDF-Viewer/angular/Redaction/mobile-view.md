@@ -5,6 +5,7 @@ description: Learn how to apply redactions in mobile view using the Syncfusion A
 platform: document-processing
 control: PdfViewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Redaction in Mobile View in Angular PdfViewer Component
@@ -193,7 +194,7 @@ Step 3: Configure your redaction parameters using the selected tool interface.
 
 N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
 
-Once you have configured redactions using any combination of tools.
+Once you have configured redactions using any combination of tools, follow these steps to apply them.
 
 Step 1: Review all redaction marks and configurations.
 

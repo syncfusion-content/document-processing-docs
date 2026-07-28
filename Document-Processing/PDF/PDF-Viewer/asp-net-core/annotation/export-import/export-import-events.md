@@ -13,7 +13,7 @@ Import/export events let developers monitor and control annotation data as it fl
 
 Common use cases:
 - Progress UI and user feedback
-- Validation and sanitization of imported annotation data
+- Validation and sanitation of imported annotation data
 - Audit logging and telemetry
 - Blocking or altering operations based on business rules
 
@@ -74,20 +74,20 @@ window.onload = function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> `importStart`, `importSuccess`, and `importFailed` cover the lifecycle of annotation imports; `exportStart`, `exportSuccess`, and `exportFailed` cover the lifecycle of annotation exports.
+N> `importStart`, `importSuccess`, and `importFailed` cover the life cycle of annotation imports; `exportStart`, `exportSuccess`, and `exportFailed` cover the life cycle of annotation exports.
 
 ## See also
 
 - [Annotation Overview](../../overview)
-- [Annotation Types](../../annotations/annotation-types/area-annotation)
+- [Annotation Types](../../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
+- [Create and Modify Annotation](../../annotation/create-modify-annotation)
+- [Customize Annotation](../../annotation/customize-annotation)
+- [Remove Annotation](../../annotation/delete-annotation)
+- [Handwritten Signature](../../annotation/signature-annotation)
 - [Export Annotation](../export-import/export-annotation)
 - [Import Annotation](../export-import/import-annotation)
-- [Annotation Permission](../../annotations/annotation-permission)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotation API](../../annotations/annotations-api)
+- [Annotation Permission](../../annotation/annotation-permission)
+- [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
+- [Annotation Events](../../annotation/annotation-event)
+- [Annotation API](../../annotation/annotations-api)

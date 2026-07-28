@@ -5,6 +5,7 @@ description: Learn how to import annotations in Syncfusion React PDF Viewer usin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import annotations in React PDF Viewer
@@ -18,7 +19,7 @@ The Comments panel provides import options in its overflow menu:
 - Import annotations from JSON file
 - Import annotations from XFDF file
 
-Steps:
+To import annotations, follow these steps:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose the appropriate import option and select the file.

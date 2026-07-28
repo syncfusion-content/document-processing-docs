@@ -9,7 +9,7 @@ documentation: UG
 
 ## Installing Syncfusion<sup>&reg;</sup> XlsIO through NuGet Packages 
 
-NuGet is the one of the easiest way to download and install XlsIO library to read, write and edit the Excel documents. The following NuGet packages need to be installed in your application.
+NuGet is one of the easiest ways to download and install the XlsIO library to read, write, and edit Excel documents. The following NuGet packages need to be installed in your application.
 <table>
 <thead>
 <tr>
@@ -282,6 +282,8 @@ Install-Package Syncfusion.ExcelToPdfConverter.AspNet
 
 N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
+N> Starting with v16.2.0.x, in addition to the packages listed above, you must also include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
+
 ## Converting Excel Worksheet to Image
 
 For converting an Excel worksheet to image, the following NuGet packages need to be installed in your application.
@@ -414,7 +416,7 @@ N> Worksheet to image conversion is supported from .NET Framework 2.0 and .NET S
 
 ## Converting Charts in XlsIO
 
-The below NuGet package need to be installed additionally to convert the charts present in Excel documents.
+The below NuGet packages need to be installed additionally to convert the charts present in Excel documents to image.
 
 <table>
 <thead>
@@ -541,7 +543,9 @@ Install-Package Syncfusion.ExcelChartToImageConverter.AspNet
 </table>
 
 N> 1. The "Syncfusion.ExcelChartToImageConverter.Wpf.nupkg" NuGet package is only supported from 4.0 .NET Framework onwards. 
-N> 2. The "Syncfusion.Xamarin.XlsIORenderer.nupkg" or "Syncfusion.XlsIORenderer.Net.Core.nupkg" NuGet packages supports chart to image conversion only from .NET Standard 2.0 onwards.
+N> 2. The "Syncfusion.Xamarin.XlsIORenderer.nupkg" or "Syncfusion.XlsIORenderer.Net.Core.nupkg" NuGet packages support chart to image conversion only from .NET Standard 2.0 onwards.
+
+N> Starting with v16.2.0.x, in addition to the packages listed above, you must also include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
 
 ## NuGet Package Installation and Uninstallation
 
@@ -866,3 +870,10 @@ https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/version
 To download version **30.2.5**, use https://www.nuget.org/packages/Syncfusion.Compression.Net.Core/30.2.5
 
 When installing Syncfusion products that depend on these packages, Visual Studio automatically fetches them. Alternatively, you can manually download and reference them in your project if needed.
+
+## See Also
+
+* [Overview of Excel Library (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+* [Assemblies Required for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
+* [Create Excel File in C# and VB.NET](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)

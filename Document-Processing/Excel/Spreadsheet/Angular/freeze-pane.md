@@ -3,7 +3,7 @@ layout: post
 title: Freeze pane in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Freeze pane in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Freeze pane 
+control: Freeze pane
 documentation: ug
 ---
 

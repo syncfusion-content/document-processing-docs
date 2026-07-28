@@ -3,7 +3,7 @@ layout: post
 title: Performance Metrics for Angular Spreadsheet Control | Syncfusion
 description: Learn about performance metrics for Angular Spreadsheet control, measured results, and environment details.
 platform: document-processing
-control: Performance 
+control: Spreadsheet
 documentation: ug
 ---
 
