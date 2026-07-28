@@ -156,7 +156,7 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippetxspreadsheet/javascript-es5/dynamic-data-binding-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs2/index.html %}
