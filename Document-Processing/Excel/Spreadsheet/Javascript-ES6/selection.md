@@ -102,7 +102,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 ## Remove Selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
+The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings) to disable's the UI selection.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
