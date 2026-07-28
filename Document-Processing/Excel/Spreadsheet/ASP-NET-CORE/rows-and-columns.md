@@ -127,7 +127,7 @@ You can provide the following type of ranges to the method:
 
 * Single-row range: `['2:2']`
 * Multiple-row range: `['1:100']`
-* Multiple rows with discontinuous range:: `['1:10', '15:25', '30:40']`
+* Multiple rows with discontinuous range: `['1:10', '15:25', '30:40']`
 * Multiple rows with different sheets: `[Sheet1!1:50, 'Sheet2!1:50', 'Sheet3!1:50']`
 
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
@@ -149,8 +149,8 @@ You can provide the following type of ranges to the method:
 
 * Single-column range: `['F:F']`
 * Multiple-column range: `['A:F']`
-* Discontinuous column ranges: `['A:C', 'G:I', 'K:M']`
-* Column ranges across different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
+* Multiple columns with discontinuous range: `['A:C', 'G:I', 'K:M']`
+* Multiple columns with different sheets: `[Sheet1!A:H, 'Sheet2!A:H', 'Sheet3!A:H']`
 
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 

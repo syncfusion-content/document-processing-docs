@@ -85,7 +85,7 @@ After running the sample, verify that the image is inserted at the specified pos
 
 ### Limitations of Image
 
-The Image feature has the following limitations:
+The image feature has the following limitations:
 
 * Images cannot be resized using the corner handles.
 * Copying and pasting images from external sources has limited support.
