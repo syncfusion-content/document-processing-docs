@@ -3,7 +3,7 @@ layout: post
 title: Open Excel in React Spreadsheet component | Syncfusion
 description: Learn here all about Open Excel in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet
+control: Open
 documentation: ug
 ---
 
