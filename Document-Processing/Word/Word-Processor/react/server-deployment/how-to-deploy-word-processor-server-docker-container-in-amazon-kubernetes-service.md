@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy Syncfusion Word Processor in Amazon Kubernetes Service
-description: Learn here all about How to deploy word processor server docker container in Amazon Kubernetes Service in the Syncfusion React Document Editor.
+title: Deploy Syncfusion React DOCX Editor in Amazon Kubernetes Service
+description: Learn here all about deploying word processor server docker container in Amazon Kubernetes Service in the Syncfusion React Document Editor.
 control: How to deploy word processor server docker container in amazon kubernetes service 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy Word Processor server in Amazon Kubernetes Service
+# Deploy Syncfusion React Document Editor in Amazon Kubernetes Service
 
 ## Prerequisites
 
