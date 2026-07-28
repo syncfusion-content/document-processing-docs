@@ -134,12 +134,12 @@ export class AppComponent {
 {% endtabs %}
 
 Behavior notes
-- isLock true: The annotation is locked; users cannot move, resize, or edit it through the UI until it is unlocked.
-- skipPrint true: All annotations are omitted from the print output initiated from the viewer.
-- skipDownload true: All annotations are omitted from the exported/downloaded PDF from the viewer.
-- isPrint on an individual annotation: Use this when you only want to exclude a particular annotation from printing while leaving others printable.
+- `isLock` true: The annotation is locked; users cannot move, resize, or edit it through the UI until it is unlocked.
+- `skipPrint` true: All annotations are omitted from the print output initiated from the viewer.
+- `skipDownload` true: All annotations are omitted from the exported/downloaded PDF from the viewer.
+- `isPrint` on an individual annotation: Use this when you only want to exclude a particular annotation from printing while leaving others printable.
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## See also
 

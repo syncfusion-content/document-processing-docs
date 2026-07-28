@@ -1,13 +1,27 @@
 ---
-title: Known exceptions thrown in XlsIO | Syncfusion
-description: Learn here all about the Known exceptions thrown in the Syncfusion's Excel (XlsIO) Library and more.
+title: Known Exceptions in Syncfusion XlsIO | Syncfusion
+description: Lists the known exceptions thrown by Syncfusion XlsIO, with the .NET exception type, XlsIO class, message, and the underlying reason.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Known Exceptions Details in Excel Library
+# Known Exceptions in Syncfusion XlsIO
 
-The list of known exceptions thrown in Essential<sup>&reg;</sup> XlsIO is listed below.
+The following tables list the known exceptions that Essential<sup>&reg;</sup> XlsIO can throw during read, write, formatting, and validation operations. Use these tables to identify the cause of an exception and to choose the correct `try`/`catch` block to handle it in your code.
+
+## How to read these tables
+
+Each row has three columns:
+
+- **Class** — the XlsIO type (such as `IWorkbook`, `IWorksheet`, or `IShape`) that the exception originates from.
+- **Message** — the text of the exception message as thrown by XlsIO.
+- **Reason** — a short user-facing explanation of why the exception is thrown and what range or value is expected.
+
+## See also
+
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
+- [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)
 
 ## ApplicationException
 

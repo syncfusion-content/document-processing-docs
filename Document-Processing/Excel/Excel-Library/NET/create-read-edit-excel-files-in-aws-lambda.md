@@ -1,4 +1,4 @@
----
+﻿---
 title: Create, read, and edit Excel files in AWS Lambda | Syncfusion
 description: This page explains how to create, read, and edit Excel files in AWS Lambda using the .NET Excel Library.
 platform: document-processing
@@ -8,11 +8,18 @@ documentation: UG
 
 # Create, read, and edit Excel files in AWS Lambda
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This library supports manipulating Excel documents in Amazon Web Services (AWS) with the Lambda function.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in AWS Lambda functions.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+* An active **AWS account** with permissions to create IAM roles, Lambda functions, and S3 buckets. If you do not have one, see [Create an AWS account](https://aws.amazon.com/free/).
+* A **Syncfusion license key**. Register it in `Function.cs` (see the snippet in Step 3a below). For production, store the key in **AWS Secrets Manager** or **Parameter Store** and load it via the SDK at startup see [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ## Steps to create an Excel document in AWS Lambda
 
-The below steps illustrates creating a simple Invoice formatted Excel document in AWS Lambda.
+The steps below illustrate creating a simple invoice-formatted Excel document in AWS Lambda.
 
 Step 1: Create a new **AWS Lambda project** as follows.
 
@@ -22,13 +29,23 @@ Step 2: Select Blueprint as Empty Function and click **Finish**.
 
 ![Select Blueprint](AWS_Images/Lambda_Images/AWS_blueprint.png)
 
-Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your .NET Standard application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet package](AWS_Images/Lambda_Images/CreateExcel_Nuget.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
-Step 4: Create a folder and copy the required data files and include the files to the project.
+Step 3a: Register your Syncfusion license key at the start of the `FunctionHandler` method (or in a static constructor) in **Function.cs**. Replace the placeholder with your actual key.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+{% endtabs %}
+
+For production deployments, load the key from **AWS Secrets Manager** or **Parameter Store** via the AWS SDK instead of hard-coding it.
+
+Step 4: Create a folder (for example, `Data/`), copy the required data files (such as `AdventureCycles-Logo.png` and any input Excel files) into it, and include the files in the project.
 
 ![Create data folder](AWS_Images/Lambda_Images/CreateExcel_Data_Folder.png)
 
@@ -42,11 +59,26 @@ Step 6: Include the following namespaces in **Function.cs** file.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.XlsIO;
+using Syncfusion.Drawing;
+using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code snippet in **Function.cs** to **create an Excel document**.
+Step 7: Add the following code snippet in the **FunctionHandler** method of **Function.cs** to **create an Excel document**.
+
+N> The code below assumes the following function handler signature. Place the body inside the `FunctionHandler` method:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+public string FunctionHandler(Stream input, ILambdaContext context)
+{
+    // ... place the snippet below inside this method ...
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The image file (`AdventureCycles-Logo.png`) is read from the working directory. Make sure the file is included in the deployment package (the AWS Toolkit adds files set to **Copy if newer** to the package automatically).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -61,9 +93,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
   
-  //Adding a picture
-  FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
-  IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+  //Adding a picture (wrap in using for proper disposal)
+  using (FileStream imageStream = new FileStream("AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read))
+  {
+    IPictureShape shape = worksheet.Pictures.AddPicture(1, 1, imageStream, 20, 20);
+  }
   
   //Disable gridlines in the worksheet
   worksheet.IsGridLinesVisible = false;
@@ -250,13 +284,15 @@ Step 12: Edit Memory size and Timeout as maximum in Basic settings of the AWS La
 
 ![Basic Settings](AWS_Images/Lambda_Images/Basic_Settings.png)
 
+N> For typical XlsIO workloads, a memory setting of **512 MB to 1024 MB** and a timeout of **1 to 5 minutes** is usually sufficient. Larger workbooks (with many images, charts, or formulas) may need more memory or a longer timeout. The maximum values depend on your AWS account and region.
+
 ## Steps to post the request to AWS Lambda
 
 Step 1: Create a new console project.
 
 ![Create console application in visual studio](AWS_Images/Lambda_Images/Console_Application.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
@@ -317,34 +353,50 @@ By executing the program, you will get the **Excel document** as follows.
 
 A complete working example of how to create an Excel file in AWS Lambda is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/AWS/AWS%20Lambda/Create%20Excel), you can download the [console application](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/AWS/Console%20Application/Create%20Excel) project here.
 
-## Read and Edit Excel file
+## Read and Edit an Excel File
 
-The below code snippet illustrates how to read and edit an Excel file in AWS Lambda.
+The following code snippet illustrates how to read and edit an Excel file in AWS Lambda.
+
+N> The code below reads `Sample.xlsx` from the working directory. Make sure the file is included in the deployment package (set **Copy to Output Directory** to **Copy if newer** in the file properties). The function returns the modified workbook as a Base64 string.
+
+The snippet below assumes the following function handler signature. Place the body inside the `FunctionHandler` method:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-//Create an instance of ExcelEngine 
-ExcelEngine excelEngine = new ExcelEngine();
+public string FunctionHandler(Stream input, ILambdaContext context)
+{
+    // ... place the snippet below inside this method ...
+}
+{% endhighlight %}
+{% endtabs %}
 
-//Instantiate the Excel application object
-IApplication application = excelEngine.Excel;
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+//Create an instance of ExcelEngine (wrap in using for proper disposal)
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+  //Instantiate the Excel application object
+  IApplication application = excelEngine.Excel;
 
-//Assigns default application version
-application.DefaultVersion = ExcelVersion.Xlsx;
+  //Assigns default application version
+  application.DefaultVersion = ExcelVersion.Xlsx;
 
-//A existing workbook is opened.             
-IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  //A existing workbook is opened.
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-//Access first worksheet from the workbook.
-IWorksheet worksheet = workbook.Worksheets[0];
+  //Access first worksheet from the workbook.
+  IWorksheet worksheet = workbook.Worksheets[0];
 
-//Set Text in cell A3.
-worksheet.Range["A3"].Text ="Hello World";
+  //Set Text in cell A3.
+  worksheet.Range["A3"].Text = "Hello World";
 
-//Creating stream object.
-MemoryStream stream = new MemoryStream();
-workbook.SaveAs(stream);
-return Convert.ToBase64String(stream.ToArray());
+  //Creating stream object.
+  using (MemoryStream stream = new MemoryStream())
+  {
+    workbook.SaveAs(stream);
+    return Convert.ToBase64String(stream.ToArray());
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -353,4 +405,4 @@ A complete working example of how to read and edit an Excel file in AWS Lambda i
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control annotation visibility in PDF Viewer
+# Control annotation visibility in PDF Viewer (React)
 
 ## Overview
 
@@ -29,11 +29,10 @@ Create an React component and update the template to include a button that trigg
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
-import {PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer, Inject, DynamicStampItem, SignStampItem, StandardBusinessStampItem, DisplayMode
-} from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 // Import PdfAnnotationFlag and PdfDocument from the Syncfusion PDF library.
-import { PdfAnnotationFlag, PdfDocument} from '@syncfusion/ej2-pdf';
+import { PdfAnnotationFlag, PdfDocument } from '@syncfusion/ej2-pdf';
 
 function App() {
     return (<div>
@@ -46,16 +45,17 @@ function App() {
     </div>
 </div>);
 function Save() {
-    // Get the PDF viewer instance
+    // Get the PDF viewer instance.
     var viewer = document.getElementById('container').ej2_instances[0];
 
-    // Save the current PDF document as a Blob
+    // saveAsBlob() returns the current PDF as a Blob.
     viewer.saveAsBlob().then((blob) => {
         const reader = new FileReader();
         reader.onload = function () {
-            // Convert Blob to Base64 format
+            // Convert Blob to Base64 format.
             const base64data = reader.result;
 
+            // Strip the data URL prefix so the PdfDocument constructor receives raw Base64.
             const base64EncodedData = base64data.split('base64,')[1];
             const document1 = new PdfDocument(base64EncodedData);
 
@@ -64,12 +64,12 @@ function Save() {
                 const page = document1.getPage(i);
                 for (let j = 0; j < page.annotations.count; j++) {
                     const annot = page.annotations.at(j);
-                    // Set the PdfAnnotationFlag to noView to ensure annotations are only visible in our viewer
+                    // Set the PdfAnnotationFlag to noView; the Syncfusion viewer ignores this flag at render time.
                     annot.flags |= PdfAnnotationFlag.noView;
                 }
             }
 
-            // Save the modified document as Blob
+            // Save the modified document as Blob.
             document1.saveAsBlob().then((modifiedBlob) => {
                 const internalReader = new FileReader();
                 internalReader.onload = function () {

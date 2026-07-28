@@ -5,6 +5,7 @@ description: Learn how to add, delete, update, and apply redaction annotations p
 platform: document-processing
 control: PdfViewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Programmatic support for redaction in Angular PdfViewer
@@ -203,7 +204,7 @@ export class AppComponent {
     } as any);
   }
 
-  //You can listen to the annotationAdd event to track when annotations are added.
+  // You can listen to the annotationAdd event to track when annotations are added.
   onAnnotationAdd(args: any): void {
     console.log('Annotation added:', args);
   }
@@ -383,7 +384,7 @@ export class AppComponent {
     ]
   };
 
-  //Edit RedactionAnnotation
+  // Edit RedactionAnnotation
   editRedactAnnotation(): void {
     const collection: any[] = (this.pdfViewer as any).annotationCollection;
     for (let i = 0; i < collection.length; i++) {
@@ -489,7 +490,7 @@ export class AppComponent implements AfterViewInit {
     ]
   };
 
-  //Add page redactions programmatically (pages 1, 3, 5, 7)
+  // Add page redactions programmatically (pages 1, 3, 5, 7)
   addPageRedactions(): void {
     this.pdfViewer.annotation.addPageRedactions([1, 3, 5, 7]);
   }
@@ -578,7 +579,7 @@ export class AppComponent implements AfterViewInit {
     ]
   };
 
-  //Apply redaction programmatically (irreversible)
+  // Apply redaction programmatically (irreversible)
   applyRedaction(): void {
     this.pdfViewer.annotation.redact();
   }
@@ -666,7 +667,7 @@ export class AppComponent implements AfterViewInit {
     ]
   };
 
-  //Configure default redaction annotation properties (same as your JS)
+  // Configure default redaction annotation properties (same as your JS)
   ngAfterViewInit(): void {
     (this.pdfViewer as any).redactionSettings = {
       overlayText: 'Confidential',
@@ -698,5 +699,5 @@ The redaction property panel allows users to update annotation properties throug
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

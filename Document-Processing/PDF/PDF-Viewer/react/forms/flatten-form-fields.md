@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flatten PDF form fields in React PDF Viewer | Syncfusion
-description: Learn hoow to flatten interactive PDF form fields before download or save-as in EJ2 React PDF Viewer.
+description: Learn how to flatten interactive PDF form fields before download or save-as in EJ2 React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -25,7 +25,7 @@ Flattening PDF forms converts interactive fields such as textboxes, dropdowns, c
 2. Intercept the download flow using [`downloadStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#downloadstart) and cancel the default flow.
 3. Retrieve the viewer's blob via [`saveAsBlob()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#saveasblob) and convert the blob to base64.
 4. Use `PdfDocument` from Syncfusion PDF Library to open the document, set `field.flatten = true` for each form field, then save.
-5. For the flattening the form fields when downloading through *Save As* option in Page Organizer, repeat steps 2–4 by using [`pageOrganizerSaveAs`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageorganizersaveas) event.
+5. To flatten the form fields when downloading through the *Save As* option in Page Organizer, repeat steps 2–4 by using [`pageOrganizerSaveAs`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#pageorganizersaveas) event.
 
 ## Complete example
 
@@ -62,7 +62,7 @@ export default function App() {
             let field: PdfField = document.form.fieldAt(index);
             field.flatten = true;
         }
-        // If both annotations and form fields needs to be flattened, use
+        // If both annotations and form fields need to be flattened, use
         // document.flatten = true
         document.save(`${viewerRef.current.fileName}.pdf`);
         document.destroy();

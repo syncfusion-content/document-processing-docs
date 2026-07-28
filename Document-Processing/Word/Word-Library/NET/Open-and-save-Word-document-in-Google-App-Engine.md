@@ -39,10 +39,10 @@ Step 1: Open Visual Studio and select the ASP.NET Core Web app (Model-View-Contr
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
 Step 2: Configure your new project according to your requirements.
-![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Configuration-Open-and-Save-Word-Document.png)
+![Configure the new project](GCP_Images/Configuration-Open-and-Save-Word-Document.png)
 
 Step 3: Click the **Create** button.
-![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Additional-Information-WordtoPDF.png)
+![Additional project configuration](GCP_Images/Additional-Information-WordtoPDF.png)
 
 Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.DocIO.Net.Core NuGet package](ASP-NET-Core_images/Install_Nuget.png)
@@ -102,7 +102,8 @@ Step 9: Add below code example to add a paragraph in the Word document.
 IWSection section = document.Sections[0];
 //Add new paragraph to the section.
 IWParagraph paragraph = section.AddParagraph();
-paragraph.ParagraphFormat.FirstLineIndent = 36;paragraph.BreakCharacterFormat.FontSize = 12f;
+paragraph.ParagraphFormat.FirstLineIndent = 36;
+paragraph.BreakCharacterFormat.FontSize = 12f;
 //Add new text to the paragraph.
 IWTextRange textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as IWTextRange;
 textRange.CharacterFormat.FontSize = 12f;
@@ -147,7 +148,7 @@ ls
 
 ![View the files and directories](GCP_Images/Navigate-Open-and-Save-Word-Document.png)
 
-Step 4: Run the following **command** to navigate which sample you want run.
+Step 4: Run the following **command** to navigate to the sample you want to run.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -157,9 +158,9 @@ cd Open-and-save-Word-document
 {% endhighlight %}
 {% endtabs %}
 
-![Navigate which sample you want run](GCP_Images/View-the-File-Open-and-Save-Word-Document.png)
+![Navigate to the sample you want to run](GCP_Images/View-the-File-Open-and-Save-Word-Document.png)
 
-Step 5: To ensure that the sample is working correctly, please run the application using the following command.
+Step 5: To ensure that the sample is working correctly, run the application using the following command.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -177,7 +178,7 @@ Step 6: Verify that the application is running properly by accessing the **Web V
 Step 7: Now you can see the sample output on the preview page.
 ![Sample output in browser](GCP_Images/Ensure-sample-Open-and-Save-Word-Document.png)
 
-Step 8: Close the preview page and return to the terminal then press **Ctrl+C** for which will typically stop the process.
+Step 8: Close the preview page and return to the terminal, then press **Ctrl+C** to stop the process.
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/Stop-Process-Open-and-Save-Word-Document.png)
 
 ## Publish the application
@@ -205,7 +206,7 @@ cd bin/Release/net8.0/publish/
 
 ![Navigate to publish folder](GCP_Images/Navigate-Publish-Folder-Open-and-Save-Word-Document.png)
 
-## Configure app.yaml and docker file
+## Configure app.yaml and Dockerfile
 
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
@@ -222,7 +223,7 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/Yaml-File-Open-and-Save-Word-Document.png)
 
-Step 2: Add the Docker file to the publish folder with the following contents.
+Step 2: Add the Dockerfile to the publish folder with the following contents.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -242,7 +243,7 @@ EOT
 
 ![Add required files to publish folder](GCP_Images/Docker-File-Open-and-Save-Word-Document.png)
 
-Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspace**.
+Step 3: Ensure the **Dockerfile** and **app.yaml** files are added in the **Workspace**.
 ![Add required files to publish folder](GCP_Images/Check-Docker-File-in-Workspace-Open-and-Save-Word-Document.png)
 
 ## Deploy to App Engine
@@ -257,10 +258,10 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-![Add required files to publish folder](GCP_Images/Deploy-Open-and-Save-Word-Document.png)
+![Deploy the application to App Engine](GCP_Images/Deploy-Open-and-Save-Word-Document.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
-![Add required files to publish folder](GCP_Images/Browser-Open-and-Save-Word-Document.png)
+![Access the deployed application in browser](GCP_Images/Browser-Open-and-Save-Word-Document.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/GCP/Google_App_Engine).
 

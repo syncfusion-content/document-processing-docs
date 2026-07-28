@@ -546,7 +546,7 @@ txt.CharacterFormat.FontSize = 11f;
 //Appends a new inline content control to enter the value
 InlineContentControl txtField = cellPara.AppendInlineContentControl(ContentControlType.Text) as InlineContentControl;
 txtField.ContentControlProperties.Title = "Text";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -559,7 +559,7 @@ txtField = cellPara.AppendInlineContentControl(ContentControlType.Date) as Inlin
 txtField.ContentControlProperties.Title = "Date";
 //Sets the date display format
 txtField.ContentControlProperties.DateDisplayFormat = "M/d/yyyy";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -572,7 +572,7 @@ txtField = cellPara.AppendInlineContentControl(ContentControlType.Text) as Inlin
 txtField.ContentControlProperties.Title = "Text";
 //Sets multiline property to true to get the multiple line input of Address
 txtField.ContentControlProperties.Multiline = true;
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -583,7 +583,7 @@ txt.CharacterFormat.FontSize = 11f;
 //Appends a new inline content control to enter the value
 txtField = cellPara.AppendInlineContentControl(ContentControlType.Text) as InlineContentControl;
 txtField.ContentControlProperties.Title = "Text";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -594,7 +594,7 @@ txt.CharacterFormat.FontSize = 11f;
 //Appends a new inline content control to enter the value
 txtField = cellPara.AppendInlineContentControl(ContentControlType.Text) as InlineContentControl;
 txtField.ContentControlProperties.Title = "Text";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -653,7 +653,7 @@ item.DisplayText = "Universal";
 item.Value = "3";
 dropdown.ContentControlProperties.ContentControlListItems.Add(item);
 dropdown.ContentControlProperties.Title = "Drop-Down";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 dropdown.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 dropdown.BreakCharacterFormat.FontName = "Arial";
 dropdown.BreakCharacterFormat.FontSize = 11f;
@@ -663,7 +663,7 @@ txt.CharacterFormat.FontName = "Arial";
 txt.CharacterFormat.FontSize = 11f;
 //Appends a new inline content control to enter the value
 txtField = cellPara.AppendInlineContentControl(ContentControlType.Text) as InlineContentControl;
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 txtField.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 txtField.BreakCharacterFormat.FontName = "Arial";
 txtField.BreakCharacterFormat.FontSize = 11f;
@@ -696,7 +696,7 @@ item = new ContentControlListItem();
 item.DisplayText = "Excellent";
 item.Value = "3";
 dropdown.ContentControlProperties.ContentControlListItems.Add(item);
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 dropdown.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 dropdown.BreakCharacterFormat.FontName = "Arial";
 dropdown.BreakCharacterFormat.FontSize = 11f;
@@ -726,7 +726,7 @@ item.DisplayText = "Excellent";
 item.Value = "3";
 dropdown.ContentControlProperties.ContentControlListItems.Add(item);
 dropdown.ContentControlProperties.Title = "Drop-Down";
-//Sets formatting options for text present insider a content control
+//Sets formatting options for text present inside a content control
 dropdown.BreakCharacterFormat.TextColor = Syncfusion.Drawing.Color.MidnightBlue;
 dropdown.BreakCharacterFormat.FontName = "Arial";
 dropdown.BreakCharacterFormat.FontSize = 11f;
@@ -1251,7 +1251,7 @@ dropdown.BreakCharacterFormat.TextColor = System.Drawing.Color.MidnightBlue
 dropdown.BreakCharacterFormat.FontName = "Arial"
 dropdown.BreakCharacterFormat.FontSize = 11.0F
 'Appends a text to paragraph of cell
-txt = cellPara.AppendText("" + vbLf + vbLf + vbTab& + " VB:" + vbTab + vbTab + vbTab& + vbTab)
+txt = cellPara.AppendText("" + vbLf + vbLf + vbTab + " VB:" + vbTab + vbTab + vbTab + vbTab)
 txt.CharacterFormat.FontName = "Arial"
 txt.CharacterFormat.FontSize = 9.0F
 'Appends a new inline content control to enter the value
@@ -1592,7 +1592,7 @@ IWParagraph paragraph = section.AddParagraph();
 //Adds new XmlPart to the document
 CustomXMLPart xmlPart = new CustomXMLPart(document);
 //Loads the xml code
-xmlPart.LoadXML(@"<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_datee>12/1/2007</pub_datee> <abstract>New You see them in the spring outside your windows.</abstract></book></books>");
+xmlPart.LoadXML(@"<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_date>12/1/2007</pub_date> <abstract>New You see them in the spring outside your windows.</abstract></book></books>");
 //Adds text
 paragraph.AppendText("Book author name : ");
 //Adds new content control to the paragraph
@@ -1626,7 +1626,7 @@ IWParagraph paragraph = section.AddParagraph();
 //Adds new XmlPart to the document
 CustomXMLPart xmlPart = new CustomXMLPart(document);
 //Loads the xml code
-xmlPart.LoadXML(@"<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_datee>12/1/2007</pub_datee> <abstract>New You see them in the spring outside your windows.</abstract></book></books>");
+xmlPart.LoadXML(@"<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_date>12/1/2007</pub_date> <abstract>New You see them in the spring outside your windows.</abstract></book></books>");
 //Adds the text
 paragraph.AppendText("Book author name : ");
 //Adds new content control to the paragraph
@@ -1658,7 +1658,7 @@ Dim paragraph As IWParagraph = section.AddParagraph
 'Adds new XmlPart to the document
 Dim xmlPart As CustomXMLPart = New CustomXMLPart(document)
 'Loads the xml code
-xmlPart.LoadXML("<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_datee>12/1/2007</pub_datee> <abstract>New You see them in the spring outside your windows.</abstract></book></books>")
+xmlPart.LoadXML("<books><book><author>Matt Hank</author><title>New Migration Paths of the Red Breasted Robin</title><genre>New non-fiction</genre><price>29.95</price><pub_date>12/1/2007</pub_date> <abstract>New You see them in the spring outside your windows.</abstract></book></books>")
 'Adds text
 paragraph.AppendText("Book author name : ")
 'Adds new content control to the paragraph
@@ -1666,11 +1666,11 @@ Dim control As InlineContentControl = CType(paragraph.AppendInlineContentControl
 'Creates the XML mapping on a content control for specified XPath
 control.ContentControlProperties.XmlMapping.SetMapping("/books/book/author", "", xmlPart)
 'Selects the single node
-CustomXMLNode node = xmlPart.SelectSingleNode("/books/book/title");
+Dim node As CustomXMLNode = xmlPart.SelectSingleNode("/books/book/title")
 'Adds another paragraph
 paragraph = section.AddParagraph
 'Adds text
-paragraph.AppendText("Book title: ");
+paragraph.AppendText("Book title: ")
 'Appends content control to second paragraph
 control = CType(paragraph.AppendInlineContentControl(ContentControlType.Text), InlineContentControl)
 'Creates the XML data mapping on a content control for specified node
@@ -1874,7 +1874,7 @@ document.EnsureMinimal();
 WParagraph paragraph = document.LastParagraph;
 //Adds text to the paragraph
 paragraph.AppendText("A new text is added to the paragraph. ");
-//Appends picture content control to the paragraph
+//Appends checkbox content control to the paragraph
 InlineContentControl checkBox = paragraph.AppendInlineContentControl(ContentControlType.CheckBox) as InlineContentControl;
 checkBox.ContentControlProperties.IsChecked = true;
 //Creates memory stream
@@ -1911,8 +1911,8 @@ Dim paragraph As WParagraph = document.LastParagraph
 'Adds text to the paragraph
 paragraph.AppendText("A new text is added to the paragraph. ")
 'Appends checkbox content control to the paragraph
-Dim checkBox As InlineContentControl = CType(paragraph.AppendInlineContentControl(ContentControlType. CheckBox), InlineContentControl)
-checkBox.ContentControlProperties.IsChecked = True 
+Dim checkBox As InlineContentControl = CType(paragraph.AppendInlineContentControl(ContentControlType.CheckBox), InlineContentControl)
+checkBox.ContentControlProperties.IsChecked = True
 'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
@@ -2533,7 +2533,7 @@ Private Shared Sub IterateTextBody(ByVal textBody As WTextBody)
             Case EntityType.Table
                 'Table is a collection of rows and cells
                 'Iterates through table's DOM
-                SurroundingClass.IterateTable(TryCast(bodyItemEntity, WTable))
+                IterateTable(TryCast(bodyItemEntity, WTable))
             Case EntityType.BlockContentControl
                 Dim blockContentControl As BlockContentControl = TryCast(bodyItemEntity, BlockContentControl)
                 'Iterates to the body items of Block Content Control.
@@ -2570,17 +2570,18 @@ Private Shared Sub IterateParagraph(ByVal paraItems As ParagraphItemCollection)
                 IterateTextBody(shape.TextBody)
             Case EntityType.InlineContentControl
                 Dim inlineContentControl As InlineContentControl = TryCast(entity, InlineContentControl)
-                If inlineContentControl.ContentControlProperties.Title = "ReplaceText" Then 
+                If inlineContentControl.ContentControlProperties.Title = "ReplaceText" Then
                     ReplaceTextWithInlineContentControl("Hello World", inlineContentControl)
+                End If
         End Select
     Next
 End Sub
 
 Private Shared Sub ReplaceTextWithInlineContentControl(ByVal text As String, ByVal inlineContentControl As InlineContentControl)
     Dim characterFormat As WCharacterFormat = Nothing
-        For Each item As ParagraphItem In inlineContentControl.ParagraphItems
-            If TypeOf item Is WTextRange Then
-                characterFormat = TryCast(item, WTextRange).CharacterFormat
+    For Each item As ParagraphItem In inlineContentControl.ParagraphItems
+        If TypeOf item Is WTextRange Then
+            characterFormat = TryCast(item, WTextRange).CharacterFormat
             Exit For
         End If
     Next
@@ -2595,7 +2596,7 @@ End Sub
 
 {% endtabs %}
 
-N> In the above-mentioned code samples, for Xamarin platforms the document is saved as stream only. To save the stream to file kindly refer code sample [here](https://help.syncfusion.com/document-processing/word/word-library/net/xamarin#save-the-document#).
+N> In the above-mentioned code samples, for Xamarin platforms the document is saved as stream only. To save the stream to file kindly refer code sample [here](https://help.syncfusion.com/document-processing/word/word-library/net/xamarin#save-the-document).
 
 ## Online Demo
 

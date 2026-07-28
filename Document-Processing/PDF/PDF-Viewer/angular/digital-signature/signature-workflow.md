@@ -242,13 +242,13 @@ N> For a ready‑to‑try flow that routes two users to sign their own fields an
 
 Use the **JavaScript PDF Library** to apply a cryptographic signature on a field, with or without a visible appearance. See the **Digital Signature** documentation for additional options (external signing callbacks, digest algorithms, etc.). 
 
-N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/angular/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/angular/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser. Digital Signature samples in the Angular sample browser.
+N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/angular/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/angular/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser.
 
 ### Finalize a signed document (lock)
 
 After collecting all signatures and passing validations, **[Lock](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#lock-signature)** the PDF (and optionally restrict permissions) to prevent further edits.
 
-## Signature Workflow Best Practices (Explanation)
+## Signature Workflow Best Practices
 
 Designing a well‑structured signature workflow ensures clarity, security, and efficiency when working with PDF documents. Signature workflows typically involve multiple participants—reviewers and approvers each interacting with the document at different stages.
 
@@ -307,7 +307,6 @@ N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewe
 - [Customize Annotation](../annotation/customize-annotation)
 - [Digital Signature - JavaScript PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature)
 - [Handwritten Signature](../annotation/signature-annotation)
-- [Form Fields API](../form-fields-api)
+- [Form Fields API](../forms/form-fields-api)
 - [Add Digital Signature](./add-digital-signature)
 - [Customize Signature Appearance](./customize-signature-appearance)
-- [Signature workflows](./signature-workflow)

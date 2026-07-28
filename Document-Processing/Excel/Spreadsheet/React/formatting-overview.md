@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Formatting Cells in React Spreadsheet component
+# Formatting Cells in React Spreadsheet Component
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are:
 
@@ -22,7 +22,7 @@ To get started quickly with Formatting, you can check this video:
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to learn how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for feature highlights.
 
 ## See Also
 
