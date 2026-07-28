@@ -11,7 +11,12 @@ documentation: UG
 
 ## Create a simple Excel report using .NET Core
 
-The below steps illustrates creating a simple Invoice formatted Excel document in console application using .NET Core.
+The following steps illustrate creating a simple Invoice-formatted Excel document in a console application using .NET Core.
+
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) or Visual Studio Code with the C# extension installed.
+- .NET 8.0 SDK or later.
+- A user account with write permissions to the project output directory.
 
 {% tabcontents %}
 
@@ -25,13 +30,13 @@ Step 2: Name the project.
 
 ![Name the Application](Console-Apps-images/Console-Apps-images_img2.png)
 
-Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your .NET Core application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Console-Apps-images/Console-Apps-images_img3.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: Include the following namespaces in the Program.cs file.
+Step 4: Include the following namespaces in the `Program.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -49,7 +54,9 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the below code snippet in program.cs to create an Excel file.
+Step 5: Include the following code snippet in the `Program.cs` file to create an Excel file.
+
+N> Before running, place the AdventureCycles-Logo.png image in the project output directory (the same folder as the generated CreateExcel.xlsx file).
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/master/Getting Started/Console/.NET/Create Excel/Create Excel/Program.cs,180"  %}
@@ -403,7 +410,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   
   'Saving the Excel to the Stream 	
   Dim stream As FileStream = New FileStream("CreateExcel.xlsx", FileMode.Create, FileAccess.Write)
-  workbook.SaveAs(stream);
+  workbook.SaveAs(stream)
 End Using
 {% endhighlight %}
 {% endtabs %} 
@@ -422,14 +429,14 @@ Step 2: Enter the project name and create the project.
 
 ![Name the Application](Console-Apps-images/Console-Apps-VS_images_img2.png)
 
-Alternatively, create a Console application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a Console application using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 ```
 dotnet new console -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in the console app**,run the following command to  install [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
+Step 3: To **create an Excel document in the console app**, run the following command to install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) package.
 
 ```
 dotnet add package Syncfusion.XlsIO.Net.Core
@@ -439,7 +446,7 @@ dotnet add package Syncfusion.XlsIO.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
 
-Step 4: Include the following namespaces in the Program.cs file.
+Step 4: Include the following namespaces in the `Program.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -457,7 +464,9 @@ Imports Syncfusion.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the below code snippet in program.cs to create an Excel file.
+Step 5: Include the following code snippet in the `Program.cs` file to create an Excel file.
+
+N> Before running, place the AdventureCycles-Logo.png image in the project output directory (the same folder as the generated CreateExcel.xlsx file).
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/refs/heads/master/Getting Started/Console/.NET/Create Excel/Create Excel/Program.cs,180"  %}
@@ -811,7 +820,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   
   'Saving the Excel to the Stream 	
   Dim stream As FileStream = New FileStream("CreateExcel.xlsx", FileMode.Create, FileAccess.Write)
-  workbook.SaveAs(stream);
+  workbook.SaveAs(stream)
 End Using
 {% endhighlight %}
 {% endtabs %} 
@@ -829,13 +838,19 @@ By executing the program, you will get the Excel file as below.
 
 ## Create a simple Excel report using .NET Framework
 
-The below steps illustrates creating a simple Invoice formatted Excel document in console application using .NET Framework.
+**Prerequisites:**
+- Visual Studio 2022 (17.0 or later) with the **.NET desktop development** workload installed.
+- .NET Framework 4.6.1 or later.
+- A user account with write permissions to the project output directory.
+
+The following steps illustrate creating a simple Invoice-formatted Excel document in a console application using .NET Framework.
+
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-Step 1: Create a new C# Console Application(.NET Framework) project.
+Step 1: Create a new C# Console Application (.NET Framework) project.
 
 ![Create console application.NET Framework in Visual Studio](Console-Apps-images/Console-Apps-images_img5.png)
 
@@ -843,13 +858,13 @@ Step 2: Name the project.
 
 ![Name the Application](Console-Apps-images/Console-Apps-images_img6.png)
 
-Step 3: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 3: Install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package as a reference to your .NET Framework application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.WinForms Nuget Package](Console-Apps-images/Console-Apps-images_img3.png)
 
 N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
 
-Step 4: Include the following namespaces in the program.cs file.
+Step 4: Include the following namespaces in the `Program.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -867,7 +882,9 @@ Imports System.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the below code snippet in program.cs to create an Excel file.
+Step 5: Include the following code snippet in the `Program.cs` file to create an Excel file.
+
+N> Before running, place the AdventureCycles-Logo.png image in the project output directory (the same folder as the generated CreateExcel.xlsx file).
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1231,7 +1248,7 @@ End Using
 
 {% tabcontent Visual Studio Code %}
 
-Step 1: Create a new C# Console Application(.NET Framework) project.
+Step 1: Create a new C# Console Application (.NET Framework) project.
 
 ![Create console application.NET Framework in Visual Studio](Console-Apps-images/Console-Apps-VS_images_img1.png)
 
@@ -1239,14 +1256,14 @@ Step 2: Name the project.
 
 ![Name the Application](Console-Apps-images/Console-Apps-VS_images_img2.png)
 
-Alternatively, create a Console application(.NET Framework) using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, create a Console application (.NET Framework) using the following command in the terminal (<kbd>Ctrl</kbd>+<kbd>`</kbd>):
 
 ```
 dotnet new console -o CreateExcel
 cd CreateExcel
 ```
 
-Step 3: To **create a Excel document in the console app (.NET Framework)**,run the following command to  install [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) package.
+Step 3: To **create an Excel document in the console app (.NET Framework)**, run the following command to install the [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) package.
 
 ```
 dotnet add package Syncfusion.XlsIO.WinForms
@@ -1256,7 +1273,7 @@ dotnet add package Syncfusion.XlsIO.WinForms
 
 N> The [Syncfusion.XlsIO.WinForms](https://www.nuget.org/packages/Syncfusion.XlsIO.WinForms) NuGet package is dependent package for Syncfusion<sup>&reg;</sup> Windows Forms GUI controls, so named with suffix "WinForms". It has platform independent .NET framework (4.0, 4.5, 4.5.1, 4.6) assemblies of Excel library and doesn't contain any Windows Forms related references or code. Hence, we recommend this package for .NET framework Console application.  
 
-Step 4: Include the following namespaces in the program.cs file.
+Step 4: Include the following namespaces in the `Program.cs` file.
 {% capture codesnippet1 %}
 {% tabs %}  
 {% highlight c# tabtitle="C#" %}
@@ -1274,7 +1291,9 @@ Imports System.Drawing
 {% endcapture %}
 {{ codesnippet1 | OrderList_Indent_Level_1 }}
 
-Step 5: Include the below code snippet in program.cs to create an Excel file.
+Step 5: Include the following code snippet in the `Program.cs` file to create an Excel file.
+
+N> Before running, place the AdventureCycles-Logo.png image in the project output directory (the same folder as the generated CreateExcel.xlsx file).
 {% capture codesnippet3 %}
 {% tabs %}  
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1645,4 +1664,4 @@ By executing the program, you will get the Excel file as below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

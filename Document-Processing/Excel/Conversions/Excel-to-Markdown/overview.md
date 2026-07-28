@@ -1,6 +1,6 @@
 ---
 title: Convert Excel to Markdown in C# | XlsIO | Syncfusion
-description: Convert Excel to Markdown in C# using Syncfusion<sup>&reg;</sup> .NET Excel (XlsIO) library without Microsoft Excel or interop dependencies
+description: Learn how to convert Excel workbooks or worksheets to Markdown files using Syncfusion .NET XlsIO, without Microsoft Office or Interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -12,12 +12,12 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert an Excel document to Markdown using the .NET Excel Library (XlsIO).
+For the assemblies and NuGet packages required to convert Excel to Markdown, see the per-platform lists below.
 
 * [Excel to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
 * [Excel to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
 
-## Convert Excel to Markdown document
+## Convert Excel to Markdown
 
 Convert an existing Excel file to Markdown using the .NET Excel (XlsIO) library.
 
@@ -164,7 +164,7 @@ Private Sub MdExportSettings_ImageNodeVisited(sender As Object, args As SaveImag
     Using fileStreamOutput As FileStream = File.Create(imagePath)
         args.ImageStream.CopyTo(fileStreamOutput)
     End Using
-    ' Set the image URI to be used in the output markdown
+    ' Set the image URI to be used in the output Markdown.
     args.Uri = imagePath
 End Sub
 {% endhighlight %}

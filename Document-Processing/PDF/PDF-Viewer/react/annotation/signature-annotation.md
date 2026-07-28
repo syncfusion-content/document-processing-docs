@@ -42,7 +42,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   function handWrittenSignature() {
@@ -163,7 +163,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Handwritten Signature programatically</button>
+    <button onClick={addAnnotation}>Add Handwritten Signature programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -233,7 +233,7 @@ function App() {
     });
   }
     return (<div>
-    <button onClick={addAnnotation}>Add Handwritten Signature programatically</button>
+    <button onClick={addAnnotation}>Add Handwritten Signature programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -281,7 +281,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)
 
-### Edit Signature Annotation Programmatically
+### Edit signature annotation programmatically
 
 With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
 

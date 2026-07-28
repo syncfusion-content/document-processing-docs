@@ -31,16 +31,18 @@ The UI Builder delivers full implementations, covering layout, components, and s
 
 ### Individual Tools
 
-You can directly invoke individual tools by name for more targeted assistance (especially useful for specialized tasks). In addition to the main UI Builder, tools like layout, style, and component are available. For more details, see the [individual tools documentation](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started#individual-tools).
+You can directly invoke individual tools by name for more targeted assistance (especially useful for specialized tasks). In addition to the main UI Builder, tools like `layout`, `style`, and `component` are available. For more details, see the [individual tools documentation](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started#individual-tools).
 
 ### Tips & Best Practices
 
 - Enable **Agent mode** in your IDE for smooth, multi-step execution with confirmation prompts.
 - Use higher-capability models (**Claude Sonnet 4.5 or newer, GPT-5**) as they typically produce more accurate, higher-quality code.
-- If a step times out or becomes unresponsive, cancel it and retry the current step.
-- Always review the generated code and commands before accepting or applying them in production.
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
+### Troubleshooting
+
+- If a step times out or becomes unresponsive, cancel it and retry the current step.
+- If the generated code does not match expectations, refine your prompt and run the command again.
+- Always review the generated code and commands before accepting or applying them in production.
 
 ### See also
 
