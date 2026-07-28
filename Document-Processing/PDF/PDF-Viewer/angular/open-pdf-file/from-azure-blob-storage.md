@@ -22,7 +22,7 @@ Follow the getting-started guide in this [link](https://help.syncfusion.com/docu
 
 **Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
-1. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties
+1. Add the following private properties to the `AppComponent` class, and assign the values from the configuration to the corresponding properties.
 
 N> Replace **Your account name in Azure** with the Azure storage account name, **Your container name in Azure** with the container name, and **Your Blob name in Azure** with the blob name.
 
@@ -110,7 +110,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -161,7 +161,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
