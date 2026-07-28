@@ -1,13 +1,13 @@
 ---
 layout: post
 title: How to deploy word processor server docker container in Azure App Service in React DOCX Editor | Syncfusion
-description: Learn here all about How to deploy word processor server docker container in Azure App Service in the Syncfusion React DOCX Editor of Syncfusion Essential JS 2 and more.
+description: Learn here all about How to deploy word processor server docker container in Azure App Service in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
 control: How to deploy word processor server docker container in Azure App Service 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy word processor server docker container in Azure App Service in React DOCX Editor
+# How to deploy word processor server docker container in Azure App Service in React Document Editor
 
 ## Prerequisites
 
