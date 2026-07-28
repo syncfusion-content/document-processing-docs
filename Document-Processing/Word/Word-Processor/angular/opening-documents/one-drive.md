@@ -133,7 +133,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 **Step 4:**  Modify the index file in the Document Editor sample
 
-On the client side, the document is returned from the web service is opened using the[`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
+On the client side, the document is returned from the web service is opened using the[`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
