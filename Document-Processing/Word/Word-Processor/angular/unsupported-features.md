@@ -45,7 +45,7 @@ This section describes the unsupported elements in [Angular Document Editor](htt
 |--------|----------------|
 | ActiveX Controls | No |
 | Embedded Objects | No |
-| Images | Bitmap images only |
+| Images | Bitmap, Metafile (EMF, WMF), and TIFF images |
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |

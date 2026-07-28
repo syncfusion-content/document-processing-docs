@@ -10,46 +10,49 @@ documentation: ug
 
 # Scrolling in ASP.NET MVC Spreadsheet Control
 
-Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowScrolling) as true.
+Scrolling allows you to navigate quickly to different areas of a worksheet using the horizontal and vertical scrollbars. Set the [`allowScrolling`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowScrolling) property to `true` to enable scrolling in the Spreadsheet.
 
-N> By default, the `allowScrolling` property is true.
+N> The default value of the `allowScrolling` property is `true`.
 
 You have the following options in Scrolling by using [`scrollSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ScrollSettings).
 
-* Finite scrolling.
-* Virtual scrolling.
+The following table lists the scrolling options available in `scrollSettings`:
+
+| Property | Type | Default value | Description |
+|----------|------|---------------|-------------|
+| `isFinite` | `boolean` | `false` | Specifies whether scrolling is restricted to the defined rows and columns. |
+| `enableVirtualization` | `boolean` | `true` | Specifies whether rows and columns are rendered dynamically based on the viewport. |
+
+## Scroll through a worksheet
+
+You can scroll through a worksheet in one of the following ways:
+
+* Use the arrow keys.
+* Use the horizontal and vertical scrollbars.
+* Use the mouse wheel.
 
 ## Finite Scrolling
 
-Finite scrolling supports two type of modes in scrolling. You can use the `isFinite` property in [`scrollSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ScrollSettings) to specify the mode of scrolling.
+The `isFinite` property in [`scrollSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ScrollSettings) supports the following scrolling modes:
 
-* Finite - This mode does not create a new row/column when the scrollbar reaches the end. This can be achieved by setting the `isFinite` property as `true`.
+* **Finite mode**: Set `isFinite` to `true` to restrict scrolling to the defined rows and columns.
+* **Infinite mode**: Set `isFinite` to `false` to allow scrolling beyond the initially defined rows and columns.
 
-* Infinite - This mode creates a new row/column when the scrollbar reaches the end. This can be achieved by setting the `isFinite`property as `false`.
-
-N> By Default, the `isFinite` property is `false`.
+N> The default value of the `isFinite` property is `false`.
 
 ## Virtual Scrolling
 
-* Virtual scrolling allows you to load data that you require (load data based on viewport size) without buffering the entire huge database. You can set the `enableVirtualization` property in `scrollSettings` as `true`.
+Virtual scrolling renders rows and columns dynamically based on the viewport instead of rendering the entire dataset at once. Set the `enableVirtualization` property in `scrollSettings` to `true` to enable virtual scrolling.
 
-In virtual scrolling `enableVirtualization` is set to true means, it allows you to load the spreadsheet data while scrolling.
+When virtualization is enabled, the Spreadsheet loads and renders additional data while scrolling.
 
-N> By Default, the `enableVirtualization` property is `true`.
-
-**User Interface**:
-
-You can scroll through the worksheet using one of the following ways,
-
-* Using the `arrow` keys.
-* Using the Horizontal and Vertical`scroll` bars.
-* Using the `mouse` wheel.
+N> The default value of the `enableVirtualization` property is `true`.
 
 ## Finite scrolling with defined rows and columns
 
-If you want to perform scrolling with defined rows and columns, you must define `rowCount` and `colCount` in the [`sheets`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets) property and set `isFinite` as true and `enableVirtualization` as false in `scrollSettings`.
+To restrict scrolling to a fixed number of rows and columns, define the `rowCount` and `colCount` properties in the [sheet model](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets), set `isFinite` to `true`, and set `enableVirtualization` to `false` in `scrollSettings`.
 
-The following code example shows the finite scrolling with defined rows and columns in the spreadsheet. Here, we used rowCount as 20 and colCount as 20, after reaching the 20th row or 20th column you can't able to scroll.
+The following example demonstrates finite scrolling with a fixed sheet size. The `rowCount` and `colCount` properties are both set to `20`; therefore, scrolling is restricted to the twentieth row and twentieth column.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

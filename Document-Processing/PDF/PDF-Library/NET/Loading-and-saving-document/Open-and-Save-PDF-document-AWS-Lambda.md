@@ -9,7 +9,7 @@ keywords: aws lambda save pdf, aws load pdf, c# save pdf, c# load pdf
 
 # Open and save PDF document in AWS Lambda
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda.
 
 ## Steps to open and save PDF document in AWS Lambda
 
@@ -22,7 +22,7 @@ Step 2: Select the Blueprint as Empty Function and click **Finish**.
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](AWS_Images/NuGetPackage.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Create a folder and copy the required data files, and include the files in the project.
 ![Create a folder](AWS_Images/Data-Folder.png)
@@ -44,7 +44,7 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code sample in **Function.cs** to **open a PDF document in AWS Lambda**.
+Step 7: Add the following code sample in **Function.cs** to **open a PDF document in AWS Lambda**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
