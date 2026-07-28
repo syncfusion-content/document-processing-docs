@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Troubleshoot 'cp' is not recognized as a command in Angular | Syncfusion
+title: Troubleshoot 'cp' command not recognized in Angular | Syncfusion
 description: Learn here all about how to solve 'cp' is not recognized as a command in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Troubleshoot: Unix Copy Command Not Recognized on Windows in Angular
 
-The Unix copy command is not available in the Windows Command Prompt. Use the Windows-native `xcopy` command to copy files and directories. The equivalent command in Windows to copy a directory and its contents recursively is:
+The Unix copy command is not available in the Windows Command Prompt. Use the Windows-native `copy` command to copy files and directories. The equivalent command in Windows to copy a directory and its contents recursively is:
 
 ```batch
 xcopy /s /e /i .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib src\assets\ej2-pdfviewer-lib
