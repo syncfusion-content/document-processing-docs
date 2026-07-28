@@ -3,7 +3,7 @@ layout: post
 title: Saving PDF files in Angular PDF Viewer component | Syncfusion
 description: This page helps you to learn here all about saving PDF files in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Saving PDF files
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -59,7 +59,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 **Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Modify the `documentPath` with the correct PDF document URL to load.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

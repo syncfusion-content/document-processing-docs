@@ -3,7 +3,7 @@ layout: post
 title: Toolbar in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Toolbar in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Toolbar
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -26,6 +26,8 @@ The following table lists built-in toolbar items and their actions:
 | DownloadOption | Downloads the loaded PDF document. |
 | UndoRedoTool | Provides undo and redo for annotations. |
 | AnnotationEditTool | Toggles annotation edit mode. |
+| FormDesignerEditTool | Toggles form designer edit mode. |
+| SubmitForm | Submits the form data of a loaded PDF. |
 | CommentTool | Adds sticky notes (comments) to pages. |
 
 ## Show or hide the built-in toolbar
@@ -101,7 +103,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 ```html
 <script>
   window.onload = function () {
-    var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+    var pdfViewer = document.getElementById('pdfViewer').ej2_instances[0];
     pdfViewer.toolbar.showToolbar(false);
   }
 </script>
@@ -182,13 +184,13 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 ```html
 <script>
   window.onload = function () {
-    var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+    var pdfViewer = document.getElementById('pdfViewer').ej2_instances[0];
     pdfViewer.toolbar.showToolbarItem(new Array("DownloadOption"), true);
   }
 </script>
 ```
 
-## Show/Hide the left toolbar with the thumbnails and bookmarks
+## Show or hide the left toolbar with the thumbnails and bookmarks
 
 The PDF Viewer can show or hide the left navigation toolbar (thumbnails and bookmarks) using the `enableNavigationToolbar` API. Examples follow.
 
@@ -262,12 +264,12 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 The PDF Viewer supports customizing toolbar items: add, show, hide, enable, and disable.
 
-* Add: Define new items using the [CustomToolbarItemModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel) and include them in the [ToolbarSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings) property. Handle item clicks with the [toolbarclick](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs) event.
+* Add: Define new items using the [CustomToolbarItemModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/customToolbarItemModel) and include them in the [ToolbarSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarSettings) property. Handle item clicks with the [toolbarClick](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs) event.
 * Show / Hide: Show or hide predefined items through `ToolbarSettings`. See the [ToolbarItem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarItem) API for available identifiers.
 * Enable / Disable: Enable or disable toolbar items using the [enabletoolbaritem](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#enabletoolbaritem) API.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight ts tabtitle="Standalone" %}
 
 import { Component, OnInit } from '@angular/core';
 import {
@@ -349,7 +351,7 @@ export class AppComponent implements OnInit {
 }
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight ts tabtitle="Server-Backed" %}
 
 import { Component, OnInit } from '@angular/core';
 import {
@@ -681,10 +683,10 @@ The PDF Viewer exposes APIs so applications can implement a custom toolbar UI. H
 
 N> The icons are embedded in the font file used in the previous snippet.
 
-**Step 5:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 6:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight ts tabtitle="Standalone" %}
 
 @ViewChild('pdfviewer')
 public pdfviewerControl: PdfViewerComponent;
@@ -856,7 +858,7 @@ private readFile(args: any): void {
 }
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
+{% highlight ts tabtitle="Server-Backed" %}
 
 @ViewChild('pdfviewer')
 public pdfviewerControl: PdfViewerComponent;
