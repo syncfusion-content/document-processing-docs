@@ -266,6 +266,81 @@ End Sub
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-open-markdown-document/.NET).
 
+The following code example demonstrates how to open a Markdown document with a specified encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates a new MarkdownDocument instance.
+MarkdownDocument markdownDocument = new MarkdownDocument();
+// Creates import settings and specifies the encoding.
+MdImportSettings mdImportSettings = new MdImportSettings();
+mdImportSettings.Encoding = Encoding.Unicode;
+// Opens an existing Markdown document with import settings.
+markdownDocument.Open("Input.md", mdImportSettings);
+// Saves the Markdown document to the file system.
+markdownDocument.Save("Output.md");
+// Disposes the document to release all memory.
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Creates a new MarkdownDocument instance.
+Dim markdownDocument As New MarkdownDocument()
+
+' Creates import settings and specifies the encoding.
+Dim mdImportSettings As New MdImportSettings()
+mdImportSettings.Encoding = Encoding.Unicode
+' Opens an existing Markdown document with import settings.
+markdownDocument.Open("Input.md", mdImportSettings)
+' Saves the Markdown document to the file system.
+markdownDocument.Save("Output.md")
+' Disposes the document to release all memory.
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can also use the constructor approach with import settings.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Creates import settings and specifies the encoding.
+MdImportSettings mdImportSettings = new MdImportSettings();
+mdImportSettings.Encoding = Encoding.Unicode;
+// Opens an existing Markdown document using constructor.
+MarkdownDocument markdownDocument = new MarkdownDocument("Input.md", mdImportSettings);
+// Saves the Markdown document to the file system.
+markdownDocument.Save("Output.md");
+// Disposes the document to release all memory.
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Creates import settings and specifies the encoding.
+Dim mdImportSettings As New MdImportSettings()
+mdImportSettings.Encoding = Encoding.Unicode
+' Opens an existing Markdown document using constructor.
+Dim markdownDocument As New MarkdownDocument("Input.md", mdImportSettings)
+' Saves the Markdown document to the file system.
+markdownDocument.Save("Output.md")
+' Disposes the document to release all memory.
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Load-Options-Encoding/.NET).
+
 ## Saving a Markdown Document
 
 You can save the created or manipulated Markdown document to file system or stream using `Save` method of `MarkdownDocument` class.
@@ -446,6 +521,44 @@ End Sub
 {% endtabs %}
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-save-markdown-conversion/.NET).
+
+The following code example demonstrates how to save a Markdown document with a specified encoding.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+// Opens an existing Markdown document.
+MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
+// Creates a SaveOptions instance.
+SaveOptions saveOptions = new SaveOptions();
+// Sets the encoding to use when saving the Markdown document.
+saveOptions.Encoding = Encoding.Unicode;
+// Saves the Markdown document with the specified encoding.
+markdownDocument.Save("Output.md", saveOptions);
+// Disposes the document to release all memory.
+markdownDocument.Dispose();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+' Opens an existing Markdown document.
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument("Input.md")
+' Creates a SaveOptions instance.
+Dim saveOptions As SaveOptions = New SaveOptions()
+' Sets the encoding to use when saving the Markdown document.
+saveOptions.Encoding = Encoding.Unicode
+' Saves the Markdown document with the specified encoding.
+markdownDocument.Save("Output.md", saveOptions)
+' Disposes the document to release all memory.
+markdownDocument.Dispose()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Save-Options-Encoding/.NET).
 
 ### Getting Markdown document text
 
