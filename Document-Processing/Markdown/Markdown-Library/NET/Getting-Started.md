@@ -276,4 +276,4 @@ The resultant Markdown document looks as follows.
 
 ![Creating a new Word document from scratch with basic elements](GettingStarted_images/GettingStarted_Output1.png)
 
-N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
+N> Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.

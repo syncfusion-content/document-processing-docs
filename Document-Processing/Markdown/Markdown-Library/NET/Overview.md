@@ -20,4 +20,4 @@ It is a non-UI component that provides a full-fledged document instance model to
 * Support for converting Markdown documents to Word, HTML, PDF, PowerPoint, and Excel.
 * Support for converting Word, PDF, PowerPoint, HTML, and Excel documents to Markdown.
 
-N> Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
+N> Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
