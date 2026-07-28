@@ -183,7 +183,7 @@ In the following example, a comment thread is assigned to a cell during the init
 {% endhighlight %}
 {% endtabs %}
 
-After running the sample, verify that the comment indicator appears in the configured cell and that the corresponding comment thread is displayed in the Comments review pane.
+After running the sample, verify that the comment indicator appears in the configured cell and that the corresponding comment thread is displayed in the comments review pane.
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.

@@ -54,7 +54,7 @@ The Merge Cells feature allows users to combine two or more cells into a single 
 You can merge cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
-* Select a range and choose the required merge option from the Ribbon toolbar.
+* Select a range and choose the required merge option from the **Ribbon** toolbar.
 * Use the `merge` method to merge a range after the component is loaded.
 
 The `merge` method requires a cell range and the applicable merge type. The range identifies the cells to merge, and the merge type determines whether all cells, rows, or columns in the range are merged.
@@ -89,7 +89,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
+The **Data Validation **restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
 
 N> * The default value of the `allowDataValidation` property is `true`.
 
@@ -127,7 +127,7 @@ You can highlight invalid data in the following ways:
 * Open the **Data** tab in the Ribbon and choose **Highlight Invalid Data**.
 * Use the `addInvalidHighlight()` method to highlight invalid values programmatically.
 
-### Clear Highlighted Invalid Data
+### Clear Highlighted Invalid Data  
 
 This feature removes the highlighting applied to invalid cell values without removing the associated validation rules.
 
@@ -184,13 +184,13 @@ The following features have some limitations in Data Validation:
 
 Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
 
-The `autoFillSettings` property configures Auto Fill behavior:
+The `autoFillSettings` property configures auto fill behavior:
 
-* `showFillOptions`: Specifies whether the Auto Fill Options menu is displayed after an Auto Fill operation.
-* `fillType`: Specifies the default Auto Fill operation.
+* `showFillOptions`: Specifies whether the auto fill Options menu is displayed after an auto fill operation.
+* `fillType`: Specifies the default auto fill operation.
 * `direction`: Specifies the direction in which values are filled.
 
-You can perform Auto Fill in the following ways:
+You can perform auto fill in the following ways:
 
 * Drag the fill handle to the required range and select an option from the **Auto Fill Options** menu.
 * Use the `autoFill()` method programmatically.

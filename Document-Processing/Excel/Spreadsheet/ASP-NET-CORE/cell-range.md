@@ -49,7 +49,7 @@ Merge cells allow users to span two or more cells in the same row or column into
 You can merge cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
-* Select a range and choose the required merge option from the Ribbon toolbar.
+* Select a range and choose the required merge option from the **Ribbon** toolbar.
 * Use the `merge` method to merge a range after the component is loaded.
 
 The available merge options in spreadsheet are,
@@ -83,7 +83,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation is used to prevent users from entering invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
+The **Data Validation** is used to prevent users from entering invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
 
 N> * The default value for `allowDataValidation` property is `true`.
 
@@ -121,11 +121,11 @@ You can highlight invalid data in one of the following ways:
 
 ### Clear Highlighted Invalid Data
 
-The Clear Highlight feature is used to remove highlights from invalid cells.
+The **Clear Highlight** feature is used to remove highlights from invalid cells.
 
 You can clear highlighted invalid data in one of the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
+* Select the **Data** tab in the Ribbon toolbar, and then choose the **Clear Highlight** item.
 * Use the `removeInvalidHighlight()` method programmatically.
 
 {% tabs %}
@@ -176,13 +176,13 @@ The following features have some limitations in Data Validation:
 
 Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
 
-The `autoFillSettings` property configures Auto Fill behavior:
+The `autoFillSettings` property configures auto fill behavior:
 
-* `showFillOptions`: Specifies whether the Auto Fill Options menu is displayed after an Auto Fill operation.
-* `fillType`: Specifies the default Auto Fill operation.
+* `showFillOptions`: Specifies whether the auto fill Options menu is displayed after an auto fill operation.
+* `fillType`: Specifies the default auto fill operation.
 * `direction`: Specifies the direction in which values are filled.
 
-You can perform Auto Fill in the following ways:
+You can perform auto fill in the following ways:
 
 * Drag the fill handle to the required range and select an option from the **Auto Fill Options** menu.
 * Use the `autoFill()` method programmatically.
@@ -194,7 +194,7 @@ The `autoFill()` method accepts the following parameters:
 | dataRange | `string` | Specifies the data range. |
 | fillRange | `string` | Specifies the fill range. |
 | direction | `AutoFillDirection` | Specifies the direction ("Up", "Right", "Down", "Left") to be filled. |
-| fillType | `AutoFillType` | Specifies the fill type ("CopyCells", "FillSeries", "FillFormattingOnly", "FillWithoutFormatting") for the Auto Fill action. |
+| fillType | `AutoFillType` | Specifies the fill type ("CopyCells", "FillSeries", "FillFormattingOnly", "FillWithoutFormatting") for the auto fill action. |
 
 Auto Fill supports the following options:
 
@@ -258,7 +258,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 
 ### Apply Clear Feature
 
-You can apply the Clear feature in one of the following ways:
+You can apply the clear feature in one of the following ways:
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
 * Using the `clear()` method to clear the values.

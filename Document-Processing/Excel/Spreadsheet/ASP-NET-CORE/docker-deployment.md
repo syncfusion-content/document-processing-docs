@@ -99,4 +99,4 @@ services:
       - "6002:8080"
 ```
 
-Please refer to these getting started pages to create a Spreadsheet in [`Angular`](https://ej2.syncfusion.com/angular/documentation/spreadsheet/getting-started), [`React`](https://ej2.syncfusion.com/react/documentation/spreadsheet/getting-started), [`Vue`](https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started), [`ASP.NET Core`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/getting-started-core), and [`ASP.NET MVC`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/getting-started-mvc).
+Please refer to these getting started pages to create a Spreadsheet in [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`React`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started), [`Vue`](https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).
