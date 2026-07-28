@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Set default format in React DOCX Editor | Syncfusion
-description: Learn here all about Set default format in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Set default format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Set default format in Document Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set default format in Document Editor in React Document Editor component
+# Set Default Format in React Document Editor
 
 You can set the default character format, paragraph format, and section format in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
@@ -106,7 +106,7 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## Set the default paragraph format
 
-You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/react/documentation/api/document-editor#setdefaultparagraphformat) API to set the default paragraph format. You can change the required [`ParagraphFormatProperties`](https://ej2.syncfusion.com/react/documentation/api/document-editor/paragraphFormatProperties/) default value.
+You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/react/documentation/api/document-editor#setdefaultparagraphformat) API to set the default paragraph format. You can change the required [`ParagraphFormatProperties`](https://ej2.syncfusion.com/react/documentation/api/document-editor/paragraphFormatProperties) default value.
 
 The following example code illustrates how to change the paragraph format (before spacing, line spacing, etc.) default value in the Document Editor.
 
@@ -155,7 +155,7 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## Set the default section format
 
-You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/react/documentation/api/document-editor#setdefaultsectionformat) API to set the default section format. You can change the required [`SectionFormatProperties`](https://ej2.syncfusion.com/react/documentation/api/document-editor/sectionFormatProperties/) default value.
+You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/react/documentation/api/document-editor#setdefaultsectionformat) API to set the default section format. You can change the required [`SectionFormatProperties`](https://ej2.syncfusion.com/react/documentation/api/document-editor/sectionFormatProperties) default value.
 
 The following example code illustrates how to change the section format (header and footer distance, page width and height, etc.) default value in the Document Editor.
 

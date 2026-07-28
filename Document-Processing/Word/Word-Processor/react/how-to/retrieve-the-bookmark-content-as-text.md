@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the bookmark content as text in React DOCX Editor | Syncfusion
+title: Retrieve Bookmark Content in React DOCX Editor | Syncfusion
 description: Learn here all about Retrieve the bookmark content as text in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Retrieve the bookmark content as text
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in React Document Editor component
+# Retrieve Bookmark Content as Text in React Document Editor
 
 You can get the bookmark or the whole document content from the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) component as plain text and SFDT (rich text).
 
