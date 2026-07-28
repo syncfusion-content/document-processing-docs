@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding in EJ2 TypeScript Spreadsheet control
 
-The Spreadsheet uses [`DataManager`](https://helpej2.syncfusion.com/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://helpej2.syncfusion.com/documentation/data/) or JavaScript object array collection.
+The Spreadsheet uses [`DataManager`](https://ej2.syncfusion.com/documentation/data/), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/) or JavaScript object array collection.
 
 > To bind data to a cell, use `cell data binding` support.
 
@@ -30,7 +30,7 @@ Refer to the following code example for local data binding.
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/documentation/data/). By default, [`DataManager`](https://helpej2.syncfusion.com/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/documentation/data/adaptors#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/documentation/data/). By default, [`DataManager`](https://ej2.syncfusion.com/documentation/data/) uses [`JsonAdaptor`](https://ej2.syncfusion.com/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
@@ -53,7 +53,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://helpej2.syncfusion.com/documentation/data/) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
+To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/documentation/data/) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
  
 Refer to the following code example for remote data binding.
 
@@ -87,7 +87,7 @@ Refer to the following code example for remote data binding.
 
 ### Web API
 
-You can use the `WebApiAdaptor` to bind the Spreadsheet to a general Web API using OData endpoint. 
+You can use the `WebApiAdaptor` to bind the Spreadsheet with Web API created using OData endpoint.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -149,7 +149,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 
 ## Dynamic data binding using updateRange method
 
-The [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel#datasource) in a Spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the Spreadsheet.
+The [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet#updaterange) method allows you to dynamically update the [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel#datasource) in the Spreadsheet without manually iterating through each cell. This method is especially useful for efficiently applying bulk updates to a specific range within the Spreadsheet.
 
 To use the [updateRange](https://ej2.syncfusion.com/documentation/api/spreadsheet#updaterange) method, provide the new [dataSource](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel#datasource) and specify the starting cell for the update using the [startCell](https://ej2.syncfusion.com/documentation/api/spreadsheet/rangeModel#startcell) property of the `RangeModel`. Additionally, set the `sheetIndex` to target the appropriate sheet for the update.
 

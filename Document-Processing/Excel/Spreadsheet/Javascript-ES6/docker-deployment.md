@@ -24,7 +24,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 * On Windows, install [`Docker for Windows`](https://hub.docker.com/editions/community/docker-ce-desktop-windows).
 * On macOS, install [`Docker for Mac`](https://docs.docker.com/desktop/install/mac-install/).
 
-## How to deploy the Spreadsheet Docker image
+## How to deploy the Spreadsheet Docker Image
 
 **Step 1:** Pull the spreadsheet-server image from Docker Hub.
 
@@ -32,7 +32,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 docker pull syncfusion/spreadsheet-server
 ```
 
-**Step 2:** Create a `docker-compose.yml` file in your project directory with the following content
+**Step 2:** Create a `docker-compose.yml` file with the following code in your file system.
 
 ```yaml
 version: '3.4' 
@@ -57,7 +57,7 @@ docker-compose up
 
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started)
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started)
 
 ```html
 <!DOCTYPE html>

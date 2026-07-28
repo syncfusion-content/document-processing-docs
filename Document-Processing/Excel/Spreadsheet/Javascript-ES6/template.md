@@ -3,7 +3,7 @@ layout: post
 title: Template in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Template in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Cell Template
+control: Template 
 documentation: ug
 ---
 

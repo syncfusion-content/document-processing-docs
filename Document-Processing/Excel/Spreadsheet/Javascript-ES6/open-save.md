@@ -9,7 +9,7 @@ documentation: ug
 
 # Open and save in EJ2 TypeScript Spreadsheet control
 
-The native data format for the Spreadsheet is `JSON`. When you open an Excel file, the file must be read and converted into a client-side Spreadsheet model. The converted client-side Spreadsheet model is sent as JSON, which is used to render the Spreadsheet. Similarly, when you save the Spreadsheet, the client-side Spreadsheet model is sent to the server as JSON for processing and saved as an Excel file. The [`Server configuration`](./open-save#server-configuration) section is used for this process.
+The native data format for the Spreadsheet is `JSON`. When you open an Excel file, the file must be read and converted into a client-side Spreadsheet model. The converted client-side Spreadsheet model is sent as JSON, which is used to render the Spreadsheet. Similarly, when you save the Spreadsheet, the client-side Spreadsheet model is sent to the server as JSON for processing and saved as an Excel file. [`Server configuration`](./open-save#server-configuration) is used for this process.
 
 ## Open
 
@@ -17,7 +17,7 @@ The Spreadsheet control opens an Excel document with its data, style, format, an
 
 **User Interface**:
 
-In the user interface, you can open an Excel document by clicking `File > Open` in the ribbon.
+In the user interface, you can open an Excel document by clicking `File > Open` menu item in the ribbon.
 
 The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforeopen) event to trigger before opening an Excel file.
 
@@ -43,7 +43,7 @@ Please find the below table for the `beforeOpen` event arguments.
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowopen) property in previous code snippet.
 
-### Open an Excel file using a file uploader
+### Open an excel file using a file uploader
 
 If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/documentation/api/uploader#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method to see the appropriate output.
  
@@ -73,7 +73,7 @@ You can achieve to access the remote excel file by using the [`created`](https:/
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-save-cs2" %}
 
-### Open an Excel file from blob data
+### Open an excel file from blob data
 
 By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method in the Spreadsheet control to load that `File` object.
 
@@ -145,13 +145,13 @@ You can find the server endpoint code to fetch and process the Excel file in thi
 fetch('https://localhost:{port number}/Home/Open')
 ```
 
-### Open an Excel file using a hosted web service in AWS Lambda
+### Open an excel file using a hosted web service in AWS Lambda
 
 Before proceeding with the opening process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
 
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The Spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `eventArgs.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforeopen) event. After that, you will get the selected file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
+After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The Spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforeopen) event. After that, you will get the selected file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
 
 On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method to load this JSON data into the spreadsheet component.
 
@@ -234,7 +234,7 @@ public class OpenOptions
 }
 ```
 
-### Open an Excel file from Base64 string data
+### Open an excel file from Base64 string data
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method in the spreadsheet.
 
@@ -251,7 +251,7 @@ The following code example shows how to save the spreadsheet data as base64 stri
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/base-64-string" %}
 
-### Open Excel file into a read-only mode
+### Open excel file into a read-only mode
 
 You can open excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/documentation/api/spreadsheet#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/documentation/api/spreadsheet#lockcells) methods.
 
@@ -652,7 +652,7 @@ public string Save([FromForm]SaveSettings saveSettings)
 
 In the Spreadsheet control, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
 
-> You can get the Spreadsheet data as blob in the [saveComplete](https://helpej2.syncfusion.com/documentation/api/spreadsheet#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://helpej2.syncfusion.com/documentation/api/spreadsheet#beforesave) event.
+> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/documentation/api/spreadsheet#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforesave) event.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 

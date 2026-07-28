@@ -16,10 +16,10 @@ You can edit the contents of a cell directly in the cell or by typing in the for
 You can start editing by one of the following ways:
 
 * Double-click a cell to start the edit mode.
-* Press the `F2` key to edit the active cell.
-* Use the formula bar to perform editing.
+* Press `F2` key to edit the active cell.
+* Use formula bar to perform editing.
 * Press the `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Use the [`startEdit`](https://ej2.syncfusion.com/documentation/api/spreadsheet#startedit) method.
+* Using the [`startEdit`](https://ej2.syncfusion.com/documentation/api/spreadsheet#startedit) method.
 
 ## Save cell
 

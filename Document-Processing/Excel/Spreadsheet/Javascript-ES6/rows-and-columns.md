@@ -44,7 +44,7 @@ The following code example shows the options for inserting rows in the spreadshe
 The columns can be inserted in the following ways,
 
 * Using [`insertColumn`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertcolumn) method, you can insert the columns once the component is loaded.
-* Using the context menu, insert empty columns in the desired position.
+* Using context menu, insert empty columns in the desired position.
  
 The following code example shows the options for inserting columns in the spreadsheet.
 

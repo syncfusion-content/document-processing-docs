@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter in EJ2 TypeScript Spreadsheet control
 
-Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property (`boolean`, default `true`) to enable or disable filtering functionality.
+Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 
 > * The default value for `allowFiltering` property is `true`.
 
@@ -53,7 +53,7 @@ To apply a filter for a cell value, right-click the cell and choose filter -> `F
 
 ## Clear filter
 
-After applying a filter to a column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways:
+After applying filter to a column, you may want to clear it to make all filtered rows visible again. It can be done in the following ways:
 
 * Choose `Clear` option in ribbon toolbar under `Filter and Sort`. It clears the filters applied in the spreadsheet for all fields.
 
@@ -65,7 +65,7 @@ After filtering, you can clear/reset the filter for a field alone. It can be don
 
 * Click the filter icon in the column's header and then choose the `Clear Filter` option from the filter dialog.
 * Right-click a filtered column cell and choose the `Clear Filter from <Column Name>` option from the context menu.
-* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearfilter) method programmatically to clear the filter on a particular column. The `field` argument accepts the column key (for example, `'A'`) or the column header name.
+* Use the [`clearFilter(field)`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearfilter) method programmatically to clear the filter on a particular column.
 
 ## Reapply filter
 
@@ -81,7 +81,7 @@ The following errors have been handled for filtering,
 
 ## Get data from filtered rows
 
-Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet/#allowfiltering) property and [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet/#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
+Filtering allows you to view specific rows in a spreadsheet while hiding the others. The [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowfiltering) property allows you to enable or disable filtering functionality through the UI. You can also use the [allowFiltering](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowfiltering) property and [applyFilter](https://ej2.syncfusion.com/documentation/api/spreadsheet#applyfilter) method combination to filter data via code behind. The filtered rows can be identified by iterating through the row collection on the sheet and using the `isFiltered` property available in each row object.
 
 The following code example shows how to get the filtered rows.
 

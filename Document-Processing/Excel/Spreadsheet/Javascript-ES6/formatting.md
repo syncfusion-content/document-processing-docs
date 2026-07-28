@@ -313,9 +313,9 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 You can clear the defined rules by using one of the following ways,
 
-* Using the **Clear Rules** option in the Conditional Formatting button on the Home Tab in the ribbon to clear the rule from selected cells.
+* Using the **Clear Rules** option in the Conditional Formatting button on the **Home** Tab in the ribbon to clear the rule from selected cells.
 
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
+* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

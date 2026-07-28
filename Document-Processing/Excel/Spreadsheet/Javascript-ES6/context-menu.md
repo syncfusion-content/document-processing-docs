@@ -15,7 +15,7 @@ Context Menu is used to improve user interaction with Spreadsheet using the popu
 
 ## Context Menu Items in Row Cell
 
-The following table lists the default context menu items available when right-clicking a cell.
+The following table lists the default context menu items and their actions when right-clicking a cell.
 
 | Context Menu items | Action |
 |-------|---------|
@@ -29,7 +29,7 @@ The following table lists the default context menu items available when right-cl
  
 ## Context Menu Items in Row Header / Column Header
 
-The following table lists the default context menu items available when right-clicking a row or column header.
+The following table lists the default context menu items and their actions when right-clicking a row or column header.
 
 | Context Menu items | Action |
 |-------|---------|
@@ -44,7 +44,7 @@ The following table lists the default context menu items available when right-cl
 
 ## Context Menu Items in Pager
 
-The following table lists the default context menu items available when right-clicking the Pager (sheet tab area).
+The following table lists the default context menu items and their actions when right-clicking the Pager (sheet tab area).
 
 | Context Menu items | Action |
 |-------|---------|
@@ -66,7 +66,7 @@ You can perform the following context menu customization options in the spreadsh
 
 You can add the custom items in context menu using the [`addContextMenuItems`](https://ej2.syncfusion.com/documentation/api/spreadsheet#addcontextmenuttems) in `contextmenuBeforeOpen` event
 
-In this demo, a Custom Item is added after the Paste item in the cell context menu.
+In this demo, a Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

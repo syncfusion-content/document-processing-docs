@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in EJ2 TypeScript Spreadsheet control
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet#enableclipboard) boolean property in Spreadsheet.
+The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
  
 > By default, the `enableClipboard` property is `true`.
 

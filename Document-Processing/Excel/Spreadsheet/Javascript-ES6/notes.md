@@ -30,7 +30,7 @@ In the below example, you can add, edit, save, and delete notes.
 
 ## Adding a note
 
-In the active worksheet, you can add a note using any of the following approaches:
+In the active worksheet, you can add a note in the following ways:
 
 * **Context Menu**: Right-click the desired cell and select **Add Note**.
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
@@ -92,8 +92,8 @@ The **Show/Hide Note** option allows you to toggle the visibility of individual 
 
 To toggle the visibility of a note:
 
-* **Context menu**: Right-click the cell containing the note and select **Show/Hide Note**.
-* **Ribbon**: Select the cell, go to the **Review** tab, open the **Notes** dropdown, and choose **Show/Hide Note**.
+* **Context Menu**: Right-click the cell containing the note and select **Show/Hide Note**.
+* **Ribbon**: Select the cell, go to the **Review** tab, click the **Notes** dropdown, and choose **Show/Hide Note**.
 
 **Behavior:**
 

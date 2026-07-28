@@ -82,7 +82,7 @@ To improve performance when opening large Excel files, use parsing options like 
 To learn how to configure these parsing options, please refer to the UG section below.
 * [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
 
-## How to improve performance for formula calculation in the Spreadsheet?
+## How to improve performance on formula calculation in the Spreadsheet?
 
 ### Manual calculation mode
 
@@ -104,7 +104,7 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
-To mitigate these issues during the save operation, you can set the [`isFullPost`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/beforeSaveEventArgs#isfullpost) property to **false** in the [`beforeSave`](https://helpej2.syncfusion.com/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
+To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/documentation/api/spreadsheet/beforeSaveEventArgs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
 
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 
@@ -122,7 +122,7 @@ Serialization options in the EJ2 Spreadsheet allow you to exclude specific featu
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://helpej2.syncfusion.com/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet.
+* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Proper use of serialization options during save improves performance and reduces the time taken during the save process.
@@ -147,7 +147,7 @@ Benefits:
 You can disable aggregate calculation using the following code example:
 
 ```ts
-const spreadsheet = new Spreadsheet({
+let spreadsheet = new Spreadsheet({
   showAggregate: false
 });
 spreadsheet.appendTo('#spreadsheet');

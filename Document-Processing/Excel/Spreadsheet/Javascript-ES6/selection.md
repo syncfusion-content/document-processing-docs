@@ -4,7 +4,6 @@ title: Selection in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Selection in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Selection
-
 documentation: ug
 ---
 
@@ -14,7 +13,7 @@ Selection provides interactive support to highlight the cell, row, or column tha
 
 > * The default value for `mode` in  `selectionSettings` is `Multiple`.
 
-The following selection types are supported:
+The available selection types are:
 
 * Cell selection
 * Row selection
@@ -86,7 +85,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://helpej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://ej2.syncfusion.com/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 

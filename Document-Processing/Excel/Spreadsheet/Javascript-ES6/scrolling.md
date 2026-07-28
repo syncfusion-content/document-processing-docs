@@ -13,7 +13,7 @@ Scrolling helps you to move quickly to different areas of the worksheet. It move
 
 > By default, the `allowScrolling` property is `true`.
 
-You have the following options in scrolling by using the [`scrollSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#scrollsettings) property:
+You have the following options in Scrolling by using the [`scrollSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#scrollsettings) property:
 
 * Finite scrolling.
 * Virtual scrolling.
@@ -41,7 +41,7 @@ In virtual scrolling `enableVirtualization` is set to true means, it allows you 
 You can scroll through the worksheet using one of the following ways:
 
 * Using the `arrow` keys.
-* Using the horizontal and vertical `scroll` bars.
+* Using the Horizontal and Vertical`scroll` bars.
 * Using the `mouse` wheel.
 
 ## Finite scrolling with defined rows and columns

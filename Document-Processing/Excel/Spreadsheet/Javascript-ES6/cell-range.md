@@ -36,7 +36,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 
 ### Limitations of Wrap text
 
-The following features have some limitations when wrap text is applied:
+The following features have some limitations in wrap text:
 
 * Sorting with wrap text applied data.
 * Merge with wrap text.
@@ -91,6 +91,8 @@ Data Validation is used to restrict the user from entering the invalid data. You
 
 You can apply data validation to restrict the type of data or the values that users enter into a cell.
 
+You can apply data validation by using one of the following ways,
+
 * Select the **Data** tab in the ribbon toolbar, and then choose **Data Validation**.
 * Use the [`addDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#adddatavalidation) method programmatically.
 
@@ -98,7 +100,7 @@ You can apply data validation to restrict the type of data or the values that us
 
 Clear validation feature is used to remove data validations from the specified ranges or the whole worksheet.
 
-Clear data validation in one of the following ways:
+You can clear data validation rule by one of the following ways,
 
 * Select the **Data** tab in the ribbon toolbar, and then choose **Clear Validation**.
 * Use the [`removeDataValidation()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#removedatavalidation) method programmatically.
@@ -116,7 +118,7 @@ Highlight invalid data in one of the following ways:
 
 Clear highlight feature is used to remove the highlight from invalid cells.
 
-Clear the highlighted invalid data in the following ways:
+You can clear the highlighted invalid data in the following ways,
 
 * Select the **Data** tab in the ribbon toolbar, and then choose **Clear Highlight**.
 * Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#removeinvalidhighlight) method programmatically.

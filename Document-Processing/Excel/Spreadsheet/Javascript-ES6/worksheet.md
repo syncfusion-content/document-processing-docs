@@ -17,7 +17,7 @@ You can dynamically add or insert a sheet in the following ways:
 
 * Click the `Add Sheet` button in the sheet tab. This adds a new empty sheet next to the current active sheet.
 * Right-click on the sheet tab, and then select `Insert` from the context menu to insert a new empty sheet before the current active sheet.
-* Use the [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method to insert one or more sheets at the desired index.
+* Using [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method to insert one or more sheets at the desired index.
 
 The following code example shows the insert sheet operation in the Spreadsheet.
 

@@ -15,7 +15,7 @@ Sheet protection helps you to prevent the users from modifying the data in the s
 
 Protect sheet feature helps you to prevent unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. You can also protect the sheet with a password.
 
-You can use the [`isProtected`](https://ej2.syncfusion.com/documentation/api/spreadsheet#isprotected) property to enable or disable the protecting functionality.
+You can use the [`isProtected`](https://ej2.syncfusion.com/documentation/api/spreadsheet#isprotected) property to enable or disable the Protecting functionality.
 
 > The default value for `isProtected` property is `false`.
 
@@ -194,7 +194,7 @@ Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hid
 
 **User Interface**:
 
-In the active Spreadsheet, the workbook Unprotection can be done in any of the following ways:
+In the active Spreadsheet, the workbook can be unprotected in any of the following ways:
 
 * Select the `Unprotect Workbook` item in the Ribbon toolbar under the Data Tab and provide the valid password in the dialog box.
 

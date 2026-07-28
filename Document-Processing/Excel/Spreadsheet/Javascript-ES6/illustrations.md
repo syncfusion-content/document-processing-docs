@@ -28,7 +28,7 @@ The available parameters in `insertImage()` method are,
 
 | Parameter | Type | Description |
 |-----|------|----|
-| images | `ImageModel[]` | Specifies the options to insert one or more images in the spreadsheet. |
+| images | `ImageModel` | Specifies the options to insert image in spreadsheet. |
 | range(optional) | `string` | Specifies the range in the spreadsheet. |
 
 The available arguments in `ImageModel` are:
@@ -38,7 +38,7 @@ The available arguments in `ImageModel` are:
 * height: Specifies the height of the image.
 * width: Specifies the width of the image.
 * top: Specifies the top position of the image.
-* left: Specifies the left position of the image.
+* left: Specifies the left side of the image.
 
 > In a spreadsheet, you can add many types of image files, including IMAGE, JPG, PNG, GIF, and JPEG files.
 
@@ -88,7 +88,7 @@ The following features have some limitations in Image:
 
 ## Chart
 
-A chart is a graphical representation of data; it organizes and represents a set of numerical or qualitative data. It typically displays the selected range of data in terms of the `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowchart) property to enable or disable the chart functionality.
+A chart is a graphical representation of data, that organizes and represents a set of numerical or qualitative data. It mostly displays the selected range of data in terms of `x`-axis and `y`-axis. You can use the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowchart) property to enable or disable the chart functionality.
 
 > The default value for the [`allowChart`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowchart) property is `true`.
 
@@ -166,9 +166,9 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/chart-cs1" %}
 
-#### Customization of Line Chart Markers
+#### Customization of line chart markers
 
-Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. The following example shows how to modify the marker shape and size when creating a line chart through the UI.
+Using the [`actionBegin`](https://ej2.syncfusion.com/documentation/api/spreadsheet#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. The following example shows how to modify the marker shape and size when creating a line chart with the UI interaction.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
