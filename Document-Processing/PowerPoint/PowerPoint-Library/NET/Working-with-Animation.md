@@ -8,7 +8,7 @@ keywords: PowerPoint animation, slide animation, shape animation, pptx animation
 ---
 # Working with Animations in PowerPoint Library
 
-[Animations](https://www.syncfusion.com/document-sdk/net-powerpoint-library/powerpoint-animations-and-transitions) are visual effects for the objects in PowerPoint presentation and animation helps to make a PowerPoint presentation more dynamic. Animation effects can be grouped into four categories.,
+[Animations](https://www.syncfusion.com/document-sdk/net-powerpoint-library/powerpoint-animations-and-transitions) are visual effects for the objects in PowerPoint presentation and animation helps to make a PowerPoint presentation more dynamic. Animation effects can be grouped into four categories:
 
 1. Entrance
 2. Emphasis
@@ -17,11 +17,11 @@ keywords: PowerPoint animation, slide animation, shape animation, pptx animation
 
 Entrance effects can be set to enter the objects with animations during slide show. Emphasis effects animate the objects on the spot. Exit effects allow objects to leave the slide show with animations. Motion Paths allow objects to move around the slide show. Each effect contains variables such as start (On click, with previous and after previous), delay, speed, repeat, and trigger. This makes animations more flexible and interactive. 
 
-Syncfusion<sup>&reg;</sup> Presentation library allows you to animate the text, pictures, shapes, tables, SmartArt graphics, and charts in PowerPoint presentation.
+The Syncfusion<sup>&reg;</sup> Presentation library allows you to animate text, pictures, shapes, tables, SmartArt graphics, and charts in a PowerPoint presentation.
 
 ## Adding animation effect to shapes
 
-Animation effects can be added to shapes, images, tables, charts and SmartArt diagrams. The following code example demonstrates how to add an animation effect to an shape.
+Animation effects can be added to shapes, images, tables, charts, and SmartArt diagrams. The following code example demonstrates how to add an animation effect to a shape.
 
 {% tabs %}
 
@@ -36,9 +36,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 ISequence sequence = slide.Timeline.MainSequence;
 //Add bounce effect to the shape
 IEffect bounceEffect = sequence.AddEffect(cubeShape, EffectType.Bounce, EffectSubtype.None, EffectTriggerType.OnClick);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -80,7 +79,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding interactive animation
 
-Animations can be interactive when it depends on another slide element., for example, an animation associated with a rectangle is triggered when user clicks an oval shape in the slide. The following code example demonstrates how to set an interactive animation.
+Animations can be interactive when they depend on another slide element. For example, an animation associated with a rectangle is triggered when the user clicks an oval shape in the slide. The following code example demonstrates how to set an interactive animation.
 
 {% tabs %}
 
@@ -96,10 +95,9 @@ IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
 //Create the interactive sequence to make the animation effects interactive by triggering with button click
 ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
 //Add Fly effect with top subtype to animate the shape as fly from top
-IEffect bounceEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+IEffect flyEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -115,7 +113,7 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Create the interactive sequence to make the animation effects interactive by triggering with button click
     ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
     //Add Fly effect with top subtype to animate the shape as fly from top
-    IEffect bounceEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick);
+    IEffect flyEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick);
     //Save the Presentation
     pptxDoc.Save("Sample.pptx");
 }
@@ -133,7 +131,7 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Create the interactive sequence to make the animation effects interactive by triggering with button click
     Dim interactiveSequence As ISequence = slide.Timeline.InteractiveSequences.Add(buttonShape)
     'Add Fly effect with top subtype to animate the shape as fly from top
-    Dim bounceEffect As IEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick)
+    Dim flyEffect As IEffect = interactiveSequence.AddEffect(cubeShape, EffectType.Fly, EffectSubtype.Top, EffectTriggerType.OnClick)
     'Save the Presentation
     pptxDoc.Save("Sample.pptx")
 End Using
@@ -146,14 +144,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding animation to text
 
-Animation effects can be applied to text. The following code example demonstrated how to set an animation effect to a text.
+Animation effects can be applied to text. The following code example demonstrates how to set an animation effect to text.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Add-animation-to-PowerPoint-text/.NET/Add-animation-to-PowerPoint-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieve the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieve the first shape
@@ -161,10 +158,9 @@ IShape shape = slide.Shapes[0] as IShape;
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add swivel effect with vertical subtype to the shape, build type is used to represent the animate level of the paragraph
-IEffect bounceEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(""Result.pptx, FileMode.Create);
-pptxDoc.Save(outputStream);
+IEffect swivelEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Result.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -178,7 +174,7 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add swivel effect with vertical subtype to the shape, build type is used to represent the animate level of the paragraph
-    IEffect bounceEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1);
+    IEffect swivelEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1);
     //Save the Presentation to the file system
     pptxDoc.Save("Result.pptx");
 }
@@ -194,7 +190,7 @@ Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add swivel effect with vertical subtype to the shape, build type is used to represent the animate level of the paragraph
-    Dim bounceEffect As IEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1)
+    Dim swivelEffect As IEffect = sequence.AddEffect(shape, EffectType.Swivel, EffectSubtype.Vertical, EffectTriggerType.OnClick, BuildType.ByLevelParagraphs1)
     'Save the Presentation to the file system
     pptxDoc.Save("Result.pptx")
 End Using
@@ -206,7 +202,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding exit animation effect
 
-When you add common animation effects for both entrance and exit types, animation is applied with entrance effect by default. The following code example demonstrates how to set exist type animation for a shape.
+When you add common animation effects for both entrance and exit types, animation is applied with the entrance effect by default. The following code example demonstrates how to set an exit type animation for a shape.
 
 {% tabs %}
 
@@ -223,9 +219,8 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect effect = sequence.AddEffect(cubeShape, EffectType.RandomBars, EffectSubtype.None, EffectTriggerType.OnClick);
 //Change the preset class type of the effect from default entrance to exit
 effect.PresetClassType = EffectPresetClassType.Exit;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -271,14 +266,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Edit existing animation effect
 
-The Presentation library allows you to edit the animations in existing presentations. The following example demonstrates how to modify an existing animation applied to a shape.
+The Presentation library allows you to edit the animations in existing presentations. The following example demonstrates how to modify an animation applied to a shape.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-existing-animation-effect/.NET/Modify-existing-animation-effect/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieve the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Retrieve the first shape
@@ -289,11 +283,10 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect[] animationEffects = sequence.GetEffectsByShape(shape);
 //Iterate the animation effect to make the change
 IEffect animationEffect = animationEffects[0];
-//Change the animation effect type from swivel to GrowAndTurn
+//Change the animation effect type to GrowAndTurn
 animationEffect.Type = EffectType.GrowAndTurn;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Animation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -343,17 +336,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying animation effect sub type
 
-Presentation library allows you to edit the sub type of animations effects in existing presentations. The following example demonstrates how to modify a sub type applied to the existing animation.
+The Presentation library allows you to edit the sub type of animation effects in existing presentations. The following example demonstrates how to modify a sub type applied to the existing animation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-animation-effect-sub-type/.NET/Modify-animation-effect-sub-type/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from Presentation
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape
+//Retrieve the first shape
 IShape shape = slide.Shapes[0] as IShape;
 //Access the animation main sequence to modify the effects
 ISequence sequence = slide.Timeline.MainSequence;
@@ -361,9 +353,8 @@ ISequence sequence = slide.Timeline.MainSequence;
 IEffect wheelEffect = sequence[0] as IEffect;
 //Change the wheel animation effect sub type from 2 spoke to 4 spoke
 wheelEffect.Subtype = EffectSubtype.Wheel4;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Animation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -409,27 +400,25 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying timing of animation effect
 
-Presentation library allows you to edit the animation timing in the existing presentations. The following example demonstrates how to modify an existing animation timing applied to a shape.
+The Presentation library allows you to edit the animation timing in existing presentations. The following example demonstrates how to modify the existing animation timing applied to a shape.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Modify-animation-effect-timing/.NET/Modify-animation-effect-timing/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from Presentation
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape
+//Retrieve the first shape
 IShape shape = slide.Shapes[0] as IShape;
 //Access the animation main sequence to modify the effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Get the required animation effect from the slide            
-IEffect pathEffect = sequence[0] as IEffect;
-//Increase the duration of the animation effect
-pathEffect.Behaviors[0].Timing.Duration = 5;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+IEffect timingEffect = sequence[0] as IEffect;
+//Increase the duration of the animation effect (value is in seconds)
+timingEffect.Behaviors[0].Timing.Duration = 5;
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Animation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -443,9 +432,9 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
     //Access the animation main sequence to modify the effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Get the required animation effect from the slide            
-    IEffect pathEffect = sequence[0] as IEffect;
-    //Increase the duration of the animation effect
-    pathEffect.Behaviors[0].Timing.Duration = 5;
+    IEffect timingEffect = sequence[0] as IEffect;
+    //Increase the duration of the animation effect (value is in seconds)
+    timingEffect.Behaviors[0].Timing.Duration = 5;
     //Saves the Presentation to the file system
     pptxDoc.Save("Result.pptx");
 }
@@ -461,9 +450,9 @@ Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
     'Access the animation main sequence to modify the effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Get the required animation effect from the slide
-    Dim pathEffect As IEffect = TryCast(sequence(0), IEffect)
-    'Increase the duration of the animation effect
-    pathEffect.Behaviors(0).Timing.Duration = 5
+    Dim timingEffect As IEffect = TryCast(sequence(0), IEffect)
+    'Increase the duration of the animation effect (value is in seconds)
+    timingEffect.Behaviors(0).Timing.Duration = 5
     'Save the Presentation to the file system.
     pptxDoc.Save("Result.pptx")
 End Using
@@ -475,19 +464,18 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Reordering the animation effects
 
-Presentation library allows you to reorder the animation effects in existing presentations. The following example demonstrates how to modify an existing animation order applied to a shape.
+The Presentation library allows you to reorder the animation effects in existing presentations. The following example demonstrates how to change the order of animations applied to a shape.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Reordering-animation-effects/.NET/Reordering-animation-effects/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Iterate the slide
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the slide
 ISlide slide = pptxDoc.Slides[0];
-//Iterate the shape
+//Retrieve the shape
 IShape shape = slide.Shapes[0] as IShape;
-//Iterate the sequence
+//Access the animation sequence
 ISequence sequence = slide.Timeline.MainSequence;
 //Get the animation effects of the shape
 IEffect[] shapeAnimationEffects = sequence.GetEffectsByShape(shape);
@@ -497,20 +485,19 @@ IEffect effect = shapeAnimationEffects[1];
 sequence.Remove(effect);
 //Insert the removed animation effect as first
 sequence.Insert(0, effect);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Animation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open the existing presentation
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Iterate the slide
+    //Retrieve the slide
     ISlide slide = pptxDoc.Slides[0];
-    //Iterate the shape
+    //Retrieve the shape
     IShape shape = slide.Shapes[0] as IShape;
-    //Iterate the sequence
+    //Access the animation sequence
     ISequence sequence = slide.Timeline.MainSequence;
     //Get the animation effects of the shape
     IEffect[] shapeAnimationEffects = sequence.GetEffectsByShape(shape);
@@ -529,11 +516,11 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open the existing presentation
 Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-    'Iterate the slide
+    'Retrieve the slide
     Dim slide As ISlide = pptxDoc.Slides(0)
-    'Iterate the shape
+    'Retrieve the shape
     Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
-    'Iterate the sequence
+    'Access the animation sequence
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Get the animation effects of the shape
     Dim shapeAnimationEffects As IEffect() = sequence.GetEffectsByShape(shape)
@@ -555,7 +542,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating custom path animation effect
 
-Presentation library allows you to create and modify the custom animations in presentations. The following example demonstrates how to apply a custom animation to a shape.
+The Presentation library allows you to create and modify custom animations in presentations. The following example demonstrates how to apply a custom animation to a shape.
 
 {% tabs %}
 
@@ -569,9 +556,9 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 0, 300, 300);
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add user path effect to the shape
-IEffect bounceEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick);
+IEffect pathEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick);
 //Add commands to the empty path for moving
-IMotionEffect motionBehavior = ((IMotionEffect)bounceEffect.Behaviors[0]);
+IMotionEffect motionBehavior = ((IMotionEffect)pathEffect.Behaviors[0]);
 PointF[] points = new PointF[1];
 //Add the move command to move the position of the shape
 points[0] = new PointF(0, 0);
@@ -581,9 +568,8 @@ points[0] = new PointF(0, 0.25f);
 motionBehavior.Path.Add(MotionCommandPathType.LineTo, points, MotionPathPointsType.Auto, false);
 //Add the end command to finish the path animation
 motionBehavior.Path.Add(MotionCommandPathType.End, null, MotionPathPointsType.Auto, false);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -597,9 +583,9 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add user path effect to the shape
-    IEffect bounceEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick);
+    IEffect pathEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick);
     //Add commands to the empty path for moving
-    IMotionEffect motionBehavior = ((IMotionEffect)bounceEffect.Behaviors[0]);
+    IMotionEffect motionBehavior = ((IMotionEffect)pathEffect.Behaviors[0]);
     PointF[] points = new PointF[1];
     //Add the move command to move the position of the shape
     points[0] = new PointF(0, 0);
@@ -624,9 +610,9 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add user path effect to the shape
-    Dim bounceEffect As IEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick)
+    Dim pathEffect As IEffect = sequence.AddEffect(cubeShape, EffectType.PathUser, EffectSubtype.None, EffectTriggerType.OnClick)
     'Add commands to the empty path for moving
-    Dim motionBehavior As IMotionEffect = DirectCast(bounceEffect.Behaviors(0), IMotionEffect)
+    Dim motionBehavior As IMotionEffect = DirectCast(pathEffect.Behaviors(0), IMotionEffect)
     Dim points As PointF() = New PointF(0) {}
     'Add the move command to move the position of the shape
     points(0) = New PointF(0, 0)
@@ -647,42 +633,39 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Removing animation effect
 
-Presentation library allows you to remove the animation effects from a shape. The following example demonstrates how to remove an animation effect from a shape.
+The Presentation library allows you to remove the animation effects from a shape. The following example demonstrates how to remove an animation effect from a shape.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Animations/Remove-animation-effect/.NET/Remove-animation-effect/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Iterate the slide
+//Open an existing PowerPoint Presentation from the file system
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the slide
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape
+//Retrieve the first shape
 IShape shape = slide.Shapes[0] as IShape;
-//Iterate the sequence
+//Access the animation sequence
 ISequence sequence = slide.Timeline.MainSequence;
-//To Remove the animation effects from the shape
 //Get the animation effects of the particular shape
 IEffect[] animationEffects = sequence.GetEffectsByShape(shape);
-//Remove the animation effect from the main sequence
+//Remove the animation effects from the main sequence
 foreach (IEffect effect in animationEffects)
 {
     sequence.Remove(effect);
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Animation.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to the file system
+pptxDoc.Save("Animation.pptx");
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open the existing presentation
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Iterate the slide
+    //Retrieve the slide
     ISlide slide = pptxDoc.Slides[0];
-    //Retrieves the first shape
+    //Retrieve the first shape
     IShape shape = slide.Shapes[0] as IShape;
-    //Iterate the sequence
+    //Access the animation sequence
     ISequence sequence = slide.Timeline.MainSequence;
     //To Remove the animation effects from the shape
     //Get the animation effects of the particular shape
@@ -700,11 +683,11 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open the existing presentation
 Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-    'Iterate the slide
+    'Retrieve the slide
     Dim slide As ISlide = pptxDoc.Slides(0)
-    'Retrieves the first shape
+    'Retrieve the first shape
     Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
-    'Iterate the sequence
+    'Access the animation sequence
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'To Remove the animation effects from the shape
     'Get the animation effects of the particular shape
@@ -722,7 +705,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Animations/Remove-animation-effect).
 
-## Supported animation effects type
+## Supported Animation Effect Types
 
 Syncfusion<sup>&reg;</sup> Presentation library supports the following predefined animation effects with the sub types like Microsoft PowerPoint.
 
@@ -741,7 +724,7 @@ Syncfusion<sup>&reg;</sup> Presentation library supports the following predefine
 {{'**Emphasis**'| markdownify }}
 </td>
 <td>
-{{'**Motion path**'| markdownify }}
+{{'**Motion Path**'| markdownify }}
 </td>
 <td>
 {{'**Effect options**'| markdownify }}
@@ -3429,7 +3412,7 @@ Yes
 Stretch
 </td>
 <td>
-yes
+Yes
 </td>
 <td>
 Yes
@@ -3597,7 +3580,7 @@ None
 Unfold
 </td>
 <td>
-yes
+Yes
 </td>
 <td>
 Yes
