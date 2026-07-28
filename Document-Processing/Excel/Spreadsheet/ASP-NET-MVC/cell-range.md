@@ -19,7 +19,7 @@ Wrap text displays lengthy content on multiple lines within a single cell. By de
 You can apply or remove wrap text in the following ways:
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
-* Select or clear the `Wrap` button in the **Ribbon** toolbar to apply or remove wrap text for the selected range.
+* Select or clear the `Wrap` button in the ribbon toolbar to apply or remove wrap text for the selected range.
 * Using the `wrap` method, you can apply or remove the **wrap** text once the component is loaded.
 
 The `wrap` method accepts the following arguments:
@@ -54,7 +54,7 @@ The Merge Cells feature allows users to combine two or more cells into a single 
 You can merge cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
-* Select a range and choose the required merge option from the **Ribbon** toolbar.
+* Select a range and choose the required merge option from the ribbon toolbar.
 * Use the `merge` method to merge a range after the component is loaded.
 
 The `merge` method requires a cell range and the applicable merge type. The range identifies the cells to merge, and the merge type determines whether all cells, rows, or columns in the range are merged.
@@ -127,13 +127,13 @@ You can highlight invalid data in the following ways:
 * Open the **Data** tab in the Ribbon and choose **Highlight Invalid Data**.
 * Use the `addInvalidHighlight()` method to highlight invalid values programmatically.
 
-### Clear Highlighted Invalid Data  
+### Clear Highlighted Invalid Data
 
 This feature removes the highlighting applied to invalid cell values without removing the associated validation rules.
 
 You can clear invalid-data highlighting in the following ways:
 
-* Open the **Data** tab in the Ribbon and choose **Clear Highlight**.
+* Open the **Data** tab in the ribbon and choose **Clear Highlight**.
 * Use the `removeInvalidHighlight()` method programmatically.
 
 {% tabs %}

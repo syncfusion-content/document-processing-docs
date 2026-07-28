@@ -19,7 +19,7 @@ Wrap text allows you to display large content as multiple lines in a single cell
 Wrap text can be applied to or removed from a cell or range of cells in the following ways:
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
-* Select or clear the `Wrap` button in the **Ribbon** toolbar to apply or remove wrap text for the selected range.
+* Select or clear the `Wrap` button in the ribbon toolbar to apply or remove wrap text for the selected range.
 * Using the `wrap` method, you can apply or remove the **wrap** text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
@@ -49,7 +49,7 @@ Merge cells allow users to span two or more cells in the same row or column into
 You can merge cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
-* Select a range and choose the required merge option from the **Ribbon** toolbar.
+* Select a range and choose the required merge option from the ribbon toolbar.
 * Use the `merge` method to merge a range after the component is loaded.
 
 The available merge options in spreadsheet are,
@@ -125,7 +125,7 @@ The **Clear Highlight** feature is used to remove highlights from invalid cells.
 
 You can clear highlighted invalid data in one of the following ways:
 
-* Select the **Data** tab in the Ribbon toolbar, and then choose the **Clear Highlight** item.
+* Select the **Data** tab in the ribbon toolbar, and then choose the **Clear Highlight** item.
 * Use the `removeInvalidHighlight()` method programmatically.
 
 {% tabs %}

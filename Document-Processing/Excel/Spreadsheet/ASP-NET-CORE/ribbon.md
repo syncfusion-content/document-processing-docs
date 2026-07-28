@@ -20,16 +20,16 @@ To expand or collapse the ribbon:
 
 ## Ribbon Customization
 
-You can customize the ribbonusing the following methods:
+You can customize the ribbon using the following methods:
 
 | Method | Description |
 |--------|-------------|
-| `hideRibbonTabs` | Shows or hides existing ribbontabs. |
-| `enableRibbonTabs` | Enables or disables existing ribbontabs. |
-| `addRibbonTabs` | Adds custom ribbontabs. |
-| `hideToolbarItems` | Shows or hides existing ribbontoolbar items. |
-| `enableToolbarItems` | Enables or disables specified ribbontoolbar items. |
-| `addToolbarItems` | Adds custom items to the ribbontoolbar. |
+| `hideRibbonTabs` | Shows or hides existing ribbon tabs. |
+| `enableRibbonTabs` | Enables or disables existing ribbon tabs. |
+| `addRibbonTabs` | Adds custom ribbon tabs. |
+| `hideToolbarItems` | Shows or hides existing ribbon toolbar items. |
+| `enableToolbarItems` | Enables or disables specified ribbon toolbar items. |
+| `addToolbarItems` | Adds custom items to the ribbon toolbar. |
 | `hideFileMenuItems` | Shows or hides File-menu items. |
 | `enableFileMenuItems` | Enables or disables File-menu items. |
 | `addFileMenuItems` | Adds custom File-menu items. |

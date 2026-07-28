@@ -15,7 +15,7 @@ documentation: ug
 
 ## Integration
 
-To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a backend AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
+To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a server-side AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
 
 After completing the integration, open the AI Assist panel, submit a prompt, and verify that the requested operation is applied to the active worksheet.
 

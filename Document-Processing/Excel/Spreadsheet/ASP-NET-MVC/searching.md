@@ -40,7 +40,7 @@ The **Replace** feature changes matching cell content within the current workshe
 
 To replace a value:
 
-1. Press `Ctrl + H` to open the `Find and Replac`e dialog.
+1. Press `Ctrl + H` to open the `Find and Replace` dialog.
 2. Enter the value to find and the replacement value.
 3. Select **Replace** to replace the current match.
 4. Select **Replace All** to replace all matching cells within the selected worksheet or workbook scope.
