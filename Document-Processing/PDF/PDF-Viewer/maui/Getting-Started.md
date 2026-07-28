@@ -49,7 +49,7 @@ Before proceeding, ensure the following are in place:
    {% endhighlight %} 
    {% endtabs %}
 
-2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+2.Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
    {% tabs %}
    {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
    
@@ -82,7 +82,7 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
+2.Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
     
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -150,14 +150,14 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
+4.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="clr-namespace:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
@@ -169,8 +169,8 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
     
-    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -213,7 +213,7 @@ Before proceeding, ensure the following are in place:
     {% endhighlight %} 
     {% endtabs %}
 
-2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+2.Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
     {% tabs %}
     {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
@@ -246,7 +246,7 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
+2.Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -273,7 +273,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 
     If the project does not reload automatically after editing the `.csproj`, close and reopen the project.
 
-3.  In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
+3.In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
@@ -329,14 +329,14 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
+4.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="clr-namespace:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
@@ -348,8 +348,8 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
@@ -400,7 +400,7 @@ Before proceeding, ensure the following are set up:
     {% endhighlight %} 
     {% endtabs %}
 
-2. Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
+2.Register the Syncfusion core handler in your `MauiProgram.cs` file to use Syncfusion controls.
     {% tabs %}
     {% highlight c# tabtitle="MauiProgram.cs" hl_lines="11" %}
 
@@ -432,7 +432,7 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-2.  Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
+2.Add the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -456,7 +456,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 
     {% endhighlight %} 
     {% endtabs %}
-3.  In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
+3.In this example, the PDF document is loaded using MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
     {% tabs %}
     {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
@@ -512,14 +512,14 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
+4.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` and name it as `local`.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     xmlns:local="clr-namespace:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-5.  Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
+5.Set an instance of the `PdfViewerViewModel` class as the `BindingContext`. Bind the PDF viewer's [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) to the `PdfDocumentStream` property of the `PdfViewerViewModel` class.
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <ContentPage.BindingContext>
@@ -531,8 +531,8 @@ Open the `MainPage.xaml` file and follow the steps below.
     {% endhighlight %} 
     {% endtabs %}
 
-    N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-    N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. If you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 ## Step 6: Running the Application
 
