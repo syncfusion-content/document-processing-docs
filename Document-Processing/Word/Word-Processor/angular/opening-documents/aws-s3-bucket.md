@@ -110,7 +110,7 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonO
 
 **Step 3:**  Modify the index file in the Document Editor sample
 
-On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
