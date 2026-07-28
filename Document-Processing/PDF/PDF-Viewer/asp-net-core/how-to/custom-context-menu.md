@@ -191,7 +191,7 @@ Use the `customContextMenuBeforeOpen()` event to conditionally display or hide m
                     for (var j = 0; j < pdfviewer.selectedItems.formFields.length; j++) {
                         var selectedFormFields = pdfviewer.selectedItems.formFields[j];
                         if (selectedFormFields) {
-                            var selectedFormField = pdfviewer.selectedItems.formFields[j].isReadonly;
+                            var selectedFormField = pdfviewer.selectedItems.formFields[j].isReadOnly;
                             var displayMenu = (isReadOnlyOption && !selectedFormField) || (!isReadOnlyOption && selectedFormField);
                             search.style.display = displayMenu ? 'block' : 'none';
                         }
@@ -206,7 +206,7 @@ Use the `customContextMenuBeforeOpen()` event to conditionally display or hide m
 </script>
 ```
 
-## Sample: Custom context menu output
+## Sample: Custom context menu
 
 The following complete sample demonstrates a customized context menu with action handlers for all menu items:
 
@@ -300,7 +300,7 @@ The following complete sample demonstrates a customized context menu with action
                     for (var j = 0; j < pdfviewer.selectedItems.formFields.length; j++) {
                         var selectedFormFields = pdfviewer.selectedItems.formFields[j];
                         if (selectedFormFields) {
-                            var selectedFormField = pdfviewer.selectedItems.formFields[j].isReadonly;
+                            var selectedFormField = pdfviewer.selectedItems.formFields[j].isReadOnly;
                             var displayMenu = (isReadOnlyOption && !selectedFormField) || (!isReadOnlyOption && selectedFormField);
                             search.style.display = displayMenu ? 'block' : 'none';
                         }

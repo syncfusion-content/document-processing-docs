@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enable resize in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Enable resize in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Resize text markup annotations in ASP.NET Core PDF Viewer control | Syncfusion
+description: Learn here all about resizing text markup annotations in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -15,7 +15,7 @@ The default value for this property is `false`.
 
 ## Enable text markup resizer
 
-Set the **EnableTextMarkupResizer** property to `true` in the Razor view to display resizer handles on text markup annotations:
+Set the **enableTextMarkupResizer** property to `true` in the Razor view to display resizer handles on text markup annotations:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
