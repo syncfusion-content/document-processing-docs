@@ -215,14 +215,16 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 
 
-3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+3.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
         xmlns:local="using:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+4.Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <Page.DataContext>
