@@ -151,7 +151,7 @@ ViewBag.deLocaleFormats = deLocaleFormats;
 To configure culture-based custom formats:
 
 1. Create a collection containing the default number format IDs and their corresponding culture-specific format codes.
-2. Pass the collection from the controller to the Razor view.
+2. Pass the collection from the controller to the razor view.
 3. Obtain the rendered Spreadsheet instance.
 4. Pass the Spreadsheet instance and the format collection to the `configureLocalizedFormat` method.
 5. Open the custom number format dialog and verify that the culture-specific formats are displayed.
