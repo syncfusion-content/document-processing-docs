@@ -9,7 +9,7 @@ documentation: ug
 
 # Identify the context menu opened in EJ2 TypeScript Spreadsheet control
 
-The Spreadsheet includes several context menus that open depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
+The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
 The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
 

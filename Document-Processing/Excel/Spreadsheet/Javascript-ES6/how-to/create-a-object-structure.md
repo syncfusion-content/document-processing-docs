@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create an object structure in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn how to about Create a object structure in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Create a object structure in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create an object structure
 documentation: ug

@@ -3,7 +3,7 @@ layout: post
 title: AI Assist Web API Server Setup in TypeScript Spreadsheet | Syncfusion
 description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion TypeScript Spreadsheet control.
 platform: document-processing
-control: Spreadsheet
+control: AI Assist Web API Server Setup
 documentation: ug
 ---
 

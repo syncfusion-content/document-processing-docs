@@ -1,9 +1,9 @@
 ---
 layout: post
-title: EJ1 API migration in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about EJ1 API migration in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2.
+title: Ej1 api migration in EJ2 TypeScript Spreadsheet control | Syncfusion
+description: Learn here all about Ej1 api migration in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: EJ1 API migration
+control: Ej1 api migration 
 documentation: ug
 ---
 

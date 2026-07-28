@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile responsiveness in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn about Mobile responsiveness in the Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Mobile responsiveness in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
