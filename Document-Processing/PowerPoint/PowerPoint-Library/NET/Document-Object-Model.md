@@ -26,8 +26,8 @@ To create or modify a PowerPoint Presentation, you need to understand how elemen
 
 ## See also
 
-* [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation.md)
-* [Create, Read, and Edit PowerPoint Files in ASP.NET Core](create-read-edit-powerpoint-files-in-asp-net-core-c-sharp.md)
-* [Open and Save PowerPoint in a Console Application](Open-and-Save-PowerPoint-in-Console-application.md)
+* [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation)
+* [Create, Read, and Edit PowerPoint Files in ASP.NET Core](create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)
+* [Open and Save PowerPoint in a Console Application](Open-and-Save-PowerPoint-in-Console-application)
 
 
