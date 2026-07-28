@@ -14,30 +14,32 @@ You can edit the contents of a cell directly in the cell or by typing in the for
 
 ## Edit cell
 
-You can start editing by one of the following ways,
+You can start editing in one of the following ways:
 
-* Double click a cell to start the edit mode.
-* Press `F2` key to edit the active cell.
-* Use formula bar to perform editing.
-* Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
-* Using the `startEdit` method.
+* Double-click a cell to enter edit mode.
+* Press the `F2` key to edit the active cell.
+* Use the formula bar to edit the cell content.
+* Press the `Backspace` or `Space` key to clear the cell content and enter edit mode.
+* Use the `startEdit` method to programmatically start editing the active cell.
 
 ## Save cell
 
-If the cell is in editable state, you can save the edited cell by one of the following ways,
+When a cell is in an editable state, you can save the edited content in one of the following ways:
 
-* Perform mouse click on any other cell rather than the current editing cell.
-* Press `Enter` or `Tab` keys to save the edited cell content.
-* Using the `endEdit` method.
+* Click any cell other than the cell being edited.
+* Press the `Enter` or `Tab` key to save the edited cell content.
+* Use the `endEdit` method to programmatically save the edited cell content.
 
 ## Cancel editing
 
-To cancel the editing without saving the changes, you can use one of the following ways,
+You can cancel editing without saving the changes in one of the following ways:
 
-* Press `ESCAPE` key, this will remove the editable state and update the unchanged cell content.
-* Using the `closeEdit` method.
+* Press the `Esc` key to exit edit mode and restore the original cell content.
+* Use the `closeEdit` method to programmatically cancel editing without saving the changes.
 
-The following sample shows how to prevent the editing and cell save. Here `E` column prevent the editing by using cancel argument as true in [`cellEdit`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_CellEdit) event. In `D` column, prevent saving the edited changes by using cancel argument as true in [`beforeCellSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeCellSave) and use `closeEdit` method in spreadsheet.
+## Prevent editing and cell saving
+
+The following example demonstrates how to prevent cell editing and cell saving. Editing is prevented in column E by setting the `cancel` argument to `true` in the [`cellEdit`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_CellEdit) event. Saving edited changes is prevented in column D by setting the `cancel` argument to `true` in the `beforeCellSave` event and using the `closeEdit` method.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -48,11 +50,12 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that cells in column E cannot enter edit mode and that edited changes in column D are not saved.
 
 
 ## Limitations
 
-* Text overflow in cells is not supported in Editing.
+* Text overflow in cells is not supported while editing.
 
 ## See Also
 

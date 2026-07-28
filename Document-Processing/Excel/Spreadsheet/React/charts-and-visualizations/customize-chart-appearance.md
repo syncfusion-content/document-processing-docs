@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Charts in React Spreadsheet component | Syncfusion
-description: Learn here how to customize charts in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Customize a Chart in React Spreadsheet component | Syncfusion
+description: Learn how to customize the appearance and structure of a chart in the React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Chart Appearance in React Spreadsheet
 
-Once a chart is inserted into the worksheet, you can customize its appearance and structure to make it clearer and more informative.
+Once a chart is inserted into the worksheet, you can customize its appearance and structure from the **Chart Design** tab in the ribbon.
 
 ## Move a Chart
 
