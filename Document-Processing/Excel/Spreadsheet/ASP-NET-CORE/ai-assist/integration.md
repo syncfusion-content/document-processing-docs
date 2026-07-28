@@ -24,7 +24,7 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `<head>` section of `~/Pages/Shared/_Layout.cshtml`.
+Add the Spreadsheet theme and the required AI Assist dependency styles to the `<head>` section of `~/Pages/Shared/_Layout.cshtml`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -73,11 +73,11 @@ To enable `AIAssist` in the Spreadsheet tag helper, set the [`enableAIAssist`](h
 {% endhighlight %}
 {% endtabs %}
 
-This enables the AI Assist into the spreadsheet.
+This enables AI Assist in the Spreadsheet and displays the **AI Assist** button in the Ribbon.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AiAssistSettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AiAssistSettings) property to configure the server side request URL, prompt placeholder, and prompt suggestions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -89,7 +89,7 @@ Use the [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncf
     <e-spreadsheet-aiassistsettings
         requestUrl="https://localhost:{port}/api/AIAssist/Chat"
         placeholder="Ask the AI about this sheet..."
-        promptSuggestions="@(new string[] { "Your suggestions" })">
+        promptSuggestions="@(new string[] { "Summarize this sheet", "Highlight duplicate values", "Create a chart from the selected data" })">
     </e-spreadsheet-aiassistsettings>
 </ejs-spreadsheet>
 ```
@@ -97,7 +97,7 @@ Use the [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncf
 {% endhighlight %}
 {% endtabs %}
 
-Your Spreadsheet is now integrated with AI Assist and ready to use.
+After completing this configuration, the Spreadsheet can send AI Assist prompts to the configured server side service.
 
 ## How-To Guides
 
@@ -110,7 +110,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 ### Undo an AI Action
 
-All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press Ctrl+Z to revert any change made by the AI, just like a manual edit.
+All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press `Ctrl + Z` to revert any change made by the AI, just like a manual edit.
 
 ### How to Customize the Request Before Sending
 
@@ -191,7 +191,15 @@ If the AI panel displays an error message:
 
 ## API References
 
+### Spreadsheet properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| [`enableAIAssist`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableAIAssist) | `boolean` | Specifies whether AI Assist is enabled in the Spreadsheet. |
+
 ### AI Assist Settings
+
+The [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AIAssistSettings) property contains the following options:
 
 | Property | Type | Description |
 |---|---|---|
@@ -276,7 +284,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Add a line chart showing the monthly trend"* | Creates a line chart to visualize changes over time |
 | *"Insert a pie chart with a title called 'Revenue Split'"* | Creates a pie chart with a custom title |
 
-## See also
+## See Also
 
 * [Node.js server setup](./ai-service/using-node-js-server)
 * [Web API (.NET) server setup](./ai-service/using-web-api)
