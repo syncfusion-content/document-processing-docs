@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Active Directory
+# Open PDF from Azure Active Directory in Angular PDF Viewer
 
 ### Overview
 
@@ -86,7 +86,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 ### Step 6: Client-side configuration
 
-1. Run the TypeScript Sample:
+1. Run the TypeScript sample:
    - Start the Angular sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
 
 2. Load PDF from AAD:
@@ -257,7 +257,7 @@ export class AppComponent implements OnInit {
       };
       xhr.send();
     } else if (args.item && args.item.id === 'saveToAAD') {
-        viewer.serverActionSettings.download = "SaveToAAD";
+      viewer.serverActionSettings.download = "SaveToAAD";
       viewer.download();
     }
   }

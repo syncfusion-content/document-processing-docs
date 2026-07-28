@@ -8,9 +8,11 @@ documentation: UG
 
 # Show or Hide in Excel Document
 
+This article explains how to **show or hide** rows, columns, worksheets, gridlines, row/column headers, worksheet tabs, and how to set the zoom level in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
+
 ## Show Row and Column
 
-The following code example illustrates how to show hidden row and column in an Excel worksheet.
+The following code example illustrates how to show a hidden row and column in an Excel worksheet.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Show%20Row%20and%20Column/.NET/Show%20Row%20and%20Column/Show%20Row%20and%20Column/Program.cs,180" %}
@@ -201,7 +203,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to hide an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Hide%20Worksheet/.NET/Hide%20Worksheet ). 
+A complete working example to hide an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Hide%20Worksheet/.NET/Hide%20Worksheet).
 
 ## Show or Hide Grid Lines 
 
@@ -379,7 +381,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Saving the workbook
   workbook.SaveAs("Output.xlsx");
-}	
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -468,3 +470,7 @@ End Using
 {% endtabs %}
 
 A complete working example to set zoom percentage in an Excel worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Set%20Zoom%20Level/.NET/Set%20Zoom%20Level).
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Framework for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).

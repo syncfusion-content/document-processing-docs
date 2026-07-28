@@ -3,7 +3,7 @@ layout: post
 title: Save PDF To AAD in Angular PDF Viewer Component | Syncfusion
 description: Learn how to Save PDF To AAD in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Load PDF From AAD
+control: Save PDF To AAD
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -42,7 +42,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 
 ### Step 2: Create the Azure Storage Account
 
-1. Create a Storage Account**:
+1. Create a Storage Account:
    - In the Azure portal, use the search bar to search for **Storage accounts**.
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
@@ -263,7 +263,7 @@ export class AppComponent implements OnInit {
       };
       xhr.send();
     } else if (args.item && args.item.id === 'saveToAAD') {
-        viewer.serverActionSettings.download = "SaveToAAD";
+      viewer.serverActionSettings.download = "SaveToAAD";
       viewer.download();
     }
   }

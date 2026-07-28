@@ -8,7 +8,7 @@ documentation: UG
 
 # Auto Fill
 
- The **Auto Fill** enables users to programmatically populate a range of Excel cells based on defined patterns, sequences, or trends. This helps reduce manual data entry by automatically generating values using built-in logic.
+The **Auto Fill** feature lets you programmatically populate a range of Excel cells based on defined patterns, sequences, or trends. It reduces manual data entry by automatically generating values using built-in logic.
 
 ## Types
 
@@ -172,7 +172,7 @@ source.AutoFill(destinationRange, ExcelAutoFillType.FillValues)
 
 {% endtabs %}  
 
-### DateTime
+### Date and Time
 
 The **Days, Weekdays, Months, and Years** options populate the destination range with date values by incrementing the corresponding part of the date from the source range. These options allow you to extend dates by individual days, skip weekends (weekdays), or increment by months or years. They are useful for generating timelines, schedules, or date-based reports with consistent and structured date progression.
 
@@ -298,7 +298,7 @@ source.AutoFill(destinationRange, ExcelAutoFillType.GrowthTrend)
 
 ## Number Series
 
-The following code example illustrates how to auto fill a series in a worksheet.
+The following complete code example illustrates how to auto fill a series in a worksheet, including workbook creation, value assignment, the `AutoFill` call, and saving.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Worksheet%20Features/Auto%20Fill/.NET/AutoFillUsingFillSeries/AutoFillUsingFillSeries/Program.cs,180" %}
@@ -386,8 +386,12 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of how to auto fill a series in a worksheet using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Auto%20Fill/.NET/AutoFillUsingFillSeries">this GitHub page</a>.
+A complete working example of how to auto fill a series in a worksheet using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Auto%20Fill/.NET/AutoFillUsingFillSeries).
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
 ![Auto Fill](Working-with-Excel-Worksheet_images/Working-with-Excel-Worksheet_img1.png)
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Framework for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).

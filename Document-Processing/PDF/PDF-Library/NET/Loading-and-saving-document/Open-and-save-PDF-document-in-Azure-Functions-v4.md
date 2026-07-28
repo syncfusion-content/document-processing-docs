@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save PDF document in Azure Functions v4
 
-The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **Open and save PDF document in Azure Functions v4**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Azure Functions v4**.
 
 ## Steps to open and save PDF document in Azure Functions v4
 
@@ -48,6 +48,10 @@ Step 6: Add the following code snippet in **Run** method of **Function1** class 
 var assembly = Assembly.GetExecutingAssembly();
 var docStream = assembly.GetManifestResourceStream("Open_and_save_PDF_document.Data.Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +88,7 @@ Step 8: Add below code example to **save the PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Save and close the PDF document  
+//Save and close the PDF document.
 MemoryStream ms = new MemoryStream();
 loadedDocument.Save(ms);
 loadedDocument.Close();

@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Insert in React Spreadsheet
+# Insert Rows and Columns in React Spreadsheet
 
 You can insert rows or columns anywhere in a spreadsheet. Use the [`allowInsert`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowinsert) property to enable or disable the insert option in Spreadsheet.
 

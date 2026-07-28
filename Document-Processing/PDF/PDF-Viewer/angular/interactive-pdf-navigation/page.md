@@ -16,11 +16,11 @@ The Angular PDF Viewer supports internal and external navigation methods.
 
 The PDF Viewer default toolbar includes the following page navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to a specified page in the PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page in the PDF document.
-* [**Show previous page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page in the PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotofirstpage):- Navigates to the first page of the PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of the PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation#gotopage):- Navigates to a specified page in the PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation#gotonextpage):- Navigates to the next page in the PDF document.
+* [**Show previous page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation#gotopreviouspage):- Navigates to the previous page in the PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation#gotofirstpage):- Navigates to the first page of the PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/navigation#gotolastpage):- Navigates to the last page of the PDF document.
 
 ```html
 <!DOCTYPE html>
@@ -144,7 +144,7 @@ The following examples show how to perform page navigation programmatically.
 <body>
     <!--Element which will render as PdfViewer -->
     <button id="goToFirstPage">Go To First Page</button>
-    <button id="goToLastPage">Go To last Page</button>
+    <button id="goToLastPage">Go To Last Page</button>
     <button id="goToNextPage">Go To Next Page</button>
     <button id="goToPage">Go To Page</button>
     <button id="goToPreviousPage">Go To Previous Page</button>
@@ -176,7 +176,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, Magnifi
                </div>
                <ejs-pdfviewer #pdfViewer id="pdfViewer"
                         [documentPath]='document'
-                        [resoourceUrl]="resource"
+                        [resourceUrl]="resource"
                         style="height:640px;display:block">
                </ejs-pdfviewer>
             </div>`,
