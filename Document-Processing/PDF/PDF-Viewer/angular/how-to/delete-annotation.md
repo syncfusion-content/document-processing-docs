@@ -25,7 +25,7 @@ The following steps are used to delete a specific annotation from PDF Document:
 ```typescript
 // Delete Annotation by id.
 // Note: viewer.annotationCollection must contain at least one annotation,
-// otherwise accessing index [0] will throw.
+// otherwise accessing index [0] will throw an error.
 deleteAnnotationbyId() {
   var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
   viewer.annotationModule.deleteAnnotationById(
