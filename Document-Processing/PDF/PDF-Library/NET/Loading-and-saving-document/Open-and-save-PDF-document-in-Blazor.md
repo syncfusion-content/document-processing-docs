@@ -13,8 +13,8 @@ The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library
 
 **Prerequisites:**
 
-* Visual Studio 2019 Preview
-* Install the [.NET Core SDK 3.1 Preview](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Visual Studio 2022 Preview
+* Install the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 
 **Creating a Blazor project**
 
@@ -22,7 +22,7 @@ The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library
 * Open Tools > Options in the menu bar.
 * Open the Projects and Solutions node. Open the .NET Core tab.
 * Check the box for Use previews of the .NET Core SDK and click OK.
-* Restart the Visual Studio 2019.
+* Restart the Visual Studio 2022.
 
 ## Server app
 
@@ -404,6 +404,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 N> Even though PDF library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
 
-Kindly explore the [supported and unsupported features of PDF library in Blazor](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library).
+Kindly explore the [supported and unsupported features of PDF library](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/supported-and-unsupported-features).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
