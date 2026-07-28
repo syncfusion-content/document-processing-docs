@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Plot Area | Syncfusion
+title: Modify the Appearance of Plot Area | DocIO | Syncfusion
 description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
 platform: document-processing
 control: DocIO
@@ -194,7 +194,7 @@ The following code snippet illustrates how to fill the image in plot area.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Appeend image in plot area.
+//Append image in plot area.
 FileStream imageStream = new FileStream("Data/Image.png", FileMode.Open, FileAccess.Read);
 Image image = Image.FromStream(imageStream);
 chartPlotArea.Fill.UserPicture(image, "image");
@@ -202,7 +202,7 @@ chartPlotArea.Fill.UserPicture(image, "image");
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Appeend image in plot area.
+//Append image in plot area.
 chartPlotArea.Fill.UserPicture("Image.png");
 
 {% endhighlight %}

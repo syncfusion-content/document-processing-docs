@@ -15,4 +15,3 @@ You can see the overflowed items of ribbon header, ribbon content, and sheet tab
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)
 
-N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.

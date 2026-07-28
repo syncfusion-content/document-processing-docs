@@ -12,7 +12,7 @@ keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
 The [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
 
 **Prerequisites:**
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 ## Steps to open and save PDF documents programmatically in .NET MAUI
 
@@ -78,6 +78,10 @@ Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
 string basePath = "Load_and_Save_PDF_MAUI.Resources.Data.";
 Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
 PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
 {% endhighlight %}
 
 {% endtabs %}
@@ -120,13 +124,13 @@ Step 8: Add the following code example to **save the PDF document in .NET MAUI**
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Saves the PDF to the memory stream.
+//Save the PDF to the memory stream.
 using MemoryStream ms = new();
 document.Save(ms);
-//Close the PDF document
+//Close the PDF document.
 document.Close(true);
 ms.Position = 0;
-//Saves the memory stream as file.
+//Save the memory stream as a file.
 SaveService saveService = new();
 saveService.SaveAndView("Result.pdf", "application/pdf", ms);
 {% endhighlight %}
@@ -215,6 +219,4 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

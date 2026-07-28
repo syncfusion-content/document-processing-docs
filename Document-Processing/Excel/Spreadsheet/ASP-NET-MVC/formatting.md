@@ -37,7 +37,7 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 
 Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-* Using the `numberFormat` method, you can set the number format to a cell or range of cells.
+* Use the `numberFormat` method to apply a number format to a cell or range of cells.
 * Selecting the number format option from ribbon toolbar.
 
 ### Custom Number Formatting
@@ -85,9 +85,9 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` | 44 |
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
-Custom Number formatting can be applied in following ways,
-* Using the `numberFormat` method, you can set your own custom number format to a cell or range of cells.
-* Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
+Custom number formatting can be applied in the following ways:
+* Use the `numberFormat` method to apply a custom number format to a cell or range of cells.
+* Select the required cells, open the number format options from the Ribbon, and choose **Custom Number Format**. Select an available format or enter a custom format code, and then click **Apply**.
 
 The following code example shows the number formatting in cell data.
 
@@ -100,6 +100,8 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the selected cells display values using the configured number format.
+
 ## Configure culture-based custom format
 
 Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
@@ -109,6 +111,8 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
 > The format code should use the default decimal separator (.) and group separator (,).
+
+Obtain the Spreadsheet instance after the component is rendered, and pass it with the collection of localized format codes to the `configureLocalizedFormat` method. The `spreadsheet` parameter represents the rendered Spreadsheet instance, and the `deLocaleFormats` parameter contains the format IDs and their corresponding culture-specific format codes.
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
@@ -144,6 +148,14 @@ ViewBag.deLocaleFormats = deLocaleFormats;
 </script>
 ```
 
+To configure culture-based custom formats:
+
+1. Create a collection containing the default number format IDs and their corresponding culture-specific format codes.
+2. Pass the collection from the controller to the Razor view.
+3. Obtain the rendered Spreadsheet instance.
+4. Pass the Spreadsheet instance and the format collection to the `configureLocalizedFormat` method.
+5. Open the custom number format dialog and verify that the culture-specific formats are displayed.
+
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
 
 {% tabs %}
@@ -154,6 +166,8 @@ The following code example demonstrates how to configure culture-based formats f
 {% include code-snippet/spreadsheet/asp-net-mvc/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+After running the sample, open the custom number format dialog and verify that the configured culture-specific number formats are displayed.
 
 ## Text and cell formatting
 
@@ -377,7 +391,7 @@ cells = new List<object>()
 
 You can also apply subscript and superscript dynamically using the `updateCell` method.
 
-```csharp
+```js
 spreadsheet.updateCell({
     value: 'X2',
     richText: [

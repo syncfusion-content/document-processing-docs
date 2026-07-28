@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Working with Find and Replace in Word Library
 
-You can search a particular text you like to change and replace it with another text or part of the document.
+You can search for particular text you want to change and replace it with another text or part of the document.
 
 To quickly get started with the Find and Replace options in a Word document, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=EJDihId35nI" %}
@@ -336,7 +336,7 @@ document.Close();
 'Loads the template document
 Dim document As New WordDocument("Template.docx", FormatType.Docx)
 'Find the first occurrence of a particular text in the document
-Dim textSelection As TextSelection = document.Find("AdventureWorks", false, true)
+Dim textSelection As TextSelection = document.Find("AdventureWorks", False, True)
 'Gets the found text as single text range
 Dim textRange As WTextRange = textSelection.GetAsOneRange()
 'Modifies the text
@@ -790,7 +790,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 'Load an existing Word document. 
 Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Replace all occurrences of non-breaking spaces with regular spaces.
-    document.Replace(ControlChar.NonBreakingSpace, ControlChar.Space, false, False)
+    document.Replace(ControlChar.NonBreakingSpace, ControlChar.Space, False, False)
     'Save the Word document.
     document.Save("Sample.docx", FormatType.Docx)
 End Using
@@ -803,7 +803,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### Find and replace text with an image
 You can find placeholder text in a Word document and replace it with any desired image.
 
-The following code example illustrates how to find and replace text in a word document with an image
+The following code example illustrates how to find and replace text in a Word document with an image.
 
 {% tabs %}
 
@@ -855,7 +855,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument("Template.docx")
 'Finds all the image placeholder text in the Word document
 Dim textSelections() As TextSelection = document.FindAll(New Regex("^//(.*)"))
-For i As Integer = 0 To textSelections.Length – 1
+For i As Integer = 0 To textSelections.Length - 1
     'Replaces the image placeholder text with desired image
     Dim paragraph As WParagraph = New WParagraph(document)
     Dim picture As WPicture = CType(paragraph.AppendPicture(Image.FromFile("Filepath" + textSelections(i).SelectedText + ".png")), WPicture)
@@ -937,7 +937,7 @@ document.Close();
 'Loads the template document
 Dim document As WordDocument = New WordDocument("Template.docx")
 'Finds all the placeholder text enclosed within '«' and '»' in the Word document
-Dim textSelections() As TextSelection = document.FindAll(New Regex("([(?i)image(?-i)]*:*[a-zA-Z0-9 ]*:*[a-zA-Z0-9 ]+)»"))
+Dim textSelections() As TextSelection = document.FindAll(New Regex("«([(?i)image(?-i)]*:*[a-zA-Z0-9 ]*:*[a-zA-Z0-9 ]+)»"))
 Dim searchedPlaceholders() As String = New String(textSelections.Length - 1) {}
 For i As Integer = 0 To textSelections.Length - 1
     searchedPlaceholders(i) = textSelections(i).SelectedText
@@ -946,7 +946,7 @@ For i As Integer = 0 To searchedPlaceholders.Length - 1
     'Replaces the placeholder text enclosed within '«' and '»' with desired merge field
     Dim paragraph As WParagraph = New WParagraph(document)
     paragraph.AppendField(searchedPlaceholders(i).TrimStart("«").TrimEnd("»"), FieldType.FieldMergeField)
-    Dim newSelection As TextSelection = New TextSelection(paragraph, 0, 	paragraph.Items.Count)
+    Dim newSelection As TextSelection = New TextSelection(paragraph, 0, paragraph.Items.Count)
     Dim bodyPart As TextBodyPart = New TextBodyPart(document)
     bodyPart.BodyItems.Add(paragraph)
     document.Replace(searchedPlaceholders(i), bodyPart, True, True, True)
@@ -1059,7 +1059,7 @@ Dim bodyPart As TextBodyPart = New TextBodyPart(document)
 bodyPart.BodyItems.Add(table)
 document.Replace("[Suppliers table]", bodyPart, True, True, True)
 'Saves the Word document
-document.Save("Result.docx", FormatType.Docx)
+document.Save("Sample.docx", FormatType.Docx)
 'Closes the document
 document.Close()
 {% endhighlight %}
@@ -1193,7 +1193,7 @@ The following code example provides supporting methods for the above code.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
+private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {
     if (reader == null)
         throw new Exception("reader");
@@ -1244,7 +1244,7 @@ Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
+private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {
     if (reader == null)
         throw new Exception("reader");
@@ -1381,8 +1381,8 @@ for (int i = 0; i < textSelections.Length; i++)
     document.Replace(textSelections[i].SelectedText, subDocument, true, true);
     subDocument.Dispose();
 }
-//Saves and closes the document instance
-document.Save("Result.docx");
+//Saves and closes the document
+document.Save("Sample.docx");
 document.Close();
 {% endhighlight %}
 
@@ -1397,8 +1397,8 @@ For i As Integer = 0 To textSelections.Length - 1
     document.Replace(textSelections(i).SelectedText, subDocument, True, True)
     subDocument.Dispose()
 Next
-'Saves and closes the document instance
-document.Save("Result.docx")
+'Saves and closes the document
+document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
@@ -1462,7 +1462,7 @@ Dim subDocument As WordDocument = New WordDocument("Source.docx", FormatType.Doc
 Dim replacePart As TextBodyPart = New TextBodyPart(subDocument)
 'Gets the content from another Word document 
 For Each bodyItem As TextBodyItem In subDocument.LastSection.Body.ChildEntities
-    replacePart.BodyItems.Add(bodyItem.Clone)
+    replacePart.BodyItems.Add(bodyItem.Clone())
 Next
 Dim placeholderText As String = "Suppliers/Vendors of Northwind" + "Customers of Northwind" + "Employee details of Northwind traders" + "The product information" + "The inventory details" + "The shippers" + "Purchase Order transactions" + "Sales Order transaction" + "Inventory transactions" + "Invoices" + "[end replace]"
 'Finds the text that extends to several paragraphs and replaces it with desired content
@@ -1544,7 +1544,7 @@ The following code example illustrates how to replace the pattern of text with n
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-pattern-text-with-normal-text/.NET/Replace-pattern-text-with-normal-text/Program.cs" %}
-//Open the file as Stream.
+//Open the file as a Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
     //Load the file stream into a Word document.
@@ -1806,11 +1806,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find and format text
 
-You can able to find and format the text in Word document using DocIO.
+You can find and format the text in a Word document using DocIO.
 
 ### Find and highlight all in Word document
 
-You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
+You can find text in a Word document and format or highlight it. You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
 
 The following code example illustrates how to find all occurrences of a length of text and highlight it.
 

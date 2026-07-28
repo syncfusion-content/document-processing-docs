@@ -118,7 +118,7 @@ export default function App() {
 
 ## Troubleshooting
 
-- If redaction icon not visible, ensure if `'RedactionEditTool'` is added to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) is included in `<Inject services=[...] />`.
+- If redaction icon not visible, ensure that `'RedactionEditTool'` is added to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) is included in `<Inject services=[...] />`.
 
 - If toolbar buttons have no effect, verify [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resourceurl) points to a reachable `ej2-pdfviewer-lib` bundle appropriate for your viewer version.
 
@@ -127,7 +127,7 @@ export default function App() {
 ## Related topics
 
 - [Adding the redaction annotation in PDF viewer](../redaction/overview)
-- [Redaction UI interactions](./ui-interactions)
+- [Redaction UI interactions](./ui-interaction)
 - [Programmatic support](./programmatic-support)
 - [Mobile view](./mobile-view)
 - [Search Text and Redact](./search-redact)

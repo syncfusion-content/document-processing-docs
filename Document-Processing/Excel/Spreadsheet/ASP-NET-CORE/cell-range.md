@@ -10,16 +10,16 @@ documentation: ug
 
 # Cell Range in ASP.NET Core Spreadsheet control
 
-A group of cells in a sheet is known as cell range.
+A group of cells in a sheet is known as a cell range.
 
 ## Wrap text
 
-Wrap text allows you to display large content as multiple lines in a single cell. By default, the wrap text support is enabled. Use the [`allowWrap`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowWrap) property to enable or disable the wrap text support in spreadsheet.
+Wrap text allows you to display large content as multiple lines in a single cell. By default, wrap text support is enabled. Use the [`allowWrap`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowWrap) property to enable or disable the wrap text support in spreadsheet.
 
-Wrap text can be applied or removed to a cell or range of cells in the following ways,
+Wrap text can be applied to or removed from a cell or range of cells in the following ways:
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
-* Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
+* Select or clear the Wrap button in the Ribbon toolbar to apply or remove wrap text for the selected range.
 * Using the `wrap` method, you can apply or remove the wrap text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
@@ -44,21 +44,21 @@ The following features have some limitations in wrap text:
 
 ## Merge cells
 
-Merge cells allows users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, top-left most cell data will be the data for the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowMerge) property to enable or disable the merge cells option in spreadsheet.
+Merge cells allow users to span two or more cells in the same row or column into a single cell. When cells with multiple values are merged, the top-left cell's value becomes the value of the merged cell. By default, the merge cells option is enabled. Use [`allowMerge`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowMerge) property to enable or disable the merge cells option in spreadsheet.
 
-You can merge the range of cells in the following ways,
+You can merge cells in the following ways:
 
-* Set the `rowSpan` and `colSpan` property in `cell` to merge the number of cells at initial load.
-* Select the range of cells and apply merge by selecting the desired option from ribbon toolbar.
-* Use `merge` method to merge the range of cells, once the component is loaded.
+* Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
+* Select a range and choose the required merge option from the Ribbon toolbar.
+* Use the `merge` method to merge a range after the component is loaded.
 
 The available merge options in spreadsheet are,
 
 | Type | Action |
 |-------|---------|
-| Merge All | Combines all the cells in a range in to a single cell (default). |
-| Merge Horizontally | Combines cells in a range as row-wise. |
-| Merge Vertically | Combines cells in a range as column-wise. |
+| Merge All | Combines all the cells in a range into a single cell (default). |
+| Merge Horizontally | Combines cells in a range row-wise. |
+| Merge Vertically | Combines cells in a range column-wise. |
 | UnMerge | Splits the merged cells into multiple cells. |
 
 The following code example shows the merge cells operation in spreadsheet.
@@ -83,42 +83,47 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
+Data Validation is used to prevent users from entering invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
 
 N> * The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 
-You can apply data validation to restrict the type of data or the values that users enter into a cell.
+Data validation can restrict the type of data or the range of values that users enter into a cell.
 
-You can apply data validation by using one of the following ways,
+You can apply data validation in the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the `addDataValidation()` method programmatically.
+* Select the required cells, open the **Data** tab in the Ribbon, and choose **Data Validation**.
+* Use the `addDataValidation()` method to apply a validation rule programmatically.
+
+The `addDataValidation()` method requires:
+
+* A validation rule that defines the validation type, operator, and permitted values or formula.
+* A cell or range address to which the rule is applied.
 
 ### Clear Validation
 
-Clear validation feature is used to remove data validations from the specified ranges or the whole worksheet.
+The Clear Validation feature is used to remove data validations from the specified ranges or the entire worksheet.
 
-You can clear data validation rule by one of the following ways,
+You can clear a data validation rule in one of the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the `removeDataValidation()` method programmatically.
+* Select the required cells, open the **Data** tab in the Ribbon, and choose **Clear Validation**.
+* Use the `removeDataValidation()` method to remove validation programmatically.
 
 ### Highlight Invalid Data
 
-Highlight invalid data feature is used to highlight the previously entered invalid values.
+The Highlight Invalid Data feature is used to highlight previously entered invalid values.
 
-You can highlight an invalid data by using one of the following ways,
+You can highlight invalid data in one of the following ways:
 
-* Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the `addInvalidHighlight()` method programmatically.
+* Open the **Data** tab in the Ribbon and choose **Highlight Invalid Data**.
+* Use the `addInvalidHighlight()` method to highlight invalid values programmatically.
 
 ### Clear Highlighted Invalid Data
 
-Clear highlight feature is used to remove the highlight from invalid cells.
+The Clear Highlight feature is used to remove highlights from invalid cells.
 
-You can clear the highlighted invalid data by using the following ways,
+You can clear highlighted invalid data in one of the following ways:
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
 * Use the `removeInvalidHighlight()` method programmatically.
@@ -138,7 +143,7 @@ The Spreadsheet supports custom data validation, allowing users to define their 
 
 With custom validation, you can enforce rules using logical expressions or formulas, ensuring that only valid data is entered into the Spreadsheet.
 
-For example, consider a scenario where you want to ensure that a cell contains a number between 10 and 100. To achieve this, define a validation rule using a formula that checks if the entered value is greater than 10 and less than 100. The formula for this validation is =AND(A1>10, A1<100), where A1 refers to the cell being validated.
+For example, consider a scenario where you want to ensure that a cell contains a number greater than 10 and less than 100. To achieve this, define a validation rule using a formula that checks if the entered value is greater than 10 and less than 100. The formula for this validation is =AND(A1>10, A1<100), where A1 refers to the cell being validated.
 
 When this rule is applied, the Spreadsheet evaluates the entered value against the formula. If a user enters a value outside the specified range, an alert notifies them of the invalid input. This helps users correct errors efficiently and ensures that only desired values are accepted.
 
@@ -171,32 +176,38 @@ The following features have some limitations in Data Validation:
 
 Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
 
-You can do this by one of the following ways,
+The `autoFillSettings` property configures Auto Fill behavior:
 
-* Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
-* Use the autoFill() method programmatically.
+* `showFillOptions`: Specifies whether the Auto Fill Options menu is displayed after an Auto Fill operation.
+* `fillType`: Specifies the default Auto Fill operation.
+* `direction`: Specifies the direction in which values are filled.
 
-The available parameters in `autoFill()` method are,
+You can perform Auto Fill in the following ways:
+
+* Drag the fill handle to the required range and select an option from the **Auto Fill Options** menu.
+* Use the `autoFill()` method programmatically.
+
+The `autoFill()` method accepts the following parameters:
 
 | Parameter | Type | Description |
 |-----|------|----|
 | dataRange | `string` | Specifies the data range. |
 | fillRange | `string` | Specifies the fill range. |
-| direction | `AutoFillDirection` | Specifies the direction("Up","Right","Down","Left")to be filled. |
-| fillType | `AutoFillType` | Specifies the fill type("CopyCells","FillSeries","FillFormattingOnly","FillWithoutFormatting") for autofill action. |
+| direction | `AutoFillDirection` | Specifies the direction ("Up", "Right", "Down", "Left") to be filled. |
+| fillType | `AutoFillType` | Specifies the fill type ("CopyCells", "FillSeries", "FillFormattingOnly", "FillWithoutFormatting") for the Auto Fill action. |
 
-In Auto Fill we have following options,
+Auto Fill supports the following options:
 
 * Copy Cells
 * Fill Series
 * Fill Formatting Only
 * Fill Without Formatting
 
-N>* The default auto fill option is “FillSeries” which can be referred from `fillType` property.
+N>* The default Auto Fill option is `FillSeries`, which is configured through the `fillType` property.
 
 ### Copy Cells
 
-To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
+To copy the selected cell content to the adjacent cells. You can do this in one of the following ways:
 
 * Using fill handle to select the adjacent cell range and “Copy Cells” option in “AutoFillOptions” menu to fill the adjacent cells.
 * Using “CopyCells” as fill type in `autoFill` method to fill the adjacent cells.
@@ -205,7 +216,7 @@ To copy the selected cell content to the adjacent cells. You can do this by one 
 
 To fill the series of numbers, characters, or dates based on selected cell content to the adjacent cells with their formats.
 
-You can do this by one of the following ways,
+You can do this in one of the following ways:
 
 * Using fill handle to select the adjacent cell range and “Fill Series” option in “AutoFillOptions” menu to fill the adjacent cells.
 * Using “FillSeries” as fill type in `autoFill` method to fill the adjacent cells.
@@ -214,7 +225,7 @@ You can do this by one of the following ways,
 
 To fill the cell style and number formatting based on the selected cell content to the adjacent cells without their content.
 
-You can do this by one of the following ways,
+You can do this in one of the following ways:
 
 * Using fill handle to select the adjacent cell range and “Fill Formatting Only” option in “AutoFillOptions” menu to fill the adjacent cells.
 * Using “FillFormattingOnly” as fill type in `autoFill` method to fill the adjacent cells.
@@ -223,7 +234,7 @@ You can do this by one of the following ways,
 
 To fill series of numbers, characters, or dates based on the selected cells to the adjacent cells without their formats.
 
-You can do this by one of the following ways,
+You can do this in one of the following ways:
 
 * Using fill handle to select the adjacent cell range and “Fill Without Formatting” option in “AutoFillOptions” menu to fill the adjacent cells.
 * Using “FillWithoutFormatting” as fill type in `autoFill` method to fill the adjacent cells.
@@ -243,16 +254,16 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 ## Clear
 
-Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear all, both the contents and the formats will be cleared simultaneously.
+Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear All, both the contents and the formats will be cleared simultaneously.
 
 ### Apply Clear Feature
 
-You can apply clear feature by using one of the following ways,
+You can apply the Clear feature in one of the following ways:
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
 * Using the `clear()` method to clear the values.
 
-Clear has the following types in the spreadsheet,
+Clear supports the following options in the Spreadsheet:
 
 | Options | Uses |
 |-----|------|

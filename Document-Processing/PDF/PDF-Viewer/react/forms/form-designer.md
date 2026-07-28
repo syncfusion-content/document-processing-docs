@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in React PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -43,9 +43,9 @@ Form fields can be selected, grouped or ungrouped, reordered, and deleted as nee
 **Save and Print Forms:**
 Designed form fields can be saved into the PDF document and printed with their appearances.
 
-## Design Forms with UI interaction
+## Design Forms Using the UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
@@ -116,7 +116,7 @@ This customization helps limit the available tools and simplify the user interfa
 
 ### Adding Form Fields
 
-Each toolbar item in form designer toolbar allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
+Each toolbar item in the Form Designer toolbar allows users to place the corresponding form field by selecting the tool and clicking on the desired location in the PDF document.
 
 ![Adding a text box using the Form Designer toolbar](../../javascript-es6/images/AddTextBox.gif)
 
@@ -130,12 +130,12 @@ Fields can be moved, resized, and edited directly in the PDF Viewer using the Fo
 
 - Fields are resized using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Selecting a field opens the Form Field Properties popover, which allows modification of the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
-For more information, see Editing Form Fields
+For more information, see [Editing Form Fields](./manage-form-fields/modify-form-fields)
 
-### Edit Form Field properties
+### Edit Form Field Properties
 
 The **Properties** panel lets you customize the styles of form fields. Open the panel by selecting the **Properties** option in a field's context menu.
 

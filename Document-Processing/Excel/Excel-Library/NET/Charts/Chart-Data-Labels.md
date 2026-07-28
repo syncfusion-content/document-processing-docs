@@ -1,18 +1,18 @@
 ---
-title: Chart Data Label | Excel library | Syncfusion
-description: In this section, you can learn about chart data label in an Excel document with the .NET Excel Library.
+title: Chart Data Labels | Excel library | Syncfusion
+description: In this section, you can learn about chart data labels in an Excel document with the .NET Excel Library through clear explanations and practical examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Data Labels in Excel document
+# Chart Data Labels in an Excel document
 
-Data Labels on a chart make it easier to understand. They show important information about the lines or points on the chart. Using XlsIO, you can **customize the data labels in the chart**.
+Data Labels on a chart make it easier to understand the chart. They show important information about the lines or points on the chart. Using XlsIO, you can **customize the data labels**.
 
 ## Add
 
-The following code snippet illustrates how to add the data label.
+The following code snippet illustrates how to add data labels. The `IsValue` property is one of several options; you can also set `IsCategoryName`, `IsSeriesName`, and `IsPercentage`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -31,9 +31,9 @@ chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.IsValue = True
 {% endhighlight %}
 {% endtabs %}
 
-### Add from the range of cells
+### Add from a Range of Cells
 
-The following code snippet illustrates how to add the data label from the range of cells.
+The following code snippet illustrates how to add data labels from a range of cells. This snippet assumes `worksheet` is an existing `IWorksheet`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -99,9 +99,9 @@ chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Bold = true;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Set the font
-chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Size = 10;
-chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.FontName = "calibri";
-chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Bold = true;
+chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Size = 10
+chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.FontName = "calibri"
+chart.Series(0).DataPoints.DefaultDataPoint.DataLabels.Bold = True
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,7 +190,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IChartDataLabels dataLabel = chart.Series[0].DataPoints.DefaultDataPoint.DataLabels;
 	(dataLabel as ChartDataLabelsImpl).NumberFormat = "#,##0.00";
 
-	//Saving the workbook 
+	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}

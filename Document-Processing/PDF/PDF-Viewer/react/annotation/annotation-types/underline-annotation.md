@@ -60,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ![Underline tool](../../../javascript-es6/annotations/annotation-images/underline-tool.gif)
 
-### Apply underline using Context Menu
+### Add Underline Using the Context Menu
 Right-click a selected text region → select **Underline**.
 
 ![Underline Context](../../../javascript-es6/annotations/annotation-images/underline-context.gif)
@@ -174,7 +174,7 @@ The PDF Viewer supports deleting existing annotations through both the UI and AP
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to underline annotations. It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation–related notes within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotation
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Underline', …)` call.
 
 {% tabs %}
