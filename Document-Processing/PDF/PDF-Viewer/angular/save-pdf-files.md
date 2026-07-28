@@ -26,7 +26,7 @@ Follow the getting-started guide at [Link](https://help.syncfusion.com/document-
 
 2. Open the `PdfViewerController.cs` file in the web service project.
 
-3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) method to open it in the viewer using URL
+3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadstarteventargs) method to open it in the viewer using URL
 
 ```csharp
 
