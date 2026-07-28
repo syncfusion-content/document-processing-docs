@@ -3,7 +3,7 @@ layout: post
 title: Open Excel in React Spreadsheet component | Syncfusion
 description: Learn here all about Open Excel in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spreadsheet
+control: Open
 documentation: ug
 ---
 
@@ -106,7 +106,7 @@ Please find the table below for the [`open`](https://ej2.syncfusion.com/react/do
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
 
-```jsx
+```js
 import React, { useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -480,7 +480,7 @@ The following code example demonstrates the client-side and server-side configur
 
 **Client Side**:
 
-```jsx
+```js
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
@@ -533,7 +533,7 @@ public IActionResult Open(IFormCollection openRequest)
 
 The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_7-101537213) includes the server endpoint code for handling chunk-based open processing. After launching the server endpoint, update the `openUrl` property of the spreadsheet in the client-side sample with the server URL, as shown below.
 
-```jsx
+```js
     // Specifies the service URL for processing the Excel file, converting it into a format suitable for loading in the spreadsheet.
     <SpreadsheetComponent ref={spreadsheetRef} openUrl="https://localhost:{{port_number}}/Home/Open">
     </SpreadsheetComponent>

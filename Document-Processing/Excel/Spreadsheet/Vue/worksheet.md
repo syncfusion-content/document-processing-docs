@@ -2,7 +2,7 @@
 layout: post
 title: Worksheet in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Worksheet in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Spreadsheet
+control: Worksheet
 platform: document-processing
 documentation: ug
 ---

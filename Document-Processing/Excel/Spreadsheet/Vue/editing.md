@@ -2,7 +2,7 @@
 layout: post
 title: Editing in Vue Spreadsheet component | Syncfusion
 description: Learn here all about Editing in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Spreadsheet
+control: Editing
 platform: document-processing
 documentation: ug
 ---
