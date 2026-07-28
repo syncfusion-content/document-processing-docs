@@ -3,7 +3,7 @@ layout: post
 title: Styles in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Styles in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Styles 
+control: Styles
 documentation: ug
 ---
 
@@ -149,7 +149,7 @@ Using this CSS, you can customize the Spreadsheet cell element.
 
 ### Customizing the Spreadsheet sorting icon
 
-Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons/#material) based on your theme.
+Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons#material) based on your theme.
 
 ```css
 

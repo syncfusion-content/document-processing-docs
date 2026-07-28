@@ -138,7 +138,6 @@ N> 1. The .NET Standard assemblies are available at the following Essential Stud
 {Installed directory}\Syncfusion<sup>&reg;</sup>\Essential Studio{Product version}\precompiledassemblies\{Product version}\
 N> 2. Syncfusion<sup>&reg;</sup> components are also available on [nuget.org](https://www.nuget.org/packages?q=syncfusion).
 N> 3. Starting with **v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also include a license key in your projects. Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application.
-N> 4. For .NET Core, .NET 5+, .NET MAUI, WinUI, and Blazor, Syncfusion recommends using the NuGet packages for easier version management and dependency resolution.
 
 ## Converting HTML to PDF
 

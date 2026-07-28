@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 This article explains how to open password-protected PDF files in the Angular PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
 
-## 1. Opening a Password-Protected PDF Using the **Open File** Dialog
+## 1. Opening a Password-Protected PDF using the **Open File** Dialog
 
 When the user selects a password-protected PDF using the built‑in **Open File** option:
 
@@ -53,7 +53,7 @@ viewer.load(
 
 This is useful when the password is known beforehand.
 
-### 2.2 Loading a Password-Protected Document's URL Using `documentPath`
+### 2.2 Loading a Password-Protected PDF by URL Using `documentPath`
 
 If the [`documentPath`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
 

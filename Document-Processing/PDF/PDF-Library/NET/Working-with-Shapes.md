@@ -1412,7 +1412,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can draw a Bezier curve in a PDF document by using the [DrawBezier](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawBezier_Syncfusion_Pdf_Graphics_PdfPen_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_System_Drawing_PointF_) method of [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html). The `startPoint` and `endPoint` define the curve segment, while the two control points shape the curve between them.
 
-> Use the [PdfBezierCurve](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBezierCurve.html) class to draw a Bezier curve that flows between multiple pages, or to control the curve with a layout format.
+N> Use the [PdfBezierCurve](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBezierCurve.html) class to draw a Bezier curve that flows between multiple pages, or to control the curve with a layout format.
 
 The following code snippet explains how to draw a Bezier in a new PDF document.
 
@@ -2164,11 +2164,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 | `PdfLoadedPage` is `null` after loading a document | The document path is incorrect or the file is not a valid PDF. | Verify that the file path is correct and that the file can be opened in any PDF reader. |
 | The drawn shape does not appear in the output | The coordinates are outside the page bounds, or the page was not added to the document. | Confirm that the page has been added to `document.Pages` and that the coordinates fall within the page size. |
 | `Cross-platform` and `Windows-specific` samples reference different types (`Syncfusion.Drawing.PointF` vs `System.Drawing.PointF`) | The `using` directives differ. | Use the `Syncfusion.Drawing.PointF` type explicitly in cross-platform code, or add `using Syncfusion.Drawing;` so the compiler resolves the type. |
-| License warnings are displayed in the output | The Syncfusion license has not been registered. | Register the license at application startup by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("your license key")`. Refer to the [documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for more information. |
-
-## See also
-
-* [Working with Brushes](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-brushes)
-* [Working with Colorspace](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-colorspace)
-* [Working with Text](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text)
-* [Working with Pages](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages)
+| License warnings are displayed in the output | The Syncfusion license has not been registered. | Register the license at application startup by calling `Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("your license key")`. Refer to the [documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for more information.
