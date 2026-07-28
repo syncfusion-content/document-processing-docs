@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in ASP.NET MVC**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -35,7 +35,7 @@ Step 3: Install the [Syncfusion.PresentationToPdfConverter.AspNet.Mvc5](https://
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that **HomeController.cs** file.
+Step 4: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -47,7 +47,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 5: A default action method named **Index** will be present in HomeController.cs. In Visual Studio, right-click the **Index** action and select **Go To View** to open the associated **Index.cshtml** page. (In JetBrains Rider, open **Views/Home/Index.cshtml** directly from the project explorer.)
 
 Step 6: Add a new button in the Index.cshtml as shown below.
 
@@ -78,17 +78,20 @@ using (FileStream pathStream = new FileStream(Server.MapPath("~/App_Data/Input.p
 {
     //Opens a PowerPoint Presentation
     using (IPresentation pptxDoc = Presentation.Open(pathStream))
-    {     
+    {
         //Converts the PowerPoint Presentation into PDF document
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Saves the PDF document to MemoryStream.
-            MemoryStream stream = new MemoryStream();
-            pdfDocument.Save(stream);
-            stream.Position = 0;
-            //Download PDF document in the browser.
-            return File(stream, "application/pdf", "Sample.pdf");
-        }                    
+            //Saves the PDF document to a MemoryStream.
+            using (MemoryStream stream = new MemoryStream())
+            {
+                pdfDocument.Save(stream);
+                //Reset stream position before returning it to the browser.
+                stream.Position = 0;
+                //Download the PDF document in the browser.
+                return File(stream, "application/pdf", "Sample.pdf");
+            }
+        }
     }
 }
 
@@ -146,7 +149,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 3: Include the following namespace in that **HomeController.cs** file.
+Step 3: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -158,7 +161,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named **Index** will be present in HomeController.cs. In JetBrains Rider, open **Views/Home/Index.cshtml** directly from the project explorer to add the convert button. (In Visual Studio, right-click the **Index** action and select **Go To View** to open the associated **Index.cshtml** page.)
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
