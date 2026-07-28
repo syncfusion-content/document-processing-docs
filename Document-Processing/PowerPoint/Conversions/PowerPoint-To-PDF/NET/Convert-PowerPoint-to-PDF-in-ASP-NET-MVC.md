@@ -47,7 +47,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: A default action method named **Index** will be present in HomeController.cs. In Visual Studio, right-click the **Index** action and select **Go To View** to open the associated **Index.cshtml** page. (In JetBrains Rider, open **Views/Home/Index.cshtml** directly from the project explorer.)
+Step 5: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 6: Add a new button in the Index.cshtml as shown below.
 
@@ -161,7 +161,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named **Index** will be present in HomeController.cs. In JetBrains Rider, open **Views/Home/Index.cshtml** directly from the project explorer to add the convert button. (In Visual Studio, right-click the **Index** action and select **Go To View** to open the associated **Index.cshtml** page.)
+Step 4: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
