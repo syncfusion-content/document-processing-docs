@@ -18,9 +18,9 @@ Wrap text displays lengthy content on multiple lines within a single cell. By de
 
 You can apply or remove wrap text in the following ways:
 
-* Use the `wrap` property of a cell to configure wrap text during the initial rendering.
-* Select or clear the **Wrap Text** option in the Ribbon toolbar for the selected range.
-* Use the `wrap` method to apply or remove wrap text after the component is loaded.
+* Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
+* Select or clear the `Wrap` button in the **Ribbon** toolbar to apply or remove wrap text for the selected range.
+* Using the `wrap` method, you can apply or remove the **wrap** text once the component is loaded.
 
 The `wrap` method accepts the following arguments:
 
@@ -111,7 +111,7 @@ The `addDataValidation()` method requires:
 
 ### Clear Validation
 
-The Clear Validation feature removes data validation rules from a specified range or the entire worksheet.
+The **Clear Validation** feature is used to remove data validations from the specified ranges or the entire worksheet.
 
 You can clear data validation in the following ways:
 
@@ -120,7 +120,7 @@ You can clear data validation in the following ways:
 
 ### Highlight Invalid Data
 
-The Highlight Invalid Data feature identifies existing cell values that do not satisfy the applied validation rules.
+The **Highlight Invalid Data** feature is used to highlight previously entered invalid values.
 
 You can highlight invalid data in the following ways:
 
@@ -211,7 +211,7 @@ In Auto Fill we have following options,
 * Fill Formatting Only
 * Fill Without Formatting
 
-N>* The default auto fill option is “FillSeries” which can be referred from `fillType` property.
+N>* The default auto fill option is `FillSeries`, which is configured through the `fillType` property.
 
 ### Copy Cells
 

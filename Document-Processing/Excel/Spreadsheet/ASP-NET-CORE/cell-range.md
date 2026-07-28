@@ -19,8 +19,8 @@ Wrap text allows you to display large content as multiple lines in a single cell
 Wrap text can be applied to or removed from a cell or range of cells in the following ways:
 
 * Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
-* Select or clear the Wrap button in the Ribbon toolbar to apply or remove wrap text for the selected range.
-* Using the `wrap` method, you can apply or remove the wrap text once the component is loaded.
+* Select or clear the `Wrap` button in the **Ribbon** toolbar to apply or remove wrap text for the selected range.
+* Using the `wrap` method, you can apply or remove the **wrap** text once the component is loaded.
 
 The following code example shows the wrap text functionality in spreadsheet.
 
@@ -103,7 +103,7 @@ The `addDataValidation()` method requires:
 
 ### Clear Validation
 
-The Clear Validation feature is used to remove data validations from the specified ranges or the entire worksheet.
+The **Clear Validation** feature is used to remove data validations from the specified ranges or the entire worksheet.
 
 You can clear a data validation rule in one of the following ways:
 
@@ -112,7 +112,7 @@ You can clear a data validation rule in one of the following ways:
 
 ### Highlight Invalid Data
 
-The Highlight Invalid Data feature is used to highlight previously entered invalid values.
+The **Highlight Invalid Data** feature is used to highlight previously entered invalid values.
 
 You can highlight invalid data in one of the following ways:
 
@@ -203,7 +203,7 @@ Auto Fill supports the following options:
 * Fill Formatting Only
 * Fill Without Formatting
 
-N>* The default Auto Fill option is `FillSeries`, which is configured through the `fillType` property.
+N>* The default auto fill option is `FillSeries`, which is configured through the `fillType` property.
 
 ### Copy Cells
 
@@ -254,7 +254,7 @@ In the following sample, you can enable/disable the fill option on the button cl
 
 ## Clear
 
-Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear All, both the contents and the formats will be cleared simultaneously.
+Clear feature helps you to clear the cell contents (formulas and data), formats (including number formats, conditional formats, and borders) in a spreadsheet. When you apply clear all, both the contents and the formats will be cleared simultaneously.
 
 ### Apply Clear Feature
 
