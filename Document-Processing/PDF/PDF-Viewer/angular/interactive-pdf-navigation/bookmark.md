@@ -54,8 +54,7 @@ import {
       [documentPath]="document"
       [resourceUrl] = "resource"
       [enableBookmark]='true'
-      >
-      style="height:640px;display:block"
+      style="height:640px;display:block">
     </ejs-pdfviewer>
     `,
   encapsulation: ViewEncapsulation.None,
@@ -133,8 +132,7 @@ import {
       [documentPath]="document"
       [resourceUrl] = "resource"
       [enableBookmark]='true'
-      >
-      style="height:640px;display:block"
+      style="height:640px;display:block">
     </ejs-pdfviewer>
     `,
   encapsulation: ViewEncapsulation.None,
@@ -182,7 +180,7 @@ Use the **goToBookmark** method to navigate to a bookmark programmatically. The 
 The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
 
 ```
-  <button id="gotobookmark">Specfic Page</button>
+  <button id="gotobookmark">Specific Page</button>
 ```
 
 ```ts
@@ -209,7 +207,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-x - Specifies the pageIndex for Navigate.
+x - Specifies the pageIndex for navigate.
 
 y - Specifies the Y coordinates value of the Page.
 

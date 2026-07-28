@@ -95,7 +95,7 @@ UWP PDF Viewer control can be added to an application either through the designe
 
 2. Open the Visual Studio **Tool** **box**. Navigate to "Syncfusion<sup>®</sup> Controls for UWP" tab and find the  SfPdfViewerControl toolbox items.
 
-![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
+    ![SfPdfViewerControl in visual studio toolbox](Getting-Started_images/Getting-Started_img1.jpeg)
 
 3. Drag the [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) and drop it into the Designer area from the Toolbox.
 
@@ -108,22 +108,22 @@ When you drag the SfPdfViewerControl toolbox item to the window, it automaticall
 The SfPdfViewerControl is available in the [`Syncfusion.Windows.PdfViewer`](https://help.syncfusion.com/cr/UWP/Syncfusion.Windows.PdfViewer.html) namespace and can be created using XAML or programmatically using C#.
 
 1. Add the Syncfusion PDF Viewer namespace.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    xmlns:syncfusion="using:Syncfusion.Windows.PdfViewer"
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Add SfPdfViewerControl
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
-{% endhighlight %}
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <syncfusion:SfPdfViewerControl Name="pdfViewer"> </syncfusion:SfPdfViewerControl>
+    {% endhighlight %}
+    {% endtabs %}
 
-{% endtabcontent %}
+    {% endtabcontent %}
 
-{% endtabcontents %}
+    {% endtabcontents %}
 
 ## Load a PDF document
 
@@ -133,55 +133,54 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 2. Create a simple class (`PdfReport.cs`) that provides the PDF stream.
 
-N> Replace `PdfViewerExample` in the manifest resource path below with your project's default namespace.
+    N> Replace `PdfViewerExample` in the manifest resource path below with your project's default namespace.
 
-{% tabs %}
+    {% tabs %}
     {% highlight c# tabtitle="PdfReport.cs" %}
-using System.Reflection;
-using System.IO;
+    using System.Reflection;
+    using System.IO;
 
-internal class PdfReport : INotifyPropertyChanged
-{
-    private Stream docStream;
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    /// <summary>
-    /// Stream object to be bound to the ItemsSource of the PDF Viewer
-    /// </summary>
-    public Stream DocumentStream
+    internal class PdfReport : INotifyPropertyChanged
     {
-        get
+        private Stream docStream;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Stream object to be bound to the ItemsSource of the PDF Viewer
+        /// </summary>
+        public Stream DocumentStream
         {
-            return docStream;
+            get
+            {
+                return docStream;
+            }
+            set
+            {
+                docStream = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
+            }
         }
-        set
+
+        public PdfReport()
         {
-            docStream = value;
-            OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
+            // Loads the stream from the embedded resource.
+            Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
+
+            // Replace 'PdfViewerExample' with your project's namespace in resource path
+            docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
         }
+
+        public void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, e);
+        }        
     }
-
-    public PdfReport()
-    {
-        // Loads the stream from the embedded resource.
-        Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-
-        // Replace 'PdfViewerExample' with your project's namespace in resource path
-        docStream = assembly.GetManifestResourceStream("PdfViewerExample.Assets.PDF_Succinctly.pdf");
-    }
-
-    public void OnPropertyChanged(PropertyChangedEventArgs e)
-    {
-        if (PropertyChanged != null)
-            PropertyChanged(this, e);
-    }        
-}
-
     {% endhighlight %} 
     
-{% highlight vbnet %}
-Class PdfReport
+    {% highlight vbnet %}
+    Class PdfReport
     Implements INotifyPropertyChanged
 
     Private docStream As Stream
@@ -210,34 +209,34 @@ Class PdfReport
         RaiseEvent PropertyChanged(Me, e)
     End Sub
 
-End Class
-{% endhighlight %}
-{% endtabs %}
+    End Class
+    {% endhighlight %}
+    {% endtabs %}
 
 
 
 3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-    xmlns:local="using:PdfViewerExample"
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+        xmlns:local="using:PdfViewerExample"
+    {% endhighlight %} 
+    {% endtabs %}
 
 4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<Page.DataContext>
-    <local:PdfReport/>
-</Page.DataContext>
-<Grid>
-   <syncfusion:SfPdfViewerControl Name="pdfViewer" ItemsSource="{Binding DocumentStream}"></syncfusion:SfPdfViewerControl>
-</Grid>
-{% endhighlight %} 
-{% endtabs %}
+    {% tabs %}
+    {% highlight xaml tabtitle="MainPage.xaml" %}
+    <Page.DataContext>
+        <local:PdfReport/>
+    </Page.DataContext>
+    <Grid>
+    <syncfusion:SfPdfViewerControl Name="pdfViewer" ItemsSource="{Binding DocumentStream}"></syncfusion:SfPdfViewerControl>
+    </Grid>
+    {% endhighlight %} 
+    {% endtabs %}
 
-You can load and display PDF documents using various approaches such as loading from a stream, StorageFile, PdfLoadedDocument, data binding, or FileOpenPicker.
+    You can load and display PDF documents using various approaches such as loading from a stream, StorageFile, PdfLoadedDocument, data binding, or FileOpenPicker.
 
-For detailed information and code examples, refer to [Viewing Pdf](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf).
+    For detailed information and code examples, refer to [Viewing Pdf](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf).
 
 ## Run the application
 

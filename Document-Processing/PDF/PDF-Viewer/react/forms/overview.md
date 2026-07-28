@@ -58,7 +58,7 @@ root.render(<App />);
 
 ## Form Designer
 
-A built in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
+A built-in Form Designer lets you quickly add, edit, move, and delete form fields in the PDF documents. This viewer allows you to design fillable PDF forms interactively either using the built-in form designer tools or building your own customized form designer tools.
 
 See the [Form Designer](./form-designer) page for full details.
 
@@ -80,7 +80,7 @@ export function App() {
         style={{ 'height': '680px' }} 
       >
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
-          Print, TextSelection, TextSearch, FormFields]} />
+          Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
       </PdfViewerComponent>
     </div>
   </div>);

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Save document to AWS S3 in React Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in React Document editor of Syncfusion Essential JS 2 and more details.
+title: Save document to AWS S3 in React DOCX Editor | Syncfusion
+description: Learn about how to save a document to AWS S3 in the Syncfusion React Document Editor of Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3
+# Save document to AWS S3 in React DOCX Editor
 
-To save a document to AWS S3, you can follow the steps below
+To save a document to AWS S3, follow the steps below.
 
-**Step 1:** Create a Simple [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React
+**Step 1:** Create a simple [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React.
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
 
@@ -31,7 +31,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -58,7 +58,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToS3")]
-//Post action for save the document to AWS S3
+//Post action to save the document to AWS S3
 
 public void SaveToS3(IFormCollection data)
 {
@@ -97,7 +97,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -114,11 +114,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:** Modify the index file in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in AWS S3 Bucket.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in an AWS S3 Bucket.
 
 ```typescript
 import * as ReactDOM from 'react-dom';
@@ -137,7 +137,6 @@ function App() {
         let formData: FormData = new FormData();
         formData.append('documentName', container.documentEditor.documentName);
         formData.append('data', exportedDocument);
-        /* tslint:disable */
         let req = new XMLHttpRequest();
         // Replace your running Url here
         req.open(
@@ -148,7 +147,7 @@ function App() {
         req.onreadystatechange = () => {
             if (req.readyState === 4) {
                 if (req.status === 200 || req.status === 304) {
-                    console.log('Saved sucessfully');
+                    console.log('Saved successfully');
                 }
             }
         };

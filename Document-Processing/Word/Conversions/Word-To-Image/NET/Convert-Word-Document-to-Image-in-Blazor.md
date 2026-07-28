@@ -737,12 +737,6 @@ Step 2: Install the following **Nuget packages** in application from [Nuget.org]
 
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
-N> 3. If you face issues related to SkiaSharp during runtime, install the necessary WebAssembly tools by running the following commands in the terminal:
-N> ```
-N> dotnet workload install wasm-tools
-N> ```
-N> After completing the installation, restart Visual Studio to ensure proper integration of the tools.
-
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
 Add the following namespaces in the file:
@@ -926,11 +920,7 @@ Step 2: To **convert a Word document to Image in Blazor WASM Standalone app**, i
 
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
-N> 3. If you face issues related to SkiaSharp during runtime, install the necessary WebAssembly tools by running the following commands in the terminal:
-N> ```
-N> dotnet workload install wasm-tools
-N> ```
-N> After completing the installation, restart Visual Studio Code to ensure proper integration of the tools.
+
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 
@@ -1134,11 +1124,6 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/nuget-packages-required-word-to-image#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
-N> 3. If you face issues related to SkiaSharp during runtime, install the necessary WebAssembly tools by running the following commands in the terminal:
-N> ```
-N> dotnet workload install wasm-tools
-N> ```
-N> After completing the installation, restart JetBrains Rider to ensure proper integration of the tools.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.
 

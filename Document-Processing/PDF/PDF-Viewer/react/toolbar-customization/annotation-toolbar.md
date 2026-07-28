@@ -132,4 +132,4 @@ export default function App() {
 ## Related topics
 
 - [Customize form designer toolbar](./form-designer-toolbar)
-- [customize primary toolbar](./primary-toolbar)
+- [Customize primary toolbar](./primary-toolbar)

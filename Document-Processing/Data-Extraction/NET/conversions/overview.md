@@ -1,10 +1,10 @@
 ---
 title: Smart Data Extractor Library | Syncfusion
-description:  Smart Data Extractor converts PDF documents and images to structured formats like JSON, Markdown (MD), and PDF output.
+description: Smart Data Extractor converts PDF documents and images to structured formats like JSON, Markdown (MD), and PDF output.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: SmartDataExtractor, PDF to JSON, PDF to Markdown
 ---
 
 # Welcome to Syncfusion<sup>&reg;</sup> Smart Data Extractor Library

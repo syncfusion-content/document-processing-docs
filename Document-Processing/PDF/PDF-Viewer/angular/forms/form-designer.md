@@ -123,7 +123,7 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 
 #### Show or Hide the Built-in Form Designer Toolbar
 
-The visibility of the Form Designer toolbar is controlled by the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This method enables the application to display or hide the Form Designer tools based on requirements. Refer to the code example [here](../toolbar-customization/form-designer-toolbar#2-show-or-hide-form-designer-toolbar-at-runtime).
+The visibility of the Form Designer toolbar is controlled by the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This method enables the application to display or hide the Form Designer tools based on requirements. Refer to the code example [here](../toolbar-customization/form-designer-toolbar#2-show-or-hide-form-designer-toolbar-at-runtime).
 
 - The Form Designer toolbar is shown when form design is required.
 - The toolbar can be hidden to provide a cleaner viewing experience.
@@ -154,12 +154,12 @@ Fields can be moved, resized, and edited directly in the PDF Viewer using the Fo
 
 - Fields are resized using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Selecting a field opens the Form Field Properties popover, which allows modification of the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
 For more information, see Editing Form Fields
 
-### Edit Form Field properties
+### Edit Form Field Properties
 
 The **Properties** panel lets you customize the styles of form fields. Open the panel by selecting the **Properties** option in a field's context menu.
 
