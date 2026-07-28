@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Troubleshoot error 'cp' is not recognized as a command in Angular
+# Resolve 'cp' Command Error in Syncfusion Angular PDF Viewer
 
-The error message you're seeing, "'cp' is not recognized as an internal or external command," is because the `cp` command you're trying to use is not recognized on Windows command prompt.
+The Unix `cp` command is not available in the Windows Command Prompt
 
-On Windows, you should use the `copy` command to copy files and directories instead of `cp`. The equivalent command in Windows to copy a directory and its contents recursively is:
+On Windows, you should use the `copy` command to copy files and directories. The equivalent command in Windows to copy a directory and its contents recursively is:
 
 ```batch
 xcopy /s /e /i .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib src\assets\ej2-pdfviewer-lib
