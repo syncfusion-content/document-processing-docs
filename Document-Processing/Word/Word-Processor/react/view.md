@@ -54,7 +54,7 @@ Explore how to use the ruler in the React Document Editor for working with Word 
 
 The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
 
-The following example demonstrates how to enable the heading navigation pane in a document editor.
+The following example demonstrates how to enable the heading navigation pane in a Document Editor.
 
 ```ts
 import * as ReactDOM from 'react-dom';
