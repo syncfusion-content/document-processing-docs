@@ -477,7 +477,7 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
 //Load the PowerPoint document
-IPresentation pptxDoc = Presentation.Open("Sample.pptx"));
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Initialize the conversion settings
 PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
 //Set the Pdf conformance level to A1B
@@ -705,7 +705,8 @@ The presentation library allows you to optimize the memory usage for the duplica
  
 The following code sample demonstrates how to optimize the duplicate images while converting a PowerPoint presentation to PDF document. 
 
-The following code sample demonstrates how to optimiz
+{% tabs %}
+
 {% highlight C# tabtitle="C# [Cross-platform]" %}
 //Open the existing PowerPoint presentation.
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
@@ -749,11 +750,11 @@ Dim pdfConverterSettings As PresentationToPdfConverterSettings  = new Presentati
 pdfConverterSettings.OptimizeIdenticalImages = true
 'Convert the documents by passing the settings as parameter.
 Dim pdfDoc As PdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings)
-Save the converted PDF file.
+'Save the converted PDF file.
 pdfDoc.Save("Sample.pdf")
-Close the presentation instance
+'Close the presentation instance
 pptxDoc.Close()
-Close the PDF instance
+'Close the PDF instance
 pdfDoc.Close()
 {% endhighlight %}
 

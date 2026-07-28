@@ -17,8 +17,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
 //Load the PowerPoint presentation.
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
@@ -118,8 +117,7 @@ The following code example demonstrates how to upload a font stream for missing 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
 //Load the PowerPoint presentation.
 using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
