@@ -23,8 +23,6 @@ For a complete reference of the enums and properties used to configure lists, se
 
 N> - `IndentLevelNumber` accepts values from `0` to `8`, where `0` indicates no indent.
 N> - `ListFormat.Size` is expressed as a percentage of the text size (range `25` to `400`).
-N> - `NumberedListStyle` supports values such as `ArabicPeriod`, `AlphaLcPeriod`, `RomanLcPeriod`, and others; see the API reference for the complete list.
-
 The following code example illustrates how to create a numbered list:
 
 {% tabs %}

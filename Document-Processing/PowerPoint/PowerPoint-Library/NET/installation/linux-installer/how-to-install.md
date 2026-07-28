@@ -35,7 +35,7 @@ The steps below show how to install PowerPoint Linux installer.
 
 5. Run the following command in linux machine to deploy the ASP.NET Core samples
  
-  **dotnet restore projectname -s \nuget** in order to restore.
+  **dotnet restore project-name -s \nuget** in order to restore.
 
 ## License key registration in samples
 

@@ -75,7 +75,7 @@ Step 4: Change the install and sample locations here. You can also change the ad
 
 Step 5: If any previous versions of the current product are installed, the **Uninstall Previous Version(s)** wizard will open. Select the **Uninstall** check box to uninstall the previous versions, then click the **Proceed** button.
 
-    ![Uninstall Previous Version(s) wizard](images/Step-by-Step-Installation_img8.png)
+    ![Uninstall Previous Version wizard](images/Step-by-Step-Installation_img8.png)
 
     N> From version 18.1 onwards, Syncfusion<sup>&reg;</sup> provides the option to uninstall previous versions while installing the new version.
 
@@ -104,39 +104,47 @@ Step 8: **Verify the installation.** Open **Control Panel → Programs → Progr
 
 The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Installer supports installation and uninstallation via the command line.
 
-### Extract the installer (silent mode)
+### Command Line Installation
 
-Step 1: Run the Syncfusion<sup>&reg;</sup> PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+To install through the Command Line in Silent mode, follow the steps below.
 
-Step 2: The `syncfusionessentialpowerpoint_(version).exe` file will be extracted into the Temp directory.
+1.	Run the Syncfusion<sup>&reg;</sup> PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+2.	The file syncfusionessentialpowerpoint_(version).exe file will be extracted into the Temp directory.
+3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialpowerpoint_(version).exe file will be located in one of the folders.
+4.	Copy the extracted syncfusionessentialpowerpoint_(version).exe file in local drive.
+5.	Exit the Wizard.
+6.	Run Command Prompt in administrator mode and enter the following arguments.
 
-Step 3: Run `%temp%` in the Run dialog (Win+R). The Temp folder opens. The `syncfusionessentialpowerpoint_(version).exe` file will be located in one of the folders. Sort by **Date Modified** to find the most recent extraction.
-
-Step 4: Copy the extracted `syncfusionessentialpowerpoint_(version).exe` file to a local drive.
-
-Step 5: Exit the Wizard.
+   
+    **Arguments:** “installer file path\SyncfusionEssentialStudio(platform)_(version).exe” /Install silent /UNLOCKKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/InstallAssemblies:{true/false}] [/UninstallExistAssemblies:{true/false}] [/InstallToolbox:{true/false}]
 
 
-Step 6: Open **Command Prompt** in administrator mode and enter the following arguments.
+    N> [..] – Arguments inside the square brackets are optional.
 
-    **Arguments:** `"installer file path\SyncfusionEssentialStudio(platform)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/InstallAssemblies:{true/false}] [/UninstallExistAssemblies:{true/false}] [/InstallToolbox:{true/false}]`
+    **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
-    N> Arguments inside square brackets are optional. Replace `x.x.x.x` with the Essential Studio<sup>&reg;</sup> version, and replace the placeholder with the Unlock Key for that version.
+	
+7.  Essential Studio<sup>&reg;</sup> for PowerPoint is installed.
 
-    **Flag reference:**
+    N> x.x.x.x should be replaced with the Essential Studio<sup>&reg;</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+   
 
-    | Flag | Description |
-    |------|-------------|
-    | `/Install silent` | Runs the installer in silent (unattended) mode. |
-    | `/UNLOCKKEY` | Specifies the unlock key (required). |
-    | `/log` | Writes installer log to the specified path. Defaults to `%TEMP%\Syncfusion_Install.log` if omitted. |
-    | `/InstallPath` | Target installation directory. Defaults to `C:\Program Files (x86)\Syncfusion\EssentialStudio\Version`. |
-    | `/InstallSamples` | Installs demo samples when `true`. |
-    | `/InstallAssemblies` | Registers Syncfusion<sup>&reg;</sup> assemblies in GAC when `true`. |
-    | `/UninstallExistAssemblies` | Removes any conflicting older assemblies from GAC when `true`. |
-    | `/InstallToolbox` | Adds Syncfusion<sup>&reg;</sup> controls to the Visual Studio toolbox when `true`. Requires `/InstallAssemblies:true`. |
+### Command Line Uninstallation
 
-    **Example:** `"D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log "C:\Temp\EssentialStudio_Platform.log" /InstallPath:"C:\Syncfusion\x.x.x.x" /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true`
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint can be uninstalled silently using the Command Line.
 
-Step 7: Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint is installed.
+1.	Run the Syncfusion<sup>&reg;</sup> PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+2.	The file syncfusionessentialpowerpoint_(version).exe file will be extracted into the Temp directory.
+3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialpowerpoint_(version).exe file will be located in one of the folders.
+4.	Copy the extracted syncfusionessentialpowerpoint_(version).exe file in local drive.
+5.	Exit the Wizard.
+6.	Run Command Prompt in administrator mode and enter the following arguments.
+   
+    **Arguments:** “Copied installer file path\syncfusionessentialpowerpoint_(version).exe” /uninstall silent 
 
+    **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe" /uninstall silent
+
+
+7.  Essential Studio<sup>&reg;</sup> for PowerPoint is uninstalled.
+   
+   

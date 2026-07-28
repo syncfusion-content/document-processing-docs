@@ -21,7 +21,7 @@ To create or modify a PowerPoint Presentation, you need to understand how elemen
 | `ITextPart` | Paragraph child | Represents a run of text within a paragraph. |
 | `IPlaceholder` | Shape variant | Represents a layout placeholder on a slide. |
 
-![Document Object Model of the Essential Presentation library: IPresentation contains ISlide collections, which contain IShape elements, and so on.](DocumentObjectModel_images/DocumentObjectModel_img1.png)
+![Document Object Model of the Essential Presentation library](DocumentObjectModel_images/DocumentObjectModel_img1.png)
 
 
 ## See also
