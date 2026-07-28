@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java in the React DOCX Editor component | Syncfusion
-description: Learn here all about Java in the Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Java in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Java 
 platform: document-processing
 documentation: ug

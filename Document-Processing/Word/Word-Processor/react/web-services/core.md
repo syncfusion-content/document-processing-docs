@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Core in the React DOCX Editor component | Syncfusion
-description: Learn here all about Core in the Syncfusion React DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Core in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Core 
 platform: document-processing
 documentation: ug
