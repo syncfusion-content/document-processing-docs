@@ -106,8 +106,7 @@ Configure default highlight settings such as **color**, **opacity**, and **autho
     <ejs-pdfviewer id="pdfviewer"
                    style="height:650px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-                   height="650px">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 <script>
@@ -168,7 +167,7 @@ For detailed behavior, supported deletion workflows, and API reference, see [Del
 
 ### Comments
 
-Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
+Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to highlight annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation
