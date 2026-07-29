@@ -748,7 +748,7 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% previewsample "/document-processing/samples/spreadsheet/angular/save-as-json" %}
 
-### Send and Receive Custom Parameters from Client to Server
+### Send and receive custom params from client to server
 
 Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event.
 
