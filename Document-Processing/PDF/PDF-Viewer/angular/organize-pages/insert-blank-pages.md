@@ -58,11 +58,11 @@ To enable or disable the **Insert Pages** button in the page thumbnails, update 
 
 - **Organize Pages button missing**: Verify `PageOrganizer` is included in `Inject` and `Toolbar` is enabled.
 - **Inserted page not saved**: Confirm [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) is configured for your selected processing mode.
-- **Insert options disabled**: Ensure [`pageOrganizerSettings.canInsert`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#caninsert) is set to `true` to enable insert option.
+- **Insert options disabled**: Ensure [`pageOrganizerSettings.canInsert`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#caninsert) is set to `true` to enable the insert option.
 
 ## Related topics
 
 - [Organize pages toolbar customization](./toolbar)
 - [Organize pages event reference](./events)
 - [Remove pages in Organize Pages](./remove-pages)
-- [Reorder pages in Organize Pages](./remove-pages)
+- [Reorder pages in Organize Pages](./reorder-pages)
