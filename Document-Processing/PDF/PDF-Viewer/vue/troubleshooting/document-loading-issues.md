@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the Syncfusion Vue PDF Viewer component
+title: Fix document loading issues in Syncfusion Vue PDF Viewer
 description: Resolve v23.1+ document rendering failures in the Syncfusion Vue PDF Viewer by calling dataBind before load, checking source URLs, CORS, CSP, and network.
 control: PDF Viewer
 platform: document-processing
