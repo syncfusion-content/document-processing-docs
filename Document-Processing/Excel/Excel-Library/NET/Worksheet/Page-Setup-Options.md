@@ -1026,6 +1026,97 @@ End Using
 
 A complete working example to add headers and footers in an Excel document using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Header%20and%20Footer/.NET/Header%20and%20Footer)
 
+## Center vertical and Horizontal
+
+The following code example illustrates how to add align the content center while Excel to PDF conversion.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet sheet = workbook.Worksheets[0];
+
+    for (int i = 1; i <= 10; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+        }
+    }
+
+    foreach (IWorksheet worksheet in workbook.Worksheets)
+    {
+        worksheet.PageSetup.CenterHorizontally = true;
+        worksheet.PageSetup.CenterVertically = true;
+    }
+
+    XlsIORenderer renderer = new XlsIORenderer();
+
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+    pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet sheet = workbook.Worksheets[0];
+
+    for (int i = 1; i <= 10; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            sheet.Range[i, j].Text = sheet.Range[i, j].AddressLocal;
+        }
+    }
+
+    foreach (IWorksheet worksheet in workbook.Worksheets)
+    {
+        worksheet.PageSetup.CenterHorizontally = true;
+        worksheet.PageSetup.CenterVertically = true;
+    }
+
+    ExcelToPdfConverter renderer = new ExcelToPdfConverter(workbook);
+
+    PdfDocument pdfDocument = renderer.Convert();
+    pdfDocument.Save("Output.pdf");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+ Using excelEngine As ExcelEngine = New ExcelEngine()
+     Dim application As IApplication = excelEngine.Excel
+     application.DefaultVersion = ExcelVersion.Xlsx
+     Dim workbook As IWorkbook = application.Workbooks.Create(1)
+     Dim sheet As IWorksheet = workbook.Worksheets(0)
+
+     For i As Integer = 1 To 10
+         For j As Integer = 1 To 5
+             sheet.Range(i, j).Text = sheet.Range(i, j).AddressLocal
+         Next j
+     Next i
+
+     For Each worksheet As IWorksheet In workbook.Worksheets
+         worksheet.PageSetup.CenterHorizontally = True
+         worksheet.PageSetup.CenterVertically = True
+     Next worksheet
+
+     Dim renderer As XlsIORenderer = New XlsIORenderer()
+
+     Dim pdfDocument As PdfDocument = renderer.ConvertToPDF(workbook)
+     pdfDocument.Save("Output.pdf")
+ End Using
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example to align the content center while Excel to PDF Conversion using C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/997626-CenterVerticalH/Worksheet%20Features/Center_Vertical_Horizontal/.NET/Center_Vertical_Horizontal)
+
 ## Paper Size  
 
 The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Interfaces.IPageSetupBase.html#Syncfusion_XlsIO_Interfaces_IPageSetupBase_PaperSize">PaperSize</a> functionality allows you to specify the paper size for worksheet.
