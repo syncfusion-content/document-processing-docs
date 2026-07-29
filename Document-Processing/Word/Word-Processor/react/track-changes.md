@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track Change in React DOCX Editor
+# Track Changes in React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 
@@ -28,15 +28,13 @@ import * as React from 'react';
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
-let documenteditor;
+let documenteditor = useRef<DocumentEditorContainerComponent>(null);
 function App() {
     return (
         <DocumentEditorContainerComponent
             id="container"
             height="590px"
-            ref={(scope) => {
-                documenteditor = scope;
-            }}
+            ref={documenteditor}
             // Use the following service URL only for demo purposes
             serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
             enableToolbar={true}
@@ -50,7 +48,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges: true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes in documentChange event. 
+N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, `enableTrackChanges` is reset to `false` even if you set it to `true` initially. If you want to enable track changes for all the documents, then we recommend enabling track changes in the `documentChange` event. 
 
 The following example demonstrates how to enable track changes for the all the document while opening.
 
@@ -89,8 +87,10 @@ function App() {
     let container = null;
 
     React.useEffect(() => {
-        container.documentEditor.showRevisions = true; // To show revisions pane
-        container.documentEditor.showRevisions = false; // To hide revisions pane
+        if (container) {
+            container.documentEditor.showRevisions = true; // To show revisions pane
+            container.documentEditor.showRevisions = false; // To hide revisions pane
+        }
     }, [container]); // Re-run the effect when the container is initialized
 
     return (
@@ -180,11 +180,15 @@ let revisions: RevisionCollection = documentEditor.revisions;
 /**
  * Accept specific changes
  */
-revisions.get(0).accept();
+if (revisions.length > 0) {
+    revisions.get(0).accept();
+}
 /**
  * Reject specific changes
  */
-revisions.get(1).reject();
+if (revisions.length > 1) {
+    revisions.get(1).reject();
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +223,7 @@ The following example illustrates how to enable and update custom metadata for t
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
 
-import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
@@ -237,14 +241,15 @@ function App() {
                 container = scope;
             }}
             height={'590px'}
-            serviceUrl="HostUrl"
+            // Use the following service URL only for demo purposes
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
             enableTrackChanges={true}
             documentEditorSettings={settings}
         />
     );
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+createRoot(document.getElementById('sample')).render(<App />);
 
 {% endhighlight %}
 {% endtabs %}
@@ -257,7 +262,7 @@ N> When the document is exported as SFDT, the customData value is stored in the 
 
 ## Restrict accept or reject by author
 
-Accepting or rejecting changes can be restricted based on the author’s name.
+Accepting or rejecting changes can be restricted based on the author’s name. The `beforeAcceptRejectChanges` event is triggered before both accept and reject actions, so the same handler can be used to restrict either operation.
 
 The following example demonstrates how to restrict an author from accept or reject changes.
 
@@ -266,13 +271,14 @@ The following example demonstrates how to restrict an author from accept or reje
 
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
+import { useRef } from 'react';
 import {
     DocumentEditorContainerComponent,
     Toolbar,
 } from '@syncfusion/ej2-react-documenteditor';
 DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
-    let container = DocumentEditorContainerComponent;
+    const container = useRef<DocumentEditorContainerComponent>(null);
     // Event gets triggered before accepting/rejecting changes
     const beforeAcceptRejectChanges = (args) => {
         // Check the author of the revision
@@ -285,9 +291,7 @@ function App() {
         <div>
             <DocumentEditorContainerComponent
                 id="container"
-                ref={(scope) => {
-                    container = scope;
-                }}
+                ref={container}
                 height={'590px'}
                 serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
                 enableToolbar={true}
