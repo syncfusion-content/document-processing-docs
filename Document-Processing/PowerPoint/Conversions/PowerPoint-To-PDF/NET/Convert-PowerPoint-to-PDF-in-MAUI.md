@@ -67,9 +67,11 @@ Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
-using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +84,7 @@ Step 6: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
@@ -211,10 +213,10 @@ Step 1: Create a new C# .NET MAUI app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a PowerPoint document to PDF in .NET MAUI app**, install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the MAUI project.
+Step 2: To **convert a PowerPoint document to PDF in .NET MAUI app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the MAUI project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.PresentationRenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.PresentationRenderer.NET.Core NuGet package](Workingwith-MAUI/Command-to-add-NuGet-package-MAUI.png)
 
@@ -251,6 +253,9 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using Syncfusion.Pdf;
@@ -266,7 +271,7 @@ Step 5: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
@@ -442,9 +447,11 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
-using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -457,7 +464,7 @@ Step 5: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
