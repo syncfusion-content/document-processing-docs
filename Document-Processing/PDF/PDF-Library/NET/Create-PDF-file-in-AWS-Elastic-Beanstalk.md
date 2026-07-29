@@ -32,7 +32,7 @@ Step 2: In configuration windows, name your project and select Next.
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](GettingStarted_images/NuGet-Package-AWS-Elastic-Beanstalk.png)
 
-Step 4: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -51,7 +51,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For Elastic Beanstalk, store the key in the environment's **Configuration > Software > Environment properties** (key/value pair) and read it with `builder.Configuration["SyncfusionLicenseKey"]` so the key is never committed to source control. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: A default controller named HomeController.cs is created with the ASP.NET Core MVC project. Create a `Data` folder in the project root, copy the `Input.pdf` file into it, and set **Copy to Output Directory** to **Copy if newer** for the file. Then include the following namespaces in the HomeController.cs file.
 

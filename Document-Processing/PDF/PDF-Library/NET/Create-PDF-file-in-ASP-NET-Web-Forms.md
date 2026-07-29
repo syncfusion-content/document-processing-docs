@@ -32,7 +32,7 @@ Step 2: Select the Empty project.
 Step 3: Install the [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/).
 ![PDF ASP.NET NuGet package installation](Asp.Net_images/NuGet-package.png)
 
-Step 4: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Global.asax.cs** inside the `Application_Start` method before initializing any Syncfusion component:
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Global.asax.cs** inside the `Application_Start` method before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -48,7 +48,7 @@ protected void Application_Start(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For security, store the key in `Web.config` `<appSettings>` rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Add a new Web Form in the ASP.NET project. Right-click the project, select **Add > New Item**, and add a Web Form from the list. Name it `MainPage`.
 
