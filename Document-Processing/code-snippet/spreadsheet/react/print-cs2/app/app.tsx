@@ -9,7 +9,8 @@ function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     const items: ItemModel[] = [
         { text: 'ActiveSheet' },
-        { text: 'Workbook' }
+        { text: 'Workbook' },
+        { text: 'PrintRange' }
     ];
     const handleItemSelect = (args: MenuSelectEventArgs): void => {
         let spreadsheet: SpreadsheetComponent = spreadsheetRef.current;
