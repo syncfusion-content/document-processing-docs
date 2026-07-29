@@ -136,7 +136,7 @@ public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnviro
 }
 ```
 
-3. Modify the `OnPostLoad()` method to load the PDF files from  Azure Blob Storage
+3. Modify the `OnPostLoad()` method to load the PDF files from Azure Blob Storage
 
 ```csharp
 

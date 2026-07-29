@@ -52,7 +52,7 @@ AWS.config.update({
 });
 ```
 
-2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer then load Base64 string generated into the viewer.load method.
+2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then uses the `getObject` method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the `viewer.load` method.
 
 N> Replace **Your Bucket Name** with the actual bucket name of your AWS S3 account and **Your Key** with the actual file key of your AWS S3 account.
 
@@ -130,7 +130,7 @@ public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnviro
 }
 ```
 
-3. Modify the `OnPostLoad()` method to load the PDF files from  AWS S3
+3. Modify the `OnPostLoadAsync()` method to load the PDF files from AWS S3
 
 ```csharp
 
