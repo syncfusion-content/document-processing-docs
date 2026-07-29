@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Spell check in Angular Document editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Spell check in Angular DOCX editor component | Syncfusion
+description: Learn here all about Spell check in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Spell check 
+control: Spell check
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in Angular Document editor component
+# Spell Check in Angular Document Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -36,8 +36,9 @@ export class AppComponent {
 
 ## Features
 
-* Supports context menu suggestions.
-* Provides built-in options to Ignore, Ignore All, Change, Change All for error words in spell checker dialog.
+* Supports context menu suggestions for misspelled words.
+
+* Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
 ## Enable SpellCheck
 
@@ -121,10 +122,9 @@ Previously on every `SpellChecker.GetSuggestion()` method call, the `.aff` and d
 
 If you find any root word is missing in the dictionary file, then you can add that new root word and the rule to form the possible words to dictionary file using `AddNewWord` API in the server-side Spell check library.
 
->Note:
->1. The rules are framed automatically using the root word, the possible words and affix file.
->2. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary.
->3. This API is included starting from `v20.2.0.xx`.
+N> 1. The rules are framed automatically using the root word, the possible words and affix file.
+N> 2. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary.
+N> 3. This API is included starting from `v20.2.0.xx`.
 
 The following code example demonstrates how to add a new root word to the dictionary along with the rule to form the possible words.
 

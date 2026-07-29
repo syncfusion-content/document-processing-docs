@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Image overview in Angular Document editor component | Syncfusion
+title: Image overview in Angular DOCX Editor component | Syncfusion
 description: Learn here all about Word processor server docker image overview in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Word processor server docker image overview 
+control: Word processor server docker image overview
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # Word processor server docker image overview in Angular Document editor component
 
-The **[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
+The **[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
 This Docker image is the predefined Docker container of Syncfusion’s Word Processor backend. You can deploy it quickly to your infrastructure.
 
@@ -55,7 +55,7 @@ docker-compose up
 
 Now the Word Processor server Docker instance runs in the localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Word Processor Web API control `http://localhost:6002/api/documenteditor`. It returns the default get method response.
 
-**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](../getting-started)
+**Step 4:** Append the Docker instance running the URL `(http://localhost:6002/api/documenteditor)` to the service URL in the client-side Word Processor control. For more information about how to get started with the Word Processor control, refer to this [`getting started page.`](../getting-started).
 
 ## How to configure spell checker dictionaries path in Docker compose file
 
