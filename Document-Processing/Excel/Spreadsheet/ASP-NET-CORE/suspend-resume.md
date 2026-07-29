@@ -9,7 +9,7 @@ documentation: ug
 
 # Suspend and Resume UI Refresh in ASP.NET Core Spreadsheet
 
-The Spreadsheet refreshes its UI after each operation performed through public methods, such as updating a cell, applying formatting, or inserting rows. This immediate rendering works well for a few actions, but it can lead to performance issues when many operations are executed one after another.
+The Spreadsheet refreshes its UI after each public method call, such as updating a cell, applying formatting, or inserting rows. Immediate rendering works well for a few actions but can cause performance issues when many operations are performed in sequence.
 
 The **suspend and resume refresh** feature lets you temporarily pause UI rendering, perform multiple operations, and then refresh the UI only once at the end. This helps reduce unnecessary re-rendering and improves the overall performance of bulk updates.
 
@@ -17,7 +17,7 @@ This is especially useful when the Spreadsheet is updated programmatically durin
 
 ## When to use
 
-Use this feature when you need to perform several actions in sequence, such as:
+Use this feature when performing several operations in sequence, such as:
 
 - Updating many cells at once
 - Applying formatting to a large range
@@ -25,14 +25,14 @@ Use this feature when you need to perform several actions in sequence, such as:
 - Running repeated operations inside a loop
 - Working with large datasets
 
-For a few operations, this feature is usually not required.
+This feature is generally not required for a few simple operations.
 
 ## How to use
 
 Use the following methods:
 
-- `suspendRefresh` — pauses UI rendering
-- `resumeRefresh` — applies all pending visual updates
+- [`suspendRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#suspendrefresh) — Pauses UI refresh while allowing the required Spreadsheet operations to run.
+- [`resumeRefresh`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#resumerefresh) — Resumes UI refresh and renders the pending visual changes.
 
 ### Step 1: Suspend UI refresh
 
@@ -74,8 +74,9 @@ Call `resumeRefresh` after all operations are complete. The Spreadsheet then ren
 		spreadsheet.setColumnsWidth(90, ['B:K']);
 		spreadsheet.resumeRefresh();
 	}
-<script>
+</script>
 ```
+> Always pair each `suspendRefresh` call with a corresponding `resumeRefresh` call. If `resumeRefresh` is not called, the pending UI changes may not be rendered.
 
 ## API reference
 

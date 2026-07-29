@@ -12,7 +12,7 @@ Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncf
 
 ## Steps to open and save Word document programmatically:
 
-The below steps illustrate open and save a simple Word document in ASP.NET Core Web API.
+The below steps illustrate opening and saving a simple Word document in ASP.NET Core Web API.
 
 Step 1: Create a new C# ASP.NET Core Web API project.
 
@@ -22,7 +22,15 @@ Step 2: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 ![Install Syncfusion.DocIO.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Open-and-save-Nuget-package.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N>
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
+N>
+N> ```csharp
+N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+N> ```
+N>
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Add a new API controller empty file in the project.
 
@@ -42,7 +50,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 5: Add a new action method DownloadWordDocument in **ValuesController.cs** and include the below code snippet to Open and save an Word file and download it.
+Step 5: Add a new action method DownloadWordDocument in **ValuesController.cs** and include the below code snippet to open and save a Word file and download it.
 
 {% tabs %}
 
@@ -120,7 +128,7 @@ Step 1: Create a console application.
 
 N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
+Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. This example uses C# top-level statements with `await` (supported in .NET 6 and later).
 
 This method sends a GET request to the Web API endpoint to retrieve and save the generated Word document.
 
@@ -139,7 +147,7 @@ using (HttpClient client = new HttpClient())
         // Check if the response is successful
         if (response.IsSuccessStatusCode)
         {
-            // Read the content as a string
+            // Read the response content as a stream
             Stream responseBody = await response.Content.ReadAsStreamAsync();
             FileStream fileStream = File.Create("../../../Output/Output.docx");
             responseBody.CopyTo(fileStream);

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the Loaded Document in React PDF Viewer | syncfusion
+title: Retrieve the Loaded Document in React PDF Viewer | Syncfusion
 description: Learn how to access the loaded PDF document instance in the React PDF Viewer using refs and the documentLoad event.
 platform: document-processing
 documentation: ug
@@ -13,7 +13,7 @@ This page explains how to access the React PDF Viewer instance using a React ref
 
 ## Explanation: Why access the loaded document instance?
 
-- The viewer instance (via **React ref**) gives you a stable handle to call APIs such as [`zoom`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification), [`print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print), [`download`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/download), and [`navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/navigation).
+- The viewer instance (via **React ref**) gives you a stable handle to call APIs such as [`zoom`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/magnification), [`print`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/print), [`download`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/download), and [`navigation`](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/interactive-pdf-navigation/overview).
 - The **document load event** (fires after the PDF is parsed and pages are ready) is the correct moment to read **document information** (title, author, page count, etc.) and **page metrics**, and to trigger post‑load UI logic.
 - Accessing the instance too early (before load completes) may cause null/undefined errors or incomplete information.
 
@@ -64,7 +64,7 @@ function App() {
     // 2) Read loaded document details (shape depends on event payload/version)
     console.log('documentLoad args:', args);
 
-    // 4) Call viewer APIs (after load)
+    // 3) Call viewer APIs (after load)
     const pageCount =
       (viewer && viewer.pageCount) ||
       (args && args.pageCount) ||

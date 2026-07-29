@@ -14,7 +14,7 @@ This guide explains how to implement page navigation in the React PDF Viewer. Yo
 
 ## Enable Page Navigation
 
-To enable or disable page navigation in the PDF Viewer, set the [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablenavigation) property on the [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer).
+Page navigation is enabled by default in the PDF Viewer. When enabled, the default toolbar shows the first, previous, next, and last page controls along with the current page indicator. To toggle this behavior, set the [`enableNavigation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enablenavigation) property (default: `true`) on the [`PdfViewerComponent`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer).
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -58,15 +58,16 @@ export default function App() {
 
 The default toolbar of the PDF Viewer provides the following navigation options:
 
-- **Go to page**: Navigates to a specific page of a PDF document.
-- **Show next page**: Navigates to the next page of a PDF document.
-- **Show previous page**: Navigates to the previous page of a PDF document.
-- **Show first page**: Navigates to the first page of a PDF document.
-- **Show last page**: Navigates to the last page of a PDF document.
+- **Go to first page**: Navigates to the first page in the document.
+- **Go to previous page**: Navigates to the page before the current page.
+- **Go to next page**: Navigates to the page after the current page.
+- **Go to last page**: Navigates to the last page in the document.
+- **Current page indicator**: Displays the current page number and total page count, and lets you jump to a specific page.
+
 
 ## Programmatic Navigation
 
-You can programmatically perform page navigation using the navigation methods available on the navigation module of PDF Viewer instance.
+You can programmatically perform page navigation using the methods on the [`navigation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation) module of the PDF Viewer instance.
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}
@@ -128,4 +129,4 @@ When using [`goToPage()`](https://ej2.syncfusion.com/react/documentation/api/pdf
 ## See also
 
 - [Toolbar items](../toolbar-customization/toolbar)
-- [Feature Modules](../feature-module)
+- [Feature modules](../feature-module)
