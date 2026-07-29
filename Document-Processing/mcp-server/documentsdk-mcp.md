@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion DocumentSDK MCP Server Setup – Syncfusion
-description: Explore the MCP server’s benefits, setup needs, and integration guidance for Syncfusion DocumentSDK.
+description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Document SDK MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK MCP Server accelerates document processing application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK MCP Server accelerates document processing application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion document processing libraries integration.
 
@@ -28,7 +28,7 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **document processing application** (existing or new); see [Syncfusion Document Processing documentation](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview)
+- A **document processing application** (existing or new); see [Syncfusion Document Processing documentation](https://help.syncfusion.com/document-processing/introduction)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -231,7 +231,7 @@ To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Docu
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your document processing project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different document library or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/introduction) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -262,4 +262,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
