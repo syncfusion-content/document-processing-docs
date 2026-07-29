@@ -14,27 +14,27 @@ The `Undo` option reverses the last action performed in the Spreadsheet. The `Re
 
 N> * The default value of the `allowUndoRedo` property is `true`.
 
-By default, the `UndoRedo` module is injected internally into the Spreadsheet to perform Undo and Redo operations.
+By default, the `UndoRedo` module is injected internally into the Spreadsheet to perform undo and redo operations.
 
 ## Undo
 
 Undo reverses the last action performed in the Spreadsheet. You can perform an undo operation in one of the following ways:
 
-* Open the **Home** tab in the Ribbon and choose **Undo**.
+* Open the **Home** tab in the ribbon and choose **Undo**.
 * Press `Ctrl + Z`.
 * Use the `undo()` method programmatically.
 
 ## Redo
 
-Redo reapplies the action that was most recently undone in the Spreadsheet. You can perform a Redo operation in one of the following ways:
+Redo reapplies the action that was most recently undone in the Spreadsheet. You can perform a redo operation in one of the following ways:
 
-* Open the **Home** tab in the Ribbon and choose **Redo**.
+* Open the **Home** tab in the ribbon and choose **Redo**.
 * Press `Ctrl + Y`.
 * Use the `redo()` method programmatically.
 
 ## Update custom actions in the UndoRedo collection
 
-Use the `updateUndoRedoCollection()` method to add or update custom actions in the `UndoRedo` collection. Use the `actionComplete` event to customize the Undo and Redo behavior of those actions.
+Use the `updateUndoRedoCollection()` method to add or update custom actions in the `UndoRedo` collection. Use the `actionComplete` event to customize the undo and redo behavior of those actions.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
