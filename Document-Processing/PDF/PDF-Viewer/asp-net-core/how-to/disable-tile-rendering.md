@@ -33,17 +33,4 @@ Set the **EnableTileRendering** property to `false` in the Razor view to disable
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   tileRenderingSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerTileRenderingSettings
-                    { EnableTileRendering=false })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}

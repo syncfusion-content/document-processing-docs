@@ -32,13 +32,6 @@ Enable or disable page navigation using the following example:
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableNavigation(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 
@@ -57,13 +50,6 @@ Enable or disable bookmark navigation using the following example:
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableBookmark(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ![Bookmark panel in the PDF Viewer](./images/bookmark.png)
@@ -78,13 +64,6 @@ Enable or disable thumbnail navigation using the following example:
 ```html
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnableThumbnail(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableThumbnail(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
@@ -112,13 +91,6 @@ Enable or disable hyperlink navigation using the following example:
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableHyperlink(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 Change the hyperlink open state using the following example:
@@ -128,13 +100,6 @@ Change the hyperlink open state using the following example:
 ```html
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").HyperlinkOpenState(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).HyperlinkOpenState(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}

@@ -289,6 +289,4 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/custom-context-menu" %}

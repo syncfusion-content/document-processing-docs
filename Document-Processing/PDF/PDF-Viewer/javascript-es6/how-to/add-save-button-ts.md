@@ -47,32 +47,6 @@ function OnCreateSearch(this: any): any {
 }
 
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,Print,CustomToolbarItemModel} from '@syncfusion/ej2-pdfviewer';
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner,Print);
-let toolItem1: CustomToolbarItemModel = {
-    prefixIcon: 'e-icons e-save',
-    id: 'download',
-    text: 'Save',
-    tooltipText: 'Save Button',
-    align: 'Left'
-};
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.toolbarSettings = { toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']}
-pdfviewer.appendTo('#PdfViewer');
-// To handle custom toolbar click event.
-pdfviewer.toolbarClick = function (args) {
-   if (args.item && args.item.id === 'download') {
-      pdfviewer.download();
-   }
-};
-function OnCreateSearch(this: any): any {
-    this.addIcon('prepend', 'e-icons e-search');
-}
-{% endhighlight %}
 {% endtabs %}
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']

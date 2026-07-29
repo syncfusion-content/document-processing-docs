@@ -168,51 +168,6 @@ Multiple modifiers can be combined using the bitwise OR operator (`|`).
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   commandManager="commandManager">
-    </ejs-pdfviewer>
-</div>
-
-<script type="text/javascript">
-    function commandManager() {
-       keyboardCommand: [{
-            name: 'customCopy',
-            gesture: {
-                pdfKeys: PdfKeys.G,
-                modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-               }
-            },
-            {
-            name: 'customPaste',
-            gesture: {
-                pdfKeys: PdfKeys.H,
-                modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-               }
-            },
-            {
-            name: 'customCut',
-            gesture: {
-                pdfKeys: PdfKeys.Z,
-                modifierKeys: ModifierKeys.Control
-               }
-            },
-            {
-            name: 'customSelectAll',
-            gesture: {
-                pdfKeys: PdfKeys.E,
-                modifierKeys: ModifierKeys.Control
-               }
-            },
-        ]
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Each `keyboardCommand` object consists of the following properties:

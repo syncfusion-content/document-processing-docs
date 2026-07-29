@@ -63,51 +63,6 @@ Use the following steps to import and export annotations as objects, JSON, or XF
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-@page "{handler?}"
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script type ="text/javascript">
-
-     var exportObject;
-    //Export annotation as Json
-    function exportAsJson(){
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.exportAnnotation('Json');
-    }
-    //Export annotation as Xfdf
-    function exportAsXfdf(){
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.exportAnnotation('Xfdf');
-    }
-    //Export annotation as object.
-    function exportAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.exportAnnotationsAsObject().then(function (value) {
-            exportObject = value
-        });
-    }
-    //Import annotation that are exported as object.
-    function importAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.importAnnotation(JSON.parse(exportObject));
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

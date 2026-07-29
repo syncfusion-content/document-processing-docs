@@ -28,11 +28,4 @@ Follow these steps to show the bookmark pane:
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnableBookmark(true).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}

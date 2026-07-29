@@ -36,23 +36,6 @@ Follow these steps to unload a PDF document programmatically:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="unload()">Unload Document</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    // Unload the PDF document.
-    function unload() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.unload();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 

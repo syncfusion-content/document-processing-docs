@@ -63,24 +63,6 @@ document.getElementById('setNone')?.addEventListener('click', () => {
     pdfviewer.annotation.setAnnotationMode('None');
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('squigglyMode')?.addEventListener('click', () => {
-    pdfviewer.annotation.setAnnotationMode('Squiggly');
-});
-
-document.getElementById('setNone')?.addEventListener('click', () => {
-    pdfviewer.annotation.setAnnotationMode('None');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add squiggly annotations programmatically
@@ -99,23 +81,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addSquiggly')?.addEventListener('click', () => {
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1
-    } as SquigglySettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, SquigglySettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addSquiggly')?.addEventListener('click', () => {
@@ -180,27 +145,6 @@ document.getElementById('editSquiggly')?.addEventListener('click', () => {
     }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editSquiggly')?.addEventListener('click', () => {
-    for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        const ann = pdfviewer.annotationCollection[i];
-        if (ann.author === 'Guest User' || ann.subject === 'Corrections') {
-            ann.color = '#ff0000';
-            ann.opacity = 0.8;
-            pdfviewer.annotation.editAnnotation(ann);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Set default properties during control initialization
@@ -219,18 +163,6 @@ let pdfviewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   squigglySettings: { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9}
 });
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  squigglySettings: { author: 'Guest User', subject: 'Corrections', color: '#00ff00', opacity: 0.9}
-});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
@@ -276,35 +208,6 @@ document.getElementById('squiggly')?.addEventListener('click', function () {
     } as SquigglySettings);
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, SquigglySettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-//Apply Squiggly Settings while adding individual Annotation
-document.getElementById('squiggly')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 1',
-        color: '#ffff00',
-        opacity: 0.9
-    } as SquigglySettings);
-
-    pdfviewer.annotation.addAnnotation('Squiggly', {
-        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 2',
-        color: '#ff1010ff',
-        opacity: 0.9
-    } as SquigglySettings);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable squiggly annotation
@@ -320,17 +223,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath= 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableTextMarkupAnnotation= false;
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.enableTextMarkupAnnotation= false;
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}

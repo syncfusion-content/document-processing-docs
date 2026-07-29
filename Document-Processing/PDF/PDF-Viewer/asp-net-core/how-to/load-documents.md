@@ -39,30 +39,6 @@ Switch between PDF documents or replace the currently displayed document after t
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="load1()">LoadDocumentFromBase64</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script type ="text/javascript">
-
-    // Load a Base64 String
-    function load1() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.load("data:application/pdf;base64," + addBase64String, null);
-
-    }
-
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 **Step 3:** Use the following code snippet to load a PDF document using a file path or URL.
@@ -85,28 +61,6 @@ Switch between PDF documents or replace the currently displayed document after t
     function load2() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf", null);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="load2()">LoadDocument</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script type ="text/javascript">
-
-    // Load document using a file path
-    function load2() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",null)
     }
 </script>
 

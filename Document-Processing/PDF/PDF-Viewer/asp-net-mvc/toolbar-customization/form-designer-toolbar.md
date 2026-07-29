@@ -28,13 +28,6 @@ The following code snippet explains how to show or hide the toolbar using the `E
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableFormDesigner(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ## How to customize the form designer toolbar
@@ -50,13 +43,6 @@ The following example demonstrates how to customize the form designer toolbar by
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, FormDesignerToolbarItems = "TextboxTool PasswordTool CheckBoxTool RadioButtonTool DropdownTool ListboxTool DrawSignatureTool DeleteTool" }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, FormDesignerToolbarItems = "TextboxTool PasswordTool CheckBoxTool RadioButtonTool DropdownTool ListboxTool DrawSignatureTool DeleteTool" }).Render()
 </div>
 
 {% endhighlight %}

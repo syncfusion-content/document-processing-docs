@@ -35,20 +35,4 @@ The following steps are used to print the PDF document programmatically.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="Print" onclick="Print()">Print</button>
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function Print() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.printModule.print();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

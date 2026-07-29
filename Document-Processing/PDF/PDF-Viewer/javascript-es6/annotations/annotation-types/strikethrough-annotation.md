@@ -86,10 +86,6 @@ document.getElementById('set')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-mode-cs1/index.html" %}
 
 #### Exit strikethrough mode
@@ -147,10 +143,6 @@ document.getElementById('setNone')?.addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "Document-Processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/strikethrough-normal-mode-cs1/index.html" %}
 
 ### Add strikethrough annotations programmatically
@@ -173,30 +165,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-
-let strikethrough = document.getElementById('strikethrough');
-if (strikethrough) {
-    strikethrough.addEventListener('click', function () {
-        if (pdfviewer) {
-            pdfviewer.annotation.addAnnotation('Strikethrough', {
-                bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-                pageNumber: 1
-            } as StrikethroughSettings);
-        }
-    });
-}
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, StrikethroughSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.appendTo('#PdfViewer');
 
 let strikethrough = document.getElementById('strikethrough');
@@ -275,34 +243,6 @@ if (editStrikethroughAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-let editStrikethroughAnnotation = document.getElementById('editStrikethroughAnnotation');
-if (editStrikethroughAnnotation) {
-    editStrikethroughAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].textMarkupAnnotationType === 'Strikethrough') {
-                    pdfviewer.annotationCollection[i].color = '#ff0000';
-                    pdfviewer.annotationCollection[i].opacity = 0.8;
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                    break;
-                }
-            }
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Default strikethrough settings during initialization
@@ -324,20 +264,6 @@ let pdfviewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9}
 });
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  strikethroughSettings: { author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9}
-});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -384,35 +310,6 @@ document.getElementById('Strikethrough')?.addEventListener('click', function () 
     } as StrikethroughSettings);
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, StrikethroughSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-//Apply Strikethrough Settings while adding individual Annotation
-document.getElementById('Strikethrough')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Strikethrough', {
-        bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 1',
-        color: '#ffff00',
-        opacity: 0.9
-    } as StrikethroughSettings);
-
-    pdfviewer.annotation.addAnnotation('Strikethrough', {
-        bounds: [{ x: 107, y: 220, width: 350, height: 14 }],
-        pageNumber: 1,
-        author: 'User 2',
-        color: '#ff1010ff',
-        opacity: 0.9
-    } as StrikethroughSettings);
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Disable strikethrough annotation
@@ -429,19 +326,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.enableTextMarkupAnnotation= false;
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.enableTextMarkupAnnotation= false;
 pdfviewer.appendTo('#PdfViewer');
 

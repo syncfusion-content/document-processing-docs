@@ -22,11 +22,4 @@ Here is an example of how you can enable the resizer for the text markup annotat
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnableTextMarkupResizer(true).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}

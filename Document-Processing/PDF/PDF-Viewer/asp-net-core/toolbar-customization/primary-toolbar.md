@@ -28,17 +28,6 @@ Use the `enableToolbar` property to show or hide the toolbar:
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableToolbar="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 The following code snippet shows how to show or hide the toolbar using the `showToolbar` method.
@@ -49,25 +38,6 @@ The following code snippet shows how to show or hide the toolbar using the `show
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="showToolbar">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function showToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbar(false);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    documentLoad="showToolbar">
     </ejs-pdfviewer>
@@ -102,19 +72,6 @@ The PDF Viewer provides options to show or hide grouped items in the built-in to
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableToolbar="true"
-                   toolbarSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, ToolbarItems = "OpenOption"  })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 * Show or hide toolbar items using showToolbarItem:
@@ -125,25 +82,6 @@ The PDF Viewer provides options to show or hide grouped items in the built-in to
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="showToolbar">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function showToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbarItem(new Array("DownloadOption"), true);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    documentLoad="showToolbar">
     </ejs-pdfviewer>
@@ -240,50 +178,6 @@ The PDF Viewer supports customization of existing toolbar items (add, show, hide
     }
 
 </script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@page "{handler?}"
-@model IndexModel
-@using Syncfusion.EJ2.PdfViewer
-@using Newtonsoft.Json
-@{
-    ViewData["Title"] = "Home page";
-    CustomToolbarItems customToolbarItems = new CustomToolbarItems();
-    var toolItem1 = new { id = "submit_form", text = "Submit Form", tooltipText = "Custom toolbar item", align = "Center", cssClass = "custom_button" };
-    customToolbarItems.ToolbarItems = new List<object> { toolItem1, "OpenOption", "PageNavigationTool", "MagnificationTool", "PanTool", "SelectionTool", "SearchOption", "PrintOption", "DownloadOption", "UndoRedoTool", "AnnotationEditTool", "FormDesignerEditTool", "CommentTool" };
-    PdfViewerToolbarSettings toolbarSettings = new PdfViewerToolbarSettings()
-            {
-                ShowTooltip = true,
-                ToolbarItems = customToolbarItems.ToolbarItems
-            };
-}
-
-<div>
-    <ejs-pdfviewer id="pdfviewer" style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   toolbarClick="toolbarClick"
-                   ToolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function toolbarClick(args) {
-         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-         if (args.item && args.item.id === 'submit_form') {
-             alert('Custom button clicked!');
-         }
-     }
-</script>
-
-<style>
-    .custom_button {
-        height: 100% !important;
-    }
-</style>
-
 
 {% endhighlight %}
 {% endtabs %}

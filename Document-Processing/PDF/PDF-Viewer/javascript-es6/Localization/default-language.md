@@ -34,19 +34,6 @@ const pdfviewer: PdfViewer = new PdfViewer({
 });
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-import {L10n} from '@syncfusion/ej2-base';
-// Inject required modules
-PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageOrganizer);
-
-const pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-    locale: 'en-US' //Using locale update culture
-});
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
 {% endtabs %}
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)

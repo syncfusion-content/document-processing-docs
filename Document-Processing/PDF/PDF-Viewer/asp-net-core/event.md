@@ -8,7 +8,7 @@ documentation: ug
 
 # Events in ASP.NET Core PDF Viewer Control
 
-The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document lifecycle, user interactions, and feature operations.
+The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document life cycle, user interactions, and feature operations.
 
 ## Event reference table
 
@@ -94,23 +94,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   bookmarkClick="bookmarkClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function bookmarkClicked(args) {
-        console.log(`Bookmark clicked: ${args.name}`);
-    }
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 ## toolbarClick
@@ -128,24 +111,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   toolbarClick="ToolbarClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function ToolbarClicked(args) {
-        console.log(`Toolbar item clicked: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer"
                    toolbarClick="ToolbarClicked">
     </ejs-pdfviewer>
 </div>
@@ -197,28 +162,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   validateFormFields="validateFormFields"
-                   enableFormFieldsValidation=true>
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function validateFormFields(args) {
-        console.log('form field event name:', args.name);
-        console.log('form field document name:', args.documentName);
-        console.log('form field data:', args.formField);
-        console.log('non fillable form field details:', args.nonFillableFields);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Tip
@@ -239,24 +182,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   zoomChange="zoomChanged">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function zoomChange(args) {
-        console.log(`Zoom changed to: ${args.zoomValue}%`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
                    zoomChange="zoomChanged">
     </ejs-pdfviewer>
 </div>
@@ -296,24 +221,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   buttonFieldClick="buttonFieldClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function buttonFieldClicked(args) {
-        console.log(`Button field clicked. Name: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentAdd
@@ -331,24 +238,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   commentAdd="commentAdded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function commentAdded(args) {
-        console.log(`Comment added. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
                    commentAdd="commentAdded">
     </ejs-pdfviewer>
 </div>
@@ -388,24 +277,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   commentDelete="commentDeleted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function commentDeleted(args) {
-        console.log(`Comment deleted. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentEdit
@@ -422,24 +293,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   commentEdit="CommentEdited">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function CommentEdited(args) {
-        console.log(`Comment edited. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    commentEdit="CommentEdited">
     </ejs-pdfviewer>
@@ -480,24 +333,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   commentSelect="commentSelected">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function CommentEdited(args) {
-        console.log(`Comment selected. Id: ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## commentStatusChanged
@@ -514,24 +349,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   commentStatusChanged="commentStatusChanged">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function commentStatusChanged(args) {
-        console.log(`Comment status changed. Id: ${args.id}, Status: ${args.status}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    commentStatusChanged="commentStatusChanged">
     </ejs-pdfviewer>
@@ -572,24 +389,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   created="created">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function created(args) {
-        console.log('PDF Viewer created');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## customContextMenuBeforeOpen
@@ -609,24 +408,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   customContextMenuBeforeOpen="customContextMenuBeforeOpened">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function customContextMenuBeforeOpened(args) {
-        console.log(`Before open context menu at page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
                    customContextMenuBeforeOpen="customContextMenuBeforeOpened">
     </ejs-pdfviewer>
 </div>
@@ -669,24 +450,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   customContextMenuSelect="customContextMenuSelected">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function customContextMenuSelected(args) {
-        console.log(`Before open context menu at page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## documentLoad
@@ -704,24 +467,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   documentLoad="documentLoaded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentLoaded(args) {
-        console.log(`Document loaded: page count = ${args.pageData}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
                    documentLoad="documentLoaded">
     </ejs-pdfviewer>
 </div>
@@ -761,24 +506,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   documentLoadFailed="documentLoadFailed">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentLoadFailed(args) {
-        console.log(`Load failed. Error: ${args.documentName}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## documentUnload
@@ -796,24 +523,6 @@ Example:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   documentUnload="documentUnloaded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentUnloaded(args) {
-        console.log('Document unloaded');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
                    documentUnload="documentUnloaded">
     </ejs-pdfviewer>
 </div>
@@ -853,24 +562,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer
-                   downloadEnd="downloadEnded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function downloadEnded(args) {
-        console.log(`Download finished. File name: ${args.fileName}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## downloadStart
@@ -899,24 +590,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   downloadStart="downloadStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function downloadStarted(args) {
-        console.log('Download started');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## exportFailed
@@ -933,24 +606,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   exportFailed="exportFailed">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function exportFailed(args) {
-        console.log(`Export failed: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    exportFailed="exportFailed">
     </ejs-pdfviewer>
@@ -991,24 +646,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   exportStart="exportStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function exportStarted(args) {
-        console.log('Export started');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## exportSuccess
@@ -1025,24 +662,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   exportSuccess="exportSuccess">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function exportSuccess(args) {
-        console.log('Export success');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    exportSuccess="exportSuccess">
     </ejs-pdfviewer>
@@ -1083,24 +702,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   extractTextCompleted="extractTextCompleted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function extractTextCompleted(args) {
-        console.log(`Extracted text length: ${(args.documentTextCollection || '').length}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## hyperlinkClick
@@ -1117,24 +718,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   hyperlinkClick="hyperlinkClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function hyperlinkClicked(args) {
-        console.log(`Hyperlink clicked: ${args.hyperlink}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    hyperlinkClick="hyperlinkClicked">
     </ejs-pdfviewer>
@@ -1175,24 +758,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   hyperlinkMouseOver="hyperlinkMouseOvered">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function hyperlinkMouseOvered(args) {
-        console.log(`Hyperlink hover at page: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## importFailed
@@ -1209,24 +774,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   importFailed="importFailed">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function importFailed(args) {
-        console.log(`Import failed: ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    importFailed="importFailed">
     </ejs-pdfviewer>
@@ -1267,24 +814,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   importStart="importStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function importStarted(args) {
-        console.log('Import started');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## importSuccess
@@ -1301,24 +830,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   importSuccess="importSuccess">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function importSuccess(args) {
-        console.log('Import success');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    importSuccess="importSuccess">
     </ejs-pdfviewer>
@@ -1366,24 +877,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   keyboardCustomCommands="keyboardCustomCommands">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function keyboardCustomCommands(args) {
-        console.log('Custom command triggered:', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## moveSignature
@@ -1400,24 +893,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   moveSignature="moveSignatured">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function moveSignatured(args) {
-        console.log(`Signature moved on page ${args.id}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    moveSignature="moveSignatured">
     </ejs-pdfviewer>
@@ -1458,24 +933,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageChange="pageChanged">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageChanged(args) {
-        console.log(`Page changed from ${args.previousPageNumber} to ${args.currentPageNumber}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageClick
@@ -1492,24 +949,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageClick="pageClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageClicked(args) {
-        console.log(`Page ${args.pageNumber} clicked at (${args.x}, ${args.y})`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    pageClick="pageClicked">
     </ejs-pdfviewer>
@@ -1550,24 +989,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageMouseover="pageMouseover">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageMouseover(args) {
-        console.log(`Mouse over page ${args.name}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageOrganizerSaveAs
@@ -1584,24 +1005,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageOrganizerSaveAs="pageOrganizerSaveAs">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageOrganizerSaveAs(args) {
-        console.log(`Page organizer save triggered. File name: ${args.downloadDocument}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    pageOrganizerSaveAs="pageOrganizerSaveAs">
     </ejs-pdfviewer>
@@ -1642,24 +1045,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageRenderComplete="pageRenderCompleted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageRenderCompleted(args) {
-        console.log(`Page ${args.data} rendering completed.`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## pageRenderInitiate
@@ -1676,24 +1061,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   pageRenderInitiate="pageRenderInitiated">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function pageRenderInitiated(args) {
-        console.log(`Page ${args.jsonData} rendering initiated.`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    pageRenderInitiate="pageRenderInitiated">
     </ejs-pdfviewer>
@@ -1734,24 +1101,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   printEnd="printEnded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function printEnded(args) {
-        console.log('Print action completed.');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## printStart
@@ -1768,24 +1117,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   printStart="printStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function printStarted(args) {
-        console.log('Print action initiated.');
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    printStart="printStarted">
     </ejs-pdfviewer>
@@ -1826,24 +1157,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   removeSignature="removeSignatured">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function removeSignatured(args) {
-        console.log(`Signature removed from page ${args.bounds}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## resizeSignature
@@ -1860,24 +1173,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   resizeSignature="resizeSignatured">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function resizeSignatured(args) {
-        console.log(`Signature resized on page ${args.currentPosition}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    resizeSignature="resizeSignatured">
     </ejs-pdfviewer>
@@ -1918,24 +1213,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   resourcesLoaded="resourcesLoaded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function resourcesLoaded(args) {
-        console.log('PDFium resources loaded.');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## signaturePropertiesChange
@@ -1952,24 +1229,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   signaturePropertiesChange="signaturePropertiesChanged">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function signaturePropertiesChanged(args) {
-        console.log(`Signature properties changed on page ${args.type}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    signaturePropertiesChange="signaturePropertiesChanged">
     </ejs-pdfviewer>
@@ -2010,24 +1269,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   signatureSelect="signatureSelected">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function signatureSelected(args) {
-        console.log(`Signature selected on page ${args.signature}`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## signatureUnselect
@@ -2044,24 +1285,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   signatureUnselect="signatureUnselected">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function signatureUnselected(args) {
-        console.log(`Signature unselected ${args.signature}`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    signatureUnselect="signatureUnselected">
     </ejs-pdfviewer>
@@ -2102,24 +1325,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   textSearchComplete="textSearchCompleted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchCompleted(args) {
-        console.log('Text search completed.');
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## textSearchHighlight
@@ -2136,24 +1341,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   textSearchHighlight="textSearchHighlight">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchHighlight(args) {
-        console.log(`Search result ${args.bounds} highlighted.`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    textSearchHighlight="textSearchHighlight">
     </ejs-pdfviewer>
@@ -2194,24 +1381,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   textSearchStart="textSearchStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchStarted(args) {
-        console.log(`Text search started for: "${args.searchText}"`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## textSelectionEnd
@@ -2228,24 +1397,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   textSelectionEnd="textSelectionEnded">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSelectionEnded(args) {
-        console.log(`Text search started for: "${args.searchText}"`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    textSelectionEnd="textSelectionEnded">
     </ejs-pdfviewer>
@@ -2286,24 +1437,6 @@ Example:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   textSelectionStart="textSelectionStarted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSelectionStarted(args) {
-        console.log(`Text selection started on page ${args.pageIndex}.`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## thumbnailClick
@@ -2320,24 +1453,6 @@ Example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   thumbnailClick="thumbnailClicked">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function thumbnailClicked(args) {
-        console.log(`Thumbnail clicked for page index ${args.pageNumber}.`);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
                    thumbnailClick="thumbnailClicked">
     </ejs-pdfviewer>

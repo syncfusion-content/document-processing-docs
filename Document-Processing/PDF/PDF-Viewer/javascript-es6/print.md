@@ -53,17 +53,6 @@ let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'https
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
@@ -84,19 +73,6 @@ pdfviewer.appendTo('#PdfViewer');
 pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 pdfviewer.print.print();
 
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-pdfviewer.print.print();
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,19 +100,6 @@ pdfviewer.printScaleFactor = 0.5;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enablePrint: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-//pdf with low quality. By changing values you can change the quality of the pdf.
-pdfviewer.printScaleFactor = 0.5;
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable print rotation in the PDF Viewer
@@ -152,20 +115,6 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    enablePrintRotation: true
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
     enablePrintRotation: true
 });
 pdfviewer.appendTo('#PdfViewer');
@@ -193,20 +142,6 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    printMode: PrintMode.NewWindow
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, PrintMode} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
     printMode: PrintMode.NewWindow
 });
 pdfviewer.appendTo('#PdfViewer');
@@ -251,24 +186,6 @@ let pdfviewer: PdfViewer = new PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, PrintStartEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-    printStart: (args: PrintStartEventArgs) => {
-        console.log('Print action has started for file: ' + args.fileName);
-        // To cancel the print action
-        // args.cancel = true;
-    }
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ### printEnd event
@@ -288,22 +205,6 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 
 let pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    printEnd: (args: PrintEndEventArgs) => {
-        console.log('Printed File Name: ' + args.fileName);
-    }
-});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, PrintEndEventArgs, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({
-    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
     printEnd: (args: PrintEndEventArgs) => {
         console.log('Printed File Name: ' + args.fileName);
     }

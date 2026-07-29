@@ -23,13 +23,6 @@ The following example shows how to enable magnification in the PDF Viewer.
     </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableMagnification(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 The following magnification options are available in the default toolbar of the PDF Viewer:

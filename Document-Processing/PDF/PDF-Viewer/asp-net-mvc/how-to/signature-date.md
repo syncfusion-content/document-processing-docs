@@ -41,26 +41,6 @@ Follow these steps to add a date to the signature field.
 </script>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div>
-    <div style="width:100%;height:600px">
-        <button type="button" onclick="signatureWithDate()">Add Signature with the time</button>
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-</div>
-
-<script>
-    function signatureWithDate() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var formFields = viewer.retrieveFormFields();
-        formFields[0].signatureType = 'Type';
-        formFields[0].value = 'Syncfusion \n' + new Date();
-        viewer.updateFormFieldsValue(formFields[0]);
-    }
-</script>
-```
-{% endhighlight %}
 {% endtabs %}
 
 View the complete sample in the [GitHub repository](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/EJ2-67373-sample/How%20to/Add%20date%20with%20the%20signature).

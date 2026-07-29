@@ -37,31 +37,6 @@ pdfviewer.documentLoad = (): void => {
 };
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation,
-         LinkAnnotation, ThumbnailView, BookmarkView, TextSelection,
-         TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject( Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
-                  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-pdfviewer.documentLoad = (): void => {
-    if (Browser.isDevice && !viewer.enableDesktopMode) {
-        pdfviewer.maxZoom = 200;
-        pdfviewer.minZoom = 10;
-    }
-    else{
-        pdfviewer.zoomMode = 'Default';
-    }
-};
-
-{% endhighlight %}
 {% endtabs %}
 
 This limits maximum zoom to 200% and minimum zoom to 10% on mobile devices, helping prevent performance issues from excessive zooming.

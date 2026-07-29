@@ -54,32 +54,6 @@ The following example demonstrates how to subscribe to these events in both stan
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-@{
-    ViewData["Title"] = "Home page";
-}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/Index"
-                   signatureSelect="signatureSelect"
-                   signatureUnselect="signatureUnselect">
-    </ejs-pdfviewer>
-</div>
-
-<script type="text/javascript">
-
-    function signatureSelect(args) {
-        console.log('Signature selected:', args);
-    }
-    function signatureUnselect(args) {
-        console.log('Signature selected:', args);
-    };
-
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 By implementing `signatureSelect` and `signatureUnselect`, developers can audit user interactions, manage toolbar states, and provide immediate visual feedback during the signing process.

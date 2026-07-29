@@ -23,7 +23,7 @@ If a PDF does not render after upgrading to v23.1+, use the checklist below to r
 <script>
     function documentLoad() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+        pdfViewer.resourceUrl="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2-pdfviewer-lib";
         pdfViewer.dataBind();
         pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }

@@ -28,18 +28,6 @@ In selection mode, text can be selected and copied from the loaded PDF document.
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableTextSelection="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](./images/selection.png)
@@ -58,18 +46,6 @@ The interaction mode can be switched using the following example:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   InteractionMode=@Syncfusion.EJ2.PdfViewer.InteractionMode.Pan>
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    InteractionMode=@Syncfusion.EJ2.PdfViewer.InteractionMode.Pan>
     </ejs-pdfviewer>

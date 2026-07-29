@@ -61,42 +61,4 @@ The following example demonstrates how to configure these colors in both Standal
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="search" onclick="search()">SearchText</button>
-<button id="searchNext" onclick="searchNext()">SearchNext</button>
-<button id="searchPervious" onclick="searchPervious()">searchPervious</button>
-<button id="searchCancel" onclick="searchCancel()">CancelSearch</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer"
-                   enableTextSearch="true"
-                   textSearchColorSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings
-                   { SearchColor = "#FF0000", SearchHighlightColor = "#0000FF" })">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function search() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearchModule.searchText("pdf", false);
-    }
-    function searchNext() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearchModule.searchNext();
-    }
-    function searchPervious() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearchModule.searchPrevious();
-    }
-    function searchCancel() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearchModule.cancelTextSearch();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

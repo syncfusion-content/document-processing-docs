@@ -50,20 +50,6 @@ document.getElementById('circleMode')?.addEventListener('click', () => {
     pdfviewer.annotationModule.setAnnotationMode('Circle');
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('circleMode')?.addEventListener('click', () => {
-    pdfviewer.annotationModule.setAnnotationMode('Circle');
-});
-{% endhighlight %}
 {% endtabs %}
 
 #### Exit circle mode
@@ -97,25 +83,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addCircleAnnotation')?.addEventListener('click', () => {
-    pdfviewer.annotation.addAnnotation('Circle', {
-        offset: { x: 200, y: 620 },
-        pageNumber: 1,
-        width: 90,
-        height: 90
-    } as CircleSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, CircleSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addCircleAnnotation')?.addEventListener('click', () => {
@@ -198,28 +165,6 @@ document.getElementById('editCircleAnnotation')?.addEventListener('click', () =>
     }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editCircleAnnotation')?.addEventListener('click', () => {
-    for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Circle') {
-            pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-            pdfviewer.annotationCollection[i].thickness = 2;
-            pdfviewer.annotationCollection[i].fillColor = '#FFFF00';
-            pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = 'Circle';
-            pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default circle settings during initialization
@@ -235,17 +180,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -271,29 +205,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Circle Settings while adding individual Annotation
-document.getElementById('Circle')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Circle', {
-        offset: { x: 200, y: 480 },
-        pageNumber: 1,
-        width: 150,
-        height: 75,
-        opacity: 0.5,
-        strokeColor: '#FF0000',
-        fillColor: '#000fff#',
-        author: 'User1'
-    } as CircleSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, CircleSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 //Apply Circle Settings while adding individual Annotation
 document.getElementById('Circle')?.addEventListener('click', function () {

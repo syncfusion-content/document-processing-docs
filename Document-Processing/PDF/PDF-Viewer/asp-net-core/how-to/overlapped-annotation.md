@@ -34,20 +34,4 @@ The following example demonstrates how to capture and log the IDs of all overlap
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                serviceUrl="/api/PdfViewer"
-                documentPath="https://cdn.syncfusion.com/content/pdf/blazor-annotations.pdf"
-                annotationSelect="annotationSelected">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function annotationSelected(args) {
-        console.log('Annotation selected with ID: ' + args.annotationCollection);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}

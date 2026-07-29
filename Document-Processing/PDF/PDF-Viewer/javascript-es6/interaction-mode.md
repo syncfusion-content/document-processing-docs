@@ -56,17 +56,6 @@ let pdfviewer: PdfViewer = new PdfViewer({enableTextSelection: true, documentPat
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableTextSelection: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Text selection mode in PDF Viewer](./images/selection.png)
@@ -87,17 +76,6 @@ import { PdfViewer, Toolbar, Magnification, Annotation, Navigation, LinkAnnotati
 PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer({documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', interactionMode: InteractionMode.Pan});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', interactionMode: InteractionMode.Pan});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

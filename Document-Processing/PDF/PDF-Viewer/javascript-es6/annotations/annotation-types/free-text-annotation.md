@@ -50,20 +50,6 @@ document.getElementById('addFreeTextAnnotation')?.addEventListener('click', () =
   pdfviewer.annotationModule.setAnnotationMode('FreeText');
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addFreeTextAnnotation')?.addEventListener('click', () => {
-  pdfviewer.annotationModule.setAnnotationMode('FreeText');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add Free Text annotation programmatically
@@ -83,30 +69,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addFreeTextProgram')?.addEventListener('click', () => {
-  pdfviewer.annotation.addAnnotation('FreeText', {
-    offset: { x: 120, y: 80 },
-    fontSize: 16,
-    fontFamily: 'Helvetica',
-    pageNumber: 1,
-    width: 200,
-    height: 40,
-    isLock: false,
-    defaultText: 'Syncfusion'
-  } as FreeTextSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, FreeTextSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -229,26 +191,6 @@ document.getElementById('changeContent')?.addEventListener('click', () => {
   }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('changeContent')?.addEventListener('click', () => {
-  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-    if (pdfviewer.annotationCollection[i].subject === 'Text Box') {
-      pdfviewer.annotationCollection[i].dynamicText = 'syncfusion';
-      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-    }
-  }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default Free Text settings during initialization
@@ -264,17 +206,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 pdfviewer.freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -300,32 +231,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply FreeText Settings while adding individual Annotation
-document.getElementById('FreeText')?.addEventListener('click', function () {
-  pdfviewer.annotation.addAnnotation('FreeText', {
-    offset: { x: 120, y: 80 },
-    fontSize: 16,
-    fontFamily: 'Helvetica',
-    pageNumber: 1,
-    width: 200,
-    height: 40,
-    isLock: false,
-    defaultText: 'Syncfusion',
-    fillColor: 'green', 
-    borderColor: 'blue', 
-    fontColor: 'yellow'
-  } as FreeTextSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FreeTextSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 //Apply FreeText Settings while adding individual Annotation
 document.getElementById('FreeText')?.addEventListener('click', function () {

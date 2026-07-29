@@ -286,19 +286,6 @@ The `locale` property enables you to specify the language and culture for the PD
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-        id="pdfviewer"
-        style="height:600px"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        locale ="ar-AE"
-        serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Custom localization

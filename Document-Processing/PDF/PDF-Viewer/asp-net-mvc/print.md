@@ -20,13 +20,6 @@ The PDF Viewer supports printing the loaded PDF file. Enable or disable printing
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrint(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-{% endhighlight %}
 {% endtabs %}
 
 ![Print dialog in the PDF Viewer](./images/print.png)
@@ -38,20 +31,6 @@ You can also invoke the print action programmatically using the following exampl
 ```html
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnablePrint(true).DocumentLoad("print").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-<script>
-    function print() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.print.print();
-    }
-</script>
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrint(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -87,22 +66,6 @@ The following example demonstrates how to customize print quality using the Prin
 
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrint(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render().PrintScaleFactor(0.5)
-</div>
-
-<script>
-    function print() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.print.print();
-    }
-</script>
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 ## Additional print options
@@ -117,15 +80,6 @@ The `EnablePrintRotation` property controls whether landscape pages are auto-rot
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnablePrintRotation(true).DocumentLoad("print").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrintRotation(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 ```
@@ -146,15 +100,6 @@ The supported values are:
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnablePrintRotation(true).DocumentLoad("print").PrintMode(Syncfusion.EJ2.PdfViewer.PrintMode.Default).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-
-```
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-```html
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnablePrintRotation(true).PrintMode(Syncfusion.EJ2.PdfViewer.PrintMode.Default).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 ```
@@ -194,21 +139,6 @@ The following example illustrates how to handle the `printStart` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintStart("printStarted").Render()
-</div>
-
-<script>
-    function printStarted(args) {
-        console.log('Print action has started for file: ' + args.fileName);
-        // To cancel the print action
-        // args.cancel = true;
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### printEnd Event
@@ -224,19 +154,6 @@ The following example illustrates how to handle the `printEnd` event.
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
-</div>
-
-<script>
-    function printEnded(args) {
-        console.log('Printed File Name: ' + args.fileName);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePrint(true).PrintEnd("printEnded").Render()
 </div>
 
 <script>

@@ -23,16 +23,6 @@ By default, the download button appears in the PDF Viewer toolbar. Set the `enab
     </ejs-pdfviewer>
 </div>
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableDownload="true">
-    </ejs-pdfviewer>
-</div>
-{% endhighlight %}
 {% endtabs %}
 
 ![Download toolbar button in PDF Viewer](./images/download.png)
@@ -55,25 +45,6 @@ In addition to the toolbar button, the PDF Viewer provides the `download()` meth
         pdfViewer.download();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   enableDownload="true"
-                   documentLoad="documentLoaded">
-    </ejs-pdfviewer>
-</div>
-<script>
-    function documentLoaded() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.download();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

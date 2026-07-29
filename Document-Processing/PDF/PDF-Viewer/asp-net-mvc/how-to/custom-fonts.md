@@ -53,16 +53,6 @@ Specify the required font names in the customFonts property.
 
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").CustomFonts(["arialbd.ttf", "arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"]).Render()
-</div>
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 N>Ensure that the font file names match the specified font names.

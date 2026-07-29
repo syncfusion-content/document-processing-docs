@@ -56,24 +56,11 @@ Use the following code snippet to enable or disable page navigation.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
 
 let pdfviewer: PdfViewer = new PdfViewer({enableNavigation: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableNavigation: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -125,40 +112,6 @@ import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkV
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
 
 let viewer: PdfViewer = new PdfViewer();
-viewer.appendTo('#pdfViewer');
-viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
-
-// Go To First Page
-document.getElementById('goToFirstPage').addEventListener('click', () => {
-  viewer.navigation.goToFirstPage();
-});
-// Go To Last Page
-document.getElementById('goToLastPage').addEventListener('click', () => {
-  viewer.navigation.goToLastPage();
-});
-// Go To Next Page
-document.getElementById('goToNextPage').addEventListener('click', () => {
-  viewer.navigation.goToNextPage();
-});
-// Go To Page
-document.getElementById('goToPage').addEventListener('click', () => {
-  viewer.navigation.goToPage(4);
-});
-// Go To Previous Page
-document.getElementById('goToPreviousPage').addEventListener('click', () => {
-  viewer.navigation.goToPreviousPage();
-});
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
-
-let viewer: PdfViewer = new PdfViewer();
-viewer.serviceUrl =
-  'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 viewer.appendTo('#pdfViewer');
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 

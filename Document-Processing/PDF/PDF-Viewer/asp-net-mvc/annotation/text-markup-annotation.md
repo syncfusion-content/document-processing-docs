@@ -52,21 +52,6 @@ Refer to the following code sample to switch to highlight mode.
     </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Highlight</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Highlight');
-        }
-    </script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Refer to the following code sample to switch back to normal mode from highlight mode.
@@ -80,28 +65,6 @@ Refer to the following code sample to switch back to normal mode from highlight 
     <button id="setNone" onclick="setNone()">Normal Mode</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Highlight');
-        }
-
-        function setNone() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('None');
-        }
-    </script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Highlight</button>
-    <!--Element to set normal mode-->
-    <button id="setNone" onclick="setNone()">Normal Mode</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
     <script>
         function addAnnot() {
@@ -130,23 +93,6 @@ Here is an example showing how to add highlights programmatically using addAnnot
 <button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-<script>
-  function addAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.addAnnotation("Highlight", {
-      bounds: [{ x: 97, y: 110, width: 350, height: 14 }],
-      pageNumber: 1
-    });
-  }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 <script>
   function addAnnotation() {
@@ -200,21 +146,6 @@ Refer to the following code sample to switch to underline mode.
     </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Underline</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Underline');
-        }
-    </script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Refer to the following code sample to switch back to normal mode from underline mode.
@@ -228,28 +159,6 @@ Refer to the following code sample to switch back to normal mode from underline 
     <button id="setNone" onclick="setNone()">Normal Mode</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Underline');
-        }
-
-        function setNone() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('None');
-        }
-    </script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Underline</button>
-    <!--Element to set normal mode-->
-    <button id="setNone" onclick="setNone()">Normal Mode</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
     <script>
         function addAnnot() {
@@ -278,23 +187,6 @@ Example:
 <button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-<script>
-  function addAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.addAnnotation("Underline", {
-      bounds: [{ x: 250, y: 148, width: 345, height: 14 }],
-      pageNumber: 2
-    })
-  }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 <script>
   function addAnnotation() {
@@ -348,22 +240,6 @@ Refer to the following code sample to switch to strikethrough mode.
     </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Strikethrough</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Strikethrough');
-        }
-    </script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Refer to the following code sample to switch back to normal mode from strikethrough mode.
@@ -377,28 +253,6 @@ Refer to the following code sample to switch back to normal mode from strikethro
     <button id="setNone" onclick="setNone()">Normal Mode</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Strikethrough');
-        }
-
-        function setNone() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('None');
-        }
-    </script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Strikethrough</button>
-    <!--Element to set normal mode-->
-    <button id="setNone" onclick="setNone()">Normal Mode</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
     <script>
         function addAnnot() {
@@ -427,23 +281,6 @@ Here is an example showing how to add strikethrough programmatically using addAn
 <button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-<script>
-  function addAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.addAnnotation("Strikethrough", {
-      bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
-      pageNumber: 2
-    });
-  }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 <script>
   function addAnnotation() {
@@ -498,22 +335,6 @@ Refer to the following code sample to switch to squiggly mode.
     </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Squiggly</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Squiggly');
-        }
-    </script>
-
-{% endhighlight %}
 {% endtabs %}
 
 Refer to the following code sample to switch back to normal mode from squiggly mode.
@@ -527,28 +348,6 @@ Refer to the following code sample to switch back to normal mode from squiggly m
     <button id="setNone" onclick="setNone()">Normal Mode</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-    <script>
-        function addAnnot() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('Squiggly');
-        }
-
-        function setNone() {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfViewer.annotation.setAnnotationMode('None');
-        }
-    </script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-    <!--Element to set text markup annotation mode-->
-    <button id="set" onclick="addAnnot()">Squiggly</button>
-    <!--Element to set normal mode-->
-    <button id="setNone" onclick="setNone()">Normal Mode</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
     <script>
         function addAnnot() {
@@ -577,23 +376,6 @@ Example:
 <button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-<script>
-  function addAnnotation() {
-    var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.addAnnotation("Squiggly", {
-      bounds: [{ x: 250, y: 144, width: 345, height: 14 }],
-      pageNumber: 2
-    });
-  }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 <script>
   function addAnnotation() {
@@ -654,13 +436,6 @@ Refer to the following code sample to set the default annotation settings.
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").HighlightSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerHighlightSettings{Author = "Guest User", Color = "#ffff00", Opacity = 0.9 }).UnderlineSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerUnderlineSettings{ Author = "Guest User", Color = "#00ffff", Opacity = 0.9 }).StrikethroughSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStrikethroughSettings{ Author = "Guest User", Color = "#ff00ff", Opacity = 0.9, }).SquigglySettings(new Syncfusion.EJ2.PdfViewer.PdfViewerSquigglySettings{ Author = "Guest User", Color = "#0000ff", Opacity = 0.9 })Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Perform undo and redo
@@ -703,28 +478,6 @@ Refer to the following code sample to call undo and redo actions from the client
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<!--Element to call undo-->
-<button id="undo" onclick="Undo()">Undo</button>
-<!--Element to call redo-->
-<button id="redo" onclick="Redo()">Redo</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-    function Undo() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.undo();
-    }
-
-    function Redo() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.redo();
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Save text markup annotations
@@ -744,13 +497,6 @@ Disable text markup annotations using the enableTextMarkupAnnotation property.
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").EnableTextMarkupAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableTextMarkupAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
 
 {% endhighlight %}

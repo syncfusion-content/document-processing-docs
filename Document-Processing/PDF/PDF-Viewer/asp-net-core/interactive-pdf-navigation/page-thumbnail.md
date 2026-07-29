@@ -28,17 +28,6 @@ You can enable or disable thumbnail navigation using the `enableThumbnail` prope
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableThumbnail="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Alt text](../images/thumbnail.png)

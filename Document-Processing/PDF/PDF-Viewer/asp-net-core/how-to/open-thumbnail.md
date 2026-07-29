@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the openThumbnailPane method after the document loads.
+title:  Open the thumbnail pane ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by using the openThumbnailPane method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Open the thumbnail pane programmatically in ASP.NET Core PDF Viewer
 
-Display page thumbnails by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method. This enables quick navigation between pages and can be triggered automatically when the document loads or in response to user interactions.
+Display page thumbnails by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) method. This enables quick navigation between pages and can be triggered automatically when the document loads or in response to user interactions.
 
 Follow these steps to open the thumbnail pane:
 
@@ -36,27 +36,6 @@ Follow these steps to open the thumbnail pane:
         pdfViewer.thumbnailViewModule.openThumbnailPane();
     }
 </script>
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="openThumbnail()">Open Thumbnail Pane</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="openThumbnail">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function openThumbnail() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.thumbnailViewModule.openThumbnailPane();
-    }
-</script>
-
 {% endhighlight %}
 {% endtabs %}
 

@@ -38,25 +38,6 @@ The following code snippet shows how to show or hide the annotation toolbar usin
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="showToolbar" onclick="ShowAnnotationToolbar()">Show Annotation Toolbar</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function ShowAnnotationToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showAnnotationToolbar(false);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## How to customize the annotation toolbar
@@ -74,17 +55,6 @@ The following example demonstrates how to customize the annotation toolbar by sp
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   toolbarSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { AnnotationToolbarItems = "HighlightTool UnderlineTool StrikethroughTool ColorEditTool OpacityEditTool AnnotationDeleteTool StampAnnotationTool HandWrittenSignatureTool InkAnnotationTool ShapeTool CalibrateTool StrokeColorEditTool ThicknessEditTool" })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    toolbarSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { AnnotationToolbarItems = "HighlightTool UnderlineTool StrikethroughTool ColorEditTool OpacityEditTool AnnotationDeleteTool StampAnnotationTool HandWrittenSignatureTool InkAnnotationTool ShapeTool CalibrateTool StrokeColorEditTool ThicknessEditTool" })">
     </ejs-pdfviewer>

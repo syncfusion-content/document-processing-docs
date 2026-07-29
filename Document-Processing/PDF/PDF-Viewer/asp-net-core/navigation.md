@@ -41,18 +41,6 @@ Page navigation can be controlled using the `enableNavigation` property. Set it 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableNavigation="false">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Toolbar navigation options in the PDF Viewer](./images/navigation.png)
@@ -79,18 +67,6 @@ Bookmark navigation is controlled using the `enableBookmark` property. Set it to
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableBookmark="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Bookmark panel in the PDF Viewer](./images/bookmark.png)
@@ -111,18 +87,6 @@ Thumbnail navigation is controlled using the `enableThumbnail` property. Set it 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableThumbnail="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enableThumbnail="true">
     </ejs-pdfviewer>
@@ -157,18 +121,6 @@ Hyperlink navigation is controlled using the `enableHyperlink` property. Set it 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableHyperlink="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Controlling hyperlink open behavior
@@ -183,18 +135,6 @@ Use the `hyperlinkOpenState` property to control whether hyperlinks open in the 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
             style="height:600px"
-            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            hyperlinkOpenState="@(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab)">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-            style="height:600px"
-            serviceUrl="/api/PdfViewer"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             hyperlinkOpenState="@(Syncfusion.EJ2.PdfViewer.LinkTarget.NewTab)">
     </ejs-pdfviewer>

@@ -27,18 +27,6 @@ Text search can be enabled or disabled using the `enableTextSearch` property. Th
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableTextSearch="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Text search in PDF Viewer](../images/search.png)
@@ -116,26 +104,6 @@ To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. T
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="searchText()">Search Text</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function searchText() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearch.searchText('PDF', true);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 #### Match Whole Word
@@ -151,26 +119,6 @@ You can search for complete words only by setting the `isMatchWholeWord` paramet
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function searchText() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.textSearch.searchText('pdf', false, true);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="searchText()">Search Text</button>
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
-                   serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
 
@@ -230,26 +178,6 @@ Searches for the specified text and returns bounding rectangles for all occurren
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Finding text bounds on a specific page
@@ -268,26 +196,6 @@ Searches for the specified text and returns bounding rectangles only for occurre
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
 
@@ -328,26 +236,6 @@ Searches for an array of text strings and returns bounding rectangles for all oc
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Finding bounds for multiple text strings on a specific page
@@ -366,26 +254,6 @@ Searches for an array of text strings and returns bounding rectangles only for o
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function findTextBounds() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<button type="button" onclick="findTextBounds()">FindTextBounds</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
 
@@ -438,27 +306,6 @@ The [`textSearchStart`]((https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
-                   textSearchStart="textSearchStarted"
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchStarted(args) {
-        // args.searchText contains the term being searched
-        // args.cancel can be set to true to stop the default search
-        console.log(`Text search started for: "${args.searchText}"`);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Text search highlight event
@@ -493,26 +340,6 @@ The [`textSearchHighlight`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfu
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
-                   textSearchHighlight="textSearchHighlighted"
-                   serviceUrl="/api/PdfViewer">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchHighlighted(args) {
-        // args.bounds provides the rectangle(s) of the current match
-        console.log('Highlighted match bounds:', args.bounds);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Text search completion event
@@ -536,26 +363,6 @@ The [`textSearchComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfus
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
                    textSearchComplete="textSearchCompleted">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function textSearchCompleted(args) {
-        // args.totalMatches may indicate how many results were found (when available)
-        console.log('Text search completed.', args);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
-                   textSearchComplete="textSearchCompleted"
-                   serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
 </div>
 

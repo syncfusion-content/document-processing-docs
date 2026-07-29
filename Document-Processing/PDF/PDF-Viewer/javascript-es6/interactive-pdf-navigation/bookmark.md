@@ -24,17 +24,6 @@ let pdfviewer: PdfViewer = new PdfViewer({enableBookmark: true, documentPath:'ht
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, ThumbnailView,BookmarkView, TextSelection} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection);
-
-let pdfviewer: PdfViewer = new PdfViewer({enableBookmark: true, documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'});
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Bookmarks panel and navigation](../images/bookmark.png)

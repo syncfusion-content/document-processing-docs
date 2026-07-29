@@ -50,18 +50,6 @@ Disable the entire toolbar by setting `enableToolbar="false"`:
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableToolbar="false">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Using showToolbar method
@@ -76,25 +64,6 @@ Toggle the toolbar visibility programmatically using the `showToolbar` method af
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="showToolbar">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function showToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbar(false);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    documentLoad="showToolbar">
     </ejs-pdfviewer>
@@ -133,19 +102,6 @@ Configure visible toolbar items using the `toolbarSettings` property at initiali
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableToolbar="true"
-                   toolbarSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, ToolbarItems = "OpenOption"  })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Using showToolbarItem method
@@ -160,25 +116,6 @@ Toggle individual toolbar items programmatically using the `showToolbarItem` met
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   documentLoad="showToolbar">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function showToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbarItem(new Array("DownloadOption"), true);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    documentLoad="showToolbar">
     </ejs-pdfviewer>
@@ -280,50 +217,6 @@ The following customization operations are available:
     }
 
 </script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@page "{handler?}"
-@model IndexModel
-@using Syncfusion.EJ2.PdfViewer
-@using Newtonsoft.Json
-@{
-    ViewData["Title"] = "Home page";
-    CustomToolbarItems customToolbarItems = new CustomToolbarItems();
-    var toolItem1 = new { id = "submit_form", text = "Submit Form", tooltipText = "Custom toolbar item", align = "Center", cssClass = "custom_button" };
-    customToolbarItems.ToolbarItems = new List<object> { toolItem1, "OpenOption", "PageNavigationTool", "MagnificationTool", "PanTool", "SelectionTool", "SearchOption", "PrintOption", "DownloadOption", "UndoRedoTool", "AnnotationEditTool", "FormDesignerEditTool", "CommentTool" };
-    PdfViewerToolbarSettings toolbarSettings = new PdfViewerToolbarSettings()
-            {
-                ShowTooltip = true,
-                ToolbarItems = customToolbarItems.ToolbarItems
-            };
-}
-
-<div>
-    <ejs-pdfviewer id="pdfviewer" style="height:600px"
-                   serviceUrl="/Index"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
-                   toolbarClick="toolbarClick"
-                   ToolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function toolbarClick(args) {
-         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-         if (args.item && args.item.id === 'submit_form') {
-             alert('Custom button clicked!');
-         }
-     }
-</script>
-
-<style>
-    .custom_button {
-        height: 100% !important;
-    }
-</style>
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -538,139 +431,6 @@ Add JavaScript functions to handle toolbar button clicks and coordinate with PDF
     var filename;
     window.onload = function () {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf", null);
-        currentPageBox = document.getElementById('currentPage');
-        currentPageBox.value = '1';
-        document.getElementById('fileUpload').addEventListener('change', readFile, false);
-        currentPageBox.addEventListener('keypress', () => {
-            var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-            var currentPage = document.getElementById('currentPage');
-            if ((event.which < 48 || event.which > 57) && event.which !== 8 && event.which !== 13) {
-                event.preventDefault();
-                return false;
-            } else {
-                var currentPageNumber = parseInt((currentPage).value);
-                if (event.which === 13) {
-                    if (currentPageNumber > 0 && currentPageNumber <= pdfViewer.pageCount) {
-                        pdfViewer.navigation.goToPage(currentPageNumber);
-                    } else {
-                        (currentPage).value = pdfViewer.currentPageNumber.toString();
-                    }
-                }
-                return true;
-            }
-        });
-    }
-    function openPage() {
-        document.getElementById('fileUpload').click();
-    }
-    function readFile(evt) {
-        var upoadedFiles = evt.target.files;
-        var uploadedFile = upoadedFiles[0];
-        filename = upoadedFiles[0].name;
-        var reader = new FileReader();
-        reader.readAsDataURL(uploadedFile);
-        reader.onload = function () {
-            var obj = document.getElementById('pdfviewer').ej2_instances[0];
-            var uploadedFileUrl = this.result;
-            obj.load(uploadedFileUrl, null);
-            obj.fileName = filename;
-            currentPageBox = document.getElementById('currentPage');
-            currentPageBox.value = '1';
-            var pageCount = document.getElementById('totalPage');
-            pageCount.textContent = 'of ' + obj.pageCount;
-        }
-    }
-    function pageChanged() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        document.getElementById('currentPage').value = pdfViewer.currentPageNumber;
-        updatePageNavigation();
-    }
-    function onCurrentPageBoxKeypress(event) {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var currentPageBox = document.getElementById('currentPage');
-        if ((event.which < 48 || event.which > 57) && event.which !== 8 && event.which !== 13) {
-            event.preventDefault();
-            return false;
-        }
-        else {
-            var currentPageNumber = parseInt(currentPageBox.value);
-            if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
-                    pdfViewer.navigation.goToPage(currentPageNumber);
-                }
-                else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
-                }
-            }
-            return true;
-        }
-    }
-
-    function currentPageClicked() {
-        var currentPage = document.getElementById('currentPage');
-        (currentPage).select();
-    }
-    function documentLoaded() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var pageCount = document.getElementById('totalPage');
-        pageCount.textContent = 'of ' + pdfViewer.pageCount;
-        updatePageNavigation();
-    }
-    function updatePageNavigation() {
-        var toolbarObj = document.getElementById('topToolbar').ej2_instances[0];
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (pdfViewer.currentPageNumber === 1) {
-            toolbarObj.enableItems(document.getElementById('previousPage'), false);
-            toolbarObj.enableItems(document.getElementById('nextPage'), true);
-        } else if (pdfViewer.currentPageNumber === pdfViewer.pageCount) {
-            toolbarObj.enableItems(document.getElementById('previousPage'), true);
-            toolbarObj.enableItems(document.getElementById('nextPage'), false);
-        } else {
-            toolbarObj.enableItems(document.getElementById('previousPage'), true);
-            toolbarObj.enableItems(document.getElementById('nextPage'), true);
-        }
-    }
-    function previousClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.navigation.goToPreviousPage();
-    }
-    function nextClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.navigation.goToNextPage();
-    }
-    function printClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.print.print();
-    }
-    function downloadClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.download();
-    }
-    function pageFitClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.magnification.fitToPage();
-    }
-    function zoomInClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.magnification.zoomIn();
-    }
-    function zoomOutClicked() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.magnification.zoomOut();
-    }
-</script>
-
-{% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-
-<script type="text/javascript">
-    var currentPageBox
-    var matchCase = false;
-    var filename;
-    window.onload = function () {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.serviceUrl = window.baseurl + 'api/PdfViewer';
         pdfViewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf", null);
         currentPageBox = document.getElementById('currentPage');
         currentPageBox.value = '1';

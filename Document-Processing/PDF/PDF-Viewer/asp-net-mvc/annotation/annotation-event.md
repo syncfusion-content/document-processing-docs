@@ -58,21 +58,6 @@ The following example illustrates how to handle the `annotationAdd` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationAdd("annotationAdd").Render()
-</div>
-
-<script type="text/javascript">
-    function annotationAdd(args) {
-        console.log('Annotation added with ID: ' + args.annotationId);
-        console.log('Annotation type: ' + args.annotationType);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### annotationDoubleClick
@@ -91,19 +76,6 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationDoubleClick("annotationDoubleClicked").Render()
-</div>
-
-<script>
-    function annotationDoubleClicked(args) {
-        console.log('Annotation double-clicked on page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationDoubleClick("annotationDoubleClicked").Render()
 </div>
 
 <script>
@@ -140,20 +112,6 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseLeave("AnnotationMouseLeaved").Render()
-</div>
-
-<script>
-    function annotationMouseLeaved(args) {
-        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### annotationMouseover
@@ -172,20 +130,6 @@ The following example illustrates how to handle the `annotationMouseover` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseover("AnnotationMouseovered").Render()
-</div>
-
-<script>
-    function annotationMouseovered(args) {
-        console.log('Annotation mouse over event is triggered for annotation with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMouseover("AnnotationMouseovered").Render()
 </div>
 
 <script>
@@ -222,20 +166,6 @@ The following example illustrates how to handle the `annotationMove` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMove("annotationMoved").Render()
-</div>
-
-<script>
-    function annotationMoved(args) {
-        console.log('Annotation moved. ID: ' + args.annotationId + ' on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### annotationMoving
@@ -254,20 +184,6 @@ The following example illustrates how to handle the `annotationMoving` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMoving("annotationMoving").Render()
-</div>
-
-<script>
-    function annotationMoving(args) {
-        console.log('Annotation is being moved. Current Action: ' + args.currentPosition);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationMoving("annotationMoving").Render()
 </div>
 
 <script>
@@ -305,21 +221,6 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationPropertiesChange("annotationPropertiesChanged").Render()
-</div>
-
-<script>
-    function annotationPropertiesChanged(args) {
-        console.log('Annotation properties changed for ID: ' + args.annotationId);
-        console.log('isThicknessChanged: ' + args.isThicknessChanged);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### annotationRemove
@@ -338,20 +239,6 @@ The following example illustrates how to handle the `annotationRemove` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationRemove("annotationRemoved").Render()
-</div>
-
-<script>
-    function annotationRemoved(args) {
-        console.log('Annotation removed with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationRemove("annotationRemoved").Render()
 </div>
 
 <script>
@@ -388,20 +275,6 @@ The following example illustrates how to handle the `annotationResize` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationResize("annotationResized").Render()
-</div>
-
-<script>
-    function annotationResized(args) {
-        console.log('Annotation resized. ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### annotationSelect
@@ -420,20 +293,6 @@ The following example illustrates how to handle the `annotationSelect` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationSelect("annotationSelected").Render()
-</div>
-
-<script>
-    function annotationSelected(args) {
-        console.log('Annotation selected with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationSelect("annotationSelected").Render()
 </div>
 
 <script>
@@ -470,20 +329,6 @@ The following example illustrates how to handle the `annotationUnselect` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AnnotationUnSelect("annotationUnselected").Render()
-</div>
-
-<script>
-    function annotationUnselected(args) {
-        console.log('Annotation unselected with ID: ' + args.annotationId);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### beforeAddFreeText
@@ -502,22 +347,6 @@ The following example illustrates how to handle the `beforeAddFreeText` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").BeforeAddFreeText("beforeAddedFreeText").Render()
-</div>
-
-<script>
-    function beforeAddedFreeText(args) {
-        console.log('Before adding free text on page: ' + args.pageIndex);
-        // Set args.cancel to true to prevent adding the free text annotation
-        // args.cancel = true;
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").BeforeAddFreeText("beforeAddedFreeText").Render()
 </div>
 
 <script>
@@ -558,20 +387,6 @@ The following example illustrates how to handle the `addSignature` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").AddSignature("addSignature").Render()
-</div>
-
-<script>
-    function addSignature(args) {
-        console.log('Signature added to page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### removeSignature
@@ -590,20 +405,6 @@ The following example illustrates how to handle the `removeSignature` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignature").Render()
-</div>
-
-<script>
-    function removeSignature(args) {
-        console.log('Signature removed from page: ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RemoveSignature("removeSignature").Render()
 </div>
 
 <script>
@@ -640,20 +441,6 @@ The following example illustrates how to handle the `resizeSignature` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResizeSignature("resizeSignature").Render()
-</div>
-
-<script>
-    function resizeSignature(args) {
-        console.log('Signature resized on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### signaturePropertiesChange
@@ -672,20 +459,6 @@ The following example illustrates how to handle the `signaturePropertiesChange` 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
-</div>
-
-<script>
-    function signaturePropertiesChanged(args) {
-        console.log('Signature properties changed on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignaturePropertiesChange("signaturePropertiesChanged").Render()
 </div>
 
 <script>
@@ -722,20 +495,6 @@ The following example illustrates how to handle the `signatureSelect` event.
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureSelect("signatureSelected").Render()
-</div>
-
-<script>
-    function signatureSelected(args) {
-        console.log('Signature selected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### signatureUnselect
@@ -754,20 +513,6 @@ The following example illustrates how to handle the `signatureUnselect` event.
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
     @Html.EJS().PdfViewer("pdfviewer").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
-</div>
-
-<script>
-    function signatureUnselected(args) {
-        console.log('Signature unselected on page ' + args.pageIndex);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    <button id="checkComments" onclick="checkComments()">Check Comments</button>
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").SignatureUnselect("signatureUnselected").Render()
 </div>
 
 <script>

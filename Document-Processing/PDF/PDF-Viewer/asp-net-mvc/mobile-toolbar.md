@@ -65,13 +65,6 @@ Enable the desktop toolbar on mobile devices using the `enableDesktopMode` API. 
     </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableDesktopMode(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Enable scrolling in desktop mode with touch gestures
@@ -83,13 +76,6 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
 
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").EnableDesktopMode(true).EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-    </div>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableDesktopMode(true).EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 
 {% endhighlight %}

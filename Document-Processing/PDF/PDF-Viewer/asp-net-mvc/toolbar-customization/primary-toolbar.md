@@ -26,12 +26,6 @@ Show or hide the toolbar using the `enableToolbar` property:
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-    <div style="width:100%;height:600px">
-         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-    </div>
-
-{% endhighlight %}
 {% endtabs %}
 
 The following code snippet explains how to show or hide the toolbar using the `showToolbar` method.
@@ -41,20 +35,6 @@ The following code snippet explains how to show or hide the toolbar using the `s
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentLoad("showToolbar").Render()
-</div>
-
-<script>
-    function showToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbar(false);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").DocumentLoad("showToolbar").Render()
 </div>
 
 <script>
@@ -84,16 +64,6 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-<button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
-<div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings{ ShowTooltip = true, ToolbarItem = "OpenOption" ).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
-```
-
-{% endhighlight %}
 {% endtabs %}
 
 * Show or hide toolbar items using showToolbarItem:
@@ -107,22 +77,6 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
-<script>
-    function enableToolbarItem() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showToolbarItem(new Array("DownloadOption"), true);
-    }
-</script>
-```
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```html
-<button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
-<div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
-</div>
 <script>
     function enableToolbarItem() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -212,45 +166,6 @@ The PDF Viewer allows you to customize (add, show, hide, enable, and disable) ex
     }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
-@using Syncfusion.EJ2.PdfViewer
-@using ToolbarCustomization.Controllers
-@{
-    var toolItem1 = new { id = "submit_form", text = "Submit Form", tooltipText = "Custom toolbar item", align = "Center", cssClass = "custom_button" };
-    CustomToolbarItems customToolbarItems = new CustomToolbarItems();
-    customToolbarItems.ToolbarItems = new List<object> { toolItem1, "OpenOption", "PageNavigationTool", "MagnificationTool", "PanTool", "SelectionTool", "SearchOption", "PrintOption", "DownloadOption", "UndoRedoTool", "AnnotationEditTool", "FormDesignerEditTool", "CommentTool" };
-    PdfViewerToolbarSettings toolbarSettings = new PdfViewerToolbarSettings()
-    {
-        ShowTooltip = true,
-        ToolbarItems = customToolbarItems.ToolbarItems
-    };
-}
-<div>
-    <div style="height:500px;width:1350px;">
-        <br /><br />
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/form-designer.pdf").ToolbarClick("toolbarClick").ToolbarSettings(toolbarSettings).Render()
-    </div>
-</div>
-
-<script type="text/javascript">
-    function toolbarClick(args) {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (args.item && args.item.id === 'submit_form') {
-            alert('Custom button clicked!');
-        }
-    }
-</script>
-
-<style>
-    .custom_button {
-        height: 100% !important;
-    }
-</style>
 {% endhighlight %}
 {% endtabs %}
 

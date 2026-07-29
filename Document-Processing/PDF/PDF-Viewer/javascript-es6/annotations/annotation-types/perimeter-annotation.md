@@ -49,20 +49,6 @@ document.getElementById('perimeterMode')?.addEventListener('click', function () 
     pdfviewer.annotationModule.setAnnotationMode('Perimeter');
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('perimeterMode')?.addEventListener('click', function () {
-    pdfviewer.annotationModule.setAnnotationMode('Perimeter');
-});
-{% endhighlight %}
 {% endtabs %}
 
 ### Add a perimeter annotation programmatically
@@ -81,25 +67,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addPerimeterAnnotation')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Perimeter', {
-        offset: { x: 200, y: 350 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }]
-    } as PerimeterSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, PerimeterSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
 pdfviewer.appendTo('#PdfViewer');
 
@@ -191,35 +158,6 @@ if (editPerimeterAnnotation) {
 }
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-let editPerimeterAnnotation = document.getElementById('editPerimeterAnnotation');
-if (editPerimeterAnnotation) {
-    editPerimeterAnnotation.addEventListener('click', function () {
-        if (pdfviewer) {
-            for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-                if (pdfviewer.annotationCollection[i].subject === "Perimeter calculation") {
-                    pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle";
-                    pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-                    pdfviewer.annotationCollection[i].thickness = 2;
-                    pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
-                    pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-                }
-            }
-        }
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Default perimeter settings during initialization
@@ -235,18 +173,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-
-pdfviewer.perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
 pdfviewer.perimeterSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
 pdfviewer.appendTo('#PdfViewer');
@@ -273,25 +199,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Perimeter Settings while adding individual Annotation
-document.getElementById('Perimeter')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Perimeter', {
-        offset: { x: 200, y: 350 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 350 }, { x: 285, y: 350 }, { x: 286, y: 412 }],
-        fillColor: 'green', opacity: 0.6, strokeColor: 'blue'
-    } as PerimeterSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PerimeterSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 //Apply Perimeter Settings while adding individual Annotation
 document.getElementById('Perimeter')?.addEventListener('click', function () {
@@ -336,19 +243,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.measurementSettings={scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'};
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.measurementSettings={scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'};
 pdfviewer.appendTo('#PdfViewer');
 

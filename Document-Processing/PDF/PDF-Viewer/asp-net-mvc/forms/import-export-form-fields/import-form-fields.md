@@ -18,14 +18,12 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 ## API to use
 - [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
-Note: If you’re using a **server-backed viewer**, include `.ServiceUrl(...)` in the helper so the viewer can access server APIs during import/export.
-
 ### Import FDF
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ServiceUrl("https://ej2services.syncfusion.com/production/web-services/api/pdfviewer").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib").Render()
 </div>
 
 <button id="importFdf">Import FDF</button>
@@ -47,7 +45,7 @@ Note: If you’re using a **server-backed viewer**, include `.ServiceUrl(...)` i
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ServiceUrl("https://ej2services.syncfusion.com/production/web-services/api/pdfviewer").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib").Render()
 </div>
 
 <button id="importXfdf">Import XFDF</button>
@@ -68,7 +66,7 @@ Note: If you’re using a **server-backed viewer**, include `.ServiceUrl(...)` i
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ServiceUrl("https://ej2services.syncfusion.com/production/web-services/api/pdfviewer").Render()
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib").Render()
 </div>
 
 <button id="importJson">Import JSON</button>

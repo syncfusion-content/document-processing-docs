@@ -50,27 +50,6 @@ function signatureUnselect(args) {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-@{
-    ViewBag.Title = "Home Page";
-}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").SignatureUnselect("signatureUnselect").SignatureSelect("signatureSelect").Render()
-</div>
-
-<script>
-function signatureSelect(args) {
-    console.log('Signature selected:', args);
-};
-
-function signatureUnselect(args) {
-    console.log('Signature selected:', args);
-};
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 By handling `signatureSelect` and `signatureUnselect`, applications can audit signer activity, enable or disable toolbar actions, and provide immediate feedback when signatures change state.

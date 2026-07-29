@@ -56,17 +56,6 @@ When `enableHyperlink` is set to `false`, all hyperlinks in the document become 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableHyperlink="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 N> Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
@@ -88,17 +77,6 @@ By default, links open in the same browser tab (`CurrentTab`). To open links in 
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   hyperlinkOpenState="NewTab">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    hyperlinkOpenState="NewTab">
     </ejs-pdfviewer>
@@ -134,34 +112,6 @@ The event arguments include:
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   hyperlinkClick="hyperlinkClicked"
-                   hyperlinkMouseOver="hyperlinkMouseOver">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function hyperlinkClicked(args) {
-        // Log the URL of the clicked hyperlink
-        console.log('Hyperlink Clicked:', args.hyperlink);
-
-        // To prevent the default navigation behavior, set args.cancel to true
-        // args.cancel = true;
-    }
-
-    function hyperlinkMouseOver(args) {
-        // Log the URL of the hyperlink being hovered over
-        console.log('Hyperlink Mouse Over:', args.hyperlinkElement.href);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    hyperlinkClick="hyperlinkClicked"
                    hyperlinkMouseOver="hyperlinkMouseOver">

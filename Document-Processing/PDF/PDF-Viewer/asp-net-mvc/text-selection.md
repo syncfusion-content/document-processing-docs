@@ -24,13 +24,6 @@ Use the enableTextSelection property to enable or disable selecting text in the 
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnableTextSelection(true).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Text selection events
@@ -56,20 +49,6 @@ The textSelectionStart event triggers when selection is initiated. Typical use c
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionStart("textSelectionStarted").Render()
-</div>
-
-<script>
-    function textSelectionStarted(args) {
-        // args.pageNumber, args.bounds provide the starting context
-        console.log('Selection started', args);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ### textSelectionEnd
@@ -81,20 +60,6 @@ The textSelectionEnd event triggers when selection is completed. It is useful to
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionEnd("textSelectionEnded").Render()
-</div>
-
-<script>
-    function textSelectionEnded(args) {
-        // For example, automatically copy or show a custom menu
-        console.log('Selection ended', args);
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").TextSelectionEnd("textSelectionEnded").Render()
 </div>
 
 <script>

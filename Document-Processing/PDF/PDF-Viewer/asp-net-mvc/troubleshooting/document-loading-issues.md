@@ -23,7 +23,7 @@ If the document does not render in the viewer when using version 23.1 or newer, 
 <script>
     function documentLoad () {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+        pdfViewer.ResourceUrl = "https://cdn.syncfusion.com/ej2/33.2.13/dist/ej2-pdfviewer-lib";
         pdfViewer.dataBind();
         pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf");
     }

@@ -37,30 +37,6 @@ The following example demonstrates how to check for mobile devices and apply zoo
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   style="height:600px"
-                   serviceUrl="/api/PdfViewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function documentLoad() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (ej2_base_1.Browser.isDevice && !viewer.enableDesktopMode) {
-            viewer.maxZoom = 200;
-            viewer.minZoom = 10;
-        }
-       else {
-            viewer.zoomMode = 'Default';
-        }
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 By enforcing these limits, users can zoom between 10% and 200% on mobile devices, ensuring a balance between detail and performance. Ensure that `minZoom` is always less than or equal to `maxZoom` to maintain a valid functional range.

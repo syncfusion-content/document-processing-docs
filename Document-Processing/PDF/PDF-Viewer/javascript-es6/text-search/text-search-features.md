@@ -98,20 +98,6 @@ pdfviewer.enableTextSearch = true;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath='https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-// Enable text search
-pdfviewer.enableTextSearch = true;
-pdfviewer.appendTo('#PdfViewer');
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Programmatic search with settings
@@ -206,53 +192,6 @@ PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,Th
 let viewer: PdfViewer = new PdfViewer({
     documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
-});
-
-viewer.appendTo('#pdfViewer'); // Ensure your HTML has <div id="pdfViewer"></div>
-
-// --- Programmatic Text Search API ---
-
-// Searches the target text in the PDF and highlights all matches.
-function searchText(query: string, matchCase = false): void {
-  if (!query || !query.trim()) return;
-  viewer.textSearch.searchText(query, matchCase);
-}
-
-// Navigates to the next occurrence relative to the current active match.
-function searchNext(): void {
-  viewer.textSearch.searchNext();
-}
-
-// Navigates to the previous occurrence relative to the current active match.
-
-function searchPrevious(): void {
-  viewer.textSearch.searchPrevious();
-}
-
-
-//Cancels the current search and clears all highlights.
-function cancelTextSearch(): void {
-  viewer.textSearch.cancelTextSearch();
-}
-
-// Example: wire up to buttons/inputs
-const input = document.getElementById('searchBox') as HTMLInputElement | null;
-document.getElementById('btnSearch')?.addEventListener('click', () => {
-  searchText(input?.value ?? '', false);
-});
-document.getElementById('btnNext')?.addEventListener('click', () => searchNext());
-document.getElementById('btnPrev')?.addEventListener('click', () => searchPrevious());
-document.getElementById('btnCancel')?.addEventListener('click', () => cancelTextSearch());
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar,Magnification,Navigation, Annotation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch);
-
-
-let viewer: PdfViewer = new PdfViewer({
-    documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
 });
 
 viewer.appendTo('#pdfViewer'); // Ensure your HTML has <div id="pdfViewer"></div>

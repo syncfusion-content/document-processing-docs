@@ -63,6 +63,6 @@ Follow these steps to add annotation toggle controls:
 {% endhighlight %}
 {% endtabs %}
 
-The `exportAnnotationsAsObject` method returns a promise whose resolved value stores the serialized annotations; persist this object securely if it contains sensitive content. The `resourceUrl` must reference a PDF Viewer build that matches your application version, and similar logic can be applied in server-backed samples by replacing the `resourceUrl` with `serviceUrl`.
+The `exportAnnotationsAsObject` method returns a promise whose resolved value stores the serialized annotations; persist this object securely if it contains sensitive content. The `resourceUrl` must reference a PDF Viewer build that matches your application version.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

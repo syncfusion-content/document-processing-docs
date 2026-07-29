@@ -32,22 +32,6 @@ Using the `initialRenderPages` property prudently works well when a smaller rang
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-```cs
-@{
-    ViewBag.Title = "Home Page";
-    double InitialRenderPages = 10;
-}
-
-<div>
-    <div style="height:100%; width: 100%;">
-        @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/Home/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").InitialRenderPages(InitialRenderPages).Render()
-    </div>
-</div>
-
-```
-{% endhighlight %}
 {% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to/Load%20N%20no%20of%20pages)

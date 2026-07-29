@@ -50,20 +50,6 @@ document.getElementById('distanceMode')?.addEventListener('click', () => {
     pdfviewer.annotationModule.setAnnotationMode('Distance');
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('distanceMode')?.addEventListener('click', () => {
-    pdfviewer.annotationModule.setAnnotationMode('Distance');
-});
-{% endhighlight %}
 {% endtabs %}
 
 #### Exit distance mode
@@ -97,24 +83,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('addDistanceAnnotation')?.addEventListener('click', () => {
-    pdfviewer.annotation.addAnnotation('Distance', {
-        offset: { x: 200, y: 230 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
-    } as DistanceSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer, DistanceSettings } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.appendTo('#PdfViewer');
 
 document.getElementById('addDistanceAnnotation')?.addEventListener('click', () => {
@@ -195,27 +163,6 @@ document.getElementById('editDistanceAnnotation')?.addEventListener('click', () 
     }
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.appendTo('#PdfViewer');
-
-document.getElementById('editDistanceAnnotation')?.addEventListener('click', () => {
-    for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
-        if (pdfviewer.annotationCollection[i].subject === 'Distance calculation') {
-            pdfviewer.annotationCollection[i].strokeColor = '#0000FF';
-            pdfviewer.annotationCollection[i].thickness = 2;
-            pdfviewer.annotationCollection[i].opacity = 0.8;
-            pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
-        }
-    }
-});
-{% endhighlight %}
 {% endtabs %}
 
 ## Default distance settings during initialization
@@ -234,17 +181,6 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.distanceSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.distanceSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
 {% endtabs %}
 
 ## Set properties while adding Individual Annotation
@@ -260,25 +196,6 @@ Refer to the following code snippet to set the default Distance settings.
 ```
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DistanceSettings} from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
-pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
-pdfviewer.appendTo('#PdfViewer');
-//Apply Distance Settings while adding individual Annotation
-document.getElementById('Ink')?.addEventListener('click', function () {
-    pdfviewer.annotation.addAnnotation('Distance', {
-        offset: { x: 200, y: 230 },
-        pageNumber: 1,
-        vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }],
-        fillColor: 'blue', opacity: 0.6, strokeColor: 'green'
-    } as DistanceSettings);
-});
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, DistanceSettings} from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
@@ -321,17 +238,6 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
-pdfviewer.appendTo('#PdfViewer');
-{% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
-
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
-
-let pdfviewer: PdfViewer = new PdfViewer();
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm' };
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}

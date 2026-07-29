@@ -28,17 +28,6 @@ The `canInsert` property controls the visibility of the insert tool. When set to
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new { CanInsert= false })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Show or hide the delete option
@@ -57,17 +46,6 @@ The `canDelete` property controls the visibility of the delete tool. When set to
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new { CanDelete= false })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Show or hide the rotate option
@@ -80,17 +58,6 @@ The `canRotate` property controls the visibility of the rotate tool. When set to
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   pageOrganizerSettings="@(new { CanRotate= false })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    pageOrganizerSettings="@(new { CanRotate= false })">
     </ejs-pdfviewer>

@@ -35,21 +35,6 @@ The following code snippet explains how to show or hide the annotation toolbar u
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="showToolbar" onclick="ShowAnnotationToolbar()">Show Annotation Toolbar</button>
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function ShowAnnotationToolbar() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.toolbar.showAnnotationToolbar(false);
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## How to customize the annotation toolbar
@@ -67,13 +52,6 @@ The following example demonstrates how to customize the annotation toolbar by sp
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, AnnotationToolbarItems = "HighlightTool UnderlineTool StrikethroughTool ColorEditTool OpacityEditTool AnnotationDeleteTool StampAnnotationTool HandWrittenSignatureTool InkAnnotationTool ShapeTool CalibrateTool StrokeColorEditTool ThicknessEditTool" }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, AnnotationToolbarItems = "HighlightTool UnderlineTool StrikethroughTool ColorEditTool OpacityEditTool AnnotationDeleteTool StampAnnotationTool HandWrittenSignatureTool InkAnnotationTool ShapeTool CalibrateTool StrokeColorEditTool ThicknessEditTool" }).Render()
 </div>
 
 {% endhighlight %}

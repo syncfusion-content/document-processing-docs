@@ -53,10 +53,6 @@ document.getElementById('redo').addEventListener('click', ()=> {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**,
-Add the below `serviceUrl` in the `index.ts` file
-`pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
-
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/undo-redo-cs1" %}
 
 ## See also

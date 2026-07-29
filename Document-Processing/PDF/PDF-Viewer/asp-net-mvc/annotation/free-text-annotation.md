@@ -42,22 +42,6 @@ The following example switches to free text annotation mode using a button click
 </script>
 
 {% endhighlight %}
-
-{% highlight html tabtitle="Server-Backed" %}
-
-<!--Element to set free text annotation mode-->
-<button id="set" onclick="addAnnot()">FreeText</button>
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-<script>
-    function addAnnot() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.setAnnotationMode('FreeText');
-       }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add a free text annotation programmatically to the PDF document
@@ -98,37 +82,6 @@ Here is an example of adding a free text annotation programmatically using addAn
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<button id="set" onclick="addAnnotation()">Add annotation programmatically</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function addAnnotation() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.annotation.addAnnotation("FreeText", {
-            offset: { x: 100, y: 150 },
-            fontSize: 16,
-            fontFamily: "Helvetica",
-            pageNumber: 1,
-            width: 200,
-            height: 40,
-            isLock: false,
-            textAlignment: 'Center',
-            borderStyle: 'solid',
-            borderWidth: 2,
-            borderColor: 'red',
-            fillColor: 'blue',
-            fontColor: 'white',
-            defaultText: "Syncfusion"
-        });
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Change the content of an existing free text annotation programmatically
@@ -144,30 +97,6 @@ Here is an example of changing the content of a free text annotation using **edi
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function editAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        for (let i = 0; i < viewer.annotationCollection.length; i++) {
-            if (viewer.annotationCollection[i].subject === "Text Box") {
-                var width = viewer.annotationCollection[i].bounds.width;
-                var height = viewer.annotationCollection[i].bounds.height;
-                viewer.annotationCollection[i].bounds = { x: 100, y: 100, width: width, height: height };
-                viewer.annotationCollection[i].dynamicText = 'syncfusion';
-                viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-            }
-        }
-    }
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<button id="set" onclick="editAnnotation()">Edit annotation programmatically</button>
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
 
 <script>
@@ -262,13 +191,6 @@ After changing default values, the selected values are applied. The following ex
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { FillColor = "green", BorderColor = "blue", FontColor = "yellow" }).Render()
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
 You can also enable the autofit support for free text annotation by using the EnableAutoFit boolean property in FreeTextSettings as below. The width of the free text rectangle box will be increased based on the text added to it.
@@ -278,13 +200,6 @@ You can also enable the autofit support for free text annotation by using the En
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { EnableAutoFit = true }).Render()
-</div>
-
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { EnableAutoFit = true }).Render()
 </div>
 
 {% endhighlight %}

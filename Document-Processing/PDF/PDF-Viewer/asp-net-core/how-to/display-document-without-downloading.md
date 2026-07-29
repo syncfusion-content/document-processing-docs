@@ -46,36 +46,6 @@ Follow these steps to display documents without downloads:
 </script>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button onclick="downloadDocument()">downloadDocument</button>
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer
-            id="pdfviewer"
-            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf">
-    </ejs-pdfviewer>
-</div>
-
-<script>
-    function downloadDocument() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.saveAsBlob().then(function (value) {
-            var data = value;
-            var reader = new FileReader();
-            reader.readAsDataURL(data);
-            reader.onload = function () {
-                var base64data = reader.result;
-                console.log(base64data);
-                viewer.load(base64data, null);
-            };
-        });
-    }
-</script>
-
-{% endhighlight %}
 {% endtabs %}
-
-The client-side logic is identical in both **Standalone** and **Server-Backed** modes. In the server-backed scenario, configure the `serviceUrl` property so the viewer can delegate processing to your ASP.NET Core controller.
 
 [View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Display%20document%20without%20downloading)

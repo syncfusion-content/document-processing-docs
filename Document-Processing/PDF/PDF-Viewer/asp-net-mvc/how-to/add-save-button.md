@@ -57,44 +57,6 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-
-<div>
-    <div style="height:500px;width:1350px;">
-        <br /><br />
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).ToolbarClick("toolbarClick").Render()
-    </div>
-</div>
-
-<script type="text/javascript">
-    window.onload = function () {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var toolItem1 = {
-            prefixIcon: 'e-icons e-save',
-            id: 'download',
-            text: 'Save',
-            tooltipText: 'Save Button',
-            align: 'left'
-        };
-        function onCreate() {
-            this.addIcon('prepend', 'e-icons e-search');
-        }
-        pdfViewer.toolbarSettings = {
-            showTooltip: true,
-            toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
-        };
-
-    };
-
-    // Define the toolbarClick event handler
-    function toolbarClick(args) {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        if (args.item && args.item.id === 'download') {
-            pdfViewer.download();
-        }
-    }
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
