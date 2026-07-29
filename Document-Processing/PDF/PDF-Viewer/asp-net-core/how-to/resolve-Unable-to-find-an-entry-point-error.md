@@ -11,7 +11,7 @@ documentation: ug
 
 Effective with Essential Studio<sup style="font-size:70%">&reg;</sup> version 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer includes an updated PDFium engine to enhance text search, selection, and overall rendering performance. If an application continues to reference legacy native PDFium binaries after upgrading NuGet packages, it may trigger the exception: **"Unable to find an entry point named FPDFText_GetCharAngle"**.
 
-This error typically results in the client displaying a **"Web-Service is not listening"** status. This can be confirmed by inspecting the **Network** tab in the browser developer tools, where the service response will indicate a failure due to missing or mismatched PDFium assemblies.
+This error typically causes the client to display a **"Web-Service is not listening"** status. This can be confirmed by inspecting the **Network** tab in the browser developer tools, where the service response will indicate a failure due to missing or mismatched PDFium assemblies.
 
 ## Troubleshooting steps
 

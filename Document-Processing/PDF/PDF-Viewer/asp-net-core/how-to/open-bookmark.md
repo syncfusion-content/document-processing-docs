@@ -26,14 +26,14 @@ Follow these steps to implement bookmark pane toggling:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function openBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.openBookmarkPane();
+        pdfViewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
 
@@ -53,7 +53,7 @@ Follow these steps to implement bookmark pane toggling:
 <script>
     function openBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.openBookmarkPane();
+        pdfViewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
 
@@ -80,7 +80,7 @@ To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the follow
 <script>
     function closeBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.closeBookmarkPane();
+        pdfViewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
 {% endhighlight %}
@@ -99,7 +99,7 @@ To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the follow
 <script>
     function closeBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.closeBookmarkPane();
+        pdfViewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
 

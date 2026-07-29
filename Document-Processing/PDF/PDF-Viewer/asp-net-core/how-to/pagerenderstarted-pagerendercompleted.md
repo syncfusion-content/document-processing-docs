@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer pro
 
 ## pageRenderInitiate
 
-The `pageRenderInitiate` event fires correctly before a page enters the rendering process. This is the ideal stage to initialize timers, allocate temporary resources, or log analytical data. The event arguments provide the specific page index and source details.
+The `pageRenderInitiate` event fires before a page enters the rendering process. This is the ideal stage to initialize timers, allocate temporary resources, or log analytical data. The event arguments provide the specific page index and source details.
 
 ## pageRenderComplete
 

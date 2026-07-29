@@ -59,7 +59,7 @@ The `Document pointer does not exist in the cache` exception indicates a mismatc
 To resolve this issue:
 
 1. **Clear the Cache:** Manually clear the contents of the cache directory specified in the PDF Viewer settings to remove corrupted or stale data.
-2. **Reload the Document:** Programmatically invoke the `Load()` method via the controller to re-initialize the document session.
+2. **Reload the Document:** Programmatically invoke the `Load()` method on the client viewer instance to re-initialize the document session.
 3. **App Restart:** Restart the application pool or service to refresh component states and clear memory-resident metadata.
 
 ## Internal server error

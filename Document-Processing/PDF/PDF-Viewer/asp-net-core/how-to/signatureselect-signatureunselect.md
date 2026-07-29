@@ -48,7 +48,7 @@ The following example demonstrates how to subscribe to these events in both stan
         console.log('Signature selected:', args);
     }
     function signatureUnselect(args) {
-        console.log('Signature selected:', args);
+        console.log('Signature unselected:', args);
     };
 
 </script>
@@ -75,7 +75,7 @@ The following example demonstrates how to subscribe to these events in both stan
         console.log('Signature selected:', args);
     }
     function signatureUnselect(args) {
-        console.log('Signature selected:', args);
+        console.log('Signature unselected:', args);
     };
 
 </script>
