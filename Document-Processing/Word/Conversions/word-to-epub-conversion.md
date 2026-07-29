@@ -1,23 +1,25 @@
 ---
 title: Convert Word document to EPUB in C# | DocIO | Syncfusion
-description: Learn how to convert Word document to EPUB  using the .NET Word (DocIO) library without Microsoft Word or interop dependencies
+description: Learn how to convert Word document to EPUB using the .NET Word (DocIO) library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Converting Word document to EPUB
+# Convert Word document to EPUB
 
-The Word document files are converted as EPUB v2.0 file format with few lines of code by using the Essential<sup>&reg;</sup> DocIO.
+Convert a Word document to the EPUB v2.0 file format with a few lines of code by using Essential<sup>&reg;</sup> DocIO.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Word document to EPUB file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+Refer to the following links for the assemblies and NuGet packages required based on your platform to convert a Word document to an EPUB file using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Word to EPUB conversion assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Word to EPUB conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
-The following code illustrates how to convert the Word document to EPUB file.
+> Word to EPUB conversion is supported only in Windows Forms, UWP, WPF, ASP.NET Web, and ASP.NET MVC.
+
+The following code illustrates how to convert the Word document to an EPUB file.
 
 {% tabs %}
 
@@ -67,7 +69,7 @@ Save(stream, "WordToEPub.epub");
 //Closes the document
 document.Close();
 
-//Saves the Word document
+//Saves the EPUB file using a file picker
 async void Save(MemoryStream streams, string filename)
 {
     streams.Position = 0;
@@ -89,16 +91,16 @@ async void Save(MemoryStream streams, string filename)
     {
         using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
         {
-            //Write compressed data from memory to file
+            //Writes compressed data from memory to the file
             using (Stream outstream = zipStream.AsStreamForWrite())
             {
-                byte[] buffer = streams.ToArray();
+                byte[] buffer = outputStream.ToArray();
                 outstream.Write(buffer, 0, buffer.Length);
                 outstream.Flush();
             }
         }
     }
-    //Launch the saved Word file
+    //Launches the saved EPUB file in the default reader
     await Windows.System.Launcher.LaunchFileAsync(stFile);
 }
 {% endhighlight %}
@@ -124,3 +126,8 @@ The following elements are supported in Word to EPUB conversion.
 ## Frequently Asked Questions
 
 * [How to set title when converting Word document to EPUB?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/html-and-epub-conversions-faqs#how-to-set-title-when-converting-word-document-to-epub)
+
+## See also
+
+* [Word to HTML conversion](html-conversions)
+* [Word to Markdown conversion](word-to-markdown-conversion)

@@ -586,7 +586,7 @@ export function App() {
         <PdfViewerComponent
           ref={viewerRef}
           id="container"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+          documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
           resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
           style={{ height: '680px' }}
         >
@@ -661,8 +661,7 @@ root.render(<App />);
 
 ## isFormDesignerToolbarVisible
 
-Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
-and get the form designer Toolbar Visible status.
+Shows the Form Designer toolbar when the PDF document is loaded into the PDF Viewer. Use the API to get the Form Designer toolbar's current visible status.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

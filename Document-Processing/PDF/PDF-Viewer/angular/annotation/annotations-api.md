@@ -24,6 +24,37 @@ The PDF Viewer provides APIs to read the loaded annotations and to configure glo
 | [customStamp](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#customstamp) | Defines custom stamp items. |
 | [customStampSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#customstampsettings) | Defaults for Custom Stamp annotations. |
 | [distanceSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#distancesettings) | Defaults for Distance annotations. |
+| [enableAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableannotation) | Enable or disable the Add/Edit Annotations tool in the toolbar. |
+| [enableAnnotationToolbar](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableannotationtoolbar) | Show or hide the annotation toolbar when the document loads. |
+| [enableFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablefreetext) | Enable or disable Free Text annotations. |
+| [enableHandwrittenSignature](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablehandwrittensignature) | Enable or disable the handwritten signature feature. |
+| [enableInkAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableinkannotation) | Enable or disable Ink annotations (true by default). |
+| [enableMeasureAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablemeasureannotation) | Enable or disable calibrate/measurement annotations. |
+| [enableMultiPageAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablemultipageannotation) | Enable or disable multi-page text markup selection in UI. |
+| [enableShapeAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableshapeannotation) | Enable or disable shape annotations. |
+| [enableShapeLabel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableshapelabel) | Enable or disable labels for shape annotations. |
+| [enableStampAnnotations](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablestampannotations) | Enable or disable stamp annotations at load time. |
+| [enableStickyNotesAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablestickynotesannotation) | Enable or disable sticky notes annotations at load time. |
+| [enableTextMarkupAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletextmarkupannotation) | Enable or disable text markup annotations. |
+| [enableTextMarkupResizer](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enabletextmarkupresizer) | Enable or disable the text markup resizer to modify bounds in the UI. |
+| [exportAnnotationFileName](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#exportannotationfilename) | Gets or sets the exported annotations JSON file name. |
+| [freeTextSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#freetextsettings) | Defaults for Free Text annotations. |
+| [handWrittenSignatureSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#handwrittensignaturesettings) | Defaults for handwritten signatures. |
+| [highlightSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#highlightsettings) | Defaults for Highlight annotations. |
+| [inkAnnotationSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#inkannotationsettings) | Defaults for Ink annotations. |
+| [isAnnotationToolbarVisible](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#isannotationtoolbarvisible) | Open the annotation toolbar initially and read its visibility state. |
+| [lineSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#linesettings) | Defaults for Line annotations. |
+| [measurementSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#measurementsettings) | Defaults for Measurement annotations. |
+| [perimeterSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#perimetersettings) | Defaults for Perimeter annotations. |
+| [polygonSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#polygonsettings) | Defaults for Polygon annotations. |
+| [radiusSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#radiussettings) | Defaults for Radius annotations. |
+| [rectangleSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#rectanglesettings) | Defaults for Rectangle annotations. |
+| [shapeLabelSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#shapelabelsettings) | Defaults for shape labels (requires `enableShapeLabel`). |
+| [stampSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stampsettings) | Defaults for Stamp annotations (dynamic/sign/business). |
+| [stickyNotesSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stickynotessettings) | Defaults for Sticky Notes annotations. |
+| [strikethroughSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#strikethroughsettings) | Defaults for Strikethrough annotations. |
+| [underlineSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#underlinesettings) | Defaults for Underline annotations. |
+| [volumeSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#volumesettings) | Defaults for Volume annotations. |
 
 ## annotationCollection
 Read the loaded document annotation collection from the viewer instance.

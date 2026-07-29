@@ -45,6 +45,4 @@ The following keyboard shortcuts copy the selected text:
 
 These topics describe how selection interacts with other features or how copy behavior may be limited depending on viewer configuration or PDF security settings.
 
-- [Restricting copy operations (permissions)](../security/prevent-copy-and-print)
-- [Toggle text selection](./toggle-text-selection)
-- [Text selection API reference](./reference)
+- [Text Selection API Events](./text-selection-api-events)

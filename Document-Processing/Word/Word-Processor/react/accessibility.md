@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in React Document editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Accessibility 
+title: Accessibility in React DOCX Editor component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion React Document Editor component of Essential JS 2 and more.
+control: Accessibility
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in React Document editor component
+# Accessibility in React Document Editor component
 
-The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component is outlined below.
+The accessibility compliance for the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also referred to as the Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -24,30 +24,34 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 | [Accessibility Checker Validation](https://ej2.syncfusion.com/react/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Axe-core Accessibility Validation](https://ej2.syncfusion.com/react/documentation/common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
+
 <style>
     .post .post-content img {
         display: inline-block;
         margin: 0.5em 0;
     }
 </style>
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## Keyboard interaction
+## Keyboard Accessibility
 
-Document editor supports [keyboard shortcuts](./keyboard-shortcut).
+For keyboard accessibility, the Document Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
-## Ensuring accessibility
+The following accessibility compliance summary applies to the `@syncfusion/ej2-react-documenteditor` package.
 
-The Document editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+## Ensuring Accessibility
 
-The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
+The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/accessibility-cs1" %}
 
-## See also
+## See Also
 
 - [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/common/accessibility)

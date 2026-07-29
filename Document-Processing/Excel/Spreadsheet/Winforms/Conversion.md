@@ -8,14 +8,14 @@ documentation: ug
 ---
 
 # Conversion in Windows Forms Spreadsheet
-This section explains about the conversion of workbook in Spreadsheet into image, PDF and HTML
+This section explains the conversion of a workbook in Spreadsheet to image, PDF, and HTML formats.
 
-## Convert into Image
+## Convert to Image
 
-Spreadsheet provides support to convert a worksheet in to an image of type Bitmap or Metafile based on the input range of rows and columns with all basic formats preserved, By using the [ConvertToImage](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ConvertToImage_System_Int32_System_Int32_System_Int32_System_Int32_) method,worksheet can be converted into an image.
+Spreadsheet provides support to convert a worksheet into an image of type `Bitmap` or `Metafile` based on the input range of rows and columns with all basic formats preserved. By using the [ConvertToImage](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ConvertToImage_System_Int32_System_Int32_System_Int32_System_Int32_) method, you can convert a worksheet into an image.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="C#" %}
 
 IWorksheet sheet = spreadsheet.Workbook.ActiveSheet;
 sheet.UsedRangeIncludesFormatting = false;
@@ -31,16 +31,16 @@ System.Diagnostics.Process.Start("Sample.png");
 {% endhighlight %}
 {% endtabs %}
 
-## Convert into PDF
+## Convert to PDF
 
-Spreadsheet provides support to export the Excel workbook to PDF using ExcelToPdfConverter. 
+Spreadsheet provides support to export the Excel workbook to PDF using `ExcelToPdfConverter`. 
 
-For converting the Excel sheet to PDF, “Syncfusion.ExcelToPDFConverter.Base.dll” and “Syncfusion.Pdf.Base.dll” references should be added.
+For converting the Excel worksheet to PDF, the `Syncfusion.ExcelToPDFConverter.Base.dll` and `Syncfusion.Pdf.Base.dll` references should be added.
 
-Export the Excel workbook as PDF document using [Convert](https://help.syncfusion.com/cr/windowsforms/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert) method of [ExcelToPdfConverter](https://help.syncfusion.com/cr/windowsforms/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) class which is available under the name space “Syncfusion.ExcelToPdfConverter”
+Export the Excel workbook as a PDF document using the [Convert](https://help.syncfusion.com/cr/windowsforms/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html#Syncfusion_ExcelToPdfConverter_ExcelToPdfConverter_Convert) method of the [ExcelToPdfConverter](https://help.syncfusion.com/cr/windowsforms/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) class, which is available in the namespace `Syncfusion.ExcelToPdfConverter`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="C#" %}
 
 ExcelToPdfConverter converter = new ExcelToPdfConverter(spreadsheet.Workbook);
 
@@ -65,16 +65,15 @@ System.Diagnostics.Process.Start("Sample.pdf");
 {% endhighlight %}
 {% endtabs %}
 
-## Convert into HTML
+## Convert to HTML
 
-Spreadsheet provides support to convert the excel workbook into HTML page.
+Spreadsheet provides support to convert the Excel workbook into an HTML page.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="C#" %}
 
 spreadsheet.Workbook.SaveAsHtml("Sample.html", HtmlSaveOptions.Default);
 System.Diagnostics.Process.Start("Sample.html");
 
 {% endhighlight %}
 {% endtabs %}
-
