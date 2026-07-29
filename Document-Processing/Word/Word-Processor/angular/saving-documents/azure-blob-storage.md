@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Azure Blob Storage in Angular DOCX Editor control | Syncfusion
+title: Save Document to Azure Blob Storage in Angular DOCX Editor Syncfusion
 description:  Learn about how to Save document to Azure Blob Storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Azure Blob Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage
+# Save document to Azure Blob Storage using Angular Document Editor
 
 To save a document to Azure Blob Storage, you can follow the steps below.
 
@@ -111,7 +111,7 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 **Step 3:**  Modify the index File in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and send it to the server side for saving in the Azure Blob Storage container.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in the Azure Blob Storage container.
 
 ```typescript
 

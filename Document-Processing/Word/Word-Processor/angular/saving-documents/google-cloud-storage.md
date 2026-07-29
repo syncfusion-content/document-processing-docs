@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Google Cloud Storage in Angular DOCX Editor control | Syncfusion
+title: Save to Google Cloud Storage in Angular DOCX Editor | Syncfusion
 description:  Learn about how to Save document to Google Cloud Storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage
+# Save document to Google Cloud Storage using Angular Document Editor
 
 To save a document to Google Cloud Storage, you can follow the steps below.
 
@@ -134,7 +134,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 
 **Step 3:**  Modify the index File in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and send it to the server side for saving in Google Cloud Storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Cloud Storage.
 
 ```typescript
 

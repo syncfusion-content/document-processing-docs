@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Box cloud file storage in Angular DOCX Editor control | Syncfusion
+title: Save to Box cloud file Storage in Angular DOCX Editor | Syncfusion
 description:  Learn about how to Save document to Box cloud file storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Box cloud file storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Box cloud file storage
+# Save document to Box cloud file storage using Angular Document Editor
 
 To save a document to Box cloud file storage, you can follow the steps below.
 
@@ -129,7 +129,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and send it to the server side for saving in Box cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Box cloud file storage.
 
 ```typescript
 
