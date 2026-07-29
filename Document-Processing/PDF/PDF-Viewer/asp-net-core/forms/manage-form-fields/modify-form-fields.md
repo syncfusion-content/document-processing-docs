@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
 - UI: Tooltip, required, max length, font, appearance.
 ![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
-![Password edited from UI](../../../javascript-es6/images/ui-password-edit.png)
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -172,9 +171,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="editRadio">Modify RadioButton</button>
@@ -200,9 +199,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="editListBox">Edit ListBox</button>
@@ -239,9 +238,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="editDropDown">Edit DropDown</button>
@@ -278,9 +277,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div class="text-center">
@@ -314,9 +313,9 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <button id="editInitial">Edit Initial</button>
@@ -354,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
