@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable print rotation in Vue PDF Viewer
 
-This guide shows how to enable automatic rotation of landscape pages during printing so they match the paper orientation and reduce clipping. Use [`enablePrintRotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableprintrotation) when printing documents that include landscape pages and you want them rotated to match the printer paper orientation.
+This guide shows how to enable automatic rotation of landscape pages during printing so they match the paper orientation and reduce clipping. Use [`enablePrintRotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableprintrotation) when printing documents that include landscape pages, and you want them rotated to match the printer paper orientation.
 
 ## Prerequisites
 

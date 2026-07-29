@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Customize Print Quality in Vue PDF Viewer | Syncfusion
-description: Learn here all about how to customize print quality for PDF Documents in the Syncfusion Vue PDF Viewer component.
+description: Learn how to customize print quality for PDF documents in the Syncfusion Vue PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Print Quality in Vue PDF Viewer
+# Customize print quality in Vue PDF Viewer
 
 This article shows a concise, task-oriented workflow to set and verify print quality for documents rendered by the Vue PDF Viewer by using the [`printScaleFactor`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printscalefactor) property.
 
@@ -98,9 +98,9 @@ export default {
 
 ### 3. Set `printScaleFactor` after instantiation
 
-As an alternative option, the [`printScaleFactor`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printscalefactor) can be dynamically changed during runtime
+As an alternative option, the [`printScaleFactor`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#printscalefactor) can be dynamically changed during runtime.
 
-{% highlight html %}
+{% highlight js %}
 // Update printScaleFactor at runtime
 pdfviewer.ej2Instances.printScaleFactor = 2; // increase print resolution for upcoming prints
 {% endhighlight %}
@@ -116,7 +116,7 @@ Use browser Print Preview or produce a printed/PDF copy to confirm sharpness and
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See Also
+## See also
 
 - [Overview](./overview)
 - [Enable print rotation](./enable-print-rotation)
