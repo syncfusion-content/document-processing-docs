@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Why manual copy from node_modules is required in the Vue PDF Viewer
-description: Understand why certain lazy-loaded assets from ej2-pdfviewer-lib must be copied from node_modules when not using a bundler, and when to reference assets directly in the Vue PDF Viewer.
+title: Why manual copy from node_modules is required in the Syncfusion Vue PDF Viewer
+description: Learn why ej2-pdfviewer-lib assets must be copied from node_modules without a bundler and when to reference them directly in the Syncfusion Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Why Do I Have to Manually Copy Files from node_modules into My App?
+# Why Do I Have to Manually Copy Files from node_modules into My Vue App?
 
 The PDF Viewer supports multiple build systems and can work without a bundler by referencing assets directly using HTML tags. To keep load times efficient, the library is split into smaller modules and uses lazy loading for certain assets.
 

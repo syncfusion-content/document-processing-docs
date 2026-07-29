@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the Vue PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the Vue PDF Viewer.
+title: Fix document loading issues in v23.1+ for the Syncfusion Vue PDF Viewer component
+description: Resolve v23.1+ document rendering failures in the Syncfusion Vue PDF Viewer by calling dataBind before load, checking source URLs, CORS, CSP, and network.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Document Loading Issues in Version 23.1 or Newer in Vue
 
 If a document does not render in the viewer when using version 23.1 or later, use the following troubleshooting checklist to identify and resolve the issue.
 
