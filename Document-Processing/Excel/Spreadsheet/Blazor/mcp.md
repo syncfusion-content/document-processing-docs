@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Blazor Spreadsheet MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet MCP Server accelerates Blazor spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet MCP Server accelerates Blazor spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion Blazor Spreadsheet integration.
 
@@ -180,13 +180,13 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 
 {% promptcards %}
 {% promptcard Spreadsheet Getting Started %}
-#search_docs How do I add and configure the Spreadsheet component in a new Blazor application?
+#search_docs How do I add the Spreadsheet component to a Blazor application?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Loading JSON Data %}
-#search_docs How do I load JSON data from local files or remote APIs into the Spreadsheet?
+{% promptcard Data Binding %}
+#search_docs How do I bind data to the Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -195,8 +195,8 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the Blazor Spreadsheet.
 
 {% promptcards %}
-{% promptcard Formulas and Calculations %}
-#search_docs How do I add and use formulas in the Spreadsheet?
+{% promptcard Formulas %}
+#search_docs How do I use formulas in the Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -211,13 +211,13 @@ Get step-by-step help for adding specific features to the Blazor Spreadsheet.
 Describe the problem in plain language, and let `search_docs` help resolve it.
 {% promptcards %}
 {% promptcard Spreadsheet Not Rendering %}
-#search_docs Why is my Spreadsheet showing a blank grid in the application?
+#search_docs Why is the Spreadsheet not showing any data?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Import and Export Issues %}
-#search_docs Why are Excel import/export operations failing or producing incorrect files in the Spreadsheet?
+#search_docs How do I import and export Excel files in the Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -262,4 +262,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
