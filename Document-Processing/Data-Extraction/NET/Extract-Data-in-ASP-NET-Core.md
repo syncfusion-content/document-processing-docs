@@ -39,7 +39,7 @@ Step 3: Install the [Syncfusion.SmartDataExtractor.Net.Core](https://www.nuget.o
    ![Install SmartDataExtractor .NET Core NuGet package](GettingStarted_images/ASPNETCore_Nuget.png)
 
 Step 4: A default controller named HomeController.cs is added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using System.Text;
@@ -47,11 +47,11 @@ using System.Diagnostics;
 using Syncfusion.SmartDataExtractor;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in the Index.cshtml as shown below.
-
-{% highlight c# tabtitle="C#" %}
-
+{% tabs %}
+{% highlight CSHTML %}
 @{
     Html.BeginForm("ExtractData", "Home", FormMethod.Get);
     {
@@ -61,11 +61,11 @@ Step 5: Add a new button in the Index.cshtml as shown below.
     }
     Html.EndForm();
 }
-
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add a new action method named `ExtractData` in HomeController.cs and include the following code example to extract data as JSON using the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class. Then use the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the DataExtractor object to process the input and export the results in JSON format.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 // Open the input PDF file as a stream.
@@ -86,6 +86,7 @@ using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMod
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Build the project.
 
@@ -124,7 +125,7 @@ dotnet add package Syncfusion.SmartDataExtractor.Net.Core
 ```
 
 Step 5: A default controller named HomeController.cs gets added on creation of ASP.NET Core project. Include the following namespaces in that HomeController.cs file.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.SmartDataExtractor;
@@ -132,10 +133,11 @@ using System.Diagnostics;
 using System.Text;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: A default action method named Index will be present in HomeController.cs. Right-click on Index method and select Go To View where you will be directed to its associated view page Index.cshtml. Add a new button in the Index.cshtml as shown below.
-
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight CSHTML %}
 
 @{
     Html.BeginForm("ExtractData", "Home", FormMethod.Get);
@@ -148,9 +150,10 @@ Step 6: A default action method named Index will be present in HomeController.cs
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add a new action method named `ExportToJson` in HomeController.cs and include the following code example to extract data as JSON using the DataExtractor (help.syncfusion.com in Bing) class. Then use the **ExtractDataAsJson** method of the DataExtractor object to process the input and export the results in JSON format.
-
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 // Open the input PDF file as a stream.
@@ -171,6 +174,7 @@ using (FileStream stream = new FileStream(Path.GetFullPath("Input.pdf"), FileMod
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 

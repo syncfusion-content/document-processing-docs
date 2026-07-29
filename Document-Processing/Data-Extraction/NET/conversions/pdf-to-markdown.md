@@ -62,6 +62,24 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Extract data as Markdown.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
@@ -117,6 +135,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 			
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page index for extraction (example: page 2).
+    extractor.PageRange = New Integer(,) {{2, 2}}
+    ' Extract data as Markdown using the API.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Extract a range of pages to Markdown
@@ -164,6 +202,26 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted Markdown data into an output file.
     File.WriteAllText("Output.md", data, Encoding.UTF8);
 }
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports System.Text
+Imports Syncfusion.SmartDataExtractor
+
+' Open the input PDF file as a stream.
+Using stream As New FileStream("Input.pdf", FileMode.Open, FileAccess.Read)
+    ' Initialize the Data Extractor.
+    Dim extractor As New DataExtractor()
+    ' Set the page range for extraction (pages 1 to 3).
+    extractor.PageRange = New Integer(,) {{1, 3}}
+    ' Extract data as Markdown using the API.
+    Dim data As String = extractor.ExtractDataAsMarkdown(stream)
+    ' Save the extracted Markdown data into an output file.
+    File.WriteAllText("Output.md", data, Encoding.UTF8)
+End Using
 
 {% endhighlight %}
 
