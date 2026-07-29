@@ -48,7 +48,7 @@ This guide explains how to change the thumbnail zoom level in the **Organize Pag
 
 ## Show or hide Zoom Pages button
 
-To enable or disable the **Zoom Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#show-or-hide-the-zoom-pages-option) for the guidelines
+To enable or disable the **Zoom Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#show-or-hide-the-zoom-pages-option) for the guidelines.
 
 ## Troubleshooting
 
