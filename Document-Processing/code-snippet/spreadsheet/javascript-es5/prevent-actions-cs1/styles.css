@@ -1,0 +1,19 @@
+#container {
+    visibility: hidden;
+}
+
+#spreadsheet_sheet_panel {
+  height: 380px;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+body {
+  height: 475px;
+}
