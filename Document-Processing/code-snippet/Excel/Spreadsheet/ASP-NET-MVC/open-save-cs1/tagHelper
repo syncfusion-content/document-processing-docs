@@ -1,0 +1,25 @@
+@using Syncfusion.EJ2
+
+@* 
+    This uses Tag Helpers to set up the Spreadsheet component.
+    The openUrl, saveUrl, and beforeOpen event are configured just like in the Razor example.
+*@
+<ejs-spreadsheet id="spreadsheet" openUrl="Home/Open" allowOpen="true" saveUrl="Home/Save" allowSave="true" beforeOpen="beforeOpen">
+</ejs-spreadsheet>
+
+<script>
+    function beforeOpen(args) {
+        // These options are taken directly from your app.tsx file.
+        // They will be sent to the server with the open request.
+        args.parseOptions = {
+            ignoreStyle: true,
+            ignoreFormat: true,
+            ignoreChart: true,
+            ignoreImage: true,
+            ignoreMergedCell: true,
+            ignoreFormula: true,
+            ignoreValidation: true,
+            ignoreConditionalFormat: true,
+        };
+    }
+</script>
