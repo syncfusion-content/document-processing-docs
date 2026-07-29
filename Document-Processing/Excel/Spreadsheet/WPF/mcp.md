@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Syncfusion WPF SfSpreadsheet MCP Server | Syncfusion
-description: Learn how to configure and use the Syncfusion WPF MCP server for intelligent code generation, documentation, and troubleshooting in WPF SfSpreadsheet applications.
+title: Syncfusion WPF Spreadsheet (SfSpreadsheet) MCP Server | Syncfusion
+description: Learn how to configure Syncfusion WPF MCP server for intelligent code generation, documentation, and troubleshooting in WPF Spreadsheet applications.
 platform: wpf
-control: Getting started with Syncfusion WPF SfSpreadsheet MCP Server
+control: Getting started with Syncfusion WPF Spreadsheet MCP Server
 documentation: ug
 ---
 
-# Syncfusion WPF SfSpreadsheet MCP Server
+# Syncfusion WPF Spreadsheet (SfSpreadsheet) MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerates WPF SfSpreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerates WPF Spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
-These tools speed up development and reinforce best practices for Syncfusion WPF SfSpreadsheet control integration.
+These tools speed up development and reinforce best practices for Syncfusion WPF Spreadsheet control integration.
 
 ## Key Benefits
 
-- **Expert Component Knowledge** - Deep understanding of WPF SfSpreadsheet features such as workbook loading, editing, formatting, formulas, printing, themes, localization, freeze panes, and Excel content import.
+- **Expert Component Knowledge** - Deep understanding of WPF Spreadsheet features such as workbook loading, editing, formatting, formulas, printing, themes, localization, freeze panes, and Excel content import.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -28,8 +28,8 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **WPF SfSpreadsheet application** (existing or new); see [Getting Started with WPF Spreadsheet (SfSpreadsheet)](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started)
-- Required WPF Spreadsheet NuGet package: `Syncfusion.SfSpreadsheet.WPF`. For theme support, install the required Syncfusion WPF theme package such as `Syncfusion.Themes.Windows11Light.WPF`.
+- A **WPF Spreadsheet application** (existing or new); see [Getting Started with WPF Spreadsheet (Spreadsheet)](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started)
+- Required WPF Spreadsheet NuGet package: `Syncfusion.Spreadsheet.WPF`. For theme support, install the required Syncfusion WPF theme package such as `Syncfusion.Themes.Windows11Light.WPF`.
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -173,31 +173,31 @@ You can install the Syncfusion WPF MCP server as a local tool without a global i
 
 **Verifying Installation** Check your editor's MCP Server list for `sf-wpf-mcp` with a **Connected** status to confirm a successful installation.
 
-> **Note:** The MCP server configuration remains `Syncfusion.WPF.MCP` because SfSpreadsheet is a WPF control. The internal package source is configured through `--source https://nexus.syncfusioninternal.com/repository/nuget-hosted/` for .NET 10 and through `--add-source` during local tool installation for .NET 8 / .NET 9. Use WPF SfSpreadsheet-specific prompts to retrieve SpreadsheetEditor guidance and code snippets.
+> **Note:** The MCP server configuration remains `Syncfusion.WPF.MCP` because Spreadsheet is a WPF control. The internal package source is configured through `--source https://nexus.syncfusioninternal.com/repository/nuget-hosted/` for .NET 10 and through `--add-source` during local tool installation for .NET 8 / .NET 9. Use WPF Spreadsheet-specific prompts to retrieve SpreadsheetEditor guidance and code snippets.
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world WPF SfSpreadsheet application development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world WPF Spreadsheet application development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
-**Create a WPF SfSpreadsheet Application**
+**Create a WPF Spreadsheet Application**
 
-Use `search_docs` to get contextual guidance, required NuGet packages, XAML namespace references, and starter code for creating a WPF SfSpreadsheet application.
+Use `search_docs` to get contextual guidance, required NuGet packages, XAML namespace references, and starter code for creating a WPF Spreadsheet application.
 
 {% promptcards %}
-{% promptcard Create WPF SfSpreadsheet Application %}
-#search_docs Create a Syncfusion WPF SfSpreadsheet application with required NuGet packages, XAML namespace, SpreadsheetRibbon, and SfSpreadsheet control.
+{% promptcard Create WPF Spreadsheet Application %}
+#search_docs Create a Syncfusion WPF Spreadsheet application with required NuGet packages, XAML namespace, SpreadsheetRibbon, and Spreadsheet control.
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Open Excel File %}
-#search_docs How to open and load an Excel file in WPF SfSpreadsheet control?
+#search_docs How to open and load an Excel file in WPF Spreadsheet control?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement SpreadsheetEditor Features**
 
-Get step-by-step help for adding specific SpreadsheetEditor features to an existing WPF SfSpreadsheet application.
+Get step-by-step help for adding specific SpreadsheetEditor features to an existing WPF Spreadsheet application.
 
 {% promptcards %}
 {% promptcard Print Spreadsheet %}
@@ -213,41 +213,41 @@ Get step-by-step help for adding specific SpreadsheetEditor features to an exist
 
 {% promptcards %}
 {% promptcard Import Charts Sparklines Pictures Textboxes %}
-#search_docs how to import charts, sparklines, pictures and textboxes in WPF SfSpreadsheet control?
+#search_docs how to import charts, sparklines, pictures and textboxes in WPF Spreadsheet control?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Set Current UI Culture %}
-#search_docs How to Set Current UI Culture to the Application in the WPF SfSpreadsheet Control?
+#search_docs How to Set Current UI Culture to the Application in the WPF Spreadsheet Control?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Apply Theme %}
-#search_docs How do I apply a theme to the WPF SfSpreadsheet control?
+#search_docs How do I apply a theme to the WPF Spreadsheet control?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Freeze Rows and Columns %}
-#search_docs How to freeze and unfreeze rows and columns in WPF SfSpreadsheet Control?
+#search_docs How to freeze and unfreeze rows and columns in WPF Spreadsheet Control?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Troubleshooting**
 
-Describe the problem in plain language, and let `search_docs` help resolve WPF SfSpreadsheet integration or runtime issues.
+Describe the problem in plain language, and let `search_docs` help resolve WPF Spreadsheet integration or runtime issues.
 
 {% promptcards %}
 {% promptcard Spreadsheet Loading Issues %}
-#search_docs Why is my WPF SfSpreadsheet control not loading or displaying the Excel workbook correctly?
+#search_docs Why is my WPF Spreadsheet control not loading or displaying the Excel workbook correctly?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Spreadsheet Editing Issues %}
-#search_docs Why are cell editing, formulas, or formatting not working correctly in WPF SfSpreadsheet control?
+#search_docs Why are cell editing, formulas, or formatting not working correctly in WPF Spreadsheet control?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -255,13 +255,13 @@ Describe the problem in plain language, and let `search_docs` help resolve WPF S
 
 To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Servers:
 
-- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF SfSpreadsheet application with SpreadsheetRibbon and Excel file loading"*).
+- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF Spreadsheet application with SpreadsheetRibbon and Excel file loading"*).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
-- **Stay Consistent** - Keep file organization, naming conventions, XAML naming, and coding standards consistent throughout your WPF SfSpreadsheet project.
+- **Stay Consistent** - Keep file organization, naming conventions, XAML naming, and coding standards consistent throughout your WPF Spreadsheet project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different control or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [WPF SfSpreadsheet documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [WPF Spreadsheet documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -291,4 +291,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

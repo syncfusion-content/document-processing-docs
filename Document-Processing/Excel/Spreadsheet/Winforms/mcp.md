@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion WinForms Spreadsheet MCP Server | Syncfusion
-description: Learn how to configure and use the Syncfusion WinForms MCP server for intelligent code generation, documentation, and troubleshooting in WinForms Spreadsheet applications.
+description: Learn how to configure Syncfusion WinForms MCP server for intelligent code generation, documentation, and troubleshooting in WinForms Spreadsheet applications.
 platform: WindowsForms
 control: Getting started with Syncfusion WinForms Spreadsheet MCP Server
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion WinForms Spreadsheet MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerates WinForms Spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerates WinForms Spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion WinForms Spreadsheet control integration in desktop applications.
 
@@ -332,5 +332,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
-- [Getting Started with WinForms Spreadsheet control](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
