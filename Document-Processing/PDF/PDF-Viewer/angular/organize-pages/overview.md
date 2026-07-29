@@ -30,8 +30,6 @@ The Organize Pages panel supports the following actions:
 
 After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
 
-For a full guide to Organize pages in Angular, see the feature landing page: [Organize pages in Angular PDF Viewer](./organize-pdf).
-
 See also:
 
 - [Toolbar customization for Organize Pages](./toolbar)
