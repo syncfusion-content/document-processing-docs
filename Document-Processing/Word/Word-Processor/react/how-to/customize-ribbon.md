@@ -402,4 +402,4 @@ Explore how to customize the ribbon in the React Document Editor for working wit
 
 ## Related Links
 
-- [File Menu Customization Demo](https://ej2.syncfusion.com/demos#/material/document-editor/ribbon-customization)
+- [File Menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ribbon-customization)
