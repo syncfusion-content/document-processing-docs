@@ -97,7 +97,7 @@ public async Task<IActionResult> OnPostDownloadAsync([FromBody] jsonObjects resp
 }
 ```
 
-4. Open the `appsettings.json` file in the project and add the following lines below the existing "`AllowedHosts`" configuration.
+4. Open the `appsettings.json` file in the project and add the following lines below the existing `AllowedHosts` configuration.
 
 ```json
 {
