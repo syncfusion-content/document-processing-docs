@@ -7,7 +7,7 @@ control: Enable Ruler
 documentation: ug
 ---
 
-## How to enable ruler in ASP.NET Core Document Editor component
+# How to enable ruler in ASP.NET Core Document Editor component
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
