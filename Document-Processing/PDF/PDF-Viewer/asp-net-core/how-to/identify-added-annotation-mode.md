@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Identify annotation mode in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to identify the annotation addition mode in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to identify the current annotation addition mode in the Syncfusion ASP.NET Core PDF Viewer and manage annotation workflows efficiently.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

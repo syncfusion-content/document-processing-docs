@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize text markup annotations in ASP.NET Core PDF Viewer control | Syncfusion
+title: Resize Text Markup Annotations in Syncfusion ASP.NET Core PDF Viewer
 description: Learn here all about resizing text markup annotations in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Resize text markup annotations in ASP.NET Core PDF Viewer
 
-The PDF Viewer has the option to display resizers for text markup annotations using the **enableTextMarkupResizer** property. This feature allows users to adjust the dimensions of the markup after it has been added to the document.
+The PDF Viewer has the option to display resizer for text markup annotations using the **enableTextMarkupResizer** property. This feature allows users to adjust the dimensions of the markup after it has been added to the document.
 
 The default value for this property is `false`.
 

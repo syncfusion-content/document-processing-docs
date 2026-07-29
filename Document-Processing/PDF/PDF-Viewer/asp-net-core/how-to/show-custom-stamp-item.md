@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Display custom items in the custom stamp dropdown
+# Show User-Defined Items in the Custom Stamp Menu
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer supports custom stamp templates, allowing reviewers to use organization-specific seals or approval marks. Populate the custom stamp menu by configuring the [`PdfViewerCustomStampSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerCustomStampSettings.html) object during component initialization.
 
