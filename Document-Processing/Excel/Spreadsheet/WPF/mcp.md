@@ -29,7 +29,7 @@ Before beginning, ensure the following prerequisites are met:
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **WPF Spreadsheet application** (existing or new); see [Getting Started with WPF Spreadsheet (Spreadsheet)](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started)
-- Required WPF Spreadsheet NuGet package: `Syncfusion.Spreadsheet.WPF`. For theme support, install the required Syncfusion WPF theme package such as `Syncfusion.Themes.Windows11Light.WPF`.
+- Required WPF Spreadsheet NuGet package: [`Syncfusion.SfSpreadsheet.WPF`](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.WPF). For theme support, install the required Syncfusion WPF theme package such as [`Syncfusion.Themes.Windows11Light.WPF`](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF).
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)

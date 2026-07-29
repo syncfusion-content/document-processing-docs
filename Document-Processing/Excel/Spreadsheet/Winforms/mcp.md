@@ -29,7 +29,7 @@ Before beginning, ensure the following prerequisites are met:
 - A **compatible MCP client** such as VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key).
 - A **WinForms Spreadsheet application** existing or new; see [Getting Started with WinForms Spreadsheet control](https://help.syncfusion.com/document-processing/excel/spreadsheet/winforms/getting-started).
-- Required WinForms Spreadsheet NuGet package: `Syncfusion.Spreadsheet.Windows`.
+- Required WinForms Spreadsheet NuGet package: [`Syncfusion.Spreadsheet.Windows`](https://www.nuget.org/packages/Syncfusion.Spreadsheet.Windows).
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license, such as one of the following:
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
