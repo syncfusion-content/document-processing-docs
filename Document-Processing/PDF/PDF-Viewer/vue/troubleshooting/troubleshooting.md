@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why manual copy from node_modules is required in the Vue PDF Viewer
-description: Understand why certain lazy-loaded assets from ej2-pdfviewer-lib must be copied from node_modules when not using a bundler, how pdfium.js is handled, and when to reference assets directly in the Vue PDF Viewer.
+description: Understand why certain lazy-loaded assets from ej2-pdfviewer-lib must be copied from node_modules when not using a bundler, and when to reference assets directly in the Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

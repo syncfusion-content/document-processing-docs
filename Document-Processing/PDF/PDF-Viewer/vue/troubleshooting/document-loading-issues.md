@@ -29,7 +29,7 @@ documentLoad: function (args) {
 ```
 
 2. **Verify document source:** Confirm the document URL or local path is correct and reachable. Open the document URL directly in a browser to validate accessibility.
-3. **Network connectivity:** Ensure the application can access remote resources. Intermittent or blocked network requests will prevent the viewer from fetching the document.connection.
+3. **Network connectivity:** Ensure the application can access remote resources. Intermittent or blocked network requests will prevent the viewer from fetching the document.
 4. **Inspect console and network logs:** Use browser developer tools to check for errors, failed network requests (including worker script loads), and HTTP status codes that indicate resource or permission problems.
 5. **Loading Sequence:** Validate the initialization order. Initialize the viewer, call `dataBind()`, then call `load()`.
 6. **Update the viewer:** Verify the project uses a compatible and up-to-date viewer package. Review release notes for version-specific changes that affect initialization or API behavior.

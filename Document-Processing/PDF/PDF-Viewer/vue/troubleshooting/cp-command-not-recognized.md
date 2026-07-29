@@ -28,5 +28,4 @@ Notes:
 - Run the command from the project root so the node_modules path resolves correctly.
 - Windows paths use backslashes (\). Adjust paths if your project structure differs.
 - Ensure sufficient permissions to write to the destination folder.
-
-For cross-platform scripts in package.json, consider tools such as "shx" or "copyfiles" to avoid OS-specific commands.
+- For cross-platform scripts in package.json, consider tools such as shx or copyfiles to avoid OS-specific commands.
