@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize context menu in React DOCX Editor component | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion React Document Editor component by adding custom menu items and handling selection events.
+description: Learn how to customize the context menu in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Customize Context Menu
 platform: document-processing
 documentation: ug
@@ -79,9 +79,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property is intended solely for demonstration and evaluation purposes.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ### Customize Custom Option in Context Menu
 
@@ -140,9 +138,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property is intended solely for demonstration and evaluation purposes.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 #### Customize Added Context Menu Items
 
