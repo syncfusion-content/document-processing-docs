@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Print Quality in Vue PDF Viewer | Syncfusion
-description: Learn how to customize print quality for PDF documents in the Syncfusion Vue PDF Viewer component.
+description: Learn how to customize the print quality of PDF documents in the Syncfusion Vue PDF Viewer component using printScaleFactor.
 platform: document-processing
 control: Print
 documentation: ug
