@@ -67,6 +67,36 @@ The table below shows the performance results of various Markdown document opera
     <td>0.04</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Excel-to-MD/)'| markdownify }}</td>    
 </tr>
+<tr>
+    <td>{{'[MD to DOCX](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)'| markdownify }}</td>
+    <td>100 pages</td>
+    <td>1.5</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/MD-to-Word/)'| markdownify }}</td>    
+</tr>
+<tr>
+    <td>{{'[MD to HTML](https://help.syncfusion.com/document-processing/markdown/conversions/html-conversions)'| markdownify }}</td>
+    <td>100 pages</td>
+    <td>1.4</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/MD-to-HTML/)'| markdownify }}</td>    
+</tr>
+<tr>
+    <td>{{'[MD to PDF](https://help.syncfusion.com/document-processing/markdown/conversions/markdown-to-pdf)'| markdownify }}</td>
+    <td>50 pages</td>
+    <td>2.2</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/MD-to-PDF/)'| markdownify }}</td>    
+</tr>
+<tr>
+    <td>{{'[MD to PPTX](https://help.syncfusion.com/document-processing/powerpoint/conversions/markdown-to-powerpoint)'| markdownify }}</td>
+    <td>100 Slides</td>
+    <td>0.98</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/MD-to-PPTX/)'| markdownify }}</td>    
+</tr>
+<tr>
+    <td>{{'[MD to Excel](https://help.syncfusion.com/document-processing/excel/conversions/markdown-to-excel/overview)'| markdownify }}</td>
+    <td>Table (1000 cells)</td>
+    <td>0.04</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/MD-to-Excel/)'| markdownify }}</td>    
+</tr>
 </table>
 
 N> Execution times are based on the sample documents and may vary with different content or environments.

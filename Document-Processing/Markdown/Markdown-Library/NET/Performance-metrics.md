@@ -52,5 +52,27 @@ The following system configurations were used for benchmarking:
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Open-and-Save-MD-document/).
 
-N> Execution times are based on the sample documents and may vary with different content or environments.
+## Markdown Library Operations
 
+<table>
+<tr>
+    <th>Operation</th>
+    <th>Input Details</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
+    <th>GitHub Example</th>
+</tr>
+<tr>
+    <td>{{'[Create MD file](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/working-with-markdown-document)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.005</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Create-Markdown-file/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Clone and merge](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/loading-and-saving-document)'| markdownify }}</td>
+    <td>100 pages</td>
+    <td>0.8</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Clone-and-Merge/)'| markdownify }}</td>    
+</tr>
+</table>
+
+N> Execution times are based on the sample documents and may vary with different content or environments.
