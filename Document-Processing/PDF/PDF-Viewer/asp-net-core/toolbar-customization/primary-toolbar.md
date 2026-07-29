@@ -13,7 +13,7 @@ The primary toolbar of the PDF Viewer can be customized by rearranging existing 
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableToolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar] (https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableToolbar) property or the [showToolbar] (https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
 
 Use the `enableToolbar` property to show or hide the toolbar:
 

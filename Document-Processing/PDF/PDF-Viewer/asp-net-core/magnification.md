@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Magnification
+# Viewing at Different Zoom Levels
 
 The PDF Viewer includes magnification tools on the default toolbar: Zoom In, Zoom Out, Zoom, Fit Page, and Fit Width. The toolbar can be configured to show or hide magnification tools as needed.
 

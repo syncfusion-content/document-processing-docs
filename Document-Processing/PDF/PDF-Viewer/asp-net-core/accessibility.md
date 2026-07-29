@@ -40,7 +40,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
 
 | Attributes | Purpose |
 | --- | --- |

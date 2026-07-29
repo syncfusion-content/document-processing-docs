@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Interaction mode in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use selection and panning interaction modes in the Syncfusion ASP.NET Core PDF Viewer.
+description: Learn how to switch between selection and panning modes in the Syncfusion ASP.NET Core PDF Viewer to easily select content or navigate pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
 
-# Interaction Mode in PDF Viewer
+# PDF Viewer Interaction Settings
 
 The PDF Viewer provides two interaction modes for working with loaded PDF documents: selection mode and panning mode.
 

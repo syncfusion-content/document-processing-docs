@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from AWS S3
+# Open Documents from Amazon S3 Storage
 
 The ASP.NET Core PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. Both approaches are demonstrated below.
 
