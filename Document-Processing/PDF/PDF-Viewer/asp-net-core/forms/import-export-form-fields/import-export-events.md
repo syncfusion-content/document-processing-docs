@@ -89,8 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endtabs %}
 
 ## Key Notes
-- importStart, importSuccess, importFailed cover the full import life cycle.
-- exportStart, exportSuccess, exportFailed cover the full export life cycle.
+- For each import or export operation, the Start event fires first, followed by either Success or Failed (mutually exclusive).
 
 ## See also
 
@@ -103,5 +102,4 @@ document.addEventListener('DOMContentLoaded', function () {
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
 - [Form validation](../form-validation)
-- [Form fields API](../form-fields-api)
 - [Form fields API](../form-fields-api)
