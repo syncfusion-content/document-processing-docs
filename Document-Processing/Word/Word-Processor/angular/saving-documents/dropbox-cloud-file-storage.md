@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage using Angular Document Editor
+# Save document to Dropbox cloud storage using Angular Document Editor
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 
