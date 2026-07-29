@@ -11,7 +11,7 @@ documentation: ug
 
 If a PDF does not render after upgrading to v23.1+, use the checklist below to resolve common causes. The most frequent fix is calling `dataBind()` before `load()`.
 
-1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
+1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and ensure correct rendering.
 
 ```html
 <button id="viewer" onclick="documentLoad()">Load</button>
