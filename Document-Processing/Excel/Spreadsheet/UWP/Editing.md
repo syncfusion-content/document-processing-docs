@@ -9,13 +9,13 @@ documentation: ug
 
 # Editing in UWP Spreadsheet (SfSpreadsheet)
 
-This section explains about the Editing behavior, Data Validation and Hyperlinks in SfSpreadsheet.
+This section explains the Editing behavior, Data Validation, and Hyperlinks in SfSpreadsheet.
 
 ## Editing
 
-The SfSpreadsheet control provides support for editing, you can modify and commit the cell values in the workbook.
+SfSpreadsheet supports editing, you can modify and commit cell values in the workbook.
 
-By default, Editing will be enabled in `SfSpreadsheet`,but if you want to disable the editing in SfSpreadsheet, then set the `AllowEditing` Property to be false.
+By default, Editing is enabled in SfSpreadsheet. To disable editing, set the `AllowEditing` property to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -32,7 +32,7 @@ void spreadsheet_WorkbookLoaded(object sender, WorkbookLoadedEventArgs args)
 
 #### Start Editing
     
-User can edit a cell programmatically by using `BeginEdit` method.
+You can edit a cell programmatically by using the `BeginEdit` method.
 
 {% tabs %}
 {% highlight c# %}
@@ -44,19 +44,19 @@ User can edit a cell programmatically by using `BeginEdit` method.
 
 #### End Editing
 
-User can end the editing of a cell programmatically in any of the following way,
+You can end editing of a cell programmatically in any of the following ways:
 
-* `ValidateAndEndEdit` - Validates and ends the edit operation for the current cell. if the cancel is "true", then the current cell remains in edit mode else if the validation is true, commits the new value and moved to next cell or else if the validation is false, it reverts the old value and moved to next cell.
+* `ValidateAndEndEdit` - Validates and ends the edit operation for the current cell. If `cancel` is `true`, the current cell remains in edit mode. If validation succeeds, the new value is committed and the cell moves to the next cell; otherwise the old value is reverted and the cell moves to the next cell.
 
-* `EndEdit`   - Commits and ends the edit operation for the current cell, if it is passed with parameter _"true"_, commits the new changes for the cell, else reverts the old value.
+* `EndEdit` - Commits and ends the edit operation for the current cell. When called with the parameter `true`, the new value is committed; otherwise the old value is reverted.
 
 {% tabs %}
 {% highlight c# %}
 
-//Validates and end the edit operation,
+//Validates and ends the edit operation,
 spreadsheet.ActiveGrid.CurrentCell.ValidateAndEndEdit();
 
-//Commits the value and end the edit operation,
+//Commits the value and ends the edit operation,
 spreadsheet.ActiveGrid.CurrentCell.EndEdit(true);
 
 {% endhighlight %}
@@ -64,8 +64,8 @@ spreadsheet.ActiveGrid.CurrentCell.EndEdit(true);
 
 ### Locking or Unlocking a cell
 
-Locking cells allows you to disable editing and formatting the cells when the sheet is protected. By default, every cells are locked in the worksheet.
-But while in protect mode, if you want to edit or format a cell, you can unlock the cells.
+Locking cells disables editing and formatting of the cells when the sheet is protected. By default, all cells in the worksheet are locked.
+When the sheet is protected, you can unlock cells to allow them to be edited or formatted.
 
 {% tabs %}
 {% highlight c# %}
@@ -82,9 +82,9 @@ excelStyle.Locked = true;
 {% endhighlight %}
 {% endtabs %}
 
-### Properties, Methods and Events
+### Properties, Methods, and Events
 
-The order of events when editing and committing a cell value in SfSpreadsheet,
+The order of events when editing and committing a cell value in SfSpreadsheet:
 
 <table>
 <tr>
@@ -110,10 +110,10 @@ Occurs after the current cell is validated.</td></tr>
 <tr>
 <td>
 <code>CurrentCellEndEdit</code></td><td>
-Occurs when the current cell leaves from edit mode.</td></tr>
+Occurs when the current cell exits edit mode.</td></tr>
 </table>
 
-Below table list the properties associated with Editing.
+The table below lists the properties associated with Editing.
 
 <table>
 <tr>
@@ -127,7 +127,7 @@ Gets or sets the value indicating whether to allow the editing operation or not.
 <tr>
 <td>
 <code>EditorSelectionBehavior</code></td><td>
-Gets or sets a value indicating whether editor select all the value or move last position.</td></tr>
+Gets or sets a value indicating whether the editor selects all the value or moves to the last position.</td></tr>
 <tr>
 <td>
 <code>EditTrigger</code></td><td>
@@ -135,10 +135,10 @@ Gets or sets a value indicating any of the trigger options will cause cells to e
 <tr>
 <td>
 <code>IsEditing</code></td><td>
-Gets  whether the current cell is in edit mode or not.</td></tr>
+Gets whether the current cell is in edit mode.</td></tr>
 </table>
 
-Below table list the methods associated with Editing.
+The table below lists the methods associated with Editing.
 
 <table>
 <tr>
@@ -165,11 +165,11 @@ Validates the current cell in the SpreadsheetGrid.</td></tr>
 
 ## Data Validation
 
-Data Validation is a list of rules to limit the type of data or the values that can be entered in the cell.
+Data Validation is a list of rules that limit the type of data or the values that can be entered in a cell.
 
 ### Applying Data Validation at runtime
 
-SfSpreadsheet allows the user to apply the data validation rules at runtime for particular cell or range using `IDataValidation` interface.
+SfSpreadsheet allows you to apply data validation rules at runtime for a particular cell or range using the `IDataValidation` interface.
 
 {% tabs %}
 {% highlight c# %}
@@ -201,7 +201,7 @@ validation.AllowType = ExcelDataType.TextLength;
 validation.CompareOperator = ExcelDataValidationComparisonOperator.LessOrEqual;
 validation.FirstFormula = "4";
 validation.ShowErrorBox = true;
-validation.ErrorBoxText = "Text length should be lesser than or equal 4 characters";
+validation.ErrorBoxText = "Text length should be less than or equal to 4 characters";
 
 //List Validation
 IDataValidation validation = spreadsheet.ActiveSheet.Range["D4"].DataValidation;
@@ -220,20 +220,20 @@ validation.ErrorBoxText = "Sum of the values in A1 and A2 should be greater than
 
 For more reference, please go through the [XlsIO](http://help.syncfusion.com/file-formats/xlsio/working-with-data-validation) UG.
 
-T> If you want to load ComboBox to a cell in SfSpreadsheet, you can apply List Validation to that cell.
+T> To show a ComboBox in a cell in SfSpreadsheet, apply List Validation to that cell.
 
 ## Hyperlink
 
-The Hyperlink is a convenient way to access the web pages, files and browse the data within a worksheet or other worksheets in a workbook. SfSpreadsheet provides support to add, edit and remove the Hyperlinks in the workbook.
+Hyperlinks provide a convenient way to access web pages, files, and data within a worksheet or across other worksheets in a workbook. SfSpreadsheet supports adding, editing, and removing Hyperlinks in the workbook.
 
 ### Add a Hyperlink to a cell
 
-SfSpreadsheet provides support to add hyperlink to a cell and it can be added in the hyperlinks collection using `IHyperlinks` interface. 
+SfSpreadsheet supports adding a hyperlink to a cell through the hyperlinks collection using the `IHyperlinks` interface. 
 
-SfSpreadsheet allows you to add below types of the hyperlink.
+SfSpreadsheet allows you to add the following types of hyperlinks.
 
 * Web URL
-* Cell or range in workbook
+* Cell or range in a workbook
 * E-mail
 * External files
 
@@ -258,7 +258,7 @@ hyperlink2.Address = @"C:\Samples\Local";
 hyperlink2.TextToDisplay = "File Location";
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5, 4));
 
-//Creating a Hyperlink to refer another cell in the workbook,
+//Creating a Hyperlink to refer to another cell in the workbook,
 var range2 = spreadsheet.ActiveSheet.Range["C13"];
 
 IHyperLink hyperlink3 = spreadsheet.ActiveSheet.HyperLinks.Add(range);
@@ -272,18 +272,18 @@ spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(13, 3));
 
 ### Edit or Remove a Hyperlink
 
-SfSpreadsheet provides support to edit or remove the hyperlinks from the range by accessing Hyperlinks collection.
+SfSpreadsheet supports editing or removing hyperlinks from a range by accessing the Hyperlinks collection.
 
 {% tabs %}
 {% highlight c# %}
 
-//To Edit a hyperlink in a cell,
+//To edit a hyperlink in a cell,
 var hyperlink = spreadsheet.ActiveSheet.Range["A5"].Hyperlinks[0];
 hyperlink.TextToDisplay = "Sample";
 hyperlink.Address = "http://help.syncfusion.com";
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5,1));
 
-//To remove a hyperlink in a cell,
+//To remove a hyperlink from a cell,
 var hyperlink = spreadsheet.ActiveSheet.Range["A5"].Hyperlinks.RemoveAt(0);
 spreadsheet.ActiveGrid.InvalidateCell(GridRangeInfo.Cell(5,1));
 

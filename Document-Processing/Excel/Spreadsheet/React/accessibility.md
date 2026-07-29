@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in React Spreadsheet component
 
-The Spreadsheet component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet component is outlined below.
 
@@ -84,9 +84,9 @@ The Spreadsheet component followed the [keyboard interaction](https://www.w3.org
 | Ctrl + Down | Navigate to the last non-blank cell in the same column as the active cell. |
 | Ctrl + Left | Navigate to the non-blank cell before the active cell in the same row. |
 | Ctrl + Right | Navigate to the last non-blank cell in the same row as the active cell. |
-| Shift + Up | Extend the selection of cells to the previous row. | 
-| Shift + Down | Extend the selection of cells to the next row. | 
-| Shift + Left | Extend the selection of cells to the previous column. | 
+| Shift + Up | Extend the selection of cells to the previous row. |
+| Shift + Down | Extend the selection of cells to the next row. |
+| Shift + Left | Extend the selection of cells to the previous column. |
 | Shift + Right | Extend the selection of cells to the next column. |
 | Ctrl + Shift + Up | Extend the cell selection to the previous non-blank cell in the same column as the active cell. |
 | Ctrl + Shift + Down | Extend the cell selection to the last non-blank cell in the same column as the active cell. |
@@ -100,8 +100,8 @@ The Spreadsheet component followed the [keyboard interaction](https://www.w3.org
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
 | Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
+| Left | Move the focus to the previous item in the ribbon content. |
+| Right | Move the focus to the next item in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
 

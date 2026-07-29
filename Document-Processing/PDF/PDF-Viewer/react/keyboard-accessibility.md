@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard accessibility in React Pdfviewer component | Syncfusion
+title: Keyboard accessibility in React PDF Viewer component | Syncfusion
 description: Learn here all about Keyboard accessibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: PDF Viewer
 platform: document-processing
@@ -28,7 +28,7 @@ The React PDF Viewer supports the keyboard interactions listed below.
 |**Shortcuts for text selection**|||
 |Copy the selected text, annotation, or form field|CONTROL + C|COMMAND + C|
 |Cut the selected text, annotation, or form field|CONTROL + X|COMMAND + X|
-|Paste the selected text, annotation, or form field|CONTROL + Y|COMMAND + Y|
+|Paste the selected text, annotation, or form field|CONTROL + V|COMMAND + V|
 |**Shortcuts for general operations**|||
 |Undo the action|CONTROL + Z|COMMAND + Z|
 |Redo the action|CONTROL + Y|COMMAND + Y|

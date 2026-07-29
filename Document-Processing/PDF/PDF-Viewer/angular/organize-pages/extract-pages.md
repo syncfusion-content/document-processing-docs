@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract Pages in Angular PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to extract pages from PDF documents using the Organize Pages UI in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -37,7 +37,7 @@ You can extract by typing page numbers/ranges or by selecting thumbnails.
 
 ![Extract Pages with selected thumbnails](../images/extract-page-selected-thumbnail.png)
 
-Note: Page numbers are 1-based (the first page is 1). Invalid or out-of-range entries are ignored; only valid pages are processed. Consider validating input before extraction to ensure expected results.
+N> Page numbers are 1-based (the first page is 1). Invalid or out-of-range entries are ignored; only valid pages are processed. Consider validating input before extraction to ensure expected results.
 
 ## Extraction options (checkboxes)
 
@@ -269,9 +269,8 @@ export class AppComponent implements OnInit {
 
 ## See also
 
-- [Overview](../overview)
-- [UI interactions](../ui-interactions)
-- [Programmatic support](../programmatic-support)
-- [Toolbar](../toolbar)
+- [Overview](./overview)
+- [Programmatic support](./programmatic-support)
+- [Toolbar](./toolbar)
 - [Events](../events)
-- [Mobile view](../mobile-view)
+- [Mobile view](./mobile-view)

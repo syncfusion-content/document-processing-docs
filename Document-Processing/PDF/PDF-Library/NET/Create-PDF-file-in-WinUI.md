@@ -12,7 +12,7 @@ The [WinUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library)
 
 **Prerequisites:**
 - Install the **Windows App SDK** extension for Visual Studio to use the WinUI 3 project templates. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
-- This guide targets **WinUI 3 Desktop (packaged)** on **.NET 6.0 (Windows) or later**.
+- This guide targets **WinUI 3 Desktop (packaged)** on **.NET 8.0 (Windows) or later**.
 
 
 ## WinUI Desktop app

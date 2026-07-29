@@ -10,20 +10,22 @@ documentation: ug
 
 # Hyperlink in ASP.NET MVC Spreadsheet control
 
-Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowHyperlink) property to enable or disable hyperlink functionality.
+Hyperlinks allow users to navigate to web pages, cell references within the current worksheet, or cells in other worksheets. Use the [`allowHyperlink`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowHyperlink) property to enable or disable hyperlink functionality in the Spreadsheet.
 
-N> * The default value for `allowHyperlink` property is `true`.
+N> * The default value of the `allowHyperlink` property is `true`.
 
 ## Insert Link
 
-You can insert a hyperlink in a worksheet cell for quick access to related information.
+You can insert a hyperlink into a worksheet cell for quick access to related information.
 
-**User Interface**:
+To insert a hyperlink through the user interface:
 
-In the active spreadsheet, click the cell where you want to create a hyperlink. Insert hyperlink can be done by any of the following ways:
-* Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
-* Right-click the cell and then click Hyperlink item in the context menu, or you can press Ctrl+K.
-* Use the `addHyperlink()` method programmatically.
+* Select the cell where you want to insert the hyperlink.
+* Open the **Insert** tab in the Ribbon and choose **Link**.
+* Alternatively, right-click the cell and choose **Hyperlink** from the context menu, or press `Ctrl + K`.
+* Enter the destination and display text in the dialog, and apply the changes.
+
+You can also use the `addHyperlink()` method to insert a hyperlink programmatically.
 
 ## Edit Hyperlink
 
@@ -48,9 +50,9 @@ In the active spreadsheet, click the cell where you want to remove a hyperlink. 
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
 * Use the `removeHyperlink()` method programmatically.
 
-## How to change target attribute
+## Change the hyperlink target
 
-There is an event named `beforeHyperlinkClick` which triggers only on clicking hyperlink. You can customize where to open the hyperlink by using the `target` property in the arguments of that event.
+The `beforeHyperlinkClick` event is triggered before a hyperlink is opened. Use the `target` property in the event arguments to specify where the hyperlink opens.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

@@ -8,9 +8,15 @@ documentation: UG
 
 # Loading and Saving Excel files in AWS Lambda
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **load and save an Excel document in AWS Lambda**.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. This article explains how to **load and save an Excel file in AWS Lambda** using Syncfusion XlsIO.
 
-## Steps to Load and Save an Excel document in AWS Lambda
+## Prerequisites
+
+- An AWS account with permissions to create and invoke Lambda functions.
+- Visual Studio 2019 or later with the **AWS Toolkit for Visual Studio** extension installed.
+- A Syncfusion<sup>&reg;</sup> license key. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
+
+## Steps to Load and Save an Excel file in AWS Lambda
 
 Step 1: Create a new **AWS Lambda project** as follows.
 
@@ -18,7 +24,7 @@ Step 1: Create a new **AWS Lambda project** as follows.
 
 Step 2: Name the application.
 
-![Name the applicatio](Loading-and-Saving_images/AWS_Lambda_img2.png)
+![Name the application](Loading-and-Saving_images/AWS_Lambda_img2.png)
 
 Step 3: Select Blueprint as Empty Function and click **Finish**.
 
@@ -26,15 +32,15 @@ Step 3: Select Blueprint as Empty Function and click **Finish**.
 
 Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
-![Install Syncfusion.XlsIO.Net.Core Nuget Package](Loading-and-Saving_images/AWS_Lambda_img4.png)
+![Install Syncfusion.XlsIO.Net.Core NuGet Package](Loading-and-Saving_images/AWS_Lambda_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the **Syncfusion.Licensing** assembly reference and register a license key in your project. Refer to [How to register the Syncfusion license key](https://help.syncfusion.com/common/essential-studio/licensing/how-to-register-in-an-application) for details.
 
-Step 5: Create a folder and copy the required data files and include the files to the project.
+Step 5: Create a folder named **Data** in the project and copy the required template files (for example, `InputTemplate.xlsx`) into it. Include the files in the project.
 
 ![Create data folder](Loading-and-Saving_images/AWS_Lambda_img5.png)
 
-Step 6: Set the **copy to output directory** to **Copy if newer** to all the data files.
+Step 6: Set **Copy to Output Directory** to **Copy if newer** for all the data files so they are included in the deployment bundle.
 
 ![File properties](Loading-and-Saving_images/AWS_Lambda_img6.png)
 
@@ -56,7 +62,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   application.DefaultVersion = ExcelVersion.Xlsx;
 
   string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "InputTemplate.xlsx");
-  FileStream excelStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+  using FileStream excelStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
   IWorkbook workbook = application.Workbooks.Open(excelStream);
 
   //Access first worksheet
@@ -80,15 +86,15 @@ Step 9: Right-click the project and select **Publish to AWS Lambda**.
 
 ![Publish](Loading-and-Saving_images/AWS_Lambda_img7.png)
 
-Step 10: Create a new AWS profile in the Upload Lambda Function Window. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
+Step 10: In the **Upload Lambda Function** window, create a new AWS profile and enter a name for the Lambda function. Click **Next**.
 
 ![Upload](Loading-and-Saving_images/AWS_Lambda_img8.png)
 
-Step 11: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
+Step 11: In the **Advanced Function Details** window, select a **Role Name** that is backed by an AWS managed policy (for example, `AWSLambdaBasicExecutionRole`). Click **Upload** to deploy the application.
 
 ![Advanced function details](Loading-and-Saving_images/AWS_Lambda_img9.png)
 
-Step 12: After deploying the application, you can see the published Lambda function in **AWS console**.
+Step 12: After the application is deployed, you can see the published Lambda function in the **AWS Lambda console**.
 
 ![AWS Console](Loading-and-Saving_images/AWS_Lambda_img10.png)
 
@@ -98,11 +104,13 @@ Step 13: Edit Memory size and Timeout as maximum in Basic settings of the AWS La
 
 ## Steps to post the request to AWS Lambda
 
-Step 1: Create a new console project.
+The following console application invokes the published AWS Lambda function and writes the returned Excel file to disk.
 
-![Create console application in visual studio](Loading-and-Saving_images/AWS_Lambda_img12.png)
+Step 1: Create a new console project in Visual Studio.
 
-step 2: Install the following **NuGet packages** in your application from [Nuget.org](https://www.nuget.org/).
+![Create console application in Visual Studio](Loading-and-Saving_images/AWS_Lambda_img12.png)
+
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/):
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
@@ -112,7 +120,7 @@ step 2: Install the following **NuGet packages** in your application from [Nuget
 ![Install AWSSDK.Lambda NuGet package](Loading-and-Saving_images/AWS_Lambda_img14.png)
 ![Install Newtonsoft.Json NuGet package](Loading-and-Saving_images/AWS_Lambda_img15.png)
 
-Step 3: Include the following namespaces in **Program.cs** file.
+Step 3: Include the following namespaces in **Program.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -162,7 +170,7 @@ System.Diagnostics.Process.Start(psi);
 {% endhighlight %}
 {% endtabs %}
 
-By executing the program, you will get the **Excel document** as follows.
+By executing the program, you will get the **Excel document** as shown below.
 
 ![Output File](Loading-and-Saving_images/AWS_Lambda_img16.png)
 
