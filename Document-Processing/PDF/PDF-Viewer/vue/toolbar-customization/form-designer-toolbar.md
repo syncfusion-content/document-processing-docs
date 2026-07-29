@@ -342,10 +342,10 @@ export default {
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Primary toolbar customization](./primary-toolbar)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)

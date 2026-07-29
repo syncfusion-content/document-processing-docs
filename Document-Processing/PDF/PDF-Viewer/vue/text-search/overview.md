@@ -33,3 +33,4 @@ The [`extractText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#e
 - [Find Text](./find-text)
 - [Text Search Features](./text-search-features)
 - [Text Search Events](./text-search-events)
+- [Extract Text](../how-to/extract-text)
