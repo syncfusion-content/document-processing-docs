@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion MAUI PDF Viewer MCP Server | Syncfusion
-description: Learn how to configure and use Syncfusion MAUI PDF Viewer MCP server for intelligent code generation, documentation, and troubleshooting in .NET MAUI apps.
-platform: document-processing
-control: Getting started with Syncfusion MAUI PDF Viewer MCP Server
+title: Syncfusion MAUI MCP Server | Syncfusion
+description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting in .NET MAUI apps.
+platform: MAUI
+control: Getting started with Syncfusion MAUI MCP Server
 documentation: ug
 ---
 
-# Syncfusion MAUI PDF Viewer MCP Server
+# Syncfusion MAUI MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate .NET MAUI PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate .NET MAUI application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion component integration.
 
@@ -261,4 +261,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
