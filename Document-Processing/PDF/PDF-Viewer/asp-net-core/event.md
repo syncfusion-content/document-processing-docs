@@ -474,7 +474,7 @@ Example:
 </div>
 
 <script>
-    function CommentEdited(args) {
+    function commentSelected(args) {
         console.log(`Comment selected. Id: ${args.id}`);
     }
 </script>
@@ -492,7 +492,7 @@ Example:
 </div>
 
 <script>
-    function CommentEdited(args) {
+    function commentSelected(args) {
         console.log(`Comment selected. Id: ${args.id}`);
     }
 </script>

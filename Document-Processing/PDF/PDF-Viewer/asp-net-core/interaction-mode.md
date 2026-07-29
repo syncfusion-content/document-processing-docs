@@ -42,7 +42,7 @@ In selection mode, text can be selected and copied from the loaded PDF document.
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/selection.png)
+![Selection mode in the PDF Viewer](./images/selection.png)
 
 ## Panning Mode
 

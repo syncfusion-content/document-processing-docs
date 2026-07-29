@@ -40,7 +40,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -81,8 +81,8 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | | | **Shortcut for text search** |
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> | Open the search toolbar |
 | | | **Shortcut for text selection** |
-| <kbd>CONTROL + C</kbd> | <kbd>CONTROL + C</kbd> | Copy selected text, annotation, or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> | Cut selected text, annotation, or form field |
+| <kbd>CONTROL + C</kbd> | <kbd>COMMAND + C</kbd> | Copy selected text, annotation, or form field |
+| <kbd>CONTROL + X</kbd> | <kbd>COMMAND + X</kbd> | Cut selected text, annotation, or form field |
 | <kbd>CONTROL + V</kbd> | <kbd>COMMAND + V</kbd> | Paste selected text, annotation, or form field |
 | | | **Shortcuts for general operations** |
 | <kbd>CONTROL + Z</kbd> | <kbd>COMMAND + Z</kbd> | Undo the action |

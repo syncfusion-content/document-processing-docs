@@ -43,12 +43,12 @@ The following example shows how to enable magnification:
 
 The following magnification options are available in the default toolbar:
 
-* **ZoomIn**:- Zoom in from the current zoom value.
-* **ZoomOut**:- Zoom out from the current zoom value.
-* **Zoom**:- Zoom to a specific percentage.
-* **FitPage**:- Fit the entire page within the available viewport.
-* **FitWidth**:- Fit the page width to the viewport.
-* **Auto**:- Fits the page content with-in the viewport on resizing action.
+* **ZoomIn**: Zoom in from the current zoom value.
+* **ZoomOut**: Zoom out from the current zoom value.
+* **Zoom**: Zoom to a specific percentage.
+* **FitPage**: Fit the entire page within the available viewport.
+* **FitWidth**: Fit the page width to the viewport.
+* **Auto**: Fits the page content within the viewport on resize.
 
 ![Zoom controls in the PDF Viewer toolbar](./images/zoom.png)
 
