@@ -203,7 +203,7 @@ The PDF Viewer provides comprehensive customization capabilities for the toolbar
 The following customization operations are available:
 
 * **Add custom items** - Add new buttons and controls alongside built-in toolbar items defined by `CustomToolbarItemModel` in [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html)
-* **Show/Hide items** - Show or hide existing toolbar items using [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Pre-defined toolbar items are available with [`ToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems) |
+* **Show/Hide items** - Show or hide existing toolbar items using [`ToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html). Pre-defined toolbar items are available with [`ToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_ToolbarItems)
 * **Enable/Disable items** - Enable or disable toolbar item using `enableToolbarItem()` method
 * **Handle clicks** - Execute custom code when toolbar items are clicked using `toolbarClick` event
 
@@ -354,7 +354,7 @@ The prefix property is used to set the CSS class or icon that should be added as
 The id property within a CustomToolbarItemModel is a compulsory attribute that plays a vital role in toolbar customization. It serves as a unique identifier for each toolbar item, facilitating distinct references and interactions.
 
 When defining or customizing toolbar items, it is mandatory to assign a specific and descriptive id to each item.
-These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel`` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings`` property, you can include these properties to customize the appearance and behavior of each toolbar item.
+These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel` in the context of Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, you can include these properties to customize the appearance and behavior of each toolbar item.
 
 N> When customizing toolbar items, you have the flexibility to include either icons or text based on your design preference.
 
@@ -596,11 +596,11 @@ Add JavaScript functions to handle toolbar button clicks and coordinate with PDF
         else {
             var currentPageNumber = parseInt(currentPageBox.value);
             if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
+                if (currentPageNumber > 0 && currentPageNumber <= pdfViewer.pageCount) {
                     pdfViewer.navigation.goToPage(currentPageNumber);
                 }
                 else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
+                    currentPageBox.value = pdfViewer.currentPageNumber.toString();
                 }
             }
             return true;
@@ -729,11 +729,11 @@ Add JavaScript functions to handle toolbar button clicks and coordinate with PDF
         else {
             var currentPageNumber = parseInt(currentPageBox.value);
             if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
+                if (currentPageNumber > 0 && currentPageNumber <= pdfViewer.pageCount) {
                     pdfViewer.navigation.goToPage(currentPageNumber);
                 }
                 else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
+                    currentPageBox.value = pdfViewer.currentPageNumber.toString();
                 }
             }
             return true;
