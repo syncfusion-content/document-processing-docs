@@ -117,7 +117,7 @@ The PDF Viewer provides options to show or hide grouped items in the built-in to
 {% endhighlight %}
 {% endtabs %}
 
-* Show or hide toolbar items using showToolbarItem:
+* Show or hide toolbar items using `showToolbarItem`:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -288,7 +288,7 @@ The PDF Viewer supports customization of existing toolbar items (add, show, hide
 {% endhighlight %}
 {% endtabs %}
 
-N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+N> Default toolbar items: ['OpenOption', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
 ### Align property
 
@@ -311,9 +311,9 @@ The Prefix property sets the CSS class or icon added as a prefix to the existing
 
 ### ID property
 
-The Id property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
+The ID property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
 
-Assign a specific and descriptive `Id` to each custom toolbar item.
+Assign a specific and descriptive `ID` to each custom toolbar item.
 
 These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel`. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize the appearance and behavior of each toolbar item.
 
