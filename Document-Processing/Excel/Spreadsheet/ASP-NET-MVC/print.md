@@ -16,8 +16,8 @@ The printing functionality allows end-users to print all contents, such as table
 
 To print the active worksheet:
 
-1. Ensure that the Spreadsheet is in focus.
-2. Open the **File** menu in the Ribbon and choose **Print**. Alternatively, press `Ctrl + P`.
+1. Ensure that the spreadsheet is in focus.
+2. Open the **File** menu in the ribbon and choose **Print**. Alternatively, press `Ctrl + P`.
 3. Review the active worksheet in the browser's print dialog.
 4. Select the printer and configure the available browser print settings.
 5. Start the print operation.

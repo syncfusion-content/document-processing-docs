@@ -88,7 +88,7 @@ The following example demonstrates how to select the third column using the `sel
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#getdata) method.
 
 The following example demonstrates how to retrieve the values from the selected cells as a collection programmatically:
 
