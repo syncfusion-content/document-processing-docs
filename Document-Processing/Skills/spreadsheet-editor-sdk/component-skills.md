@@ -9,7 +9,7 @@ keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 
 # Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants
 
-This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated knowledge package that empowers AI assistants (such as GitHub Copilot, Code Studio, Cursor, Claude, and others) to generate accurate code for Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
+This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated knowledge package that empowers AI assistants (such as GitHub Copilot, Code Studio, Cursor, Claude, and others) to generate accurate, production ready Spreadsheet integration code using the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills address common issues with generic AI code suggestions by grounding the assistant in precise Spreadsheet Editor SDK Component APIs, spreadsheet editor patterns, and platform-specific configuration for the following platforms:
 
@@ -20,7 +20,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK Skills a
 | [Blazor](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/overview) | [syncfusion-blazor-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-blazor-spreadsheet-editor) |
 | [ASP.NET Core](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview) | [syncfusion-aspnetcore-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-aspnetcore-spreadsheet-editor) |
 | [ASP.NET MVC](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/overview) | [syncfusion-aspnetmvc-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-aspnetmvc-spreadsheet-editor) |
-| [TypeScript](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | [syncfusion-javascript-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-javascript-spreadsheet-editor) |
+| [avaScript (ES6)](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) | [syncfusion-javascript-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-javascript-spreadsheet-editor) |
 | [Vue](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/overview) | [syncfusion-vue-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-vue-spreadsheet-editor) |
 | [UWP](https://help.syncfusion.com/document-processing/excel/spreadsheet/uwp/overview) | [syncfusion-uwp-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-uwp-spreadsheet-editor) |
 | [WPF](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/overview) | [syncfusion-wpf-spreadsheet-editor](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-wpf-spreadsheet-editor) |
@@ -74,10 +74,10 @@ The terminal will show a list of available skills. Use the arrow keys to navigat
 
 Select skills to install (space to toggle)
 │  ◻ syncfusion-react-spreadsheet-editor
-│  ◻ ssyncfusion-angular-spreadsheet-editor
+│  ◻ syncfusion-angular-spreadsheet-editor
 │  ◻ syncfusion-blazor-spreadsheet-editor
 │  ◻ syncfusion-aspnetcore-spreadsheet-editor
-│  ◻ ssyncfusion-aspnetmvc-spreadsheet-editor
+│  ◻ syncfusion-aspnetmvc-spreadsheet-editor
 │  ◻ syncfusion-javascript-spreadsheet-editor
 │  ◻ syncfusion-vue-spreadsheet-editor
 │  ◻ syncfusion-uwp-spreadsheet-editor
@@ -252,7 +252,7 @@ Yes. Once installed, supported agents automatically detect and load relevant ski
 
 Verify that skills are installed in the correct agent directory, restart the IDE, and confirm that the agent supports external skill files.
 
-## See also
+## See Also
 
 - [Syncfusion Spreadsheet Editor Documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/overview)
 - [Agent Skills Standards](https://agentskills.io/home)
