@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling and zooming in React DOCX Editor | Syncfusion
-description: Learn here all about Scrolling and zooming in the Syncfusion React DOCX Editor of Syncfusion Essential JS 2 and more.
+description: Learn here all about Scrolling and zooming in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Scrolling zooming 
 platform: document-processing
 documentation: ug

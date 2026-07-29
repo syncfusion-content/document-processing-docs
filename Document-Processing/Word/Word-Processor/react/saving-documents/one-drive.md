@@ -190,10 +190,10 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 N> The following NuGet packages are required to use the previous code example:
-N> 1. **Microsoft.Identity.Client**
-N> 2. **Microsoft.Graph**
-N> 3. **Microsoft.Extensions.Configuration**
-N> 4. **Microsoft.Extensions.Configuration.FileExtensions**
-N> 5. **Microsoft.Extensions.Configuration.Json**
+* **Microsoft.Identity.Client**
+* **Microsoft.Graph**
+* **Microsoft.Extensions.Configuration**
+* **Microsoft.Extensions.Configuration.FileExtensions**
+* **Microsoft.Extensions.Configuration.Json**
 
 You can install these packages using the NuGet Package Manager in Visual Studio or Visual Studio Code.

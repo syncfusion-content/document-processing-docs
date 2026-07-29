@@ -58,14 +58,14 @@ documenteditor.selection.sectionFormat.footerDistance = 72;
 
 You can define the number of columns, column width, and space between columns for the pages in a section.
 
-The following code example illustrates how to define a two-column layout for the pages in a section.
+The following code example illustrates how to define the two column layout for the pages in a section.
 
 ```typescript
-var column = new SelectionColumnFormat(documenteditor.selection);
+var column = new SelectionColumnFormat(documentEditor.selection);
 column.width = 216;
 column.space = 36;
-documenteditor.selection.sectionFormat.columns = [column, column];
-documenteditor.selection.sectionFormat.lineBetweenColumns = true;
+documentEditor.selection.sectionFormat.columns = [column, column];
+documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
 ### Online Demo
