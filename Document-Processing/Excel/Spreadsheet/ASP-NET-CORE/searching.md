@@ -16,11 +16,11 @@ N> * The default value for `allowFindAndReplace` property is `true`.
 
 ## Find
 
-The Find feature selects cells containing content that matches the search value within the current worksheet or workbook. It is useful when working with large data sources.
+The **Find** feature selects cells containing content that matches the search value within the current worksheet or workbook. It is useful when working with large data sources.
 
 To find a value:
 
-1. Select the **Search** icon in the Ribbon or press `Ctrl + F` to open the Find dialog.
+1. Select the **Search** icon in the ribbon or press `Ctrl + F` to open the `Find` dialog.
 2. Enter the value to search for.
 3. Select **Find Next** or **Find Previous** to navigate between matching cells.
 4. Open the additional search options to configure the search scope, direction, case sensitivity, or exact-cell matching.
@@ -36,16 +36,16 @@ N> The Find dialog provides the following options:
 
 ## Replace
 
-The Replace feature changes matching cell content within the current worksheet or workbook. The **Replace All** option changes all matching cells within the selected search scope.
+The **Replace** feature changes matching cell content within the current worksheet or workbook. The **Replace All** option changes all matching cells within the selected search scope.
 
 To replace a value:
 
-1. Press `Ctrl + H` to open the Find and Replace dialog.
+1. Press `Ctrl + H` to open the `Find and Replace` dialog.
 2. Enter the value to find and the replacement value.
 3. Select **Replace** to replace the current match.
 4. Select **Replace All** to replace all matching cells within the selected worksheet or workbook scope.
 
-You can also use the `replace()` method to perform Replace and Replace All operations programmatically.
+You can also use the `replace()` method to perform replace and replace all operations programmatically.
 
 ## Go to
 
@@ -61,7 +61,7 @@ You can also use the `goTo()` method to navigate to a cell programmatically.
 
 The following example demonstrates how to find values in the Spreadsheet:
 
-1. Open the **Home** tab in the Ribbon and select the **Search** icon.
+1. Open the **Home** tab in the ribbon and select the **Search** icon.
 2. Enter a value in the search box.
 3. Select **Next** or **Previous** to navigate between matching cells.
 4. Open the additional search options to customize the search.

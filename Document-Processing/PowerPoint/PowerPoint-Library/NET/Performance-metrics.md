@@ -1,6 +1,6 @@
 ---
 title: Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of .NET PowerPoint library with different slide count 
+description: Know about the performance benchmark results of the .NET PowerPoint library with different slide counts
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -15,10 +15,10 @@ The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerp
 The following system configurations were used for benchmarking: 
 
 * **Operating System:** Windows 11
-* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
-* **RAM:** 24GB
+* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics
+* **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v33.1.44](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/33.1.44)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Presentation.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/34.1.29)
 
 ## Open and save Presentation 
 
@@ -46,7 +46,7 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/Open-and-save/.NET/Open-and-save-PowerPoint/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>1.04</td>
+    <td>1.03</td>
 </tr>
 </table>
 
