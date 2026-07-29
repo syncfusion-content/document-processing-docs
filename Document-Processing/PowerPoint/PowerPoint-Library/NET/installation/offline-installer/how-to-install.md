@@ -30,7 +30,7 @@ Step 1: Open the Syncfusion<sup>&reg;</sup> PowerPoint offline installer file fr
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
-    N> The Installer wizard extracts the `syncfusionessentialpowerpoint_(version).exe` dialog, which displays the package's unzip operation.
+    N> The Installer wizard extracts the `syncfusion essentialpowerpoint_(version).exe` dialog, which displays the package's unzip operation.
 
 Step 2: To unlock the Syncfusion<sup>&reg;</sup> offline installer, you have two options:
 
@@ -109,9 +109,9 @@ The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint Insta
 To install through the Command Line in Silent mode, follow the steps below.
 
 1.	Run the Syncfusion<sup>&reg;</sup> PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-2.	The file syncfusionessentialpowerpoint_(version).exe file will be extracted into the Temp directory.
-3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialpowerpoint_(version).exe file will be located in one of the folders.
-4.	Copy the extracted syncfusionessentialpowerpoint_(version).exe file in local drive.
+2.	The file syncfusion essentialpowerpoint_(version).exe file will be extracted into the Temp directory.
+3.	Run %temp%. The Temp folder will be opened. The syncfusion essentialpowerpoint_(version).exe file will be located in one of the folders.
+4.	Copy the extracted syncfusion essentialpowerpoint_(version).exe file in local drive.
 5.	Exit the Wizard.
 6.	Run Command Prompt in administrator mode and enter the following arguments.
 
@@ -121,7 +121,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
     N> [..] – Arguments inside the square brackets are optional.
 
-    **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
+    **Example:** “D:\Temp\syncfusion essentialpowerpoint_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
 	
 7.  Essential Studio<sup>&reg;</sup> for PowerPoint is installed.
@@ -134,15 +134,15 @@ To install through the Command Line in Silent mode, follow the steps below.
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion<sup>&reg;</sup> PowerPoint installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
-2.	The file syncfusionessentialpowerpoint_(version).exe file will be extracted into the Temp directory.
-3.	Run %temp%. The Temp folder will be opened. The syncfusionessentialpowerpoint_(version).exe file will be located in one of the folders.
-4.	Copy the extracted syncfusionessentialpowerpoint_(version).exe file in local drive.
+2.	The file syncfusion essentialpowerpoint_(version).exe file will be extracted into the Temp directory.
+3.	Run %temp%. The Temp folder will be opened. The syncfusion essentialpowerpoint_(version).exe file will be located in one of the folders.
+4.	Copy the extracted syncfusion essentialpowerpoint_(version).exe file in local drive.
 5.	Exit the Wizard.
 6.	Run Command Prompt in administrator mode and enter the following arguments.
    
-    **Arguments:** “Copied installer file path\syncfusionessentialpowerpoint_(version).exe” /uninstall silent 
+    **Arguments:** “Copied installer file path\syncfusion essentialpowerpoint_(version).exe” /uninstall silent 
 
-    **Example:** “D:\Temp\syncfusionessentialpowerpoint_x.x.x.x.exe" /uninstall silent
+    **Example:** “D:\Temp\syncfusion essentialpowerpoint_x.x.x.x.exe" /uninstall silent
 
 
 7.  Essential Studio<sup>&reg;</sup> for PowerPoint is uninstalled.
