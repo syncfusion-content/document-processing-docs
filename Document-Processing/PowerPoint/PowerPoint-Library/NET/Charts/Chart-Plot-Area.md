@@ -182,11 +182,9 @@ The following code snippet illustrates how to add an image to the plot area.
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Append an image to the chart plot area.
-using (FileStream imageStream = new FileStream("Data/Image.png", FileMode.Open, FileAccess.Read))
-{
-    Image image = Image.FromStream(imageStream);
-    chartPlotArea.Fill.UserPicture(image, "image");
-}
+FileStream imageStream = new FileStream("Data/Image.png", FileMode.Open, FileAccess.Read);
+Image image = Image.FromStream(imageStream);
+chartPlotArea.Fill.UserPicture(image, "image");
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}

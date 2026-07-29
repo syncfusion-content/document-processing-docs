@@ -145,7 +145,7 @@ chart.PrimaryValueAxis.Font.Size = 20
 
 ## Text Angle Rotation
 
-The following code snippet illustrates how to set the text rotation angle for the axis title area. The valid range is typically `-90` to `90` degrees.
+The following code snippet illustrates how to set the text rotation angle for the axis title area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -195,7 +195,7 @@ chart.PrimaryValueAxis.MaximumValue = 14.0
 
 ## Set the Number Format in an Axis
 
-The following code snippet illustrates how to set the number format of an axis. Common format strings include `"0.0"`, `"#,##0"`, `"0.00%"`, and `"$#,##0"`.
+The following code snippet illustrates how to set the number format of an axis.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
