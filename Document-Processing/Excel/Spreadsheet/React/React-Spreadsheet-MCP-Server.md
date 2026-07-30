@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Spreadsheet MCP Server | Syncfusion®
+title: React Spreadsheet MCP Server Configuration | Syncfusion®
 description: Install and configure the Syncfusion® React Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
 control: Spreadsheet
 platform: document-processing
@@ -237,7 +237,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 The Syncfusion MCP Server acts as a knowledge bridge between the selected AI model and Syncfusion documentation.
 
-- The tools process requests according to the user’s query without storing any content or prompts.
+- The tools process requests according to the user's query without storing any content or prompts.
 - User prompts are not stored or used for other purposes.
 - Prompts are not used to train Syncfusion models.
 - The assistant provides context; the final output is produced by the selected AI model.
