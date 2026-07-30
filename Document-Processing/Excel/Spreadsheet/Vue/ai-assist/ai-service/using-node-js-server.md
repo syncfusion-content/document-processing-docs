@@ -245,7 +245,7 @@ And returns:
 
 ## Sample
 
-A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
+A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command:
 
 ```bash
 npm start

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile responsiveness in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Mobile responsiveness in EJ2 JavaScript Spreadsheet | Syncfusion
+description: Learn here all about Mobile responsiveness in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Mobile responsiveness 
+control: Mobile responsiveness
 documentation: ug
 ---
 
-# Mobile responsiveness in EJ2 Javascript Spreadsheet control
+# Mobile responsiveness in EJ2 JavaScript Spreadsheet Control
 
 The spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
@@ -15,4 +15,3 @@ You can see the overflowed items of ribbon header, ribbon content, and sheet tab
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)
 
-N> Looking for the full JavaScript Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.

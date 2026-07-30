@@ -215,14 +215,16 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 
 
-3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+3.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
         xmlns:local="using:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+4.Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <Page.DataContext>
@@ -249,4 +251,3 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 - [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
 - [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
 - [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
-

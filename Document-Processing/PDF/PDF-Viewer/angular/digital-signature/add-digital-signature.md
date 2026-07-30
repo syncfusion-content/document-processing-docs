@@ -11,9 +11,9 @@ documentation: ug
 
 This section explains how to **add signature fields** using the Syncfusion **Angular PDF Viewer** and how to apply **digital (PKI) signatures** using the **JavaScript PDF Library**.
 
-N> As instructed by team leads — use the **Angular PDF Viewer only to add & place signature fields**. Use the **JavaScript PDF Library** to apply the *actual cryptographic digital signature*.
+N> Use the **Angular PDF Viewer only to add & place signature fields**. Use the **JavaScript PDF Library** to apply the *actual cryptographic digital signature*.
 
-## Overview (Explanation)
+## Overview
 
 A **digital signature** provides:
 - **Authenticity** – confirms the signer’s identity.
@@ -24,11 +24,12 @@ Syncfusion supports a hybrid workflow:
 - Viewer → **[Design signature fields](../forms/manage-form-fields/create-form-fields#signature-field)**, capture Draw/Type/Upload electronic signature.
 - PDF Library → **[Apply PKCS#7/CMS digital signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature)** using a certificate (PFX/P12).
 
-## Add a Signature Field (How-to)
+## Add a Signature Field
 
 ### Using the UI
-1. Open **Form Designer**.
-2. Select **Signature Field**.
+1. Enable **Form Designer** mode in the PDF Viewer. See [Form Designer overview](../forms/overview).
+2. Open **Form Designer**.
+3. Select **Signature Field**.
 3. Click on the document to place the field.
 4. Configure Name, Tooltip, Required, etc.
 

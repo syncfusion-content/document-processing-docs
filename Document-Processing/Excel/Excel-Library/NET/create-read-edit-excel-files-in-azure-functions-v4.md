@@ -1,13 +1,20 @@
----
+﻿---
 title: Create, read, and edit Excel files in Azure Functions v4 | Syncfusion
 description: Explains how to create, read, and edit Excel documents in Azure Functions v4 using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in in Azure Functions v4
+# Create, read, and edit Excel files in Azure Functions v4
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+
+* An active **Azure subscription**. If you do not have one, see [Create an Azure account](https://azure.microsoft.com/free/).
+* A **Syncfusion license key**. Register it in `Function1.cs` (see the snippet in Step 4a below) or via the `SyncfusionLicense.txt` file placed in the project output directory.
 
 ## Create a simple Excel report
 
@@ -23,11 +30,21 @@ Step 3: Select the framework and click Create button..
 
 ![Select functions worker](Azure-Images/Functions-v4/Functions_Worker.png)
 
-Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your project from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.Net.Core NuGet package](Azure-Images/Functions-v4/Install_NuGet_Create.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+
+Step 4a: Register your Syncfusion license key at the start of the `Run` method (or in a static constructor) in **Function1.cs**. Replace the placeholder with your actual key.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+{% endhighlight %}
+{% endtabs %}
+
+For Azure-hosted deployments, store the key in an **Application Setting** (for example, `SYNCFUSION_LICENSE_KEY`) and read it via `Environment.GetEnvironmentVariable` so the key is not committed to source control.
 
 Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
@@ -232,7 +249,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   };
 
   //Set the content type as Excel document mime type.
-  response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/excel");
+  response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
 
   //Return the response with output Excel document stream.
   return response;
@@ -268,11 +285,11 @@ Step 13: Click the **Publish** button.
 
 ![Click Publish Button](Azure-Images/Functions-v4/Start_Publish_Create.png)
 
-Step 14: Publish has been succeeded.
+Step 14: The publish operation has succeeded.
 
 ![Publish succeeded](Azure-Images/Functions-v4/Publish_Success_Create.png)
 
-Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to ** create Excel document**). You will get the output Excel document as follows.
+Step 15: Go to the Azure portal and open the **Function App**. Click **Get function URL** to copy the function's URL, then paste it into the client sample below to request the Excel document. The output Excel document is shown below.
 
 ![Output File](Azure-Images/Functions-v4/CreateExcel_Function_v4.png)\
 
@@ -283,54 +300,58 @@ Step 1: Create a console application to request the Azure Functions API.
 Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions and get the resultant Excel document.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-FileStream imageStream = new FileStream("../../../AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read);
-imageStream.Position = 0;
-
-//Saves the Excel document in memory stream.
-MemoryStream inputStream = new MemoryStream();
-imageStream.CopyTo(inputStream);
-inputStream.Position = 0;
-
-try
+// Wrap all streams in `using` for proper disposal.
+// Tip: prefer HttpClient over the legacy WebRequest/HttpWebRequest APIs for new code.
+using (FileStream imageStream = new FileStream("../../../AdventureCycles-Logo.png", FileMode.Open, FileAccess.Read))
 {
-    Console.WriteLine("Please enter your Azure Functions URL :");
-    string functionURL = Console.ReadLine();
+    //Saves the Excel document in memory stream.
+    using (MemoryStream inputStream = new MemoryStream())
+    {
+        imageStream.CopyTo(inputStream);
+        inputStream.Position = 0;
 
-    //Create HttpWebRequest with hosted azure functions URL.                
-    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(functionURL);
+        try
+        {
+            Console.WriteLine("Please enter your Azure Functions URL :");
+            string functionURL = Console.ReadLine();
 
-    //Set request method as POST
-    req.Method = "POST";
+            //Create HttpWebRequest with hosted azure functions URL.
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(functionURL);
 
-    //Get the request stream to save the Excel document stream
-    Stream stream = req.GetRequestStream();
+            //Set request method as POST
+            req.Method = "POST";
 
-    //Write the Excel document stream into request stream
-    stream.Write(inputStream.ToArray(), 0, inputStream.ToArray().Length);
+            //Write the image stream directly to the request stream
+            using (Stream stream = req.GetRequestStream())
+            {
+                inputStream.Position = 0;
+                inputStream.CopyTo(stream);
+            }
 
-    //Gets the responce from the Azure Functions.
-    HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-
-    //Saves the Excel stream.
-    FileStream excelStream = File.Create("Sample.xlsx");
-    res.GetResponseStream().CopyTo(excelStream);
-
-    //Dispose the streams
-    inputStream.Dispose();
-    excelStream.Dispose();
-}
-catch (Exception ex)
-{
-    throw;
+            //Gets the responce from the Azure Functions.
+            using (HttpWebResponse res = (HttpWebResponse)req.GetResponse())
+            {
+                //Saves the Excel stream.
+                using (FileStream excelStream = File.Create("Sample.xlsx"))
+                {
+                    res.GetResponseStream().CopyTo(excelStream);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Azure%20V4%20Function/Create%20Excel). 
 
-## Read and Edit Excel file
+## Read and Edit an Excel File
 
-The below code snippet illustrates how to read and edit an Excel file in Azure Functions v4.
+The following code snippet illustrates how to read and edit an Excel file in Azure Functions v4.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -375,7 +396,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   };
 
   //Set the content type as Excel document mime type.
-  response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/excel");
+  response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
 
   //Return the response with output Excel document stream.
   return response;
@@ -387,5 +408,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.
 

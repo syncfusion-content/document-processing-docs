@@ -74,27 +74,23 @@ step 8: Add the following code snippet in **Function.cs** to **convert a PowerPo
 public string FunctionHandler(string input, ILambdaContext context)
 {
     string filePath = Path.GetFullPath(@"Data/Input.pptx");
-    //Open the file as Stream
-    using (FileStream fileStreamInput = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+    //Open the existing PowerPoint presentation.
+    using (IPresentation pptxDoc = Presentation.Open(filePath))
     {
-        //Open the existing PowerPoint presentation with loaded stream.
-        using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+        //Hooks the font substitution event.
+        pptxDoc.FontSettings.SubstituteFont += FontSettings_SubstituteFont;
+        //Convert the PowerPoint document to PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Hooks the font substitution event.
-            pptxDoc.FontSettings.SubstituteFont += FontSettings_SubstituteFont;
-            //Convert the PowerPoint document to PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Create the MemoryStream to save the converted PDF.
-                MemoryStream pdfStream = new MemoryStream();
-                //Save the converted PDF document to MemoryStream.
-                pdfDocument.Save(pdfStream);
-                //Unhooks the font substitution event after converting to PDF.
-                pptxDoc.FontSettings.SubstituteFont -= FontSettings_SubstituteFont;
-                pdfStream.Position = 0;
-                return Convert.ToBase64String(pdfStream.ToArray());
-            }
-        }           
+            //Create the MemoryStream to save the converted PDF.
+            MemoryStream pdfStream = new MemoryStream();
+            //Save the converted PDF document to MemoryStream.
+            pdfDocument.Save(pdfStream);
+            //Unhooks the font substitution event after converting to PDF.
+            pptxDoc.FontSettings.SubstituteFont -= FontSettings_SubstituteFont;
+            pdfStream.Position = 0;
+            return Convert.ToBase64String(pdfStream.ToArray());
+        }
     }
 }
 
@@ -133,7 +129,7 @@ Step 13: Edit Memory size and Timeout as maximum in General configuration of the
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-PowerPoint-Presentation-to-PDF.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
