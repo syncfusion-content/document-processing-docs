@@ -11,7 +11,7 @@ documentation: ug
 
 The collaborative editing support allows you to work at a spreadsheet collaboratively with other users. Multiple users can access to the the same spreadsheet simultaneously.
 
-> * To use Collaborative editing, inject the `CollaborativeEditing` module in the spreadsheet.
+> To use Collaborative editing, inject the `CollaborativeEditing` module in the spreadsheet.
 
 ## Dependencies
 

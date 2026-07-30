@@ -87,7 +87,7 @@ deployment  = Your_Deployment_Name
 apiVersion  = Your_Azure_OpenAI_API_Version
 ```
 
-> **Important:** Add `.env` to `.gitignore` to prevent exposing secrets.
+>*Important:** Add `.env` to `.gitignore` to prevent exposing secrets.
 
 ## Configure required modules
 
