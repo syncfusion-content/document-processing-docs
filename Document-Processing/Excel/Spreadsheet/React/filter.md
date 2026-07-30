@@ -7,24 +7,24 @@ platform: document-processing
 documentation: ug
 ---
 
-# Filter in React Spreadsheet component
+# Filter in React Spreadsheet Component
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 
-> * The default value for `allowFiltering` property is `true`.
+> The default value for `allowFiltering` property is `true`.
 
 By default, the `Filter` module is injected internally into Spreadsheet to perform filtering.
 
-## Apply filter on UI
+## Apply filter in the UI
 
 In the active sheet, select a range of cells to filter by value of the cell. The filtering can be done by any of the following ways:
 
-* Select the filter item in the Ribbon toolbar.
-* Right-click the sheet, select the filter item in the context menu.
+* Choose the **Filter** item in the Ribbon toolbar.
+* Right-click the sheet and select the **Filter** item from the context menu.
 * Use the [`applyFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method programmatically.
-* Use `Ctrl + Shift + L` keyboard shortcut to apply the filter.
+* Use the `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
-> * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
+> Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
 ## Filter by criteria
 
@@ -118,7 +118,7 @@ The following features have some limitations in Filter:
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

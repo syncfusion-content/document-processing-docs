@@ -67,7 +67,6 @@ import {
     </div>
   `,
   providers: [
-    // Angular DI is the Angular equivalent of PdfViewer.Inject(...)
     LinkAnnotationService,
     BookmarkViewService,
     MagnificationService,
@@ -86,7 +85,7 @@ import {
 export class AppComponent {
   @ViewChild('pdfviewer', { static: true }) pdfViewer!: PdfViewerComponent;
 
-  // Same sources as in your JS
+  // Document and resource URLs
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 

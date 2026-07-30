@@ -223,7 +223,7 @@ export class AppComponent {
 
 - Annotation toolbar tools do not appear.
     - **Cause**: The items are not valid [`AnnotationToolbarItem`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationtoolbaritem) strings or the viewer is not injected with [`AnnotationService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) / [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) modules.
-    - **Solution**: Confirm services in providers includes [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) and [`AnnotationService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) and use valid item names.
+    - **Solution**: Confirm services in providers include [`ToolbarService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar) and [`AnnotationService`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation) and use valid item names.
 
 ## Related topics
 

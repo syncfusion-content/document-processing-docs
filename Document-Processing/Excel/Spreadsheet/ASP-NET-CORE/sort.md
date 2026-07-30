@@ -95,11 +95,11 @@ N> * The current sorting functionality supports sorting based on cell values onl
 
 ### Custom sort dialog
 
-The custom sort dialog allows you to sort multiple columns in the selected range. The dialog appears when you select **Custom Sort** from the Ribbon or context menu. By default, the first column in the selected range is added as a sort criterion and cannot be removed. Use **Add Column** to add criteria with different sort orders. To remove an added criterion, select its delete icon.
+The custom sort dialog allows you to sort multiple columns in the selected range. The dialog appears when you select **Custom Sort** from the ribbon or context menu. By default, the first column in the selected range is added as a sort criterion and cannot be removed. Use **Add Column** to add criteria with different sort orders. To remove an added criterion, select its delete icon.
 
 You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Thus, multiple columns can be specified with different sort order. The newly added sort criteria items can be removed using the `delete` icons at the end of each items.
 
-You can refer to the [`Data contains header`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/sort#data-contains-header) topic to learn more about `Data contains header` checkbox. To learn more about `Case sensitive` checkbox, you can refer to [`Case sensitive sort`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/sort#case-sensitive-sort) topic.
+You can refer to the [`Data contains header`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/sort#data-contains-header) topic to learn more about `Data contains header` checkbox. To learn more about `Case sensitive` checkbox, you can refer to [`Case sensitive sort`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/sort#case-sensitive-sort) topic.
 
 ### Passing sort criteria manually
 

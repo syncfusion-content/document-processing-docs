@@ -1,16 +1,17 @@
 ---
 title: NuGet Packages for Excel to PDF | Syncfusion
-description: This section illustrates the NuGet packages required to perform Excel to PDF conversion in various platforms and frameworks.
+description: Lists the NuGet packages required to perform Excel to PDF conversion on various .NET platforms and frameworks.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# NuGet Packages Required for Excel to PDF conversion
+# NuGet Packages Required for Excel to PDF Conversion
 
-## Converting Excel document to PDF
+## Converting an Excel Workbook to PDF
 
-For converting Excel document into PDF, the following NuGet packages need to be installed in your application.
+To convert an Excel workbook to PDF, install the NuGet package that matches your target platform and framework.
+
 
 <table>
 <thead>

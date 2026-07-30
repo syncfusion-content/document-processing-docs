@@ -24,7 +24,7 @@ N> This guide assumes you have an existing Ionic Angular project (v8.0+) with An
 
 ## Tutorial – Create Ionic Angular Application
 
-## Step 1: Create an Ionic Angular App
+### Step 1: Create an Ionic Angular App
 
 If you don't have an Ionic Angular project, create one:
 
@@ -33,7 +33,8 @@ ionic start deployment-docs tabs --type=angular
 ```
 
 ### Step 2: Run the Application
-Start the Application
+
+Start the application:
 
 ```bash
 ionic serve
@@ -101,7 +102,7 @@ export class Tab1Page {
 }
 ```
 
-### Step 5: Add Syncfusion Styles (app.css)
+### Step 5: Add Syncfusion Styles (global.scss)
 
 Place the Syncfusion CSS imports in your global stylesheet (`src/global.scss`).
 
@@ -117,7 +118,7 @@ Place the Syncfusion CSS imports in your global stylesheet (`src/global.scss`).
 @import '../node_modules/@syncfusion/ej2-angular-pdfviewer/styles/material.css';
 ```
 
-## Step 6: Run the Application
+### Step 6: Run the Application
 
 Start the development server:
 
