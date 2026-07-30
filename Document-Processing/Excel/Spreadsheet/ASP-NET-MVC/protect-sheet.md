@@ -32,7 +32,7 @@ The available `protectSettings` options in spreadsheet are,
 | `Format Columns` | Allows column formatting. |
 | `Insert Link` | Allows hyperlink insertion. |
 
-N> * The default value of each `protectSettings` option is `false`.
+N> The default value of each `protectSettings` option is `false`.
 
 By default, the `Protect Sheet` module is injected internally into the Spreadsheet to perform sheet protection function.
 

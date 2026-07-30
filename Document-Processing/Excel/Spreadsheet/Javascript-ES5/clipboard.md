@@ -23,7 +23,7 @@ Cut can be performed in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
 
 * Using the [`cut`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cut) method.
 
@@ -37,7 +37,7 @@ Copy can be performed in one of the following ways:
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
 
 * Using the [`copy`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#copy) method.
 
@@ -56,7 +56,7 @@ Paste can be performed in one of the following ways:
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
 
 * Using the [`paste`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#paste) method.
 
