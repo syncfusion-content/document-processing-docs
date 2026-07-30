@@ -32,28 +32,16 @@ The table below shows the performance results of various Markdown document opera
     <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>{{'[DOCX to MD](https://help.syncfusion.com/document-processing/word/conversions/word-to-markdown-conversion)'| markdownify }}</td>
+    <td>{{'[Word to MD](https://help.syncfusion.com/document-processing/word/conversions/word-to-markdown-conversion)'| markdownify }}</td>
     <td>100 pages</td>
     <td>1.6</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/DOCX-to-MD/)'| markdownify }}</td>    
-</tr>
-<tr>
-    <td>{{'[RTF to MD](https://help.syncfusion.com/document-processing/word/conversions/rtf-conversions)'| markdownify }}</td>
-    <td>100 pages</td>
-    <td>4.4</td>
-    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/RTF-to-MD/)'| markdownify }}</td>    
 </tr>
 <tr>
     <td>{{'[HTML to MD](https://help.syncfusion.com/document-processing/markdown/conversions/html-conversions)'| markdownify }}</td>
     <td>100 pages</td>
     <td>5.3</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/HTML-to-MD/)'| markdownify }}</td>    
-</tr>
-<tr>
-    <td>{{'[PDF to MD](https://help.syncfusion.com/document-processing/data-extraction/net/conversions/pdf-to-markdown)'| markdownify }}</td>
-    <td>50 pages</td>
-    <td>186</td>
-    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/PDF-to-MD/)'| markdownify }}</td>    
 </tr>
 <tr>
     <td>{{'[PPTX to MD](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-markdown)'| markdownify }}</td>

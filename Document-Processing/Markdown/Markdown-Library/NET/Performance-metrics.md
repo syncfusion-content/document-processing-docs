@@ -62,7 +62,7 @@ You can find the sample used for this performance evaluation on [GitHub](https:/
     <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>{{'[Create MD file](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/working-with-markdown-document)'| markdownify }}</td>
+    <td>{{'[Create Markdown file](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/working-with-markdown-document)'| markdownify }}</td>
     <td>2 pages</td>
     <td>0.005</td>
     <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Create-Markdown-file/)'| markdownify }}</td>
