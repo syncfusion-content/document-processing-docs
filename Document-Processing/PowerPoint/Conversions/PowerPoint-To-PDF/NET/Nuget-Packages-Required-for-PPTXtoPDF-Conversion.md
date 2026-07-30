@@ -36,18 +36,10 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -92,6 +84,14 @@ The following NuGet packages need to be included in your application based on th
 {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}}<br/></td>
 <td>
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET MVC4
+</td>
+<td>
+{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc4/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -169,18 +169,10 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -224,6 +216,13 @@ ASP.NET<br/></td>
 Xamarin<br/></td>
 <td>
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}<br/>
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET MVC4<br/></td>
+<td>
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -272,19 +271,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-* Install-package Syncfusion.PresentationToPdfConverter.AspNet.MVC4<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4
-</td>
-<td>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.AspNet.MVC4 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4 -RemoveDependencies  
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
@@ -293,7 +279,7 @@ ASP.NET MVC5
 </td>
 <td>
 * Uninstall-package Syncfusion.PresentationToPdfConverter.AspNet.MVC5 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC5 -RemoveDependencies  
+* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC5 -RemoveDependencies
 </td>
 </tr>
 <tr>
