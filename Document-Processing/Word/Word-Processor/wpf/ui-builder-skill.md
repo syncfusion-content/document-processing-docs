@@ -28,7 +28,7 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
-## Key Benefits
+## Key benefits
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed WPF components rather than just partial code snippets.
@@ -102,7 +102,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WPF UI Builder.
 
-## How the Syncfusion® WPF UI Builder Skill Works with DOCX Editor
+## How the Syncfusion® WPF UI builder Skill works with DOCX Editor
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level layout intent.
 2. **Project Detection** — Automatically detects project framework and existing themes.
@@ -125,7 +125,7 @@ Key enforcement points:
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
-## Using the AI Assistant
+## Using the AI assistant
 
 After installing WPF UI Builder with APM, the relevant agent and skill files are added to your project under:
 
@@ -169,7 +169,7 @@ Ensure the interaction between the DataGrid and editor is seamless, and maintain
 
 Generated code follows best practices with well-structured XAML markup, proper event wiring and binding setup, strong C# typing, DPI awareness, and built-in security measures such as input validation and safe data handling.
 
-## Best Practices
+## Best practices
 
 Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
@@ -205,7 +205,7 @@ Yes — the generated WPF controls include clear integration points for style ad
 **Does it modify files automatically?**
 The skill proposes changes and requires confirmation for insertion; automatic dependency installation may be offered depending on agent permissions.
 
-## See Also
+## See also
 
 - [Agent Skills Standards](https://agentskills.io/home)
 - [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
