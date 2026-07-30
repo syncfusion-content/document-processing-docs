@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Customize tool bar in Vue Document editor component | Syncfusion
-description: Learn here all about Customize tool bar in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
-control: Customize tool bar 
+title: Customize the toolbar in the Vue DOCX Editor component | Syncfusion
+description: Learn here all about how to customize the toolbar in the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+control: Customize the toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tool bar in Vue Document editor component
+# Customize the toolbar in the Vue DOCX Editor component
 
-## How to customize existing toolbar in DocumentEditorContainer
+## How to customize the existing toolbar in DocumentEditorContainer
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container allows you to customize (add, show, hide, enable, and disable) the existing items in a toolbar.
 
-* Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and included with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
 * Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/toolbarItem/).
-* Enable, Disable -  Toolbar items can be enabled or disable using [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/toolbar#enableItems)
+* Enable, Disable - Toolbar items can be enabled or disabled using the [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/toolbar#enableItems) API.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -37,7 +37,7 @@ const onWrapText = function (text) {
   let content = '';
     const index = text.lastIndexOf(' ');
     if (index !== -1) {
-        content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "<div>";
+        content = text.slice(0, index) + "<div class='e-de-text-wrap'>" + text.slice(index + 1) + "</div>";
     } else {
         content = text;
     }
@@ -58,7 +58,7 @@ provide('DocumentEditorContainer', [Toolbar]);
 const onToolbarClick = function (args) {
   switch (args.item.id) {
     case 'Custom':
-      //Disable image toolbar item.
+      //Disable the image toolbar item.
       container.value.ej2Instances.toolbar.enableItems(4, false);
       break;
   }
@@ -102,7 +102,7 @@ export default {
     onToolbarClick: function (args) {
       switch (args.item.id) {
         case 'Custom':
-          //Disable image toolbar item.
+          //Disable the image toolbar item.
           this.$refs.container.ej2Instances.toolbar.enableItems(4, false);
           break;
       }
@@ -168,7 +168,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
->Note: Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.
+N> The default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.
 
 ## Online Demo
 
