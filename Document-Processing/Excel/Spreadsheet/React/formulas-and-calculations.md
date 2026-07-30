@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Formulas in React Spreadsheet component
+# Formulas in React Spreadsheet Component
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component supports formulas, allowing you to perform calculations on worksheet data. Formulas can reference cells from the same sheet or from different sheets, enabling dynamic and flexible data analysis.
 
@@ -34,7 +34,7 @@ The React Spreadsheet Editor component provides a variety of features for workin
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

@@ -31,7 +31,7 @@ cd angular-ssr-pdfviewer
 
 ### Step 2: Run the Application
 
-To Start the application use the following commands:
+To start the application, use the following commands:
 
 ```bash
 npm run build

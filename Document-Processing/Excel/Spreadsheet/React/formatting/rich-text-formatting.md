@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rich Text Formatting in React Spreadsheet component | Syncfusion
+title: Rich Text Formatting in React Spreadsheet Component | Syncfusion
 description: Learn how to apply rich text formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Formatting
 platform: document-processing
@@ -32,7 +32,7 @@ You can apply subscript and superscript formatting in following ways:
 
 1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
 
-![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+![Subscript and superscript in Spreadsheet](../images/spreadsheet_richtext.gif)
 
 2. You can define the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
@@ -58,7 +58,7 @@ You can apply subscript and superscript formatting in following ways:
                 ] }, 'A5');
 ```
 
-The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+The following code example shows subscript and superscript formatting in cells of the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
