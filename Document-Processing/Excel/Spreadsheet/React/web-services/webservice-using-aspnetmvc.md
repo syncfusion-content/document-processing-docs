@@ -17,7 +17,7 @@ This guide explains how to set up and connect local web services for open and sa
 
 Follow the official Microsoft tutorial to create an ASP.NET MVC 5 project:
 
-[Getting Started with ASP.NET MVC 5 | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
+[Getting Started with ASP.NET MVC 5 (Microsoft Learn)](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
 
 ### Install Required Dependencies
 
