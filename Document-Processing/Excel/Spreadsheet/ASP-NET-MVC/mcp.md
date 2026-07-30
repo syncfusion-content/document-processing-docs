@@ -75,12 +75,7 @@ If you have the .NET 10 SDK installed, you can directly add the following config
     "sf-aspnetmvc-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": [
-        "Syncfusion.AspNetMvc.MCP",
-        "--source",
-        "https://nexus.syncfusioninternal.com/repository/nuget-hosted/",
-        "--yes"
-      ],
+      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -100,12 +95,7 @@ If you have the .NET 10 SDK installed, you can directly add the following config
     "sf-aspnetmvc-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": [
-        "Syncfusion.AspNetMvc.MCP",
-        "--source",
-        "https://nexus.syncfusioninternal.com/repository/nuget-hosted/",
-        "--yes"
-      ],
+      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -125,14 +115,8 @@ If you have the .NET 10 SDK installed, you can directly add the following config
 {
   "mcpServers": {
     "sf-aspnetmvc-mcp": {
-      "type": "stdio",
       "command": "dnx",
-      "args": [
-        "Syncfusion.AspNetMvc.MCP",
-        "--source",
-        "https://nexus.syncfusioninternal.com/repository/nuget-hosted/",
-        "--yes"
-      ],
+      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -152,13 +136,9 @@ If you have the .NET 10 SDK installed, you can directly add the following config
 {
   "mcpServers": {
     "sf-aspnetmvc-mcp": {
-      "type": "stdio",
       "command": "dnx",
       "args": [
-        "Syncfusion.AspNetMvc.MCP",
-        "--source",
-        "https://nexus.syncfusioninternal.com/repository/nuget-hosted/",
-        "--yes"
+        "Syncfusion.AspNetMvc.MCP", "--yes"
       ],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
