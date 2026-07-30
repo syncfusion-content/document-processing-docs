@@ -191,7 +191,7 @@ The following features are not supported in Formatting:
 
 Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowconditionalformat) property.
 
-> * The default value for the `allowConditionalFormat` property is `true`.
+> The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 

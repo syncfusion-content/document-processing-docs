@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Syncfusion ASP.NET MVC PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for ASP.NET MVC PDF Viewer.
+title: Syncfusion MAUI PDF Viewer MCP Server | Syncfusion
+description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting of the MAUI PDF Viewer component.
 platform: document-processing
-control: PDF Viewer
+control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion ASP.NET MVC PDF Viewer MCP Server
+# Syncfusion .NET MAUI PDF Viewer MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer MCP Server accelerates ASP.NET MVC PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI MCP Server accelerates development of the [.NET MAUI PDF Viewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) control by providing deep, component-specific knowledge directly in your AI-powered IDE. Through [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration, you get quick access to PDF Viewer documentation, API references, and code-generation features without leaving the development environment.
 
-These tools speed up development and reinforce best practices for ASP.NET MVC PDF Viewer integration.
+These tools speed up development and reinforce best practices for embedding, customizing, and extending the MAUI PDF Viewer in your apps.
 
 ## Key Benefits
 
-- **Expert PDF Viewer Knowledge** - Deep understanding of ASP.NET MVC PDF Viewer component (SfPdfViewer) and its implementation patterns.
+- **Expert PDF Viewer Knowledge** - Deep understanding of the .NET MAUI PDF Viewer control, including viewing, annotation, form filling, redaction, search, and signature workflows.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -28,10 +28,10 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- An **ASP.NET MVC application** (existing or new); see [ASP.NET MVC PDF Viewer documentation](./getting-started)
+- A **.NET MAUI application** (existing or new) that targets the [.NET MAUI PDF Viewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) control; see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
-  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
+  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)  
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
 ### Getting Your API Key
@@ -59,10 +59,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-maui-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -79,10 +79,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-maui-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -101,9 +101,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-maui-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -122,9 +122,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-maui-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.Maui.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -141,25 +141,25 @@ Create a configuration file in your project folder to install the server for you
 
 **For .NET 8 / .NET 9 (using a local tool):**
 
-You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the official [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion MAUI MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
-1. Install the Syncfusion ASP.NET MVC MCP tool locally:
+1. Install the Syncfusion MAUI MCP tool locally:
 
     ````bash
-    dotnet tool install Syncfusion.AspNetMVC.MCP
+    dotnet tool install Syncfusion.MAUI.MCP
     ````
-
-    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
+    
+    N> * If the project does not already have a tool manifest, create one first by running dotnet new tool-manifest in the project root. This generates a shared .config/dotnet-tools.json file that tracks local tools, then re-run the install command above.
 
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
     ````json
     {
       "servers": {
-        "sf-aspnetmvc-mcp": {
+        "sf-maui-mcp": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "syncfusion-aspnetmvc-mcp"],
+          "args": ["tool", "run", "syncfusion-maui-mcp"],
           "env": {
             "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
             // or
@@ -170,65 +170,76 @@ You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a 
     }
     ````
 
-**Verifying Installation** Check your editor's MCP Server list for `ASP.NET MVC MCP Server` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for `sf-maui-mcp` with a **Connected** status to confirm a successful installation.
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world ASP.NET MVC PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world MAUI PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the ASP.NET MVC PDF Viewer component.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the MAUI PDF Viewer.
 
 {% promptcards %}
-{% promptcard Component Configuration %}
-#search_docs How do I configure the Syncfusion ASP.NET MVC Standalone PDF Viewer Component?
+{% promptcard Load a PDF Document %}
+#search_docs How do I load and display a PDF document from a local file or stream in the Syncfusion MAUI PDF Viewer?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Open a Password-Protected PDF %}
+#search_docs How do I open a password-protected PDF in the Syncfusion MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement Features**
 
-Get step-by-step help for adding specific features to the ASP.NET MVC PDF Viewer.
+Get step-by-step help for adding specific PDF Viewer features to your MAUI project.
 
 {% promptcards %}
-{% promptcard Form Designer %}
-#search_docs How can I enable Form Designer in ASP.NET MVC PDF Viewer?
+{% promptcard Add Annotations %}
+#search_docs How can I add, modify, and remove annotations such as text markups, shapes, and sticky notes in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Fit to Viewport %}
-#search_docs Provide API for Fit the entire page to the viewport in ASP.NET MVC PDF viewer
+{% promptcard Form Filling %}
+#search_docs How do I enable form filling, validation, and import/export of form data in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Programmatic Printing %}
-#search_docs how to programmatically trigger printing in the ASP.NET MVC PDF Viewer?
+{% promptcard Text Search and Selection %}
+#search_docs How do I implement text search, text selection, and copy-to-clipboard in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Troubleshooting**
 
 Describe the problem in plain language, and let `search_docs` help resolve it.
+{% promptcards %}
+{% promptcard PDF Not Loading %}
+#search_docs Why isn't my PDF document loading or rendering correctly in the MAUI PDF Viewer?
+{% endpromptcard %}
+{% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Document Not Loading %}
-#search_docs Document not loading newer version in ASP.NET MVC PDF Viewer.
+{% promptcard Annotation Issues %}
+#search_docs Why are my PDF annotations not saving, exporting, or displaying correctly in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 ## Best Practices
 
-To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer MCP Server:
+To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI MCP Servers:
 
-- **Be Specific** - Include the component and use case in your queries (for example, *"Load a PDF from a remote URL into the ASP.NET MVC PDF Viewer and enable annotation export"*).
+- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion MAUI PDF Viewer that loads a PDF with annotations enabled"*).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
-- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your ASP.NET MVC project.
-- **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
+- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your MAUI project.
+- **Start Fresh for New Topics** - Begin a new chat when switching to a different PDF Viewer feature (such as moving from annotations to form filling) to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](./getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/maui/introduction/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
