@@ -98,7 +98,7 @@ namespace WebApplication.Hubs
 }
 ```
 
-To configure the SignalR middleware, register the following service in the `ConfigureServices` method of the `Startup` class.
+To configure the SignalR, register the following service in the `ConfigureServices` method of the `Startup` class.
 
 ```javascript
     services.AddSignalR();
