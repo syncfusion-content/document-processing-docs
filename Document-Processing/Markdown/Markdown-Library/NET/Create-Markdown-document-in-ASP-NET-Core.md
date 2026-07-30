@@ -41,7 +41,7 @@ Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Markdown;
+using Syncfusion.Office.Markdown;
 using System.IO;
 
 {% endhighlight %}

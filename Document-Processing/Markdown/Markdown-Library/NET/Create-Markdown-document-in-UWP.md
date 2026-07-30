@@ -1,6 +1,6 @@
 ---
 title: Create Markdown document in UWP | Syncfusion
-description: Create Markdown document without external dependencies in UWP application using Syncfusion<sup>&reg;</sup> UWP Markdown library.
+description: Create Markdown document without external dependencies in UWP application using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
