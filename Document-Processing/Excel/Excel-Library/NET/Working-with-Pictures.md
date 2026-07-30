@@ -8,6 +8,7 @@ documentation: UG
 # Working with Pictures
 
 XlsIO supports inserting pictures into a worksheet. Refer to the following code snippet.
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture/Add%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -478,10 +479,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Add image from the specified url at the specified location in the worksheet
+  'Add image from the specified url at the specified location in the worksheet
   worksheet.Pictures.AddPictureAsLink(1, 1, 5, 7, "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png")
 
-  'Save workbook
+  'Save workbook
   workbook.SaveAs("ExternalImage.xlsx")
 End Using
 {% endhighlight %}
@@ -530,7 +531,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   FileStream svgStream = new FileStream("Sample.svg", FileMode.Open);
   FileStream pngStream = new FileStream("Sample.png", FileMode.Open);
 
-  //Add svg image with given svg and png streams
+  //Add svg image with given svg and png streams
   worksheet.Pictures.AddPicture(1, 1, svgStream, pngStream);
 
   //Save workbook
@@ -548,10 +549,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim svgStream As New FileStream("Sample.svg", FileMode.Open)
   Dim pngStream As New FileStream("Sample.png", FileMode.Open)
 
-  'Add svg image with given svg and png streams
+  'Add svg image with given svg and png streams
   worksheet.Pictures.AddPicture(1, 1, svgStream, pngStream)
 
-  'Save workbook
+  'Save workbook
   workbook.SaveAs("Svg.xlsx")
 End Using
 {% endhighlight %}
@@ -618,7 +619,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   shape.PlaceInCell = True
 
-  'Save workbook
+  'Save workbook
   workbook.SaveAs("PlaceInCellPicture.xlsx")
 End Using
 {% endhighlight %}

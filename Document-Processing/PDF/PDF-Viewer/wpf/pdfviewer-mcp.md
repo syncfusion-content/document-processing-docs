@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Syncfusion ASP.NET MVC PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for ASP.NET MVC PDF Viewer.
+title: Syncfusion WPF PDF Viewer MCP Server Setup – Syncfusion
+description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion WPF PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
+# Syncfusion WPF PDF Viewer MCP Server
 
-# Syncfusion ASP.NET MVC PDF Viewer MCP Server
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer MCP Server accelerates ASP.NET MVC PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
-
-These tools speed up development and reinforce best practices for ASP.NET MVC PDF Viewer integration.
+Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE.
+ [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 ## Key Benefits
 
-- **Expert PDF Viewer Knowledge** - Deep understanding of ASP.NET MVC PDF Viewer component (SfPdfViewer) and its implementation patterns.
+- **Expert PDF Viewer Knowledge** - Deep understanding of Syncfusion WPF PDF Viewer component and its implementation patterns.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -28,7 +26,7 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- An **ASP.NET MVC application** (existing or new); see [ASP.NET MVC PDF Viewer documentation](./getting-started)
+- A **WPF application** (existing or new); see [ WPF application that includes Syncfusion WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -59,10 +57,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-wpf-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.WPF.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -79,10 +77,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-wpf-mcp": {
       "type": "stdio",
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.WPF.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -101,9 +99,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-wpf-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.WPF.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -122,9 +120,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-aspnetmvc-mcp": {
+    "sf-wpf-mcp": {
       "command": "dnx",
-      "args": ["Syncfusion.AspNetMvc.MCP", "--yes"],
+      "args": ["Syncfusion.WPF.MCP", "--yes"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -139,14 +137,15 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
+
 **For .NET 8 / .NET 9 (using a local tool):**
 
-You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the official [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
+You can install the Syncfusion WPF MCP Server as a local tool without requiring a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
-1. Install the Syncfusion ASP.NET MVC MCP tool locally:
+1. Install the Syncfusion WPF MCP tool locally:
 
     ````bash
-    dotnet tool install Syncfusion.AspNetMVC.MCP
+    dotnet tool install Syncfusion.WPF.MCP
     ````
 
     > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
@@ -156,10 +155,10 @@ You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a 
     ````json
     {
       "servers": {
-        "sf-aspnetmvc-mcp": {
+        "sf-wpf-mcp": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "syncfusion-aspnetmvc-mcp"],
+          "args": ["tool", "run", "syncfusion-wpf-mcp"],
           "env": {
             "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
             // or
@@ -170,41 +169,41 @@ You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a 
     }
     ````
 
-**Verifying Installation** Check your editor's MCP Server list for `ASP.NET MVC MCP Server` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for `sf-wpf-mcp` with a **Connected** status to confirm a successful installation.
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world ASP.NET MVC PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world WPF PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the ASP.NET MVC PDF Viewer component.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the WPF PDF Viewer component.
 
 {% promptcards %}
-{% promptcard Component Configuration %}
-#search_docs How do I configure the Syncfusion ASP.NET MVC Standalone PDF Viewer Component?
+{% promptcard PDF Viewer Getting Started %}
+#search_docs How do I add the WPF PDF Viewer component to a WPF application?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Load Document %}
+#search_docs How do I load document to the  WPF PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement Features**
 
-Get step-by-step help for adding specific features to the ASP.NET MVC PDF Viewer.
+Get step-by-step help for adding specific features to the WPF PDF Viewer.
 
 {% promptcards %}
-{% promptcard Form Designer %}
-#search_docs How can I enable Form Designer in ASP.NET MVC PDF Viewer?
+{% promptcard Export PDF Page %}
+#search_docs How to exporting pdf pages to images in WPF Pdfviewer
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Fit to Viewport %}
-#search_docs Provide API for Fit the entire page to the viewport in ASP.NET MVC PDF viewer
-{% endpromptcard %}
-{% endpromptcards %}
-
-{% promptcards %}
-{% promptcard Programmatic Printing %}
-#search_docs how to programmatically trigger printing in the ASP.NET MVC PDF Viewer?
+{% promptcard Search Text %}
+#search_docs How to Search text in PDF programmatically in WPF Pdfviewer
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -213,22 +212,29 @@ Get step-by-step help for adding specific features to the ASP.NET MVC PDF Viewer
 Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
-{% promptcard Document Not Loading %}
-#search_docs Document not loading newer version in ASP.NET MVC PDF Viewer.
+{% promptcard PDF Viewer Not Rendering %}
+#search_docs Why is the WPF PDF Viewer not showing any document?
 {% endpromptcard %}
 {% endpromptcards %}
 
+{% promptcards %}
+{% promptcard Extract Text Issues %}
+#search_docs Why does the Extract Text API not extract text from a PDF document in the WPF PDF Viewer?
+{% endpromptcard %}
+{% endpromptcards %}
+
+
 ## Best Practices
 
-To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer MCP Server:
+To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server:
 
-- **Be Specific** - Include the component and use case in your queries (for example, *"Load a PDF from a remote URL into the ASP.NET MVC PDF Viewer and enable annotation export"*).
-- **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
+- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF PDF Viewer with no UI interaction and view-only functionality"*).
+- **Provide Context** - Include applicable versions expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
-- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your ASP.NET MVC project.
+- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your WPF project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](./getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -244,6 +250,8 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
+| **WPF PDF Viewer not rendering** | Ensure the `Syncfusion.PdfViewer.WPF` NuGet packages are installed and configured properly in MainWindow.xaml or MainWindow.xaml.cs |
+
 
 ## Privacy & Security
 
