@@ -264,7 +264,7 @@ Syncfusion<sup>&reg;</sup> license key should be registered, if your project usi
 
 The following code is used to register the license.
 
-## JavaScript es5
+### JavaScript es5
 
 Register the license key by using **registerLicense** method after the [Syncfusion JavaScript script](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1) file reference as below.
 
@@ -275,7 +275,7 @@ ej.base.registerLicense('License Key');
 {% endhighlight %}
 {% endtabs %}
 
-## VueJS
+### VueJS
 
 Register the license key in the **index.js** file of the Vue project.
 
@@ -549,7 +549,7 @@ You must have an active Syncfusion<sup>&reg;</sup> Essential JS license to use S
 
 For the following platforms, you can use the script files without registering the license keys.
 
-## JavaScript (Essential<sup>&reg;</sup> JS 1)
+### JavaScript (Essential<sup>&reg;</sup> JS 1)
 
 * AngularJS
 
