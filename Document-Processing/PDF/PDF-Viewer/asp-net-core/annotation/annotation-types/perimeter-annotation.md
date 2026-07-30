@@ -152,9 +152,9 @@ function editPerimeterProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Perimeter Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`perimeterSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_PerimeterSettings) property.

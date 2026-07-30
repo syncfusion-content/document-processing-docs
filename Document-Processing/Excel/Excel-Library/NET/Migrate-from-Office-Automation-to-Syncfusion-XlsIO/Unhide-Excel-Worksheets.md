@@ -29,7 +29,7 @@ private void UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -52,7 +52,7 @@ private void UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -74,7 +74,7 @@ Private Sub UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible
 
   'Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx")
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx")
 
   'Quit the application
   excelApp.Quit()
