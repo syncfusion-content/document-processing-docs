@@ -39,7 +39,7 @@ The `extractText()` method in the PDF Viewer retrieves text from a single page o
 
 ### Method parameters
 
-- **startIndex:** The starting page index (0-based).
+- **startIndex (number):** The starting page index (0-based).
 
 - **endIndex or isOptions:** Either the ending page index for multi-page extraction or an option for single-page extraction.
 
