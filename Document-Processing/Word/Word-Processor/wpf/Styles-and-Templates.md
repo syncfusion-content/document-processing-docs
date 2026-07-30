@@ -835,7 +835,7 @@ The following code example demonstrates how to apply the custom style for SfRich
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Getting Started in WPF RichTextBox](./Getting-Started)
 - [Document Structure in WPF RichTextBox](./Document-Structure)

@@ -62,7 +62,7 @@ richTextBoxAdv.SpellChecker.IgnoreURIs = True
 
 {% endtabs %}
 
-## Adding Custom Dictionaries
+## Adding custom dictionaries
 
 The SfRichTextBoxAdv also supports defining custom dictionaries that can be referred to while checking spelling mistakes. The SfRichTextBoxAdv ignores words that are defined in the referenced custom dictionaries. The SfRichTextBoxAdv supports the option of adding a misspelled word to a dictionary. This option will be enabled only when at least one custom dictionary is defined. The misspelled words are added to the first item in the [CustomDictionaries](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SpellChecker.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SpellChecker_CustomDictionaries) collection.
 The following code example demonstrates how to define custom dictionaries for spell checking.
@@ -85,7 +85,7 @@ The following code example demonstrates how to define custom dictionaries for sp
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Samples/tree/main/How-to-add-custom-dictionaries-in-richtextbox).
 
 
-## Multilingual Spell Check Support
+## Multilingual spell check support
 
 The SfRichTextBoxAdv provides support for checking spelling mistakes based on multiple languages. You can do so by defining the Language property of the SfRichTextBoxAdv control.
 
@@ -106,7 +106,7 @@ The following code example demonstrates how to enable spell checking based on la
 
 {% endtabs %}
 
-## Spelling Pane
+## Spelling pane
 
 The SfRichTextBoxAdv provides built-in spelling pane support for checking spelling mistakes and correcting error words, similar to the Microsoft Word application.
 
@@ -124,7 +124,7 @@ The following code example demonstrates how to show the spelling pane in SfRichT
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Commands in WPF RichTextBox](./Commands)
 - [Document Structure in WPF RichTextBox](./Document-Structure)
