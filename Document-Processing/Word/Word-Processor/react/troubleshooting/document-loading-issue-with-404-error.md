@@ -28,8 +28,6 @@ The 404 error may occur due to the following reasons:
     container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     ```
 
-N> 1. The hosted Web Service link is provided for demonstration and evaluation only.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+N> The hosted Web Service link is provided for demonstration and evaluation only. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
 - If you are using your own hosted Web Service, ensure that the Web Service is running, active, and the configured service URL is valid.

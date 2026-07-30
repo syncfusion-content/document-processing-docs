@@ -214,9 +214,7 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property is intended solely for demonstration and evaluation purposes.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
 The following is the output of the custom context menu with customization.
 
@@ -234,9 +232,7 @@ The following is the output of the custom context menu with customization.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/customize-context-menu-cs1" %}
 
-N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property is intended solely for demonstration and evaluation purposes.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
 #### Customize Context Menu with Sub-Menu Items
 
@@ -301,9 +297,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
  
 ```
 
-N> 1. The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the `serviceUrl` property is intended solely for demonstration and evaluation purposes.
-N> 2. For production deployment, please host your own Web Service with your required server configurations.
-N> 3. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the `serviceUrl` property.
+N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
 ## Online Demo
 
