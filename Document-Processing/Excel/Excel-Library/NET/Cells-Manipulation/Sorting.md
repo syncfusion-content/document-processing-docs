@@ -14,7 +14,7 @@ A range of cells in Excel worksheet can be sorted based on data in one or more c
 * Font Color
 * Cell Color
 
-N> Currently XlsIO don’t support sorting based on cell icon, parsing and serialization of its sorting details.
+N> Currently XlsIO don't support sorting based on cell icon, parsing and serialization of its sorting details.
 
 ## Cell Values
 
