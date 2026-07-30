@@ -91,7 +91,7 @@ Examples:
 - `restrictLineAngleTo: 45` → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
 - `restrictLineAngleTo: 100` → Snapped angles: 0°, 100°, 200°, 300°, 360°
 
-N> Refer to the TypeScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/typescript-pdf-viewer) for feature highlights, and to the [TypeScript PDF Viewer examples](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples) for rendering and configuration examples.
+N> Refer to the JavaScript PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) for feature highlights, and to the [TypeScript PDF Viewer examples](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples) for rendering and configuration examples.
 
 ## See also
 

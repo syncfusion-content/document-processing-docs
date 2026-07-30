@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo and redo annotations in JavaScript PDF Viewer
+# Control Annotation Modifications with Undo/Redo Support
 
 The PDF Viewer supports undo and redo for annotations.
 

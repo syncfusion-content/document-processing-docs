@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations API in TypeScript PDF Viewer | Syncfusion
-description: Learn how to read and configure annotations using APIs in the Syncfusion TypeScript PDF Viewer.
+description: Learn how to read, manage, and configure PDF annotations with Syncfusion TypeScript PDF Viewer APIs to customize review workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

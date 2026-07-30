@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Custom Data in annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use add custom Data in annotation in Syncfusion TypeScript PDF Viewer
+description: Learn how to add and manage custom data in PDF annotations using Syncfusion TypeScript PDF Viewer APIs for enhanced metadata handling and workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations
+# Manage Custom Annotation Properties
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 
