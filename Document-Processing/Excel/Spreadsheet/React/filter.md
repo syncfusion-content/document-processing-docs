@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 
-> * The default value for `allowFiltering` property is `true`.
+> The default value for `allowFiltering` property is `true`.
 
 By default, the `Filter` module is injected internally into Spreadsheet to perform filtering.
 
@@ -24,7 +24,7 @@ In the active sheet, select a range of cells to filter by value of the cell. The
 * Use the [`applyFilter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#applyfilter) method programmatically.
 * Use the `Ctrl + Shift + L` keyboard shortcut to apply the filter.
 
-> * Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
+> Use `Alt + Up/Down` keyboard shortcut to open the filter dialog.
 
 ## Filter by criteria
 
