@@ -9,7 +9,7 @@ keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, write exce
 
 # Worksheet Cells Manipulation
 
-The [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface represents a single cell or a group of cells in a worksheet. XlsIO has several useful methods for accessing, manipulating and formatting the content in the cells.
+The [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) interface represents a single cell or a group of cells in a worksheet. The XlsIO library has several useful methods for accessing, manipulating and formatting the content in the cells.
 
 ## Access
 
@@ -30,10 +30,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	#region Access Access Cell or Range
 	//Access a range by specifying cell address
-	sheet.Range["A7"].Text = "Accessing a Range by specify cell address ";
+	sheet.Range["A7"].Text = "Accessing a Range by specifying cell address ";
 
 	//Access a range by specifying cell row and column index
-	sheet.Range[9, 1].Text = "Accessing a Range by specify cell row and column index ";
+	sheet.Range[9, 1].Text = "Accessing a Range by specifying cell row and column index ";
 
 	//Access a Range by specifying using defined name
 	IName name = workbook.Names.Add("Name");
@@ -63,10 +63,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet sheet = workbook.Worksheets[0];
 
   //Access a range by specifying cell address
-  sheet.Range["A7"].Text = "Accessing a Range by specify cell address ";
+  sheet.Range["A7"].Text = "Accessing a Range by specifying cell address ";
 
   //Access a range by specifying cell row and column index
-  sheet.Range[9, 1].Text = "Accessing a Range by specify cell row and column index ";
+  sheet.Range[9, 1].Text = "Accessing a Range by specifying cell row and column index ";
 
   //Access a Range by specifying using defined name
   IName name = workbook.Names.Add("Name");
@@ -90,11 +90,11 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Access a range by specify cell address
-  sheet.Range("A7").Text = "Accessing a Range by specify cell address "
+  'Access a range by specifying cell address
+  sheet.Range("A7").Text = "Accessing a Range by specifying cell address "
 
-  'Access a range by specify cell row and column index
-  sheet.Range(9, 1).Text = "Accessing a Range by specify cell row and column index "
+  'Access a range by specifying cell row and column index
+  sheet.Range(9, 1).Text = "Accessing a Range by specifying cell row and column index "
 
   'Access a Range by specifying using defined name
   Dim name As IName = workbook.Names.Add("Name")
@@ -114,7 +114,7 @@ End Using
 
 A complete working example to access a cell or range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Cell%20or%20Range/.NET/Access%20Cell%20or%20Range).
 
-T> You can make use of [GetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetText_System_Int32_System_Int32_), [SetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetText_System_Int32_System_Int32_System_String_), [GetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetNumber_System_Int32_System_Int32_) and [SetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetNumber_System_Int32_System_Int32_System_Double_) methods from worksheet object that enable users to get/set values without range object.
+T> You can make use of the [GetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetText_System_Int32_System_Int32_), [SetText](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetText_System_Int32_System_Int32_System_String_), [GetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_GetNumber_System_Int32_System_Int32_) and [SetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_SetNumber_System_Int32_System_Int32_System_Double_) methods from the worksheet object that enable users to get/set values without a range object.
 
 ### Accessing Relative Range
 
@@ -141,7 +141,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet sheet = workbook.Worksheets[0];
 
-	#region Access Reative Range
+	#region Access Relative Range
 	//Creating a range by specifying cells address
 	IRange range1 = sheet.Range["B3:D5"];
 
@@ -223,7 +223,7 @@ A complete working example to access relative range in an Excel worksheet in C# 
 
 ### Accessing Discontinuous Ranges
 
-It is possible to modify the contents or apply formatting to discontinuous range by accessing and adding them to the [RangesCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRanges.html).
+It is possible to modify the contents or apply formatting to a discontinuous range by accessing and adding each range to the [RangesCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRanges.html).
 
 The following code example illustrates how to access discontinuous range.
 
@@ -301,9 +301,9 @@ End Using
 
 A complete working example to access discontinuous range in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Editing%20Excel%20cells/Access%20Discontinuous%20Range/.NET/Access%20Discontinuous%20Range).
 
-### Accessing a Cell or Range using IMigrantRange 
+### Accessing a Cell or Range using IMigrantRange
 
-The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or group of cells and manipulate it.  It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) for writing large amount of data in an optimal way. 
+The [IMigrantRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html) interface can also be used to access a single cell or a group of cells and manipulate it. It is recommended to prefer **IMigrantRange** instead of [IRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) for writing a large amount of data in an optimal way. The [LastRow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html#Syncfusion_XlsIO_IMigrantRange_LastRow) and [LastColumn](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IMigrantRange.html#Syncfusion_XlsIO_IMigrantRange_LastColumn) properties return the last row and column of the worksheet used range, which can be used to bound the loop when writing data with **IMigrantRange**.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Editing%20Excel%20cells/Access%20Migrant%20Range/.NET/Access%20Migrant%20Range/Access%20Migrant%20Range/Program.cs,180" %}
@@ -389,7 +389,7 @@ A complete working example to access migrant range in an Excel worksheet in C# i
 
 ### Accessing Precedent and Dependent Cells or Range
 
-Precedent cells are cells that are referred to by a formula in another cell. Dependent cells contain formulas that refer to other cells. XlsIO allows to trace the relationship between cells and formulas in Excel workbooks and returns the list of cells or range that are precedent and dependent.
+Precedent cells are cells that are referred to by a formula in another cell. Dependent cells contain formulas that refer to other cells. XlsIO allows you to trace the relationship between cells and formulas in Excel workbooks and returns the list of cells or ranges that are precedent and dependent.
 
 Accessing list of precedent and dependent cells can be obtained:
 
@@ -994,25 +994,25 @@ A complete working example to access the precedent and dependent cells in an Exc
 
 Find and replace operations across worksheet text, formulas, values, and comments allow users to seamlessly update and manage data within Excel workbooks.
 
-With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform find and replace operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/find-and-replace) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform find and replace operations in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/find-and-replace) for more details.
 
 ## Sorting
 
 Sorting is the process of arranging data in a specific order, typically in ascending or descending sequence.
 
-With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform sorting operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/sorting) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform sorting operations in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/sorting) for more details.
 
 ## Filtering
 
 Filtering is the process of selectively displaying data in a worksheet based on specified criteria.
 
-With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform filtering operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform filtering operations in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering) for more details.
 
 ## Hyperlink
 
-Hyperlink is a reference or navigation element in a document that allows users to access another location, such as specific cells within the same worksheet, other worksheets, external files, websites, or email addresses.
+A hyperlink is a reference or navigation element in a document that allows users to access another location, such as specific cells within the same worksheet, other worksheets, external files, websites, or email addresses.
 
-With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform hyperlink operations in an Excel worksheets using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/hyperlink) for more details.
+With the Syncfusion<sup>&reg;</sup> Excel Library, you can perform hyperlink operations in an Excel worksheet using C#. Click [here](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/hyperlink) for more details.
 
 ## Clear
 
@@ -1047,7 +1047,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
   IWorksheet sheet = workbook.Worksheets[0];
 
-  //Clearing a Range “A4” and its formatting
+  //Clearing a Range "A4" and its formatting
   sheet.Range["A4"].Clear(true);
 
   workbook.Version = ExcelVersion.Xlsx;
@@ -1061,7 +1061,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Clearing a Range “A4” and its formatting
+  'Clearing a Range "A4" and its formatting
   sheet.Range("A4").Clear(True)
 
   workbook.Version = ExcelVersion.Xlsx

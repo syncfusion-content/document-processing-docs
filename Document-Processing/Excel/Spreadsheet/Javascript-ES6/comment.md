@@ -56,8 +56,8 @@ After posting, the replies appear under the first comment in the comment editor.
 ## Editing a comment
 You can edit the content of a comment or its replies directly within the comment editor.
 
-* **Edit first comment**: In the comment editor. Click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
-* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)**, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit first comment**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header, select **Edit Comment**, modify the text, and click **Post**.
+* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)** menu, select **Edit Comment**, modify the text, and click **Post**.
 
 ![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 

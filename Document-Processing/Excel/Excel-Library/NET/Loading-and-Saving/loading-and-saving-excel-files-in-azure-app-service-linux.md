@@ -7,11 +7,19 @@ documentation: UG
 ---
 # Loading and Saving Excel files in Azure App Service on Linux
 
-[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files in Azure App Service on Linux.
+[.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel files in Azure App Service on Linux.
+
+## Prerequisites
+
+* An active Azure subscription with permission to create App Services.
+* Visual Studio 2022 (17.0 or later) with the **ASP.NET and web development** workload installed.
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package in your project.
+* Register your Syncfusion<sup>&reg;</sup> license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
+* A sample input file (for example, `Data/InputTemplate.xlsx`) added to the project and configured with **Build Action: Content** and **Copy to Output Directory: Copy if newer** so the file is deployed to Azure.
 
 ## Steps to Load and Save an Excel document in Azure App Service on Linux
 
-The below steps illustrates loading and saving a simple Invoice formatted Excel document in Azure App Service Linux.
+The steps below illustrate how to load and save a simple Invoice-formatted Excel document in Azure App Service on Linux.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
@@ -25,11 +33,11 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Loading-and-Saving_images/Loading-and-Saving_images_img18.png)
 
-Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference to your ASP.NET Core application from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Loading-and-Saving_images/Loading-and-Saving_images_img19.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion&reg; assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your applications to use our components. 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
 Step 5: Include the following namespaces in **HomeController.cs**.
 
@@ -56,38 +64,43 @@ Step 6: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** to **load and save an Excel file and download it**.
+Step 7: Include the following code snippet in **HomeController.cs** to **load and save an Excel file and download it**.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C#" %}
-//Create an instance of ExcelEngine
-using (ExcelEngine excelEngine = new ExcelEngine())
+public ActionResult LoadingandSaving()
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
+    // Create an instance of ExcelEngine
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        IApplication application = excelEngine.Excel;
+        application.DefaultVersion = ExcelVersion.Xlsx;
 
-    //Load an existing Excel document
-    FileStream inputStream = new FileStream("Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read);
-    IWorkbook workbook = application.Workbooks.Open(inputStream);
+        // Load an existing Excel document
+        using (FileStream inputStream = new FileStream("Data/InputTemplate.xlsx", FileMode.Open, FileAccess.Read))
+        {
+            IWorkbook workbook = application.Workbooks.Open(inputStream);
 
-    //Access first worksheet from the workbook.
-    IWorksheet worksheet = workbook.Worksheets[0];
+            // Access first worksheet from the workbook
+            IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Set Text in cell A3.
-    worksheet.Range["A3"].Text = "Hello World";
+            // Set text in cell A3
+            worksheet.Range["A3"].Text = "Hello World";
 
-    //Save the Excel to MemoryStream 
-    MemoryStream outputStream = new MemoryStream();
-    workbook.SaveAs(outputStream);
+            // Save the Excel to a MemoryStream
+            using (MemoryStream outputStream = new MemoryStream())
+            {
+                workbook.SaveAs(outputStream);
+                outputStream.Position = 0;
 
-    //Set the position
-    outputStream.Position = 0;
-
-    //Download the Excel document in the browser.
-    return File(outputStream, "application/msexcel", "Output.xlsx");
+                // Download the Excel document in the browser
+                return File(outputStream, "application/msexcel", "Output.xlsx");
+            }
+        }
+    }
 }
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ## Steps to publish as Azure App Service on Linux
 
@@ -123,11 +136,11 @@ Step 8: Click the **Publish** button.
 
 ![Start publish](Loading-and-Saving_images/Loading-and-Saving_images_img35.png)
 
-Step 9: Now, Publish has been succeeded.
+Step 9: The publish has succeeded.
 
-![Publish has been succeeded](Loading-and-Saving_images/Loading-and-Saving_images_img36.png)
+![Publish has succeeded](Loading-and-Saving_images/Loading-and-Saving_images_img36.png)
 
-Step 10: Now, the published webpage will open in the browser. 
+Step 10: The published web page opens in the browser.
 
 ![Browser will open after publish](Loading-and-Saving_images/Loading-and-Saving_images_img37.png)
 
@@ -135,8 +148,15 @@ Step 11: Click **Loading and Saving Document** to load and save a simple Excel d
 
 ![Output File](Loading-and-Saving_images/Loading-and-Saving_images_img30.png)
 
-A complete working example of how to load and save an Excel document in Azure App Service on Linux in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure/Azure%20App%20Service/Loading%20and%20Saving).
+A complete working example of how to load and save an Excel document in Azure App Service on Linux in C# is available on the [SyncfusionExamples/XlsIO-Examples GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Loading%20and%20Saving/Azure/Azure%20App%20Service/Loading%20and%20Saving).
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion&reg; Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document in ASP.NET Core](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) is also available.
+
+## See Also
+
+* [Create, read, and edit Excel files in ASP.NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-core-c-sharp)
+* [Assemblies Required for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
+* [NuGet Packages for XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)

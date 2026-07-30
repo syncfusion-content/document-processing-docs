@@ -12,26 +12,6 @@ Syncfusion<sup>&reg;</sup> PDF supports drawing headers and footers in a PDF doc
 To quickly get started with adding headers and footers to PDF files using the Syncfusion<sup>&reg;</sup> PDF library for .NET, refer to this video tutorial.
 {% youtube "https://youtu.be/zGcQEVw5v9Y?si=lI6qZLUJRw6UWUZi" %}
 
-## Assemblies and NuGet packages
-
-The following assemblies or NuGet packages are required to work with PDF headers and footers.
-
-**Assemblies**
-
-* Syncfusion.Pdf.Base
-* Syncfusion.Drawing.Base
-
-**NuGet packages**
-
-* [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) (cross-platform)
-* [Syncfusion.Pdf.WinForms](https://www.nuget.org/packages/Syncfusion.Pdf.WinForms) (Windows-specific)
-* [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf) (Windows-specific)
-* [Syncfusion.Pdf.AspNet](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet) (ASP.NET Web Forms)
-* [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5) (ASP.NET MVC5)
-* [Syncfusion.Pdf.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc4) (ASP.NET MVC4)
-
-For more information, refer to the [Assemblies Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required) and [NuGet Packages Required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/nuget-packages-required) documentation.
-
 ## Page template areas
 
 When you assign a template to a page, Syncfusion<sup>&reg;</sup> PDF divides each page into the following four areas:
@@ -182,8 +162,6 @@ pdfDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Header%20and%20Footer/Adding-an-automatic-field-in-header-and-footer).
-
-> **Note:** Replace `Logo.png` with the actual path to your image file. If the image is larger than the template bounds, it will be clipped. Use [PdfBitmap](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfBitmap.html) or [PdfImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html) appropriate for your platform.
 
 ## Adding dynamic headers and footers in PDF documents
 

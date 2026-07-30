@@ -75,13 +75,13 @@ You can edit comments in two ways:
 
 ---
 
-## Add Comments to the annotation Programmatically
+## Add comments to the annotation programmatically
 
 ### Add comments and replies programmatically
 
 Comments can be added to the PDF document programmatically using the `editAnnotation` property.
 
-The following example Shows how to add comments and reply in response to a button click.
+The following example shows how to add comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -250,7 +250,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
 
-The following example Shows how to edit comments and reply in response to a button click.
+The following example shows how to edit comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -502,7 +502,7 @@ The PDF Viewer supports review workflows by combining [annotations](../annotatio
 
 ### Understanding Review Workflows
 
-Annotations act as visual markers during review—such as [highlights](../annotation/annotation-types/highlight-annotation), [shapes](../annotation/annotation-types/area-annotation), [stamps](../annotation/annotation-types/stamp-annotation), or [sticky notes](../annotation/annotation-types/sticky-notes) while [comments](../annotation/comments) provide a communication space attached to each annotation. Multiple reviewers can participate in these annotation threads, making the review process more organized and traceable.
+Annotations act as visual markers during review—such as [highlights](../annotation/annotation-types/highlight-annotation), [shapes](../annotation/annotation-types/area-annotation), [stamps](../annotation/annotation-types/stamp-annotation), or [sticky notes](../annotation/annotation-types/sticky-notes), while [comments](../annotation/comments) provide a communication space attached to each annotation. Multiple reviewers can participate in these annotation threads, making the review process more organized and traceable.
 
 During a review cycle, users typically:
 
@@ -548,7 +548,7 @@ These review patterns are especially useful in content editing, design review, l
 - [Remove Annotation](../annotation/delete-annotation)  
 - [Handwritten Signature](../annotation/signature-annotation)  
 - [Export and Import Annotation](../annotation/export-import/export-annotation)  
-- [Annotation Permission](../annotationsannotation-permission)  
+- [Annotation Permission](../annotation/annotation-permission)  
 - [Annotation in Mobile View](../annotation/annotations-in-mobile-view)  
 - [Annotation Events](../annotation/annotation-event)  
 - [Annotation API](../annotation/annotations-api)

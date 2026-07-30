@@ -158,9 +158,10 @@ Use the [**Comments panel**](../comments) to add, view, and reply to threaded di
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Strikethrough', …)` call.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
+<script>
 function addMultipleStrikethroughs() {
-  const viewer = document.getElementById('container').ej2_instances[0];
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
   // Strikethrough 1
   viewer.annotation.addAnnotation('Strikethrough', {
     bounds: [{ x: 100, y: 150, width: 320, height: 14 }],
@@ -178,6 +179,7 @@ function addMultipleStrikethroughs() {
     opacity: 0.9
   });
 }
+</script>
 {% endhighlight %}
 {% endtabs %}
 
