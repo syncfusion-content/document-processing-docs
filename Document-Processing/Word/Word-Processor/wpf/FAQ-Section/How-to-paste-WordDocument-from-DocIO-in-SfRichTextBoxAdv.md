@@ -80,7 +80,7 @@ When the document content is pasted into the SfRichTextBoxAdv control using Word
 
 N> This feature is supported from v22.2.5.
 
-## See Also
+## See also
 
 - [PasteCommand API Reference](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PasteCommand)
 - [.NET Word Library (DocIO) Documentation](https://help.syncfusion.com/file-formats/docio/overview)
