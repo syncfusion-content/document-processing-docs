@@ -1,6 +1,6 @@
----
+﻿---
 title: Syncfusion Excel to PDF Conversion
-description: In this section, you can learn how to convert Excel Workbook to PDF & Worksheet to PDF file; how to print Excel file and how to convert Excel chart to image
+description: This section explains how to convert an Excel workbook to PDF, a single worksheet to PDF, an Excel chart to image or PDF, and how to print an Excel document.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,12 +8,14 @@ documentation: UG
 
 # Excel to PDF Conversion
 
-[XlsIO](https://www.syncfusion.com/document-processing/excel-framework/net/excel-to-pdf-conversion) supports converting an entire workbook or a single worksheet into PDF document. Refer the following links for assemblies/nuget packages required based on platforms to convert Excel document into PDF.
+[XlsIO](https://www.syncfusion.com/document-processing/excel-framework/net/excel-to-pdf-conversion) supports converting an entire workbook, a single worksheet, or a chart to a PDF document. The following links list the assemblies and NuGet packages required for each platform:
 
-* [Assemblies Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required#converting-excel-document-to-pdf) 
-* [NuGet Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-excel-document-into-pdf)
+* [Assemblies Required for Excel to PDF conversion](assemblies-required-for-excel-to-pdf)
+* [NuGet Packages Required for Excel to PDF conversion](nuget-packages-required-for-excel-to-pdf)
 
-N> Worksheet To Image conversion can be performed by referring [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package in UWP platform.
+N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform (see the links above) and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
+
+N> Worksheet To Image conversion can be performed by referring the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package in UWP platform.
 
 ## Workbook to PDF
 
@@ -41,7 +43,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -113,7 +115,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -124,9 +126,9 @@ Using(ExcelEngine excelEngine = new ExcelEngine())
   //convert the sheet to PDF
   ExcelToPdfConverter converter = new ExcelToPdfConverter(sheet);
 
-  PdfDocument pdfDocument= new PdfDocument();
+  PdfDocument pdfDocument = new PdfDocument();
   pdfDocument = converter.Convert();
-  pdfDocument.Save("ExcelToPDF.pdf");     
+  pdfDocument.Save("ExcelToPDF.pdf");
 }
 {% endhighlight %}
 
@@ -166,36 +168,35 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	//Initialize XlsIO renderer.
 	XlsIORenderer renderer = new XlsIORenderer();
-	PdfDocument pdfDocument = new PdfDocument();
 
 	foreach (IWorksheet sheet in workbook.Worksheets)
 	{
-		pdfDocument = renderer.ConvertToPDF(sheet);
-
-		#region Save
-		//Saving the workbook
-		pdfDocument.Save(sheet.Name + ".pdf");
-		#endregion
+		using (PdfDocument pdfDocument = renderer.ConvertToPDF(sheet))
+		{
+			#region Save
+			//Save each worksheet as a separate PDF.
+			pdfDocument.Save(sheet.Name + ".pdf");
+			#endregion
+		}
 	}
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
 
-  PdfDocument pdfDocument = new PdfDocument();     
-
   foreach (IWorksheet sheet in workbook.Worksheets)
   {
     ExcelToPdfConverter converter = new ExcelToPdfConverter(sheet);
-    pdfDocument = converter.Convert();
-
-    //Save the PDF file
-    pdfDocument.Save(sheet.Name+".pdf");
+    using (PdfDocument pdfDocument = converter.Convert())
+    {
+      //Save the PDF file
+      pdfDocument.Save(sheet.Name + ".pdf");
+    }
     converter.Dispose();
   }
 }
@@ -211,10 +212,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   For Each sheet As IWorksheet In workbook.Worksheets
     Dim converter As New ExcelToPdfConverter(sheet)
-    PdfDocument = converter.Convert()
+    Dim pdfDocument As PdfDocument = converter.Convert()
 
     'Save the PDF file
-    PdfDocument.Save(sheet.Name + ".pdf")
+    pdfDocument.Save(sheet.Name + ".pdf")
     converter.Dispose()
   Next
 End Using
@@ -225,9 +226,9 @@ A complete working example to convert each worksheet into individual PDF in C# i
   
 ## Excel with chart to PDF
 
-XlsIO supports to convert a workbook/worksheet with charts or a single chart into PDF document.
+XlsIO supports converting a workbook, a worksheet with charts, or a single chart to a PDF document.
 
-To preserve the charts during Excel To PDF conversion in .NET Framework, initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface. Otherwise the charts present in worksheet gets skipped.
+To preserve the charts during Excel-to-PDF conversion in the .NET Framework, initialize the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_ChartToImageConverter) property of the [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) interface. Otherwise, the charts in the worksheet are skipped.
 
 The following code illustrates how to convert an Excel with chart to PDF document.
 
@@ -256,23 +257,24 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
 
-  //Instantiating the ChartToImageConverter and assigning the ChartToImageConverter instance of XlsIO application
+  //Instantiate the ChartToImageConverter and assign it to the XlsIO application.
   application.ChartToImageConverter = new ChartToImageConverter();
 
-  //Tuning chart image quality
+  //Tune the chart image quality.
   application.ChartToImageConverter.ScalingMode = ScalingMode.Best;
-  IWorkbook workbook = application.Workbooks.Open("chart.xlsx");
-  IWorksheet worksheet = workbook.Worksheets[0];
 
+  IWorkbook workbook = application.Workbooks.Open("chart.xlsx", ExcelOpenType.Automatic);
   ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
-  PdfDocument pdfDocument = new PdfDocument();
-  pdfDocument = converter.Convert();
-  pdfDocument.Save("ExcelToPDF.pdf");
+
+  using (PdfDocument pdfDocument = converter.Convert())
+  {
+    pdfDocument.Save("ExcelToPDF.pdf");
+  }
 }
 {% endhighlight %}
 
@@ -288,10 +290,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   application.ChartToImageConverter.ScalingMode = ScalingMode.Best
 
   Dim workbook As IWorkbook = application.Workbooks.Open("chart.xlsx")
-  Dim worksheet As IWorksheet = workbook.Worksheets(0)
-  Dim converter As New ExcelToPdfConverter(workbook)  
-  Dim pdfDocument As New PdfDocument()
-  pdfDocument = converter.Convert()
+  Dim converter As New ExcelToPdfConverter(workbook)
+  Dim pdfDocument As PdfDocument = converter.Convert()
   pdfDocument.Save("ExcelToPDF.pdf")
 End Using
 {% endhighlight %}
@@ -301,7 +301,7 @@ A complete working example to convert Excel chart to PDF in C# is present on [th
 
 ## Excel with comments (notes) to PDF
 
-XlsIO supports to convert a workbook or a worksheet with comments (notes) to PDF documents. By default, comments (notes) will not get converted. To convert the comments in worksheets of an Excel workbook, it is a must to set the print options through [ExcelPrintLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelPrintLocation.html) enumeration. This option helps to convert,
+XlsIO supports converting a workbook or a worksheet that contains comments (notes) to a PDF document. By default, comments are not converted. To convert the comments in a worksheet, set the print options through the [ExcelPrintLocation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelPrintLocation.html) enumeration. This option supports three modes:
 
 * comments as displayed in place,
 * comments at the end of the sheet, and
@@ -370,7 +370,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintInPlace
 
   'Open the Excel document to convert
-  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(worksheet)
 
   'Initialize the PDF document
   Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -457,7 +457,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintSheetEnd
 
   'Open the Excel document to convert
-  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(worksheet)
 
   'Initialize the PDF document
   Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -545,7 +545,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.PageSetup.PrintComments = ExcelPrintLocation.PrintNoComments
 
   'Open the Excel document to convert
-  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(worksheet)
 
   'Initialize the PDF document
   Dim pdfDocument As PdfDocument = New PdfDocument()
@@ -677,10 +677,13 @@ The following screenshot represents the output pdf document generated by the Xls
 
 ## Substitute Font in Excel-to-PDF Conversion
 
-By default, XlsIO substitutes unsupported fonts to **Microsoft Sans Serif** in Excel-to-PDF conversion. However, there might be a requirement for substituting a different font or the same font for the unsupported font during the conversion. XlsIO supports substituting unsupported or missing fonts through the event [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_SubstituteFont). The event has the below arguments:
+By default, XlsIO substitutes unsupported fonts with **Microsoft Sans Serif** during Excel-to-PDF conversion. If you need a different fallback, subscribe to the [SubstituteFont](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_SubstituteFont) event on `IApplication`. The event handler receives the following arguments:
 
-**AlternateFontName** – Substitutes an available font in the machine for the [OriginalFontName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html#Syncfusion_XlsIO_Implementation_SubstituteFontEventArgs_OriginalFontName).
-**AlternateFontStream** – Substitutes a font from stream that is added as embedded resource for the [OriginalFontName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html#Syncfusion_XlsIO_Implementation_SubstituteFontEventArgs_OriginalFontName).	
+| Argument | Type | Description |
+| --- | --- | --- |
+| [OriginalFontName](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html#Syncfusion_XlsIO_Implementation_SubstituteFontEventArgs_OriginalFontName) | `string` | Name of the font in the workbook that is not installed on the machine. Read-only. |
+| AlternateFontName | `string` | Name of an installed font to substitute. Use this when an equivalent system font is available. |
+| AlternateFontStream | `Stream` | Font stream (for example, an embedded-resource `.ttf`) to substitute. Use this when no installed font is available. |
 
 The following code illustrates how to perform Excel-to-PDF conversion by substituting unsupported fonts in the machine.
 
@@ -849,11 +852,11 @@ End Namespace
 
 In Linux OS, the Excel to PDF conversion can be performed using .NET Core (Targeting .NET core app) application. Please refer [Excel to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-excel-document-into-pdf) to know about the packages required to deploy .NET Core (Targeting .NET core app) application with Excel to PDF conversion capabilities.
 
-In addition to the previous NuGet packages, SkiaSharp.Linux helper NuGet package is required, that can be generated by the following steps: 
+In addition to the previous NuGet packages, the SkiaSharp.Linux helper NuGet package is required. It can be generated with the following steps:
 
-1. Download libSkiaSharp.so [here](https://github.com/mono/SkiaSharp/releases/tag/v3.119.1#).
-2. Create a folder and name it as SkiaSharp.Linux and place the downloaded file in the folder structure "SkiaSharp.Linux\runtimes\linux-x64\native"
-3. Create a nuspec file with name SkiaSharp.Linux.nuspec using the following metadata information and place it inside SkiaSharp.Linux folder. The nuspec file can be customized.
+1. Download `libSkiaSharp.so` from the [SkiaSharp release page](https://github.com/mono/SkiaSharp/releases/tag/v3.119.1). The native binary should be placed in the folder structure `SkiaSharp.Linux/runtimes/linux-x64/native/libSkiaSharp.so` (the filename must be exactly `libSkiaSharp.so`).
+2. Create a folder named `SkiaSharp.Linux` containing the `runtimes/linux-x64/native/libSkiaSharp.so` file from step 1.
+3. Create a nuspec file named `SkiaSharp.Linux.nuspec` inside the `SkiaSharp.Linux` folder using the following metadata. The nuspec can be customized.
 
 {% tabs %}
 {% highlight XML %}
@@ -892,9 +895,9 @@ Now, SkiaSharp.Linux NuGet will be generated in the mentioned output directory a
 
 ## Print Excel document
 
-XlsIO supports Excel printing option by converting Excel To PDF and printing that PDF document. The Excel can be printed with specified page setup and printer settings in XlsIO.
+XlsIO supports printing Excel documents by first converting them to PDF and then sending the PDF to the printer. An Excel document can be printed with the specified page setup and printer settings in XlsIO.
 
-The following printer settings can be applied to print Excel in XlsIO. 
+The following printer settings can be applied when printing an Excel document. 
 
 ![Printer settings](Excel-to-PDF-Conversion_images/Excel-to-PDF-Conversion_img1.jpg)
  
@@ -908,7 +911,7 @@ The following code snippet illustrates how to print the Excel document in XlsIO.
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -948,7 +951,7 @@ The following code snippet illustrates how to print the Excel document with prin
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -959,6 +962,7 @@ Using(ExcelEngine excelEngine = new ExcelEngine())
 
   //Initialize the printer settings
   PrinterSettings printerSettings = new PrinterSettings();
+
 
   //customizing the printer settings
   printerSettings.PrinterName = "HP LaserJet Pro MFP M127-M128 PCLmS";
@@ -1009,7 +1013,7 @@ The following code snippet illustrates how to print the Excel document with Exce
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -1062,7 +1066,7 @@ The following code snippet illustrates how to print the Excel document with Exce
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -1173,11 +1177,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Xlsx;
+  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
     //Convert Excel document into PDF document
     ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
@@ -1697,4 +1701,12 @@ The following list contains unsupported elements that presently not preserved in
 * OLE objects
 
 
-N> Explore our [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) Feature Tour page and [.Net Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create and modify Excel files from C# with 5 lines of code on different platforms.
+N> Explore our [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) Feature Tour page and [.NET Excel Framework demo](https://www.syncfusion.com/demos/fileformats/excel-library) that shows how to create and modify Excel files from C# with 5 lines of code on different platforms.
+
+## Next Steps
+
+* [Excel to PDF Converter Settings](excel-to-pdf-converter-settings) \u2014 customize layout, embedding, and image quality.
+* [Assemblies Required for Excel to PDF conversion](assemblies-required-for-excel-to-pdf) \u2014 manual assembly references for non-NuGet scenarios.
+* [NuGet Packages Required for Excel to PDF conversion](nuget-packages-required-for-excel-to-pdf) \u2014 install the right package for your target platform.
+* [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) \u2014 register your license key.
+

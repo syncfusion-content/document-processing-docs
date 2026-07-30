@@ -29,7 +29,7 @@ In the ASP.NET Core PDF Viewer, annotation modules such as Polygon annotation ar
 {% endhighlight %}
 {% endtabs %}
 
-##  Add Polygon Annotation
+## Add Polygon Annotation
 
 ### Add Polygon Annotation Using the Toolbar
 1. Open the **Annotation Toolbar**.
@@ -116,11 +116,11 @@ window.onload = function () {
 
 ## Manage Polygon (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Polygon
 
-#### Edit Circle (UI)
+#### Edit Polygon (UI)
 
-- Select a Circle to view resize handles.
+- Select a Polygon to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
@@ -141,7 +141,7 @@ Use the annotation toolbar:
 
 #### Edit Polygon Programmatically
 
-Modify an existing Circle programmatically using `editAnnotation()`.
+Modify an existing Polygon programmatically using `editAnnotation()`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Feature list in Vue Spreadsheet component
+# Feature list in Vue Spreadsheet Component
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 
@@ -16,7 +16,7 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Ribbon | Yes | Yes | - |
 | Formula bar | Yes | Yes | - |
 | Sheet tab | Yes | Yes | - |
-| Show / Hide gridlines and header | Yes | Yes | - |
+| Show/Hide gridlines and header | Yes | Yes | - |
 | Scrolling | Partially | Yes | - |
 | Selection | Yes | Yes | - |
 | Editing | Yes | Yes | - |
@@ -30,16 +30,16 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Sorting | Yes | Yes | - |
 | Filtering | Yes | Yes | - |
 | Hyperlink | Yes | Yes | - |
-| Undo & redo | Yes | Yes | - |
+| Undo/redo | Yes | Yes | - |
 | Open and Save | Yes | Yes | - |
-| Resize / Autofit | Yes | Yes | - |
+| Resize/Autofit | Yes | Yes | - |
 | Clipboard | Yes | Yes | - |
 | Collaborative editing | No | Yes | - |
 | Wrap text | Yes | Yes | - |
 | Template | No | Yes | - |
 | Merge cells | Yes | Yes | - |
-| Show / Hide rows and columns | Yes | Yes | - |
-| Sheet customizations | Yes | Partially | Move or copy sheet is not supported in EJ2 spreadsheet. |
+| Show/Hide rows and columns | Yes | Yes | - |
+| Sheet customizations | Yes | Partially | Move or copy sheet is not supported in EJ2 Spreadsheet. |
 | Data Validation | Yes | Yes | - |
 | Table | Yes | No | - |
 | Chart | Yes | Yes | - |
@@ -52,7 +52,7 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Autofill | Yes | No | - |
 | Auto Sum | Yes | Yes | - |
 | Format painter | Yes | No | - |
-| Cell Style | Yes | Partially | We can only customize the cell style in EJ2 Spreadsheet through API. |
+| Cell Style | Yes | Partially | Cell style in EJ2 Spreadsheet can be customized only through the API. |
 | Protection | Yes | Partially | Custom encryption is not supported in EJ2 Spreadsheet's protect workbook. |
 | Find and replace | Yes | Yes | - |
 | Drag and Drop | Yes | No | - |

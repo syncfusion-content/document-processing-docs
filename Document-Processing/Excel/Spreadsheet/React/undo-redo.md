@@ -13,7 +13,7 @@ The Undo and Redo functionality allows you to reverse or restore actions perform
 
 You can enable or disable undo redo functionality using the [`allowUndoRedo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowundoredo) property.
 
-> * The default value for `allowUndoRedo` property is `true`.
+> The default value for `allowUndoRedo` property is `true`.
 
 By default, the `UndoRedo` module is injected internally into Spreadsheet to perform undo redo.
 
@@ -52,9 +52,9 @@ It reverses the last undo action you performed with Spreadsheet. Redo can be don
 * Use `Ctrl + Y` keyboard shortcut to perform the redo.
 * Use the [`redo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#redo) method programmatically.
 
-## Update custom actions in UndoRedo collection
+## Update custom actions in the UndoRedo collection
 
-You can update your own custom actions in UndoRedo collection, by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updateundoredocollection) method. And also customize the undo redo operations of your custom action by using `actionComplete` event.
+You can update your own custom actions in the UndoRedo collection by using the [`updateUndoRedoCollection`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#updateundoredocollection) method. You can also customize the undo redo operations of your custom action by using the `actionComplete` event.
 
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
@@ -77,7 +77,7 @@ The following code example shows `How to update and customize your own actions f
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

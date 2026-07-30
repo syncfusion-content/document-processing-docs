@@ -12,15 +12,15 @@ documentation: ug
 
 The `Undo` option reverses the last action performed in the Spreadsheet. The `Redo` option reapplies the most recently undone action. Use the [`allowUndoRedo`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowUndoRedo) property to enable or disable undo and redo functionality in the Spreadsheet.
 
-N> * The default value for `allowUndoRedo` property is `true`.
+N> The default value of the `allowUndoRedo` property is `true`.
 
-By default, the `UndoRedo` module is injected internally into Spreadsheet to perform undo redo.
+By default, the `UndoRedo` module is injected internally into the Spreadsheet to perform undo and redo operations.
 
 ## Undo
 
 Undo reverses the last action performed in the Spreadsheet. You can perform an undo operation in one of the following ways:
 
-* Open the **Home** tab in the Ribbon and choose **Undo**.
+* Open the **Home** tab in the ribbon and choose **Undo**.
 * Press `Ctrl + Z`.
 * Use the `undo()` method programmatically.
 
@@ -28,7 +28,7 @@ Undo reverses the last action performed in the Spreadsheet. You can perform an u
 
 Redo reapplies the action that was most recently undone in the Spreadsheet.You can perform a redo operation in one of the following ways:
 
-* Open the **Home** tab in the Ribbon and choose **Redo**.
+* Open the **Home** tab in the ribbon and choose **Redo**.
 * Press `Ctrl + Y`.
 * Use the `redo()` method programmatically.
 

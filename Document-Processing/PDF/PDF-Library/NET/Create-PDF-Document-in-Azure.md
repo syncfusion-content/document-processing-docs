@@ -17,7 +17,7 @@ N> If this is your first time working with Azure, please refer to the dedicated 
 * An active **Microsoft Azure subscription** is required. If you don't have one, please create a free account before starting.
 * Install the required NuGet package: [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/).
 * Visual Studio 2022 (17.0 or later) or Visual Studio Code with the C# Dev Kit extension.
-* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+* An active Syncfusion<sup>&reg;</sup> license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
 ## Supported Azure Services
 

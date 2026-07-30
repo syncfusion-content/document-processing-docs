@@ -10,7 +10,7 @@ documentation: ug
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 
-> * The default value for `allowHyperlink` property is `true`.
+> The default value for `allowHyperlink` property is `true`.
 
 ## Insert Link
 
@@ -27,8 +27,8 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 
 You can update an existing hyperlink in your workbook by changing either:
 
-* **Destination Link** – Modify the link target (web address, cell reference, or sheet).  
-* **Display Text** – Change the text shown in the cell that represents the hyperlink.  
+* **Destination Link** – Modify the link target (web address, cell reference, or sheet).
+* **Display Text** – Change the text shown in the cell that represents the hyperlink.
 
 
 **User Interface**:
@@ -72,7 +72,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

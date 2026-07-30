@@ -77,9 +77,9 @@ You can edit comments in two ways:
 
 ### Add comments and replies programmatically
 
-Comments can be added to the PDF document programmatically using the `editAnnotation` property.
+Comments can be added to the PDF document programmatically using the `editAnnotation` method.
 
-The following example Shows how to add comments and reply in response to a button click.
+The following example shows how to add comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -160,9 +160,9 @@ window.onload = function() {
 
 ### Edit comments and replies programmatically
 
-Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
+Comments can be edited in the PDF document programmatically using the `editAnnotation` method.
 
-The following example Shows how to edit comments and reply in response to a button click.
+The following example shows how to edit comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
