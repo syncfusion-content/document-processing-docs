@@ -7,9 +7,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Angular PDF Viewer MCP Server
+# Syncfusion Angular PDF Viewer MCP Server
 
-Angular PDF Viewer MCP Server accelerates Angular PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Angular PDF Viewer MCP Server accelerates Angular PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Angular PDF Viewer integration.
 > The previously available **Agentic UI Builder** (`#sf_angular_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](./ui-builder-skill). The **AI Coding Assistant** (#sf_angular_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
@@ -26,7 +26,7 @@ These tools speed up development and reinforce best practices for Angular PDF Vi
 
 Before beginning, ensure the following prerequisites are met:
 
-- [Node.js 18+](https://nodejs.org/en/download) with **npm**, **yarn**, or **pnpm**
+- [Node.js 18+](https://nodejs.org/en/download) with **npm** or **yarn**
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - An **Angular application** (existing or new); see [Angular PDF Viewer documentation](./getting-started)

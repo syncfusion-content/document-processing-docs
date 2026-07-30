@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript PDF Viewer MCP Server
+# Syncfusion JavaScript PDF Viewer MCP Server
 
-The JavaScript PDF Viewer MCP Server accelerates JavaScript PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript PDF Viewer MCP Server accelerates JavaScript PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for the JavaScript PDF Viewer (SfPdfViewer) component integration.
 
@@ -155,7 +155,7 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 
 {% promptcards %}
 {% promptcard Standalone Component Setup %}
-#search_docs How do I configure the Syncfusion Javascript Standalone PDF Viewer Component?
+#search_docs How do I configure the Syncfusion JavaScript Standalone PDF Viewer Component?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -165,25 +165,25 @@ Get step-by-step help for adding specific features to the JavaScript PDF Viewer.
 
 {% promptcards %}
 {% promptcard Form Designer %}
-#search_docs How can I enable Form Designer in Javascript PDF Viewer?
+#search_docs How can I enable Form Designer in JavaScript PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Fit to Viewport %}
-#search_docs Provide API for Fit the entire page to the viewport in Javascript PDF viewer.
+#search_docs Provide API for Fit the entire page to the viewport in JavaScript PDF viewer.
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Programmatic Printing %}
-#search_docs how to programmatically trigger printing in the Javascript PDF Viewer?
+#search_docs how to programmatically trigger printing in the JavaScript PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Retry Timeout %}
-#search_docs How to Configure Retry Timeout for Javascript PDF Viewer Requests.
+#search_docs How to Configure Retry Timeout for JavaScript PDF Viewer Requests.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -193,7 +193,7 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Document Loading Issue %}
-#search_docs Document not Loading Newer version in Javascript PDF Viewer.
+#search_docs Document not Loading Newer version in JavaScript PDF Viewer.
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -238,4 +238,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
