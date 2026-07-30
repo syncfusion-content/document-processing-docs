@@ -1,6 +1,6 @@
 ---
-title: Highlight Cells| Excel library | Syncfusion
-description: In this section, you can learn how to apply highlight cells using conditional formatting in an Excel document with XlsIO
+title: Highlight Cells | Excel library | Syncfusion
+description: Learn how to apply highlight-cell conditional formatting rules in an Excel document using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,20 +8,20 @@ documentation: UG
 
 # Highlight Cells in Conditional Formatting
 
-Highlight cell rules are powerful tools for data analysis and presentation, enhancing the ability to quickly interpret and act upon data within worksheets.
+Highlight-cell rules are conditional formatting rules that visually emphasize cells in a worksheet based on their values. They help you quickly interpret and act upon data.
 
 ## Format Unique and Duplicate Values
 
-Format unique and duplicate values of an Excel range using conditional formatting. The values, **Unique** and **Duplicate** of the enumeration [ExcelCFType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCFType.html) helps to achieve the requirement.
+You can highlight unique and duplicate values within an Excel range by setting the [FormatType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html#Syncfusion_XlsIO_IConditionalFormat_FormatType) of an [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) to `ExcelCFType.Unique` or `ExcelCFType.Duplicate` from the [ExcelCFType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCFType.html) enumeration. The `Unique` value applies the rule only to values that appear once in the range, while `Duplicate` applies the rule to values that appear more than once.
 
 The following code example illustrates how to format unique and duplicate values using conditional formatting.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Conditional%20Formatting/Unique%20and%20Duplicate/.NET/Unique%20and%20Duplicate/Unique%20and%20Duplicate/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Excel2016;
+	application.DefaultVersion = ExcelVersion.Xlsx;
 	IWorkbook workbook = application.Workbooks.Create(1);
 	IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -84,7 +84,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	worksheet.Range["A4:B21"].ConditionalFormats;
 	IConditionalFormat condition = conditionalFormats.AddCondition();
 
-	//conditional format to set duplicate format type
+	//Conditional format to set duplicate format type
 	condition.FormatType = ExcelCFType.Duplicate;
 	condition.BackColorRGB = Color.FromArgb(255, 255, 199, 206);
 
@@ -170,10 +170,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["C14"].Number = 300;  
   worksheet.Range["C15"].Number = 550;  
   worksheet.Range["C16"].Number = 700;
-  worksheet.Range["C17"].Number = 610; 
-  worksheet.Range["C18"].Number = 750; 
-  worksheet.Range["C19"].Number = 500;  
-  worksheet.Range["C20"].Number = 750;  
+  worksheet.Range["C17"].Number = 610;
+  worksheet.Range["C18"].Number = 750;
+  worksheet.Range["C19"].Number = 500;
+  worksheet.Range["C20"].Number = 750;
   worksheet.Range["C21"].Number = 910;
 
   worksheet.SetColumnWidth(1, 23.45);
@@ -315,6 +315,6 @@ End Using
 
 A complete working example to format unique and duplicate values in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Conditional%20Formatting/Unique%20and%20Duplicate/.NET/Unique%20and%20Duplicate).
 
-By executing the program, you will get the Excel file as below
+By executing the program, you will get the Excel file as shown below.
 
-![unique and duplicate conditional Formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.png).
+![Unique and Duplicate conditional formatting](../Working-with-Conditional-Formatting_images/Working-with-Conditional-Formatting_img3.png)

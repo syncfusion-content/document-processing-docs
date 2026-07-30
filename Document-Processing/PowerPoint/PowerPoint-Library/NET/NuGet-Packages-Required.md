@@ -1,6 +1,6 @@
 ---
-title: Required NuGet Packages for PowerPoint library | Syncfusion
-description: This section illustrates the NuGet packages required to use Syncfusion PowerPoint library (Essential Presentation) in various platforms and frameworks
+title: Required NuGet Packages for PowerPoint Library | Syncfusion
+description: This section illustrates the NuGet packages required to use Syncfusion PowerPoint Library (Essential Presentation) in various platforms and frameworks
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -10,18 +10,19 @@ documentation: UG
 To work with PowerPoint Presentations, install the following NuGet packages in your application:
 
 <table>
-<tr>
 <thead>
+<tr>
 <th><b>Platform(s)</b></th>
 <th><b>NuGet Package</b></th>
-</thead>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>
 {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-windows-forms)'| markdownify }}, Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.Presentation.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/)'| markdownify }}
+{{'[Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -29,23 +30,16 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 {{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-wpf)'| markdownify }}
 </td>
 <td>
-{{'[Syncfusion.Presentation.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/)'| markdownify }}
+{{'[Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'| markdownify }}
-</td>
-<td>
-{{'[Syncfusion.Presentation.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
+
 {{'[ASP.NET MVC5](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'| markdownify }}
 </td>
 <td>
-{{'[Syncfusion.Presentation.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -53,7 +47,7 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 {{'[UWP](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-uwp)'| markdownify }}
 </td>
 <td>
-{{'[Syncfusion.Presentation.UWP.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/)'| markdownify }}
+{{'[Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -61,7 +55,7 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)'| markdownify }}, Console Application (Targeting .NET Core) and {{'[Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-blazor)'| markdownify }}
 </td>
 <td>
-{{'[Syncfusion.Presentation.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/)'| markdownify }}
+{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -69,14 +63,15 @@ To work with PowerPoint Presentations, install the following NuGet packages in y
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-winui)'| markdownify }} and {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui)'| markdownify }}
 </td>
 <td>
-{{'[Syncfusion.Presentation.NET.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.NET/)'|markdownify }}
+{{'[Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET/)'|markdownify }}
 </td>
 </tr>
+</tbody>
 </table>
 
-T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+N> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -92,7 +87,7 @@ The following NuGet packages need to be included in your application based on th
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms)' | markdownify}}<br/>
 </td>
 <td>
-{{'[Syncfusion.Presentation.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
+{{'[Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
 </td>
 </tr>
 <tr>
@@ -100,18 +95,24 @@ The following NuGet packages need to be included in your application based on th
 {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin)'| markdownify }}<br/>
 </td>
 <td>
-{{'[Syncfusion.Xamarin.Presentation.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Presentation/)'| markdownify }}
+{{'[Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages/Syncfusion.Xamarin.Presentation/)'| markdownify }}
 </td>
-</tr>
-</table>
+</tr><tr>
+<td>
+{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'| markdownify }}<br/>
+</td>
+<td>
+{{'[Syncfusion.Presentation.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'| markdownify }}
+</td>
+</tr></table>
 
-N> 1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your applications to use the components.
-N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21), Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
+N> 1. Starting with v16.2.0, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your applications to use the components.
+N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release (v16.3.0.21), Syncfusion<sup>&reg;</sup> has changed some of the NuGet package names to search and find the required Syncfusion<sup>&reg;</sup> NuGet packages in nuget.org easily based on the control and its platforms.
 N> 3. Syncfusion has **deprecated the ASP.NET package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
 
-## Converting PowerPoint Presentation into PDF
+## Converting a PowerPoint Presentation to PDF
 
-For converting PowerPoint Presentation into PDF, install the following NuGet packages in your application:
+For converting a PowerPoint Presentation to PDF, install the following NuGet packages in your application:
 
 <table>
 <tr>
@@ -125,7 +126,7 @@ For converting PowerPoint Presentation into PDF, install the following NuGet pac
 Windows Forms, Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.PresentationToPDFConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/)'| markdownify }}
+{{'[Syncfusion.PresentationToPDFConverter.WinForms](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.WinForms/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -133,23 +134,16 @@ Windows Forms, Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.PresentationToPDFConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/)'| markdownify }}
+{{'[Syncfusion.PresentationToPDFConverter.Wpf](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.Wpf/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
+
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -157,7 +151,7 @@ ASP.NET MVC5
 UWP, ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </td>
 <td>
-{{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -165,11 +159,11 @@ UWP, ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-{{'[Syncfusion.PresentationRenderer.NET.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET/)'| markdownify }}<br/></td>
+{{'[Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET/)'| markdownify }}<br/></td>
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -184,14 +178,21 @@ The following NuGet packages need to be included in your application based on th
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net)' | markdownify}}<br/></td>
 <td>
-{{'[Syncfusion.PresentationToPDFConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet)'|markdownify }}
+{{'[Syncfusion.PresentationToPDFConverter.AspNet](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet)'|markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'| markdownify }}<br/></td>
+<td>
+{{'[Syncfusion.PresentationToPDFConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet.Mvc4/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
 {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin)' | markdownify}}<br/></td>
 <td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+{{'[Syncfusion.Xamarin.PresentationRenderer](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -239,9 +240,9 @@ The following table illustrates the native assets NuGet packages and their appli
   </tbody>
 </table>
 
-## Converting PowerPoint Presentation to image
+## Converting a PowerPoint Presentation to an Image
 
-For converting a PowerPoint Presentation to image, install the following NuGet packages in your application:
+For converting a PowerPoint Presentation to an image, install the following NuGet packages in your application:
 
 <table>
 <tr>
@@ -256,7 +257,7 @@ For converting a PowerPoint Presentation to image, install the following NuGet p
 Windows Forms, Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.Presentation.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/)'| markdownify }}
+{{'[Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -264,15 +265,7 @@ Windows Forms, Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.Presentation.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.Presentation.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'| markdownify }}
+{{'[Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -280,7 +273,7 @@ ASP.NET MVC4
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.Presentation.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -288,7 +281,7 @@ ASP.NET MVC5
 UWP
 </td>
 <td>
-{{'[Syncfusion.Presentation.UWP.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/)'| markdownify }}
+{{'[Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -296,7 +289,7 @@ UWP
 ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </td>
 <td>
-{{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -304,13 +297,13 @@ ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-{{'[Syncfusion.PresentationRenderer.NET.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET/)'| markdownify }}<br/>
+{{'[Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET/)'| markdownify }}<br/>
 </td>
 </tr>
 </tbody>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -325,14 +318,21 @@ The following NuGet packages need to be included in your application based on th
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net)' | markdownify}}<br/></td>
 <td>
-{{'[Syncfusion.Presentation.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
+{{'[Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet)'|markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'|Â markdownify }}<br/></td>
+<td>
+{{'[Syncfusion.Presentation.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'|Â markdownify }}
 </td>
 </tr>
 <tr>
 <td>
 {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}}<br/></td>
 <td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+{{'[Syncfusion.Xamarin.PresentationRenderer](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -380,9 +380,9 @@ The following table illustrates the native assets NuGet packages and their appli
   </tbody>
 </table>
 
-## Converting charts in Presentation
+## Converting Charts in a PowerPoint Presentation
 
-The following NuGet package should be installed additionally to convert the charts present in PowerPoint Presentation:
+Install the following NuGet package in addition to the base presentation package to convert charts present in a PowerPoint Presentation:
 
 <table>
 <tr>
@@ -396,7 +396,7 @@ The following NuGet package should be installed additionally to convert the char
 Windows Forms, Console Application (Targeting .NET Framework)
 </td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.WinForms.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WinForms/)'| markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.WinForms](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WinForms/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -404,23 +404,16 @@ Windows Forms, Console Application (Targeting .NET Framework)
 WPF
 </td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.Wpf.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf/)'| markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.Wpf](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf/)'| markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
+
 ASP.NET MVC5
 </td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5/)'| markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -428,7 +421,7 @@ ASP.NET MVC5
 UWP
 </td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.UWP.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.UWP/)'| markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.UWP/)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -436,12 +429,20 @@ UWP
 ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </td>
 <td>
-{{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
+</td>
+<td>
+{{'[Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET/)'| markdownify }}
 </td>
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -454,16 +455,23 @@ The following NuGet packages need to be included in your application based on th
 </tr>
 <tr>
 <td>
-ASP.NET<br/></td>
+{{'[ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-web-forms)'| markdownify }}<br/></td>
 <td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet)'|markdownify }}
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet)'|markdownify }}
 </td>
 </tr>
 <tr>
 <td>
-Xamarin<br/></td>
+{{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-xamarin)'| markdownify }}<br/></td>
 <td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+{{'[Syncfusion.Xamarin.PresentationRenderer](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+{{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc)'|Â markdownify }}<br/></td>
+<td>
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'|Â markdownify }}
 </td>
 </tr>
 </table>
@@ -489,14 +497,14 @@ N> The Syncfusion<sup>&reg;</sup> components are available in nuget.org
 Windows Forms
 </td>
 <td>
-* Install-package Syncfusion.Presentation.WinForms<br/><br/>
-* Install-package Syncfusion.PresentationToPdfConverter.WinForms<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.WinForms
+* Install-Package Syncfusion.Presentation.WinForms<br/><br/>
+* Install-Package Syncfusion.PresentationToPdfConverter.WinForms<br/><br/>
+* Install-Package Syncfusion.OfficeChartToImageConverter.WinForms
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.WinForms -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.WinForms -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.WinForms -RemoveDependencies                             
+* Uninstall-Package Syncfusion.Presentation.WinForms -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.PresentationToPdfConverter.WinForms -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.OfficeChartToImageConverter.WinForms -RemoveDependencies
 </td>
 </tr>
 <tr>
@@ -504,29 +512,14 @@ Windows Forms
 WPF
 </td>
 <td>
-* Install-package Syncfusion.Presentation.Wpf<br/><br/>
-* Install-package Syncfusion.PresentationToPdfConverter.Wpf<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.Wpf
+* Install-Package Syncfusion.Presentation.Wpf<br/><br/>
+* Install-Package Syncfusion.PresentationToPdfConverter.Wpf<br/><br/>
+* Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.Wpf -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.Wpf -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies  
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC4
-</td>
-<td>
-* Install-package Syncfusion.Presentation.AspNet.MVC4<br/><br/>
-* Install-package Syncfusion.PresentationToPdfConverter.AspNet.MVC4<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4
-</td>
-<td>
-* Uninstall-package Syncfusion.Presentation.AspNet.MVC4 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.AspNet.MVC4 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4 -RemoveDependencies  
+* Uninstall-Package Syncfusion.Presentation.Wpf -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.PresentationToPdfConverter.Wpf -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies
 </td>
 </tr>
 <tr>
@@ -534,14 +527,14 @@ ASP.NET MVC4
 ASP.NET MVC5
 </td>
 <td>
-* Install-package Syncfusion.Presentation.AspNet.MVC5<br/><br/>
-* Install-package Syncfusion.PresentationToPdfConverter.AspNet.MVC5<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC5
+* Install-Package Syncfusion.Presentation.AspNet.Mvc5<br/><br/>
+* Install-Package Syncfusion.PresentationToPdfConverter.AspNet.Mvc5<br/><br/>
+* Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.AspNet.MVC5 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.PresentationToPdfConverter.AspNet.MVC5 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC5 -RemoveDependencies  
+* Uninstall-Package Syncfusion.Presentation.AspNet.Mvc5 -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 -RemoveDependencies <br/><br/>
+* Uninstall-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5 -RemoveDependencies
 </td>
 </tr>
 <tr>
@@ -549,12 +542,12 @@ ASP.NET MVC5
 UWP
 </td>
 <td>
-* Install-package Syncfusion.Presentation.UWP<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.UWP
+* Install-Package Syncfusion.Presentation.UWP<br/><br/>
+* Install-Package Syncfusion.OfficeChartToImageConverter.UWP
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.UWP –RemoveDependencies<br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.UWP -RemoveDependencies 
+* Uninstall-Package Syncfusion.Presentation.UWP -RemoveDependencies<br/><br/>
+* Uninstall-Package Syncfusion.OfficeChartToImageConverter.UWP -RemoveDependencies
 </td>
 </tr>
 <tr>
@@ -562,12 +555,12 @@ UWP
 ASP.NET Core and Blazor
 </td>
 <td>
-* Install-package Syncfusion.Presentation.Net.Core<br/><br/>
-* Install-package Syncfusion.PresentationRenderer.Net.Core
+* Install-Package Syncfusion.Presentation.Net.Core<br/><br/>
+* Install-Package Syncfusion.PresentationRenderer.Net.Core
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.Net.Core –RemoveDependencies<br/><br/>
-* Uninstall-package Syncfusion.PresentationRenderer.Net.Core - RemoveDependencies
+* Uninstall-Package Syncfusion.Presentation.Net.Core -RemoveDependencies<br/><br/>
+* Uninstall-Package Syncfusion.PresentationRenderer.Net.Core -RemoveDependencies
 </td>
 </tr>
 <tr>
@@ -575,12 +568,12 @@ ASP.NET Core and Blazor
 Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 </td>
 <td>
-* Install-package Syncfusion.Presentation.NET<br/>
-* Install-package Syncfusion.PresentationRenderer.NET
+* Install-Package Syncfusion.Presentation.NET<br/>
+* Install-Package Syncfusion.PresentationRenderer.NET
 </td>
 <td>
-* Uninstall-package Syncfusion.Presentation.NET - RemoveDependencies<br/>
-* Uninstall-package Syncfusion.PresentationRenderer.NET - RemoveDependencies
+* Uninstall-Package Syncfusion.Presentation.NET -RemoveDependencies<br/>
+* Uninstall-Package Syncfusion.PresentationRenderer.NET -RemoveDependencies
 </td>
 </tr>
 </table>

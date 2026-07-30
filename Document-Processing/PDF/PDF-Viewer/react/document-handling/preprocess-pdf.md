@@ -75,7 +75,7 @@ const bytes = await doc.save();
 
 ### Flatten on Load
 
-Use the following code-snippet, when you want uploaded PDFs to be flattened before they are loaded into the viewer.
+Use the following code-snippet when you want uploaded PDFs to be flattened before they are loaded into the viewer.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

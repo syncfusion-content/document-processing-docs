@@ -25,7 +25,7 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 1. Open the Organize Pages view
 
-	- Click the **Organize Pages** button in the viewer toolbar to open the Organize Pages dialog.
+	- Click the **Organize Pages** button in the viewer navigation toolbar to open the Organize Pages dialog.
 
 2. Select pages to duplicate
 
