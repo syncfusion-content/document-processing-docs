@@ -16,7 +16,7 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 
 * Image.
 
-## UI Commands to Access Clipboard Operations
+## UI commands to access clipboard operations
 
 
 The following code example demonstrates how to bind commands for accessing clipboard operations.
@@ -38,7 +38,7 @@ N> In order to cut, copy, or paste, the standard keyboard shortcuts such as CTRL
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Document Properties in WPF RichTextBox](./Document-Properties)
 - [Selection in WPF RichTextBox](./Selection)
