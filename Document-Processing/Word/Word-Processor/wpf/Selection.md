@@ -156,7 +156,7 @@ richTextBoxAdv.Selection.[Select](endPosition, startPosition)
 
 N> You can select a text position within a comment with another text position within the same comment only. It is not possible to select a text position within comment with a text position that exists outside of that comment.
 
-## Multi Selection
+## Multi selection
 
 The SfRichTextBoxAdv also supports selecting different portions of the document at a time. The following code example demonstrates how to perform multi selection in SfRichTextBoxAdv using the [SelectionRanges](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_SelectionRanges) collection.
 {% tabs %}
@@ -193,7 +193,7 @@ richTextBoxAdv.Selection.SelectionRanges.Add(startPosition2, endPosition2)
 
 {% endtabs %}
 
-## Apply Formatting for selection
+## Apply formatting for selection
 
 The SfRichTextBoxAdv supports the following format properties that can be applied to the selection content.
 Character Format-bold, italic, font size, font family, font color, highlight color, underline, strikethrough, subscript, and superscript.
@@ -257,7 +257,7 @@ richTextBoxAdv.Selection.SectionFormat.PageMargin = New Thickness(96, 48, 96, 48
 
 {% endtabs %}
 
-## Binding Selection format properties
+## Binding selection format properties
 
 The SfRichTextBoxAdv supports binding the rich-text format options of the selection content.
 
@@ -444,7 +444,7 @@ Dim isDeleted As Boolean = richTextBoxAdv.Selection.Delete()
 N> This API is supported starting from release version v18.2.0.X.
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Commands in WPF RichTextBox](./Commands)
 - [Document Structure in WPF RichTextBox](./Document-Structure)

@@ -10,7 +10,7 @@ keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern.
 
-## Creating a View Model
+## Creating a view model
 
 The following code example demonstrates how to implement a view model class that contains properties to hold a collection of animals, the currently selected animal, and the description for the selected animal. When the selected animal changes, the `Text` property is updated with the new animal's description; when `Text` changes (typed by the user), the in-memory description for the current animal is updated.
 {% tabs %}
@@ -475,7 +475,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-## Creating XAML View
+## Creating xaml view
 
 The following code example demonstrates how to create XAML view with SfRichTextBoxAdv and UI properties bound to view model properties.
 {% tabs %}
@@ -520,7 +520,7 @@ The following code example demonstrates how to create XAML view with SfRichTextB
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Commands in WPF RichTextBox](./Commands)
 - [Layout Types in WPF RichTextBox](./Layout-Types)
