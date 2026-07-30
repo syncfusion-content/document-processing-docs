@@ -25,7 +25,7 @@ The PDF Viewer applies styles to the toolbar, buttons, panels, annotations, and 
 
 **Step-1:** Create a PDF Viewer sample by following the [React PDF Viewer getting started guide](./getting-started).
 
-**Step-2:** To change the theme to tailwind, add the imports to tailwind theme in `app.css`.
+**Step-2:** To change the theme to tailwind, add the imports to the tailwind theme in `app.css`.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
@@ -42,13 +42,13 @@ The PDF Viewer applies styles to the toolbar, buttons, panels, annotations, and 
 
 This short, guided walkthrough shows a minimal end-to-end customization flow:
 
-1. Create a new React app and install the viewer
+1. Create a new React app and install the viewer.
 
 2. Add the Tailwind theme imports to your global CSS (see Quick start).
 
 3. Render the PDF Viewer in `src/App` and verify the default look.
 
-4. Add a theme switcher using the dark-mode logic in later shown in this file
+4. Add a theme switcher using the dark-mode logic shown later in this file
 
 5. Add additional CSS rules under `.e-custom-style` and load it after the theme CSS, and verify appearance and accessibility.
 

@@ -27,13 +27,13 @@ Step 4: Install the [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/S
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
-N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 N> ```
 N>
-N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
@@ -65,10 +65,6 @@ using Syncfusion.DocIO.DLS;
 {% endtabs %}
 
 Step 7: Include the below code snippet in **HomeController.cs** to **create a Word document**.
-
-N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
-
-N> Register the Syncfusion license key before creating the `WordDocument`. See [Registering a Syncfusion license in your application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application) for details.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -351,6 +347,8 @@ Step 11: The published webpage will open in the browser.
 Step 12: On the published page, click **Create Word Document** to generate the document. You will get the output **Word document** as follows.
 
 ![Create Word document in Azure App Service on Windows](ASP-NET-Core_images/GettingStartedOutput.jpg)
+
+N> The code sample references image files (AdventureCycle.jpg, Mountain-200.jpg, Mountain-300.jpg, Road-550-W.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service/Create-Word-Document/wwwroot/Data) and place them in the application's `wwwroot/Data` folder so the relative paths in the code resolve correctly at runtime.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Getting-Started/Azure/Azure_App_Service).
 

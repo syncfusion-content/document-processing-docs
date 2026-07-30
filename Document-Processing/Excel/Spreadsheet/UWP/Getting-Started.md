@@ -46,15 +46,15 @@ Optional NuGet Packages</th><th>
 Description</th></tr>
 <tr>
 <td>
-[Syncfusion.SfSpreadsheetHelper.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.UWP)</td><td>
+{{'[Syncfusion.SfSpreadsheetHelper.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.UWP)' | markdownify}}</td><td>
 Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
 <tr>
 <td>
-[Syncfusion.ExcelChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.UWP)</td><td>
+{{'[Syncfusion.ExcelChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.UWP)' | markdownify}}</td><td>
 Contains the classes responsible for converting charts to images.</td></tr>
 <tr>
 <td>
-[Syncfusion.SfChart.UWP](https://www.nuget.org/packages/Syncfusion.SfChart.UWP)</td><td>
+{{'[Syncfusion.SfChart.UWP](https://www.nuget.org/packages/Syncfusion.SfChart.UWP)' | markdownify}}</td><td>
 Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
 </table>
 
@@ -149,7 +149,7 @@ N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="
 
    ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 
-3. Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
+3.Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
 
    **For Spreadsheet:**
 
@@ -177,7 +177,7 @@ N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="
 
    N> Assign a name (for example, `spreadsheet`) so you can reference the control from code-behind.
 
-4. Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
+4.Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
 
    **For Ribbon:**
 

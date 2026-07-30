@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the Loaded Document in ASP.NET Core PDF Viewer | syncfusion
+title: Retrieve the Loaded Document in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to access the loaded PDF document instance in the ASP.NET Core PDF Viewer using refs and the documentLoad event.
 platform: document-processing
 documentation: ug

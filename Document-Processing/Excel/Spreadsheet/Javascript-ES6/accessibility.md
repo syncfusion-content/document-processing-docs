@@ -3,13 +3,13 @@ layout: post
 title: Accessibility in EJ2 TypeScript Spreadsheet control | Syncfusion
 description: Learn here all about Accessibility in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Accessibility 
+control: Accessibility
 documentation: ug
 ---
 
 # Accessibility in EJ2 TypeScript Spreadsheet control
 
-The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet control is outlined below.
 
@@ -61,7 +61,7 @@ The Spreadsheet control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/
 
 ## Keyboard interaction
 
-The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
+The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
 
 | Press | To do this |
 |----------|-------------|
@@ -76,7 +76,7 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Shift + Home | Extend the cell selection to the first column of a worksheet. |
 | Ctrl + Shift + Home | Extend the selection of cells to the beginning of the worksheet. |
 | Ctrl + End | Move to the last cell on a worksheet, right most last column and last row cell. |
-| Page Up | Move page up. |    
+| Page Up | Move page up. |
 | Page Down | Move page down. |
 | Shift + Page Up | Perform page up by selecting all cells between. |
 | Shift + Page Down | Perform page down by selecting all cells between. |
@@ -84,9 +84,9 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Ctrl + Down | Navigate to the last non-blank cell in the same column as the active cell. |
 | Ctrl + Left | Navigate to the non-blank cell before the active cell in the same row. |
 | Ctrl + Right | Navigate to the last non-blank cell in the same row as the active cell. |
-| Shift + Up | Extend the selection of cells to the previous row. | 
-| Shift + Down | Extend the selection of cells to the next row. | 
-| Shift + Left | Extend the selection of cells to the previous column. | 
+| Shift + Up | Extend the selection of cells to the previous row. |
+| Shift + Down | Extend the selection of cells to the next row. |
+| Shift + Left | Extend the selection of cells to the previous column. |
 | Shift + Right | Extend the selection of cells to the next column. |
 | Ctrl + Shift + Up | Extend the cell selection to the previous non-blank cell in the same column as the active cell. |
 | Ctrl + Shift + Down | Extend the cell selection to the last non-blank cell in the same column as the active cell. |

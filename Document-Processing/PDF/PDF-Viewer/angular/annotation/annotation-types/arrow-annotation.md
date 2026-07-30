@@ -170,7 +170,7 @@ N> For **Line** and **Arrow** annotations, **Fill Color** is available only when
 ### Edit Arrow 
 
 #### Edit Arrow (UI)
-- Select a Arrow to view resize handles.
+- Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
 

@@ -1,22 +1,28 @@
 ---
 title: Working with lists in PowerPoint Presentation | Syncfusion
-description: Learn here all about working with lists of PowerPoint Presentation Library and more.
+description: Learn how to create and format numbered, bulleted, picture, and multi-level lists in PowerPoint presentations using the Syncfusion Presentation library.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 # Working with lists in PowerPoint Library
 
-## Creating a simple list
+## Creating a Simple List
 
-Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier for reading. In PowerPoint, Presentation lists consists of the following types 
+Essential<sup>&reg;</sup> Presentation allows you to create simple and multi-level lists that make the content easier to read. In PowerPoint, Presentation lists consist of the following types:
 
-1. Numbered list
-2. Bulleted list
-3. Picture list 
+1. [Numbered List](#numbered-list)
+2. [Bulleted List](#bulleted-list)
+3. [Picture List](#picture-list)
+4. [Multilevel List](#creating-a-multilevel-list)
+
+For a complete reference of the enums and properties used to configure lists, see the [API Reference](#api-reference) section.
 
 ### Numbered List
 
+
+N> - `IndentLevelNumber` accepts values from `0` to `8`, where `0` indicates no indent.
+N> - `ListFormat.Size` is expressed as a percentage of the text size (range `25` to `400`).
 The following code example illustrates how to create a numbered list:
 
 {% tabs %}
@@ -40,11 +46,11 @@ paragraph.ListFormat.StartValue = 1;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
-//Sets the list type as bulleted
+//Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
@@ -52,23 +58,22 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
-//Sets the list type as bulleted
+//Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
-// Sets the hanging value
+//Sets the hanging value
 paragraph.FirstLineIndent = -20;
-// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system.
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -92,11 +97,11 @@ paragraph.ListFormat.StartValue = 1;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
-//Sets the list type as bulleted
+//Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
@@ -104,11 +109,11 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
-//Sets the list type as bulleted
+//Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
@@ -116,7 +121,7 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Saves the Presentation to the file system.
 pptxDoc.Save("Sample.pptx");
@@ -144,11 +149,11 @@ paragraph.ListFormat.StartValue = 1
 paragraph.IndentLevelNumber = 1
 'Sets the hanging value
 paragraph.FirstLineIndent = -20
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.")
-'Sets the list type as bulleted
+'Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered
 'Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod
@@ -156,11 +161,11 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod
 paragraph.IndentLevelNumber = 1
 'Sets the hanging value
 paragraph.FirstLineIndent = -20
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Adds another paragraph with the text in the left hand side textbox.
-paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located Washington with 290 employees, several regional sales teams are located throughout their market base.")
-'Sets the list type as bulleted
+paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.")
+'Sets the list type as Numbered
 paragraph.ListFormat.Type = ListType.Numbered
 'Sets the numbered style (list numbering) as Arabic number following by period.
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod
@@ -168,7 +173,7 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod
 paragraph.IndentLevelNumber = 1
 'Sets the hanging value
 paragraph.FirstLineIndent = -20
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Saves the Presentation to the file system.
 pptxDoc.Save("Sample.pptx")
@@ -181,7 +186,11 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Lists/Create-numbered-list).
 
-### Bulleted list
+### Bulleted List
+
+ 
+N> - `Convert.ToChar(183)` represents the middle dot (`·`) used as the bullet character in this sample.
+N> - `ListType.Bulleted` requires a `BulletCharacter` and `FontName` to render the bullet glyph.
 
 The following code example demonstrates how to create a simple bulleted list.
 
@@ -206,7 +215,7 @@ paragraph.FirstLineIndent = -20;
 paragraph.IndentLevelNumber = 1;
 //Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
@@ -220,8 +229,8 @@ paragraph.FirstLineIndent = -20;
 paragraph.IndentLevelNumber = 1;
 //Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
-paragraph.ListFormat.Size = 100;            
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
+paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
 //Sets the list type as bulleted
@@ -232,13 +241,12 @@ paragraph.ListFormat.BulletCharacter = Convert.ToChar(183);
 paragraph.FirstLineIndent = -20;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
-//Sets the font of the bullet character
+//Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system.
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -262,7 +270,7 @@ paragraph.FirstLineIndent = -20;
 paragraph.IndentLevelNumber = 1;
 //Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
@@ -276,8 +284,8 @@ paragraph.FirstLineIndent = -20;
 paragraph.IndentLevelNumber = 1;
 //Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
-paragraph.ListFormat.Size = 100;            
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
+paragraph.ListFormat.Size = 100;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
 //Sets the list type as bulleted
@@ -288,9 +296,9 @@ paragraph.ListFormat.BulletCharacter = Convert.ToChar(183);
 paragraph.FirstLineIndent = -20;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
-//Sets the font of the bullet character
+//Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol";
-//Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100;
 //Saves the Presentation to the file system.
 pptxDoc.Save("Sample.pptx");
@@ -318,7 +326,7 @@ paragraph.FirstLineIndent = -20
 paragraph.IndentLevelNumber = 1
 'Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol"
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.")
@@ -332,7 +340,7 @@ paragraph.FirstLineIndent = -20
 paragraph.IndentLevelNumber = 1
 'Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol"
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.")
@@ -344,13 +352,13 @@ paragraph.ListFormat.BulletCharacter = Convert.ToChar(183)
 paragraph.FirstLineIndent = -20
 'Sets the list level as 1
 paragraph.IndentLevelNumber = 1
-'Sets the font of the bullet character
+'Sets the font for the bullet character
 paragraph.ListFormat.FontName = "Symbol"
-'Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the bullet character size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 100
 'Saves the Presentation to the file system.
-pptxDoc.Save(""Sample.pptx"")
-Process.Start(""Sample.pptx"")
+pptxDoc.Save("Sample.pptx")
+Process.Start("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -360,6 +368,11 @@ pptxDoc.Close()
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Lists/Create-bulleted-list).
 
 ### Picture List
+
+
+N> - `ListType.Picture` replaces the bullet glyph with a custom image supplied through `ListFormat.Picture(Stream)`.
+N> - The image file (`Image.png` in the samples below) must exist on disk at runtime. In cross-platform samples, the image is opened through a `FileStream`; in Windows-specific samples, `Syncfusion.Drawing.Image.FromFile` is used.
+N> - `ListFormat.Size` for a picture list is expressed as a percentage of the text size (range `25` to `400`).
 
 The following code example demonstrates how to create a simple picture list.
 
@@ -372,13 +385,15 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds a textbox to hold the list
 IShape textBoxShape = slide.AddTextBox(65, 140, 410, 270);
+//Opens the image file used as the picture bullet.
+FileStream pictureStream = new FileStream("Image.png", FileMode.Open, FileAccess.Read);
 //Adds a new paragraph with the text in the left hand side textbox.
 IParagraph paragraph = textBoxShape.TextBody.AddParagraph("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//Sets the list type as Numbered
+//Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture;
 //Sets the image for the list.
 paragraph.ListFormat.Picture(pictureStream);
-//Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
@@ -386,19 +401,20 @@ paragraph.IndentLevelNumber = 1;
 paragraph.FirstLineIndent = -20;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
-//Sets the list type as picture
+//Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture;
 //Sets the image for the list.
 paragraph.ListFormat.Picture(pictureStream);
-//Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system.
+pptxDoc.Save("Sample.pptx");
+//Closes the picture stream.
+pictureStream.Close();
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -412,23 +428,23 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 IShape textBoxShape = slide.AddTextBox(65, 140, 410, 270);
 // Adds a new paragraph with the text in the left hand side textbox.
 IParagraph paragraph = textBoxShape.TextBody.AddParagraph("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//Sets the list type as Numbered
+//Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture;
 //Sets the image for the list.
 paragraph.ListFormat.Picture(new MemoryStream(Syncfusion.Drawing.Image.FromFile("Image.png").ImageData));
-//Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
-// Sets the hanging value
+//Sets the hanging value
 paragraph.FirstLineIndent = -20;
 //Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
-//Sets the list type as picture
+//Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture;
 //Sets the image for the list.
 paragraph.ListFormat.Picture(new MemoryStream(Syncfusion.Drawing.Image.FromFile("Image.png").ImageData));
-//Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+//Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
@@ -449,11 +465,11 @@ Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 Dim textBoxShape As IShape = slide.AddTextBox(65, 140, 410, 270)
 'Adds a new paragraph with the text in the left hand side textbox.
 Dim paragraph As IParagraph = textBoxShape.TextBody.AddParagraph("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-'Sets the list type as Numbered
+'Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture
 'Sets the image for the list.
 paragraph.ListFormat.Picture(New MemoryStream (Syncfusion.Drawing.Image.FromFile("Image.png").ImageData))
-'Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+'Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150
 'Sets the list level as 1
 paragraph.IndentLevelNumber = 1
@@ -461,11 +477,11 @@ paragraph.IndentLevelNumber = 1
 paragraph.FirstLineIndent = -20
 'Adds another paragraph with the text in the left hand side textbox.
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.")
-'Sets the list type as picture
+'Sets the list type as Picture
 paragraph.ListFormat.Type = ListType.Picture
 'Sets the image for the list.
-paragraph.ListFormat.Picture(New MemoryStream (Syncfusion.Drawing. Image.FromFile("Image.png").ImageData))
-'Sets the picture size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+paragraph.ListFormat.Picture(New MemoryStream (Syncfusion.Drawing.Image.FromFile("Image.png").ImageData))
+'Sets the picture size. Here, 100 means 100% of the text. Possible values can range from 25 to 400.
 paragraph.ListFormat.Size = 150
 'Sets the list level as 1
 paragraph.IndentLevelNumber = 1
@@ -483,7 +499,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a Multilevel List
 
-You can create a multi-level list by setting the indentation levels. By default, the level begins at 0 and increments by 1 for each level. A list can be incremented or decremented from levels 0 to 8 as like Microsoft PowerPoint. 
+N> - When a paragraph jumps to a deeper `IndentLevelNumber`, the numbering for the previous level pauses and resumes at the same value when the level returns.
+N> - The valid `IndentLevelNumber` range is `0` to `8`, matching Microsoft PowerPoint.
+
+You can create a multi-level list by setting the indentation levels. By default, the level begins at 0 and increments by 1 for each level. A list can be incremented or decremented from levels 0 to 8, as in Microsoft PowerPoint.
 
 The following code example demonstrates how to create a multilevel list.
 
@@ -506,7 +525,7 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 paragraph.ListFormat.StartValue = 1;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
-// Sets the hanging value
+//Sets the hanging value
 paragraph.FirstLineIndent = -20;
 //Adds paragraph to the textbox
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.");
@@ -517,9 +536,9 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.AlphaLcPeriod;
 //Sets the list level as 2
 paragraph.IndentLevelNumber = 2;
 //Sets the hanging value
-paragraph.FirstLineIndent = -20;         
-//Add paragraph to the textbox
-paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located Washington with 290 employees, several regional sales teams are located throughout their market base.");
+paragraph.FirstLineIndent = -20;
+//Adds paragraph to the textbox
+paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
 //Sets the list type as Numbered list
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as roman number lower casing following by period.
@@ -536,10 +555,9 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod;
 //Sets the list level as 1
 paragraph.IndentLevelNumber = 1;
 //Sets the hanging value
-paragraph.FirstLineIndent = -20;         
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("MultiLevelList.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+paragraph.FirstLineIndent = -20;
+//Saves the Presentation to the file system.
+pptxDoc.Save("MultiLevelList.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -573,8 +591,8 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.AlphaLcPeriod;
 paragraph.IndentLevelNumber = 2;
 //Sets the hanging value
 paragraph.FirstLineIndent = -20;
-//Add paragraph to the textbox
-paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located Washington with 290 employees, several regional sales teams are located throughout their market base.");
+//Adds paragraph to the textbox
+paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.");
 //Sets the list type as Numbered list
 paragraph.ListFormat.Type = ListType.Numbered;
 //Sets the numbered style (list numbering) as roman number lower casing following by period.
@@ -615,7 +633,7 @@ paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod
 paragraph.ListFormat.StartValue = 1
 'Sets the list level as 1
 paragraph.IndentLevelNumber = 1
-' Sets the hanging value
+'Sets the hanging value
 paragraph.FirstLineIndent = -20
 'Adds paragraph to the textbox
 paragraph = textBoxShape.TextBody.AddParagraph("The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.")
@@ -628,7 +646,7 @@ paragraph.IndentLevelNumber = 2
 'Sets the hanging value
 paragraph.FirstLineIndent = -20
 'Adds paragraph to the textbox
-paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located Washington with 290 employees, several regional sales teams are located throughout their market base.")
+paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.")
 'Sets the list type as Numbered list
 paragraph.ListFormat.Type = ListType.Numbered
 'Sets the numbered style (list numbering) as roman number lower casing following by period.
@@ -638,7 +656,7 @@ paragraph.IndentLevelNumber = 3
 'Sets the hanging value
 paragraph.FirstLineIndent = -20
 'Adds paragraph to the textbox
-paragraph = textBoxShape.TextBody.AddParagraph("While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.")
+paragraph = textBoxShape.TextBody.AddParagraph("These subcomponents are shipped to another location for final product assembly")
 'Sets the list type as Numbered list
 paragraph.ListFormat.Type = ListType.Numbered
 paragraph.ListFormat.NumberStyle = NumberedListStyle.ArabicPeriod

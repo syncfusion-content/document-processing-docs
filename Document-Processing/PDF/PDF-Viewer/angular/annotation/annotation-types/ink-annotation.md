@@ -80,7 +80,7 @@ enableInkMode(): void {
 {% endhighlight %}
 {% endtabs %}
 
-#### Exit Ink Mode
+### Exit Ink Mode
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
@@ -167,7 +167,7 @@ export class AppComponent {
 - **Delete**: Via toolbar or context menu.
 - **Customize context menu**: See [Customize Context Menu](../../context-menu/custom-context-menu).
 
-### Edit ink annotation in UI
+### Edit Ink Annotation in UI
 
 Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 

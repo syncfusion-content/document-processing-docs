@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Global local in React Document editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Global local in React DOCX Editor component | Syncfusion
+description: Learn here all about Global local in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Global local 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in React Document editor component
+# Global local in React Document Editor component
 
 ## Localization
 <!-- todo -->
-The `Localization` library allows you to localize default text content of the Document Editor. The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left)
+The `Localization` library allows you to localize default text content of the Document Editor. The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer to the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left)
 
-Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale).
+N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## Document Editor
 
@@ -262,7 +262,7 @@ Direction | Direction
 Table direction | Table direction
 Indent from right | Indent from right
 Contextual Spacing | Don't add space between the paragraphs of the same styles
-Password Mismatch | The password don't match
+Password Mismatch | The passwords don't match
 Restrict Editing | Restrict Editing
 Formatting restrictions | Formatting restrictions
 Allow formatting | Allow formatting
