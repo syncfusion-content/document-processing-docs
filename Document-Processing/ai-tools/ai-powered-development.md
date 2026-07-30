@@ -51,7 +51,7 @@ Learn more about [AI Agent Tools](https://help.syncfusion.com/document-processin
 
 Integrates with Visual Studio, VS Code, and JetBrains Rider and other popular IDEs to accelerate development. Ask how to implement any feature and instantly receive documentation-backed, copy‑paste‑ready C# code tailored to Syncfusion APIs.
 
-Learn more about [AI Coding Assistant](https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview).
+Learn more about [AI Coding Assistant](https://help.syncfusion.com/document-processing/mcp-server/documentsdk).
 
 ## Choosing the Right AI Tool
 
