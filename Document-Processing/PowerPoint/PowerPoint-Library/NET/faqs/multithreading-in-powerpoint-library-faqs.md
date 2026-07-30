@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Frequently asked questions about multithreading in the PowerPoint library
+# FAQ about multithreading in the PowerPoint library
 
 The frequently asked questions regarding multithreading and thread-safety support in opening, editing, and saving PowerPoint presentations using the Syncfusion [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) are listed below.
 

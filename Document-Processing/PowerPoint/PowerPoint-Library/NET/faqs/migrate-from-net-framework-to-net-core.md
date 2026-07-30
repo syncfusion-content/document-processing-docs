@@ -205,7 +205,7 @@ You can save the document as stream and then download from browser.
 - For a full list of platform-level limitations (chart types, OLE objects, and so on), see the [Syncfusion PowerPoint library limitations](https://help.syncfusion.com/document-processing/powerpoint/overview#limitations) page.
 
 ## Notable changes
-- **Graphics library:** In .NET Framework, the library uses `System.Drawing.Common` for text measuring and graphics operations. In .NET Core, the library uses the [SkiaSharp](https://learn.microsoft.com/dotnet/maui/graphics/skia) graphics library to provide the same behavior. When deploying to Linux, ensure the SkiaSharp native assets for the target runtime are available; see the [SkiaSharp platform notes](https://learn.microsoft.com/dotnet/maui/graphics/skia#platform-specific-notes).
+- **Graphics library:** In .NET Framework, the library uses `System.Drawing.Common` for text measuring and graphics operations. In .NET Core, the library uses the [SkiaSharp](https://learn.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp) graphics library to provide the same behavior. When deploying to Linux, ensure the SkiaSharp native assets for the target runtime are available.
 - **Separate renderer package:** The following conversion features rely on SkiaSharp and are delivered through a separate package, [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core):
   - [PowerPoint Presentation to PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf)
   - [PowerPoint Presentation to Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image)

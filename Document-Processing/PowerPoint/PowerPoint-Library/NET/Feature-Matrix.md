@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion® Essential PowerPoint is the [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) that provides comprehensive support for creating, editing, and managing PowerPoint presentations programmatically. It allows seamless handling of features such as slides, shapes, charts, SmartArt, and tables.
 
-For prerequisites and setup, refer to the [Assemblies Required](Assemblies-Required.md) and [NuGet Packages Required](NuGet-Packages-Required) pages. For a quick start, see the [Getting Started](Getting-Started) guide.
+For prerequisites and setup, refer to the [Assemblies Required](Assemblies-Required) and [NuGet Packages Required](NuGet-Packages-Required) pages. For a quick start, see the [Getting Started](Getting-Started) guide.
 
 The following table outlines the supported features for PowerPoint 2007–2016 and later OOXML presentations.
 

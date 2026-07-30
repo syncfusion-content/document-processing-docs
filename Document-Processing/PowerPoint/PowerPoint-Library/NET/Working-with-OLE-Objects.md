@@ -14,13 +14,13 @@ The OLE Object enables sharing of application objects written in different file 
 
 Before using OLE objects in your project, ensure the following:
 
-- Install the required Syncfusion assemblies. Refer to the [Assemblies-Required](Assemblies-Required.md) and [NuGet-Packages-Required](NuGet-Packages-Required.md) pages for details.
+- Install the required Syncfusion assemblies. Refer to the [Assemblies-Required](Assemblies-Required) and [NuGet-Packages-Required](NuGet-Packages-Required) pages for details.
 - Keep the input files (such as `OleTemplate.xlsx`, `OleTemplate.docx`, and `OlePicture.png`) in the application's working directory. You can download them from the [GitHub sample](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/OLE-objects).
 - For the extraction and link-path examples, the input presentation must already contain an embedded or linked OLE object.
 
-## Supported File Types and ProgIDs
+## Supported File Types and Programmatic Identifiers
 
-| Source file | ProgID |
+| Source file | Programmatic Identifiers |
 |-------------|--------|
 | Excel workbook (.xlsx) | `Excel.Sheet.12` |
 | Word document (.docx) | `Word.Document.12` |
@@ -107,8 +107,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 | Overload | Description |
 |----------|-------------|
-| [`AddOleObject(Stream imageStream, string progId, Stream oleData)`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShapes.html#Syncfusion_Presentation_IShapes_AddOleObject_System_IO_Stream_System_String_System_IO_Stream_) |Creates an IOleObject instance with the specified image, program id, and data, then adds it to the IShapes collection. |
-| [`AddOleObject(string imagePath, string progId, string pathLink)`[(https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShapes.html#Syncfusion_Presentation_IShapes_AddOleObject_System_IO_Stream_System_String_System_String_) | Creates an IOleObject instance with the specified image, program id, and data, then adds it to the IShapes collection.|
+| [`AddOleObject(Stream, string, Stream)`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShapes.html#Syncfusion_Presentation_IShapes_AddOleObject_System_IO_Stream_System_String_System_IO_Stream_) |Creates an IOleObject instance with the specified image, program id, and data, then adds it to the IShapes collection. |
+| [`AddOleObject(string, string, string)`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IShapes.html#Syncfusion_Presentation_IShapes_AddOleObject_System_IO_Stream_System_String_System_String_) | Creates an IOleObject instance with the specified image, program id, and data, then adds it to the IShapes collection.|
 
 ## Inserting an OLE Object into a Slide with the DisplayAsIcon Property
 

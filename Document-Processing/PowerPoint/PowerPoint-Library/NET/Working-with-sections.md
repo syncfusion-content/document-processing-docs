@@ -1,6 +1,6 @@
 ---
 title: Working with sections in PowerPoint Presentation | Syncfusion |
-description: Learn here all about working with sections in the PowerPoint Presentation Library and more.
+description: Learn about working with sections in Syncfusion Presentation Library, including creating, managing and updating presentation sections programmatically.
 platform: document-processing
 control: Presentation
 documentation: UG

@@ -110,6 +110,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also
 
-* [Loading and saving the presentation](./Loading-and-Saving-the-Presentatio)
+* [Loading and saving the presentation](./Loading-and-Saving-the-Presentation)
 * [NuGet packages required](./NuGet-Packages-Required)
 * [Assemblies required](./Assemblies-Required)

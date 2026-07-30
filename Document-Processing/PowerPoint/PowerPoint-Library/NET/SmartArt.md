@@ -1,6 +1,6 @@
 ---
 title: Working with SmartArt in PowerPoint Presentation | Syncfusion
-description: Learn how to create, edit, and format SmartArt diagrams in PowerPoint presentations using the Syncfusion .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to create, edit, and format SmartArt diagrams in PowerPoint presentations using the Syncfusion .NET PowerPoint library without Microsoft PowerPoint.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -480,8 +480,6 @@ pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/SmartArts/Assistant-nodes-in-SmartArt).
 
 ## Limitations
 
