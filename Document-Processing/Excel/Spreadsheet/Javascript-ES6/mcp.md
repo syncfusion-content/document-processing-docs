@@ -10,7 +10,7 @@ keywords: TypeScript Agentic UI Builder, MCP Server, search docs, Spreadsheet SD
 
 # TypeScript Spreadsheet MCP Server
 
-The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) to connect an AI assistant with Syncfusion TypeScript documentation.
+The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion TypeScript documentation.
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for TypeScript Spreadsheet applications.
 
@@ -31,7 +31,7 @@ Before configuring the TypeScript MCP Server, ensure that you have:
 - **Node.js** version 18 or later.
 - A **compatible MCP client**, such as Visual Studio Code, Syncfusion Code Studio, Cursor, or JetBrains.
 - An active [Syncfusion API key](https://www.syncfusion.com/account/api-key).
-- A **TypeScript application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/documentation/getting-started/typescript)
+- A **TypeScript application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/documentation/getting-started/quick-start)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license, such as one of the following:
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)

@@ -10,7 +10,7 @@ keywords: Vue Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Serv
 
 # Vue Spreadsheet MCP Server
 
-The Syncfusion® Vue MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) to connect an AI assistant with Syncfusion Vue documentation.
+The Syncfusion® Vue MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion Vue documentation.
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for Vue Spreadsheet applications.
 

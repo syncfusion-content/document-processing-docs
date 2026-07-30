@@ -10,7 +10,7 @@ keywords: ASP.NET Core Agentic UI Builder, MCP Server, search docs, Spreadsheet 
 
 # ASP.NET Core Spreadsheet MCP Server
 
-The Syncfusion® ASP.NET Core MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) to connect an AI assistant with Syncfusion ASP.NET Core documentation.
+The Syncfusion® ASP.NET Core MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion ASP.NET Core documentation.
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for ASP.NET Core Spreadsheet applications.
 
