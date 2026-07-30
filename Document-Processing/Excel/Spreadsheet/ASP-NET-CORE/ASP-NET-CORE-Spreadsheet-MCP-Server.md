@@ -61,7 +61,7 @@ Alternatively, provide the API key directly:
 
 Create the MCP configuration file in the root folder of the ASP.NET Core Spreadsheet application. Use the configuration that corresponds to your MCP client and installed .NET SDK version.
 
-### .NET 10 SDK (automatic)
+### .NET 10 SDK
 
 If you have the .NET 10 SDK installed, you can directly add the following configuration to the `mcp.json` file.
 
@@ -280,7 +280,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 | Issue | Solution |
 | --- | --- |
-| Server failed to start | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
+| Server failed to start | Verify the .NET SDK version and JSON syntax in the config file, then restart your IDE. |
 | Invalid API key | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
 | Incorrect API key config | Verify the file location and content for a file path. For an inline key, check that the key is correctly updated. |
 | Wrong config file location | VS Code: `.vscode/mcp.json`<br/>Code Studio: `.codestudio/mcp.json`<br/>Cursor: `.cursor/mcp.json` in the workspace root. |
