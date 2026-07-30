@@ -86,7 +86,7 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 {% endtabs %}
 
-## Hyperlink ScreenTip
+## Hyperlink screentip
 
 In the SfRichTextBoxAdv control, a ToolTip (ScreenTip) shows additional information, such as the navigation link, when the mouse hovers over a hyperlink, and disappears when the mouse moves away. "ScreenTip" is the WPF RichTextBoxAdv term for the hyperlink tooltip; the underlying WPF `ToolTip` is used to display it. By default, it shows the navigation link of that hyperlink, and you can set the text you want to use for the ScreenTip.
 
@@ -158,7 +158,7 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 
 The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
 
-### Insert with ScreenTip via UI command
+### Insert with screentip via ui command
 
 The `string[3]` parameter array contains the URL, the display text, and the ScreenTip text, in that order.
 
@@ -215,7 +215,7 @@ richTextBoxAdv.EditorSettings.DisplayScreenTips = False
 
 N> ScreenTip option is supported from V18.4.0.30
 
-## Hyperlink Navigation
+## Hyperlink navigation
 
 The SfRichTextBoxAdv supports an event that is raised when hyperlink navigation is requested. You can use this event to customize hyperlink navigation.
 
@@ -275,7 +275,7 @@ RemoveHandler richTextBoxAdv.RequestNavigate, AddressOf RichTextBoxAdv_RequestNa
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Selection in WPF RichTextBox](./Selection)
 - [Commands in WPF RichTextBox](./Commands)

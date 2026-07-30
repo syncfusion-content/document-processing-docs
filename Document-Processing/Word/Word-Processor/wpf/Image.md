@@ -21,7 +21,7 @@ The following code example illustrates how to insert a picture into the SfRichTe
 
 {% endtabs %}
 
-## Image Resizer
+## Image resizer
 
 The SfRichTextBoxAdv also supports a built-in image resizer to resize the images present in the document to a size of your choice. The image resizer accepts both touch and mouse interactions.
 
@@ -56,7 +56,7 @@ Starting from v19.1.0.x, the SfRichTextBoxAdv preserves the position properties 
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Selection in WPF RichTextBox](Selection)
 - [Commands in WPF RichTextBox](Commands)
