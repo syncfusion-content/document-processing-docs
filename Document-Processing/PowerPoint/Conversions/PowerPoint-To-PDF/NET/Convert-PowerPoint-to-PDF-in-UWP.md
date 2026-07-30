@@ -50,6 +50,8 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;

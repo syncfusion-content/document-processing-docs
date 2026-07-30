@@ -47,12 +47,16 @@ Enable or disable bookmark navigation using the `enableBookmark` property on the
 
 To perform bookmark navigation, you can use the `goToBookmark` method. It's important to note that `goToBookmark` will throw an error if the specified bookmark destination does not exist in the PDF document.
 
+x - Specifies the pageIndex for Navigate.
+
+y - Specifies the Y coordinates value of the Page.
+
 Here is an example of how to use the `goToBookmark` method:
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-<button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
+<button id="gotobookmark" onclick="gotobookmark()">Specific Page</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
@@ -71,7 +75,7 @@ Here is an example of how to use the `goToBookmark` method:
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
-<button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
+<button id="gotobookmark" onclick="gotobookmark()">Specific Page</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
@@ -90,10 +94,6 @@ Here is an example of how to use the `goToBookmark` method:
 
 {% endhighlight %}
 {% endtabs %}
-
-x - Specifies the pageIndex for Navigate.
-
-y - Specifies the Y coordinates value of the Page.
 
 ## Retrieve all bookmarks
 
