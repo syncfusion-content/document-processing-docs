@@ -106,7 +106,7 @@ Switch between PDF documents or replace the currently displayed document after t
     // Load document using a file path
     function load2() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",null)
+        viewer.load("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf", null)
     }
 </script>
 
