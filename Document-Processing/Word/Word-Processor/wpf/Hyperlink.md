@@ -86,7 +86,7 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 {% endtabs %}
 
-## Hyperlink screentip
+## Hyperlink ScreenTip
 
 In the SfRichTextBoxAdv control, a ToolTip (ScreenTip) shows additional information, such as the navigation link, when the mouse hovers over a hyperlink, and disappears when the mouse moves away. "ScreenTip" is the WPF RichTextBoxAdv term for the hyperlink tooltip; the underlying WPF `ToolTip` is used to display it. By default, it shows the navigation link of that hyperlink, and you can set the text you want to use for the ScreenTip.
 
@@ -158,7 +158,7 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 
 The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
 
-### Insert with screentip via ui command
+### Insert with ScreenTip via UI command
 
 The `string[3]` parameter array contains the URL, the display text, and the ScreenTip text, in that order.
 
