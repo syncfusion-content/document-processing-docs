@@ -15,7 +15,7 @@ The default English (`en-US`) resource files (`Syncfusion.SfRichTextBoxAdv.WPF.r
 
 To localize the controls to a different culture, add a culture-specific `<assembly-name>.<culture>.resx` file (for example, `Syncfusion.SfRichTextBoxAdv.WPF.fr.resx`) to your project with its `Build Action` set to `Embedded Resource`. The runtime resource manager will then pick up the localized strings for the current UI culture, falling back to the embedded default if no culture-specific match is found.
 
-## Setting Current UI Culture
+## Setting current ui culture
 
 For localizing your application to a specific culture, set the `CurrentUICulture` to the required culture before invoking the `InitializeComponent()` method.
 
@@ -46,19 +46,19 @@ End Class
 
 [View the complete localization sample on GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization)
 
-## Adding Resource file
+## Adding resource file
 
-### Create the Resources folder
+### Create the resources folder
 
 Create a folder named `Resources` in your project root (alongside your `.csproj` file).
 
-### Add the default Resx
+### Add the default resx
 
 The default English (`en-US`) [Resx](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization/Localization/Resources) (resource) files for `SfRichTextBoxAdv` and `SfRichTextRibbon` are available in the [GitHub sample](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization). Copy `Syncfusion.SfRichTextBoxAdv.WPF.resx` and `Syncfusion.SfRichTextRibbon.WPF.resx` from the sample into the `Resources` folder of your application.
 
 ![Added resource files for SfRichTextBoxAdv and SfRichTextRibbon shown in the Visual Studio Resources folder](Localization_images/wpf-richtextbox-resource-file.jpeg)
 
-### Create the localized Resx
+### Create the localized resx
 
 Create Resx (resource) files named `Syncfusion.SfRichTextBoxAdv.WPF.<culture>.resx` and `Syncfusion.SfRichTextRibbon.WPF.<culture>.resx`. For example, `Syncfusion.SfRichTextBoxAdv.WPF.fr.resx` and `Syncfusion.SfRichTextRibbon.WPF.fr.resx` for the French (`fr`) culture. For your reference, see the French (`fr`) [Resx](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization/Localization/Resources) files.
 
@@ -76,7 +76,7 @@ The following screenshot shows the localization in the SfRichTextBoxAdv and SfRi
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Getting Started in WPF RichTextBox](./Getting-Started)
 - [Commands in WPF RichTextBox](./Commands)
