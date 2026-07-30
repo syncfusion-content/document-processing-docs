@@ -74,8 +74,8 @@ public registerWebMcpTools(prefix?: string, toolNames?: string[]): void
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `prefix` | `string` | ❌ | Unique prefix to avoid name collisions across multiple instances (e.g. `'sales'`, `'gdp'`). Defaults to the spreadsheet element's `id` if omitted. |
-| `toolNames` | `string[]` | ❌ | Allowlist of tool names to register. When omitted, all available tools are registered. |
+| `prefix` | `string` | ❌ | Unique prefix to avoid name collisions across multiple instances (e.g. `sales`, `requirement`). Defaults to the spreadsheet element's `id` if omitted. |
+| `toolNames` | `string[]` | ❌ | Array of permitted tool names to register. When omitted, all available tools are registered. |
 
 ### Use in Your Application
 
@@ -101,7 +101,7 @@ spreadsheet.appendTo('#spreadsheet');
 
 ### Selective Tool Registration
 
-By default, all available WebMCP tools are registered. To expose only specific tools, pass an allowlist array as the second argument:
+By default, all available WebMCP tools are registered. To expose only specific tools, pass an array of permitted tool names as the second argument:
 
 ```ts
 // Register only data reading and editing tools
@@ -125,7 +125,7 @@ spreadsheet1.registerWebMcpTools('sales');
 spreadsheet2.registerWebMcpTools('gdp');
 ```
 
-Now MCP clients can call `sales_getCellData`, `sales_editCell`, `gdp_getCellData`, etc., distinguishing between instances automatically.
+Now MCP clients can call `sales_getCellData`, `sales_editCell`, etc., distinguishing between instances automatically.
 
 ### Event Handling
 
@@ -153,7 +153,7 @@ const spreadsheet = new Spreadsheet({
 
 ## Spreadsheet WebMCP Tools
 
-WebMCP exposes **26 tools** that any MCP client can discover and invoke. Read-only tools execute immediately without a confirmation dialog; write tools require user confirmation by default.
+WebMCP exposes **28 tools** that any MCP client can discover and invoke. Read-only tools execute immediately without a confirmation dialog; write tools require user confirmation by default.
 
 ### Read-Only Tools (No Confirmation Required)
 
@@ -164,6 +164,7 @@ WebMCP exposes **26 tools** that any MCP client can discover and invoke. Read-on
 | **getSheetInfo** | Get sheet metadata including name, dimensions, used range, and row/column counts. |
 | **evaluateFormula** | Evaluate a formula string and return the computed result without writing to any cell. |
 | **find** | Find all cell addresses matching a search value within a sheet or specified range. |
+| **sheetList** | Retrieve the names of all sheets in the workbook. Use to discover available sheet names before calling getSheetInfo, getRangeData, or getCellData. |
 | **undo** | Revert the last action in the undo history. |
 
 ### Cell Editing Tools
@@ -205,6 +206,7 @@ WebMCP exposes **26 tools** that any MCP client can discover and invoke. Read-on
 |------|-------------|
 | **insertRowsColumns** | Insert rows or columns at a specified 1-based position. |
 | **deleteRowsColumns** | Delete rows or columns starting at a specified 1-based position. |
+| **insertSheet** | Insert one or more new blank sheets into the workbook at a specified 0-based position. Optionally provide a name when inserting a single sheet. |
 | **freezePanes** | Freeze or unfreeze rows, columns, or panes. |
 
 ### Visualization & Analytics Tools
@@ -311,7 +313,7 @@ const spreadsheet = new Spreadsheet({
         ranges: [{ dataSource: salesData }]
     }],
     created: (): void => {
-        // Register all 26 WebMCP tools with instance prefix 'sales'
+        // Register all 28 WebMCP tools with instance prefix 'sales'
         spreadsheet.registerWebMcpTools('sales');
     }
 });
@@ -511,6 +513,30 @@ AI responds: "Applied currency format to Price (E2:E11) and Amount (F2:F11)"
 ```
 
 **Key Insight:** AI discovers target columns first, then applies formatting to the relevant data rows only.
+
+### Example 7: Discovering and Adding Sheets
+
+**User Prompt:** "Add a new sheet called 'Q4 Summary' at the end of the workbook"
+
+**AI Tool Execution Flow:**
+```
+AI calls: sheetList()
+         ↓
+Tool returns: sheets: ["Sheet1", "Sales", "Inventory"]
+         ↓
+AI determines there are 3 sheets; inserts after the last (index 3)
+         ↓
+AI calls: insertSheet({
+    startIndex: 3,
+    sheetName: "Q4 Summary"
+})
+         ↓
+Tool returns: message: "Inserted 1 sheet named "Q4 Summary" at position 3"
+         ↓
+AI responds: "Added a new sheet 'Q4 Summary' at the end of the workbook"
+```
+
+**Key Insight:** `sheetList` should be called first to discover the current sheet structure, then `insertSheet` can target the correct position.
 
 ## Limitations
 
