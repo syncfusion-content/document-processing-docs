@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Syncfusion MAUI MCP Server | Syncfusion
-description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting in .NET MAUI apps.
-platform: MAUI
-control: Getting started with Syncfusion MAUI MCP Server
+title: Syncfusion MAUI PDF Viewer MCP Server | Syncfusion
+description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting of the MAUI PDF Viewer component.
+platform: document-processing
+control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion MAUI MCP Server
+# Syncfusion .NET MAUI PDF Viewer MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate .NET MAUI application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to  documentation, API references, and code-generation features from within the development environment.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI MCP Server accelerates development of the [.NET MAUI PDF Viewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) control by providing deep, component-specific knowledge directly in your AI-powered IDE. Through [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration, you get quick access to PDF Viewer documentation, API references, and code-generation features without leaving the development environment.
 
-These tools speed up development and reinforce best practices for Syncfusion component integration.
+These tools speed up development and reinforce best practices for embedding, customizing, and extending the MAUI PDF Viewer in your apps.
 
 ## Key Benefits
 
-- **Expert Component Knowledge** - Deep understanding of 100+ MAUI components and their implementation patterns.
+- **Expert PDF Viewer Knowledge** - Deep understanding of the .NET MAUI PDF Viewer control, including viewing, annotation, form filling, redaction, search, and signature workflows.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -28,7 +28,7 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **.NET MAUI application** (existing or new); see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
+- A **.NET MAUI application** (existing or new) that targets the [.NET MAUI PDF Viewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) control; see [MAUI application that includes Syncfusion MAUI](https://help.syncfusion.com/maui/introduction/overview)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)  
@@ -148,6 +148,8 @@ You can install the Syncfusion MAUI MCP server as a local tool without a global 
     ````bash
     dotnet tool install Syncfusion.MAUI.MCP
     ````
+    
+    N> * If the project does not already have a tool manifest, create one first by running dotnet new tool-manifest in the project root. This generates a shared .config/dotnet-tools.json file that tracks local tools, then re-run the install command above.
 
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
@@ -172,37 +174,43 @@ You can install the Syncfusion MAUI MCP server as a local tool without a global 
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world MAUI development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world MAUI PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for any component.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the MAUI PDF Viewer.
 
 {% promptcards %}
-{% promptcard Grid with Paging & Sorting %}
-#search_docs Create a Syncfusion MAUI Grid with paging, sorting, and filtering enabled.
+{% promptcard Load a PDF Document %}
+#search_docs How do I load and display a PDF document from a local file or stream in the Syncfusion MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Scheduler Setup %}
-#search_docs How do I set up the Syncfusion MAUI Scheduler with custom event configuration and data binding?
+{% promptcard Open a Password-Protected PDF %}
+#search_docs How do I open a password-protected PDF in the Syncfusion MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement Features**
 
-Get step-by-step help for adding specific features to components that are already in the project.
+Get step-by-step help for adding specific PDF Viewer features to your MAUI project.
 
 {% promptcards %}
-{% promptcard Grid Export %}
-#search_docs How can I add PDF and Excel export options to my existing Grid's toolbar?
+{% promptcard Add Annotations %}
+#search_docs How can I add, modify, and remove annotations such as text markups, shapes, and sticky notes in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Kanban Features %}
-#search_docs How do I enable drag-and-drop and custom scheduling in the Schedule control?
+{% promptcard Form Filling %}
+#search_docs How do I enable form filling, validation, and import/export of form data in the MAUI PDF Viewer?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Text Search and Selection %}
+#search_docs How do I implement text search, text selection, and copy-to-clipboard in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -210,14 +218,14 @@ Get step-by-step help for adding specific features to components that are alread
 
 Describe the problem in plain language, and let `search_docs` help resolve it.
 {% promptcards %}
-{% promptcard Grid Issues %}
-#search_docs Why isn't my Grid loading or rendering data correctly?
+{% promptcard PDF Not Loading %}
+#search_docs Why isn't my PDF document loading or rendering correctly in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Schedule Issues %}
-#search_docs Why aren't my Schedule events displaying or saving correctly?
+{% promptcard Annotation Issues %}
+#search_docs Why are my PDF annotations not saving, exporting, or displaying correctly in the MAUI PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -225,11 +233,11 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI MCP Servers:
 
-- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion MAUI Grid with sorting and filtering"*).
+- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion MAUI PDF Viewer that loads a PDF with annotations enabled"*).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your MAUI project.
-- **Start Fresh for New Topics** - Begin a new chat when switching to a different component or task to maintain clean context.
+- **Start Fresh for New Topics** - Begin a new chat when switching to a different PDF Viewer feature (such as moving from annotations to form filling) to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
 - **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/maui/introduction/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
