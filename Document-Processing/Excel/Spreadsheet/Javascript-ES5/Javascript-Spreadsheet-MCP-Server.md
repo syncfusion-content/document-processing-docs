@@ -1,37 +1,37 @@
 ---
 layout: post
-title: React Spreadsheet MCP Server | Syncfusion®
-description: Install and configure the Syncfusion® React Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
+title: JavaScript Spreadsheet MCP Server Configuration | Syncfusion®
+description: Install and configure the Syncfusion® JavaScript Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: React Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+keywords: JavaScript Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
 ---
 
-# React Spreadsheet MCP Server
+# JavaScript(ES5) Spreadsheet MCP Server
 
-The Syncfusion® React MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) to connect an AI assistant with Syncfusion React documentation. 
+The Syncfusion® JavaScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) to connect an AI assistant with Syncfusion JavaScript documentation.
 
-Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for React Spreadsheet applications.
+Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for JavaScript Spreadsheet applications.
 
-> The previously available Agentic UI Builder (`#sf_react_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/react/documentation/mcp). The AI Coding Assistant (`#sf_react_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
+> The previously available Agentic UI Builder (`#sf_js_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/javascript/documentation/mcp). The AI Coding Assistant (`#sf_js_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
 
 ## Key benefits
 
 - **Spreadsheet-specific guidance**: Access relevant documentation for data binding, formulas, open and save operations, charts, conditional formatting, sorting, filtering, hyperlinks, scrolling, and other Spreadsheet features.
-- **API assistance**: Find React Spreadsheet properties, methods, and events with contextual usage guidance.
+- **API assistance**: Find JavaScript Spreadsheet properties, methods, and events with contextual usage guidance.
 - **Troubleshooting support**: Search for guidance related to rendering, data loading, import and export, and performance issues.
 - **IDE integration**: Use Syncfusion documentation from compatible MCP clients such as Visual Studio Code, Syncfusion Code Studio, Cursor, and JetBrains.
 - **Privacy-focused operation**: The MCP Server processes requests based on the submitted query without storing prompts or application content.
 
 ## Prerequisites
 
-Before configuring the React MCP Server, ensure that you have:
+Before configuring the JavaScript MCP Server, ensure that you have:
 
 - **Node.js** version 18 or later.
 - A **compatible MCP client**, such as Visual Studio Code, Syncfusion Code Studio, Cursor, or JetBrains.
 - An active [Syncfusion API key](https://www.syncfusion.com/account/api-key).
-- A **React application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/react/documentation/getting-started/quick-start)
+- A **JavaScript application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license, such as one of the following:
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -57,9 +57,9 @@ Alternatively, provide the API key directly:
 
 > Using `Syncfusion_API_Key_Path` is recommended because it helps keep the API key out of source control. Do not commit an API key or key file to a repository.
 
-## Configure the React MCP Server
+## Configure the JavaScript MCP Server
 
-Create the MCP configuration file in the root folder of the React Spreadsheet application. Use the configuration that corresponds to your MCP client.
+Create the MCP configuration file in the root folder of the JavaScript Spreadsheet application. Use the configuration that corresponds to your MCP client.
 
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
@@ -68,10 +68,10 @@ Create the MCP configuration file in the root folder of the React Spreadsheet ap
 
 {
   "servers": {
-    "sf-react-mcp": {
+    "sf-javascript-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@syncfusion/react-mcp@latest"],
+      "args": ["-y", "@syncfusion/javascript-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -88,10 +88,10 @@ Create the MCP configuration file in the root folder of the React Spreadsheet ap
 
 {
   "servers": {
-    "sf-react-mcp": {
+    "sf-javascript-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@syncfusion/react-mcp@latest"],
+      "args": ["-y", "@syncfusion/javascript-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -110,9 +110,9 @@ Create the MCP configuration file in the root folder of the React Spreadsheet ap
 
 {
   "mcpServers": {
-    "sf-react-mcp": {
+    "sf-javascript-mcp": {
       "command": "npx",
-      "args": ["-y", "@syncfusion/react-mcp@latest"],
+      "args": ["-y", "@syncfusion/javascript-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -131,11 +131,11 @@ Create the MCP configuration file in the root folder of the React Spreadsheet ap
 
 {
   "mcpServers": {
-    "sf-react-mcp": {
+    "sf-javascript-mcp": {
       "command": "npx.cmd",
       "args": [
         "-y",
-        "@syncfusion/react-mcp@latest"
+        "@syncfusion/javascript-mcp@latest"
       ],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
@@ -151,25 +151,25 @@ Create the MCP configuration file in the root folder of the React Spreadsheet ap
 {% endhighlight  %}
 {% endtabs %}
 
-**Verifying Installation** Check your editor's MCP Server list for `sf-react-mcp` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for `sf-javascript-mcp` with a **Connected** status to confirm a successful installation.
 
 ## Common use cases
 
-The examples below demonstrate common React Spreadsheet scenarios and how the MCP tools can provide relevant guidance, code examples, API references, and troubleshooting assistance. Tools can be invoked directly for specific tasks, or an AI assistant can automatically choose the most appropriate tool based on the request.
+The examples below demonstrate common JavaScript Spreadsheet scenarios and how the MCP tools can provide relevant guidance, code examples, API references, and troubleshooting assistance. Tools can be invoked directly for specific tasks, or an AI assistant can automatically choose the most appropriate tool based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for React Spreadsheet applications.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for JavaScript Spreadsheet applications.
 
 {% promptcards %}
 {% promptcard Spreadsheet Setup %}
-#search_docs How do I configure the React Spreadsheet component?
+#search_docs How do I configure the JavaScript Spreadsheet component?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard JSON Data Binding %}
-#search_docs How can I bind JSON data to a React Spreadsheet?
+#search_docs How can I bind JSON data to a JavaScript Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -179,13 +179,13 @@ Get step-by-step help for adding specific features to Spreadsheet applications t
 
 {% promptcards %}
 {% promptcard Open and Save Excel Files %}
-#search_docs How do I open and save Excel files programmatically in a React Spreadsheet?
+#search_docs How do I open and save Excel files programmatically in a JavaScript Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Spreadsheet Charts %}
-#search_docs How do I create a chart from Spreadsheet data in React?
+#search_docs How do I create a chart from Spreadsheet data in JavaScript?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -195,13 +195,13 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Performance Issues %}
-#search_docs Why is my React Spreadsheet slow when opening large datasets?
+#search_docs Why is my JavaScript Spreadsheet slow when opening large datasets?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Formulas %}
-#search_docs How do I use formulas in a React Spreadsheet?
+#search_docs How do I use formulas in a JavaScript Spreadsheet?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -209,13 +209,13 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 To get the most out of the Syncfusion<sup>®</sup> Spreadsheet MCP Server:
 
-- **Be Specific** - Include the platform and Spreadsheet feature in your queries (for example, _"Can you show me how to render a Spreadsheet with default data in a React application?"_).
+- **Be Specific** - Include the platform and Spreadsheet feature in your queries (for example, _"Can you show me how to render a Spreadsheet with default data in a JavaScript application?"_).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -237,7 +237,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 The Syncfusion MCP Server acts as a knowledge bridge between the selected AI model and Syncfusion documentation.
 
-- The tools process requests according to the user’s query without storing any content or prompts.
+- The tools process requests according to the user's query without storing any content or prompts.
 - User prompts are not stored or used for other purposes.
 - Prompts are not used to train Syncfusion models.
 - The assistant provides context; the final output is produced by the selected AI model.
