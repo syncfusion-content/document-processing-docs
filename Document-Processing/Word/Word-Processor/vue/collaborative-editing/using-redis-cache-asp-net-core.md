@@ -14,14 +14,14 @@ Vue DOCX Editor (Document Editor) supports collaborative editing which allows mu
 
 ## Prerequisites
 
-The following prerequisites are required to set up collaborative editing using Redis in an ASP.NET Core backend. SignalR handles real-time communication between clients and the server, while Redis stores the queue of editing operations.
+The following prerequisites are required to set up collaborative editing using Redis in an ASP.NET Core back end. SignalR handles real-time communication between clients and the server, while Redis stores the queue of editing operations.
 
 - [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (DOCX Editor).
 
 - SignalR
 - Redis
 
-Configure CORS in the ASP.NET Core web service to allow the Vue application's origin (e.g., `http://localhost:8080` or your deployed domain) to call the API endpoints. Add CORS services and middleware in `Program.cs`:
+Configure CORS in the ASP.NET Core web service to allow the Vue application's origin (e.g., `http://localhost:8080` or your deployed domain) to call the API endpoints. Add CORS services and middle ware in `Program.cs`:
 
 ```csharp
 // In Program.cs

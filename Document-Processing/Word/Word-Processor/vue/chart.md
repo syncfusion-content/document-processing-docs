@@ -25,7 +25,7 @@ The following example shows chart preservation in DOCX Editor.
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/chart-cs1" %}
 
-# Supported Chart Types
+## Supported Chart Types
 
 The following chart types are supported in DOCX Editor:
 

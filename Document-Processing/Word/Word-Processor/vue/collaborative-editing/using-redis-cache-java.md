@@ -156,7 +156,7 @@ methods: {
 
 ### Step 1: Configure SockJS hub to create room for collaborative editing session.
 
-To manage groups for each document, create a folder named "Hub" and add a file named `DocumentEditorHub.java` inside it. Add the following code to the file to manage SockJS groups using room names.
+To manage groups for each document, create a folder named "Hub" and add a file named ``` DocumentEditorHub.java ``` inside it. Add the following code to the file to manage SockJS groups using room names.
 
 Join the group by using unique id of the document by using `joinGroup` method.
 

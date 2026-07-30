@@ -70,7 +70,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Pi
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contentControlInfo/) and import it using [`importContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#importcontentcontroldata). Use this to apply property values to existing content controls in the document.
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contentControlInfo) and import it using [`importContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#importcontentcontroldata). Use this to apply property values to existing content controls in the document.
 
 {% highlight ts %}
 var data = [];
