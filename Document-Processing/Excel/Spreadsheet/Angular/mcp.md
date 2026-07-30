@@ -199,12 +199,6 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 {% endpromptcard %}
 {% endpromptcards %}
 
-{% promptcards %}
-{% promptcard Formulas %}
-#search_docs How do I use formulas in an Angular Spreadsheet?
-{% endpromptcard %}
-{% endpromptcards %}
-
 ## Best practices
 
 To get the most out of the Syncfusion<sup>®</sup> Spreadsheet MCP Server:
