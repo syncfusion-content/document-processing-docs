@@ -93,20 +93,19 @@ Step 8: Add a new action method **ConvertPPTXToPDF** in HomeController.cs and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using (FileStream inputStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PPTX document.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Opens the existing PPTX document.
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
+    //Convert the PPTX document into a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Converts PPTX document into PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        { 
-            //Saves the PDF document to MemoryStream.
-            pdfDocument.Save(stream);
-            stream.Position = 0;
-            //Download PDF document in the browser.
-            return File(stream, "application/pdf", "PPTXtoPDF.pdf");
-        }
+        //Create a MemoryStream to hold the converted PDF.
+        MemoryStream stream = new MemoryStream();
+        //Save the PDF document to the MemoryStream.
+        pdfDocument.Save(stream);
+        stream.Position = 0;
+        //Download PDF document in the browser.
+        return File(stream, "application/pdf", "PPTXtoPDF.pdf");
     }
 }
 
@@ -202,7 +201,7 @@ Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 cat <<EOT >> app.yaml
 env: flex
-runtime: custom   
+runtime: custom
 EOT
 
 {% endhighlight %}

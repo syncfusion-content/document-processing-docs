@@ -116,7 +116,7 @@ The `extractPages` method enables programmatic extraction. This example extracts
 
     //Load the Extracted Pages
     viewer.load(array,'');
-    //Print the Base64 for reference
+    //Print the extracted PDF data for reference
     console.log(array);
   }
 </script>
