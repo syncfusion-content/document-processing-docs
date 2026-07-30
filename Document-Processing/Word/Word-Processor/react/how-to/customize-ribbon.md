@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Ribbon in React Document Editor | Syncfusion
+title: Customize Ribbon in React DOCX Editor | Syncfusion
 description: Learn how to customize the ribbon in Syncfusion React Document Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in React Document editor component
+# Customize Ribbon in React Document Editor component
 
-The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
+The [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides a rich and flexible API to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
 - Add the Backstage menu instead of File menu.
@@ -22,7 +22,7 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File Menu Customization
 
-Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#filemenuitems) property.
+Document Editor provides APIs to remove existing built-in File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#filemenuitems) property.
 
 In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
 
@@ -116,7 +116,7 @@ root.render(<Default />);
 ```
 {% endraw %}
 
-Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
+Refer to this documentation to know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
 
 ## Tab Customization
 
@@ -124,9 +124,9 @@ You can customize the ribbon tabs in the Document Editor by showing, hiding, or 
 
 ### Show/Hide Tab
 
-Document editor provides the [`showTab`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using existing `RibbonTabType` and `tabId`.
+Document editor provides the [`showTab`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
 
-The following code example how to show/hide existing tab using existing tab type and tab id.
+The following code example shows how to show/hide an existing tab using the existing tab type and tab id.
 
 ```ts
 // To hide the Home tab using the built-in `RibbonTabType`
@@ -302,9 +302,9 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide Item
 
-Using [`showItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showitems) API in Document editor ribbon to enable/disable the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
+Using the [`showItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showitems) API in the Document Editor ribbon to show/hide the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
 
-The following code example show how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#ribboniteminfo).
+The following code example shows how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#ribboniteminfo).
 
 ```ts
 // To hide the Bold and Italic items using ribbon item information
@@ -319,7 +319,7 @@ container.current.ribbon.showItems('custom_item', false);
 
 ### Enable/Disable Item
 
-Using [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#enableitems) API in Document editor ribbon to enable/disable the existing item.
+Using the [`enableItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#enableitems) API in the Document Editor ribbon to enable/disable the existing item.
 
 ```ts
 // To disable the underline using ribbon item info
@@ -402,4 +402,4 @@ Explore how to customize the ribbon in the React Document Editor for working wit
 
 ## Related Links
 
-- [File menu Customization Demo](https://ej2.syncfusion.com/demos#/material/document-editor/ribbon-customization)
+- [File Menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/ribbon-customization)
