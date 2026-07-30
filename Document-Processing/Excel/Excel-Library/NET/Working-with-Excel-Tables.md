@@ -507,7 +507,7 @@ A complete working example to apply custom table style in C# is present on [this
 
 The following screenshot represents generated Excel file with custom table styles in XlsIO.
 
-![custom table style](Working-with-Excel-Tables_images/Working-with-Tables_img1.jpg)
+![custom table style](Working-with-pivot-tables_images/Working-with-Tables_img1.jpg)
 
 N> The [TableStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
 

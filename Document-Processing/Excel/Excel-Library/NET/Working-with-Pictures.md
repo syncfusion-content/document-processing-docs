@@ -8,6 +8,7 @@ documentation: UG
 # Working with Pictures
 
 XlsIO supports inserting pictures into a worksheet. Refer to the following code snippet.
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Pictures%20in%20Excel/Add%20Picture/.NET/Add%20Picture/Add%20Picture/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
