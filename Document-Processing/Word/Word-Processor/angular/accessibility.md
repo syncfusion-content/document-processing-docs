@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Angular Document editor component
 
-The accessibility compliance for the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is outlined below.
+The accessibility compliance for the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,7 +38,9 @@ The accessibility compliance for the [Angular DOCX Editor](https://www.syncfusio
 
 ## Keyboard interaction
 
-Document editor supports [keyboard shortcuts](./keyboard-shortcut).
+The Document editor supports [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
+
+The following accessibility compliance summary applies to the `@syncfusion/ej2-angular-documenteditor` package.
 
 ## Ensuring accessibility
 
