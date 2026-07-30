@@ -9,11 +9,12 @@ documentation: ug
 
 # Add Digital Signature to PDF
 
-This section explains how to **add signature fields** using the Syncfusion **React PDF Viewer** and how to apply **digital (PKI) signatures** using the **JavaScript PDF Library**.
+Learn how to **add signature fields** with the Syncfusion **React PDF Viewer** and how to apply **digital (PKI) signatures** with the **JavaScript PDF Library**.
+
 
 N> As instructed by team leads — use the **React PDF Viewer only to add & place signature fields**. Use the **JavaScript PDF Library** to apply the *actual cryptographic digital signature*.
 
-## Overview (Explanation)
+## Overview
 
 A **digital signature** provides:
 - **Authenticity** – confirms the signer’s identity.
@@ -30,7 +31,7 @@ Syncfusion supports a hybrid workflow:
 1. Open **Form Designer**.
 2. Select **Signature Field**.
 3. Click on the document to place the field.
-4. Configure Name, Tooltip, Required, etc.
+4. Configure **Name**, **Tooltip**, and **Required** as needed.
 
 ![Signature annotation toolbar](../../javascript-es6/images/add_sign.png)
 
@@ -50,9 +51,7 @@ viewerRef.current?.formDesignerModule.addFormField('SignatureField', {
 {% endtabs %}
 
 ## Capture Electronic Signature (Draw / Type / Upload)
-Users click the field → dialog appears → they can **Draw**, **Type**, or **Upload** a handwritten signature.
-
-This creates a *visual* signature only (not cryptographically secure).
+When the user clicks the field, a dialog appears where they can **Draw**, **Type**, or **Upload** a handwritten signature. The result is a *visual* signature only — it is not cryptographically secure. For a cryptographically secure signature.
 
 ## Apply PKI Digital Signature (JavaScript PDF Library)
 
@@ -89,16 +88,16 @@ document.destroy();
 N> See the PDF Library [Digital signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature) to know more about Digital Signature in PDF Documents.
 
 ## Important Notes
-- **Do all form edits first. Sign last.** Any PDF modification *after signing* invalidates the signature.
-- Self‑signed PFX will show **Unknown / Untrusted** until added to Trusted Certificates.
+- **Complete all form edits before signing.** Any PDF modification after signing invalidates the signature.
+- A self‑signed PFX certificate displays as **Unknown / Untrusted** until it is added to the consumer's **Trusted Certificates**.
 
 ## Best Practices
-- Place signature fields via Viewer for accurate layout.
-- Apply PKI signature using PDF Library only.
-- Use CMS + SHA‑256 for compatibility.
-- Avoid flattening after signing.
+- Place signature fields with the Viewer for accurate layout.
+- Apply the PKI signature with the PDF Library only.
+- Use **CMS** with **SHA‑256** for broad compatibility.
+- Avoid flattening the form after signing.
 
 ## See Also
-- [Validate Digital Signatures](./validate-digital-signatures)
-- [Custom fonts for Signature fields](../../how-to/custom-font-signature-field)
-- [Signature workflows](./signature-workflow)
+- [Validate Digital Signatures](./validate-digital-signatures) — verify an existing digital signature and inspect signer details.
+- [Custom fonts for Signature fields](../../how-to/custom-font-signature-field) — configure custom fonts for the signature field appearance.
+- [Signature workflows](./signature-workflow) — end-to-end signing and approval workflows.

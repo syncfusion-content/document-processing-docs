@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Overview of the JavaScript PDF Library Component | Syncfusion
+title: Overview of the JavaScript PDF Library | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn about the JavaScript PDF Library component, including its key capabilities and the platforms it supports.
+description: Learn about the JavaScript PDF Library, including its key capabilities, system requirements, and supported platforms.
 platform: document-processing
 control: PDF
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the JavaScript PDF Library control 
+# Overview of the JavaScript PDF Library
 
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is a lightweight, high-performance, and feature-rich non-UI solution written natively in JavaScript for generating PDF documents in both Node.js and browser environments. It enables developers to seamlessly integrate robust PDF functionality into their applications for creating, reading, and editing PDF documents without relying on Adobe Acrobat. Designed to work across JavaScript, TypeScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC platforms, the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports programmatic generation of PDF reports with rich content, including formatted text, images, shapes, hyperlinks, and lists, while complying with PDF 1.7 (ISO 32000-1) and the latest PDF 2.0 (ISO 32000-2) standards to ensure high-quality, compatible PDF document processing.
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is a lightweight, high-performance non-UI library written natively in JavaScript for generating PDF documents in both Node.js and browser environments. It enables developers to integrate robust PDF functionality into their applications for creating, reading, and editing PDF documents, and does not require Adobe Acrobat. Designed to work across JavaScript, TypeScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC, the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports programmatic generation of PDF reports with rich content, including formatted text, images, shapes, hyperlinks, and lists. The library is compliant with PDF 1.7 (ISO 32000-1) and PDF 2.0 (ISO 32000-2:2020), and produces output compatible with all major PDF readers.
 
 ## Key features
 
@@ -35,12 +35,29 @@ The following are the key features of this [JavaScript PDF Library](https://www.
 * Extract images from PDF documents.
 * Redact shapes to protect sensitive graphical content.
 
-## Supported web platforms
+## Supported environments
 
-* [ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core)
-* [ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc)
-* [Angular](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-angular)
-* [React](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react)
-* [Vue](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue)
-* [JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript)
-* [TypeScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-typescript)
+| Environment | Get started |
+|---|---|
+| Node.js | [Create PDF in Node.js](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-node-js) |
+| JavaScript | [Create PDF in JavaScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-javascript) |
+| TypeScript | [Create PDF in TypeScript](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-typescript) |
+| Angular | [Create PDF in Angular](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-angular) |
+| React | [Create PDF in React](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react) |
+| Vue | [Create PDF in Vue](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue) |
+| ASP.NET Core | [Create PDF in ASP.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core) |
+| ASP.NET MVC | [Create PDF in ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc) |
+
+## Licensing
+
+A valid Syncfusion license is required to use the JavaScript PDF Library in commercial applications. A free community license is available for individuals and small businesses; trial licenses are available for evaluation.
+
+* [Generate a license key](https://help.syncfusion.com/document-processing/licensing/overview)
+
+If the license is not registered, the generated PDFs include a watermark and an evaluation notice.
+
+## Next steps
+
+* [Quickstart tutorial](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+* [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+* [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
