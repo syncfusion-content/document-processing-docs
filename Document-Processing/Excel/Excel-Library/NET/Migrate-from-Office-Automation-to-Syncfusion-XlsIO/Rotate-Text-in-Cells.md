@@ -8,7 +8,7 @@ documentation: UG
 
 # Rotate Text in Cells
 
-When a text is entered, it is placed horizontally by default. However, you may need to rotate text in cells to add visual impact to a spreadsheet or presentation. Orientation or rotation allows rotating text in various ways.
+When text is entered, it is placed horizontally by default. However, you may need to rotate text in cells to add visual impact to a spreadsheet or presentation. Orientation allows you to rotate text in various ways.
 
 The following code shows how to change the formatting of a cell to rotate text in the desired direction with Interop and XlsIO for .NET.
 
@@ -44,7 +44,7 @@ private void RotateText()
   range.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
 
   //Save the Excel file
-  workbook.SaveCopyAs("InteropOutput_RotateText.xlsx");
+  workbook.SaveAs("InteropOutput_RotateText.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -80,7 +80,7 @@ private void RotateText()
   range.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White);
 
   //Save the Excel file
-  workbook.SaveCopyAs("InteropOutput_RotateText.xlsx");
+  workbook.SaveAs("InteropOutput_RotateText.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -115,7 +115,7 @@ Private Sub RotateText()
   range.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.White)
 
   'Save the file
-  workbook.SaveCopyAs("InteropOutput_RotateText.xlsx")
+  workbook.SaveAs("InteropOutput_RotateText.xlsx")
 
   'Quit the application
   excelApp.Quit()
@@ -214,7 +214,7 @@ Private Sub RotateText()
     'Set the font color of cell text
     range.CellStyle.Font.Color = ExcelKnownColors.White
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_RotateText.xlsx")
   End Using
 End Sub

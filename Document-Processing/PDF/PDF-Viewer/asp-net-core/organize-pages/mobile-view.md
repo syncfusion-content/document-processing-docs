@@ -27,7 +27,7 @@ To perform actions on a page thumbnail, tap and hold on the thumbnail to open a 
 * **Select All:** Selects all pages in the document.
 
 
-![Alt text](../images/Context-Menu-Page-Operations1.png)
+![Context menu showing page operations on a mobile PDF Viewer](../images/Context-Menu-Page-Operations1.png)
 
 ## Rearranging Pages on Mobile
 

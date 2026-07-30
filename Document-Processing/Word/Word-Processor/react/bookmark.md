@@ -1,95 +1,101 @@
 ---
 layout: post
-title: Bookmark in React Document editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
-control: Bookmark 
+title: Bookmark in React DOCX Editor component | Syncfusion
+description: Learn here all about Bookmark in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+control: Bookmark
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in React Document editor component
+# Bookmark in React Document Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
 
 >Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore.
 >Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
-## Add bookmark
+## Add a Bookmark
 
-Using [`insertBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertbookmark) method, Bookmark can be added to the selected text.
+Use the [`insertBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertbookmark) method to add a bookmark to the selected text.
 
-```csharp
+>The following code snippet assumes that `container` is a reference to the `DocumentEditorContainerComponent` instance declared in your React component.
+
+```typescript
 this.container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
 ## Select Bookmark
 
-You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
+You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectbookmark) method by providing the bookmark name to select as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
 
->Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
+N> The second parameter is optional and it denotes whether to exclude the bookmark start and end from the selection. If true, excludes bookmark start and end from selection.
 
 ## Delete Bookmark
 
-You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#deletebookmark) method as shown in the following code snippet.
+You can delete a bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#deletebookmark) method as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 ```
 
-## Get Bookmark from document
+## Get Bookmark from Document
 
-You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getbookmarks) method as shown in the following code snippet.
+You can get all the bookmarks in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getbookmarks) method on the `DocumentEditor` instance as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.getBookmarks(false);
 ```
 
->Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+N> The boolean parameter denotes whether to include hidden bookmarks. If false, hidden bookmarks are ignored.
 
-## Get Bookmark from selection
+## Get Bookmark from Selection
 
-You can get bookmarks in current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor#getbookmarks) method as shown in the following code snippet.
+You can get bookmarks in the current selection in the document using the [`getBookmarks`](https://ej2.syncfusion.com/react/documentation/api/document-editor/index-default#getbookmarks) method on the `Selection` instance as shown in the following code snippet.
 
-```csharp
+```typescript
 this.container.documentEditor.selection.getBookmarks(false);
 ```
 
-## Replace bookmark content
+## Show or Hide Bookmark
 
-You can replace bookmark content without removing the bookmark start and end for backtracking the bookmark content.
+You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
 
-```csharp
-this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
-this.container.documentEditor.editor.insertText('Hello World')
-```
-
-You can replace content by removing the bookmark start and end, thus the bookmark content can't be tracked in future.
-
-```csharp
-this.container.documentEditor.selection.selectBookmark("Bookmark1");
-this.container.documentEditor.editor.insertText('Hello World')
-```
-
-## Show or Hide bookmark
-
-You can show or hide the show square brackets around bookmarked items in Document editor component.
-
-The following example code illustrates how to show or hide square brackets around bookmarked items.
+The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
 ```typescript
-this.container.documentEditorSettings.showBookmarks = true;
+this.container.documentEditor.documentEditorSettings.showBookmarks = true;
+```
+
+## Replace Bookmark Content
+
+### Preserve the Bookmark While Replacing Content
+
+When you pass `true` for the `excludeStartEnd` parameter in `selectBookmark`, the bookmark start and end markers are preserved. The subsequent `insertText` call replaces only the content between the markers, so the bookmark remains intact and can be tracked later.
+
+```typescript
+this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
+this.container.documentEditor.editor.insertText('Hello World');
+```
+
+### Remove the Bookmark While Replacing Content
+
+When you omit the `excludeStartEnd` parameter (or pass `false`), the bookmark start and end markers are included in the selection. The subsequent `insertText` call replaces both the content and the markers, so the bookmark is removed and cannot be tracked later.
+
+```typescript
+this.container.documentEditor.selection.selectBookmark("Bookmark1");
+this.container.documentEditor.editor.insertText('Hello World');
 ```
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in document editor.
+The following example shows how to open bookmark dialog in Document Editor.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -101,6 +107,8 @@ import {
   Editor,
   BookmarkDialog,
 } from '@syncfusion/ej2-react-documenteditor';
+import { createRoot } from 'react-dom/client';
+
 DocumentEditorComponent.Inject(SfdtExport, Selection, Editor, BookmarkDialog);
 let documenteditor;
 function App() {
@@ -123,11 +131,12 @@ function App() {
   );
   function showBookmarkDialog() {
     //Open Bookmark dialog.
-    documenteditor.showDialog('Bookmark');
+    documenteditor.documentEditor.showDialog('Bookmark');
   }
 }
 export default App;
-ReactDOM.render(<App />, document.getElementById('sample'));
+const root = createRoot(document.getElementById('sample')!);
+root.render(<App />);
 ```
 
 ## Online Demo

@@ -25,17 +25,17 @@ WordDocument document = new WordDocument(docStream, FormatType.Docx);
 foreach (WSection section in document.Sections)
 {
     HeaderFooter header;
-    //Gets even footer of current section
+    //Gets even header of current section
     header = section.HeadersFooters[HeaderFooterType.EvenHeader];
-    //Removes even footer
+    //Removes even header
     header.ChildEntities.Clear();
-    //Gets odd footer of current section
+    //Gets odd header of current section
     header = section.HeadersFooters[HeaderFooterType.OddHeader];
-    //Removes odd footer
+    //Removes odd header
     header.ChildEntities.Clear();
-    //Gets first page footer
+    //Gets first page header
     header = section.HeadersFooters[HeaderFooterType.FirstPageHeader];
-    //Removes first page footer
+    //Removes first page header
     header.ChildEntities.Clear();
 }
 //Saves and closes the document
@@ -51,17 +51,17 @@ WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 foreach (WSection section in document.Sections)
 {
     HeaderFooter header;
-    //Gets even footer of current section
+    //Gets even header of current section
     header = section.HeadersFooters[HeaderFooterType.EvenHeader];
-    //Removes even footer
+    //Removes even header
     header.ChildEntities.Clear();
-    //Gets odd footer of current section
+    //Gets odd header of current section
     header = section.HeadersFooters[HeaderFooterType.OddHeader];
-    //Removes odd footer
+    //Removes odd header
     header.ChildEntities.Clear();
-    //Gets first page footer
+    //Gets first page header
     header = section.HeadersFooters[HeaderFooterType.FirstPageHeader];
-    //Removes first page footer
+    //Removes first page header
     header.ChildEntities.Clear();
 }
 //Saves and closes the document
@@ -75,17 +75,17 @@ Dim document As New WordDocument("Template.docx", FormatType.Docx)
 'Iterates through the sections
 For Each section As WSection In document.Sections
     Dim header As HeaderFooter
-    'Gets even footer of current section
+    'Gets even header of current section
     header = section.HeadersFooters(HeaderFooterType.EvenHeader)
-    'Removes even footer
+    'Removes even header
     header.ChildEntities.Clear()
-    'Gets odd footer of current section
+    'Gets odd header of current section
     header = section.HeadersFooters(HeaderFooterType.OddHeader)
-    'Removes odd footer
+    'Removes odd header
     header.ChildEntities.Clear()
-    'Gets first page footer
+    'Gets first page header
     header = section.HeadersFooters(HeaderFooterType.FirstPageHeader)
-    'Removes first page footer
+    'Removes first page header
     header.ChildEntities.Clear()
 Next
 'Saves and closes the document
@@ -130,7 +130,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");            
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Iterates through the sections
 foreach (WSection section in document.Sections)
 {

@@ -14,13 +14,13 @@ This guide explains how to set up and run your own PDF Viewer web service for us
 ## Prerequisites
 
 - .NET SDK 6.0 or 8.0 installed on your machine
-- Basic knowledge of ASP.NET Core
+- Basic knowledge of ASP.NET Core and React
 
 ## Steps to Set Up the Web Service
 
 ### Step 1: Download the Web Service Sample
 
-Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) repository.
+Clone or download the sample from the [Web service sample on GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) repository.
 
 ### Step 2: Navigate to the ASP.NET Core Folder
 
@@ -124,4 +124,4 @@ root.render(<App />);
 - [GitHub Web Service Examples](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 - [Docker Image for PDF Viewer Server](https://hub.docker.com/r/syncfusion/pdfviewer-server)
 
-N> For production deployment, ensure you configure proper security, CORS policies, and hosting settings for your web service.
+N> For production deployment, configure appropriate security, CORS policies, and hosting settings for your web service.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document Loading Issues in Version 23.1 or Newer Angular PDF Viewer Component
+title: Document Loading Issues in Syncfusion Angular PDF Viewer
 description: Learn here all about troubleshooting Document Loading Issues in Version 23.1 or newer in Angular PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Document Loading Issues in Version 23.1 or Newer — Angular
 
 If a document does not render in the viewer when using version 23.1 or later, use the following troubleshooting checklist to identify and resolve the issue.
 
@@ -21,8 +21,9 @@ If a document does not render in the viewer when using version 23.1 or later, us
 
 function documentLoad () {
     var pdfviewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
-    pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";        pdfViewer.dataBind();
-    pdfViewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf",null);
+    pdfviewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+    pdfviewer.dataBind();
+    pdfviewer.load("https://cdn.syncfusion.com/content/pdf/annotations.pdf", null);
     }
 ```
 
@@ -32,7 +33,7 @@ function documentLoad () {
 
 * **Inspect console and network logs:** Use browser developer tools to check for errors, failed network requests (including worker script loads), and HTTP status codes that indicate resource or permission problems.
 
-* **Loading sequence and Angular lifecycle:** Ensure `viewer.dataBind()` is called after the viewer instance is ready. For Angular applications, prefer the idiomatic approach using `@ViewChild` to access the component instance and invoke methods in appropriate lifecycle hooks (for example, `ngAfterViewInit`) rather than relying on direct DOM access.
+* **Loading sequence and Angular life cycle:** Ensure `viewer.dataBind()` is called after the viewer instance is ready. For Angular applications, prefer the idiomatic approach using `@ViewChild` to access the component instance and invoke methods in appropriate life cycle hooks (for example, `ngAfterViewInit`) rather than relying on direct DOM access.
 
 * **Update the viewer:** Verify the project uses a compatible and up-to-date viewer package. Review release notes for version-specific changes that affect initialization or API behavior.
 

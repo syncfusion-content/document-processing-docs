@@ -116,9 +116,9 @@ window.onload = function () {
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
-### Edit Perimeter
+### Edit Area Appearance
 
-#### Edit Perimeter (UI)
+#### Edit Area Appearance (UI)
 
 - Edit the **fill color** using the Edit Color tool.  
   ![Fill color](../../images/calibrate_fillcolor.png)
@@ -155,9 +155,9 @@ function editAreaProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Area Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AreaSettings) property.

@@ -9,7 +9,7 @@ keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 
 # Open and Save PDF document in UWP
 
-The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**.
+The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in UWP**.
 
 ## Steps to open and save PDF document programmatically:
 
@@ -58,6 +58,10 @@ Step 5: Include the below code snippet in the click event of the button in MainP
 //Load an existing PDF document.
 Stream docStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 
@@ -99,13 +103,13 @@ Step 7: Add below code example to **save the PDF document in UWP**.
 
 {% highlight c# tabtitle="C#" %}
 
-//Create memory stream.
+//Create a memory stream.
 MemoryStream ms = new MemoryStream();
-//Open the document in browser after saving it.
+//Open the document in the browser after saving it.
 loadedDocument.Save(ms);
 //Close the document.
 loadedDocument.Close(true);
-//Save the PDF document. 
+//Save the PDF document.
 Save(ms, "Sample.pdf");
 
 {% endhighlight %}
@@ -118,7 +122,7 @@ Step 8: Add below code example to save the PDF document as a physical file and o
 
 {% highlight c# tabtitle="C#" %}
 
-//Save the stream to physical file and open the file for viewing. 
+//Save the stream to a physical file and open the file for viewing.
 public async void Save(Stream stream, string filename)
 {
     stream.Position = 0;

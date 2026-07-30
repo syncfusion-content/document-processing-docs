@@ -53,7 +53,7 @@ viewer.load(
 
 This is useful when the password is known beforehand.
 
-### 2.2 Loading a Password-Protected Document's URL Using `documentPath`
+### 2.2 Loading a Password-Protected PDF Using `documentPath`
 
 If the [`documentPath`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentpath) points to a password-protected PDF:
 
