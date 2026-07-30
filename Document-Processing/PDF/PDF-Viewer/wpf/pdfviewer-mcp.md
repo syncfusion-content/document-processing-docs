@@ -184,8 +184,8 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Data Binding %}
-#search_docs How do I load data to the  WPF PDF Viewer?
+{% promptcard Load Document %}
+#search_docs How do I load document to the  WPF PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -195,7 +195,7 @@ Get step-by-step help for adding specific features to the WPF PDF Viewer.
 
 {% promptcards %}
 {% promptcard Export PDF Page %}
-#search_docs How to exporting pdf pages in WPF Pdfviewer
+#search_docs How to exporting pdf pages to images in WPF Pdfviewer
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -208,15 +208,16 @@ Get step-by-step help for adding specific features to the WPF PDF Viewer.
 **Troubleshooting**
 
 Describe the problem in plain language, and let `search_docs` help resolve it.
+
 {% promptcards %}
 {% promptcard PDF Viewer Not Rendering %}
-#search_docs Why is the WPF PDF Viewer not showing any data?
+#search_docs Why is the WPF PDF Viewer not showing any document?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Import and Export Issues %}
-#search_docs How do I import and export json files in the WPF PDF Viewer?
+{% promptcard Extract Text Issues %}
+#search_docs Why extract text API not extract the text from PDF documnet in WPF PdfViewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -225,7 +226,7 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server:
 
-- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF PDF Viewer with Rotating PDF Page in Clockwise"*).
+- **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF PDF Viewer with no UI interaction and view-only functionality"*).
 - **Provide Context** - Include applicable versions expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your WPF project.
