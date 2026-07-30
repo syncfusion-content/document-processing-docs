@@ -149,6 +149,8 @@ You can install the Syncfusion ASP.NET Core MCP server as a local tool without a
     dotnet tool install Syncfusion.AspNetCore.MCP
     ````
 
+    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
+
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
     ````json
