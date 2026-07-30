@@ -185,7 +185,7 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Load %}
+{% promptcard Load PDF Document %}
 #search_docs How do I load PDF document to the PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
@@ -195,13 +195,13 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the Windows Forms PDF Viewer.
 
 {% promptcards %}
-{% promptcard Bookmark %}
+{% promptcard Bookmark Navigation %}
 #search_docs Provide information for how to programmatically navigate to Bookmark
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Print Size %}
+{% promptcard Customize Print Size %}
 #search_docs how to customize the print size in pdfviewer?
 {% endpromptcard %}
 {% endpromptcards %}
@@ -210,14 +210,14 @@ Get step-by-step help for adding specific features to the Windows Forms PDF View
 
 Describe the problem in plain language, and let `search_docs` help resolve it.
 {% promptcards %}
-{% promptcard PDF Viewer Not Rendering %}
-#search_docs Why is the PDF Viewer not showing any data?
+{% promptcard PDF Document Not Loaded %}
+#search_docs Why the PDF Document not loaded in the PdfViewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Import and Export Issues %}
-#search_docs How do I import and export json files in the PDF Viewer?
+{% promptcard Extract Text Issues %}
+#search_docs Why does the Extract Text API not extract text from a PDF document in the WPF PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
