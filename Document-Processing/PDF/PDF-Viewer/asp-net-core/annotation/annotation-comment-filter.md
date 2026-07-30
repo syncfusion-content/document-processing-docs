@@ -86,7 +86,8 @@ You can apply multiple filter criteria simultaneously:
 3. Set the **Annotation Type** to "Highlight"
 4. Set the **Status** to "Accepted"
 5. Click **APPLY**
-6. Result: Only highlights created by John Smith with "Accepted" status are displayed
+
+Only highlights created by John Smith with "Accepted" status are displayed.
 
 ### Filter settings
 

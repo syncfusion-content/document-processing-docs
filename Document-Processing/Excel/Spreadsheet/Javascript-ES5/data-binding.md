@@ -30,7 +30,7 @@ Refer to the following code example for local data binding.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data). By default, [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data) uses [`JsonAdaptor`](https://ej2.syncfusion.com/javascript/documentation/data/adaptors#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data). By default, [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data) uses [`JsonAdaptor`](https://ej2.syncfusion.com/javascript/documentation/data/adaptors#json-adaptor) for local data-binding.
 
 ### Customizing column data mapping
 
@@ -53,7 +53,7 @@ The following code example demonstrates how to customize the mapping of column d
 
 ## Remote data
 
-To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://helpej2.syncfusion.com/javascript/documentation/data) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
+To bind remote data to the Spreadsheet control, assign service data as an instance of [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/data) to the `dataSource` property. To interact with remote data source, provide the service endpoint `url`.
  
 Refer to the following code example for remote data binding.
 
@@ -156,7 +156,7 @@ The following code example demonstrates how to dynamically update data using the
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippetxspreadsheet/javascript-es5/dynamic-data-binding-cs2/index.js %}
+{% include code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/spreadsheet/javascript-es5/dynamic-data-binding-cs2/index.html %}

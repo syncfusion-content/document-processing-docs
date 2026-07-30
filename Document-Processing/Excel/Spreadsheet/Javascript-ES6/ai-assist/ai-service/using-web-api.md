@@ -193,7 +193,7 @@ Run the following command to start the Web API server:
 dotnet run
 ```
 
-The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint like below:
+The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint as below:
 
 ```
 https://localhost:{port}/api/AIAssist/Chat
@@ -201,7 +201,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the TypeScript Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

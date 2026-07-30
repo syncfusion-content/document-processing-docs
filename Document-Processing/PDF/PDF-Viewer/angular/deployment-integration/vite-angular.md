@@ -32,6 +32,7 @@ cd angular-vite-pdfviewer
 ```
 
 ### Step 2: Run the Application
+
 Start the development server:
 
 ```bash
