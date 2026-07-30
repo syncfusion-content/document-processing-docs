@@ -201,7 +201,7 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Formulas %}
-#search_docs How do I use formulas in a React Spreadsheet?
+#search_docs Why does React Spreadsheet show HTTP 413 entity too large error while export large Excel files?
 {% endpromptcard %}
 {% endpromptcards %}
 
