@@ -48,7 +48,7 @@ The following code example illustrates to identify whether the viewer is scrolle
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
 - [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

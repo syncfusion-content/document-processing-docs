@@ -114,7 +114,7 @@ When the application is executed, the standard RichTextBox control is displayed 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
 
-## See Also
+## See also
 
 - [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
 - [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

@@ -75,7 +75,7 @@ SfRichTextBoxAdv provides the following functionalities related with styles:
 * Apply style
 * Clear formatting
 
-## Create New Style
+## Create new style
 New styles are created and added to the style collection of the document. Here, you can create character, paragraph and linked type styles.
 
 The following code example explains how to create new style dialog through command binding.
@@ -129,7 +129,7 @@ The following code example explains how to clear the formatting of text through 
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Document Properties in WPF RichTextBox](./Document-Properties)
 - [Selection in WPF RichTextBox](./Selection)
