@@ -171,7 +171,7 @@ You can install the Syncfusion WPF MCP Server as a local tool without requiring 
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world WPF PDF Verifying development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world WPF PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
@@ -179,7 +179,7 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 
 {% promptcards %}
 {% promptcard PDF Viewer Getting Started %}
-#search_docs How do I add the PDF Viewer component to a WPF application?
+#search_docs How do I add the WPF PDF Viewer component to a WPF application?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -226,7 +226,7 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server:
 
 - **Be Specific** - Include the platform and component in your queries (for example, *"Create a Syncfusion WPF PDF Viewer with Rotating PDF Page in Clockwise"*).
-- **Provide Context** - Include applicable versions (.NET 8, 9, 10) or .NET 462, expected outcomes, and any requirements or limitations that may affect the request.
+- **Provide Context** - Include applicable versions expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your WPF project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
