@@ -217,7 +217,7 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Extract Text Issues %}
-#search_docs Why extract text API not extract the text from PDF documnet in WPF PdfViewer?
+#search_docs Why does the Extract Text API not extract text from a PDF document in the WPF PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
