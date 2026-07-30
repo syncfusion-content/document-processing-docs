@@ -12,7 +12,7 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 
 The list APIs are exposed through the [Lists](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_Lists) and [AbstractLists](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_AbstractLists) collections of the [DocumentAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html) class, and the [LevelOverrideAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.LevelOverrideAdv.html) type. Up to **nine levels** can be defined in a multilevel list, matching the Microsoft Word limit.
 
-## Single Level List
+## Single level List
 
 Single level means that all the items in the list have the same hierarchy and indentation. It can be a numbered or bulleted list.
 
@@ -363,7 +363,7 @@ richTextBoxAdv.Selection.ParagraphFormat.ListLevelNumber = 0
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Document Structure in WPF RichTextBox](./Document-Structure)
 - [Selection in WPF RichTextBox](./Selection)

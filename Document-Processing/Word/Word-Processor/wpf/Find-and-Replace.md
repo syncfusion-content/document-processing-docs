@@ -158,7 +158,7 @@ End If
 
 {% endtabs %}
 
-## Options Pane
+## Options pane
 
 The SfRichTextBoxAdv provides built-in options pane support to find text and navigate through the search results, similar to that of Microsoft Word.
 
@@ -177,7 +177,7 @@ The following code example demonstrates how to show the options pane in SfRichTe
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Selection in WPF RichTextBox](./Selection)
 - [Commands in WPF RichTextBox](./Commands)
