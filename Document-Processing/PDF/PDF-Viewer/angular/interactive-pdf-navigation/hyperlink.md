@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
+title: Hyperlink navigation in Angular PDF Viewer | Syncfusion
 description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for Angular.
 platform: document-processing
 control: PDF Viewer
@@ -16,7 +16,7 @@ N> The table of contents pane and hyperlink interactions rely on the same naviga
 
 ## Required modules
 
-Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+Inject the following modules to enable both navigation experiences: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, `Print`, and optionally `Annotation`.
 
 ## Table of contents navigation
 
@@ -285,6 +285,6 @@ export class AppComponent {
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)

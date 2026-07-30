@@ -56,7 +56,7 @@ window.onload = function () {
 
 Refer to the following image for the toolbar view:
 
-![Enable redaction toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Enable redaction toolbar](./redaction-annotations-images/redaction-icon-toolbar.png)
 
 ## Show or hide the redaction toolbar
 
@@ -66,7 +66,7 @@ Toggle the redaction toolbar using the built‑in toolbar icon or programmatical
 
 When `RedactionEditTool` is included in the toolbar settings, clicking the redaction icon in the primary toolbar shows or hides the redaction toolbar.
 
-![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Show redaction toolbar from the primary toolbar](./redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
@@ -118,11 +118,11 @@ The following example demonstrates toggling the redaction toolbar programmatical
 
 Refer to the following image for details:
 
-![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
+![Programmatically show the Redaction toolbar](./redaction-annotations-images/show-redaction-toolbar.png)
 
 ## See also
 
-* [Adding the redaction annotation in PDF viewer](../redaction/overview)
+* [Adding the redaction annotation in PDF viewer](./overview)
 * [UI interactions](./ui-interaction)
 * [Programmatic support](./programmatic-support)
 * [Mobile view](./mobile-view)

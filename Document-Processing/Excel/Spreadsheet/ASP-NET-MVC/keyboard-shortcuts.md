@@ -21,7 +21,7 @@ The following keyboard shortcuts are supported in the Spreadsheet:
 |----------|-------------|
 | Ctrl + O | Displays a dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
-| Ctrl + P | Prints the active worksheet when the Spreadsheet is in focus. |
+| Ctrl + P | Prints the active worksheet when the spreadsheet is in focus. |
 | Ctrl + Alt + N | Opens a new workbook. |
 | Shift + F11 | Adds a new worksheet. |
 
@@ -137,18 +137,18 @@ The following keyboard shortcuts are supported in the Spreadsheet:
 
 | Shortcut | Description |
 |----------|-------------|
-| Alt | Focuses the active Ribbon tab. |
+| Alt | Focuses the active ribbon tab. |
 | Alt + F | Opens the **File** menu. |
 | Alt + H | Opens the **Home** tab. |
 | Alt + N | Opens the **Insert** tab. |
 | Alt + M | Opens the **Formulas** tab. |
 | Alt + A | Opens the **Data** tab. |
 | Alt + W | Opens the **View** tab. |
-| Left arrow | Moves the focus to the previous item in the Ribbon. |
-| Right arrow | Moves the focus to the next item in the Ribbon. |
-| Alt + Down | Opens the selected Ribbon dropdown menu. |
-| Esc / Alt + Up | Closes the Ribbon dropdown menu. |
-| Ctrl + F8 | Expands or collapses the Ribbon content. |
+| Left arrow | Moves the focus to the previous item in the ribbon. |
+| Right arrow | Moves the focus to the next item in the ribbon. |
+| Alt + Down | Opens the selected ribbon dropdown menu. |
+| Esc / Alt + Up | Closes the ribbon dropdown menu. |
+| Ctrl + F8 | Expands or collapses the ribbon content. |
 | Ctrl + Shift + U | Expands or collapses the formula bar. |
 | Shift + Alt + K | Opens the **List All Sheets** dropdown. |
 
