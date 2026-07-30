@@ -1,5 +1,5 @@
 ---
-title: How to apply formatting to a pivot table created by XlsIO? | XlsIO | Syncfusion
+title: How to apply formatting to a pivot table created by XlsIO? | Syncfusion
 description: Explains how to apply a built-in PivotTable style in Syncfusion XlsIO and why the Layout method must be called.
 platform: document-processing
 control: XlsIO

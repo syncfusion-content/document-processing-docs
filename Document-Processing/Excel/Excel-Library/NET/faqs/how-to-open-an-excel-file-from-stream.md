@@ -1,6 +1,6 @@
 ---
 title: How to open an Excel file from stream | XlsIO | Syncfusion
-description: This page demonstrates with an example to open an Excel file from stream using .NET Excel Library.
+description: Learn how to open an Excel file from a stream programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

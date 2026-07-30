@@ -1,5 +1,5 @@
 ---
-title: How to resolve the "File does not contain a workbook stream" error | XlsIO | Syncfusion
+title: Fix the "File Does Not Contain a Workbook Stream" Error | Syncfusion
 description: Explains why XlsIO throws the "File does not contain a workbook stream" error and how to detect unsupported files up front.
 platform: document-processing
 control: XlsIO

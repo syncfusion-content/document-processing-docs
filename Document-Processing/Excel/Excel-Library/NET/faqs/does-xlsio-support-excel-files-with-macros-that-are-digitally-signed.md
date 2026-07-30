@@ -1,5 +1,5 @@
 ---
-title: Does XlsIO support Excel files with macros that are digitally signed? | XlsIO | Syncfusion
+title: Does XlsIO Support Digitally Signed Excel Macros? | Syncfusion
 description: Explains whether Syncfusion XlsIO preserves the digital signature on a macro-enabled Excel workbook when it is re-saved.
 platform: document-processing
 control: XlsIO

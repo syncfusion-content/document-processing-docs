@@ -134,7 +134,6 @@ End Module
 
 ## See Also
 
-* [Working with cell styles in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-styles)
 * [`ExcelKnownColors` enum](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelKnownColors.html)
 * [`IExtendedFormat` API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html)
 * [`IRange.CellStyle` API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyle)

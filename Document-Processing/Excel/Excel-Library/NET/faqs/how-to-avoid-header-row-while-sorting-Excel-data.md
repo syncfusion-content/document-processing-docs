@@ -1,5 +1,5 @@
 ---
-title: How to avoid a header row when sorting Excel data in XlsIO? | XlsIO | Syncfusion
+title: How to avoid a header row when sorting Excel data in XlsIO? | Syncfusion
 description: Explains how to include the first row of a sort range in the sort by disabling IDataSort.HasHeader, with a working C# and VB.NET example.
 platform: document-processing
 control: XlsIO
@@ -166,4 +166,3 @@ End Module
 * [`ISortField` API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ISortField.html)
 * [`SortOn` enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.SortOn.html)
 * [`OrderBy` enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.OrderBy.html)
-* [Working with data sorting in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-sorting) 

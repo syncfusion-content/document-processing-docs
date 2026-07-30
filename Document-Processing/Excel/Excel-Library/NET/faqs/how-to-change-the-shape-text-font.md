@@ -111,8 +111,5 @@ End Module
 
 ## See Also
 
-* [How to insert a shape in a worksheet with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-insert-a-shape)
-* [Working with shapes in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel#shapes)
 * [IFont API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFont.html)
-* [IRichTextString API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRichTextString.html)  
-
+* [IRichTextString API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRichTextString.html)

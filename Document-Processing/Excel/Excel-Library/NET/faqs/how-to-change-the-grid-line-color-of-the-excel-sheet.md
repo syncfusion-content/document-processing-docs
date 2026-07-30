@@ -1,6 +1,6 @@
 ---
 title: How to change the gridline color of an Excel worksheet | Syncfusion
-description: Code example to change the gridline color of an Excel worksheet using the .NET Excel Library.
+description: Learn how to change the gridline color of an Excel worksheet using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

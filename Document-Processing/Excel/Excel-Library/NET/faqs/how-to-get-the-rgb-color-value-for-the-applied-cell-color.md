@@ -1,5 +1,5 @@
 ---
-title: How to get the RGB color value of an applied cell color? | XlsIO | Syncfusion
+title: How to get the RGB color value of an applied cell color? | Syncfusion
 description: Explains how to read the resolved RGB value of a cell's fill color in XlsIO using CellStyle.Color, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
@@ -93,7 +93,5 @@ End Using
 
 ## See Also
 
-* [How to apply a background color to a cell in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-apply-cell-background-color)
-* [How to apply a theme color to a cell in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-apply-theme-color)
 * [IStyle API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html)
 * [ExcelKnownColors enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelKnownColors.html)

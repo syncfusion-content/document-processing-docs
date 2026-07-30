@@ -1,6 +1,6 @@
 ---
 title: How to enable PivotTable Show Details in XlsIO? | Syncfusion
-description: This page explains how to enable the pivot table show details option using .NET Excel Library.
+description: Learn how to enable the Show Details option in an Excel pivot table using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

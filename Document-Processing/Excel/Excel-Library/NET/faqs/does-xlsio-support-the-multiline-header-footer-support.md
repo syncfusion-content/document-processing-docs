@@ -1,6 +1,6 @@
 ---
 title: Does XlsIO support multiline header footer? | Syncfusion
-description: This page explains how to add the multiline header and footer using .NET Excel Library.
+description: This page explains how to add multiline headers and footers in Excel worksheets using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

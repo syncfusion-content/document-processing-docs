@@ -1,5 +1,5 @@
 ---
-title: How to search for a value in specific columns of an Excel worksheet | Syncfusion
+title: Search for Values in Specific Worksheet Columns | Syncfusion
 description: This page shows how to search for a value in specific (non-adjacent) columns of an Excel worksheet using the .NET Excel library.
 platform: document-processing
 control: XlsIO

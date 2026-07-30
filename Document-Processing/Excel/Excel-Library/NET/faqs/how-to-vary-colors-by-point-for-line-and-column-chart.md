@@ -1,5 +1,5 @@
 ---
-title: How to vary colors by point for a line or column chart? | XlsIO | Syncfusion
+title: How to vary colors by point for a line or column chart? | Syncfusion
 description: Explains how to set IsVaryColor on a line or column chart series in XlsIO so each data point uses a different theme color.
 platform: document-processing
 control: XlsIO

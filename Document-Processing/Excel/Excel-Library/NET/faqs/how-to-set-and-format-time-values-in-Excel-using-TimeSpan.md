@@ -1,5 +1,5 @@
 ---
-title: How to set and format time values in Excel using TimeSpan in C# | Syncfusion
+title: Set and Format Time Values in Excel Using TimeSpan | Syncfusion
 description: Code example to set and format time values in Excel using TimeSpan with the Syncfusion .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO

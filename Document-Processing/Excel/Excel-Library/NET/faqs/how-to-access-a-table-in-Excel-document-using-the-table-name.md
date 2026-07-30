@@ -104,7 +104,5 @@ End Using
 
 ## See Also
 
-* [How to create an Excel table in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-create-a-table)
-* [How to format an Excel table in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-format-a-table)
 * [IListObject API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html)
 * [IListObjects API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html)

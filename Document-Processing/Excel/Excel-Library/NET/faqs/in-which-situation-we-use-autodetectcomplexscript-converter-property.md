@@ -1,5 +1,5 @@
 ﻿---
-title: When should I use the AutoDetectComplexScript converter property? | XlsIO | Syncfusion
+title: When to Use the AutoDetectComplexScript Property? | Syncfusion
 description: Explains when to enable the AutoDetectComplexScript converter setting in XlsIO's Excel-to-PDF rendering.
 platform: document-processing
 control: XlsIO

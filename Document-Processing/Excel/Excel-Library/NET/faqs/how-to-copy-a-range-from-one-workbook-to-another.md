@@ -1,6 +1,6 @@
 ---
 title: How to copy a range from one workbook to another | XlsIO | Syncfusion
-description: Code example to copy a range from one workbook to another using .NET Excel Library.
+description: Learn how to copy a range of cells from one Excel workbook to another using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

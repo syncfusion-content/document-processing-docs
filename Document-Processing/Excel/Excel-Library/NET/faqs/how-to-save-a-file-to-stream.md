@@ -1,6 +1,6 @@
 ---
 title: How to save a file to stream | XlsIO | Syncfusion
-description: This page demonstrates with an example to save a file to stream using .NET Excel Library.
+description: Learn how to save an Excel file to a stream programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

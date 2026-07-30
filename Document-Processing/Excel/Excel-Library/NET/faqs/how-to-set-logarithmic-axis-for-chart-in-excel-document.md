@@ -1,5 +1,5 @@
 ---
-title: How to set a logarithmic axis for a chart in an Excel document? | XlsIO | Syncfusion
+title: Set a Logarithmic Axis for a Chart in Excel | Syncfusion
 description: Demonstrates how to set a logarithmic value axis on a chart in XlsIO using IsLogScale and LogBase, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO

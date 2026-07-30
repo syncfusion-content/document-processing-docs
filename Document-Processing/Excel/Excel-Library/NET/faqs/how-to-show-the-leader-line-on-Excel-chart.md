@@ -1,6 +1,6 @@
 ---
 title: How to show the leader line on Excel chart | Syncfusion 
-description: Code example to show the leader line on Excel chart using .NET Excel library. 
+description: This page demonstrates how to show leader lines for chart data labels in Excel using the .NET Excel Library and C# code. 
 platform: document-processing
 control: XlsIO
 documentation: UG

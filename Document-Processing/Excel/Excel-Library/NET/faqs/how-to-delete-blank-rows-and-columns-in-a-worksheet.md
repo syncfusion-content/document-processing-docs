@@ -128,7 +128,5 @@ End Using
 ## See Also
 
 * [How to resolve a performance issue when deleting a large number of rows?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-resolve-performance-issue-when-deleting-a-large-number-of-rows)
-* [How to delete rows and columns in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-delete-rows-and-columns)
-* [How to insert rows and columns in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-insert-rows-and-columns)
 * [IWorksheet API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html)
 * [IRange API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)

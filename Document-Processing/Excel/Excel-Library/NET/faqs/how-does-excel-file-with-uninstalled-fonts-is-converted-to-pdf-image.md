@@ -1,12 +1,12 @@
 ---
-title: How does XlsIO handle Excel files with uninstalled fonts when converting to PDF or image? | XlsIO | Syncfusion
+title: How XlsIO Handles Missing Fonts in PDF and Image Export | Syncfusion
 description: Explains how XlsIO substitutes missing fonts when converting an Excel file to PDF or image, with a code example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How does XlsIO handle Excel files with uninstalled fonts when converting to PDF or image?
+# How XlsIO Handles Missing Fonts in PDF and Image Export?
 
 When a font used in an Excel document is not installed on the machine, the PDF or image output will be missing the glyphs that the original font would have rendered. Syncfusion<sup>&reg;</sup> XlsIO lets you provide an alternate font by subscribing to the [`SubstituteFont`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_SubstituteFont) event, which exposes the original font name on [`SubstituteFontEventArgs.OriginalFontName`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html) and lets you set the substitute on [`SubstituteFontEventArgs.AlternateFontName`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html#Syncfusion_XlsIO_Implementation_SubstituteFontEventArgs_AlternateFontName). If you do not provide a substitute, XlsIO falls back to **Microsoft Sans Serif** (a Windows-only system font) on Windows, or to a built-in replacement on non-Windows platforms.
 

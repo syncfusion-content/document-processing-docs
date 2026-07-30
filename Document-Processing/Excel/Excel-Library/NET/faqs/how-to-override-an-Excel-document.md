@@ -1,6 +1,6 @@
 ---
 title: How to override an Excel document using C# | Syncfusion
-description: This page explains how to override an existing Excel document using .NET Excel Library.
+description: Learn how to overwrite an existing Excel document programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

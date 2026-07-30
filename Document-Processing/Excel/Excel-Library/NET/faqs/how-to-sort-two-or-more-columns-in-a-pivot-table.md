@@ -1,6 +1,6 @@
 ---
 title: How to sort two or more columns in a pivot table | Syncfusion
-description: Code example to sort two or more columns in a pivot table using the .NET Excel library.
+description: This page demonstrates how to sort multiple columns in a pivot table programmatically using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

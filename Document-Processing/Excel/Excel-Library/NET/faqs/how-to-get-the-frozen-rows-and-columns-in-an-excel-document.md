@@ -1,12 +1,12 @@
 ---
-title: How to get the frozen rows and columns in an Excel document? | XlsIO | Syncfusion
-description: Explains how to read the frozen-pane state of a worksheet in XlsIO using the internal PaneRecord or the public FreezeRow/FreezeColumn API, with a C# and VB.NET example.
+title: How to Retrieve Frozen Rows and Columns in Excel? | Syncfusion
+description: Learn how to read the frozen pane state of an Excel worksheet using the FreezeRow and FreezeColumn APIs in XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the frozen rows and columns in an Excel document?
+# How to Retrieve Frozen Rows and Columns in Excel?
 
 In Syncfusion<sup>&reg;</sup> XlsIO, a worksheet's frozen-pane state is exposed on the **internal** [`WorksheetImpl.Pane`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html) property, which returns a [`PaneRecord`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PaneRecord.html) with four useful properties: `FirstRow`, `FirstColumn`, `HorizontalSplit`, and `VerticalSplit`. For a more public-API approach, the worksheet's `FreezeRow` and `FreezeColumn` properties expose the same information (1-based row/column index of the split, or `0` if no freeze).
 
@@ -102,7 +102,5 @@ End Using
 
 ## See Also
 
-* [How to freeze panes in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-freeze-panes)
-* [How to split a worksheet window in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-split-worksheet-window)
 * [WorksheetImpl API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html)
 * [PaneRecord API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PaneRecord.html)

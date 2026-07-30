@@ -55,6 +55,5 @@ class Program
 
 ## See Also
 
-* [How to read and write CSV files in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-read-and-write-csv-file)
 * [IWorkbooks.Open API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html)
 * [IWorkbook.SaveAs API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html)

@@ -1,6 +1,6 @@
 ---
 title: How to add chart labels to scatter points | XlsIO | Syncfusion
-description: This page shows how to add chart labels to scatter points using the .NET Excel library.
+description: Learn how to add chart labels to scatter plot data points in Excel worksheets using the .NET Excel Library with examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

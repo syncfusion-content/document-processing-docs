@@ -1,5 +1,5 @@
 ---
-title: How to protect zip files with a password using Syncfusion.Compression.Base | Compression | Syncfusion
+title: Protect ZIP Files with Passwords Using Syncfusion Compression | Syncfusion
 description: Code example that protects a zip archive with a password using Syncfusion.Compression.Base encryption algorithms.
 platform: document-processing
 control: XlsIO
