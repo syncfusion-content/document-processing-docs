@@ -12,6 +12,18 @@ ListObjects represent Excel tables in a worksheet. You can use the [ListObjects]
 
 The following code example illustrates how to remove all ListObjects from a worksheet.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `ListObjects`, `IListObject`.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/InputTemplate.xlsx` (cross-platform tab) or `InputTemplate.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with at least one ListObject (Excel table).
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -73,3 +85,7 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects">this GitHub page</a>.
+
+## See also
+
+* [RemoveListObjects on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects)

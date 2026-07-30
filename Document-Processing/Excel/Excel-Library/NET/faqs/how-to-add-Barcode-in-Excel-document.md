@@ -1,12 +1,29 @@
 ---
-title: How to add Barcode in Excel document using C# | Syncfusion
-description: Code example to add barcode images to an Excel document using .NET Excel Library.
+title: How to add a barcode image to an Excel document using C# | Syncfusion
+description: Code example to add barcode images to an Excel document using the Syncfusion .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# How to add Barcode in Excel document using C#?
-You can embed barcode images into an Excel worksheet using Syncfusion XlsIO. The following code snippets illustrate how to insert barcodes at specified locations and save the workbook.
+
+# How to add a barcode image to an Excel document using C#?
+
+You can embed barcode images (PNG, JPEG, BMP, and other formats supported by Excel) into an Excel worksheet by calling [Pictures.AddPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_Int32_System_Int32_System_IO_Stream_) on the worksheet's [IPictures](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html) collection. XlsIO does not generate the barcode itself — you supply the image and XlsIO places it at the requested row and column anchor.
+
+The following code example creates a workbook and inserts two barcode images at four locations in the first worksheet. Three variants are shown: a C# cross-platform sample that loads images from a `FileStream`, a C# Windows-specific sample that loads images by file path, and a VB.NET Windows-specific sample that uses a multi-line `Using` block.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;` and `using System.IO;` (or `Imports Syncfusion.XlsIO` and `Imports System.IO` in VB.NET).
+- The cross-platform C# sample expects `Barcode1.png` and `Barcode2.png` in the application's working directory.
+- The Windows-specific C# sample expects `../../Images/Barcode1.png` and `../../Images/Barcode2.png` to exist relative to the working directory.
+- The VB.NET sample expects `Images/Barcode1.png` and `Images/Barcode2.png` in the working directory.
+- All samples create a new workbook with `Workbooks.Create(1)`, so no input Excel file is required.
+
+## Code example
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Barcode/.NET/Add%20Barcode/Barcode/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -77,7 +94,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add Barcode in Excel document in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Barcode/.NET/Add%20Barcode).   
+## See also
 
-
+- [How to insert a picture into a cell in an Excel document](how-to-insert-a-picture-into-a-cell-in-an-excel-document.md)
+- [How to align the image inside the cell](how-to-align-the-image-inside-the-cell.md)
+- [How to extract and save images from the worksheet](how-to-extract-and-save-images-from-the-worksheet.md)   
 

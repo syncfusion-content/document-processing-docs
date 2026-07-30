@@ -1,21 +1,38 @@
 ---
-title: Copy/paste cell values that contain only formula| XlsIO | Syncfusion
-description: Code example to copy and paste the values of the cells that contain only formulas using Essential XlsIO.
+title: How to copy or paste cell values that contain only formulas | XlsIO | Syncfusion
+description: Code example to copy and paste the values of cells that contain only formulas using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to copy/paste the cell values that contain only formula?
+# How to copy or paste cell values that contain only formulas?
 
-You can copy and paste the values of the cell which contain only formula using [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method by specifying the [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) as **None**. The following code snippet illustrates this.
+You can copy and paste the computed values of cells that contain only formulas by using the [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method and specifying the [ExcelCopyRangeOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelCopyRangeOptions.html) enumeration as **None**. The following code example demonstrates this.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //Workbooks.Create(int) creates a workbook with the given number of worksheets
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -24,16 +41,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IRange sourceRange = worksheet.Range["A3"];
   IRange destinationRange = worksheet.Range["B1"];
 
-  //Copy and paste the values using ExcelCopyRangeOption
+  //ExcelCopyRangeOptions.None copies only the computed values, not the formula
   sourceRange.CopyTo(destinationRange, ExcelCopyRangeOptions.None);
   
   workbook.SaveAs("Output.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -46,14 +64,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IRange sourceRange = worksheet.Range["A3"];
   IRange destinationRange = worksheet.Range["B1"];
 
-  //Copy and paste the values using ExcelCopyRangeOption
+  //ExcelCopyRangeOptions.None copies only the computed values, not the formula
   sourceRange.CopyTo(destinationRange, ExcelCopyRangeOptions.None);
 
   workbook.SaveAs("Output.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
@@ -65,13 +86,14 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim sourceRange As IRange = worksheet.Range("A3")
   Dim destinationRange As IRange = worksheet.Range("B1")
 
-  'Copy and paste the values using ExcelCopyRangeOption
+  'ExcelCopyRangeOptions.None copies only the computed values, not the formula
   sourceRange.CopyTo(destinationRange, ExcelCopyRangeOptions.None)
 
   workbook.SaveAs("Output.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

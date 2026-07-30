@@ -1,72 +1,137 @@
 ---
-title: Avoid exception when adding worksheets with same name | Syncfusion
-description: This page helps to avoid exception when adding worksheets with same name in .NET Excel Library.
+title: How to avoid an exception when adding worksheets with the same name | XlsIO | Syncfusion
+description: Explains how to suppress the duplicate-sheet-name exception in XlsIO by enabling IgnoreSheetNameException on IApplication.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to avoid exception when adding worksheets with same name?
+# How to avoid an exception when adding worksheets with the same name?
 
-Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) as true.
+## Prerequisites
 
-The following code snippet shows how to add two worksheets with same name in a workbook.
+Before running the code example, make sure the following are in place:
 
-{% tabs %}  
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites the destination file. The path is resolved relative to `Environment.CurrentDirectory`; file paths are case-sensitive on Linux.
+
+## Allow duplicate sheet names
+
+The following code example sets `IgnoreSheetNameException` to `true` and then attempts to create two worksheets with the same name. The first `Create` adds a sheet; the second returns the existing sheet without throwing.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+
+class Program
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      application.DefaultVersion = ExcelVersion.Excel2013;
 
-  //Set IgnoreSheetNameException property as true 
-  application.IgnoreSheetNameException = true;
+      //Set the flag BEFORE any Worksheets.Create call so it takes effect for subsequent calls
+      application.IgnoreSheetNameException = true;
 
-  //Create worksheets with same name
-  IWorksheet sheet_1 = workbook.Worksheets.Create("Sheet");
-  IWorksheet sheet_2 = workbook.Worksheets.Create("Sheet");
+      IWorkbook workbook = application.Workbooks.Create(1);
 
-  //Saving the workbook
-  workbook.SaveAs("Output.xlsx");
+      //First call: creates a new worksheet named "Sheet"
+      IWorksheet sheet1 = workbook.Worksheets.Create("Sheet");
+
+      //Second call: returns the existing "Sheet" reference rather than throwing
+      IWorksheet sheet2 = workbook.Worksheets.Create("Sheet");
+
+      //Confirm the behavior: sheet1 and sheet2 are the same instance
+      //(this writes the same value through both references)
+      sheet1["A1"].Text = "Hello from both references";
+      sheet2["A1"].Text = "Updated through sheet2";
+
+      //Save the workbook
+      workbook.SaveAs("Output.xlsx");
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+
+class Program
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Excel2013;
-  IWorkbook workbook = application.Workbooks.Create(1);
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      application.DefaultVersion = ExcelVersion.Excel2013;
 
-  //Set IgnoreSheetNameException property as true 
-  application.IgnoreSheetNameException = true;
+      //Set the flag BEFORE any Worksheets.Create call so it takes effect for subsequent calls
+      application.IgnoreSheetNameException = true;
 
-  //Create worksheets with same name
-  IWorksheet sheet_1 = workbook.Worksheets.Create("Sheet");
-  IWorksheet sheet_2 = workbook.Worksheets.Create("Sheet");
+      IWorkbook workbook = application.Workbooks.Create(1);
 
-  string fileName = "Output.xlsx";
-  workbook.SaveAs(fileName);
+      //First call: creates a new worksheet named "Sheet"
+      IWorksheet sheet1 = workbook.Worksheets.Create("Sheet");
+
+      //Second call: returns the existing "Sheet" reference rather than throwing
+      IWorksheet sheet2 = workbook.Worksheets.Create("Sheet");
+
+      //Confirm the behavior: sheet1 and sheet2 are the same instance
+      sheet1["A1"].Text = "Hello from both references";
+      sheet2["A1"].Text = "Updated through sheet2";
+
+      //Save the workbook to the path of your choice
+      string fileName = "Output.xlsx";
+      workbook.SaveAs(fileName);
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-  Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Excel2013
-  Dim workbook As IWorkbook = application.Workbooks.Create(1)
+Imports Syncfusion.XlsIO
 
-  'Set IgnoreSheetNameException property as true
-  application.IgnoreSheetNameException = true
+Module Module1
+  Sub Main()
+    'ExcelEngine is IDisposable; the Using block guarantees the engine is disposed
+    Using excelEngine As ExcelEngine = New ExcelEngine()
+      Dim application As IApplication = excelEngine.Excel
+      application.DefaultVersion = ExcelVersion.Excel2013
 
-  'Create worksheets with same name
-  Dim sheet_1 As IWorksheet = workbook.Worksheets.Create("Sheet")
-  Dim sheet_2 As IWorksheet = workbook.Worksheets.Create("Sheet")
+      'Set the flag BEFORE any Worksheets.Create call so it takes effect for subsequent calls
+      application.IgnoreSheetNameException = True
 
-  Dim fileName As String = "Output.xlsx"
-  workbook.SaveAs(fileName)
-End Using
+      Dim workbook As IWorkbook = application.Workbooks.Create(1)
+
+      'First call: creates a new worksheet named "Sheet"
+      Dim sheet1 As IWorksheet = workbook.Worksheets.Create("Sheet")
+
+      'Second call: returns the existing "Sheet" reference rather than throwing
+      Dim sheet2 As IWorksheet = workbook.Worksheets.Create("Sheet")
+
+      'Confirm the behavior: sheet1 and sheet2 are the same instance
+      sheet1("A1").Text = "Hello from both references"
+      sheet2("A1").Text = "Updated through sheet2"
+
+      'Save the workbook to the path of your choice
+      Dim fileName As String = "Output.xlsx"
+      workbook.SaveAs(fileName)
+      workbook.Close()
+    End Using
+  End Sub
+End Module
 {% endhighlight %}
 {% endtabs %}
 

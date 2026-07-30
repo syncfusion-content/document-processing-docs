@@ -1,73 +1,118 @@
 ---
-title: Font settings for shape text | Syncfusion
-description: This page explains the font settings for the shape text using the .NET Excel Library.
+title: How to apply a font to shape text? | XlsIO | Syncfusion
+description: Explains how to apply a font to the text in a worksheet shape with XlsIO using a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply font to shape text?
+# How to apply a font to shape text?
 
-The following code snippet shows how to apply or change the shape text font.  
+Syncfusion<sup>&reg;</sup> XlsIO lets you change the font of the text inside a worksheet shape (autoshape, text box, callout, and similar) by creating a new [`IFont`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFont.html) with `workbook.CreateFont()` and assigning it to a range of characters through `shape.TextFrame.TextRange.RichText.SetFont(startIndex, endIndex, font)`. The example below loads a workbook, ensures a shape exists on the first sheet, builds an `IFont`, and applies it to a slice of the shape's text.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* If you load an existing `Sample.xlsx`, the file must contain at least one text-bearing shape on the first sheet. Otherwise, the example creates the shape for you with `Shapes.AddTextBox(...)` and assigns some text.
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites `Output.xlsx`.
+
+## Apply a font to a range of characters in a shape
+
+The flow is: open the workbook, find or create a shape on the first sheet, build an `IFont`, call `RichText.SetFont` on a slice of the shape's text, and save the workbook.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+
+class Program
 {
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+  static void Main()
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      application.DefaultVersion = ExcelVersion.Excel2013;
 
-  IFont font = workbook.CreateFont();
-  font.FontName = "Arial";
-  font.Size = 9; 
+      IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
+      IWorksheet worksheet = workbook.Worksheets[0];
 
-  IShape shape = worksheet.Shapes[0];
-  shape.TextFrame.TextRange.RichText.SetFont(1, 3, font);
+      //Get the first shape, or create a text box so the example always has
+      //a shape to work with. shapes[0] throws if there are no shapes.
+      IShape shape = worksheet.Shapes.Count > 0
+        ? worksheet.Shapes[0]
+        : worksheet.Shapes.AddTextBox(row: 1, column: 1, height: 100, width: 200);
+      shape.TextFrame.TextRange.Text = "Hello, XlsIO!";
 
-  //Saving the workbook
-  workbook.SaveAs("Output.xlsx");
-}
-{% endhighlight %}
+      //Build the font you want to apply
+      IFont font = workbook.CreateFont();
+      font.FontName = "Arial";
+      font.Size = 9;
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-  IApplication application = excelEngine.Excel;
-  application.DefaultVersion = ExcelVersion.Xlsx;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
-  IWorksheet worksheet = workbook.Worksheets[0];
+      //Apply the font to characters at positions 0..4 inclusive
+      shape.TextFrame.TextRange.RichText.SetFont(
+        startIndex: 0,
+        endIndex: 4,
+        font: font);
 
-  IFont font = workbook.CreateFont();
-  font.FontName = "Arial";
-  font.Size = 9; 
-
-  IShape shape = worksheet.Shapes[0];
-  shape.TextFrame.TextRange.RichText.SetFont(1, 3, font);
-
-  //Saving the workbook
-  workbook.SaveAs("Output.xlsx");
+      workbook.SaveAs("Output.xlsx");
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-  Dim application As IApplication = excelEngine.Excel
-  application.DefaultVersion = ExcelVersion.Xlsx
-  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
-  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+Imports Syncfusion.XlsIO
 
-  Dim font As IFont = workbook.CreateFont
-  font.FontName = "Arial"
-  font.Size = 9
-  
-  Dim shape As IShape = worksheet.Shapes(0)
-  shape.TextFrame.TextRange.RichText.SetFont(1, 3, font)
+Module Module1
+  Sub Main()
+    'ExcelEngine is IDisposable; the Using block guarantees the engine is disposed
+    Using excelEngine As New ExcelEngine()
+      Dim application As IApplication = excelEngine.Excel
+      application.DefaultVersion = ExcelVersion.Excel2013
 
-  'Saving the workbook
-  workbook.SaveAs("Output.xlsx")
-End Using
+      Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
+      Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+      'Get the first shape, or create a text box so the example always has
+      'a shape to work with. Shapes(0) throws if there are no shapes.
+      Dim shape As IShape = If(worksheet.Shapes.Count > 0,
+                               worksheet.Shapes(0),
+                               worksheet.Shapes.AddTextBox(1, 1, 100, 200))
+      shape.TextFrame.TextRange.Text = "Hello, XlsIO!"
+
+      'Build the font you want to apply
+      Dim font As IFont = workbook.CreateFont()
+      font.FontName = "Arial"
+      font.Size = 9
+
+      'Apply the font to characters at positions 0..4 inclusive
+      shape.TextFrame.TextRange.RichText.SetFont(
+        startIndex:=0,
+        endIndex:=4,
+        font:=font)
+
+      workbook.SaveAs("Output.xlsx")
+      workbook.Close()
+    End Using
+  End Sub
+End Module
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
+
+## See Also
+
+* [How to insert a shape in a worksheet with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-insert-a-shape)
+* [Working with shapes in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel#shapes)
+* [IFont API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IFont.html)
+* [IRichTextString API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRichTextString.html)  
 

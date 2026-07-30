@@ -12,6 +12,18 @@ To merge cells in Excel while preserving only the top-left cell’s value and ex
 
 The following code examples shows how to merge cells preserving cell value and formatting using C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IRange`, `Merge`.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/InputTemplate.xlsx` (cross-platform tab) or `InputTemplate.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with data in cells `B8:C11` (the range to be merged).
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -59,3 +71,10 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting">this GitHub page</a>.
+
+## See also
+
+* [Merge Cells Formatting on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting)
+* [Merged Cells in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/merge-cells-in-excel)
+* [How to unmerge cells in an Excel worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/unmerge-cells-in-excel)
+

@@ -12,6 +12,18 @@ Both the category (horizontal) and value (vertical) axes can be removed from a c
 
 The following examples show the cross-platform C#, Windows-specific C#, and VB.NET variants.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` — for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` — for the XlsIO types and `IApplication`, `IWorkbook`, `IWorksheet`, `IChart`.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data\InputTemplate.xlsx` (cross-platform tab) or `InputTemplate.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with at least one chart.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 // Create an instance of ExcelEngine
@@ -86,3 +98,8 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008514-ChartAxis/FAQ/Chart/.NET/Remove%20Axis">this GitHub page</a>.
+
+## See also
+
+* [Remove Axis on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008514-ChartAxis/FAQ/Chart/.NET/Remove%20Axis)
+* [Charts in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts)

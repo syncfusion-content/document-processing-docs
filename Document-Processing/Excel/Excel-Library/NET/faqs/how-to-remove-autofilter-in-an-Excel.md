@@ -1,14 +1,25 @@
 ---
-title: How to remove autofilter from an Excel worksheet | Syncfusion
-description: This page shows how to remove autofilter from an Excel worksheet .NET Excel Library.
+title: How to remove AutoFilter from an Excel worksheet | Syncfusion
+description: This page shows how to remove AutoFilter from an Excel worksheet using the Syncfusion .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to remove autofilter from an Excel worksheet?
+# How to remove AutoFilter from an Excel worksheet?
 
-You can remove the AutoFilter from a specified worksheet by setting the [FilterRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilters.html#Syncfusion_XlsIO_IAutoFilters_FilterRange) property to null.
+AutoFilter lets users display only the rows that meet specified criteria in an Excel worksheet. You can remove the AutoFilter from a specified worksheet by setting the [FilterRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilters.html#Syncfusion_XlsIO_IAutoFilters_FilterRange) property of the [IAutoFilters](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilters.html) interface to null. Setting the range to null clears the filter range without deleting the filter object, and the worksheet no longer has an AutoFilter applied when the file is reopened.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;`.
+- The input workbook (`InputTemplate.xlsx`) must already contain an AutoFilter applied to a range on the target worksheet.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
 
 The following code example illustrates how to remove the AutoFilter from a worksheet.
 

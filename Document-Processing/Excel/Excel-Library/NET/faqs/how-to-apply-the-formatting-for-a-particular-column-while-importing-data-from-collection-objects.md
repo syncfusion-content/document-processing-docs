@@ -10,6 +10,22 @@ documentation: UG
 
 To apply formatting to a specific column while importing data from collection objects, use the **DisplayFormatAttribute** in the class definition, as shown in the example below.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` — for `Console` and exception handling.
+  - `using System.Collections.Generic;` — for `IList<T>` and `List<T>`.
+  - `using System.ComponentModel;` — for `DisplayNameAttribute` (the C# sample uses the long form `[DisplayNameAttribute(...)]`).
+  - `using System.ComponentModel.DataAnnotations;` — for `[DisplayFormat(...)]`.
+  - `using System.IO;` — for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` — for the XlsIO types.
+- The VB.NET equivalents: `Imports System`, `Imports System.Collections.Generic`, `Imports System.ComponentModel`, `Imports System.ComponentModel.DataAnnotations`, `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -162,9 +178,9 @@ Public Class Customer
     End Sub
 End Class
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-## See Also
+## See also
 
 * [Collection Objects to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel#collection-objects-to-excel)
 * [How to import data table with its data type using template markers?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-import-data-table-with-its-data-type-using-template-markers)

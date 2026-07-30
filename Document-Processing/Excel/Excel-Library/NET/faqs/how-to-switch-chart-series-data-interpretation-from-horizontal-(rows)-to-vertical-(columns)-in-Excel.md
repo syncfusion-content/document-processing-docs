@@ -1,16 +1,27 @@
 ---
 title: How to change chart series data interpretation in Excel | Syncfusion 
-description: Code example to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel using .NET Excel library. 
-platform: document-processing 
-control: XlsIO 
+description: Code example to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel using the Syncfusion .NET Excel Library (XlsIO).
+platform: document-processing
+control: XlsIO
 documentation: UG
 ---
 
-# How to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel?
+# How to switch chart series data interpretation from rows to columns?
 
 You can change how data is interpreted in a chart by switching the series alignment from horizontal (rows) to vertical (columns) using Syncfusion XlsIO. This is done by using [IsSeriesInRows](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_IsSeriesInRows) property of the [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface. 
 
 The following code snippets demonstrate how to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel using C# (cross-platform and Windows-specific) and VB.NET.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Chart/.NET/Switch%20chart%20series%20orientation/Switch%20chart%20series%20orientation/Program.cs,180" %} 
@@ -156,6 +167,9 @@ End Using
 {% endhighlight %} 
 {% endtabs %}
 
-A complete working example to switch chart series data interpretation from horizontal (rows) to vertical (columns) in Excel is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Switch%20chart%20series%20orientation).
+A complete working example to switch chart series data interpretation in Excel is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Switch%20chart%20series%20orientation).
 
+## See also
 
+- [How to add oval shape to Excel chart](how-to-add-oval-shape-to-Excel-chart.md)
+- [How to show the leader line on Excel chart](how-to-show-the-leader-line-on-Excel-chart.md)

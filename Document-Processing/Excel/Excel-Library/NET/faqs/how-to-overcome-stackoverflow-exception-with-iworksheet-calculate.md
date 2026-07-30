@@ -1,16 +1,32 @@
 ---
-title: Avoid StackOverflow exception with IWorksheet Calculate() |Syncfusion
-description: This page shows how to overcome StackOverflow exception while calling Calculate method of IWorksheet using XlsIO.
+title: How to overcome a StackOverflow exception with IWorksheet's Calculate() | XlsIO | Syncfusion
+description: Explains why IWorksheet.Calculate() can throw a StackOverflowException in XlsIO and how to raise the calculation limits to avoid it.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to overcome StackOverflow exception with IWorksheet's Calculate()?
+# How to overcome a StackOverflow exception with IWorksheet's Calculate()?
 
-StackOverflow exception occurs when the number of **IterationMaxCount**, **MaximumRecursiveCalls** and **MaxStackDepth** exceeds in the [CalcEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_CalcEngine). To avoid this StackOverflow exception while computing the formulas iteratively exceeding the maximum capacity, you need to set the values for these properties before calling the [Calculate](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Calculate) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
+A `StackOverflowException` is thrown by the .NET runtime when XlsIO's calculation engine recurses deeper than the call stack can hold. In Syncfusion<sup>&reg;</sup> XlsIO, the depth of that recursion is bounded by three properties on the [`CalcEngine`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_CalcEngine): `MaximumRecursiveCalls`, `IterationMaxCount`, and `MaxStackDepth`. When a workbook contains deeply nested or self-referential formulas (for example, long dependency chains, iterative calculations, or circular references that converge slowly), XlsIO can hit one of these limits and throw the exception. To avoid it, raise the three limits before calling [`IWorksheet.Calculate()`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Calculate).
 
-The following code snippet explains this.
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook that contains the formulas you want to calculate. `IWorksheet.EnableSheetCalculations()` must be called once per worksheet so the engine considers the worksheet's formulas during calculation.
+* Ensure the output directory is writable if you save the calculated workbook.
+
+## Raise the limits and calculate
+
+The flow is: open the workbook, get the worksheet, call `EnableSheetCalculations()`, raise the three `CalcEngine` limits, call `Calculate()`, then save.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

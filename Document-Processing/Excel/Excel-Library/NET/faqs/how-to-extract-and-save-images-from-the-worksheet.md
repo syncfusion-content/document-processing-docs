@@ -1,6 +1,6 @@
 ---
 title: How to extract and save images from an Excel worksheet | Syncfusion
-description: This page explains how to extract and save images from an Excel worksheet using .NET Excel Library.
+description: Explains how to extract embedded pictures from a worksheet and save each one to a file on disk, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -9,6 +9,23 @@ documentation: UG
 # How to extract and save images from an Excel worksheet?
 
 You can extract all images from the worksheet using XlsIO. The following code example demonstrates how to retrieve images from a worksheet and save them to a specified directory.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Provide an input `InputTemplate.xlsx` in the working directory. The file must contain at least one picture on the first sheet.
+* Ensure the output directory exists. Create it with `Directory.CreateDirectory("directory_name");` before running the code, or modify the path to an existing directory.
+* Ensure the working directory and the output directory are writable.
+
+
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -106,3 +123,11 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [How to insert a picture into a cell in an Excel document?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-insert-a-picture-into-a-cell-in-an-excel-document)
+* [How to extract images from shapes in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-extract-images-from-shapes)
+* [Working with pictures in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel#pictures)
+* [IPictureShape API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictureShape.html)
+* [IPictures API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html)

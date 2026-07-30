@@ -1,6 +1,6 @@
 ---
 title: How to define discontinuous ranges | XlsIO | Syncfusion
-description: This page explains with an example to define discontinuous ranges using .NET Excel Library.
+description: This page demonstrates with an example how to define discontinuous ranges using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,32 +8,52 @@ documentation: UG
 
 # How to define discontinuous ranges?
 
-You can define a discontinuous range by adding different ranges to the Range collection. The following code example illustrates this.
+You can define a discontinuous range by creating an `IRanges` collection and adding multiple `IRange` blocks to it. The following code example demonstrates this.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //Workbooks.Create(int) creates a workbook with the given number of worksheets
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Range collection.
+  //Create a discontinuous-range collection
   IRanges rangeCollection = worksheet.CreateRangesCollection();
 
-  //Add different ranges to the Range collection.
+  //Add two non-contiguous ranges to the collection
   rangeCollection.Add(worksheet.Range["D2:D3"]);
   rangeCollection.Add(worksheet.Range["D10:D11"]);
+
+  //Set text on every range in the collection
   rangeCollection.Text = "Welcome";
 
   workbook.SaveAs("DiscontinuousRange.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -41,19 +61,22 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Create Range collection.
+  //Create a discontinuous-range collection and add two ranges
   IRanges rangeCollection = worksheet.CreateRangesCollection();
-
-  //Add different ranges to the Range collection.
   rangeCollection.Add(worksheet.Range["D2:D3"]);
   rangeCollection.Add(worksheet.Range["D10:D11"]);
+
+  //Set text on every range in the collection
   rangeCollection.Text = "Welcome";
 
   workbook.SaveAs("DiscontinuousRange.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
@@ -69,9 +92,10 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   range.Text = "Welcome"
 
   workbook.SaveAs("DiscontinuousRange.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

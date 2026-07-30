@@ -12,6 +12,19 @@ The [UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Xl
 
 The following code examples show how to copy the used range from a source workbook to a destination workbook in C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `UsedRange`, `CopyTo`.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects two input files: `Data/Source.xlsx` and `Data/Destination.xlsx` (cross-platform tab) or `Source.xlsx` and `Destination.xlsx` (Windows-specific and VB.NET tabs). Both files must exist relative to the application's working directory.
+- The destination workbook must contain a worksheet named `Sheet1`. If the source and destination workbooks use a different sheet name, change `"Sheet1"` to match.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}                                  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange/CopyUsedRange/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -80,3 +93,7 @@ End Using
 {% endtabs %}
 
 A complete working example to copy the used range from a source workbook to a destination workbook using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange">this GitHub page</a>.
+
+## See also
+
+* [CopyUsedRange on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange)

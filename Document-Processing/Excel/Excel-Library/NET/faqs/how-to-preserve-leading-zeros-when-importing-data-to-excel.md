@@ -12,6 +12,21 @@ Excel often treats numeric-looking text as numbers, removing leading zeros. The 
 
 The following code snippet shows how to use the PreserveDataTypes option in XlsIO.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `DataTable`, `DataRow`, and `DateTime`.
+  - `using System.Data;` - for `DataTable` and `DataColumn`.
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `ImportDataTable`.
+- The VB.NET equivalents: `Imports System`, `Imports System.Data`, `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+- The C# cross-platform tab saves to `Path.GetFullPath("Output/ImportDataTable.xlsx")`; the C# Windows-specific tab saves to `"ImportFromDT.xlsx"`; the VB.NET tab saves to `"ImportFromDT.xlsx"`. Confirm that the path matches your project's working directory.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
@@ -128,7 +143,10 @@ End Function
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 * [How to import data table with its data type using template markers?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-import-data-table-with-its-data-type-using-template-markers)
 * [Import to Excel Document](https://help.syncfusion.com/document-processing/excel/excel-library/net/import-export/import-to-excel)
+* [How to import data from collection objects to Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-apply-the-formatting-for-a-particular-column-while-importing-data-from-collection-objects)
+* [Working with Data Validation](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
+

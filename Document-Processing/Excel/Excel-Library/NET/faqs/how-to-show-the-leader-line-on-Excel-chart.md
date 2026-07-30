@@ -1,14 +1,27 @@
 ---
 title: How to show the leader line on Excel chart | Syncfusion 
 description: Code example to show the leader line on Excel chart using .NET Excel library. 
-platform: document-processing 
-control: XlsIO 
+platform: document-processing
+control: XlsIO
 documentation: UG
 ---
 
 # How to show the leader line on Excel chart?
 
 The following code snippets demonstrate how to show the leader line on Excel chart using C# (cross-platform and Windows-specific) and VB.NET.
+
+The following code example creates a pie chart from a small fruit-distribution dataset, enables value data labels with leader lines, manually positions the first data label using the layout API, and saves the workbook. Three variants are shown: a C# cross-platform sample, a C# Windows-specific sample, and a VB.NET Windows-specific sample.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Chart/.NET/Show%20leader%20line/Show%20leader%20line/Program.cs,180" %} 
@@ -130,4 +143,9 @@ End Using
 {% endhighlight %} 
 {% endtabs %}
 
-A complete working example to show the leader line on Excel chart using XlsIO is available on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Show%20leader%20line).
+A complete working example to show the leader line on an Excel chart is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Show%20leader%20line).
+
+## See also
+
+- [How to add an oval shape to an Excel chart using XlsIO](how-to-add-oval-shape-to-Excel-chart.md)
+- [How to switch chart series data interpretation from rows to columns in Excel](how-to-switch-chart-series-data-interpretation-from-horizontal-(rows)-to-vertical-(columns)-in-Excel.md)

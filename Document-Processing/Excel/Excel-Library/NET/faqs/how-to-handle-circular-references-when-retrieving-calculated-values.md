@@ -12,6 +12,21 @@ Circular references occur when a formula refers back to one of its own cells, cr
 
 The following code example illustrates how to enable circular reference handling and retrieve calculated values.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console.WriteLine`.
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using System.Linq;` - for `.First()` (used to get the first worksheet).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IWorkbook`, `IWorksheet`, `CalcEngine`.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports System.Linq`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/InputTemplate.xlsx` (cross-platform tab) or `InputTemplate.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with formulas that may have circular references. The example reads calculated values from cells `I234` and `J234` on the first worksheet.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+- The `CalcEngine` configuration (`AllowShortCircuitIFs`, `UseFormulaValues`, `ThrowCircularException`, `IterationMaxCount`) is set per-worksheet, but the configuration applies globally to the workbook. The loop iterates all worksheets, but the configuration is effectively the same for all of them.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -118,3 +133,9 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1017888-Circular-Reference/FAQ/Circular%20Reference/.NET/Circular%20Reference">this GitHub page</a>.
+
+## See also
+
+* [Circular Reference on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1017888-Circular-Reference/FAQ/Circular%20Reference/.NET/Circular%20Reference)
+* [Formulas in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas)
+* [How to check if a formula in a cell contains an error value](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-check-if-a-formula-in-a-cell-contains-an-error-value)
