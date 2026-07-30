@@ -14,7 +14,7 @@ The PDF Viewer provides a mobile-responsive layout for the `Organize Pages` feat
 
 ## Mobile-friendly toolbar
 
-In mobile view the `Organize Pages` toolbar appears at the bottom of the screen for easier one-handed access. The toolbar exposes the same tools as the desktop layout (insert, delete, rotate, etc.) in a touch-optimized arrangement.
+In mobile view, the `Organize Pages` toolbar appears at the bottom of the screen for easier one-handed access. The toolbar exposes the same tools as the desktop layout (insert, delete, rotate, etc.) in a touch-optimized arrangement.
 
 ## Context Menu for Page Operations
 

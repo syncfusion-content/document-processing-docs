@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sort in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Sort in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Sort in EJ2 JavaScript Spreadsheet Control | Syncfusion
+description: Learn here all about Sort in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Sort 
+control: Sort
 documentation: ug
 ---
 
-# Sort in EJ2 JavaScript Spreadsheet control
+# Sort in EJ2 JavaScript Spreadsheet Control
 
 Sorting helps arranging the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 
@@ -17,7 +17,7 @@ By default, the `sort` module is injected internally into Spreadsheet to perform
 
 ## Sort by cell value
 
-In the active Spreadsheet, select a range of cells to sort by cell value. The range sort can be done by any of the following ways:
+Select a range of cells in the active Spreadsheet to sort by cell value. You can perform the sort in any of the following ways:
 * Select the sort item in the Ribbon toolbar and choose the ascending or descending item.
 * Right-click the sheet, select the sort item in the context menu and choose the ascending/descending item.
 * Use the [`sort()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sort) method programmatically.
@@ -48,9 +48,9 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 
 ## Data contains header
 
-You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#containsheader) property to `true` and pass it as `sortOption` arguments of the sort() method.
+You can specify whether the selected range of cells contains a header row. To do so, set the [`containsHeader`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#containsheader) property to `true` and pass it as a `sortOptions` argument to the `sort()` method.
 
-> * If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
+> * If the `containsHeader` property is not set and the active cell column's first cell value type differs from the second cell value type, the first row in the range is marked as column headers.
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
@@ -69,7 +69,7 @@ In the custom sort dialog, the `Data contains header` checkbox is checked on loa
 
 ## Case sensitive sort
 
-The default sort functionality of Spreadsheet is a case insensitive sorting. When you want to perform sorting with case sensitive, you need to set the [`caseSensitive`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#caseSensitive) property to `true` and pass it as `sortOption` arguments of the sort() method.
+By default, the Spreadsheet's sort is case-insensitive. To enable case-sensitive sorting, set the [`caseSensitive`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#caseSensitive) property to `true` and pass it as a `sortOptions` argument to the `sort()` method.
  
 Case sensitive sorting is applicable only for cells with alphabets. In ascending order sorting with case sensitive enabled, the cells with lower case text will be placed above the cells with upper case text.
 
@@ -143,7 +143,7 @@ For custom sort comparer example, refer to the [`Sort a range by custom list`] b
 
 You can also define the sorting of cell values based on your own customized personal list. In this article, custom list is achieved using `custom sort comparer`.
 
-In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
+In the following code example, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

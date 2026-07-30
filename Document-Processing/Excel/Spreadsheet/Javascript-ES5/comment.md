@@ -10,7 +10,7 @@ documentation: ug
 # Comment in EJ2 JavaScript Spreadsheet control
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
-Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
+Cells with a comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
 
 ![Spreadsheet showing a comment](./images/spreadsheet_comment.png)
 
@@ -43,10 +43,10 @@ The image below shows that once a comment is posted, the cell displays an indica
 
 ## Adding a reply
 You can add one or more replies to an existing comment to provide additional details or answers:
-* **Context menu**: Right-click the cell that already has a comment, select **Comment > New Reply**, enter your reply, and click **Post**.
+* **Context Menu**: Right-click the cell that already has a comment, select **Comment > New Reply**, enter your reply, and click **Post**.
 * **Ribbon**: Go to **Review > Comment > New Comment** on a cell that contains a comment. This opens the comment editor in **reply mode**.
-* **Comment editor**: Open the comment editor by hovering over the comment indicator, type your reply, and click **Post**.
-* **Keyboard shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> on a cell that contains a comment to open the comment editor in reply mode.
+* **Comment Editor**: Open the comment editor by hovering over the comment indicator, type your reply, and click **Post**.
+* **Keyboard Shortcut**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> on a cell that contains a comment to open the comment editor in reply mode.
 
 After posting, the replies appear under the first comment in the comment editor.
 
@@ -55,8 +55,8 @@ After posting, the replies appear under the first comment in the comment editor.
 ## Editing a comment
 You can edit the content of a comment or its replies directly within the comment editor.
 
-* **Edit first comment**: In the comment editor. Click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
-* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)**, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit first comment**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)** menu, select the **Edit Comment**, modify the text and click **Post**.
 
 ![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
 
@@ -79,7 +79,7 @@ You can also use the `isResolved` property in the comment model when initializin
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
     comment: {
-        author: 'Chistoper', text: 'Are you completed the report',
+        author: 'Christopher', text: 'Have you completed the report',
         createdTime: 'January 03, 2026 at 5:00 PM',
         // Set to true to mark the thread as resolved; false keeps it active
         isResolved: false,
@@ -94,16 +94,16 @@ You can also use the `isResolved` property in the comment model when initializin
 You can delete either a specific reply or an entire comment thread (including all replies) using the following options:
 
 ### Deleting a comment thread
-* **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
+* **Context Menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in header for a resolved comment.
+* **Comment Editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in the header for a resolved comment.
 
 Deleting a thread removes the comment and all its replies from the cell.
 
 ![Deleting a comment thread in Spreadsheet](./images/spreadsheet_delete_comment.png)
 
 ### Delete a reply
-In the comment editor, hover over the reply and click the **"⋯" (More actions)** menu then select **Delete Comment**.
+In the comment editor, hover over the reply and click the **"⋯" (More actions)** menu, then select **Delete Comment**.
 
 ![Deleting a comment reply in Spreadsheet](./images/spreadsheet_delete-reply_comment.png)
 
@@ -122,8 +122,8 @@ The **"Comments" review pane** provides a centralized view of all comments in th
 
 You can show or hide the "Comments" review pane using:
 
-* **Ribbon**: Go to **Review > Comment > Show Comments**.
-* **Property**: Set the `showCommentsPane` property to true when initializing the Spreadsheet. By default, this property is **false**.
+* **Ribbon**: Go to **Review > Comment > Show Comments**. Click the same command again to hide the pane.
+* **Property**: Set the `showCommentsPane` property to true when initializing the Spreadsheet to show the pane on load. By default, this property is **false**.
 
 ![Show comments in Spreadsheet](./images/spreadsheet_show_comments.gif)
 
@@ -141,11 +141,11 @@ The "Comments" review pane allows you to:
   * **Delete** – Remove a reply or an entire thread.
   * **Resolve/Reopen** – Change the status of a comment.
 
-When the review pane is open, all actions performed in the review pane or in the cell’s comment editor are synchronized:
+When the review pane is open, actions performed in the review pane or in the cell’s comment editor are synchronized:
 
 * Selecting a comment in the review pane highlights the corresponding cell in the sheet.
 * Selecting a cell with a comment focuses the respective comment thread in the review pane.
-* Actions such as **Reply**, **Edit**, **Delete**, and **Resolve/Reopen** update both the pane and the cell comment editor instantly, ensuring consistency across the UI.
+* Actions such as **Reply**, **Edit**, **Delete**, and **Resolve/Reopen** generally update both the pane and the cell comment editor, ensuring consistency across the UI.
 * The review pane dynamically updates when comments are added, deleted, or resolved, so you always see the latest state without refreshing.
 
 ## Saving a Workbook with Comments
@@ -185,7 +185,7 @@ In the below sample, comments are added to a specific cell using cell data bindi
 
 ## Limitations
 * **Un-posted comments are not stored**: If you type in the comment editor and close it without clicking **Post**, the entered text is not saved and will not appear when you reopen the editor. Only posted content is persisted in the comment model.
-* **Comments and Notes cannot coexist**: When a cell contains comment, notes cannot be added. Similarly, if a cell already has a notes, comment cannot be added.
+* **Comments and Notes cannot coexist**: When a cell contains a comment, notes cannot be added. Similarly, if a cell already has a notes, a comment cannot be added.
 * **Comments in Print**: Comments are not included in print output.
 * **Non-collaborative**: Real-time multi-user synchronization is not supported. However, when exporting and re-importing the workbook, the author information for each comment and reply is preserved.
 
