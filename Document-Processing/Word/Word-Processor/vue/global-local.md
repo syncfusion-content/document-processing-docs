@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The Localization library allows you to localize the default text content of the DOCX Editor. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that you can change to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and the translation object. Please refer to the [RTL](https://ej2.syncfusion.com/vue/demos/document-editor/right-to-left/) sample.
+The Localization library allows you to localize the default text content of the DOCX Editor. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that you can change to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and the translation object. Please refer to the [RTL](https://ej2.syncfusion.com/vue/demos/document-editor/right-to-left) sample.
 
 Note: Please refer to the [Locale](https://github.com/syncfusion/ej2-locale) repository.
 
