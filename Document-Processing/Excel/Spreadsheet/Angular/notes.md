@@ -113,7 +113,7 @@ To activate:
 
 All notes in the worksheet will appear as floating text boxes near their respective cells.
 
->*Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
+> **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
 
 This functionality enhances workflow efficiency by providing flexible control over note visibility, whether for individual focus or comprehensive review.
 
