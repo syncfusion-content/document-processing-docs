@@ -149,5 +149,3 @@ Dev mode............ spa
 Open the printed URL in a browser to view the PDF Viewer with the sample document and the complete toolbar interface, allowing users to interact with features like zoom, search, annotations, and navigation.
 
 ![Quasar PDF Viewer output](./images/quasar.png)
-
-N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.

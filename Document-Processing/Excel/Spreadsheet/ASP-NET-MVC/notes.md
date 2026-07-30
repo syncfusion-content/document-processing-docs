@@ -11,11 +11,11 @@ documentation: ug
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property, which defaults to **true**.
 
-When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
+When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. Cells containing notes display a red triangle indicator in the top-right corner. Hover over the cell to view the note content.
 
 ![Adding, editing, and deleting a note in Spreadsheet](./images/spreadsheet_add_edit_delete_note.gif)
 
-In the below example, you can add, edit, save, and delete notes.
+The following example demonstrates how to add, edit, save, and delete notes.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -35,10 +35,9 @@ In the active worksheet, you can add a note in the following ways:
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
 * **Programmatically**: 
     * Use the `updateCell` method with the note model to add a note to a specific cell.
-    * Bind notes via code-behind during initial load by associating the note model with the cell model.
+    * Use the `notes` property in the cell model to bind a note during the initial load.
 
-A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
-
+A dialog opens where you can enter the note content. After entering the content, click another cell or press the <kbd>Esc</kbd> key to automatically save the note and close the dialog.
 
 ## Editing a note
 
@@ -53,12 +52,12 @@ The note editor dialog box will open with the existing content. After editing th
 
 ## Deleting a note
 
-You can remove notes from cells using the following ways:
+You can remove a note from a cell in one of the following ways:
 
 * **Context Menu**: Right-click the cell containing the note and select **Delete Note**.
 * **Ribbon**: Select the cell containing the note, navigate to the **Review** tab, click the **Notes** dropdown, and select **Delete Note**.
 
-The note will be removed from the cell, and the red triangle indicator will be removed.
+After the note is deleted, its content and red triangle indicator are removed from the cell.
 
 
 ## Navigating between notes
@@ -105,7 +104,7 @@ To toggle the visibility of a note:
 
 ## Show All Notes
 
-The **Show All Notes** option enables you to display all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple comments at a glance.
+The **Show All Notes** option displays all notes in the current worksheet simultaneously as sticky notes, simplifying the review of multiple notes.
 
 To activate:
 
@@ -127,7 +126,11 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [enableNotes](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+Set the [enableNotes](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property to `false` to disable note functionality. When notes are disabled:
+
+* Existing notes are not displayed when the document is opened.
+* The **Add Note** option is not displayed in the context menu.
+* Keyboard shortcuts associated with notes do not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 

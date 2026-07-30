@@ -121,7 +121,7 @@ If thumbnails or page reordering are not essential:
 				   style="height:600px"
 				   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
 				   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-				   enableLocalStoarage="true">
+				   enableLocalStorage="true">
 	</ejs-pdfviewer>
 </div>
 {% endhighlight %}

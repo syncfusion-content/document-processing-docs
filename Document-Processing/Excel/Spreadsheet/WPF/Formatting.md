@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in WPF Spreadsheet (SfSpreadsheet)
 
-This section explains about the formatting options similar to excel in SfSpreadsheet.
+This section explains the formatting options available in SfSpreadsheet, similar to those in Microsoft Excel.
 
 Styles and formats defined in an Excel file are automatically imported. Users can also apply these settings to cells during run time. The following are the formatting attributes for the cell.
 
@@ -24,19 +24,19 @@ Styles and formats defined in an Excel file are automatically imported. Users ca
 
 ## Cell Background
 
-For applying background color for the cells at runtime in SfSpreadsheet, set the color index for the particular XlsIO range and invalidate the range in order to update the view in `SpreadsheetGrid`.
+To apply a background color to cells at runtime, set the color on the XlsIO `IRange` and then invalidate the affected cells in `SpreadsheetGrid` to update the view.
 
-For single cell
+For a single cell,
 
 {% tabs %}
 {% highlight c# %}
 IRange range = spreadsheet.ActiveSheet.Range["A5"];
-range.CellStyle.ColorIndex = Syncfusion.XlsIO.ExcelKnownColors.Blue;
+range.CellStyle.Color = Syncfusion.XlsIO.ExcelKnownColors.Blue;
 spreadsheet.ActiveGrid.InvalidateCell(range.Row, range.Column);
 {% endhighlight %}
 {% endtabs %}
 
-For selected range of cells,
+For a selected range of cells,
 
 {% tabs %}
 {% highlight c# %}
@@ -44,16 +44,16 @@ var selectedRanges = spreadsheet.ActiveGrid.SelectedRanges;
 
 foreach (var range in selectedRanges)
 {
-  string cell = GridExcelHelper.ConvertGridRangeToExcelRange(range, spreadsheet.ActiveGrid);
-  spreadsheet.ActiveSheet.Range[cell].CellStyle.ColorIndex = ExcelKnownColors.Blue;
-  spreadsheet.ActiveGrid.InvalidateCell(range, true);
+    string cell = GridExcelHelper.ConvertGridRangeToExcelRange(range, spreadsheet.ActiveGrid);
+    spreadsheet.ActiveSheet.Range[cell].CellStyle.Color = ExcelKnownColors.Blue;
+    spreadsheet.ActiveGrid.InvalidateCell(range, true);
 }
 {% endhighlight %}
 {% endtabs %}
 
 ## Font
 
-SfSpreadsheet allows the user to apply the font settings such as font color, font name ,font size etc., for a particular cell or a range of cells.
+SfSpreadsheet allows the user to apply font settings such as font color, font name, and font size to a particular cell or a range of cells.
 
 {% tabs %}
 {% highlight c# %}
@@ -73,20 +73,20 @@ range.CellStyle.Font.Size = 18;
 //Setting the Font Effects,
 range.CellStyle.Font.Strikethrough = true;
 
-//Setting the UnderLine Types,
+//Setting the Underline Types,
 range.CellStyle.Font.Underline = ExcelUnderline.Single;
 
 //Setting the Font Color,
 range.CellStyle.Font.Color = ExcelKnownColors.Blue;
 
-//Invalidating the range, to update in view,
+//Invalidating the range to update the view,
 spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 {% endhighlight %}
 {% endtabs %}
 
 ## Cell Borders
 
-SfSpreadsheet allows the user to apply the borders at runtime for particular cell or range of cells,
+SfSpreadsheet allows the user to apply borders to a particular cell or a range of cells at runtime.
 
 {% tabs %}
 {% highlight c# %}
@@ -107,7 +107,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Cell Alignment
 
-SfSpreadsheet allows the user to align the content of the cell. The alignment options includes Horizontal Alignment, Vertical Alignment, Indentation, Orientation etc.,
+SfSpreadsheet allows the user to align the content of a cell. The alignment options include horizontal alignment, vertical alignment, indentation, and orientation.
 
 {% tabs %}
 {% highlight c# %}
@@ -119,25 +119,25 @@ spreadsheet.ActiveGrid.InvalidateCell(2,1);
 spreadsheet.Workbook.Worksheets[0].Range["B2"].CellStyle.VerticalAlignment = ExcelVAlign.VAlignBottom;
 spreadsheet.ActiveGrid.InvalidateCell(2,2);
 
-//Applying Orientation for the selected cell or ranges,
+//Applying Orientation (in degrees) for the selected cell or ranges,
 spreadsheet.FormatOrientation(90);
 
 //For Indentation,
 
-//Increase the indent for the selected ranges or cell,
+//Increase the indent for the selected ranges or cells by one level.
 spreadsheet.FormatIndent(true);
 
-//Decrease the indent for the selected ranges or cell,
+//Decrease the indent for the selected ranges or cells by one level.
 spreadsheet.FormatIndent(false);
 
-//Level of indent for selected ranges or cell,
+//Set the level of indent for the selected ranges or cells.
 spreadsheet.FormatIndentLevel(3);
 {% endhighlight %}
 {% endtabs %}
 
 ## Wrap Text
 
-SfSpreadsheet allows the user to wrap the text in the cell, if the text is too large.
+SfSpreadsheet allows the user to wrap the text in a cell when the text exceeds the cell width.
 
 {% tabs %}
 {% highlight c# %}
@@ -153,9 +153,9 @@ spreadsheet.ActiveGrid.InvalidateCell(4, 3);
 
 ### Merge
 
-SfSpreadsheet provides support to merge two or more cells. When a group of cells is merged, the contents of the upper-left cell will be taken as the content of the merged cell, rest will be deleted.
+SfSpreadsheet provides support to merge two or more cells. When a group of cells is merged, the content of the upper-left cell becomes the content of the merged cell, and the content of the other cells is discarded.
 
-For merging the cells in SfSpreadsheet, you need to add the [CoveredCellInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.CoveredCellInfo.html) into [CoveredCells](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CoveredCells) collection of SpreadsheetGrid and merge the range using [Merge](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Merge) method in XlsIO. Also to update the view, you need to invalidate the cells in the SpreadsheetGrid
+To merge cells in SfSpreadsheet, add a [CoveredCellInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.CoveredCellInfo.html) entry to the [CoveredCells](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CoveredCells) collection of `SpreadsheetGrid`, call the [Merge](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Merge) method on the XlsIO range, and then invalidate the cells in `SpreadsheetGrid` to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -172,7 +172,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 You can also unmerge the merged cells in SfSpreadsheet.
 
-For unmerging the cells in SfSpreadsheet, you need to clear the [CoveredCells](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CoveredCells) from the SpreadsheetGrid and unmerge the range using [UnMerge](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_UnMerge) method in XlsIO. Also to update the view, you need to invalidate the cells in the SpreadsheetGrid
+To unmerge cells in SfSpreadsheet, clear the [CoveredCells](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.SfCellGrid.html#Syncfusion_UI_Xaml_CellGrid_SfCellGrid_CoveredCells) entry from `SpreadsheetGrid`, call the [UnMerge](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_UnMerge) method on the XlsIO range, and then invalidate the cells in `SpreadsheetGrid` to update the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -186,7 +186,7 @@ spreadsheet.ActiveGrid.InvalidateCell(gridRange, true);
 
 ## Number Format
 
-SfSpreadsheet allows the user to view the numbers in the cells with different formats which includes currency, percentage, datetime, scientific etc.,
+SfSpreadsheet allows the user to display numbers in the cells with different formats, including currency, percentage, date/time, and scientific.
 
 {% tabs %}
 {% highlight c# %}
@@ -197,7 +197,7 @@ spreadsheet.ActiveGrid.InvalidateCell(3,3);
 //Applying Date format for the selected ranges at runtime,
 spreadsheet.Workbook.ActiveSheet.Range["D1"].NumberFormat = "m/d/yyyy";
 spreadsheet.ActiveGrid.InvalidateCell(1,4);
-  
+
 //Applying Time format for the selected ranges at runtime,
 spreadsheet.Workbook.ActiveSheet.Range["D4"].NumberFormat = "[$-F400]h:mm:ss AM/PM";
 spreadsheet.ActiveGrid.InvalidateCell(3,4);
@@ -205,10 +205,10 @@ spreadsheet.ActiveGrid.InvalidateCell(3,4);
 //Applying Text format for the selected ranges at runtime,
 spreadsheet.Workbook.ActiveSheet.Range["D5"].NumberFormat = "@";
 spreadsheet.ActiveGrid.InvalidateCell(4,4);
-  {% endhighlight %}
+{% endhighlight %}
 {% endtabs %}
 
-The different types of number formats with its notation are
+The different types of number formats with their notation are:
 
 <table>
 <tr>
@@ -263,7 +263,7 @@ m/d/yyyy</td></tr>
 
 ## Built-in Styles
 
-SfSpreadsheet supports some predefined built in styles of XlsIO. [BuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.BuiltInStyles.html) is an enum which contains different styles for formatting a cell or range of cells.
+SfSpreadsheet supports the predefined built-in styles provided by XlsIO. [BuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.BuiltInStyles.html) is an enum that contains different styles for formatting a cell or range of cells.
 
 {% tabs %}
 {% highlight c# %}
@@ -274,33 +274,33 @@ spreadsheet.ActiveGrid.InvalidateCell(3, 1);
 
 ## Format as Table
 
-SfSpreadsheet allows the users to format a table with built in styles of table (i.e.) [TableBuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.TableBuiltInStyles.html) of XlsIO
+SfSpreadsheet allows the user to format a range as a table using the built-in table styles provided by XlsIO via [TableBuiltInStyles](https://help.syncfusion.com/cr/wpf/Syncfusion.XlsIO.TableBuiltInStyles.html).
 
 {% tabs %}
 {% highlight c# %}
 // Creating a table
 IListObject table = spreadsheet.Workbook.ActiveSheet.ListObjects.Create("Table1", spreadsheet.Workbook.ActiveSheet.Range["C1:G5"]);
 
-// Formatting table with a built-in style
+// Formatting the table with a built-in style
 table.BuiltInTableStyle = TableBuiltInStyles.TableStyleLight6;
 spreadsheet.ActiveGrid.InvalidateCells();
 {% endhighlight %}
 {% endtabs %}
 
-For more information regarding formatting options, please go through [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting)
+For more information regarding formatting options, please go through [XlsIO](https://help.syncfusion.com/file-formats/xlsio/working-with-cell-or-range-formatting).
 
 N> Users need to [refresh the view](https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/working-with-sfspreadsheet#refreshing-the-view) after the formatting is applied on the XlsIO range to update the styles in `SpreadsheetGrid`.
 
 ## Clear formatting
 
-SfSpreadsheet provides support to clear the contents of a cell along with its formatting or by specifying the required clear options using [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) enum which specifies the possible directions to clear the cell formats, content, comments,conditional format,data validation or clear all of them.
+SfSpreadsheet provides support for clearing the contents of a cell along with its formatting, or for clearing specific items using the [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) enum. The enum controls which elements are removed, including formats, content, comments, conditional formats, data validation, or a combination of any of them.
 
 {% tabs %}
 {% highlight c# %}
 //To clear the contents along with its formatting in the range,   
 spreadsheet.Workbook.Worksheets[0].Range[4, 5].Clear(true);
 
-//To clear the range with specified ExcelClearOptions,
+//To clear only the conditional formats in the range,
 spreadsheet.Workbook.Worksheets[0].Range[4, 5].Clear(ExcelClearOptions.ClearConditionalFormats);
 {% endhighlight %}
 {% endtabs %}

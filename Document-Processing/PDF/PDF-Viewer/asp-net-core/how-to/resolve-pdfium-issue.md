@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resolve PDFium initialization error in ASP.NET Core PDF Viewer | Syncfusion
-description: Fix the “The type initializer for Syncfusion.EJ2.PdfViewer.PdfiumNative threw an exception” error in the Syncfusion ASP.NET Core PDF Viewer by copying the PDFium binaries and configuring ReferencePath.
+title: Fix PDFium Initialization Error in Core PDF Viewer | Syncfusion
+description: Fix the “Syncfusion.EJ2.PdfViewer.PdfiumNative” initialization error in ASP.NET Core PDF Viewer by copying PDFium binaries and setting ReferencePath.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
 
-# Resolve the Pdfium issue
+# Address PDFium Dependency Issues
 
-The error “The type initializer for `Syncfusion.EJ2.PdfViewer.PdfiumNative` threw an exception” occurs when the PDF Viewer cannot unpack the required PDFium native binaries because write access is blocked or the assemblies are missing. The viewer extracts `pdfium.dll` at runtime based on the current operating system, so ensure the application can write to the target folder or manually include the binaries by copying the x64 and x86 folders into the project.
+The error “The type initializer for `Syncfusion.EJ2.PdfViewer.PdfiumNative` threw an exception” occurs when the PDF Viewer cannot unpack the required PDFium native binaries because write access is blocked or the assemblies are missing. The viewer extracts `pdfium.dll` at runtime based on the current operating system. Ensure the application can write to the target folder, or manually include the binaries by copying the x64 and x86 folders into the project.
 
 Pdfium DLL package: [pdfium.dll](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Pdfium1334927507.zip)
 
@@ -29,7 +29,7 @@ pdfRenderer.ReferencePath = @"C:/Pdfium/";
 ## Steps to refer the PDFium.dll
 
 1. Extract the downloaded Pdfium archive and copy the entire folder into the application’s root directory (parallel to the `Controllers` folder) so both `x64` and `x86` subfolders are available.
-2. In Solution Explorer, select `pdfium.dll` within the `x64` and `x86` folders, open the Properties window, and set **Copy to Output Directory** to **Copy always**. This ensures the assemblies are packaged during publish.
+2. In Solution Explorer, select all files within the `x64` and `x86` folders (including `pdfium.dll`), open the Properties window, and set **Copy to Output Directory** to **Copy always**. This ensures every native binary in those folders is packaged during publish.
 ![Pdfium.dll settings](../images/pdfium_dll_settings.png)
 3. Update the `Load` method in `PDFViewerController.cs` to point to the parent Pdfium folder. The reference should target the folder that contains the architecture folders.
 N> `PdfRenderer.ReferencePath = _hostingEnvironment.ContentRootPath + "\\Pdfium\\";`

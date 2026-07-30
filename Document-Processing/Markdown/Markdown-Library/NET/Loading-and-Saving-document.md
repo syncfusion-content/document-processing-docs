@@ -285,7 +285,6 @@ MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md");
 // To-Do some manipulation
-// To-Do some manipulation
 // Saves the Markdown document to the file system
 markdownDocument.Save("Output.md");
 // Disposes the document to release all memory
@@ -299,7 +298,6 @@ markdownDocument.Dispose();
 Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md")
-'To-Do some manipulation
 'To-Do some manipulation
 ' Saves the Markdown document to the file system
 markdownDocument.Save("Output.md")
@@ -327,7 +325,6 @@ MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md");
 // To-Do some manipulation
-// To-Do some manipulation
 // Creates an instance of memory stream
 MemoryStream stream = new MemoryStream();
 // Saves the Markdown document to the stream
@@ -343,7 +340,6 @@ markdownDocument.Dispose();
 Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md")
-'To-Do some manipulation
 'To-Do some manipulation
 'Creates an instance of memory stream
 Dim stream As New MemoryStream()
@@ -460,7 +456,6 @@ The following code example demonstrates how to get the Markdown content as text.
 // Opens an existing Markdown document.
 MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
 // To-Do some manipulation
-// To-Do some manipulation
 // Retrieves the Markdown document content as text.
 string mdContent = markdownDocument.GetMarkdownText();
 // Disposes the document to release all memory
@@ -472,7 +467,6 @@ markdownDocument.Dispose();
 
 ' Opens an existing Markdown document.
 Dim markdownDocument As MarkdownDocument = New MarkdownDocument("../../Data/Input.md")
-' To-Do some manipulation
 ' To-Do some manipulation
 ' Retrieves the Markdown document content as text.
 Dim mdContent As String = markdownDocument.GetMarkdownText()
@@ -501,7 +495,6 @@ Once the document manipulation and save operations are completed, you should clo
 MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
 
 // To-Do some manipulation
-// To-Do some manipulation
 
 // Saves the Markdown document to the file system
 markdownDocument.Save("Output.md");
@@ -516,7 +509,6 @@ markdownDocument.Dispose();
 ' Opens, saves and closes a Markdown document.
 Dim markdownDocument As New MarkdownDocument("Input.md")
 
-'To-Do some manipulation
 'To-Do some manipulation
 
 ' Saves the Markdown document to the file system
