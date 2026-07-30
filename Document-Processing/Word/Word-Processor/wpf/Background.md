@@ -91,7 +91,7 @@ richTextBoxAdv.OverridesDocumentBackground = true
 **Continuous layout:**
 ![Changing Background color of Continuous Layout in WPF RichTextBox](Image_images/wpf-richtextbox-continous-background.PNG)
 
-## Setting Background for Document Pages
+## Setting background for document pages
 
 The RichTextBox control allows you to change background color of the document pages. A background of a document is represented by [`Background`](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_Background) property of `DocumentAdv` class. The default value of this property is white.
 
@@ -130,7 +130,7 @@ richTextBoxAdv.Document.Background.Color = Color.FromRgb(102, 153, 204)
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Document Properties in WPF RichTextBox](./Document-Properties)
 - [Selection in WPF RichTextBox](./Selection)

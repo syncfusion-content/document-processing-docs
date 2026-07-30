@@ -30,7 +30,7 @@ Commands are a way to handle user interface (UI) actions. They are a loosely cou
 
 * Document Styles – Create, modify, apply and clear style.
 
-## UI Command to Access Character Formatting
+## UI command to access character formatting
 
 
 The following code example demonstrates how to bind commands for applying character format.
@@ -53,7 +53,7 @@ The following code example demonstrates how to bind commands with parameter.
 {% endhighlight %}
 {% endtabs %}
 
-## List of available Commands
+## List of available commands
 
 The following table contains the list of available UI Commands in SfRichTextBoxAdv.
 
@@ -1503,7 +1503,7 @@ The {{'[TextAlignment](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Con
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
-## See Also
+## See also
 
 - [Document Properties in WPF RichTextBox](./Document-Properties)
 - [Document Structure in WPF RichTextBox](./Document-Structure)
