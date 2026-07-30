@@ -9,7 +9,7 @@ documentation: ug
 
 # Data validation in EJ2 TypeScript Spreadsheet control
 
-Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](../api/spreadsheet/#allowdatavalidation) property to enable or disable data validation.
+Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](../api/spreadsheet#allowdatavalidation) property to enable or disable data validation.
 
 > The default value for `allowDataValidation` property is `true`.
 
@@ -20,7 +20,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](../api/spreadsheet/#adddatavalidation) method programmatically.
+* Use the [`addDataValidation()`](../api/spreadsheet#adddatavalidation) method programmatically.
 
 ## Clear Validation
 
@@ -29,7 +29,7 @@ Clear validation feature is used to remove data validations from the specified r
 You can clear data validation rule by one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](../api/spreadsheet/#removedatavalidation) method programmatically.
+* Use the [`removeDataValidation()`](../api/spreadsheet#removedatavalidation) method programmatically.
 
 ## Highlight Invalid Data
 
@@ -38,7 +38,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight an invalid data by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](../api/spreadsheet/#addinvalidhighlight) method programmatically.
+* Use the [`addInvalidHighlight()`](../api/spreadsheet#addinvalidhighlight) method programmatically.
 
 ## Clear Highlighted Invalid Data
 
@@ -47,7 +47,7 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data by using the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](../api/spreadsheet/#removeinvalidhighlight) method programmatically.
+* Use the [`removeInvalidHighlight()`](../api/spreadsheet#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
