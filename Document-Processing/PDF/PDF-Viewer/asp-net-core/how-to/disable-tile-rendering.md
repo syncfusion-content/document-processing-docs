@@ -11,7 +11,7 @@ documentation: ug
 
 Tile rendering is a performance-optimization feature used to display large PDF documents efficiently. In some scenarios, such as when viewing smaller documents or troubleshooting rendering artifacts, disabling this feature will help.
 
-Use the **enableTileRendering** property within the `tileRenderingSettings` object to toggle this behavior. By default, tile rendering is enabled.
+Use the **EnableTileRendering** property within the `tileRenderingSettings` object to toggle this behavior. By default, tile rendering is enabled.
 
 N> Disabling tile rendering can improve initial performance for small documents but may result in slower rendering and increased memory usage for larger PDF files.
 

@@ -206,7 +206,7 @@ Use the `customContextMenuBeforeOpen()` event to conditionally display or hide m
 </script>
 ```
 
-## Sample: Custom context menu output
+## Sample: Custom context menu
 
 The following complete sample demonstrates a customized context menu with action handlers for all menu items:
 
