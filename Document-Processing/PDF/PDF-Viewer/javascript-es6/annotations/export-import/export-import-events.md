@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to handle Import/Export events for annotations in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -27,7 +27,7 @@ Each event exposes typed event-args: `ImportStartEventArgs`, `ImportSuccessEvent
 ## Handle import events
 Example: handle import events by assigning callback handlers.
 
-```js
+```ts
 viewer.importStart = (args: any) => {
   console.log('Import started', args);
 };
@@ -45,7 +45,7 @@ viewer.importFailed = (args: any) => {
 - [`exportFailed`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting annotations fails.
 
 ## Handle export events
-```js
+```ts
 viewer.exportStart = (args: any) => {
   console.log('Export started', args);
 };

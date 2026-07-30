@@ -27,7 +27,7 @@ All annotations in the selected file are applied to the current document.
 
 ![Import Annotation](../annotation-images/import-annot.png)
 
-## Import programmatically (from object)  
+## Import programmatically (from object)
 
 Import annotations from an object previously exported using `exportAnnotationsAsObject()`. Only objects produced by the viewer can be re-imported with the `importAnnotation` method (`importAnnotation` documentation: https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importannotation).
 
@@ -76,7 +76,7 @@ btnObject?.addEventListener('click', () => {
   });
 });
 
-// Import from an exported object pasted in the textarea
+// Import from the previously exported annotation object
 const btnImport = document.getElementById('ImportFromObject');
 btnImport?.addEventListener('click', () => {
   viewer.importAnnotation(JSON.parse(exportedObject));
