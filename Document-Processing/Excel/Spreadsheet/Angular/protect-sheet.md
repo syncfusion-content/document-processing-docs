@@ -96,7 +96,7 @@ Now, you can make an entire row, an entire column, or a specific range of cells 
 
 | Parameter | Description |
 |-----|------|
-| `readOnly` | Specifies whether an entire row, an entire column, or a specific range of cells should be set as read-only (**true**) or editable (**false**). |.
+| `readOnly` | Specifies whether an entire row, an entire column, or a specific range of cells should be set as read-only (**true**) or editable (**false**). |
 | `range` | Specifies the particular range of cells to be set as read-only. |
 | `sheetIndex` | Specifies the index of the sheet. |
 
