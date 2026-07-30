@@ -8,15 +8,20 @@ documentation: UG
 
 # Open and save Presentation in UWP
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/powerpoint-framework/uwp/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in UWP**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/powerpoint-framework/uwp/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint presentation in UWP**.
 
-## Steps to open and save PowerPoint Presentation programmatically
+## Prerequisites
 
-Step 1: Create a new C# UWP application project.
+- Visual Studio 2022 or later with the **.NET desktop development** and **Universal Windows Platform development** workloads installed.
+- Windows 10 SDK (minimum build 17763 or later) to develop UWP applications.
+
+## Steps to open and save PowerPoint presentation programmatically
+
+Step 1: In Visual Studio, create a new C# **Blank App (Universal Windows)** project.
 
 ![Create UWP project](Workingwith-UWP/Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/) NuGet package as a reference to your UWP application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.UWP Nuget Package](Workingwith-UWP/Nuget-Open-and-Save.png)
 
@@ -49,17 +54,21 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.Collections.Generic;
+using System.Reflection;
 using Syncfusion.Presentation;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs, to **Open an existing PowerPoint Presentation in UWP**.
+Step 5: Add an existing **Template.pptx** file to the project's **Assets** folder. In **Solution Explorer**, right-click the **Assets** folder, select **Add → Existing Item**, choose **Template.pptx**, and set its **Build Action** to **Embedded Resource** in the Properties window. Then add the following code snippet in the click event of the button in `MainPage.xaml.cs` to **open an existing PowerPoint presentation in UWP**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//"App" is the class of Portable project.
+//"App" is the class of the UWP project.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open an existing PowerPoint presentation
 IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Read_and_edit_PowerPoint_presentation.Assets.Template.pptx"));
@@ -67,7 +76,7 @@ IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Re
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 6: Add the following code snippet, which demonstrates accessing a shape from a slide and changing the text within it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -83,7 +92,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add below code snippet to Save and close the presentation.
+Step 7: Add the following code snippet to save and close the presentation. The `IPresentation.SaveAsync` method saves the file in **.pptx** format by default; the same approach supports saving as other PowerPoint formats such as **.pptm** and **.ppsx** by selecting the appropriate file type in the picker.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -95,18 +104,19 @@ savePicker.SuggestedFileName = "Result";
 savePicker.FileTypeChoices.Add("PowerPoint Files", new List<string>() { ".pptx" });
 //Creates a storage file from FileSavePicker
 StorageFile storageFile = await savePicker.PickSaveFileAsync();
-//Saves changes to the specified storage file
-await pptxDoc.SaveAsync(storageFile);
+//Saves changes to the specified storage file (skip if the user cancels the picker)
+if (storageFile != null)
+    await pptxDoc.SaveAsync(storageFile);
 //Close the PowerPoint presentation
 pptxDoc.Close();
 
 {% endhighlight %}
 {% endtabs %}
 
+By executing the program, you will get the **PowerPoint presentation** as follows.
+
+![UWP output PowerPoint presentation](Workingwith-UWP/Open-and-Save-output-image.png)
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/UWP).
-
-By executing the program, you will get the **PowerPoint document** as follows.
-
-![UWP output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
 Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
