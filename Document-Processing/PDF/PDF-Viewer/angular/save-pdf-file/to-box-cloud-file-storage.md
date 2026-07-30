@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save PDF files to Box cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion Angular PDF Viewer component
+description: Learn how to save PDF files to Box cloud storage using the Syncfusion Angular PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF files to Box cloud storage in Angular
 
 The Angular PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
@@ -35,7 +35,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -48,7 +48,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _clientID = _configuration.GetValue<string>("ClientID");
   _clientSecret = _configuration.GetValue<string>("ClientSecret");
@@ -57,7 +57,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -97,7 +97,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the required settings below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -149,7 +149,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
   }
 ```
 
-N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
+N> Install the Box .NET SDK in the web service project: `dot net add package Box.V2`.
 
 N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `Angular PDF Viewer` component.
 

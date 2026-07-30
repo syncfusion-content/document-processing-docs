@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://helpej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+The [`Localization`](https://ej2.syncfusion.com/react/documentation/common/globalization/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
@@ -377,7 +377,7 @@ Locale keywords |Text
 
 ### Loading translations
 
-To load translation object in an application, use [`load`](https://helpej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) function of the [`L10n`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) class.
+To load translation object in an application, use [`load`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization#loading-culture-data) function of the [`L10n`](https://ej2.syncfusion.com/react/documentation/common/globalization/internationalization) class.
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
@@ -522,8 +522,8 @@ RTL provides an option to switch the text direction and layout of the Spreadshee
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 
-* [Localization](https://helpej2.syncfusion.com/react/documentation/common/globalization/localization)
+* [Localization](https://ej2.syncfusion.com/react/documentation/common/globalization/localization)

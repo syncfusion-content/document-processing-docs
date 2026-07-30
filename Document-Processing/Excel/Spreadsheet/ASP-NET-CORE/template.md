@@ -10,7 +10,13 @@ documentation: ug
 
 # Cell Template in ASP.NET Core Spreadsheet Control
 
-Cell Template is used for adding HTML elements into Spreadsheet. You can add the cell template in spreadsheet by using the `template` property and specify the address using the `address` property inside the `ranges` property. You can customize the HTML elements similar to Syncfusion<sup style="font-size:70%">&reg;</sup> components (TextBox, DropDownList, RadioButton, MultiSelect, DatePicker etc) by using the `beforeCellRender` event. In this demo, Cell template is applied to `C2:C9` and instantiated with HTML input components like TextBox, RadioButton, TextArea. You need to bind the events to perform any operations through HTML elements or Syncfusion<sup style="font-size:70%">&reg;</sup> components. Here, we have added `change` event in to the MultiSelect control, and we have updated the selected data into the spreadsheet cell through that change event.
+Cell Template allows you to add HTML elements to the Spreadsheet. Use the `template` property to define a cell template and the `address` property within `ranges` to specify where the template is applied.
+
+Use the `beforeCellRender` event to further customize the HTML elements or initialize Syncfusion components within templated cells. You can initialize components such as TextBox, DropDownList, RadioButton, MultiSelect, DatePicker, and TextArea.
+
+In the following example, a cell template is applied to the `C2:C9` range. Bind events to perform operations through the HTML elements or Syncfusion components. The MultiSelect `change` event writes the selected value to the corresponding Spreadsheet cell.
+
+The following code example demonstrates how to apply a cell template, initialize components in the templated cells, and handle component events.
 
 The following code example describes the above behavior.
 
