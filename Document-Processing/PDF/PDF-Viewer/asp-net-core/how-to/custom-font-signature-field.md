@@ -17,7 +17,7 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
 
 **Step 1:** Follow the [Getting Started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance.
 
-**Step 2:** Define the signature and initial field settings in your application:
+**Step 2:** Define the signature and initial field settings in your application and call the function (for example, on a button click or in the `documentLoaded` event) so the font arrays are applied to the viewer:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -51,7 +51,7 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
 {% endhighlight %}
 {% endtabs %}
 
-### Initial field property
+### typeInitialFonts property
 
 Use the following code to apply custom fonts to the Initial field.
 
