@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auto Save to Server in Angular DOCX Editor | Syncfusion
-description: Learn how to auto-save documents to a server from the Syncfusion Angular Document Editor component.
+description: Learn how to auto save documents in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto save document in document editor 
 documentation: ug
