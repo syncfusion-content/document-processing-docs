@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find and replace in Vue Document editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Find and replace in Vue DOCX Editor component | Syncfusion
+description: Learn here all about Find and replace in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Find and replace 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in Vue Document editor component
+# Find and replace in Vue DOCX Editor component
 
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
@@ -135,7 +135,7 @@ You can close the options pane by pressing `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/) module of DOCX Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -147,7 +147,7 @@ The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/
 
 Using [`find()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
-The following example code illustrates how to use find in Document editor.
+The following example code illustrates how to use find in DOCX Editor.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.search.find('Some text', 'None');
@@ -182,7 +182,7 @@ The [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-
 
 Using [`replaceAll`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults#replaceall), you can replace all the occurrences with specified text.
 
-The following example code illustrates how to use replace All in Document editor.
+The following example code illustrates how to use replace All in DOCX Editor.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.search.findAll ('Some text');
