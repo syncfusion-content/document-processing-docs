@@ -87,6 +87,6 @@ Dynamically enable or disable text selection using buttons or other UI triggers.
 
 Text selection is enabled by default. When disabled, users cannot select or copy text from the PDF, which helps protect document content in security-sensitive scenarios.
 
-N> When `enableTextSelection` is set to `false`, all text selection functionality, including keyboard shortcuts and mouse interactions, is disabled.
+N> When `enableTextSelection` is set to `false` (whether at initialization or at runtime), all text selection functionality, including keyboard shortcuts and mouse interactions, is disabled.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to)
