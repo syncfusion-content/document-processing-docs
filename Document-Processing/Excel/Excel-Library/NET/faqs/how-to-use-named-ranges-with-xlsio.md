@@ -1,51 +1,69 @@
 ---
-title: How to use Named Ranges with XlsIO | Syncfusion
-description: This page demonstrates with an example on how to use named ranges in .NET Excel library.
+title: How to use named ranges with XlsIO | Syncfusion
+description: This page demonstrates with an example how to use named ranges in the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to use Named Ranges with XlsIO?
+# How to use named ranges with XlsIO?
 
-A named range can be added to worksheet or workbook based on the required scope, the following code snippet illustrate this. For more information, see [Named Range](https://support.microsoft.com/en-us/office/define-and-use-names-in-formulas-4d0f13ac-53b7-422e-afd2-abd7ff379c64?ui=en-us&rs=en-us&ad=us)
+A named range can be added to a worksheet or to the entire workbook, depending on the required scope. The following code example demonstrates this. For more information, see [Define and use names in formulas](https://support.microsoft.com/en-us/office/define-and-use-names-in-formulas-4d0f13ac-53b7-422e-afd2-abd7ff379c64).
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //Workbooks.Create(int) creates a workbook with the given number of worksheets
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding named range to the workbook
-  IName workBookName = workbook.Names.Add("WorkBookName");
-  workBookName.RefersToRange = worksheet.Range["I8"];
+  //Add a named range to the workbook (workbook-scoped)
+  IName workbookName = workbook.Names.Add("WorkBookName");
+  workbookName.RefersToRange = worksheet.Range["I8"];
 
-  //Looping through the Named Ranges in a workbook
-  foreach (IName workbookName in workbook.Names)
+  //Loop through the named ranges in the workbook
+  foreach (IName name in workbook.Names)
   {
-    MessageBox.Show(workbookName.Name.ToString());
+    Console.WriteLine(name.Name);
   }
 
-  //Adding named range to the worksheet
-  IName worksheetName = worksheet.Names.Add("WorkSheetName");
-  worksheetName.RefersToRange = worksheet.Range["J8"];
+  //Add a named range to the worksheet (worksheet-scoped)
+  IName localName = worksheet.Names.Add("WorkSheetName");
+  localName.RefersToRange = worksheet.Range["J8"];
 
-  //Looping through the Named Ranges in a worksheet
+  //Loop through the named ranges in the worksheet
   foreach (IName name in worksheet.Names)
   {
-    MessageBox.Show(name.Name.ToString());
+    Console.WriteLine(name.Name);
   }
 
   workbook.SaveAs("NamedRange.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -53,58 +71,63 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Adding named range to the workbook            
-  IName workBookName = workbook.Names.Add("WorkBookName");
-  workBookName.RefersToRange = worksheet.Range["I8"];
+  //Add a named range to the workbook (workbook-scoped)
+  IName workbookName = workbook.Names.Add("WorkBookName");
+  workbookName.RefersToRange = worksheet.Range["I8"];
 
-  //Looping through the Named Ranges in a workbook.
-  foreach (IName workbookName in workbook.Names)
+  //Loop through the named ranges in the workbook
+  foreach (IName name in workbook.Names)
   {
-    MessageBox.Show(workbookName.Name.ToString());
+    Console.WriteLine(name.Name);
   }
 
-  //Adding named range to the worksheet
-  IName worksheetName = worksheet.Names.Add("WorkSheetName");
-  worksheetName.RefersToRange = worksheet.Range["J8"];
+  //Add a named range to the worksheet (worksheet-scoped)
+  IName localName = worksheet.Names.Add("WorkSheetName");
+  localName.RefersToRange = worksheet.Range["J8"];
 
-  //Looping through the Named Ranges in a worksheet.
+  //Loop through the named ranges in the worksheet
   foreach (IName name in worksheet.Names)
   {
-    MessageBox.Show(name.Name.ToString());
+    Console.WriteLine(name.Name);
   }
-  workbook.SaveAs("NamedRange.Xlsx");
+
+  workbook.SaveAs("NamedRange.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Adding named range to the workbook
-  Dim workBookName__1 As IName = workbook.Names.Add("WorkBookName")
-  workBookName__1.RefersToRange = worksheet.Range("I8")
+  'Add a named range to the workbook (workbook-scoped)
+  Dim workbookName As IName = workbook.Names.Add("WorkBookName")
+  workbookName.RefersToRange = worksheet.Range("I8")
 
- 'Looping through the Named Ranges in a workbook.
-  For Each workbookName__2 As IName In workbook.Names
-    MessageBox.Show(workbookName__2.Name.ToString())
+  'Loop through the named ranges in the workbook
+  For Each name As IName In workbook.Names
+    Console.WriteLine(name.Name)
   Next
 
-  'Adding named range to the worksheet
-  Dim worksheetName__3 As IName = worksheet.Names.Add("WorkSheetName")
-  worksheetName__3.RefersToRange = worksheet.Range("J8")
+  'Add a named range to the worksheet (worksheet-scoped)
+  Dim localName As IName = worksheet.Names.Add("WorkSheetName")
+  localName.RefersToRange = worksheet.Range("J8")
 
-  'Looping through the Named Ranges in a worksheet.
-  For Each worksheetName__4 As IName In worksheet.Names
-    MessageBox.Show(worksheetName__4.Name.ToString())
+  'Loop through the named ranges in the worksheet
+  For Each name As IName In worksheet.Names
+    Console.WriteLine(name.Name)
   Next
 
-  workbook.SaveAs("NamedRange.Xlsx")
+  workbook.SaveAs("NamedRange.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

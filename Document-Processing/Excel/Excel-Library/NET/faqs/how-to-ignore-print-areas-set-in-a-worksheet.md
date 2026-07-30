@@ -1,6 +1,6 @@
 ---
 title: How to ignore print areas set in a worksheet | XlsIO | Syncfusion
-description: This page shows how to ignore print areas set in a worksheet using .NET Excel Library.
+description: Explains how to clear the print area of an XlsIO worksheet so the PDF export includes the full sheet.
 platform: document-processing
 control: XlsIO
 documentation: UG

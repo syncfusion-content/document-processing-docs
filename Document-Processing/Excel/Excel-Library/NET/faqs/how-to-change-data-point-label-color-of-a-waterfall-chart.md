@@ -1,14 +1,32 @@
 ---
-title: How to change data point label color of Waterfall chart | Syncfusion
-description: Code example to change data point label color of a Waterfall chart using .NET Excel Library.
+title: How to change the data point label color of a Waterfall chart | XlsIO | Syncfusion
+description: Code example that changes the data point label color of a Waterfall chart in an Excel workbook with the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to change data point label color of a Waterfall chart?
+# How to change the data point label color of a Waterfall chart?
 
-The following code snippet shows how to change data point label color of a Waterfall chart.
+The following code example shows how to change the color of a single data point's label on a Waterfall chart in Syncfusion<sup>&reg;</sup> XlsIO. The same pattern applies to any chart type that supports per-data-point label formatting.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook called `Sample.xlsx` in the application's working directory. The workbook must contain at least one Waterfall chart (this article uses `sheet.Charts[0]`).
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites the destination file.
+
+## Change a single data point label color
+
+The flow is: open the workbook, locate the chart, cache the `DataLabels` object for the target data point (so the same instance is used for both the `IsValue` and `RGBColor` assignments), then save.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

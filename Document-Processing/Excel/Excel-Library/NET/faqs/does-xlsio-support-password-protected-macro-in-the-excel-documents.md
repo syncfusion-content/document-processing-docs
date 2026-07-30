@@ -1,13 +1,14 @@
 ---
-title: XlsIO support for password protected macro | Syncfusion
-description: This page tells whether the Syncfusion XlsIO supports password protected macro in the Excel documents.
+title: Does XlsIO support password-protected macros in Excel documents? | XlsIO | Syncfusion
+description: Explains whether Syncfusion XlsIO preserves the password protection of a VBA macro when an Excel workbook is re-saved.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support password protected macro in the Excel documents?
-Yes. XlsIO preserves the password protection for the macro in the Excel documents for resaving process.  But, it does not have support for remove and modify the password.
+# Does XlsIO support password-protected macros in Excel documents?
+
+**Yes.** Syncfusion<sup>&reg;</sup> XlsIO preserves the password protection of an embedded VBA macro when an Excel workbook is re-saved through `Workbook.SaveAs` or `Workbook.Save`. The protection travels with the bytes; you do not need to re-apply it. However, XlsIO does not expose APIs to **add**, **change**, or **remove** the macro's password programmatically.
 
 ## See Also
 

@@ -1,14 +1,14 @@
 ---
-title: How to set Logarithmic axis for chart in Excel document | Syncfusion
-description: Code example to set Logarithmic axis for chart in Excel document using .NET Excel Library.
+title: How to set a logarithmic axis for a chart in an Excel document? | XlsIO | Syncfusion
+description: Demonstrates how to set a logarithmic value axis on a chart in XlsIO using IsLogScale and LogBase, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set Logarithmic axis for chart in Excel document?
+# How to set a logarithmic axis for a chart in an Excel document?
 
-The following code snippet shows how to set Logarithmic axis for chart in Excel document.
+A **logarithmic axis** is useful for visualizing data whose values span several orders of magnitude (for example, population growth, audio frequencies, or earthquake magnitudes). In Syncfusion<sup>&reg;</sup> XlsIO, you enable it on the primary value axis by setting [`IChartValueAxis.IsLogScale`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartValueAxis.html) to `true` and choosing a `LogBase` (typically 2 or 10). The example below creates a column chart with exponential-style data and applies a log<sub>10</sub> scale.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

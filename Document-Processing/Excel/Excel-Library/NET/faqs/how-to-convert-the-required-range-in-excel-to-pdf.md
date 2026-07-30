@@ -1,14 +1,14 @@
 ---
-title: Convert the required range in Excel to PDF | Syncfusion
-description: This page shows how to convert the required range of Excel to PDF using the .NET Excel Library.
+title: Convert a specific range in Excel to PDF | Syncfusion
+description: This page shows how to convert a specific range of an Excel worksheet to PDF using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert the required range in Excel to PDF?
+# How to convert a specific range in Excel to PDF?
 
-A specific range of an Excel worksheet can be converted to PDF by applying page breaks to that particular range and copying it to a new worksheet for conversion. The following code snippet explains this.
+To convert a specific range of an Excel worksheet to PDF, the recommended approach is to use the [`XlsIORenderer.ConvertToPDF(IWorksheet, IRange, XlsIORendererSettings)`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer_ConvertToPDF_Syncfusion_XlsIO_IWorksheet_Syncfusion_XlsIO_IRange_Syncfusion_XlsIORenderer_XlsIORendererSettings_) overload (cross-platform) or the [`ExcelToPdfConverter`](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelToPdfConverter.ExcelToPdfConverter.html) class (Windows-specific). Both APIs accept a worksheet and a range so that only the cells you specify are rendered.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

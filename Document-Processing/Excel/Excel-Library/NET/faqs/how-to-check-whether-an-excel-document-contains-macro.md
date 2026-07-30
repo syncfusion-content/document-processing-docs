@@ -1,69 +1,125 @@
 ---
-title: How to check whether an Excel document contains macro | Syncfusion
-description: Code example to check whether an Excel document contains macro using .NET Excel Library.
+title: How to check whether an Excel document contains a macro | XlsIO | Syncfusion
+description: Code example that checks whether an Excel workbook contains a VBA macro using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to check whether an Excel document contains macro?
-You can check whether the Excel document contains macro using [HasMacros](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_HasMacros) property of [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html). The value true indicates that the Excel document has a Vba project.
+# How to check whether an Excel document contains a macro?
 
-The following code illustrate how to check whether an Excel document contains macro using XlsIO.
-{% tabs %}  
+You can check whether an Excel workbook contains a VBA macro by reading the [`IWorkbook.HasMacros`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_HasMacros) property on the [`IWorkbook`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html) instance returned by `Application.Workbooks.Open(...)`. The property returns `true` when the workbook contains an embedded VBA project (the file is then typically saved as `.xls`, `.xlsm`, or `.xlsb`) and `false` otherwise.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook called `Test.xls` (or `Test.xlsm` / `Test.xlsb`) in the application's working directory. The workbook may or may not contain macros; the sample reads `HasMacros` either way.
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites the destination file. The path is resolved relative to `Environment.CurrentDirectory`; file paths are case-sensitive on Linux.
+
+## Check whether the workbook contains macros
+
+The flow is: open the workbook, read `IWorkbook.HasMacros`, write the result somewhere visible, then save the workbook. The sample writes the result to cell `A1` of the first worksheet so the user can confirm the detection in Excel.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+using System;
+
+class Program
 {
-  //Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
 
-  //Opening form module existing workbook
-  IWorkbook workbook = application.Workbooks.Open("Test.xls");
-  IWorksheet sheet = workbook.Worksheets[0];
+      //ExcelOpenType.Automatic detects the source file format from the file's bytes
+      IWorkbook workbook = application.Workbooks.Open("Test.xls", ExcelOpenType.Automatic);
+      IWorksheet sheet = workbook.Worksheets[0];
 
-  //Check macro exist
-  bool IsMacroEnabled = workbook.HasMacros;     
+      //Read the flag; rename to camelCase to follow C# conventions
+      bool hasMacros = workbook.HasMacros;
 
-  // Save the workbook
-  workbook.SaveAs("Output.xls");
+      //Surface the result so it is visible in the saved workbook and in the console
+      sheet["A1"].Text = "Has macros: " + hasMacros;
+      Console.WriteLine($"Workbook '{workbook.FileName}' HasMacros = {hasMacros}");
+
+      //Save the workbook (preserves the .xls format and any embedded VBA project)
+      workbook.SaveAs("Output.xls");
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+using System;
+
+class Program
 {
-  // Instantiate the excel application object.
-  IApplication application = excelEngine.Excel;
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
 
-  // Opening a workbook
-  IWorkbook workbook = application.Workbooks.Open("Test.xls");
-  IWorksheet sheet = workbook.Worksheets[0];
+      IWorkbook workbook = application.Workbooks.Open("Test.xls", ExcelOpenType.Automatic);
+      IWorksheet sheet = workbook.Worksheets[0];
 
-  //Check macro exist
-  bool IsMacroEnabled = workbook.HasMacros;        
+      //Read the flag; rename to camelCase to follow C# conventions
+      bool hasMacros = workbook.HasMacros;
 
-  //Save the workbook
-  workbook.SaveAs("Output.xls");
+      //Surface the result so it is visible in the saved workbook and in the console
+      sheet["A1"].Text = "Has macros: " + hasMacros;
+      Console.WriteLine($"Workbook '{workbook.FileName}' HasMacros = {hasMacros}");
+
+      //Save the workbook (preserves the .xls format and any embedded VBA project)
+      workbook.SaveAs("Output.xls");
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-  'Instantiate the excel application object.
-  Dim application As IApplication = excelEngine.Excel
+Imports Syncfusion.XlsIO
+Imports System
 
-  'Opening a Workbook
-  Dim workbook As IWorkbook = application.Workbooks.Open("Test.xls")
-  Dim sheet As IWorksheet = workbook.Worksheets(0)
+Module Module1
+  Sub Main()
+    'ExcelEngine is IDisposable; the Using block guarantees the engine is disposed
+    Using excelEngine As ExcelEngine = New ExcelEngine()
+      Dim application As IApplication = excelEngine.Excel
 
-  'Check macro exist
-  Dim IsMacroEnabled As Boolean = workbook.HasMacros            
+      Dim workbook As IWorkbook = application.Workbooks.Open("Test.xls", ExcelOpenType.Automatic)
+      Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  ‘Save the workbook 
-  workbook.SaveAs("Output.xls")
-End Using
+      'Read the flag
+      Dim hasMacros As Boolean = workbook.HasMacros
+
+      'Surface the result so it is visible in the saved workbook and in the console
+      sheet("A1").Text = "Has macros: " & hasMacros
+      Console.WriteLine($"Workbook '{workbook.FileName}' HasMacros = {hasMacros}")
+
+      'Save the workbook (preserves the .xls format and any embedded VBA project)
+      workbook.SaveAs("Output.xls")
+      workbook.Close()
+    End Using
+  End Sub
+End Module
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
 ## See Also
 

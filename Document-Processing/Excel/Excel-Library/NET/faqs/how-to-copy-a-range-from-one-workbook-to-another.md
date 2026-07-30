@@ -8,39 +8,55 @@ documentation: UG
 
 # How to copy a range from one workbook to another?
 
-You can copy the range from source workbook to the destination workbook through [CopyTo](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method. 
+You can copy a range from a source workbook to a destination workbook using the [CopyTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CopyTo_Syncfusion_XlsIO_IRange_Syncfusion_XlsIO_ExcelCopyRangeOptions_) method. The following code example demonstrates this.
 
-The following code snippet illustrates this.
+## Prerequisites
 
-{% tabs %}  
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Add `SourceWorkbook.xlsx` and `DestinationWorkbook.xlsx` files in the application's working directory, or update the file paths passed to `Workbooks.Open` accordingly. Note that file paths are case-sensitive on Linux.
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //ExcelOpenType.Automatic detects the source and destination file formats automatically
   IWorkbook sourceWorkbook = application.Workbooks.Open("SourceWorkbook.xlsx", ExcelOpenType.Automatic);
   IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbook.xlsx", ExcelOpenType.Automatic);
 
-  //The first worksheet object in the worksheets collection in the Source Workbook is accessed.
+  //Worksheets[0] accesses the first worksheet (0-based index)
   IWorksheet sourceWorksheet = sourceWorkbook.Worksheets[0];
-
-  //The first worksheet object in the worksheets collection in the Destination Workbook is accessed.
   IWorksheet destinationWorksheet = destinationWorkbook.Worksheets[0];
 
-  //Assigning an object to the range of cells (90 rows) both for source and destination.
+  //Range[row, column, lastRow, lastColumn] defines a 90-row x 100-column range (A1:CV90)
   IRange sourceRange = sourceWorksheet.Range[1, 1, 90, 100];
   IRange destinationRange = destinationWorksheet.Range[1, 1, 90, 100];
 
-  //Copying (90 rows) from Source to Destination worksheet.
+  //Copy the source range to the destination range
   sourceRange.CopyTo(destinationRange);
 
   destinationWorkbook.SaveAs("CopyingRange.xlsx");
+  sourceWorkbook.Close();
   destinationWorkbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -48,47 +64,49 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook sourceWorkbook = application.Workbooks.Open("SourceWorkbook.xlsx", ExcelOpenType.Automatic);
   IWorkbook destinationWorkbook = application.Workbooks.Open("DestinationWorkbook.xlsx", ExcelOpenType.Automatic);
 
-  //The first worksheet object in the worksheets collection in the Source Workbook is accessed.
+  //Worksheets[0] accesses the first worksheet (0-based index)
   IWorksheet sourceWorksheet = sourceWorkbook.Worksheets[0];
-
-  //The first worksheet object in the worksheets collection in the Destination Workbook is accessed.
   IWorksheet destinationWorksheet = destinationWorkbook.Worksheets[0];
 
-  //Assigning an object to the range of cells (90 rows) both for source and destination.
+  //Range[row, column, lastRow, lastColumn] defines a 90-row x 100-column range (A1:CV90)
   IRange sourceRange = sourceWorksheet.Range[1, 1, 90, 100];
   IRange destinationRange = destinationWorksheet.Range[1, 1, 90, 100];
 
-  //Copying (90 rows) from Source to Destination worksheet.
+  //Copy the source range to the destination range
   sourceRange.CopyTo(destinationRange);
 
   destinationWorkbook.SaveAs("CopyingRange.xlsx");
+  sourceWorkbook.Close();
+  destinationWorkbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
   Dim sourceWorkbook As IWorkbook = application.Workbooks.Open("SourceWorkbook.xlsx", ExcelOpenType.Automatic)
   Dim destinationWorkbook As IWorkbook = application.Workbooks.Open("DestinationWorkbook.xlsx", ExcelOpenType.Automatic)
 
-  'The first worksheet object in the worksheets collection in the Source Workbook is accessed.
-  Dim sourceWorksheet As Syncfusion.XlsIO.IWorksheet = sourceWorkbook.Worksheets(0)
+  'Worksheets(0) accesses the first worksheet (0-based index)
+  Dim sourceWorksheet As IWorksheet = sourceWorkbook.Worksheets(0)
+  Dim destinationWorksheet As IWorksheet = destinationWorkbook.Worksheets(0)
 
-  'The first worksheet object in the worksheets collection in the Destination Workbook is accessed.
-  Dim destinationWorksheet As Syncfusion.XlsIO.IWorksheet = destinationWorkbook.Worksheets(0)
+  'Range(row, column, lastRow, lastColumn) defines a 90-row x 100-column range (A1:CV90)
+  Dim sourceRange As IRange = sourceWorksheet.Range(1, 1, 90, 100)
+  Dim destinationRange As IRange = destinationWorksheet.Range(1, 1, 90, 100)
 
-  'Assigning an object to the range of cells (90 rows) both for source and destination.
-  Dim sourceRange As Syncfusion.XlsIO.IRange = sourceWorksheet.Range(1, 1, 90, 100)
-  Dim destinationRange As Syncfusion.XlsIO.IRange = destinationWorksheet.Range(1, 1, 90, 100)
-
-  'Copying (90 rows) from Source to Destination worksheet.
+  'Copy the source range to the destination range
   sourceRange.CopyTo(destinationRange)
 
   destinationWorkbook.SaveAs("CopyingRange.xlsx")
+  sourceWorkbook.Close()
+  destinationWorkbook.Close()
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

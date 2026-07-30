@@ -14,6 +14,18 @@ In Syncfusion&reg; XlsIO, the default value for both **Autofit column widths on 
 
 The following code examples demonstrate how to do this in C# (Cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;` and (for the cross-platform sample) `using System.IO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The cross-platform C# sample expects the input file at `Data/InputTemplate.xlsx` relative to the working directory and writes the output to `Output/Output.xlsx`.
+- The Windows-specific C# and VB.NET samples read `InputTemplate.xlsx` from and write `Output.xlsx` to the current working directory.
+- The input workbook must contain a data range in `Worksheets[0]` (used as the pivot cache) and a blank second worksheet for the pivot to be created on. The pivot source data must contain a column named `Total` (referenced as `pivotTable.Fields["Total"]` in the example).
+
+## Code example
+
 {% tabs %}   
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Column%20width%20for%20pivot%20table%20range/.NET/Column%20width%20for%20pivot%20table%20range/Column%20width%20for%20pivot%20table%20range/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -113,4 +125,10 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set column width for a pivot table range in an Excel Document in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Column%20width%20for%20pivot%20table%20range/.NET/Column%20width%20for%20pivot%20table%20range).
+A complete working example to set column width for a pivot table range is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Column%20width%20for%20pivot%20table%20range/.NET/Column%20width%20for%20pivot%20table%20range).
+
+## See also
+
+- [How to enable pivottable show details in XlsIO](how-to-enable-pivottable-show-details-in-xlsio.md)
+- [How to apply formatting to pivottable in Excel protected view](how-to-apply-formatting-to-pivottable-in-Excel-protected-view.md)
+- [How to freeze pivot table header in excel workbook](how-to-freeze-pivot-table-header-in-excel-workbook.md)

@@ -1,21 +1,38 @@
 ---
-title: How to set or format a Header/Footer | XlsIO | Syncfusion
-description: This page explains with an example to set or format a Header/Footer using .NET Excel Library.
+title: How to set or format a header/footer | XlsIO | Syncfusion
+description: This page explains with an example how to set or format a header/footer using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set or format a Header/Footer?
+# How to set or format a header/footer?
 
-Script commands are used to set header/ footer formatting. The following code snippet illustrate this. For more information on formatting the string, see [Inserting and Formatting Text in Headers and Footers](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2007/bb225426(v=office.12))
+Header and footer formatting in Syncfusion<sup>&reg;</sup> XlsIO uses Excel's script-command syntax. The following code example demonstrates this. For more information about formatting header/footer text, see [Format header and footer text in worksheets](https://support.microsoft.com/office/insert-headers-and-footers-in-excel-for-the-web-43a75436-3b9a-4c19-8b73-1d22c96fc7d4).
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //Workbooks.Create(int) creates a workbook with the given number of worksheets
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -24,11 +41,12 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   
   workbook.SaveAs("HeaderFormat.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -39,10 +57,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Format the header
   worksheet.PageSetup.CenterHeader = @"&""Gothic,bold""Center Header Text";
   workbook.SaveAs("HeaderFormat.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
@@ -52,6 +73,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Format the header
   worksheet.PageSetup.CenterHeader = "&""Gothic,bold""Center Header Text"
   workbook.SaveAs("HeaderFormat.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
 {% endtabs %}

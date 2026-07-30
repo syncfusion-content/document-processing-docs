@@ -13,6 +13,17 @@ You can set the background color of a chart by customizing either the plot area 
 
 The following code example illustrates how to set the background color for Excel Chart in C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;` and `using System.Drawing;` (or `Imports Syncfusion.XlsIO` and `Imports System.Drawing` in VB.NET).
+- The cross-platform C# sample expects the input file at `Data/InputTemplate.xlsx` relative to the working directory and writes the output to `Output/Output.xlsx`.
+- The Windows-specific C# and VB.NET samples read `InputTemplate.xlsx` from and write `Output.xlsx` to the current working directory.
+
+## Code example
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Chart/.NET/Set%20background%20color%20for%20chart/Set%20background%20color%20for%20chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -80,6 +91,11 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-A complete working example to set the background color for Excel Chart using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Set%20background%20color%20for%20chart).
+A complete working example to set the background color for an Excel chart is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Chart/.NET/Set%20background%20color%20for%20chart).
+
+## See also
+
+- [How to show the leader line on an Excel chart](how-to-show-the-leader-line-on-Excel-chart.md)
+- [How to add an oval shape to an Excel chart using XlsIO](how-to-add-oval-shape-to-Excel-chart.md)

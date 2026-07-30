@@ -7,6 +7,17 @@ documentation: UG
 ---
 # How to avoid processing unnecessary worksheets using C#?
 XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The example expects `Input.xlsx` in the application's working directory and writes `Output.xlsx` to the same directory.
+- The input workbook must contain at least one worksheet; otherwise `workbook.Worksheets[0]` throws an `IndexOutOfRangeException`.
+
+## Code example
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -61,4 +72,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to avoid processing unnecessary worksheets when opening an Excel document using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand).   
+
+## See also
+
+- [How to check if a worksheet is empty in Excel](how-to-check-if-a-worksheet-is-empty-in-excel.md)
+- [How to get the list of worksheet names in an Excel workbook](how-to-get-the-list-of-worksheet-names-in-an-Excel-workbook.md)
+- [How to retrieve the last row of a worksheet in Excel](how-to-retrieve-the-last-row-of-a-worksheet-in-excel.md)   

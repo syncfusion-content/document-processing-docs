@@ -10,6 +10,19 @@ documentation: UG
 
 The following code examples demonstrate retrieving the first cell in the used range of an Excel worksheet using C# (Cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console.WriteLine`.
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `UsedRange`.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/Input.xlsx` (cross-platform tab) or `Input.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with at least one cell that has data or formatting (so the used range is not empty).
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}   
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/First%20used%20cell%20in%20used%20range/.NET/FirstUsedCellInUsedRange/FirstUsedCellInUsedRange/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -87,3 +100,9 @@ End Using
 {% endtabs %}       
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/First%20used%20cell%20in%20used%20range/.NET/FirstUsedCellInUsedRange">this GitHub page</a>.
+
+## See also
+
+* [FirstUsedCellInUsedRange on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/First%20used%20cell%20in%20used%20range/.NET/FirstUsedCellInUsedRange)
+* [How to copy the used range from one Excel workbook to another](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-copy-the-used-range-from-one-Excel-workbook-to-another)
+* [Working with Ranges](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange)

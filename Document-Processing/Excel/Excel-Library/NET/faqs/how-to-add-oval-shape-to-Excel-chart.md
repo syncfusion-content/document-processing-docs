@@ -10,6 +10,17 @@ documentation: UG
 
 The following code snippets illustrate how to add Oval shape to Excel chart in C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Add%20oval%20shape%20to%20chart/.NET/Add%20oval%20shape%20to%20chart/Add%20oval%20shape%20to%20chart/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -92,4 +103,9 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to add Oval shape to Excel chart using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Add%20oval%20shape%20to%20chart/.NET/Add%20oval%20shape%20to%20chart).  
+A complete working example to add an oval shape to an Excel chart is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Add%20oval%20shape%20to%20chart/.NET/Add%20oval%20shape%20to%20chart).
+
+## See also
+
+- [How to switch chart series data interpretation from rows to columns in Excel](how-to-switch-chart-series-data-interpretation-from-horizontal-(rows)-to-vertical-(columns)-in-Excel.md)
+- [How to show the leader line on Excel chart](how-to-show-the-leader-line-on-Excel-chart.md)  

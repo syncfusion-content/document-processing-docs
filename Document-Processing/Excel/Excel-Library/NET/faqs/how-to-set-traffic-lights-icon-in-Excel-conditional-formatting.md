@@ -10,6 +10,17 @@ documentation: UG
 
 The following code snippets illustrate how to set traffic lights icon in Excel conditional formatting in C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` and, for the VB.NET sample, `Imports System.Drawing` in VB.NET).
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon/Traffic%20lights%20icon/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -161,8 +172,10 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to set traffic lights icon in Excel conditional formatting using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon).   
+A complete working example to set traffic-light icons in Excel conditional formatting is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conditional%20Formatting/.NET/Traffic%20lights%20icon).
 
+## See also
 
-
-
+- [Does XlsIO support changing the colors of built-in icon sets](does-xlsio-support-changing-the-colors-of-built-in-icon-sets.md)
+- [How to apply TimePeriod conditional formatting in Excel](how-to-apply-TimePeriod-conditional-formatting-in-Excel.md)
+- [How to set the first item in a list as the default selected value in an Excel file](how-to-set-the-first-item-in-a-list-as-the-default-selected-value-in-an-Excel-file.md)   
