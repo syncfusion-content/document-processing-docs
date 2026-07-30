@@ -662,7 +662,7 @@ End Using
 
 A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row).
 
-## Create a table from external connectionÂ
+## Create a table from external connection
 
 External connection support allows you to work with the most recent data right in the workbook. After the data is imported, only refresh operations are performed to retrieve the updated data.
 
