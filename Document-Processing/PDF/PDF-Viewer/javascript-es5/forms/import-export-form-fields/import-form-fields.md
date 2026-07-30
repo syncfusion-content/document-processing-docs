@@ -30,7 +30,7 @@ N> For server-backed viewers, set `serviceUrl` before importing. The method trig
 ```js
 document.getElementById('importFdf').addEventListener('click', function () {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Fdf');
+  viewer.importFormFields('formData.fdf', 'Fdf');
 });
 ```
 
@@ -43,7 +43,7 @@ document.getElementById('importFdf').addEventListener('click', function () {
 ```js
 document.getElementById('importXfdf').addEventListener('click', function () {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Xfdf');
+  viewer.importFormFields('formData.xfdf', 'Xfdf');
 });
 ```
 
@@ -55,7 +55,7 @@ document.getElementById('importXfdf').addEventListener('click', function () {
 ```js
 document.getElementById('importJson').addEventListener('click', function () {
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Json');
+  viewer.importFormFields('formData.json', 'Json');
 });
 ```
 

@@ -62,8 +62,6 @@ Other annotations:
 - Stamp: Use [`stampSettings`](./annotation-types/stamp-annotation/#default-stamp-settings-during-initialization)
 - Sticky notes: Use [`stickyNotesSettings`](./annotation-types/sticky-notes-annotation/#default-sticky-notes-settings-during-initialization)
 
-Set defaults for specific annotation types when creating the PdfViewer instance. Below are examples using settings already used in the annotation type pages.
-
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
@@ -186,7 +184,7 @@ if (btn) {
 }
 ```
 
-## Customize Annotation Settings 
+## Customize Annotation Settings
 
 Defines the settings of the annotations. You can change annotation settings like author name, height, width etc., using [annotationSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationsettings) API
 

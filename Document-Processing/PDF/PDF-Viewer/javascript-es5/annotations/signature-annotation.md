@@ -33,7 +33,7 @@ The handwritten signature can be added to the PDF document using the annotation 
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 ```html
-<button id="handWrittenSignature">HandWritten Signature mode</button>
+<button id="handWrittenSignature">Handwritten signature mode</button>
 ```
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -81,7 +81,7 @@ With the PDF Viewer library, you can programmatically add a handwritten signatur
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 ```html
-<button id="addHandwrittenSignature "> Add HandWritten signature Programmatically</button>
+<button id="addHandwrittenSignature">Add handwritten signature programmatically</button>
 ```
 
 {% tabs %}
@@ -252,7 +252,7 @@ document.getElementById('Signature')?.addEventListener('click', function () {
                 height: 65,
                 signatureItem: ['Signature'],
                 signatureDialogSettings: {
-                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                    displayMode: ej.pdfviewer.DisplayMode.Text, hideSaveSignature: false
                 },
                 canSave: false,
                 path: 'Syncfusion',
@@ -290,7 +290,7 @@ document.getElementById('Signature')?.addEventListener('click', function () {
                 height: 65,
                 signatureItem: ['Signature'],
                 signatureDialogSettings: {
-                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                    displayMode: ej.pdfviewer.DisplayMode.Text, hideSaveSignature: false
                 },
                 canSave: false,
                 path: 'Syncfusion',
@@ -341,7 +341,7 @@ pdfviewer.enableHandwrittenSignature  = false;
 {% endhighlight %}
 {% endtabs %}
 
-N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
+Note: When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
 
 ## See also
 

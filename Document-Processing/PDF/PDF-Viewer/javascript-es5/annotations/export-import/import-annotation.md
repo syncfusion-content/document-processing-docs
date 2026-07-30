@@ -18,7 +18,7 @@ The Comments panel provides import options in its overflow menu:
 - Import annotations from JSON file
 - Import annotations from XFDF file
 
-Steps:
+Follow the steps to import annotations:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose the appropriate import option and select the file.

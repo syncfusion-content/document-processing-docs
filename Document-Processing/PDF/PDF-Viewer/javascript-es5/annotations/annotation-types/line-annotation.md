@@ -18,10 +18,11 @@ Line is a shape annotation used to mark straight connections or callouts. Common
 
 ### Add line annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation** dropdown.
-- Choose **Line**, then draw on the page.
+Use the annotation toolbar to add a line annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Shape Annotation** dropdown.
+3. Choose **Line**, then draw on the page.
 
 N> When in pan mode, selecting a shape annotation switches the viewer to text select mode.
 
@@ -104,7 +105,7 @@ document.getElementById('setNone').addEventListener('click', function() {
 
 ### Add a line annotation programmatically
 
-Use the addAnnotation method with Line settings.
+The PDF Viewer library allows adding shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 ```html
 <button id="addLineAnnotation">Add Line annotation programmatically</button>
@@ -352,17 +353,17 @@ N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `lineSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default line settings.
+Refer to the following code snippet to set the properties while adding a line annotation.
 
 ```html
 <button id="line">Add line</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -397,7 +398,7 @@ document.getElementById('line')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,

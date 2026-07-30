@@ -1,5 +1,5 @@
 ---
-title: Annotations Events in JavaScript PDF Viewer control | Syncfusion
+title: Annotation Events in JavaScript PDF Viewer control | Syncfusion
 description: Learn here all about Annotations Events in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer

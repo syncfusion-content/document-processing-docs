@@ -18,10 +18,11 @@ Ink is a freehand drawing annotation used to sketch, sign, or mark up content.
 
 ### Add ink annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Click the **Draw Ink** button to enable ink mode.
-- Draw on any page of the PDF document.
+Use the annotation toolbar to add an ink annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Click the **Draw Ink** button to enable ink mode.
+3. Draw on any page of the PDF document.
 
 ![Ink tool in the annotation toolbar](../../images/ink_tool.png)
 
@@ -80,7 +81,7 @@ if (setNone) {
 
 ### Add ink annotation programmatically
 
-Use addAnnotation to programmatically create an Ink annotation.
+The PDF Viewer library allows adding ink annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
 
 ```html
 <button id="addInkAnnotationProgram"> Add Ink Annotation Programmatically</button>
@@ -187,7 +188,9 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ### Edit an existing ink annotation programmatically
 
-Use editAnnotation to modify properties and bounds of an existing ink annotation.
+To modify an existing ink annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editInkAnnotation"> Edit Ink Annotation Programmatically</button>
@@ -323,17 +326,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `InkSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Ink settings.
+Refer to the following code snippet to set the properties while adding an Ink annotation.
 
 ```html
 <button id="Ink">Add Ink</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -366,7 +369,7 @@ document.getElementById('Ink')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
