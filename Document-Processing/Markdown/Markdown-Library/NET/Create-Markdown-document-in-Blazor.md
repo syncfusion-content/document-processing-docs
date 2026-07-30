@@ -40,13 +40,13 @@ To **create a Markdown document in a Blazor Web App Server**, install [Syncfusio
 
 N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
-N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 N> ```
 N>
-N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview). Register the license key in `Program.cs` before any Syncfusion type is used.
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview). Register the license key in `Program.cs` before any Syncfusion type is used.
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder, which is located inside the `Components` folder.
 
@@ -309,13 +309,13 @@ To **create a Markdown document in a Blazor WASM Standalone app**, install [Sync
 
 N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
-N> Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup.
+N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
 N> ```
 N>
-N> For more information about generating and registering a license key, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 3: Create a Razor file named `Markdown.razor` in the `Pages` folder.
 

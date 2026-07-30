@@ -6,8 +6,13 @@ control: DocIO
 documentation: UG
 ---
 
-# Supported symbols using LaTeX in Word Library
-The .NET Word (DocIO) library allows to insert below supported symbols in equation using **LaTeX**.
+# Supported symbols in LaTeX
+
+The .NET Word (DocIO) library allows you to insert the following supported symbols in an equation using **LaTeX**.
+
+N> To learn how to create equations from these symbols, see [Working with LaTeX](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-latex).
+N> The `AppendMath` API used to add LaTeX is available starting with **v20.1.0.47** of Syncfusion DocIO.
+N> Equations are supported only in documents saved in the Open XML format (.docx); they cannot be used in the Word 97-2003 (.doc) format.
 
 ## Arrows
 
@@ -30,11 +35,11 @@ The following image demonstrates the LaTeX supported in .NET Word Library to cre
 
 ## Geometry
 
-The following image demonstrates the LaTeX equivalent to geometry.
+The following image demonstrates the LaTeX supported in .NET Word Library to create geometry symbols.
 
 ![Create Geometry Symbols in LaTeX](WorkingwithMathematicalEquation_images/Geometry.png)
 
-## Greek Letter
+## Greek Letters
 
 ### Lower Case
 
@@ -76,7 +81,7 @@ The following image demonstrates the LaTeX supported in .NET Word Library to cre
 
 ### Common Relational Operators
 
-The following image demonstrates the LaTeX supported in .NET Word Library to common relational operators.
+The following image demonstrates the LaTeX supported in .NET Word Library to create common relational operators.
 
 ![Create Common Relational Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/CommonRelationalOperator_1.png)
 ![Create Common Relational Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/CommonRelationalOperator_2.png)
@@ -84,24 +89,24 @@ The following image demonstrates the LaTeX supported in .NET Word Library to com
 
 ### Basic N-ary Operators
 
-The following image demonstrates the LaTeX supported in .NET Word Library to basic N-ary operators.
+The following image demonstrates the LaTeX supported in .NET Word Library to create basic N-ary operators.
 
 ![Create Basic N-ary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/BinaryN-aryOperator_1.png)
 ![Create Basic N-ary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/BinaryN-aryOperator_2.png)
 
 ### Advanced Binary Operators
 
-The following image demonstrates the LaTeX supported in .NET Word Library to advanced binary operators.
+The following image demonstrates the LaTeX supported in .NET Word Library to create advanced binary operators.
 
-![Create Advanced Binary Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_1.png)
-![Create Advanced Binary Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_2.png)
-![Create Advanced Binary Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_3.png)
+![Create Advanced Binary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_1.png)
+![Create Advanced Binary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_2.png)
+![Create Advanced Binary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedBinaryOperator_3.png)
 
 ### Advanced Relational Operators
 
-The following image demonstrates the LaTeX supported in .NET Word Library to advanced relational operators.
+The following image demonstrates the LaTeX supported in .NET Word Library to create advanced relational operators.
 
-![Create Advanced Relational Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_1.png)
-![Create Advanced Relational Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_2.png)
-![Create Advanced Relational Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_3.png)
+![Create Advanced Relational Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_1.png)
+![Create Advanced Relational Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_2.png)
+![Create Advanced Relational Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/AdvancedRelationalOperator_3.png)
 

@@ -160,9 +160,10 @@ Use the [**Comments panel**](../comments) to add, view, and reply to threaded di
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Underline', …)` call.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
+<script>
 function addMultipleUnderlines() {
-  const viewer = document.getElementById('container').ej2_instances[0];
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
   // Underline 1
   viewer.annotation.addAnnotation('Underline', {
     bounds: [{ x: 100, y: 150, width: 320, height: 14 }],
@@ -180,6 +181,7 @@ function addMultipleUnderlines() {
     opacity: 0.9
   });
 }
+</script>
 {% endhighlight %}
 {% endtabs %}
 

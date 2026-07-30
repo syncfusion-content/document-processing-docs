@@ -17,7 +17,7 @@ When applying a PKI [digital signature](https://help.syncfusion.com/document-pro
 
 For implementation details and exact API usage, check the Syncfusion PDF Library references:
 
-- .NET PDF Library — [Drawing text/image in the signature appearance]( https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#drawing-textimage-in-the-signature-appearance)
+- .NET PDF Library — [Drawing text/image in the signature appearance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#drawing-textimage-in-the-signature-appearance)
 - JavaScript PDF Library — [Drawing text/image in the signature appearance](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#drawing-textimage-in-the-signature-appearance)
 
 ## What you can customize

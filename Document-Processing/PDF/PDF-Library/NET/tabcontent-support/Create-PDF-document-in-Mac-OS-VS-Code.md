@@ -1,14 +1,17 @@
-**Prerequisites**:
+**Prerequisites:**
 
-* Install .NET SDK: Ensure that you have the .NET SDK installed on your system. You can download it from the [.NET Downloads page](https://dotnet.microsoft.com/en-us/download).
-* Install Visual Studio Code: Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
-* Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (`Cmd+Shift+X`), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+* [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [C# extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) (search for `C#` in the **Extensions** view (<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>) and install the official Microsoft extension)
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available)
 
-Step 1: Open the terminal (`Cmd+`` ) from the parent directory where you want the project to be created, and run the following command to create a new .NET console application. Replace `CreatePdfMacOSApp` with your desired project name.
+Step 1: Open the integrated terminal (`Cmd+`` ) from the parent directory where you want the project to be created, and run the following command to create a new .NET console application. Replace `CreatePdfMacOSApp` with your desired project name.
 
 ```
 dotnet new console -n CreatePdfMacOSApp
 ```
+
+N> Use `dotnet new console -f net8.0 -n CreatePdfMacOSApp` to explicitly target a specific .NET version (for example, .NET 8.0).
 
 Step 2: Navigate to the project directory using the following command.
 
@@ -16,7 +19,7 @@ Step 2: Navigate to the project directory using the following command.
 cd CreatePdfMacOSApp
 ```
 
-Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package to your project.
+Step 3: Use the following command in the terminal to add the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) package as a reference to your project.
 
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
@@ -24,7 +27,22 @@ dotnet add package Syncfusion.Pdf.Net.Core
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespaces in the *Program.cs* file.
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. An evaluation watermark is added to every page of the generated PDF until a valid key is registered. Include the license key at the top of **Program.cs** before creating a `PdfDocument` instance. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 5: Include the following namespaces in the *Program.cs* file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -37,7 +55,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code sample to the *Program.cs* file to **create a PDF document in a .NET application on macOS**.
+Step 6: Add the following code sample to the *Program.cs* file to **create a PDF document in a .NET application on macOS**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -98,15 +116,15 @@ using (FileStream outputFileStream = new FileStream("Output.pdf", FileMode.Creat
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the **AdventureCycle.jpg** image to the project root (alongside *Program.cs*) so the program can locate it at runtime.
+Step 7: Add the **AdventureCycle.jpg** image to the project root (alongside *Program.cs*) so the program can locate it at runtime.
 
-Step 7: Open the project folder in Visual Studio Code by running the following command in the terminal.
+Step 8: Open the project folder in Visual Studio Code by running the following command in the terminal.
 
 ```
 code .
 ```
 
-Step 8: Build the project.
+Step 9: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -114,7 +132,7 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 9: Run the project.
+Step 10: Run the project.
 
 Run the following command in terminal to run the project.
 

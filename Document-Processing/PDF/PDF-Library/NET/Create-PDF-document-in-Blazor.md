@@ -15,13 +15,6 @@ To include the Syncfusion<sup>&reg;</sup> .NET PDF library into your Blazor appl
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
 
-## Prerequisites
-
-- .NET 8.0 SDK or later for Blazor Server, Blazor WebAssembly, and Blazor WebAssembly PWA projects
-- .NET 8.0 SDK or later for .NET MAUI Blazor projects
-- Visual Studio 2022 with the ASP.NET and web development workload installed (or Visual Studio Code / JetBrains Rider)
-- A valid Syncfusion license key (required for production use; a free Community License is available)
-
 ## Steps to create a PDF document in Blazor Server application
 
 {% tabcontents %}
@@ -480,3 +473,11 @@ Click the **Create PDF document** button to download the generated PDF document 
 Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 
 An online sample to get started with creating a PDF document is available [here](https://document.syncfusion.com/demos/pdf/default#/tailwind).
+
+## Next steps
+
+* [Create a PDF in ASP.NET Core MVC](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in Azure App Service on Windows](Create-PDF-document-in-Azure-App-Service-Windows.md)
+* [Create a PDF in Azure Functions v4](Create-PDF-document-in-Azure-Functions-v4.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

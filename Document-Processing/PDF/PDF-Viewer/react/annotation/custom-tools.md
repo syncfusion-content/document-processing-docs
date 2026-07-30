@@ -10,21 +10,21 @@ domainurl: ##DomainURL##
 
 # Custom annotation tools in React PDF Viewer
 
-The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius)  
+The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius).
 
 Follow these steps to build a minimal custom annotation toolbar.
 
-Step 1: Start from a basic PDF Viewer sample
+1. **Start from a basic PDF Viewer sample**
 
-Refer to the [Getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a basic sample.
+   Refer to the [Getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a basic sample.
 
-Step 2: Add a lightweight custom toolbar with React buttons
+2. **Add a lightweight custom toolbar with React buttons**
 
-Add buttons for the tools to expose. The sample below uses plain React buttons for simplicity; replace with a Syncfusion ToolbarComponent for a richer UI if desired.
+   Add buttons for the tools to expose. The sample below uses plain React buttons for simplicity; replace with a Syncfusion ToolbarComponent for a richer UI if desired.
 
-Step 3: Import and inject modules
+3. **Import and inject modules**
 
-Ensure the `Annotation` module is injected. Include text selection and search modules if those capabilities are required.
+   Ensure the `Annotation` module is injected. Include text selection and search modules if those capabilities are required.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
