@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move selection to specific position in Angular Document Editor component
+# Move selection to specific position in Angular Document Editor
 
 Using [`select`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#select) API in selection module, you can set the cursor position anywhere in the document.
 

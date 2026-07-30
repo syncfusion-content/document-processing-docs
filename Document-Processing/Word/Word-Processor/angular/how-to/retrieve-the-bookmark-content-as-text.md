@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in Angular Document Editor component
+# Retrieve the bookmark content as text in Angular Document Editor
 
 You can get the bookmark or the whole document content from the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component as plain text and SFDT (rich text).
 
@@ -113,7 +113,7 @@ export class AppComponent implements OnInit {
 
 ## Get the whole document content as SFDT (rich text)
 
-You can use [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize) API to get the whole document content as SFDT string from Angular Document Editor component.
+You can use [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#serialize) API to get the whole document content as SFDT string from Angular Document Editor component.
 
 The following example code illustrates how to get the whole document content as SFDT.
 
@@ -157,7 +157,7 @@ export class AppComponent implements OnInit {
 
 ## Get the header content as text
 
-You can use [`goToHeader`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotoheader) API to navigate the selection to the header and then use [`text`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#text-code-classlanguage-textstringcode) API to get the content as plain text.
+You can use [`goToHeader`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotoheader) API to navigate the selection to the header and then use [`text`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the content as plain text.
 
 The following example code illustrates how to get the header content as plain text.
 
@@ -203,4 +203,4 @@ export class AppComponent implements OnInit {
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Similarly, you can use [`goToFooter`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotofooter) API to navigate the selection to the footer and then use [`text`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the content as plain text.
+Similarly, you can use [`goToFooter`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotofooter) API to navigate the selection to the footer and then use [`text`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the content as plain text.

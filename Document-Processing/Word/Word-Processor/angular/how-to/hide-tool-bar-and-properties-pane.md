@@ -54,7 +54,7 @@ N> Positioning and customizing the properties pane in the Document Editor Contai
 
 ## Hide the toolbar
 
-You can use [`enableToolbar`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the existing toolbar.
+You can use [`enableToolbar`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/documentEditorContainerModel) to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 
