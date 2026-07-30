@@ -1,21 +1,23 @@
 ---
 layout: post
-title: Syncfusion DocumentSDK MCP Server Setup – Syncfusion
-description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK.
+title: Syncfusion React PDF Viewer MCP Server Setup | Syncfusion
+description: Discover the MCP server's advantages, installation requirements, and integration guidance for React PDF Viewer.
+control: PDF Viewer
 platform: document-processing
-control: AI coding assistant
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Syncfusion Document SDK MCP Server
+# Syncfusion React PDF Viewer MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK MCP Server accelerates document processing application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer MCP Server accelerates React PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
-These tools speed up development and reinforce best practices for Syncfusion document processing libraries integration.
+These tools speed up development and reinforce best practices for React PDF Viewer integration.
+> The previously available **Agentic UI Builder** (`#sf_react_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](./ui-builder-skill). The **AI Coding Assistant** (#sf_react_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
 
 ## Key Benefits
 
-- **Expert Document Processing Knowledge** - Deep understanding of Syncfusion document processing libraries (PDF, Word, Excel, PowerPoint, Markdown) and their implementation patterns.
+- **Expert PDF Viewer Knowledge** - Deep understanding of the React PDF Viewer component and its implementation patterns.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -25,10 +27,10 @@ These tools speed up development and reinforce best practices for Syncfusion doc
 
 Before beginning, ensure the following prerequisites are met:
 
-- Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
+- [Node.js 18+](https://nodejs.org/en/download) with **npm** or **yarn**
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **document processing application** (existing or new); see [Syncfusion Document Processing documentation](https://help.syncfusion.com/document-processing/introduction)
+- A **React application** (existing or new); see [React PDF Viewer documentation](./getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -50,8 +52,6 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 Create a configuration file in your project folder to install the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
 
-**For .NET 10** :
-
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
 
@@ -59,10 +59,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-documentsdk-mcp": {
+    "sf-react-mcp": {
       "type": "stdio",
-      "command": "dnx",
-      "args": ["Syncfusion.DocumentSdk.MCP", "--yes"],
+      "command": "npx",
+      "args": ["-y", "@syncfusion/react-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -79,10 +79,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-documentsdk-mcp": {
+    "sf-react-mcp": {
       "type": "stdio",
-      "command": "dnx",
-      "args": ["Syncfusion.DocumentSdk.MCP", "--yes"],
+      "command": "npx",
+      "args": ["-y", "@syncfusion/react-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -101,9 +101,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-documentsdk-mcp": {
-      "command": "dnx",
-      "args": ["Syncfusion.DocumentSdk.MCP", "--yes"],
+    "sf-react-mcp": {
+      "command": "npx",
+      "args": ["-y", "@syncfusion/react-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -122,9 +122,12 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-documentsdk-mcp": {
-      "command": "dnx",
-      "args": ["Syncfusion.DocumentSdk.MCP", "--yes"],
+    "sf-react-mcp": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@syncfusion/react-mcp@latest"
+      ],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -139,101 +142,71 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**For .NET 8 / .NET 9 (using a local tool):**
-
-You can install the Syncfusion Document SDK MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
-
-1. Install the Syncfusion Document SDK MCP tool locally:
-
-    ````bash
-    dotnet tool install Syncfusion.DocumentSdk.MCP
-    ````
-
-    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
-
-2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
-
-    ````json
-    {
-      "servers": {
-        "sf-documentsdk-mcp": {
-          "type": "stdio",
-          "command": "dotnet",
-          "args": ["tool", "run", "syncfusion-documentsdk-mcp"],
-          "env": {
-            "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
-            // or
-            // "Syncfusion_API_Key": "YOUR_API_KEY"
-          }
-        }
-      }
-    }
-    ````
-
-**Verifying Installation** Check your editor's MCP Server list for `sf-documentsdk-mcp` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for `sf-react-mcp` with a **Connected** status to confirm a successful installation.
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world document processing development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world React PDF Viewer development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for any document processing library.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the React PDF Viewer component.
 
 {% promptcards %}
-{% promptcard PDF Creation %}
-#search_docs Create a PDF document with text, images, and tables using Syncfusion PDF library.
-{% endpromptcard %}
-{% endpromptcards %}
-
-{% promptcards %}
-{% promptcard Word Document Processing %}
-#search_docs How do I create and manipulate Word documents with Syncfusion Word library?
+{% promptcard Standalone Component Configuration %}
+#search_docs How do I configure the Syncfusion React Standalone PDF Viewer Component?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement Features**
 
-Get step-by-step help for adding specific features to document processing libraries.
+Get step-by-step help for adding specific features to the React PDF Viewer.
 
 {% promptcards %}
-{% promptcard PDF Conversion %}
-#search_docs How can I convert Word documents to PDF using Syncfusion libraries?
+{% promptcard Form Designer %}
+#search_docs How can I enable Form Designer in React PDF Viewer?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Excel Data Processing %}
-#search_docs How do I read, write, and format Excel files with Syncfusion XlsIO library?
-{% endpromptcard %}
-{% endpromptcards %}
-
-**Troubleshooting**
-
-Describe the problem in plain language, and let `search_docs` help resolve it.
-{% promptcards %}
-{% promptcard PDF Issues %}
-#search_docs Why isn't my PDF rendering correctly or displaying images properly?
+{% promptcard Fit to Viewport %}
+#search_docs Provide API for Fit the entire page to the viewport in React PDF viewer
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
-{% promptcard Word Document Issues %}
-#search_docs Why is my Word document not converting or formatting correctly?
+{% promptcard Programmatic Printing %}
+#search_docs how to programmatically trigger printing in the React PDF Viewer?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Configuration & Troubleshooting**
+
+Get help configuring network behavior and resolving loading issues in the React PDF Viewer.
+
+{% promptcards %}
+{% promptcard Retry Timeout %}
+#search_docs How to Configure Retry Timeout for React PDF Viewer Requests.
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Document Loading Issue %}
+#search_docs Document not Loading Newer version in React PDF Viewer.
 {% endpromptcard %}
 {% endpromptcards %}
 
 ## Best Practices
 
-To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK MCP Server:
+To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer MCP Server:
 
-- **Be Specific** - Include the library and use case in your queries (for example, *"Create a PDF with tables and formatted text using Syncfusion PDF library"*).
+- **Be Specific** - Include the component and use case in your queries (for example, *"Load a PDF from a remote URL into the React PDF Viewer and enable annotation export"*).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
-- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your document processing project.
-- **Start Fresh for New Topics** - Begin a new chat when switching to a different document library or task to maintain clean context.
+- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your React project.
+- **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/introduction) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](./getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -244,12 +217,11 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 | Issue | Solution |
 |-------|----------|
-| **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
+| **Server failed to start** | Verify Node.js 18+ is installed, check JSON syntax in the config file, and restart your IDE. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
-| **Document processing not working** | Ensure the NuGet package for the specific library (PDF, Word, Excel, PowerPoint, Markdown) is installed and properly referenced. |
 
 ## Privacy & Security
 
