@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript Spreadsheet MCP Server Configuration | Syncfusion®
+title: JavaScript Spreadsheet MCP Server Setup | Syncfusion®
 description: Install and configure the Syncfusion® JavaScript Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
 control: Spreadsheet
 platform: document-processing
@@ -14,7 +14,7 @@ The Syncfusion® JavaScript MCP Server accelerates Spreadsheet application devel
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for JavaScript Spreadsheet applications.
 
-> The previously available Agentic UI Builder (`#sf_js_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/javascript/documentation/mcp). The AI Coding Assistant (`#sf_js_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
+> The previously available Agentic UI Builder (`#sf_javascript_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/javascript/documentation/mcp). The AI Coding Assistant (`#sf_javascript_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
 
 ## Key benefits
 
