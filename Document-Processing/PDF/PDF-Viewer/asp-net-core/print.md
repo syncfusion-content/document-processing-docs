@@ -43,7 +43,7 @@ The print functionality can be controlled using the `enablePrint` property. Set 
 {% endhighlight %}
 {% endtabs %}
 
-![Print dialog in the PDF Viewer](../images/print.png)
+![Print dialog in the PDF Viewer](./images/print.png)
 
 In addition to the toolbar print button, the PDF Viewer provides the `print()` method to programmatically trigger printing. This is useful for creating custom print buttons or integrating printing into application workflows.
 

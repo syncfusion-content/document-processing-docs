@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fix Document Loading Issues in Core PDF Viewer | Syncfusion
-description: Resolve document rendering issues in ASP.NET Core PDF Viewer v23.1+ by using dataBind before load, validating URLs, and checking CORS, CSP, and network settings.
+description: Fix ASP.NET Core PDF Viewer v23.1+ rendering issues by calling dataBind before load, validating URLs, and verifying CORS, CSP, and network settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

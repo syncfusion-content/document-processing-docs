@@ -41,7 +41,7 @@ Text search can be enabled or disabled using the `enableTextSearch` property. Th
 {% endhighlight %}
 {% endtabs %}
 
-![Text search in PDF Viewer](../images/search.png)
+![Text search in PDF Viewer](./images/search.png)
 
 ## Text search features
 
@@ -403,7 +403,7 @@ Searches for an array of text strings and returns bounding rectangles only for o
 
 ## Text search events
 
-The PDF Viewer provides events that allow you to monitor and respond to different stages of the text search lifecycle. Use these events to customize search behavior, validate queries, track search analytics, or implement conditional logic based on search results.
+The PDF Viewer provides events that allow you to monitor and respond to different stages of the text search life cycle. Use these events to customize search behavior, validate queries, track search analytics, or implement conditional logic based on search results.
 
 ### Text search start event
 
