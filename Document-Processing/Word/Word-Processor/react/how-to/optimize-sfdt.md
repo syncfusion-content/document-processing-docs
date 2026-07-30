@@ -27,7 +27,7 @@ As a backward compatibility to create older format SFDT files, refer to the foll
 <td>Client-side</td>
 <td>
 {% tabs %} 
-{% highlight tsx tabtitle="Component Declaration" %}
+{% highlight ts tabtitle="Component Declaration" %}
 <DocumentEditorContainerComponent></DocumentEditorContainerComponent>
 {% endhighlight %}
 {% endtabs %}
