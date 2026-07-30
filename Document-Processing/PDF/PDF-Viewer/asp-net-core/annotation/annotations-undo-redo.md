@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo and Redo annotation in Core PDF Viewer | Syncfusion
-Syncfusion description: Learn to undo and redo annotation changes in Syncfusion ASP.NET Core PDF Viewer, with UI and programmatic examples.
+description: Learn to undo and redo annotation changes in Syncfusion ASP.NET Core PDF Viewer, with UI and programmatic examples.
 platform: aspnet-core
 control: PDF Viewer
 documentation: ug
@@ -25,6 +25,10 @@ Refer to the following code snippet to call undo and redo actions from the clien
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div style="margin-bottom:8px">
+    <button onclick="undoAnnotation()">Undo</button>
+    <button onclick="redoAnnotation()">Redo</button>
+</div>
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"

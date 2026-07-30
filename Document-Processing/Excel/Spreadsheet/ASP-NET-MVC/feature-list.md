@@ -21,8 +21,8 @@ The following table compares Excel functionality with the availability of EJ1 an
 | Scrolling | Partially | Yes | - |
 | Selection | Yes | Yes | - |
 | Editing | Yes | Yes | - |
-| Formulae | Yes | Partially | EJ2 supports a limited number of [`commonly used formulas`](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/formulas#supported-formulas)  |
-| Named range | Yes | Partially | EJ2 Spreadsheet Named Range feature is supported only at the workbook scope |
+| Formulae | Yes | Partially | EJ2 supports a limited number of [`commonly used formulas`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/formulas)  |
+| Named range | Yes | Partially | EJ2 Spreadsheet Named range feature is supported only at the workbook scope |
 | Data Binding | Yes | Yes | - |
 | Formatting | Yes | Yes | - |
 | Context menu | Yes | Yes | - |

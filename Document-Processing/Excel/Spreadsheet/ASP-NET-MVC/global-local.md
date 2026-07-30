@@ -385,7 +385,7 @@ To load translations in the Spreadsheet:
 3. Set the Spreadsheet `locale` property to the corresponding culture code.
 4. Render the Spreadsheet.
 
-The following example demonstrates the Spreadsheet in the French culture. The Ribbon tab names and Home tab content, including clipboard and cell-style options, are localized.
+The following example demonstrates the Spreadsheet in the French culture. The Ribbon tab names and `Home` tab content, including clipboard and cell-style options, are localized.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -396,7 +396,7 @@ The following example demonstrates the Spreadsheet in the French culture. The Ri
 {% endhighlight %}
 {% endtabs %}
 
-After running the sample, verify that the translated Ribbon tabs and Home tab content are displayed in French.
+After running the sample, verify that the translated Ribbon tabs and `Home` tab content are displayed in French.
 
 
 ## Internationalization
@@ -432,7 +432,7 @@ RTL support changes the text direction and layout of the Spreadsheet from right 
 {% endhighlight %}
 {% endtabs %}
 
-After running the sample, verify that the Spreadsheet layout, Ribbon, and worksheet content are displayed from right to left.
+After running the sample, verify that the spreadsheet layout, ribbon, and worksheet content are displayed from right to left.
 
 
 ## See Also

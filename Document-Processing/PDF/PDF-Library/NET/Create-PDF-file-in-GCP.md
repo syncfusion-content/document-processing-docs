@@ -16,7 +16,7 @@ N> If this is your first time working with the Google Cloud Platform (GCP), plea
 
 * A Google Cloud Platform (GCP) account with an active billing account.
 * The Google App Engine Admin API must be enabled in your GCP project. To enable it, navigate to **APIs & Services > Library**, search for **App Engine Admin API**, and click **Enable**.
-* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+* An active Syncfusion<sup>&reg;</sup> license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
 ## Supported Platforms in GCP
 
