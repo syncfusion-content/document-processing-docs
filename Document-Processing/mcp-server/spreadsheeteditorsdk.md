@@ -31,6 +31,8 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for JavaScript Spreadsheet Editor](../Excel/Spreadsheet/javascript-es5/mcp)
 - [MCP Server for ASP.NET Core Spreadsheet Editor](../Excel/Spreadsheet/asp-net-core/mcp)
 - [MCP Server for ASP.NET MVC Spreadsheet Editor](../Excel/Spreadsheet/asp-net-mvc/mcp)
+- [MCP Server for WPF Spreadsheet Editor](../Excel/Spreadsheet/wpf/mcp)
+- [MCP Server for WinForms Spreadsheet Editor](../Excel/Spreadsheet/winforms/mcp)
 
 ## See also
 
