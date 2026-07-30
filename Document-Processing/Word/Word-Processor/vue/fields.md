@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Adding Fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor) module.
 
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
@@ -47,7 +47,7 @@ The following types of fields are automatically updated in DOCX Editor, independ
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection/) module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection) module.
 
 ```ts
 //Gets the field information of the selected field.
@@ -58,7 +58,7 @@ let fieldInfo: FieldInfo = this.$refs.documenteditor.ej2Instances.selection.getF
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor) module.
 
 ```ts
 //Get the current field info before modifying it.
