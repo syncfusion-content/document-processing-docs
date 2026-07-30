@@ -1,12 +1,12 @@
 ---
-title: How to find duplicate values in an Excel document using formulas? | XlsIO | Syncfusion
+title: Find Duplicate Cell Values Using Excel Formulas | Syncfusion
 description: Explains how to write a per-row formula that marks the first occurrence of each value in a column, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to find duplicate values in the Excel document using formulas in C#?
+# How to Find Duplicate Cell Values Using Excel Formulas ?
 
 The following code illustrates how to find the duplicate values in the Excel document using formulas.
 
@@ -89,7 +89,4 @@ End Using
 
 ## See Also
 
-* [How to find and remove duplicate rows in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-find-and-remove-duplicate-rows)
-* [How to write a formula in a cell with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-write-a-formula-in-a-cell)
-* [How to calculate formulas in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-calculate-formulas)
 * [IRange.Formula API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)

@@ -117,7 +117,3 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 ## See also
 
 * [Pictures in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pictures)
-* [How to add a picture to a worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-add-a-picture-to-a-worksheet)
-* [How to resize a picture to fit a cell](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-resize-a-picture-to-fit-a-cell)
-* [Working with Shapes](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-shapes)
-  

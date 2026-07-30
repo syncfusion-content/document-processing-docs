@@ -1,5 +1,5 @@
 ---
-title: How to convert an image from a URL in Excel to PDF? | XlsIO | Syncfusion
+title: How to convert an image from a URL in Excel to PDF? | Syncfusion
 description: Explains how to download an image from a URL, embed it in an XlsIO workbook, and convert the workbook to PDF.
 platform: document-processing
 control: XlsIO

@@ -1,5 +1,5 @@
 ---
-title: How to save edited changes to the same Excel document? | XlsIO | Syncfusion
+title: How to save edited changes to the same Excel document? | Syncfusion
 description: Explains how to save changes back to the same Excel file in XlsIO using IWorkbook.Save on Windows-specific builds and IWorkbook.SaveAs on cross-platform builds.
 platform: document-processing
 control: XlsIO
@@ -78,7 +78,5 @@ End Using
 
 ## See Also
 
-* [How to open an Excel file in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-an-excel-file)
-* [How to save a workbook to a stream in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-save-to-stream)
 * [IWorkbook.Save API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html)
 * [IWorkbook.SaveAs API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html)

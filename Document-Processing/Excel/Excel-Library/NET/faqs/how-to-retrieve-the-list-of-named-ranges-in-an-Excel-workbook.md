@@ -1,6 +1,6 @@
 ---
 title: Retrieve the list of named ranges in an Excel workbook | Syncfusion
-description: Code example to retrieve the list of named ranges in an Excel workbook using .NET Excel Library.
+description: Learn how to retrieve all named ranges defined in an Excel workbook using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -8,7 +8,7 @@ documentation: UG
 
 # How to convert an Excel worksheet to a high-resolution image?
 
-Essential&reg; XlsIO allows you to convert an Excel worksheet to an image. To produce a high-resolution image, the worksheet is first converted to a Metafile (EMF) and the resolution of that Metafile is then reset to a target value (such as 300 DPI) using a custom `ResetResolution` helper. The result is saved as a JPEG in the example, but the same helper works for other [ImageFormat](https://learn.microsoft.com/dotnet/api/system.drawing.imaging.imageformat) values.
+Essential&reg; XlsIO allows you to convert an Excel worksheet to an image. To produce a high-resolution image, the worksheet is first converted to a Metafile (EMF) and the resolution of that Metafile is then reset to a target value (such as 300 DPI) using a custom `ResetResolution` helper. The result is saved as a JPEG in the example, but the same helper works for other ImageFormat values.
 
 ## Prerequisites
 

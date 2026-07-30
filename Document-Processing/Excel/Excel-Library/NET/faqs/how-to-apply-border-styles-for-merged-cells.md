@@ -114,7 +114,5 @@ A complete working example to apply border styles for merged cells using C# is p
 ## See also
 
 * [Borderstylesformergedcells on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells)
-* [Merged Cells in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-merged-cells)
 * [Borders in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/apply-borders-in-excel)
 * [Working with Styles](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#create-a-style)
-  

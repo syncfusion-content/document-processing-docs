@@ -1,6 +1,6 @@
 ---
 title: How to set error bars in a chart? | XlsIO | Syncfusion
-description: Explains how to add error bars to a chart series in XlsIO with a C# and VB.NET example.
+description: Learn how to add error bars to chart series in Excel using XlsIO with practical C# and VB.NET code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

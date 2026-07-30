@@ -1,5 +1,5 @@
 ---
-title: How to avoid an exception when adding worksheets with the same name | XlsIO | Syncfusion
+title: Prevent Worksheet Name Conflicts in XlsIO | Syncfusion
 description: Explains how to suppress the duplicate-sheet-name exception in XlsIO by enabling IgnoreSheetNameException on IApplication.
 platform: document-processing
 control: XlsIO

@@ -127,7 +127,6 @@ End Using
 ## See Also
 
 * [How to insert a picture into a cell in an Excel document?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-insert-a-picture-into-a-cell-in-an-excel-document)
-* [How to extract images from shapes in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-extract-images-from-shapes)
-* [Working with pictures in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel#pictures)
+* [Working with pictures in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pictures)
 * [IPictureShape API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictureShape.html)
 * [IPictures API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html)

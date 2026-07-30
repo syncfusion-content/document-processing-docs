@@ -1,5 +1,5 @@
 ---
-title: How to check whether an Excel document contains a macro | XlsIO | Syncfusion
+title: How to check whether an Excel document contains a macro | Syncfusion
 description: Code example that checks whether an Excel workbook contains a VBA macro using the .NET Excel library.
 platform: document-processing
 control: XlsIO

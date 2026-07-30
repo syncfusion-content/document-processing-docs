@@ -1,5 +1,5 @@
 ---
-title: How to protect zip file items with different passwords? | XlsIO | Syncfusion
+title: How to protect zip file items with different passwords? | Syncfusion
 description: Explains how to set a unique password for each item in a Syncfusion.Compression.Zip archive, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO

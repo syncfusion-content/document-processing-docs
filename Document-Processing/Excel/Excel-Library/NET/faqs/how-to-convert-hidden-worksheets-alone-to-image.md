@@ -191,5 +191,3 @@ foreach (IWorksheet worksheet in workbook.Worksheets)
 * [How to convert a worksheet to an image?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/net/worksheet-to-image-conversion)
 * [`WorksheetVisibility` enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.WorksheetVisibility.html)
 * [`IWorksheet.ConvertToImage` API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ConvertToImage)
-* [How to hide and show a worksheet in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-worksheet#hide-and-show-worksheet)  
-

@@ -82,7 +82,5 @@ End Using
 
 ## See Also
 
-* [How to convert an XLSX file to XLS in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-convert-xlsx-document-to-xls-format-document)
-* [How to open and save a workbook in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-and-save-a-workbook)
 * [IWorkbook.Version API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html)
 * [IApplication.DefaultVersion API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html)

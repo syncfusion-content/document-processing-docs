@@ -6,7 +6,7 @@ control: XlsIO
 documentation: UG
 ---
 
-# How to zip all files in subfolders using Syncfusion<sup>&reg;</sup> Compression?
+# How to Zip All Files in Subfolders Using Syncfusion Compression?
 
 You can compress a folder along with all of its subfolders into a single zip archive by recursively enumerating files with the `Syncfusion.Compression.Zip` namespace in Syncfusion<sup>&reg;</sup> Document Processing. The code example below demonstrates the full flow: enumerating the source folder, adding every file to a `ZipArchive`, saving the archive, and (optionally) cleaning up the source folder.
 

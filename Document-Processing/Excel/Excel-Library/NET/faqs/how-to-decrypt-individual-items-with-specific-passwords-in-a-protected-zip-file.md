@@ -1,12 +1,12 @@
 ---
-title: How to decrypt individual items with specific passwords in a protected ZIP file | Syncfusion
+title: How to Decrypt Specific Files in a Protected ZIP | Syncfusion
 description: This page demonstrates how to decrypt individual items with specific passwords using Syncfusion.Compression.Zip in .NET.
 platform: document-processing
 control: Compression
 documentation: UG
 ---
 
-# How to decrypt individual items with specific passwords in a protected ZIP file?
+# How to Decrypt Specific Files in a Protected ZIP?
 
 Syncfusion.Compression.Zip allows you to decrypt individual items within a protected ZIP file, each secured with a unique password. When the archive is opened, the `OnZipArchiveItemPasswordNeeded` event is raised for every encrypted entry; supplying the matching password in the event handler lets that item be extracted successfully. Items that are not encrypted (added without a per-item password) are extracted without raising the event.
 

@@ -1,6 +1,6 @@
 ---
 title: How to compute the size of the Excel file | Syncfusion
-description: Code example to compute the size of the Excel file using .NET Excel Library.
+description: Learn how to calculate the size of an Excel file programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

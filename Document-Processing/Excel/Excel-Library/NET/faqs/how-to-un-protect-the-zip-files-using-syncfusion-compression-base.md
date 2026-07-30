@@ -1,6 +1,6 @@
 ---
 title: Un-protect zip files using Syncfusion.Compression.Base | Syncfusion
-description: Code example that unprotects a password-encrypted zip archive using Syncfusion.Compression.Base.
+description: Learn how to unprotect and extract password-encrypted ZIP archives using Syncfusion.Compression.Base with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

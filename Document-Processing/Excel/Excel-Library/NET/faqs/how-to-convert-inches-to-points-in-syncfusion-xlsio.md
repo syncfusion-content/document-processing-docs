@@ -67,7 +67,5 @@ A complete working example in C# is present on <a href="https://github.com/Syncf
 
 ## See also
 
-* [Inches To Points on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/996021-Inches-To-Points/FAQ/Inches%20To%20Points/.NET/Inches%20To%20Points)
 * [Page Setup in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/page-setup-options)
 * [How to set the print area in an Excel worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet/page-setup-options#print-area)
-

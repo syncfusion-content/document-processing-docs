@@ -1,5 +1,5 @@
 ---
-title: How to apply rotation, flip, and transparency to a background image? | XlsIO | Syncfusion
+title: How to Modify Background Images with XlsIO | Syncfusion
 description: Explains how to rotate, flip, and make a background image transparent in XlsIO using System.Drawing as a workaround.
 platform: document-processing
 control: XlsIO
@@ -169,6 +169,4 @@ End Module
 
 ## See Also
 
-* [How to set a worksheet page background image in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-worksheet-background-image)
-* [Page setup options in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel#page-setup)
 * [IPageSetup API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html)

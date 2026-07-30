@@ -1,5 +1,5 @@
 ---
-title: How to remove data validation from a specified range? | XlsIO | Syncfusion
+title: How to remove data validation from a specified range? | Syncfusion
 description: Explains how to remove data validation rules from a range in XlsIO using ExcelClearOptions.ClearDataValidations, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
@@ -76,8 +76,6 @@ End Using
 
 ## See Also
 
-* [How to add data validation to a cell range in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-add-data-validation)
-* [How to list every data validation rule in a worksheet?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-list-data-validation-rules)
 * [IRange.Clear API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)
 * [ExcelClearOptions enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html)
 * [IValidations API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IValidations.html)

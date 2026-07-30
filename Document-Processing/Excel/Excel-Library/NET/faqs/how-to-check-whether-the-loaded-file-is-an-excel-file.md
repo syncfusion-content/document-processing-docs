@@ -101,6 +101,5 @@ End Using
 ## See Also
 
 * [How to open an Excel file with a specific encoding in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-an-excel-file-with-encoding-in-net-core)
-* [How to open an Excel file from a stream with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-open-excel-file-from-stream)
 * [IApplication.IsExcelFile API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html)
 * [IWorkbooks.Open API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html)

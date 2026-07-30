@@ -122,9 +122,6 @@ End Using
 
 ## See Also
 
-* [How to calculate formulas in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-calculate-formulas)
-* [How to write a formula in a cell with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-write-a-formula-in-a-cell)
-* [How to find and remove duplicate rows in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-find-and-remove-duplicate-rows)
 * [IWorksheet.EnableSheetCalculations API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html)
 * [IRange.CalculatedValue API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)
 * [ExcelClearOptions enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html)

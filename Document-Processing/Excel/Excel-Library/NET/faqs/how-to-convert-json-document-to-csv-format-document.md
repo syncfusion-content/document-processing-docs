@@ -1,6 +1,6 @@
 ---
 title: How to convert JSON document to CSV format document |Syncfusion.
-description: This page explains how to convert JSON document to CSV format document using .NET Excel Library.
+description: Learn how to convert JSON data into CSV format programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

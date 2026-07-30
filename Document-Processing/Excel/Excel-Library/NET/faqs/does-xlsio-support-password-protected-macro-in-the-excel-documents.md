@@ -1,5 +1,5 @@
 ---
-title: Does XlsIO support password-protected macros in Excel documents? | XlsIO | Syncfusion
+title: XlsIO Support for Password-Protected Macros | Syncfusion
 description: Explains whether Syncfusion XlsIO preserves the password protection of a VBA macro when an Excel workbook is re-saved.
 platform: document-processing
 control: XlsIO
