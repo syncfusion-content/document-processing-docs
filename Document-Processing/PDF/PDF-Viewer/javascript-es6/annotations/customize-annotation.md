@@ -17,7 +17,7 @@ Annotation appearance and behavior (for example color, stroke color, thickness, 
 Use the annotation toolbar after selecting an annotation:
 - Edit color: changes the annotation fill/text color
 ![Edit color](../images/edit_color.png)
-- Edit stroke color: changes border or line color for shapes and lines types.
+- Edit stroke color: changes border or line color for shapes and line types.
 ![Edit stroke color](../images/shape_strokecolor.png)
 - Edit thickness: adjusts border or line thickness
 ![Edit thickness](../images/shape_thickness.png)
@@ -71,7 +71,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 
 const pdfviewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
   // Text markup defaults
   highlightSettings: { author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6 },
   strikethroughSettings: { author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6 },
@@ -166,7 +166,7 @@ document.getElementById('bulkUpdateAnn')?.addEventListener('click', () => {
 });
 ```
 
-## Customize Annotation Settings 
+## Customize Annotation Settings
 
 Defines the settings of the annotations. You can change annotation settings like author name, height, width etc., using [annotationSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationsettings) API
 
@@ -179,7 +179,7 @@ import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, Thumbnai
 
     PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView,
     TextSelection, TextSearch, Print, Annotation,FormFields, FormDesigner);
-    
+
     let viewer: PdfViewer = new PdfViewer();
     viewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
     viewer.documentPath = "PDF_Succinctly.pdf";

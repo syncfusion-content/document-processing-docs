@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Undo and redo annotations in JavaScript PDF Viewer 
+# Undo and redo annotations in JavaScript PDF Viewer
 
 The PDF Viewer supports undo and redo for annotations.
 
-![Undo-redo](../annotations/annotation-images/annotation-undo-redo.png)
+![Undo-redo](annotation-images/annotation-undo-redo.png)
 
 Undo and redo actions can be performed by using either of the following methods:
 
@@ -61,14 +61,14 @@ Add the below `serviceUrl` in the `index.ts` file
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
-- [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
-- [Export and Import Annotation](../../annotations/export-import/export-annotation)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotations API](../annotations/annotations-api)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](./create-modify-annotation)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotations API](./annotations-api)

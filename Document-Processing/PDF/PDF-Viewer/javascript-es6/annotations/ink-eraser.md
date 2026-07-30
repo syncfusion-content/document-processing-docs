@@ -136,9 +136,9 @@ document.getElementById('disableBtn')?.addEventListener('click', () => {
 Use the `inkEraserSize` property to control the width of the eraser:
 
 ```html
-<button id="smallBtn">Small Ink </button>
-<button id="mediumBtn">Medium Ink </button>
-<button id="largeBtn">Large Ink </button>
+<button id="smallBtn">Small Eraser</button>
+<button id="mediumBtn">Medium Eraser</button>
+<button id="largeBtn">Large Eraser</button>
 <div id="PdfViewer"></div>
 ```
 ```ts

@@ -28,7 +28,7 @@ Shape annotations:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 Measurement annotations:
@@ -36,8 +36,8 @@ Measurement annotations:
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
 - Area: [Area annotation](./annotation-types/area-annotation)
-- Radius: [Radius annotation](./annotation-types/ra)
-- Volume: [Volume annotation](./annotation-types/vo)
+- Radius: [Radius annotation](./annotation-types/radius-annotation)
+- Volume: [Volume annotation](./annotation-types/volume-annotation)
 
 Other annotations:
 
@@ -137,14 +137,14 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)
