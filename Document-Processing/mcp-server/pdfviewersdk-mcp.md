@@ -31,7 +31,7 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for JavaScript PDF Viewer](../PDF/PDF-Viewer/javascript-es5/mcp)
 - [MCP Server for ASP.NET Core PDF Viewer](../PDF/PDF-Viewer/asp-net-core/mcp)
 - [MCP Server for ASP.NET MVC PDF Viewer](../PDF/PDF-Viewer/asp-net-mvc/mcp)
-- [MCP Server for.NET MAUI PDF Viewer](../PDF/PDF-Viewer/maui/mcp)
+- [MCP Server for .NET MAUI PDF Viewer](../PDF/PDF-Viewer/maui/mcp)
 
 ## See also
 
