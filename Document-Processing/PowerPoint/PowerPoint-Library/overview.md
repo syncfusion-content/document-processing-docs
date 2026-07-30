@@ -1,14 +1,22 @@
 ---
-title: PowerPoint Presentation Processing Library | Syncfusion
+title: Syncfusion PowerPoint Presentation Processing Library | .NET
 canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
-description:  The .NET PowerPoint Presentation processing library allows you create, read and write PowerPoint presentations through code in .NET applications without Microsoft Office dependencies.
+description: The .NET PowerPoint Presentation library enables creating, editing, converting, reading, and saving PowerPoint files in .NET without Microsoft Office.
 platform: document-processing
 control: general
 documentation: UG
-keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, write
+keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, write, edit, convert, PPTX to PDF, Blazor, MAUI, Linux, WPF, WinForms
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Library
+# Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Library
+
+## Overview
+
+Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing library is a class library used to create, read, edit, write, and convert PowerPoint presentations through code in Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI, UWP, WinUI, Xamarin, and console applications without Microsoft Office dependencies. It enables developers to integrate the library quickly and focus on their application's core logic.
+
+## Supported Platforms
+
+### UI Platforms
 
 {% doccards %}
 
@@ -16,7 +24,7 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% doccard text="ASP.NET Core" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET Core.png" %}
 
-{% doccard text="Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
+{% doccard text="ASP.NET Core Web API" link="/document-processing/powerpoint/powerpoint-library/net/Create-PowerPoint-Presentation-in-ASP-NET-Core-WEB-API" icon="/document-processing/powerpoint/powerpoint-library/net/images/NET.svg" %}
 
 {% doccard text="ASP.NET MVC" link="/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-mvc" icon="/document-processing/powerpoint/powerpoint-library/net/images/ASP.NET MVC.svg" %}
 
@@ -44,6 +52,13 @@ keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, 
 
 {% enddoccards %}
 
-Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing library is a class library used to create, read, and write PowerPoint presentations (.PPTX, .PPTM, .POTX, .POTM) through code in Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI applications without Microsoft Office dependencies. It eases you developers to just integrate this library to achieve the required PowerPoint presentations processing functionalities and concentrate on core logics of your application.
+## Prerequisites and Related Resources
 
-N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
+- [Getting Started](net/Getting-Started) - Quick setup and first steps.
+- [Assemblies Required](net/Assemblies-Required) - Required assemblies for each platform.
+- [NuGet Packages Required](net/NuGet-Packages-Required) - NuGet packages and versions.
+- [Feature Matrix](net/Feature-Matrix) - Full list of supported features per platform.
+- [FAQ](net/FAQ) - Common questions and troubleshooting.
+
+
+N> Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

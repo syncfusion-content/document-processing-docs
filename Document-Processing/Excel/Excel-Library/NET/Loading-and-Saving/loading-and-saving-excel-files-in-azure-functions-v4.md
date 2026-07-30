@@ -1,17 +1,17 @@
 ---
 title: Loading and Saving Excel in Azure Functions v4 | Syncfusion
-description: Explains how to load and save an Excel files in Azure Functions v4 using Syncfusion Excel(XlsIO) library.
+description: Explains how to load and save Excel files in Azure Functions v4 using Syncfusion Excel(XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 # Loading and Saving Excel files in Azure Functions v4
 
-Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) can be used to create, read, edit Excel files in Azure Functions v4.
+Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) that can be used to create, read, edit Excel files in Azure Functions v4.
 
 ## Steps to Load and Save an Excel document in Azure Functions v4
 
-The below steps illustrates loading and saving a simple Invoice formatted Excel document in Azure Functions v4.
+The following steps illustrate loading and saving a simple invoice-formatted Excel document in Azure Functions v4.
 
 Step 1: Create a new Azure Functions project.
 
@@ -25,7 +25,7 @@ Step 3: Select the framework and click **Create** button.
 
 ![Framework version](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img3.png)
 
-Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package as a reference in your project from [NuGet.org](https://www.nuget.org).
 
 ![Install Syncfusion.XlsIO.Net.Core Nuget Package](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img4.png)
 
@@ -37,7 +37,7 @@ Step 5: Include the following namespaces in the Function1.cs file.
 {% highlight c# tabtitle="C#" %}
 using Syncfusion.XlsIO;
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **Loading and Saving Excel files** in Azure Functions v4.
 
@@ -99,7 +99,7 @@ Step 12: Click the **Finish** button to finalize the **Azure Function** creation
 
 ![Creating app service](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img10.png)
 
-Step 13: Click **Close** button.
+Step 13: Click the **Close** button.
 
 ![Profile created](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img11.png)
 
@@ -107,7 +107,7 @@ Step 14: Click the **Publish** button.
 
 ![Click Publish Button](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img12.png)
 
-Step 15: Publish has been succeeded.
+Step 15: Publishing has been completed.
 
 ![Publish succeeded](Loading-and-Saving_images/Loadind-and-Saving-Azure-Functions-v4_img13.png)
 
@@ -148,7 +148,7 @@ try
   //Write the Excel document stream into request stream
   stream.Write(inputStream.ToArray(), 0, inputStream.ToArray().Length);
 
-  //Gets the responce from the Azure Functions
+  //Gets the response from the Azure Functions
   HttpWebResponse res = (HttpWebResponse)req.GetResponse();
 
   //Saves the Excel stream

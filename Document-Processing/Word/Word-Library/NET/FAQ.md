@@ -7,14 +7,14 @@ documentation: UG
 ---
 # Frequently Asked Questions in Word Library
 
-The frequently asked questions under each category in Essential<sup>&reg;</sup> DocIO are listed below.
+The frequently asked questions under each category in Syncfusion<sup>&reg;</sup> DocIO are listed below.
 
 ## Word Document
 
 * [How to open a document from stream using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-open-a-document-from-stream-using-docio)
 * [How to attach a Template to a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-attach-a-template-to-a-word-document)
 * [How to check the compatibility mode of the Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-check-the-compatibility-mode-of-the-word-document)
-* [Which units does Essential<sup>&reg;</sup> DocIO uses for measurement properties such as size, margins, etc, in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
+* [Which units does Syncfusion<sup>&reg;</sup> DocIO use for measurement properties such as size, margins, etc., in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#which-units-does-essential-docio-uses-for-measurement-properties-such-as-size-margins-etc-in-a-word-document)
 * [How to convert Units (cm, mm, or inches) to Points for DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#how-to-convert-units-cm-mm-or-inches-to-points-for-docio)
 * [Why does the ‘File Not Supported’ exception occur in Syncfusion<sup>®</sup> DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-does-the-file-not-supported-exception-occur-in-syncfusion-docio)
 * [Why do documents remain locked after use?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-document-faqs#why-do-documents-remain-locked-after-use)
@@ -71,9 +71,9 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
 * [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)
 
-## Mail merge
+## Mail Merge
 
-* [Is it possible to format merge fields with image formats before performing a mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs)
+* [Is it possible to format merge fields with image formats before performing a mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#is-it-possible-to-format-merge-fields-with-image-formats-before-performing-a-mail-merge)
 * [Why does DocIO use merge field values from the parent group when the nested group data does not contain a value?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-does-docio-use-merge-field-values-from-the-parent-group-when-the-nested-group-data-does-not-contain-a-value)
 * [How to identify merge fields that do not exist in the data source?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#how-to-identify-merge-fields-that-do-not-exist-in-the-data-source)
 * [Why is each record merging on a new page during mail merge?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/mail-merge-faqs#why-is-each-record-merging-on-a-new-page-during-mail-merge)
@@ -83,10 +83,10 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 ## Tables
 
 * [How to insert a DataTable in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-insert-a-datatable-in-a-word-document)
-* [How to insert a table from HTML string in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-insert-a-table-from-html-string-in-word-document)
+* [How to insert a table from HTML string in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-insert-a-table-from-html-string-in-word-document)
 * [How to set table cell width?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-table-cell-width)
 * [How to position a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-position-a-table-in-a-word-document)
-* [How to set the text direction to a table in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-the-text-direction-to-a-table-in-word-document)
+* [How to set the text direction to a table in a Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-to-set-the-text-direction-to-a-table-in-word-document)
 * [How can I obtain the height of a cell or row in a Word document using the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#how-can-i-obtain-the-height-of-a-cell-or-row-in-a-word-document-using-the-docio-library)
 * [Why does setting the top or bottom padding for one cell in a Word document apply the same padding to all cells in the row?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#why-does-setting-the-top-or-bottom-padding-for-one-cell-in-a-word-document-apply-the-same-padding-to-all-cells-in-the-row)
 * [Is it possible to insert a page break inside a table using DocIO?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/tables-faqs#is-it-possible-to-insert-a-page-break-inside-a-table-using-docio)
@@ -102,7 +102,7 @@ The frequently asked questions under each category in Essential<sup>&reg;</sup> 
 * [Why track changes color are different in Word document?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#why-track-changes-color-are-different-in-word-document)
 * [Is it possible to track changes made programmatically using the DocIO library?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/track-changes-faqs#is-it-possible-to-track-changes-made-programmatically-using-the-docio-library)
 
-## Word to PDF and Image conversions
+## Word to PDF and Image Conversions
 
 * [Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#could-not-find-syncfusionofficecharttoimageconverter-assembly-in-net-35-framework-does-it-mean-there-is-no-support-for-chart-conversion-in-this-framework)
 * [Is it possible to convert 3D charts to PDF or image?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/word-to-pdf-and-image-conversions-faqs#is-it-possible-to-convert-3d-charts-to-pdf-or-image)

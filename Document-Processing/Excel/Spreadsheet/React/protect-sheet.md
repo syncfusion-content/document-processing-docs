@@ -69,8 +69,7 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 
 ### Unprotect Sheet
 
-The **Unprotect Sheet** feature restores all functionalities that were disabled in a protected spreadsheet.  
-Once a sheet is unprotected, users can edit, format, insert, delete, and move data without restrictions.
+The **Unprotect Sheet** feature restores all functionalities that were disabled in a protected spreadsheet. Once a sheet is unprotected, users can edit, format, insert, delete, and move data without restrictions.
 
 **User Interface**:
 
@@ -121,13 +120,13 @@ You can make an entire row, an entire column, or a specific range of cells read-
 
 ```ts
 // To set read-only for single cell.
-spreadsheet.setRangeReadOnly(true, 'A2', 0)
+spreadsheet.setRangeReadOnly(true, 'A2', 0);
 // To set read-only for range of cells.
-spreadsheet.setRangeReadOnly(true, 'A2:B5', 0)
+spreadsheet.setRangeReadOnly(true, 'A2:B5', 0);
 // To set read-only for entire row.
-spreadsheet.setRangeReadOnly(true, '3:3', 0)
+spreadsheet.setRangeReadOnly(true, '3:3', 0);
 // To set read-only for entire column.
-spreadsheet.setRangeReadOnly(true, 'A:A', 0)
+spreadsheet.setRangeReadOnly(true, 'A:A', 0);
 ```
 
 You can make the cells read-only in the cell data binding by setting the `isReadOnly` property to **true** for the respective rows, columns, and cells. Please refer to the code snippet below to see how to set cells to read-only in the cell data binding:
@@ -236,7 +235,7 @@ In the active Spreadsheet, the workbook can be unprotected in any of the followi
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

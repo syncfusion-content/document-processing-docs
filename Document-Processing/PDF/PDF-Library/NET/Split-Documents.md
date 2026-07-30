@@ -1,21 +1,21 @@
 ---
 title: Split PDF Documents | Syncfusion
-description:  Effortlessly Split large PDF documents into smaller ones, each comprising single or multiple pages, using the Syncfusion .NET PDF C# library.
+description: Effortlessly split large PDF documents into smaller ones, each comprising a single page or multiple pages, using the Syncfusion .NET PDF C# library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Split PDF Documents using .NET PDF Library
+# Split PDF Documents using the .NET PDF Library
 
-The .NET PDF library supports [Splitting PDF file](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/split-pdf) into single-page or multiple-page PDF documents.
+The .NET PDF library supports [splitting PDF files](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/split-pdf) into single-page or multiple-page PDF documents.
 
 Check the following video to quickly get started with split PDF document in .NET using the PDF Library.
 {% youtube "https://www.youtube.com/watch?v=GfPY3wwAKF4" %}
 
 ## Splitting a PDF file into individual pages
 
-The .NET PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
+The .NET PDF library allows splitting the pages of an existing PDF document into multiple individual PDF documents using the [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class.
 
 Refer to the following code example to split a PDF into individual pages.
 

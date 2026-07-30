@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create a object structure in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Create object structure in Javascript Spreadsheet | Syncfusion
 description: Learn here all about Create a object structure in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Create a object structure 
 documentation: ug
 ---
 
-# Create a object structure in EJ2 Javascript Spreadsheet control
+# Create a object structure in EJ2 Javascript Spreadsheet Control
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#properties) of the spreadsheet as value.
+This topic describes the JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to render the Spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 
 ```js

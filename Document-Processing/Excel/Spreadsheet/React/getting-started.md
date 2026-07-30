@@ -119,7 +119,7 @@ You can also explore the Spreadsheet interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/getting-started-cs1" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code. You can also explore our [React Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default) that shows you how to present and manipulate data.
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-react-spreadsheet-component) to explore the complete source code.
 
 ## Video tutorial
 
@@ -127,7 +127,6 @@ To get started quickly with React Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=3Cx9AnKAHdY" %}
 
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.
 
 ## See also
 

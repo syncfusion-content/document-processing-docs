@@ -8,7 +8,7 @@ documentation: UG
 
 # Delete Comments in Excel
 
-You can also delete comments in Excel, which removes the red triangle in a cell.
+You can also delete comments in Excel, which removes the red triangle from a cell.
 
 The following code shows how to delete a comment from a cell with Interop and XlsIO for .NET.
 
@@ -24,7 +24,7 @@ private void DeleteComment()
   //Specify the template Excel file path
   string myPath = "InteropOutput_AddComment.xlsx";
 
-  //Open the Excel file containing comment
+  //Open the Excel file containing a comment
   Workbook workbook = excelApp.Workbooks.Open(myPath);
 
   //Get the A1 cell
@@ -50,7 +50,7 @@ private void DeleteComment()
   //Specify the template Excel file path
   string myPath = "InteropOutput_AddComment.xlsx";
 
-  //Open the Excel file containing comment
+  //Open the Excel file containing a comment
   Workbook workbook = excelApp.Workbooks.Open(myPath);
 
   //Get the A1 cell
@@ -75,7 +75,7 @@ Private Sub DeleteComment()
   'Specify the template Excel file path
   Dim myPath As String = "InteropOutput_AddComment.xlsx"
 
-  'Open the Excel file
+  'Open the Excel file containing a comment
   Dim workbook As Workbook = excelApp.Workbooks.Open(myPath)
 
   'Get the A1 cell
@@ -104,7 +104,7 @@ private void DeleteComment()
     //Instantiate the application object
     IApplication application = excelEngine.Excel;
 
-    //Open the Excel file containing comment
+    //Open the Excel file containing a comment
     IWorkbook workbook = application.Workbooks.Open("XlsIOOutput_AddComment.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -125,7 +125,7 @@ private void DeleteComment()
     //Instantiate the application object
     IApplication application = excelEngine.Excel;
 
-    //Open the Excel file containing comment
+    //Open the Excel file containing a comment
     IWorkbook workbook = application.Workbooks.Open("XlsIOOutput_AddComment.xlsx");
     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -144,14 +144,14 @@ Private Sub DeleteComment()
     'Instantiate the application object
     Dim application As IApplication = excelEngine.Excel
 
-    'Open the Excel file containing comment
+    'Open the Excel file containing a comment
     Dim workbook As IWorkbook = application.Workbooks.Open("XlsIOOutput_AddComment.xlsx")
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-    'Remove the comment.
+    'Remove the comment
     worksheet.Range("A1").Comment.Remove()
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_DeleteComment.xlsx")
   End Using
 End Sub

@@ -9,7 +9,7 @@ documentation: ug
 
 # AI Assist Node.js Server Setup in JavaScript Spreadsheet
 
-AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
+AI Assist requires a backend service to process prompts and return AI-generated responses. This how-to guide shows how to create a **Node.js** server with **Azure OpenAI** credentials and connect it to the JavaScript Spreadsheet.
 
 ## Prerequisites
 
@@ -206,8 +206,8 @@ The server accepts a `POST` request with the following JSON body:
 ```json
 {
   "messages": [
-    { "role": "system",    "content": "You are a spreadsheet assistant." },
-    { "role": "user",      "content": "Make the header row bold." }
+    { "role": "system", "content": "You are a spreadsheet assistant." },
+    { "role": "user",   "content": "Make the header row bold." }
   ]
 }
 ```
@@ -223,7 +223,7 @@ And returns:
 
 ## Sample
 
-A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
+A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command:
 
 ```bash
 npm start

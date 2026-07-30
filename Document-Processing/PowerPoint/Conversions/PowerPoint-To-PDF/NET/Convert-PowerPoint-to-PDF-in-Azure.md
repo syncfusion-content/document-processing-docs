@@ -6,7 +6,7 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint Presentation to PDF in Azure Platform 
+# Convert PowerPoint Presentation to PDF in Azure Platform
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Azure Platform** within a few lines of code.
 
@@ -43,4 +43,10 @@ NuGet packages required<br/></th></tr></thead>
 {{'[Azure Functions v4](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-functions-v4)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify }}<br/></td></tr>
+<tr>
+<td>
+{{'[Azure Functions (Flex Consumption)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-functions-flex-consumption)' | markdownify}}
+<br/></td><td>
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}}<br/></td></tr>
 </table>
