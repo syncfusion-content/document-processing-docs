@@ -8,7 +8,7 @@ keywords: automatic-suggestion, @mentions
 ---
 # Automatic Suggestion in WPF RichTextBox (SfRichTextBoxAdv)
 
-## Automatic Suggestion functionality for using @mentions
+## Automatic suggestion functionality for using @mentions
 [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control shows an inline dropdown with a list of suggested names while typing the mention character (@ symbol). The list of suggested names filters as you type additional characters. You can use the up or down arrow keys to move the selection and the Tab or Enter key to insert the selected item. You can also use the mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
 
 ![WPF RichTextBox displays Automatic Suggestion](Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG)
@@ -103,7 +103,7 @@ For details on the API surface used in the samples above, see the following refe
 
 N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Automatic%20Suggestion)
 
-## Customize the SuggestionBox ItemTemplate and Style
+## Customize the suggestionbox itemtemplate and style
 By default, the drop-down window lists the filtered items as an image, display text and link. If you want to remove the image or link, you can write your own item template.
 
 ![Modifying Suggestion Box Item in WPF RichTextBox](Automatic-Suggestion_images/wpf-richtextbox-modify-suggestion.PNG)
@@ -251,7 +251,7 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 {% endtabs %}
 
 
-## Multiple Suggestion Providers
+## Multiple suggestion providers
 Two or more suggestion providers can be used at a time, but each suggestion provider should have a different mention character. Additionally, each suggestion provider can have a different item source and suggestion box style.
 
 <table><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td></tr></table>
