@@ -1,5 +1,5 @@
 ---
-title: Modify the Appearance of Series | Syncfusion
+title: Chart Series in PowerPoint | Syncfusion
 description: Learn how to modify the appearance of series in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
@@ -12,7 +12,7 @@ In a chart, a **series** represents a set of related data points, often depicted
 
 ## Set the Series Name
 
-The following code snippet illustrates how to set the series name in chart.
+The following code snippet illustrates how to set the series name in the chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -130,9 +130,8 @@ The complete code snippet illustrating the above options is shown below.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Series/Format-Series/.NET/Format-Series/Program.cs" %}
 
- FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
  //Open an existing PowerPoint Presentation.
- using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
+ using (IPresentation pptxDoc = Presentation.Open("Data/Template.pptx"))
  {
      //Gets the first slide.
      ISlide slide = pptxDoc.Slides[0];
@@ -165,11 +164,9 @@ The complete code snippet illustrating the above options is shown below.
      //Sets position of legend.
      chart.Legend.Position = OfficeLegendPosition.Bottom;
 
-     using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-     {
-         //Save the PowerPoint Presentation.
-         pptxDoc.Save(outputStream);
-     }
+     //Save the PowerPoint Presentation.
+     pptxDoc.Save("Result.pptx");
+     
  }
 
 {% endhighlight %}
@@ -283,9 +280,9 @@ chart.Series(0).DataPoints(3).SetAsTotal = True
 {% endhighlight %}
 {% endtabs %}
 
-## Set the connector lines between data points 
+## Set the connector lines between data points
 
-The following code snippet illustrates how to set the connector lines between data points. 
+The following code snippet illustrates how to set the connector lines between data points. This option applies only to line charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -310,33 +307,33 @@ chart.Series(0).SerieFormat.ShowConnectorLines = True
 
 ## Add space between bars
 
-The following code snippet illustrates how to add space between bars.
+The following code snippet illustrates how to add space between bars. These options apply only to bar and column charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
- //Adding space between bars of different series of single category.
+ //Add space between bars of the same category across different series.
  chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = -40;
 
- //Adding space between bars of different categories.
+ //Add space between bars of different categories.
  chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 100;
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
- //Adding space between bars of different series of single category.
+ //Add space between bars of the same category across different series.
  chart.Series[0].SerieFormat.CommonSerieOptions.Overlap = -40;
 
- //Adding space between bars of different categories.
+ //Add space between bars of different categories.
  chart.Series[0].SerieFormat.CommonSerieOptions.GapWidth = 100;
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Adding space between bars of different series of a single category.
+' Add space between bars of the same category across different series.
 chart.Series(0).SerieFormat.CommonSerieOptions.Overlap = -40
 
-' Adding space between bars of different categories.
+' Add space between bars of different categories.
 chart.Series(0).SerieFormat.CommonSerieOptions.GapWidth = 100
 
 {% endhighlight %}
@@ -346,7 +343,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add High-Low Lines
 
-The following code snippet illustrates how to add high-low lines.
+The following code snippet illustrates how to add high-low lines. This option applies only to line charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -388,7 +385,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add Drop Lines
 
-The following code snippet illustrates how to add drop lines.
+The following code snippet illustrates how to add drop lines. This option applies only to line and area charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -430,7 +427,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add Series Lines
 
-The following code snippet illustrates how to add series lines in chart.
+The following code snippet illustrates how to add series lines in the chart. This option applies only to stacked bar/column and pie charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -470,9 +467,9 @@ chart.Series(0).SerieFormat.CommonSerieOptions.PieSeriesLine.LineWeight = Office
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Charts/Format-Series/Add-Series-Lines/.NET).
 
-## Different Marker Properties
+## Customize Marker Properties
 
-The following code snippet illustrates how to customize the marker properties.
+The following code snippet illustrates how to customize the marker properties of a series. Markers apply to line, scatter, and radar charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -512,24 +509,24 @@ chart.Series(0).SerieFormat.MarkerForegroundColor = Color.Black
 
 ## Explode a Pie Chart
 
-The following code snippet illustrates how to explode a pie chart.
+The following code snippet illustrates how to explode a pie chart. This property applies only to pie and doughnut charts.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Exploding the pie chart to 10%.
+//Explode the pie chart to 10%.
 chart.Series[0].SerieFormat.Percent = 10;
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Exploding the pie chart to 10%.
+//Explode the pie chart to 10%.
 chart.Series[0].SerieFormat.Percent = 10;
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Exploding the pie chart to 10%.
+' Explode the pie chart to 10%.
 chart.Series(0).SerieFormat.Percent = 10
 
 {% endhighlight %}
@@ -539,3 +536,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 * [How to change the slice color of Pie chart in Presentation?](https://support.syncfusion.com/kb/article/13830/how-to-change-the-slice-color-of-pie-chart-in-presentation-using-c-in-aspnet-core)
+* [Chart Area in PowerPoint](Chart-Area)
+* [Chart Axis in PowerPoint](Chart-Axis)
+* [Chart Data Labels in PowerPoint](Chart-Data-Labels)
+* [Chart Legend in PowerPoint](Chart-Legend)
+* [Chart Plot Area in PowerPoint](Chart-Plot-Area)
+* [Chart Title in PowerPoint](Chart-Title)

@@ -43,4 +43,4 @@ Replace `*` with the specific version matching the other Syncfusion dependencies
 
 ## Licensing requirement
 
-Syncfusion provides a license key that must be registered in the application. Ensure that  the key is registered in the `Program.cs` or `Startup.cs` file before deploying the application to avoid licensing watermarks. For detailed instructions, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).
+Syncfusion provides a license key that must be registered in the application. Ensure that the key is registered in the `Program.cs` or `Startup.cs` file before deploying the application to avoid licensing watermarks. For detailed instructions, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).

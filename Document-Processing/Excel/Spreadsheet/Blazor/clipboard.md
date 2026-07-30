@@ -499,7 +499,7 @@ The available parameters in the [PasteCellAsync()](https://help.syncfusion.com/c
 | cellAddress | string (optional) | Specifies the target cell or range of cells for pasting clipboard content. Accepts either a single cell reference from a specific worksheet (for example, **"Sheet1!A1"**) or a range of cells (for example, **"Sheet2!A1:C5"**). A valid cell selection must exist before executing the paste operation. If no parameter is provided, the currently selected cell or range will be used as the paste destination. |
 
 {% tabs %}
-{% highlight razor  tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet

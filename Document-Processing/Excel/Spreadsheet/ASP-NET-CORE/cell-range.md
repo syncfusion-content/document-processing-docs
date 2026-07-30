@@ -85,7 +85,7 @@ The following features have some limitations in Merge:
 
 The **Data Validation** is used to prevent users from entering invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
 
-N> * The default value for `allowDataValidation` property is `true`.
+N> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 
