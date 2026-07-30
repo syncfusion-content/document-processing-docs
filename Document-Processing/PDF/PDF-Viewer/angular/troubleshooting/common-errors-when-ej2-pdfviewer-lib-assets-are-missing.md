@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common error when assets are missing in Angular PDF Viewer | Syncfusion
+title: Assets missing error in Angular PDF Viewer | Syncfusion
 description: Learn here about common error when ej2-pdfviewer-lib assets are missing in your app in Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Uncaught DOMException: Failed to execute 'importScripts' on 'WorkerGlobalScope'
+# Uncaught DOMException: importScripts on WorkerGlobalScope
 
 An error that can occur when the `ej2-pdfviewer-lib` assets are missing is the **Uncaught DOMException: Failed to execute 'importScripts' on 'WorkerGlobalScope'**. This occurs when the PDF viewer's web worker cannot load required files such as `pdfium.js` or `pdfium.wasm`.
 

@@ -329,6 +329,12 @@ You can also experiment directly using the interactive playground below for a qu
 
 N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebAppServerMode). Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) page.
 
+## Video tutorial
+
+To get started quickly with the Blazor PDF Viewer, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=RNzFAXlGEHA" %}
+
 ## See also
 
 * [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)

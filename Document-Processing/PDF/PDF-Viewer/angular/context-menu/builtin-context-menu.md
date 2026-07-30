@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Built-in Context Menu in Angular PDF Viewer | Syncfusion
-description: Explore the default context menu items in the Angular PDF Viewer, including options for text selection, annotations, and form fields.
+description: Learn about the built-in context menu items available in the Syncfusion Angular PDF Viewer, including options for text, annotations, and form fields.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -18,19 +18,19 @@ Menu items vary depending on the target element:
 
 * **Text**: Displays options to annotate and copy selected text.
 
-  ![context menu on text](../../react/images/context-menu-text.png)
+  ![Context menu displayed when right-clicking on selected text](../../react/images/context-menu-text.png)
 
 * **Annotations**: Provides options to copy, cut, paste, or remove annotations, and add comments.
 
-  ![context menu on annotation](../../react/images/context-menu-annotation.png)
+  ![Context menu displayed when right-clicking on an annotation](../../react/images/context-menu-annotation.png)
 
 * **Form Fields**: Shows standard form field interactions, such as modifying properties. The context menu for form fields appears only when the viewer is in **designer mode**.
 
-  ![context menu on form fields](../../react/images/context-menu-forms.png)
+  ![Context menu displayed when right-clicking on a form field](../../react/images/context-menu-forms.png)
 
-* **Empty Space**: Displays the option to paste a previously copied annotation or form field.
+* **Empty Space**: Displays the option to paste a previously copied annotation or form field. Paste is available only if an annotation or form field has been previously copied or cut, and it is placed at the location of the right-click.
 
-  ![context menu on empty space](../../react/images/context-menu-empty.png)
+  ![Context menu displayed when right-clicking on empty space](../../react/images/context-menu-empty.png)
 
 ## Default Item Reference
 
@@ -57,11 +57,11 @@ The following items are available when interacting with annotations:
 | **Cut** | Removes the selected annotation and copies it to the clipboard. |
 | **Paste** | Pastes a previously copied or cut annotation. |
 | **Delete** | Permanently removes the selected annotation. |
-| **Comments** | Opens the comment panel to manage discussions on the annotation. |
+| **Comments** | Opens the comment panel for the annotation. |
 
 ### Form Field Menu Items
 
-These items appear when the viewer is in designer mode and a form field is selected:
+These items appear when the viewer is in Form Designer mode and a form field is selected:
 
 | Item | Description |
 | :--- | :--- |
@@ -71,4 +71,7 @@ These items appear when the viewer is in designer mode and a form field is selec
 | **Delete** | Removes the selected form field from the document. |
 | **Properties** | Launches the properties dialog for the specific form field. |
 
-N> The availability of the context menu is a client-side feature and is independent of server configurations.
+## See Also
+
+* [Context Menu in Angular PDF Viewer](context-menu.md) – An overview of the built-in context menu and its capabilities.
+* [Customize Context Menu](custom-context-menu.md) – A guide on how to add, remove, and reorder custom menu items.

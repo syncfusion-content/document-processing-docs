@@ -85,7 +85,7 @@ enableCircleMode(): void {
 
 #### Exit Circle Mode
 
-Switch back to normal mode using:
+Switch back to default mode (`None`) using:
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -179,17 +179,17 @@ export class AppComponent {
 ![Shape tools](../../images/shape_toolbar.png)
 
 Use the annotation toolbar:
-- **Edit fill Color** tool  
-![Edit fill color](../../../javascript-es6/images/shape_fillColor.png)
+- **Edit Fill Color** tool  
+![Edit Fill Color tool in the annotation toolbar](../../../javascript-es6/images/shape_fillColor.png)
 
-- **Edit stroke Color** tool
-![Edit stroke color](../../../javascript-es6/images/shape_strokecolor.png)
+- **Edit Stroke Color** tool
+![Edit Stroke Color tool in the annotation toolbar](../../../javascript-es6/images/shape_strokecolor.png)
 
 - **Edit Opacity** slider
-![Edit opacity](../../../javascript-es6/images/shape_opacity.png)
+![Edit Opacity slider in the annotation toolbar](../../../javascript-es6/images/shape_opacity.png)
 
 - **Edit Thickness** slider
-![Edit thickness](../../../javascript-es6/images/shape_thickness.png)
+![Edit Thickness slider in the annotation toolbar](../../../javascript-es6/images/shape_thickness.png)
 
 #### Edit Circle Programmatically
 
@@ -221,7 +221,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to circle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotation
 Set properties for individual circle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -306,7 +306,7 @@ For the full list of available events and their descriptions, see [**Annotation 
 
 ## Export and Import
 
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../import-export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

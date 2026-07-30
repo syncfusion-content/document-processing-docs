@@ -59,7 +59,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ![Strikethrough tool](../../../javascript-es6/annotations/annotation-images/strikethrough-tool.gif)
 
-### Add strikethrough using Context Menu
+### Add Strikethrough Using the Context Menu
 Right-click a selected text region → select **Strikethrough**.
 
 ![Strikethrough Context](../../../javascript-es6/annotations/annotation-images/strikethrough-context.gif)
@@ -172,7 +172,7 @@ The PDF Viewer supports deleting existing annotations through both the UI and AP
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to strikethrough annotations. It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation–related notes within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotation
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Strikethrough', …)` call.
 
 {% tabs %}
