@@ -113,7 +113,7 @@ The `printScaleFactor` property controls the quality of printed output. Higher s
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enablePrint="true"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 
@@ -126,7 +126,7 @@ The `printScaleFactor` property controls the quality of printed output. Higher s
                    serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enablePrint="true"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 
@@ -154,7 +154,7 @@ The `enablePrintRotation` property controls whether landscape pages are automati
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enablePrintRotation="true"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 
@@ -167,7 +167,7 @@ The `enablePrintRotation` property controls whether landscape pages are automati
                    serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    enablePrintRotation="true"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 
@@ -192,7 +192,7 @@ The `printMode` property controls how the print dialog is displayed when printin
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    printMode="NewWindow"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 
@@ -205,7 +205,7 @@ The `printMode` property controls how the print dialog is displayed when printin
                    serviceUrl="/api/PdfViewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                    printMode="NewWindow"
-                   printScaleFactor="0.5">
+                   printScaleFactor=0.5>
     </ejs-pdfviewer>
 </div>
 

@@ -311,9 +311,9 @@ The Prefix property sets the CSS class or icon added as a prefix to the existing
 
 ### ID property
 
-The ID property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
+The id property of a CustomToolbarItemModel uniquely identifies a toolbar item and is required for customization.
 
-Assign a specific and descriptive `ID` to each custom toolbar item.
+Assign a specific and descriptive `id` to each custom toolbar item.
 
 These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel`. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize the appearance and behavior of each toolbar item.
 
