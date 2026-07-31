@@ -125,7 +125,7 @@ Step 5: Build and run the project. In Visual Studio, press **F5** (with debugger
 
 By executing the program, you will get the **PowerPoint** as follows.
 
-![Output PowerPoint in .NET Framework console application](Console-Images/NET-FrameWork/Open-and-Save-output-image.png)
+![Output PowerPoint in .NET Framework console application](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## See Also
 [Open and save Presentation in Windows Forms](./Open-and-Save-PowerPoint-Presentation-in-Windows-Forms)

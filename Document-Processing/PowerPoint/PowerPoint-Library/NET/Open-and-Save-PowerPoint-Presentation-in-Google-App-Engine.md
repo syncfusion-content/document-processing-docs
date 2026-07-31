@@ -15,7 +15,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 - A Google Cloud account with a created GCP project and billing enabled.
 - The **App Engine Admin API** enabled in the [Google Cloud Console](https://console.cloud.google.com/).
 - The [gcloud CLI](https://cloud.google.com/sdk/docs/install) installed locally.
-- [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) or later installed.
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed.
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) with the **ASP.NET and web development** workload installed.
 - A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application.
 

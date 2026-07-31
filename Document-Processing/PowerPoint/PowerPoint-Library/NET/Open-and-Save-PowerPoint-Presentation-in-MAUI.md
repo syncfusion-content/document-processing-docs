@@ -140,7 +140,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 By executing the program, the resulting **PowerPoint presentation** is saved to the device and opened with the platform's default viewer, as shown below.
 
-![.NET MAUI output PowerPoint presentation](Workingwith-MAUI/Open-and-Save-output-image.png)
+![.NET MAUI output PowerPoint presentation](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## Helper files for .NET MAUI
 

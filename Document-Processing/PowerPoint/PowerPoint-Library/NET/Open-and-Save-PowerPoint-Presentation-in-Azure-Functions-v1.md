@@ -115,7 +115,7 @@ Step 13: Publishing has succeeded.
 
 Step 14: Go to the Azure portal and select **App Services**. After the function is running, click **Get function URL** and copy it. Then, paste the URL into the client sample in the next section (which will request the Azure Functions to open and save a PowerPoint Presentation using the template PowerPoint document). You will get the output PowerPoint Presentation as follows.
 
-![Output PowerPoint Presentation in Azure Functions v1](Workingwith-Core/Open-and-Save-output.png)
+![Output PowerPoint Presentation in Azure Functions v1](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## Steps to post the request to Azure Functions
 

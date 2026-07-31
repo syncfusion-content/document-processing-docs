@@ -15,10 +15,10 @@ N> **Prerequisites:** An active [Azure subscription](https://azure.microsoft.com
 ## Steps to open and save Presentation in Azure Functions v4
 
 Step 1: Create a new Azure Functions project. Select the **Azure Functions** template and choose the **HTTP trigger** function type.
-![Create an Azure Functions project](Azure-Images/Functions-v4/Azure_PowerPoint_Presentation_to_PDF.png)
+![Create an Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
 
 Step 2: Configure the project name and select the location.
-![Configure the project name and location](Azure-Images/Functions-v4/Configuration-Open-and-Save-PowerPoint.png)
+![Configure the project name and location](Azure-Images/Functions-v1/Configuration-Open-and-Save-PowerPoint.png)
 
 Step 3: Select the function worker as **.NET 8.0 (Long Term Support)**. 
 ![Select function worker](Azure-Images/Functions-v4/Additional_Information_PowerPoint_Presentation_to_PDF.png)
@@ -92,29 +92,29 @@ public static async Task<HttpResponseData> Run(
 {% endtabs %}
 
 Step 7: Right-click the project and select **Publish**. Then, create a new profile in the **Publish** window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-v4/Publish-Open-and-Save-PowerPoint.png)
+![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Open-and-Save-PowerPoint.png)
 
 Step 8: Select the target as **Azure** and click the **Next** button.
-![Select the target as Azure](Azure-Images/Functions-v4/Target_PowerPoint_Presentation_to_PDF.png)
+![Select the target as Azure](Azure-Images/Functions-v1/Target_PowerPoint_Presentation_to_PDF.png)
 
 Step 9: Click the **Create new** button.
-![Configure Hosting Plan](Azure-Images/Functions-v4/Function_Instance_PowerPoint_Presentation_to_PDF.png)
+![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_PowerPoint_Presentation_to_PDF.png)
 
 Step 10: Click the **Create** button. 
-![Select the plan type](Azure-Images/Functions-v4/Hosting-Open-and-Save-PowerPoint.png)
+![Select the plan type](Azure-Images/Functions-v1/Hosting-Open-and-Save-PowerPoint.png)
 
 Step 11: After the Function App is created, click the **Finish** button. 
-![Creating Function App](Azure-Images/Functions-v4/Azure-Instance-Open-and-Save-PowerPoint.png)
+![Creating Function App](Azure-Images/Functions-v1/Azure-Instance-Open-and-Save-PowerPoint.png)
 
 Step 12: Click the **Publish** button.
-![Click Publish Button](Azure-Images/Functions-v4/Before-Publish-Open-and-Save-PowerPoint.png)
+![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Open-and-Save-PowerPoint.png)
 
 Step 13: Publishing has succeeded.
-![Publish succeeded](Azure-Images/Functions-v4/After-Publish-Open-and-Save-PowerPoint.png)
+![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Open-and-Save-PowerPoint.png)
 
 Step 14: Go to the Azure portal and select **Function App**. After the function is running, click **Get Function URL** and copy it. Then, paste the URL into the client sample in the next section (which will request the Azure Function to open and save a PowerPoint Presentation using the template PowerPoint document). The output PowerPoint Presentation is shown below.
 
-![Output PowerPoint Presentation in Azure Functions v4](Workingwith-Core/Open-and-Save-output.png)
+![Output PowerPoint Presentation in Azure Functions v4](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## Steps to post the request to Azure Functions
 

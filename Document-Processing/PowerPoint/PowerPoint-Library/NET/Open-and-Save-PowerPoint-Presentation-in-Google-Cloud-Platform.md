@@ -1,6 +1,6 @@
 --- 
 title: Open and save Presentation in GCP | Syncfusion 
-description: Learn how to open and save Presentation in Google Cloud Platform (GCP) using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies. 
+description: Learn how to open and save PowerPoint presentations in Google Cloud Platform using the .NET PowerPoint library without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -14,7 +14,7 @@ N> If this is your first time working with Google Cloud Platform (GCP), refer to
 
 ## Prerequisites
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with billing enabled.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled.
 * The [Google Cloud SDK (`gcloud` CLI)](https://docs.cloud.google.com/sdk/docs/install-sdk) installed and initialized (`gcloud init`).
 * The **App Engine Admin API** enabled for your project. For steps, see [Enabling APIs](https://docs.cloud.google.com/service-usage/docs/enable-disable).
 * Visual Studio with the **.NET 8 SDK** and the **ASP.NET and web development** workload installed.

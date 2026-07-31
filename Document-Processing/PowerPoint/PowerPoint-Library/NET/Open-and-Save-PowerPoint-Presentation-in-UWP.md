@@ -115,7 +115,7 @@ pptxDoc.Close();
 
 By executing the program, you will get the **PowerPoint presentation** as follows.
 
-![UWP output PowerPoint presentation](Workingwith-UWP/Open-and-Save-output-image.png)
+![UWP output PowerPoint presentation](Workingwith-Core/Open-and-Save-output-image.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/UWP).
 

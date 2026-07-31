@@ -1,6 +1,6 @@
 ---
-title: Open and save Presentation in Azure Functions Flex Consumption | Syncfusion
-description: Open and save a PowerPoint Presentation in Azure Functions Flex Consumption using the .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+title: Open and Save Presentations in Azure Flex Functions | Syncfusion
+description: Open and save Presentation in Azure Functions Flex Consumption using the .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
 documentation: UG
