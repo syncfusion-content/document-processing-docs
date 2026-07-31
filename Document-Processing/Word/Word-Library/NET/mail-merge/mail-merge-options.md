@@ -544,7 +544,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Restart numbering in lists
 
-You can restart the list numbering for each record while performing mail merge for a group in Word document by setting the [ImportOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html) to [ListRestartNumbering](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html).
+You can restart the list numbering for each record while performing mail merge for a group in Word document (https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html).
 
 The following code example shows how to restart the list numbering in a Word document while performing mail merge.
 
@@ -562,7 +562,7 @@ employeeList.Add(new Employee("101", "Nancy Davolio", "Seattle, WA, USA"));
 employeeList.Add(new Employee("102", "Andrew Fuller", "Tacoma, WA, USA"));
 employeeList.Add(new Employee("103", "Janet Leverling", "Kirkland, WA, USA"));
 //Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
-MailMergeDataTable dataTable = new MailMergeDataTable("Employee", employeeList);
+MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
 //Performs mail merge
 document.MailMerge.ExecuteGroup(dataTable);
 //Saves the Word document to MemoryStream
@@ -583,7 +583,7 @@ employeeList.Add(new Employee("101", "Nancy Davolio", "Seattle, WA, USA"));
 employeeList.Add(new Employee("102", "Andrew Fuller", "Tacoma, WA, USA"));
 employeeList.Add(new Employee("103", "Janet Leverling", "Kirkland, WA, USA"));
 //Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
-MailMergeDataTable dataTable = new MailMergeDataTable("Employee", employeeList);
+MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
 //Performs mail merge
 document.MailMerge.ExecuteGroup(dataTable);
 //Saves the Word document
@@ -603,7 +603,7 @@ employeeList.Add(New Employee("101", "Nancy Davolio", "Seattle, WA, USA"))
 employeeList.Add(New Employee("102", "Andrew Fuller", "Tacoma, WA, USA"))
 employeeList.Add(New Employee("103", "Janet Leverling", "Kirkland, WA, USA"))
 'Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
-Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Employee", employeeList)
+Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Employees", employeeList)
 'Performs mail merge
 document.MailMerge.ExecuteGroup(dataTable)
 'Saves the Word document

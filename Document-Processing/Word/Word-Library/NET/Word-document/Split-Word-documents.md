@@ -449,11 +449,10 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-bookmark).
 
-## Split by Placeholder Text
+## Split by placeholder text
 
-The following code example illustrates how to split the Word document using placeholder text. The snippet finds every placeholder of the form `<<…>>`, and inserts `BookmarkStart`/`BookmarkEnd` markers around each *pair* of placeholders (the start placeholder of a pair becomes the bookmark start; the next placeholder becomes the bookmark end). After all pairs are marked, each bookmark is extracted into a standalone document. The algorithm assumes the placeholders appear in start/end pairs; an odd number of placeholders will leave the last one unpaired and should be validated before processing.
+The following code example illustrates how to split the Word document using the placeholder text.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 N> The regular expression `"<<(.*)>>"` is greedy and will match from the first `<<` to the last `>>` in a single line/span. If your placeholders appear on the same line, use a non-greedy pattern such as `"<<(.*?)>>"` to limit each match to a single placeholder.
 
@@ -659,8 +658,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * See how to split a Word document by heading using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyheading#/tailwind).
 * See how to split a Word document by bookmark using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbybookmark#/tailwind).
 * See how to split a Word document by placeholder text using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).
-
-## See Also
-
-* [How to split Word document by bookmarks in C#, VB.NET](https://support.syncfusion.com/kb/article/6723/how-to-split-word-document-by-bookmarks-in-c-vb-net)
-* [How to split Word document by sections in C#, VB.NET](https://support.syncfusion.com/kb/article/6456/how-to-split-word-document-by-sections-in-c-vb-net)

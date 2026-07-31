@@ -39,7 +39,6 @@ document.Close()
 
 You can specify the printer settings and page settings through the [PrintDocument](https://learn.microsoft.com/dotnet/api/system.drawing.printing.printdocument) class. The [PrintDocument.PrintPage](https://learn.microsoft.com/dotnet/api/system.drawing.printing.printdocument.printpage) event should be handled to layout the document for printing. The following code example demonstrates how to print the Word document pages that have been rendered as an image, using the `images` array produced in the previous snippet.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 N> `startPageIndex` must be declared as a class-level integer field (initialize it to `0`). The snippet updates it based on the page range chosen in the print dialog.
 

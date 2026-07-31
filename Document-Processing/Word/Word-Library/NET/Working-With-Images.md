@@ -12,8 +12,6 @@ DocIO provides support for both inline and absolute positioned images.
 * Inline images: The position of the image is constrained to the lines of text on the page.
 * Absolute positioned images: The images can be positioned anywhere irrespective of the lines of text.
 
-N> To run the code samples in this topic, install the `Syncfusion.DocIO.Net.Core` (cross-platform) or `Syncfusion.DocIO.Wpf`/`Syncfusion.DocIO.WinForms` (Windows-specific) NuGet package, register your Syncfusion license, and add `using`/`Imports` directives for the `Syncfusion.DocIO` and `Syncfusion.DocIO.DLS` namespaces.
-
 The following code example explains how to add image to the paragraph.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
@@ -631,8 +629,6 @@ To add an SVG image to a paragraph in a Word document using Syncfusion<sup>&reg;
 
 N> To preserve the SVG image in the Word document, pass both the SVG image data and a fallback raster image (e.g., PNG) as byte arrays to DocIO. The fallback image is used by viewers that do not support SVG.
 
-N> SVG image support is available from Syncfusion.DocIO packages version 20.1.0.x and later.
-
 The following code example shows how to add an SVG image in a Word document.
 
 {% tabs %}
@@ -723,6 +719,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
 * [How to Convert Excel Worksheets to Images in .NET Core Word document?](https://support.syncfusion.com/kb/article/20162/how-to-convert-excel-worksheets-to-images-in-net-core-word-document)
 * [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
+* [How to extract all images from ASP.NET Core Word Document?](https://support.syncfusion.com/kb/article/19583/how-to-extract-all-images-from-aspnet-core-word-document)
 
 ## Frequently Asked Questions
 

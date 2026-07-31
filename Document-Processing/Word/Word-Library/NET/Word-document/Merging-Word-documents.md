@@ -236,7 +236,6 @@ destinationDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Maintain-Imported-List-Style-Information).
 
-N> For production use, register a Syncfusion license before merging Word documents. Refer to the [licensing registration guide](https://help.syncfusion.com/document-processing/word/licensing/how-to-register-in-an-application) for details.
 
 ## See Also
 

@@ -55,11 +55,11 @@ In this template, Employees is the owner group and it has two child groups Custo
 
 The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [ExecuteNestedGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteNestedGroup_System_Data_Common_DbConnection_System_Collections_ArrayList_) method to perform mail merge for nested groups or regions in the Word document.
 
-The following code example shows how to perform a nested mail merge.
+You need to define commands with the table name and expression for linking the multiple data tables **(explicit relation data)** during nested Mail merge process. You can use the “%TableName.ColumnName%” expression for getting the current value of specified column or field from the table.
 
-N> 
-> `OleDbConnection` is supported only on Windows. It is not available on Linux or macOS, including in ASP.NET Core on non-Windows platforms. Use `Microsoft.ACE.OLEDB.12.0` instead of the deprecated `Microsoft.Jet.OLEDB.4.0` provider on modern Windows.
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+The following code example shows how to perform a nested Mail merge.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 

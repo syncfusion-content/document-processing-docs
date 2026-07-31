@@ -113,7 +113,7 @@ You need to add a prefix (“Image:”) to the merge field name for merging an i
 
 **For example:** The merge field name should be like "Image:Photo" (<<Image:MergeFieldName>>)
 
-You can **create Word document template programmatically** by adding merge fields to the Word document using Essential<sup>&reg;</sup> DocIO. DocIO supports the following template formats: `.docx`, `.doc`, `.rtf`, and `.dotx`.
+You can **create Word document template programmatically** by adding merge fields to the Word document using Essential<sup>&reg;</sup> DocIO.
 
 The following code example shows how to create a merge field in the Word document.
 
