@@ -1,6 +1,6 @@
 ---
-title: Syncfusion Excel to JSON File Conversion | Syncfusion
-description: This page explains how to export Excel workbook, worksheet, or custom range data into JSON format efficiently.
+title: Syncfusion Excel to JSON Conversion
+description: Lists how to convert an Excel workbook, worksheet, or range to JSON using the Syncfusion .NET Excel (XlsIO) library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -104,68 +104,82 @@ The following code illustrates how to convert an Excel workbook to the JSON file
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Workbook%20to%20JSON%20without%20Schema/.NET/Workbook%20to%20JSON%20without%20Schema/Workbook%20to%20JSON%20without%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
-	IWorksheet worksheet = workbook.Worksheets[0];
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
 
-	#region save as JSON
-	//Saves the workbook to JSON file without schema
-	workbook.SaveAsJson(Path.GetFullPath(@"Output/Workbook-To-JSON-without-schema.json"),false);
-	#endregion
+    // Save the workbook to JSON, as schema by default
+    workbook.SaveAsJson(Path.GetFullPath("Output/Workbook-To-JSON-with-schema.json"));
 
-	#region Open JSON 
-	//Open default JSON
-	#endregion
+    // Save the workbook to JSON without schema
+    workbook.SaveAsJson(Path.GetFullPath("Output/Workbook-To-JSON-without-schema.json"), false);
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
 
-  //Saves the workbook to a JSON file without schema
+  // Save the workbook to a JSON file, as schema by default
+  workbook.SaveAsJson("Excel-Workbook-To-JSON-with-schema.json");
+
+  // Save the workbook to a JSON file without schema
   workbook.SaveAsJson("Excel-Workbook-To-JSON-without-schema.json", false);
 
-  //Saves the workbook to a JSON filestream without schema
-  FileStream stream = new FileStream("Excel-Workbook-To-JSON-filestream-without-schema.json", FileMode.Create);
-  workbook.SaveAsJson(stream, false);
+  // Save the workbook to a JSON filestream, as schema by default
+  using (FileStream stream = new FileStream("Excel-Workbook-To-JSON-filestream-with-schema.json", FileMode.Create))
+  {
+    workbook.SaveAsJson(stream);
+  }
+
+  // Save the workbook to a JSON filestream without schema
+  using (FileStream stream = new FileStream("Excel-Workbook-To-JSON-filestream-without-schema.json", FileMode.Create))
+  {
+    workbook.SaveAsJson(stream, false);
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
 
-  'Saves the workbook to a JSON file without schema
-  workbook.SaveAsJson("Excel-Workbook-To-JSON-without-schema.json", false)
+  ' Save the workbook to a JSON file, as schema by default
+  workbook.SaveAsJson("Excel-Workbook-To-JSON-with-schema.json")
 
-  'Saves the workbook to a JSON filestream without schema
-  Dim stream As FileStream = new FileStream("Excel-Workbook-To-JSON-filestream-without-schema.json", FileMode.Create)
-  workbook.SaveAsJson(stream, false)
+  ' Save the workbook to a JSON file without schema
+  workbook.SaveAsJson("Excel-Workbook-To-JSON-without-schema.json", False)
+
+  ' Save the workbook to a JSON filestream, as schema by default
+  Using stream As New FileStream("Excel-Workbook-To-JSON-filestream-with-schema.json", FileMode.Create)
+    workbook.SaveAsJson(stream)
+  End Using
+
+  ' Save the workbook to a JSON filestream without schema
+  Using stream1 As New FileStream("Excel-Workbook-To-JSON-filestream-without-schema.json", FileMode.Create)
+    workbook.SaveAsJson(stream1, False)
+  End Using
 End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to JSON without schema in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Convert%20Excel%20to%20JSON/Workbook%20to%20JSON%20without%20Schema/.NET/Workbook%20to%20JSON%20without%20Schema). 
+## Worksheet to JSON
 
-## Worksheet to JSON as schema
-
-The following code illustrates how to convert an Excel worksheet to the JSON file or JSON file stream with schema.
+The following code converts the active worksheet to a JSON file or stream.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Convert%20Excel%20to%20JSON/Worksheet%20to%20JSON%20with%20Schema/.NET/Worksheet%20to%20JSON%20with%20Schema/Worksheet%20to%20JSON%20with%20Schema/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
-	IApplication application = excelEngine.Excel;
-	application.DefaultVersion = ExcelVersion.Xlsx;
-	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
-	IWorksheet worksheet = workbook.Worksheets[0];
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"), ExcelOpenType.Automatic);
+    IWorksheet worksheet = workbook.Worksheets[0];
 
 	#region save as JSON
 	//Saves the workbook to JSON, as schema by default
@@ -184,13 +198,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
-
-  //Active worksheet
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Saves the worksheet to a JSON file, as schema by default
@@ -199,23 +211,25 @@ using(ExcelEngine excelEngine = new ExcelEngine())
   //Saves the worksheet to a JSON file as schema
   workbook.SaveAsJson("Excel-Worksheet-To-JSON-as-schema.json", worksheet, true);
 
-  //Saves the worksheet to a JSON filestream, as schema by default
-  FileStream stream = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema-default.json", FileMode.Create);
-  workbook.SaveAsJson("stream", worksheet);
+  // Save the worksheet to a JSON filestream, as schema by default
+  using (FileStream stream = new FileStream("Excel-Worksheet-To-JSON-filestream-with-schema.json", FileMode.Create))
+  {
+    workbook.SaveAsJson(stream, worksheet);
+  }
 
-  //Saves the worksheet to a JSON filestream as schema
-  FileStream stream1 = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema.json", FileMode.Create);
-  workbook.SaveAsJson(stream1, worksheet, true);
+  // Save the worksheet to a JSON filestream without schema
+  using (FileStream stream = new FileStream("Excel-Worksheet-To-JSON-filestream-without-schema.json", FileMode.Create))
+  {
+    workbook.SaveAsJson(stream, worksheet, false);
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
-
-  'Active worksheet
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
   'Saves the worksheet to a JSON file, as schema by default
@@ -224,13 +238,15 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   'Saves the worksheet to a JSON file as schema
   workbook.SaveAsJson("Excel-Worksheet-To-JSON-as-schema.json", worksheet, true)
 
-  'Saves the worksheet to a JSON filestream as schema by default
-  Dim stream As FileStream = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema-default.json",FileMode.Create)
-  workbook.SaveAsJson(stream, worksheet)
+  ' Save the worksheet to a JSON filestream, as schema by default
+  Using stream As New FileStream("Excel-Worksheet-To-JSON-filestream-with-schema.json", FileMode.Create)
+    workbook.SaveAsJson(stream, worksheet)
+  End Using
 
-  'Saves the worksheet to a JSON filestream as schema
-  Dim stream1 As FileStream = new FileStream("Excel-Worksheet-To-JSON-filestream-as-schema.json",FileMode.Create)
-  workbook.SaveAsJson(stream1, worksheet, true)
+  ' Save the worksheet to a JSON filestream without schema
+  Using stream1 As New FileStream("Excel-Worksheet-To-JSON-filestream-without-schema.json", FileMode.Create)
+    workbook.SaveAsJson(stream1, worksheet, False)
+  End Using
 End Using
 {% endhighlight %}
 {% endtabs %}
@@ -363,7 +379,7 @@ using(ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
