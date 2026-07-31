@@ -9,15 +9,11 @@ keywords: Working with Notes
 
 # Working with PowerPoint Notes
 
-Notes are the contents associated with each slide and are visible only to the presenter when monitors are shared in “Presenter View”. They show hints for the speaker, so they are often called “Speaker Notes”. The presenter can optionally add key points to notes. You can add and modify the notes in your slide using Syncfusion<sup>&reg;</sup> Presentation library.
-
-## Prerequisites
-
-Before you begin, make sure the following NuGet package is installed in your application. For more information on the assemblies and NuGet packages required for your target platform, refer to [Assemblies Required](Assemblies-Required) and [NuGet Packages Required](NuGet-Packages-Required).
+Notes are the contents associated with each slide and are visible only to the presenter when monitors are shared in “Presenter View”. It shows hint for the speaker, so it is often called as “Speaker Notes”. The presenter can optionally add key points to notes. You can add and modify the notes in your slide using Essential<sup>&reg;</sup> Presentation library.
 
 ## Adding Notes to a Slide
 
-The following code example demonstrates how to add notes to a PowerPoint slide.
+The below code example demonstrates how to create a Notes in a PowerPoint Slide.
 
 {% tabs %}
 
@@ -71,11 +67,9 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Notes/Add-notes-to-PowerPoint-slide).
 
-N> `AddNotesSlide()` returns the newly created `INotesSlide` for the specified slide. If a notes slide already exists for that slide, the existing notes slide is returned. The notes slide can also be accessed through the `slide.NotesSlide` property.
+## Adding Text into the Notes 
 
-## Adding Text into the Notes
-
-The following code example demonstrates how to add formatted text to notes.
+The following code example demonstrates how to add a text in a Notes.
 
 {% tabs %}
 
@@ -156,11 +150,9 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Notes/Add-text-in-notes).
 
-N> In addition to `Bold`, `FontName`, and `FontSize`, the `ITextPart.Font` property exposes formatting options such as `Italic`, `Underline`, `FontColor`, `HighlightColor`, `StrikeThrough`, `BaselineAlignment`, and `FontScript`. For the full list of members, refer to the [ITextPart API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ITextPart.html).
+## Adding a numbered list to Notes
 
-## Adding a Numbered List to Notes
-
-The following code example demonstrates how to create a simple numbered list as notes.
+The following code example demonstrates how to create simple numbered list as Notes.
 
 {% tabs %}
 
@@ -372,8 +364,3 @@ pptxDoc.Close()
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Notes/Remove-notes-from-slide).
-
-## See Also
-
-- [Working with Comments](Comments)
-- [Working with Paragraphs](./Working-with-paragraphs)
