@@ -24,7 +24,7 @@ When validation is enabled and a user attempts to print, download, or submit the
 
 ## Enable PDF Form Field Validation
 
-To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#validateformfields) property to true and wire the validateFormFields event.
+To enable validation, set the [enableFormFieldsValidation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property to true and wire the validateFormFields event.
 
 ```ts
 // 1) Default for new Textbox fields
