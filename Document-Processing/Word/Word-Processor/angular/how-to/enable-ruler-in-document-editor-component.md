@@ -1,7 +1,7 @@
 ---
 title: "How to enable ruler in Angular DOCX Editor | Syncfusion"
 component: "DocumentEditor"
-description: "Learn how to enable ruler in Angular Document Editor component."
+description: "Learn here all about enabling the ruler in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more."
 platform: document-processing
 control: Enable Ruler
 documentation: ug

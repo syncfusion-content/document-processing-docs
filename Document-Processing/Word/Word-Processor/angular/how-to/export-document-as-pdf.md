@@ -18,7 +18,7 @@ To quickly get started with exporting to PDF in the [Angular Document Editor](ht
 
 ## Export the document as PDF on the client side
 
-Use [`PDF export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
+Use [`PDF export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using [`exportAsImage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
 
 N> 1. The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
 N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
@@ -123,7 +123,7 @@ With the help of [DocIO](https://help.syncfusion.com/file-formats/docio/word-to-
 
 The following way illustrates how to convert the document as PDF:
 
-* Using [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to the server side.
+* Using [`serialize`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#serialize) API, convert the document as Sfdt and send it to the server side.
 
 The following example code illustrates how to convert the document to sfdt and pass it to the server side.
 
