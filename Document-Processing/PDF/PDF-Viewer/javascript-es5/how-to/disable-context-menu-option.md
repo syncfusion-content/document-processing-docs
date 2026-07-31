@@ -14,7 +14,7 @@ Set [ContextMenuOption](https://ej2.syncfusion.com/documentation/api/pdfviewer/#
 
 Example: Disable context menu
 
-```
+```html
 
 <button id='disable'>Disable ContextMenuOption</button>
 

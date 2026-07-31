@@ -18,11 +18,11 @@ The following steps are used to print the PDF document programmatically.
 
 **Step 2:** Add the following code snippet to perform the print operation.
 
-```
+```html
  <button id="print">Print</button>
 ```
 
-```ts
+```js
 document.getElementById('print').addEventListener('click', ()=> {
    //Print the loaded document.
    viewer.printModule.print();

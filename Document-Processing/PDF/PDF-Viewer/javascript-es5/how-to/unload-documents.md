@@ -18,11 +18,11 @@ The following steps are used to unload the PDF document programmatically.
 
 **Step 2:** Add the following code snippet to perform the unload operation.
 
-```
+```html
   <button id="unload">Unload Document</button>
 ```
 
-```ts
+```js
 document.getElementById('unload').addEventListener('click', () => {
    // Unload the document.
   viewer.unload();

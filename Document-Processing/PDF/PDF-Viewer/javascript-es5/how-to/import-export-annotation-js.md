@@ -18,7 +18,7 @@ Use the following steps to import and export annotations as objects, JSON, or XF
 
 **Step 2:** Use the following code to perform import and export operations.
 
-```
+```html
 <button id="ExportXfdf">Export XFDF</button>
 <button id="ExportJSON">Export JSON</button>
 <button id="export">Export as Object</button>

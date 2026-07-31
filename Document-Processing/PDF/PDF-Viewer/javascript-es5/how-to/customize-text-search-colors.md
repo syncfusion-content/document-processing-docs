@@ -33,7 +33,7 @@ The above sets the active result highlight to blue.
 
 Example: buttons to control search flow
 
-```
+```html
 
 <button id="search">SearchText</button>
 <button id="searchNext">SearchNext</button>

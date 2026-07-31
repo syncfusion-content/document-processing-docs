@@ -18,7 +18,7 @@ Follow these steps to open the thumbnail pane from application code.
 
 **Step 2:** Use the code snippet below to open the thumbnail pane.
 
-```
+```html
 <button id="openThumbnail">Open Thumbnail Pane</button>
 ```
 

@@ -18,13 +18,13 @@ Follow these steps to bring a form field into focus during document load and on 
 
 **Step 2:** Add the following markup and code to focus the desired form field when the document loads or when a button is clicked.
 
-```
+```html
   <button id="focusFormField">FocusFormField</button>
 ```
 
-```ts
+```js
 //Event triggers while clicking the FocusFormField button.
-document.getElementById('click').addEventListener('click', function () {
+document.getElementById('focusFormField').addEventListener('click', function () {
     var formField = viewer.retrieveFormFields();
     //API to bring the form fields in focus.
     viewer.focusFormField(formField[1]);

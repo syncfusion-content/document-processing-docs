@@ -51,7 +51,7 @@ Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 
 **Step 7:** Add the following code to the `PdfViewerController.cs` controller.
 
-```ts
+```cs
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;

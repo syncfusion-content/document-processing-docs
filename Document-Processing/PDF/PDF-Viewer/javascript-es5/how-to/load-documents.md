@@ -14,10 +14,10 @@ The PDF Viewer supports loading or switching PDF documents at runtime after the 
 
 The following steps show common approaches for loading documents dynamically.
 
-**Step 1:** Follow the getting started guide to create a basic JavaScript PDF Viewer sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript/getting-started
+**Step 1:** Follow the getting started guide to create a basic JavaScript PDF Viewer sample: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started
 
 **Step 2:** Use the following code snippet to load the document from a Base64 string.
-```
+```html
 <button id='load1'>LoadDocumentFromBase64</button>
 ```
 
@@ -26,12 +26,12 @@ The following steps show common approaches for loading documents dynamically.
 document.getElementById('load1').addEventListener('click', () => {
   viewer.load(
     'data:application/pdf;base64,'+ AddBase64String, null);
-}
+});
 ```
 
 **Step 3:** Use the following code snippet to load a PDF document from a URL (document name)
 
-```
+```html
 <button id='load2'>LoadDocument</button>
 ```
 

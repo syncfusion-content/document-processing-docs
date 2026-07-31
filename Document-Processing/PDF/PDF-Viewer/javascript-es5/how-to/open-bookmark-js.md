@@ -40,5 +40,6 @@ document.getElementById('closeBookmark').addEventListener('click', () => {
   // close Bookmark pane
   viewer.bookmarkViewModule.closeBookmarkPane();
 });
+```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to/Open%20and%20Close%20bookmark%20pane)

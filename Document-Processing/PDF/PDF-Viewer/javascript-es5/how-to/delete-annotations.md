@@ -18,7 +18,7 @@ Use the `deleteAnnotationById()` method to remove a specific annotation from a P
 
 **Step 2:** Add a control to trigger deletion and use the following example to call `deleteAnnotationById()`.
 
-```
+```html
  <button id="deleteAnnotationbyId">Delete Annotation By Id</button>
 ```
 

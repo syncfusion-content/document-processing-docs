@@ -37,4 +37,4 @@ window.onbeforeunload = function (e) {
 };
 ```
 
-View the sample on GitHub/StackBlitz: [Download PDF before closing or refreshing window sample](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Download/Download%20the%20pdf%20document%20before%20closing%20window%20or%20refresh)
+View the sample on GitHub: [Download PDF before closing or refreshing window sample](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Download/Download%20the%20pdf%20document%20before%20closing%20window%20or%20refresh)

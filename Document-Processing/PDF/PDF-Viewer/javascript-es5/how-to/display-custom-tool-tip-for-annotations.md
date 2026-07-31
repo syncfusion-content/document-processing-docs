@@ -39,4 +39,4 @@ viewer.annotationMouseLeave = function(args) {
 
 ```
 
-Sample: [Display a custom tooltip for annotations sample on GitHub/StackBlitz](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)
+Sample: [Display a custom tooltip for annotations sample on StackBlitz](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)
