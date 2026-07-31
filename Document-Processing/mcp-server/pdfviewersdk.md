@@ -34,6 +34,7 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for WPF PDF Viewer](../PDF/PDF-Viewer/wpf/pdfviewer-mcp)
 - [MCP Server for WinForms PDF Viewer](../PDF/PDF-Viewer/winforms/pdfviewer-mcp)
 - [MCP Server for .NET MAUI PDF Viewer](../PDF/PDF-Viewer/maui/mcp)
+- [MCP Server for Blazor Smart PDF Viewer](../PDF/Smart-PDF-Viewer/blazor/mcp)
 
 ## See also
 
