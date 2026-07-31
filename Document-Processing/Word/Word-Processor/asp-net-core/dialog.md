@@ -8,15 +8,15 @@ documentation: ug
 ---
 
 
-# Dialog in ASP.NET Core in DOCX Editor Component
+# Dialog in ASP.NET Core DOCX Editor Component
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides dialog support to major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
-## Font Dialog
+## Font dialog
 
-Font dialog allows to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
+The font dialog lets you modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
-N>To enable font dialog for a DOCX Editor instance, set ‘enableFontDialog’ to true.
+N> To enable the font dialog for a DOCX Editor instance, set `enableFontDialog` to true. The other dialogs covered on this page are enabled by default and do not require a separate opt-in property.
 
 
 {% tabs %}
@@ -61,7 +61,7 @@ This dialog allows creating and inserting a table at cursor position by specifyi
 
 ## Bookmark dialog
 
-This dialog allows to perform the following operations:
+This dialog lets you perform the following operations:
 
 * View all bookmarks.
 * Navigate to a bookmark.
@@ -109,7 +109,7 @@ This dialog allows creating and inserting table of contents at cursor position. 
 {% endtabs %}
 
 
-## Styles Dialog
+## Styles dialog
 
 This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create new style with the help of ‘Style dialog’.
 
@@ -171,7 +171,7 @@ This dialog allows customizing the border style, border width, and background co
 
 ## Table options dialog
 
-This dialog allows customizing the default cell margins and spacing between each cells of the selected table.
+This dialog allows customizing the default cell margins and spacing between each cell of the selected table.
 
 
 {% tabs %}
@@ -200,7 +200,7 @@ This dialog allows customizing the table, row, and cell properties of the select
 
 ## Page setup dialog
 
-This dialog allows customizing margins, size, and layout options for pages of the section.
+This dialog allows customizing margins, size, and layout options for the pages in a section.
 
 
 {% tabs %}
