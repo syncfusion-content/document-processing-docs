@@ -6,9 +6,9 @@ control: Markdown
 documentation: UG
 ---
 
-# Performance Metrics in Markdown Library
+# .NET Markdown library performance benchmarks
 
-Syncfusion® Markdown Document Processing library is a .NET class library used to create, read, and edit Markdown documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how Markdown handles large-scale document processing in real-world scenarios.
+The [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) provides high-performance APIs to create, read, edit, and convert Markdown documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how Markdown library handles large-scale document processing in real-world scenarios.
 
 ## Environment
 
@@ -20,7 +20,11 @@ The following system configurations were used for benchmarking:
 * **.NET Version:** .NET 8.0  
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Markdown v34.1.29](https://www.nuget.org/packages/Syncfusion.Markdown/34.1.29) 
 
-## Open and save Markdown 
+## Benchmark Results
+
+The table below shows the performance results of various Markdown document operations. Each operation was executed using the input document described in the **Input Details** column, and the reported time is the elapsed time for a single run in the environment described above.
+
+### Open and save Markdown
 
 <table>
 <tr>
@@ -52,7 +56,7 @@ The following system configurations were used for benchmarking:
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Performance-metrices/Open-and-Save-MD-document/).
 
-## Markdown Library Operations
+### Markdown Library Operations
 
 <table>
 <tr>

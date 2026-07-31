@@ -6,23 +6,23 @@ control: Markdown
 documentation: UG
 ---
 
-# Markdown conversion performance benchmarks
+# Conversion performance benchmarks using .NET Markdown Library
 
-The Syncfusion<sup>&reg;</sup> .NET Markdown Library is a high-performance API for creating, editing, and converting Markdown documents programmatically without external dependencies. It efficiently handles Markdown processing workflows and supports conversion to PDF, Word, HTML, Excel, PowerPoint, and image formats while preserving document structure and formatting.
+The Syncfusion<sup>&reg;</sup> [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) enables high-performance Markdown document processing and conversions. This performance benchmark report highlights the speed and efficiency of Markdown document operations, demonstrating how the library performs across various processing and conversion scenarios using representative workloads.
 
 ## Environment
 
 The following system configurations were used for benchmarking:
 
-* **Operating System:** Windows 11  
+* **Operating System:** Windows 11
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** v34.1.29
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.Markdown v34.1.29](https://www.nuget.org/packages/Syncfusion.Markdown/34.1.29) 
 
 ## Benchmark Results
 
-The table below shows the performance results of various Markdown document operations, evaluated using predefined input conditions in the previously described environment. 
+The table below presents the performance results of various Markdown document operations, evaluated using predefined input conditions in the previously described environment. Each row includes the operation performed, the input details, the average execution time, and a link to the corresponding GitHub example.
 
 <table>
 <tr>
@@ -89,3 +89,12 @@ The table below shows the performance results of various Markdown document opera
 
 N> Execution times are based on the sample documents and may vary with different content or environments.
 
+> **Note:** The conversion operations listed in this benchmark use different Syncfusion® document processing libraries based on the source and target formats.
+>
+> - **Word to Markdown**, **Markdown to Word**, and **Markdown to PDF** conversions use the **Syncfusion® .NET Word Library (DocIO)**: [Syncfusion.DocIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/34.1.29)
+>
+> - **Markdown to PDF** conversion uses the **Syncfusion® DocIORenderer** package to render Markdown documents as PDF: [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
+>
+> - **Excel to Markdown** and **Markdown to Excel** conversions use the **Syncfusion® .NET Excel Library (XlsIO)**: [Syncfusion.XlsIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/34.1.29)
+>
+> - **PowerPoint to Markdown** and **Markdown to PowerPoint** conversions use the **Syncfusion® .NET PowerPoint Library**: [Syncfusion.Presentation.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/34.1.29)
