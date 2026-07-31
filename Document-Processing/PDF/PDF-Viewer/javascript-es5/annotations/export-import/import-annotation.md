@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Import annotations in JavaScript PDF Viewer
+# Import annotations in PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 

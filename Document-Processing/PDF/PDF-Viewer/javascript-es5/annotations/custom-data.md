@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Custom Data in annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to add custom Data in annotations in Syncfusion JavaScript PDF Viewer
+description: Learn how to add and use custom key-value data in annotations in Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations
+# Custom data in PDF annotations
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 
