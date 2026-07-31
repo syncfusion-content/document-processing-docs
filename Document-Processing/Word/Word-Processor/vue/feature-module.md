@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Feature module in React DOCX Editor component | Syncfusion
-description: Learn here all about Feature module in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature module in Vue DOCX Editor component | Syncfusion
+description: Learn here all about Feature module in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Feature module 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in React Document Editor component
+# Feature module in Vue DOCX Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) features are segregated into individual feature modules to enable selective referencing. By default, the DOCX Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of DOCX Editor that can be included as required:
 * **Print** - Prints the document.
-* **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
+* **SfdtExport** - Exports the document as Vue Document Text (.SFDT) file.
 * **Selection** - Selects a portion of the document and copies it to the clipboard.
 * **Search** - Searches specific text and navigates between the results.
 * **WordExport** - Exports the document as Word Document (.DOCX) file.
@@ -21,35 +21,36 @@ domainurl: ##DomainURL##
 * **EditorHistory** - Maintains the history of editing operations so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
 
->In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a Document Editor instance.
-Refer to the following table.
+In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a DOCX Editor instance. Refer to the following table.
 
-| Module | Dependent modules to be injected for extending the functionality of Document Editor in your application | Property to enable the functionality for a Document Editor instance |
+| Module | Dependent modules to be injected for extending the functionality of DOCX Editor in your application | Property to enable the functionality for a DOCX Editor instance |
 |---|---|---|
-|Print|`DocumentEditor.Inject(Print)`|`<DocumentEditorComponent enablePrint= {true} />`|
-|SfdtExport|`DocumentEditor.Inject(SfdtExport)`|`<DocumentEditorComponent enableSfdtExport= {true} />`|
-|Selection|`DocumentEditor.Inject(Selection)`|`<DocumentEditorComponent enableSelection= {true} />`|
-|Search|`DocumentEditor.Inject(Selection, Search)`|`<DocumentEditorComponent enableSearch= {true} />`|
-|WordExport|`DocumentEditor.Inject(SfdtExport, WordExport)`|`<DocumentEditorComponent enableWordExport= {true} />`|
-|TextExport|`DocumentEditor.Inject(SfdtExport, TextExport)`|`<DocumentEditorComponent enableTextExport= {true} />`|
-|Editor|`DocumentEditor.Inject(Selection, Editor)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} />`|
-|EditorHistory|`DocumentEditor.Inject(Selection, Editor, EditorHistory)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableEditorHistory= {true} />`|
-|OptionsPane(Find)|`DocumentEditor.Inject(Selection, Search, OptionsPane)`|`<DocumentEditorComponent enableSearch= {true} enableOptionsPane= {true} />`|
-|OptionsPane(Find and Replace)|`DocumentEditor.Inject(Selection, Search, Editor, OptionsPane)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableSearch= {true} enableOptionsPane= {true} />`|
-|ContextMenu|`DocumentEditor.Inject(Selection, ContextMenu)`|`<DocumentEditorComponent enableSelection= {true} enableContextMenu= {true} />`|
-|ImageResizer|`DocumentEditor.Inject(Selection, Editor, ImageResizer)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableImageResizer= {true} />`|
-|HyperlinkDialog|`DocumentEditor.Inject(Selection, Editor, HyperlinkDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableHyperlinkDialog= {true} />`|
-|TableDialog|`DocumentEditor.Inject(Selection, Editor, TableDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableTableDialog= {true} />`|
-|FontDialog|`DocumentEditor.Inject(Selection, Editor, FontDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableFontDialog= {true} />`|
-|ParagraphDialog|`DocumentEditor.Inject(Selection, Editor, ParagraphDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableParagraphDialog= {true} />`|
-|BookmarkDialog|`DocumentEditor.Inject(Selection, Editor, BookmarkDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableBookmarkDialog= {true} />`|
-|PageSetupDialog|`DocumentEditor.Inject(Selection, Editor, PageSetupDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enablePageSetupDialog= {true} />`|
-|TableOfContentsDialog|`DocumentEditor.Inject(Selection, Editor, TableOfContentsDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableTableOfContentsDialog= {true} />`|
-|ListDialog|`DocumentEditor.Inject(Selection, Editor, ListDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableListDialog= {true} />`|
-|TablePropertiesDialog|`DocumentEditor.Inject(Selection, Editor, TablePropertiesDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableTablePropertiesDialog= {true} />`|
-|BordersAndShadingDialog|`DocumentEditor.Inject(Selection, Editor, BordersAndShadingDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableBordersAndShadingDialog= {true} />`|
-|TableOptionsDialog|`DocumentEditor.Inject(Selection, Editor, TableOptionsDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableTableOptionsDialog= {true} />`|
-|StylesDialog|`DocumentEditor.Inject(Selection, Editor, StylesDialog,StyleDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableStyleDialog= {true} enableStylesDialog= {true} />`|
-|StyleDialog|`DocumentEditor.Inject(Selection, Editor, StyleDialog)`|`<DocumentEditorComponent isReadOnly= {false} enableEditor= {true} enableStyleDialog= {true} />`|
+|Print|`Print`|`<ejs-documenteditor :enablePrint='true'></ejs-documenteditor>`|
+|SfdtExport|`SfdtExport`|`<ejs-documenteditor :enableSfdtExport='true'></ejs-documenteditor>`|
+|Selection|`Selection`|`<ejs-documenteditor :enableSelection='true'></ejs-documenteditor>`|
+|Search|`Selection, Search`|`<ejs-documenteditor :enableSearch='true'></ejs-documenteditor>`|
+|WordExport|`SfdtExport, WordExport`|`<ejs-documenteditor :enableWordExport='true'></ejs-documenteditor>`|
+|TextExport|`SfdtExport, TextExport`|`<ejs-documenteditor :enableTextExport='true'></ejs-documenteditor>`|
+|Editor|`Selection, Editor`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true'></ejs-documenteditor>`|
+|EditorHistory|`Selection, Editor, EditorHistory`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableEditorHistory='true'></ejs-documenteditor>`|
+|OptionsPane(Find)|`Selection, Search, OptionsPane`|`<ejs-documenteditor :enableSearch='true' :enableOptionsPane='true'></ejs-documenteditor>`|
+|OptionsPane(Find and Replace)|`Selection, Search, Editor, OptionsPane`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableSearch='true' :enableOptionsPane='true'></ejs-documenteditor>`|
+|ContextMenu|`Selection, ContextMenu`|`<ejs-documenteditor :enableSelection='true' :enableContextMenu='true'></ejs-documenteditor>`|
+|ImageResizer|`Selection, Editor, ImageResizer`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableImageResizer='true'></ejs-documenteditor>`|
+|HyperlinkDialog|`Selection, Editor, HyperlinkDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableHyperlinkDialog='true'></ejs-documenteditor>`|
+|TableDialog|`Selection, Editor, TableDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableTableDialog='true'></ejs-documenteditor>`|
+|FontDialog|`Selection, Editor, FontDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableFontDialog='true'></ejs-documenteditor>`|
+|ParagraphDialog|`Selection, Editor, ParagraphDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableParagraphDialog='true'></ejs-documenteditor>`|
+|BookmarkDialog|`Selection, Editor, BookmarkDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableBookmarkDialog='true'></ejs-documenteditor>`|
+|PageSetupDialog|`Selection, Editor, PageSetupDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enablePageSetupDialog='true'></ejs-documenteditor>`|
+|TableOfContentsDialog|`Selection, Editor, TableOfContentsDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableTableOfContentsDialog='true'></ejs-documenteditor>`|
+|ListDialog|`Selection, Editor, ListDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableListDialog='true'></ejs-documenteditor>`|
+|TablePropertiesDialog|`Selection, Editor, TablePropertiesDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableTablePropertiesDialog='true'></ejs-documenteditor>`|
+|CellOptionsDialog|`Selection, Editor, CellOptionsDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableCellOptionsDialog='true'></ejs-documenteditor>`|
+|BordersAndShadingDialog|`Selection, Editor, BordersAndShadingDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableBordersAndShadingDialog='true'></ejs-documenteditor>`|
+|TableOptionsDialog|`Selection, Editor, TableOptionsDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableTableOptionsDialog='true'></ejs-documenteditor>`|
+|StylesDialog|`Selection, Editor, StylesDialog,StyleDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableStyleDialog='true' :enableStylesDialog='true'></ejs-documenteditor>`|
+|StyleDialog|`Selection, Editor, StyleDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableStyleDialog='true'></ejs-documenteditor>`|
+|BulletsAndNumberingDialog|`Selection, Editor, BulletsAndNumberingDialog`|`<ejs-documenteditor :isReadOnly='false' :enableEditor='true' :enableBulletsAndNumberingDialog='true'></ejs-documenteditor>`|
 
-These modules should be injected into the documenteditor using the `Inject` directive.
+These modules should be injected into the `provide` section and use `DocumentEditor` as a key of the object.
