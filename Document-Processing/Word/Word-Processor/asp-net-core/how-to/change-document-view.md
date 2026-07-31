@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Change document view
+# Change document view in ASP.NET Core DOCX Editor Component
 
 ## How to change the document view in DocumentEditor component
 

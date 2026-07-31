@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Auto-Save Document in DOCX Editor Component
+# Auto-Save Document in ASP.NET Core DOCX Editor Component
 
 Learn how to auto-save a document to the server using the Syncfusion DOCX Editor component. You can automatically save the edited content at regular intervals, which helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 

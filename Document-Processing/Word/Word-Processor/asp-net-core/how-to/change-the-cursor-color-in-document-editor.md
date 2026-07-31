@@ -7,7 +7,7 @@ control: Change The Cursor Color
 documentation: ug
 ---
 
-# How to change the cursor color using CSS in DOCX Editor component
+# How to change the cursor color using CSS in ASP.NET Core DOCX Editor component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) default cursor color is black. You can change the color by overriding the CSS property using the class name. The DOCX Editor cursor CSS uses a class named `e-de-blink-cursor`.
 
