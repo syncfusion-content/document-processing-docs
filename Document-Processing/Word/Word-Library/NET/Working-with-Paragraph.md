@@ -426,8 +426,6 @@ A tab stop is a horizontal position that is set for aligning text of the paragra
 
 Each paragraph has its own tab stop collection where the new tab stop can be added and existing tab stop can be removed.
 
-N> The tab position value is specified in points (1 inch = 72 points).
-
 The following code example explains how to add tab stops to the paragraph.
 
 {% tabs %}
@@ -1243,7 +1241,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Sample1.docx", FormatType.Docx);
+WordDocument document = new WordDocument("Sample.docx", FormatType.Docx);
 //Gets the textbody content
 WTextBody textbody = document.Sections[0].Body;
 //Iterates through the paragraphs
@@ -1715,6 +1713,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to fit image within a text box in the Word document](https://support.syncfusion.com/kb/article/10284/how-to-fit-image-within-a-text-box-in-the-word-document)
 * [How to find and modify hyperlink address in Word document?](https://support.syncfusion.com/kb/article/12198/find-and-modify-hyperlink-address-in-word-document)
 * [How to change the character/symbol used for bullet points in Word document?](https://support.syncfusion.com/kb/article/12099/how-to-change-the-character-symbol-used-for-bullet-points-in-word-document)
+* [How to resize list character in a Word document?](https://support.syncfusion.com/kb/article/12327/how-to-resize-list-character-in-a-word-document)
 * [How to resize list character in a Word document?](https://support.syncfusion.com/kb/article/12327/how-to-resize-list-character-in-a-word-document)
 * [How to modify the formatting for the default format of sections, paragraphs, and tables in a Word document?](https://support.syncfusion.com/kb/article/15884/how-to-modify-the-formatting-for-the-default-format-of-sections-paragraphs-and-tables-in-a-word-document?)
 * [How to extract images from tables in a Word document?](https://support.syncfusion.com/kb/article/15812/how-to-extract-images-from-tables-in-a-word-document)

@@ -15,28 +15,6 @@ Hyperlinks have two parts: the address and the display content. The Syncfusion<s
 * Bookmark hyperlink
 * Image hyperlink
 
-## Prerequisites
-
-To use the DocIO library, add a reference to the **Syncfusion.DocIO.Net.Core** (cross-platform) or **Syncfusion.DocIO.WinForms** (Windows-specific) NuGet package from [nuget.org](https://www.nuget.org/). For more information, refer to [NuGet packages required](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required).
-
-**Starting with v16.2.0.x**, you must also install the **Syncfusion.Licensing** package and register a valid license key in your application. For details, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
-
-The following namespaces are required in the samples below.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C#" %}
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET" %}
-Imports Syncfusion.DocIO
-Imports Syncfusion.DocIO.DLS
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Web hyperlink
 
 The following code example shows how to insert a web link.
