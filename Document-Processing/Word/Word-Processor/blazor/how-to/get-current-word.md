@@ -7,7 +7,7 @@ control: Document Editor
 documentation: ug
 ---
 
-# Get word and paragraph in Blazor Document Editor
+# How to select and retrieve the word and paragraph in Blazor Document Editor
 
 The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows you to get the current word or paragraph content as plain text or SFDT (rich text).
 
