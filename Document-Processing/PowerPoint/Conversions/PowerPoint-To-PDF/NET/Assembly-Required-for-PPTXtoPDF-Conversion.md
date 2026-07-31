@@ -10,7 +10,7 @@ keywords: Assemblies
 
 ## Converting PowerPoint Presentation to PDF
 
-For converting a PowerPoint Presentation to PDF, the following assemblies needed to be referenced in your application
+To convert a PowerPoint Presentation to PDF, the following assemblies must be referenced in your application:
 <table>
 <tr>
 <thead>

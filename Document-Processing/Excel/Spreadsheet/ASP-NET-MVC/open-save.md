@@ -18,7 +18,7 @@ The Spreadsheet component opens an Excel document with its data, style, format, 
 
 **User Interface**:
 
-In the user interface, choose `File > Open` from the Ribbon to open an Excel document.
+In the user interface, choose `File -> Open` from the ribbon to open an Excel document.
 
 The following sample shows the `Open` option by using the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeOpen) event to trigger before opening an Excel file.
 
@@ -41,19 +41,19 @@ Find the below table for the beforeOpen event arguments.
 | cancel | boolean | To prevent the open operation. |
 | requestData | object |  To provide the Form data. |
 
-N> * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-<br/> * The default value of the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property is `true`. For demonstration purpose, the previous example explicitly configures the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property.
+>* Use `Ctrl + O` keyboard shortcut to open Excel documents.
+>* The default value of the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property is `true`. For demonstration purpose, the previous example explicitly configures the [allowOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowOpen) property.
 
 ### Open an excel file using a file uploader
 
-To open an Excel file using a file uploader:
+To open an excel file using a file uploader:
 
-1. Select and upload an Excel file through the file uploader.
+1. Select and upload an excel file through the file uploader.
 2. Access the uploaded file from the uploader's `success` event.
-3. Pass the file to the Spreadsheet `open` method.
-4. Verify that the uploaded Excel file is loaded into the Spreadsheet.
+3. Pass the file to the spreadsheet `open` method.
+4. Verify that the uploaded excel file is loaded into the spreadsheet.
 
-The following example demonstrates how to open an Excel file using a file uploader.
+The following example demonstrates how to open an excel file using a file uploader.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -384,7 +384,7 @@ The Spreadsheet component saves its data, styles, formatting, and other supporte
 
 **User Interface**:
 
-In the user interface, choose `File > Save As` from the Ribbon to save the Spreadsheet data as an Excel document.
+In the user interface, choose `File -> Save As` from the ribbon to save the spreadsheet data as an excel document.
 
 The following sample shows the `Save` option by using the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property in the Spreadsheet control. The [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event is triggered before the Spreadsheet is saved as a file.
 
@@ -411,9 +411,9 @@ Find the below table for the beforeSave event arguments.
 | needBlobData | boolean | You can get the blob data if set to true. |
 | cancel | boolean | To prevent the save operations. |
 
-N> * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
-<br/> * The default value of [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property in previous code snippet.
-<br/> * Demo purpose only, we have used the online web service url link.
+>* Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
+>* The default value of [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property in previous code snippet.
+>* Demo purpose only, we have used the online web service url link.
 
 ### Save an excel file as blob data
 

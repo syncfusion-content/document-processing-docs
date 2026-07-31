@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Notes in EJ2 Javascript Spreadsheet control | Syncfusion
+title: Notes in EJ2 JavaScript Spreadsheet control | Syncfusion
 description: Learn here all about the notes feature in EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Notes 
+control: Notes
 documentation: ug
 ---
 
@@ -36,11 +36,11 @@ In the active worksheet, you can add a note in the following ways:
 * **Context Menu**: Right-click the desired cell and select **Add Note**.
 * **Ribbon**: Select the cell, navigate to the **Review** tab, click the **Notes** dropdown, and select **Add Note**.
 * **Keyboard Shortcut**: Select the cell and press <kbd>Shift</kbd> + <kbd>F2</kbd>.
-* **Programmatically**: 
+* **Programmatically**:
     * Use the `updateCell` method with the note model to add a note to a specific cell.
     * Bind notes via code-behind during initial load by associating the note model with the cell model.
 
-A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
+A dialog box opens where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
 
 
 ## Editing a note
@@ -83,7 +83,7 @@ To navigate to the previous note:
 
 To navigate to the next note:
 
-*  In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
+* In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
 * The Spreadsheet will automatically select the next note in the current worksheet, searching rightward and then downward.
 * If no subsequent note exists in the sheet, the search continues to the next worksheet in order.
 * If the workbook contains no notes, the selection remains on the current cell.
@@ -116,7 +116,7 @@ To activate:
 
 All notes in the worksheet will appear as floating text boxes near their respective cells.
 
-> **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
+> **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet automatically appear as visible sticky notes when Show All Notes is active.
 
 This functionality enhances workflow efficiency by providing flexible control over note visibility, whether for individual focus or comprehensive review.
 
@@ -130,7 +130,7 @@ The Spreadsheet data, including notes, can be saved and exported as an Excel doc
 
 ## Disabling notes
 
-To disable the note functionality, you need to set the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the notes in the document will not be shown when opened in the Spreadsheet. The **"Add Note"** option will not be shown in the context menu. The keyboard shortcuts for the note functionality will not work.
+To disable the note functionality, set the [enableNotes](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#enablenotes) property to **false**. After disabling, the Spreadsheet does not show notes in opened documents. The **"Add Note"** option does not appear in the context menu, and the keyboard shortcuts for note functionality do not work.
 
 ![Spreadsheet with notes feature disabled](./images/spreadsheet_notes_disable.png)
 
@@ -166,7 +166,7 @@ In the below example, you can navigate between notes using **Previous Note** and
 
 ## Limitations
 
-* When importing the document with notes, the formatting of the content in the notes will not be available. Similarly, while adding notes, we cannot apply formatting to them.
-* The style and appearance of the dialog box for the notes, including size, color, border, and other elements, cannot be directly changed.
+* When importing a document with notes, the formatting of the content in the notes is not available. Similarly, formatting cannot be applied while adding notes.
+* The style and appearance of the dialog box for notes, including size, color, border, and other elements, cannot be directly changed.
 * Exporting the workbook along with notes is not supported in file formats such as Comma Separated Values (.csv), Excel Macro-Enabled Workbook (.xlsm), Excel Binary Workbook (.xlsb), and PDF Document (.pdf).
-* Notes added outside the used ranges of the worksheet will not be included in the exported document.
+* Notes added outside the used ranges of the worksheet are not included in the exported document.

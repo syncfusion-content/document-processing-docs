@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Table format in React Document editor component | Syncfusion
-description: Learn here all about Table format in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Table format in React DOCX Editor component | Syncfusion
+description: Learn here all about Table format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
 control: Table format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in React Document editor component
+# Table format in React Document Editor component
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -27,7 +27,7 @@ documenteditor.selection.cellFormat.topMargin=5.4;
 documenteditor.selection.cellFormat.bottomMargin=5.4;
 ```
 
-You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
+You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from the default cell margins of the table. Refer to the following sample code.
 
 ```ts
 //To change the left margin
@@ -72,15 +72,15 @@ documenteditor.selection.cellFormat.verticalAlignment='Bottom';
 
 ## Table alignment
 
-The tables are aligned in document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
+The tables are aligned in the document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
 ```ts
-documenteditor.selection.tableFormat.tableAlignment=’Center’;
+documenteditor.selection.tableFormat.tableAlignment='Center';
 ```
 
 ## Cell width
 
-Set the desired width of table cells that will be considered when the table is layouted. Refer to the following sample code.
+Set the desired width of table cells that will be considered when the table is laid out. Refer to the following sample code.
 
 
 ```ts
@@ -174,7 +174,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
 
-Please check below gif which illustrates how to apply border for selected cells through properties pane options - border color, line size and no border:
+Please check the below gif which illustrates how to apply a border for selected cells through properties pane options - border color, line size and no border:
 
 ![ApplyBorderToSelectedCell_viaPropertiesPane](images/ApplyBorderToSelectedCell_viaPropertiesPane.gif)
 
@@ -201,7 +201,7 @@ function App() {
     function componentDidMount() {
         //Insert table.
         documenteditor.editor.insertTable(2, 2);
-        //To change the width of a table
+        //To change the height of a table row
         documenteditor.selection.rowFormat.heightType = 'Exactly';
         documenteditor.selection.rowFormat.height = 20;
     }
@@ -225,7 +225,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ### Header row
 
-The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
+The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at the first row of the table, then you can define whether it is a header row or not, using the following sample code.
 
 ```ts
 documenteditor.selection.rowFormat.isHeader=true;
@@ -233,7 +233,7 @@ documenteditor.selection.rowFormat.isHeader=true;
 
 ### Allow row break across pages
 
-This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
+This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of the next page. You can modify this property for selected rows using the following sample code.
 
 ```ts
 documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
@@ -241,7 +241,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```ts
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -249,7 +249,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```ts
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';

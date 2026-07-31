@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line angle constraints in ASP.NET Core PDF Viewer
-Syncfusion description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Line angle constraints in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Line angle constraints in ASP.NET Core PDF Viewer
+# Line angle constraints in ASP.NET Core PDF Viewer
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
@@ -53,7 +53,7 @@ When modifying existing line annotations using selectors:
 - Constraint snapping during modification is supported for Line and Arrow.
 - Adjustments snap to the configured angle increment.
 
-[View a sample in GitHub](https://github.com/SyncfusionExamples/aspnetcore-pdf-viewer-examples)
+A complete working sample is available on GitHub: [asp net core-pdf-viewer-examples](https://github.com/SyncfusionExamples/aspnet-core-pdf-viewer-examples).
 
 ### Configuration properties
 
@@ -85,10 +85,10 @@ Angle snapping rules:
 - If the increment does not divide 360 evenly, angles reset after 360°.
 
 Examples:
-- `restrictLineAngleTo: 45` → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
-- `restrictLineAngleTo: 100` → Snapped angles: 0°, 100°, 200°, 300°, 360°
+- `restrictLineAngleTo: 45` → Snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°
+- `restrictLineAngleTo: 100` → Snapped angles: 0°, 100°, 200°, 300° (the cycle repeats after 360°)
 
-> Refer to the ASP.NET Core PDF Viewer [feature tour](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/default) for feature highlights, and to the [ASP.NET Core PDF Viewer examples]((https://github.com/SyncfusionExamples/aspnet-core-pdf-viewer-examples)) for rendering and configuration examples.
+> Refer to the ASP.NET Core PDF Viewer [feature tour] (https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/default) for feature highlights, and to the [ASP.NET Core PDF Viewer examples] (https://github.com/SyncfusionExamples/aspnet-core-pdf-viewer-examples) for rendering and configuration examples.
 
 ### See also
 

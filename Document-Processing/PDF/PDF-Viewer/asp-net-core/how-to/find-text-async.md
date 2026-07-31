@@ -54,7 +54,7 @@ Use the `findTextAsync` method to search for text strings and retrieve bounding 
 
 ### Description
 
-The `findTextAsync` method performs an asynchronous text search within a PDF document. You can search for a single string or multiple strings while controlling case sensitivity. By default, the search runs across all pages. Specify the optional `pageIndex` argument to limit the search to a single page.
+The `findTextAsync` method performs an asynchronous text search within a PDF document. You can search for a single string or multiple strings while controlling case sensitivity. By default, the search runs on all pages. Specify the optional `pageIndex` argument to limit the search to a single page.
 
 ### Parameters
 
@@ -62,7 +62,7 @@ The `findTextAsync` method performs an asynchronous text search within a PDF doc
 
 - **matchCase (boolean):** Whether the search is case-sensitive. `true` matches exact case; `false` ignores case.
 
-- **pageIndex (optional, number):** Zero-based page index to search. If omitted, searches all pages.
+- **pageIndex (optional, number):** Zero-based page index to search. If omitted, searches all pages. When `text` is an array, each string is searched only on the page specified by `pageIndex`. When `pageIndex` is provided, the search is restricted to that single page and the `matchCase` argument is still honored.
 
 ### Example workflow
 
