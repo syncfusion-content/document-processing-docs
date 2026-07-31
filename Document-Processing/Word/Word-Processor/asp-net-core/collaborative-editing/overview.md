@@ -16,8 +16,8 @@ To get started with integrating collaborative editing, refer to [Collaborative e
 
 ## Prerequisites
 
-- ***Real-Time Transport Protocol***: This protocol facilitates instant communication between clients and the server, ensuring immediate updates during collaborative editing. For this integration, [SignalR](https://learn.microsoft.com/aspnet/core/signalr/introduction/) is used.
-- ***Distributed Cache or Database***: Used to temporarily store the queue of editing operations. For example, you can use [Redis](https://redis.io/) as a distributed cache or a database such as SQL Server.
+- *Real-Time Transport Protocol*: This protocol facilitates instant communication between clients and the server, ensuring immediate updates during collaborative editing.
+- *Distributed Cache or Database*: Used to temporarily store the queue of editing operations.
 
 ### Real-time transport protocol
 
