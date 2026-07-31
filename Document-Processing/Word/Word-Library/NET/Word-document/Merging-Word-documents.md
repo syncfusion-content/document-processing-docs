@@ -85,10 +85,6 @@ In the resultant document, the imported contents start from a new page followed 
 
 When your requirement is to append the contents on the same page instead of starting from a new page, you need to set the break code of the first section of the source document as [NoBreak](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.SectionBreakCode.html). The following code example illustrates how to import the contents on the same page.
 
-N> For multi-section source documents, only the first section's break code controls the page break behavior of the imported content.
-
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
-
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
 

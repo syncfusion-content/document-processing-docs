@@ -426,6 +426,8 @@ A tab stop is a horizontal position that is set for aligning text of the paragra
 
 Each paragraph has its own tab stop collection where the new tab stop can be added and existing tab stop can be removed.
 
+N> The tab position value is specified in points (1 inch = 72 points).
+
 The following code example explains how to add tab stops to the paragraph.
 
 {% tabs %}
@@ -1147,8 +1149,6 @@ For further information, click [here](https://help.syncfusion.com/document-proce
 
 Symbols are used to add contents such as currencies, numbers, punctuation, etc. DocIO represents symbols with [WSymbol](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSymbol.html) instance. Each symbol can be identified with their character codes.
 
-N> The character code corresponds to the symbol's position in the selected font's character map. Refer the [WSymbol](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSymbol.html) API for details on character codes and font names.
-
 The following code example explains how to add new symbol to the document.
 
 {% tabs %}
@@ -1241,7 +1241,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Sample.docx", FormatType.Docx);
+WordDocument document = new WordDocument("Sample1.docx", FormatType.Docx);
 //Gets the textbody content
 WTextBody textbody = document.Sections[0].Body;
 //Iterates through the paragraphs
