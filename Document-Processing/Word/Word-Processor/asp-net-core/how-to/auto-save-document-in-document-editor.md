@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auto Save Document in DOCX Editor Component | Syncfusion
-description: Learn here all about auto save document in Syncfusion DOCX Editor component and more.
+description: Learn here all about auto save document in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto Save Document In DOCX Editor
 documentation: ug
