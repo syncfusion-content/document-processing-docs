@@ -18,9 +18,9 @@ Wrap text displays lengthy content on multiple lines within a single cell. By de
 
 You can apply or remove wrap text in the following ways:
 
-* Use the `wrap` property of a cell to configure wrap text during the initial rendering.
-* Select or clear the **Wrap Text** option in the Ribbon toolbar for the selected range.
-* Use the `wrap` method to apply or remove wrap text after the component is loaded.
+* Using the `wrap` property in `cell`, you can enable or disable wrap text to a cell at initial load.
+* Select or clear the `Wrap` button in the ribbon toolbar to apply or remove wrap text for the selected range.
+* Using the `wrap` method, you can apply or remove the **wrap** text once the component is loaded.
 
 The `wrap` method accepts the following arguments:
 
@@ -54,7 +54,7 @@ The Merge Cells feature allows users to combine two or more cells into a single 
 You can merge cells in the following ways:
 
 * Set the `rowSpan` and `colSpan` properties of a cell to merge cells during the initial rendering.
-* Select a range and choose the required merge option from the Ribbon toolbar.
+* Select a range and choose the required merge option from the ribbon toolbar.
 * Use the `merge` method to merge a range after the component is loaded.
 
 The `merge` method requires a cell range and the applicable merge type. The range identifies the cells to merge, and the merge type determines whether all cells, rows, or columns in the range are merged.
@@ -89,7 +89,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-Data Validation restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
+The **Data Validation** restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
 
 N> * The default value of the `allowDataValidation` property is `true`.
 
@@ -111,7 +111,7 @@ The `addDataValidation()` method requires:
 
 ### Clear Validation
 
-The Clear Validation feature removes data validation rules from a specified range or the entire worksheet.
+The **Clear Validation** feature is used to remove data validations from the specified ranges or the entire worksheet.
 
 You can clear data validation in the following ways:
 
@@ -120,7 +120,7 @@ You can clear data validation in the following ways:
 
 ### Highlight Invalid Data
 
-The Highlight Invalid Data feature identifies existing cell values that do not satisfy the applied validation rules.
+The **Highlight Invalid Data** feature is used to highlight previously entered invalid values.
 
 You can highlight invalid data in the following ways:
 
@@ -133,7 +133,7 @@ This feature removes the highlighting applied to invalid cell values without rem
 
 You can clear invalid-data highlighting in the following ways:
 
-* Open the **Data** tab in the Ribbon and choose **Clear Highlight**.
+* Open the **Data** tab in the ribbon and choose **Clear Highlight**.
 * Use the `removeInvalidHighlight()` method programmatically.
 
 {% tabs %}
@@ -184,13 +184,13 @@ The following features have some limitations in Data Validation:
 
 Auto Fill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. You can use [`allowAutoFill`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowAutoFill) property to enable/disable the auto fill support. You can also use `showFillOptions` property to enable/disable the fill option and `fillType` property to change the default auto fill option which is available in [`autoFillSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AutoFillSettings).
 
-The `autoFillSettings` property configures Auto Fill behavior:
+The `autoFillSettings` property configures auto fill behavior:
 
-* `showFillOptions`: Specifies whether the Auto Fill Options menu is displayed after an Auto Fill operation.
-* `fillType`: Specifies the default Auto Fill operation.
+* `showFillOptions`: Specifies whether the auto fill Options menu is displayed after an auto fill operation.
+* `fillType`: Specifies the default auto fill operation.
 * `direction`: Specifies the direction in which values are filled.
 
-You can perform Auto Fill in the following ways:
+You can perform auto fill in the following ways:
 
 * Drag the fill handle to the required range and select an option from the **Auto Fill Options** menu.
 * Use the `autoFill()` method programmatically.
@@ -211,7 +211,7 @@ In Auto Fill we have following options,
 * Fill Formatting Only
 * Fill Without Formatting
 
-N>* The default auto fill option is “FillSeries” which can be referred from `fillType` property.
+N>* The default auto fill option is `FillSeries`, which is configured through the `fillType` property.
 
 ### Copy Cells
 

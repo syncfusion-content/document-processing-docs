@@ -31,8 +31,8 @@ N> * Ascending is the default sorting order.
 
 When the `sort()` method is called without arguments, it sorts the selected range in ascending order using the active cell's column as the sort column.
 
-N> * The `beforeSort` event will be triggered before sorting the specified range.
-<br/> * The `sortComplete` event will be triggered after the sort action is completed successfully.
+>* The `beforeSort` event will be triggered before sorting the specified range.
+>* The `sortComplete` event will be triggered after the sort action is completed successfully.
 
 The following code example shows `sort` functionality in the Spreadsheet control.
 
@@ -98,7 +98,7 @@ The custom sort dialog helps sorting multiple columns in the selected range by u
 
 You can add multiple criteria using the `Add Column` button at the bottom of the dialog. Thus, multiple columns can be specified with different sort order. The newly added sort criteria items can be removed using the `delete` icons at the end of each items.
 
-You can refer to the [`Data contains header`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/sort#data-contains-header) topic to learn more about `Data contains header` checkbox. To learn more about `Case sensitive` checkbox, you can refer to [`Case sensitive sort`](https://ej2.syncfusion.com/aspnetmvc/documentation/spreadsheet/sort#case-sensitive-sort) topic.
+You can refer to the [`Data contains header`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/sort#data-contains-header) topic to learn more about `Data contains header` checkbox. To learn more about `Case sensitive` checkbox, you can refer to [`Case sensitive sort`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/sort#case-sensitive-sort) topic.
 
 ### Passing sort criteria manually
 
@@ -107,8 +107,8 @@ The multi-column sorting can also be performed manually by passing sort options 
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
 
-N> * All the arguments are optional.
-<br/> * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
+>* All the arguments are optional.
+>* When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

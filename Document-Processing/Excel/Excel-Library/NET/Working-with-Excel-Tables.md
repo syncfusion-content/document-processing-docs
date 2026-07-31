@@ -507,7 +507,7 @@ A complete working example to apply custom table style in C# is present on [this
 
 The following screenshot represents generated Excel file with custom table styles in XlsIO.
 
-![custom table style](Working-with-Excel-Tables_images/Working-with-Tables_img1.jpg)
+![custom table style](Working-with-pivot-tables_images/Working-with-Tables_img1.jpg)
 
 N> The [TableStyles](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITableStyles.html) API only retrieves custom table styles.
 
@@ -662,7 +662,7 @@ End Using
 
 A complete working example to insert total row in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Table/Add%20Total%20Row/.NET/Add%20Total%20Row).
 
-## Create a table from external connectionÂ
+## Create a table from external connection
 
 External connection support allows you to work with the most recent data right in the workbook. After the data is imported, only refresh operations are performed to retrieve the updated data.
 

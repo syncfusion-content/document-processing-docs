@@ -15,13 +15,17 @@ Follow these steps to configure authorization headers for your PDF Viewer instan
 
 **Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer instance in your ASP.NET Core project.
 
-**Step 2:** Add the following script to configure the authorization token. This should be executed after the PDF Viewer instance is initialized (for example, in the Razor view or layout file).
+**Step 2:** Add the following PDF Viewer markup and script to configure the authorization token. The script should be executed after the PDF Viewer instance is initialized (for example, in the Razor view or layout file).
 
 ```html
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer" serviceUrl="/Index"></ejs-pdfviewer>
+</div>
+
 <script>
     // Include the Authorization token
     window.onload = function () {
-        var pdfViewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
         pdfViewer.ajaxRequestSettings = {
             ajaxHeaders: [
                 {

@@ -19,7 +19,7 @@ N> If this is your first time working with Amazon Web Services (AWS), please ref
 * Download and install the **AWS Toolkit** for Visual Studio from this [link](https://aws.amazon.com/visualstudio/). You can install the toolkit from the **Extensions > Manage Extensions** option in Visual Studio.
 * Visual Studio 2022 with the **AWS development** workload.
 * .NET 8.0 SDK or later.
-* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+* An active Syncfusion<sup>&reg;</sup> license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
 
 

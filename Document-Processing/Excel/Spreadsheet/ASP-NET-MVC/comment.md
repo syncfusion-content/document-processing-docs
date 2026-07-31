@@ -174,7 +174,7 @@ You can bind **comment thread** to cells at initial load by providing a `comment
 - **Comment**: `author`, `text`, `createdTime`, `isResolved`
 - **Replies**: A collection of replies. Each reply is an object containing its `author`, `text`, and `createdTime` (no nested replies-of-replies).
 
-In the following example, a comment thread is assigned to a cell during the initial data binding. Additional comments are added using the `updateCell` method in the `created` event. The `showCommentsPane` property is enabled to display the Comments review pane when the Spreadsheet is rendered.
+In the following example, a comment thread is assigned to a cell during the initial data binding. Additional comments are added using the `updateCell` method in the `created` event. The `showCommentsPane` property is enabled to display the comments review pane when the Spreadsheet is rendered.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -185,7 +185,7 @@ In the following example, a comment thread is assigned to a cell during the init
 {% endhighlight %}
 {% endtabs %}
 
-After running the sample, verify that the comment indicator appears in the configured cell and that the corresponding comment thread is displayed in the Comments review pane.
+After running the sample, verify that the comment indicator appears in the configured cell and that the corresponding comment thread is displayed in the comments review pane.
 
 ### Important Notes
 * **One thread per cell**: Attach a single `comment` object per cell. New remarks should be added as replies inside the existing thread.

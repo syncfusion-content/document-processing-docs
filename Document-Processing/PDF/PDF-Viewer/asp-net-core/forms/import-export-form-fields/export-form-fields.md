@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Export as Object
 
-Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration.
+Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportformfieldsasobject) to obtain form data as a JavaScript object for database or API integration. The `format` parameter is required and accepts `Fdf`, `Xfdf`, `Xml` or `Json`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
