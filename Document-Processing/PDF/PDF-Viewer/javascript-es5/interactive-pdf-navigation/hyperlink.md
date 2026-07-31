@@ -76,6 +76,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
+
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs open when a hyperlink is clicked.
@@ -100,7 +101,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -115,6 +115,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
