@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download document on window closing in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to download a PDF document when the browser window closes or refreshes in the Syncfusion JavaScript PDF Viewer control by handling the onbeforeunload event.
+title: Auto-download PDF on window close in PDF Viewer | Syncfusion
+description: Learn how to download a PDF document when the browser window closes or refreshes in the JavaScript PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Download document on window closing in JavaScript PDF Viewer
 
-The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the [onbeforeunload](https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeunload) event.
+The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the `beforeunload` event (also known as `window.onbeforeunload`).
 
 ## Prerequisites
 
 - Include the JavaScript PDF Viewer script and initialize the viewer instance on the page.
-- Confirm the viewer has finished loading the document before attaching the `onbeforeunload` handler.
+- Confirm the viewer has finished loading the document before attaching the event handler.
 
-**Step 1:** Create a working sample by following the getting-started guide: [Getting started with JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/).
+**Step 1:** Create a working sample by following the getting-started guide: [Getting started with JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started).
 
-**Step 2:** Attach an `onbeforeunload` handler that prompts the user and calls `viewer.download()` to download the document. Note: browser behavior for `onbeforeunload` varies between browsers and some modern browsers restrict prompts; use this pattern judiciously.
+**Step 2:** Attach a `beforeunload` event handler that prompts the user and calls `viewer.download()` to download the document. Note: browser behavior for this event varies between browsers and some modern browsers restrict prompts; use this pattern judiciously.
 
 ```js
 // The event triggers when closing or refreshing the window.

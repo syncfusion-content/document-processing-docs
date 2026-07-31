@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open or close the Bookmark pane programmatically in JavaScript PDF Viewer | Syncfusion
+title: Manage Bookmark pane in JavaScript PDF Viewer | Syncfusion
 description: Learn how to open and close the Bookmark pane programmatically in the Syncfusion JavaScript PDF Viewer using openBookmarkPane and closeBookmarkPane.
 platform: document-processing
 control: PDF Viewer

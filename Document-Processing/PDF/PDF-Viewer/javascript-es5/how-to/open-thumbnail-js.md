@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically in JavaScript PDF Viewer | Syncfusion
+title: Manage Thumbnail pane in JavaScript PDF Viewer | Syncfusion
 description: Learn how to open the thumbnail pane programmatically in the Syncfusion JavaScript PDF Viewer using openThumbnailPane.
 platform: document-processing
 control: PDF Viewer

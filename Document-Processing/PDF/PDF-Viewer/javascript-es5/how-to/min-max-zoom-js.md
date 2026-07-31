@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure minZoom and maxZoom in JavaScript PDF Viewer | Syncfusion
+title: Configure minZoom and maxZoom in PDF Viewer | Syncfusion
 description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Configure minZoom and maxZoom in the PDF Viewer
 
-Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#maxzoom) properties to ensure a consistent viewing experience.
+Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer#maxzoom) properties to ensure a consistent viewing experience.
 
 ### minZoom
 
@@ -52,7 +52,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 #### Restrict zoom percentage on mobile devices
 
-You can easily restrict the zoom percentage on mobile devices using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#maxzoom) properties. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading on mobile devices. By controlling the zoom levels, you can provide a better user experience across different devices.
+You can easily restrict the zoom percentage on mobile devices using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer#maxzoom) properties. This feature allows you to set specific limits for zooming, ensuring smoother scrolling performance and efficient document loading on mobile devices. By controlling the zoom levels, you can provide a better user experience across different devices.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

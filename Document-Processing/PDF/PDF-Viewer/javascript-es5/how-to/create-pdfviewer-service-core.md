@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create PDF Viewer service in JavaScript PDF Viewer | Syncfusion
-description: Learn how to create an ASP.NET Core Web API service for the JavaScript PDF Viewer to handle server-side processing for rendering, text extraction, thumbnails, and more.
+description: Learn how to create an ASP.NET Core Web API service for JavaScript PDF Viewer to handle server-side processing for rendering, text extraction, and thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,7 @@ Follow these steps to create the PDF Viewer service
 
 **Step 1:** In Visual Studio, choose File > New > Project to create a new application.
 
-![Visual Studio: New Project menu](./images/Start.png)
+![Visual Studio New Project menu](./images/Start.png)
 
 **Step 2:** Select the ASP.NET Core Web Application template and click **Next**.
 
