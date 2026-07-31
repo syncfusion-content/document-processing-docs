@@ -19,7 +19,7 @@ documentation: ug
 * **TextExport** - Exports the document as Text Document (.TXT) file.
 * **Editor** - Performs all kinds of editing operations.
 * **EditorHistory** - Maintains the history of editing operations, so that you can perform undo and redo at any time.
-* User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
+* User interface options such as context menu, options pane, image resizer, and dialogs are available as individual modules.
 
 N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a document editor instance.
 
@@ -48,9 +48,9 @@ Refer to the following table.
 |TableOfContentsDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableTableOfContentsDialog= true ></ejs-documenteditor>`|
 |ListDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableListDialog= true ></ejs-documenteditor>`|
 |TablePropertiesDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableTablePropertiesDialog= true ></ejs-documenteditor>`|
-|CellOptionsDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableTablePropertiesDialog= true ></ejs-documenteditor>`|
+|CellOptionsDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableCellOptionsDialog= true ></ejs-documenteditor>`|
 |BordersAndShadingDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableBordersAndShadingDialog= true ></ejs-documenteditor>`|
 |TableOptionsDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableTableOptionsDialog= true ></ejs-documenteditor>`|
-|StylesDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableStyleDialog= true ,enableStylesDialog= true ></ejs-documenteditor>`|
+|StylesDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableStyleDialog= true enableStylesDialog= true ></ejs-documenteditor>`|
 |StyleDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableStyleDialog= true ></ejs-documenteditor>`|
-|BulletsAndNumberingDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableStyleDialog= true ></ejs-documenteditor>`|
+|BulletsAndNumberingDialog|`<ejs-documenteditor isReadOnly= false enableEditor= true enableBulletsAndNumberingDialog= true ></ejs-documenteditor>`|
