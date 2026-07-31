@@ -229,11 +229,11 @@ N> The icons are embedded in the font file used in the previous code snippet.
         else {
             var currentPageNumber = parseInt(currentPageBox.value);
             if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
+                if (currentPageNumber > 0 && currentPageNumber <= pdfViewer.pageCount) {
                     pdfViewer.navigation.goToPage(currentPageNumber);
                 }
                 else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
+                    currentPageBox.value = pdfViewer.currentPageNumber.toString();
                 }
             }
             return true;
@@ -362,11 +362,11 @@ N> The icons are embedded in the font file used in the previous code snippet.
         else {
             var currentPageNumber = parseInt(currentPageBox.value);
             if (event.which === 13) {
-                if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
+                if (currentPageNumber > 0 && currentPageNumber <= pdfViewer.pageCount) {
                     pdfViewer.navigation.goToPage(currentPageNumber);
                 }
                 else {
-                    currentPageBox.value = viewer.currentPageNumber.toString();
+                    currentPageBox.value = pdfViewer.currentPageNumber.toString();
                 }
             }
             return true;
