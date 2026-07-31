@@ -11,7 +11,7 @@ documentation: ug
 
 ## Configuring PDF Viewer with local styles and scripts
 
-For offline deployment or when CDN access is restricted, you can use local resources required for PDF Viewer. To load the PDF Viewer with local resources, follow these steps:
+For offline deployment or when CDN access is restricted, you can use local resources for the PDF Viewer. To load the PDF Viewer with local resources, follow these steps:
 
 **Step 1:** Place the `ej2.min.js` script and the required theme CSS files in the `wwwroot` folder of the ASP.NET Core application.
 
