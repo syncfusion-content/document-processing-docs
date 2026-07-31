@@ -1,17 +1,17 @@
 ﻿---
 layout: post
 title: Deploy the DOCX Editor component for mobile | Syncfusion
-description: Learn here all about deploying the Document Editor component for mobile in the Syncfusion DOCX Editor component and more.
+description: Learn here all about deploying the DOCX Editor component for mobile in the Syncfusion DOCX Editor component and more.
 platform: document-processing
 control: Deploy the DOCX Editor component for mobile
 documentation: ug
 ---
 
-# Deploy the Document Editor component for mobile
+# Deploy the DOCX Editor component for mobile
 
-## Document Editor component for mobile
+## DOCX Editor component for mobile
 
-At present, the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component is not responsive on mobile, and the editing functionalities are not ensured in mobile browsers. However, it works properly as a document viewer in mobile browsers. Hence, it is recommended to switch the Document Editor component to read-only mode in mobile browsers. Also, invoke the `fitPage` method with the `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
+At present, the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) component is not responsive on mobile, and the editing functionalities are not ensured in mobile browsers. However, it works properly as a document viewer in mobile browsers. Hence, it is recommended to switch the DOCX Editor component to read-only mode in mobile browsers. Also, invoke the `fitPage` method with the `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

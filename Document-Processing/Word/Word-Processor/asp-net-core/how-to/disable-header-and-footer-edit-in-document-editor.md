@@ -1,13 +1,13 @@
 ﻿---
 layout: post
-title: Disable header and footer in Syncfusion DOCX Editor
-description: Learn how to disable header and footer editing in the Syncfusion Document Editor component of Essential JS 2 and more.
+title: How to disable header and footer edit in Syncfusion DOCX Editor
+description: Learn how to disable header and footer editing in the Syncfusion DOCX Editor component of Essential JS 2 and more.
 platform: document-processing
 control: Disable Header And Footer
 documentation: ug
 ---
 
-# How to disable header and footer edit in Document Editor component
+# How to disable header and footer edit in DOCX Editor component
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 
@@ -42,7 +42,7 @@ The following example code illustrates how to close header and footer when the s
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use the [`isReadOnly`] property in the Document Editor to disable header and footer edit.
+Like restrictEditing, you can use the [`isReadOnly`] property in the DOCX Editor to disable header and footer edit.
 
 The following example code illustrates how to disable header and footer edit in the `DocumentEditor` instance.
 
