@@ -14,7 +14,7 @@ In this article, we are going to see how to auto save the document to the server
 
 The following example illustrates how to auto save the document on the server.
 
-* In the client-side, using the content change event, we can automatically save the edited content in regular intervals of time. Based on the `contentChanged` boolean value, the document is sent as a Docx file to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) method.
+* In the client-side, using the content change event, we can automatically save the edited content in regular intervals of time. Based on the `contentChanged` boolean value, the document is sent as a DOCX file to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) method.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -173,4 +173,4 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 Explore how to automatically save Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/auto-save.html).
 
 ## See Also
-* [Autosave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)
+* [Auto save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the default search highlight color in the Vue DOCX Editor component | Syncfusion
+title: Change search highlight color in Vue DOCX Editor | Syncfusion
 description: Learn here all about how to change the default search highlight color in the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
 control: Change the default search highlight color
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the default search highlight color in the Vue DOCX Editor component
+# Change search highlight color in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in Document Editor settings. The highlight color specified in [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditorsettings) will be highlighted on the searched text. By default, the search highlight color is `yellow`.
 
