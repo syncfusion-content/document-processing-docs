@@ -23,8 +23,6 @@ Refer to the following links for the assemblies and NuGet packages required for 
 * [Split Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Split Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
-N> For production use, register a Syncfusion license before splitting Word documents. Refer to the [licensing registration guide](https://help.syncfusion.com/document-processing/word/licensing/how-to-register-in-an-application) for details.
-
 N> The code samples use the namespaces `Syncfusion.DocIO.DLS`, `System.IO`, and `System.Text.RegularExpressions`. Add the corresponding `using`/`Imports` directives for these namespaces before running the samples.
 
 ## Split by Section
@@ -367,7 +365,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following code example illustrates how to split the Word document using bookmarks. The [`BookmarksNavigator.MoveToBookmark`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) API moves the virtual cursor to a bookmark, and [`GetContent`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) returns the bookmark range as a `WordDocumentPart`; calling `WordDocumentPart.GetAsWordDocument()` produces a standalone `WordDocument` containing the bookmark's contents.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 N> If a bookmark name contains characters that are invalid in file names (for example, `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, `|`), the `Save` call will throw. Sanitize the bookmark name before using it as a file name.
 
@@ -452,9 +449,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Split by placeholder text
 
 The following code example illustrates how to split the Word document using the placeholder text.
-
-
-N> The regular expression `"<<(.*)>>"` is greedy and will match from the first `<<` to the last `>>` in a single line/span. If your placeholders appear on the same line, use a non-greedy pattern such as `"<<(.*?)>>"` to limit each match to a single placeholder.
 
 {% tabs %}
 

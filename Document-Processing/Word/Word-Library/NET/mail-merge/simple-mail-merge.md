@@ -81,6 +81,7 @@ document.LastParagraph.AppendField("City", FieldType.FieldMergeField);
 //Saves the Word document to a file
 FileStream fileStream = new FileStream("Template.docx", FileMode.Create, FileAccess.ReadWrite);
 document.Save(fileStream, FormatType.Docx);
+fileStream.Dispose();
 //Closes the Word document
 document.Close();
 {% endhighlight %}
