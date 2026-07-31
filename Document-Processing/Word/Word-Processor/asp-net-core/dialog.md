@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in Document Editor Component | Syncfusion
-description: Learn here all about dialog in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialog in DOCX Editor Component | Syncfusion
+description: Learn here all about dialog in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Dialog
 documentation: ug
 ---
 
 
-# Dialog in ASP.NET Core in Document Editor Component
+# Dialog in ASP.NET Core in DOCX Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
 
@@ -16,7 +16,7 @@ documentation: ug
 
 Font dialog allows to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
 
-N>To enable font dialog for a document editor instance, set ‘enableFontDialog’ to true.
+N>To enable font dialog for a DOCX Editor instance, set ‘enableFontDialog’ to true.
 
 
 {% tabs %}
