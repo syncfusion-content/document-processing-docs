@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Import annotations in JavaScript PDF Viewer | Syncfusion
+title: Import annotations in JavaScript PDF Viewer ES5 | Syncfusion
 description: Learn how to import annotations in Syncfusion JavaScript PDF Viewer using UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer

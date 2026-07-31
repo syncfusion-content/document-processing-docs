@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Data in annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to add and use custom key-value data in annotations in Syncfusion JavaScript PDF Viewer.
+description: Learn how to add, store, and retrieve custom key-value data in annotations using Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
