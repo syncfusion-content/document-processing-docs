@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Amazon Linux EC2
 
-Syncfusion<sup>&reg;</sup> [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) is used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert PowerPoint to image in Amazon Linux EC2** within a few lines of code.
+Syncfusion<sup>&reg;</sup> [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) is used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Amazon Linux EC2** within a few lines of code.
 
 N> To run the sample without manually providing credentials, attach an IAM role with S3 access to your EC2 instance. The AWS SDK will automatically use this role, allowing secure access to S3 without storing access keys.
 
@@ -42,19 +42,22 @@ Install the following NuGet packages from [NuGet.org](https://www.nuget.org/).
 * [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](AWS_Images/AWS_EC2_Images/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core NuGet Package](AWS_Images/AWS_EC2_Images/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 ### Step 3: Include required namespaces
 
-Add the following namespaces in Program.cs
+Add the following namespaces in **Program.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using Amazon.S3;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 using Amazon;
+using Amazon.S3;
 using Amazon.S3.Model;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
@@ -63,8 +66,8 @@ using Syncfusion.PresentationRenderer;
 {% endtabs %}
 
 ### Step 4: Process PowerPoint files from AWS S3
- 
-Include the following code snippet in Program.cs to convert PowerPoint presentations into images.
+
+Include the following code snippet in **Program.cs** to convert PowerPoint presentations into images.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -163,7 +166,7 @@ static async Task ConvertPptxToImage(string inputFileName, string inputFolderNam
         var response = await s3Client.GetObjectAsync(new Amazon.S3.Model.GetObjectRequest
         {
             BucketName = bucketName,
-            Key = inputFolderName+inputFileName
+            Key = inputFolderName + inputFileName
         });
         using (Stream responseStream = response.ResponseStream)
         {
@@ -300,7 +303,7 @@ Step 3: Click the **Browse** button in the **Private key file for authentication
 
 Step 4: Click **Open** button. It will be connected to the EC2 instance .
 
-![connect with EC2 instance](AWS_Images/AWS_EC2_Images/Connected-with-PuTTY.png)
+![Connect with EC2 instance](AWS_Images/AWS_EC2_Images/Connected-with-PuTTY.png)
 
 ## Deploy the sample on an AWS Linux EC2 Instance
 
@@ -333,7 +336,7 @@ sudo yum install git -y
 
 Step 5:	Check whether the **Git** is installed properly using below command.
 ```
-git –version
+git --version
 ```
 
 ![Ensure git installation](AWS_Images/AWS_EC2_Images/ensure-git-installation.png)
