@@ -109,6 +109,134 @@ Future importPdfjsScript() async {
 
 ![main.dart](images/add-custom-action.png)
 
+### Pass PDF Document to the Custom Widget
+
+You can pass the PDF document to the custom widget as a parameter. The following steps explain how to pass the PDF document URL to the custom widget.
+
+1. In the `Custom Widget Settings` panel on the right, click the `+ Add Parameters` button to add a new parameter.
+
+![Add Parameter](images/add-parameter.png)
+
+2. Set the parameter `Name` as `url`, choose the `Type` as `String`, and enable the `Nullable` option.
+
+![Add url Parameter](images/add-url-parameter.png)
+
+3. Modify the `PDFViewerWidget` class constructor to include the newly added `url` parameter, and declare the `url` field as shown below.
+
+{% tabs %}
+{% highlight Dart %}
+
+class PDFViewerWidget extends StatefulWidget {
+  const PDFViewerWidget(
+      {super.key, this.width, this.height, required this.url});
+
+  final double? width;
+  final double? height;
+  final String url;
+
+  @override
+  State<PDFViewerWidget> createState() => _PDFViewerWidgetState();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Modify Widget Code](images/modify-widget-code.png)
+
+4. Replace the constant URL in the `SfPdfViewer.network` constructor with the `url` parameter that is passed to the widget.
+
+{% tabs %}
+{% highlight Dart hl_lines="18 19" %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Flutter PDF Viewer'),
+      actions: <Widget>[
+        IconButton(
+          icon: const Icon(
+            Icons.bookmark,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            _pdfViewerKey.currentState?.openBookmarkView();
+          },
+        ),
+      ],
+    ),
+    body: SfPdfViewer.network(
+      widget.url,
+      key: _pdfViewerKey,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+5. Save the changes and click the `Compile Code` button to compile the custom code.
+
+6. On the canvas, select the `PDFViewerWidget` and enter the PDF document URL in the `url` field of the `Custom Widget Properties` section.
+
+![Set url in Widget Properties](images/set-url-in-widget.png)
+
+In this example, we pass `url` as a parameter and use the `SfPdfViewer.network` constructor to display the PDF document. Similarly, you can use the `SfPdfViewer.file` or `SfPdfViewer.memory` constructor to display a PDF document of your choice.
+
+>**Note**: To display a PDF document from an **Uploaded File (Bytes)** in FlutterFlow, add a parameter of type `FFUploadedFile` (you can find this exact type by clicking the `View Boilerplate Code` button) and then use the `SfPdfViewer.memory` constructor with the uploaded file bytes. See the code snippet below.
+
+{% tabs %}
+{% highlight Dart hl_lines="11 37 38" %}
+
+class PDFViewerWidget extends StatefulWidget {
+  const PDFViewerWidget({
+    super.key,
+    this.width,
+    this.height,
+    this.file,
+  });
+
+  final double? width;
+  final double? height;
+  final FFUploadedFile? file;
+
+  @override
+  State<PDFViewerWidget> createState() => _PDFViewerWidgetState();
+}
+
+class _PDFViewerWidgetState extends State<PDFViewerWidget> {
+  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.file != null && widget.file!.bytes != null
+        ? Scaffold(
+            appBar: AppBar(
+              title: Text('Flutter PDF Viewer'),
+              actions: <Widget>[
+                IconButton(
+                  icon: Icon(
+                    Icons.bookmark,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    _pdfViewerKey.currentState?.openBookmarkView();
+                  },
+                ),
+              ],
+            ),
+            body: SfPdfViewer.memory(
+              widget.file!.bytes!,
+              key: _pdfViewerKey,
+            ),
+          )
+        : Container();
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Utilizing the Custom Widget
 
 1. Navigate to the `Widget Palette` located in the left-side navigation menu.
