@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fields in DOCX Editor Component | Syncfusion
-description: Learn here all about overview of Fields in the ASP.NET Core of Syncfusion DOCX Editor Component.
+description: Learn here all about overview of Fields in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 ## Adding fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#insertfield) method in `Editor` module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield) method in `Editor` module.
 
 ```typescript
 
@@ -46,7 +46,7 @@ The following type of fields are automatically updated in DOCX Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/#getfieldinfo) method in the `Selection` module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo) method in the `Selection` module.
 
 ```typescript
 //Gets the field information of the selected field.
@@ -57,7 +57,7 @@ N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#setfieldinfo) method in the `Editor` module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo) method in the `Editor` module.
 
 ```typescript
 //Gets the field information for the selected field.
