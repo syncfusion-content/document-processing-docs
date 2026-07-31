@@ -107,7 +107,7 @@ Also, you can programmatically perform page navigation options as follows.
 <body>
     <!--Element which will render as PdfViewer -->
     <button id="goToFirstPage">Go To First Page</button>
-    <button id="goToLastPage">Go To last Page</button>
+    <button id="goToLastPage">Go To Last Page</button>
     <button id="goToNextPage">Go To Next Page</button>
     <button id="goToPage">Go To Page</button>
     <button id="goToPreviousPage">Go To Previous Page</button>
@@ -120,12 +120,12 @@ Also, you can programmatically perform page navigation options as follows.
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
 
 let viewer: PdfViewer = new PdfViewer();
-viewer.appendTo('#pdfViewer');
+viewer.appendTo('#PdfViewer');
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
 // Go To First Page
@@ -152,14 +152,14 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
 
 let viewer: PdfViewer = new PdfViewer();
 viewer.serviceUrl =
   'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-viewer.appendTo('#pdfViewer');
+viewer.appendTo('#PdfViewer');
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
 // Go To First Page
@@ -186,7 +186,7 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 {% endhighlight %}
 {% endtabs %}
 
-Find the [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the page navigation options programmatically.
+Find a sample [here](https://stackblitz.com/edit/5dqbkd?file=index.ts) to perform the page navigation options programmatically.
 
 ## See also
 
