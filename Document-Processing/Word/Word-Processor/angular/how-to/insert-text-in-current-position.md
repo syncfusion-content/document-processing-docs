@@ -14,7 +14,7 @@ You can insert text, paragraphs, and rich-text content in [Angular Document Edit
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
 The following example code illustrates how to add the text at the current cursor position.
 
@@ -58,7 +58,7 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## Insert paragraph in current cursor position
 
-To insert a new paragraph at the current selection, you can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext) API with parameter as `\r\n` or `\n`.
+To insert a new paragraph at the current selection, you can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
 
 The following example code illustrates how to add the new paragraph in the current selection.
 
@@ -69,7 +69,7 @@ this.container.documentEditor.editor.insertText('\n');
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#paste) API to insert the SFDT at the current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#paste) API to insert the SFDT at the current cursor position.
 
 N> The HTML string should be well-formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.
 

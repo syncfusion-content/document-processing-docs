@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to disable drag and drop in the Angular Document Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support to drag and drop contents within the component and it can be customized (enable and disable) using the [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings/#allowDragAndDrop) property in Document Editor settings.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support to drag and drop contents within the component and it can be customized (enable and disable) using the [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#allowDragAndDrop) property in Document Editor settings.
 
 The following example illustrates how to customize the drag and drop option.
 
@@ -23,7 +23,7 @@ export class AppComponent{
 }
 ```
 
-N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings/#allowDragAndDrop) property is `true`.
+N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#allowDragAndDrop) property is `true`.
 
 The following example illustrates how to disable the drag and drop option in the Document Editor.
 
