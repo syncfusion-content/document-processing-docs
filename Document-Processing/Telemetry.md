@@ -80,7 +80,7 @@ Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data d
 </tr>
 <tr>
 <td>Machine Name</td>
-<td>System Name (hashed value)</td>
+<td>Hashed value of machine name, so it cannot be traced back</td>
 </tr>
 <tr>
 <td>Event Name</td>
