@@ -1,6 +1,6 @@
 ---
 title: Does XlsIO support multiline header footer? | Syncfusion
-description: This page explains how to add the multiline header and footer using .NET Excel Library.
+description: This page explains how to add multiline headers and footers in Excel worksheets using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -9,6 +9,17 @@ documentation: UG
 # Does XlsIO support the multiline header footer?
 
 You can enable multiline header and footer support by using XlsIO. The following code snippet illustrates this.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+
+## Code example
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -91,3 +102,9 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [How to set or format a header/footer](how-to-set-or-format-a-headerfooter.md)
+- [How to add and remove page breaks in a worksheet](how-to-add-and-remove-page-breaks-in-Excel.md)
+- [Understanding FitToPagesTall and FitToPagesWide in Excel print layout](what-is-the-behavior-of-fittopagestall-and-fittopageswide.md)

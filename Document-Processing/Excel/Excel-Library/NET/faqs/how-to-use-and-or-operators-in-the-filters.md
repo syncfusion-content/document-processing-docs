@@ -1,6 +1,6 @@
 ---
 title: How to use AND and OR operators in the filter | Syncfusion
-description: Code example to use AND and OR operators in the filter using .NET Excel library.
+description: Code example to use AND and OR operators in an AutoFilter using the Syncfusion .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,20 @@ documentation: UG
 
 # How to use AND and OR operators in the filter?
 
-You can use AND and OR operators in the filter by using XlsIO. The following code snippet illustrates this.
+You can combine multiple AutoFilter conditions in XlsIO using either the **AND** operator (all conditions must be met) or the **OR** operator (any condition can be met). The combination is controlled by the [IsAnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html#Syncfusion_XlsIO_IAutoFilter_IsAnd) property on the [IAutoFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html) interface. By default, `IsAnd` is `true` (AND); set it to `false` to switch to OR.
+
+The following code example applies an OR-combined AutoFilter and then narrows the results to the top 5 entries using the [Top10](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html) filter (`IsTop` and `IsTop10` must both be enabled before setting `Top10Number`).
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;` and (for the cross-platform sample) `using System.IO;`.
+- The cross-platform sample expects the input file at `Data/InputTemplate.xlsx` relative to the application's working directory and writes the output to `Output/Filter.xlsx`.
+- The Windows-specific and VB.NET samples use `Sample.xlsx` and write `Filter.xlsx` to the current working directory.
+
+## Code example
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -104,3 +117,9 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [How to apply custom filtering to string data types using XlsIO](how-to-apply-custom-filtering-to-string-data-types-using-XlsIO.md)
+- [How to remove AutoFilter from an Excel worksheet](how-to-remove-autofilter-in-an-Excel.md)
+- [How to read filtered rows in Excel](how-to-read-filtered-rows-in-excel.md)

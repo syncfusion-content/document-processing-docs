@@ -1,16 +1,25 @@
 ---
-title: Decrypt individual items with specific passwords | Syncfusion
-description: This page demonstrates how to decrypt individual items with specific passwords using Syncfusion.Compression.Base.
+title: How to Decrypt Specific Files in a Protected ZIP | Syncfusion
+description: This page demonstrates how to decrypt individual items with specific passwords using Syncfusion.Compression.Zip in .NET.
 platform: document-processing
-control: XlsIO
+control: Compression
 documentation: UG
 ---
 
-# How to decrypt individual items with specific passwords using C#?
+# How to Decrypt Specific Files in a Protected ZIP?
 
-Syncfusion.Compression allows users to decrypt individual items within a protected ZIP file, each secured with a unique password. When decompressing the ZIP file, you can provide the correct password for each item to extract it successfully.
+Syncfusion.Compression.Zip allows you to decrypt individual items within a protected ZIP file, each secured with a unique password. When the archive is opened, the `OnZipArchiveItemPasswordNeeded` event is raised for every encrypted entry; supplying the matching password in the event handler lets that item be extracted successfully. Items that are not encrypted (added without a per-item password) are extracted without raising the event.
 
-The following complete code snippet explains how to decrypt individual items in a ZIP file using the ZipCrypto encryption algorithm.
+The following complete code snippet explains how to create a protected ZIP file with per-item passwords and then decrypt those items by handling the `OnZipArchiveItemPasswordNeeded` event. The example uses the [ZipCrypto](https://help.syncfusion.com/cr/document-processing/Syncfusion.Compression.Zip.EncryptionAlgorithm.html) encryption algorithm.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.Compression.Base** NuGet package.
+- Add the required `using` directive: `using Syncfusion.Compression.Zip;` (or `Imports Syncfusion.Compression.Zip` in VB.NET).
+- The example expects input files (`FinancialReport.xlsx`, `EmployeeDetails.pdf`, `ProjectDetails.docx`, `ProductImage.png`) to exist in a `Data` folder relative to the application's working directory, and an `Output` folder to exist for the generated ZIP files.
+- The example first creates `Sample.zip` and then opens it again to demonstrate the password event flow. The two `ZipArchive` instances are independent — only the second one needs the password event handler.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

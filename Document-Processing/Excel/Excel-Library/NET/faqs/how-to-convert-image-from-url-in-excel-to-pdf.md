@@ -1,18 +1,33 @@
 ---
-title: Convert image from URL in Excel to PDF | Syncfusion
-description: This page shows how to image from URL in Excel to PDF using the .NET Excel Library.
+title: How to convert an image from a URL in Excel to PDF? | Syncfusion
+description: Explains how to download an image from a URL, embed it in an XlsIO workbook, and convert the workbook to PDF.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert image from URL in Excel to PDF?
+# How to convert an image from a URL in Excel to PDF?
 
-The image added from an URL/external link will be downloaded every time the spreadsheet is opened in Microsoft Excel. The image is not physically embedded into the Excel document but points to a web resource. As the image is not present, it would not be rendered in the converted PDF document.
+When you add an image to a worksheet from a URL or external link, Microsoft Excel downloads the image every time the spreadsheet is opened. The image is not physically embedded in the file; it only stores the URL. Because Syncfusion<sup>&reg;</sup> XlsIO does not fetch external resources during PDF conversion, the image will not appear in the output PDF. To work around this, download the image first, embed it as a picture, and then convert the workbook to PDF.
 
-But, this can be achieved by downloading the image prior and adding it into Excel. Please find the code snippet below.
+## Prerequisites
 
-{% tabs %}  
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Install the renderer package:
+  * **Cross-platform:** [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
+  * **Windows-specific:** Syncfusion.ExcelToPdfConverter.WinForms (or .WPF)
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* The example downloads an image from `https://cdn.syncfusion.com/...`; an active internet connection is required.
+* Ensure the working directory is writable; the example writes `ExcelToPDF.pdf` next to the input file.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {

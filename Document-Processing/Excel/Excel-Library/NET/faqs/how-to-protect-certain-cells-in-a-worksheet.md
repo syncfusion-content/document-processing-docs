@@ -8,35 +8,55 @@ documentation: UG
 
 # How to protect certain cells in a worksheet?
 
-All the cells in an Excel worksheet have a **Locked** property, which determines if the cell will be editable. When a worksheet is protected, all the cells in the worksheet get locked, by default.
+All cells in an Excel worksheet have a **Locked** property, which determines whether the cell is editable. When a worksheet is protected, all cells in the worksheet are locked by default.
 
-However, there is often a need to protect only certain cells in a worksheet. In this scenario, you need to protect a worksheet, and set the [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property as false for the cells that need to be made editable. 
+However, you often need to protect only certain cells in a worksheet while leaving others editable. In this scenario, protect the worksheet and set the [Locked](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Locked) property to `false` for the cells that should remain editable. The following code example demonstrates this.
 
-The following code snippet illustrate this.
+## Prerequisites
 
-{% tabs %}  
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Add a `Sample.xlsx` file in the application's working directory, or update the file path passed to `Workbooks.Open` accordingly. Note that file paths are case-sensitive on Linux.
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
+  application.DefaultVersion = ExcelVersion.Excel2013;
+
+  //ExcelOpenType.Automatic detects the file format automatically
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Sample data
+  //Populate the entire range with "Locked" text
   worksheet.Range["A1:K20"].Text = "Locked";
 
-  //A1:A10 will not be protected, hence it is editable.
+  //Mark A1:A10 as editable (CellStyle.Locked defaults to true for every cell)
   worksheet.Range["A1:A10"].CellStyle.Locked = false;
   worksheet.Range["A1:A10"].Text = "UnLocked";
   worksheet.Protect("syncfusion", ExcelSheetProtection.All);
 
+  //To remove protection: worksheet.Unprotect("syncfusion");
+
   workbook.SaveAs("ProtectCells.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -44,35 +64,45 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Sample data
+  //Populate the entire range with "Locked" text
   worksheet.Range["A1:K20"].Text = "Locked";
 
-  //A1:A10 will not be protected, hence it is editable.
+  //Mark A1:A10 as editable
   worksheet.Range["A1:A10"].CellStyle.Locked = false;
-  worksheet.Range["A1:A10"].Text = "UnLocked";
+  worksheet.Range["A1:A10"].Text = "Unlocked";
+
+  //Protect the worksheet; call after setting Locked properties
   worksheet.Protect("syncfusion", ExcelSheetProtection.All);
+
   workbook.SaveAs("ProtectCells.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
-  'Sample data
+  'Populate the entire range with "Locked" text
   worksheet.Range("A1:K20").Text = "Locked"
 
-  'A1:A10 will not be protected.
+  'Mark A1:A10 as editable
   worksheet.Range("A1:A10").CellStyle.Locked = False
-  worksheet.Range("A1:A10").Text = "UnLocked"
+  worksheet.Range("A1:A10").Text = "Unlocked"
+
+  'Protect the worksheet; call after setting Locked properties
   worksheet.Protect("syncfusion", ExcelSheetProtection.All)
+
   workbook.SaveAs("ProtectCells.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 N> Locking/Unlocking cells in an unprotected worksheet has no effect.
 

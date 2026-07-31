@@ -1,6 +1,6 @@
 ---
 title: How to open an Excel file from stream | XlsIO | Syncfusion
-description: This page demonstrates with an example to open an Excel file from stream using .NET Excel Library.
+description: Learn how to open an Excel file from a stream programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,48 +8,78 @@ documentation: UG
 
 # How to open an Excel file from stream?
 
-XlsIO provides support for opening a file that is stored as a stream. The following code snippet illustrates this.
+XlsIO can open an Excel file that is supplied as a stream. The following code example demonstrates this.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Add a sample `Sample.xlsx` file in the application's working directory, or update the file path passed to `FileStream` accordingly. Note that file paths are case-sensitive on Linux.
+* On Windows, if the input file is open in Microsoft Excel, use `FileShare.ReadWrite` so XlsIO can read it without a sharing violation.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+using System.IO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
 
-  //Opening a File from a Stream
-  FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read);
-  IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
-  workbook.SaveAs("Output.xlsx");
-  workbook.Close();
-  excelEngine.Dispose();
+  //Open the file as a stream
+  using (FileStream inputStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read))
+  {
+    //ExcelOpenType.Automatic detects the file format automatically
+    IWorkbook workbook = application.Workbooks.Open(inputStream, ExcelOpenType.Automatic);
+    workbook.SaveAs("Output.xlsx");
+    workbook.Close();
+  }
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+using System.IO;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2013;
 
-  //Opening a File from a Stream
-  FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-  IWorkbook workbook = application.Workbooks.Open(fileStream);
-  workbook.SaveAs("Output.xlsx");
+  //FileShare.ReadWrite allows Microsoft Excel to keep the file open
+  using (FileStream fileStream = new FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+  {
+    IWorkbook workbook = application.Workbooks.Open(fileStream);
+    workbook.SaveAs("Output.xlsx");
+    workbook.Close();
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+Imports System.IO
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
 
-  'Opening a File from a Stream
-  Dim fileStream As New FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-  Dim workbook As IWorkbook = application.Workbooks.Open(fileStream)
-  workbook.SaveAs("Output.xlsx")
+  'FileShare.ReadWrite allows Microsoft Excel to keep the file open
+  Using fileStream As New FileStream("Sample.xlsx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+    Dim workbook As IWorkbook = application.Workbooks.Open(fileStream)
+    workbook.SaveAs("Output.xlsx")
+    workbook.Close()
+  End Using
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

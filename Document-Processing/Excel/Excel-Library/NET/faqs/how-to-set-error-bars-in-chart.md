@@ -1,16 +1,30 @@
 ---
-title: How to set error bars in chart | Syncfusion
-description: This page demonstrates with an example on how to set error bars in chart with .NET Excel Library.
+title: How to set error bars in a chart? | XlsIO | Syncfusion
+description: Learn how to add error bars to chart series in Excel using XlsIO with practical C# and VB.NET code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set error bars in chart?
+# How to set error bars in a chart?
 
-Charts can be enhanced by adding error bars which help to view the margin errors and deviations. The following code snippet shows how to set error bar in a chart series.
+Error bars let you visualize the margin of error or deviation for each data point in a chart series. Syncfusion<sup>&reg;</sup> XlsIO exposes this through the [`IChartSerie.ErrorBar(...)`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartSerie.html) method, which takes four parameters: a `bool` indicating whether to show the error bar, an [`ExcelErrorBarInclude`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelErrorBarInclude.html) direction, an [`ExcelErrorBarType`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelErrorBarType.html) calculation mode, and a numeric `value`. The following code example creates a clustered-column chart, adds a percentage error bar to the first series, and saves the workbook.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* The sample creates the chart on a brand-new workbook and writes its own data, so no input file is required. If you want to load an existing `Sample.xlsx`, the file must contain a chart on the first sheet whose data range covers `A1:E5`.
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites the destination file.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {

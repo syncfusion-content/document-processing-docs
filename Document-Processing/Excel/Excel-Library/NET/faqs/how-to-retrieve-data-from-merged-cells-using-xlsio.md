@@ -12,6 +12,19 @@ When a cell belongs to a merged region the visible value is stored in the top-le
 
 The following example demonstrates this pattern.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` — for `Console.WriteLine`.
+  - `using System.IO;` — for `Path.GetFullPath` (cross-platform and VB.NET tabs).
+  - `using Syncfusion.XlsIO;` — for the XlsIO types and `IRange`, `IsMerged`, `MergeArea`.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/InputTemplate.xlsx` (cross-platform and VB.NET tabs) or `InputTemplate.xlsx` (Windows-specific tab). The input workbook must contain at least one worksheet with at least one merged region.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 // Create an instance of ExcelEngine
@@ -81,3 +94,9 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data">this GitHub page</a>.
+
+## See also
+
+* [Merge Area Data on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data)
+* [Merged Cells in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/merge-cells-in-excel)
+* [How to unmerge cells in an Excel worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/unmerge-cells-in-excel)

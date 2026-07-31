@@ -1,19 +1,21 @@
 ---
-title: What is the maximum range of Rows and Columns | Syncfusion
-description: This page tells about the maximum range of rows and columns supported in .NET Excel library.
+title: What is the maximum range of rows and columns? | XlsIO | Syncfusion
+description: This page describes the maximum range of rows and columns supported by the .NET Excel library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the maximum range of Rows and Columns?
+# What is the maximum range of rows and columns?
 
-XlsIO has support below worksheet size for Excel 97 to 2003, Excel 2007 and later versions.
+Syncfusion<sup>&reg;</sup> XlsIO supports the following worksheet sizes, which match the native limits of Microsoft Excel:
 
-* **Excel** **97** **to** **2003****(.****xls** **format****)** – 65,536 by 256 rows and columns.
-* **Excel** **2007** **and** **Later** **versions****(.****xlsx** **format****)**  – 1,048,576 by 16,384 rows and columns
+| File format | Last row | Last column | Last column letter |
+|-------------|----------|-------------|--------------------|
+| Excel 97 to 2003 (`.xls`) | 65,536 | 256 | `IV` |
+| Excel 2007 and later (`.xlsx`, `.xlsm`, `.xltx`, `.xltm`) | 1,048,576 | 16,384 | `XFD` |
 
-The above specification is the worksheet size of Excel. For more information, see [Excel specifications and limits](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3?ui=en-us&rs=en-us&ad=us)
+For more information, see [Excel specifications and limits](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).
 
 ## See Also
 

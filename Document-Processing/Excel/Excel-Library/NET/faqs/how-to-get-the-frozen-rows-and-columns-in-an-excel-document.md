@@ -1,14 +1,28 @@
 ---
-title: How to get the frozen rows and columns in an Excel | Syncfusion.
-description: This page explains how to get the frozen rows and columns in an Excel document using .NET Excel Library.
+title: How to Retrieve Frozen Rows and Columns in Excel? | Syncfusion
+description: Learn how to read the frozen pane state of an Excel worksheet using the FreezeRow and FreezeColumn APIs in XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the frozen rows and columns in an Excel document?
+# How to Retrieve Frozen Rows and Columns in Excel?
 
-The following code example illustrates how to get the frozen rows and columns in an Excel document.
+In Syncfusion<sup>&reg;</sup> XlsIO, a worksheet's frozen-pane state is exposed on the **internal** [`WorksheetImpl.Pane`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html) property, which returns a [`PaneRecord`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PaneRecord.html) with four useful properties: `FirstRow`, `FirstColumn`, `HorizontalSplit`, and `VerticalSplit`. For a more public-API approach, the worksheet's `FreezeRow` and `FreezeColumn` properties expose the same information (1-based row/column index of the split, or `0` if no freeze).
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* The example creates a sample workbook with three frozen rows and two frozen columns, then reads the state back through the internal `PaneRecord`. No input file is required.
+* Ensure the working directory is writable; the example writes `Sample.xlsx`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -85,3 +99,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [WorksheetImpl API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.WorksheetImpl.html)
+* [PaneRecord API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.PaneRecord.html)

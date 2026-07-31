@@ -1,6 +1,6 @@
 ---
-title: How to apply formatting to pivot table | XlsIO | Syncfusion
-description: This page explains how to apply formatting to pivot table in Excel protected view using .NET Excel Library.
+title: Apply Formatting to a Pivot Table Using XlsIO | Syncfusion
+description: Explains how to apply a built-in PivotTable style in Syncfusion XlsIO and why the Layout method must be called.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,25 @@ documentation: UG
 
 # How to apply formatting to pivot table in Excel protected view?
 
-Syncfusion&reg; XlsIO supports applying formatting to pivot table during creation. But, in the protected view, to get the formatting applied to pivot table, [Layout](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) method of [IPivotTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html) should be called. The following code snippet explains this.
+Syncfusion<sup>&reg;</sup> XlsIO supports applying a built-in style to a pivot table when the pivot table is created in code. The style is applied by setting the [`IPivotTable.BuiltInStyle`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_BuiltInStyle) property to a value from the [`PivotBuiltInStyles`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotBuiltInStyles.html) enum (for example, `PivotStyleDark15`). For the style to be visible in the saved file, you must also call the [`IPivotTable.Layout`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotTable.html#Syncfusion_XlsIO_IPivotTable_Layout) method after assigning the style. The following code example demonstrates the full flow: create a pivot cache, add a pivot table to a separate sheet, configure row / column / data fields, apply a built-in style, call `Layout()`, and save.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook called `Sample.xlsx` in the application's working directory. The workbook must contain at least one data sheet whose first row is a header row and whose data range covers `A1:H50` (eight columns, fifty rows of data). The pivot table is created on `Worksheets[1]`; if the workbook has only one sheet, the code will throw an `ArgumentOutOfRangeException` at `Worksheets[1]`.
+* Ensure the output directory is writable; `Workbook.SaveAs` creates or overwrites the destination file.
+
+## Create a pivot table and apply a built-in style
+
+The flow is: open the source workbook, create a `PivotCache` over the data range, add a pivot table on the pivot sheet, configure the row / column / data fields, set `BuiltInStyle`, call `Layout()`, then save.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -42,7 +60,6 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   //Saving the workbook
   workbook.SaveAs("Output.xlsx");
 }
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}

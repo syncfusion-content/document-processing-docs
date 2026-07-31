@@ -1,6 +1,6 @@
 ---
-title: Zip files using the Syncfusion.Compression.Zip namespace | Syncfusion
-description: This page demonstrates with an example on how to zip files using the Syncfusion.Compression.Zip namespace.
+title: How to Zip Files Using Syncfusion.Compression.Zip | Syncfusion
+description: Code example that zips files using the Syncfusion.Compression.Zip namespace with the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,51 +8,73 @@ documentation: UG
 
 # How to zip files using the Syncfusion.Compression.Zip namespace?
 
-You can compress the file using **Syncfusion.Compression.Zip** namespace. The following code illustrate this.
+You can compress one or more files into a zip archive by using the **Syncfusion.Compression.Zip** namespace in Syncfusion<sup>&reg;</sup> Document Processing. The following code example demonstrates how to add a file to a `ZipArchive` and save the result.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`). This transitively brings in `Syncfusion.Compression.Base` and `Syncfusion.Compression.Zip`.
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Place a `SampleFile.cs` file in the application's working directory (the path is resolved relative to `Environment.CurrentDirectory`). File paths are case-sensitive on Linux.
+* Ensure the output directory is writable; `ZipArchive.Save` creates or overwrites the destination file.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using Syncfusion.Compression.Zip;
+using System.IO;
 
-ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
-zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best;
+using (ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive())
+{
+  //Pick the strongest available compression
+  zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best;
 
-//Add the file you want to zip.
-zipArchive.AddFile("SampleFile.cs");
+  //Add the file you want to zip (resolved relative to the current working directory)
+  zipArchive.AddFile("SampleFile.cs");
 
-//Zip file name and location.
-zipArchive.Save("SyncfusionCompressFileSample.zip");
-zipArchive.Close();
+  //Save creates or overwrites the destination zip file
+  zipArchive.Save("SyncfusionCompressFileSample.zip");
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression.Zip;
+using System.IO;
 
-ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
-zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best;
+using (ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive())
+{
+  //Pick the strongest available compression
+  zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best;
 
-//Add the file you want to zip.
-zipArchive.AddFile("SampleFile.cs");
+  //Add the file you want to zip (resolved relative to the current working directory)
+  zipArchive.AddFile("SampleFile.cs");
 
-//Zip file name and location.
-zipArchive.Save("SyncfusionCompressFileSample.zip");
-zipArchive.Close();
+  //Save creates or overwrites the destination zip file
+  zipArchive.Save("SyncfusionCompressFileSample.zip");
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Imports Syncfusion.Compression.Zip
+Imports System.IO
 
-Dim zipArchive As ZipArchive = New Syncfusion.Compression.Zip.ZipArchive()
-zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best
+Using zipArchive As ZipArchive = New Syncfusion.Compression.Zip.ZipArchive()
+  'Pick the strongest available compression
+  zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best
 
-'Add the file you want to zip.
-zipArchive.AddFile("SampleFile.cs")
+  'Add the file you want to zip (resolved relative to the current working directory)
+  zipArchive.AddFile("SampleFile.cs")
 
-'Zip file name and location.
-zipArchive.Save("SyncfusionCompressFileSample.zip")
-zipArchive.Close()
+  'Save creates or overwrites the destination zip file
+  zipArchive.Save("SyncfusionCompressFileSample.zip")
+End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 T>You can use CompressionLevel to reduce the size of the file.  
 
@@ -60,44 +82,82 @@ For compressing directories, you can make use of the **AddDirectory** method whi
 
 The following code snippet illustrate how to add the file from the local drive.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression.Zip;
+using System.IO;
+
 string fileName = @"SampleFile.cs";
-ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
-zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
-Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-FileAttributes attributes = (FileAttributes)File.GetAttributes(fileName);
-ZipArchiveItem item = new ZipArchiveItem(zipArchive, "SampleFile.cs", stream, true, attributes);
-zipArchive.AddItem(item);
-zipArchive.Save(@"SyncfusionCompressFileSample.zip");
-zipArchive.Close();
+using (ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive())
+{
+  zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
+
+  //Stream the file from disk; wrap in a using block to release the handle
+  using (Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+  {
+    //Cast the enum to FileAttributes because File.GetAttributes returns a boxed int
+    FileAttributes attributes = (FileAttributes)File.GetAttributes(fileName);
+
+    //ZipArchiveItem(zipArchive, nameInArchive, sourceStream, isDirectory, fileAttributes)
+    //The 4th argument (true here) marks the entry as a directory; pass false for a regular file
+    ZipArchiveItem item = new ZipArchiveItem(zipArchive, "SampleFile.cs", stream, false, attributes);
+
+    zipArchive.AddItem(item);
+  }
+
+  zipArchive.Save(@"SyncfusionCompressFileSample.zip");
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.Compression.Zip;
+using System.IO;
+
 string fileName = @"SampleFile.cs";
-ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
-zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
-Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-FileAttributes attributes = File.GetAttributes(fileName);
-ZipArchiveItem item = new ZipArchiveItem(zipArchive, "SampleFile.cs", stream, true, attributes);
-zipArchive.AddItem(item);
-zipArchive.Save(@"SyncfusionCompressFileSample.zip");
-zipArchive.Close();
+using (ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive())
+{
+  zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
+
+  //Stream the file from disk; wrap in a using block to release the handle
+  using (Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+  {
+    FileAttributes attributes = File.GetAttributes(fileName);
+
+    //ZipArchiveItem(zipArchive, nameInArchive, sourceStream, isDirectory, fileAttributes)
+    //The 4th argument (false here) marks the entry as a regular file
+    ZipArchiveItem item = new ZipArchiveItem(zipArchive, "SampleFile.cs", stream, false, attributes);
+
+    zipArchive.AddItem(item);
+  }
+
+  zipArchive.Save(@"SyncfusionCompressFileSample.zip");
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.Compression.Zip
+Imports System.IO
+
 Dim fileName As String = "SampleFile.cs"
-Dim zipArchive As ZipArchive = New Syncfusion.Compression.Zip.ZipArchive()
-zipArchive.DefaultCompressionLevel = CompressionLevel.Best
-Dim stream As Stream = New FileStream(fileName, FileMode.Open, FileAccess.Read)
-Dim attributes As FileAttributes = File.GetAttributes(fileName)
-Dim item As New ZipArchiveItem(zipArchive, "SampleFile.cs", stream, True, attributes)
-zipArchive.AddItem(item)
-zipArchive.Save("SyncfusionCompressFileSample.zip")
-zipArchive.Close()
+Using zipArchive As ZipArchive = New Syncfusion.Compression.Zip.ZipArchive()
+  zipArchive.DefaultCompressionLevel = CompressionLevel.Best
+
+  'Stream the file from disk; wrap in a Using block to release the handle
+  Using stream As Stream = New FileStream(fileName, FileMode.Open, FileAccess.Read)
+    Dim attributes As FileAttributes = File.GetAttributes(fileName)
+
+    'ZipArchiveItem(zipArchive, nameInArchive, sourceStream, isDirectory, fileAttributes)
+    'The 4th argument (False here) marks the entry as a regular file
+    Dim item As New ZipArchiveItem(zipArchive, "SampleFile.cs", stream, False, attributes)
+
+    zipArchive.AddItem(item)
+  End Using
+
+  zipArchive.Save("SyncfusionCompressFileSample.zip")
+End Using
 {% endhighlight %}
-{% endtabs %}  
- 
+{% endtabs %}
+
 ## See Also
 
 * [How to zip files using the Syncfusion.Compression.Zip namespace?](how-to-zip-files-using-the-syncfusion-compression-zip-namespace)

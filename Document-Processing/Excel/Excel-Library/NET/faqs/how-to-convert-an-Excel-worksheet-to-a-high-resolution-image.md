@@ -1,6 +1,6 @@
 ---
 title: How to convert an worksheet to a high-resolution image | Syncfusion
-description: This page shows how to convert an Excel worksheet to a high-resolution image using the .NET Excel Library.
+description: This page shows how to convert an Excel worksheet to a high-resolution image using the Syncfusion .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,17 @@ documentation: UG
 
 # How to convert an Excel worksheet to a high-resolution image?
 
-Essential&reg; XlsIO allows you to convert an Excel worksheet to a high-resolution image. This can be achieved by converting the worksheet to a Metafile and then resetting the resolution using a custom ResetResolution method.
+Essential&reg; XlsIO allows you to convert an Excel worksheet to an image. To produce a high-resolution image, the worksheet is first converted to a Metafile (EMF) and the resolution of that Metafile is then reset to a target value (such as 300 DPI) using a custom `ResetResolution` helper. The result is saved as a JPEG in the example, but the same helper works for other ImageFormat values.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;`, `using System.Drawing;`, `using System.Drawing.Imaging;`, and (for cross-platform) `using System.IO;`.
+- The input workbook (`InputTemplate.xlsx`) must exist in the application's working directory.
+
+## Code example
 
 The following code example illustrates how to convert an Excel worksheet to a high-resolution image.
 

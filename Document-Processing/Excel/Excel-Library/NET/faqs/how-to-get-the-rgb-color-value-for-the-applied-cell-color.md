@@ -1,14 +1,28 @@
 ---
-title: How to get the RGB color value for the applied cell color |Syncfusion.
-description: This page explains how to get the RGB color value for the applied cell color in an Excel document using .NET Excel Library.
+title: How to get the RGB color value of an applied cell color? | Syncfusion
+description: Explains how to read the resolved RGB value of a cell's fill color in XlsIO using CellStyle.Color, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the RGB color value for the applied cell color?
+# How to get the RGB color value of an applied cell color?
 
-The following code example illustrates how to get the RGB color value for the applied cell color in an Excel document.
+Syncfusion<sup>&reg;</sup> XlsIO exposes two color APIs on a cell's [`IStyle`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html):
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* The example creates a fresh workbook and applies an explicit RGB color, so no input file is required.
+* Ensure the working directory is writable; the example writes `Output.xlsx`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -76,3 +90,8 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [IStyle API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IStyle.html)
+* [ExcelKnownColors enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelKnownColors.html)

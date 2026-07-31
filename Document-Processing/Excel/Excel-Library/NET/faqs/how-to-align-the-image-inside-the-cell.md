@@ -11,6 +11,15 @@ Image can be aligned in the cell as required using the **TopRowOffset** and **Le
 
 The following example shows how to align a picture inside a worksheet cell using the Syncfusion .NET Excel (XlsIO) library.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` — for `FileStream`, `FileMode`, and `FileAccess` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` — for the XlsIO types and `Picture` / `ShapeImpl` (C# and VB.NET).
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -103,4 +112,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
      workbook.SaveAs("../../Output/Picture.xlsx")
  End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
+
+## See also
+
+* [Pictures in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pictures)

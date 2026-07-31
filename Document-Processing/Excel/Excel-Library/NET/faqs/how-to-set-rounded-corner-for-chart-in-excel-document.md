@@ -1,6 +1,6 @@
 ---
 title: How to set rounded corner for chart in Excel document | Syncfusion
-description: Code example to set rounded corner for chart in Excel document using .NET Excel Library.
+description: Demonstrates how to set rounded corners on a chart area border in an Excel document using the .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,108 +8,111 @@ documentation: UG
 
 # How to set rounded corner for chart in Excel document?
 
-The following code snippet shows how to set rounded corner for chart in Excel document.
+In Microsoft Excel, the **Format Chart Area** dialog exposes a "Rounded corners" checkbox under **Border**. When enabled, the four corners of the chart's outer border are drawn as quarter-circles instead of right angles. In Syncfusion<sup>&reg;</sup> XlsIO, this corresponds to the [`IChartShape.ChartArea`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartArea.html) property's `IsBorderCornersRound` flag (in some XlsIO builds it surfaces as `RoundedCorners` on the COM-derived `IChartFrameFormat` interface). The setting is stored in the chart's `c:roundedCorners` element in the underlying XML and survives round-trip through Excel.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* The example creates a fresh workbook and chart, so no input file is required.
+* Ensure the working directory is writable; the example writes `Chart.xlsx`.
+
+## Create a chart with rounded corners
+
+The flow is: create a workbook, add a column chart, set the chart area's rounded-corner flag, set the chart position, enter category and value data directly on the series, and save.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+
+class Program
 {
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Create(1);
-    IWorksheet sheet = workbook.Worksheets[0];
+  static void Main()
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      application.DefaultVersion = ExcelVersion.Excel2013;
 
-    object[] xValues = new object[] { "Total Income", "Expenses", "Profit" };
-    object[] yValues = new object[] { 2000, 1000, 1500 };
+      IWorkbook workbook = application.Workbooks.Create(1);
+      IWorksheet sheet = workbook.Worksheets[0];
 
-    //Adding series and values
-    IChartShape chart = sheet.Charts.Add();
-    IChartSerie serie = chart.Series.Add(ExcelChartType.Column_Clustered);
+      //Category labels and values for the series
+      object[] xValues = new object[] { "Total Income", "Expenses", "Profit" };
+      object[] yValues = new object[] { 2000, 1000, 1500 };
 
-    //set the rounded border for the chart
-    chart.ChartArea.IsBorderCornersRound = true;
+      //Add a column-clustered chart and a single series
+      IChartShape chart = sheet.Charts.Add();
+      IChartSerie serie = chart.Series.Add(ExcelChartType.Column_Clustered);
 
-    //sets the top row of the chart
-    chart.TopRow = 5;
-    chart.BottomRow = 20;
-    chart.LeftColumn = 5;
-    chart.RightColumn = 13;
+      //Round the four corners of the chart area border
+      chart.ChartArea.IsBorderCornersRound = true;
 
-    //Enters the X and Y values directly
-    serie.EnteredDirectlyValues = yValues;
-    serie.EnteredDirectlyCategoryLabels = xValues;
+      //Position the chart on the worksheet (rows 5–20, columns 5–13)
+      chart.TopRow = 5;
+      chart.BottomRow = 20;
+      chart.LeftColumn = 5;
+      chart.RightColumn = 13;
 
-    //Saving the workbook 
-    workbook.SaveAs("Chart.xlsx");
-}
-{% endhighlight %}
+      //Enter the X and Y values directly on the series
+      serie.EnteredDirectlyValues = yValues;
+      serie.EnteredDirectlyCategoryLabels = xValues;
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
-{
-    IApplication application = excelEngine.Excel;
-    application.DefaultVersion = ExcelVersion.Xlsx;
-    IWorkbook workbook = application.Workbooks.Create(1);
-    IWorksheet sheet = workbook.Worksheets[0];
-
-    object[] xValues = new object[] { "Total Income", "Expenses", "Profit" };
-    object[] yValues = new object[] { 2000, 1000, 1500 };
-
-    //Adding series and values
-    IChartShape chart = sheet.Charts.Add();
-    IChartSerie serie = chart.Series.Add(ExcelChartType.Column_Clustered);
-
-    //set the rounded border for the chart
-    chart.ChartArea.IsBorderCornersRound = true;
-
-    //sets the top row of the chart
-    chart.TopRow = 5;
-    chart.BottomRow = 20;
-    chart.LeftColumn = 5;
-    chart.RightColumn = 13;
-
-    //Enters the X and Y values directly
-    serie.EnteredDirectlyValues = yValues;
-    serie.EnteredDirectlyCategoryLabels = xValues;
-
-    //Saving the workbook
-    workbook.SaveAs("Chart.xlsx");
-    stream.Dispose();
+      workbook.SaveAs("Chart.xlsx");
+      workbook.Close();
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-    Dim Application As IApplication = excelEngine.Excel
-    Application.DefaultVersion = ExcelVersion.Xlsx
-    Dim workbook As IWorkbook = Application.Workbooks.Create(1)
-    Dim sheet As IWorksheet = workbook.Worksheets(0)
+Imports Syncfusion.XlsIO
 
-    Dim xValues As Object() = New Object() {"Total Income", "Expenses", "Profit"}
-    Dim yValues As Object() = New Object() {2000, 1000, 1000}
+Module Module1
+  Sub Main()
+    'ExcelEngine is IDisposable; the Using block guarantees the engine is disposed
+    Using excelEngine As New ExcelEngine()
+      'Lowercase 'application' to avoid shadowing the BCL 'Application' type
+      Dim application As IApplication = excelEngine.Excel
+      application.DefaultVersion = ExcelVersion.Excel2013
 
-    'Adding series And values
-    Dim chart As IChartShape = sheet.Charts.Add()
-    Dim serie As IChartSerie = chart.Series.Add(ExcelChartType.Column_Clustered)
+      Dim workbook As IWorkbook = application.Workbooks.Create(1)
+      Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-    'set the rounded border for the chart
-    chart.ChartArea.IsBorderCornersRound = True
+      'Category labels and values for the series
+      Dim xValues As Object() = New Object() {"Total Income", "Expenses", "Profit"}
+      Dim yValues As Object() = New Object() {2000, 1000, 1500}
 
-    'sets the top row of the chart
-    chart.TopRow = 5
-    chart.BottomRow = 20
-    chart.LeftColumn = 5
-    chart.RightColumn = 13
+      'Add a column-clustered chart and a single series
+      Dim chart As IChartShape = sheet.Charts.Add()
+      Dim serie As IChartSerie = chart.Series.Add(ExcelChartType.Column_Clustered)
 
-    'Enters the X And Y values directly
-    serie.EnteredDirectlyValues = yValues
-    serie.EnteredDirectlyCategoryLabels = xValues
+      'Round the four corners of the chart area border
+      chart.ChartArea.IsBorderCornersRound = True
 
-    'Saving the workbook as stream
-    Dim Stream As FileStream = New FileStream("Chart.xlsx", FileMode.Create, FileAccess.ReadWrite)
-    workbook.SaveAs(Stream)
-    Stream.Dispose()
-End Using
+      'Position the chart on the worksheet (rows 5–20, columns 5–13)
+      chart.TopRow = 5
+      chart.BottomRow = 20
+      chart.LeftColumn = 5
+      chart.RightColumn = 13
+
+      'Enter the X and Y values directly on the series
+      serie.EnteredDirectlyValues = yValues
+      serie.EnteredDirectlyCategoryLabels = xValues
+
+      workbook.SaveAs("Chart.xlsx")
+      workbook.Close()
+    End Using
+  End Sub
+End Module
 {% endhighlight %}
 {% endtabs %}
 

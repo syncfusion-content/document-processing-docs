@@ -1,34 +1,63 @@
 ---
-title: Excel file with uninstalled fonts converted to PDF/Image | Syncfusion
-description: This page tells what happens when an Excel file containing uninstalled fonts is converted to PDF/Image using XlsIO.
+title: How XlsIO Handles Missing Fonts in PDF and Image Export | Syncfusion
+description: Explains how XlsIO substitutes missing fonts when converting an Excel file to PDF or image, with a code example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How does Excel file with uninstalled fonts is converted to PDF/Image?
+# How XlsIO Handles Missing Fonts in PDF and Image Export?
 
-When the fonts used in particular Excel document are not installed in the machine, the desired characters will be missing in the PDF/Image conversion. However, XlsIO comes up with a font substitution method through [SubstituteFontEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventHandler.html) event. This will enable user to specify alternate font name to render the characters in the specified alternate font. Otherwise, Microsoft Sans Serif is used as the default one.
+When a font used in an Excel document is not installed on the machine, the PDF or image output will be missing the glyphs that the original font would have rendered. Syncfusion<sup>&reg;</sup> XlsIO lets you provide an alternate font by subscribing to the [`SubstituteFont`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_SubstituteFont) event, which exposes the original font name on [`SubstituteFontEventArgs.OriginalFontName`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html) and lets you set the substitute on [`SubstituteFontEventArgs.AlternateFontName`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventArgs.html#Syncfusion_XlsIO_Implementation_SubstituteFontEventArgs_AlternateFontName). If you do not provide a substitute, XlsIO falls back to **Microsoft Sans Serif** (a Windows-only system font) on Windows, or to a built-in replacement on non-Windows platforms.
 
-N> Due to this font substitution, there might be a slight difference with the rendered text in the generated PDF/Image files during Excel to PDF/Image conversion.
+> Due to font substitution, the rendered text in the generated PDF or image file may differ slightly in width, weight, or layout from the source Excel document.
 
-The following code snippet shows how to use font substitution in Excel to PDF conversion using XlsIO.
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`) **and** the matching PDF or imaging renderer package (`Syncfusion.Pdf.Net.Core` for cross-platform PDF, or `Syncfusion.Pdf.WinForms` for Windows-specific PDF). The renderer is required because Excel-to-PDF/Image conversion lives in a separate assembly from XlsIO.
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have `Sample.xlsx` in the application's working directory. The file must contain at least one cell formatted with a font that is not installed on the machine, so that the substitution path is exercised.
+* Ensure the output directory is writable; the converter creates or overwrites the destination PDF file.
+
+## Font substitution in Excel-to-PDF conversion
+
+The flow is: open the workbook, subscribe to the `SubstituteFont` event, run the converter, and save the result. The `sender` argument of the event handler is the `IApplication` that raised the event; the `args` argument carries the original font name and accepts the substitute.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+using Syncfusion.Pdf;
+using System.IO;
+
+class Program
 {
-  IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-  //Initializes the SubstituteFont event to perform font substitution during Excel to PDF conversion
-  application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
+      //Subscribe to the SubstituteFont event before rendering
+      application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
 
-  XlsIORenderer renderer = new XlsIORenderer();
-  PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+      //XlsIORenderer is the cross-platform renderer (replaces the legacy ExcelToPdfConverter)
+      XlsIORenderer renderer = new XlsIORenderer();
+      PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
 
-  pdfDocument.Save("Output.pdf");
-}
+      //Save the resulting PDF
+      pdfDocument.Save("Output.pdf");
+      workbook.Close();
+    }
+  }
 
 private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
@@ -41,54 +70,91 @@ private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using (ExcelEngine excelEngine = new ExcelEngine())
+using Syncfusion.XlsIO;
+using Syncfusion.Pdf;
+using System.IO;
+
+class Program
 {
-  IApplication application = excelEngine.Excel;
-  IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
+  static void Main(string[] args)
+  {
+    //ExcelEngine is IDisposable; the using block guarantees the engine is disposed
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+      IApplication application = excelEngine.Excel;
+      IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
 
-  //Initializes the SubstituteFont event to perform font substitution during Excel to PDF conversion
-  application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
+      //Subscribe to the SubstituteFont event before rendering
+      application.SubstituteFont += new SubstituteFontEventHandler(SubstituteFont);
 
-  ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
-  PdfDocument pdf = converter.Convert();
+      //ExcelToPdfConverter is the legacy Windows-specific API; XlsIORenderer is the modern equivalent
+      ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+      PdfDocument pdf = converter.Convert();
 
-  Stream stream = File.Create("Output.pdf");
-  pdf.Save(stream);
-}
+      //Wrap the output stream in a using block so it is flushed and closed
+      using (Stream stream = File.Create("Output.pdf"))
+      {
+        pdf.Save(stream);
+      }
 
-private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
-{
-  //Sets the alternate font when a specified font is not installed in the production environment
-  if (args.OriginalFontName == "Wingdings Regular")
-	args.AlternateFontName = "Bauhaus 93";
-  else
-	args.AlternateFontName = "Times New Roman";
+      workbook.Close();
+    }
+  }
+
+  //Static handler so it can be referenced from the event-registration line above
+  private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
+  {
+    //sender is the IApplication that raised the event
+    if (args.OriginalFontName == "Wingdings Regular")
+    {
+      args.AlternateFontName = "Bauhaus 93";
+    }
+    else
+    {
+      args.AlternateFontName = "Times New Roman";
+    }
+  }
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
-  Dim application As IApplication = excelEngine.Excel
-  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
+Imports Syncfusion.XlsIO
+Imports Syncfusion.Pdf
+Imports System.IO
 
-  'Initializes the SubstituteFont event to perform font substitution during Excel to PDF conversion
-  AddHandler application.SubstituteFont, AddressOf SubstituteFont
+Module Module1
+  Sub Main()
+    'ExcelEngine is IDisposable; the Using block guarantees the engine is disposed
+    Using excelEngine As ExcelEngine = New ExcelEngine()
+      Dim application As IApplication = excelEngine.Excel
+      Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
 
-  Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
-  Dim pdf As PdfDocument = converter.Convert()
+      'Subscribe to the SubstituteFont event before rendering
+      AddHandler application.SubstituteFont, AddressOf SubstituteFont
 
-  Dim stream As Stream = File.Create("Output.pdf")
-  pdf.Save(stream)
-End Using
+      'ExcelToPdfConverter is the legacy Windows-specific API
+      Dim converter As ExcelToPdfConverter = New ExcelToPdfConverter(workbook)
+      Dim pdf As PdfDocument = converter.Convert()
 
-Private Shared Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
-  'Sets the alternate font when a specified font is not installed in the production environment.
-  If args.OriginalFontName = "Wingdings Regular" Then
-	args.AlternateFontName = "Bauhaus 93"
-  Else
-	args.AlternateFontName = "Times New Roman"
-  End If
-End Sub
+      'Wrap the output stream in a Using block so it is flushed and closed
+      Using stream As Stream = File.Create("Output.pdf")
+        pdf.Save(stream)
+      End Using
+
+      workbook.Close()
+    End Using
+  End Sub
+
+  'Shared handler so it can be referenced from the AddHandler line above
+  Private Shared Sub SubstituteFont(ByVal sender As Object, ByVal args As SubstituteFontEventArgs)
+    'sender is the IApplication that raised the event
+    If args.OriginalFontName = "Wingdings Regular" Then
+      args.AlternateFontName = "Bauhaus 93"
+    Else
+      args.AlternateFontName = "Times New Roman"
+    End If
+  End Sub
+End Module
 {% endhighlight %}
 {% endtabs %}
 

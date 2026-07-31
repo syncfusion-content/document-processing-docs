@@ -1,6 +1,6 @@
 ---
 title: Cone chart shows itself as column or bar chart | Syncfusion
-description: This page tells why cone chart shows itself as column or bar chart.
+description: This page explains how to create cone, pyramid, and cylinder charts in Excel using XlsIO and why cone charts render as bar charts.
 platform: document-processing
 control: XlsIO
 documentation: UG

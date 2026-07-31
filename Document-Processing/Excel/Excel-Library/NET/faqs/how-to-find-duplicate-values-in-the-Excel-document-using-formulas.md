@@ -1,14 +1,28 @@
 ---
-title: Find duplicate values in the Excel document | Syncfusion
-description: This page shows how to find duplicate values in the Excel document using formulas with the .NET Excel Library.
+title: Find Duplicate Cell Values Using Excel Formulas | Syncfusion
+description: Explains how to write a per-row formula that marks the first occurrence of each value in a column, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to find duplicate values in the Excel document using formulas in C#?
+# How to Find Duplicate Cell Values Using Excel Formulas ?
 
 The following code illustrates how to find the duplicate values in the Excel document using formulas.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Provide an input `InputTemplate.xlsx` whose first sheet has data in **column C starting at row 2**. The first row is treated as a header; the formula is not written to row 1.
+* Ensure the working directory is writable; the example writes `Output.xlsx`.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -72,3 +86,7 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [IRange.Formula API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)
