@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion DocumentSDK MCP Server Setup – Syncfusion
-description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK.
+title: Syncfusion DocumentSDK MCP Server Setup | Syncfusion
+description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK
 platform: document-processing
 control: AI coding assistant
 documentation: ug
@@ -149,7 +149,7 @@ You can install the Syncfusion Document SDK MCP server as a local tool without a
     dotnet tool install Syncfusion.DocumentSdk.MCP
     ````
 
-    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
+N> If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
 
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
