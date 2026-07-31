@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize text search color in PDF Viewer
+# Customize text search color in JavaScript PDF Viewer
 
 Change the text search and highlight colors using the `textSearchColorSettings` properties. Set `searchColor` for matched text and `searchHighlightColor` for the active result. Both properties accept hexadecimal color values.
 

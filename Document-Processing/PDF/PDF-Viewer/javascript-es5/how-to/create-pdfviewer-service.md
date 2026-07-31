@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create PDF Viewer service using ASP.NET MVC | Syncfusion
+title: Create PDF Viewer service using ASP.NET MVC in JS | Syncfusion
 description: Learn how to create an ASP.NET MVC Web API service for JavaScript PDF Viewer to handle server-side processing for rendering and related operations.
 platform: document-processing
 control: PDF Viewer

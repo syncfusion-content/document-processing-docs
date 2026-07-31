@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Delete an annotation in PDF Viewer
+# Delete an annotation in JavaScript PDF Viewer
 
 Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 

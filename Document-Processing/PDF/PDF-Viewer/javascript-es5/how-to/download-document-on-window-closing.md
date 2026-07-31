@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Download document on window closing in JavaScript PDF Viewer
 
-The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the `beforeunload` event (also known as `window.onbeforeunload`).
+The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the before unload event (also called the `window.onbeforeunload` API).
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ The JavaScript PDF Viewer can automatically download the loaded PDF document whe
 
 **Step 1:** Create a working sample by following the getting-started guide: [Getting started with JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started).
 
-**Step 2:** Attach a `beforeunload` event handler that prompts the user and calls `viewer.download()` to download the document. Note: browser behavior for this event varies between browsers and some modern browsers restrict prompts; use this pattern judiciously.
+**Step 2:** Attach a before unload event handler that prompts the user and calls `viewer.download()` to download the document. Note: browser behavior for this event varies between browsers and some modern browsers restrict prompts; use this pattern judiciously.
 
 ```js
 // The event triggers when closing or refreshing the window.
