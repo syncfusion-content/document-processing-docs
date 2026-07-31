@@ -11,7 +11,7 @@ documentation: ug
 
 Hyperlink is used to navigate to a web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowHyperlink) property to enable or disable the hyperlink functionality.
 
-> * The default value of the `allowHyperlink` property is `true`.
+> The default value of the `allowHyperlink` property is `true`.
 
 ## Insert Link
 

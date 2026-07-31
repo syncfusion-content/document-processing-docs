@@ -34,7 +34,7 @@ The following example demonstrates how to configure these colors in both Standal
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    enableTextSearch="true"
                    textSearchColorSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings
                    { SearchColor = "#FF0000", SearchHighlightColor = "#0000FF" })">
