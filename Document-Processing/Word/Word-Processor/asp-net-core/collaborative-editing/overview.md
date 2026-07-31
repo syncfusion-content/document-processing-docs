@@ -1,42 +1,43 @@
 ---
 layout: post
-title: Collaborative Editing in ASP.NET Core Document Editor | Syncfusion
+title: Collaborative Editing in ASP.NET Core DOCX Editor | Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion Document editor control of Syncfusion Essential JS 2 and more.
+description: Learn about collaborative editing in Syncfusion DOCX Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in ASP.NET Core Document Editor
+# Collaborative Editing in ASP.NET Core DOCX Editor
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+
+To get started with integrating collaborative editing, refer to [Collaborative editing using Redis cache in ASP.NET Core](./using-redis-cache-asp-net).
 
 ## Prerequisites
 
-- *Real-time Transport Protocol*: This protocol facilitates instant communication between clients and the server, ensuring immediate updates during collaborative editing.
-- *Distributed Cache or Database*: Used to temporarily store the queue of editing operations.
+- ***Real-Time Transport Protocol***: This protocol facilitates instant communication between clients and the server, ensuring immediate updates during collaborative editing. For this integration, [SignalR](https://learn.microsoft.com/aspnet/core/signalr/introduction/) is used.
+- ***Distributed Cache or Database***: Used to temporarily store the queue of editing operations. For example, you can use [Redis](https://redis.io/) as a distributed cache or a database such as SQL Server.
 
-### Real time transport protocol
+### Real-time transport protocol
 
-- *Managing Connections*: Keeps active connections open for real-time collaboration, allowing seamless communication between users and the server.
-- *Broadcasting Changes*: Ensures that any edits made by one user are instantly sent to all collaborators, keeping everyone on the same page with the latest document version.
+- ***Managing Connections***: Keeps active connections open for real-time collaboration, allowing seamless communication between users and the server.
+- ***Broadcasting Changes***: Ensures that any edits made by one user are instantly sent to all collaborators, keeping everyone on the same page with the latest document version.
 
 ### Distributed cache or database
 
-To support collaborative editing, it's crucial to have a backing system that temporarily stores the editing operations of all active users. There are two primary options:
+To support collaborative editing, it is crucial to have a backing system that temporarily stores the editing operations of all active users. There are two primary options:
 
-- *Distributed Cache*: Handles a higher number of `HTTP` requests per second compared to a database approach. For instance, a server with 2 vCPUs and 8GB RAM can handle up to 125 requests per second using a distributed cache.
-- *Database*: With the same server configuration, it can handle up to 50 requests per second.
+- ***Distributed Cache***: Handles a higher number of `HTTP` requests per second compared to a database approach. For instance, a server with 2 vCPUs and 8GB RAM can handle up to 125 requests per second using a distributed cache. We highly recommend using a distributed cache as a backing system over a database.
 
-Using the distributed cache or database all the editing operations are queued in order and conflict resolution is performed using `Operational Transformation` Algorithm.
+- ***Database***: With the same server configuration, it can handle up to 50 requests per second.
 
-> *Recommendation* - If you expect average `http` requests per second of your live application as 50 or below, then the database can provide reliable a backing system for operation queue. If you expect average requests per second of your live application as above 50, then the distributed cache is highly recommended backing system.
+Using the distributed cache or database, all the editing operations are queued in order and conflict resolution is performed using the `Operational Transformation` algorithm.
 
-> Tips to calculate the average requests per second of your application:
-Assume the editor in your live application is actively used by 1000 users and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your applications will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
+N> 1. To calculate the average requests per second of your application, assume the DOCX Editor in your live application is actively used by 1000 users, and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
 
-> Note: The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app's traffic and choose a configuration that best suits your needs.
-#### See Also
+N> 2. The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app's traffic and choose a configuration that best suits your needs.
 
-- [Collaborative editing using Redis cache in ASP.NET Core](../../asp-net-core/collaborative-editing/using-redis-cache-asp-net)
+## See Also
+
+- [Collaborative editing using Redis cache in ASP.NET Core](./using-redis-cache-asp-net)
