@@ -2,7 +2,7 @@
 layout: post
 title: Scrolling and Virtualization in React Spreadsheet | Syncfusion
 description: Learn here all about Scrolling and Virtualization in React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Spreadsheet
+control: Scrolling
 platform: document-processing
 documentation: ug
 ---
