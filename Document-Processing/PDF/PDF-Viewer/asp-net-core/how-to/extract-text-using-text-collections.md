@@ -9,7 +9,7 @@ documentation: ug
 
 # Extract text using TextLineCollection in ASP.NET Core
 
-The Syncfusion PDF Viewer server Library extracts text and its precise bounding coordinates from a PDF page using the **ExtractText** method. The output **TextLineCollection** contains detailed layout information for each line of text.
+The Syncfusion PDF Viewer server Library extracts text and its precise bounding coordinates from a PDF page using the `ExtractText` method. The output `TextLineCollection` contains detailed layout information for each line of text.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ var fileInfo = new FileInfo(path);
 var docStream = new FileStream(fileInfo.FullName, FileMode.Open, FileAccess.Read);
 // Load the PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
-// Loading page collections
+// Load the first page.
 PdfPageBase page = document.Pages[0] as PdfLoadedPage;
 //Extract text from the page.
 var text = page.ExtractText(out TextLineCollection textLineCollection);

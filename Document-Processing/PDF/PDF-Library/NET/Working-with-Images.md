@@ -285,15 +285,43 @@ Syncfusion<sup>&reg;</sup> PDF supports adding metafile vector images. During th
 * EMF Plus Dual
 * WMF (Windows Metafile)
 
-The [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) class is used to load metafile images. The [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class allows you to control how the metafile is paginated across multiple pages, including options to split text and images at page boundaries.
+For cross-platform .NET applications, install the [Syncfusion.MetafileRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/). This package provides the `MetafileRenderer` class, which converts EMF and WMF streams into PDF templates that can be rendered in PDF documents.
 
-The following code example illustrates this,
+For Windows-specific applications, The [PdfMetafile](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafile.html) class loads EMF images, and the [PdfMetafileLayoutFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfMetafileLayoutFormat.html) class allows you to control how text and images are split across pages in the PDF document. The following code example illustrates this.
 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" %} 
 
-//PDF doesn't support inserting a vector image C#.NET Cross platforms.
+using Syncfusion.Drawing;
+using Syncfusion.Metafile;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Open the EMF file as a stream.
+using (FileStream metafileStream = new FileStream("Input.emf", FileMode.Open, FileAccess.Read))
+{
+    //Create a new instance of the MetafileRenderer class.
+    MetafileRenderer renderer = new MetafileRenderer();
+    //Convert the Metafile stream to a PdfTemplate.
+    PdfTemplate template = renderer.ConvertToPdfTemplate(metafileStream);
+    //Set the page size to match the template size.
+    document.PageSettings.Size = new Syncfusion.Drawing.SizeF(template.Size);
+    //Remove page margins.
+    document.PageSettings.Margins.All = 0;
+    //Add a page to the document.
+    PdfPage page = document.Pages.Add();
+    //Get the PDF page graphics.
+    PdfGraphics graphics = page.Graphics;
+    //Draw the template on the PDF page.
+    graphics.DrawPdfTemplate(template, PointF.Empty);
+}
+//Save the PDF document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
 
 {% endhighlight %}
 
@@ -359,7 +387,11 @@ doc.Close(True)
 
 {% endtabs %}  
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-vector-image-in-a-PDF-document/). 
+You can download a complete working Cross-platform sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Converting-Metafile-to-PDF/.NET).
+
+You can download a complete working Window-specific sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Images/Insert-vector-image-in-a-PDF-document/).
+
+N> EMF and WMF images can be converted on cross-platform .NET applications by using the `Syncfusion.MetafileRenderer.Net.Core` NuGet package. On Windows-specific platforms, you can also use the PdfMetafile class for rendering Metafile images directly into PDF documents. 
 
 ## Working with image masking
 

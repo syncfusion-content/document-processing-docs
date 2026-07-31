@@ -72,6 +72,8 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using Syncfusion.Pdf;
@@ -188,7 +190,7 @@ Step 10: Now, Publish has been succeeded.
 Step 11: Now, the published webpage will open in the browser. 
 ![Browser will open after publish](Azure-Images/App-Service-Linux/Browser_PowerPoint_Presentation_to_PDF.png)
 
-Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to convert the given PowerPoint Presentation to PDF.You will get the output **PDF** document as follows.
+Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to convert the given PowerPoint Presentation to PDF. You will get the output **PDF** document as follows.
 
 ![PowerPoint Presentation to PDF in Azure App Service on Windows](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 

@@ -24,7 +24,7 @@ Cut can be done in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
 * Using the `cut` method.
 
 ## Copy
@@ -37,7 +37,7 @@ Copy can be done in one of the following ways.
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
 * Using the `copy` method.
 
 ## Paste
@@ -55,7 +55,7 @@ Paste can be done in one of the following ways.
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
 * Using the `paste` method.
 
 N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
