@@ -1,16 +1,16 @@
 ---
-title: Open and save Markdown document in WPF | Syncfusion
-description: Open and save Markdown document in WPF application using Syncfusion<sup>&reg;</sup> .NET Markdown library without external dependencies.
+title: Create Markdown document in WPF | Syncfusion
+description: Create Markdown document in WPF application using Syncfusion<sup>&reg;</sup> .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Open and Save Markdown document in WPF
+# Create Markdown document in WPF
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown documents** programmatically without external dependencies. Using this library, you can **open and save a Markdown document in WPF**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown documents** programmatically without external dependencies. Using this library, you can **Create a Markdown document in WPF**.
 
-## Steps to open and save Markdown document programmatically in WPF:
+## Steps to Create Markdown document programmatically in WPF:
 
 ## Prerequisites
 

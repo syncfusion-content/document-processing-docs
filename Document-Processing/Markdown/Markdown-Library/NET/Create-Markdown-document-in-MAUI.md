@@ -1,6 +1,6 @@
 ---
 title: Create Markdown document in .NET MAUI | Syncfusion
-description: Create Markdown document without external dependencies in .NET MAUI application using Syncfusion<sup>&reg;</sup> .NET MAUI Markdown library.
+description: Create Markdown document without external dependencies in .NET MAUI application using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG

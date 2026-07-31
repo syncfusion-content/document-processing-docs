@@ -1,6 +1,6 @@
 ---
 title: Create Markdown document in WinUI | Syncfusion
-description: Create Markdown document without external dependencies in WinUI application using Syncfusion<sup>&reg;</sup> WinUI Markdown library.
+description: Create Markdown document without external dependencies in WinUI application using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
