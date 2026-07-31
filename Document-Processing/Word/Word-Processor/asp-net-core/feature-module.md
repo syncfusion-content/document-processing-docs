@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Feature Module in Document Editor Component | Syncfusion
-description: Learn here all about Feature Module in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature Module in DOCX Editor Component | Syncfusion
+description: Learn here all about Feature Module in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature Module
 documentation: ug
 ---
 
 
-# Feature modules in Document Editor Component
+# Feature modules in DOCX Editor Component
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the document editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of document editor that can be included as required:
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the DOCX Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of DOCX Editor that can be included as required:
 * **Print** - Prints the document.
 * **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
 * **Selection** - Selects a portion of the document and copies it to the clipboard.
@@ -21,11 +21,11 @@ documentation: ug
 * **EditorHistory** - Maintains the history of editing operations, so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialogs are available as individual modules.
 
-N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a document editor instance.
+N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a DOCX Editor instance.
 
 Refer to the following table.
 
-| Module | Property to enable the functionality for a document editor instance |
+| Module | Property to enable the functionality for a DOCX Editor instance |
 |---|---|
 |Print|`<ejs-documenteditor enablePrint= true ></ejs-documenteditor>`|
 |SfdtExport|`<ejs-documenteditor enableSfdtExport= true ></ejs-documenteditor>`|
