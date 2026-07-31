@@ -18,7 +18,7 @@ The following example illustrates how to disable the auto focus in DocumentEdito
 <ejs-documenteditorcontainer [enableAutoFocus]=false></ejs-documenteditorcontainer>
 ```
 
-N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#enableautofocus) property is `true`.
+N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#enableautofocus) property is `true`.
 
 ## Disable auto focus in DocumentEditor
 
@@ -28,4 +28,4 @@ The following example illustrates how to disable the auto focus in DocumentEdito
 <ejs-documenteditor [enableAutoFocus]=false></ejs-documenteditor>
 ```
 
-N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#enableautofocus) property is `true`.
+N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#enableautofocus) property is `true`.

@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 At present, [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is not responsive for mobile, and editing functionalities are not supported in mobile browsers. However, it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document Editor component to read-only in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#fitpage) method with `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
+Hence, it is recommended to switch the Document Editor component to read-only in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#fitpage) method with `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
 
 The following example code illustrates how to deploy the Document Editor component for mobile.
 
@@ -55,4 +55,4 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 
-N> You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change the component to read-only mode.
+N> You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change the component to read-only mode.

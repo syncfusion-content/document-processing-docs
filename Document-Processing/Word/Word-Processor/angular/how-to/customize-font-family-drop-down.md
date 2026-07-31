@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize font family drop down in Angular Document Editor component | Syncfusion
+title: Customize font family dropdown in Angular Document Editor | Syncfusion
 description: Learn here all about Customize font family drop down in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize font family drop down 
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Customize font family drop down in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel/#fontfamilies) in Document editor settings. Fonts added in the fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#documenteditorsettings) will be displayed in the font drop-down list of the Text Properties pane and the Font dialog.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts added in the fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#documenteditorsettings) will be displayed in the font drop-down list of the Text Properties pane and the Font dialog.
 
-Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#documenteditorsettings) property for DocumentEditor also.
+Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
 The following example code illustrates how to change the font families in Document editor container.
 
