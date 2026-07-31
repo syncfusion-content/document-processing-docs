@@ -1,6 +1,6 @@
 ---
 title: Markdown library Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of the Markdown library with different document sizes
+description: Explore Markdown library performance benchmarks across various document sizes and conversion scenarios.
 platform: document-processing
 control: Markdown
 documentation: UG
