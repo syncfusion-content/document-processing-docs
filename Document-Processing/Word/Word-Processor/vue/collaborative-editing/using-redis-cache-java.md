@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Collaborative Editing in Vue Document editor control | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in Vue DOCX Editor control | Syncfusion
+description: Learn how to enable collaborative editing in Syncfusion Vue DOCX Editor control of Syncfusion Essential JS 2 and more.
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in Vue with Redis in Java
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+This feature allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@ The following are needed to enable collaborative editing in [Vue DOCX Editor](ht
 
 ## How to enable collaborative editing in client side
 
-### Step 1: Enable collaborative editing in Document Editor
+### Step 1: Enable collaborative editing in DOCX Editor
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the DOCX Editor, like in the code snippet below.
 
 ```javaScript
 <template>
@@ -54,7 +54,7 @@ export default {
   methods: {
     onCreated() {
       DocumentEditor.Inject(CollaborativeEditingHandler);
-      // Enable collaborative editing in Document Editor.
+      // Enable collaborative editing in DOCX Editor.
       this.$refs.doceditcontainer.ej2Instances.documentEditor.enableCollaborativeEditing = true;
     }
   }
@@ -85,7 +85,7 @@ methods: {
         this.joinGroup(roomName);
       }
     },
-    //Receive the remote action and apply to currenty document.
+    // Receive the remote action and apply it to the current document.
     onMessageReceived(data) {
         const content = JSON.parse(data.body);
         if (content.payload.operations != null) {
@@ -97,14 +97,19 @@ methods: {
 
 ### Step 3: Subscribe to specific topic while opening the document
 
-When opening a document, we need to generate a unique ID for each document. These unique IDs are then used to create rooms using SockJS, which facilitates sending and receiving data from the server.
+When opening a document, we need to use a unique identifier (such as the file name) for each document. These unique identifiers are then used to create rooms using SockJS, which facilitates sending and receiving data from the server.
 
 ```javaScript
 methods: {
     loadDocumentFromServer() {
+      let httpRequest = new XMLHttpRequest();
+      httpRequest.open('POST', this.collborativeEditingServiceUrl + '/ImportFile', true);
+      httpRequest.setRequestHeader('Content-Type', 'application/json');
       httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === 4) {
           if (httpRequest.status === 200 || httpRequest.status === 304) {
+            let data = JSON.parse(httpRequest.responseText);
+            let roomName = this.fileName;
             if (this.$refs.doceditcontainer) {
               //Update the room and version information to collaborative editing handler.
               this.collaborativeEditingHandler.updateRoomInfo(roomName, data.version, this.collborativeEditingServiceUrl);
@@ -134,7 +139,7 @@ methods: {
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the DOCX Editor using the `contentChange` event.
 
 ```javaScript
 methods: {
@@ -151,7 +156,7 @@ methods: {
 
 ### Step 1: Configure SockJS hub to create room for collaborative editing session.
 
-To manage groups for each document, create a folder named “Hub” and add a file named ``` DocumentEditorHub.java ``` inside it. Add the following code to the file to manage SockJS groups using room names.
+To manage groups for each document, create a folder named "Hub" and add a file named ``` DocumentEditorHub.java ``` inside it. Add the following code to the file to manage SockJS groups using room names.
 
 Join the group by using unique id of the document by using `joinGroup` method.
 
@@ -168,9 +173,7 @@ public void joinGroup(ActionInfo info, SimpMessageHeaderAccessor headerAccessor,
     MessageHeaders headers = new MessageHeaders(additionalHeaders);
     // send the connection Id to the client
     broadcastToRoom(docName, info, headers);
-    …………
-    …………
-    …………
+    // Register the user in the room (e.g., add sessionId to the document map in Redis).
 }
 
 public static void broadcastToRoom(String roomName, Object payload, MessageHeaders headers) {
@@ -239,7 +242,7 @@ public String importFile(@RequestBody FilesPathInfo file) throws Exception {
 
 #### Update editing records to Redis
 -	Each edit operation made by the user is sent to the server and is pushed to the Redis. Each operation receives a version number after being inserted into the Redis.
--	After inserting the records to the server, the position of the current editing operation must be transformed against any previous editing operations not yet synced with the client using the TransformOperation method.
+-	After inserting the records to the server, the position of the current editing operation must be transformed against any previous editing operations not yet synced with the client using the `transformOperation` method.
 -	After performing the transformation, the current operation is broadcast to all connected users within the group.
 
 ```java
@@ -255,6 +258,7 @@ public ActionInfo updateAction(@RequestBody ActionInfo param) throws Exception {
 
 private ActionInfo addOperationsToCache(ActionInfo action) throws Exception {
     int clientVersion = action.getVersion();
+    // Serialize the action before storing it in Redis.
     …………
     …………
     …………
@@ -267,16 +271,14 @@ private ActionInfo addOperationsToCache(ActionInfo action) throws Exception {
     String[] values = { serializedAction, String.valueOf(clientVersion),
             String.valueOf(CollaborativeEditingHelper.saveThreshold) };
 
-    …………
-    …………
-    …………
+    // Execute the Redis script to persist and transform the action.
     // Return the updated action
     return action;
 }
 ```
 
 #### Add Web API to get previous operation as a backup to get lost operations
-On the client side, messages send from server using SockJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the Redis.
+On the client side, messages sent from the server using SockJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the Redis.
 Using the following method, we can retrieve all operations after the last successful client-synced version and return all missing operations to the requesting client. 
 
 ```java
@@ -315,15 +317,15 @@ public String getActionsFromServer(@RequestBody ActionInfo param) throws ClassNo
     }
 }
 ```
-## How to perform Scaling in Collaborative Editing.
+## How to perform scaling in Collaborative Editing.
 
-### Role of Scaling in Collaborative editing
-As the number of users increases, collaborative application face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
+### Role of scaling in Collaborative Editing
+As the number of users increases, collaborative editing applications face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
 
-During scaling the users may connected to different servers, so collaborative editing application introduces a specific challenge like, updating the edit operations to all the users connected in different serves. To overcome this issue you need to use ``` Redis Cache pub/sub ``` for message relay(syncing the editing operations to the users connected to different server instance)
+During scaling, users may be connected to different servers, so collaborative editing applications introduce a specific challenge: updating the edit operations to all the users connected in different servers. To overcome this issue, you need to use ``` Redis Cache pub/sub ``` for message relay (syncing the editing operations to the users connected to different server instances).
 
 ### Use of Redis Pub/Sub in scaling environment
-Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple AWS services without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views. 
+Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple application instances without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views.
 
 ### Steps to configure Redis in Collaborative Editing Application
 Refer to the below steps to know about the Redis pub/sub implementation to sync the messages.
@@ -340,25 +342,25 @@ spring.datasource.redisport= "<Redis port number>"
 Publish each editing operation to Redis channel with the room name. This will send notifications to all the users(in different servers) subscribed to that specific channel. Refer to the publishToRedis() method in DocumentEditorHub.Java for details.
 
 ```java
-try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {                           
-jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
-    break;
-    } catch (JedisConnectionException e) {
-    }
+try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {
+    jedis.publish("collaborativeediting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));
+} catch (JedisConnectionException e) {
+    e.printStackTrace();
+}
 ```
 #### Step 3: Subscribe to the specific channel using the Redis cache 'Subscribe'
 
- Redis cache will be initialized and subscribe to the specific channel using the Redis cache 'Subscribe' option. This ensures that users in any server will get notified when an editing operation is published to the Redis cache using the onMessage() API. Refer to the code snippet in RedisSubscriber.Java for details.
+Redis cache will be initialized and subscribed to the specific channel using the Redis cache 'Subscribe' option. This ensures that users in any server will be notified when an editing operation is published to the Redis cache using the onMessage() API. Refer to the code snippet in RedisSubscriber.Java for details.
 
  ```java
 @PostConstruct
       public void subscribeToInstanceChannel() {
             //Subscriber to `collaborativeediting`
-            String channel = "collaborativeedtiting";
+            String channel = "collaborativeediting";
              new Thread(() -> {
                    JedisPoolConfig poolConfig = new JedisPoolConfig();
                     jedisPool = new JedisPool(poolConfig, REDIS_HOST, REDIS_PORT);
-                    try (Jedis jedis = jedisPool.getResource()) {      
+                    try (Jedis jedis = jedisPool.getResource()) {
                            jedis.subscribe(new JedisPubSub() {
                                  @Override
                                  public void onMessage(String channel, String message) {                               
