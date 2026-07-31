@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Image overview in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Word processor server docker image overview in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Word processor server docker image overview in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Word processor server docker image overview
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Word processor server docker image overview in Angular Document editor component
+# Word processor server docker image overview in Angular Document Editor 
 
 The **[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
@@ -140,7 +140,7 @@ You can copy the required template Word documents into docker container while de
 
 >Note: Place the word files in the data folder mentioned in the volumes section(i.e., C:/Docker/Data) of the docker-compose.yml file. All the files present in the folder path (C:/Docker/Data) mentioned in the volumes section of ‘docker-compose.yml’ file will be copied to the respective folder (/app/Data) of docker container. The Word documents copied to docker container can be processed using the 'LoadDocument' web API.
 
-The following code example shows how to use LoadDocument() API in document editor.
+The following code example shows how to use LoadDocument() API in Document Editor.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
