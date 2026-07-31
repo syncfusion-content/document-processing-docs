@@ -234,7 +234,6 @@ destinationDocument.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Maintain-Imported-List-Style-Information).
 
 
 ## See Also
