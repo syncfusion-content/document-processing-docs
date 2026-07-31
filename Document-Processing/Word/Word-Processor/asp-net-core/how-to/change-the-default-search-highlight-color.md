@@ -1,17 +1,17 @@
 ---
 layout: post
-title: how to change the default search highlight color | Syncfusion
-description: Learn how to change the default search highlight color in ASP.NET Core Syncfusion Document Editor component.
+title: How to Change the Default Search Highlight Color | Syncfusion
+description: Learn how to change the default search highlight color in ASP.NET Core Syncfusion DOCX Editor component.
 platform: document-processing
 control: Change The Default Search Highlight Color
 documentation: ug
 ---
 
-# How to change the default search highlight color in Document Editor
+# How to change the default search highlight color in DOCX Editor
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an options to change the default search highlight color using [`searchHighlightColor`] in Document editor settings. The highlight color which is given in [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_DocumentEditorSettings) will be highlighted on the searched text. By default, search highlight color is `yellow`.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`] in Document Editor settings. The highlight color which is given in [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_DocumentEditorSettings) will be highlighted on the searched text. By default, the search highlight color is `yellow`.
 
-Similarly, you can use [`documentEditorSettings`] property for DocumentEditor also.
+Similarly, you can use the [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_DocumentEditorSettings) property for the DocumentEditor component also.
 
 The following example code illustrates how to change the default search highlight color.
 
