@@ -13,7 +13,7 @@ This section explains how to manage Excel workbooks in SfSpreadsheet, including 
 
 ## Creating a new Excel Workbook
 
-A new workbook can be created by using a `Create` method with specified number of worksheets. By default, a workbook will be created with single worksheet.
+A new workbook can be created by using the `Create` method with the specified number of worksheets. By default, a workbook will be created with a single worksheet.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -25,13 +25,13 @@ A new workbook can be created by using a `Create` method with specified number o
 
 ## Opening an existing Excel Workbook
 
-The Excel Workbook can be opened in SfSpreadsheet using the `Open` method in various ways,
+The Excel Workbook can be opened in SfSpreadsheet using the `Open` method in the following ways:
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-//Using Stream, 
-spreadsheet.Open (Stream file)
+//Using Stream,
+spreadsheet.Open(Stream file)
 
 //Using StorageFile,
 spreadsheet.Open (StorageFile file)
@@ -56,9 +56,9 @@ this.spreadsheet.Open(fileStream);
 ![Getting-Started_img4](Getting-Started_images/Getting-Started_img4.jpg)
 
 
-## Saving the Excel Workbook
+## Saving an Excel Workbook
 
-The Excel workbook can be saved in SfSpreadsheet using `Save` method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location.
+The Excel workbook can be saved in SfSpreadsheet using the `Save` method. If the workbook already exists on the system drive, it will be saved in the same location; otherwise, a Save Dialog box opens to save the workbook to a user-specified location.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -68,9 +68,9 @@ The Excel workbook can be saved in SfSpreadsheet using `Save` method. If the wor
 {% endhighlight %}
 {% endtabs %}
 
-You can also use `SaveAs` method directly to save the existing excel file with modifications.
+Use the `SaveAs` method to save an existing Excel file with modifications to a different location.
 
-The `SaveAs` method in SfSpreadsheet can be used in various ways,
+The `SaveAs` method in SfSpreadsheet can be used in the following ways:
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

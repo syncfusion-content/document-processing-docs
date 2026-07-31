@@ -81,10 +81,10 @@ var stream = new MemoryStream();
 request.Download(stream);
 
 // Step 5: Save the Word document locally.
-using (FileStream fileStream = new FileStream("Output.docx", FileMode.Create, FileAccess.Write))
-{
+    using (FileStream fileStream = new FileStream("Output.docx", FileMode.Create, FileAccess.Write))
+    {
     stream.WriteTo(fileStream);
-}
+    }
 //Dispose the stream.
 stream.Dispose();
    
@@ -97,7 +97,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Save Word document to Google Drive
 
-To save a Word document to Google Drive, you can follow the steps below
+To save a Word document to Google Drive, you can follow the steps below.
 
 Step 1: Set up **Google Drive API**.
 
@@ -106,7 +106,7 @@ You must set up a project in the Google Developers Console and enable the Google
 Step 2: Create a new **.NET Core console application** project.
 ![Create a Console application in Visual Studio](Cloud-Storage/Google-Drive/Console-Template-Net-Core.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core)
 * [Google.Apis.Drive.v3](https://www.nuget.org/packages/Google.Apis.Drive.v3)

@@ -344,7 +344,7 @@ Move a free text annotation programmatically by updating its `bounds` and callin
 
 ```
 
-Find the sample: how to move the free text annotation programmatically (https://stackblitz.com/edit/angular-dxub1a-qjbisb?file=app.component.ts)
+Find the sample: [how to move the free text annotation programmatically](https://stackblitz.com/edit/angular-dxub1a-qjbisb?file=app.component.ts)
 
 
 ## Get the ID of a newly added free text annotation
@@ -361,7 +361,7 @@ public annotationAddEventHandler(args) {
 
 ```
 
-Find the sample: how to get the newly added free text annotation id (https://stackblitz.com/edit/angular-dxub1a-utuefq?file=app.component.ts)
+Find the sample: [how to get the newly added free text annotation id](https://stackblitz.com/edit/angular-dxub1a-utuefq?file=app.component.ts)
 
 
 ## Change the content of an existing free text annotation programmatically

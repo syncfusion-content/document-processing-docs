@@ -10,10 +10,10 @@ domainurl: ##DomainURL##
 
 # Export annotations in Angular PDF Viewer
 
-PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
+PDF Viewer supports exporting annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
-- Programmatically (JSON, XFDF, or as an object for custom handling)
+- Programmatically (JSON, XFDF, as an object, or as a Base64 string for custom handling)
 
 ## Export using the UI (Comments panel)
 

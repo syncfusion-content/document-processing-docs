@@ -526,5 +526,5 @@ N> Provide the encoding value before opening the Markdown file, as shown in the 
 
 ## See Also
 
-* [Convert Word document to Markdown in C#](word-to-markdown-conversion.md)
+* [Convert Word document to Markdown in C#](word-to-markdown-conversion)
 * [How to change the image size during Markdown to Word conversion](https://support.syncfusion.com/kb/article/17707/how-to-change-the-image-size-during-markdown-to-word-conversion)

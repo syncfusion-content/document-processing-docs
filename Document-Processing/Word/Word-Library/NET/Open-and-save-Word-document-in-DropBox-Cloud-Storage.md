@@ -34,8 +34,8 @@ Step 3: Install the following **Nuget packages** in your application from [NuGet
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
-{% tabs %}  
-{% highlight CSHTML %}
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
 @{Html.BeginForm("EditDocument", "Home", FormMethod.Get);
     {
         <div>
@@ -176,8 +176,8 @@ Step 3: Install the following **Nuget packages** in your application from [NuGet
 
 Step 4: Add a new button in the **Index.cshtml** as shown below.
 
-{% tabs %}  
-{% highlight CSHTML %}
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
 @{Html.BeginForm("UploadDocument", "Home", FormMethod.Get);
     {
         <div>
@@ -193,8 +193,8 @@ Step 5: Include the following namespaces in **HomeController.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-using Dropbox.Api.Files;
 using Dropbox.Api;
+using Dropbox.Api.Files;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
@@ -436,6 +436,7 @@ public async Task<IActionResult> UploadDocument()
     //Saves the Word document to MemoryStream
     MemoryStream stream = new MemoryStream();
     document.Save(stream, FormatType.Docx);
+    document.Close();
 
     //Upload the document to Dropbox
     await UploadDocumentToDropBox(stream);
@@ -474,7 +475,6 @@ public async Task<MemoryStream> UploadDocumentToDropBox(MemoryStream stream)
         }
         Console.WriteLine("Upload completed successfully");
     }
-
     catch (Exception e)
     {
         Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);

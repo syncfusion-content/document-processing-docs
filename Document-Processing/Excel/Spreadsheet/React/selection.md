@@ -2,7 +2,7 @@
 layout: post
 title: Selection in React Spreadsheet component | Syncfusion
 description: Learn here all about Selection in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Selection 
+control: Selection
 platform: document-processing
 documentation: ug
 ---
@@ -101,7 +101,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://helpej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. Additionally, you can also programmatically perform selection using the [selectRange](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled based on the [selectionSettings](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#selectionsettings) property. Now, retrieving the selected cell values as a collection is achievable using the [getData](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -149,4 +149,4 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
