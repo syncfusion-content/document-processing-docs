@@ -53,7 +53,7 @@ export class AppComponent {
 <td>Server-side C#</td>
 <td>
 {% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 {% endhighlight %}
