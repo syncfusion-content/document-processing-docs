@@ -14,8 +14,8 @@ domainurl: ##DomainURL##
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container allows you to customize (add, show, hide, enable, and disable) the existing items in a toolbar.
 
-* Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and included with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
-* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/toolbarItem/).
+* Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel) and included with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs).
+* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/toolbarItem).
 * Enable, Disable - Toolbar items can be enabled or disabled using the [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/toolbar#enableItems) API.
 
 {% tabs %}
