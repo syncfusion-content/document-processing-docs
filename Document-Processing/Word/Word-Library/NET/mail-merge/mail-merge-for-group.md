@@ -8,7 +8,7 @@ documentation: UG
 
 # Mail merge for a group
 
-You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region between start and end groups merge fields. It gets repeated for every record from the data source.
+You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region is bounded by start and end group merge fields. The region gets repeated for every record from the data source.
 
 The following table illustrates the supported mail merge overloads for ExecuteGroup method.
 
@@ -38,11 +38,10 @@ The following table illustrates the supported mail merge overloads for ExecuteGr
 The region where the Mail merge operations are to be performed must be marked by two merge fields with the following names.
 
   * «TableStart:TableName» and «BeginGroup:GroupName» - For the entry point of the region.
-
   * «TableEnd:TableName» and «EndGroup:GroupName» - For the end point of the region.
 
-  1. *TableStart* and *TableEnd* region is preferred for performing Mail merge inside the table cell.
-  2. *BeginGroup* and *EndGroup* region is preferred for performing Mail merge inside the document body contents.
+  * *TableStart* and *TableEnd* regions are preferred for performing Mail merge inside the table cell.
+  * *BeginGroup* and *EndGroup* regions are preferred for performing Mail merge inside the document body contents.
 
 For example, consider that you have a template document as shown.
 
@@ -54,7 +53,7 @@ In this template, Employees is the group name and the same name should be used w
 
 The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail merge within a group from various data sources. 
 
-N> For group mail merge, declare a class with the field names, create a list, and pass it to [MailMergeDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_Syncfusion_DocIO_DLS_MailMergeDataTable_). Ensure that the property and field names in the input document match when creating the data table.
+N> For group mail merge, declare a class with the field names, create a list, and pass it to [MailMergeDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMergeDataTable.html). Ensure that the property and field names in the input document match when creating the data table.
 
 The following code example shows how to perform Mail merge in the specific region with **data source retrieved from SQL connection**.
 
@@ -108,8 +107,8 @@ private DataTable GetDataTable()
     adapter.Fill(dataset);
     adapter.Dispose();
     conn.Close();
-    System.Data.DataTable table = dataset.Tables[0];
-    //Sets table name as Employees for template merge field reference.
+    DataTable table = dataset.Tables[0];
+    //Sets the table name to "Employees" to match the template merge field.
     table.TableName = "Employees";
     return table;
 }
@@ -125,7 +124,7 @@ Private Function GetDataTable() As DataTable
     adapter.Dispose()
     conn.Close()
     Dim table As System.Data.DataTable = DataSet.Tables(0)
-    'Sets table name as Employees for template merge field reference.
+    'Sets the table name to "Employees" to match the template merge field.
     table.TableName = "Employees"
     Return table
 End Function
@@ -149,9 +148,9 @@ You can perform Mail merge with .NET objects in a template document. The followi
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
-//Gets the employee details as “IEnumerable” collection
+//Gets the employee details as IEnumerable collection
 List<Employee> employeeList = GetEmployees();
-//Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+//Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
 //Uses the mail merge events handler for image fields.
 document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_EmployeeImage);
@@ -179,9 +178,9 @@ private void MergeField_EmployeeImage(object sender, MergeImageFieldEventArgs ar
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the template document
 WordDocument document = new WordDocument("Template.docx");
-//Gets the employee details as “IEnumerable” collection
+//Gets the employee details as IEnumerable collection
 List<Employee> employeeList = GetEmployees();
-//Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+//Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
 //Uses the mail merge events handler for image fields.
 document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_EmployeeImage);
@@ -207,9 +206,9 @@ private void MergeField_EmployeeImage(object sender, MergeImageFieldEventArgs ar
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document
 Dim document As New WordDocument("Template.docx")
-'Gets the employee details as “IEnumerable” collection
+'Gets the employee details as IEnumerable collection
 Dim employeeList As List(Of Employee) = GetEmployees()
-'Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection
+'Creates an instance of MailMergeDataTable by specifying mail merge group name and IEnumerable collection
 Dim dataTable As New MailMergeDataTable("Employees", employeeList)
 'Uses the mail merge events handler for image fields.
 AddHandler document.MailMerge.MergeImageField, AddressOf MergeField_EmployeeImage

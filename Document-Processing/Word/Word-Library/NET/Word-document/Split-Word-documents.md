@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Split Word documents
 
-The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows you to split the large Word document into number of smaller word documents by the sections, headings, bookmarks, and placeholder text in programmatically. 
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows you to split a large Word document into a number of smaller Word documents by section, heading, bookmark, and placeholder text programmatically.
 
-By using this feature, you can be able to split/extract the necessary parts from the original document for further processing.
+By using this feature, you can split/extract the necessary parts from the original document for further processing.
 
 You can save the resultant document as a Word document (DOCX, WordML, DOC), PDF, image, HTML, RTF, and more.
 
@@ -18,14 +18,18 @@ To quickly start splitting Word documents, please check out this video:
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to split Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+Refer to the following links for the assemblies and NuGet packages required for each platform to split Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 * [Split Word documents assemblies](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required)
 * [Split Word documents NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required)
 
+N> For production use, register a Syncfusion license before splitting Word documents. Refer to the [licensing registration guide](https://help.syncfusion.com/document-processing/word/licensing/how-to-register-in-an-application) for details.
+
+N> The code samples use the namespaces `Syncfusion.DocIO.DLS`, `System.IO`, and `System.Text.RegularExpressions`. Add the corresponding `using`/`Imports` directives for these namespaces before running the samples.
+
 ## Split by Section
 
-The following code example illustrates how to split the Word document by sections.
+The following code example illustrates how to split the Word document by section.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -33,8 +37,8 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-section/.NET/Split-by-section/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Load the template document as stream
-using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
+//Load the template document as a stream
+using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
     //Iterate each section from Word document
     for (int i = 0; i < document.Sections.Count; i++)
@@ -43,11 +47,13 @@ using(WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(document.Sections[i].Clone());
-        //Saves the Word document to  MemoryStream
-        FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-        newDocument.Save(outputStream, FormatType.Docx);
-        //Closes the document
-        newDocument.Close();
+        //Saves the Word document to a file stream
+        using (FileStream outputStream = new FileStream("Section" + i + ".docx", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+        {
+            newDocument.Save(outputStream, FormatType.Docx);
+            //Closes the document
+            newDocument.Close();
+        }
     }
 }
 {% endhighlight %}
@@ -63,7 +69,7 @@ using (WordDocument document = new WordDocument(@"Template.docx"))
         WordDocument newDocument = new WordDocument();
         //Add cloned section into new Word document
         newDocument.Sections.Add(document.Sections[i].Clone());
-        //Save and close the new Word documet
+        //Save and close the new Word document
         newDocument.Save("Section" + i + ".docx");
         newDocument.Close();
     }
@@ -90,7 +96,7 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-section).
 
-## Split by Headings
+## Split by Heading
 
 The following code example illustrates how to split the Word document by using headings.
 
@@ -99,13 +105,13 @@ The following code example illustrates how to split the Word document by using h
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-heading/.NET/Split-by-heading/Program.cs" %}
 using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
-    //Load the template document as stream
+    //Load the template document as a stream
     using (WordDocument document = new WordDocument(inputStream, FormatType.Docx))
     {   
         WordDocument newDocument = null;
         WSection newSection = null;
         int headingIndex = 0;
-        /Iterate each section in the Word document.
+        //Iterate each section in the Word document.
         foreach (WSection section in document.Sections)
         {
             // Clone the section and add into new document.
@@ -154,7 +160,7 @@ using (FileStream inputStream = new FileStream("Template.docx", FileMode.Open, F
 
 private static WSection AddSection(WordDocument newDocument, WSection section)
 {
-    //Create new session based on original document
+    //Create a new section based on the original document
     WSection newSection = section.Clone();
     newSection.Body.ChildEntities.Clear();
     //Remove the first page header.
@@ -200,8 +206,8 @@ using (WordDocument doc = new WordDocument("Template.docx"))
     WordDocument newDocument = null;
     WSection newSection = null;
     int headingIndex = 0;
-    /Iterate each section in the Word document.
-    foreach (WSection section in document.Sections)
+    //Iterate each section in the Word document.
+    foreach (WSection section in doc.Sections)
     {
         // Clone the section and add into new document.
         if (newDocument != null)
@@ -248,7 +254,7 @@ using (WordDocument doc = new WordDocument("Template.docx"))
 
 private static WSection AddSection(WordDocument newDocument, WSection section)
 {
-    //Create new session based on original document
+    //Create a new section based on the original document
     WSection newSection = section.Clone();
     newSection.Body.ChildEntities.Clear();
     //Remove the first page header.
@@ -276,7 +282,7 @@ private static void AddEntity(WSection newSection, Entity entity)
 
 private static void SaveWordDocument(WordDocument newDocument, string fileName)
 {
-    //Save file stream as Word document
+    //Save the new Word document
     newDocument.Save(fileName, FormatType.Docx);
     //Closes the document
     newDocument.Close();
@@ -291,7 +297,7 @@ Using doc As WordDocument = New WordDocument("Template.docx")
     Dim newSection As WSection = Nothing
     Dim headingIndex = 0
     'Iterate each section in the Word document.
-    For Each section As WSection In document.Sections
+    For Each section As WSection In doc.Sections
         ' Clone the section and add into new document.
         If newDocument IsNot Nothing Then newSection = AddSection(newDocument, section)
         'Iterate each child entity in the Word document.
@@ -302,7 +308,7 @@ Using doc As WordDocument = New WordDocument("Template.docx")
                 Dim paragraph As WParagraph = TryCast(item, WParagraph)
                 'If paragraph has Heading 1 style, then save the traversed content as separate document.
                 'And create new document for new heading content.
-                If paragraph.StyleName Is "Heading 1" Then
+                If paragraph.StyleName = "Heading 1" Then
                     If newDocument IsNot Nothing Then
                         'Saves the Word document
                         Dim fileName As String = "Document" & (headingIndex + 1).ToString() & ".docx"
@@ -359,7 +365,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Split by Bookmark
 
-The following code example illustrates how to split the Word document using bookmarks.
+The following code example illustrates how to split the Word document using bookmarks. The [`BookmarksNavigator.MoveToBookmark`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) API moves the virtual cursor to a bookmark, and [`GetContent`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) returns the bookmark range as a `WordDocumentPart`; calling `WordDocumentPart.GetAsWordDocument()` produces a standalone `WordDocument` containing the bookmark's contents.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
+N> If a bookmark name contains characters that are invalid in file names (for example, `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, `|`), the `Save` call will throw. Sanitize the bookmark name before using it as a file name.
 
 {% tabs %}
 
@@ -374,7 +384,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     //Iterate each bookmark in Word document.
     foreach (Bookmark bookmark in bookmarkCollection)
     {
-         //Move the virtual cursor to the location before the end of the bookmark.
+         //Move the virtual cursor to the bookmark.
         bookmarksNavigator.MoveToBookmark(bookmark.Name);
         //Get the bookmark content as WordDocumentPart.
         WordDocumentPart documentPart = bookmarksNavigator.GetContent();
@@ -401,7 +411,7 @@ using (WordDocument document = new WordDocument("Template.docx", FormatType.Docx
     //Iterate each bookmark in Word document.
     foreach (Bookmark bookmark in bookmarkCollection)
     {
-        //Move the virtual cursor to the location before the end of the bookmark.
+        //Move the virtual cursor to the bookmark.
         bookmarksNavigator.MoveToBookmark(bookmark.Name);
         //Get the bookmark content as WordDocumentPart.
         WordDocumentPart documentPart = bookmarksNavigator.GetContent();
@@ -422,7 +432,7 @@ Using document As WordDocument = New WordDocument("Template.docx", FormatType.Do
     Dim bookmarkCollection As BookmarkCollection = document.Bookmarks
     'Iterate each bookmark in Word document.
     For Each bookmark As Bookmark In bookmarkCollection
-    'Move the virtual cursor to the location before the end of the bookmark.
+    'Move the virtual cursor to the bookmark.
     bookmarksNavigator.MoveToBookmark(bookmark.Name)
     'Get the bookmark content as WordDocumentPart.
     Dim documentPart As WordDocumentPart = bookmarksNavigator.GetContent()
@@ -439,9 +449,13 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Split-by-bookmark).
 
-## Split by placeholder text
+## Split by Placeholder Text
 
-The following code example illustrates how to split the Word document using the placeholder text.
+The following code example illustrates how to split the Word document using placeholder text. The snippet finds every placeholder of the form `<<…>>`, and inserts `BookmarkStart`/`BookmarkEnd` markers around each *pair* of placeholders (the start placeholder of a pair becomes the bookmark start; the next placeholder becomes the bookmark end). After all pairs are marked, each bookmark is extracted into a standalone document. The algorithm assumes the placeholders appear in start/end pairs; an odd number of placeholders will leave the last one unpaired and should be validated before processing.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
+N> The regular expression `"<<(.*)>>"` is greedy and will match from the first `<<` to the last `>>` in a single line/span. If your placeholders appear on the same line, use a non-greedy pattern such as `"<<(.*?)>>"` to limit each match to a single placeholder.
 
 {% tabs %}
 
@@ -644,4 +658,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * Explore how to split a Word document by section using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbysection#/tailwind).
 * See how to split a Word document by heading using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyheading#/tailwind).
 * See how to split a Word document by bookmark using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbybookmark#/tailwind).
-* See how to split a Word document by placeholder using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).
+* See how to split a Word document by placeholder text using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/splitbyplaceholder#/tailwind).
+
+## See Also
+
+* [How to split Word document by bookmarks in C#, VB.NET](https://support.syncfusion.com/kb/article/6723/how-to-split-word-document-by-bookmarks-in-c-vb-net)
+* [How to split Word document by sections in C#, VB.NET](https://support.syncfusion.com/kb/article/6456/how-to-split-word-document-by-sections-in-c-vb-net)

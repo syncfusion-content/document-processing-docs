@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with Sections
 
-A section contains the contents present in Headers, Footers and main document through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html). A section also has a specific set of properties used to define the page settings, number of columns, headers and footers and so on that decide how the text appears. [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) represents group of paragraphs and tables etc. 
+A section contains the contents of the headers, footers, and main document body through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html). A section also has a specific set of properties used to define the page settings, number of columns, headers and footers and so on that decide how the text appears. [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) represents a group of paragraphs and tables, etc.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -52,7 +52,7 @@ Dim section As IWSection = document.AddSection()
 Dim paragraph As IWParagraph = section.AddParagraph()
 'Appends the text to the created paragraph
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -61,9 +61,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Sections/Add-sections-in-Word-document).
 
-You can add the multiple sections into the document. When you add more than one section into the word document, the section starts from the next page by default.
+You can add multiple sections to the document. When you add more than one section to the Word document, the section starts on a new page by default.
 
-You can also add a new section that starts on a same page by specifying the [BreakCode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_BreakCode) as shown in following code example.
+You can also add a new section that starts on the same page by specifying the [BreakCode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSection.html#Syncfusion_DocIO_DLS_WSection_BreakCode) as shown in the following code example.
 
 {% tabs %}
 
@@ -132,7 +132,7 @@ section.BreakCode = SectionBreakCode.NoBreak
 paragraph = section.AddParagraph()
 'Appends the text to the created paragraph
 paragraph.AppendText(paraText)
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -209,7 +209,7 @@ section.PageSetup.OtherPagesTray = PrinterPaperTray.MiddleBin
 Dim paragraph As IWParagraph = section.AddParagraph()
 'Appends the text to the created paragraph.
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %} 
@@ -218,7 +218,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Sections/Page-setup-properties).
 
-## Creating Multi-column document
+## Creating a Multi-column Document
 
 You can split the contents into two or more columns by specifying the column width and spacing between columns.
 
@@ -328,7 +328,7 @@ paragraph.AppendBreak(BreakType.ColumnBreak)
 paragraph = section.AddParagraph()
 'Appends the text to the created paragraph
 paragraph.AppendText(paraText)
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %} 
@@ -339,7 +339,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating document with different page settings
 
-You can prefer to have more sections in a Word document when you need to have different page settings or headers and footers for a specific set of contents. The following code example illustrates how to create a Word document with multiple sections whose page orientation are portrait and landscape respectively.
+You can prefer to have more sections in a Word document when you need to have different page settings or headers and footers for a specific set of contents. The following code example illustrates how to create a Word document with multiple sections whose page orientation is portrait and landscape, respectively.
 
 {% tabs %}
 
@@ -430,7 +430,7 @@ section.PageSetup.PageSize = PageSize.A4;
 section.PageSetup.Orientation = PageOrientation.Landscape
 'Appends the text to the paragraph
 paragraph.AppendText(paraText)
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -538,7 +538,7 @@ paragraph.AppendText("[ Default Page Header ]")
 'Inserts the default Page footer
 paragraph = section.HeadersFooters.OddFooter.AddParagraph()
 paragraph.AppendText("[ Default Page Footer ]")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -659,7 +659,7 @@ paragraph.AppendText("[ Default Page Header ]")
 'Inserts the default page footer
 paragraph = section.HeadersFooters.OddFooter.AddParagraph()
 paragraph.AppendText("[ Default Page Footer ]")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -782,7 +782,7 @@ paragraph.AppendText("[Even Page Header ]")
 'Inserts the even page footer
 paragraph = section.HeadersFooters.EvenFooter.AddParagraph()
 paragraph.AppendText("[ Even Page Footer ]")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -911,7 +911,7 @@ section.HeadersFooters.Footer.AddParagraph().AppendText("[ Third Section Footer 
 'Appends some text to the third page in document
 paragraph = section.AddParagraph()
 paragraph.AppendText(Convert.ToString(vbCr & vbCr & "[ Third Page ] " & vbCr & vbCr) & paraText)
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -1180,7 +1180,7 @@ paragraph.AppendField("TotalNumberOfPages", FieldType.FieldNumPages)
 paragraph = section.AddParagraph()
 'Appends the text to the created paragraph
 paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -1287,7 +1287,7 @@ paragraph.AppendText("[ Default Page Header ]")
 'Inserts the default page footer
 paragraph = section.HeadersFooters.OddFooter.AddParagraph()
 paragraph.AppendText("[ Default Page Footer ]")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -1366,11 +1366,11 @@ Using document As WordDocument = New WordDocument()
     section.PageSetup.Borders.Color = Color.Blue
     'Set the linewidth of the borders.
     section.PageSetup.Borders.LineWidth = 0.75F
-    //Set the page border margins.
-    section.PageSetup.Borders.Top.Space = 5F;
-    section.PageSetup.Borders.Bottom.Space = 5F;
-    section.PageSetup.Borders.Right.Space = 5F;
-    section.PageSetup.Borders.Left.Space = 5F;
+    'Set the page border margins.
+    section.PageSetup.Borders.Top.Space = 5F
+    section.PageSetup.Borders.Bottom.Space = 5F
+    section.PageSetup.Borders.Right.Space = 5F
+    section.PageSetup.Borders.Left.Space = 5F
     'Add a paragraph to a section.
     Dim paragraph As IWParagraph = section.AddParagraph()
     paragraph.AppendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
@@ -1504,7 +1504,7 @@ document.Close();
 Dim document As New WordDocument(inputFileName)
 'Removes the second section from the collection
 document.Sections.RemoveAt(1)
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
