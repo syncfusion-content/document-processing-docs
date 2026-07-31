@@ -11,7 +11,7 @@ keywords: Working with Notes
 
 Notes are the contents associated with each slide and are visible only to the presenter when monitors are shared in “Presenter View”. It shows hint for the speaker, so it is often called as “Speaker Notes”. The presenter can optionally add key points to notes. You can add and modify the notes in your slide using Essential<sup>&reg;</sup> Presentation library.
 
-## Adding Notes to a Slide
+## Adding Notes to a Slides
 
 The below code example demonstrates how to create a Notes in a PowerPoint Slide.
 
@@ -27,10 +27,9 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 INotesSlide notesSlide = slide.AddNotesSlide();
 //Adds text content into the Notes Slide.
 notesSlide.NotesTextBody.AddParagraph("Notes content");
-//Saves the Presentation to the file system.
-pptxDoc.Save("PresentationWithNotesSlide.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
+//Save the PowerPoint Presentation as stream
+FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
+pptxDoc.Save(outputStream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -44,8 +43,6 @@ INotesSlide notesSlide = slide.AddNotesSlide();
 notesSlide.NotesTextBody.AddParagraph("Notes content");
 //Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -59,8 +56,6 @@ Dim notesSlide As INotesSlide = slide.AddNotesSlide()
 notesSlide.NotesTextBody.AddParagraph("Notes content")
 'Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx")
-'Closes the Presentation.
-pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -81,21 +76,20 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds new notes slide in the specified slide.
 INotesSlide notesSlide = slide.AddNotesSlide();
-//Adds a paragraph into the text body.
+//Adds Paragraph into the text body.
 IParagraph paragraph = notesSlide.NotesTextBody.AddParagraph();
-//Adds a text part into the paragraph.
+//Adds text part into the Paragraph.
 ITextPart textPart = paragraph.AddTextPart();
 textPart.Text = "The notes slide represents the contents and key notes of the corresponding slide. It is more useful when we use Presenter View while presenting the seminars through SlideShow.";
 //Sets Bold format for text content.
-textPart.Font.Bold = true;
-//Sets font style using font name.
+textPart.Font.Bold=true;
+// Sets font style using font name.
 textPart.Font.FontName = "Times New Roman";
-//Sets text content size using FontSize property.
+// Sets text content size using FontSize property.
 textPart.Font.FontSize = 20;
-//Saves the Presentation to the file system.
-pptxDoc.Save("PresentationWithNotesText.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
+//Save the PowerPoint Presentation as stream
+FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
+pptxDoc.Save(outputStream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -105,21 +99,19 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Adds new notes slide in the specified slide.
 INotesSlide notesSlide = slide.AddNotesSlide();
-//Adds a paragraph into the text body.
+//Adds Paragraph into the text body.
 IParagraph paragraph = notesSlide.NotesTextBody.AddParagraph();
-//Adds a text part into the paragraph.
+//Adds text part into the Paragraph.
 ITextPart textPart = paragraph.AddTextPart();
 textPart.Text = "The notes slide represents the contents and key notes of the corresponding slide. It is more useful when we use Presenter View while presenting the seminars through SlideShow.";
 //Sets Bold format for text content.
-textPart.Font.Bold = true;
-//Sets font style using font name.
+textPart.Font.Bold=true;
+// Sets font style using font name.
 textPart.Font.FontName = "Times New Roman";
-//Sets text content size using FontSize property.
+// Sets text content size using FontSize property.
 textPart.Font.FontSize = 20;
 //Saves Presentation with specified file name with extension.
-pptxDoc.Save("PresentationWithNotesText.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
+pptxDoc.Save("PresentationWithNotesSlide.pptx");
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -129,9 +121,9 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Adds new notes slide in the specified slide.
 Dim notesSlide As INotesSlide = slide.AddNotesSlide()
-'Adds a paragraph into the text body.
+'Adds Paragraph into the text body.
 Dim paragraph As IParagraph = notesSlide.NotesTextBody.AddParagraph()
-'Adds a text part into the paragraph.
+'Adds text part into the Paragraph.
 Dim textPart As ITextPart = paragraph.AddTextPart()
 textPart.Text = "The notes slide represents the contents and key notes of the corresponding slide. It is more useful when we use Presenter View while presenting the seminars through SlideShow."
 'Sets Bold format for text content.
@@ -141,9 +133,7 @@ textPart.Font.FontName = "Times New Roman"
 'Sets text content size using FontSize property.
 textPart.Font.FontSize = 20
 'Saves Presentation with specified file name with extension.
-pptxDoc.Save("PresentationWithNotesText.pptx")
-'Closes the Presentation.
-pptxDoc.Close()
+pptxDoc.Save("PresentationWithNotesSlide.pptx")
 {% endhighlight %}
 
 {% endtabs %}
@@ -203,7 +193,8 @@ paragraph.FirstLineIndent = -20;
 // Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400. 
 paragraph.ListFormat.Size = 100; 
 //Save the PowerPoint Presentation as stream
-pptxDoc.Save(OutputFileName);
+FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
+pptxDoc.Save(outputStream);
 //Closes the Presentation 
 pptxDoc.Close();
 {% endhighlight %}
@@ -314,51 +305,46 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Notes/Create-numbered-list-in-notes-slide).
 
-
 ## Removing Notes from a Slide
 
-The following code example demonstrates how to remove the notes slide from a PowerPoint slide.
+The below code example demonstrates how to remove a Notes from a PowerPoint Slide.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]"
 playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Notes/Remove-notes-from-slide/.NET/Remove-notes-from-slide/Program.cs" %}
-//Opens an existing PowerPoint presentation.
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Gets the instance of the first slide from the presentation.
+//Loads or open an PowerPoint Presentation
+FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
+IPresentation pptxDoc = Presentation.Open(inputStream);
+//Gets instance of the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0] as ISlide;
-//Removes the notes slide from the corresponding slide.
+//Removes Notes Slide from a corresponding slide.
 slide.RemoveNotesSlide();
-//Saves the Presentation to the file system.
-pptxDoc.Save("PresentationWithNotesSlide.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
+//Save the PowerPoint Presentation as stream
+FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
+pptxDoc.Save(outputStream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens an existing PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Gets the instance of the first slide from the presentation.
+//Gets instance of the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0] as ISlide;
-//Removes the notes slide from the corresponding slide.
+//Removes Notes Slide from a corresponding slide.
 slide.RemoveNotesSlide();
-//Saves the Presentation with the specified file name and extension.
+//Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx");
-//Closes the Presentation.
-pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing PowerPoint presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Gets the instance of the first slide from the presentation.
+'Gets instance of the first slide from the Presentation.
 Dim slide As ISlide = TryCast(pptxDoc.Slides(0), ISlide)
-'Removes the notes slide from the corresponding slide.
+'Removes Notes Slide from a corresponding slide.
 slide.RemoveNotesSlide()
-'Saves the Presentation with the specified file name and extension.
+'Saves Presentation with specified file name with extension.
 pptxDoc.Save("PresentationWithNotesSlide.pptx")
-'Closes the Presentation.
-pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
