@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Get Word and Paragraph in Blazor DocumentEditor | Syncfusion
-description: Learn how to select and retrieve current word and Paragraph in the Syncfusion Blazor Document Editor component and much more.
+title: Get Word and Paragraph in Blazor DOCX Editor | Syncfusion
+description: Learn how to select and retrieve the current word and paragraph in the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# How to select and retrieve the word and paragraph in Document Editor
+# How to select and retrieve the word and paragraph in Blazor Document Editor
 
-The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows for getting the current word or paragraph content as plain text and SFDT (rich text).
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows you to get the current word or paragraph content as plain text or SFDT (rich text).
 
-## Select and get the word in current cursor position
+## Select and get the word at the current cursor position
 
-Use the [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in the selection module to select the current word at the cursor position, and use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from Blazor Document Editor component.
+Use the [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in the selection module to select the current word at the cursor position. Then, use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from the Blazor Document Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 
@@ -29,9 +29,9 @@ The following example code illustrates how to select and get the current word as
 
     public async void OnCreated(object args)
     {
-        // To insert text in cursor position
-        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
-        // To select the current word in document
+        // To insert text at the cursor position
+        await container.DocumentEditor.Editor.InsertTextAsync("Document Editor");
+        // To select the current word in the document
         await container.DocumentEditor.Selection.SelectCurrentWordAsync();
         // To get the selected content as text
         string selectedContent = await container.DocumentEditor.Selection.GetTextAsync();
@@ -41,9 +41,9 @@ The following example code illustrates how to select and get the current word as
 
 To get the bookmark content as SFDT (rich text), check this [`link`](./get-the-selected-content).
 
-## Select and get the paragraph in current cursor position
+## Select and get the paragraph at the current cursor position
 
-You can use [`SelectParagraphAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectParagraphAsync) API in selection module to select the current paragraph at cursor position and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API or [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as plain text or SFDT from Blazor Document Editor component.
+You can use the [`SelectParagraphAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectParagraphAsync) API in the selection module to select the current paragraph at the cursor position, and use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API or the [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as plain text or SFDT from the Blazor Document Editor component.
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 
@@ -59,9 +59,9 @@ The following example code illustrates how to select and get the current paragra
 
     public async void OnCreated(object args)
     {
-        // To insert text in cursor position
-        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
-        // To select the current paragraph in document
+        // To insert text at the cursor position
+        await container.DocumentEditor.Editor.InsertTextAsync("Document Editor");
+        // To select the current paragraph in the document
         await container.DocumentEditor.Selection.SelectParagraphAsync();
         // To get the selected content as SFDT
         string selectedContent = await container.DocumentEditor.Selection.GetSfdtAsync();
