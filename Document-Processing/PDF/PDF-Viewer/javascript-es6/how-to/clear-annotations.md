@@ -29,7 +29,7 @@ document.getElementById('deleteAnnotations').addEventListener('click',()=> {
 
 ```
 
-To remove a specific annotation, use the `deleteAnnotationById` method and provide the target annotation's id
+To remove a specific annotation, use the `deleteAnnotationById` method and provide the target annotation's id.
 
 Example: delete a specific annotation by id
 

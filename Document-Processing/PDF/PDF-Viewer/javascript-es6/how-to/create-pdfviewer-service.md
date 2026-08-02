@@ -43,7 +43,7 @@ Open the NuGet Package Manager and install the `Syncfusion.EJ2.PdfViewer.AspNet.
 
 **Step 4:** Add the following code to `PdfViewerController.cs`.
 
-```ts
+```csharp
 using Newtonsoft.Json;
 using Syncfusion.EJ2.PdfViewer;
 using System;
@@ -268,7 +268,7 @@ namespace MvcWebService.webapi
 
 **Step 6:** Configure global Web API routing in `Global.asax`:
 
-```
+```csharp
     System.Web.Http.GlobalConfiguration.Configuration.Routes.MapHttpRoute(
     name: "DefaultApi",
     routeTemplate: "api/{controller}/{action}/{id}",

@@ -32,4 +32,6 @@ The `resizerShape` property accepts values such as `Circle` or `Square` to chang
 
 Sample: [How to customize the annotation selector](https://stackblitz.com/edit/typescript-u7xjdv?file=index.ts)
 
-Accessibility: Use descriptive button labels and add an `aria-label` when a button uses an icon-only label. Ensure the toolbar or control used to trigger selector changes is reachable by keyboard navigation.
+### Accessibility
+
+Use descriptive button labels and add an `aria-label` when a button uses an icon-only label. Ensure the toolbar or control used to trigger selector changes is reachable by keyboard navigation.

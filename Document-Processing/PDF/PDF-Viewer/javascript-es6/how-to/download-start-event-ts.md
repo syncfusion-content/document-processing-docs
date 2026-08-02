@@ -16,7 +16,7 @@ Use the `downloadStart` event to intercept the start of a viewer download and op
 - Ensure the viewer instance is initialized before assigning the `downloadStart` handler.
 
 ```ts
-pdfviewer.downloadStart = (args: any) => {
+viewer.downloadStart = (args: any) => {
     // Custom logic
     args.cancel = true; // Prevent download action
 };

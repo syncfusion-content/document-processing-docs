@@ -40,7 +40,7 @@ Follow these steps to create the PDF Viewer service
 **Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency using the NuGet Package Manager.
 
 Open the NuGet Package Manager and install the `Syncfusion.EJ2.PdfViewer.AspNet.Core` package.
-![Alt text](./images/Nugetpackage.png)
+![Install the Syncfusion.EJ2.PdfViewer.AspNet.Core NuGet package](./images/Nugetpackage.png)
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 

@@ -16,7 +16,7 @@ Display custom tooltips for annotations by handling the [annotationMouseover](ht
 - Include the `ej.popups` module or equivalent tooltip library used in the example.
 - Ensure the viewer instance is initialized before attaching the event handlers.
 
-Example: show a tooltip on mouse over
+## Example: show a tooltip on mouse over
 
 ```ts
 

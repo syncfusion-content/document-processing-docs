@@ -11,7 +11,7 @@ documentation: ug
 
 Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
 
-Example: Add a custom Authorization header using `ajaxRequestSettings` in an TypeScript component
+Example: Add a custom Authorization header using `ajaxRequestSettings` in a TypeScript component
 
 ```ts
 
