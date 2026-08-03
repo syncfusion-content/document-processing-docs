@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Working with Paragraph Formatting in Syncfusion Blazor DocumentEditor component and more.
+title: Paragraph Formatting in Blazor DOCX Editor Component | Syncfusion
+description: Learn here all about working with paragraph formatting in Syncfusion Blazor Document Editor component and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Working with Paragraph Formatting in Blazor DocumentEditor Component
+# Working with Paragraph Formatting in Blazor Document Editor Component
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -30,7 +30,7 @@ await documentEditor.Selection.ParagraphFormat.SetFirstLineIndentAsync(24);
 
 ## Increase indent
 
-The left indent of selected paragraphs can be increased by a factor of 36 points using the following sample code.
+The left indent of selected paragraphs can be increased by 36 points using the following sample code.
 
 ```csharp
 await documentEditor.Editor.IncreaseIndentAsync();
@@ -38,7 +38,7 @@ await documentEditor.Editor.IncreaseIndentAsync();
 
 ## Decrease indent
 
-The left indent of selected paragraphs can be decreased by a factor of 36 points using the following sample code.
+The left indent of selected paragraphs can be decreased by 36 points using the following sample code.
 
 ```csharp
 await documentEditor.Editor.DecreaseIndentAsync();
@@ -52,7 +52,7 @@ The text alignment of selected paragraphs can be retrieved or set using the foll
 await documentEditor.Selection.ParagraphFormat.SetTextAlignmentAsync(TextAlignment.Center);
 ```
 
-You can toggle the text alignment of selected paragraphs by specifying a value using the following sample code.
+You can toggle the text alignment of selected paragraphs by passing a value using the following sample code.
 
 ```csharp
 await documentEditor.Editor.ToggleTextAlignmentAsync(TextAlignment.Center);
@@ -81,7 +81,7 @@ await documentEditor.Selection.ParagraphFormat.SetAfterSpacingAsync(24);
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the Document Editor component. These marks help identify the start and end of paragraphs and all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -97,4 +97,4 @@ The following example code illustrates how to show or hide paragraph marks.
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/paragraph-format?theme=fluent2).
+Explore how to apply paragraph formatting in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/paragraph-format?theme=fluent2).
