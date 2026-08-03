@@ -668,7 +668,7 @@ Enables or disables built-in validation for required and constrained fields.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
   <div>
-    <button id="updateFormFields">updateFormFields</button>
+    <button id="checkFormFieldDocument">checkFormFieldDocument</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
   </div>
 </template>
