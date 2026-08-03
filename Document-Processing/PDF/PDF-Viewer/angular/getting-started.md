@@ -145,7 +145,7 @@ After the application starts, open `http://localhost` (the default dev server UR
 
 If you prefer a video walkthrough, watch the following tutorial to get started quickly with the Angular PDF Viewer.
 
-{% youtube "https://www.youtube.com/watch?v=r8IPr_nTiHo&t=1s" %}
+{% youtube "https://www.youtube.com/watch?v=riZ1zACc5co" %}
 
 ## Angular version compatibility
 
