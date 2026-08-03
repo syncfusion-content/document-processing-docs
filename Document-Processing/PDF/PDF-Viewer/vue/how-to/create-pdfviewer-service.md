@@ -279,4 +279,4 @@ Download the sample to create a PDF Viewer web service: https://www.syncfusion.c
 
 ## Conclusion
 
-These steps show how to create an ASP.NET MVC web service that hosts the Syncfusion PDF Viewer backend, configure CORS, and connect it to the Vue PDF Viewer component for server-side rendering, text extraction, thumbnails, and annotation operations.
+These steps show how to create an ASP.NET MVC web service that hosts the Syncfusion PDF Viewer back end, configure CORS, and connect it to the Vue PDF Viewer component for server-side rendering, text extraction, thumbnails, and annotation operations.

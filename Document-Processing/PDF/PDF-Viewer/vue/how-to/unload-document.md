@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unload a PDF document programmatically in Vue PDF viewer
 
-The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
+The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#unload) method to remove the currently loaded PDF from the viewer instance. Use this API to free memory or reset the viewer when navigating between documents or closing the viewer.
 
 The following steps are used to unload the PDF document programmatically.
 

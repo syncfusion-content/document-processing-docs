@@ -175,4 +175,4 @@ By default, the `cancel` property is `false`, so the download proceeds unless th
 
 ### Enhanced Flexibility
 
-Using the [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadStartEventArgs/) event enables conditional control over downloads—for example, to enforce authentication, restrict downloads for certain documents, or prompt users for confirmation. When using server-backed viewers, confirm whether server-side behavior requires additional handling; canceling the client-side event prevents the local download but may not affect server workflows.
+Using the [downloadStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/downloadstarteventargs) event enables conditional control over downloads—for example, to enforce authentication, restrict downloads for certain documents, or prompt users for confirmation. When using server-backed viewers, confirm whether server-side behavior requires additional handling; canceling the client-side event prevents the local download but may not affect server workflows.

@@ -14,7 +14,7 @@ Use the [`importAnnotations()`](https://ej2.syncfusion.com/vue/documentation/api
 
 The following example shows how to import annotations during document load:
 
-**Step 1:** Follow the steps in the [Get started with Vue PDF Viewer](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Get started with Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide to create a sample.
 
 **Step 2:** Add the following code to import annotations when a PDF is loaded.
 

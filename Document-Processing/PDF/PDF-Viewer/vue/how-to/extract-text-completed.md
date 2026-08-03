@@ -14,7 +14,7 @@ The PDF Viewer can extract page text along with bounding information. Enable tex
 
 The following example shows how to enable text extraction and handle the completion event:
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** The following code snippet explains how to extract text from the loaded document.
 

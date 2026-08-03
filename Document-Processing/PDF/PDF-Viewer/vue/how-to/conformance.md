@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Supported PDF conformance levels | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels in the Vue PDF Viewer component.
+title: Supported PDF conformance levels in Vue PDF Viewer | Syncfusion
+description: Learn about the supported PDF/A and PDF/X conformance levels available in the Syncfusion Vue PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices | Syncfusion
+title: Restrict zoom percentage on mobile in Vue PDF Viewer | Syncfusion
 description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
