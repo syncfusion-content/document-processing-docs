@@ -54,7 +54,7 @@ N> If you're new to Azure, refer to the Azure development resources below. This 
 
 ## Next steps
 
-* [Open and Save PowerPoint in Azure App Service (Windows)](./Open-and-Save-PowerPoint-Presentation-in-Azure-App-Service-Windows.md)
+* [Open and Save PowerPoint in Azure App Service (Windows)](./Open-and-Save-PowerPoint-Presentation-in-Azure-App-Service-Windows)
 * [Create PowerPoint in Azure App Service (Linux)](./create-powerpoint-presentation-in-azure-app-service-linux)
 * [Create PowerPoint in Azure Functions v1](./create-powerpoint-presentation-in-azure-functions-v1)
 * [Create PowerPoint in Azure Functions v4](./create-powerpoint-presentation-in-azure-functions-v4)
