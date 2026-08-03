@@ -307,6 +307,8 @@ The `locale` property enables you to specify the language and culture for the PD
 
 To use a locale other than the default en-US, or to customize the localization strings, map the text content for the selected locale using the `ej.base.L10n.load()` method. This method registers the localized strings for your chosen locale, and the PDF Viewer will use them when displaying the interface.
 
+N> The `ej.base.L10n.load(...)` call must be registered **before** the PDF Viewer component initializes; otherwise the localized strings will not be applied. The `ej.base` namespace is available through the Syncfusion EJ2 scripts that are loaded by the Tag Helper.
+
 **Example: Custom Arabic (ar-AE) localization**
 
 Add the following script to register custom localization strings for the Arabic (UAE) locale:

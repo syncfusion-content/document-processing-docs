@@ -23,7 +23,7 @@ Step 2: Enter the project name and click **Create**.
 
 ![Create a project name for your new project](Workingwith-WinUI/Configuration_PPTXtoPDF.png)
 
-Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.NET NuGet package](Workingwith-MAUI/Nuget_Package_PPTXtoPDF.png)
 
@@ -56,6 +56,8 @@ Step 5: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;

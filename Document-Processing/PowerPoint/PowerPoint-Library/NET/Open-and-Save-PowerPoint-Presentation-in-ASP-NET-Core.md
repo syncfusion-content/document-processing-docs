@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Presentation in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit, and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint presentation in ASP.NET Core**.
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
@@ -16,24 +16,26 @@ Step 1: Create a new C# ASP.NET Core Web application project.
 
 ![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/Create-Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as a reference to your .NET Core application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
 Step 3: Include the following namespaces in **HomeController.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in **HomeController.cs**. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named `Index` will be present in **HomeController.cs**. Right-click on the Index method and select **Go To View**, where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button to **Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -56,14 +58,13 @@ Step 6: Add a new action method **OpenAndSavePresentation** in HomeController.cs
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-FileStream fileStreamPath = new(Path.GetFullPath(@"Data/Template.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Open an existing PowerPoint presentation.
-IPresentation pptxDoc = Presentation.Open(fileStreamPath);
+IPresentation pptxDoc = Presentation.Open(Path.GetFullPath(@"Data/Template.pptx"));
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 7: The following code snippet demonstrates how to access a shape on a slide and change the text within it:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -73,30 +74,33 @@ ISlide slide = pptxDoc.Slides[0];
 //Get the first shape of the slide.
 IShape shape = slide.Shapes[0] as IShape;
 //Change the text of the shape.
-if (shape.TextBody.Text == "Company History")
-shape.TextBody.Text = "Company Profile";
+if (shape != null && shape.TextBody != null && shape.TextBody.Text == "Company History")
+{
+    shape.TextBody.Text = "Company Profile";
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code example to **save the PowerPoint Presentation in ASP.NET Core**.
+Step 8: Add the following code to save the PowerPoint presentation in ASP.NET Core. The action method returns the saved file as a download:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Save the PowerPoint Presentation as stream.
+//Save the PowerPoint presentation as a stream.
 MemoryStream pptxStream = new();
 pptxDoc.Save(pptxStream);
+pptxDoc.Close();
 pptxStream.Position = 0;
 //Download Powerpoint document in the browser.
-return File(pptxStream, "application/powerpoint", "Result.pptx");
+return File(pptxStream, "application/vnd.openxmlformats-officedocument.presentationml.presentation", "Result.pptx");
 
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/ASP.NET-Core)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/ASP.NET-Core).
 
-By executing the program, you will get the **PowerPoint document** as follows.
+By executing the program, you will get a **PowerPoint document** as follows.
 
 ![ASP.Net Core output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 

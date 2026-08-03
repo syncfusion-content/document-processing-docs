@@ -18,7 +18,7 @@ Formatting options make your data easier to view and understand. The different t
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are:
+Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -239,7 +239,7 @@ The following features are not supported in Formatting:
 
 Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowconditionalformat) property.
 
-> * The default value for the `allowConditionalFormat` property is `true`.
+> The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 

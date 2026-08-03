@@ -68,7 +68,7 @@ function exitVolumeMode() {
 {% endtabs %}
 
 ### Add Volume Programmatically
-Configure default properties using the [`volumeSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_VolumeSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#addannotation) API to add a Volume measurement at a specific location.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
