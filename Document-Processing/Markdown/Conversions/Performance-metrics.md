@@ -91,10 +91,7 @@ N> Execution times are based on the sample documents and may vary with different
 
 N> **Note:** The conversion operations listed in this benchmark use different Syncfusion® document processing libraries based on the source and target formats.
 N>
-N> - **Word to Markdown**, **Markdown to Word**, and **Markdown to PDF** conversions use the **Syncfusion® .NET Word Library (DocIO)**: [Syncfusion.DocIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/34.1.29)
-N>
-N> - **Markdown to PDF** conversion uses the **Syncfusion® DocIORenderer** package to render Markdown documents as PDF: [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
-N>
-N> - **Excel to Markdown** and **Markdown to Excel** conversions use the **Syncfusion® .NET Excel Library (XlsIO)**: [Syncfusion.XlsIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/34.1.29)
-N>
-N> - **PowerPoint to Markdown** and **Markdown to PowerPoint** conversions use the **Syncfusion® .NET PowerPoint Library**: [Syncfusion.Presentation.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/34.1.29)
+N> * **Word to Markdown**, **Markdown to Word**, and **Markdown to PDF** conversions use the **Syncfusion® .NET Word Library (DocIO)**: [Syncfusion.DocIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/34.1.29)
+N> * **Markdown to PDF** conversion uses the **Syncfusion® DocIORenderer** package to render Markdown documents as PDF: [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
+N> * **Excel to Markdown** and **Markdown to Excel** conversions use the **Syncfusion® .NET Excel Library (XlsIO)**: [Syncfusion.XlsIO.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/34.1.29)
+N> * **PowerPoint to Markdown** and **Markdown to PowerPoint** conversions use the **Syncfusion® .NET PowerPoint Library**: [Syncfusion.Presentation.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/34.1.29)
