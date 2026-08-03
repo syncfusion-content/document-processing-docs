@@ -12,8 +12,8 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 
 ## Steps to Open and save PowerPoint in Azure App Service on Linux
 
-Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
+Step 1: Create a new ASP.NET Core Web App (Model-View-Controller)
+![Create an ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
 ![Configure your new project](Azure-Images/App-Service-Windows/Configure-Open-and-Save-PowerPoint-Presentation.png)
@@ -27,7 +27,7 @@ Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button to **Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -51,57 +51,52 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Presentation;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **OpenAndSavePresentation** in HomeController.cs and include the below code snippet to **open an existing Presentation in Azure App Service on Linux**.
+Step 7: Inject `IWebHostEnvironment` into the **HomeController** constructor and add a new action method `OpenAndSavePowerPoint` with the following code to open the existing presentation, modify a shape's text, and stream the result back to the browser.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-string pptxPath = Path.Combine(_hostingEnvironment.WebRootPath, "Data/Template.pptx");
-using FileStream fileStreamPath = new FileStream(pptxPath, FileMode.Open, FileAccess.Read);
-//Open an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(fileStreamPath);
+private readonly IWebHostEnvironment _hostingEnvironment;
 
-{% endhighlight %}
-{% endtabs %}
+public HomeController(IWebHostEnvironment hostingEnvironment)
+{
+    _hostingEnvironment = hostingEnvironment;
+}
 
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+public IActionResult OpenAndSavePowerPoint()
+{
+    //Open an existing PowerPoint presentation using the file path overload.
+    string pptxPath = Path.Combine(_hostingEnvironment.WebRootPath, "Data/Template.pptx");
+    using IPresentation pptxDoc = Presentation.Open(pptxPath);
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+    //Get the first slide from the PowerPoint presentation.
+    ISlide slide = pptxDoc.Slides[0];
+    //Get the first shape of the slide.
+    IShape shape = slide.Shapes[0] as IShape;
+    //Change the text of the shape.
+    if (shape != null && shape.TextBody.Text == "Company History")
+        shape.TextBody.Text = "Company Profile";
 
-//Get the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Get the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 9: Add below code example to **save the PowerPoint Presentation in Azure App Service on Linux**.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-//Save the PowerPoint Presentation as stream.
-MemoryStream pptxStream = new();
-pptxDoc.Save(pptxStream);
-pptxStream.Position = 0;
-//Download Powerpoint document in the browser.
-return File(pptxStream, "application/powerpoint", "Result.pptx");
+    //Save the PowerPoint presentation to a memory stream.
+    MemoryStream pptxStream = new();
+    pptxDoc.Save(pptxStream);
+    pptxStream.Position = 0;
+    //Download the PowerPoint document in the browser.
+    return File(pptxStream, "application/powerpoint", "Result.pptx");
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Steps to publish as Azure App Service on Linux
 
-Step 1: Right-click the project and select **Publish** option.
+Step 1: Right-click the project and select the **Publish** option.
 ![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-PowerPoint-Presentation.png)
 
 Step 2: Click the **Add a Publish Profile** button.
@@ -113,7 +108,7 @@ Step 3: Select the publish target as **Azure**.
 Step 4: Select the Specific target as **Azure App Service (Linux)**.
 ![Select the publish target](Azure-Images/App-Service-Linux/Specific_Target_PowerPoint_Presentation_to_PDF.png)
 
-Step 5: To create a new app service, click **Create new** option.
+Step 5: To create a new app service, click the **Create new** option.
 ![Click create new option](Azure-Images/App-Service-Windows/App-Service-Create-PowerPoint-Presentation.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
@@ -122,7 +117,7 @@ Step 6: Click the **Create** button to proceed with **App Service** creation.
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the Finish button](Azure-Images/App-Service-Linux/App-Service-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 8: Click **Close** button.
+Step 8: Click the **Close** button.
 ![Create a ASP.NET Core Project](Azure-Images/App-Service-Linux/Finish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 9: Click the **Publish** button.
@@ -131,10 +126,10 @@ Step 9: Click the **Publish** button.
 Step 10: Now, Publish has been succeeded.
 ![Publish has been succeeded](Azure-Images/App-Service-Linux/After-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 11: Now, the published webpage will open in the browser. 
+Step 11: The published webpage opens in the browser at `/Home/OpenAndSavePowerPoint`.
 ![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 12: Click **Open and Save PowerPoint** button.You will get the output **PowerPoint document** as follows.
+Step 12: Click the **Open and Save PowerPoint** button. You will get the output **PowerPoint document** as follows.
 
 ![Open and save PowerPoint in Azure App Service on Linux](Workingwith-Core/Open-and-Save-output-image.png)
 

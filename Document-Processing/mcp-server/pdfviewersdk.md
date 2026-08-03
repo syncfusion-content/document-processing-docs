@@ -23,14 +23,16 @@ These tools speed up development and reinforce best practices for Syncfusion<sup
 
 You can refer to the platform-specific guidance on how to set up and use the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer MCP Server from the following:
 
-- [MCP Server for Blazor PDF Viewer](../PDF/PDF-Viewer/blazor/mcp)
 - [MCP Server for React PDF Viewer](../PDF/PDF-Viewer/react/mcp)
 - [MCP Server for Angular PDF Viewer](../PDF/PDF-Viewer/angular/mcp)
+- [MCP Server for Blazor PDF Viewer](../PDF/PDF-Viewer/blazor/mcp)
+- [MCP Server for Blazor Smart PDF Viewer](../PDF/Smart-PDF-Viewer/blazor/mcp)
 - [MCP Server for Vue PDF Viewer](../PDF/PDF-Viewer/vue/mcp)
 - [MCP Server for TypeScript PDF Viewer](../PDF/PDF-Viewer/javascript-es6/mcp)
 - [MCP Server for JavaScript PDF Viewer](../PDF/PDF-Viewer/javascript-es5/mcp)
 - [MCP Server for ASP.NET Core PDF Viewer](../PDF/PDF-Viewer/asp-net-core/mcp)
 - [MCP Server for ASP.NET MVC PDF Viewer](../PDF/PDF-Viewer/asp-net-mvc/mcp)
+- [MCP Server for .NET MAUI PDF Viewer](../PDF/PDF-Viewer/maui/mcp)
 - [MCP Server for WPF PDF Viewer](../PDF/PDF-Viewer/wpf/pdfviewer-mcp)
 - [MCP Server for WinForms PDF Viewer](../PDF/PDF-Viewer/winforms/pdfviewer-mcp)
 

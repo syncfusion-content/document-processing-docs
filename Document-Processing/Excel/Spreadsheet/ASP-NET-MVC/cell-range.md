@@ -89,7 +89,7 @@ The following features have some limitations in Merge:
 
 ## Data Validation
 
-The **Data Validation **restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
+The **Data Validation** restricts the type of data or values that users can enter into cells. Use the [allowDataValidation](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation in the Spreadsheet.
 
 N> * The default value of the `allowDataValidation` property is `true`.
 
