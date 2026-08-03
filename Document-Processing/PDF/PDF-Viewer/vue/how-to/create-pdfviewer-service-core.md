@@ -19,7 +19,7 @@ To get started with an ASP.NET Core Web API service, refer to System requirement
 
 Follow these steps to create the PDF Viewer service
 
-**Step 1:**  Select File > New > Project, in the Visual Studio menu bar.
+**Step 1:** Select **File > New > Project** in the Visual Studio menu bar.
 
 ![Alt text](./images/Start.png)
 
@@ -35,7 +35,7 @@ Follow these steps to create the PDF Viewer service
 
 ![Alt text](./images/CoreappCreate.png)
 
-**Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency to your project by using 'NuGet Package Manager'.
+**Step 5:** Add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) NuGet package to your project.
 
 Open the `NuGet` package manager.
 ![Alt text](./images/Nugetpackage.png)

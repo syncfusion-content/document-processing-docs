@@ -2,7 +2,7 @@
 layout: post
 title: Open the thumbnail pane programmatically | Syncfusion
 description: Learn how to open the thumbnail pane programmatically in the Syncfusion Vue PDF Viewer using openThumbnailPane.
-control: Open thumbnail
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -48,7 +48,6 @@ const onSplitterResize = function () {
   const viewer = pdfviewer.value.ej2Instances;
   viewer.updateViewerContainer();
   viewer.thumbnailViewModule.openThumbnailPane();
-  debugger;
 }
 </script>
 
@@ -90,7 +89,6 @@ export default {
       const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.updateViewerContainer();
       viewer.thumbnailViewModule.openThumbnailPane();
-      debugger;
     },
   }
 }
@@ -127,7 +125,6 @@ const onSplitterResize = function () {
   const viewer = pdfviewer.value.ej2Instances;
   viewer.updateViewerContainer();
   viewer.thumbnailViewModule.openThumbnailPane();
-  debugger;
 }
 </script>
 
@@ -170,7 +167,6 @@ export default {
       const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.updateViewerContainer();
       viewer.thumbnailViewModule.openThumbnailPane();
-      debugger;
     },
   }
 }

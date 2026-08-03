@@ -24,7 +24,7 @@ To get started with an ASP.NET MVC Web API service, ensure the following softwar
 
 Follow these steps to create the PDF Viewer service
 
-**Step 1:** Create an ASP.NET web application using the default template in Visual Studio 2017.
+**Step 1:** Create an ASP.NET Web Application using the default template in Visual Studio 2017.
 
 ![Alt text](./images/default-template.png)
 
@@ -276,3 +276,7 @@ namespace MvcWebService.webapi
 ```
 
 Download the sample to create a PDF Viewer web service: https://www.syncfusion.com/downloads/support/directtrac/general/ze/MvcWebService587924662.zip
+
+## Conclusion
+
+These steps show how to create an ASP.NET MVC web service that hosts the Syncfusion PDF Viewer backend, configure CORS, and connect it to the Vue PDF Viewer component for server-side rendering, text extraction, thumbnails, and annotation operations.

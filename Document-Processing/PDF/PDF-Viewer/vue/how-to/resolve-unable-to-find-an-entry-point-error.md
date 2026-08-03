@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Resolve “unable to find an entry point” error | Syncfusion
-description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the Syncfusion Vue PDF Viewer.Essential JS 2 and more.
-control: Unable to find an entry point
+description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the Syncfusion Vue PDF Viewer.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

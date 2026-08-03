@@ -5,6 +5,7 @@ description: Learn how to import annotations in the Syncfusion Vue PDF Viewer us
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import annotations in Vue PDF Viewer

@@ -26,7 +26,7 @@ API name: annotationSettings
 | isPrint | Boolean (true) | Specifies whether the annotation is included in print actions. |
 | isDownload | Boolean (true) | Specifies whether the annotation is included in download actions. |
 | Free Text Settings |
-| allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
+| allowTextOnly | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
 Change the author name and other properties using the annotationSettings API as shown below.
 

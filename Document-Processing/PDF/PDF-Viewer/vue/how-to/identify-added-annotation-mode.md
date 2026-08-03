@@ -5,6 +5,7 @@ description: Learn how to determine whether an added annotation was drawn, impor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Identify added annotation mode in Vue PDF Viewer

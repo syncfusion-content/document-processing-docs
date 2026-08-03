@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize the context menu in PDF Viewer
 
-The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the addCustomMenu and [customContextMenuSelect()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#customcontextmenuselect) API.
+The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the [addCustomMenu()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addcustommenu) and [customContextMenuSelect()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#customcontextmenuselect) API.
 
 ### Add a custom option
 

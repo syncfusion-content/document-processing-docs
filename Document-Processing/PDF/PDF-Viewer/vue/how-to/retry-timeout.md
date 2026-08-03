@@ -2,7 +2,7 @@
 layout: post
 title: Retry Timeout in Vue PDF Viewer component | Syncfusion
 description: Learn here all about Retry Timeout in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Retry Timeout
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,8 +14,8 @@ The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) 
 
 Defaults and units:
 
-- `retryTimeout` is specified in seconds. A value of `0` disables the timeout and may cause requests to hang indefinitely — avoid this in production.
-- `retryCount` sets how many retry attempts the viewer makes after timeouts or transient failures.
+- `retryTimeout` is specified in seconds. A value of `0` disables the timeout and may cause requests to hang indefinitely — avoid this in production. The default value is `0`.
+- `retryCount` sets how many retry attempts the viewer makes after timeouts or transient failures. The default value is `1`.
 
 Use cases:
 
@@ -67,7 +67,7 @@ import {
   PdfViewerComponent, Toolbar, Magnification, Navigation,
   Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';;
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'app',

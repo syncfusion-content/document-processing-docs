@@ -159,7 +159,7 @@ import {
   PdfViewerComponent, Toolbar, Magnification, Navigation,
   LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
   Print, TextSelection, TextSearch, FormFields, FormDesigner
-   } from '@syncfusion/ej2-vue-pdfviewer';
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: "App",

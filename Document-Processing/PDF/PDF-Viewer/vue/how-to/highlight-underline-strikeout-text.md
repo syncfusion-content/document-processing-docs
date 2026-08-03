@@ -5,6 +5,7 @@ description: Learn how to programmatically highlight, underline, and strikeout t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Highlight, underline, and strikeout text in Vue PDF Viewer
@@ -36,16 +37,19 @@ Step 2: Add the following Vue component snippet to enable highlight, underline, 
 </template>
 
 <script>
-import { PdfViewerComponent } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerComponent, Annotation, Toolbar, TextSelection } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'AnnotationModesDemo',
   components: { 'ejs-pdfviewer': PdfViewerComponent },
   data() {
     return {
-      serviceUrl: 'https://services.syncfusion.com/js/development/api/pdfviewer',
+      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
+  },
+  provide: {
+    PdfViewer: [Annotation, Toolbar, TextSelection]
   },
   methods: {
     getViewer() {

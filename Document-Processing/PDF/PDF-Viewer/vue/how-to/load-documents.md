@@ -2,7 +2,7 @@
 layout: post
 title: Load documents dynamically in Vue PDF Viewer | Syncfusion
 description: Learn how to load or switch PDF documents dynamically in the Syncfusion Vue PDF Viewer using the load method.
-control: Load documents
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##

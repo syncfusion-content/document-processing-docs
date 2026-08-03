@@ -1,20 +1,20 @@
 ---
 layout: post
-title: How to clear the "Web-service is not listening" to error | Syncfusion
-description: Learn here all about How to clear the "Web-service is not listening" to error in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: How to clear the "Web-service is not listening" to error
+title: How to clear the "Web-service is not listening" error | Syncfusion
+description: Learn here all about How to clear the "Web-service is not listening" error in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to clear the "Web-service is not listening" to error
+# How to clear the "Web-service is not listening" error
 
 ![Alt text](../images/webservice.png)
 
 If the Vue PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behaviour. The steps below guide the most common troubleshooting paths and remediation actions.
 
-**Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
+**Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 
 ![Alt text](../images/networktab.png)
 
@@ -54,7 +54,7 @@ We can use Redis cache and distributive cache for this issue.
 
 Ensure that your network connection is stable and strong enough to support the web service you are trying to use. Sometimes, simply restarting the web service can resolve the issue. Try stopping and starting the service again to see if it resolves the problem.
 
-## The document pointer does not exist in the cache.
+## The document pointer does not exist in the cache
 
 The `Document pointer does not exist in the cache` exception in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
 

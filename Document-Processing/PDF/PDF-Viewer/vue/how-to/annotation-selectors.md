@@ -68,7 +68,7 @@ export default {
 </script>
 ```
 
-Composition API example
+### Composition API example
 
 ```html
 <template>

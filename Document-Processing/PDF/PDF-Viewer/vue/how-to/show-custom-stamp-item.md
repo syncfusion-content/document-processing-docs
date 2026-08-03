@@ -70,8 +70,8 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  },
   }
+}
 </script>
 
 {% endhighlight %}
@@ -122,8 +122,8 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  },
   }
+}
 </script>
 
 {% endhighlight %}

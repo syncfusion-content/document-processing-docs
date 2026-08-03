@@ -310,7 +310,7 @@ import {
 export default {
   name: "App",
   components: {
-    "ejs-pdfviewer": PdfviewerComponent
+    "ejs-pdfviewer": PdfViewerComponent
   },
   data() {
     return {

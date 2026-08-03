@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads PDF Viewer
+# Control file downloads in the Vue PDF Viewer
 
-The PDF Viewer exposes a `downloadStart` event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
+The PDF Viewer exposes a [`downloadStart`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#downloadstart) event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
 
 ### Using the downloadStart Event
 
@@ -171,7 +171,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
+By default, the `cancel` property is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
 
 ### Enhanced Flexibility
 

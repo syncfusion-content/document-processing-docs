@@ -10,17 +10,15 @@ domainurl: ##DomainURL##
 
 # Configure annotation selector settings
 
-AnnotationSelectorSettingsModel
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationselectorsettings) property to customize the appearance and interaction behavior of the annotation selector in the Vue PDF Viewer UI.
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the Vue PDF Viewer UI.
-
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
 ### How to Configure Annotation Selector Settings
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:**	 Add the following code snippet to configure the annotation selector Settings in the PDF Viewer.
+**Step 2:** Add the following code snippet to configure the annotation selector settings in the PDF Viewer.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -73,7 +71,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-#### Key properties include:
+### Key properties include:
 
 - selectionBorderColor: Sets the color for the border around selected annotations.
 - resizerBorderColor: Sets the color for the border of the resizer handles.

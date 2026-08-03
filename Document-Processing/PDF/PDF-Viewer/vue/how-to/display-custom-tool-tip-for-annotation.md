@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display a custom tooltip for annotations in the Vue PDF Viewer
 
-Display custom tooltips for annotations by handling the [annotationMouseOver](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and annotationMouseLeave events.
+Display custom tooltips for annotations by handling the [annotationMouseOver](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationmouseover) and annotationMouseLeave events.
 
 Example: Show a tooltip on mouse over
 

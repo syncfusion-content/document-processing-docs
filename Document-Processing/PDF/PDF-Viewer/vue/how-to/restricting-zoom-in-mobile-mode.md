@@ -35,7 +35,6 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
          Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import {Browser} from '@syncfusion/ej2-base';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
@@ -51,7 +50,7 @@ export default {
 
   methods: {
     documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
         viewer.minZoom = 10;
@@ -86,7 +85,6 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
          Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import {Browser} from '@syncfusion/ej2-base';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
@@ -102,7 +100,7 @@ export default {
 
   methods: {
     documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
         viewer.minZoom = 10;

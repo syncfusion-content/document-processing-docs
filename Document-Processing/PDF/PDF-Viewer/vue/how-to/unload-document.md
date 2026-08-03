@@ -2,7 +2,7 @@
 layout: post
 title: Unload document in Vue PDF Viewer component | Syncfusion
 description: Learn here all about Unload document in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Unload document
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,7 +14,7 @@ The PDF Viewer provides the [unload()](https://ej2.syncfusion.com/vue/documentat
 
 The following steps are used to unload the PDF document programmatically.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to perform the unload operation.
 
@@ -175,4 +175,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Find the Sample, [how to unload the PDF document programmatically](https://www.syncfusion.com/downloads/support/directtrac/general/ze/quickstart-620361849.zip)
+Find the sample: [how to unload the PDF document programmatically](https://www.syncfusion.com/downloads/support/directtrac/general/ze/quickstart-620361849.zip)
