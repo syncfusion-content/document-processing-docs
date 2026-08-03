@@ -13,7 +13,7 @@ You can insert text, a paragraph, and rich-text content in the [ASP.NET Core DOC
 
 ## Insert text at the current cursor position
 
-You can use the [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserttext) API in the editor module to insert the text at the current cursor position.
+You can use the [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserttext) API in the editor module to insert the text at the current cursor position.
 
 The following example code illustrates how to add the text in the current selection.
 
