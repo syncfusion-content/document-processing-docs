@@ -7,7 +7,7 @@ control: Optimize the SFDT file
 documentation: ug
 ---
 
-# How to optimize the SFDT file
+# How to optimize the SFDT file in ASP.NET Core DOCX Editor
 
 Starting from version v21.1.x, the SFDT file generated in the Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 
