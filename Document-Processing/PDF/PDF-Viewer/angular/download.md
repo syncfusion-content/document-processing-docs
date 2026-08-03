@@ -88,5 +88,5 @@ To invoke download programmatically, use the following snippet:
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

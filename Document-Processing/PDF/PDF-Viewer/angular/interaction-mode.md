@@ -144,5 +144,5 @@ You can switch the interaction mode of the PDF Viewer using the following code s
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

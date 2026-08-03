@@ -97,5 +97,5 @@ N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

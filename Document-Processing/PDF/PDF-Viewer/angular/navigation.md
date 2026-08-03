@@ -384,5 +384,5 @@ N> The tab order is defined by the order of form fields in the PDF file.
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

@@ -46,5 +46,5 @@ N> In addition to registering the required modules, enable the corresponding com
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Toolbar customization](./toolbar-customization/custom-toolbar)
