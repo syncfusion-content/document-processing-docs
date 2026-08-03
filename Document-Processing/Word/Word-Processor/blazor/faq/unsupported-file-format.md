@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unsupported file in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion Blazor Document Editor component and more.
+description: Learn about unsupported file format warnings in the Syncfusion Blazor Document Editor component and how to use supported document formats.
 platform: document-processing
 control: Document Editor
 documentation: ug

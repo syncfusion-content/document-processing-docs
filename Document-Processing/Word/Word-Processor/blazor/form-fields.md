@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form fields in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Form fields in Syncfusion Blazor Document Editor component and more.
+description: Learn how to insert, manage, import, export, and protect form fields in the Syncfusion Blazor Document Editor component.
 platform: document-processing
 control: Document Editor
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find and Replace in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Find and Replace in Syncfusion Blazor Document Editor component and more.
+description: Learn how to find and replace text in the Syncfusion Blazor Document Editor component using search options and navigation features.
 platform: document-processing
 control: Document Editor
 documentation: ug
