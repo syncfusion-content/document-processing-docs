@@ -87,7 +87,6 @@ When your requirement is to append the contents on the same page instead of star
 
 N> For multi-section source documents, only the first section's break code controls the page break behavior of the imported content.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Merge-documents-in-same-page/.NET/Merge-documents-in-same-page/Program.cs" %}
@@ -234,9 +233,7 @@ destinationDocument.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Maintain-Imported-List-Style-Information).
 
-N> For production use, register a Syncfusion license before merging Word documents. Refer to the [licensing registration guide](https://help.syncfusion.com/document-processing/word/licensing/how-to-register-in-an-application) for details.
 
 ## See Also
 

@@ -1170,7 +1170,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can ungroup group shapes in a Word document so that each shape is preserved as an individual item.
 
-N> The following example assumes that the template document (`Template.docx`) contains a `GroupShape` in its last paragraph. To locate group shapes in arbitrary documents, iterate through the paragraphs and paragraph items of each section.
+The following code example illustrates how to ungroup the group shape in Word document.
 
 The following code example illustrates how to ungroup a group shape in a Word document.
 

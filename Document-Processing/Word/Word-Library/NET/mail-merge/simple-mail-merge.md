@@ -81,6 +81,7 @@ document.LastParagraph.AppendField("City", FieldType.FieldMergeField);
 //Saves the Word document to a file
 FileStream fileStream = new FileStream("Template.docx", FileMode.Create, FileAccess.ReadWrite);
 document.Save(fileStream, FormatType.Docx);
+fileStream.Dispose();
 //Closes the Word document
 document.Close();
 {% endhighlight %}
@@ -191,9 +192,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The resultant document looks as follows.
 
 ![Mail merged Word document](../MailMerge_images/file-formats-word-simple-mail-merge-output.png)
-
-## See also
-
-- [Mail merge using nested groups](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#mail-merge-using-nested-groups)
-- [Conditional merge fields](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#conditional-merge-fields)
-- [Mail merge for regions](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#region-mail-merge)
