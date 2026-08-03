@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the document and bookmark content as text in DOCX Editor
+title: Retrieve the document and bookmark text in DOCX Editor | Syncfusion
 description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion DOCX Editor Component
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text

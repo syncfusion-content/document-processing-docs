@@ -22,7 +22,8 @@ Using the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusio
 {% include code-snippet/document-editor/asp-net-core/read-only/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Read-only.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Opening a document in read only mode by default in Document Editor Container

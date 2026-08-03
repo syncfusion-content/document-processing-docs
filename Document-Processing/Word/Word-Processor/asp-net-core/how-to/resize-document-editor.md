@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resize Document Editor in DOCX Editor Component
+title: Resize Document Editor in DOCX Editor | Syncfusion
 description: Learn here all about how to resize Document Editor in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize Document Editor
