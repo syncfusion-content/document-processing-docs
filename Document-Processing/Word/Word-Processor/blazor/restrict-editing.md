@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict editing in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Restrict editing in Syncfusion Blazor Document Editor component and more.
+description: Learn how to restrict editing and protect documents in the Syncfusion Blazor Document Editor component.
 platform: document-processing
 control: Document Editor
 documentation: ug
