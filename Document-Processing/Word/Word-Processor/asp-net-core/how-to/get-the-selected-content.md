@@ -5,10 +5,11 @@ description: Learn here all about getting the selected content in the Syncfusion
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 
-# How to get the selected content in DOCX Editor component
+# How to get the selected content in the DOCX Editor component
 
 You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) component as plain text and SFDT (rich text).
 
@@ -49,5 +50,5 @@ You can use the `sfdt` API to get the selected content as rich text from the ASP
 You can add the following custom options using this API:
 
 * Save or export the selected content as an SFDT file.
-* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the `select bookmark` API.
+* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the `selectBookmark` API.
 * Create template content that can be inserted into multiple documents at the cursor position using the `paste` API.
