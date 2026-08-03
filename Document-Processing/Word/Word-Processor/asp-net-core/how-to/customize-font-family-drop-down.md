@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize FontFamily DropDown in Document Editor | Syncfusion
-description: Learn here all about how to customize font family drop down in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Customize FontFamily DropDown in DOCX Editor | Syncfusion
+description: Learn here all about how to customize font family drop down in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Font Family Drop Down
 documentation: ug
 ---
 
 
-# How to customize the font family dropdown in Document Editor
+# How to customize the font family drop-down in ASP.NET Core DOCX Editor
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the font family drop down list values using `fontFamilies` in Document editor settings. Fonts which are added in `fontFamilies` of `documentEditorSettings` will be displayed on font drop down list of text properties pane and font dialog.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using `fontFamilies` in the DOCX Editor settings. The `fontFamilies` property accepts an array of font name strings; the default value is Syncfusion's built-in font list. Fonts added to `fontFamilies` in `documentEditorSettings` will be displayed in the font drop-down list of the text properties pane and the font dialog.
 
-Similarly, you can use `documentEditorSettings` property for DocumentEditor also.
+Similarly, you can use the `documentEditorSettings` property for the Document Editor also.
 
 
 {% tabs %}
@@ -25,4 +25,8 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% endtabs %}
 
 
+The following screenshot shows the customized font family drop-down list:
+
 ![Font](../images/font-family.png)
+
+Run the application to see the customized font family drop-down list in the DOCX Editor.
