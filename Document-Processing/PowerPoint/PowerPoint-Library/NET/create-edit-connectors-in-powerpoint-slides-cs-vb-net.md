@@ -1,5 +1,5 @@
 ---
-title: Add and edit connectors in PowerPoint slides | Syncfusion |
+title: Add, edit, and remove connectors in PowerPoint slides | Syncfusion
 description: Code examples to create and edit PowerPoint connectors in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
 platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
@@ -7,11 +7,9 @@ documentation:
 keywords: PowerPoint, slide, connectors, pptx, shapes
 ---
 
-# Adding connectors in PowerPoint slides
+# Adding, editing, and removing connectors in PowerPoint slides
 
-Essential<sup>&reg;</sup> Presentation library supports adding, editing, and removing the connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
-
-The following code example demonstrates how to add a connector in PowerPoint slide.
+Essential<sup>&reg;</sup> Presentation library supports adding, editing, and removing connectors in a PowerPoint file. The following code example demonstrates how to add a connector between two shapes.
 
 {% tabs %}
 
@@ -26,9 +24,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     IShape oval = slide.Shapes.AddShape(AutoShapeType.Oval, 400, 10, 100, 100);
     //Add elbow connector on the slide and connect the end points of connector with specified port positions 0 and 4 of the beginning and end shapes
     IConnector connector = slide.Shapes.AddConnector(ConnectorType.Elbow, rectangle, 0, oval, 4);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint file
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 
@@ -71,7 +68,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a single point connector
 
-You can also add a connector to a source shape without any destination shapes. The following code example demonstrates how to add a connector with single point connection.
+You can also add a connector with only one end connected to a source shape, while the other end remains free. The following code example demonstrates how to add a single point connector.
 
 {% tabs %}
 
@@ -94,9 +91,8 @@ using (IPresentation pptxDoc = Presentation.Create())
     connector.LineFormat.Fill.FillType = FillType.Solid;
     //Set the connector solid fill as black
     connector.LineFormat.Fill.SolidFill.Color = ColorObject.Black;
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint file
+    pptxDoc.Save("Sample.pptx");
 }
 {% endhighlight %}
 
@@ -158,10 +154,8 @@ The following code example demonstrates how to edit an existing connector in a P
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Modify-existing-connector/.NET/Modify-existing-connector/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -171,19 +165,18 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     connector.LineFormat.BeginArrowheadStyle = ArrowheadStyle.ArrowOpen;
     //Set the line format for the connector
     connector.LineFormat.DashStyle = LineDashStyle.DashDotDot;
-    //Disconnect the end connection of the connector if end point get connected
+    //Disconnect the end connection of the connector if end point gets connected
     if (connector.EndConnectedShape != null)
         connector.EndDisconnect();
     //Insert a triangle shape into slide
     IShape triangle = slide.Shapes.AddShape(AutoShapeType.IsoscelesTriangle, 600, 500, 150, 150);
     //Declare the end connection site index
     int connectionSiteIndex = 4;
-    //Reconnect the end point of connector with triangle shape if its connection site count is greater than 4
+    //Reconnect the end point of the connector with the triangle if the triangle has enough connection sites
     if (connectionSiteIndex < triangle.ConnectionSiteCount)
         connector.EndConnect(triangle, connectionSiteIndex);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint file
+    pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 
@@ -218,7 +211,7 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 ' Open an existing PowerPoint file.
 Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
     'Get the first slide of a PowerPoint file
-    Dim slide As ISlide = pptxDoc.Slides(2)
+    Dim slide As ISlide = pptxDoc.Slides(0)
     'Get the connector from a slide
     Dim connector As IConnector = CType(slide.Shapes(2), IConnector)
     'Set the beginning cap for the connector
@@ -233,7 +226,7 @@ Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
     Dim triangle As IShape = slide.Shapes.AddShape(AutoShapeType.IsoscelesTriangle, 600, 500, 150, 150)
     'Declare the end connection site index
     Dim connectionSiteIndex As Integer = 4
-    'Reconnect the end point of connector with triangle shape if its connection site count is greater than 4
+    'Reconnect the end point of the connector with the triangle if the triangle has enough connection sites
     If (connectionSiteIndex < triangle.ConnectionSiteCount) Then
         connector.EndConnect(triangle, connectionSiteIndex)
     End If
@@ -253,10 +246,8 @@ The following code example demonstrates how to update a connector’s position w
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Update-connector-position/.NET/Update-connector-position/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
     ISlide slide = pptxDoc.Slides[0];
@@ -267,11 +258,10 @@ using (IPresentation pptxDoc = Presentation.Open(inputStream))
     //Change the X and Y position of the rectangle
     rectangle.Left = 600;
     rectangle.Top = 200;
-    //Update the connector to connect with previously updated shape
+    //Update the connector to reflect the new shape position
     connector.Update();
-   //Save the PowerPoint Presentation as stream
-   FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-   pptxDoc.Save(outputStream);
+    //Save the PowerPoint file
+    pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 
@@ -325,20 +315,17 @@ The following code example demonstrates how to remove a connector from PowerPoin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Connectors/Remove-connector-from-shapes/.NET/Remove-connector-from-shapes/Program.cs" %}
-//Loads an PowerPoint file in stream
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
 //Opens the loaded PowerPoint file
-using (IPresentation pptxDoc = Presentation.Open(inputStream))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Get the first slide of a PowerPoint file
-    ISlide slide = pptxDoc.Slides[0];                
+    ISlide slide = pptxDoc.Slides[0];
     //Get the connector from a slide
     IConnector connector = slide.Shapes[2] as IConnector;
     //Remove the connector from slide
     slide.Shapes.Remove(connector);
-    //Save the PowerPoint Presentation as stream
-    FileStream outputStream = new FileStream("Connector.pptx", FileMode.Create);
-    pptxDoc.Save(outputStream);
+    //Save the PowerPoint file
+    pptxDoc.Save("Connector.pptx");
 }
 {% endhighlight %}
 
