@@ -105,7 +105,7 @@ var toolbarObj = new ej.navigations.Toolbar({
         { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
         { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
         { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-        { template: ele, tooltipText: 'Page Number', align: 'Center' },
+        { template: totalPageNum, tooltipText: 'Page Number', align: 'Center' },
         { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
         { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
         { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
@@ -1010,7 +1010,7 @@ enablePrevButton(false);
 {% endhighlight %}
 {% endtabs %}
 
-Sample :
+Sample:
 [https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## See also

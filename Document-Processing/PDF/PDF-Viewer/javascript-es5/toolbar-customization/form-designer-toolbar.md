@@ -16,7 +16,7 @@ Customize the form designer toolbar by showing or hiding default items and contr
 
 The form designer toolbar can be shown or hidden programmatically during initialization or at runtime.
 
-Use the [enableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method at runtime to toggle visibility. The links below reference the corresponding API documentation.
+Use the [enableFormDesigner](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method at runtime to toggle visibility.
 
 The following code snippet shows how to set the `enableFormDesigner` property during initialization.
 

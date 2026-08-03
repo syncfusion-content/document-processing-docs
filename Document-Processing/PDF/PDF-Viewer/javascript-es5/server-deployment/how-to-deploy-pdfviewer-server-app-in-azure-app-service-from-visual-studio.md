@@ -37,6 +37,6 @@ domainurl: ##DomainURL##
 
 **Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
 
-Use the service endpoint (for example, http://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client’s serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
+Use the service endpoint (for example, https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client's serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
 
-For Azure App Service deployment guidance, see: https://docs.microsoft.com/visualstudio/deployment/
+For Azure App Service deployment guidance, see: https://learn.microsoft.com/visualstudio/deployment/

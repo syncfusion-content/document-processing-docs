@@ -14,7 +14,7 @@ The JavaScript PDF Viewer component supports saving PDF files to Azure Blob Stor
 
 ## Using Standalone PDF Viewer
 
-Follow the steps below to save a PDF file to Azure Blob Storage from an JavaScript PDF Viewer.
+Follow the steps below to save a PDF file to Azure Blob Storage from a JavaScript PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in JavaScript
 
@@ -81,7 +81,7 @@ N> Install the Azure Storage Blob client package for browser use: `npm install @
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, you can follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in JavaScript
 

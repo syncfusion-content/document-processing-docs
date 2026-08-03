@@ -68,7 +68,7 @@ pdfviewer.toolbarClick = function (args) {
 N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket and object key. Ensure the S3 bucket is configured with appropriate permissions and CORS rules to allow browser uploads.
 
 ```javascript
-private s3 = new AWS.S3();
+var s3 = new AWS.S3();
 
 function saveDocument() {
   pdfviewer.saveAsBlob().then(function (value) {

@@ -43,7 +43,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -68,7 +69,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -107,7 +109,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -130,7 +133,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
