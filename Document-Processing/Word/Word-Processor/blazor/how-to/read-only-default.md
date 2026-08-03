@@ -55,7 +55,7 @@ The following code example illustrates how to open a document in read-only mode.
     }
     public void OnDocumentChanged()
     {
-        //Enable read-only mode inside the `DocumentChanged` event.
+        //Enable read-only mode inside the `documentChange` event.
         container.RestrictEditing = true;
     }
 }
