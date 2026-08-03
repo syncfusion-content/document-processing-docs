@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in WPF
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in WPF**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to an image in WPF**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -135,7 +135,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Select the Syncfusion.PresentationToPdfConverter.Wpf NuGet package](Workingwith-WPF/Search-Syncfusion.PresentationToPdfConverter.Wpf-NuGet.png)
 
-* Click the Install button to complete the installation.
+* Click the **Install** button to complete the installation.
 
 ![Install the Syncfusion.PresentationToPdfConverter.Wpf NuGet package](Workingwith-WPF/Install-Syncfusion.PresentationToPdfConverter.Wpf-NuGet.png)
 
