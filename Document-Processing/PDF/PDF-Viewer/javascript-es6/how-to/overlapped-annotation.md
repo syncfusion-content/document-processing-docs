@@ -16,7 +16,7 @@ The following example shows how to access overlapped annotations on click:
 ```ts
 
 // Get overlapped annotation collections.
-viewer.annotationSelect =(args) =>{
+viewer.annotationSelect = (args: any) => {
   console.log(args.annotationCollection);
 }
 

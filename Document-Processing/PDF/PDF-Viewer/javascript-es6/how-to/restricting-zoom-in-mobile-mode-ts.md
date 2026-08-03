@@ -27,7 +27,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 
 pdfviewer.documentLoad = (): void => {
-    if (Browser.isDevice && !viewer.enableDesktopMode) {
+    if (Browser.isDevice && !pdfviewer.enableDesktopMode) {
         pdfviewer.maxZoom = 200;
         pdfviewer.minZoom = 10;
     }
@@ -52,7 +52,7 @@ pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.
 pdfviewer.appendTo('#PdfViewer');
 
 pdfviewer.documentLoad = (): void => {
-    if (Browser.isDevice && !viewer.enableDesktopMode) {
+    if (Browser.isDevice && !pdfviewer.enableDesktopMode) {
         pdfviewer.maxZoom = 200;
         pdfviewer.minZoom = 10;
     }

@@ -20,6 +20,7 @@ viewer.enableMultiPageAnnotation = true;
 
 // Export Annotation
 document.getElementById('export').addEventListener('click', () => {
+  // exportAnnotation() serializes the annotation; store the result for round-tripping.
   viewer.exportAnnotation();
 });
 

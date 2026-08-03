@@ -17,7 +17,7 @@ Save the loaded PDF document to a specific URL using a custom web service endpoi
 
 **Step 3:** Add the below code snippet in the PDF Viewer controller code to save the PDF document to the URL.
 
-```ts
+```csharp
 
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
@@ -57,7 +57,7 @@ public async Task<IActionResult> SaveUrl([FromBody] Dictionary<string, string> j
 
 **Step 4:** Add the following code in your file server to rewrite the content.
 
-```ts
+```csharp
 
 [AcceptVerbs("Put")]
 [HttpPut]

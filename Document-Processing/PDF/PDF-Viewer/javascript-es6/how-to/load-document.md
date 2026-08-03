@@ -28,7 +28,7 @@ document.getElementById('load1').addEventListener('click', () => {
 });
 ```
 
-**Step 3:** Use the following code snippet to load a PDF document from a URL (document name)
+**Step 3:** Use the following code snippet to load a PDF document from a URL. The second argument of `load()` is the document password; pass `null` (or omit it) for unprotected PDFs.
 
 ```
 <button id='load2'>LoadDocument</button>

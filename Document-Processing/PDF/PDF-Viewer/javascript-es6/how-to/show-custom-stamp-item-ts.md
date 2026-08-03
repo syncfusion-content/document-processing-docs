@@ -15,7 +15,7 @@ Add and display custom items in the Custom Stamp dropdown using TypeScript. This
 
 ### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Create a basic TypeScript PDF Viewer sample using the getting started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started
+**Step 1:** Create a basic TypeScript PDF Viewer sample using the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide.
 
 **Step 2:** Configure custom stamp settings
 
@@ -44,6 +44,8 @@ const pdfviewer: PdfViewer = new PdfViewer({
 });
 
 ```
+
+Setting `enableCustomStamp: true` activates the Custom Stamp option in the annotation toolbar dropdown.
 
 By following these steps, the Custom Stamp dropdown will display the configured items, allowing users to apply personalized stamps to documents.
 

@@ -9,6 +9,8 @@ documentation: ug
 
 # Configure minZoom and maxZoom in the PDF Viewer
 
+This section explains how to configure minimum and maximum zoom levels in the TypeScript PDF Viewer. Before proceeding, create a basic project by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started).
+
 Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/#maxzoom) properties to ensure a consistent viewing experience.
 
 ### minZoom

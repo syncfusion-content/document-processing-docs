@@ -36,7 +36,7 @@ To close the Bookmark pane programmatically, use the following code:
 
 ```ts
 document.getElementById('closeBookmark').addEventListener('click', () => {
-  // close Bookmark pane
+  // Close Bookmark pane
   viewer.bookmarkViewModule.closeBookmarkPane();
 });
 ```
