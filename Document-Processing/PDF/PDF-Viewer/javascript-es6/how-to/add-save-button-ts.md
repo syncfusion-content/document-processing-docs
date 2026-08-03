@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Save button to the built-in toolbar in TypeScript PDF Viewer | Syncfusion
+title: Add Save Button to Syncfusion TypeScript PDF Viewer Toolbar
 description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the TypeScript PDF Viewer component.
 platform: document-processing
 control: Toolbar
@@ -15,9 +15,9 @@ The PDF Viewer supports customizing toolbar items, including adding, showing, hi
 
 - Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/documentation/api/document-editor/customToolbarItemModel) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/documentation/api/file-manager/toolbarSettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/documentation/api/file-manager/toolbarClickEventArgs).
 
-- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/documentation/api/file-manager/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/chart/toolbarItems).
+- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarItem).
 
-- Enable or disable: The Save button can be enabled or disabled using [`enabletoolbaritem`](https://ej2.syncfusion.com/documentation/api/document-editor-container/toolbar).
+- Enable or disable: The Save button can be enabled or disabled using [`enableToolbarItem`](https://ej2.syncfusion.com/documentation/api/document-editor-container/toolbar).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -90,7 +90,7 @@ Sets the tooltip text for the Save button. The tooltip provides additional infor
 
 ### CssClass property
 
-Applies custom CSS classes to the Save button for styling.
+Applies custom CSS classes to the Save button for styling using the `cssClass` property.
 
 ### Prefix property
 
