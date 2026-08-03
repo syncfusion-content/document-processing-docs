@@ -49,8 +49,8 @@ N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOptio
 
 ## See Also
 
-[Text Search Features](../text-search/text-search-features)
-[Find Text](../text-search/find-text)
-[Text Search Events](../text-search/text-search-events)
-[Extract Text](../how-to/extract-text-ts.md)
-[Extract Text Completed](./extract-text-completed-ts)
+- [Text Search Features](../text-search/text-search-features)
+- [Find Text](../text-search/find-text)
+- [Text Search Events](../text-search/text-search-events)
+- [Extract Text](../how-to/extract-text-ts.md)
+- [Extract Text Completed](./extract-text-completed-ts.md)

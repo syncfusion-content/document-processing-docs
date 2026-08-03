@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Load document after resources Loaded JS(ES6) PDF Viewer | Syncfusion
+title: Load document after resources are loaded in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn how to load a PDF only after assets are ready in the Syncfusion JavaScript (ES6) PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -32,9 +32,9 @@ const viewer: PdfViewer = new PdfViewer({
     resourcesLoaded: onResourcesLoaded
 });
 viewer.appendTo('#PdfViewer');
- // Sample sources to demonstrate both URL and Base64 loading
-  const documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  const base64 ='data:application/pdf;base64,JVBERi0xLjMNCiX...';// supply your Base64 here when needed
+// Sample sources to demonstrate both URL and Base64 loading
+const documentUrl = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const base64 = 'data:application/pdf;base64,JVBERi0xLjMNCiX...';// supply your Base64 here when needed
 
   // Called when PDFium runtime assets have finished loading
   function onResourcesLoaded() {

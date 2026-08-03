@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to import annotations in the Syncfusion TypeScript PDF Viewer using the importAnnotations method.
+description: Learn how to import annotations in the Syncfusion TypeScript PDF Viewer using the importAnnotation method.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Import annotations in TypeScript PDF Viewer
 
-Use the [importAnnotations()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations from a file or a string when loading a PDF document.
+Use the [importAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations from a file or a string when loading a PDF document.
 
 The following example shows how to import annotations during document load:
 
@@ -113,7 +113,7 @@ viewer.importAnnotation({
 
 ```
 
-In this example, the PDF Viewer loads a document and then imports annotations from a string. The imported annotations are added to the viewer and displayed along with the document.
+In this example, the button click triggers importing annotations from a string-based JSON payload. The imported annotations are added to the viewer and displayed along with the document.
 
 Alternatively, annotations can be imported from a file in JSON or XFDF format.
 

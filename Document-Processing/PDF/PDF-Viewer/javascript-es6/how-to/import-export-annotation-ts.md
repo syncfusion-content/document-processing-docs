@@ -17,7 +17,7 @@ Use the following steps to import and export annotations as objects, JSON, or XF
 
 **Step 2:** Use the following code to perform import and export operations.
 
-```
+```html
     <button id="ExportXfdf">ExportXfdf</button>
     <button id="ExportJSON">ExportJSON</button>
     <button id="export">ExportasObject</button>
@@ -58,7 +58,7 @@ if (ExportAnnotationsAsObject) {
 }
 
 let Import = document.getElementById('import');
-//Import annotation that are exported as object.
+//Import annotations that were exported as an object.
 if (Import) {
     Import.addEventListener('click', () => {
         pdfviewer.importAnnotation(JSON.parse(exportObject));
