@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Opening a Document in the Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Opening a document in Syncfusion Blazor Document Editor component and more.
+description: Learn how to open and load Word documents in the Syncfusion Blazor Document Editor component from URLs, cloud storage, databases, and local files.
 platform: document-processing
 control: Document Editor
 documentation: ug

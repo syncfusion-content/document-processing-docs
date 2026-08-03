@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Images in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Images in Syncfusion Blazor Document Editor component and more.
+description:  Learn how to work with images in the Syncfusion Blazor Document Editor component, including image insertion, resizing, formatting, and positioning.
 platform: document-processing
 control: Document Editor
 documentation: ug
