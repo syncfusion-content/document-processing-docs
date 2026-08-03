@@ -85,8 +85,8 @@ loadOptions.MdImportSettings.ImageNodeVisited += MdImportSettings_ImageNodeVisit
 // Open the Markdown file with load options.
 using (IPresentation presentation = Presentation.Open(Path.GetFullPath("Data/Input.md"), loadOptions))
 {
-	// Save as a PowerPoint document.
-    presentation.Save(Path.GetFullPath(@"Output/Output.pptx"));
+    // Save as a PowerPoint document.
+    presentation.Save(Path.GetFullPath("Output/Output.pptx"));
 }
 {% endhighlight %}
 
