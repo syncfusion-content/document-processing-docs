@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in TypeScript PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion TS PDF Viewer, including disabling interaction and handling signatures.
+description: Learn to fill, import, and export PDF form fields in the Syncfusion TS PDF Viewer, including handling the validateFormFields event.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -36,13 +36,13 @@ The following example demonstrates how to update PDF form field values programma
 ```ts
 // Wire up the button click
 document.getElementById('updateBtn')!.onclick = () => {
-  //Retriveformfields
+  // Retrieve form fields
   const fields =
     pdfviewer.retrieveFormFields?.() || pdfviewer.formFieldCollection || [];
-  //Get form fields by name
+  // Get form fields by name
   const field = fields.find((f) => f?.name === 'name') || fields[0];
 
- //Update the Values
+  // Update the values
   if (field) {
     field.value = 'John Doe';
     field.tooltip = 'First';
@@ -133,7 +133,6 @@ pdfviewer.validateFormFields = (args: any) => {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
