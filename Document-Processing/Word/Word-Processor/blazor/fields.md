@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with Fields in Blazor DocumentEditor Component | Syncfusion
+title: Working with Fields in Blazor DOCX Editor Component | Syncfusion
 description: Learn how to preserve, update, and manage fields like merge fields and page numbers in the Syncfusion Blazor Document Editor component.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Working with Fields in Blazor DocumentEditor Component
+# Working with Fields in Blazor Document Editor Component
 
-Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
+Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
 
 This document explains how to update fields and interact with them programmatically using the Document Editor's APIs.
 
@@ -36,7 +36,7 @@ To update all fields in the document, click the **Update Fields** button in the 
 
 #### Update Programmatically
 
-To update the fields programmatically, use the [`UpdateFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditor.html#Syncfusion_Blazor_DocumentEditor_DocumentEditor_UpdateFieldsAsync) method. This method updates all bookmark cross-reference fields in the document.
+To update the fields programmatically, use the [`UpdateFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditor.html#Syncfusion_Blazor_DocumentEditor_DocumentEditor_UpdateFieldsAsync) method. This method updates the bookmark cross-reference fields in the document.
 
 ```csharp
 // Updates all bookmark cross-reference fields in the document.
@@ -51,7 +51,7 @@ The Document Editor provides APIs to insert fields and to get or set the informa
 
 The following type of fields are automatically updated in Document Editor.
 
-A new field can be inserted at the current selection using the [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method. This requires specifying both the fieldCode and the `fieldResult`.
+A new field can be inserted at the current selection using the [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method. This requires specifying both the `fieldCode` and the `fieldResult`.
 
 *   **Field Code**: The instruction that defines the field's behavior (e.g., `MERGEFIELD FirstName`).
 *   **Field Result**: The text displayed in the document (e.g., `«FirstName»`).
@@ -60,7 +60,7 @@ The following example demonstrates how to insert a `MERGEFIELD`.
 
 ```csharp
 // Defines the field's behavior.
-string fieldCode = "MERGEFIELD  FirstName  \\* MERGEFORMAT ";
+string fieldCode = "MERGEFIELD FirstName \\* MERGEFORMAT";
 // Defines the placeholder text to display in the editor.
 string fieldResult = "«First Name»";
 
@@ -83,7 +83,7 @@ The following example shows how to get the information of a selected field and t
 FieldInfo fieldInfo = await container.DocumentEditor.Selection.GetFieldInfoAsync();
 
 // Modify the field's code and result.
-fieldInfo.Code = "MERGEFIELD  LastName  \\* MERGEFORMAT ";
+fieldInfo.Code = "MERGEFIELD LastName \\* MERGEFORMAT";
 fieldInfo.Result = "«Last Name»";
 
 // Apply the changes to the selected field.
