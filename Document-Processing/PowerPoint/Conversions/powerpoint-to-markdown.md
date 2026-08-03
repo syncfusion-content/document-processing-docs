@@ -15,14 +15,14 @@ Markdown is a lightweight markup language that adds formatting elements to plain
 
 Refer to the following links for assemblies and NuGet packages required based on platforms to convert a PowerPoint Presentation document to a Markdown file using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
-* [Markdown to PowerPoint assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
-* [Markdown to PowerPoint NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
+* [PowerPoint to Markdown assemblies](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required)
+* [PowerPoint to Markdown NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required)
 
 ## Convert PowerPoint to Markdown
 
-Convert an existing PowerPoint Presentation document that is created from scratch into a Markdown file using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
+Convert an existing PowerPoint Presentation document into a Markdown file using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
-The following code example shows how to convert a PowerPoint Presentation document to a Markdown.
+The following code example shows how to convert a PowerPoint Presentation document to a Markdown file.
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ You can customize the above default behaviors using the following options in the
 
 The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `ImageNodeVisited` event, which is used to customize the image path to set in the output Markdown file and save images externally while converting a PowerPoint Presentation to a Markdown.
 
-The following code example illustrates how to save image files during a PowerPoint to Markdown conversion.
+The following code example shows how to save image files during a PowerPoint to Markdown conversion.
 
 {% tabs %}
 
@@ -141,7 +141,7 @@ using (IPresentation presentation = Presentation.Open("Input.pptx"))
 	// Hook the event to customize the image.
     presentation.MdSaveOptions.ImageNodeVisited += SaveImage;
     // Save the PowerPoint Presentation as a Markdown file.
-    presentation.Save(@"Output.md");
+    presentation.Save("Output.md");
 }
 
 {% endhighlight %}
@@ -154,7 +154,7 @@ using (IPresentation presentation = Presentation.Open("Input.pptx"))
 	// Hook the event to customize the image.
     presentation.MdSaveOptions.ImageNodeVisited += SaveImage;
     // Save the PowerPoint Presentation as a Markdown file.
-    presentation.Save(@"Output.md");
+    presentation.Save("Output.md");
 }
 
 {% endhighlight %}

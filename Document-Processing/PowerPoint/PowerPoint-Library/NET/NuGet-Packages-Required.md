@@ -482,7 +482,7 @@ To use NuGet package in your project, refer to the NuGet package [Installation](
 
 The PowerPoint Presentation NuGet packages can be installed and uninstalled using the Package Manager Console. In Visual Studio, select **Tools > NuGet Package Manager > Package Manager Console** and execute the following commands in respective platforms.
 
-N> The Syncfusion<sup>&reg;</sup> components are available in nuget.org
+N> The Syncfusion<sup>&reg;</sup> components are available in [NuGet.org](https://www.nuget.org/)
 
 <table>
 <tr>

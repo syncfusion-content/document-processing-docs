@@ -100,7 +100,7 @@ N> 2. Starting with the v27.1.x, if you reference "Syncfusion.PresentationRender
 
 ## Converting Charts
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the PowerPoint Presentation into image.
+The following assemblies are required in addition to the above-mentioned assemblies to convert the chart present in the PowerPoint Presentation to an image.
 <table>
 <tr>
 <thead>

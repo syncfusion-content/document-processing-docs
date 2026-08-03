@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the ASP.NET Core PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the ASP.NET Core PDF Viewer.
+title: Fix Document Loading Issues in Core PDF Viewer | Syncfusion
+description: Fix ASP.NET Core PDF Viewer v23.1+ rendering issues by calling dataBind before load, validating URLs, and verifying CORS, CSP, and network settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Troubleshooting Document Loading in Version 23.1+
 
 If a PDF does not render after upgrading to v23.1+, use the checklist below to resolve common causes. The most frequent fix is calling `dataBind()` before `load()`.
 
-1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and render correctly.
+1. Call `pdfViewer.dataBind()` before `load()`. Starting with v23.1, an explicit dataBind call is required to initialize data binding and ensure correct rendering.
 
 ```html
 <button id="viewer" onclick="documentLoad()">Load</button>
