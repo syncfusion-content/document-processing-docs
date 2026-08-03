@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with Lists in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about working with lists in Syncfusion Blazor DocumentEditor component and more.
+title: Working with Lists in Blazor DOCX Editor Component | Syncfusion
+description: Learn here all about working with lists in Syncfusion Blazor Document Editor component and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Working with Lists in Blazor DocumentEditor Component
+# Working with Lists in Blazor Document Editor Component
 
-Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for single-level and multilevel lists, which can be either ordered (numbered) or unordered (bulleted).
+Lists are a fundamental feature for organizing content in a document, making it easier for readers to follow step-by-step instructions or grasp key points. The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for single-level and multilevel lists, which can be ordered (numbered) or unordered (bulleted).
 
 ## Create a Bulleted List
 
@@ -43,7 +43,7 @@ The `numberFormat` parameter uses placeholders like `%1`, `%2`, etc., which corr
 await container.DocumentEditor.Editor.ApplyNumberingAsync("%1.", ListLevelPattern.UpRoman);
 ```
 
-## Clear list
+## Clear List
 
 To remove all list formatting from a selection of paragraphs and revert them to normal text, use the [`ClearListAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ClearListAsync) method.
 
@@ -58,7 +58,7 @@ The Document Editor provides options for controlling the sequence of numbered li
 
 ### Restarting and Continuing Numbering
 
-When working with numbered lists, you can choose to restart numbering at "1" or continue the sequence from a previous list. These options are available in the context menu when you right-click on a list number.
+When working with numbered lists, you can choose to restart numbering at "1" or continue the sequence from a previous list. These options are available in the context menu when you right-click a list number.
 
 ![Context menu in Blazor Document Editor showing options to restart or continue list numbering.](images/blazor-document-editor-list.jpeg)
 
