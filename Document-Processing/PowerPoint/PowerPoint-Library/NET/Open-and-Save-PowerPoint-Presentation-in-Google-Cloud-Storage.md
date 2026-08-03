@@ -365,5 +365,5 @@ By executing the program, the Presentation is saved to the configured Google Clo
 
 ## See also
 
-* [Open and Save a Presentation in AWS S3 Cloud Storage](Open-and-Save-PowerPoint-Presentation-in-AWS-S3-Cloud-Storage.md)
-* [Open and Save a Presentation in Azure Blob Cloud Storage](Open-and-Save-PowerPoint-Presentation-in-Azure-Blob-Cloud-Storage.md)
+* [Open and Save a Presentation in AWS S3 Cloud Storage](Open-and-Save-PowerPoint-Presentation-in-AWS-S3-Cloud-Storage)
+* [Open and Save a Presentation in Azure Blob Cloud Storage](Open-and-Save-PowerPoint-Presentation-in-Azure-Blob-Cloud-Storage)
