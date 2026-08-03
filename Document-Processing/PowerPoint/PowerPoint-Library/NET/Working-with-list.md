@@ -672,9 +672,8 @@ pptxDoc.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Lists/Create-multilevel-list).
-
 The above code example generates a multi-level list in Presentation as follows.
 
 ![Working with List Images](Workingwithlist_images/Workingwithlist_img1.JPG)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Lists/Create-multilevel-list).

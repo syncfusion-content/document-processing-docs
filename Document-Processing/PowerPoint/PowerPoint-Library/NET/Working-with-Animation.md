@@ -827,8 +827,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -948,8 +950,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1029,10 +1033,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1052,8 +1058,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1073,10 +1081,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1096,8 +1106,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1117,9 +1129,11 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> FontBold </li>
 <li> FontItalic </li>
 <li> FontUnderline </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1139,10 +1153,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1162,8 +1178,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Vertical </li>
 <li> Across </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1183,8 +1201,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1344,10 +1364,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
 <li> Bottom </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1467,8 +1489,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1588,8 +1612,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> None </li>
 <li> Center </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1709,6 +1735,7 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
@@ -1717,6 +1744,7 @@ Yes
 <li> TopRight </li>
 <li> BottomLeft </li>
 <li> BottomRight </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3176,10 +3204,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Bottom </li>
 <li> Left </li>
 <li> Right </li>
 <li> Top </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3219,8 +3249,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3240,8 +3272,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3401,10 +3435,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> HorizontalIn </li>
 <li> HorizontalOut </li>
 <li> VerticalIn </li>
 <li> VerticalOut </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3424,11 +3460,13 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
 <li> Bottom </li>
 <li> Across </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3448,10 +3486,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> UpLeft </li>
 <li> UpRight </li>
 <li> DownLeft </li> 
 <li> DownRight </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3511,8 +3551,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3672,11 +3714,13 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Wheel1 </li>
 <li> Wheel2 </li>
 <li> Wheel3 </li>
 <li> Wheel4 </li>
 <li> Wheel8 </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3716,10 +3760,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Top </li>
 <li> Right </li>
 <li> Bottom </li>
 <li> Left </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3759,6 +3805,7 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
 <li> InCenter - only for Entrance type </li>
@@ -3767,6 +3814,7 @@ Yes
 <li> InSlightly </li>
 <li> OutCenter - only for Exit type </li>
 <li> InBottom - only for Exit type </li>
+</ul>
 </td>
 </tr>
 </table>
