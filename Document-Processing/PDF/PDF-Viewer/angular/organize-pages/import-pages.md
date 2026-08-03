@@ -19,7 +19,7 @@ This guide explains how to import pages from another PDF into the current docume
 ## Prerequisites
 
 - EJ2 Angular PDF Viewer installed
-- PDF Viewer is injected with `PageOrganizer` service
+- PDF Viewer is injected with `PageOrganizer` module
 - [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) (standalone) or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) (server-backed) configured when required
 
 ## Steps
@@ -54,7 +54,7 @@ To enable or disable the **Import Pages** button in the Organize Pages toolbar, 
 
 - **Import fails**: Ensure the selected file is a valid PDF and the browser file picker is permitted.
 - **Imported pages not visible**: Confirm that the import is persisted using **Save** or **Save As**.
-- **Import option disabled**: Ensure [`pageOrganizerSettings.canImport`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#canimport) is set to `true` to enable import option.
+- **Import option disabled**: Ensure [`pageOrganizerSettings.canImport`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#canimport) is set to `true` to enable the import option.
 
 ## Related topics
 
