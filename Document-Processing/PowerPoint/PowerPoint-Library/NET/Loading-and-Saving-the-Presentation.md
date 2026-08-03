@@ -9,7 +9,7 @@ documentation: UG
 
 ## Prerequisites
 
-Before you start, ensure the required Syncfusion assemblies or NuGet packages are installed. For more information, see [Assemblies-Required](Assemblies-Required.md) and [NuGet-Packages-Required](NuGet-Packages-Required.md).
+Before you start, ensure the required Syncfusion assemblies or NuGet packages are installed. For more information, see [Assemblies-Required](Assemblies-Required) and [NuGet-Packages-Required](NuGet-Packages-Required).
 
 
 ## Opening an existing presentation from the file system
