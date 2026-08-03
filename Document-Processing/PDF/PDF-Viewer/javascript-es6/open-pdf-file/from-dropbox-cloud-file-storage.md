@@ -15,13 +15,13 @@ The TypeScript PDF Viewer component supports loading PDF files from Dropbox usin
 
 To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
 
-**Step 1** Create a Dropbox API app
+**Step 1:** Create a Dropbox API app
 
 Follow the [Dropbox documentation](https://www.dropbox.com/developers/documentation/dotnet#tutorial) to create a Dropbox API app. This enables programmatic access with secure credentials and allows generation of access tokens or configuration of OAuth flows.
 
 **Step 2:** Create a simple PDF Viewer sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in JavaScript. This provides a basic setup of the PDF Viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This provides a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the src/app/app.ts file in the TypeScript project
 
@@ -88,7 +88,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -148,7 +148,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {

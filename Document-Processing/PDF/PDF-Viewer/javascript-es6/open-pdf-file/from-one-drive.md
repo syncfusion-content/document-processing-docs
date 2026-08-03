@@ -15,7 +15,7 @@ Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewe
 
 Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive
 
-**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
+**Step 2:** Create a simple PDF Viewer sample in TypeScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 

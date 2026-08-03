@@ -23,7 +23,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 1. Add the following private properties to the `app.ts`, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual blob name.
 
 ```typescript
 private accountName: string = "*Your account name in Azure*";
@@ -112,7 +112,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -163,7 +163,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
