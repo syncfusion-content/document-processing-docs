@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Lists in Blazor DOCX Editor Component | Syncfusion
-description:  Learn how to create, customize, and manage bulleted and numbered lists in the Syncfusion Blazor Document Editor component using built in list formatting features.
+description:  Learn how to create and manage bulleted and numbered lists in the Syncfusion Blazor Document Editor component with list formatting features.
 platform: document-processing
 control: Document Editor
 documentation: ug
