@@ -11,7 +11,7 @@ documentation: ug
 
 `Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the Spreadsheet. You can use the [`allowUndoRedo`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowundoredo) property to enable or disable undo redo functionality in spreadsheet.
 
-> * The default value for `allowUndoRedo` property is `true`.
+> The default value for `allowUndoRedo` property is `true`.
 
 By default, the `UndoRedo` module is injected internally into the Spreadsheet to perform undo redo.
 

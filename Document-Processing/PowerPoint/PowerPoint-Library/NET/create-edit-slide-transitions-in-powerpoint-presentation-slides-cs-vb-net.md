@@ -9,17 +9,17 @@ keywords: PowerPoint, slide, format-table, pptx, transitions
 
 # Add and edit transitions in PowerPoint slides
 
-Slide transitions are the motion effects that occur when you move from one slide to the next during a slide show presentation. A transition can be simple as push type that pushes to the next slide or an airplane type that displays the next slide like an eye-catching effect. You can control the speed, add sound, and customize the properties of transition effects. Transition effects can be grouped into three categories.
+Slide transitions are the motion effects that occur when you move from one slide to the next during a slide show presentation. A transition can be as simple as a Push transition that moves to the next slide, or as eye-catching as an Airplane transition that animates the next slide in. You can control the speed, add sound, and customize the properties of transition effects. Transition effects can be grouped into three categories.
 
 1. Subtle
 2. Exciting
 3. Dynamic Content
 
-Transition effect contains the following properties. This makes slide transition more flexible and interactive. 
- 
-1. Start (after a click or after certain time)
-2. Duration 
-3. Speed 
+Transition effects have the following properties. These make slide transitions more flexible and interactive.
+
+1. Start (after a click or after a certain time)
+2. Duration
+3. Speed
 
 ## Set a transition effect to a PowerPoint slide
 
@@ -34,13 +34,12 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a shape to the slide
 IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
-//Set the transition effect type 
+//Set the transition effect type
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set the transition effect options
 slide.SlideTransition.TransitionEffectOption = TransitionEffectOption.Across;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -90,18 +89,16 @@ You can edit the transition effects that already applied to the PowerPoint slide
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slide-transitions/Modify-transition-effect/.NET/Modify-transition-effect/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open an existing PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Retrieve the first slide from the presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the transition effect applied to the slide
 slide.SlideTransition.TransitionEffect = TransitionEffect.Cover;
 //Set the transition subtype
 slide.SlideTransition.TransitionEffectOption = TransitionEffectOption.Right;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Transition.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Transition.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -157,9 +154,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 // Set the duration in seconds for the transition effect. Maximum duration value is 59 seconds
 slide.SlideTransition.Duration = 40;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Transition.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Transition.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -188,9 +184,9 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Add a shape to the slide
 Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
-'Add a shape to the slide
+'Set the transition effect type
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard
-'Set the duration value(sec) for the transition effect. Max duration value is 59 seconds
+'Set the duration value (in seconds) for the transition effect. Maximum duration value is 59 seconds
 slide.SlideTransition.Duration = 40
 'Save the presentation
 pptxDoc.Save("Transition.pptx")
@@ -204,7 +200,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set the transition delay
 
-You can set the transition delay in seconds. This delays the next transactions to happen for a certain number of seconds.  The following example demonstrates how to apply the time delay.
+You can set the transition delay in seconds. This delays the next transition by the specified number of seconds. The following example demonstrates how to apply the time delay.
 
 {% tabs %}
 
@@ -221,9 +217,8 @@ slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 slide.SlideTransition.TriggerOnTimeDelay = true;
 //Assign the value for the advance time delay in seconds
 slide.SlideTransition.TimeDelay = 5;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -272,10 +267,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set the trigger mode for the transition
 
-The next slide transition can be triggered by the following two ways:
+The next slide transition can be triggered in the following two ways:
 
-1. Mouse clicks - Brings the next slide to the view.
-2. Setting a time - Brings the next slide after that specified time without any interactions.
+1. **On mouse click** - Advances to the next slide when the user clicks.
+2. **After a specified time** - Advances to the next slide automatically after the specified time, without any user interaction.
 
 The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) allows you to set both the previously given trigger modes while using PowerPoint slide transitions. Refer to the following code example.
 
@@ -292,9 +287,8 @@ IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
 //Set transition advance on click to true. This will enable the next transition after a click
 slide.SlideTransition.TriggerOnClick = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Sample.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -339,7 +333,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set the speed for transition effect
 
-The speed is the customized property provided by the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to set the transition duration mentioned [above](/document-processing/powerpoint/powerpoint-library/net/create-edit-slide-transitions-in-powerpoint-presentation-slides-cs-vb-net#set-the-transition-duration) (in this page) to a customized enumeration values. By default, each transition will happen for 2 seconds. You can change the following enumeration values to change the duration of a slide transition:
+The `Speed` property is a predefined enumeration provided by the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) that maps to a fixed transition duration (described in the [Set the transition duration](#set-the-transition-duration) section above). By default, each transition lasts 2 seconds. You can assign any of the following enumeration values to change the duration of a slide transition:
 
 1. Default       - 2 seconds
 2. [Fast](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.TransitionSpeed.html)          - 0.5 seconds
@@ -357,11 +351,12 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 //Set the transition effect type
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
-//Set the transition effect speed enumeration. This will reduce the transition duration to 0.75 seconds from the default 2 second
+//Set the transition effect speed enumeration. This will reduce the transition duration to 0.75 seconds from the default 2 seconds
 slide.SlideTransition.Speed = TransitionSpeed.Medium;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the presentation
+pptxDoc.Save("Sample.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -373,10 +368,12 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
 //Set the transition effect type
 slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard;
-//Set the transition effect speed enumeration. This will reduce the transition duration to 0.75 seconds from the default 2 second
+//Set the transition effect speed enumeration. This will reduce the transition duration to 0.75 seconds from the default 2 seconds
 slide.SlideTransition.Speed = TransitionSpeed.Medium;
 //Save the presentation
 pptxDoc.Save("Sample.pptx");
+//Close the presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -392,15 +389,17 @@ slide.SlideTransition.TransitionEffect = TransitionEffect.Checkerboard
 slide.SlideTransition.Speed = TransitionSpeed.Medium
 'Save the presentation
 pptxDoc.Save("Sample.pptx")
+'Close the presentation
+pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slide-transitions/Set-transition-speed).
 
-## Supported transition effect types:
+## Supported transition effect types
 
-The following are the  list of transition effect options that can be applied to each transition effects.
+The following table lists the transition effect options that can be applied to each transition effect.
 
 <table>
 <tr>
@@ -756,7 +755,7 @@ Morph
 <td>
 <li> ByObject </li>
 <li> ByWord </li>
-ByChar
+<li> ByChar </li>
 </td>
 </tr>
 <tr>
@@ -1128,3 +1127,10 @@ Zoom
 ## Online Demo
 
 * Explore how to create slide transition effects in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slidetransition#/tailwind).
+
+## Related API references
+
+* [`TransitionEffect`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.TransitionEffect.html) enum
+* [`TransitionEffectOption`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.TransitionEffectOption.html) enum
+* [`TransitionSpeed`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.TransitionSpeed.html) enum
+* [`ISlideTransition`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISlideTransition.html) interface

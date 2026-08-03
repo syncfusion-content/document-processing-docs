@@ -18,8 +18,8 @@ This guide shows how to enable automatic rotation of landscape pages during prin
 
 ## Steps to enable print rotation
 
-1. Inject the required modules (including [`Print`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print)) into [`PdfViewerComponent`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer).
-2. Set [`enablePrintRotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enableprintrotation) to `true` in the PDF Viewer during initialization.
+1. Inject the required modules, including [`Print`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print), into [`PdfViewerComponent`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer).
+2. Set [`enablePrintRotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enableprintrotation) to `true` during PDF Viewer initialization.
 
 ## Example
 
