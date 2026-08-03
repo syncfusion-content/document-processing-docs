@@ -35,7 +35,7 @@ Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in **HomeController.cs** file.
+Step 4: Include the following namespace in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -65,7 +65,7 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the below code snippet in **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
+Step 7: Add the below code snippet in the **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -147,7 +147,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespace in **HomeController.cs** file.
+Step 3: Include the following namespace in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -177,7 +177,7 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the below code snippet in **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
+Step 6: Add the below code snippet in the **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
