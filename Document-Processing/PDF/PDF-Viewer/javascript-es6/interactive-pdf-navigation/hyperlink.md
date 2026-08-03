@@ -189,6 +189,6 @@ viewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](./bookmark.md)
-- [Page navigation](page.md)
-- [Page thumbnail navigation](page-thumbnail.md)
+- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark-navigation/)
+- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation)
+- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail-navigation)
