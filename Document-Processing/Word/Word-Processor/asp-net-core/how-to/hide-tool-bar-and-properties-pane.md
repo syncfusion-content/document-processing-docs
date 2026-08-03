@@ -25,7 +25,8 @@ The following example code illustrates how to hide the properties pane.
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-the-default-propertiespane/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-propertiespane.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 N> Positioning and customizing the properties pane in the Document Editor container is not possible. Instead, you can hide the existing properties pane and create your own pane using public APIs.
@@ -42,7 +43,8 @@ The following example code illustrates how to hide the existing toolbar.
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/hide-the-default-toolbar/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-toolbar.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## See Also
