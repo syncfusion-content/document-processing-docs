@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Styles in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about working with styles in Syncfusion Blazor Document Editor component and more.
+description: Learn how to work with styles in the Syncfusion Blazor Document Editor component, including creating, applying, and managing document styles.
 platform: document-processing
 control: Document Editor
 documentation: ug

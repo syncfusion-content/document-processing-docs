@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Shapes in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about the Shapes in Syncfusion Blazor Document Editor component and more.
+description: Learn how to work with shapes in the Syncfusion Blazor Document Editor component, including viewing, resizing, and preserving shapes in Word documents.
 platform: document-processing
 control: Document Editor
 documentation: ug
@@ -41,4 +41,4 @@ The Document Editor preserves the position properties of the shape and displays 
 
 ## Online Demo
 
-Explore how to preserve auto shapes in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/autoshapes?theme=fluent2).
+Explore how to preserve AutoShapes in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/autoshapes?theme=fluent2).
