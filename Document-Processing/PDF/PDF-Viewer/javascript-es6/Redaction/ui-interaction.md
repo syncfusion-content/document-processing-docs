@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction UI interactions in TypeScript PDF Viewer | Syncfusion
+title: Redaction UI interactions in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about UI interactions in Redaction annotations of the Syncfusion JavaScript (ES6) PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
@@ -23,7 +23,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 * **Resizable** – Resize the annotation to cover the required area.  
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar).
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](./toolbar).
 
 ## Add redaction annotations using the context menu
 

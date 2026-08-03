@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redaction Programmatic support in TypeScript PDF Viewer | Syncfusion
+title: Redaction Programmatic support in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion JavaScript (ES6/TypeScript) PDF Viewer.
 platform: document-processing
 control: PdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Programmatic support for redaction in JavaScript (ES6) PdfViewer
 
-The Syncfusion TypeScript `PdfViewer` control provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
+The Syncfusion JavaScript (ES6) `PdfViewer` control provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
 ## Enable the redaction toolbar
 
@@ -120,7 +120,7 @@ editRedactAnnotation.addEventListener('click', function () {
                 viewer.annotationCollection[i].fontColor= '#333333',
                 viewer.annotationCollection[i].fontSize= 14,
                 viewer.annotationCollection[i].fontFamily= 'Symbol',
-                viewer.annotationCollection[i].textAlign= 'Right'
+                viewer.annotationCollection[i].textAlign= 'Right',
                 viewer.annotationCollection[i].beforeRedactionsApplied= false
                 viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
             }
@@ -189,5 +189,5 @@ The redaction property panel allows users to update annotation properties throug
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)
