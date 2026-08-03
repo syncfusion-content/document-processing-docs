@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
+title: Hyperlink navigation in JS PDF Viewer | Syncfusion
 description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for JavaScript.
 platform: document-processing
 control: PDF Viewer
@@ -208,6 +208,6 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/bookmark-navigation)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-navigation)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-thumbnail-navigation)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)

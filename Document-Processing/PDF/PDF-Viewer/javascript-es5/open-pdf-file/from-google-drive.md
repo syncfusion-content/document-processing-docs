@@ -54,7 +54,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Drive.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer#load) method to load the PDF files from Google Drive.
 
 ```csharp
 [HttpPost("Load")]
@@ -149,7 +149,7 @@ N> The Folder ID is the unique identifier for the folder. For example, if your f
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder. The value passed to `load()` must be the exact PDF file name as it appears in the configured Google Drive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder. The value passed to `load()` must be the exact PDF file name as it appears in the configured Google Drive folder.
 
 ```javascript
 
