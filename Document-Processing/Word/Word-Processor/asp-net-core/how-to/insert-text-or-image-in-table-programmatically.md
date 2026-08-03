@@ -21,7 +21,8 @@ The following example illustrates how to create a 2x2 table and then add text an
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-text-image-table/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-text-image-table" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 The output will be as shown below.
