@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Show and hide spinner in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to display and hide a loading spinner while opening a document in the Syncfusion Blazor DocumentEditor component.
+title: Show and Hide Spinner in Blazor DOCX Editor Component | Syncfusion
+description: Learn how to display and hide a loading spinner while opening a document in the Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# How to show and hide spinner in Blazor Document Editor component
+# How to Show and Hide a Spinner in Blazor Document Editor Component
 
-The [`Spinner`](https://blazor.syncfusion.com/documentation/spinner/getting-started) component can be used to show/hide a spinner while opening a document in the [`Blazor DOCX Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component.
+The [`Spinner`](https://blazor.syncfusion.com/documentation/spinner/getting-started) component can be used to show or hide a spinner while opening a document in the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component.
 
-Example code snippet to show/hide spinner
+An example code snippet to show or hide a spinner.
 
 ```csharp
 <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
@@ -38,7 +38,7 @@ Refer to the following example.
 @using System.Net
 @using Syncfusion.Blazor.Spinner
 <div>
-    <SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
+    <SfDocumentEditorContainer @ref="container" EnableToolbar="true" Height="590px">
         <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
     </SfDocumentEditorContainer>
     <SfSpinner @bind-Visible="@VisibleProperty">
@@ -56,31 +56,31 @@ Refer to the following example.
         WebClient webClient = new WebClient();
         byte[] byteArray = webClient.DownloadData(fileUrl);
         Stream stream = new MemoryStream(byteArray);
-        //To observe the memory go down, null out the reference of byteArray variable.
+        //To free memory, null out the reference of byteArray variable.
         byteArray = null;
         WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
         stream.Dispose();
-        //To observe the memory go down, null out the reference of stream variable.
+        //To free memory, null out the reference of stream variable.
         stream = null;
         sfdtString = System.Text.Json.JsonSerializer.Serialize(document);
         document.Dispose();
-        //To observe the memory go down, null out the reference of document variable.
+        //To free memory, null out the reference of document variable.
         document = null;
     }
     public async void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        // It will make the spinner visible
+        // It will make the spinner visible.
         this.VisibleProperty = true;
         await editor.OpenAsync(sfdtString);
         await Task.Delay(1000);
-        // It will make the spinner hide
+        // It will make the spinner hidden.
         this.VisibleProperty = false;
-        //To observe the memory go down, null out the reference of sfdtString variable.
+        //To free memory, null out the reference of sfdtString variable.
         sfdtString = null;
 
     }
 }
 ```
 
-N> In above example, we have used Delay to hide spinner, just for demo purpose.
+N> In the above example, we have used `Task.Delay` to hide the spinner, just for demonstration purposes.
