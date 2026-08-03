@@ -6,11 +6,11 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint Presentation to Image in Azure Platform 
+# Convert PowerPoint Presentation to Image in Azure
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Platform** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure** within a few lines of code.
 
-N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to convert PowerPoint Presentation to image in C# using the PowerPoint library (Presentation) in Azure. 
+N> If this is your first time working with Azure, please refer to the [Azure development resources](https://learn.microsoft.com/en-us/azure/). This section explains how to convert a PowerPoint Presentation to an image in C# using the Syncfusion<sup>&reg;</sup> PowerPoint library in Azure.
 
 ## Prerequisites 
 * An active **Microsoft Azure subscription** is required. If you don’t have one, please [create an account](https://portal.azure.com/#home) before starting.
@@ -43,4 +43,10 @@ NuGet packages required<br/></th></tr></thead>
 {{'[Azure Functions v4](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-azure-functions-v4)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify }}<br/></td></tr>
+<tr>
+<td>
+{{'[Azure Functions (Flex Consumption)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-azure-functions-flex-consumption)' | markdownify}}
+<br/></td><td>
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies)' | markdownify}}<br/></td></tr>
 </table>

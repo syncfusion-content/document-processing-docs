@@ -13,7 +13,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www
 ## Steps to convert a PowerPoint Presentation to Image in Azure Functions v1
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
+![Create an Azure Functions project](Azure-Images/Functions-v1/Azure_PowerPoint_Presentation_to_PDF.png)
 
 Step 2: Create a project name and select the location.
 ![Create a project name](Azure-Images/Functions-v1/Configure_PowerPoint_Presentation_to_Image.png)
@@ -31,6 +31,12 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
