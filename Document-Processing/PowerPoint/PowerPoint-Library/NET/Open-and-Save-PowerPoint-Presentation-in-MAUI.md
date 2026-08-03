@@ -220,9 +220,9 @@ Refer to the following helper files and add them to the mentioned project. These
 </table>
 
 
-## Next steps
+## See Also
 
-- [Create a PowerPoint presentation from scratch](Create-PowerPoint-in-Console-application.md)
-- [Edit comments and shapes in an existing PowerPoint presentation](Comments.md)
+- [Create a PowerPoint presentation from scratch](Create-PowerPoint-in-Console-application)
+- [Edit comments and shapes in an existing PowerPoint presentation](Comments)
 
 Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
