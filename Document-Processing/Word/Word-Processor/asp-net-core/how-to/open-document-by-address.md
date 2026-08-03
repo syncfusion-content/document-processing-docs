@@ -20,7 +20,8 @@ This article explains how to open a document from a URL in the [ASP.NET Core DOC
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/open-by-url/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Open-by-url.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
