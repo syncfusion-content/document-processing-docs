@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in TypeScript PDF Viewer
+# Bookmark Navigation in the Syncfusion TypeScript PDF Viewer
 
 Bookmarks embedded in PDF files are loaded and exposed for quick navigation. Use the following code snippet to enable or disable bookmark navigation.
 

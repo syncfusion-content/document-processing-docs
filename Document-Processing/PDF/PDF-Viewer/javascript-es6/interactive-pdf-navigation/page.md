@@ -16,11 +16,11 @@ The JavaScript PDF Viewer supports internal and external navigation.
 
 The default PDF Viewer toolbar provides the following navigation options:
 
-- [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage) — Navigate to a specific page.
-- [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage) — Navigate to the next page.
-- [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage) — Navigate to the previous page.
-- [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage) — Navigate to the first page.
-- [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage) — Navigate to the last page.
+- [**Go to page**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage) — Navigate to a specific page.
+- [**Show next page**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage) — Navigate to the next page.
+- [**Show previous page**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage) — Navigate to the previous page.
+- [**Show first page**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage) — Navigate to the first page.
+- [**Show last page**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage) — Navigate to the last page.
 
 ```html
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+title: Import and Export Events in the TypeScript PDF Viewer | Syncfusion
+description: Learn how to manage import and export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

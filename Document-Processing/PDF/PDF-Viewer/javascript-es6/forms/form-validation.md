@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Validate PDF form fields in JavaScript PDF Viewer
+# Validate PDF Form Fields Using the TypeScript PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** provides built-in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that required form fields are completed before allowing these actions to proceed and improves the reliability of collected data.
 
