@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disable the context menu in PDF Viewer
 
-Set [ContextMenuOption](https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) to `None` to hide all context menu options. The default value is `RightClick`.
+Set [ContextMenuOption] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) to `None` to hide all context menu options. The default value is `RightClick`.
 
 ## Example: Disable context menu
 

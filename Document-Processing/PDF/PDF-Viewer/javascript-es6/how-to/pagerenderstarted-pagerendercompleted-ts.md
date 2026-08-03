@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Handle pageRenderInitiate and pageRenderComplete | Syncfusion
+title: Monitor Page Rendering Lifecycle in Syncfusion PDF Viewer
 description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion TypeScript PDF Viewer during page rendering.
 platform: document-processing
 control: PDF Viewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Handle pageRenderInitiate and pageRenderComplete events
 
-In the Syncfusion PDF Viewer, the [pageRenderInitiate](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
+In the Syncfusion PDF Viewer, the [pageRenderInitiate] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 
 **pageRenderInitiate**
 

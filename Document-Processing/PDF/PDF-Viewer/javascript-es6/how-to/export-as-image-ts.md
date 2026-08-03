@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export pages as images in PDF Viewer
+# Configure PDF Page Export to Image Format
 
 Export pages as Base64-encoded images using `exportAsImage()` for a single page or `exportAsImages()` for a range. These APIs return Base64-encoded image strings suitable for further processing or download.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manage local storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to control session-specific data storage in the TypeScript PDF Viewer using the enableLocalStorage property. When true, data is persisted in the browser's local storage; when false, session storage is used.
+description: Learn how to manage session-specific data storage in the Syncfusion TypeScript PDF Viewer using enableLocalStorage to switch between local and session storage.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

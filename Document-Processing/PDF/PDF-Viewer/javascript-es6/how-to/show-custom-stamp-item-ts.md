@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show custom items in the Custom Stamp dropdown | Syncfusion
+title: Custom Stamp Dropdown Not Showing Custom Items | Syncfusion
 description: Learn how to display custom items in the Custom Stamp dropdown using customStampSettings in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer

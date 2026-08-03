@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change author name using annotation settings in TypeScript PDF Viewer | Syncfusion
+title: Change Annotation Author Name in Syncfusion PDF Viewer
 description: Learn how to change the author name and related annotation settings using the annotationSettings API in the TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable text selection in PDF Viewer
+# Configure Text Selection Behavior in the Syncfusion PDF Viewer
 
 Use the [`enableTextSelection`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enabletextselection) property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
 

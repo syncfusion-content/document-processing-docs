@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Clear annotations in TypeScript PDF Viewer
 
-Use the [deleteAnnotations](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method to remove all annotations from the currently loaded document.
+Use the [deleteAnnotations] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method to remove all annotations from the currently loaded document.
 
 Example: Clear all annotations in the loaded document
 

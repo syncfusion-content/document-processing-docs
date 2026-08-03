@@ -9,7 +9,7 @@ documentation: ug
 
 # Select multi-page annotations in TypeScript PDF Viewer
 
-Select a multi-page TextMarkup annotation as a single annotation by enabling the [enableMultiPageAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property (default: `false`).
+Select a multi-page TextMarkup annotation as a single annotation by enabling the [enableMultiPageAnnotation] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#enablemultipageannotation) property (default: `false`).
 
 The following example shows how to select, export, and import a multi-page annotation:
 

@@ -11,9 +11,9 @@ documentation: ug
 
 Save the loaded PDF document to a specific URL using a custom web service endpoint.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create simple PDF Viewer sample.
 
-**Step 2:** Follow the steps in the [Create PDF Viewer web service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service/) guide to create the PDF Viewer web service.
+**Step 2:** Follow the steps in the [Create PDF Viewer web service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service) guide to create the PDF Viewer web service.
 
 **Step 3:** Add the below code snippet in the PDF Viewer controller code to save the PDF document to the URL.
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control file downloads in PDF Viewer
+# Manage PDF Download Permissions and Behavior
 
 Use the `downloadStart` event to intercept the start of a viewer download and optionally cancel it. Set `args.cancel = true` in the event handler to prevent the download.
 
@@ -26,4 +26,4 @@ By default, `args.cancel` is `false`, so the download proceeds unless explicitly
 
 ### Flexibility
 
-Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application logic.
+Leverage the [downloadStart] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application logic.

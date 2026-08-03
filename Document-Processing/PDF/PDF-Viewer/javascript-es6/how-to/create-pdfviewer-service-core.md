@@ -23,7 +23,7 @@ Follow these steps to create the PDF Viewer service
 
 **Step 1:**  In Visual Studio, choose File > New > Project to create a new application.
 
-![Visual Studio: New Project menu](./images/Start.png)
+![Visual Studio New Project menu](./images/Start.png)
 
 **Step 2:** Select the ASP.NET Core Web Application template and click **Next**.
 
