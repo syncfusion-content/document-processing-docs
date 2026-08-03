@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Table of Contents in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
+title: Table of Contents in Blazor DOCX Editor Component | Syncfusion
+description: Check out and learn all about Table of contents in Syncfusion Blazor Document Editor component and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Table of Contents in Blazor DocumentEditor Component
+# Table of Contents in Blazor Document Editor Component
 
-The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
+The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document along with the page number where that heading starts, and provides various options to customize the appearance.
 
 ## Inserting table of contents
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. The settings for a table of contents can be specified explicitly. Otherwise, the default settings will be applied.
+[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. The settings for a table of contents can be specified explicitly. Otherwise, the default settings are applied.
 
 [`TableOfContentsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.TableOfContentsSettings.html) contain the following properties:
-* **startLevel**: Specifies the start level for constructing table of contents.
-* **endLevel**: Specifies the end level for constructing table of contents.
+* **startLevel**: Specifies the start level for constructing a table of contents.
+* **endLevel**: Specifies the end level for constructing a table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
-* **includePageNumber**: Specified whether the page number of the headings is included.
+* **includePageNumber**: Specifies whether the page number of the headings is included.
 * **rightAlign**: Specifies whether the page number is right aligned.
-* **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
+* **tabLeader**: Specifies the tab leader styles such as `None`, `Dot`, `Hyphen`, and `Underscore`.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert table of content in document editor.
+The following code illustrates how to insert a table of contents in the Document Editor.
 
 ```csharp
 TableOfContentsSettings tableOfContentsSettings = new TableOfContentsSettings();
@@ -39,7 +39,7 @@ await editor.Editor.InsertTableOfContentsAsync(tableOfContentsSettings);
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true">
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
@@ -63,14 +63,14 @@ await editor.Editor.InsertTableOfContentsAsync(tableOfContentsSettings);
 
 ## Update or edit table of contents
 
-You can update or edit the table of contents using the built-in context menu shown up by right-clicking it. Refer to the following screenshot.
+You can update or edit the table of contents using the built-in context menu shown when you right-click it. Refer to the following screenshot.
 
-![Updating Table Contents in Blazor DocumentEditor](images/blazor-documenteditor-table-contents.jpeg)
+![Updating Table Contents in Blazor Document Editor](images/blazor-documenteditor-table-contents.jpeg)
 
-* **Update Field**: Updates the headings in table of contents with same settings by searching the entire document.
+* **Update Field**: Updates the headings in the table of contents with the same settings by searching the entire document.
 * **Edit Field**: Opens the built-in table of contents dialog and allows you to modify its settings.
 
-You can also do it programmatically by using the exposed API. Refer to the following sample code.
+You can also perform this programmatically using the exposed API. Refer to the following sample code.
 
 ```csharp
 await editor.OpenAsync(''); /*Open any existing document*/
@@ -84,8 +84,8 @@ await editor.Editor.InsertTableOfContentsAsync(tableOfContentsSettings);
 
 ```
 
-N> Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> The same method is used for inserting, updating, and editing the table of contents. This will work based on the current element at the cursor position and the optional settings parameter. If a table of contents is present at the cursor position, the update operation is performed based on the optional settings parameter. Otherwise, the insert operation is performed.
 
-## Online Demo
+## Online demo
 
-Explore how to insert and update table of contents in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/table-of-contents?theme=fluent2).
+Explore how to insert and update table of contents in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/table-of-contents?theme=fluent2).
