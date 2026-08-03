@@ -5,7 +5,6 @@ description: Learn here all about getting the selected content in the Syncfusion
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 
