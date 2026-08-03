@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# How to Customize Annotation Selector Appearance in TypeScript PDF Viewer
+# Customize Annotation Selector Appearance in TypeScript PDF Viewer
 
 Customize the annotation selector using the [annotationSelectorSettings] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
 

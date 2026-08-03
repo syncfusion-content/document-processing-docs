@@ -14,7 +14,7 @@ This guide explains how to control the visibility of PDF annotations in document
 
 Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Add buttons for annotation modification and downloading
 

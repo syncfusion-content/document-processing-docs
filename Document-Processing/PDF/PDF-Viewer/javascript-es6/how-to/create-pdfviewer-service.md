@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Initialize PDF Viewing Services in an ASP.NET MVC Application
+title: Initialize PDF Viewing Services in MVC Application | Syncfusion
 description: Learn how to create an ASP.NET MVC Web API service for the TypeScript PDF Viewer to handle server-side processing for rendering and related operations.
 platform: document-processing
 control: PDF Viewer

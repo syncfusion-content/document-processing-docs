@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure annotation selector settings in TypeScript PDF Viewer | Syncfusion
+title: Configure Annotation Selector in TypeScript PDF Viewer | Syncfusion
 description: Learn how to configure annotation selector settings in the Syncfusion TypeScript PDF Viewer, including styles, borders, and selection behavior.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Annotation Selection Handles and Borders in TypeScript PDF Viewer
+# Customize Annotation Selection Borders in TypeScript PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and behavior of the annotation selector in the UI.
 
