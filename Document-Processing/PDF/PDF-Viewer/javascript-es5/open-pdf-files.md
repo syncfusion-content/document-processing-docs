@@ -35,9 +35,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
 
-  if (jsonObject != null && jsonObject.ContainsKey("document"))
+  if (jsonData != null && jsonData.ContainsKey("document"))
   {
-    if (bool.Parse(jsonObject["isFileName"]))
+    if (bool.Parse(jsonData["isFileName"]))
     {
       string documentPath = GetDocumentPath(jsonData["document"]);
       if (!string.IsNullOrEmpty(documentPath))
@@ -62,11 +62,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
     }
     else
     {
-      byte[] bytes = Convert.FromBase64String(jsonObject["document"]);
+      byte[] bytes = Convert.FromBase64String(jsonData["document"]);
       stream = new MemoryStream(bytes);
     }
   }
-  jsonResult = pdfviewer.Load(stream, jsonObject);
+  jsonResult = pdfviewer.Load(stream, jsonData);
   return Content(JsonConvert.SerializeObject(jsonResult));
 }
 
@@ -163,9 +163,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
 
-  if (jsonObject != null && jsonObject.ContainsKey("document"))
+  if (jsonData != null && jsonData.ContainsKey("document"))
   {
-    if (bool.Parse(jsonObject["isFileName"]))
+    if (bool.Parse(jsonData["isFileName"]))
     {
       string documentPath = GetDocumentPath(jsonData["document"]);
       if (!string.IsNullOrEmpty(documentPath))
@@ -173,7 +173,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
         byte[] bytes = System.IO.File.ReadAllBytes(documentPath);
         stream = new MemoryStream(bytes);
       }
-      string documentName = jsonObject["document"];
+      string documentName = jsonData["document"];
 
       string connectionString = _connectionString;
       System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
@@ -194,11 +194,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
     }
     else
     {
-      byte[] bytes = Convert.FromBase64String(jsonObject["document"]);
+      byte[] bytes = Convert.FromBase64String(jsonData["document"]);
       stream = new MemoryStream(bytes);
     }
   }
-  jsonResult = pdfviewer.Load(stream, jsonObject);
+  jsonResult = pdfviewer.Load(stream, jsonData);
   return Content(JsonConvert.SerializeObject(jsonResult));
 }
 

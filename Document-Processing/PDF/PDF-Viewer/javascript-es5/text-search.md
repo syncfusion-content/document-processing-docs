@@ -108,11 +108,11 @@ Set the `isMatchCase` parameter to `true` to perform a case-sensitive search tha
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
 });
-pdfviewer.appendTo('#PdfViewer');
+viewer.appendTo('#PdfViewer');
 
 // Later, to search programmatically:
 // This will only find instances of "PDF" in uppercase.
-pdfviewer.textSearch.searchText('PDF', true);
+viewer.textSearch.searchText('PDF', true);
 ```
 
 #### Match Whole Word
@@ -123,11 +123,11 @@ Set the `isMatchWholeWord` parameter to `true` to restrict results to whole-word
 var viewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
 });
-pdfviewer.appendTo('#PdfViewer');
+viewer.appendTo('#PdfViewer');
 
 // Later, to search programmatically:
 // This will find "pdf" but not "pdf-succinctly"
-pdfviewer.textSearch.searchText('pdf', false, true);
+viewer.textSearch.searchText('pdf', false, true);
 ```
 
 **Note on Match Any Word:** The Match Any Word checkbox in the toolbar splits the input into multiple words and searches for each term individually. This differs from the `isMatchWholeWord` parameter, which enforces a whole-word match on the entire query string.

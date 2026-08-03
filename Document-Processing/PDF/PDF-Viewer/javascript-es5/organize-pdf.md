@@ -168,7 +168,7 @@ pdfviewer.appendTo('#PdfViewer');
 ```ts
 document.getElementById('openPageOrganizer').addEventListener('click', function () {
   // Open Page Organizer panel.
-  viewer.pageOrganizer.openPageOrganizer();;
+  viewer.pageOrganizer.openPageOrganizer();
 });
 
 ```
