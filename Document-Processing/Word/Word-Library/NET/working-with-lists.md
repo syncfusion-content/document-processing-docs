@@ -13,7 +13,7 @@ Lists can organize and format the contents of a document in hierarchical way. Th
 * Numbered list
 * Bulleted list 
 
-## Create Bulleted List
+## Create Bulleted List in the Word Library
 
 The following code example explains how to create a simple bulleted list.
 
