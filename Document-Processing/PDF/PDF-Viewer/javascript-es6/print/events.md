@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Print Events in TypeScript PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to configure print events and track usage and implement workflows in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in Typescript PDF Viewer
+# Print events in TypeScript PDF Viewer
 
 Subscribe to print lifecycle events to track usage and implement custom workflows.
 
