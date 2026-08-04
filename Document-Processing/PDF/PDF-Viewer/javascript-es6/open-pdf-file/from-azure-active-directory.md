@@ -1,6 +1,6 @@
 ---
 layout: post
-title: View PDFs from Azure Active Directory in TypeScript PDF Viewer
+title: View PDFs from Azure AD in TypeScript PDF Viewer | Syncfusion
 description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
