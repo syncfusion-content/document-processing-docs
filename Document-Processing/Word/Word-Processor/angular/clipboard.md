@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in Angular Document editor component | Syncfusion
+title: Clipboard in Angular DOCX Editor component | Syncfusion
 description: Learn here all about Clipboard in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
@@ -91,7 +91,7 @@ export class AppComponent {
 ```
 
 By default, **enableLocalPaste** is false.
-When local paste is enabled for a document editor instance, you can paste contents programmatically if the internal clipboard has stored data during the last copy operation. Refer to the following sample code.
+When local paste is enabled for a Document Editor instance, you can paste contents programmatically if the internal clipboard has stored data during the last copy operation. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.editor.paste();

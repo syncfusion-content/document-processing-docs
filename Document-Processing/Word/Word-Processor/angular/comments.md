@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Comments in Angular Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Comments in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Angular Document editor component
+# Comments in Angular Document Editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 
@@ -40,7 +40,7 @@ let commentProperties: CommentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the document editor.
+// Insert the comment with the specified properties into the Document Editor.
 this.documentEditor.editor.insertComment('Hello world', commentProperties);
 ```
 
@@ -121,9 +121,9 @@ this.documentEditor.editor.deleteAllComments();
 
 Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

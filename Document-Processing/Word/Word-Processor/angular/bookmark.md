@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in Angular Document editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Bookmark in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Bookmark in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in Angular Document editor component
+# Bookmark in Angular Document Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -79,7 +79,7 @@ this.container.documentEditor.editor.insertText('Hello World');
 
 ## Show or Hide bookmark
 
-You can show or hide the bookmark indicators around bookmarked items in Document editor component.
+You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
 
 The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
@@ -89,7 +89,7 @@ this.container.documentEditor.documentEditorSettings.showBookmarks = true;
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in Document editor.
+The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}

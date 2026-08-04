@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart in Angular Document editor component | Syncfusion
+title: Chart in Angular DOCX Editor component | Syncfusion
 description: Learn here all about Chart in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart 
