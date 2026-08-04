@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in TypeScript PDF Viewer | Syncfusion
+title: Save PDF Files to Google Cloud Storage in Syncfusion PDF Viewer
 description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Google Cloud Storage
+# Save PDF Files to Google Cloud Storage in Syncfusion PDF Viewer
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
@@ -108,7 +108,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to the
 
 **Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 ```typescript
 

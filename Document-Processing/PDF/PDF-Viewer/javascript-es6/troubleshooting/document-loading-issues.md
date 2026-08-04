@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the TypeScript PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the TypeScript PDF Viewer.
+title: Fix Document Loading Issues in Syncfusion PDF Viewer v23.1+
+description: Resolve document rendering failures in Syncfusion PDF Viewer v23.1+ by using dataBind, validating URLs, checking CORS/CSP, and network access.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Document Loading Issues in Version 23.1 or Newer
+# Troubleshoot Document Loading Issues in Version 23.1+
 
 If a document does not render in the viewer when using version 23.1 or newer, follow these steps:
 

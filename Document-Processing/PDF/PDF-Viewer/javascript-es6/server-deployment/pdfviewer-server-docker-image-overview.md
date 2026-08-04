@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TypeScript PDF Viewer server Docker image overview
+title: TypeScript Syncfusion PDF Viewer server Docker image overview
 description: Run the Syncfusion PDF Viewer server Docker image, configure licensing and Redis cache, and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
 control: PDF Viewer
@@ -122,7 +122,7 @@ if(ele) {
 
 The PDF Viewer server caches loaded document instances. To use a distributed cache, configure Azure Cache for Redis with Docker Compose as follows.
 
-**Step 1:** Create an Azure Cache for Redis instance and copy the connection string. Follow the [Azure Cache for Redis quickstart](https://learn.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-core-quickstart).
+**Step 1:** Create an Azure Cache for Redis instance and copy the connection string. Follow the [Azure Cache for Redis quickstart](https://learn.microsoft.com/en-us/azure/redis/dotnet).
 
 **Step 2:** Provide the connection string with the `REDIS_CACHE_CONNECTION_STRING` variable in `docker-compose.yml`. The default sliding expiration is 10 minutes. To change it, set `DOCUMENT_SLIDING_EXPIRATION_TIME`.
 
