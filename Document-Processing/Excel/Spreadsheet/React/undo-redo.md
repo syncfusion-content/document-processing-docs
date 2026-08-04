@@ -13,7 +13,7 @@ The Undo and Redo functionality allows you to reverse or restore actions perform
 
 You can enable or disable undo redo functionality using the [`allowUndoRedo`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowundoredo) property.
 
-> * The default value for `allowUndoRedo` property is `true`.
+> The default value for `allowUndoRedo` property is `true`.
 
 By default, the `UndoRedo` module is injected internally into Spreadsheet to perform undo redo.
 

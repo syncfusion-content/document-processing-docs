@@ -81,7 +81,7 @@ function exitVolumeMode() {
 {% endtabs %}
 
 ### Add Volume Programmatically
-Configure default properties using the [`Volume Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use [`addAnnotation()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) to insert a Volume measurement at a specific page location with optional offset, dimensions, and styling.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -118,7 +118,7 @@ Configure default properties using the [`Volume Settings`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-## Manage Volume (Move, Resize, Delete)
+## Manage Volume (Move, Reshape, Delete)
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
@@ -190,7 +190,7 @@ Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.co
 
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
+Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

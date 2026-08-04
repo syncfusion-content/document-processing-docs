@@ -1,6 +1,6 @@
 ---
 title: Assemblies Required for PowerPoint Presentation | Syncfusion
-description: This section explains about how to assemblies required to convert powerpoint presentation to PDF for various platforms and frameworks.
+description: This section explains the assemblies required to work with PowerPoint presentations and to convert them to PDF and image for various platforms and frameworks.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -10,15 +10,15 @@ keywords: Assemblies
 
 The following assemblies need to be referenced in your application
 <table>
-<tr>
 <thead>
+<tr>
 <th>
 Platform(s)</th>
 <th>
 Assembly
 </th>
-</thead>
 </tr>
+</thead>
 <tr>
 <td>
 												 
@@ -53,11 +53,10 @@ T> 1. If you encounter issues while using the [.NET PowerPoint Library](https://
 T> 2. Switch to NuGet packages for a seamless experience:
 T> * Get frequent bug fixes every week.
 T> * Upgrade quickly with no manual effort.
-T> Note: To avoid trail watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-T>
-T> Refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required) to know more about NuGet packages required.
+T> Note: To avoid trial watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) for information on registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+T> Refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required) for more information on the required NuGet packages.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -83,17 +82,17 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 ## Converting PowerPoint Presentation to PDF
 
-For converting a PowerPoint Presentation to PDF, the following assemblies needed to be referenced in your application
+For converting a PowerPoint Presentation to PDF, the following assemblies need to be referenced in your application
 <table>
-<tr>
 <thead>
+<tr>
 <th>
 Platform(s)</th>
 <th>
 Assembly
 </th>
-</thead>
 </tr>
+</thead>
 <tr>
 <td>
 												 
@@ -135,7 +134,7 @@ Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusio
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -172,17 +171,17 @@ N> 2. Starting with the v27.1.x, if you reference "Syncfusion.PresentationRender
 
 ## Converting PowerPoint Presentation to Image
 
-For converting a PowerPoint Presentation to Image, the following assemblies needed to be referenced in your application
+For converting a PowerPoint Presentation to Image, the following assemblies need to be referenced in your application
 <table>
-<tr>
 <thead>
+<tr>
 <th>
 Platform(s)</th>
 <th>
 Assembly
 </th>
-</thead>
 </tr>
+</thead>
 <tr>
 <td>
 {{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
@@ -230,7 +229,7 @@ Syncfusion.SfChart.UWP<br/>
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -264,19 +263,19 @@ Syncfusion.SkiaSharpHelper.Portable<br/>
 SkiaSharp<br/></td></tr>
 </table>
 
-## Converting Charts
+## Converting Charts to PDF/Image
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the PowerPoint Presentation into PDF and image.
+The following assemblies are required to be referenced in addition to the above mentioned assemblies for converting the chart present in the PowerPoint Presentation into PDF and image.
 <table>
-<tr>
 <thead>
+<tr>
 <th>
 Platform(s)</th>
 <th>
 Assembly
 </th>
-</thead>
 </tr>
+</thead>
 <tr>
 <td>
 WPF, Windows Forms and ASP.NET MVC<br/>
@@ -286,9 +285,18 @@ Syncfusion.OfficeChartToImageConverter.WPF<br/>
 Syncfusion.SfChart.WPF<br/>
 </td>
 </tr>
+<tr>
+<td>
+ASP.NET Core and Blazor<br/>
+</td>
+<td>
+Syncfusion.OfficeChartToImageConverter.Portable<br/>
+Syncfusion.SfChart.Portable<br/>
+</td>
+</tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -306,3 +314,6 @@ Syncfusion.SfChart.WPF<br/></td></tr>
 </table>
 
 N> The “Syncfusion.OfficeChartToImageConverter.WPF” assembly is supported from .NET Framework 4.0 onwards.
+
+N> On Linux and macOS, the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp) NuGet package may require additional native runtime libraries (e.g., `libSkiaSharp`) to be installed on the host.
+

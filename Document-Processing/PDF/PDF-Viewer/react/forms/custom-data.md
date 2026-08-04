@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add custom data to form fields in React Pdf Viewer | Syncfusion
-description: Learn how to attach, update, and read custom Data on PDF form fields using the Form Designer UI and APIs in the Syncfusion React PDF Viewer.
+title: Add custom data to form fields in React PDF Viewer | Syncfusion
+description: Learn how to attach, update, and read custom data on PDF form fields using the Form Designer UI and APIs in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -143,7 +143,7 @@ export function App() {
   const viewerRef = useRef(null);
 
   const updateFirstField = () => {
-    const fields = viewerRef.current?.formFieldCollection || [];
+    const fields = viewerRef.current?.formFieldCollections || [];
     if (!fields.length) { return; }
     const target = fields[0];
     viewerRef.current?.formDesignerModule.updateFormField(target, {
@@ -196,7 +196,7 @@ export function App() {
   const viewerRef = useRef(null);
 
   const onDocumentLoad = () => {
-    const fields = viewerRef.current?.formFieldCollection || [];
+    const fields = viewerRef.current?.formFieldCollections || [];
     fields.forEach((f) => {
       console.log('Field', f.name, 'customData:', f.customData);
     });
@@ -239,7 +239,7 @@ root.render(<App />);
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./overview-create-forms)
+- [Create form fields](./manage-form-fields/create-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form flags](./form-constrain)
 - [Form validation](./form-validation)

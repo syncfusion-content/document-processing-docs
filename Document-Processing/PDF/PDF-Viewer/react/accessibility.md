@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in PDF Viewer components React
+# Accessibility in React PDF Viewer component
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and the WCAG ARIA roles specified by WAI-ARIA. The component's accessibility compliance is outlined below.
 
@@ -51,7 +51,7 @@ The PDF Viewer component follows accessibility guidelines and standards, includi
 | `aria-describedby` | This attribute points to the PDF Viewer element describing the one it's set on. |
 | `aria-orientation` | Indicates whether the PDF Viewer element is oriented horizontally or vertically. |
 | `aria-valuetext` | Returns the current text of the PDF Viewer. |
-| `aria-valuemax` | Indicates the Maximum value of the PDF Viewer. |
+| `aria-valuemax` | Indicates the maximum value of the PDF Viewer. |
 | `aria-valuemin` | Indicates the Minimum value of the PDF Viewer. |
 | `aria-valuenow` | Indicates the current value of the PDF Viewer. |
 | `aria-controls` | Attribute is set to the button and it points to the corresponding content. |
@@ -67,7 +67,7 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | <kbd>CONTROL + Right Arrow (or) CONTROL + Down Arrow</kbd> |<kbd>COMMAND + Right Arrow (or) COMMAND + Down Arrow</kbd> |Navigate to the last page |
 |<kbd>Left Arrow</kbd> |<kbd> Left Arrow (or) Shift + Space </kbd> |Navigate to the previous page|
 | <kbd>Right Arrow</kbd> | <kbd>Right Arrow (or) Space</kbd> | Navigate to the next page |
-| <kbd>CONTROL + G</kbd> | <kbd>COMMAND + G</kbd> | Go To The Page|
+| <kbd>CONTROL + G</kbd> | <kbd>COMMAND + G</kbd> | Go to the page|
 |<kbd>Up Arrow</kbd> |<kbd>Up Arrow </kbd> |Scroll up|
 | <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Scroll down|
 |||**Shortcuts for Zooming**|
@@ -78,8 +78,8 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation of the form field|
-|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation or form field|
+| <kbd>CONTROL + X</kbd> |<kbd>CONTROL + X</kbd> |Cut the selected text, annotation, or form field|
+|<kbd>CONTROL + V</kbd> |<kbd>COMMAND + V</kbd> |Paste the selected text, annotation, or form field|
 |||**Shortcuts for the general operation**|
 | <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
 |<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Redo the action|
@@ -252,4 +252,4 @@ The PDF Viewer component's accessibility levels are ensured through an [accessib
 
 ## See also
 
-* [Accessibility in  React components](../common/accessibility)
+* [Accessibility in React components](../common/accessibility)
