@@ -152,7 +152,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
+5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
 
 ```csharp
 
