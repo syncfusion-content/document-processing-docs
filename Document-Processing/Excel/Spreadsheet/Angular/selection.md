@@ -11,7 +11,7 @@ documentation: ug
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
-> * The default value for `mode` in `selectionSettings` is `Multiple`.
+> The default value for `mode` in `selectionSettings` is `Multiple`.
 
 You have the following options in Selection,
 

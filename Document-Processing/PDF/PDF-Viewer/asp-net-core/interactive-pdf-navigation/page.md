@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Page Navigation in ASP.NET Core PDF Viewer
+title: Page Navigation in ASP.NET Core PDF Viewer | Syncfusion
 description: Overview of page navigation in Syncfusion ASP.NET Core PDF Viewer. Learn about  toolbar controls and programmatic navigation.
 platform: document-processing
 control: PDF Viewer
@@ -16,12 +16,16 @@ The ASP.NET Core PDF Viewer supports internal page navigation via toolbar contro
 The default toolbar of PDF Viewer contains the following navigation options
 
 * **Go to page** :- Navigates to the specific page of a PDF document.
-* **Show next page** :- Navigates to the next page of PDF a document.
+* **Show next page** :- Navigates to the next page of a PDF document.
 * **Show previous page** :- Navigates to the previous page of a PDF document.
 * **Show first page** :-  Navigates to the first page of a PDF document.
 * **Show last page** :- Navigates to the last page of a PDF document.
 
 Page navigation can be enabled or disabled in PDF Viewer using the following code snippet.
+
+- **Property**: `enableNavigation`
+- **Type**: `boolean`
+- **Default**: `true`
 
 **Example: Enable navigation:**
 
@@ -49,7 +53,7 @@ Page navigation can be enabled or disabled in PDF Viewer using the following cod
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/navigation.png)
+![Page navigation in PDF Viewer](../images/navigation.png)
 
 ## Programmatic page navigation
 
@@ -61,7 +65,7 @@ The following examples show how to navigate pages programmatically using the PDF
 {% highlight cshtml tabtitle="Standalone" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>
@@ -100,7 +104,7 @@ The following examples show how to navigate pages programmatically using the PDF
 {% highlight cshtml tabtitle="Server-Backed" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>

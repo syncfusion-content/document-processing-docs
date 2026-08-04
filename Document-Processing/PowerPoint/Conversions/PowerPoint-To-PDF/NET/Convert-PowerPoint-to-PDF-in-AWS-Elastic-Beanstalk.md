@@ -21,8 +21,8 @@ Step 2: Install the following **Nuget packages** in your application from [Nuget
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
 
-![Install Syncfusion.PresentationRenderer.Net.Core NuGet Paackage](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
-![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 NuGet Paackage](AWS_images/Elastic_Beanstalk_Images/Nuget-Package-PPTXtoPDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 NuGet Package](AWS_images/Elastic_Beanstalk_Images/Nuget-Package-PPTXtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -65,25 +65,22 @@ Step 6: Include the below code snippet in the **HomeController.cs** file to **co
 
 public ActionResult ConvertPPTXtoPDF()
 {
-    using (FileStream inputStream = new FileStream(Path.GetFullPath("wwwroot/Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+    //Open the existing PPTX document.
+    using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("wwwroot/Data/Input.pptx")))
     {
-        //Open the existing PPTX document.
-        using (IPresentation pptxDoc = Presentation.Open(inputStream))
+        //Hooks the font substitution event.
+        pptxDoc.FontSettings.SubstituteFont += FontSettings_SubstituteFont;
+        //Converts PPTX document into PDF document.
+        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
         {
-            //Hooks the font substitution event.
-            pptxDoc.FontSettings.SubstituteFont += FontSettings_SubstituteFont;
-            //Converts PPTX document into PDF document.
-            using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-            {
-                //Saves the PDF document to MemoryStream.
-                MemoryStream stream = new MemoryStream();
-                pdfDocument.Save(stream);
-                //Unhooks the font substitution event after converting to PDF.
-                pptxDoc.FontSettings.SubstituteFont -= FontSettings_SubstituteFont;
-                stream.Position = 0;
-                //Download PDF document in the browser.
-                return File(stream, "application/pdf", "Sample.pdf");
-            }
+            //Saves the PDF document to MemoryStream.
+            MemoryStream stream = new MemoryStream();
+            pdfDocument.Save(stream);
+            //Unhooks the font substitution event after converting to PDF.
+            pptxDoc.FontSettings.SubstituteFont -= FontSettings_SubstituteFont;
+            stream.Position = 0;
+            //Download PDF document in the browser.
+            return File(stream, "application/pdf", "Sample.pdf");
         }
     }
 }
@@ -106,7 +103,7 @@ Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (L
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-PowerPoint.png)
 
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
-![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Create-PowerPoint.png)
+![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Create-PowerPoint.png)
 
 Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Environment-PPTXtoPDF.png)

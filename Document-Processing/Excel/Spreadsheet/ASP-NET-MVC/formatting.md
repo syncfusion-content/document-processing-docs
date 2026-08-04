@@ -151,7 +151,7 @@ ViewBag.deLocaleFormats = deLocaleFormats;
 To configure culture-based custom formats:
 
 1. Create a collection containing the default number format IDs and their corresponding culture-specific format codes.
-2. Pass the collection from the controller to the Razor view.
+2. Pass the collection from the controller to the razor view.
 3. Obtain the rendered Spreadsheet instance.
 4. Pass the Spreadsheet instance and the format collection to the `configureLocalizedFormat` method.
 5. Open the custom number format dialog and verify that the culture-specific formats are displayed.
@@ -272,11 +272,11 @@ N>* 'GreaterThan', 'LessThan', 'Between', 'EqualTo', 'ContainsText', 'DateOccur'
 
 The following preset colors can be used for formatting styles,
 
-N>* `"RedFT"` - Light Red Fill with Dark Red Text,
-<br/>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
-<br/>* `"GreenFT"` - Green Fill with Dark Green Tex/t,
-<br/>* `"RedF"` - Red Fill,
-<br/>* `"RedT"` - Red Text.
+>* `"RedFT"` - Light Red Fill with Dark Red Text,
+>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
+>* `"GreenFT"` - Green Fill with Dark Green Text,
+>* `"RedF"` - Red Fill,
+>* `"RedT"` - Red Text.
 
 ### Top bottom rules
 

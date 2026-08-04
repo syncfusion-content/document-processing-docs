@@ -48,7 +48,7 @@ AI Assist supports a wide range of spreadsheet operations through natural langua
 | **Formatting** | Apply styles such as bold, italic, font color, background color, number formats, and wrap text. |
 | **Structure Management** | Insert/delete rows and columns, merge cells, and freeze panes. |
 | **Clipboard Actions** | Perform cut, copy, and paste operations through AI commands. |
-| **Navigation** | Perform sorting, filtering, and Find and Replace operations. |
+| **Navigation** | Perform sorting, filtering, and find and replace operations. |
 | **Visualization** | Insert charts with multiple types, themes, titles, and sizing options. |
 
 ### Writing Effective Prompts
