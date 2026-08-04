@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Blob Storage
+# Open PDF from Azure Blob Storage using JavaScript
 
 The JavaScript PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -16,15 +16,17 @@ The JavaScript PDF Viewer component supports loading PDF files from Azure Blob S
 
 Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF Viewer.
 
+N> The standalone approach fetches the blob directly from the browser. The target blob must be accessible via the URL — either a public blob or a container with anonymous read access enabled. If the blob is private, use the server-backed approach below.
+
 **Step 1:** Create a PDF Viewer sample in JavaScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF viewer sample in JavaScript. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Modify the `src/app/app.ts` file in the JavaScript project
+**Step 2:** Modify the `index.html` file in the JavaScript project
 
 1. Add the following private properties to the `app.ts`, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual blob name.
 
 ```javascript
 var accountName = "*Your account name in Azure*";
@@ -87,6 +89,8 @@ function blobToBase64(blob) {
 }
 ```
 
+N> Ensure the `fetchAndConvertToBase64` and `blobToBase64` functions are defined in the script before the PDF Viewer is initialized (e.g., placed in the same `<script>` block above the Viewer creation, or loaded from a separate script file included earlier in `index.html`).
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 
 ## Using the server-backed PDF Viewer
@@ -126,7 +130,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load PDF files from Azure Blob Storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer#load) method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -182,7 +186,7 @@ N> Replace the placeholders with your actual values: Azure storage connection st
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container. The value passed to `load()` must be the exact blob name as it appears in the container.
 
 ```javascript
 // Inject required modules

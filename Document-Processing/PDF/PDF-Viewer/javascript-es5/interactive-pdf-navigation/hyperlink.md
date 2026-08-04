@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
+title: Hyperlink navigation in JS PDF Viewer | Syncfusion
 description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for JavaScript.
 platform: document-processing
 control: PDF Viewer
@@ -76,6 +76,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
+
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs open when a hyperlink is clicked.
@@ -100,7 +101,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -115,6 +115,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -207,6 +208,6 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/bookmark-navigation)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-navigation)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-thumbnail-navigation)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)
