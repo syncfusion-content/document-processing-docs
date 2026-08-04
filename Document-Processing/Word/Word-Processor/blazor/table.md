@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Tables in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to work with tables in the Syncfusion Blazor Document Editor component and much more.
+description: Checkout and learn here all about Tables in Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
 control: Document Editor
 documentation: ug
