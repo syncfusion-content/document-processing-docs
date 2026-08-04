@@ -43,27 +43,50 @@ Use the `addAnnotation` method with the Redaction type to add redaction annotati
 <button id="addRedactAnnot">Add Redaction Annotation</button>
 ```
 ```js
-document.getElementById('addRedactAnnot')?.addEventListener('click', () => {
-  viewer.annotation.addAnnotation('Redaction', {
-    bound: { x: 200, y: 480, width: 150, height: 75 },
-    pageNumber: 1,
-    markerFillColor: '#0000FF',
-    markerBorderColor: 'white',
-    fillColor: 'red',
-    overlayText: 'Confidential',
-    fontColor: 'yellow',
-    fontFamily: 'Times New Roman',
-    fontSize: 8,
-    beforeRedactionsApplied: false
-  });
-});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+var addRedactAnnot = document.getElementById('addRedactAnnot');
+if (addRedactAnnot) {
+    addRedactAnnot.addEventListener('click', function () {
+        pdfviewer.annotation.addAnnotation('Redaction', {
+            bound: { x: 200, y: 480, width: 150, height: 75 },
+            pageNumber: 1,
+            markerFillColor: '#0000FF',
+            markerBorderColor: 'white',
+            fillColor: 'red',
+            overlayText: 'Confidential',
+            fontColor: 'yellow',
+            fontFamily: 'Times New Roman',
+            fontSize: 8,
+            beforeRedactionsApplied: false
+        });
+    });
+}
 ```
 
 Track additions using the annotationAdd event.
 
 ```js
-viewer.annotationAdd = (args) => {
-  console.log('Annotation added:', args);
+pdfviewer.annotationAdd = function (args) {
+    console.log('Annotation added:', args);
 };
 ```
 
@@ -88,23 +111,46 @@ Use editAnnotation to modify overlay text, colors, fonts, etc.
 <button id="editRedactAnnotation">Edit Redact Annotation</button>
 ```
 ```js
-document.getElementById('editRedactAnnotation')?.addEventListener('click', () => {
-  for (let i = 0; i < viewer.annotationCollection.length; i++) {
-    if (viewer.annotationCollection[i].subject === 'Redaction') {
-      viewer.annotationCollection[i].overlayText = 'EditedAnnotation';
-      viewer.annotationCollection[i].markerFillColor = '#22FF00';
-      viewer.annotationCollection[i].markerBorderColor = '#000000';
-      viewer.annotationCollection[i].isRepeat = true;
-      viewer.annotationCollection[i].fillColor = '#F8F8F8';
-      viewer.annotationCollection[i].fontColor = '#333333';
-      viewer.annotationCollection[i].fontSize = 14;
-      viewer.annotationCollection[i].fontFamily = 'Symbol';
-      viewer.annotationCollection[i].textAlign = 'Right';
-      viewer.annotationCollection[i].beforeRedactionsApplied = false;
-      viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
-    }
-  }
-});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+var editRedactAnnotation = document.getElementById('editRedactAnnotation');
+if (editRedactAnnotation) {
+    editRedactAnnotation.addEventListener('click', function () {
+        for (var i = 0; i < pdfviewer.annotationCollection.length; i++) {
+            if (pdfviewer.annotationCollection[i].subject === 'Redaction') {
+                pdfviewer.annotationCollection[i].overlayText = 'EditedAnnotation';
+                pdfviewer.annotationCollection[i].markerFillColor = '#22FF00';
+                pdfviewer.annotationCollection[i].markerBorderColor = '#000000';
+                pdfviewer.annotationCollection[i].isRepeat = true;
+                pdfviewer.annotationCollection[i].fillColor = '#F8F8F8';
+                pdfviewer.annotationCollection[i].fontColor = '#333333';
+                pdfviewer.annotationCollection[i].fontSize = 14;
+                pdfviewer.annotationCollection[i].fontFamily = 'Symbol';
+                pdfviewer.annotationCollection[i].textAlign = 'Right';
+                pdfviewer.annotationCollection[i].beforeRedactionsApplied = false;
+                pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+            }
+        }
+    });
+}
 ```
 
 ## Delete redaction annotations
@@ -125,9 +171,32 @@ Delete by id using deleteAnnotationById:
 <button id="deleteAnnotationbyId">Delete Annotation By Id</button>
 ```
 ```js
-document.getElementById('deleteAnnotationbyId')?.addEventListener('click', () => {
-  viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
-});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+var deleteAnnotationbyId = document.getElementById('deleteAnnotationbyId');
+if (deleteAnnotationbyId) {
+    deleteAnnotationbyId.addEventListener('click', function () {
+        pdfviewer.annotationModule.deleteAnnotationById(pdfviewer.annotationCollection[0].annotationId);
+    });
+}
 ```
 
 ## Redact pages
@@ -146,9 +215,32 @@ Options include Current Page, Odd Pages Only, Even Pages Only, and Specific Page
 <button id="addPageRedactions">Add Page Redaction</button>
 ```
 ```js
-document.getElementById('addPageRedactions')?.addEventListener('click', () => {
-  viewer.annotation.addPageRedactions([1, 3, 5, 7]);
-});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+var addPageRedactions = document.getElementById('addPageRedactions');
+if (addPageRedactions) {
+    addPageRedactions.addEventListener('click', function () {
+        pdfviewer.annotation.addPageRedactions([1, 3, 5, 7]);
+    });
+}
 ```
 
 ## Apply redaction
@@ -168,9 +260,32 @@ N> Redaction is permanent and cannot be undone.
 <button id="redact">Apply Redaction</button>
 ```
 ```js
-document.getElementById('redact')?.addEventListener('click', () => {
-  viewer.annotation.redact();
-});
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+var redact = document.getElementById('redact');
+if (redact) {
+    redact.addEventListener('click', function () {
+        pdfviewer.annotation.redact();
+    });
+}
 ```
 
 N> Applying redaction is irreversible.
@@ -180,7 +295,27 @@ N> Applying redaction is irreversible.
 Configure defaults with redactionSettings:
 
 ```js
-viewer.redactionSettings = {
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/34.1.33/dist/ej2-pdfviewer-lib';
+pdfviewer.appendTo('#PdfViewer');
+
+pdfviewer.redactionSettings = {
   overlayText: 'Confidential',
   markerFillColor: '#FF0000',
   markerBorderColor: '#000000',
