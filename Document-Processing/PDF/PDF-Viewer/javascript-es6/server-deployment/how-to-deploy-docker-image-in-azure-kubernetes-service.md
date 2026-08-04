@@ -101,7 +101,7 @@ kubectl apply -f ./pdfviewer-server.yaml
 kubectl get all
 ```
 
-It can take several minutes for Azure to provision the LoadBalancer  IP. When the external IP is available, browse to `http://<external-ip>/api/pdfviewer` to verify the default GET response. Enable HTTPS with an ingress controller or Azure Front Door for production workloads.
+It can take several minutes for Azure to provision the LoadBalancer IP. When the external IP is available, browse to `http://<external-ip>/api/pdfviewer` to verify the default GET response. Enable HTTPS with an ingress controller or Azure Front Door for production workloads.
 
 **Step 6:** Connect the client to the server endpoint.
 
