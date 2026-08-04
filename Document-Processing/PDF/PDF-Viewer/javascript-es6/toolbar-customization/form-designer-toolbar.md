@@ -65,7 +65,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## How to customize the form designer toolbar
+## Customize the form designer toolbar
 
 Select which tools appear and control their order in the form designer toolbar.
 
