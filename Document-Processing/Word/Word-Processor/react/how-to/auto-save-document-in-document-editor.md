@@ -105,7 +105,7 @@ In `startup.cs`, register the profile in the following format:
 
 * In the server-side, receive the stream content from the client-side and process it to save the document in AWS S3. Add a Web API in the controller file like below to save the document in AWS S3.
 
-  ```ts
+  ```c#
   [AcceptVerbs("Post")]
   [HttpPost]
   [EnableCors("AllowAllOrigins")]
