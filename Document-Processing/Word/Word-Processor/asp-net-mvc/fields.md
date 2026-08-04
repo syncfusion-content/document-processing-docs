@@ -7,13 +7,13 @@ control: Fields
 documentation: ug
 ---
 
-# Fields
+# Fields in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) has preservation support for all types of fields in an existing Word document without any data loss.
 
 ## Adding Fields
 
-You can add a field to the document by using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/#insertfield) method in the `Editor` module.
+You can add a field to the document by using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertfield) method in the `Editor` module.
 
 ```typescript
 
@@ -46,7 +46,7 @@ The following types of fields are automatically updated in DOCX Editor.
 
 ## Get field info
 
-You can get the field code and field result of the currently selected field by using the [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection/#getfieldinfo) method in the `Selection` module.
+You can get the field code and field result of the currently selected field by using the [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#getfieldinfo) method in the `Selection` module.
 
 ```typescript
 //Gets the field information of the selected field.
@@ -57,7 +57,7 @@ N> For nested fields, this method returns the combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the currently selected field by using the [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/#setfieldinfo) method in the `Editor` module.
+You can modify the field code and field result of the currently selected field by using the [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#setfieldinfo) method in the `Editor` module.
 
 ```typescript
 //Get the field information for the selected field.

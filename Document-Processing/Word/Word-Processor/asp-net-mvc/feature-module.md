@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Feature Module in ASP.NET MVC DOCX Editor Component
+title: Feature Module in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about Feature Module in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature Module
