@@ -192,8 +192,30 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the Blazor DOCX Editor.
 
 {% promptcards %}
-{% promptcard Track changes %}
-#search_docs How to enable track changes in Blazor DOCX Editor ?
+{% promptcard Track Changes %}
+#search_docs How to enable Track Changes in Blazor DOCX Editor
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Add Comments %}
+#search_docs How to add comments in Blazor DOCX Editor
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Unsupported File Format %}
+#search_docs Why does Blazor DOCX Editor show an unsupported file format message
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard DOCX Editor Not Rendering %}
+#search_docs Why does Blazor DOCX Editor not render or show script errors in the browser console
 {% endpromptcard %}
 {% endpromptcards %}
 

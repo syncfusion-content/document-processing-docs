@@ -191,11 +191,32 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the ASP.NET Core DOCX Editor.
 
 {% promptcards %}
-{% promptcard Track changes %}
-#search_docs How to enable track changes in ASP.NET Core DOCX Editor ?
+{% promptcard Track Changes %}
+#search_docs How to enable Track Changes in ASP.NET Core DOCX Editor
 {% endpromptcard %}
 {% endpromptcards %}
 
+{% promptcards %}
+{% promptcard Add Comments %}
+#search_docs How to add comments in ASP.NET Core DOCX Editor
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Unsupported File Format %}
+#search_docs Why does ASP.NET Core DOCX Editor show an unsupported file format message
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard DOCX Editor Not Rendering %}
+#search_docs Why is a blank area displayed where the ASP.NET Core DOCX Editor should appear
+{% endpromptcard %}
+{% endpromptcards %}
 
 ## Best Practices
 
