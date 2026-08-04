@@ -43,6 +43,6 @@ The Restrict Editing pane provides the following options to manage the document:
 * To apply the chosen editing restrictions, click the **YES, START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
 * To stop protection, select the **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
-* [How to protect the document in form-filling mode](./form-fields.md/#protect-the-document-in-form-filling-mode)
-* [How to protect the document in comments-only mode](./comments.md/#protect-the-document-in-comments-only-mode)
-* [How to protect the document in track-changes-only mode](./track-changes.md/#protect-the-document-in-track-changes-only-mode)
+* [How to protect the document in form-filling mode](./form-fields.md#protect-the-document-in-form-filling-mode)
+* [How to protect the document in comments-only mode](./comments.md#protect-the-document-in-comments-only-mode)
+* [How to protect the document in track-changes-only mode](./track-changes.md#protect-the-document-in-track-changes-only-mode)
