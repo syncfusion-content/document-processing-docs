@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header Footer in ASP.NET MVC Document Editor Component
-description: Learn here all about Header Footer in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Header Footer in ASP.NET MVC DOCX Editor Component | Syncfusion
+description: Learn here all about Header Footer in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Header Footer
 documentation: ug
@@ -10,24 +10,24 @@ documentation: ug
 
 # Headers and Footers
 
-Document editor supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)  supports headers and footers in its documents. Each section in the document can have the following types of headers and footers:
 
 * First page: Used only on the first page of the section.
-* Even pages: Used on all even numbered pages in the section.
+* Even pages: Used on all even-numbered pages in the section.
 * Default: Used on all pages of the section, where the first or even pages are not applicable or not specified.
 
 You can define this by setting format properties of the corresponding section using the following sample code.
 
 ```typescript
-//Defines whether different header footer is required for first page of the section
+//Defines whether a different header/footer is required for the first page of the section
 documenteditor.selection.sectionFormat.differentFirstPage= true;
-//Defines whether different header footer is required for odd and even pages in the section
+//Defines whether different header/footer is required for odd and even pages in the section
 documenteditor.selection.sectionFormat.differentOddAndEvenPages= true;
 ```
 
 ## Go to header footer region
 
-Double click in header or footer region to move the selection into it.
+Double-click in the header or footer region to move the selection into it.
 
 ```typescript
 documenteditor.selection.goToHeader();
@@ -39,47 +39,47 @@ documenteditor.selection.goToFooter();
 
 ## Link to previous
 
-Link to previous is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
+Link to previous is enabled by default when the document has more than one section. If you're using different headers and footers such as a different first page or different odd and even pages, they can't be linked together because they're all separate.
 
-Before setting or getting the link to previous value, use the ['goToHeader'](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/selection#gotoheader) or ['goToFooter'](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/selection#gotofooter) API to move the current selection to the header or footer region.
+Before setting or getting the link to previous value, use the [`goToHeader`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/selection#gotoheader) or [`goToFooter`](https://ej2.syncfusion.com/aspnetmvc/documentation/api/document-editor/selection#gotofooter) API to move the current selection to the header or footer region.
 
-You can get or set the default header footer link to previous value of a section at cursor position by using the following sample code.
+You can get or set the default header footer link to previous value of a section at the cursor position by using the following sample code.
 
 ```typescript
 container.documentEditor.selection.sectionFormat.oddPageHeader.linkToPrevious = false;
 container.documentEditor.selection.sectionFormat.oddPageFooter.linkToPrevious = false;
 ```
 
-In case the document has different header and footer types, such as different first page, odd, and even pages.
+In case the document has different header and footer types, such as different first page, odd, and even pages, use the following sample code.
 
 ```typescript
 // Different first page
 container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
 container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
 //Even page
-container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
-container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
+container.documentEditor.selection.sectionFormat.evenPageHeader.linkToPrevious = false;
+container.documentEditor.selection.sectionFormat.evenPageFooter.linkToPrevious = false;
 ```
 
-N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled state in UI and set to return false for the first section.
+N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled in the UI and set to return false for the first section.
 
 ## Header and footer distance
 
-You can define the distance of header region content from the top of the page.
+You can define the distance of the header region content from the top of the page.
 
 ```typescript
 documenteditor.selection.sectionFormat.headerDistance= 36;
 ```
 
-Same way, you can define the distance of footer region content from the bottom of the page.
+In the same way, you can define the distance of the footer region content from the bottom of the page.
 
 ```typescript
-documenteditor.selection.sectionFormat.footerDistace=36;
+documenteditor.selection.sectionFormat.footerDistance=36;
 ```
 
 ## Close header footer region
 
-Move the selection to the document body from header or footer region by double clicking or tapping the document area.
+Move the selection to the document body from the header or footer region by double-clicking or tapping the document area.
 
 ```typescript
 documenteditor.selection.closeHeaderFooter()
@@ -87,7 +87,7 @@ documenteditor.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headersandfooters#/tailwind3).
+Explore how to add and customize headers and footers in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headersandfooters#/tailwind3).
 
 ## See Also
 
