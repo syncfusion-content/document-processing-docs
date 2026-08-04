@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Google Drive Files in ASP.NET Core Document Editor | Syncfusion
-description: Learn about how to Open document from Google Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Google Drive Files in ASP.NET Core DOCX Editor | Syncfusion
+description: Learn how to open a document from Google Drive in the ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open document from Google Drive
 
-To load a document from Google Drive in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
+To load a document from Google Drive in a [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Set up Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, see the official [documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
@@ -34,7 +34,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -61,7 +61,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("LoadFromGoogleDrive")]
-//Post action for Loading the documents
+// Post action for loading the documents
 public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, string> jsonObject)
 {
 
@@ -113,7 +113,7 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project, and add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -130,13 +130,13 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your application name, and the path to the JSON file.
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+On the client side, the document returned from the web service is opened using the `open` method.
 
 
 {% tabs %}
@@ -149,4 +149,4 @@ In the client-side, the document is returned from the web service is opening usi
 {% endtabs %}
 
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the preceding code example.
