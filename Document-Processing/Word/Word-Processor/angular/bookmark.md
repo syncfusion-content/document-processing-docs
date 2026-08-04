@@ -17,7 +17,7 @@ Bookmark is a powerful tool that helps you to mark a place in the document to fi
 >Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore.
 >Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
-## Add a bookmark
+## Add bookmark
 
 Use the [`insertBookmark`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertbookmark) method to add a bookmark to the selected text.
 

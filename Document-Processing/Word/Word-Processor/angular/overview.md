@@ -34,7 +34,7 @@ The [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular
 * Provides a [ribbon interface](./ribbon) similar to Microsoft Word, with tab-based commands for quick and intuitive access to features.
 * [Localizes](./global-local) all the static text to any desired language.
 * Allows creating a lightweight Word viewer using module injection to view and [print](./print) Word documents.
-* Provides a [server-side helper library](./web-services) to open Word documents like DOCX, DOC, WordML, RTF, and Text by converting them to SFDT file format.
+* Provides a [server-side helper library](./web-services/core) to open Word documents like DOCX, DOC, WordML, RTF, and Text by converting them to SFDT file format.
 
 ## Supported platforms for server-side dependencies
 
@@ -52,6 +52,6 @@ You can deploy web APIs for the server-side dependencies of the Document Editor 
 * [ASP.NET MVC](./web-services/mvc)
 * [Java](./web-services/java)
 
-To know more about server-side dependencies, refer to this [page](./web-services-overview).
+To know more about server-side dependencies, refer to this [page](./web-services/core).
 
 N> If you don't require the above functionalities, then you can deploy it as a pure client-side component without any server-side interactions.
