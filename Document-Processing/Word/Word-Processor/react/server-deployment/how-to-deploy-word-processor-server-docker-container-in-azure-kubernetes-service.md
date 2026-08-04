@@ -98,7 +98,7 @@ spec:
 **Step 5:** To create all Services and Deployments needed to run the Document Editor server, execute the following.
 
 ```
-kubectl apply -f ./documenteditor-server.yml
+kubectl create -f ./documenteditor-server.yml
 ```
 
 Run the following command to get the Kubernetes cluster deployed service details and copy the external IP address of the Document Editor service.

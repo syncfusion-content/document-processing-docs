@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Publish Syncfusion Document Editor Web API to Azure App Service
+# Publish Syncfusion Document Editor Web API to Azure App Service from Visual Studio
 
 ## Prerequisites
 
