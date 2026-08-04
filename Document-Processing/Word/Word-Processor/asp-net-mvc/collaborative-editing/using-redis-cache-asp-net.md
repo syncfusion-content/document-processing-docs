@@ -83,7 +83,7 @@ N> For better performance, a minimum `SaveThreshold` value of 100 is recommended
 
 ### Step 1: Integrate DOCX Editor
 
-Refer to the following documentation to get started with the [ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/getting-started-core).
+Refer to the following documentation to get started with the [ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/getting-started).
 
 ### Step 2: Enable collaborative editing
 
