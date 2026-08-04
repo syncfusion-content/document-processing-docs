@@ -13,13 +13,13 @@ The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Stor
 
 ## Using Standalone PDF Viewer
 
-Follow the steps below to save a PDF file to Azure Blob Storage from an TypeScript PDF Viewer.
+Follow the steps below to save a PDF file to Azure Blob Storage from a TypeScript PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.ts` file in the Angular project
+**Step 2:** Modify the `src/app/app.ts` file in the TypeScript project
 
 1. Import the required namespaces at the top of the file:
 
@@ -80,7 +80,7 @@ N> Install the Azure Storage Blob client package for browser use: `npm install @
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, you can follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 

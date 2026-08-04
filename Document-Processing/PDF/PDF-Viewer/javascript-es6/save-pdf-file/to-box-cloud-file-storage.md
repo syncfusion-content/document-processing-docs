@@ -9,7 +9,7 @@ documentation: ug
 
 # Save PDF files to Box cloud storage
 
-The JavaScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
+The TypeScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
@@ -94,7 +94,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration.
 
 ```json
 {

@@ -13,7 +13,7 @@ To save a PDF file to Google Cloud Storage, follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Follow the Syncfusion getting-started instructions for the JavaScript PDF Viewer: [JavaScript PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started). This sets up the basic PDF Viewer application structure.
+Follow the Syncfusion getting-started instructions for the TypeScript PDF Viewer: [TypeScript PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started). This sets up the basic PDF Viewer application structure.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 

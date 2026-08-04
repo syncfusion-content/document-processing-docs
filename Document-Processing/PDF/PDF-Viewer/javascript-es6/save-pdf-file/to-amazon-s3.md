@@ -19,7 +19,7 @@ Follow the steps below to save a PDF file to AWS S3 from a browser-based TypeScr
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.ts` file in the Angular project
+**Step 2:** Modify the `src/app/app.ts` file in the TypeScript project
 
 1. Import the required namespaces at the top of the file:
 
@@ -33,7 +33,7 @@ N> Replace the placeholder values with the AWS region and credentials. For produ
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this with your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
