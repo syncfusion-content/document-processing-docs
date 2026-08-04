@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy PDF Viewer server app to Azure App Service from Visual Studio in JavaScript PDF Viewer | Syncfusion
+title: Deploy PDF Viewer to Azure App Service | Syncfusion
 description: Publish the Syncfusion PDF Viewer Web API application from Visual Studio to Azure App Service and connect it to a JavaScript client.
 platform: document-processing
 control: PDF Viewer
@@ -37,6 +37,6 @@ domainurl: ##DomainURL##
 
 **Step 6:** Verify the API at the corresponding `/api/pdfviewer` path on the same domain. A default GET response indicates the server is running.
 
-Use the service endpoint (for example, https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client's serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
+Use the service endpoint (for example, https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client's serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
 
 For Azure App Service deployment guidance, see: https://learn.microsoft.com/visualstudio/deployment/

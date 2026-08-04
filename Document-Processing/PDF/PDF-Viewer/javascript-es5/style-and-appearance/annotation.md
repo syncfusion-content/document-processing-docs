@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize annotation toolbar icons in JavaScript PDF Viewer | Syncfusion
+title: Customize Annotation Toolbar in JavaScript PDF Viewer | Syncfusion
 description: Learn how to customize annotation toolbar icons in the Syncfusion JavaScript PDF Viewer by applying targeted CSS styles.
 platform: document-processing
 control: PDF Viewer

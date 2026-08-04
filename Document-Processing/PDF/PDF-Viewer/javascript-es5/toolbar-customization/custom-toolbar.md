@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Custom Toolbar
+# Custom Toolbar
 
 The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
@@ -68,7 +68,7 @@ Hide the default toolbar using `enableToolbar` and `enableNavigationToolbar` pro
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```javascript
+```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -79,7 +79,7 @@ pdfviewer.appendTo('#PdfViewer');
 ```
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-```javascript
+```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -96,7 +96,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Add Syncfusion EJ2 Toolbar components to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download:
 
-```javascript
+```js
 
 var toolbarObj = new ej.navigations.Toolbar({
     items: [
@@ -119,7 +119,7 @@ toolbarObj.appendTo('#topToolbar');
 
 Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PDF Viewer:
 
-```javascript
+```js
 
 var magnificationToolbar = new ej.navigations.Toolbar({
     items: [
@@ -310,7 +310,7 @@ Add the following scripts for handling user interactions with the custom toolbar
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
-```javascript
+```js
 
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
@@ -658,7 +658,7 @@ enablePrevButton(false);
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 
-```javascript
+```js
 
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';

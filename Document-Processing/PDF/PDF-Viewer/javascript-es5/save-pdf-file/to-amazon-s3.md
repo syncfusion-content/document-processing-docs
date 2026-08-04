@@ -140,7 +140,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -198,7 +198,7 @@ N> Replace the placeholders with the appropriate AWS credentials and bucket name
 
 **Step 3:** Set the PDF Viewer properties in the JavaScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 ```javascript
 // Inject required modules

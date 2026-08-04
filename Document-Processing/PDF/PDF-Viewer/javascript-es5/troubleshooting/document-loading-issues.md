@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fix document loading issues in v23.1+ for the JavaScript PDF Viewer component
-description: Resolve document rendering failures in v23.1 or newer by calling dataBind before load, verifying source URLs, checking CORS and CSP, and confirming network connectivity in the JavaScript PDF Viewer.
+title: Fix Document Loading Issues in PDF Viewer | Syncfusion
+description: Resolve rendering failures in v23.1+ by calling dataBind before load, verifying URLs, checking CORS, CSP, and network connectivity in Syncfusion JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
