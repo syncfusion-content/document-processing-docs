@@ -33,13 +33,13 @@ Before beginning, ensure the following prerequisites are met:
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
 - A **Vue application** (existing or new); see [Vue PDF Viewer documentation](./getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
-  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
-  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
-  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+  - Commercial License
+  - Free Community License
+  - Free Trial
 
 ### Getting Your API Key
 
-Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [API Key page](https://www.syncfusion.com/account/api-key) and store it in a `.txt` or `.key` file. The saved file will be referenced in the MCP configuration:
+Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the API Key page and store it in a `.txt` or `.key` file. The saved file will be referenced in the MCP configuration:
 
 ````json
 "env": {

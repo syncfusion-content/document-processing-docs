@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature modules in Vue PDF Viewer Control
 
-The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
+The Vue PDF Viewer exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
 
 * **Toolbar**: Built-in toolbar for user interaction.
 * **Magnification**: Zoom and fit options for improved viewing.

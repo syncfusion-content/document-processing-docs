@@ -33,7 +33,7 @@ The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/signature-annotation)
 * [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/globalization) - Localize the UI.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/localization/default-language) - Localize the UI.
 * [Open and display](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) normal and protected PDF files with AES and RC4 encryption.
 
 ## Supported Web platforms
