@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Feature modules
+# Feature modules in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the DOCX Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the DOCX Editor that can be included as required:
 * **Print** - Prints the document.

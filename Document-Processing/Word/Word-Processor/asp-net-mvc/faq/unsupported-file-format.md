@@ -7,7 +7,7 @@ control: Unsupported file
 documentation: ug
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document in ASP.NET MVC?
+# Why Do I Get an Unsupported Warning When Opening Docs in ASP.NET MVC?
 
 If you receive the "The file format you have selected isn't supported. Please choose a valid format." message when opening a document in the DOCX Editor, it typically indicates that the document format is not supported by the current version of the DOCX Editor. Here are some common reasons for this warning:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the DOCX Editor does not support. Ensure you are using a supported format, such as SFDT.
