@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Chart
+# Chart in ASP.NET MVC DOCX Editor Component
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides chart preservation support. Using the DOCX Editor, you can see the chart reports from your Word document.
 

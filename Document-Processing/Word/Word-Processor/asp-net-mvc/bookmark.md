@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Bookmarks
+# Bookmarks in ASP.NET MVC DOCX Editor Component
 
 A bookmark is a powerful tool that helps to mark a place in the document that can be found again easily. You can enter many bookmarks in the document and give each one a unique name to identify them easily.
 
