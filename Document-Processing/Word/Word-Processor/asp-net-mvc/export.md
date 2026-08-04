@@ -142,7 +142,8 @@ DOCX Editor also supports an API to store the document into a blob.
 {% include code-snippet/document-editor/asp-net-mvc/export-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-blob.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
