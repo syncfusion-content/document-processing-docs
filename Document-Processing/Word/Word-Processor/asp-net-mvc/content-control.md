@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Content Control in ASP.NET MVC DOCX Editor | Syncufusion
+title: Content Control in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn here all about Content Control in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content Control
@@ -82,12 +82,16 @@ container.documentEditor.importContentControlData(data);
 ## Export content control properties
 
 Content control properties can be exported using the `exportContentControlData` method.
+
+{% highlight ts %}
 var contentControlInfos = container.documentEditor.exportContentControlData();
 {% endhighlight %}
 
 ## Reset content control
 
 Content control properties can be reset using the `resetContentControlData` method.
+
+{% highlight ts %}
 var data = [];
 var contentControlData = { title: placeHolderPrefix + 'Name', tag: '', value: 'John', canDelete: false, canEdit: false, type: 'RichText' };
 data.push(contentControlData);
