@@ -14,9 +14,7 @@ domainurl: ##DomainURL##
 
 The Vue PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
-### Steps to open the PDF file from Azure Active Directory
-
----
+### Steps to open and save PDF files from Azure Active Directory
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
 

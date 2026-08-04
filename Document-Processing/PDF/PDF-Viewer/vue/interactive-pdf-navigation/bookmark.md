@@ -232,8 +232,6 @@ export default {
 
 Use the **goToBookmark** method to navigate to a bookmark programmatically. The method expects valid bookmark coordinates (zero-based page index and a Y offset). If the specified bookmark does not exist, the call may throw an error—guard calls with error handling or verify existence first using `getBookmarks()`.
 
-The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
-
 {% tabs %}
 {% highlight html tabtitle="Composition API" %}
 
@@ -370,7 +368,6 @@ Use the [**getBookmarks**](https://ej2.syncfusion.com/vue/documentation/api/pdfv
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Page navigation](page)
+- [Page thumbnail navigation](page-thumbnail)
 

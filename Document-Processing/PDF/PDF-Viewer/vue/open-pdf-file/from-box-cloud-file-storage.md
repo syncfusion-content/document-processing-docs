@@ -14,7 +14,7 @@ Follow these steps to load a PDF from Box cloud storage using the server-backed 
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
+Create a developer account and a Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
 
 **Step 2:** Create a PDF Viewer sample in Vue
 

@@ -54,9 +54,9 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
   // Create a storage client with Application Default Credentials
   _storageClient = StorageClient.Create(credentials);
 
-   _configuration = configuration;
+  _configuration = configuration;
 
-   _bucketName = _configuration.GetValue<string>("BucketName");
+  _bucketName = _configuration.GetValue<string>("BucketName");
 }
 ```
 

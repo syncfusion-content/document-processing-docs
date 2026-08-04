@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page navigation in PDF Viewer
+# Page navigation in Vue PDF Viewer
 
 The Vue PDF Viewer supports internal and external navigation methods.
 
@@ -528,8 +528,7 @@ For a runnable example, explore the [PDF Viewer page navigation sample](https://
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-thumbnail-navigation/)
-
-- [Feature modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/feature-module/)
+- [Bookmark navigation](bookmark)
+- [Page navigation](page)
+- [Page thumbnail navigation](page-thumbnail)
+- [Feature modules](../feature-module)

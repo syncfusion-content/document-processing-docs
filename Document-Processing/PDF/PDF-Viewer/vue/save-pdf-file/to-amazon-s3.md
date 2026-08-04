@@ -34,9 +34,9 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
-
 N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+
+2. Configure the AWS credentials after the import:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ N> Replace the placeholder values with the AWS region and credentials. For produ
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}

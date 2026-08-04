@@ -115,7 +115,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 N> Replace the placeholders with the appropriate Box access token, folder ID, client ID, and client secret. For production, avoid storing secrets in configuration files; use environment variables or a secure secret manager and follow Box best practices for OAuth or JWT authentication.
 
-**Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
+**Step 4:**  Set the PDF Viewer Properties in Vue PDF Viewer component
 
 Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Box cloud storage, and ensure that the document exists in the target folder.
 

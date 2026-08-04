@@ -62,7 +62,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - In the Storage account, open **Containers**, create or select a container, and upload the PDF document intended for viewing.
 
 2. **Upload the PDF file**:
-  - Create a new container and upload the PDF document the want to access in the PDF Viewer.
+  - Create a new container, and upload the PDF document you want to access in the PDF Viewer.
 
   ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
 ---
