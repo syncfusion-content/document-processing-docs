@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
-To get started with integrating collaborative editing, refer to [Collaborative editing using Redis cache in ASP.NET MVC](./using-redis-cache-asp-net).
+To get started with integrating collaborative editing, refer to [Collaborative editing using Redis cache in ASP.NET Core](./using-redis-cache-asp-net).
 
 ## Prerequisites
 
@@ -39,4 +39,4 @@ N> 2. The above metrics are based solely on the collaborative editing module. Ac
 
 ## See Also
 
-- [Collaborative editing using Redis cache in ASP.NET MVC](./using-redis-cache-asp-net)
+- [Collaborative editing using Redis cache in ASP.NET Core](./using-redis-cache-asp-net)
