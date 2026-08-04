@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in Angular with Redis in ASP.NET Core
+# Collaborative Editing in Angular Document Editor with Redis in ASP.NET Core
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 

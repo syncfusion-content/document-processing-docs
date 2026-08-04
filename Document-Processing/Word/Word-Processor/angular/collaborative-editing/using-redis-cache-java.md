@@ -14,7 +14,7 @@ This feature allows multiple users to work on the same document simultaneously i
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
+The following are needed to enable collaborative editing in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor)
 
 - `SockJS`
 - `Redis`

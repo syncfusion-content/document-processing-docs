@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Comments in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 
