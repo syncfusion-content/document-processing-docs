@@ -1,17 +1,17 @@
 ---
 layout: post
-title: View in Document Editor Control | Syncfusion
-description: Learn here all about View in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in ASP.NET Core DOCX Editor Control | Syncfusion
+description: Learn all about the View options in the Syncfusion Document Editor component.
 platform: document-processing
 control: View
 documentation: ug
 ---
 
-# View in DocumentEditor
+# View in Document Editor
 
-## Web Layout
+## Web layout
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows to change the view to web layout and print using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html)
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows you to change the view to either web layout or print using the [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html) enum.
 
 
 {% tabs %}
@@ -21,15 +21,15 @@ documentation: ug
 {% highlight c# tabtitle="Web-layout.cs" %}
 {% endhighlight %}{% endtabs %}
 
-### Online Demo
+### Online demo
 
-Explore how to view Word documents in web layout using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/weblayout#/tailwind3).
+Explore how to view Word documents in web layout using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/weblayout#/tailwind3).
 
 ## Ruler
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the Document Editor.
 
-The following example illustrates how to enable ruler in Document Editor
+The following example illustrates how to enable the ruler in the Document Editor.
 
 
 {% tabs %}
@@ -41,15 +41,15 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-### Online Demo
+### Online demo
 
-Explore how to use the ruler in the ASP.NET Core Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ruler#/tailwind3).
+Explore how to use the ruler in the ASP.NET Core Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ruler#/tailwind3).
 
-## Navigation Pane
+## Navigation pane
 
-Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
+The heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
 
-The following example illustrates how to enable heading navigation pane in Document Editor
+The following example illustrates how to enable the heading navigation pane in the Document Editor.
 
 
 {% tabs %}
@@ -61,6 +61,6 @@ The following example illustrates how to enable heading navigation pane in Docum
 {% endhighlight %}
 {% endtabs %}
 
-### Online Demo
+### Online demo
 
-Explore how to navigate through headings in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headingnavigation#/tailwind3).
+Explore how to navigate through headings in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headingnavigation#/tailwind3).
