@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Import in Document Editor Component | Syncfusion
+title: Import in DOCX Editor Component | Syncfusion
 description: Learn here all about import in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
@@ -10,7 +10,7 @@ documentation: ug
 
 # Import in Document Editor Component
 
-In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 
 {% tabs %}
@@ -37,9 +37,9 @@ In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net
 
 
 
-## Convert word documents into SFDT
+## Convert Word documents into SFDT
 
-You can convert word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps to convert word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
+You can convert Word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you convert Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
 
 {% tabs %}
@@ -52,7 +52,7 @@ You can convert word documents into SFDT format using the .NET Standard library 
 {% endtabs %}
 
 
-Here’s how to handle the server-side action for converting word document into SFDT.
+Here’s how to handle the server-side action for converting a Word document into SFDT.
 
 ```csharp
 [AcceptVerbs("Post")]
