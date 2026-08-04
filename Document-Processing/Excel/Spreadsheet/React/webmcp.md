@@ -69,13 +69,14 @@ Once WebMCP is enabled, call the built-in `registerWebMcpTools()` public method 
 
 **Signature:**
 ```ts
-public registerWebMcpTools(prefix?: string, toolNames?: string[]): void
+public registerWebMcpTools(prefix?: string, toolNames?: string[], exposedTo?: string[]): void
 ```
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `prefix` | `string` | ❌ | Unique prefix to avoid name collisions across multiple instances (e.g. `sales`, `requirement`). Defaults to the spreadsheet element's `id` if omitted. |
 | `toolNames` | `string[]` | ❌ | Array of permitted tool names to register. When omitted, all available tools are registered. |
+| `exposedTo` | `string[]` | ❌ | Optional list of trusted origins allowed to access the tool in cross-origin embedding scenarios. Values must be secure origins (e.g., `"https://trusted.example"`). When omitted, the tool is not exposed to additional cross-origin sites. |
 
 ### Use in Your Application
 
@@ -96,6 +97,8 @@ const spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 ```
+
+> **Note:** When the Spreadsheet component is destroyed, all tools registered via `registerWebMcpTools()` are **automatically unregistered** from `document.modelContext`. This cleanup is managed internally using an `AbortController`, preventing memory leaks and orphaned tool registrations without requiring any manual cleanup code.
 
 ## WebMCP Customization
 
@@ -126,6 +129,20 @@ spreadsheet2.registerWebMcpTools('gdp');
 ```
 
 Now MCP clients can call `sales_getCellData`, `sales_editCell`, etc., distinguishing between instances automatically.
+
+### Cross-Origin Tool Access
+
+Use the `exposedTo` parameter to grant access to tools from trusted cross-origin sites. This is useful when your spreadsheet is embedded in a partner domain or a micro-frontend architecture:
+
+```ts
+// Allow tools to be accessed from a trusted partner origin
+spreadsheet.registerWebMcpTools('sales', ['getCellData', 'getRangeData'], [
+    'https://partner.example.com',
+    'https://dashboard.trusted.com'
+]);
+```
+
+> **Security Note:** Only specify origins you explicitly trust. When `exposedTo` is omitted, the tools are not exposed to any additional cross-origin sites.
 
 ### Event Handling
 
