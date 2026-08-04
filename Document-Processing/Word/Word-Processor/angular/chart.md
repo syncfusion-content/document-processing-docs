@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Chart in Angular Document editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Chart in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in Angular Document editor component
+# Chart in Angular Document Editor component
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
 

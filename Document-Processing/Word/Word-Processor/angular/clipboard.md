@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Clipboard in Angular Document editor component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Clipboard in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in Angular Document editor component
+# Clipboard in Angular Document Editor component
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into the clipboard in HTML format, so that it can be pasted in any application that supports clipboard.
 
@@ -38,7 +38,7 @@ N> Due to browser limitation of getting content from the system clipboard, paste
 
 Document Editor exposes an API to enable local paste within the control. On enabling this, the following is performed:
 * Selected contents will be stored to an internal clipboard in addition to the system clipboard.
-* Clipboard paste will be overridden, and internally stored data (SFDT data) that has formatted text will be pasted using paste() API in the Document editor.
+* Clipboard paste will be overridden, and internally stored data (SFDT data) that has formatted text will be pasted using paste() API in the Document Editor.
 
 Refer to the following sample code.
 
@@ -99,7 +99,7 @@ this.documentEditor.editor.paste();
 
 ### Paste options in context menu
 
-In Document editor, paste options in the context menu will be in disabled state if you try to copy/paste content from outside of the Document editor. It gets enabled when **enableLocalPaste** is true and trying to copy/paste content inside the Document editor.
+In Document Editor, paste options in the context menu will be in disabled state if you try to copy/paste content from outside of the Document Editor. It gets enabled when **enableLocalPaste** is true and trying to copy/paste content inside the Document Editor.
 
 N> Due to browser limitation of getting content from system clipboard, paste using API and context menu option doesn't work. Hence, the paste option is disabled in context menu.
 Alternatively, you can use the keyboard shortcuts,
