@@ -3896,6 +3896,6 @@ export default {
 
 ## See also
 
-- [Annotation events](./annotations/annotation-event)
-- [Form field events](./form-designer/form-field-events)
-- [Organize PDF events](./organize-pdf/organize-pdf-events)
+- [Annotation events](./annotation/annotation-event)
+- [Form field events](./forms/form-field-events)
+- [Organize PDF events](./organize-pages/events)
