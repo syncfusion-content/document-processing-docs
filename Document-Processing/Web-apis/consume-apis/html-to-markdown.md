@@ -1,17 +1,19 @@
 ---
-title: Convert HTML to Markdown Using Syncfusion Web API 
-description: Convert HTML files to Markdown format using Syncfusion Web API. Extract structured text, headings, tables, and formatting with fast, reliable server-side conversion.
+title: Convert HTML Documents to Markdown Using Syncfusion Web API 
+description: Convert HTML documents to Markdown format using Syncfusion Web API. Preserve headings, tables, lists, and formatting with reliable server-side HTML to Markdown conversion.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting HTML to Markdown Using Syncfusion Web API 
+# Convert HTML Documents to Markdown Using Syncfusion Web API
 
-The Syncfusion HTML to Markdown Web API allows you to convert HTML documents into well‑structured Markdown format while preserving the content and readability of the document. It supports accurate conversion of elements such as headings, paragraphs, tables, lists, and inline formatting, making the output ready for use in documentation systems, content pipelines, and AI-powered workflows.
+The Syncfusion HTML to Markdown Web API converts HTML documents into well-structured Markdown files while preserving document content and formatting. It accurately converts headings, paragraphs, tables, lists, links, and inline formatting to generate readable and maintainable Markdown output.
+
+The API is useful for content migration, documentation websites, knowledge bases, content management systems, and AI-powered workflows.
 
 ## Convert HTML to Markdown
 
-To convert an HTML document to Markdown, send a request to the /v1/conversion/html-to-markdown endpoint, including both the HTML file as input and the settings JSON.
+To convert an HTML document to Markdown format, send a request to the /v1/conversion/html-to-markdown endpoint with the HTML document and conversion settings in the request body.
 
 {% tabs %}
 
@@ -75,12 +77,12 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## HTML to Markdown Settings
-**InputFile** 
+**File** 
 
-Specifies the key name of the uploaded HTML file to be converted to Markdown.
+Specifies the form field key name of the uploaded HTML document to be converted.
 
 ## HTML to Markdown Job Response 
-Once the request is sent, it will create a conversion job to convert the HTML document to Markdown and return the job details as follows:
+Once the request is sent, a conversion job is created, and the API returns the job details as shown below.
 
 ```
 {
@@ -91,7 +93,7 @@ Once the request is sent, it will create a conversion job to convert the HTML do
 ```
 ## Check HTML to Markdown Job Status
 
-Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
+After submitting the conversion request, use the job ID to check the conversion status by sending a request to the /v1/conversion/status/{jobID} endpoint.
 
 {% tabs %}
 
@@ -128,7 +130,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+You will receive one of the following job statuses while the conversion is in progress. When the job completed successfully, the generated Markdown file is returned.
 
 **Job Statuses:**
 
@@ -159,4 +161,4 @@ You will receive one of the following statuses until the job is completed. Upon 
 }
 ```
 
-N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing APIs are available as Docker-based services for simplified deployment and scalability. [Try them from Docker Hub](https://hub.docker.com/r/syncfusion/document-processing-apis)

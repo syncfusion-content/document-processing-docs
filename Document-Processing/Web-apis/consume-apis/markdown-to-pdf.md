@@ -1,17 +1,19 @@
 ---
-title: Convert Markdown to PDF Using Syncfusion Web API 
-description: Convert Markdown files to high-quality PDFs using Syncfusion Web API. Preserve headings, tables, code blocks, and formatting with fast, reliable server-side conversion.
+title: Convert Markdown Files to PDF Using Syncfusion Web API 
+description: Convert Markdown files to PDF documents using Syncfusion Web API. Preserve headings, tables, code blocks, lists, and formatting with reliable server-side conversion.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting Markdown to PDF Using Syncfusion Web API 
+# Convert Markdown Files to PDF Using Syncfusion Web API 
 
-The Syncfusion Markdown to PDF Web API allows you to convert Markdown documents into well‑formatted, high‑quality PDF files while preserving the structure and readability of the content. It supports accurate rendering of elements such as headings, paragraphs, tables, code blocks, lists, and inline formatting in the resulting PDF. The conversion can be customized with options like PDF/A compliance for long‑term archiving.
+The Syncfusion Markdown to PDF Web API converts Markdown documents into PDF files while preserving document structure and formatting. It accurately renders headings, paragraphs, tables, code blocks, lists, and inline formatting to generate visually consistent PDF documents.
+
+The API is useful for documentation publishing, report generation, knowledge bases, technical content distribution, and long-term document archiving.
 
 ## Convert Markdown to PDF
 
-To convert a Markdown document to PDF, send a request to the /v1/conversion/markdown-to-pdf endpoint, including both the Markdown file as input and the settings JSON.
+To convert a Markdown document to PDF, send a request to the /v1/conversion/markdown-to-pdf endpoint with the Markdown file and conversion settings in the request body.
 
 {% tabs %}
 
@@ -79,24 +81,24 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## Markdown to PDF Settings
-**InputFile** 
+**File** 
 
-Specifies the key name of the uploaded Markdown file to be converted to PDF.
+Specifies the form field key name of the uploaded Markdown file to be converted.
 
 **Password** 
 
-Specifies the password to protect the output PDF document after conversion. 
+Specifies the password used to protect the generated PDF document after conversion.
 
 **PdfCompliance** 
 
-Defines the PDF/A compliance level for archival and standards adherence. Supported levels include PDF/A‑1B, PDF/A‑2B, PDF/A‑3B, and PDF/A‑4.
+Specifies the PDF compliance standard to apply to the generated PDF document. Supported values include PDF/A-1B, PDF/A-2B, PDF/A-3B, and PDF/A-4.
 
 **EnableAccessibility**
 
-Specifies whether to enable accessibility (tagged PDF) support in the output PDF document.
+Specifies whether accessibility support (tagged PDF) should be enabled in the generated PDF document.
 
 ## Markdown to PDF Job Response 
-Once the request is sent, it will create a conversion job to convert the Markdown document to PDF and return the job details as follows:
+Once the request is sent, a conversion job is created, and the API returns the job details as shown below.
 
 ```
 {
@@ -107,7 +109,7 @@ Once the request is sent, it will create a conversion job to convert the Markdow
 ```
 ## Check Markdown to PDF Job Status
 
-Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
+After submitting the conversion request, use the job ID to check the conversion status by sending a request to the /v1/conversion/status/{jobID} endpoint.
 
 {% tabs %}
 
@@ -144,7 +146,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+You will receive one of the following job statuses while the conversion is in progress. When the job is completed successfully, the generated PDF document is returned.
 
 **Job Statuses:**
 
@@ -175,4 +177,4 @@ You will receive one of the following statuses until the job is completed. Upon 
 }
 ```
 
-N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing APIs are available as Docker-based services for simplified deployment and scalability. [Try them from Docker Hub](https://hub.docker.com/r/syncfusion/document-processing-apis)

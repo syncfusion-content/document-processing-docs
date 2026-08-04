@@ -1,17 +1,19 @@
 ---
-title: Convert PDF to Markdown Using Syncfusion Web API 
-description: Convert PDF files to Markdown format using Syncfusion Web API. Extract structured text, tables, and content from PDFs with fast, reliable server-side conversion.
+title: Convert PDF Documents to Markdown Using Syncfusion Web API 
+description: Convert PDF documents to Markdown format using Syncfusion Web API. Extract text, tables, headings, and structured content for documentation, content processing, and AI-powered workflows.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting PDF to Markdown Using Syncfusion Web API 
+# Convert PDF Documents to Markdown Using Syncfusion Web API 
 
-The Syncfusion PDF to Markdown Web API allows you to extract and convert content from PDF documents into well‑structured Markdown format. It accurately extracts text, tables, and other document elements, making the content ready for use in documentation systems, content pipelines, and AI-powered workflows.
+The Syncfusion PDF to Markdown Web API converts PDF documents into well-structured Markdown files while preserving the logical flow and readability of the content. It accurately extracts text, headings, tables, lists, and other structured document elements for seamless content conversion.
+
+The API is useful for content migration, documentation generation, knowledge management systems, search indexing, and AI-powered document processing workflows.
 
 ## Convert PDF to Markdown
 
-To convert a PDF document to Markdown, send a request to the /v1/conversion/pdf-to-markdown endpoint, including the PDF file as input along with the settings JSON.
+To convert a PDF document to Markdown format, send a request to the /v1/conversion/pdf-to-markdown endpoint with the PDF document and conversion settings in the request body.
 
 {% tabs %}
 
@@ -83,7 +85,7 @@ Specifies the form field key name of the uploaded PDF file to be converted to Ma
 Specifies the password required to open a protected PDF document before converting it to Markdown. 
 
 ## PDF to Markdown Job Response 
-Once the request is sent, it will create a conversion job to convert the PDF document to Markdown and return the job details as follows:
+Once the request is sent, a conversion job is created, and the API returns the job details as shown below.
 
 ```
 {
@@ -94,7 +96,7 @@ Once the request is sent, it will create a conversion job to convert the PDF doc
 ```
 ## Check PDF to Markdown Job Status
 
-Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
+After submitting the conversion request, use the job ID to check the conversion status by sending a request to the /v1/conversion/status/{jobID} endpoint.
 
 {% tabs %}
 
@@ -131,7 +133,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+You will receive one of the following job statuses while the conversion is in progress. When the job completed successfully, the generated Markdown file is returned.
 
 **Job Statuses:**
 
@@ -162,4 +164,4 @@ You will receive one of the following statuses until the job is completed. Upon 
 }
 ```
 
-N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing APIs are available as Docker-based services for simplified deployment and scalability. [Try them from Docker Hub](https://hub.docker.com/r/syncfusion/document-processing-apis)

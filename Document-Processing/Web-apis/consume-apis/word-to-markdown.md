@@ -1,17 +1,18 @@
 ---
 title: Convert Word to Markdown Using Syncfusion Web API 
-description: Convert Word documents to Markdown format using Syncfusion Web API. Extract structured text, tables, headings, and formatting with fast, reliable server-side conversion.
+description: Convert Word documents (DOCX) to Markdown format using Syncfusion Web API. Preserve headings, tables, lists, and text formatting with reliable server-side document conversion.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Converting Word to Markdown Using Syncfusion Web API 
+# Convert Word Documents to Markdown using Syncfusion Web API
 
-The Syncfusion Word to Markdown Web API allows you to convert Word documents into well‑structured Markdown format while preserving the content and readability of the document. It supports accurate conversion of elements such as headings, paragraphs, tables, lists, and inline formatting. The conversion also supports password-protected Word documents.
+The Syncfusion Word to Markdown Web API converts Word documents into well-structured Markdown files while preserving document content and formatting. It accurately converts headings, paragraphs, tables, lists, and inline text formatting to maintain the structure and readability of the original document.
+The API is useful for documentation websites, knowledge bases, content management systems, content migration workflows, and AI-powered applications.
 
 ## Convert Word to Markdown
 
-To convert a Word document to Markdown, send a request to the /v1/conversion/word-to-md endpoint, including both the Word file as input and the settings JSON.
+To convert a Word document to Markdown format, send a request to the /v1/conversion/word-to-md endpoint with the Word document and conversion settings in the request body.
 
 {% tabs %}
 
@@ -75,12 +76,16 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 {% endtabs %}
 
 ## Word to Markdown Settings
+**File**
+
+Specifies the form field key name of the uploaded Word document to be converted.
+
 **Password** 
 
-Specifies the password required to open a protected Word document before converting it to Markdown. 
+Specifies the password required to open a protected Word document before converting it to Markdown.
 
 ## Word to Markdown Job Response 
-Once the request is sent, it will create a conversion job to convert the Word document to Markdown and return the job details as follows:
+Once the request is sent, a conversion job is created, and the API returns the job details as shown below:
 
 ```
 {
@@ -91,7 +96,7 @@ Once the request is sent, it will create a conversion job to convert the Word do
 ```
 ## Check Word to Markdown Job Status
 
-Next, you can retrieve the job status by sending a request to the /v1/conversion/status/{jobID} endpoint with the job ID.
+After submitting the conversion request, use the job ID to check the conversion status by sending a request to the /v1/conversion/status/{jobID} endpoint.
 
 {% tabs %}
 
@@ -128,7 +133,7 @@ Console.WriteLine(await response.Content.ReadAsStringAsync());
 
 {% endtabs %}
 
-You will receive one of the following statuses until the job is completed. Upon completion, you will receive the actual output file.
+You will receive one of the following job statuses while the conversion is in progress. When the job completed successfully, the generated Markdown file is returned.
 
 **Job Statuses:**
 
@@ -159,4 +164,4 @@ You will receive one of the following statuses until the job is completed. Upon 
 }
 ```
 
-N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)
+N> The Syncfusion Document Processing APIs are available as Docker-based services for simplified deployment and scalability. [Try them from Docker Hub](https://hub.docker.com/r/syncfusion/document-processing-apis).
