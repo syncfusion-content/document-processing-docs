@@ -124,6 +124,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 
 |Key Combination|Description|
 |---------------|-----------|
+|Ctrl + F| Opens options pane.|
 |Ctrl + D| Opens font dialog.|
 |Ctrl + K| Opens hyperlink dialog.|
 
