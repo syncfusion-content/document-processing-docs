@@ -20,7 +20,7 @@ Host the Syncfusion PDF Viewer server container on Azure Kubernetes Service (AKS
 az login
 ```
 
-Ensure the AKS nodes can pull the `syncfusion/pdfviewerserver:latest` image from Docker Hub or from a private registry mirror if outbound internet access is restricted.
+Ensure the AKS nodes can pull the `syncfusion/pdfviewer server:latest` image from Docker Hub or from a private registry mirror if outbound internet access is restricted.
 
 ## Deploy the PDF Viewer server
 

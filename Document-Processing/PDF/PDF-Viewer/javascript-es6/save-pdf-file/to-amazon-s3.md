@@ -29,7 +29,7 @@ import * as AWS from 'aws-sdk';
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognition, STS) or perform uploads via a trusted server.
 
 ```typescript
 AWS.config.update({

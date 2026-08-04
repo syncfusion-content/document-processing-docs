@@ -10,11 +10,11 @@ documentation: ug
 
 The Syncfusion PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 
-Use the PDF Viewer server Docker image to host this backend quickly in containerized environments. The container exposes a REST API that the TypeScript PDF Viewer client calls through its `serviceUrl` value.
+Use the PDF Viewer server Docker image to host this back end quickly in containerized environments. The container exposes a REST API that the TypeScript PDF Viewer client calls through its `serviceUrl` value.
 
 PDF Viewer is a commercial product and requires a valid license in production environments. Request a license or trial key from the [Syncfusion licensing portal](https://help.syncfusion.com/common/essential-studio/licensing/licensing-faq/where-can-i-get-a-license-key).
 
-PDF Viewer is available for JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor. Choose the Docker image when you need a lightweight deployment option or when multiple clients share the same backend.
+PDF Viewer is available for JavaScript, Angular, React, Vue, ASP.NET Core, ASP.NET MVC, and Blazor. Choose the Docker image when you need a lightweight deployment option or when multiple clients share the same back end.
 
 ## Prerequisites
 
