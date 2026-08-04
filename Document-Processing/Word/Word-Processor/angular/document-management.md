@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Document management in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for restricting editing. When the protected document includes range permissions, only the unique user or user group is authorized to edit a separate text area.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides support for restricting editing. When the protected document includes range permissions, only the unique user or user group is authorized to edit a separate text area.
 
 ## Set current user
 

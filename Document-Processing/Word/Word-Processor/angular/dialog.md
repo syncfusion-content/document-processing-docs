@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Dialog in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
 ## Font Dialog
 
