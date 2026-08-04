@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print events in JavaScript PDF Viewer
 
-Subscribe to print lifecycle events to track usage and implement custom workflows.
+Subscribe to print life cycle events to track usage and implement custom workflows.
 
 | Name         | Description |
 |--------------|-------------|

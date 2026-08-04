@@ -33,9 +33,9 @@ domainurl: ##DomainURL##
 
 ![Create App Service settings dialog](../images/azure_pdfviewer.png)
 
-**Step 5:** Select Create. After deployment, the app is available at `https://<app_name>.azurewebsites.net` (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`).
+**Step 5:** Select Create. After deployment, the app is available at the Azure-provided default domain, for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net`.
 
-**Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
+**Step 6:** Verify the API at the corresponding `/api/pdfviewer` path on the same domain. A default GET response indicates the server is running.
 
 Use the service endpoint (for example, https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client's serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/)
 

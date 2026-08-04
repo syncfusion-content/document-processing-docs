@@ -30,7 +30,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (such as AWS STS) or perform uploads via a trusted server.
 
 ```javascript
 AWS.config.update({

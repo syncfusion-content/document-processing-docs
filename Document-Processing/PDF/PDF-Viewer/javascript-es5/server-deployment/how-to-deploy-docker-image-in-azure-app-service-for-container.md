@@ -41,7 +41,7 @@ az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappserv
 
 **Step 4:** Browse to the app.
 
-Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewer-server.azurewebsites.net`). Use HTTPS in production. Verify the server API returns a default response at `https://<app_name>.azurewebsites.net/api/pdfviewer`.
+Open the app at the Azure-provided default domain, for example, `https://pdfviewer-server.azurewebsites.net`. Use HTTPS in production. Verify the server API returns a default response at the corresponding `/api/pdfviewer` path on the same domain.
 
 Append the service endpoint (for example, `https://pdfviewer-server.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client's `serviceUrl`.
 
