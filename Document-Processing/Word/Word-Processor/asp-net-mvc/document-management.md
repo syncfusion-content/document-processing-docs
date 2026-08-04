@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Document Management in ASP.NET MVC Document Editor Component
-description: Learn here all about Document Management in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Document Management in ASP.NET MVC DOCX Editor Component | Syncfusion
+description: Learn here all about Document Management in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document Management
 documentation: ug
 ---
 
 
-# Document management in Document Editor Component
+# Document management in DOCX Editor Component
 
-Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group is only authorized to edit separate text area.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permissions, only a unique user or user group is authorized to edit a separate text area.
 
-## Set current user
+## Set the current user
 
 You can use the `currentUser` property to authorize the current document user by name, email, or user group name.
 
-The following code shows how to set currentUser
+The following code shows how to set `currentUser`.
 
 ```typescript
 container.documentEditor.currentUser = 'engineer@mycompany.com';
@@ -26,7 +26,7 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 
 You can highlight the editable region of the current user using the `userColor` property.
 
-The following code shows how to set userColor.
+The following code shows how to set `userColor`.
 
 ```typescript
 container.documentEditor.userColor = '#fff000';
@@ -34,15 +34,15 @@ container.documentEditor.userColor = '#fff000';
 
 ## Restrict Editing Pane
 
-Restrict Editing Pane provides the following options to manage the document:
+The Restrict Editing pane provides the following options to manage the document:
 
 * To apply formatting restrictions to the current document, select the allow formatting check box.
-* To apply editing restrictions to the current document, select the read only check box.
-* To add users to the current document, select more users option and add user from the popup dialog.
-* To include range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
-* To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
-* To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
+* To apply editing restrictions to the current document, select the read-only check box.
+* To add users to the current document, select the more users option and add a user from the popup dialog.
+* To include range permissions in the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
+* To apply the chosen editing restrictions, click the **YES, START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
+* To stop protection, select the **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
-* [How to protect the document in form filling mode](./form-fields.md/#protect-the-document-in-form-filling-mode)
-* [How to protect the document in comments only mode](./comments.md/#protect-the-document-in-comments-only-mode)
-* [How to protect the document in track changes only mode](./track-changes.md/#protect-the-document-in-track-changes-only-mode)
+* [How to protect the document in form-filling mode](./form-fields.md/#protect-the-document-in-form-filling-mode)
+* [How to protect the document in comments-only mode](./comments.md/#protect-the-document-in-comments-only-mode)
+* [How to protect the document in track-changes-only mode](./track-changes.md/#protect-the-document-in-track-changes-only-mode)
