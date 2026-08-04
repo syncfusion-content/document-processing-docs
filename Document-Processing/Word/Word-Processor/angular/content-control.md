@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content control in Angular Document editor component | Syncfusion
-description: Learn here all about Content Control in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Content control in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Content Control in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Content Control 
 documentation: ug

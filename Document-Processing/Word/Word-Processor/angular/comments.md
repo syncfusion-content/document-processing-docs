@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comments in Angular Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Comments in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments 
 documentation: ug

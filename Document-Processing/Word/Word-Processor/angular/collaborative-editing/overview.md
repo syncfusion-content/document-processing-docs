@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in Angular Document editor control | Syncfusion
+title: Collaborative Editing in Angular DOCX Editor control | Syncfusion
 description: Learn about collaborative editing in the Syncfusion Angular Document Editor control and how to implement real-time document collaboration.
 platform: document-processing
 control: Collaborative Editing

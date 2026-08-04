@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in Angular with Redis in Java | Syncfusion
-description: Learn about collaborative editing in Syncfusion Angular Document editor control With Redis in Java of Syncfusion Essential JS 2 and more
+description: Learn about collaborative editing in Syncfusion Angular Document Editor control With Redis in Java of Syncfusion Essential JS 2 and more
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
