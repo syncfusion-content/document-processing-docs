@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Collaborative Editing in Angular DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in Angular DOCX Editor to allow multiple users to work on a document simultaneously.
+description: Learn how to enable collaborative editing in Angular Document Editor to allow multiple users to work on a document simultaneously.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Angular DOCX Editor
+# Collaborative Editing in Angular with Redis in ASP.NET Core
 
-Syncfusion® Angular DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
+The following are needed to enable collaborative editing in Document Editor.
 
 - SignalR
 - Redis
@@ -25,7 +25,7 @@ SignalR enables real-time communication by instantly sending and receiving docum
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
 The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
 
@@ -204,7 +204,7 @@ initializeSignalR = (): void => {
 
     this.connection.onclose(async () => {
       if (this.connection && this.connection.state === HubConnectionState.Disconnected) {
-        alert('Connection lost. Please relod the browser to continue.');
+        alert('Connection lost. Please reload the browser to continue.');
       }
     });
   }
@@ -414,7 +414,7 @@ Add the following code to the file to manage SignalR groups using room names.
             // Add the connection ID to the group
             await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
  
-            //To ensure whether the room exixts in the Redis cache
+            //To ensure whether the room exists in the Redis cache
             bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
             if (roomExists)
             {
@@ -422,7 +422,7 @@ Add the following code to the file to manage SignalR groups using room names.
                 var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
                 var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
  
-                //Send the exisiting user details to the newly joined user. 
+                //Send the existing user details to the newly joined user. 
                 await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
             }
  
@@ -432,7 +432,7 @@ Add the following code to the file to manage SignalR groups using room names.
             // Store the room name with the connection ID
             await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
  
-            // Notify all the exsisiting users in the group about the new user
+            // Notify all the existing users in the group about the new user
             await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
         }
 
@@ -467,7 +467,7 @@ The following code snippet demonstrates how to disconnect a connection using Sig
                 if (pendingOps.Length > 0)
                 {
                     List<ActionInfo> actions = new List<ActionInfo>();
-                    // Prepare the message fir adding it in background service queue.
+                    // Prepare the message for adding it in background service queue.
                     foreach (var element in pendingOps)
                     {
                         actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
@@ -557,7 +557,7 @@ The following code snippet demonstrates how the operations are cached and update
             try
             {
                 ActionInfo modifiedAction = await AddOperationsToCache(param);
-                //After transformation broadcast changes to all users in the gropu
+                //After transformation broadcast changes to all users in the group
                 await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
                 return modifiedAction;
             }
