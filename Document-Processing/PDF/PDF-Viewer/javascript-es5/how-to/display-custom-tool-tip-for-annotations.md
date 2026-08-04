@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display a custom tooltip for annotations in JavaScript PDF Viewer | Syncfusion
+title: Display custom annotation tooltip in PDF Viewer | Syncfusion
 description: Learn how to display a custom tooltip for annotations in the JavaScript PDF Viewer using the annotationMouseover and annotationMouseLeave events.
 platform: document-processing
 control: PDF Viewer
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display a custom tooltip for annotations in JavaScript PDF Viewer
+# Display a custom tooltip for annotations in PDF Viewer
 
-Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationmouseover) and `annotationMouseLeave` events.
+Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer#annotationmouseover) and `annotationMouseLeave` events.
 
 - Include the JavaScript PDF Viewer script and the `Annotation` module on the page.
 - Include the `ej.popups` module or equivalent tooltip library used in the example.
@@ -39,4 +39,4 @@ viewer.annotationMouseLeave = function(args) {
 
 ```
 
-Sample: [Display a custom tooltip for annotations sample on GitHub/StackBlitz](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)
+Sample: [Display a custom tooltip for annotations sample on StackBlitz](https://stackblitz.com/edit/ztmvjx-byzwvq?file=index.js)
