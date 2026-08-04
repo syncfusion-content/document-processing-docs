@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Resolve “Web service is not listening” error in ASP.NET Core PDF Viewer | Syncfusion
-description: Troubleshoot the “Web service is not listening” error in the Syncfusion ASP.NET Core PDF Viewer by validating network requests, cache configuration, and server availability.
+title: Fix Web Service Not Listening Error in Core PDF Viewer | Syncfusion
+description: Troubleshoot the “Web service is not listening” error in Syncfusion ASP.NET Core PDF Viewer by checking requests, cache settings, and server status.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve “Web service is not listening” error
+# Fix Web Service Connectivity Issues in PDF Viewer
 
 ![Browser showing the Web service is not listening error](../images/webservice.png)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer displays the **Web service is not listening** message when the component cannot establish a connection with the backend service or the service encounters an unhandled exception. Follow these diagnostic steps to identify and resolve the issue.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer displays the **Web service is not listening** message when the component cannot establish a connection with the back end service or the service encounters an unhandled exception. Follow these diagnostic steps to identify and resolve the issue.
 
 ## Diagnose the service response
 
@@ -59,7 +59,7 @@ The `Document pointer does not exist in the cache` exception indicates a mismatc
 To resolve this issue:
 
 1. **Clear the Cache:** Manually clear the contents of the cache directory specified in the PDF Viewer settings to remove corrupted or stale data.
-2. **Reload the Document:** Programmatically invoke the `Load()` method via the controller to re-initialize the document session.
+2. **Reload the Document:** Programmatically invoke the `Load()` method on the client viewer instance to re-initialize the document session.
 3. **App Restart:** Restart the application pool or service to refresh component states and clear memory-resident metadata.
 
 ## Internal server error
