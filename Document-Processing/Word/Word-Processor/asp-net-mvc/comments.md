@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Comments in ASP.NET MVC Document Editor Control | Syncfusion
+title: Comments in ASP.NET MVC DOCX Editor Control | Syncfusion
 description: Learn here all about comments in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments
@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# Comments in ASP.NET MVC in Document Editor Component
+# Comments in ASP.NET MVC DOCX Editor Component
 
-Document editor allows to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) lets you  you to add comments to documents. You can add, navigate, and remove comments in code and from the UI.
 
 ## Add a new comment
 
@@ -22,28 +22,7 @@ documentEditor.editor.insertComment('Test comment');
 
 ## Add a New Comment with Date, Author, and Status
 
-Comments can be inserted into the selected text with a specified date, author, and status.
-
-```typescript
-// In this example, a comment with the text "Nancy Davolio" is added by the author Rachel Green on July 23, 2024, at 2:30 PM. The isResolved status is set to false.
-
-// Create a specific date: July 23, 2024, at 2:30:00 PM.
-let specificDate = new Date(2024, 6, 23, 14, 30, 0); // Note: July is represented by 6 (0-based index).
-
-// Define the properties of the comment including author, date, and resolution status.
-let commentProperties = { 
-    author: 'Nancy Davolio',          // The author of the comment.
-    dateTime: specificDate,           // The date and time when the comment is created.
-    isResolved: false                 // The status of the comment; false indicates it is unresolved.
-};
-
-// Insert the comment with the specified properties into the document editor.
-documentEditor.editor.insertComment('Hello world', commentProperties);
-```
-
-## Add a New Comment with Date, Author, and Status
-
-Comments can be inserted into the selected text with a specified date, author, and status `insertComment`.
+Comments can be inserted into the selected text with a specified date, author, and status using `insertComment`.
 
 ```typescript
 // In this example, a comment with the text "Hello world"
@@ -55,7 +34,7 @@ Comments can be inserted into the selected text with a specified date, author, a
 var specificDate = new Date(2024, 6, 23, 14, 30, 0); 
 
 
-// Define the properties of the comment including author, date, and resolution status.
+// Define the properties of the comment, including author, date, and resolution status.
 var commentProperties = { 
     author: 'Nancy Davolio',          // The author of the comment.
     dateTime: specificDate,           // The date and time when the comment is created.
@@ -68,7 +47,7 @@ documentEditor.editor.insertComment('Hello world', commentProperties);
 
 ## Add a Reply Comment with Date, Author, and Status
 
-Reply comments can be inserted into the parent comment with a specified date, author using `insertReplyComment`.
+Reply comments can be inserted into the parent comment with a specified date and author using `insertReplyComment`.
 
 ```typescript
 // In this example, a comment with the text "Hello world"
@@ -79,7 +58,7 @@ Reply comments can be inserted into the parent comment with a specified date, au
 // Note: July is represented by 6 (0-based index).
 var specificDate = new Date(2024, 6, 23, 14, 30, 0);
 
-// Define the properties of the comment including author, date, and resolution status.
+// Define the properties of the comment, including author, date, and resolution status.
 var commentProperties = { 
     author: 'Nancy Davolio',          // The author of the comment.
     dateTime: specificDate,           // The date and time when the comment is created.
@@ -88,13 +67,13 @@ var commentProperties = {
 
 // Insert the comment with the specified properties into the Document Editor.
 var comment = documentEditor.editor.insertComment('Hello world', commentProperties);
-// Insert a reply comment with specified properties into the Document Editor
+// Insert a reply comment with the specified properties into the Document Editor.
 documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
 ```
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using `getComments`.
+The DOCX editor allows you to get the comments along with their replies and comment properties using `getComments`.
 
 ```typescript
 //Get Comments in the document along with the properties author, date, status.
@@ -103,7 +82,7 @@ var commentinfo = container.documentEditor.getComments();
 
 ## Comment navigation
 
-Next and previous comments can be navigated using the below code snippet.
+The next and previous comments can be navigated using the below code snippet.
 
 ```typescript
 //Navigate to next comment
@@ -115,7 +94,7 @@ documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be deleted using `deleteComment`.
+The current comment can be deleted using `deleteComment`.
 
 ```typescript
 //Delete the current selected comment.
@@ -131,7 +110,7 @@ container.documentEditor.editor.deleteComment(commentinfo[0].id);
 container.documentEditor.editor.deleteComment(commentinfo[0].replies[0].id);
 ```
 
-## Delete all comment
+## Delete all comments
 
 All the comments in the document can be deleted using the below code snippet.
 
@@ -141,9 +120,9 @@ documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments only mode
 
-Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user is allowed to add or edit comments alone in the document.
+The DOCX editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
+The DOCX editor provides an option to protect and unprotect the document using the `enforceProtection` and `stopProtection` APIs.
 
 
 
@@ -158,17 +137,17 @@ Document editor provides an option to protect and unprotect document using `enfo
 
 
 
-Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
+Comment only protection can be enabled in UI by using the [Restrict Editing pane](./document-management#restrict-editing-pane).
 
 ![Enable comment only protection](images/commentsonly.png)
 
-N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly`. In the `stopProtection` method, the parameter denotes the password.
 
 ## Mention Support in comments
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the `@` character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in Document Editor
+The following example illustrates how to enable mention support in the DOCX editor.
 
 
 {% tabs %}
@@ -183,7 +162,7 @@ The following example illustrates how to enable mention support in Document Edit
 
 ## Events
 
-DocumentEditor provides `beforeCommentAction` event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the `CommentActionEventArgs` object as an argument, which allows access to information about the comment.
+The DOCX editor provides the `beforeCommentAction` event, which is triggered on comment actions like Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve, and reopen. The event handler receives the `CommentActionEventArgs` object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
@@ -199,4 +178,4 @@ To demonstrate a specific use case, let’s consider an example where we want to
 
 ## Online Demo
 
-Explore how to add, view, and manage comments in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/comments#/tailwind3).
+Explore how to add, view, and manage comments in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/comments#/tailwind3).
