@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # PDF Viewer annotation events in Angular
 
-The PDF Viewer raises events for annotation and signature interactions (add, remove, move, resize, select, etc.). Handle these events to integrate custom workflows, telemetry, or UI updates. Code samples below demonstrate typical handlers — code blocks are preserved unchanged.
+The PDF Viewer raises events for annotation and signature interactions (add, remove, move, resize, select, etc.). Handle these events to integrate custom workflows, telemetry, or UI updates.
 
 | Annotation events               | Description                                                        |
 |---------------------------------|--------------------------------------------------------------------|

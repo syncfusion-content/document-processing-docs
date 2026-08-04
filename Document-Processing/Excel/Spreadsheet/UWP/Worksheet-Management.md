@@ -8,11 +8,11 @@ documentation: ug
 ---
 
 # Worksheet Management in UWP Spreadsheet (SfSpreadsheet)
-This section explains about the operations that are performed with the worksheet.
+This section explains the operations that can be performed on a worksheet.
 
 ## Insert and Delete
 
-SfSpreadsheet provides support to insert and delete the worksheets in a workbook.
+SfSpreadsheet supports inserting and deleting worksheets in a workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -31,7 +31,7 @@ spreadsheet.RemoveSheet("Sheet2");
 
 ## Hide and Unhide
 
-SfSpreadsheet provides support to hide and unhide the worksheets in a workbook.
+SfSpreadsheet supports hiding and unhiding worksheets in a workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -45,9 +45,9 @@ spreadsheet.UnhideSheet("Sheet 2");
 {% endhighlight %}
 {% endtabs %}
 
-## Rename a sheet programmatically
+## Rename a Sheet Programmatically
 
-SfSpreadsheet provides support to rename a worksheet in the workbook programmatically by using `RenameSheet` method.
+SfSpreadsheet provides support to rename a worksheet in the workbook programmatically by using the `RenameSheet` method.
 
 {% tabs %}
 	
@@ -63,7 +63,7 @@ spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
 
 ### Protecting a worksheet
 
-SfSpreadsheet provides support to protect the worksheet with or without password. This helps to prevent a user from modifying the contents of the worksheet. The protection of worksheet can be done with `ExcelSheetProtection` options also.
+SfSpreadsheet supports protecting the worksheet with or without a password. This helps to prevent a user from modifying the contents of the worksheet. The protection of a worksheet can also be done with `ExcelSheetProtection` options.
 
 The Protect sheet options are
 
@@ -87,7 +87,7 @@ The Protect sheet options are
 
 * DeletingColumns     - Allows the users to delete columns on the protected worksheet.
 
-* Objects             - Allows the users to edit the objects such as Graphic cells like charts,rich textbox, etc.
+* Objects             - Allows the users to edit the objects such as Graphic cells like charts, rich text box, and so on.
 
 {% tabs %}
 {% highlight c# %}
@@ -106,7 +106,7 @@ spreadsheet.UnProtectSheet(spreadsheet.ActiveSheet, "123");
 
 ### Protecting a workbook
 
-SfSpreadsheet provides support to protect the structure and windows of a workbook. By protecting the structure, prevent a user from adding or deleting worksheets or from displaying hidden worksheets. By protecting the windows in the workbook, you can control the size of the workbook, etc.
+SfSpreadsheet supports protecting the structure and windows of a workbook. Protecting the structure prevents a user from adding or deleting worksheets, or from displaying hidden worksheets. Protecting the windows in the workbook allows you control the size and position of the workbook.
 
 {% tabs %}
 {% highlight c# %}
@@ -122,7 +122,7 @@ spreadsheet.Unprotect("123");
 
 ## Gridlines
 
-SfSpreadsheet provides support to control the visibility and color of the Gridlines in a worksheet.
+SfSpreadsheet supports controlling the visibility and color of the Gridlines in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -138,7 +138,7 @@ spreadsheet.SetGridLinesVisibility(false);
 
 ## Headings
 
-SfSpreadsheet provides support to control the visibility of row and column headers in a worksheet
+SfSpreadsheet supports controlling the visibility of row and column headers in a worksheet.
 
 {% tabs %}
 {% highlight c# %}
@@ -151,7 +151,7 @@ spreadsheet.SetRowColumnHeadersVisibility(false);
 
 ## Zooming
 
-SfSpreadsheet provides support to zoom in and zoom out of a worksheet view. The property `AllowZooming` determines whether to allow zooming or not.
+SfSpreadsheet supports zooming in and out of a worksheet view. The property `AllowZooming` determines whether zooming is allowed.
 
 {% tabs %}
 {% highlight c# %}
@@ -162,11 +162,10 @@ spreadsheet.SetZoomFactor("Sheet1", 200);
 {% endhighlight %}
 {% endtabs %}
 
-The Events associated with the Zooming are 
+The Events associated with Zooming are:
 
-. `ZoomFactorChanged`
-
-. `ZoomFactorChanging`
+- `ZoomFactorChanged`
+- `ZoomFactorChanging`
 
 ## Events
 
@@ -182,30 +181,27 @@ Occurs when the workbook is to be created in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 <code>WorkbookLoaded</code></td><td>
-Occur when the workbook is loaded in SfSpreadsheet.</td></tr>
+Occurs when the workbook is loaded in SfSpreadsheet.</td></tr>
 <tr>
 <td>
-<code>WorksheetAdding</code>
-</td><td>
-Occurs when the worksheet is to be added in SfSpreadsheet.</td></tr>
+<code>WorksheetAdding</code></td><td>
+Occurs when a worksheet is about to be added in SfSpreadsheet.</td></tr>
 <tr>
 <td>
-<code>WorksheetAdded</code>
-Occurs when the worksheet is added in SfSpreadsheet.</td></tr>
+<code>WorksheetAdded</code></td><td>
+Occurs when a worksheet is added in SfSpreadsheet.</td></tr>
 <tr>
 <td>
-<code>WorksheetRemoving</code>
-</td><td>
-Occurs when the worksheet is to be removed from SfSpreadsheet.</td></tr>
+<code>WorksheetRemoving</code></td><td>
+Occurs when a worksheet is about to be removed from SfSpreadsheet.</td></tr>
 <tr>
 <td>
-<code>WorksheetRemoved</code>
-</td><td>
-Occurs when the worksheet is removed from SfSpreadsheet.</td></tr>
+<code>WorksheetRemoved</code></td><td>
+Occurs when a worksheet is removed from SfSpreadsheet.</td></tr>
 <tr>
 <td>
 <code>WorkbookUnloaded</code></td><td>
-Occurs when the workbook is unloaded or removed from the SfSpreadsheet.</td></tr>
+Occurs when the workbook is unloaded from the SfSpreadsheet.</td></tr>
 <tr>
 <td>
 <code>ZoomFactorChanged</code></td><td>
@@ -237,5 +233,5 @@ Occurs when opening the context menu of the cell in SfSpreadsheet.</td></tr>
 <tr>
 <td>
 <code>QueryRange</code></td><td>
-Occurs when grid queries for <code>IRange</code> information about a specific cell while rendering.</td></tr>
+Occurs when the grid queries for <code>IRange</code> information about a specific cell while rendering.</td></tr>
 </table>

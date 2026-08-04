@@ -15,10 +15,7 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 Before you begin, ensure the following:
 
 * An active **AWS account** with permissions to create IAM roles, Lambda functions, and S3 buckets. If you do not have one, see [Create an AWS account](https://aws.amazon.com/free/).
-* **AWS CLI** installed and configured with your credentials â€” see [AWS CLI quick start](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html).
-* **Visual Studio 2022** with the **AWS Toolkit for Visual Studio** extension installed (required for the **Publish to AWS Lambda** menu option) â€” see [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/).
-* An **IAM role** with the `AWSLambdaBasicExecutionRole` managed policy attached, for the Lambda function's execution role.
-* A **Syncfusion license key**. Register it in `Function.cs` (see the snippet in Step 3a below). For production, store the key in **AWS Secrets Manager** or **Parameter Store** and load it via the SDK at startup â€” see [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+* A **Syncfusion license key**. Register it in `Function.cs` (see the snippet in Step 3a below). For production, store the key in **AWS Secrets Manager** or **Parameter Store** and load it via the SDK at startup see [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 ## Steps to create an Excel document in AWS Lambda
 
@@ -81,7 +78,7 @@ public string FunctionHandler(Stream input, ILambdaContext context)
 {% endhighlight %}
 {% endtabs %}
 
-The image file (`AdventureCycles-Logo.png`) is read from the working directory. Make sure the file is included in the deployment package (the AWS Toolkit adds files set to **Copy if newer** to the package automatically).
+N> The image file (`AdventureCycles-Logo.png`) is read from the working directory. Make sure the file is included in the deployment package (the AWS Toolkit adds files set to **Copy if newer** to the package automatically).
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -320,8 +317,6 @@ using Newtonsoft.Json;
 
 Step 4: Add the following code snippet in **Program.cs** to invoke the published AWS Lambda function using the function name and access keys.
 
-N> The snippet below uses the parameterless `AmazonLambdaClient()` constructor, which relies on the **default AWS SDK credential chain** (environment variables, `~/.aws/credentials`, or IAM role). Avoid hard-coding credentials in source code. The `Payload = "\"Test\""` is a JSON string payload; the Lambda function in this example ignores the input and returns a fixed result. Also note that `System.Diagnostics.Process.Start` only works on Windows desktop environments with a shell association for `.xlsx` files.
-
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
@@ -410,4 +405,4 @@ A complete working example of how to read and edit an Excel file in AWS Lambda i
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [create an Excel document](https://ej2.syncfusion.com/aspnetcore/Excel/Create#/material3) in ASP.NET Core.
+An online sample link to [create an Excel document](https://document.syncfusion.com/demos/excel/create#/tailwind3) in ASP.NET Core.

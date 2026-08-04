@@ -67,7 +67,7 @@ function exitRadiusMode() {
 {% endtabs %}
 
 ### Add Radius Programmatically
-Configure default properties using the [`Radius Settings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RadiusSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#addannotation) API to add a Radius measurement at a specific location.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

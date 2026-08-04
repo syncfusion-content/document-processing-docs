@@ -26,4 +26,4 @@ keywords: Assemblies
 
 {% enddoccards %}
 
-The .NET **Smart Data Extractor** is a robust, deterministic C# library built to capture complete document structures from PDFs and images. Optimized for .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract *tables, text blocks, images, headers, footers, and form fields*. Each extracted element includes per‑field confidence scores, enabling precise validation, seamless export, and smooth integration into applications.
+The .NET **Smart Data Extractor** extracts structured document content from PDFs and images. It interprets visual layout patterns—lines, boxes, labels, and alignment—to identify and extract *tables, text blocks, images, headers, footers, and form fields*. Each extracted element includes per‑field confidence scores for validation, export, and integration. See the [Conversions overview](NET/conversions/overview.md) for JSON, Markdown, and fillable PDF extraction.

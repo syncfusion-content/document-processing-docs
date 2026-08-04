@@ -5,6 +5,7 @@ description: Learn how to customize the redaction toolbar in the Syncfusion Angu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Redaction toolbar customization in Angular
@@ -102,7 +103,7 @@ export class AppComponent {
 
 Refer to the following image for the toolbar view:
 
-![Enable redaction toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Enable redaction toolbar](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ## Show or hide the redaction toolbar
 
@@ -112,7 +113,7 @@ The redaction toolbar can be toggled using the built‑in toolbar icon or progra
 
 When `RedactionEditTool` is included in the toolbar settings, clicking the redaction icon in the primary toolbar will show or hide the redaction toolbar.
 
-![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Show redaction toolbar from the primary toolbar](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
@@ -221,7 +222,7 @@ export class AppComponent {
 
 Refer to the following image for details:
 
-![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
+![Programmatically show the Redaction toolbar](redaction-annotations-images/show-redaction-toolbar.png)
 
 ## See also
 

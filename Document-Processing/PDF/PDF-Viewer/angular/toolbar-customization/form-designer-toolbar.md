@@ -57,7 +57,7 @@ export class AppComponent {
 
 ### 2. Show or hide form designer toolbar at runtime
 
-Use the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) API on the viewer's instance on a custom method to toggle form designer visibility at runtime.
+Use the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) API on the viewer instance in a custom method to toggle form designer visibility at runtime.
 
 {% highlight ts %}
 this.pdfViewerObj.enableFormDesigner = true;
@@ -74,8 +74,6 @@ Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentatio
 </ejs-pdfviewer>
 {% endhighlight %}
 {% endtabs %}
-
-**Complete example:**
 
 ## Complete example with runtime toggle
 

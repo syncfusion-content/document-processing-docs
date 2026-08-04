@@ -33,6 +33,8 @@ Step 3: Install [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.org/p
 
 ![Install Syncfusion.SmartDataExtractor.WinForms NuGet package](GettingStarted_images/Winforms_Nuget.png)
 
+Add the input PDF file named **Input.pdf** to the Data folder before running the sample.
+
 Step 4: Include the following namespaces in the **Form1.cs** file.
 
 {% tabs %}
@@ -94,7 +96,7 @@ Step 6: Add the following code in **btnExtract_Click** to extract data from PDF.
 // Load the existing PDF document
 using (FileStream stream = new FileStream(Path.GetFullPath(@"../../Data/Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor
+    // Initialize the Data Extractor
     DataExtractor extractor = new DataExtractor();
     // Extract data as JSON string
     string data = extractor.ExtractDataAsJson(stream);

@@ -145,7 +145,7 @@ After the application starts, open `http://localhost` (the default dev server UR
 
 If you prefer a video walkthrough, watch the following tutorial to get started quickly with the Angular PDF Viewer.
 
-{% youtube "https://www.youtube.com/watch?v=r8IPr_nTiHo&t=1s" %}
+{% youtube "https://www.youtube.com/watch?v=riZ1zACc5co" %}
 
 ## Angular version compatibility
 
@@ -157,6 +157,8 @@ For older Angular versions, refer to the following guides:
 * [Create a Standalone PDF Viewer in Angular 17 and above with the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 17 and above without the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
+
+> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
 
 ## See also
 

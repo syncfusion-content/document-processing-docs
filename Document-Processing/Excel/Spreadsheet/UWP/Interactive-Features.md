@@ -13,7 +13,7 @@ documentation: ug
  
 ## Clipboard Operations
 
-SfSpreadsheet provides support for all the clipboard operations to with all the format settings when copied within a workbook.  
+SfSpreadsheet provides support for all the clipboard operations with all the format settings when copied within a workbook.
 
 You can use the following shortcut keys for Clipboard operations like Excel
 <table>
@@ -68,7 +68,7 @@ Value & Source Formatting</td><td>
 To maintain the source range original format and paste only values</td></tr>
 </table>
 
-N> When the content is copied from external source, SfSpreadsheet does not support the format settings (paste options).
+N> When the content is copied from an external source, SfSpreadsheet does not support the format settings (paste options).
 
 For `Cut` Operation,
 
@@ -107,8 +107,7 @@ For `Paste` Operation,
 
 //To perform paste operation
 spreadsheet.ActiveGrid.CopyPaste.Paste();
-
-//To perform paste operation with range and Paste Options
+//To perform paste operation with range and PasteOptions
 var copyPaste = spreadsheet.ActiveGrid.CopyPaste as SpreadsheetCopyPaste;
 copyPaste.Paste(range);
 copyPaste.Paste(range, PasteOptions.Paste);
@@ -139,9 +138,9 @@ Redo</td><td>
 Ctrl + Y</td></tr>
 </table>
 
-SfSpreadsheet has `History Manager` class that supports the implementation of undo/ redo operations
+SfSpreadsheet has `History Manager` class that supports the implementation of undo/redo operations.
 
-By default, Undo/Redo operations in SfSpreadsheet is enabled. To disable the Undo/Redo operations, set the `Enabled` property of `History Manager` to be false.  
+By default, Undo/Redo operations in SfSpreadsheet is enabled. To disable the Undo/Redo operations, set the `Enabled` property of `History Manager` to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -151,7 +150,7 @@ spreadsheet.HistoryManager.Enabled = false;
 {% endhighlight %}
 {% endtabs %}
 
-To programmatically, invoke the Undo/Redo operations,
+To programmatically invoke the Undo/Redo operations,
 
 {% tabs %}
 {% highlight c# %}
@@ -162,15 +161,15 @@ spreadsheet.HistoryManager.Redo();
 {% endhighlight %}
 {% endtabs %}
 
-## Context menu
+## Context Menu
 
-Context menu in SfSpreadsheet is customizable menu which can be used for various functionalities
+Context Menu in SfSpreadsheet is a customizable menu that can be used for various functionalities.
 
-### Cell Context menu
+### Cell Context Menu
 
-Cell Context menu opens when the user right-click on a worksheet cell or selection of cells in SfSpreadsheet.
+Cell Context Menu opens when the user right-clicks on a worksheet cell or selection of cells in SfSpreadsheet.
 
-By default, Cell Context menu is enabled in SfSpreadsheet. To disable the Cell Context menu, set the `AllowCellContextMenu`  property as false.
+By default, Cell Context Menu is enabled in SfSpreadsheet. To disable the Cell Context Menu, set the `AllowCellContextMenu` property to false.
 
 {% tabs %}
 {% highlight c# %}
@@ -207,11 +206,11 @@ void ActiveGrid_CellContextMenuOpening(object sender, CellContextMenuOpeningEven
 {% endhighlight %}
 {% endtabs %}
 
-T> Custom Cell Context menu can also by added by assigning the customized menu items to the `CellContextMenu` property of `SpreadsheetGrid`. For your reference, [CustomContextMenu](https://www.syncfusion.com/kb/6728/how-to-create-a-customized-cell-context-menu-of-sfspreadsheet)
+T> Custom Cell Context Menu can also be added by assigning the customized menu items to the `CellContextMenu` property of `SpreadsheetGrid`. For your reference, [CustomContextMenu](https://www.syncfusion.com/kb/6728/how-to-create-a-customized-cell-context-menu-of-sfspreadsheet)
 
 ## Cell Comments
 
-SfSpreadsheet provides support for cell comments like in excel to give the reader additional context for the data it contains. You can set the comment height and color for the particular comments at runtime by invoking `CellCommentOpening` Event of SpreadsheetGrid
+SfSpreadsheet provides support for cell comments like in Excel to give the reader additional context for the data it contains. You can set the comment's height and color at runtime in the `CellCommentOpening` event of `SpreadsheetGrid`.
 
 To enable the comment in SfSpreadsheet, set the `ShowComment` property of SpreadsheetGrid to true.
 

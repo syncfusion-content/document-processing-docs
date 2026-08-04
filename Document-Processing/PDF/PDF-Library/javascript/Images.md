@@ -1,6 +1,7 @@
 ---
 title: Images in JavaScript PDF Library | Syncfusion
-description: This section explains how to add and replace images in a PDF document by using the JavaScript PDF Library
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
+description: Learn to add and insert JPEG and PNG images in PDF documents with JavaScript PDF Library, including drawing, clipping, transparency, and rotation
 platform: document-processing
 control: PDF
 documentation: UG
@@ -8,13 +9,15 @@ documentation: UG
 
 # Images in JavaScript PDF Library
 
-The JavaScript PDF supports JPEG and PNG images.
+Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports adding **JPEG** and **PNG** images.
 
-Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class that provides the common functionality for [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class.
+Images are supported through the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class, which is an abstract base class. The [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class derives from `PdfImage` and is used to load and draw raster images in a PDF.
 
-## Adding image in PDF document
+## Adding an Image to a PDF Document
 
-This example demonstrates how to add an image to a PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and drawn at the specified coordinates on the page.
+The following example demonstrates how to add an image to a new PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a `Uint8Array` or file and drawn at the specified coordinates on the page.
+
+The `draw` method also accepts optional `width` and `height` parameters to resize the image. If omitted, the image is drawn at its original size.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -56,9 +59,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Inserting an image in an existing document
+## Inserting an Image in an Existing Document
 
-This example demonstrates how to insert an image into an existing PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class. The image is loaded from a file and rendered at the specified position on the selected page.
+The following example demonstrates how to insert an image into an existing PDF document using the [PdfBitmap](https://ej2.syncfusion.com/documentation/api/pdf/pdfbitmap) class and the [draw](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage#draw) method of the [PdfImage](https://ej2.syncfusion.com/documentation/api/pdf/pdfimage) class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -73,7 +76,7 @@ let graphics: PdfGraphics = page.graphics;
 // Load the image (base64 / Uint8Array)
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
-image.draw(graphics, { x: 10, y: 10});
+image.draw(graphics, { x: 10, y: 10 });
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -91,7 +94,7 @@ var graphics = page.graphics;
 // Load the image (base64 / Uint8Array)
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Draw the image.
-image.draw(graphics, {x: 10, y: 10});
+image.draw(graphics, { x: 10, y: 10 });
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -100,13 +103,19 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Clipping and graphics state
+## Clipping and Graphics State
 
-This example demonstrates how to apply clipping and manage graphics state in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#restore) methods preserve the current graphics state, while the [setClip](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#setclip) method defines a clipping region to restrict drawing operations, ensuring precise control over rendering.
+The following example demonstrates how to apply a clipping region and manage the graphics state in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. The [save](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#save) and [restore](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#restore) methods preserve the current graphics state, while the [setClip](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#setclip) method defines a clipping region that restricts drawing operations to its area.
+
+`PdfFillMode` determines how the clipping path is filled:
+
+- `PdfFillMode.alternate` — Uses the even-odd rule. A point is inside the region if a ray from it crosses the path an odd number of times. Suitable for paths with self-intersections or holes.
+- `PdfFillMode.winding` — Uses the non-zero winding rule. A point is inside the region if the winding number around it is non-zero. Suitable for nested and overlapping paths.
+
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState, PdfFillMode  } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState, PdfFillMode } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -118,9 +127,10 @@ let graphics: PdfGraphics = page.graphics;
 let image: PdfImage = new PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 let state: PdfGraphicsState = graphics.save();
-graphics.setClip({ x: 0, y: 0, width: 50, height: 12}, PdfFillMode.alternate );
+// Define a clip region partially overlapping the image
+graphics.setClip({ x: 10, y: 10, width: 200, height: 80 }, PdfFillMode.alternate);
 // Draw the image.
-image.draw(graphics, { x: 10, y: 10});
+image.draw(graphics, { x: 10, y: 10, width: 200, height: 100 });
 // Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
@@ -141,9 +151,10 @@ var graphics = page.graphics;
 var image = new ej.pdf.PdfBitmap('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Save the current graphics state (to restore later)
 var state = graphics.save();
-graphics.setClip({x: 0, y: 0, width: 50, height: 12}, ej.pdf.PdfFillMode.alternate);
+// Define a clip region partially overlapping the image
+graphics.setClip({ x: 10, y: 10, width: 200, height: 80 }, ej.pdf.PdfFillMode.alternate);
 // Draw the image.
-image.draw(graphics, {x: 10, y: 10});
+image.draw(graphics, { x: 10, y: 10, width: 200, height: 100 });
 // Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
@@ -154,9 +165,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Applying transparency and rotation to the image
+## Applying Transparency and Rotation to the Image
 
-This example demonstrates how to apply transparency and rotation to an image in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. Transparency can be controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects in the document.
+The following example demonstrates how to apply transparency and rotation to an image in a PDF document using the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class. Transparency is controlled through the graphics state, while rotation is applied by transforming the graphics context before drawing the image, enabling advanced visual effects.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -217,3 +228,10 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+## Additional Resources
+
+- [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
+- [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
+- [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)

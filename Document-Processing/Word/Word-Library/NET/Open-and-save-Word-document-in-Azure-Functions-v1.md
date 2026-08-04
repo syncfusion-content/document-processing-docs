@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Word document in Azure Functions v1
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save Word document in Azure Functions v1**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Azure Functions v1**.
 
 ## Steps to open and save Word document in Azure Functions v1
 
@@ -37,7 +37,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code snippet in **Run** method of **Function1** class to perform ***open an existing Word document**.
+Step 6: Add the following code snippet in the **Run** method of the **Function1** class to **open an existing Word document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -45,12 +45,12 @@ Step 6: Add the following code snippet in **Run** method of **Function1** class 
 //Gets the input Word document as stream from request
 Stream stream = req.Content.ReadAsStreamAsync().Result;
 //Loads an existing Word document
-using WordDocument document = new WordDocument(stream);
+using WordDocument document = new WordDocument(stream, Syncfusion.DocIO.FormatType.Docx);
        
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add below code example to add a paragraph in the Word document.
+Step 7: Add the below code example to add a paragraph in the Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -67,7 +67,7 @@ text.CharacterFormat.FontSize = 12f;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code example to **save the Word document**.
+Step 8: Add the below code example to **save the Word document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -87,7 +87,7 @@ response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue(
     FileName = "Sample.docx"
 };
 //Set the content type as Word document mime type.
-response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/docx");
+response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 //Return the response with output Word document stream.
 return response;
 
@@ -106,16 +106,16 @@ Step 11: Select the **Create new** button.
 Step 12: Click **Create** button. 
 ![Select the plan type](Azure-Images/Functions-v1/Subscription-Open-and-Save-Word-Document.png)
 
-Step 13: After creating app service then click **Finish** button. 
+Step 13: After creating the app service, click the **Finish** button. 
 ![Creating app service](Azure-Images/Functions-v1/App-service-Created-Open-and-Save-Word-Document.png)
 
 Step 14: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before-Publish-Open-and-Save-Word-Document.png)
 
-Step 15: Publish has been succeed.
+Step 15: Publish has succeeded.
 ![Publish succeeded](Azure-Images/Functions-v1/After-Publish-Open-and-Save-Word-Document.png)
 
-Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **open and save Word document**. You will get the output Word document as follows.
+Step 16: Now, go to the Azure portal and select the App Services. After running the service, click **Get function URL** by copying it. Then, paste it in the below client sample (which will request the Azure Functions, to perform **open and save Word document**). You will get the output Word document as follows.
 
 ![Open and Save in Azure Functions v1](ASP-NET-Core_images/OpenAndSaveOutput.png)
 
@@ -123,7 +123,7 @@ Step 16: Now, go to Azure portal and select the App Services. After running the 
 
 Step 1: Create a console application to request the Azure Functions API.
 
-Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions with template Word document and get the resultant Word document.
+Step 2: Add the following code snippet into the **Main** method to post the request to Azure Functions with the template Word document and get the resultant Word document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -149,7 +149,7 @@ try
     //Write the Word document stream into request stream.
     stream.Write(inputStream.ToArray(), 0, inputStream.ToArray().Length);
 
-    //Gets the responce from the Azure Functions.
+    //Gets the response from the Azure Functions.
     HttpWebResponse res = (HttpWebResponse)req.GetResponse();
 
     //Saves the Word document stream.

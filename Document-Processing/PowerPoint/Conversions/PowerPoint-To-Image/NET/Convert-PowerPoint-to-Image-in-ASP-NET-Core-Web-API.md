@@ -113,7 +113,7 @@ N> Ensure your ASP.NET Core Web API is running on the specified port before runn
 
 Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
 
-This method sends a GET request to the Web API endpoint to retrieve and save the converted Image.
+This method sends a GET request to the Web API endpoint to retrieve and save the converted image.
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ using (HttpClient client = new HttpClient())
         // Check if the response is successful
         if (response.IsSuccessStatusCode)
         {
-			//Read the content as a string.
+            //Read the content as a stream.
             Stream responseBody = await response.Content.ReadAsStreamAsync();
             FileStream fileStream = File.Create("../../../Output/Output.jpeg");
             responseBody.CopyTo(fileStream);

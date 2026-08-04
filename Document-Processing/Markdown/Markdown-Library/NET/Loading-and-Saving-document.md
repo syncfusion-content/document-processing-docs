@@ -8,11 +8,11 @@ documentation: UG
 
 # Loading and Saving a Markdown Document
 
-The Syncfusion<sup>&reg;</sup> Markdown library allows you to load an existing Markdown document and save it to the file system or stream programmatically.
+The Syncfusion<sup>&reg;</sup> .NET Markdown library allows you to load an existing Markdown document and save it to the file system or stream programmatically.
 
 ## Namespaces required
 
-The following namespaces of Essential<sup>&reg;</sup> Markdown need to be included in your application to load and save the Markdown document.
+The following namespaces need to be included in your application to load and save a Markdown document.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C#*** for ASP.NET Core, Blazor, ASP.NET MVC, UWP, .NET MAUI, WinUI, WinForms and WPF; ***VB.NET*** for VB.NET applications.
 
@@ -81,6 +81,8 @@ Dim markdownDocument As New MarkdownDocument(Path.GetFullPath("Input.md"))
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
+
 ### Opening using Open Method
 
 The `MarkdownDocument` class also provides the `Open` method to open an existing Markdown document from a stream or string.
@@ -133,7 +135,7 @@ markdownDocument.Open("Input.md")
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
 ### Opening a document with import settings
 
@@ -262,7 +264,7 @@ End Sub
 
 {% endtabs %}
 
-
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-open-markdown-document/.NET).
 
 ## Saving a Markdown Document
 
@@ -283,7 +285,6 @@ MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md");
 // To-Do some manipulation
-// To-Do some manipulation
 // Saves the Markdown document to the file system
 markdownDocument.Save("Output.md");
 // Disposes the document to release all memory
@@ -298,7 +299,6 @@ Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md")
 'To-Do some manipulation
-'To-Do some manipulation
 ' Saves the Markdown document to the file system
 markdownDocument.Save("Output.md")
 ' Disposes the document to release all memory
@@ -307,6 +307,8 @@ markdownDocument.Dispose();
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
 ### Saving a Markdown Document to stream
 
@@ -322,7 +324,6 @@ The following code example demonstrates how to save a Markdown document to the s
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md");
-// To-Do some manipulation
 // To-Do some manipulation
 // Creates an instance of memory stream
 MemoryStream stream = new MemoryStream();
@@ -340,7 +341,6 @@ Dim markdownDocument As New MarkdownDocument()
 ' Opens an existing Markdown document using the Open method.
 markdownDocument.Open("Input.md")
 'To-Do some manipulation
-'To-Do some manipulation
 'Creates an instance of memory stream
 Dim stream As New MemoryStream()
 ' Saves the Markdown document to the stream
@@ -351,6 +351,8 @@ markdownDocument.Dispose();
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
 ### Save Options
 
@@ -439,6 +441,7 @@ End Sub
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Customize-save-markdown-conversion/.NET).
 
 ### Getting Markdown document text
 
@@ -453,7 +456,6 @@ The following code example demonstrates how to get the Markdown content as text.
 // Opens an existing Markdown document.
 MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
 // To-Do some manipulation
-// To-Do some manipulation
 // Retrieves the Markdown document content as text.
 string mdContent = markdownDocument.GetMarkdownText();
 // Disposes the document to release all memory
@@ -466,7 +468,6 @@ markdownDocument.Dispose();
 ' Opens an existing Markdown document.
 Dim markdownDocument As MarkdownDocument = New MarkdownDocument("../../Data/Input.md")
 ' To-Do some manipulation
-' To-Do some manipulation
 ' Retrieves the Markdown document content as text.
 Dim mdContent As String = markdownDocument.GetMarkdownText()
 ' Disposes the document to release all memory
@@ -475,6 +476,8 @@ markdownDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Get-markdown-document-text/.NET).
 
 N> You can also retrieve the Markdown content with save options by passing the `SaveOptions` parameter to the `GetMarkdownText` method.
 
@@ -492,7 +495,6 @@ Once the document manipulation and save operations are completed, you should clo
 MarkdownDocument markdownDocument = new MarkdownDocument("Input.md");
 
 // To-Do some manipulation
-// To-Do some manipulation
 
 // Saves the Markdown document to the file system
 markdownDocument.Save("Output.md");
@@ -508,7 +510,6 @@ markdownDocument.Dispose();
 Dim markdownDocument As New MarkdownDocument("Input.md")
 
 'To-Do some manipulation
-'To-Do some manipulation
 
 ' Saves the Markdown document to the file system
 markdownDocument.Save("Output.md")
@@ -519,4 +520,5 @@ markdownDocument.Dispose()
 {% endhighlight %}
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Read-and-Save-document/Open-and-save-Markdown-document/.NET).
 
