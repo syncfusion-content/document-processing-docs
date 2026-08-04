@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy PDF Viewer server app to Azure App Service from Visual Studio
+# Deploy PDF Viewer Server App to Azure from Visual Studio
 
 ## Prerequisites
 
