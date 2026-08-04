@@ -123,5 +123,5 @@ N> On Windows Phone devices, the entire rich-text content is rendered continuous
 ## See Also
 
 - [Commands in UWP RichTextBox](./Commands)
-- [Background in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/background)
-- [Getting started with UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/getting-started)
+- [Background in UWP RichTextBox](./Background)
+- [Getting started with UWP RichTextBox](./Getting-Started)
