@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Toolbar in Javascript PDF Viewer | Syncfusion
+title: Custom Toolbar in Javascript PDF Viewer control | Syncfusion
 description: Learn here all about Custom Toolbar in Syncfusion Javascript PDF Viewer of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Toolbar
+# Custom Toolbar in JavaScript PDF Viewer Control
 
 The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
@@ -68,7 +68,6 @@ Hide the default toolbar using `enableToolbar` and `enableNavigationToolbar` pro
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -76,10 +75,8 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
-```
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-```js
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -88,7 +85,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -309,9 +305,6 @@ Add the following scripts for handling user interactions with the custom toolbar
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```js
-
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
@@ -653,13 +646,8 @@ bookmarkPopup.hide();
 textSearchPopup.hide();
 enableNextButton(false);
 enablePrevButton(false);
-
-```
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-
-```js
-
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
@@ -1005,8 +993,6 @@ bookmarkPopup.hide();
 textSearchPopup.hide();
 enableNextButton(false);
 enablePrevButton(false);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
