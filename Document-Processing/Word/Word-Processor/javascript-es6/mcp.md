@@ -165,13 +165,13 @@ Get step-by-step help for adding specific features to the TypeScript DOCX Editor
 
 {% promptcards %}
 {% promptcard Track Changes %}
-#search_docs How to enable Track Changes in TypeScript DOCX Editor
+#search_docs How to enable Track Changes in TypeScript DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Add Comments %}
-#search_docs How to add comments in TypeScript DOCX Editor
+#search_docs How to add comments in TypeScript DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -181,13 +181,13 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Unsupported File Format %}
-#search_docs Why does TypeScript DOCX Editor show an unsupported file format message
+#search_docs Why does TypeScript DOCX Editor show an unsupported file format message?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Document Loading Issue %}
-#search_docs Why does TypeScript DOCX Editor fail to load a document with a 404 error
+#search_docs Why does TypeScript DOCX Editor fail to load a document with a 404 error?
 {% endpromptcard %}
 {% endpromptcards %}
 

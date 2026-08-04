@@ -192,13 +192,13 @@ Get step-by-step help for adding specific features to the ASP.NET MVC DOCX Edito
 
 {% promptcards %}
 {% promptcard Track Changes %}
-#search_docs How to enable Track Changes in ASP.NET MVC DOCX Editor
+#search_docs How to enable Track Changes in ASP.NET MVC DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Add Comments %}
-#search_docs How to add comments in ASP.NET MVC DOCX Editor
+#search_docs How to add comments in ASP.NET MVC DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -208,13 +208,13 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Unsupported File Format %}
-#search_docs Why does ASP.NET MVC DOCX Editor show an unsupported file format message
+#search_docs Why does ASP.NET MVC DOCX Editor show an unsupported file format message?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard DOCX Editor Not Rendering %}
-#search_docs Why is a blank area displayed where the ASP.NET MVC DOCX Editor should appear
+#search_docs Why is a blank area displayed where the ASP.NET MVC DOCX Editor should appear?
 {% endpromptcard %}
 {% endpromptcards %}
 
