@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## How to enable ruler in Angular Document Editor component
+# How to enable ruler in Angular Document Editor component
 
 The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
