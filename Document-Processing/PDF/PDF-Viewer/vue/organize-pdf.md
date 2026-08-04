@@ -51,7 +51,7 @@ Removing unwanted pages from your document is straight forward:
 
 ### Copying PDF pages
 
-Duplicate the pages within your PDF document effortlessly:
+Duplicates the pages within your PDF document effortlessly:
 
 * `Select pages to copy`: Click on the page thumbnails you wish to duplicate. Use the copy option to create duplicates. When a page is copied, the duplicate is automatically added to the right of the selected page. Multiple copies can be made using the toolbar action.
 
@@ -370,7 +370,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 
 ![Undo and redo icons in organizer](images/undo-redo.png)
 
-#### Conclusion
+## Conclusion
 
 With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
 

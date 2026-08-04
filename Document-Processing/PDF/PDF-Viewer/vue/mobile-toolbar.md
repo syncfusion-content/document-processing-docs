@@ -225,4 +225,6 @@ export default {
 
 The Print option is not available in the default mobile toolbar. To access print functionality on mobile devices, enable desktop mode by setting `enableDesktopMode` to `true`. Once desktop mode is active, the print option becomes available in the toolbar, allowing users to print PDF documents directly from their mobile device.
 
+N> Ensure the `Print` module is included in the `provide` block of your PDF Viewer configuration.
+
 N> Print functionality on mobile devices typically opens the native print dialog, allowing users to save as PDF, print to wireless printers, or use other platform-specific print options.

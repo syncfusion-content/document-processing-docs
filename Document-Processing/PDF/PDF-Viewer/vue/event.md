@@ -3,7 +3,7 @@ layout: post
 title: Events in Vue PDF Viewer | Syncfusion
 description: Comprehensive list of events in the Syncfusion Vue PDF Viewer with descriptions, event arguments, and usage examples to integrate custom logic.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -814,10 +814,11 @@ export default {
     },
     data: function() {
         return {
-			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'}
+            documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+        };
     },
-	provide: {
+    provide: {
       PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer]
     },
     methods: {
@@ -931,6 +932,7 @@ Example:
   <div id="app">
     <ejs-pdfviewer
       id="pdfViewer"
+      ref="pdfViewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :customContextMenuBeforeOpen="customContextMenuBeforeOpen"
@@ -1005,7 +1007,7 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
+      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]
   },
 };
 </script>
@@ -1031,6 +1033,7 @@ Example:
   <div id="app">
     <ejs-pdfviewer
       id="pdfViewer"
+      ref="pdfViewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :customContextMenuSelect="customContextMenuSelect"
@@ -1105,7 +1108,7 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
+      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]
   },
 };
 </script>
