@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Frequently Asked Questions in TypeScript PDF Viewer
+# Frequently Asked Questions in TypeScript PDF Viewer
 
 The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

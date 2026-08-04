@@ -14,7 +14,7 @@ The PDF Viewer provides tools to organize PDF documents by inserting, deleting, 
 
 ## Getting started
 
-To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel/) for configuration options.
+To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel) for configuration options.
 
 ![Organize Pages dialog showing page thumbnails](./images/organize-page.png)
 
