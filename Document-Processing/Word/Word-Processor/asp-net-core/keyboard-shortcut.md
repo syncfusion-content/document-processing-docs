@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Keyboard Shortcuts in Document Editor Component
+# Keyboard Shortcuts in ASP.NET Core Document Editor
 
 ## Text formatting
 
