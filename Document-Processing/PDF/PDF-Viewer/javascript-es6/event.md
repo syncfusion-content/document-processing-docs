@@ -22,7 +22,7 @@ The following table lists commonly used events supported by the PDF Viewer compo
 | [`commentDelete`](#commentdelete) | Triggers when a comment is deleted from the comment panel. |
 | [`commentEdit`](#commentedit) | Triggers when a comment is edited in the comment panel. |
 | [`commentSelect`](#commentselect) | Triggers when a comment is selected in the comment panel. |
-| [`commentStatusChanged`](#commentstatuschanged) | Triggers when a comment’s status changes in the comment panel. |
+| [`commentStatusChanged`](#commentstatuschanged) | Triggers when a comment's status changes in the comment panel. |
 | [`created`](#created) | Triggers during the creation of the PDF Viewer component. |
 | [`customContextMenuBeforeOpen`](#customcontextmenubeforeopen) | Fires before the custom context menu opens. |
 | [`customContextMenuSelect`](#customcontextmenuselect) | Fires when a custom context menu item is selected. |
@@ -127,7 +127,7 @@ The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api
   - nonFillableFields: Array detailing required/invalid fields
 
 When it triggers
-- Add a form field and mark it Required (UI: right‑click field > Properties > Required).
+- Add a form field and mark it Required (UI: right-click field > Properties > Required).
 - Leave the field empty and click Download. The event fires and provides the list of fields that failed validation.
 
 Example:

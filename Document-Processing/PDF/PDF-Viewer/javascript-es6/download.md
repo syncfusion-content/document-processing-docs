@@ -120,19 +120,21 @@ The following example illustrates how to access the downloaded document as a bas
 
 ```ts
 
+let pdfstream: string;
+
 document.getElementById('download').addEventListener('click', function () {
     //API to perform download action.
-    viewer.download();
-    viewer.downloadEnd = function (args) {
+    pdfviewer.downloadEnd = function (args) {
         pdfstream = args.downloadDocument;
         //Print the document as a base64 string in the console window.
         console.log(pdfstream);
     };
+    pdfviewer.download();
 });
 
 document.getElementById('load').addEventListener('click', function () {
     //Load the base64 string in the viewer.
-    viewer.load(pdfstream, null);
+    pdfviewer.load(pdfstream, null);
 });
 
 ```

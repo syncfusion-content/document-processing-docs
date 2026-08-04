@@ -17,7 +17,7 @@ The TypeScript PDF Viewer supports multiple navigation options, including toolba
 The default toolbar includes the following navigation options:
 
 * [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of a PDF document.
 * [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
 * [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
 * [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
@@ -120,12 +120,12 @@ You can also perform page navigation programmatically:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
 
 let viewer: PdfViewer = new PdfViewer();
-viewer.appendTo('#pdfViewer');
+viewer.appendTo('#PdfViewer');
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
 // Go To First Page
@@ -152,14 +152,14 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 
-import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
+import {PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar,Magnification,Navigation, LinkAnnotation,ThumbnailView,BookmarkView, TextSelection, TextSearch, Annotation, FormFields );
 
 let viewer: PdfViewer = new PdfViewer();
 viewer.serviceUrl =
   'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-viewer.appendTo('#pdfViewer');
+viewer.appendTo('#PdfViewer');
 viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
 
 // Go To First Page
@@ -289,7 +289,7 @@ Hyperlink navigation enables users to open URLs embedded in the PDF.
 
 ![PDF Viewer hyperlink navigation](./images/link.png)
 
-## Table of content navigation
+## Table of contents navigation
 
 Table of contents navigation allows users to jump to sections defined in the document outline.
 

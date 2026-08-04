@@ -114,7 +114,7 @@ Use the [TypeScript getting started guide](https://help.syncfusion.com/document-
 document.getElementById('load').addEventListener('click', () => {
   viewer.load(
     'data:application/pdf;base64,'+ AddBase64String, null);
-}
+});
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20base64%20string)

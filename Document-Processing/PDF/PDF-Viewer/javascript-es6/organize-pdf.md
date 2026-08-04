@@ -185,8 +185,8 @@ document.getElementById('openPageOrganizer').addEventListener('click', function 
 ```
 ```ts
 document.getElementById('closePageOrganizer').addEventListener('click', function () {
-  viewer.pageOrganizer.openPageOrganizer();
-}
+  viewer.pageOrganizer.closePageOrganizer();
+});
 ```
 ## Keyboard shortcuts
 The following keyboard shortcuts are available at the organize pages dialog.
