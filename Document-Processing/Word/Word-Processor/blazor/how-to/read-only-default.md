@@ -7,7 +7,7 @@ control: Document Editor
 documentation: ug
 ---
 
-# How to Open a Document in Read-Only Mode in Blazor Document Editor Component
+# Open a Document in Read-Only Mode in Blazor Document Editor
 
 In this article, we are going to see how to open a document in read-only mode by default in the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component.
 

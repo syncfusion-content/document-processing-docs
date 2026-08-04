@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Retrieve Bookmark Content in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+description: Learn how to retrieve document and bookmark content as text in the Syncfusion Blazor Document Editor component.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Retrieve the Document and Bookmark Content in Blazor Document Editor Component
+# Retrieve the Document and Bookmark Content in Blazor Document Editor
 
 The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows retrieving the bookmark or whole document content as plain text and SFDT (rich text).
 
