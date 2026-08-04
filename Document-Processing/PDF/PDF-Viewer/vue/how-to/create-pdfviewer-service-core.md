@@ -21,31 +21,31 @@ Follow these steps to create the PDF Viewer service
 
 **Step 1:** Select **File > New > Project** in the Visual Studio menu bar.
 
-![Alt text](./images/Start.png)
+![Alt text](../../javascript-es6/how-to/images/Start.png)
 
 **Step 2:** Select ASP.NET Core Web Application and then click **Next**.
 
-![Alt text](./images/Coreapp.png)
+![Alt text](../../javascript-es6/how-to/images/Coreapp.png)
 
 **Step 3:** In the Configure your new project dialog, enter Project Name and select **Next**.
 
-![Alt text](./images/Coreapp1.png)
+![Alt text](../../javascript-es6/how-to/images/Coreapp1.png)
 
 **Step 4:** In the Additional information dialog, select .NET 6.0 (Long-term Support) and then select **Create**.
 
-![Alt text](./images/CoreappCreate.png)
+![Alt text](../../javascript-es6/how-to/images/CoreappCreate.png)
 
 **Step 5:** Add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) NuGet package to your project.
 
 Open the `NuGet` package manager.
-![Alt text](./images/Nugetpackage.png)
+![Alt text](../../javascript-es6/how-to/images/Nugetpackage.png)
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 
-![Alt text](./images/viewer-dependency.png)
+![Alt text](../../javascript-es6/how-to/images/viewer-dependency.png)
 
 **Step 6:** Add an API controller to the project and name it `PdfViewerController`.
-![Alt text](./images/apicontroller.png)
+![Alt text](../../javascript-es6/how-to/images/apicontroller.png)
 
 **Step 7:** Add the following code to the `PdfViewerController.cs` controller.
 

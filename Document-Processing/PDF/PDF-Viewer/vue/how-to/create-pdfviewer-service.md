@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create PDF Viewer service using ASP.NET MVC in Vue PDF Viewer | Syncfusion
+title: Create PDF Viewer service using ASP.NET MVC in Vue | Syncfusion
 description: Learn how to create an ASP.NET MVC Web API service for the Vue PDF Viewer to handle server-side processing for rendering and related operations.
 platform: document-processing
 control: PDF Viewer
@@ -26,19 +26,19 @@ Follow these steps to create the PDF Viewer service
 
 **Step 1:** Create an ASP.NET Web Application using the default template in Visual Studio 2017.
 
-![Alt text](./images/default-template.png)
+![Alt text](../../javascript-es6/how-to/images/default-template.png)
 
 **Step 2:** After creating the project, add the `Syncfusion.EJ2.PdfViewer.AspNet.MVC5` dependency using NuGet Package Manager.
 
 Open the `NuGet` package manager.
-![Alt text](./images/solution-explorer.png)
+![Alt text](../../javascript-es6/how-to/images/solution-explorer.png)
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Mvc5** package for the application.
 
-![Alt text](./images/pdfviewer-dependency.png)
+![Alt text](../../javascript-es6/how-to/images/pdfviewer-dependency.png)
 
 **Step 3:** Add a Web API 2 controller to the project and name it `PdfViewerController`.
-![Alt text](./images/api-controller.png)
+![Alt text](../../javascript-es6/how-to/images/api-controller.png)
 
 **Step 4:** Add the following code to `PdfViewerController.cs`.
 
