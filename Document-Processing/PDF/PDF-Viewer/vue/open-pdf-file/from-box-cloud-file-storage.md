@@ -129,7 +129,7 @@ N> Replace the placeholders with the actual Box values: Access Token, Folder ID,
 
 **Step 4:** Configure the Vue PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in the Box folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in the Box folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

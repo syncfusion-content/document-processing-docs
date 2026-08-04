@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from OneDrive
+# Open PDF from OneDrive in Vue
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 
@@ -143,7 +143,7 @@ N> Replace the placeholders with the actual values: Tenant ID, Application ID, a
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in the OneDrive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in the OneDrive folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

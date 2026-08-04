@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Cloud Storage
+# Save PDF files to Google Cloud Storage in Vue
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
