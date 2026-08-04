@@ -10,17 +10,17 @@ documentation: UG
 
 The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to image conversion, demonstrating how our library performs in real-world scenarios.
 
-## Environment 
+## Environment
 
 The following system configurations were used for benchmarking: 
 
 * **Operating System:** Windows 11
-* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
+* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics
 * **RAM:** 16GB
 * **.NET Version:** .NET 8.0
 * **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/34.1.29)
 
-## PowerPoint to image conversion 
+## PowerPoint to image conversion
 
 <table>
 <tr>

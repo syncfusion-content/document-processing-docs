@@ -274,3 +274,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to change text of data labels for Chart in Presentation](https://support.syncfusion.com/kb/article/13828/how-to-change-the-text-in-data-labels-inside-a-chart-in-presentation-using-c-in-aspnet-core)
+* [Chart Area in PowerPoint](Chart-Area)
+* [Chart Axis in PowerPoint](Chart-Axis)
+* [Chart Title in PowerPoint](Chart-Title)
+* [Chart Legend in PowerPoint](Chart-Legend)
+* [Chart Plot Area in PowerPoint](Chart-Plot-Area)
+* [Chart Series in PowerPoint](Chart-Series)
