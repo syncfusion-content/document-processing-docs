@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in JavaScript (ES6) PDF Viewer control | Syncfusion
-description: Learn about programmatic support for Organize Pages in the JavaScript (ES6) PDF Viewer, including enabling the page organizer, opening and closing the dialog, and configuring page-management settings.
+title: Organize PDF Pages in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn how to programmatically organize PDF pages in the JavaScript (ES6) PDF Viewer, including dialog control and page management options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic Support for Organize Pages in JavaScript (ES6) PDF Viewer control
+# Programmatic Page Organization in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 

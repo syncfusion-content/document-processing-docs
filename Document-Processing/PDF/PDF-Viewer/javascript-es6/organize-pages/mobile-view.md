@@ -34,4 +34,4 @@ To perform actions on a page thumbnail, tap and hold the thumbnail to open a con
 
 To rearrange pages, tap and hold a page thumbnail to select it, then drag it to the desired position. A blue line will indicate the drop location.
 
-The mobile interface enables efficient PDF page management on handheld devices.
+The mobile interface enables efficient PDF page management on handled devices.
