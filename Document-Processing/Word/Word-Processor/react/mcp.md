@@ -163,8 +163,30 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the React DOCX Editor.
 
 {% promptcards %}
-{% promptcard Track changes %}
-#search_docs How to enable track changes in React DOCX Editor ?
+{% promptcard Track Changes %}
+#search_docs How to enable Track Changes in React DOCX Editor?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Add Comments %}
+#search_docs How to add comments in React DOCX Editor?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Unsupported File Format %}
+#search_docs Why does React DOCX Editor show an unsupported file format message?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Document Loading Issue %}
+#search_docs Why does React DOCX Editor fail to load a document with a 404 error?
 {% endpromptcard %}
 {% endpromptcards %}
 
