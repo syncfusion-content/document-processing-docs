@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Global Local in Syncfusion ASP.NET MVC Document Editor Component
-description: Learn here all about Global Local in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Global Local in Syncfusion ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn here all about Global Local in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global Local
 documentation: ug
 ---
 
 
-# Globalization in ASP.NET MVC in Document Editor Component
+# Globalization in ASP.NET MVC DOCX Editor Component
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows to localize default text content of the DocumentEditor. The document editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Refer the sample link [RTL](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
+The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows you to localize the default text content of the DocumentEditor. The DOCX Editor component has static text in some features (like find & replace, context menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Refer to the sample link [RTL](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
 
-N> Refer the [Locale](https://github.com/syncfusion/ej2-locale).
+N> Refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## Document Editor
 
-The following list of properties and its values are used in the document editor.
+The following list of properties and their values are used in the DOCX Editor.
 
 Locale keywords |Text
 -----|-----
@@ -365,7 +365,7 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and its values are used in the document editor container.
+The following list of properties and their values are used in the Document Editor container.
 
 Locale keywords |Text
 -----|-----
@@ -518,7 +518,7 @@ Show properties pane | Show properties pane
 
 ## Color Picker
 
-The following list of properties and its values are used in the color picker.
+The following list of properties and their values are used in the color picker.
 
 Locale keywords | Text
 -----|-----
