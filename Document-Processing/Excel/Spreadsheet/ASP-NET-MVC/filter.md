@@ -32,8 +32,8 @@ N> * Press `Alt + Up/Down` to open the filter dialog.
 
 Use the `applyFilter()` method to apply a filter based on the specified predicate and cell range. The predicate defines the filter condition, and the range specifies the cells to which the filter is applied.
 
-N> * The `beforeFilter` event will be triggered before filtering the specified range.
-<br/> * The `filterComplete` event will be triggered after the filter action is completed successfully.
+>* The `beforeFilter` event will be triggered before filtering the specified range.
+>* The `filterComplete` event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 

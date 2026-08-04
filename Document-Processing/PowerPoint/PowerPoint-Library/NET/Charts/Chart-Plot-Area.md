@@ -10,7 +10,7 @@ documentation: UG
 
 The plot area refers to the region that represents the plotted data in a chart. Using Presentation, you can **customize the plot area in the chart**.
 
-## Customization of Border
+## Customize the Border
 
 The following code snippet illustrates how to modify the border of the plot area.
 
@@ -47,9 +47,9 @@ chartPlotArea.Border.LineWeight = OfficeChartLineWeight.Hairline
 {% endhighlight %}
 {% endtabs %}
 
-## Customization of Color
+## Customize the Fill
 
-The following code snippet illustrates how to fill the color in plot area.
+The following code snippet illustrates how to apply a fill color to the plot area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -86,13 +86,12 @@ The complete code snippet illustrating the above options is shown below.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Format-Plot-Area/.NET/Format-Plot-Area/Program.cs" %}
 
-FileStream fileStreamPath = new FileStream("Data/Template.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 //Open an existing PowerPoint Presentation.
-using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
+using (IPresentation pptxDoc = Presentation.Open("Data/Template.pptx"))
 {
     //Gets the first slide.
     ISlide slide = pptxDoc.Slides[0];
-    //Gets the chart in slide.
+    //Gets the chart in the slide.
     IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 
     //Plot Area.
@@ -109,11 +108,8 @@ using (IPresentation pptxDoc = Presentation.Open(fileStreamPath))
     chartPlotArea.Fill.BackColor = Syncfusion.Drawing.Color.FromArgb(205, 217, 234);
     chartPlotArea.Fill.ForeColor = Syncfusion.Drawing.Color.White;
 
-    using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-    {
-        //Save the PowerPoint Presentation.
-        pptxDoc.Save(outputStream);
-    }
+    //Save the PowerPoint Presentation.
+    pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}
@@ -149,7 +145,7 @@ using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 ' Open an existing PowerPoint presentation.
-    Using pptxDoc As IPresentation = Presentation.Open("Template.pptx")
+Using pptxDoc As IPresentation = Presentation.Open("Template.pptx")
     ' Get the first slide.
     Dim slide As ISlide = pptxDoc.Slides(0)
     ' Get the chart in the slide.
@@ -180,12 +176,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add Image in Plot Area
 
-The following code snippet illustrates how to fill the image in plot area.
+The following code snippet illustrates how to add an image to the plot area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Appeend image in plot area.
+//Append an image to the chart plot area.
 FileStream imageStream = new FileStream("Data/Image.png", FileMode.Open, FileAccess.Read);
 Image image = Image.FromStream(imageStream);
 chartPlotArea.Fill.UserPicture(image, "image");
@@ -193,7 +189,7 @@ chartPlotArea.Fill.UserPicture(image, "image");
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Appeend image in plot area.
+//Append an image to the chart plot area.
 chartPlotArea.Fill.UserPicture("Image.png");
 
 {% endhighlight %}
@@ -205,9 +201,9 @@ chartPlotArea.Fill.UserPicture("Image.png")
 {% endhighlight %}
 {% endtabs %}
 
-## Set the Transparency level
+## Set the Transparency Level
 
-The following code snippet illustrates how to make transparency in plot area.
+The following code snippet illustrates how to apply transparency to the plot area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -230,11 +226,11 @@ chartPlotArea.Fill.Transparency = 0.5
 {% endhighlight %}
 {% endtabs %}
 
-N> [Transparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeFill.html#Syncfusion_OfficeChart_IOfficeFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeFill.html#Syncfusion_OfficeChart_IOfficeFill_FillType) is set as SolidColor. Color-shaded fill is represented as a floating-point value ranging from 0.0 (Clear) to 1.0 (Opaque).
+N> [Transparency](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeFill.html#Syncfusion_OfficeChart_IOfficeFill_Transparency) is only applicable when [FillType](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeFill.html#Syncfusion_OfficeChart_IOFFiceFill_FillType) is set to `SolidColor`. The fill's transparency is represented as a floating-point value ranging from 0.0 (Fully Opaque) to 1.0 (Fully Transparent).
 
-## Set the position of Plot Area
+## Set the Position of the Plot Area
 
-The following code snippet illustrates how to position the plot area in chart.
+The following code snippet illustrates how to position the plot area in the chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -262,3 +258,11 @@ chartPlotArea.Layout.LayoutTarget = LayoutTargets.outer
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+* [Chart Area in PowerPoint](Chart-Area)
+* [Chart Axis in PowerPoint](Chart-Axis)
+* [Chart Data Labels in PowerPoint](Chart-Data-Labels)
+* [Chart Legend in PowerPoint](Chart-Legend)
+* [Chart Title in PowerPoint](Chart-Title)
+* [Chart Series in PowerPoint](Chart-Series)

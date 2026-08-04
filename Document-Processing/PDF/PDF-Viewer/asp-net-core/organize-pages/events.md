@@ -73,8 +73,8 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 Event arguments:
 
-- `previousZoomValue`: The previous zoom value.
-- `currentZoomValue`: The current zoom value.
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

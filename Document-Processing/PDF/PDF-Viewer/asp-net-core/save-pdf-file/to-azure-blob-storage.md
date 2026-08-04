@@ -11,7 +11,7 @@ documentation: ug
 
 The ASP.NET Core PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
-## Using Standalone PDF Viewer
+## Using standalone PDF Viewer
 
 To save a PDF file to Azure Blob Storage, follow these steps:
 
@@ -21,7 +21,7 @@ Log in to the Azure Portal. Create a new Storage Account with preferred settings
 
 **Step 2:** Create an ASP.NET Core PDF Viewer sample
 
-Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET Core. This establishes the basic structure of the PDF Viewer application.
+Follow the instructions in this Getting Started [guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample in ASP.NET Core. This establishes the basic structure of the PDF Viewer application.
 
 **Step 3:** Modify the `Index.cshtml.cs` file in the project
 
@@ -231,7 +231,7 @@ public IActionResult OnPostDownload([FromBody] jsonObjects responseData)
 
 N> Replace the placeholders with the actual Azure Storage connection string and container name.
 
-**Step 3:** Set the PDF Viewer properties in the ASP.NET Core PDF Viewer component
+**Step 4:** Set the PDF Viewer properties in the ASP.NET Core PDF Viewer component
 
 Set the `documentPath` property of the PDF Viewer component to the desired PDF file name that you wish to load from Azure Blob Storage. Ensure that the document exists in the target container.
 

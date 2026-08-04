@@ -32,6 +32,10 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using SkiaSharp;
@@ -94,7 +98,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
         }
     }
     /// <summary>
-    /// Event handler for font substitution during PDF conversion
+    /// Event handler for font substitution during Image conversion
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
@@ -113,7 +117,6 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
             args.AlternateFontStream = File.OpenRead(Path.Combine(fontsFolder, "Times New Roman.ttf"));
         }
     }
-	
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,8 +141,8 @@ Step 12: After creating app service then click **Finish** button.
 Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_PowerPoint_Presentation_to_Image.png)
 
-Step 14: Publish has been succeed.
-![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_PowerPoint_Presentation_to_Image.png)
+Step 14: Publish has succeeded.
+![Publish has succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **PowerPoint Presentation to image conversion** using the template PowerPoint document). You will get the output **image** as follows.
 

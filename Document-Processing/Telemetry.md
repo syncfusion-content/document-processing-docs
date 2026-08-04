@@ -47,6 +47,10 @@ Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data d
 <td>Syncfusion component being used</td>
 </tr>
 <tr>
+<td>Feature Name</td>
+<td>Syncfusion feature being used</td>
+</tr>
+<tr>
 <td>Assembly Name</td>
 <td>Syncfusion assembly or package in use</td>
 </tr>
@@ -73,6 +77,10 @@ Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data d
 <tr>
 <td>Session ID</td>
 <td>Unique session identifier (hashed value)</td>
+</tr>
+<tr>
+<td>Machine Name</td>
+<td>Hashed value of machine name, so it cannot be traced back</td>
 </tr>
 <tr>
 <td>Event Name</td>

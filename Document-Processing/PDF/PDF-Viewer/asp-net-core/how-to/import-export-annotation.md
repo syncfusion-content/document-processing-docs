@@ -39,7 +39,7 @@ Follow these steps to implement annotation import and export functionality:
     </ejs-pdfviewer>
 </div>
 
-<script type ="text/javascript">
+<script type="text/javascript">
 
      var exportObject;
     //Export annotation as Json
@@ -59,7 +59,7 @@ Follow these steps to implement annotation import and export functionality:
             exportObject = value;
         });
     }
-    //Import annotation that are exported as object.
+    //Import annotations that are exported as object.
     function importAnnotation() {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.importAnnotation(JSON.parse(exportObject));
