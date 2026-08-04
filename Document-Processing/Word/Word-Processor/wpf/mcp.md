@@ -8,8 +8,7 @@ documentation: ug
 ---
 # Syncfusion WPF DOCX Editor MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF RichTextBox application development by providing deep knowledge directly in your AI-powered IDE.
- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF RichTextBox application development by providing deep knowledge directly in your AI-powered IDE.[Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 ## Key Benefits
 
@@ -185,16 +184,38 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 {% endpromptcard %}
 {% endpromptcards %}
 
+
 **Implement Features**
 
-Get step-by-step help for adding specific features to the Angular DOCX Editor.
+Get step-by-step help for adding specific features to the WPF DOCX Editor.
 
 {% promptcards %}
-{% promptcard Find and replace %}
-#search_docs how to use find and replace feature in  WPF SfRichTextBoxAdv?
+{% promptcard Find and Replace Text %}
+#search_docs How to find and replace text in WPF SfRichTextBoxAdv?
 {% endpromptcard %}
 {% endpromptcards %}
 
+{% promptcards %}
+{% promptcard Enable Spell Check %}
+#search_docs #search_docs How to enable spell checking in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Out of Memory Error %}
+#search_docs Why does an OutOfMemoryException occur when opening large documents in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Missing Document Elements %}
+#search_docs Why are some elements not displayed when loading a Word document in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
 
 ## Best Practices
 
@@ -222,7 +243,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
-| **WPF RichTextBox not rendering** | Ensure the `Syncfusion.PdfViewer.WPF` NuGet packages are installed and configured properly in MainWindow.xaml or MainWindow.xaml.cs |
+| **WPF RichTextBox not rendering** | Ensure the `Syncfusion.SfRichTextBoxAdv.WPF` NuGet packages are installed and configured properly in MainWindow.xaml or MainWindow.xaml.cs |
 
 
 ## Privacy & Security
