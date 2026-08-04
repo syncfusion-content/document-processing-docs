@@ -14,7 +14,7 @@ The PDF Viewer lets applications customize the Organize Pages toolbar to enable 
 
 ## Show or hide the insert option
 
-The `canInsert` property controls the insert tool visibility. Set it to `false` to disable the insert tool.
+The `canInsert` property controls the insert tool interaction. Set it to `false` to disable the insert tool.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -401,4 +401,4 @@ The `canRearrange` property controls whether pages can be rearranged. Set it to 
 
 ## Show or hide the zoom pages option
 
-The `showImageZoomingSlider` property controls the zooming tool visibility. Set it to `false` to hide the zoom page tool.
+The `showImageZoomingSlider` property controls the zooming tool visibility. Set it to `false` to hide the zoom pages slider.

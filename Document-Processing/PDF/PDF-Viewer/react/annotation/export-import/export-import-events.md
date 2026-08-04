@@ -5,6 +5,7 @@ description: Learn how to handle Import/Export events for PDF Annotations in the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import/Export events in React PDF Viewer
@@ -17,7 +18,7 @@ Common use cases:
 - Audit logging and telemetry
 - Blocking or altering operations based on business rules
 
-Each event exposes typed event-args: `ImportStartEventArgs`, `ImportSuccessEventArgs`, `ImportFailureEventArgs`, `ExportStartEventArgs`, `ExportSuccessEventArgs`, and `ExportFailureEventArgs` that describe the operation context.
+Each event passes a typed event-args object: `ImportStartEventArgs`, `ImportSuccessEventArgs`, `ImportFailureEventArgs`, `ExportStartEventArgs`, `ExportSuccessEventArgs`, and `ExportFailureEventArgs` that describe the operation context.
 
 ## Import events
 - [`importStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.

@@ -21,14 +21,14 @@ This page lists each event emitted by the Angular PDF Viewer's [`Print`](https:/
 
 ### `printStart`
 
-This event is emitted when printing is initiated by toolbar or through programmatic API. Use to validate prerequisites, record analytics, or cancel printing.
+This event is emitted when printing is initiated by the toolbar or through the programmatic API. Use it to validate prerequisites, record analytics, or cancel printing.
 
 **Arguments** - ([`PrintStartEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printstarteventargs)):
 
 - `fileName` - The document file name being printed.
 - `cancel` - Default: `false`. Set to `true` to cancel the print operation.
 
-Setting `args.cancel = true` prevents the client-side print flow; for server-backed printing it prevents the service request that produces print output. Find the code example [here](../security/restricting-download-and-print#3-block-print-with-the-printstart-event)
+Setting `args.cancel = true` prevents the client-side print flow; for server-backed printing it prevents the service request that produces print output. See the code example [here](../../react/security/restricting-download-and-print#3-block-print-with-the-printstart-event).
 
 **Minimal usage example:**
 
@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
 
 This event is emitted after the printing completes. Use to finalize analytics, clear temporary state, or notify users.
 
-Arguments - ([`PrintEndEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printendeventargs)):
+Arguments: ([`PrintEndEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printendeventargs)):
 
 - `fileName` - The printed document name.
 
