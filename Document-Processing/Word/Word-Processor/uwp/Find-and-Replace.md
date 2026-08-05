@@ -178,7 +178,7 @@ The following code example demonstrates how to show the advanced replace pane in
 
 N> Currently, the SfRichTextBoxAdv does not support the options pane on Phone devices.
 
-## See Also
+## See also
 
 - [Getting started with UWP RichTextBox](./Getting-Started)
 - [Selection in UWP RichTextBox](./Selection)

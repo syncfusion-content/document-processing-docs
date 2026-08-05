@@ -32,4 +32,5 @@ To avoid an `OutOfMemoryException` when working with large documents, consider t
 
 ## See also
 
+- [UWP RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
 - [UWP RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)

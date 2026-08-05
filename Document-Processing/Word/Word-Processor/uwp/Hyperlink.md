@@ -65,7 +65,7 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 {% endtabs %}
 
-## Hyperlink ScreenTip
+## Hyperlink screentip
 
 In the `SfRichTextBoxAdv` control, a ToolTip (ScreenTip) shows information or the navigation link when the mouse hovers over a hyperlink, and disappears when the mouse is moved away. By default, it shows the navigation link of the hyperlink; you can override this with custom ScreenTip text.
 
@@ -188,7 +188,7 @@ richTextBoxAdv.EditorSettings.DisplayScreenTips = False
 
 N> The `ScreenTip` option is supported starting from v20.4.0.38.
 
-## Hyperlink Navigation
+## Hyperlink navigation
 
 SfRichTextBoxAdv supports an event that fires when hyperlink navigation is requested. This allows you to easily customize the hyperlink navigation behavior.
 
@@ -219,7 +219,7 @@ private async void RichTextBoxAdv_RequestNavigate(object obj, RequestNavigateEve
 
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)
