@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Format in Document Editor Component | Syncfusion
+title: Text Format in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn here all about text format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text Format
@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Working with Text Formatting
+# Text formatting
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports several text formatting options such as bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
-The bold formatting for selected text can be get or set by using the following sample code.
+The bold formatting for selected text can be retrieved or set using the following sample code.
 
 ```typescript
 //Gets the value for bold formatting of selected text.
@@ -31,7 +31,7 @@ documenteditor.editor.toggleBold();
 
 ## Italic
 
-The Italic formatting for selected text can be get or set by using the following sample code.
+The italic formatting for selected text can be retrieved or set using the following sample code.
 
 ```typescript
 documenteditor.selection.characterFormat.italic= true|false;
@@ -45,7 +45,7 @@ documenteditor.editor.toggleItalic();
 
 ## Underline property
 
-The underline style for selected text can be get or set by using the following sample code.
+The underline style for selected text can be retrieved or set using the following sample code.
 
 ```typescript
 documenteditor.selection.characterFormat.underline='Single' | 'None';
@@ -59,7 +59,7 @@ documenteditor.editor.toggleUnderline('Single');
 
 ## Strikethrough property
 
-The strikethrough style for selected text can be get or set by using the following sample code.
+The strikethrough style for selected text can be retrieved or set using the following sample code.
 
 ```typescript
 documenteditor.selection.characterFormat.strikethrough='Single' | 'Normal';
@@ -79,7 +79,7 @@ The selected text can be made superscript by using the following sample code.
 documenteditor.selection.characterFormat.baselineAlignment='Superscript';
 ```
 
-Toggle the selected text as superscript or normal using the following sample code.
+Use the following code to toggle the selected text between superscript and normal.
 
 ```typescript
 documenteditor.editor.toggleSuperscript();
@@ -93,13 +93,13 @@ The selected text can be made subscript by using the following sample code.
 documenteditor.selection.characterFormat.baselineAlignment='Subscript';
 ```
 
-Toggle the selected text as subscript or normal using the following sample code.
+Use the following code to toggle the selected text between subscript and normal.
 
 ```typescript
 documenteditor.editor.toggleSubscript();
 ```
 
-You can make a subscript or superscript text as normal using the following code.
+You can change subscript or superscript text to normal using the following code.
 
 ```typescript
 documenteditor.selection.characterFormat.baselineAlignment='Normal';
@@ -107,7 +107,7 @@ documenteditor.selection.characterFormat.baselineAlignment='Normal';
 
 ## Change case
 
-You can apply different case formatting based on the selected text. Refer to the following sample code.
+You can change the case of the selected text as follows.
 
 ```typescript
 documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleCase'|'CapitalizeEachWord');
@@ -115,7 +115,7 @@ documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleC
 
 ## Size
 
-The size of selected text can be get or set using the following code.
+The size of selected text can be retrieved or set using the following code.
 
 ```typescript
 documenteditor.selection.characterFormat.fontSize= 32;
@@ -130,13 +130,13 @@ In the Document Editor, the Text Properties pane features two icons for managing
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
 
-This Font Color option appear as follows.
+This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
 ### Change Font Color by Code
 
-The color of selected text can be get or set using the following code.
+The color of selected text can be retrieved or set using the following code.
 
 ```typescript
 documenteditor.selection.characterFormat.fontColor= 'Pink';
@@ -145,7 +145,7 @@ documenteditor.selection.characterFormat.fontColor= '#FFC0CB';
 
 ## Font
 
-The font style of selected text can be get or set using the following sample code.
+The font style of selected text can be retrieved or set using the following sample code.
 
 ```typescript
 documenteditor.selection.characterFormat.fontFamily= 'Arial';
@@ -153,7 +153,7 @@ documenteditor.selection.characterFormat.fontFamily= 'Arial';
 
 ## Highlight color
 
-The highlight color of the selected text can be get or set using the following sample code.
+The highlight color of the selected text can be retrieved or set using the following sample code.
 
 ```typescript
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
@@ -161,14 +161,14 @@ documenteditor.selection.characterFormat.highlightColor= 'Pink';
 
 ## Bidirectional
 
-The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) to support multilingual content. You can get or set this property using the following code.
 
 ```typescript
 // Get Bidi value of selected text
 var bidi = documenteditor.selection.characterFormat.bidi;
  
 // Set Bidi for selected text
-documenteditor.selection.characterFormat.bidi= true;
+documenteditor.selection.characterFormat.bidi = true;
 ```
 
 ## Toolbar with options for text formatting
@@ -183,11 +183,11 @@ documenteditor.selection.characterFormat.bidi= true;
 {% endhighlight %}
 {% endtabs %}
 
-## Online Demo
+## Online demo
 
 Explore how to apply text formatting in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/characterformat#/tailwind3).
 
-## See Also
+## See also
 
 * [Feature modules](../asp-net-core/feature-module)
 * [Font dialog](../asp-net-core/dialog#font-dialog)

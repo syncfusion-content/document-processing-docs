@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Table Of Contents in Document Editor Component
-description: Learn here all about table of contents in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table of Contents in ASP.NET Core DOCX Editor | Syncfusion
+description: Learn here all about table of contents in the Syncfusion ASP.NET Core Document Editor component and more.
 platform: document-processing
-control: Table Of Contents
+control: Document Editor
 documentation: ug
 ---
 
 
-# Table of contents
+# Table of contents in ASP.NET Core Document Editor
 
-The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
+The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where each heading starts, with various options to customize the appearance.
 
 ## Inserting table of contents
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for the table of contents explicitly. Otherwise, the default settings will be applied.
 
 `TableOfContentsSettings` contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -42,9 +42,9 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 {% endhighlight %}{% endtabs %}
 
 
-## Update or edit table of contents
+## Update or edit the table of contents
 
-You can update or edit the table of contents using the built-in context menu shown up by right-clicking it.
+You can update or edit the table of contents using the built-in context menu shown when you right-click it.
 
 ![Table of Contents](images/table-of-contents.jpeg)
 
@@ -63,12 +63,12 @@ documenteditor.editorModule.insertTableOfContents(tocSettings);
 
 ```
 
-N>Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> The same method is used for inserting, updating, and editing the table of contents. This will work based on the current element at the cursor position and the optional settings parameter. If a table of contents is present at the cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the table of contents is inserted.
 
-## Online Demo
+## Online demo
 
 Explore how to insert and update table of contents in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/tableofcontents#/tailwind3).
 
-## See Also
+## See also
 
 * [Table of contents dialog](../asp-net-core/dialog#table-of-contents-dialog)
