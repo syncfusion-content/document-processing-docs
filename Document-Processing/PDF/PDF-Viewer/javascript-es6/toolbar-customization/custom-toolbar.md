@@ -336,7 +336,6 @@ Add the following scripts for handling user interactions with the custom toolbar
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-```ts
 
 import {
     PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print,
@@ -709,10 +708,8 @@ function updateSearchInputIcon(isEnable: boolean): void {
     enableNextButton(false);
     enablePrevButton(false);
 
-```
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
-```ts
 
 import {
     PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print,
@@ -1085,7 +1082,6 @@ function updateSearchInputIcon(isEnable: boolean): void {
     enableNextButton(false);
     enablePrevButton(false);
 
-```
 {% endhighlight %}
 {% endtabs %}
 
