@@ -2,7 +2,6 @@
 
 <script>
     var container;
-    var containerPanel;
     var contentChanged =false;
     document.addEventListener('DOMContentLoaded', function () {
         var documenteditorElement = document.getElementById("container");
@@ -18,7 +17,7 @@
             if (contentChanged) {
                 //You can save the document as below
                 container.documentEditor.saveAsBlob('Docx').then((blob) => {
-                    console.log('Saved sucessfully');
+                    console.log('Saved successfully');
                     let exportedDocument = blob;
                     //Now, save the document where ever you want.
                     let formData = new FormData();
@@ -35,7 +34,7 @@
                     req.onreadystatechange = () => {
                         if (req.readyState === 4) {
                             if (req.status === 200 || req.status === 304) {
-                                console.log('Saved sucessfully');
+                                console.log('Saved successfully');
                             }
                         }
                     };

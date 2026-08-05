@@ -1,5 +1,4 @@
- public ActionResult Default()
-    {
-        return View();
-    }
-   
+public ActionResult Default()
+{
+    return View();
+}
