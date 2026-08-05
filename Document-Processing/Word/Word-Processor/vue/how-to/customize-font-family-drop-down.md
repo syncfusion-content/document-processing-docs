@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize font family drop-down in Vue DOCX Editor
+# Customize font family drop-down in Vue Document Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an option to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in the Document Editor settings. The fonts that are added in the `fontFamilies` of [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditorsettings) will be displayed in the font drop-down list of the text properties pane and the font dialog.
 

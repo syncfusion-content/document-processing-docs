@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add a save button in the Vue DOCX Editor toolbar
+# Add a save button in the Vue Document Editor toolbar
 
 ## Add a save button to the existing toolbar in DocumentEditorContainer
 

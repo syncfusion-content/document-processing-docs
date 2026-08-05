@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the color picker in the Vue DOCX Editor component
+# Customize the color picker in the Vue Document Editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an option to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in the Document Editor settings. The color picker offers customization options for the default appearance by allowing selection between Picker or Palette mode for font and border colors.
 

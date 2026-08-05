@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in Vue DOCX Editor
+# Customize context menu in Vue Document Editor
 
 ## How to customize the context menu in the Document Editor
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the cursor color in the Vue DOCX Editor component
+# Change the cursor color in the Vue Document Editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) default cursor color is black. The user can change the color by overriding the CSS property using the class name. The Document Editor cursor CSS has a class named `e-de-blink-cursor`.
 
@@ -22,4 +22,4 @@ border-left: 1px solid red !important;
 
 The output will be as shown below:
 
-![Change the cursor color in the DOCX Editor](../images/cursor-css.png)
+![Change the cursor color in the Document Editor](../images/cursor-css.png)

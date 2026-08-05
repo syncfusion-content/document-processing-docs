@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in the Vue DOCX Editor component
+# Change document view in the Vue Document Editor component
 
 ## How to change the document view in the DocumentEditor component
 

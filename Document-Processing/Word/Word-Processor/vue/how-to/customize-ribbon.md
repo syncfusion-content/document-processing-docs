@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in the Vue DOCX Editor
+# Customize Ribbon in the Vue Document Editor
 
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 
