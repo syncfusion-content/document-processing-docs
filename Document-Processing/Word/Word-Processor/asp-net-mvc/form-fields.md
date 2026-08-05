@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Form Fields in ASP.NET MVC DOCX Editor Control
+# Form Fields in ASP.NET MVC Document Editor Control
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 
@@ -101,9 +101,9 @@ documentEditor.resetFormFields();
 
 ## Protect the document in form filling mode
 
-DOCX Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
+Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-DOCX Editor provides an option to protect and unprotect the document using `enforceProtection` and `stopProtection` API.
+Document Editor provides an option to protect and unprotect the document using `enforceProtection` and `stopProtection` API.
 
 
 
@@ -120,4 +120,4 @@ N> In the enforceProtection method, the first parameter denotes the password and
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/formfields#/tailwind3).
+Explore how to insert and manage form fields in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/formfields#/tailwind3).

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Find and Replace in ASP.NET MVC DOCX Editor Component
+# Find and Replace in ASP.NET MVC Document Editor Component
 
 The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)  component searches for a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bold, and more.
 
@@ -34,7 +34,7 @@ You can close the options pane by pressing the `Esc` key.
 
 ## Search
 
-The `Search` module of the DOCX Editor exposes the following APIs:
+The `Search` module of the Document Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|

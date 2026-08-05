@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Document management in DOCX Editor Component
+# Document management in Document Editor Component
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permissions, only a unique user or user group is authorized to edit a separate text area.
 

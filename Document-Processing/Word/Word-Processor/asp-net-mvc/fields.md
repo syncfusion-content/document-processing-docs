@@ -7,7 +7,7 @@ control: Fields
 documentation: ug
 ---
 
-# Fields in ASP.NET MVC DOCX Editor
+# Fields in ASP.NET MVC Document Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) has preservation support for all types of fields in an existing Word document without any data loss.
 
@@ -23,11 +23,11 @@ documenteditor.editor.insertField(fieldCode, fieldResult);
 
 ```
 
-N> DOCX Editor does not validate or process the field code or field result. It simply inserts the field with the specified field information.
+N> Document Editor does not validate or process the field code or field result. It simply inserts the field with the specified field information.
 
 ## Update fields
 
-DOCX Editor provides support for updating bookmark cross reference fields.
+Document Editor provides support for updating bookmark cross reference fields.
 
 ```typescript
 //Update all the bookmark cross reference fields in the document.
@@ -38,7 +38,7 @@ Bookmark cross reference fields can be updated through the UI by using the updat
 
 ![Update bookmark cross reference fields.](images/updatefields.png)
 
-The following types of fields are automatically updated in DOCX Editor.
+The following types of fields are automatically updated in Document Editor.
 
 * NUMPAGES
 * SECTION
