@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Insert Page number and Navigate to specific page ASP.NET MVC Document Editor Component
-description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion ASP.NET MVC Document Editor Component
+title: Insert Page Numbers and Navigate to Pages in ASP.NET MVC DOCX Editor
+description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion ASP.NET MVC DOCX Editor Component
 platform: document-processing
 control: Insert Page number And Navigate To Specific Page
 documentation: ug
 ---
 
-# How to insert page number and navigate to specific page in Document Editor component
+# How to Insert Page Numbers and Move to Specific Pages in DOCX Editor
 
-You can insert page number and navigate to specific page in Document Editor component by following ways.
+You can insert a page number and navigate to a specific page in the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) component in the following ways.
 
 ## Insert page number
 
-You can use [`insertPageNumber`] API in editor module to insert the page number in current cursor position. By default, Page number will insert in Arabic number style. You can change it, by providing the number style in parameter.
+You can use the [`insertPageNumber`] API in the editor module to insert the page number at the current cursor position. By default, the page number will be inserted in Arabic number style. You can change it by providing the number style in the parameter.
 
-N> Currently, Document Editor have options to insert page number at current cursor position.
+N> Currently, the DOCX Editor has options to insert a page number at the current cursor position.
 
 The following example code illustrates how to insert page number in header.
 
@@ -25,9 +25,10 @@ The following example code illustrates how to insert page number in header.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-page-number/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-page-number.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-Also, you use [`insertField`] API in Editor module to insert the Page number in current position
+You can also use the [`insertField`] API in the editor module to insert the page number at the current position.
 
 ```typescript
 //Current page number
@@ -36,9 +37,9 @@ container.documentEditor.editor.insertField('PAGE \* MERGEFORMAT', '1');
 
 ## Get page count
 
-You can use [`pageCount`] API to gets the total number of pages in Document.
+You can use the [`pageCount`] API to get the total number of pages in the document.
 
-The following example code illustrates how to get the number of pages in Document.
+The following example code illustrates how to get the number of pages in the document.
 
 
 {% tabs %}
@@ -46,16 +47,19 @@ The following example code illustrates how to get the number of pages in Documen
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/Page-count/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="pageCount.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Navigate to specific page
 
-You can use [`goToPage`] API in Selection module to move selection to the start of the specified page number.
+You can use the [`goToPage`] API in the Selection module to move the selection to the start of the specified page number.
 
-The following example code illustrates how to move selection to specific page.
+The following example code illustrates how to move the selection to a specific page.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/go-to-page/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Go-to-page.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
