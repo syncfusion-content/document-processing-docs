@@ -1,18 +1,18 @@
-<ejs-documenteditorcontainer id="container" created="onDocCreate"></ejs-documenteditorcontainer>
+<ejs-documenteditorcontainer id="container" created="onCreated" enable-toolbar="true"></ejs-documenteditorcontainer>
 <script>
-    function onDocCreate() {
+    function onCreated() {
         var container = document.getElementById("container").ej2_instances[0];
         var toolItem = {
-            prefixIcon: "e-de-ctnr-lock",
-            tooltipText: "Disable Image",
-            text: "Disable Image",
-            id: "Custom"
+            prefixIcon: "e-de-ctnr-save e-icons",
+            tooltipText: "Save the Document",
+            text: "Save",
+            id: "save"
         };
-        container.toolbarItems = ['New','Open',toolItem, 'Separator' ,'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'Comments', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'Separator', 'Find', 'Separator', 'LocalClipboard', 'RestrictEditing'];
+        container.toolbarItems = ['New', 'Open', toolItem, 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields', 'ContentControl'];
         container.toolbarClick = function (args) {
             switch (args.item.id) {
-                case 'Custom':
-                    container.documentEditor.save('Sample', 'Docx');
+                case 'save':
+                    container.documentEditor.save('sample', 'Docx');
                     break;
             }
         };
