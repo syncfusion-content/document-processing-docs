@@ -37,4 +37,4 @@ When you build the project or run `dotnet restore`, NuGet will automatically dow
 3. **Register Your Syncfusion License**  
 
 Before publishing your application, make sure to register your Syncfusion license key. This is required for the components to work properly.  
-Refer to the official Syncfusion licensing guide for instructions on how to obtain and register your license key.
+Refer to the [Syncfusion licensing guide](https://help.syncfusion.com/document-processing/licensing/how-to-generate) for instructions on how to obtain and register your license key.

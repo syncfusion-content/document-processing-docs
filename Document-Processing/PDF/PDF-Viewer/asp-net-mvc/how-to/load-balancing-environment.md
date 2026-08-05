@@ -27,7 +27,7 @@ public class CacheManager:{{'**ICacheManager**'| markdownify }}{}
 
 ```
 
-**Step 3:** Connect the Redis database in the constructor by using the **redisconnectionstring** as provided in the below code.
+**Step 2:** Connect the Redis database in the constructor by using the **redisconnectionstring** as provided in the below code.
 
 ```cs
 
@@ -51,7 +51,7 @@ public CacheManager(string redisConnectionstring = null, int slidingExpiration =
 
 ```
 
-**Step 4:** Override the **ICacheManager** interface methods into the newly created class for adding, retrieving, and deleting the data from the Redis cache.
+**Step 3:** Override the **ICacheManager** interface methods into the newly created class for adding, retrieving, and deleting the data from the Redis cache.
 
 ```cs
 
@@ -86,7 +86,7 @@ public void DeleteCache(string key)
 
 ```
 
-**Step 5:** In the controller, create a new object by passing the **redisconnectionstring** and the sliding expiration time.
+**Step 4:** In the controller, create a new object by passing the **redisconnectionstring** and the sliding expiration time.
 
 ```cs
 
@@ -96,7 +96,7 @@ pdfviewer.CacheManager = new CacheManager(redisconnectonstring, slidingexpiratio
 
 ```
 
-**Step 6:** Set the newly created object to **CacheManager** property by using the below code-snippet.
+**Step 5:** Set the newly created object to **CacheManager** property by using the below code-snippet.
 
 ```cs
 
@@ -105,7 +105,7 @@ pdfviewer.CacheManager = new CacheManager(redisconnectonstring, 0);
 
 ```
 
-**Step 7:** Use this code in all our controller methods (Load, RenderPdfPage).
+**Step 6:** Use this code in all our controller methods (Load, RenderPdfPage).
 
 ```cs
 
