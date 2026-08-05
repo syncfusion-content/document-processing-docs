@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Tool Bar in ASP.NET Core DOCX Editor Component | Syncfusion
+title: Customize Tool Bar in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn here all about how to customize the toolbar in Syncfusion ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document Editor
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Customize the Existing Toolbar in ASP.NET Core Document Editor Component
+# Customize Toolbar in ASP.NET Core Document Editor
 
 ## How to Customize the Existing Toolbar in ASP.NET Core Document Editor Container
 

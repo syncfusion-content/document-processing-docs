@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Context Menu in ASP.NET Core DOCX Editor Component | Syncfusion
+title: Customize Context Menu in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn here all about how to customize the context menu in Syncfusion ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document Editor
@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# Context Menu Customization
+# Context Menu Customization in ASP.NET Core Document Editor
 
-## How to Customize the Context Menu in ASP.NET Core Document Editor
+## How to Customize the Context Menu
 
 [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) allows you to add a custom option in the context menu. You can achieve this by using the `addCustomMenu()` method, and the custom action is defined using the `customContextMenuSelect` event.
 
