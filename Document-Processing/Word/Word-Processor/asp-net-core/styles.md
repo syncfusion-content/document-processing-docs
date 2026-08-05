@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in Document Editor Component | Syncfusion
-description: Learn how to create, manage, customize, and apply styles in the Syncfusion ASP.NET Core Document Editor component for consistent document formatting.
+description: Learn here all about styles in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Styles
 documentation: ug

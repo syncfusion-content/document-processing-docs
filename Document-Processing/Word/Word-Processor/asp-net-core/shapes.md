@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapes in Document Editor Component | Syncfusion
-description: Learn about shape support, text boxes, shape resizing, positioning, and text wrapping in the Syncfusion ASP.NET Core Document Editor.
+description: Learn here all about shapes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Shapes
 documentation: ug
@@ -42,4 +42,4 @@ DocumentEditor preserves the position properties of the shape and displays the s
 
 ## Online Demo
 
-Explore how to preserve AutoShapes and grouped shapes in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/autoshapes#/tailwind3).
+Explore how to preserve auto shapes and grouped shapes in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/autoshapes#/tailwind3).
