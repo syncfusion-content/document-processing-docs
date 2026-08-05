@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Add save button in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here to add save button in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here to add save button in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Add save button toolbar
 documentation: ug
 ---
 
 
-# Add save button in ASP.NET MVC DOCX Editor toolbar
+# Add save button in toolbar in ASP.NET MVC Document Editor Component
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
