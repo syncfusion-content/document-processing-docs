@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Bookmarks in ASP.NET MVC DOCX Editor Component
+# Bookmarks in ASP.NET MVC Document Editor Component
 
 A bookmark is a powerful tool that helps to mark a place in the document that can be found again easily. You can enter many bookmarks in the document and give each one a unique name to identify them easily.
 
@@ -104,7 +104,7 @@ The following example shows how to open the bookmark dialog in the Document Edit
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage bookmarks in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 
