@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling and zooming in Angular Document Editor
 
-The [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
+The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
