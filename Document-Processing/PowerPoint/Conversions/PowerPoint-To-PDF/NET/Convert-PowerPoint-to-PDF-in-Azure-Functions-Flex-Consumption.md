@@ -32,6 +32,10 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Azure.Functions.Worker;
 using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
@@ -137,7 +141,7 @@ Step 12: After creating app service then click **Finish** button.
 Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_PowerPoint_Presentation_to_PDF.png)
 
-Step 14: Publish has been succeed.
+Step 14: Publish has been successful.
 ![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_PowerPoint_Presentation_to_PDF.png)
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **PowerPoint Presentation to PDF conversion** using the template PowerPoint document). You will get the output **PDF** as follows.
