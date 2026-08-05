@@ -21,7 +21,8 @@ The following example code illustrates how to disable header and footer edit in 
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Disable header and footer edit using the closeHeaderFooter API
 
