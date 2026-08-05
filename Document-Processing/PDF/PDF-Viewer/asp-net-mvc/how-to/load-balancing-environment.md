@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer | Syncfusion
+title: Configure Redis for Load Balancing in Syncfusion MVC PDF Viewer
 description: Learn how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer, ensuring efficient document processing in a distributed environment.
 platform: document-processing
 control: PDF Viewer
@@ -26,7 +26,7 @@ public class CacheManager:{{'**ICacheManager**'| markdownify }}{}
 
 ```
 
-**Step 2:** Connect the Redis database in the constructor by using the **redisconnection string** as provided in the below code.
+**Step 2:** Connect the Redis database in the constructor by using the **re-disconnection string** as provided in the below code.
 
 ```cs
 
@@ -85,7 +85,7 @@ public void DeleteCache(string key)
 
 ```
 
-**Step 4:** In the controller, create a new object by passing the **redisconnection string** and the sliding expiration time.
+**Step 4:** In the controller, create a new object by passing the **re-disconnection string** and the sliding expiration time.
 
 ```cs
 

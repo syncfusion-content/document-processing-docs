@@ -4,7 +4,6 @@ title: Identify Added Annotation Mode in Syncfusion ASP.NET MVC PDF Viewer
 description: Learn here all about Identify added annotation mode in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identify Edited State of Document in ASP.NET MVC PDF Viewer | Syncfusion
+title: Identify Edited State in Syncfusion ASP.NET MVC PDF Viewer
 description: Learn how to check if a loaded PDF document has been edited using the isDocumentEdited property in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -13,7 +13,7 @@ The Syncfusion ASP.NET MVC PDF Viewer allows you to determine whether a loaded P
 
 To identify if the loaded document has been edited, follow these steps:
 
-**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
+**Step 1:** Create an ASP.NET MVC PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
 **Step 2:** Add the following buttons and JavaScript code to your Razor view (e.g., `Index.cshtml`). This example demonstrates checking the `isDocumentEdited` property before and after an intentional edit (for demonstration purposes).
 
