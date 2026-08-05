@@ -12,90 +12,101 @@ The following tables list the features available in Essential<sup>&reg;</sup> PD
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
 </tr>
-
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Drawing Text<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Drawing Text</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Text Formatting<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Text Formatting</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Multilingual Support<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Multilingual Support</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Drawing RTL text<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Drawing RTL text</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Drawing complex script text<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Drawing complex script text</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Text Extraction<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Text Extraction</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Unicode<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Unicode</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Pagination<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+<td>Pagination</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -104,79 +115,91 @@ Graphics:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Pen and Brush<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Pen and Brush</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Layers<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Layers</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Transparent Graphics<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Transparent Graphics</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Color Spaces<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Color Spaces</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Image Extraction<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Image Extraction</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-Enhanced Printing Support<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Enhanced Printing Support</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Barcode<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Barcode</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -185,72 +208,81 @@ Document-level Operations:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Merge Documents<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Merge Documents</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Split Document<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Split Document</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Overlay Documents<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Overlay Documents</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Import Pages<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Import Pages</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Stamp<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Stamp</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Booklet<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Booklet</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -259,71 +291,81 @@ Document Settings :
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Custom Metadata<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Custom Metadata</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Document Properties<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Document Properties</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Page Orientation<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Page Orientation</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Page Sizes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Page Sizes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Viewer Preferences<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Viewer Preferences</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Tagged PDF with section 508 compliant<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Tagged PDF with section 508 compliant</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -332,65 +374,70 @@ Forms:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Fields<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Fields</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Form Filling<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Form Filling</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Flatten<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Flatten</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Import Form Data<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Import Form Data</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Form Export<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Form Export</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
@@ -400,34 +447,41 @@ XFA Forms:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th> 
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Fields<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Fields</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Form Filling<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Form Filling</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -437,124 +491,141 @@ Document Conversion:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-TIFF to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>TIFF to PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-HTML to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>HTML to PDF</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-RTF To PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>RTF To PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-DOC To PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>DOC To PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Excel To PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>Excel To PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-PDF OCR<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>PDF OCR</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-XPS to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>XPS to PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-SVG to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>SVG to PDF</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-EMF to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td></tr>
+<td>EMF to PDF</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-JPEG to PDF<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>JPEG to PDF</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-PDF to JPEG<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>PDF to JPEG</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 <tr>
-<td>
-PDF to PDF/A-1b<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>PDF to PDF/A-1b</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
 </tbody>
 </table>
 
@@ -564,56 +635,71 @@ PDF Standards:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-PDF/ A-1b Compliance<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
-
+<td>PDF/ A-1b Compliance</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-PDF/ A-2b Compliance<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>PDF/ A-2b Compliance</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-PDF/ A-3b Compliance<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>PDF/ A-3b Compliance</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-PDF/x1a: 2001 Compliance<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>PDF/x1a: 2001 Compliance</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-ZUGFeRD Invoice<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>ZUGFeRD Invoice</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -622,47 +708,61 @@ Fonts:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUi<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Standard Fonts<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Standard Fonts</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-CJK Fonts<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>CJK Fonts</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-TrueType Fonts<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>TrueType Fonts</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Unicode TrueType<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Unicode TrueType</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -671,48 +771,61 @@ Images:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Scalar Images<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
-<tr>
-<td>
-Soft Mask<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td></tr>
-<tr>
-<td>
-Vector Images<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
+<td>Scalar Images</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Watermarks<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Soft Mask</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Vector Images</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Watermarks</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -721,83 +834,100 @@ Tables:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-ADO.Net Tables Support<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td>
-<td>No<br/><br/></td></tr>
-<tr>
-<td>
-Cell / Row / Column Formatting<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
-<tr>
-<td>
-Header<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
-<tr>
-<td>
-Pagination<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>ADO.Net Tables Support</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
 </tr>
 <tr>
-<td>
-Borders<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Cell / Row / Column Formatting</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-RowSpan and ColumnSpan<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Header</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Nested table<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Pagination</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Cell Padding and Spacing<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Borders</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>RowSpan and ColumnSpan</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Nested table</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Cell Padding and Spacing</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
@@ -807,39 +937,51 @@ Page Level Operations:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Headers and Footers<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Headers and Footers</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Page Label<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Page Label</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Automatic Fields<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Automatic Fields</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 
@@ -848,94 +990,110 @@ Interactive Elements:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-3D-Annotation<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>3D-Annotation</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Measurement Annotations<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Measurement Annotations</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Action<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Action</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Attachment<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td><td>Yes<br/><br/></td>
+<td>Attachment</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Bookmark<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Bookmark</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Hyperlink<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Hyperlink</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Portfolio<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Portfolio</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Import Annotation Data<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Import Annotation Data</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>
-Export Annotation Data<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
+<td>Export Annotation Data</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
@@ -945,60 +1103,70 @@ Security:
 <table>
 <thead>
 <tr>
-<th>
-Features<br/><br/></th><th>
-.NET Framework<br/><br/></th><th>
-UWP<br/><br/></th><th>
-.NET Core <br/><br/></th>
-<th>Blazor Client-Side<br/><br/></th>
-<th>Blazor Server-Side & Hosted Application<br/><br/></th>
-<th>WinUI<br/><br/></th></tr>
+<th rowspan="2">Features</th>
+<th colspan="3">Desktop/Windows Technologies</th>
+<th colspan="4">Cross-Platform/Web Technologies</th>
+</tr>
+<tr>
+<th>.NET Framework</th>
+<th>UWP</th>
+<th>WinUI</th>
+<th>.NET Core</th>
+<th>.NET MAUI</th>
+<th>Blazor Server-Side</th>
+<th>Blazor Client-Side</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-<td>
-Digital Signature<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Digital Signature</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Digital Signature with LTV<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Digital Signature with LTV</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Validate Digital Signature<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Validate Digital Signature</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Encryption and Decryption<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Encryption and Decryption</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 <tr>
-<td>
-Redaction<br/><br/></td><td>
-Yes<br/><br/></td><td>
-No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>No<br/><br/></td>
-<td>Yes<br/><br/></td>
-<td>Yes<br/><br/></td></tr>
+<td>Redaction</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
