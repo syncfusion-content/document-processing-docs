@@ -14,19 +14,23 @@ documentation: UG
 
 * **[Azure Cloud Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal)** is required. 
 
+* The **connection string**, **container name**, and **blob name** for your Azure Storage account. To get the connection string, see [View account access keys](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal).
+
+* The example uses the **Azure.Storage.Blobs** SDK (v12 or later). For more information, see the [Azure Blob Storage client library for .NET](https://learn.microsoft.com/en-us/dotnet/api/overview/azure/storage.blobs-readme?view=azure-dotnet).
+
 ## Open Presentation from Azure Blob
 
 Steps to open a Presentation from Azure Blob Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/Azure-Blob/Create-ASPNET-Core-App.png)
+![Create an ASP.NET Core Web App project in visual studio](Cloud-Storage/Azure-Blob/Create-ASPNET-Core-App.png)
 
 Step 2: Name the project.
 
 ![Name the project](Cloud-Storage/Azure-Blob/Name-the-project-for-open-document.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)
 * [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs)
@@ -86,14 +90,17 @@ public async Task<IActionResult> EditDocument()
             if (shape.TextBody.Text == "Company History")
                 shape.TextBody.Text = "Company Profile";
 
-            //Saving the PowerPoint file to a MemoryStream 
-            MemoryStream outputStream = new MemoryStream();
-            pptxDocument.Save(outputStream);
+            //Save the PowerPoint file to a MemoryStream
+            using (MemoryStream outputStream = new MemoryStream())
+            {
+                pptxDocument.Save(outputStream);
+                outputStream.Position = 0;
 
-            //Download the PowerPoint file in the browser
-            FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/powerpoint");
-            fileStreamResult.FileDownloadName = "EditPowerPoint.pptx";
-            return fileStreamResult;
+                //Download the PowerPoint file in the browser
+                FileStreamResult fileStreamResult = new FileStreamResult(outputStream, "application/powerpoint");
+                fileStreamResult.FileDownloadName = "EditPowerPoint.pptx";
+                return fileStreamResult;
+            }
         }
     }
     catch (Exception ex)
@@ -105,9 +112,9 @@ public async Task<IActionResult> EditDocument()
 {% endhighlight %}
 {% endtabs %}
 
-### Download file from Azure Blob cloud storage
+### Download file from Azure Blob Cloud Storage
 
-This is the helper method to download Presentation from Azure Blob cloud storage.
+This is the helper method to download a Presentation from Azure Blob Cloud Storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -125,7 +132,7 @@ public async Task<MemoryStream> GetDocumentFromAzure()
         //Name of the Azure Blob Storage container
         string containerName = "Your_container_name";
 
-        //Name of the Powerpoint file you want to load
+        //Name of the PowerPoint file you want to download
         string blobName = "PowerPointTemplate.pptx";
 
         //Download the PowerPoint from Azure Blob Storage
@@ -137,6 +144,8 @@ public async Task<MemoryStream> GetDocumentFromAzure()
         //Create a MemoryStream to copy the file content
         MemoryStream stream = new MemoryStream();
         await download.Content.CopyToAsync(stream);
+        //Reset the position to the beginning so callers can read from the start
+        stream.Position = 0;
 
         return stream;
     }
@@ -161,13 +170,13 @@ Steps to save a Presentation to Azure Blob Cloud Storage.
 
 Step 1: Create a new ASP.NET Core Web Application (Model-View-Controller).
 
-![Create a ASP.NET Core Web App project in visual studio](Cloud-Storage/Azure-Blob/Create-ASPNET-Core-App.png)
+![Create an ASP.NET Core Web App project in visual studio](Cloud-Storage/Azure-Blob/Create-ASPNET-Core-App.png)
 
 Step 2: Name the project.
 
 ![Name the project](Cloud-Storage/Azure-Blob/Name-the-project-for-save-document.png)
 
-Step 3: Install the following **Nuget packages** in your application from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)
 * [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs)
@@ -256,30 +265,32 @@ public async Task<IActionResult> UploadDocument()
     stampShape.Fill.FillType = FillType.None;
     stampShape.TextBody.AddParagraph("IMN").HorizontalAlignment = HorizontalAlignmentType.Center;
 
-    //Saves the PowerPoint document to MemoryStream
-    MemoryStream stream = new MemoryStream();
-    pptxDocument.Save(stream);            
+    //Save the PowerPoint document to MemoryStream
+    using (MemoryStream stream = new MemoryStream())
+    {
+        pptxDocument.Save(stream);
+        stream.Position = 0;
 
-    //Upload the document to azure
-    await UploadDocumentToAzure(stream);
+        //Upload the document to Azure
+        await UploadDocumentToAzure(stream);
+    }
 
     return Ok("PowerPoint uploaded to Azure Blob Storage.");
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Upload file to Azure Blob cloud storage
+### Upload file to Azure Blob Cloud Storage
 
-This is the helper method to upload Presentation to Azure Blob cloud storage.
+This is the helper method to upload a Presentation to Azure Blob Cloud Storage.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 /// <summary>
-/// Upload file to Azure Blob cloud storage
+/// Upload file to Azure Blob Cloud Storage
 /// </summary>
-/// <param name="stream"></param>
-/// <returns></returns>
-public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
+/// <param name="stream">MemoryStream containing the PowerPoint file to upload.</param>
+public async Task UploadDocumentToAzure(MemoryStream stream)
 {
     try
     {
@@ -289,10 +300,11 @@ public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
         //Name of the Azure Blob Storage container
         string containerName = "Your_container_name";
 
-        //Name of the PowerPoint file you want to load
+        //Name of the PowerPoint file you want to upload
         string blobName = "CreatePowerPoint.pptx";
 
-        //Download the PowerPoint from Azure Blob Storage
+        //Upload the PowerPoint to Azure Blob Storage.
+        //Passing 'true' for overwrite allows the existing blob (if any) to be replaced.
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlobClient blobClient = containerClient.GetBlobClient(blobName);
@@ -302,9 +314,8 @@ public async Task<MemoryStream> UploadDocumentToAzure(MemoryStream stream)
     }
     catch (Exception e)
     {
-        Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+        Console.WriteLine("Unknown error encountered on server. Message:'{0}' when writing an object", e.Message);
     }
-    return stream;
 }
 {% endhighlight %}
 {% endtabs %}

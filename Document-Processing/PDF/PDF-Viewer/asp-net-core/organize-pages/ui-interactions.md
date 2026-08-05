@@ -34,8 +34,8 @@ Change page sequence with drag-and-drop.
 
 Add blank pages at the required position.
 
-* **Insert blank page left** Inserts a blank page to the left of the selected page.
-* **Insert blank page right** Inserts a blank page to the right of the selected page.
+* **Insert blank page left:** Inserts a blank page to the left of the selected page.
+* **Insert blank page right:** Inserts a blank page to the right of the selected page.
 
 ![insert](../images/organize-insert.png)
 
