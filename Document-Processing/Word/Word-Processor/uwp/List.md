@@ -4,31 +4,33 @@ description: Learn here all about List support in Syncfusion UWP RichTextBox (Sf
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: list
+keywords: list,bullet,numbered,multilevel,single-level
 ---
 # List in UWP RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv supports both the single-level and multilevel lists similar to the Microsoft Word. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports both single-level and multilevel lists, similar to Microsoft Word. Lists are used to organize data as step-by-step instructions in documents, making key points easy to understand.
 
-## Single Level List
+## Single level list
 
-Single level means that all the items in the list have the same hierarchy and indentation. It can be a numbered or a bulleted list.
+A single level list has all the items at the same hierarchy and indentation. It can be a numbered or a bulleted list.
+
 The following screenshot shows single level bulleted list.
 ![Single level bulleted list](List_images/List_img1.jpeg)
 
 The following screenshot shows single level numbered list.
 ![Single level numbered list](List_images/List_img2.jpeg)
 
-## Multilevel List
+## Multilevel list
 
-Multilevel means defining a list within a list where up to nine levels can be defined similar to the Microsoft Word. A multilevel list can be bulleted or numbered and also mixed with numbers, letters, and bullets. For example, one level can be bulleted and next level can be a numbered list inside it.
-The following screenshot shows multilevel list.
+A multilevel list defines a list within a list, where up to nine levels can be defined, similar to Microsoft Word. A multilevel list can be bulleted or numbered, and can also be mixed across levels (for example, numbers, letters, and bullets). For example, one level can be bulleted and the next level can be a numbered list inside it.
+
 ![Multilevel list](List_images/List_img3.jpeg)
 
-## Adding List
+## Adding a list
 
-Each list in the document can contain reference to any one of the abstract lists in the document. Both abstract list and list should be defined a unique Id. List should refer the abstract list with the abstract list’s Id. List format for a paragraph should refer to the list with the list’s Id.
-The following code example demonstrates how to define a single level numbered list for a document and how it is applied to a paragraph.
+Each list in the document can contain a reference to any one of the abstract lists in the document. Both the abstract list and the list should be assigned a unique Id. The list should refer to the abstract list with the abstract list's Id. The list format for a paragraph should refer to the list with the list's Id.
+
+The following code example demonstrates how to define a single-level numbered list for a document and how it is applied to a paragraph.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:DocumentAdv>
@@ -69,7 +71,7 @@ The following code example demonstrates how to define a single level numbered li
 AbstractListAdv abstractListAdv = new AbstractListAdv(null);
 abstractListAdv.AbstractListId = 1;
 
-// Defines new ListLevel instance.
+// Defines a new ListLevel instance.
 ListLevelAdv listLevel = new ListLevelAdv(abstractListAdv);
 listLevel.ParagraphFormat.LeftIndent = 48d;
 listLevel.ParagraphFormat.FirstLineIndent = 24d;
@@ -79,10 +81,10 @@ listLevel.NumberFormat = "%1.";
 listLevel.RestartLevel = 0;
 listLevel.StartAt = 1;
 
-// Adds list level to abstract list.
+// Adds the list level to the abstract list.
 abstractListAdv.Levels.Add(listLevel);
 
-// Adds abstract list to the document.
+// Adds the abstract list to the document.
 richTextBoxAdv.Document.AbstractLists.Add(abstractListAdv);
 
 // Creates a new list instance.
@@ -91,10 +93,10 @@ listAdv.ListId = 1;
 // Sets the abstract list Id for this list.
 listAdv.AbstractListId = 1;
 
-// Adds list to the document.
+// Adds the list to the document.
 richTextBoxAdv.Document.Lists.Add(listAdv);
 
-// Add list item 1
+// Adds the first list item.
 ParagraphAdv paragraphAdv = new ParagraphAdv();
 paragraphAdv.Inlines.Add(new SpanAdv() { Text = "List Item 1" });
 richTextBoxAdv.Document.Sections[0].Blocks.Add(paragraphAdv);
@@ -113,8 +115,8 @@ The following code example demonstrates how to define number format for numbered
 {% highlight c# %}
 // Defines the number format for the list level.
 /* Note
-* The percent sign (%) followed by any number from 1 through 9 represents the number style from the respective list level. 
-* For example, if you wanted the format for the first level to be "Article I." "Article II," and so on, the string for the NumberFormat property would be "Article %1." and the ListLevelPattern property would be set to ListLevelPattern.UpRoman.
+* The percent sign (%) followed by any number from 1 through 9 represents the number style from the respective list level.
+* For example, if you wanted the format for the first level to be "Article I.", "Article II.", and so on, the string for the NumberFormat property would be "Article %1." and the ListLevelPattern property would be set to ListLevelPattern.UpRoman.
 */
 listLevel.NumberFormat = "Article %1.";
 listLevel.ListLevelPattern = ListLevelPattern.UpRoman;
@@ -127,7 +129,7 @@ listLevel.ListLevelPattern = ListLevelPattern.UpRoman;
 You can define bulleted list by setting list level pattern as Bullet. You can define various bullets by defining the bullet character. The following code sample demonstrates how to define dot, square and arrow bullets in the SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight c# %}
-// Defines Bulleted List.
+// Defines a bulleted list.
 listLevel.ListLevelPattern = ListLevelPattern.Bullet;
 // Defining Dot Bullet
 listLevel.NumberFormat = "\uf0b7";
@@ -146,9 +148,9 @@ listLevel.CharacterFormat.FontFamily = new Windows.UI.Xaml.Media.FontFamily("Sym
 
 ## Level overrides
 
-The list levels for a list are defined in the abstract list to which it refers to. Additionally you can define level overrides for any list level. The SfRichTextBoxAdv supports two types of level overrides.
+The list levels for a list are defined in the abstract list to which it refers. Additionally, you can define level overrides for any list level. The `SfRichTextBoxAdv` supports two types of level overrides.
 
-1. Start at override – Only start value for the list is overridden and other properties are referred to list level defined in abstract list.
+1. Start-at override – Only the start value for the list is overridden; other properties are referred to the list level defined in the abstract list.
 
 2. Level override – The list level is completely overridden.
 
@@ -211,28 +213,35 @@ listAdv.LevelOverrides.Add(levelOverride);
 
 {% endtabs %}
 
-## Editing list
+## Editing a list
 
-You can retrieve the list applied for the current selection. By doing so, you can edit the list according to your requirement. After editing the list, you need to set it for the current selection in order to make the changes effective.
-The following code sample demonstrates how to apply the list to the selection content in the SfRichTextBoxAdv control.
+You can retrieve the list applied to the current selection. By doing so, you can edit the list according to your requirements. After editing the list, you need to set it on the current selection for the changes to take effect.
+
+N> `GetList()` returns `null` if the current selection does not have a list applied.
+
+The following code sample demonstrates how to get the list applied to the current selection.
+
 {% tabs %}
 {% highlight c# %}
-// Gets the current list for the selection content.
+// Gets the list applied to the current selection.
 ListAdv listAdv = richTextBoxAdv.Selection.ParagraphFormat.GetList();
 
-
 {% endhighlight %}
-
 {% endtabs %}
 
-The following code example demonstrates how to apply a list for the selection content in the SfRichTextBoxAdv control. When the selection content has a list, then it gets modified with that list. Otherwise the list is added to the document and applied to the selection content.
+The following code example demonstrates how to apply a list to the current selection in the `SfRichTextBoxAdv` control. If the selection already has a list, the existing list is modified; otherwise the list is added to the document and applied to the selection.
+
 {% tabs %}
 {% highlight c# %}
-// Applies list for the Selection content.
+// Applies the list to the current selection.
 richTextBoxAdv.Selection.ParagraphFormat.SetList(listAdv);
 richTextBoxAdv.Selection.ParagraphFormat.ListLevelNumber = 0;
 
-
 {% endhighlight %}
-
 {% endtabs %}
+
+## See also
+
+- [Commands in UWP RichTextBox](./Commands)
+- [Selection in UWP RichTextBox](./Selection)
+- [Getting started with UWP RichTextBox](./Getting-Started)
