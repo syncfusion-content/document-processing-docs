@@ -7,7 +7,7 @@ control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
 ---
 
-# Insert text, paragraph, and rich text in DOCX Editor
+# Insert text, paragraph, and rich text in Document Editor component
 
 You can insert text, a paragraph, and rich-text content in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component.
 

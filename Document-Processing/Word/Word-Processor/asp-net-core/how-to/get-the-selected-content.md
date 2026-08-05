@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# How to get the selected content in the DOCX Editor component
+# How to get the selected content in the Document Editor component
 
-You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) component as plain text and SFDT (rich text).
+You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 
-You can use the `text` API to get the selected content as plain text from the ASP.NET Core DOCX Editor component.
+You can use the `text` API to get the selected content as plain text from the ASP.NET Core Document Editor component.
 
 
 {% tabs %}
@@ -34,7 +34,7 @@ You can add the following custom options using this API:
 
 ## Get the selected content as SFDT (rich text)
 
-You can use the `sfdt` API to get the selected content as rich text from the ASP.NET Core DOCX Editor component.
+You can use the `sfdt` API to get the selected content as rich text from the ASP.NET Core Document Editor component.
 
 
 {% tabs %}
