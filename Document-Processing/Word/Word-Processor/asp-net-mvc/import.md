@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Import in ASP.NET MVC Document Editor Component | Syncfusion
-description: Learn here all about Import in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in ASP.NET MVC DOCX Editor Component | Syncfusion
+description: Learn here all about Import in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
 documentation: ug
 ---
 
 
-# Importing in the ASP.NET MVC Document Editor Component
+# Importing in the ASP.NET MVC DOCX Editor Component
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 The following example shows how to open SFDT data in Document Editor.
 
@@ -28,9 +28,9 @@ The following example shows how to open SFDT data in Document Editor.
 
 
 
-## Import document from local machine
+## Import a document from a local machine
 
-The following example shows how to import document from local machine.
+The following example shows how to import a document from a local machine.
 
 
 
@@ -46,9 +46,9 @@ The following example shows how to import document from local machine.
 
 
 
-## Convert word documents into SFDT
+## Convert Word documents into SFDT
 
-You can convert word documents into SFDT format using the [`Syncfusion.EJ2.WordEditor.AspNet.MVC5`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.MVC5/>) by the web API service implementation. This library helps you to convert word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format. Refer to the following example.
+You can convert Word documents into SFDT format using the [`Syncfusion.EJ2.WordEditor.AspNet.MVC5`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.MVC5/>) by the web API service implementation. This library helps you to convert Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format. Refer to the following example.
 
 
 
@@ -64,7 +64,7 @@ You can convert word documents into SFDT format using the [`Syncfusion.EJ2.WordE
 
 
 
-Here’s how to handle the server-side action for converting word document in to SFDT.
+Here's how to handle the server-side action for converting a Word document into SFDT.
 
 ```csharp
 [HttpPost]
