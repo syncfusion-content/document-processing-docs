@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Content Control in ASP.NET MVC DOCX Editor
+# Content Control in ASP.NET MVC Document Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support for inserting and editing content controls.
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Dialog in ASP.NET MVC DOCX Editor Component
+# Dialog in ASP.NET MVC Document Editor Component
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)provides dialog support for major operations such as inserting or editing a hyperlink, formatting text, paragraph, style, list, and table properties.
 
@@ -16,7 +16,7 @@ documentation: ug
 
 The Font dialog allows modifying all text properties for selected content at once such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
-N>To enable the Font dialog for a DOCX Editor instance, set `enableFontDialog` to true.
+N>To enable the Font dialog for a Document Editor instance, set `enableFontDialog` to true.
 
 
 

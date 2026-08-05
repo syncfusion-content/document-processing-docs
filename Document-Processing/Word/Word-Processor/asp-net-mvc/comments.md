@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Comments in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about comments in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
+description: Learn here all about comments in Syncfusion ASP.NET MVC DOCX Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments
 documentation: ug
 ---
 
 
-# Comments in ASP.NET MVC DOCX Editor Component
+# Comments in ASP.NET MVC Document Editor Component
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) lets you  you to add comments to documents. You can add, navigate, and remove comments in code and from the UI.
 
@@ -73,7 +73,7 @@ documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentPrope
 
 ## Get Comments
 
-The DOCX editor allows you to get the comments along with their replies and comment properties using `getComments`.
+The Document Editor allows you to get the comments along with their replies and comment properties using `getComments`.
 
 ```typescript
 //Get Comments in the document along with the properties author, date, status.
@@ -120,9 +120,9 @@ documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments only mode
 
-The DOCX editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
+The Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
 
-The DOCX editor provides an option to protect and unprotect the document using the `enforceProtection` and `stopProtection` APIs.
+The Document Editor provides an option to protect and unprotect the document using the `enforceProtection` and `stopProtection` APIs.
 
 
 
@@ -147,7 +147,7 @@ N> In the `enforceProtection` method, the first parameter denotes the password a
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the `@` character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in the DOCX editor.
+The following example illustrates how to enable mention support in the Document Editor.
 
 
 {% tabs %}
@@ -162,7 +162,7 @@ The following example illustrates how to enable mention support in the DOCX edit
 
 ## Events
 
-The DOCX editor provides the `beforeCommentAction` event, which is triggered on comment actions like Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve, and reopen. The event handler receives the `CommentActionEventArgs` object as an argument, which allows access to information about the comment.
+The Document Editor provides the `beforeCommentAction` event, which is triggered on comment actions like Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve, and reopen. The event handler receives the `CommentActionEventArgs` object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
@@ -178,4 +178,4 @@ To demonstrate a specific use case, let’s consider an example where we want to
 
 ## Online Demo
 
-Explore how to add, view, and manage comments in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/comments#/tailwind3).
+Explore how to add, view, and manage comments in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/comments#/tailwind3).

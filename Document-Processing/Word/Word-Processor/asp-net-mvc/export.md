@@ -8,20 +8,20 @@ documentation: ug
 ---
 
 
-# Export in ASP.NET MVC DOCX Editor Component 
+# Export in ASP.NET MVC Document Editor Component 
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs as mentioned below.
 
-|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for DOCX Editor Container|
+|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documentEditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documentEditor.saveAsBlob('Docx')|
 
 ## Sfdt export
 
-The following example shows how to export documents in the DOCX Editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in the Document Editor as Syncfusion document text (.sfdt).
 
 
 
@@ -45,7 +45,7 @@ The following example shows how to export documents in the DOCX Editor as Syncfu
 
 
 
-N>To enable Sfdt export for a DOCX Editor instance, set [`enableSfdtExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableSfdtExport) to true.
+N>To enable Sfdt export for a Document Editor instance, set [`enableSfdtExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableSfdtExport) to true.
 
 ## Word export
 
@@ -73,13 +73,13 @@ The following example shows how to export the document as a Word document (.docx
 
 
 
-N>To enable Word export for a DOCX Editor instance, set [`enableWordExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableWordExport) to true.
+N>To enable Word export for a Document Editor instance, set [`enableWordExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableWordExport) to true.
 
 ## Word Template Export 
 
 The following example shows how to export the document as a Word Template (.dotx).
 
-N>The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N>The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 
 
@@ -129,11 +129,11 @@ The following example shows how to export the document as a text document (.txt)
 
 
 
-N>To enable text export for a DOCX Editor instance, set [`enableTextExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableTextExport) to true.
+N>To enable text export for a Document Editor instance, set [`enableTextExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableTextExport) to true.
 
 ## Export as blob
 
-DOCX Editor also supports an API to store the document into a blob.
+Document Editor also supports an API to store the document into a blob.
 
 
 
@@ -189,7 +189,7 @@ On the client side, you can consume this web service and save the document as a 
 
 ## Online Demo
 
-Explore how to export Word documents in various formats using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/advancedexporting#/tailwind3).
+Explore how to export Word documents in various formats using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/advancedexporting#/tailwind3).
 
 ## See Also
 
