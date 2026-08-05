@@ -38,12 +38,12 @@ Step 3: The Platform Selection Wizard will appear. From the **Available** tab, s
 
 ![Platform Selection wizard Available](images/Step-by-Step-Installation_img3.png)
 
-	If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the **Next** button.
+If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the **Next** button.
 
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img24.png)
 
-	I> If the required software for the selected product isn't already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later. Common prerequisites include supported .NET runtimes (for example, .NET 6.0 or .NET 8.0) and the Visual Studio build tools.
+I> If the required software for the selected product isn't already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later. Common prerequisites include supported .NET runtimes (for example, .NET 6.0 or .NET 8.0) and the Visual Studio build tools.
 	
 	
 ![Additional Software Alert](images/Step-by-Step-Installation_img5.png)
