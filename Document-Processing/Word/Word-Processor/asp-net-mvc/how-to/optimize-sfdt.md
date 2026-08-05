@@ -7,7 +7,7 @@ control: Optimize the SFDT file
 documentation: ug
 ---
 
-# How to optimize the SFDT file
+# How to optimize the SFDT file in ASP.NET MVC DOCX Editor
 
 Starting from version v21.1.x, the SFDT file generated in DOCX Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 * File transfer between client and server through the internet gets faster.

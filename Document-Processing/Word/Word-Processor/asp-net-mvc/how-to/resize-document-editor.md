@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Resize Document Editor in ASP.NET MVC Document Editor Component
-description: Learn here all about how to resize Document Editor in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Resize DOCX Editor in ASP.NET MVC DOCX Editor Component | Syncfusion
+description: Learn here all about how to resize the DOCX Editor in the Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Resize Document Editor
 documentation: ug
 ---
 
 
-# How to change height and width of Document Editor component
+# How to change the height and width of the DOCX Editor component
 
-This article explains how to change height and width of Document editor.
+This article explains how to change the height and width of the DOCX Editor.
 
-## Change height of Document Editor
+## Change the height of the DOCX Editor
 
-DocumentEditorContainer initially renders with default height. You can change the height of document editor using `height` property, the value which is in pixel.
+The DocumentEditorContainer initially renders with the default height. You can change the height of the DOCX Editor using the `height` property, the value of which is in pixels.
 
 
 {% tabs %}
@@ -22,14 +22,15 @@ DocumentEditorContainer initially renders with default height. You can change th
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/change-height/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Change-height.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-Similarly, you can use `height` property for DocumentEditor also.
+Similarly, you can use the `height` property for the DocumentEditor also.
 
-## Change width of Document Editor
+## Change the width of the DOCX Editor
 
-DocumentEditorContainer initially renders with default width. You can change the width of document editor using `width` property, the value which is in percent.
+The DocumentEditorContainer initially renders with the default width. You can change the width of the DOCX Editor using the `width` property, the value of which is in percent.
 
 
 
@@ -42,11 +43,11 @@ DocumentEditorContainer initially renders with default width. You can change the
 
 
 
-Similarly, you can use `width` property for DocumentEditor also.
+Similarly, you can use the `width` property for the DocumentEditor also.
 
-## Resize Document Editor
+## Resize the DOCX Editor
 
-Using `resize` method, you change height and width of Document editor.
+Using the `resize` method, you can change the height and width of the DOCX Editor.
 
 
 {% tabs %}
@@ -54,5 +55,6 @@ Using `resize` method, you change height and width of Document editor.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/resize/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Resize.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
