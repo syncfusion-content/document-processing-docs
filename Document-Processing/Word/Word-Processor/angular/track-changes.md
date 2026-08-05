@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Track Changes in Angular Document Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
 ## Enable Track changes
 
@@ -47,7 +47,7 @@ The following example demonstrates how to get all tracked revisions from the cur
 let revisions : RevisionCollection = this.documentEditor.revisions;
 ```
 
-## Accept or reject all changes
+## Accept or Reject all changes
 
 The following example demonstrates how to accept or reject all changes.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported File Formats in Angular DOCX Editor | Syncfusion
-description: Learn more about the supported file formats in Syncfusion® Angular Document Editor (Document Editor) for opening and exporting documents.
+description: Learn more about the supported file formats in Syncfusion® Angular DOCX Editor (Document Editor) for opening and exporting documents.
 control: Supported File Formats
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in Angular Document Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
 
 ## Supported File Formats
 

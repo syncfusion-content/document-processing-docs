@@ -12,7 +12,7 @@ keywords: Angular UI Builder, Skills, AI Assistants, Document Editor, Agent Skil
 
 **Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular Document Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor)** (Document Editor) and other Angular components to deliver accurate and ready-to-use code.
+Integrated with your AI-powered IDE, it leverages deep knowledge of **[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor)** and other Angular components to deliver accurate and ready-to-use code.
 By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, Angular UI Builder helps you rapidly build scalable Document editing applications and user interfaces without leaving your development workflow.
 
 ## Prerequisites
