@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to export the document as PDF in ASP.NET Core DOCX Editor
+# How to export the document as PDF in ASP.NET Core Document Editor
 
 This article explains how to export the document as a PDF. You can export the document as PDF in the following ways:
 
@@ -16,7 +16,7 @@ This article explains how to export the document as a PDF. You can export the do
 
 Use the [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) at the application level to export the document as PDF using the `exportAsImage` API. Here, all pages will be converted to images and inserted as PDF pages (works like print as PDF).
 
-N> 1. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) exports PDFs by converting pages into images on the client side, which may slightly increase the file size compared to text-based PDFs.
+N> 1. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) exports PDFs by converting pages into images on the client side, which may slightly increase the file size compared to text-based PDFs.
 N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
 N> 3. You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 

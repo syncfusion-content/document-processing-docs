@@ -7,7 +7,7 @@ control: Disable Header And Footer
 documentation: ug
 ---
 
-# How to disable header and footer edit in DOCX Editor component
+# How to disable header and footer edit in Document Editor component
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 
@@ -42,7 +42,7 @@ The following example code illustrates how to close header and footer when the s
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use the [`isReadOnly`] property in the DOCX Editor to disable header and footer edit.
+Like restrictEditing, you can use the [`isReadOnly`] property in the Document Editor to disable header and footer edit.
 
 The following example code illustrates how to disable header and footer edit in the `DocumentEditor` instance.
 
