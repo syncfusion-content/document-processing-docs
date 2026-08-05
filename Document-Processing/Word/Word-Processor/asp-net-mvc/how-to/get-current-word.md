@@ -7,7 +7,7 @@ control: Get The Current Word And Paragrapgh
 documentation: ug 
 ---
 
-# Select and Retrieve Word and Paragraph at Cursor in DOCX Editor
+# Select and retrieve word and paragraph at cursor in DOCX Editor
 
 You can get the current word or paragraph content from the DOCX Editor component as plain text and SFDT (rich text).
 
