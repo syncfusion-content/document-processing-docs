@@ -4,36 +4,51 @@ description: Learn here all about how to export the inserted image as an Embedde
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: embedded-image-html
+keywords: embedded-image-html,image-node-visited,html-import-export-settings,embedded-image,html-export,image-source
 ---
 
-# Export Image as Embedded in HTML in UWP SfRichTextBoxAdv
+# How to export the inserted image as an embedded image in HTML in UWP SfRichTextBoxAdv
 
-This page explains how to export the inserted image as an Embedded image in HTML in Syncfusion&reg; UWP SfRichTextBoxAdv.
+This page explains how to export the inserted image as an embedded image in HTML in the UWP [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) control.
 
-In the SfRichTextBoxAdv control, we offer an option to specify HTML export settings. By utilizing the [ImageNodeVisitedEvent](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.ImageNodeVisitedEventArgs.html) event of the [HtmlImportExportSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.HtmlImportExportSettings.html) instance, you can both retrieve and define the image stream and image source. When setting the image source as Empty, the inserted picture can be exported as an embedded image in the HTML.
+SfRichTextBoxAdv lets you specify HTML export settings. By using the [`ImageNodeVisited`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.HtmlImportExportSettings.html#imagenodevisited) event of the [`HtmlImportExportSettings`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.HtmlImportExportSettings.html) instance, you can retrieve or set the image stream and image source. When you set the image source to an empty string, the inserted picture is exported as an embedded image in the HTML.
 
-The following code example illustrates to export the inserted image as an Embedded image in HTML in the SfRichTextBoxAdv.
+N> The `IsSaving` property of `ImageNodeVisitedEventArgs` is `true` when the image is being exported to HTML and `false` when it is being imported from HTML. The `Source` property accepts a URL, a base64 data URI, or an empty string to embed the image inline.
+
+N> The XAML snippet in this FAQ assumes the `RichTextBoxAdv` namespace is mapped to `clr-namespace:Syncfusion.UI.Xaml.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.UWP` and that the host `SfRichTextBoxAdv` is declared as `<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" />`.
+
+The following code example illustrates how to export the inserted image as an embedded image in HTML in `SfRichTextBoxAdv`.
 
 {% tabs %}
 {% highlight c# %}
-// Hooks the event handler for ImageNodeVisited event.
+using Syncfusion.UI.Xaml.RichTextBoxAdv;
+
+// Hooks the event handler for the ImageNodeVisited event.
 richTextBoxAdv.HtmlImportExportSettings.ImageNodeVisited += HtmlImportExportSettings_ImageNodeVisited;
 
 /// <summary>
 /// Handles the ImageNodeVisited event of the richTextBoxAdv control.
 /// </summary>
-/// <param name="obj">The source of the event.</param>
-/// <param name="args">The <see cref="ImageNodeVisitedEventArgs"/> instance containing the event data.</param>
- private void HtmlImportExportSettings_ImageNodeVisited(object obj, Syncfusion.UI.Xaml.RichTextBoxAdv.ImageNodeVisitedEventArgs args)
-        {
-            if (args.IsSaving)
-            {
-                args.Source = string.Empty;
-            }
-        }
-		
-// Unhooks the event handler for ImageNodeVisited event.
+/// <param name="sender">The source of the event (the HtmlImportExportSettings instance).</param>
+/// <param name="e">The <see cref="ImageNodeVisitedEventArgs"/> instance containing the event data.</param>
+private void HtmlImportExportSettings_ImageNodeVisited(object sender, ImageNodeVisitedEventArgs e)
+{
+    if (e.IsSaving)
+    {
+        // Sets the image source to an empty string so that the image is exported as an embedded image.
+        e.Source = string.Empty;
+    }
+}
+
+// Unhooks the event handler for the ImageNodeVisited event.
 richTextBoxAdv.HtmlImportExportSettings.ImageNodeVisited -= HtmlImportExportSettings_ImageNodeVisited;
 {% endhighlight %}
 {% endtabs %}
+
+N> The `ImageNodeVisited` event and `HtmlImportExportSettings` class are supported from Syncfusion UWP RichTextBox v17.4.0.X onwards.
+
+## See Also
+
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
+- [HtmlImportExportSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.HtmlImportExportSettings.html)
+- [Importing and exporting documents in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/import-and-export)

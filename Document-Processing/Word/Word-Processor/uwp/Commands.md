@@ -4,11 +4,11 @@ description: Learn here all about Commands support in Syncfusion UWP RichTextBox
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: commands
+keywords: commands,boldcommand,italiccommand,underlinecommand,table-commands,paragraph-commands,clipboard-commands,command-parameter
 ---
 # Commands in UWP RichTextBox (SfRichTextBoxAdv)
 
-Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The SfRichTextBoxAdv supports commands for mostly used operations which are classified below.
+Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) supports commands for the most commonly used operations, classified below.
 
 * Character Formatting – Bold, Italic, Underline, Strikethrough, Baseline Alignment, Font Family, Font Size, Font Color and Highlight Color.
 
@@ -26,37 +26,42 @@ Commands are a way to handle user interface (UI) actions. They are a loosely cou
 
 * UI options – Show Hyperlink Dialog and Show Options Pane.
 
-* Other – Insert Picture, Insert Hyperlink and Layout Type.
+* Other – Insert Picture, Insert Hyperlink, and Change Layout Type.
 
-## UI Command to access character formatting
+## UI commands to access character formatting
 
 
-The following code example demonstrates how to bind commands for applying character format.
+The following code example demonstrates how to bind commands for applying character format. Ensure that `SfRichTextBoxAdv` is declared in the same XAML scope as the bound buttons, e.g.:
+
+```xaml
+<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" />
+```
+
 {% tabs %}
 {% highlight xaml %}
-<!-- Binds button to the BoldCommand -->
-<Button Content="Bold" Command="{Binding ElementName=richTextBoxAdv, Path=BoldCommand, Mode=TwoWay}" />
-<!-- Binds button to the ItalicCommand -->
-<Button Content="Italic" Command="{Binding ElementName=richTextBoxAdv, Path=ItalicCommand, Mode=TwoWay}" />
+<!-- Binds the button to the BoldCommand -->
+<Button Content="Bold" Command="{Binding ElementName=richTextBoxAdv, Path=BoldCommand}" />
+<!-- Binds the button to the ItalicCommand -->
+<Button Content="Italic" Command="{Binding ElementName=richTextBoxAdv, Path=ItalicCommand}" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 /// <summary>
-/// Apply bold style for the selected contents of SfRichTextBoxAdv.
+/// Applies bold style to the selected content of SfRichTextBoxAdv.
 /// </summary>
 public void Bold()
 {
-    // Executes bold command.
+    // Executes the bold command.
     if (richTextBoxAdv.BoldCommand.CanExecute(null))
         richTextBoxAdv.BoldCommand.Execute(null);
 }
 /// <summary>
-/// Apply Italic style for the selected contents of SfRichTextBoxAdv.
+/// Applies italic style to the selected content of SfRichTextBoxAdv.
 /// </summary>
 public void Italic()
 {
-    // Executes copy command.
+    // Executes the italic command.
     if (richTextBoxAdv.ItalicCommand.CanExecute(null))
         richTextBoxAdv.ItalicCommand.Execute(null);
 }
@@ -66,7 +71,7 @@ public void Italic()
 The following code example demonstrates how to bind commands with parameter.
 {% tabs %}
 {% highlight xaml %}
-<Button Content="TextAlignment" Command="{Binding ElementName=richTextBoxAdv, Path=TextAlignmentCommand, Mode=TwoWay}" CommandParameter="Right" />
+<Button Content="TextAlignment" Command="{Binding ElementName=richTextBoxAdv, Path=TextAlignmentCommand}" CommandParameter="Right" />
 {% endhighlight %}
 {% endtabs %}
 
@@ -417,6 +422,8 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 <p>NA</p>
 </td>
 </tr>
+<tr>
+<tr>
 <td>
 <p>EnterKeyCommand</p>
 </td>
@@ -564,7 +571,7 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 <p>ItalicCommand</p>
 </td>
 <td>
-<p>Represents the command that toggle italic style for the selected text.</p>
+<p>Represents the command that toggles italic style for the selected text.</p>
 </td>
 <td>
 <p>NA</p>
@@ -682,10 +689,10 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 </tr>
 <tr>
 <td>
-<p>PasteAsyncCommand </p>
+<p>PasteAsyncCommand</p>
 </td>
 <td>
-<p>Represents the command that paste the clipboard contents into `SfRichTextBoxAdv` control asynchronously .</p>
+<p>Represents the command that pastes the clipboard contents into the `SfRichTextBoxAdv` control asynchronously.</p>
 </td>
 <td>
 <p>NA</p>
@@ -729,7 +736,7 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 <p>RedoCommand</p>
 </td>
 <td>
-<p>Represents the command that redo the last undo operation in `SfRichTextBoxAdv` control.</p>
+<p>Represents the command that redoes the last undo operation in the `SfRichTextBoxAdv` control.</p>
 </td>
 <td>
 <p>NA</p>
@@ -938,7 +945,7 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 <p>UndoCommand</p>
 </td>
 <td>
-<p>Represents the command that undo the last edit operation in `SfRichTextBoxAdv` control.</p>
+<p>Represents the command that undoes the last edit operation in the `SfRichTextBoxAdv` control.</p>
 </td>
 <td>
 <p>NA</p>
@@ -946,3 +953,12 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 </tr>
 </tbody>
 </table>
+
+N> The clipboard APIs (`CutCommand`, `CopyCommand`, `PasteCommand`, and `PasteAsyncCommand`) are supported from Syncfusion UWP RichTextBox v17.4.0.X onwards.
+
+## See Also
+
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
+- [Clipboard support in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/clipboard)
+- [Table support in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/table)
+- [Comments in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/comments)

@@ -4,12 +4,17 @@ description: Learn here all about Styles and Templates support in Syncfusion UWP
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: styles-and-templates, custom-style
+keywords: styles-and-templates,custom-style,control-template,generic-xaml,template-parts,default-style,styling
 ---
-# Styles and Templates in UWP RichTextBox (SfRichTextBoxAdv)
+# Styles and templates in UWP RichTextBox
 
-This section describes the styles and templates for the SfRichTextBoxAdv control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default Control template to define a unique appearance for the control.
+This section describes the styles and templates for the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) control. The control template defines the structure of the SfRichTextBoxAdv control and the style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
+
+## Default style and template
+
 The following XAML shows the default style and template for the SfRichTextBoxAdv control.
+
+N> The XAML snippets in this document assume the `RichTextBoxAdv` namespace is mapped to `using:Syncfusion.UI.Xaml.RichTextBoxAdv` on the page root. The custom style must be declared in the same `Resources` scope as the control that uses it (for example, the page-level `Resources` block).
 {% tabs %}
 {% highlight xml %}
 <Style TargetType="RichTextBoxAdv:SfRichTextBoxAdv" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
@@ -48,12 +53,20 @@ The following XAML shows the default style and template for the SfRichTextBoxAdv
 
 {% endtabs %}
 
-N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the control template you should be careful to include all required parts. Usually required parts are marked with Name attribute. Omission of required parts may impact some of the functionality. 
+N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the control template, you should be careful to include all required parts. Required template parts are marked with the `x:Name` attribute. Omission of required parts may impact some of the functionality.
 
-## Styling the SfRichTextBoxAdv
+The following table lists the required named visual-tree parts of the `SfRichTextBoxAdv` control template.
 
-You can define custom style for the SfRichTextBoxAdv control either by creating empty style and set it up on your own or by copying the default style and modifying it. 
-The following example demonstrates how to customize the style for SfRichTextBoxAdv control.
+| Template part (`x:Name`) | Purpose |
+| --- | --- |
+| `content` | The `ContentControl` that hosts the document view. |
+| `OptionsPane` | The search / replace options pane (collapsed by default). |
+| `HorizontalScrollBar` | The horizontal `ScrollBar`. |
+| `VerticalScrollBar` | The vertical `ScrollBar`. |
+
+## Styling SfRichTextBoxAdv
+
+You can define a custom style for the SfRichTextBoxAdv control either by creating an empty style and setting it up yourself, or by copying the default style and modifying it. The following example demonstrates how to customize the style for the SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xml %}
 <Style x:Key="RichTextBoxAdvCustomStyle" TargetType="RichTextBoxAdv:SfRichTextBoxAdv" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
@@ -101,16 +114,27 @@ The following example demonstrates how to customize the style for SfRichTextBoxA
 
 {% endtabs %}
 
-The following code example demonstrates how to apply the custom style for RichTextBoxAdv control.
-{% tabs %}
-{% highlight c# %}
-<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" Style="{StaticResource RichTextBoxAdvCustomStyle}" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
+The following XAML example demonstrates how to apply the custom style to the SfRichTextBoxAdv control.
 
+{% tabs %}
+{% highlight xaml %}
+<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" Style="{StaticResource RichTextBoxAdvCustomStyle}" />
 
 {% endhighlight %}
-
 {% endtabs %}
 
-The following screenshot shows the SfRichTextBoxAdv control with customized style.
-![Styles-and-Templates_img1](Styles-and-Templates_images/Styles-and-Templates_img1.jpeg)
+The following screenshot shows the SfRichTextBoxAdv control with the customized style, which adds a top header band labeled "Rich Text Editor" above the document view.
+
+![SfRichTextBoxAdv control with the RichTextBoxAdvCustomStyle applied, showing the custom header band](Styles-and-Templates_images/Styles-and-Templates_img1.jpeg)
+
+N> When you copy the default style from the Syncfusion assembly's `Themes/generic.xaml` and modify it, keep all the required template parts (`content`, `OptionsPane`, `HorizontalScrollBar`, `VerticalScrollBar`) in the modified template; otherwise some functionality (search pane, scrolling) may not work.
+
+N> The `SfRichTextBoxAdv` style and template APIs are supported from Syncfusion UWP RichTextBox v17.4.0.X onwards.
+
+## See Also
+
+- [SfRichTextBoxAdv API reference](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html)
+- [Commands in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/commands)
+- [Background in UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/background)
+- [Getting started with UWP RichTextBox](https://help.syncfusion.com/uwp/richtextbox/getting-started)
 
