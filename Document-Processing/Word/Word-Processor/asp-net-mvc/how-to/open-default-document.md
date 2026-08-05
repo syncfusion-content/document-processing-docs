@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to open a default document in DocumentEditor when initialized
+# How to Open a Default Document When Initializing DocumentEditor
 
 This article explains how to open a default document when DocumentEditor and DocumentEditorContainer are initialized.
 
