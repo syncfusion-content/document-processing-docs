@@ -42,7 +42,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
         }
         pdfViewer.toolbarSettings = {
             showTooltip: true,
-            toolbarItems: ['OpenOption', toolItem1'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+            toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
         };
 
     };

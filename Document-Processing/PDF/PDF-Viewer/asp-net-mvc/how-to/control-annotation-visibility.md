@@ -91,7 +91,7 @@ Define the viewer markup and include a button that triggers the download workflo
 
 **Step 3:** Add annotations to the PDF document.
 
-The `documentLoaded` function in the script above programmatically inserts highlight, underline, and strikethrough annotations. Extend this logic to include any additional annotations you require.
+The `documentLoad` function in the script above programmatically inserts highlight, underline, and strikethrough annotations. Extend this logic to include any additional annotations you require.
 
 **Step 4:** Add event listeners for button clicks.
 

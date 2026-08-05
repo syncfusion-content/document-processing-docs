@@ -111,5 +111,5 @@ Fetch the blob data and convert it into a JSON object that can be processed for 
 ## Conclusion
 
 These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, maintaining accurate annotation placement.
-  
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

@@ -170,7 +170,7 @@ Use the `customContextMenuBeforeOpen()` method to hide or show custom options dy
         }
     };
 
- function customContextMenuBeforeOpen(args) {
+    function customContextMenuBeforeOpen(args) {
         for (var i = 0; i < args.ids.length; i++) {
             var search = document.getElementById(args.ids[i]);
             var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
