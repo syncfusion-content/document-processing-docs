@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Insert Page Number and Navigate in Angular Document Editor
 
-You can insert page number and navigate to specific page in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component using the following ways.
+You can insert page number and navigate to specific page in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component using the following ways.
 
 ## Insert page number
 
