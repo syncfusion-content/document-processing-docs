@@ -7,13 +7,13 @@ control: Retrieve the Whole Document and Bookmark Content as Text
 documentation: ug
 ---
 
-# How to Retrieve Document and Bookmark Text in the DOCX Editor
+# How to retrieve document and bookmark text in the Document Editor
 
-You can get the bookmark or whole document content from the DOCX Editor component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the Document Editor component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 
-You can use the [`selectBookmark`] API to navigate to the bookmark and use the [`text`] API to get the bookmark content as plain text from the DOCX Editor component.
+You can use the [`selectBookmark`] API to navigate to the bookmark and use the [`text`] API to get the bookmark content as plain text from the Document Editor component.
 
 The following example code illustrates how to get the bookmark content as plain text.
 
@@ -30,7 +30,7 @@ To get the bookmark content as SFDT (rich text), check this [`link`](../how-to/g
 
 ## Get the whole document content as text
 
-You can use the [`text`] API to get the whole document content as plain text from the DOCX Editor component.
+You can use the [`text`] API to get the whole document content as plain text from the Document Editor component.
 
 The following example code illustrates how to get the whole document content as plain text.
 
@@ -45,7 +45,7 @@ The following example code illustrates how to get the whole document content as 
 
 ## Get the whole document content as SFDT (rich text)
 
-You can use the [`serialize`] API to get the whole document content as SFDT string from the DOCX Editor component.
+You can use the [`serialize`] API to get the whole document content as SFDT string from the Document Editor component.
 
 The following example code illustrates how to get the whole document content as SFDT.
 

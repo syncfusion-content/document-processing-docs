@@ -8,11 +8,11 @@ documentation: ug
 ---
 
 
-# How to open a document in read-only mode by default in DOCX Editor
+# How to open a document in read-only mode by default in Document Editor
 
 This article explains how to open a document in read-only mode by default in Document Editor & Document Editor Container.
 
-## Opening a document in read-only mode by default in DOCX Editor
+## Opening a document in read-only mode by default in Document Editor
 
 Using the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in the Document Editor allows you to enable or disable read-only mode in the Document Editor.
 

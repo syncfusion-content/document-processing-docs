@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# How to change the height and width of the DOCX Editor component
+# How to change the height and width of the Document Editor component
 
-This article explains how to change the height and width of the DOCX Editor.
+This article explains how to change the height and width of the Document Editor.
 
-## Change the height of the DOCX Editor
+## Change the height of the Document Editor
 
-The DocumentEditorContainer initially renders with the default height. You can change the height of the DOCX Editor using the `height` property, the value of which is in pixels.
+The DocumentEditorContainer initially renders with the default height. You can change the height of the Document Editor using the `height` property, the value of which is in pixels.
 
 
 {% tabs %}
@@ -28,9 +28,9 @@ The DocumentEditorContainer initially renders with the default height. You can c
 
 Similarly, you can use the `height` property for the DocumentEditor also.
 
-## Change the width of the DOCX Editor
+## Change the width of the Document Editor
 
-The DocumentEditorContainer initially renders with the default width. You can change the width of the DOCX Editor using the `width` property, the value of which is in percent.
+The DocumentEditorContainer initially renders with the default width. You can change the width of the Document Editor using the `width` property, the value of which is in percent.
 
 
 
@@ -39,15 +39,16 @@ The DocumentEditorContainer initially renders with the default width. You can ch
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/change-width/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Change-width.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 Similarly, you can use the `width` property for the DocumentEditor also.
 
-## Resize the DOCX Editor
+## Resize the Document Editor
 
-Using the `resize` method, you can change the height and width of the DOCX Editor.
+Using the `resize` method, you can change the height and width of the Document Editor.
 
 
 {% tabs %}
