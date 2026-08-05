@@ -1,11 +1,11 @@
 ---
 title: Convert Markdown Files to PDF Using Syncfusion Web API 
-description: Convert Markdown files to PDF documents using Syncfusion Web API. Preserve headings, tables, code blocks, lists, and formatting with reliable server-side conversion.
+description: Convert Markdown files to PDF using Syncfusion Web API. Preserve headings, tables, code blocks, lists, and formatting with reliable server-side conversion.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Convert Markdown Files to PDF Using Syncfusion Web API 
+# Markdown to PDF Conversion Using Syncfusion Web API
 
 The Syncfusion Markdown to PDF Web API converts Markdown documents into PDF files while preserving document structure and formatting. It accurately renders headings, paragraphs, tables, code blocks, lists, and inline formatting to generate visually consistent PDF documents.
 
