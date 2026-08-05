@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Auto Save Document In DOCX Editor in ASP.NET MVC DOCX Editor Component
-description: Learn here all about auto save document in DOCX Editor in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion and more.
+title: Auto Save Document in Document Editor in ASP.NET MVC | Syncfusion
+description: Learn here all about auto save document in Document Editor in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion and more.
 platform: document-processing
 control: Auto Save Document In DOCX Editor
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 
 This article explains how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps to reduce the risk of data loss by saving an open document automatically at customized intervals.
 
-* In the client-side, using content change event, the edited content can be automatically saved in regular intervals of time. Based on `contentChanged` boolean, the document is sent as Docx format to server-side using `saveAsBlob` method at a customized polling interval.
+* In the client-side, using content change event, the edited content can be automatically saved in regular intervals of time. Based on `contentChanged` boolean, the document is sent as DOCX format to server-side using `saveAsBlob` method at a customized polling interval.
 
 
 {% tabs %}
@@ -20,7 +20,8 @@ This article explains how to auto save the document in AWS S3. You can automatic
 {% include code-snippet/document-editor/asp-net-mvc/auto-save/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 

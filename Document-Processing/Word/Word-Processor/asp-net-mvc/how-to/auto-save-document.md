@@ -14,7 +14,7 @@ In this article, we are going to see how to auto save the document to server. Yo
 
 The following example illustrates how to auto save the document on the server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document is sent as Docx format to server-side using [`saveAsBlob`] method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document is sent as DOCX format to server-side using [`saveAsBlob`] method.
 
 
 {% tabs %}
@@ -22,7 +22,8 @@ The following example illustrates how to auto save the document on the server.
 {% include code-snippet/document-editor/asp-net-mvc/auto-save-server/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save-server.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 

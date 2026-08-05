@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# Change document view
+# Change document view in ASP.NET MVC DOCX Editor component
 
-## How to change the document view in ASP.NET MVC DOCX Editor component
+## How to change the document view
 
 DocumentEditor allows you to change the view to web layout and print using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html) (`Continuous` for web layout, `Pages` for print layout).
 
