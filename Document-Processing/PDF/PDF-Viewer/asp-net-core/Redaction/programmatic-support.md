@@ -104,7 +104,7 @@ You can add redaction annotations to a PDF document using the `addAnnotation` me
 
 ## Delete redaction annotations programmatically
 
-Redaction annotations can be removed using the `deleteAnnotationById` event or by selecting and deleting them through code.
+Redaction annotations can be removed using the `deleteAnnotationById` method or by selecting and deleting them through code.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -317,7 +317,7 @@ You can configure default properties for redaction annotations (such as fill col
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
 
-![Redaction Property Panel](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+![Redaction Property Panel](./redaction-annotations-images/redaction-property-panel-icon.png)
 
 ## See also
 

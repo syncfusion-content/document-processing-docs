@@ -30,6 +30,10 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 {% endhighlight %}
@@ -93,8 +97,8 @@ Step 11: After creating app service then click **Finish** button.
 Step 12: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-v1/Before_Publish_PowerPoint_Presentation_to_Image.png)
 
-Step 13: Publish has been succeed.
-![Publish succeeded](Azure-Images/Functions-v1/After_Publish_PowerPoint_Presentation_to_Image.png)
+Step 13: Publish has succeeded.
+![Publish has succeeded](Azure-Images/Functions-v1/After_Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 14: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **PowerPoint Presentation to image conversion** using the template PowerPoint document). You will get the output **image** as follows.
 

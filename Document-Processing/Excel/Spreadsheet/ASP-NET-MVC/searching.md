@@ -28,11 +28,11 @@ To find a value:
 
 You can also use the `find()` method to perform the find operation programmatically.
 
-N> The Find dialog provides the following options:
-<br/> * `Search within`: Searches within the current worksheet or the entire workbook. The default scope is the current worksheet.
-<br/> * `Search by`: Searches by rows or columns. The default direction is by rows.
-<br/> * `Match case`: Finds values that match the capitalization of the search value.
-<br/> * `Match exact cell contents`: Finds cells whose complete content exactly matches the search value.
+>* The Find dialog provides the following options:
+>* `Search within`: Searches within the current worksheet or the entire workbook. The default scope is the current worksheet.
+>* `Search by`: Searches by rows or columns. The default direction is by rows.
+>* `Match case`: Finds values that match the capitalization of the search value.
+>* `Match exact cell contents`: Finds cells whose complete content exactly matches the search value.
 
 ## Replace
 
@@ -49,7 +49,7 @@ You can also use the `replace()` method to perform replace and replace All opera
 
 ## Go to
 
-The Go To feature navigates to a specified cell address in a worksheet.
+The **Go To** feature navigates to a specified cell address in a worksheet.
 
 To navigate to a cell:
 
