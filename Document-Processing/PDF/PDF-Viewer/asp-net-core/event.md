@@ -8,7 +8,7 @@ documentation: ug
 
 # Events in ASP.NET Core PDF Viewer Control
 
-The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document lifecycle, user interactions, and feature operations.
+The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document life cycle, user interactions, and feature operations.
 
 ## Event reference table
 
@@ -474,7 +474,7 @@ Example:
 </div>
 
 <script>
-    function CommentEdited(args) {
+    function commentSelected(args) {
         console.log(`Comment selected. Id: ${args.id}`);
     }
 </script>
@@ -492,7 +492,7 @@ Example:
 </div>
 
 <script>
-    function CommentEdited(args) {
+    function commentSelected(args) {
         console.log(`Comment selected. Id: ${args.id}`);
     }
 </script>

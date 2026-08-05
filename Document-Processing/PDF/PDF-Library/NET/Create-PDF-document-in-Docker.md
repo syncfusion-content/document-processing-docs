@@ -35,7 +35,7 @@ Step 3: Enable Docker support with **Linux** as the target OS.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your .NET application from [NuGet.org](https://www.nuget.org/).
 ![NuGet Package](GettingStarted_images/Docker-Image4.png)
 
-Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -54,7 +54,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For Docker deployment, pass the key at runtime as an environment variable (`SyncfusionLicenseKey`), read it in `Program.cs` with `builder.Configuration["SyncfusionLicenseKey"]`, and DON'T bake it into the image. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 6: A default action method named `Index` is present in `HomeController.cs`. Right-click on this `Index` method and select **Go To View** to open its associated view page `Index.cshtml`. Add a new button in `Index.cshtml` as follows.
 

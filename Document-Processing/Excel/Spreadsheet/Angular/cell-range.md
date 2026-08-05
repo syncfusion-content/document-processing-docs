@@ -86,7 +86,7 @@ The following features have some limitations in Merge:
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 
@@ -169,7 +169,7 @@ The following code example demonstrates how to add custom data validation with a
 
 The following features have some limitations in Data Validation:
 
-* Applying validation to an entire row.
+* Applying data validation to an entire row.
 * Insert row between the data validation.
 * Copy/paste with data validation.
 * Delete cells between data validation applied range.

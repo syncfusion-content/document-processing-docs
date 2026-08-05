@@ -2,7 +2,7 @@
 layout: post
 title: Downloading Syncfusion Document SDK web installer - Syncfusion
 description: Learn here about how to download the Syncfusion Document SDK web installer from our Syncfusion website with a license.
-platform: document-sdk
+platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
@@ -28,7 +28,7 @@ Our 30-days trial can be downloaded in two ways.
 1. You can evaluate our 30-days free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and you can select any Document Solution platform.
 2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the Document SDK trial installer from the confirmation page. (as shown in the screenshot below.)
    
-   N> Correspondingly, You can also download other SDK platform (such as Docx Editor SDK, PDF Viewer SDK, Spreadsheet Editor SDK, Document SDK) from the [Trial and downloads of Syncfusion Essential Studio](https://www.syncfusion.com/downloads) page. 
+   N> Correspondingly, You can also download other SDK platform (such as DOCX Editor SDK, PDF Viewer SDK, Spreadsheet Editor SDK, Document SDK) from the [Trial and downloads of Syncfusion Essential Studio](https://www.syncfusion.com/downloads) page. 
    
    ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
