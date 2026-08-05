@@ -7,7 +7,7 @@ control: Insert Text Or Image In Table
 documentation: ug
 ---
 
-# How to insert text or image in a table in DOCX Editor
+# How to insert text or image in a table in Document Editor component
 
 Using the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) APIs, you can insert [`text`] or [`image`] in a [`table`] programmatically based on your requirement.
 

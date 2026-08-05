@@ -7,7 +7,7 @@ control: Move The Selection To Specific Position
 documentation: ug
 ---
 
-# How to move the selection to a specific position in the DOCX Editor
+# How to move selection to a specific position in the Document Editor
 
 Using the [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in the selection module, you can set the cursor position anywhere in the document.
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to open a default document in the DOCX Editor when initialized
+# How to open default document in the Document Editor when initialized
 
 This section explains how to open a default document when the Document Editor and Document Editor Container are initialized.
 
