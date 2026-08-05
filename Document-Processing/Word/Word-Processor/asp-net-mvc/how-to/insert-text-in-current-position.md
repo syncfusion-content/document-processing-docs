@@ -7,7 +7,7 @@ control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
 ---
 
-# How to insert text, paragraph and rich-text content in DOCX Editor
+# How to insert text, paragraph and rich-text content in Document Editor
 
 You can insert text, paragraph, and rich-text content in the Document Editor component.
 

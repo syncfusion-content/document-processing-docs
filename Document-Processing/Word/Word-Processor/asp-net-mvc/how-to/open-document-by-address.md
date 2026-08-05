@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Open a document from URL
+# Open a document from URL in ASP.NET MVC Document Editor component
 
 ## How to open a document from a URL in DocumentEditor
 
