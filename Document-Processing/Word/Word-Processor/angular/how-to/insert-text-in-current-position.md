@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in Angular Document Editor component
+# Insert Text in Current Position in Angular Document Editor component
 
-You can insert text, paragraphs, and rich-text content in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component.
+You can insert text, paragraphs, and rich-text content in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component.
 
 ## Insert text in current cursor position
 
