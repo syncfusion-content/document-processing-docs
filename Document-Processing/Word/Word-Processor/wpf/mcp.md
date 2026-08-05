@@ -184,16 +184,38 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 {% endpromptcard %}
 {% endpromptcards %}
 
+
 **Implement Features**
 
 Get step-by-step help for adding specific features to the WPF DOCX Editor.
 
 {% promptcards %}
-{% promptcard Find and replace %}
-#search_docs how to use find and replace feature in  WPF SfRichTextBoxAdv?
+{% promptcard Find and Replace Text %}
+#search_docs How to find and replace text in WPF SfRichTextBoxAdv?
 {% endpromptcard %}
 {% endpromptcards %}
 
+{% promptcards %}
+{% promptcard Enable Spell Check %}
+#search_docs #search_docs How to enable spell checking in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Out of Memory Error %}
+#search_docs Why does an OutOfMemoryException occur when opening large documents in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Missing Document Elements %}
+#search_docs Why are some elements not displayed when loading a Word document in WPF SfRichTextBoxAdv?
+{% endpromptcard %}
+{% endpromptcards %}
 
 ## Best Practices
 
