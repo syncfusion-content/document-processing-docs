@@ -41,8 +41,6 @@ Insert blank pages to the left or right of a selected page using the respective 
 
 Duplicate pages by selecting thumbnails and using the copy action; duplicates are inserted to the right of the selected page.
 
-![Insert, delete, and copy page actions shown in the organizer](./images/insert-delete-copy.gif)
-
 ### Copying PDF pages
 
 Duplicate pages by selecting thumbnails and using the copy action; duplicates are inserted to the right of the selected page.

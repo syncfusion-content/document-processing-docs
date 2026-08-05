@@ -680,7 +680,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     let previousSearch: Button = new Button({ iconCss: 'e-pv-previous-search' });
     previousSearch.appendTo('#previousSearch');
 
-    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-btn' });
+    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-button' });
     nextSearch.appendTo('#nextSearch');
 
     let matchCaseCheck: CheckBox = new CheckBox({ label: 'Match case', change: checkBoxChanged });
@@ -695,7 +695,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
         document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
         updatePageNavigation();
     };
-    searchButton = document.getElementById('searchBtn');
+    searchButton = document.getElementById('searchButton');
     searchInput.addEventListener('focus', () => { searchInput.parentElement.classList.add('e-input-focus'); });
     searchInput.addEventListener('blur', () => { searchInput.parentElement.classList.remove('e-input-focus'); });
     searchInput.addEventListener('keypress', searchInputKeypress);
@@ -1056,7 +1056,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     let previousSearch: Button = new Button({ iconCss: 'e-pv-previous-search' });
     previousSearch.appendTo('#previousSearch');
 
-    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-btn' });
+    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-button' });
     nextSearch.appendTo('#nextSearch');
 
     let matchCaseCheck: CheckBox = new CheckBox({ label: 'Match case', change: checkBoxChanged });
@@ -1071,7 +1071,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
         document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
         updatePageNavigation();
     };
-    searchButton = document.getElementById('searchBtn');
+    searchButton = document.getElementById('searchButton');
     searchInput.addEventListener('focus', () => { searchInput.parentElement.classList.add('e-input-focus'); });
     searchInput.addEventListener('blur', () => { searchInput.parentElement.classList.remove('e-input-focus'); });
     searchInput.addEventListener('keypress', searchInputKeypress);
