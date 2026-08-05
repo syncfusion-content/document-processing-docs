@@ -9,15 +9,45 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools Overview
 
+> **Looking for what AI agents can actually *do* with this?**
+> See the [AI Agents View](./agents) — outcome-first walkthroughs for Legal, Finance, HR, Compliance, Invoice Processing, and Autonomous Document agents.
+
 [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 
-You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize existing functionality, you can use the source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
+You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). To extend or customize, the source is available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
+
+## Why an Agent Chooses Syncfusion
+
+| Affordance | What it means for the agent |
+|---|---|
+| **Framework-agnostic** | Works with Microsoft Agent Framework and any `IChatClient` (OpenAI, Claude, Gemini). |
+| **Deterministic tools** | Each tool has a clear contract — predictable input, predictable output. |
+| **Headless / CI-ready** | Runs in containers, on servers, and in CI/CD pipelines. No Office installation required. |
+| **Comprehensive coverage** | Word, Excel, PDF, PowerPoint, Markdown, and structured data extraction in one library. |
+| **Multiple execution modes** | In-memory for desktop and console; storage-backed for web and scalable services. |
+| **.NET 8.0, 9.0, 10.0** | Long-term support, no upgrade pressure. |
 
 ## How It Works
 
 ![How AI Agent Tool Execution Works](how-it-works.png)
 
+## Quick Start
+
+### Path A — Tell Your Agent
+
+> *"Use the Syncfusion Document SDK AI Agent Tools to handle this document. The package is available on NuGet as `Syncfusion.DocumentSDK.AI.AgentTools`. Follow the getting-started guide at our docs."*
+
+### Path B — Install It Yourself
+
+```bash
+dotnet add package Syncfusion.DocumentSDK.AI.AgentTools
+```
+
+Then follow [Getting Started](./getting-started) to register the document managers and expose the tools to your agent framework.
+
 ## Key Capabilities
+
+For a complete reference of every tool class, see the [Tools](./tools) page. The table below is an at-a-glance summary of the formats and operations available.
 
 <table>
   <thead>
@@ -126,8 +156,16 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
   </tbody>
 </table>
 
+## See It in Action
+
+Looking for ready-to-use prompts? See [Example Prompts](./example-prompts).
+End-to-end scenarios? See [Example Use Cases](./example-use-cases).
+
+---
+
 ## Related Resources
 
+- [AI Agents View](./agents) — what agents can do with this (outcome-first)
 - [Tools](./tools)
 - [Getting Started](./getting-started)
 - [Customization](./customization)
