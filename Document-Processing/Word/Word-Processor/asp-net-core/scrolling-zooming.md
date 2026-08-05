@@ -76,3 +76,4 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 {% include code-snippet/document-editor/asp-net-core/scrolling-status-bar/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
