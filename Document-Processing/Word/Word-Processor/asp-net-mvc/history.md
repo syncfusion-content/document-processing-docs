@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# History in ASP.NET MVC DOCX Editor
+# History in ASP.NET MVC Document Editor
 
 The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
@@ -29,7 +29,7 @@ Inject the `EditorHistory` module in your application to provide history preserv
 
 
 
-You can enable or disable history preservation for a DOCX Editor instance at any time using the `enableEditorHistory` property.
+You can enable or disable history preservation for a Document Editor instance at any time using the `enableEditorHistory` property.
 
 ```typescript
 editor.enableEditorHistory = false;
@@ -37,7 +37,7 @@ editor.enableEditorHistory = false;
 
 ## Undo and redo
 
-You can perform undo and redo by using the `Ctrl+Z` and `Ctrl+Y` keyboard shortcuts. The DOCX Editor exposes APIs to do it programmatically. To undo the last editing operation in the DOCX Editor, refer to the following sample code.
+You can perform undo and redo by using the `Ctrl+Z` and `Ctrl+Y` keyboard shortcuts. The Document Editor exposes APIs to do it programmatically. To undo the last editing operation in the Document Editor, refer to the following sample code.
 
 ```typescript
 editor.editorHistory.undo();
@@ -51,7 +51,7 @@ editor.editorHistory.redo();
 
 ## Stack size
 
-The history of editing actions will be maintained in a stack, so that the last item will be reverted first. By default, the DOCX Editor limits the size of the undo and redo stacks to 500 each, respectively. However, you can customize this limit.
+The history of editing actions will be maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of the undo and redo stacks to 500 each, respectively. However, you can customize this limit.
 
 ```typescript
 editor.editorHistory.undoLimit = 400;

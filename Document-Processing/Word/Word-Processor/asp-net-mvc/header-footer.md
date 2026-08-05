@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Headers and Footers in ASP.NET MVC DOCX Editor
+# Headers and Footers in ASP.NET MVC Document Editor
 
 The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)  supports headers and footers in its documents. Each section in the document can have the following types of headers and footers:
 
@@ -87,7 +87,7 @@ documenteditor.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headersandfooters#/tailwind3).
+Explore how to add and customize headers and footers in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headersandfooters#/tailwind3).
 
 ## See Also
 
