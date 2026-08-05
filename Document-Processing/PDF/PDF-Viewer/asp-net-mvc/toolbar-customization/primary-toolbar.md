@@ -16,17 +16,17 @@ The primary toolbar of the PDF Viewer can be customized by rearranging existing 
 
 Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. In scenarios where a custom toolbar is required, the built-in toolbar can be hidden. Use the [EnableToolbar](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableToolbar) property or the [showToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
 
-Show or hide the toolbar using the `enableToolbar` property:
+Show or hide the toolbar using the `EnableToolbar` property:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
     </div>
@@ -74,7 +74,7 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 * Show or hide toolbar items using toolbarSettings:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 ```html
 <button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
@@ -84,12 +84,12 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 ```html
 <button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
 <div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings{ ShowTooltip = true, ToolbarItem = "OpenOption" ).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { ShowTooltip = true, ToolbarItems = "OpenOption" }).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 
@@ -99,7 +99,7 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 * Show or hide toolbar items using showToolbarItem:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 ```html
 <button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
@@ -116,7 +116,7 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 ```
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 ```html
 <button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
@@ -145,7 +145,7 @@ The PDF Viewer allows you to customize (add, show, hide, enable, and disable) ex
 - Enable/Disable: Toolbar items can be enabled or disabled using enableToolbarItem.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 @using Syncfusion.EJ2
 @{
@@ -213,7 +213,7 @@ The PDF Viewer allows you to customize (add, show, hide, enable, and disable) ex
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 @{
     ViewBag.Title = "Home Page";

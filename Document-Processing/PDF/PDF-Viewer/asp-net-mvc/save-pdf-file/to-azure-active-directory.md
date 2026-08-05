@@ -58,8 +58,8 @@ The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with 
 
 ### **Step 4: Upload the PDF document to Azure Storage**
 
-1. **Navigate to Data storage**:
-   - In the Azure portal, go to **Data storage** > **Containers**.
+1. **Navigate to the storage account**:
+   - In the Azure portal, go to **Storage accounts** > **Containers** in your storage account.
 
 2. **Upload the PDF file**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
@@ -128,7 +128,7 @@ public async Task<ActionResult> LoadFromAAD(string fileName)
 
 public async Task<ActionResult> SaveToAAD(jsonObjects responseData)
 {
-    var jsonObject = JsonConverterstring(responseData);
+    var jsonObject = JsonConverter(responseData);
     PdfRenderer pdfviewer = new PdfRenderer();
     var fileName = jsonObject.ContainsKey("documentId") ? jsonObject["documentId"] : "Test.pdf";
     string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);

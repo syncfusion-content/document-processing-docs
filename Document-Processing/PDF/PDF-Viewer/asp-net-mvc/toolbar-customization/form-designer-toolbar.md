@@ -21,14 +21,14 @@ Use the [EnableFormDesigner](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfu
 The following code snippet explains how to show or hide the toolbar using the `EnableFormDesigner` property.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 ```html
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableFormDesigner(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 ```html
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableFormDesigner(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
@@ -39,7 +39,7 @@ The following code snippet explains how to show or hide the toolbar using the `E
 
 ## How to customize the form designer toolbar
 
-Choose which tools appear and control their order in the form designer toolbar.
+The set of tools that appear and their order in the form designer toolbar can be customized.
 
 Use [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) with the [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property to choose which form design tools are available. The property accepts a list of [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) values. The items you include are both displayed and rendered in the order listed; any items you omit are hidden. This provides a streamlined, user-friendly form design experience across devices.
 

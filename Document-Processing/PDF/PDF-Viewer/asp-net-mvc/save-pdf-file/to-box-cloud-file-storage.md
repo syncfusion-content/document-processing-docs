@@ -71,7 +71,7 @@ public async Task<ActionResult> Download(jsonObjects jsonObject)
 
 ```
 
-N> Replace the placeholders with your actual Box access token and the target folder ID. Use valid Box API credentials for Client ID and Client Secret.
+N> Replace the placeholders with your actual Box Client ID, Client Secret, Access Token, Refresh Token, and the target Folder ID. Use valid Box API credentials.
 
 **Step 4:** Set the PDF Viewer properties in the ASP.NET MVC PDF Viewer component
 
