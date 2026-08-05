@@ -71,10 +71,10 @@ Use the following steps to import and export annotations as objects, JSON, or XF
     ViewData["Title"] = "Home page";
 }
 
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
+<button type="button" onclick="exportAsJson()">Export Annotation As Json</button>
+<button type="button" onclick="exportAsXfdf()">Export Annotation As Xfdf</button>
+<button type="button" onclick="exportAnnotation()">Export Annotation</button>
+<button type="button" onclick="importAnnotation()">Import Annotation</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

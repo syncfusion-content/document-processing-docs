@@ -38,7 +38,7 @@ var docStream = new FileStream(fileInfo.FullName, FileMode.Open, FileAccess.Read
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 // Loading page collections
 PdfPageBase page = document.Pages[0] as PdfLoadedPage;
-//Extract text from the page.
+// Extract text from the page.
 var text = page.ExtractText(out TextLineCollection textLineCollection);
 
 ```
