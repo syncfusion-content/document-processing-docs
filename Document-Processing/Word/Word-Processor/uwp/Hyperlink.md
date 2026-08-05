@@ -65,7 +65,7 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 {% endtabs %}
 
-## Hyperlink screentip
+## Hyperlink screen tip
 
 In the `SfRichTextBoxAdv` control, a ToolTip (ScreenTip) shows information or the navigation link when the mouse hovers over a hyperlink, and disappears when the mouse is moved away. By default, it shows the navigation link of the hyperlink; you can override this with custom ScreenTip text.
 
