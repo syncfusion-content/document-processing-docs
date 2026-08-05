@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Set Default Format in the ASP.NET MVC Document Editor Component
+# Set Default Format in the ASP.NET MVC Document Editor component
 
 You can set the default character format, paragraph format, and section format in the Document Editor.
 
