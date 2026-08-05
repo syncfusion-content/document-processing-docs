@@ -99,7 +99,7 @@ function editFirstRedaction(){
 {% endhighlight %}
 {% endtabs %}  
 
-This mirrors the TS logic using the ASP.NET Core component ref to access the annotation APIs.
+This uses the PDF Viewer instance to access the annotation APIs.
 
 ## Delete redaction annotations
 

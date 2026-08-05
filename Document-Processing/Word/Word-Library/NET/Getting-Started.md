@@ -6,12 +6,12 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Getting started with simple word document
+# Getting Started with a Simple Word Document
 
-To quickly get started with the .NET Word (DOCIO) Library, please check out this video:
+To quickly get started with the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
 
-In this page, you can see how to create a simple Word document by using Essential<sup>&reg;</sup> DocIO’s API. For creating and manipulating a Word document, the following assemblies are required to be referenced in your application.
+On this page, you can learn how to create a simple Word document by using Essential<sup>&reg;</sup> DocIO’s API. For creating and manipulating a Word document, the following assemblies must be referenced in your application.
 
 <table>
 <thead>
@@ -42,7 +42,7 @@ N> 2. Syncfusion components are available in [nuget.org](https://www.nuget.org/)
 
 N> You can also explore our [.NET Word Library](https://www.syncfusion.com/demos/fileformats/word-library) demo that shows how to create and modify word files from C# with just five lines of code on different platforms.
 
-Include the following namespaces in your .cs or .vb file
+Include the following namespaces in your .cs or .vb file.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -73,12 +73,12 @@ Imports Syncfusion.DocIO.DLS
 
 ## Creating a new Word document with few lines of code
 
-The following code example explains how to create a new Word document with few lines of code
+The following code example explains how to create a new Word document with a few lines of code.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-document/.NET/Create-Word-document/Program.cs" %}
-//Creates a new instance of WordDocument (Empty Word Document)
+//Creates an instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a section and a paragraph to the document
 document.EnsureMinimal();
@@ -92,25 +92,25 @@ document.Close();
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance of WordDocument Instance (Empty Word Document)
+//Creates an instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
-//Add a section & a paragraph in the empty document
+//Adds a section and a paragraph in the empty document
 document.EnsureMinimal();
-//Append text to the last paragraph of the document
+//Appends text to the last paragraph of the document
 document.LastParagraph.AppendText("Hello World");
-//Save and close the Word document
+//Saves and closes the Word document
 document.Save("Result.docx");
 document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of WordDocument Instance (Empty Word Document)
+'Creates an instance of WordDocument (Empty Word Document)
 Dim document As New WordDocument()
-'Add a section & a paragraph in the empty document
+'Adds a section and a paragraph in the empty document
 document.EnsureMinimal()
-'Append text to the last paragraph of the document
+'Appends text to the last paragraph of the document
 document.LastParagraph.AppendText("Hello World")
-'Save and close the Word document
+'Saves and closes the Word document
 document.Save("Result.docx")
 document.Close()
 {% endhighlight %} 
@@ -121,16 +121,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Creating a new Word document from scratch with basic elements
 
-An entire Word document is represented by an instance of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) and it is root element of DocIO’s DOM. Word document contains a collection of sections. A Word document must contain at least one section.
+An entire Word document is represented by an instance of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) and it is the root element of DocIO’s DOM. A Word document contains a collection of sections. A Word document must contain at least one section.
 
-A section represents group of paragraphs, tables etc., that have a specific set of properties used to define the pages, number of columns, headers and footers and so on that decides how the text appears. A section should contain at least one paragraph in this body.
+A section represents a group of paragraphs, tables, etc., that have a specific set of properties used to define the pages, number of columns, headers and footers, and so on that decide how the text appears. A section should contain at least one paragraph in its body.
 
 The following code example explains how to add a section into a [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) instance.
 
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
-//Creates an instance of WordDocument Instance (Empty Word Document)
+//Creates an instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a new section into the Word document
 IWSection section = document.AddSection();
@@ -139,7 +139,7 @@ section.PageSetup.Margins.All = 50f;
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance of WordDocument Instance (Empty Word Document)
+//Creates an instance of WordDocument (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a new section into the Word document
 IWSection section = document.AddSection();
@@ -148,7 +148,7 @@ section.PageSetup.Margins.All = 50f;
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of WordDocument Instance (Empty Word Document)
+'Creates an instance of WordDocument (Empty Word Document)
 Dim document As New WordDocument()
 'Adds a new section into the Word document
 Dim section As IWSection = document.AddSection()
@@ -158,9 +158,9 @@ section.PageSetup.Margins.All = 50.0F
 
 {% endtabs %}
 
-All the textual contents in a Word document is represented by Paragraphs. Within the paragraph, textual contents are grouped into one or more child elements such as TextRange, field etc. Each TextRange represents a region of text with a common set of rich text formatting.
+All the textual contents in a Word document are represented by paragraphs. Within the paragraph, textual contents are grouped into one or more child elements such as TextRange, field, etc. Each TextRange represents a region of text with a common set of rich text formatting.
 
-The following code example explains how to add a Paragraph into a Word document
+The following code example explains how to add a paragraph into a Word document.
 
 {% tabs %}
 
@@ -171,13 +171,13 @@ IWParagraph firstParagraph = section.AddParagraph();
 firstParagraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Justify;
 //Adds a text range into the paragraph
 IWTextRange firstTextRange = firstParagraph.AppendText("AdventureWorks Cycles,");
-//sets the font formatting of the text range
+//Sets the font formatting of the text range
 firstTextRange.CharacterFormat.Bold = true;
 firstTextRange.CharacterFormat.FontName = "Calibri";
 firstTextRange.CharacterFormat.FontSize = 14;
 //Adds another text range into the paragraph
 IWTextRange secondTextRange = firstParagraph.AppendText(" the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//sets the font formatting of the text range
+//Sets the font formatting of the text range
 secondTextRange.CharacterFormat.FontName = "Calibri";
 secondTextRange.CharacterFormat.FontSize = 11;
 {% endhighlight %} 
@@ -189,13 +189,13 @@ IWParagraph firstParagraph = section.AddParagraph();
 firstParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Justify;
 //Adds a text range into the paragraph
 IWTextRange firstTextRange = firstParagraph.AppendText("AdventureWorks Cycles,");
-//sets the font formatting of the text range
+//Sets the font formatting of the text range
 firstTextRange.CharacterFormat.Bold = true;
 firstTextRange.CharacterFormat.FontName = "Calibri";
 firstTextRange.CharacterFormat.FontSize = 14;
 //Adds another text range into the paragraph
 IWTextRange secondTextRange = firstParagraph.AppendText(" the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//sets the font formatting of the text range
+//Sets the font formatting of the text range
 secondTextRange.CharacterFormat.FontName = "Calibri";
 secondTextRange.CharacterFormat.FontSize = 11;
 {% endhighlight %}
@@ -207,13 +207,13 @@ Dim firstParagraph As IWParagraph = section.AddParagraph()
 firstParagraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Justify
 'Adds a text range into the paragraph
 Dim firstTextRange As IWTextRange = firstParagraph.AppendText("AdventureWorks Cycles, ")
-'sets the font formatting of the text range
+'Sets the font formatting of the text range
 firstTextRange.CharacterFormat.Bold = True
 firstTextRange.CharacterFormat.FontName = "Calibri"
 firstTextRange.CharacterFormat.FontSize = 14
 'Adds another text range into the paragraph
 Dim secondTextRange As IWTextRange = firstParagraph.AppendText("the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.")
-'sets the font formatting of the text range
+'Sets the font formatting of the text range
 secondTextRange.CharacterFormat.FontName = "Calibri"
 secondTextRange.CharacterFormat.FontSize = 11
 {% endhighlight %}  
@@ -228,12 +228,12 @@ The following code example shows how to add an image into the Word document.
 //Adds another paragraph and aligns it as center
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Center;
-//Sets after spacing for paragraph.
+//Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 8;
 //Adds a picture into the paragraph
 FileStream image1 = new FileStream("DummyProfilePicture.jpg", FileMode.Open, FileAccess.Read);
 IWPicture picture = paragraph.AppendPicture(image1);
-//Specify the size of the picture
+//Specifies the size of the picture
 picture.Height = 100;
 picture.Width = 100;
 {% endhighlight %} 
@@ -242,11 +242,11 @@ picture.Width = 100;
 //Adds another paragraph and aligns it as center
 IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center;
-//Sets after spacing for paragraph.
+//Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 8;
 //Adds a picture into the paragraph
 IWPicture picture = paragraph.AppendPicture(Image.FromFile("DummyProfilePicture.jpg"));
-//Specify the size of the picture
+//Specifies the size of the picture
 picture.Height = 100;
 picture.Width = 100;
 {% endhighlight %}
@@ -255,7 +255,7 @@ picture.Width = 100;
 'Adds another paragraph and aligns it as center
 Dim paragraph As IWParagraph = section.AddParagraph()
 paragraph.ParagraphFormat.HorizontalAlignment = HorizontalAlignment.Center
-'Sets after spacing for paragraph.
+'Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 8
 'Adds a picture into the paragraph
 Dim picture As IWPicture = paragraph.AppendPicture(Image.FromFile("DummyProfilePicture.jpg"))
@@ -266,7 +266,7 @@ picture.Width = 100
 
 {% endtabs %}
 
-Table is another important element in Word that contains a set of paragraphs arranged in rows and columns. You can create simple as well as complex table by using Essential DocIO’s API. The following code example creates a simple table and adds contents into it. Each table cell must contain at least one paragraph.
+A table is another important element in Word that contains a set of paragraphs arranged in rows and columns. You can create simple as well as complex tables by using Essential DocIO’s API. The following code example creates a simple table and adds contents into it. Each table cell must contain at least one paragraph.
 
 {% tabs %}
 
@@ -279,11 +279,11 @@ table.ResetCells(2, 2);
 WTableCell firstCell = table.Rows[0].Cells[0];
 //Specifies the width of the cell
 firstCell.Width = 150;
-//Adds a paragraph into the cell; a cell must have atleast 1 paragraph
+//Adds a paragraph into the cell; a cell must have at least 1 paragraph
 paragraph = firstCell.AddParagraph();
 IWTextRange textRange = paragraph.AppendText("Profile picture");
 textRange.CharacterFormat.Bold = true;
-//Accesses the instance of cell (first row, second cell)
+//Accesses the instance of the cell (first row, second cell)
 WTableCell secondCell = table.Rows[0].Cells[1];
 secondCell.Width = 330;
 paragraph = secondCell.AddParagraph();
@@ -292,7 +292,7 @@ textRange.CharacterFormat.Bold = true;
 firstCell = table.Rows[1].Cells[0];
 firstCell.Width = 150;
 paragraph = firstCell.AddParagraph();
-//Sets after spacing for paragraph.
+//Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 6;
 FileStream image2 = new FileStream("DummyProfile-Picture.jpg", FileMode.Open, FileAccess.Read);
 IWPicture profilePicture = paragraph.AppendPicture(image2);
@@ -308,16 +308,16 @@ textRange = paragraph.AppendText("AdventureWorks Cycles, the fictitious company 
 //Adds a table into the Word document
 IWTable table = section.AddTable();
 //Creates the specified number of rows and columns
-table.ResetCells(2,2);
+table.ResetCells(2, 2);
 //Accesses the instance of the cell (first row, first cell)
 WTableCell firstCell = table.Rows[0].Cells[0];
 //Specifies the width of the cell
 firstCell.Width = 150;
-//Adds a paragraph into the cell; a cell must have atleast 1 paragraph
+//Adds a paragraph into the cell; a cell must have at least 1 paragraph
 paragraph = firstCell.AddParagraph();
 IWTextRange textRange = paragraph.AppendText("Profile picture");
 textRange.CharacterFormat.Bold = true;
-//Accesses the instance of cell (first row, second cell)
+//Accesses the instance of the cell (first row, second cell)
 WTableCell secondCell = table.Rows[0].Cells[1];
 secondCell.Width = 330;
 paragraph = secondCell.AddParagraph();
@@ -326,9 +326,9 @@ textRange.CharacterFormat.Bold = true;
 firstCell = table.Rows[1].Cells[0];
 firstCell.Width = 150;
 paragraph = firstCell.AddParagraph();
-//Sets after spacing for paragraph.
+//Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 6;
-IWPicture profilePicture = paragraph.AppendPicture(Image.FromFile(DummyProfile-Picture.jpg"));
+IWPicture profilePicture = paragraph.AppendPicture(Image.FromFile("DummyProfile-Picture.jpg"));
 profilePicture.Height = 100;
 profilePicture.Width = 100;
 secondCell = table.Rows[1].Cells[1];
@@ -346,11 +346,11 @@ table.ResetCells(2, 2)
 Dim firstCell As WTableCell = table.Rows(0).Cells(0)
 'Specifies the width of the cell
 firstCell.Width = 150
-'Adds a paragraph into the cell; a cell must have atleast 1 paragraph
+'Adds a paragraph into the cell; a cell must have at least 1 paragraph
 paragraph = firstCell.AddParagraph()
 Dim textRange As IWTextRange = paragraph.AppendText("Profile picture")
 textRange.CharacterFormat.Bold = True
-'Accesses the instance of cell (first row, second cell)
+'Accesses the instance of the cell (first row, second cell)
 Dim secondCell As WTableCell = table.Rows(0).Cells(1)
 secondCell.Width = 330
 paragraph = secondCell.AddParagraph()
@@ -359,7 +359,7 @@ textRange.CharacterFormat.Bold = True
 firstCell = table.Rows(1).Cells(0)
 firstCell.Width = 150
 paragraph = firstCell.AddParagraph()
-'Sets after spacing for paragraph.
+'Sets after spacing for the paragraph.
 paragraph.ParagraphFormat.AfterSpacing = 6
 Dim profilePicture As IWPicture = paragraph.AppendPicture(Image.FromFile("DummyProfile-Picture.jpg"))
 profilePicture.Height = 100
@@ -372,14 +372,14 @@ textRange = paragraph.AppendText("AdventureWorks Cycles, the fictitious company 
 
 {% endtabs %}
 
-Essential<sup>&reg;</sup> DocIO allow you to create simple and multi-level lists. The following code snippet explains about how to create a numbered and bulleted list.
+Essential<sup>&reg;</sup> DocIO allows you to create simple and multi-level lists. The following code snippet explains how to create a numbered and bulleted list.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 //Writes default numbered list. 
 paragraph = section.AddParagraph();
-//Sets before spacing for paragraph.
+//Sets before spacing for the paragraph.
 paragraph.ParagraphFormat.BeforeSpacing = 6;
 paragraph.AppendText("Level 0");
 //Applies the default numbered list formats 
@@ -390,7 +390,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 1");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel();
@@ -419,7 +419,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 1");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel();
@@ -429,7 +429,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 0");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Decrements the list level
 paragraph.ListFormat.DecreaseIndentLevel();
@@ -443,7 +443,7 @@ section.AddParagraph();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Writes default numbered list. 
 paragraph = section.AddParagraph();
-//Sets before spacing for paragraph.
+//Sets before spacing for the paragraph.
 paragraph.ParagraphFormat.BeforeSpacing = 6;
 paragraph.AppendText("Level 0");
 //Applies the default numbered list formats 
@@ -454,7 +454,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 1");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel();
@@ -483,7 +483,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 1");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel();
@@ -493,7 +493,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18;
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left;
 paragraph = section.AddParagraph();
 paragraph.AppendText("Level 0");
-//Specifies the list format to continue from last list
+//Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering();
 //Decrements the list level
 paragraph.ListFormat.DecreaseIndentLevel();
@@ -507,7 +507,7 @@ section.AddParagraph();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Writes default numbered list. 
 paragraph = section.AddParagraph()
-'Sets before spacing for paragraph.
+'Sets before spacing for the paragraph.
 paragraph.ParagraphFormat.BeforeSpacing = 6
 paragraph.AppendText("Level 0")
 'Applies the default numbered list formats 
@@ -518,7 +518,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left
 paragraph = section.AddParagraph()
 paragraph.AppendText("Level 1")
-'Specifies the list format to continue from last list
+'Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering()
 'Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel()
@@ -547,7 +547,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left
 paragraph = section.AddParagraph()
 paragraph.AppendText("Level 1")
-'Specifies the list format to continue from last list
+'Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering()
 'Increments the list level
 paragraph.ListFormat.IncreaseIndentLevel()
@@ -557,7 +557,7 @@ paragraph.ListFormat.CurrentListLevel.ParagraphFormat.FirstLineIndent = -18
 paragraph.ListFormat.CurrentListLevel.NumberAlignment = ListNumberAlignment.Left
 paragraph = section.AddParagraph()
 paragraph.AppendText("Level 0")
-'Specifies the list format to continue from last list
+'Specifies the list format to continue from the last list
 paragraph.ListFormat.ContinueListNumbering()
 'Decrements the list level
 paragraph.ListFormat.DecreaseIndentLevel()
@@ -570,31 +570,31 @@ section.AddParagraph()
 
 {% endtabs %}
 
-Finally, save the document in file system and close its instance.
+Finally, save the document to the file system and close its instance.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Getting-Started/Create-Word-with-basic-elements/.NET/Create-Word-with-basic-elements/Program.cs" %}
 MemoryStream stream = new MemoryStream();
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 document.Save(stream, FormatType.Docx);
 document.Close();
 stream.Position = 0;
-//Download Word document in the browser
+//Downloads the Word document in the browser
 return File(stream, "application/msword", outputFileName);
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Saves the document in the given name and format
+//Saves the document with the given name and format
 document.Save(outputFileName, FormatType.Docx);
-//Releases the resources occupied by WordDocument instance
+//Releases the resources occupied by the WordDocument instance
 document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Saves the document in the given name and format
+'Saves the document with the given name and format
 document.Save(outputFileName, FormatType.Docx)
-'Releases the resources occupied by WordDocument instance
+'Releases the resources occupied by the WordDocument instance
 document.Close()
 {% endhighlight %}
 
@@ -608,19 +608,19 @@ The resultant Word document looks as follows.
 
 ## Modifying an existing Word document
 
-Essential<sup>&reg;</sup> DocIO allows you to manipulate an existing Word document, RTF, WordML, HTML and Plain text files. You can modify the documents either by manipulating DocIO’s DOM or by using DocIO’s built-in functionalities such as Find and Replace, replacing bookmark contents etc.
+Essential<sup>&reg;</sup> DocIO allows you to manipulate an existing Word document, RTF, WordML, HTML, and plain text files. You can modify the documents either by manipulating DocIO’s DOM or by using DocIO’s built-in functionalities such as Find and Replace, replacing bookmark contents, etc.
 
-Here, you can see how an existing Word document is loaded into DocIO’s DOM, replaces an existing content with another and finally saves the Word document.
+Here, you can see how an existing Word document is loaded into DocIO’s DOM, an existing content is replaced with another, and finally the Word document is saved.
 
-You can open an existing Word document either by using constructor of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class or by using [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class that reads the document and populates DocIO’s DOM. The following code example shows how to load an existing document.
+You can open an existing Word document either by using the constructor of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument__ctor_System_String_) class or by using the [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Open_System_String_) method of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class that reads the document and populates DocIO’s DOM. The following code example shows how to load an existing document.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-replace-all/.NET/Find-and-replace-all/Program.cs" %}
-FileStream fileStream = new FileStream(@"Giant Panda.docx",FileMode.Open,FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"Giant Panda.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
-//Replaces the word "bear" as "panda"
+//Replaces the word "bear" with "panda"
 document.Replace("bear", "panda", false, true);
 //Saves the Word document to MemoryStream.
 MemoryStream stream = new MemoryStream();
@@ -632,7 +632,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument("Giant Panda.docx");
-//Replaces the word "bear" as "panda"
+//Replaces the word "bear" with "panda"
 document.Replace("bear", "panda", false, true);
 //Saves the Word document
 document.Save("Result.docx");
@@ -643,11 +643,11 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads an existing Word document into DocIO instance
 Dim document As New WordDocument("Giant Panda.docx")
-'Replaces the word "bear" as "panda"
+'Replaces the word "bear" with "panda"
 document.Replace("bear", "panda", False, True)
 'Saves the Word document
 document.Save("Result.docx")
-'Closes the document 
+'Closes the document
 document.Close()
 {% endhighlight %}
 
@@ -655,15 +655,15 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all).
 
-The following code example explains how to search a particular text and highlight it.
+The following code example explains how to search for a particular text and highlight it.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Find-and-highlight-all/.NET/Find-and-highlight-all/Program.cs" %}
-FileStream fileStream = new FileStream(@"Test.docx",FileMode.Open,FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"Test.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(fileStream, FormatType.Automatic);
-//Finds the occurrence of the Word "panda" in the document
+//Finds the occurrence of the word "panda" in the document
 TextSelection[] textSelection = document.FindAll("panda", false, true);
 //Iterates through each occurrence and highlights it
 foreach (TextSelection selection in textSelection)
@@ -681,7 +681,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads an existing Word document into DocIO instance
 WordDocument document = new WordDocument(@"../../Data/Giant Panda.docx");
-//Finds the occurrence of the Word "panda" in the document
+//Finds the occurrence of the word "panda" in the document
 TextSelection[] textSelection = document.FindAll("panda", false, true);
 //Iterates through each occurrence and highlights it
 foreach (TextSelection selection in textSelection)
@@ -714,7 +714,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Performing Mail merge
 
-Essential<sup>&reg;</sup> DocIO allows to generate documents by filling data in template document from data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.  
+Essential<sup>&reg;</sup> DocIO allows you to generate documents by filling data in a template document from a data source. The Mail merge operation automatically maps the column name in the data source and the names of the merge fields in the template Word document and fills the data.  
 
 The following data sources are supported by Essential<sup>&reg;</sup> DocIO for performing Mail merge.
 
@@ -723,17 +723,17 @@ The following data sources are supported by Essential<sup>&reg;</sup> DocIO for 
 * Business Objects
 * Dynamic objects
 
-Also, you can perform more than one Mail merge operations over the same template to generate document as per your requirement.
+Also, you can perform more than one Mail merge operation over the same template to generate the document as per your requirement.
 
-Follow the given steps to perform simple Mail merge in a Word document.
+Follow the given steps to perform a simple Mail merge in a Word document.
 
 Let’s consider that you have a template Word document with merge fields as shown.
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.jpeg)
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data source. The Mail merge operation replaces the matching merge fields with the respective data.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data sources. The Mail merge operation replaces the matching merge fields with the respective data.
 
-The following code example shows how to perform simple Mail merge by using string array.
+The following code example shows how to perform a simple Mail merge by using a string array.
 
 {% tabs %}
 
@@ -786,28 +786,28 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Mail-Merge/Mail-merge-with-string-arrays).
 
-The resultant Word document look as follows.
+The resultant Word document looks as follows.
 
 ![Performing Mail merge output document](GettingStarted_images/GettingStarted_img3.jpeg)
 
 ### Simple Mail merge with Group
 
-You can perform Mail merge with group to append multiple records from data source into a single document. Group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName» 
+You can perform Mail merge with a group to append multiple records from a data source into a single document. A group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName». 
 
 * «TableStart:TableName» - denotes the start of the group
 * «TableEnd:TableName» - denotes the end of the group
 
-The region between these two merge fields get repeated for every record from the data source.
+The region between these two merge fields gets repeated for every record from the data source.
 
 For example – let’s consider that you have a template document as shown.
 
 ![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.jpeg)
 
-Here, in this template, Employees is the group name and exact same name should be used while performing Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees”, to denote the start and end of the Mail merge group. 
+Here, in this template, Employees is the group name, and the exact same name should be used while performing Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees”, to denote the start and end of the Mail merge group. 
 
-To merge an image in the replace of a merge field, you need to add a prefix (“Image:”)the merge field name. 
+To merge an image in place of a merge field, you need to add a prefix (“Image:”) to the merge field name. 
 
-For example: the merge field name should be like “<<Image:Photo>>”(<<Image:MergeFieldName>>)
+For example: the merge field name should be like “<<Image:Photo>>” (<<Image:MergeFieldName>>).
 
 The following code example shows how to perform Mail merge with objects.
 
@@ -845,7 +845,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-//Loads the template document
+'Loads the template document
 Dim document As New WordDocument("../../Data/EmployeesTemplate.doc")
 'Gets the employee details as IEnumerable collection
 Dim employeeList As List(Of Employee) = GetEmployees()
@@ -860,7 +860,7 @@ document.Close()
 
 {% endtabs %}
 
-The following code example provides supporting methods and class for the above code
+The following code example provides supporting methods and classes for the above code.
 
 {% tabs %}
 
@@ -1025,13 +1025,13 @@ Public Class Employee
     Private m_Photo As Image
 
     Public Sub New(firstName As String, lastName As String, title As String, address As String, city As String, region As String, country As String, photoFilePath As String)
-        firstName = firstName
-        lastName = lastName
-        title = title
-        address = address
-        city = city
-        region = region
-        country = country
+        Me.FirstName = firstName
+        Me.LastName = lastName
+        Me.Title = title
+        Me.Address = address
+        Me.City = city
+        Me.Region = region
+        Me.Country = country
         Photo = Image.FromFile(photoFilePath)
     End Sub
 End Class
@@ -1047,27 +1047,27 @@ The resultant document looks as follows.
 
 ## Converting Word document to PDF
 
-Essential<sup>&reg;</sup> DocIO allows you to convert a Word document into PDF document in a few lines of code. 
+Essential<sup>&reg;</sup> DocIO allows you to convert a Word document into a PDF document in a few lines of code. 
 
 Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/assemblies-required#converting-word-document-to-pdf) to know about the assemblies required to perform Word to PDF conversion in your application.
 
-[DocToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. 
+The [DocToPDFConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocToPDFConverter.DocToPDFConverter.html) class is responsible for converting a Word document into PDF. 
 
 In portable projects, `DocIORenderer` is responsible for converting a Word document into PDF.
 
-The following code example illustrates how to convert a Word document into PDF document.
+The following code example illustrates how to convert a Word document into a PDF document.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF/.NET/Convert-Word-document-to-PDF/Program.cs" %}
-FileStream fileStream = new FileStream(@"EmployeesTemplate.docx", FileMode.Open,FileAccess.ReadWrite);
+FileStream fileStream = new FileStream(@"EmployeesTemplate.docx", FileMode.Open, FileAccess.ReadWrite);
 //Loads an existing Word document into DocIO instance
 WordDocument wordDocument = new WordDocument(fileStream, FormatType.Automatic);
 //Creates an instance of DocToPDFConverter - responsible for Word to PDF conversion
 DocIORenderer converter = new DocIORenderer();
 //Converts Word document into PDF document
 PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
-//Save the document into stream.
+//Saves the document into stream.
 MemoryStream outputStream = new MemoryStream();
 pdfDocument.Save(outputStream);
 //Closes the instance of PDF document object
@@ -1077,8 +1077,8 @@ wordDocument.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument wordDocument = new WordDocument(inputWordDocument, FormatType.Automatic );
-//Initializes chart to image converter for converting charts during Word to pdf conversion
+WordDocument wordDocument = new WordDocument(inputWordDocument, FormatType.Automatic);
+//Initializes chart to image converter for converting charts during Word to PDF conversion
 wordDocument.ChartToImageConverter = new ChartToImageConverter();
 wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal;
 //Creates an instance of DocToPDFConverter - responsible for Word to PDF conversion
@@ -1087,15 +1087,15 @@ DocToPDFConverter converter = new DocToPDFConverter();
 PdfDocument pdfDocument = converter.ConvertToPDF(wordDocument);
 //Saves the PDF file to file system
 pdfDocument.Save("Sample.pdf");
-//closes the instance of document objects
+//Closes the instance of document objects
 pdfDocument.Close();
 wordDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads the template document 
+'Loads the template document
 Dim wordDocument As New WordDocument(inputWordDocument, FormatType.Automatic)
-'Initializes chart to image converter for converting charts during Word to pdf conversion
+'Initializes chart to image converter for converting charts during Word to PDF conversion
 wordDocument.ChartToImageConverter = New ChartToImageConverter()
 wordDocument.ChartToImageConverter.ScalingMode = ScalingMode.Normal
 'Creates an instance of DocToPDFConverter - responsible for Word to PDF conversion
@@ -1104,7 +1104,7 @@ Dim converter As New DocToPDFConverter()
 Dim pdfDocument As PdfDocument = converter.ConvertToPDF(wordDocument)
 'Saves the PDF file to file system
 pdfDocument.Save("Sample.pdf")
-'closes the instance of document objects
+'Closes the instance of document objects
 pdfDocument.Close()
 wordDocument.Close()
 {% endhighlight %}
@@ -1113,8 +1113,8 @@ wordDocument.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Convert-Word-document-to-PDF).
 
-N> 1. When the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) object is not initialized, then the charts in Word document gets skipped during Word to PDF conversion.
-N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards
+N> 1. When the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) object is not initialized, the charts in the Word document are skipped during Word to PDF conversion.
+N> 2. [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) is supported from .NET Framework 4.0 onwards.
 
 ## Online Demo
 

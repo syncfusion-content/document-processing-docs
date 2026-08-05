@@ -3,7 +3,7 @@ layout: post
 title: Open Excel in React Spreadsheet component | Syncfusion
 description: Learn here all about Open Excel in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Open 
+control: Open
 documentation: ug
 ---
 
@@ -62,9 +62,9 @@ For a quick walkthrough on how the open functionality works, refer to the follow
 
 ## UI options to open Excel files
 
-In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
+In the user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
-The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which gets triggered before opening an Excel file.
+The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -181,9 +181,9 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
-### Open Excel files from Blob data
+### Open Excel files from Blob Data
 
 By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#open) method in the Spreadsheet component to load that `File` object.
 
@@ -397,9 +397,9 @@ You can open Excel file into a read-only mode by using the [`openComplete`](http
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs4" %}
 
 
-## Advanced Open options
+## Advanced Open Options
 
-### Configure JSON deserialization
+### Configure JSON Deserialization
 
 Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
 
@@ -409,21 +409,21 @@ Now, you have the option to selectively ignore some features during the opening 
 spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 ```
 
-| Options | Description |
-| ----- | ----- |
-| onlyValues |  If **true**, only the cell values will be loaded. |
-| ignoreStyle | If **true**, styles will be excluded when loading the JSON data. |
-| ignoreFormula | If **true**, formulas will be excluded when loading the JSON data. |
-| ignoreFormat | If **true**, number formats will be excluded when loading the JSON data. |
-| ignoreConditionalFormat | If **true**, conditional formatting will be excluded when loading the JSON data. |
-| ignoreValidation | If **true**, data validation rules will be excluded when loading the JSON data. |
-| ignoreFreezePane | If **true**, freeze panes will be excluded when loading the JSON data. |
-| ignoreWrap | If **true**, text wrapping settings will be excluded when loading the JSON data. |
-| ignoreChart | If **true**, charts will be excluded when loading the JSON data. |
-| ignoreImage | If **true**, images will be excluded when loading the JSON data. |
-| ignoreNote | If **true**, notes will be excluded when loading the JSON data. |
+| Option | Description |
+| ------ | ----------- |
+| onlyValues | If **true**, only cell values are loaded. |
+| ignoreStyle | If **true**, styles are excluded when loading the JSON data. |
+| ignoreFormula | If **true**, formulas are excluded when loading the JSON data. |
+| ignoreFormat | If **true**, number formats are excluded when loading the JSON data. |
+| ignoreConditionalFormat | If **true**, conditional formatting is excluded when loading the JSON data. |
+| ignoreValidation | If **true**, data validation rules are excluded when loading the JSON data. |
+| ignoreFreezePane | If **true**, freeze panes are excluded when loading the JSON data. |
+| ignoreWrap | If **true**, text wrapping settings are excluded when loading the JSON data. |
+| ignoreChart | If **true**, charts are excluded when loading the JSON data. |
+| ignoreImage | If **true**, images are excluded when loading the JSON data. |
+| ignoreNote | If **true**, notes are excluded when loading the JSON data. |
 
-The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the openFromJson method:
+The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the `openFromJson` method:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -436,7 +436,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-json" %}
 
-### Optimize Open performance with parsing options
+### Optimize Open Performance with Parsing Options
 
 Opening large Excel files into the React Spreadsheet can sometimes lead to slower performance and increased memory usage. This is often caused by the processing of additional elements such as styles and number formats—even when the actual data content is minimal. For example, an Excel file with only a small amount of data but a large number of styled or formatted empty cells can significantly impact load time and memory consumption.
 
@@ -556,7 +556,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs3" %}
 
-### Handle external workbook reference confirmation
+### Handle External workbook reference confirmation
 
 When you open an Excel file that contains external workbook references, you will see a confirmation dialog. This dialog allows you to either continue with the file opening or cancel the operation. This confirmation dialog will appear only if you set the `AllowExternalWorkbook` property value to **false** during the open request, as shown below. This prevents the spreadsheet from displaying inconsistent data.
 

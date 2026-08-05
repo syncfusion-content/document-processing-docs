@@ -50,6 +50,6 @@ Additionally, we recommend setting the `isFullPost` property to `false` in the `
 ## See Also
 
 * [Performance Best Practices](../performance-best-practices)
-* [Open excel files](../open-excel-files.md)
-* [Save Excel files](../save-excel-files.md)
-* [Web Service](../web-services/webservice-overview.md)
+* [Open Excel Files](../open-excel-files.md)
+* [Save Excel Files](../save-excel-files.md)
+* [Web Services](../web-services/webservice-overview.md)

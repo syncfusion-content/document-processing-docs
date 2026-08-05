@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Radius Measurement Annotations in React PDF Viewer \ Syncfusion
+title: Add Radius Measurement Annotations in React PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -83,7 +83,7 @@ function exitRadiusMode() {
 {% endtabs %}
 
 ### Add Radius Programmatically
-Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw a radius at a specific location.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -102,7 +102,7 @@ function addRadius() {
 {% endtabs %}
 
 ## Customize Radius Appearance
-Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -121,7 +121,7 @@ Configure default properties using the [`Radius Settings`](https://ej2.syncfusio
 {% endtabs %}
 
 ## Manage Radius (Move, Reshape, Edit, Delete)
-- **Move**: Drag inside the polygon to reposition it.
+- **Move**: Drag inside the radius annotation to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
 ### Edit Radius Annotation
@@ -185,8 +185,8 @@ Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
-## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
+## Set Properties While Adding Individual Annotations
+Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -214,7 +214,7 @@ function addStyledRadius() {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#measurementsettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

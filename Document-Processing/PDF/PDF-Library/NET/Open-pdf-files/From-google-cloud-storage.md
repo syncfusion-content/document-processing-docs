@@ -1,6 +1,7 @@
 ---
 title: Load PDF file from Google cloud storage | Syncfusion
-description: This page describes how to Load PDF file from google cloud storage in C#  using Syncfusion .NET PDF library.
+description: This page describes how to load a PDF file from Google Cloud Storage in C# using the Syncfusion .NET PDF library.
+keywords: google cloud storage, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
 documentation: UG
@@ -9,9 +10,11 @@ documentation: UG
 
 To open a PDF file from Google Cloud Storage, follow these steps:
 
-Step 1: Create a simple console application
+Step 1: Create a simple console application.
 
 ![Project configuration window](Open-PDF-Images/Console-Application.png)
+
+Step 2: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
 Step 3: Install the [Google.Cloud.Storage.V1](https://www.nuget.org/packages/Google.Cloud.Storage.V1) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 
@@ -24,6 +27,9 @@ Step 4: Include the following namespaces in the Program.cs file.
 
 using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
@@ -33,22 +39,23 @@ Step 5: Add the below code example to create a simple PDF and save in Google clo
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Create a byte array
-byte[] pdfBytes;
-// Load the credentials file
+// Load the credentials file.
 GoogleCredential credential = GoogleCredential.FromFile("credentials.json");
-// Create a storage client
+// Create a storage client.
 StorageClient storage = StorageClient.Create(credential);
-// Download the PDF from Google Cloud Storage
+
+// Download the PDF from Google Cloud Storage into a memory stream.
 using (MemoryStream stream = new MemoryStream())
 {
-     storage.DownloadObject("bucket50247", "Sample.pdf", stream);
-     pdfBytes = stream.ToArray();
-}
-string filePath = "Sample.pdf";
+    storage.DownloadObject("YOUR_BUCKET_NAME", "Sample.pdf", stream);
+    stream.Position = 0;
 
-// Write the byte array to a PDF file
-File.WriteAllBytes(filePath, pdfBytes);
+    // Load the downloaded PDF using Syncfusion.
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument(stream);
+    // Use the loadedDocument for further processing (e.g., extracting text or images).
+    // Remember to dispose of the loadedDocument when you are done.
+    loadedDocument.Close(true);
+}
 
 {% endhighlight %}
 {% endtabs %}

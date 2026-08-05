@@ -9,9 +9,9 @@ documentation: ug
 
 # Clipboard in Vue Spreadsheet component
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enableclipboard) property in Spreadsheet.
+The Spreadsheet supports clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
 
-> By default, the `enableClipboard` property is true.
+> By default, the `enableClipboard` property is `true`.
 
 ## Cut
 
@@ -23,8 +23,8 @@ Cut can be done in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
-* Using the [`cut`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#cut) method.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
+* Using the [`cut`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#cut) method.
 
 ## Copy
 
@@ -36,8 +36,8 @@ Copy can be done in one of the following ways.
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
-* Using the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#copy) method.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
+* Using the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#copy) method.
 
 ## Paste
 
@@ -54,8 +54,8 @@ Paste can be done in one of the following ways.
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
-* Using the [`paste`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#paste) method.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
+* Using the [`paste`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#paste) method.
 
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
@@ -72,7 +72,7 @@ Paste can be done in one of the following ways.
 
 ## Prevent the paste functionality
 
-The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
+The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -94,4 +94,4 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
