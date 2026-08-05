@@ -1,13 +1,13 @@
 ---
 layout: post
 title: View in ASP.NET Core DOCX Editor Control | Syncfusion
-description: Learn all about the View options in the Syncfusion Document Editor component.
+description: Learn how to use view options in the Syncfusion ASP.NET Core Document Editor, including web layout, ruler, and navigation pane features.
 platform: document-processing
 control: View
 documentation: ug
 ---
 
-# View in Document Editor
+# View in ASP.NET Core Document Editor Component
 
 ## Web layout
 
