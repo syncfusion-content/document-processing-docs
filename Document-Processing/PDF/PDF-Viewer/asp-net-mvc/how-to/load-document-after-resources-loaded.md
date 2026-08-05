@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a PDF only after PDFium resources are ready
+# Load PDF After PDFium Resources Are Initialized
 
 In Standalone mode, the ASP.NET MVC PDF Viewer downloads its PDFium runtime assets (scripts/wasm) from the location specified in the resourceUrl property. Attempting to load a document before those assets are available can cause errors. Use the resourcesLoaded event to defer document loading until all required assets are ready.
 

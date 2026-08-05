@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Customize the context menu in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to add and customize custom context menu options in the Syncfusion ASP.NET MVC PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+description: Learn to add and customize context menu items in the Syncfusion ASP.NET MVC PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

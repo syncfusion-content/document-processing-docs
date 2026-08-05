@@ -4,7 +4,6 @@ title: Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer, ensuring efficient document processing in a distributed environment.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -27,7 +26,7 @@ public class CacheManager:{{'**ICacheManager**'| markdownify }}{}
 
 ```
 
-**Step 2:** Connect the Redis database in the constructor by using the **redisconnectionstring** as provided in the below code.
+**Step 2:** Connect the Redis database in the constructor by using the **redisconnection string** as provided in the below code.
 
 ```cs
 
@@ -86,7 +85,7 @@ public void DeleteCache(string key)
 
 ```
 
-**Step 4:** In the controller, create a new object by passing the **redisconnectionstring** and the sliding expiration time.
+**Step 4:** In the controller, create a new object by passing the **redisconnection string** and the sliding expiration time.
 
 ```cs
 
@@ -149,7 +148,7 @@ public object Load(Dictionary&lt;string, string&gt; jsonObject)
 
 **Important Notes:**
 
-*   Replace `"YOUR_REDIS_CONNECTION_STRING"` with your actual Redis connection string. It's highly recommended to load this from a configuration file (e.g., `Web.config` or `appsettings.json`) rather than hardcoding it.
+*   Replace `"YOUR_REDIS_CONNECTION_STRING"` with your actual Redis connection string. It's highly recommended to load this from a configuration file (e.g., `Web.config` or `appsettings.json`) rather than hard coding it.
 *   The `cacheSlidingExpiration` value is in minutes. Setting it to `0` will use the default 24-hour expiration.
 *   Ensure the `GetDocumentPath` method is correctly implemented in your controller to resolve document paths.
 *   Apply the `CacheManager` initialization logic to all relevant controller methods that process PDF documents.

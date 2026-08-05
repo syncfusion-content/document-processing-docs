@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Display PDFs without downloading in ASP.NET MVC PDF Viewer
+title: Display PDFs without downloading in ASP.NET MVC Syncfusion PDF Viewer
 description: Learn how to display PDF documents without triggering downloads by using the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

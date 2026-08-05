@@ -4,7 +4,6 @@ title: Control annotation visibility in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to control the visibility of PDF annotations in the ASP.NET MVC PDF Viewer, ensuring annotations appear only in the viewer as needed.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

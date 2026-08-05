@@ -4,7 +4,6 @@ title: Export PDF pages as images in Syncfusion ASP.NET MVC PDF Viewer
 description: Learn how to export PDF pages as Base64-encoded images by using the Syncfusion ASP.NET MVC PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

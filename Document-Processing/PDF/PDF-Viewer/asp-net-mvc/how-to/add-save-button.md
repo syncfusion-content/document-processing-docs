@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add a Save button to the built-in toolbar
+# Add a Save action to the built-in toolbar
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
