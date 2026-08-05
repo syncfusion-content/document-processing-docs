@@ -4,8 +4,16 @@ description: Learn here all about Virtualization support in Syncfusion UWP RichT
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: virtualization
+keywords: virtualization,ui-virtualization,performance,memory,rendering
 ---
 # Virtualization in UWP RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv control supports UI Virtualization. UI elements are created only for the contents that are visible in the viewer. The UI elements are created for the contents that become visible while scrolling the viewer. This reduces the main memory utilization and also improves UI performance.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control supports UI virtualization, which is enabled by default. UI elements are created only for the contents that are visible in the viewer. Additional UI elements are created on demand as the viewer scrolls and new content becomes visible. This reduces memory usage and improves UI performance.
+
+N> UI virtualization is enabled by default; no additional configuration is required.
+
+## See also
+
+- [Overview of UWP RichTextBox](./Overview)
+- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Import and Export in UWP RichTextBox](./Import-and-Export)
