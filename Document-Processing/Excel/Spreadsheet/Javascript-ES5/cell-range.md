@@ -84,7 +84,7 @@ The following features have limitations in Merge:
 
 Data Validation is used to restrict the user from entering invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowdatavalidation) property to enable or disable data validation.
 
-> * The default value for the `allowDataValidation` property is `true`.
+> The default value for the `allowDataValidation` property is `true`.
 
 ### Apply Validation
 
