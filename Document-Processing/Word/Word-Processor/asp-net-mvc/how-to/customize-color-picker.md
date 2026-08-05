@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to customize the color picker in ASP.NET MVC Document Editor component
+# How to customize color picker in ASP.NET MVC Document Editor component
 
 Document Editor provides an option to customize the color picker using `colorPickerSettings` in Document Editor settings. The color picker offers customization options for the default appearance by allowing selection between Picker or Palette mode for font and border colors.
 

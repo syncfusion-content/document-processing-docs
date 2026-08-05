@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to customize the font family drop down in ASP.NET MVC Document Editor component
+# How to customize font family drop down in ASP.NET MVC Document Editor
 
 Document Editor provides options to customize the font family drop-down list values using `fontFamilies` in Document Editor settings. Fonts added in `fontFamilies` of `documentEditorSettings` will be displayed in the font drop-down list of the text properties pane and font dialog.
 
