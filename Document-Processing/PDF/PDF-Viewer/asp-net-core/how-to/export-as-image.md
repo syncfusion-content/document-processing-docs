@@ -53,7 +53,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ### Export a page with custom size
 
-Exports the specified page as image with respect to the specified custom size.
+Exports the specified page as an image using the specified custom size.
 
 ```cs
 
@@ -70,7 +70,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ### Export a page with custom size and DPI
 
-Exports the specified page as image with respect to the custom size and the specified DPI values.
+Exports the specified page as an image using the specified custom size and DPI values.
 
 ```cs
 
@@ -127,7 +127,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ### Export a range with custom size
 
-Exports the specified pages as images with respect to the specified custom size.
+Exports the specified pages as images using the specified custom size.
 
 ```cs
 
@@ -147,7 +147,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ### Export a range with custom size and DPI
 
-Exports the specified pages as images with respect to the custom size and the specified DPI values.
+Exports the specified pages as images using the specified custom size and DPI values.
 
 ```cs
 

@@ -201,7 +201,7 @@ function editStampProgrammatically() {
 ### Delete Stamp
 Delete stamps via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 You can pass per‑annotation values (e.g., **type**, **position**, **size**, **author**, **isLock**, or **customStamps**) when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -226,7 +226,7 @@ function addMultipleStamps() {
 ## Handle Stamp Events
 
 The PDF viewer provides annotation life‑cycle events that notify when Stamp annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations, allowing you to save stamps and reload them later. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).

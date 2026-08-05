@@ -10,7 +10,7 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to PDF in Xamarin**.
 
-N> **Platform status:** Xamarin and Xamarin.Forms are in maintenance mode. Microsoft recommends migrating to [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/) for new development. For an equivalent guide for .NET MAUI, refer to [Convert Word Document to PDF in .NET MAUI](convert-word-document-to-pdf-in-maui.md).
+N> **Platform status:** Xamarin and Xamarin.Forms are in maintenance mode. Microsoft recommends migrating to [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/) for new development. For an equivalent guide for .NET MAUI, refer to [Convert Word Document to PDF in .NET MAUI](convert-word-document-to-pdf-in-maui).
 
 ## Prerequisites
 

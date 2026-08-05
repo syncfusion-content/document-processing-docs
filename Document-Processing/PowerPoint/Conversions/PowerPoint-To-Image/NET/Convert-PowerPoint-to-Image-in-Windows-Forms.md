@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Windows Forms
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Windows Forms**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to an image in Windows Forms**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -36,6 +36,9 @@ Step 3: Include the following namespaces in the **Form1.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
@@ -82,7 +85,7 @@ Step 5: Add the following code in **btnConvert_Click** to **convert a PowerPoint
 //Open an existing PowerPoint Presentation.
 using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Convert the first slide into image.
+    //Convert the first slide into an image.
     Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
     //Save the image file.
     image.Save("PPTXtoImage.Jpeg");
@@ -147,6 +150,9 @@ Step 3: Include the following namespaces in the **Form1.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
@@ -193,7 +199,7 @@ Step 5: Add the following code in **btnConvert_Click** to **convert a PowerPoint
 //Open an existing PowerPoint Presentation.
 using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Convert the first slide into image.
+    //Convert the first slide into an image.
     Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
     //Save the image file.
     image.Save("PPTXtoImage.Jpeg");

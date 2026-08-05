@@ -33,7 +33,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to copy necessary Microsoft compatible fonts to Linux?
 
-The fonts present in the location (in Linux) "/usr/share/fonts/" is used for conversion. By default, there will be limited number of fonts available in the Linux.
+The fonts present in the location (in Linux) "/usr/share/fonts/" are used for conversion. By default, only a limited number of fonts will be available in the Linux environment.
 
 Use the following code example to install the Microsoft compatible fonts to Linux.
 
@@ -51,7 +51,7 @@ N> To use Microsoft fonts in your environment, kindly get the license clearance 
 
 ## How to install necessary fonts in Linux containers?
 
-In Word to PDF conversion, Essential<sup>&reg;</sup> DocIO uses the fonts which are installed in the corresponding production machine to measure and draw the text. If the font is not available in the production environment, then the alternate font will be used to measure and draw text based on the environment. And so, it is mandatory to install all the fonts used in the Word document in machine to achieve proper preservation.
+In Word to PDF conversion, Essential<sup>&reg;</sup> DocIO uses the fonts which are installed in the corresponding production machine to measure and draw the text. If the font is not available in the production environment, then the alternate font will be used to measure and draw text based on the environment. And so, it is mandatory to install all the fonts used in the Word document in the machine to achieve proper preservation.
 
 Use the following code example to install fonts in containers.
 
@@ -60,7 +60,7 @@ Use the following code example to install fonts in containers.
 {% highlight Dockerfile %}
 RUN apt-get update -y && apt-get install libfontconfig -y
 RUN echo "deb http://httpredir.debian.org/debian buster main contrib non-free" > /etc/apt/sources.list \ 
-    && echo "deb http://httpredir.debian.org/debian buster-updates main contrib non- free" >> /etc/apt/sources.list \
+    && echo "deb http://httpredir.debian.org/debian buster-updates main contrib non-free" >> /etc/apt/sources.list \
     && echo "deb http://security.debian.org/ buster/updates main contrib non-free" >> /etc/apt/sources.list \
     && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
     && apt-get update \
@@ -87,7 +87,7 @@ By default, Culture/Locale that is specified in the container image will be used
 
 If you want to change or set Culture/Locale in the Docker container, set the required Culture/Locale in Docker file.
 
-T> We recommend you check whether the required Culture/Locale is set to the Docker containers since some Docker container may not have Culture/Locale.
+T> We recommend you check whether the required Culture/Locale is set to the Docker containers since some Docker containers may not have Culture/Locale.
 
 The following code example will set en_US locale to the container by setting Language to en_US.
 
@@ -147,7 +147,7 @@ In addition to the previous NuGet packages, SkiaSharp.Linux helper NuGet package
 {% endhighlight %}
 {% endtabs %}
 
-4. Make sure that the nuget.exe file is present along with SkiaSharp.Linux folder (in the parent folder of SkiaSharp.Linux folder). If not, download it from [here](https://www.nuget.org/downloads#).
+4. Make sure that the nuget.exe file is present along with SkiaSharp.Linux folder (in the parent folder of SkiaSharp.Linux folder). If not, download it from [here](https://www.nuget.org/downloads).
 5. Open a command prompt and navigate to SkiaSharp.Linux folder.
 6. Execute the following command.
 
@@ -157,7 +157,7 @@ nuget pack SkiaSharp.Linux\SkiaSharp.Linux.nuspec -outputdirectory "C:\NuGet"
 
 The output directory can be customized as per your need.
 
-Now, SkiaSharp.Linux NuGet will be generated in the mentioned output directory and add the generated NuGet as additional reference. You can also find the SkiaSharp.Linux NuGet package created by us from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070#).
+Now, SkiaSharp.Linux NuGet will be generated in the mentioned output directory and add the generated NuGet as additional reference. You can also find the SkiaSharp.Linux NuGet package created by us from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/SkiaSharp.Linux.1.59.3-2103435070).
 
 ## What are the NuGet packages to be installed to perform Word to PDF conversion in Linux OS?
 

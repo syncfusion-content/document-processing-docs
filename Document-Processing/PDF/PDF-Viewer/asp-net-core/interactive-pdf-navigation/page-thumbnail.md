@@ -15,6 +15,10 @@ Page thumbnails provide miniature representations of pages and enable quick navi
 
 You can enable or disable thumbnail navigation using the `enableThumbnail` property. The example below shows how to enable thumbnails.
 
+- **Property**: `enableThumbnail`
+- **Type**: `boolean`
+- **Default**: `true`
+
 **Example: Enable thumbnails**
 
 {% tabs %}
@@ -41,7 +45,7 @@ You can enable or disable thumbnail navigation using the `enableThumbnail` prope
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](../images/thumbnail.png)
+![Thumbnail pane in PDF Viewer](../images/thumbnail.png)
 
 ## See also
 

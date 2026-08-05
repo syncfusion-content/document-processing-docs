@@ -66,7 +66,7 @@ The note will be removed from the cell, and the red triangle indicator will be r
 
 ## Navigating between notes
 
-The Syncfusion Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
+The Syncfusion Spreadsheet provides navigation to move quickly between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
 
 ![Navigating between notes in Spreadsheet](./images/spreadsheet_next_previous_note.gif)
 
@@ -75,7 +75,7 @@ The Syncfusion Spreadsheet provides intuitive navigation to quickly move between
 To navigate to the previous note:
 
 * In the **Review** tab, open the **Notes** dropdown and select **Previous Note**.
-* The Spreadsheet will automatically select the previous note in the current worksheet, searching leftward and then upward.
+* The Spreadsheet automatically selects the previous note in the current worksheet, searching leftward and then upward.
 * If no prior note exists in the sheet, the search continues to the previous worksheet in order.
 * If the workbook contains no notes, the selection remains on the current cell.
 
@@ -83,8 +83,8 @@ To navigate to the previous note:
 
 To navigate to the next note:
 
-*  In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
-* The Spreadsheet will automatically select the next note in the current worksheet, searching rightward and then downward.
+* In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
+* The Spreadsheet automatically selects the next note in the current worksheet, searching rightward and then downward.
 * If no subsequent note exists in the sheet, the search continues to the next worksheet in order.
 * If the workbook contains no notes, the selection remains on the current cell.
 
@@ -114,7 +114,7 @@ To activate:
 
 * Navigate to the **Review** tab, click the **Notes** dropdown, and select **Show All Notes**.
 
-All notes in the worksheet will appear as floating text boxes near their respective cells.
+All notes in the worksheet appear as floating text boxes near their respective cells.
 
 > **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
 

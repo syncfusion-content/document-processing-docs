@@ -11,7 +11,7 @@ documentation: UG
 
 ### Add Footer to a Slide in PowerPoint
 
-Essential<sup>&reg;</sup> Presentation library facilitates adding [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) in a slide of the PowerPoint Presentation. Footers are useful in providing quick information about your document or data. 
+Essential<sup>&reg;</sup> Presentation library facilitates adding [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) in a slide of the PowerPoint presentation. Footers are useful for providing quick information about your document or data.
 
 The following code example demonstrates how to add a footer to the presentation.
 
@@ -34,9 +34,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -93,13 +92,13 @@ pptxDoc.Close()
 
 By executing the program, you will get the PowerPoint slide as follows.
 
-![Added Footer text](HeaderFooter_Images/Footer_text.png)
+![Added Footer text to the slide](HeaderFooter_Images/Footer_text.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Headers-and-Footers/Add-footer-in-PowerPoint).
 
 ### Add Date and Time in PowerPoint Slide
 
-Essential<sup>&reg;</sup> Presentation library facilitates adding Date and Time to a slide of the PowerPoint Presentation. Date and Time comes with formatting options for date stamp as either it can be updated automatically using computer's clock or stay fixed until you change it.
+Essential<sup>&reg;</sup> Presentation library facilitates adding Date and Time to a slide of the PowerPoint presentation. Date and Time come with formatting options for the date stamp, as either it can be updated automatically using the computer's clock or stay fixed until you change it.
 
 The following code example demonstrates how to add Date and Time to a slide of the presentation.
 
@@ -112,7 +111,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Sets the visibility of Date and Time in the slide
 slide.HeadersFooters.DateAndTime.Visible = true;
-//Sets the format of the Date and Time to the Footer
+//Sets the format of the Date and Time
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimehmmssAMPM;
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(0, 0, 500, 500);
@@ -122,9 +121,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -138,7 +136,7 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Sets the visibility of Date and Time in the slide
 slide.HeadersFooters.DateAndTime.Visible = true;
-//Sets the format of the Date and Time to the Footer
+//Sets the format of the Date and Time
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimehmmssAMPM;
 //Adds textbox to the slide
 IShape textboxShape = slide.AddTextBox(0, 0, 500, 500);
@@ -161,7 +159,7 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Sets the visibility of Date and Time in the slide
 slide.HeadersFooters.DateAndTime.Visible = True
-'Sets the format of the Date and Time to the Footer
+'Sets the format of the Date and Time
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimehmmssAMPM
 'Adds textbox to the slide
 Dim textboxShape As IShape = slide.AddTextBox(0, 0, 500, 500)
@@ -181,15 +179,15 @@ pptxDoc.Close()
 
 By executing the program, you will get the PowerPoint slide as follows.
 
-![Added Date and TIme to the slide](HeaderFooter_Images/AddDateTime.png)
+![Added Date and Time to the slide](HeaderFooter_Images/AddDateTime.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Headers-and-Footers/Add-date-and-time-in-PowerPoint-slide).
 
 ### Add Slide Number to PowerPoint Slides
 
-Essential<sup>&reg;</sup> Presentation library facilitates adding Slide number to a slide of the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates adding a Slide number to a slide of the PowerPoint presentation.
 
-The following code example demonstrates how to add Slide number to a slide of the presentation.
+The following code example demonstrates how to add a Slide number to a slide of the presentation.
 
 {% tabs %}
 
@@ -208,9 +206,8 @@ IParagraph paragraph = textboxShape.TextBody.AddParagraph();
 ITextPart textPart = paragraph.AddTextPart();
 //Adds text to the TextPart
 textPart.Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -269,16 +266,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Footer to Master and Layout slides
 
-Essential<sup>&reg;</sup> Presentation library facilitates adding Footers to both master and layout slides of the PowerPoint Presentation. If you want to use a different format for the Footers, then a great way to apply the format to all the slides (existing and new slides) is using the Slide Master and Slide layout. Under Slide Master and Slide layout, you can control the styles for footer options and this way you can apply different styles to the slides, or re-locate the Footer shape to any other position based on your requirement
+Essential<sup>&reg;</sup> Presentation library facilitates adding Footers to both master and layout slides of the PowerPoint presentation. If you want to use a different format for the Footers, a great way to apply the format to all the slides (existing and new slides) is by using the Slide Master and Slide Layout. Under Slide Master and Slide Layout, you can control the styles for the footer and apply different styles to the slides, or relocate the Footer shape to any other position based on your requirement.
 
-The following code example demonstrates how to add a Footers to the master and layout slides of the presentation.
+The following code example demonstrates how to add a Footer to the master and layout slides of the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Add-footer-in-master-and-layout-slides/.NET/Add-footer-in-master-and-layout-slides/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Load or open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 //Access the first master slide in PowerPoint file
 IMasterSlide masterSlide = pptxDoc.Masters[0];
 //Sets the visibility of Footer content in the Master slide
@@ -301,9 +297,8 @@ foreach(ILayoutSlide layoutSlide in masterSlide.LayoutSlides)
     //Sets the format of the DateTime Footer in Layout slide
     layoutSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMddyyhmmAMPM;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -311,7 +306,7 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load or open an PowerPoint Presentation
+//Load or open a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Access the first master slide in PowerPoint file
 IMasterSlide masterSlide = pptxDoc.Masters[0];
@@ -342,7 +337,7 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load or open an PowerPoint Presentation
+'Load or open a PowerPoint Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Footer.pptx")
 'Access the first master slide in PowerPoint file
 Dim masterSlide As IMasterSlide = pptxDoc.Masters(0)
@@ -366,7 +361,7 @@ For Each layoutSlide As ILayoutSlide In masterSlide.LayoutSlides
     layoutSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMddyyhmmAMPM
 Next
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -385,12 +380,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add Headers and Footers into Notes slide
 
-Essential<sup>&reg;</sup> Presentation library facilitates adding Headers and Footers to the Notes slide of the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates adding Headers and Footers to the Notes slide of the PowerPoint presentation.
 
-N> 1. As per Microsoft PowerPoint behavior, you can add Header only in Notes slide of the PowerPoint using our Essential<sup>&reg;</sup> Presentation Library.
-N> 2. Header added in Notes slide will be visible only in the Notes page of the PowerPoint viewer. 
+N> 1. As per Microsoft PowerPoint behavior, you can add a Header only in the Notes slide of the PowerPoint using our Essential<sup>&reg;</sup> Presentation Library.
+N> 2. The Header added in a Notes slide will be visible only in the Notes page of the PowerPoint viewer.
 
-The following code example demonstrates how to add a Headers and Footers to the Notes slide of the presentation.
+The following code example demonstrates how to add Headers and Footers to the Notes slide of the presentation.
 
 {% tabs %}
 
@@ -413,9 +408,8 @@ notesSlide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeMMMyy;
 notesSlide.HeadersFooters.Footer.Visible = true;
 //Sets the text to be added to the Footer of the Notes slide
 notesSlide.HeadersFooters.Footer.Text = "Notes slide Footer";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -467,7 +461,7 @@ notesSlide.HeadersFooters.Footer.Visible = True
 'Sets the text to be added to the Footer of the Notes slide
 notesSlide.HeadersFooters.Footer.Text = "Notes slide Footer"
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -484,23 +478,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit Footer text of an existing Slide
 
-Essential<sup>&reg;</sup> Presentation library facilitates editing the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates editing the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the PowerPoint presentation.
 
-The following code example demonstrates how to edit [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the presentation.
+The following code example demonstrates how to edit the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) text of an existing slide in the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-footer-text/.NET/Edit-footer-text/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Gets the first slide from the cloned PowerPoint presentation
+//Load or open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the Footer text
-slide.HeadersFooters.Footer.Text = "Footer content modified";     
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+slide.HeadersFooters.Footer.Text = "Footer content modified";
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -508,9 +500,9 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load or open an PowerPoint Presentation
+//Load or open a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Footer.pptx");
-//Gets the first slide from the cloned PowerPoint presentation
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Modify the Footer text
 slide.HeadersFooters.Footer.Text = "Footer content modified";
@@ -521,14 +513,14 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load or open an PowerPoint Presentation
+'Load or open a PowerPoint Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Footer.pptx")
 'Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0]
+Dim slide As ISlide = pptxDoc.Slides(0)
 'Modify the Footer text
 slide.HeadersFooters.Footer.Text = "Footer content modified"
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -543,50 +535,49 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Edit Header text of an existing Notes slide
 
-Essential<sup>&reg;</sup> Presentation library facilitates editing of Headers for the Notes slide of the PowerPoint Presentation.
+Essential<sup>&reg;</sup> Presentation library facilitates editing of Headers for the Notes slide of the PowerPoint presentation.
 
-N> 1. As per Microsoft PowerPoint behavior, you can edit Header only in Notes slide of the PowerPoint using our Essential<sup>&reg;</sup> Presentation Library.
-N> 2. Header edited in Notes slide will be visible only in the Notes page of the PowerPoint viewer. 
+N> 1. As per Microsoft PowerPoint behavior, you can edit a Header only in the Notes slide of the PowerPoint using our Essential<sup>&reg;</sup> Presentation Library.
+N> 2. The Header edited in a Notes slide will be visible only in the Notes page of the PowerPoint viewer.
 
 The following code example demonstrates how to edit the Headers for the Notes slide of the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Edit-header-text/.NET/Edit-header-text/Program.cs" %}
-//Open a PowerPoint presentation. 
-IPresentation pptxDoc = Presentation.Open("Header.pptx"); 
-//Get the notes slide from the presenatation. 
-INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide; 
-//Modify the existing content of the header. 
-notesSlide.HeadersFooters.Header.Text = "Header content is modified"; 
-//Save the PowerPoint Presentation as stream.
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the Presentation.
+//Open a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open("Header.pptx");
+//Get the notes slide from the presentation
+INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide;
+//Modify the existing content of the header
+notesSlide.HeadersFooters.Header.Text = "Header content is modified";
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open a PowerPoint presentation. 
-IPresentation pptxDoc = Presentation.Open("Header.pptx"); 
-//Get the notes slide from the presenatation. 
-INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide; 
-//Modify the existing content of the header. 
-notesSlide.HeadersFooters.Header.Text = "Header content is modified"; 
-//Save the modified PowerPoint presentation. 
-pptxDoc.Save("Result.pptx"); 
-//Close the Presentation.
-pptxDoc.Close(); 
+//Open a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open("Header.pptx");
+//Get the notes slide from the presentation
+INotesSlide notesSlide = pptxDoc.Slides[0].NotesSlide;
+//Modify the existing content of the header
+notesSlide.HeadersFooters.Header.Text = "Header content is modified";
+//Saves the Presentation to the file system
+pptxDoc.Save("Result.pptx");
+//Close the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open a PowerPoint presentation. 
+'Open a PowerPoint presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Header.pptx")
-'Get the notes slide from the presenatation.
+'Get the notes slide from the presentation
 Dim notesSlide As INotesSlide = pptxDoc.Slides(0).NotesSlide
-'Modify the existing content of the header. 
+'Modify the existing content of the header
 notesSlide.HeadersFooters.Header.Text = "Header content is modified"
-'Save the modified PowerPoint presentation. 
+'Saves the Presentation to the file system
 pptxDoc.Save("Result.pptx")
 'Close the Presentation
 pptxDoc.Close()
@@ -602,23 +593,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modify Date and Time format of an existing Slide
 
-Essential<sup>&reg;</sup> Presentation library facilitates modifying the Date and Time of an existing slide in the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates modifying the Date and Time format of an existing slide in the PowerPoint presentation.
 
-The following code example demonstrates how to modify Date and Time of an existing slide in the presentation.
+The following code example demonstrates how to modify the Date and Time format of an existing slide in the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-date-and-time-format/.NET/Modify-date-and-time-format/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Gets the first slide from the cloned PowerPoint presentation
+//Load or open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
-//Modify Date and Time format of the Footer
-slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy;    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Modify the Date and Time format
+slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy;
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -626,11 +615,11 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load or open an PowerPoint Presentation
+//Load or open a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Footer.pptx");
-//Gets the first slide from the cloned PowerPoint presentation
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
-//Modify Date and Time format of the Footer
+//Modify the Date and Time format
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy;
 //Saves the Presentation to the file system
 pptxDoc.Save("Sample.pptx");
@@ -639,14 +628,14 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load or open an PowerPoint Presentation
+'Load or open a PowerPoint Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Footer.pptx")
 'Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0]
-'Modify Date and Time format of the Footer
+Dim slide As ISlide = pptxDoc.Slides(0)
+'Modify the Date and Time format
 slide.HeadersFooters.DateAndTime.Format = DateTimeFormatType.DateTimeddddMMMMddyyyy
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -661,17 +650,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Modify font of the Footer text
 
-Essential<sup>&reg;</sup> Presentation library facilitates editing font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in slide of the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates editing the font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in a slide of the PowerPoint presentation.
 
-The following code example demonstrates how to edit font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in slide of the presentation.
+The following code example demonstrates how to edit the font of the [Footer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IHeadersFooters.html#Syncfusion_Presentation_IHeadersFooters_Footer) content in a slide of the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Modify-footer-text-font/.NET/Modify-footer-text-font/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Gets the first slide from the cloned PowerPoint presentation
+//Load or open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Iterate each shape in slide
 foreach(IShape shape in slide.Shapes)
@@ -685,9 +673,8 @@ foreach(IShape shape in slide.Shapes)
         shape.TextBody.Paragraphs[0].Font.FontSize = 18;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -695,9 +682,9 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load or open an PowerPoint Presentation
+//Load or open a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Footer.pptx");
-//Gets the first slide from the cloned PowerPoint presentation
+//Gets the first slide from the PowerPoint presentation
 ISlide slide = pptxDoc.Slides[0];
 //Iterate each shape in slide
 foreach(IShape shape in slide.Shapes)
@@ -718,10 +705,10 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load or open an PowerPoint Presentation
+'Load or open a PowerPoint Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Footer.pptx")
 'Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0]
+Dim slide As ISlide = pptxDoc.Slides(0)
 'Iterate each shape in slide
 For Each shape As IShape In slide.Shapes
     'Check whether the shape is with Placeholder SlideItemType and PlaceholderType as Footer
@@ -733,7 +720,7 @@ For Each shape As IShape In slide.Shapes
     End If
 Next
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -748,16 +735,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Remove Headers and Footers from Title Slides
 
-Essential<sup>&reg;</sup> Presentation library facilitates removing Footers from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the PowerPoint Presentation. 
+Essential<sup>&reg;</sup> Presentation library facilitates removing Footers, Date/Time, and Slide Number from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the PowerPoint presentation.
 
-The following code example demonstrates how to remove Footers from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the presentation.
+The following code example demonstrates how to remove Footers, Date/Time, and Slide Number from all the [Title](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SlideLayoutType.html) slides in the presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Headers-and-Footers/Remove-footers-from-all-title-slides/.NET/Remove-footers-from-all-title-slides/Program.cs" %}
-//Load or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Load or open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 
 //Iterate each slide in the Presentation
 foreach(ISlide slide in pptxDoc.Slides)
@@ -765,17 +751,16 @@ foreach(ISlide slide in pptxDoc.Slides)
     //Checks whether the LayoutType of Layout slide is Title
     if (slide.LayoutSlide.LayoutType == SlideLayoutType.Title)
     {
-        //Sets the visibility of DateAndTime in the Title slide 
+        //Sets the visibility of DateAndTime in the Title slide
         slide.HeadersFooters.DateAndTime.Visible = false;
-        //Sets the visibility of Footer in the Title slide 
+        //Sets the visibility of Footer in the Title slide
         slide.HeadersFooters.Footer.Visible = false;
-        //Sets the visibility of SlideNumber in the Title slide 
+        //Sets the visibility of SlideNumber in the Title slide
         slide.HeadersFooters.SlideNumber.Visible = false;
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to the file system
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
 //Closes the Presentation
@@ -783,7 +768,7 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Load or open an PowerPoint Presentation
+//Load or open a PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Open("Footer.pptx");
 //Iterate each slide in the Presentation
 foreach(ISlide slide in pptxDoc.Slides)
@@ -791,11 +776,11 @@ foreach(ISlide slide in pptxDoc.Slides)
     //Checks whether the LayoutType of Layout slide is Title
     if (slide.LayoutSlide.LayoutType == SlideLayoutType.Title)
     {
-        //Sets the visibility of DateAndTime in the Title slide 
+        //Sets the visibility of DateAndTime in the Title slide
         slide.HeadersFooters.DateAndTime.Visible = false;
-        //Sets the visibility of Footer in the Title slide 
+        //Sets the visibility of Footer in the Title slide
         slide.HeadersFooters.Footer.Visible = false;
-        //Sets the visibility of SlideNumber in the Title slide 
+        //Sets the visibility of SlideNumber in the Title slide
         slide.HeadersFooters.SlideNumber.Visible = false;
     }
 }
@@ -806,7 +791,7 @@ pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Load or open an PowerPoint Presentation
+'Load or open a PowerPoint Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Footer.pptx")
 'Iterate each slide in the Presentation
 For Each slide As ISlide In pptxDoc.Slides
@@ -814,14 +799,14 @@ For Each slide As ISlide In pptxDoc.Slides
     If slide.LayoutSlide.LayoutType = SlideLayoutType.Title Then
         'Sets the visibility of DateAndTime in the Title slide
         slide.HeadersFooters.DateAndTime.Visible = False
-        'Sets the visibility of Footer in the Title slide 
+        'Sets the visibility of Footer in the Title slide
         slide.HeadersFooters.Footer.Visible = False
-        'Sets the visibility of SlideNumber in the Title slide 
+        'Sets the visibility of SlideNumber in the Title slide
         slide.HeadersFooters.SlideNumber.Visible = False
     End If
 Next
 'Saves the Presentation to the file system
-pptxDoc.Save("Sample.pptx
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -830,10 +815,15 @@ pptxDoc.Close()
 
 By executing the program, you will get the PowerPoint slide as follows.
 
-![Removed Footers from Title Slide](HeaderFooter_Images/TitleSlide.png)
+![Removed Footers, Date/Time, and Slide Number from Title Slide](HeaderFooter_Images/TitleSlide.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Headers-and-Footers/Remove-footers-from-all-title-slides).
 
 ## Online Demo
 
 * Explore how to insert headers and footers in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/headerandfooter#/tailwind).
+
+## See Also
+
+* [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation)
+* [NuGet Packages Required](NuGet-Packages-Required)
