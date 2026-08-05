@@ -15,7 +15,7 @@ documentation: ug
 
 ## Integration
 
-To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a backend AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
+To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a server-side AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
 
 After completing the integration, open the AI Assist panel, submit a prompt, and verify that the requested operation is applied to the active worksheet.
 
@@ -48,7 +48,7 @@ AI Assist supports a wide range of spreadsheet operations through natural langua
 | **Formatting** | Apply styles such as bold, italic, font color, background color, number formats, and wrap text. |
 | **Structure Management** | Insert/delete rows and columns, merge cells, and freeze panes. |
 | **Clipboard Actions** | Perform cut, copy, and paste operations through AI commands. |
-| **Navigation** | Perform sorting, filtering, and Find and Replace operations. |
+| **Navigation** | Perform sorting, filtering, and find and replace operations. |
 | **Visualization** | Insert charts with multiple types, themes, titles, and sizing options. |
 
 ### Writing effective prompts

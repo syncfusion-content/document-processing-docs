@@ -32,7 +32,7 @@ You can apply subscript and superscript formatting in following ways:
 
 1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
 
-![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+![Subscript and superscript in Spreadsheet](../images/spreadsheet_richtext.gif)
 
 2. You can define the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 

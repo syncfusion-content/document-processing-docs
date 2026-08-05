@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load document after resources Loaded Core PDF Viewer | Syncfusion
+title: Load Document After Resources Load in Syncfusion Core PDF Viewer
 description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
 platform: document-processing
 control: PDF Viewer
@@ -67,7 +67,7 @@ Follow these steps to synchronize document loading with asset readiness:
 ## Best practices
 
 *   **Path Verification:** Ensure the `resourceUrl` is accurate and accessible. If the network blocks the asset location or the path is incorrect, the `resourcesLoaded` event will not fire.
-*   **One-Time Lifecycle:** The `resourcesLoaded` event typically fires once during the component's lifecycle initialization. Subsequent document loads (e.g., in response to user selection) do not need to wait for this event if it has already occurred.
+*   **One-Time Life cycle:** The `resourcesLoaded` event typically fires once during the component's life cycle initialization. Subsequent document loads (e.g., in response to user selection) do not need to wait for this event if it has already occurred.
 *   **Error Handling:** For mission-critical viewers, monitor network failures for the `resourceUrl` to provide appropriate fallback messages to the user.
 
 ## See also

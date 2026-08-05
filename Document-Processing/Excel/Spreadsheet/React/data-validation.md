@@ -12,7 +12,7 @@ documentation: ug
 Data validation restricts users from entering invalid data. Use the [`allowDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
 
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ## Apply Validation
 

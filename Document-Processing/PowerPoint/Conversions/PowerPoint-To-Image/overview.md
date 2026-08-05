@@ -64,28 +64,24 @@ The following code example demonstrates the conversion of an entire Presentation
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET/Convert-PowerPoint-presentation-to-Image/Program.cs" %}
-//Open the PowerPoint file stream.
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-   //Open the existing PowerPoint presentation.
-   using (IPresentation pptxDoc = Presentation.Open(fileStream))
-   {
-       //Initialize PresentationRenderer.
-       pptxDoc.PresentationRenderer = new PresentationRenderer();
-       //Convert the PowerPoint presentation as image streams.
-       Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
-       //Save the image streams to file.
-       for (int i = 0; i < images.Length; i++)
-       {
-           using (Stream stream = images[i])
-           {
-               using (FileStream fileStreamOutput = File.Create("Output" + i + ".jpg")))
-               {
-                   stream.CopyTo(fileStreamOutput);
-               }
-           }
-       }
-   }
+    //Initialize PresentationRenderer.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert the PowerPoint presentation as image streams.
+    Stream[] images = pptxDoc.RenderAsImages(ExportImageFormat.Jpeg);
+    //Save the image streams to file.
+    for (int i = 0; i < images.Length; i++)
+    {
+        using (Stream stream = images[i])
+        {
+            using (FileStream fileStreamOutput = File.Create("Output" + i + ".jpg"))
+            {
+                stream.CopyTo(fileStreamOutput);
+            }
+        }
+    }
 }
 {% endhighlight %}
 
@@ -138,8 +134,8 @@ using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using System.IO;
 
-//Open the existing PowerPoint presentation with stream.
-using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Initialize PresentationRenderer.
     pptxDoc.PresentationRenderer = new PresentationRenderer();
@@ -198,7 +194,7 @@ image.Save("slide1.png")
 'Disposes the image
 image.Dispose()
 'Closes the Presentation instance
-Presentation_1.Close()
+pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -223,7 +219,7 @@ The following code snippet demonstrates how to convert a PowerPoint slide to ima
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open("Output.pptx");
+IPresentation pptxDoc = Presentation.Open("Template.pptx");
 //Declare variables to hold custom width and height
 int customWidth = 1500;
 int customHeight = 1000;

@@ -108,7 +108,7 @@ function editStickyNotesProgrammatically() {
   var coll = viewer.annotationCollection || [];
   for (var i = 0; i < coll.length; i++) {
     var ann = coll[i];
-    if (ann.subject === 'Volume calculation') {
+    if (ann.subject === 'Sticky Note') {
       ann.strokeColor = '#0000FF';
       ann.thickness = 2;
       ann.opacity = 0.8;
