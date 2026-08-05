@@ -18,7 +18,7 @@ To extract text, set the **isExtractText** property to `true`. Once the text ext
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-page "{handler?}"
+@page "{handler?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -34,7 +34,7 @@ page "{handler?}"
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.isExtractText = true;
         viewer.extractTextCompleted = args => {
-        //Extract the Complete text of load document
+        //Extract the complete text of the loaded document
         console.log(args);
         console.log(args.documentTextCollection[1]);
         //Extract the Text data.
