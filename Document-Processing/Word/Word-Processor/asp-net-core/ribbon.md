@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Ribbon in Document editor control | Syncfusion
-description: Learn here all about the Ribbon UI in Syncfusion Document editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in DOCX Editor control | Syncfusion
+description: Learn here all about the Ribbon UI in the ASP.NET Core Document Editor control, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
-control: Ribbon
+control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Ribbon in Document Editor Control
 
-The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides a modern Ribbon interface similar to Microsoft Word's interface. This Ribbon UI provides an efficient and intuitive way to access editing features, organizing commands within well-structured tabs and groups to enhance your document editing experience. Additionally, the Ribbon interface supports contextual tabs. Contextual tabs appear only when certain elements, such as tables, images, or headers/footers, are selected in the document.
+The [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) provides a modern Ribbon interface similar to Microsoft Word. The Ribbon UI organizes commands in well-structured tabs and groups, giving you an efficient way to access editing features. Additionally, the Ribbon interface supports contextual tabs that appear only when elements such as tables, images, or headers/footers are selected in the document.
 
-You can switch between the classic **Toolbar** and the new **Ribbon** UI, and you can also choose between **Classic** and **Simplified** ribbon layouts.
+You can switch between the **Toolbar** and **Ribbon** UI, and choose between **Classic** and **Simplified** ribbon layouts.
 
 ## Enable Ribbon Mode
 
-To enable Ribbon in Document Editor, use the `toolbarMode` property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable the `Ribbon` in the Document Editor, use the `toolbarMode` property of `DocumentEditorContainer`. The available toolbar modes are:
 
-- **'Toolbar'** - The traditional toolbar UI.
-- **'Ribbon'** - The Ribbon UI, which provides a tabbed interface with grouped commands.
+- **`'Toolbar'`** - The traditional toolbar UI.
+- **`'Ribbon'`** - The Ribbon UI, which provides a tabbed interface with grouped commands.
 
 By default, `toolbarMode` is `Toolbar`.
 
-The following code shows the how to enable the `Ribbon` in Document Editor.
+The following example shows how to enable the `Ribbon` in the Document Editor.
 
 ```typescript
 
@@ -35,14 +35,14 @@ The following code shows the how to enable the `Ribbon` in Document Editor.
 
 ## Ribbon Layouts
 
-Document Editor provides two different Ribbon layouts:
+The Document Editor provides two different Ribbon layouts:
 
-- **Classic**: A traditional Office-like ribbon with detailed grouping and larger icons
-- **Simplified**: A more compact ribbon design with streamlined controls
+- **Classic**: A traditional, Office-like ribbon with detailed grouping and larger icons.
+- **Simplified**: A more compact ribbon design with streamlined controls.
 
-By default, `ribbonLayout` is set to `Simplified`. 
+By default, `ribbonLayout` is set to `Simplified`.
 
-The following code shows the how to configure the ribbon layout in Document Editor:
+The following example shows how to configure the ribbon layout in the Document Editor:
 
 ```typescript
 
@@ -55,4 +55,4 @@ The following code shows the how to configure the ribbon layout in Document Edit
 
 ## See Also
 
-* [How to customize the ribbon](../asp-net-core/how-to/customize-ribbon)
+* [How to customize the ribbon](./how-to/customize-ribbon)

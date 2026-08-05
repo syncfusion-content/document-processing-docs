@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Paragraph Format in Document Editor Control | Syncfusion
-description: Learn here all about paragraph format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in DOCX Editor Control | Syncfusion
+description: Learn here all about paragraph format in the ASP.NET Core Document Editor component and more.
 platform: document-processing
-control: Paragraph Format
+control: ParagraphFormat
 documentation: ug
 ---
 
 
 # Working with Paragraph Formatting
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -31,7 +31,7 @@ documenteditor.selection.paragraphFormat.firstLineIndent= 24;
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can increase the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```typescript
 documenteditor.editor.increaseIndent()
@@ -39,7 +39,7 @@ documenteditor.editor.increaseIndent()
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can decrease the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```typescript
 documenteditor.editor.decreaseIndent()
@@ -132,13 +132,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 
 ```
 
-N> At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> Currently, the Document Editor component renders every border style as a single line. However, any border style you apply is preserved correctly when opening the exported Word document in Microsoft Word.
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
-
-The following example code illustrates how to show or hide paragraph marks.
+Use the following code to toggle the visibility of hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the Document Editor component. These marks indicate the start and end of a paragraph and reveal all hidden formatting symbols in a Word document.
 
 ```typescript
 documenteditor.documentEditorSettings.showHiddenMarks = true;
@@ -162,6 +160,6 @@ Explore how to apply paragraph formatting in Word documents using the ASP.NET Co
 
 ## See Also
 
-* [Feature modules](../asp-net-core/feature-module)
-* [Paragraph dialog](../asp-net-core/dialog#paragraph-dialog)
-* [Keyboard shortcuts](../asp-net-core/keyboard-shortcut)
+* [Feature modules](./feature-module)
+* [Paragraph dialog](./dialog#paragraph-dialog)
+* [Keyboard shortcuts](./keyboard-shortcut)
