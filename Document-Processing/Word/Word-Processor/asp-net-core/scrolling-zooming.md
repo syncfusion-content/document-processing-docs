@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling and Zooming in ASP.NET Core DOCX Editor Component
+title: Scrolling and Zooming in ASP.NET Core DOCX Editor Component | Syncfusion
 description: Learn here all about scrolling and zooming in Syncfusion ASP.NET Core Document Editor component and more.
 platform: document-processing
 control: Scrolling and Zooming
