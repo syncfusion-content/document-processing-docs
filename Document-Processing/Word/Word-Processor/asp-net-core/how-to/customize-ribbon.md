@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Ribbon in Document Editor | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion Document Editor - file menu, backstage, tabs, groups, and items.
+title: Customize Ribbon in DOCX Editor | Syncfusion
+description: Learn how to customize the ribbon in Syncfusion DOCX Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in Document Editor
+# Customize Ribbon in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 
@@ -22,9 +22,9 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File Menu Customization
 
-Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the `fileMenuItems` property.
+The DOCX Editor allows you to replace the default File menu items by setting the `fileMenuItems` property. You can include built-in items (such as `New` and `Print`) alongside your own custom items.
 
-In below code example, In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
+In the example below, the File menu is configured with `New`, `Print`, and a custom `Export` item that triggers a save action when clicked.
 
 
 {% tabs %}
@@ -38,9 +38,9 @@ In below code example, In the example below, the "Open" and "Export" items have 
 
 ## Backstage Menu Customization
 
-The Document Editor provides an `backStageMenu` API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
+The DOCX Editor provides a `backstageMenu` API to add a backstage menu in place of the File menu. When the `backstageMenu` property is set, the default File menu item list (`fileMenuItems`) is not displayed; the backstage items defined here take its place.
 
-The following code example shows how to add the backstage menu items.
+The following code example shows how to add backstage menu items.
 
 
 {% tabs %}
@@ -52,17 +52,17 @@ The following code example shows how to add the backstage menu items.
 {% endtabs %}
 
 
-Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
+Refer to this documentation to learn more about [backstage items](https://ej2.syncfusion.com/documentation/ribbon/backstage).
 
 ## Tab Customization
 
-You can customize the ribbon tabs in the Document Editor by showing, hiding, or adding tabs according to your application's requirements.
+You can customize the ribbon tabs in the DOCX Editor by showing, hiding, or adding tabs according to your application's requirements.
 
 ### Show/Hide Tab
 
-Document editor provides the `showTab` API to show and hide the existing tab using existing `RibbonTabType` and `tabId`.
+The DOCX Editor provides the `showTab` API to show or hide a tab using its built-in `RibbonTabType` name or a custom `tabId`. The built-in tab types are `Home`, `Insert`, `Layout`, `References`, `Review`, and `View`.
 
-The following code example how to show/hide existing tab using existing tab type and tab id.
+The following code example shows how to show or hide an existing tab using its tab type or tab id.
 
 ```typescript
 
@@ -75,7 +75,7 @@ container.ribbon.showTab('custom_tab', false);
 
 ### Add Tab
 
-The Document Editor provides the `addTab` API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
+The DOCX Editor provides the `addTab` API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
 
 ```typescript
 
@@ -107,20 +107,19 @@ The Document Editor provides the `addTab` API, which allows you to insert a new 
             };
             container.ribbon.addTab(ribbonTab);
 
-            // To add the tab before the Insert tab(exising tab)
+            // To add the tab before the Insert tab (an existing tab)
             container.ribbon.addTab(ribbonTab, 'Insert');
         }, 100);
 </script>
-
 ```
 
 ## Group Customization
 
 You can also customize ribbon groups within a tab to better organize commands or add new functionalities as per your needs.
 
-### Show/Hide Group 
+### Show/Hide Group
 
-Document Editor provides an `showGroup` API to show or hide existing groups within a ribbon tab.
+The DOCX Editor provides a `showGroup` API to show or hide existing groups within a ribbon tab. You can identify the target group by passing either a group id or a `RibbonGroupInfo` object, whose fields are `{ tabId, index }` — where `tabId` is the tab identifier and `index` is the zero-based group position within that tab.
 
 The following code example show how to show/hide the group using group Id or `RibbonGroupInfo`.
 
@@ -168,11 +167,9 @@ To extend the ribbon's functionality, you can add custom groups to any tab. This
             container.ribbon.addGroup('Home', ribbonGroup);
 
             // Add the new group at the specified index of the Home tab (before the Clipboard group)
-
             container.ribbon.addGroup('Home', ribbonGroup, 1);
         }, 100);
 </script>
-
 ```
 
 ## Item Customization
@@ -181,9 +178,9 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide Item
 
-Using `showItems` API in Document editor ribbon to enable/disable the existing item. Here, you can specify the item Id or `RibbonItemInfo`.
+Use the `showItems` API in the DOCX Editor ribbon to show or hide existing items. You can identify the target item by passing either an item id or a `RibbonItemInfo` object, whose fields are `{ tabId, groupIndex, itemIndexes }` — where `tabId` is the tab identifier, `groupIndex` is the zero-based group position, and `itemIndexes` is an array of zero-based item positions within that group.
 
-The following code example show how to show/hide the item using item Id or `RibbonItemInfo`.
+The following code example shows how to show or hide an item using an item id or `RibbonItemInfo`.
 
 ```typescript
 // To hide the Bold and Italic items using ribbon item information
@@ -198,7 +195,7 @@ container.ribbon.showItems('custom_item', false);
 
 ### Enable/Disable Item
 
-Using `enableItems` API in Document editor ribbon to enable/disable the existing item.
+Use the `enableItems` API in the DOCX Editor ribbon to enable or disable an existing item.
 
 ```typescript
 // To disable the underline using ribbon item info
@@ -214,7 +211,7 @@ container.ribbon.enableItems('custom_item', false);
 
 ### Add Item
 
-You can use the `addItem` API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
+You can use the `addItem` API in the DOCX Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
 
 ```typescript
 
@@ -239,7 +236,6 @@ You can use the `addItem` API in the Document Editor ribbon to add a new item. A
         container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem);
 
         // To add the item before the specified item index (the item will be added before the Redo item in the Undo group)
-
         container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
     }, 100);
 </script>
@@ -248,7 +244,7 @@ You can use the `addItem` API in the Document Editor ribbon to add a new item. A
 
 ## Online Demo
 
-Explore how to customize the ribbon in the ASP.NET Core Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ribboncustomization#/tailwind3).
+Explore how to customize the ribbon in the ASP.NET Core DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ribboncustomization#/tailwind3).
 
 ## Related Links
 
