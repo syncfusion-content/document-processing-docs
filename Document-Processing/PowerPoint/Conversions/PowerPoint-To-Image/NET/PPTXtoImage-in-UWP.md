@@ -38,6 +38,8 @@ PowerPoint slides can be converted to images in UWP by using Essential<sup>&reg;
     </tbody>
 </table>
 
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+
 ## Convert a slide to image
 
 The following code example demonstrates how to convert a slide to image in UWP.

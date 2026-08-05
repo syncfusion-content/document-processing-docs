@@ -139,8 +139,8 @@ The following table defines each property of the `ConditionalFormat`.
 | Property | Type | Description |
 |-------|-------|-------|
 | type | `HighlightCell` or `TopBottom` or `DataBar` or `ColorScale` or `IconSet` | Specifies the conditional-formatting type. |
-| format | `Format` | Specifies the formatting applied when the condition is met. |
-| cFColor | `CFColor` | Specifies the conditional-formatting highlight color. |
+| cFColor | `CFColor` | Specifies a predefined color for highlighting cells that meet the condition. |
+| format | `Format` | Specifies the custom formatting to apply when preferred formatting is required instead of the predefined `cFColor` options. |
 | value | string | Specifies the conditional-formatting value. |
 | range | string | Specifies the range to which conditional formatting is applied. |
 
@@ -173,7 +173,7 @@ The following table defines each property of the `DefinedName`.
 | comment | string | Specifies comment for the defined name. |
 | refersTo | string | Specifies reference for the defined name. |
 
-Obtain the rendered Spreadsheet instance in the `created` event handler before calling the `openFromJson()` method. Bind the `created` event when rendering the Spreadsheet.
+Bind the `created` event when rendering the Spreadsheet. In the `created` event handler, obtain the rendered Spreadsheet instance and call the `openFromJson()` method with the constructed Workbook JSON object to render the Spreadsheet.
 
 The following example passes the constructed JSON object to the `openFromJson()` method in the [`created`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Created) event handler to render the Spreadsheet.
 

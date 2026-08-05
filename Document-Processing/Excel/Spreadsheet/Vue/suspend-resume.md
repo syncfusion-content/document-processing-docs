@@ -78,7 +78,7 @@ Suspends visual updates in the Spreadsheet.
 Resumes visual updates and applies all pending changes.
 
 **Behavior:**
-- Applies all operations performed after `suspendRefresh`
+- Applies all operations performed between `suspendRefresh` and `resumeRefresh`
 - Refreshes the Spreadsheet UI once
 - Improves rendering efficiency for bulk operations
 

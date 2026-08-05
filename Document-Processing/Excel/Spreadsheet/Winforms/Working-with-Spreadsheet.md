@@ -352,5 +352,3 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Looking for the full WinForms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.

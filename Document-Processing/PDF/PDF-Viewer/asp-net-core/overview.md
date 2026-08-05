@@ -3,7 +3,7 @@ title: Overview of ASP.NET Core PDF Viewer | Syncfusion
 description: Learn here all about the Syncfusion ASP.NET Core PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
-documentation: UG
+documentation: ug
 ---
 
 # Overview of ASP.NET Core PDF Viewer
