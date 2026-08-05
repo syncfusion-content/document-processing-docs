@@ -4,12 +4,15 @@ description: Learn here all about Table support in Syncfusion UWP RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: table
+keywords: table,tablecommands,mergecells,tableformat,rowformat,cellformat
 ---
 # Table in UWP RichTextBox (SfRichTextBoxAdv)
 
-The SfRichTextBoxAdv allows you to add tables into the rich text document. You can insert any rows or columns to the existing table and also can delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally).
-The following code example illustrates how to add tables into the rich text document.
+[`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) allows you to add tables to the rich-text document. You can insert rows or columns into an existing table and delete existing rows and columns. SfRichTextBoxAdv also lets you merge the selected cells into one (both vertically and horizontally).
+
+## Adding a table programmatically
+
+The following code example illustrates how to add a table to the rich-text document.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:DocumentAdv>
@@ -45,16 +48,16 @@ The following code example illustrates how to add tables into the rich text docu
 // Initializes a document.
 DocumentAdv document = new DocumentAdv();
 
-// Initialize a section.
+// Initializes a section.
 SectionAdv section = new SectionAdv();
 
-// Initialize a table.
+// Initializes a table.
 TableAdv tableAdv = new TableAdv();
 
-// Initialize a row.
+// Initializes a row.
 TableRowAdv tableRowAdv = new TableRowAdv();
 
-// Initialize a table cell.
+// Initializes a table cell.
 TableCellAdv tableCellAdv = new TableCellAdv();
 tableCellAdv.CellFormat.CellWidth = 240;
 
@@ -65,21 +68,21 @@ spanAdv.Text = "Cell 1";
 paragraphAdv.Inlines.Add(spanAdv);
 
 tableCellAdv.Blocks.Add(paragraphAdv);
-// Initialize and add any number of blocks to the cell here.
+// Add any number of blocks to the cell here.
 
 tableRowAdv.Cells.Add(tableCellAdv);
-// Initialize and add any number of cells to the row here.
+// Add any number of cells to the row here.
 
 tableAdv.Rows.Add(tableRowAdv);
-// Initialize and add any number of rows to the table here.
+// Add any number of rows to the table here.
 
 section.Blocks.Add(tableAdv);
-// Initialize and add any number of blocks to the section here.
+// Add any number of blocks to the section here.
 
 document.Sections.Add(section);
-// Initialize and add any number of sections to the document here.
+// Add any number of sections to the document here.
 
-// Assign the document to the RichTextBoxAdv instance.
+// Assigns the document to the RichTextBoxAdv instance.
 richTextBoxAdv.Document = document;
 
 
@@ -87,102 +90,114 @@ richTextBoxAdv.Document = document;
 
 {% endtabs %}
 
-## UI Commands for accessing table
+## UI commands for accessing tables
 
-The following code example illustrates how to bind the Button UI Command for inserting a table.
+The following XAML examples illustrate how to bind commands for table operations.
+
+### Inserting a table
+
 {% tabs %}
 {% highlight xaml %}
-<!-- Inserts the table with default size of one row and two columns -->
-<Button Content="Insert Table" Command="{Binding ElementName=richTextBoxAdv,Path=InsertTableCommand}"/>
+<!-- Inserts a table with the default size of one row and two columns. -->
+<Button Content="Insert Table" Command="{Binding ElementName=richTextBoxAdv, Path=InsertTableCommand}" />
 
-<!-- Inserts the table with the size of two rows and three columns -->
-<Button Content="Insert Table" Command="{Binding ElementName=richTextBoxAdv,Path=InsertTableCommand}" CommandParameter="2,3"/>
-
+<!-- Inserts a table with the size of two rows and three columns. -->
+<Button Content="Insert Table" Command="{Binding ElementName=richTextBoxAdv, Path=InsertTableCommand}" CommandParameter="2,3" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-// InsertTableCommand accepting string parameter.
+// InsertTableCommand accepts a comma-separated string parameter.
 richTextBoxAdv.InsertTableCommand.Execute("2,3");
 
-// InsertTableCommand accepting int[] with row, column size as parameter
+// InsertTableCommand accepts an int[] parameter specifying rows and columns.
 richTextBoxAdv.InsertTableCommand.Execute(new int[] { 2, 3 });
 
 {% endhighlight %}
-
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command for inserting rows and columns.
+### Inserting rows and columns
+
+The `InsertRowCommand` and `InsertColumnCommand` accept a string parameter specifying the placement relative to the current row or column.
+
+| Command | Valid `CommandParameter` values |
+| --- | --- |
+| `InsertRowCommand` | `"Above"`, `"Below"` |
+| `InsertColumnCommand` | `"Left"`, `"Right"` |
+
 {% tabs %}
 {% highlight xaml %}
-<!-- Inserts one row above to the current row -->
-<!-- Command parameter can be either Above or Below -->
-<Button Content="Insert Row" Command="{Binding ElementName=richTextBoxAdv,Path=InsertRowCommand}" CommandParameter="Above"/>
-<!-- Inserts one column to the right of current column -->
-<!-- Command parameter can be either Left or Right -->
-<Button Content="Insert Column" Command="{Binding ElementName=richTextBoxAdv,Path=InsertColumnCommand}" CommandParameter="Right"/>
+<!-- Inserts one row above the current row. -->
+<Button Content="Insert Row" Command="{Binding ElementName=richTextBoxAdv, Path=InsertRowCommand}" CommandParameter="Above" />
 
+<!-- Inserts one column to the right of the current column. -->
+<Button Content="Insert Column" Command="{Binding ElementName=richTextBoxAdv, Path=InsertColumnCommand}" CommandParameter="Right" />
 
 {% endhighlight %}
-
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command for selecting cell, row, column and table.
-{% tabs %}
-{% highlight xml %}
-<!--Selects the Cell--> 
-<Button Content="Select Cell" Command="{Binding ElementName=richTextBoxAdv,Path=SelectCellCommand}" />
-<!--Selects the Column-->
-<Button Content="Select Column" Command="{Binding ElementName=richTextBoxAdv,Path=SelectColumnCommand}" />
-<!--Selects the Row-->
-<Button Content="Select Row" Command="{Binding ElementName=richTextBoxAdv,Path=SelectRowCommand}" />
-<!--Selects the Table-->
-<Button Content="Select Table" Command="{Binding ElementName=richTextBoxAdv,Path=SelecttableCommand}" />
+### Selecting a cell, row, column, or table
 
-{% endhighlight %}
-
-{% endtabs %}
-
-The following code example illustrates how to bind the Button UI Command for merging selected cells.
 {% tabs %}
 {% highlight xaml %}
-<!-- Merges the selected cells -->
-<Button Content="Merge Cells" Command="{Binding ElementName=richTextBoxAdv,Path=MergeSelectedCellsCommand}"/>
+<!-- Selects the cell. -->
+<Button Content="Select Cell" Command="{Binding ElementName=richTextBoxAdv, Path=SelectCellCommand}" />
 
+<!-- Selects the column. -->
+<Button Content="Select Column" Command="{Binding ElementName=richTextBoxAdv, Path=SelectColumnCommand}" />
+
+<!-- Selects the row. -->
+<Button Content="Select Row" Command="{Binding ElementName=richTextBoxAdv, Path=SelectRowCommand}" />
+
+<!-- Selects the table. -->
+<Button Content="Select Table" Command="{Binding ElementName=richTextBoxAdv, Path=SelectTableCommand}" />
 
 {% endhighlight %}
-
 {% endtabs %}
 
-The following code example illustrates how to bind the Button UI Command to change content alignment of the selected cells.
+### Merging selected cells
+
 {% tabs %}
-{% highlight xml %}
-<!--Change cell content alignment with command parameter as comma separated(vertical alignment and text alignment)-->
+{% highlight xaml %}
+<!-- Merges the selected cells. -->
+<Button Content="Merge Cells" Command="{Binding ElementName=richTextBoxAdv, Path=MergeSelectedCellsCommand}" />
+
+{% endhighlight %}
+{% endtabs %}
+
+### Changing cell content alignment
+
+The `CellContentAlignmentCommand` accepts a string parameter that specifies the vertical and horizontal alignment. Use the comma-separated form (`"Top,Left"`) or the combined form (`"CenterRight"`).
+
+{% tabs %}
+{% highlight xaml %}
+<!-- Cell content alignment with a comma-separated parameter (vertical, horizontal). -->
 <Button Content="Cell Content Alignment" Command="{Binding ElementName=richTextBoxAdv,Path=CellContentAlignmentCommand}" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="Top,Left" />
 
-<!--or-->
-
-<!--Change cell content alignment with command parameter single sting (vertical alignment and text alignment)-->
+<!-- Cell content alignment with a combined string parameter (vertical + horizontal). -->
 <Button Content="Cell Content Alignment" Command="{Binding ElementName=richTextBoxAdv,Path=CellContentAlignmentCommand}" CommandTarget="{Binding ElementName=richTextBoxAdv}"  CommandParameter="CenterRight"/>
 
-
 {% endhighlight %}
-
 {% endtabs %}
 
-The following code example illustrates how to Button UI Command for deleting a row, deleting a column and deleting an entire table.
+### Deleting rows, columns, and tables
+
 {% tabs %}
 {% highlight xaml %}
-<!-- Deletes the column -->
-<Button Content="Delete Column" Command="{Binding ElementName=richTextBoxAdv,Path=DeleteColumnCommand}"/>
-<!-- Deletes the row -->
-<Button Content="Delete Row" Command="{Binding ElementName=richTextBoxAdv,Path=DeleteRowCommand}"/>
-<!-- Deletes the table -->
-<Button Content="Delete Table" Command="{Binding ElementName=richTextBoxAdv,Path=DeleteTableCommand}"/>
+<!-- Deletes the column. -->
+<Button Content="Delete Column" Command="{Binding ElementName=richTextBoxAdv, Path=DeleteColumnCommand}" />
 
+<!-- Deletes the row. -->
+<Button Content="Delete Row" Command="{Binding ElementName=richTextBoxAdv, Path=DeleteRowCommand}" />
+
+<!-- Deletes the table. -->
+<Button Content="Delete Table" Command="{Binding ElementName=richTextBoxAdv, Path=DeleteTableCommand}" />
 
 {% endhighlight %}
-
 {% endtabs %}
 
+## See Also
 
+- [Commands in UWP RichTextBox](./Commands)
+- [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)
+- [Getting started with UWP RichTextBox](./Getting-Started)
