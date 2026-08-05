@@ -4,6 +4,7 @@ description: Learn here all about Annotations Events in Syncfusion ASP.NET MVC P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Annotations Events in ASP.NET MVC PDF Viewer control
