@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to auto save the document of Document Editor component into AWS S3
+# How to auto save in ASP.NET MVC Document Editor component into AWS S3
 
 This article explains how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps to reduce the risk of data loss by saving an open document automatically at customized intervals.
 
