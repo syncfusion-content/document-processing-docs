@@ -10,7 +10,7 @@ documentation: ug
 
 # How to Customize the Color Picker in ASP.NET Core Document Editor Component
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the color picker using `colorPickerSettings` in `DocumentEditorSettings`. The color picker offers customization options for the default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) provides options to customize the color picker using `colorPickerSettings` in `DocumentEditorSettings`. The color picker offers customization options for the default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
 
 Similarly, you can use the `documentEditorSettings` property for the Document Editor as well.
 
