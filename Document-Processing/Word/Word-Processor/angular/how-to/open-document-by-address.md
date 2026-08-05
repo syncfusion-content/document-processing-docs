@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open Document by Address in Angular Document Editor | Syncfusion
-description: Learn here all about Open document by address in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Open document by address in Angular DOCX Editor | Syncfusion
+description: Learn here all about Open document by address in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Open document by address 
+control: Open document by address
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in Angular Document editor component
+# Open document by address in Angular Document Editor component
 
-## How to open a document from URL in Angular Document Editor
+## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
+In this article, we are going to see how to open a document from URL in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
-please refer below example for client-side code
+Please refer to the example below for the client-side code.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -25,7 +25,7 @@ import {
 @Component({
       selector: 'app-root',
       // specifies the template string for the DocumentEditorContainer component
-      template: `<button id='export'(click)="onClick(this)">Export</button><ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
+      template: `<button id='export'(click)="onClick()">Export</button><ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
       providers: [ToolbarService],
 })
 export class AppComponent implements OnInit {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {}
   onClick(): void {
     let http: XMLHttpRequest = new XMLHttpRequest();
-    //add your url in which you want to open document inside the ""
+    //add your URL from which you want to open the document inside the ""
     let content = { fileUrl: '' };
     let baseurl: string = '/api/documenteditor/ImportFileURL';
     http.open('POST', baseurl, true);
@@ -52,9 +52,9 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-please refer below example for server-side code
+Please refer to the example below for the server-side code.
 
 ```csharp
     [AcceptVerbs("Post")]
