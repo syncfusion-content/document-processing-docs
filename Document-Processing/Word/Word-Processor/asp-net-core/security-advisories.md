@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Security Advisories in Document Editor Control | Syncfusion
-description: Learn here all about Security Advisories in  Document Editor component of Syncfusion Essential JS 2 and more.
-control: Security advisories 
+title: Security Advisories in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about security advisories in Syncfusion ASP.NET Core Document Editor component and more.
+control: Security Advisories
 platform: document-processing
 documentation: ug
 ---
@@ -15,7 +15,7 @@ This document provides a description of the security updates available for Syncf
 
 ## Security Updates
 
-The following security updates are available for [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) control and are listed based on the release version. 
+The following security updates are available for the [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control, listed by release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
@@ -43,4 +43,4 @@ For details on common security updates related to Syncfusion<sup style="font-siz
 
 ## Security Issue
 
-If users discover any security issues or need assistance in resolving them with Syncfusion<sup style="font-size:70%">&reg;</sup> controls, please contact us by creating a support ticket on [our support site](https://syncfusion.com/support) or by posting your query on Stack Overflow with the tag `syncfusion`<sup style="font-size:70%">&reg;</sup>`-ej2`.
+If users discover any security issues or need assistance in resolving them with Syncfusion<sup style="font-size:70%">&reg;</sup> controls, please contact us by creating a support ticket on [our support site](https://syncfusion.com/support) or by posting your query on Stack Overflow with the tag `syncfusion-ej2`.
