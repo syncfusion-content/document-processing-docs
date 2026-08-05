@@ -95,7 +95,7 @@ richTextBoxAdv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Automatic%20Suggestion)
 
-## Customize the suggestion box itemtemplate and style
+## Customize the suggestion box item template and style
 By default, the drop-down window lists the filtered items as an image, display text, and link. To remove the image or link, write your own item template.
 
 ![Modify Suggestion Box Item](Automatic-Suggestion_images/autosuggestion2.PNG)
