@@ -54,7 +54,7 @@ documenteditor.selection.sectionFormat.footerDistance = 72;
 
 ## Online Demo
 
-Explore how to apply section formatting in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat).
+Explore how to apply section formatting in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
 
 ## See Also
 

@@ -42,4 +42,4 @@ The Document Editor preserves the position properties of the shape and displays 
 
 ## Online Demo
 
-Explore how to preserve AutoShapes and grouped shapes in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/autoshapes).
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/autoshapes#/tailwind3).

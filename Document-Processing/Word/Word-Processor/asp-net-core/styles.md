@@ -136,4 +136,4 @@ var characterStyles = documentEditor.getStyles('Character');
 
 ## Online Demo
 
-Explore how to apply and modify styles in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/styles).
+Explore how to apply and modify styles in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/styles#/tailwind3).
