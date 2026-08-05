@@ -7,7 +7,7 @@ control: Insert Text Or Image In Table
 documentation: ug
 ---
 
-# How to add text or images to tables programmatically in Document Editor
+# How to add text or images to tables in ASP.NET MVC Document Editor
 
 Using the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) APIs, you can insert [`text`] or [`image`] in a [`table`] programmatically based on your requirement.
 
