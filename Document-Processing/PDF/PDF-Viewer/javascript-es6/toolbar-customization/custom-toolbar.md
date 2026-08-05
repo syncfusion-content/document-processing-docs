@@ -490,7 +490,7 @@ function  readFile(args:  any):  void  {
             let  reader:  FileReader  =  new  FileReader();
             let filename: string = uploadedFiles[0].name;
             reader.readAsDataURL(uploadedFile);
-            // ts lint:disable-next-line
+            // tslint:disable-next-line
             reader.onload  =  (e:  any):  void  =>  {
                 let  uploadedFileUrl:  string  =  e.currentTarget.result;
                 viewer.load(uploadedFileUrl,  null);
@@ -866,7 +866,7 @@ function  readFile(args:  any):  void  {
             let  reader:  FileReader  =  new  FileReader();
             let filename: string = uploadedFiles[0].name;
             reader.readAsDataURL(uploadedFile);
-            // ts lint:disable-next-line
+            // tslint:disable-next-line
             reader.onload  =  (e:  any):  void  =>  {
                 let  uploadedFileUrl:  string  =  e.currentTarget.result;
                 viewer.load(uploadedFileUrl,  null);

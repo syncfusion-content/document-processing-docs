@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF Files to Google Cloud Storage in Syncfusion PDF Viewer
+# Save and Manage PDFs in Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
