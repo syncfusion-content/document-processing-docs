@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To save a document to Azure Blob Storage, you can follow the steps below.
 
-**Step 1:** Create a Simple [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) sample in Angular.
+**Step 1:** Create a Simple Angular Document Editor sample in Angular.
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
 
