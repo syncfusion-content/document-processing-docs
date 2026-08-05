@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to show and hide spinner while opening a document in DOCX Editor
+# How to show or hide spinner when opening document in Document Editor
 
 Using the [`spinner`](https://ej2.syncfusion.com/aspnetcore/documentation/spinner/getting-started-asp-core) component, you can show or hide the spinner while opening a document in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to open a document in read only mode by default in DOCX Editor
+# How to open document in read only mode by default in Document Editor
 
 This section explains how to open a document in read only mode by default in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor and Document Editor Container).
 
