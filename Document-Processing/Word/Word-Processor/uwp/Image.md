@@ -37,7 +37,7 @@ Starting from v19.1.0.x, SfRichTextBoxAdv preserves the position properties of a
 
 N> At present, the image with text wrapping style `In-Line with Text` can only be dragged and dropped anywhere in the document.
 
-## See Also
+## See also
 
 - [Getting started with UWP RichTextBox](./Getting-Started)
 - [Text wrapping style in UWP RichTextBox](./Text-Wrapping-Style)

@@ -12,7 +12,7 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://
 
 ![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-richtextbox.png)
 
-## Key Features
+## Key features
 
 * View and edit rich text content, including text, [images](/uwp/richtextbox/Image), [tables](/uwp/richtextbox/table), and [comments](/uwp/richtextbox/Comment). 
 

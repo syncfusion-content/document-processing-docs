@@ -240,7 +240,7 @@ richTextBoxAdv.Selection.ParagraphFormat.ListLevelNumber = 0;
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)

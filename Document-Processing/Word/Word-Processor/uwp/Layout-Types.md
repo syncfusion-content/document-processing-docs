@@ -120,7 +120,7 @@ richTextBoxAdv.LayoutType = LayoutType.Block
 
 N> On Windows Phone devices, the entire rich-text content is rendered continuously in a single page as the continuous layout type, regardless of the `LayoutType` setting.
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Background in UWP RichTextBox](./Background)

@@ -303,7 +303,7 @@ The following code example demonstrates how to create a XAML view with SfRichTex
 
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Document properties in UWP RichTextBox](./Document-Properties)

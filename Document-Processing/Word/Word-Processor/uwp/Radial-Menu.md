@@ -128,7 +128,7 @@ The following screenshot shows the radial menu with customized style.
 
 N> The sample to demonstrate customizing the style of the built-in radial menu can be downloaded from the link [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/RadialMenuCustomization-1397995223#).
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)

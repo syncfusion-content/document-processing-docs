@@ -163,7 +163,7 @@ N> This API is supported starting from release version v17.4.0.X.
 
 N> These events are supported from Syncfusion UWP RichTextBox v18.2.0.X onwards.
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Document properties in UWP RichTextBox](./Document-Properties)

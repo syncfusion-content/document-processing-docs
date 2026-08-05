@@ -187,7 +187,7 @@ richTextBoxAdv.EditorSettings.PrintComments = False
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)

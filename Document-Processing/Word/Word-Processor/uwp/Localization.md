@@ -41,7 +41,7 @@ The following screenshot shows the localized `SfRichTextBoxAdv`.
 
 ![Localized SfRichTextBoxAdv UI](Localization_images/Localization_img4.jpeg)
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)
