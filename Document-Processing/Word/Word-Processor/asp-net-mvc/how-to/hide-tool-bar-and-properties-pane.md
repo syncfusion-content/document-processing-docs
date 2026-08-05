@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Hide the default tool bar and properties pane in ASP.NET MVC Document Editor Component
-description: Learn how to hide the default tool bar properties pane from the Syncfusion ASP.NET MVC Document Editor Component
+title: Hide Default Toolbar and Properties Pane in ASP.NET MVC DOCX Editor
+description: Learn how to hide the default tool bar properties pane from the Syncfusion ASP.NET MVC DOCX Editor Component
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
 documentation: ug
 ---
 
-# How to hide the default tool bar and properties pane in Document Editor component
+# How to hide the default tool bar and properties pane in DOCX Editor
 
-**Document editor container** provides the main document view area along with the built-in toolbar and properties pane.
+**Document Editor Container** provides the main document view area along with the built-in toolbar and properties pane.
 
-**Document editor** provides just the main document view area. Here, the user can compose, view, and edit the Word documents. You may prefer to use this component when you want to design your own UI options for your application.
+**Document Editor** provides just the main document view area. Here, the user can compose, view, and edit Word documents. You may prefer to use this component when you want to design your own UI options for your application.
 
 ## Hide the properties pane
 
-By default, Document editor container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`showPropertiesPane`] API in `DocumentEditorContainer` to hide the properties pane.
+By default, the Document Editor Container has a built-in properties pane that contains options for formatting text, tables, images, headers, and footers. You can use the [`showPropertiesPane`] API in `DocumentEditorContainer` to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 
@@ -25,13 +25,14 @@ The following example code illustrates how to hide the properties pane.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/hide-the-default-propertiespane/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-propertiespane.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-N> Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
+N> Positioning and customizing the properties pane in Document Editor Container is not possible. Instead, you can hide the existing properties pane and create your own pane using public APIs.
 
 ## Hide the toolbar
 
-You can use [`enableToolbar`] API in `DocumentEditorContainer` to hide the existing toolbar.
+You can use the [`enableToolbar`] API in `DocumentEditorContainer` to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 
@@ -41,7 +42,9 @@ The following example code illustrates how to hide the existing toolbar.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/hide-the-default-toolbar/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Hide-the-default-toolbar.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
+
 ## See Also
 
 * [How to customize the toolbar](../how-to/customize-tool-bar)
