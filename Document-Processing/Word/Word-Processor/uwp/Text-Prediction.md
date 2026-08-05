@@ -40,7 +40,7 @@ richTextBoxAdv.IsTextPredictionEnabled = False
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)

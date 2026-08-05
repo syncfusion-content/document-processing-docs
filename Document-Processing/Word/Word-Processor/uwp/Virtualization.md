@@ -12,7 +12,7 @@ The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.R
 
 N> UI virtualization is enabled by default; no additional configuration is required.
 
-## See Also
+## See also
 
 - [Overview of UWP RichTextBox](./Overview)
 - [Getting started with UWP RichTextBox](./Getting-Started)

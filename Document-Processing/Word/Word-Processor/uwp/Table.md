@@ -196,7 +196,7 @@ The `CellContentAlignmentCommand` accepts a string parameter that specifies the 
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)

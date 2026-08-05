@@ -49,7 +49,7 @@ In this option, text wraps around the image or text box in a square shape.
 
 ![Shape with square wrapping style in SfRichTextBoxAdv](Text-Wrapping-Style_images/square-textwrapping.PNG)
 
-## See Also
+## See also
 
 - [Image support in UWP RichTextBox](./Image)
 - [Shapes in UWP RichTextBox](./Shapes)

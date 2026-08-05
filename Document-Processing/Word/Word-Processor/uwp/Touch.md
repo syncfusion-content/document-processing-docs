@@ -103,7 +103,7 @@ richTextBoxAdv.ManipulationMode = ManipulationModes.Scale | ManipulationModes.Sc
 
 {% endtabs %}
 
-## See Also
+## See also
 
 - [Getting started with UWP RichTextBox](./Getting-Started)
 - [Overview of UWP RichTextBox](./Overview)

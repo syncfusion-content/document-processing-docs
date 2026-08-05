@@ -99,7 +99,7 @@ richTextBoxAdv.EditorSettings.CanUndoStyle = false;
 
 N> The `IsUndoEnabled` and `CanUndoStyle` properties are available starting from Syncfusion UWP RichTextBox v18.1.0.X.
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Selection in UWP RichTextBox](./Selection)

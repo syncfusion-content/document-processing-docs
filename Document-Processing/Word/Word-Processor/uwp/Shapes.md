@@ -40,7 +40,7 @@ Starting from Syncfusion UWP RichTextBox v19.1.0.X, `SfRichTextBoxAdv` preserves
 
 N> At present, a shape with the `Inline` text wrapping style can be dragged and dropped anywhere in the document.
 
-## See Also
+## See also
 
 - [Text wrapping style in UWP RichTextBox](./Text-Wrapping-Style)
 - [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)

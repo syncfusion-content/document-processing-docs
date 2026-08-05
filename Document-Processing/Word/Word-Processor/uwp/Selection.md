@@ -316,7 +316,7 @@ Dim isDeleted As Boolean = richTextBoxAdv.Selection.Delete()
 
 N> The `Delete` method is supported from Syncfusion UWP RichTextBox v18.2.0.X onwards.
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Find and Replace in UWP RichTextBox](./Find-and-Replace)

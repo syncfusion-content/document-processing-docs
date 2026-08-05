@@ -120,7 +120,7 @@ The following screenshot shows the SfRichTextBoxAdv control with the customized 
 
 ![SfRichTextBoxAdv control with the RichTextBoxAdvCustomStyle applied](Styles-and-Templates_images/Styles-and-Templates_img1.jpeg)
 
-## See Also
+## See also
 
 - [Commands in UWP RichTextBox](./Commands)
 - [Background in UWP RichTextBox](./Background)
