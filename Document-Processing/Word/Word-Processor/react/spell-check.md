@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Spell Check in React Document Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 
 ## Features
 
@@ -101,7 +101,7 @@ The following code example demonstrates how to configure this behavior.
 
 ```ts
 
-container.documentEditor.spellChecker.removeUnderline = true;
+container.documentEditor.spellChecker.removeUnderline = false;
 
 ```
 

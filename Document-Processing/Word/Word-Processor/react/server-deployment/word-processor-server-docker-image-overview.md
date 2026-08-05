@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # React Document Editor Server Docker Image Overview
 
-The [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also known as Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
+The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also known as Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
 This Docker image is the predefined Docker container of Syncfusion’s Word Processor back-end. You can deploy it quickly to your infrastructure.
 
@@ -115,7 +115,7 @@ N> By default, the JSON file name should be "spellcheck.json". You can also use 
          - "6002:80"
    ```
 
-**Step 3:** For handling the personal dictionary, place an empty .dic file (e.g., customDictionary.dic file) in the data folder.
+**Step 3:** For handling the personal dictionary, place an empty .dic file (e.g., customDict.dic file) in the data folder.
 
 **Step 4:** Provide the configured volume path to the environment variable like in the following in the Docker compose file.
 
