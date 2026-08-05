@@ -55,7 +55,8 @@ The following example code illustrates how to get the whole document content as 
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/get-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Get the header content as text
 
