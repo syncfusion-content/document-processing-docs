@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from OneDrive in Angular Document Editor
 
-To load a document from OneDrive in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below
+To load a document from OneDrive in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create the Microsoft Graph API.
 
