@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the toolbar in the Vue DOCX Editor component
+# Customize the toolbar in the Vue Document Editor component
 
 ## How to customize the existing toolbar in DocumentEditorContainer
 
