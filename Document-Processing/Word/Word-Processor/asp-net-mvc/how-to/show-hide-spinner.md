@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# How to Show and Hide the Spinner in ASP.NET MVC DOCX Editor
+# How to Show and Hide the Spinner in ASP.NET MVC Document Editor
 
-Using the [`spinner`](https://ej2.syncfusion.com/aspnetcore/documentation/spinner/getting-started-asp-core/) component, you can show or hide the spinner while opening a document in the DOCX Editor.
+Using the [`spinner`](https://ej2.syncfusion.com/aspnetcore/documentation/spinner/getting-started-asp-core) component, you can show or hide the spinner while opening a document in the Document Editor.
 
 ```typescript
 // showSpinner() makes the spinner visible

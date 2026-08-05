@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Set Default Format in the ASP.NET MVC DOCX Editor Component
+# Set Default Format in the ASP.NET MVC Document Editor Component
 
 You can set the default character format, paragraph format, and section format in the Document Editor.
 
 ## Set the default character format
 
-You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the default font size of the DOCX Editor is `11`, and you can change it to any valid value.
+You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the default font size of the Document Editor is `11`, and you can change it to any valid value.
 
 
 {% tabs %}

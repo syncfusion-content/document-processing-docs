@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Images in ASP.NET MVC DOCX Editor
+# Images in ASP.NET MVC Document Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or an online image in the document using the `insertImage()` method.
 

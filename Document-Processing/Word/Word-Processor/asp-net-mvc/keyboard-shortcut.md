@@ -8,11 +8,11 @@ documentation: ug
 ---
 
 
-# Keyboard Shortcuts in DOCX Editor Component
+# Keyboard Shortcuts in Document Editor Component
 
 ## Text formatting
 
-The following table lists the default keyboard shortcuts in the DOCX Editor for formatting text:
+The following table lists the default keyboard shortcuts in the Document Editor for formatting text:
 
 | Key combination | Description |
 |-----------------|-------------|
