@@ -102,7 +102,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     // Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -122,7 +122,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -142,7 +142,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -162,7 +162,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i = 0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```

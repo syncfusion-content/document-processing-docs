@@ -57,7 +57,7 @@ Use the following code snippet to export a specified page as a Base64-encoded im
         let pageIndex = 1;
         let size: Size = new Size(200,500);
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.exportAsImage(pageIndex,size).then(function (value) {
+        viewer.exportAsImage(pageIndex, size).then(function (value) {
             imageDetail = value;
             console.log(imageDetail);
         });

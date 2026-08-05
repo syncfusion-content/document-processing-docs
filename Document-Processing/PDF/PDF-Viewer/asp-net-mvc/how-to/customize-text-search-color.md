@@ -30,6 +30,7 @@ viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
 
 This will set the highlight color of the search results to blue.
 
+* [**PdfViewerTextSearchColorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html)
 * [**searchColor**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchColor)
 * [**searchHighlightColor**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerTextSearchColorSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerTextSearchColorSettings_SearchHighlightColor)
 

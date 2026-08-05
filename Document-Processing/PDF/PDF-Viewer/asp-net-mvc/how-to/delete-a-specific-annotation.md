@@ -16,7 +16,7 @@ Use the `deleteAnnotationById()` method to remove a specific annotation from a P
 
 **Step 1:** Follow the steps provided in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`.
+**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`. The example deletes the first annotation in the collection; replace `[0]` with the index of the annotation you want to remove.
 
 
 {% tabs %}

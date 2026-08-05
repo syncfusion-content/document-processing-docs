@@ -39,7 +39,7 @@ Set initial behavior when instantiating the PDF Viewer. Text selection is enable
 
 ## Toggle dynamically
 
-Change the behavior at runtime using buttons or other UI controls. The following example demonstrates how to toggle text selection with button clicks.
+Change the behavior at runtime using buttons or other UI controls. The following example demonstrates how to toggle text selection on demand.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

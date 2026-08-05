@@ -16,7 +16,7 @@ Use the following steps to display the document in the viewer without initiating
 
 **Step 1:** Follow the steps in the [Getting Started with ASP.NET MVC PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a sample and reference the required EJ2 scripts, styles, and (if needed) the server controller.
 
-**Step 2:** Use the following code snippet to reload the document from the saved blob. Place the script after the PDF Viewer markup so it runs once the viewer instance is available.
+**Step 2:** Use the following code snippet to reload the document from the blob returned by `saveAsBlob`. Place the script after the PDF Viewer markup so it runs once the viewer instance is available.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
