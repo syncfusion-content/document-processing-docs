@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Ribbon in Angular Document Editor component
 
-The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides a rich and flexible API to customize the built-in ribbon UI. You can:
+The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides a rich and flexible API to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
 - Add the Backstage menu instead of File menu.
