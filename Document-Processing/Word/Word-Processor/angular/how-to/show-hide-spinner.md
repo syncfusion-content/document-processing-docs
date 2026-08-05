@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Show hide spinner in Angular Document editor component | Syncfusion
-description: Learn here all about Show hide spinner in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Show hide spinner in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Show hide spinner in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide spinner in Angular Document editor component
+# Show hide spinner in Angular Document Editor component
 
-Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
+Using the [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show or hide a spinner while opening a document in the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
 
-Example code snippet to show/hide spinner
+Example code snippet to show or hide a spinner:
 
 ```typescript
 // showSpinner() will make the spinner visible
 showSpinner(document.getElementById('container'));
 
-// hideSpinner() method used hide spinner
+// hideSpinner() method is used to hide the spinner
 hideSpinner(document.getElementById('container'));
 ```
 
@@ -39,4 +39,4 @@ Refer to the following example.
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 
->Note: In above example, we have used setInterval to hide spinner, just for demo purpose.
+N> In the above example, we have used setInterval to hide the spinner, just for demo purposes.

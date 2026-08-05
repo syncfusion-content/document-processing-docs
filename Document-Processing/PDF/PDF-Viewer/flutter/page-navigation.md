@@ -235,3 +235,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Avoid calling `setState()` inside the `onPageChanged` or `onDocumentLoaded` callbacks. Doing so rebuilds the entire widget tree — including the `SfPdfViewer` — which can decrease performance when viewing large PDF documents. Instead, use an `addListener()` to the `PdfViewerController` to monitor page changes and update only the specific UI elements that need to change (for example, the page number indicator). This keeps viewer rebuilds to a minimum and delivers smoother scrolling and better stability with large PDF files.
