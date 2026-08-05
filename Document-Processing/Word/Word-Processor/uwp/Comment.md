@@ -111,4 +111,3 @@ Dim isCommentPaneVisible As Boolean = richTextBoxAdv.EditorSettings.IsCommentPan
 - [Clipboard support in UWP RichTextBox](./Clipboard)
 - [Table support in UWP RichTextBox](./Table)
 - [Commands in UWP RichTextBox](./Comment)
-
