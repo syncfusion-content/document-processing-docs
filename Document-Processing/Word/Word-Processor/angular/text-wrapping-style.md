@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text wrapping style in Angular Document Editor component
 
-Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
+Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 
 ## In-Line with Text
 

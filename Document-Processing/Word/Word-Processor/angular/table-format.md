@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table format in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -80,7 +80,7 @@ this.documentEditor.selection.tableFormat.tableAlignment='Center';
 
 ## Cell width
 
-Set the desired width of table cells that will be considered when the table is laid out. Refer to the following sample code.
+Set the desired width of table cells that will be considered when the table is lay out. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.selection.cellFormat.preferredWidthType='Point';
