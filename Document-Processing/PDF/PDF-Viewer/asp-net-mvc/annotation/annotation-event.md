@@ -39,7 +39,7 @@ The [annotationAdd](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.
 
 #### Event Arguments
 
-For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationAddEventArgs/). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
+For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationaddeventargs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
 The following example illustrates how to handle the `annotationAdd` event.
 
@@ -82,7 +82,7 @@ The [annotationDoubleClick](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfus
 
 #### Event Arguments
 
-For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationDoubleClickEventArgs/).
+For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationdoubleclickeventargs).
 
 The following example illustrates how to handle the `annotationDoubleClick` event.
 
@@ -122,7 +122,7 @@ The [annotationMouseLeave](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusi
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseLeaveEventArgs/).
+For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationmouseleaveeventargs).
 
 The following example illustrates how to handle the `annotationMouseLeave` event.
 
@@ -163,7 +163,7 @@ The [annotationMouseover](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusio
 
 #### Event Arguments
 
-For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMouseOverEventArgs/).
+For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationmouseovereventargs).
 
 The following example illustrates how to handle the `annotationMouseover` event.
 
@@ -204,7 +204,7 @@ The [annotationMove](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2
 
 #### Event Arguments
 
-For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMoveEventArgs/).
+For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationmoveeventargs).
 
 The following example illustrates how to handle the `annotationMove` event.
 
@@ -245,7 +245,7 @@ The [annotationMoving](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.e
 
 #### Event Arguments
 
-For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationMovingEventArgs/).
+For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationmovingeventargs).
 
 The following example illustrates how to handle the `annotationMoving` event.
 
@@ -286,7 +286,7 @@ The [annotationPropertiesChange](https://help.syncfusion.com/cr/aspnetmvc-js2/sy
 
 #### Event Arguments
 
-For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs/). It provides properties such as `annotationId`, `pageNumber`, and `action`.
+For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationpropertieschangeeventargs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
 The following example illustrates how to handle the `annotationPropertiesChange` event.
 
@@ -329,7 +329,7 @@ The [annotationRemove](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.e
 
 #### Event Arguments
 
-For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationRemoveEventArgs/). It provides properties such as `annotationId` and `pageNumber`.
+For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationremoveeventargs). It provides properties such as `annotationId` and `pageNumber`.
 
 The following example illustrates how to handle the `annotationRemove` event.
 
@@ -370,7 +370,7 @@ The [annotationResize](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.e
 
 #### Event Arguments
 
-For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationResizeEventArgs/).
+For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationresizeeventargs).
 
 The following example illustrates how to handle the `annotationResize` event.
 
@@ -411,7 +411,7 @@ The [annotationSelect](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.e
 
 #### Event Arguments
 
-For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationSelectEventArgs/).
+For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationselecteventargs).
 
 The following example illustrates how to handle the `annotationSelect` event.
 
@@ -452,7 +452,7 @@ The [annotationUnselect](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion
 
 #### Event Arguments
 
-For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationUnSelectEventArgs/).
+For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/annotationunselecteventargs).
 
 The following example illustrates how to handle the `annotationUnselect` event.
 
@@ -493,7 +493,7 @@ The [beforeAddFreeText](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 
 #### Event Arguments
 
-For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeAddFreeTextEventArgs/).
+For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/beforeaddfreetexteventargs).
 
 The following example illustrates how to handle the `beforeAddFreeText` event.
 
@@ -540,7 +540,7 @@ The [addSignature](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.p
 
 #### Event Arguments
 
-For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [AddSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/addsignatureeventargs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `addSignature` event.
 
@@ -581,7 +581,7 @@ The [removeSignature](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej
 
 #### Event Arguments
 
-For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removeSignatureEventArgs/). It provides properties such as `pageNumber`.
+For event data, see [RemoveSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/removesignatureeventargs). It provides properties such as `pageNumber`.
 
 The following example illustrates how to handle the `removeSignature` event.
 
@@ -622,7 +622,7 @@ The [resizeSignature](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej
 
 #### Event Arguments
 
-For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizeSignatureEventArgs/).
+For event data, see [ResizeSignatureEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/resizesignatureeventargs).
 
 The following example illustrates how to handle the `resizeSignature` event.
 
@@ -663,7 +663,7 @@ The [signaturePropertiesChange](https://help.syncfusion.com/cr/aspnetmvc-js2/syn
 
 #### Event Arguments
 
-For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturePropertiesChangeEventArgs/).
+For event data, see [SignaturePropertiesChangeEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signaturepropertieschangeeventargs).
 
 The following example illustrates how to handle the `signaturePropertiesChange` event.
 
@@ -704,7 +704,7 @@ The [signatureSelect](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej
 
 #### Event Arguments
 
-For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureSelectEventArgs/).
+For event data, see [SignatureSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureselecteventargs).
 
 The following example illustrates how to handle the `signatureSelect` event.
 
@@ -745,7 +745,7 @@ The [signatureUnselect](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 
 #### Event Arguments
 
-For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureUnSelectEventArgs/).
+For event data, see [SignatureUnSelectEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/signatureunselecteventargs).
 
 The following example illustrates how to handle the `signatureUnselect` event.
 
