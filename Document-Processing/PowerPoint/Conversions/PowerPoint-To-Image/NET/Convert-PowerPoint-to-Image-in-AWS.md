@@ -8,11 +8,11 @@ documentation: UG
 
 # Convert PowerPoint Presentation to Image in Amazon Web Services (AWS)
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Amazon Web Services (AWS)** within a few lines of code. 
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Amazon Web Services (AWS)** within a few lines of code.
 
-N> If this is your first time working with Amazon Web Services (AWS), please refer to the dedicated AWS resources. This section explains how to convert PowerPoint Presentation to image in C# using the .NET Core PowerPoint library (Presentation) in AWS. 
+N> If this is your first time working with Amazon Web Services (AWS), please refer to the [AWS getting started resources](https://aws.amazon.com/getting-started/). This section explains how to convert a PowerPoint Presentation to an image in C# using the Syncfusion<sup>&reg;</sup> PowerPoint library in AWS.
 
-## Prerequisites 
+## Prerequisites
 
 * An active **Amazon Web Services (AWS) account** is required. If you don’t have one, please [create an account](https://aws.amazon.com/) before starting.
 
@@ -37,5 +37,12 @@ NuGet package name<br/></th></tr></thead>
 {{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
 {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}} <br/>
+</td></tr>
+<tr>
+<td>
+{{'[AWS Linux EC2](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws-linux-ec2)' | markdownify}} <br/></td><td>
+{{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies)' | markdownify}} <br/>
+{{'[AWSSDK.S3](https://www.nuget.org/packages/AWSSDK.S3)' | markdownify}} <br/>
 </td></tr>
 </table>
