@@ -7,7 +7,7 @@ documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbar
 ---
 
-# Use SfRichTextBoxAdv as a standard RichTextBox
+# Use SfRichTextBoxAdv as a standard RichTextBox in UWP
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 

@@ -7,7 +7,7 @@ documentation: ug
 keywords: embedded-image-html,image-node-visited,html-import-export-settings,embedded-image,html-export,image-source
 ---
 
-# How to export the inserted image as an embedded image in HTML in UWP SfRichTextBoxAdv
+# Export inserted image as embedded in HTML in UWP SfRichTextBoxAdv
 
 This page explains how to export the inserted image as an Embedded image in HTML in Syncfusion&reg; UWP SfRichTextBoxAdv.
 

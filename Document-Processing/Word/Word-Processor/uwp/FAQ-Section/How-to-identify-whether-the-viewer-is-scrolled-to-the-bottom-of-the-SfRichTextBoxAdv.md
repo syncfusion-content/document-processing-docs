@@ -7,7 +7,7 @@ documentation: ug
 keywords: scroll-to-bottom,scroll,verticalscrollbar,horizontalscrollbar,scrollbar,scrolling-events
 ---
 
-# How to detect whether the viewer is scrolled to the bottom in UWP SfRichTextBoxAdv
+# Detect whether the viewer is scrolled to the bottom in UWP SfRichTextBoxAdv
 
 This page explains how to identify whether the viewer is scrolled to the bottom in the UWP [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control.
 
