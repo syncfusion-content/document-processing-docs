@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Document Editor component for mobile
 
-At present, [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component is not responsive for mobile, and editing functionalities are not supported in mobile browsers. However, it works properly as a document viewer in mobile browsers.
+At present, Angular Document Editor component is not responsive for mobile, and editing functionalities are not supported in mobile browsers. However, it works properly as a document viewer in mobile browsers.
 
 Hence, it is recommended to switch the Document Editor component to read-only in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#fitpage) method with `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
 
