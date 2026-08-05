@@ -1,14 +1,13 @@
 ---
 layout: post
 title: Section Format in Document Editor Control | Syncfusion
-description: Learn here all about section format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
-platform: document-processing
+description: Learn how to configure page size, margins, header distance, footer distance, and section formatting in the Syncfusion ASP.NET Core Document Editor.
 control: Section Format
 documentation: ug
 ---
 
 
-# Working with Section Formatting
+# Section Formatting in ASP.NET Core Document Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
@@ -58,4 +57,4 @@ Explore how to apply section formatting in Word documents using the ASP.NET Core
 
 ## See Also
 
-* [Pagesetup dialog](../asp-net-core/dialog#page-setup-dialog)
+* [Page setup dialog](../asp-net-core/dialog#page-setup-dialog)
