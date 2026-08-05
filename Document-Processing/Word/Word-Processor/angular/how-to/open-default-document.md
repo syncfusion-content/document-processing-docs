@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open default document in Angular DocumentEditor component | Syncfusion
-description: Learn here all about Open default document in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Open default document in Angular DOCX Editor | Syncfusion
+description: Learn here all about Open default document in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Open default document 
+control: Open default document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open default document in Angular Document editor component
+# Open default document in Angular Document Editor component
 
-In this article, we are going to see how to open a default document when [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) & Document Editor Container is initialized.
+In this article, we are going to see how to open a default document when the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) & Document Editor Container are initialized.
 
 ## Opening a default document in DocumentEditor
 

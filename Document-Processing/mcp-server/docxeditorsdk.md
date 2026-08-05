@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion DOCX Editor SDK MCP Server
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK MCP Server accelerates DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. Model Context Protocol(https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK MCP Server accelerates DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor integration across multiple platforms.
 
@@ -27,7 +27,7 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for React DOCX Editor](../Word/Word-Processor/react/mcp)
 - [MCP Server for Vue DOCX Editor](../Word/Word-Processor/vue/mcp)
 - [MCP Server for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/mcp)
-- [MCP Server for TypeScript EDOCX Editor](../Word/Word-Processor/javascript-es6/mcp)
+- [MCP Server for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/mcp)
 - [MCP Server for ASP.NET MVC DOCX Editor](../Word/Word-Processor/asp-net-mvc/mcp)
 - [MCP Server for ASP.NET Core DOCX Editor](../Word/Word-Processor/asp-net-core/mcp)
 - [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/mcp)
@@ -35,4 +35,4 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 
 ## See also
 
-- Model Context Protocol(https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

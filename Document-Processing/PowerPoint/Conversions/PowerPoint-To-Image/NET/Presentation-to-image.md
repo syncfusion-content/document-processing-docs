@@ -138,8 +138,8 @@ using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using System.IO;
 
-//Open the existing PowerPoint presentation with stream.
-using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Initialize the PresentationRenderer to perform image conversion.
     pptxDoc.PresentationRenderer = new PresentationRenderer();
@@ -198,7 +198,7 @@ image.Save("slide1.png")
 'Disposes the image
 image.Dispose()
 'Closes the Presentation instance
-Presentation_1.Close()
+pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -221,13 +221,13 @@ The following code snippet demonstrates how to convert a PowerPoint slide to ima
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]"  %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //The Essential Presentation Library does not provides support to custom image resolution in C# [Cross-platform] platforms.
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open("Output.pptx");
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Declare variables to hold custom width and height
 int customWidth = 1500;
 int customHeight = 1000;
@@ -249,7 +249,7 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the PowerPoint presentation
-Dim pptxDoc As IPresentation = Presentation.Open("Output.pptx")
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Declare variables to hold custom width and height
 Dim customWidth As Integer = 1500
 Dim customHeight As Integer = 1000
@@ -389,7 +389,7 @@ PowerPoint slides can be converted to images in UWP platform by using Essential<
 
 ## Font Substitution
 
-When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to image, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted image. 
+When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to image, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted image.
 
 To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion).
 
