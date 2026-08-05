@@ -112,20 +112,20 @@ In this command:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-deployment
+  name: ```your-deployment```
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: your-app
+      app: ```your-app```
   template:
     metadata:
       labels:
-        app: your-app
+        app: ```your-app```
     spec:
       containers:
       - name: your-container
-        image: <account-id>.dkr.ecr.<region>.amazonaws.com/your-repository-name:tag
+        image: ```<account-id>.dkr.ecr.<region>.amazonaws.com/your-repository-name:tag```
         ports:
         - containerPort: 80
 ```
