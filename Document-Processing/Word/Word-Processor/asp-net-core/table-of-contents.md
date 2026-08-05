@@ -3,7 +3,7 @@ layout: post
 title: Table of Contents in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn here all about table of contents in the Syncfusion ASP.NET Core Document Editor component and more.
 platform: document-processing
-control: Document Editor
+control: Table Of Contents
 documentation: ug
 ---
 
