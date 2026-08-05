@@ -18,7 +18,7 @@ Follow these steps to load a PDF from Azure Blob Storage in the standalone PDF V
 
 **Step 1:** Create the Azure Blob Storage account
 
-Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note the access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 
@@ -28,7 +28,7 @@ Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</
 
 1. Add the following properties to the `Views/Home/index.cshtml`, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account, **Your container name in Azure** with the actual container name, and **Your Blob name in Azure** with the actual blob name.
 
 ```csharp
 var accountName = "*Your account name in Azure*";
@@ -36,7 +36,7 @@ var containerName = "*Your container name in Azure*";
 var blobName = "*Your Blob name in Azure*";
 ```
 
-2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then Loads the base64 string into the PDF Viewer.
+2. Constructs the URL to the PDF in Azure Blob Storage. Calls fetchAndConvertToBase64 to fetch the PDF and convert it to a base64 string. Then loads the base64 string into the PDF Viewer.
 
 ```csharp
 function loadDocument() {
@@ -103,7 +103,7 @@ Follow these steps to load a PDF from Azure Blob Storage using the server-backed
 
 **Step 1:** Create the Azure Blob Storage account
 
-Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note the access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 

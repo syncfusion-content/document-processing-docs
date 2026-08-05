@@ -135,13 +135,12 @@ public async Task<ActionResult> SaveToAAD(jsonObjects responseData)
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure server-side code:
-   - Open the server-side application (e.g., ASP.NET MVC) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+3. Configure the server-side code with the following values in `HomeController.cs`:
+   - `tenantId` (your Azure AD tenant ID).
+   - `clientId` (your registered application client ID).
+   - `clientSecret` (your registered application client secret).
+   - `blobServiceEndpoint` (your storage account blob service URL).
+   - `containerName` (your container name in Azure Blob Storage).
 
 4. Add the following code snippet in `Index.cshtml`.
 

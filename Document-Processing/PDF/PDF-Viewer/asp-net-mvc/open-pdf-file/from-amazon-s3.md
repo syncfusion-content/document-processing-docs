@@ -18,7 +18,7 @@ Follow these steps to load a PDF from AWS S3 in the standalone PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
- Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
+Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 
@@ -53,7 +53,7 @@ AWS.config.update({
 });
 ```
 
-2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer then load Base64 string generated into the viewer.load method.
+2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the viewer.load method.
 
 N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
 
@@ -94,7 +94,7 @@ Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer.
 
 **Step 1:** Create AWS S3 account
 
- Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
+Set up an AWS S3 account by following the instructions on the official AWS site: [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html). Create an S3 bucket and generate access keys while ensuring secure storage of credentials.
 
 **Step 2:** Create PDF Viewer Sample in ASP.NET MVC
 
@@ -114,7 +114,7 @@ using Amazon.S3.Model;
 2. Modify the `Load()` method to load the PDF files from AWS S3.
 
 ```csharp
-    private readonly string _accessKey = "Your Access Key from AWS S35";
+    private readonly string _accessKey = "Your Access Key from AWS S3";
     private readonly string _secretKey = "Your Secret Key from AWS S3";
     private readonly string _bucketName = "Your Bucket name from AWS S3";
 
