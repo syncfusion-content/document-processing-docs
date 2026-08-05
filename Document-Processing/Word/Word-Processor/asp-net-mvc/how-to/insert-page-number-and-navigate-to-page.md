@@ -7,7 +7,7 @@ control: Insert Page number And Navigate To Specific Page
 documentation: ug
 ---
 
-# How to insert page numbers and move to specific pages in DOCX Editor
+# How to insert page numbers and move to specific pages in Document Editor
 
 You can insert a page number and navigate to a specific page in the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) component in the following ways.
 
@@ -15,7 +15,7 @@ You can insert a page number and navigate to a specific page in the [ASP.NET MVC
 
 You can use the [`insertPageNumber`] API in the editor module to insert the page number at the current cursor position. By default, the page number will be inserted in Arabic number style. You can change it by providing the number style in the parameter.
 
-N> Currently, the DOCX Editor has options to insert a page number at the current cursor position.
+N> Currently, the Document Editor has options to insert a page number at the current cursor position.
 
 The following example code illustrates how to insert page number in header.
 

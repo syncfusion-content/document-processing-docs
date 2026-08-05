@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# How to export the document as PDF in ASP.NET MVC DOCX Editor
+# How to export the document as PDF in ASP.NET MVC Document Editor
 
 This article explains how to export the document as PDF format. You can export the document as PDF in the following ways:
 

@@ -7,7 +7,7 @@ control: Hide The Default Tool Bar And Properties Pane
 documentation: ug
 ---
 
-# How to hide the default tool bar and properties pane in DOCX Editor
+# How to hide tool bar and properties pane in Document Editor
 
 **Document Editor Container** provides the main document view area along with the built-in toolbar and properties pane.
 
