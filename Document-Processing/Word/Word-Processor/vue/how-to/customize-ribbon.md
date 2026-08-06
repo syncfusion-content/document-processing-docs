@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Ribbon in the Vue DOCX Editor | Syncfusion
-description: Learn how to customize the ribbon in the Syncfusion Vue DOCX Editor - file menu, backstage, tabs, groups, and items.
+description: Learn how to customize the ribbon in the Syncfusion Vue Document Editor - file menu, backstage, tabs, groups, and items.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug

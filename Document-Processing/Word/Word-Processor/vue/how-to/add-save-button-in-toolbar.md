@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add save button in Vue DOCX Editor toolbar | Syncfusion
-description: Learn here to add a save button to the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here to add a save button to the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Add save button toolbar
 platform: document-processing
 documentation: ug

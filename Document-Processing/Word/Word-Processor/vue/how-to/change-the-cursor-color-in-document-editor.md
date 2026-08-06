@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change the cursor color in the Vue DOCX Editor component | Syncfusion
-description: Learn here all about how to change the cursor color in the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to change the cursor color in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Change the cursor color in DOCX Editor
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change document view in the Vue DOCX Editor component | Syncfusion
-description: Learn here all about how to change the document view in the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to change the document view in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Change document view
 platform: document-processing
 documentation: ug
