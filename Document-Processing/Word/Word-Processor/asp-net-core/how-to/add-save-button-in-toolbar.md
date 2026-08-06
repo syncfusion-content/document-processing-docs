@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Add save button in Document Editor toolbar
+# Add save button in ASP.NET Core Document Editor toolbar
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
