@@ -4,7 +4,6 @@ title: Load PDF from Base64 string in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to open a PDF document from a Base64 data string in the Syncfusion ASP.NET MVC PDF Viewer using the load() method.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -14,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer can 
 
 Follow these steps to load a PDF from Base64 data:
 
-**Step 1:** Create a PDF Viewer sample by following the [ASP.NET MVC getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/). The guide covers setting up scripts, styles, and Razor markup.
+**Step 1:** Create a PDF Viewer sample by following the [ASP.NET MVC getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started). The guide covers setting up scripts, styles, and Razor markup.
 
 **Step 2:** Add the following markup and script to your Razor view file. Place the script element after the viewer to ensure it initializes before the handler runs.
 

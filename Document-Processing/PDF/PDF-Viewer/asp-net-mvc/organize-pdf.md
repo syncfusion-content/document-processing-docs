@@ -306,7 +306,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
-![Alt text](../images/undo-redo.png)
+![Alt text](./images/undo-redo.png)
 
 #### Conclusion
 
