@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fields in DOCX Editor Component | Syncfusion
-description: Learn here all about overview of Fields in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: Fields in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about overview of Fields in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields
 documentation: ug
 ---
 
-# Fields in DOCX Editor Component
+# Fields in ASP.NET Core Document Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
@@ -23,11 +23,11 @@ documenteditor.editor.insertField(fieldCode, fieldResult);
 
 ```
 
-N> DOCX Editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
+N> Document Editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
-DOCX Editor provides support for updating bookmark cross reference field.
+Document Editor provides support for updating bookmark cross reference field.
 
 ```typescript
 //Update all the bookmark cross reference field in the document.
@@ -38,7 +38,7 @@ Bookmark cross reference fields can be updated through UI by using update fields
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following type of fields are automatically updated in DOCX Editor.
+The following type of fields are automatically updated in Document Editor.
 
 * NUMPAGES
 * SECTION

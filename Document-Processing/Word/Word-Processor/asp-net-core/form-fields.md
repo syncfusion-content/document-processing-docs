@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Fields in DOCX Editor Control | Syncfusion
-description: Learn here all about Form Fields in Syncfusion DOCX Editor control of Syncfusion Essential JS 2 and more.
+title: Form Fields in ASP.NET Core DOCX Editor Control | Syncfusion
+description: Learn here all about Form Fields in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Form Fields
 documentation: ug
 ---
 
 
-# Form Fields in ASP.NET Core DOCX Editor Control
+# Form Fields in ASP.NET Core Document Editor Control
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) control provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
@@ -101,9 +101,9 @@ documentEditor.resetFormFields();
 
 ## Protect the document in form filling mode
 
-DOCX Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
+Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-DOCX Editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
+Document Editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
 
 
 {% tabs %}
@@ -120,4 +120,4 @@ N> In enforce Protection method, first parameter denotes password and second par
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/formfields#/tailwind3).
+Explore how to insert and manage form fields in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/formfields#/tailwind3).
