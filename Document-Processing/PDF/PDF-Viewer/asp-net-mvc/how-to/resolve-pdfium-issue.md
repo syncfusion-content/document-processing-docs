@@ -21,7 +21,6 @@ If the PDFium assemblies reside in `C:\Pdfium\x64` or `D:\Pdfium\x86`, set `PdfR
 
 N> Set the `ReferencePath` inside the `Load` method in `PDFViewerController.cs`.
 
-N> 
 ```
 PdfRenderer pdfRenderer = new PdfRenderer();
 pdfRenderer.ReferencePath = @"C:/Pdfium/";

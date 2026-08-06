@@ -31,12 +31,14 @@ Follow these steps to surface custom stamp items:
     customStamp.Add(new
     {
         customStampName = "Image1",
-        customStampImageSource="data:image/png;base64,...' // Provide a valid base64 or URL for the image"
+        // Provide a valid base64 or URL for the image
+        customStampImageSource = "data:image/png;base64,..."
     });
     customStamp.Add(new
     {
         customStampName = "Image2",
-        customStampImageSource ="data:image/png;base64,...' // Provide a valid base64 or URL for the image"
+        // Provide a valid base64 or URL for the image
+        customStampImageSource = "data:image/png;base64,..."
     });
     PdfViewerCustomStampSettings CustomStampsSettings = new PdfViewerCustomStampSettings()
     {

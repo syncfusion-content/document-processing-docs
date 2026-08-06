@@ -34,7 +34,7 @@ Follow these steps to show the notification dialog when form fields are empty.
     function validateFormFields(args) {
         var nonfilledFormFields = args.nonFillableFields;
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var errorMessage = "Kindly fill all the form fieds";
+        var errorMessage = "Kindly fill all the form fields";
         viewer.showNotificationPopup(errorMessage);
     }
 </script>

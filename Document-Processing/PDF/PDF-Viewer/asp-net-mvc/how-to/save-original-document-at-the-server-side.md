@@ -28,7 +28,7 @@ Follow these steps to enable server-side persistence:
 
 <script>
     function save() {
-        var pdfViewer = document.getElementById('pdfviewer1').ej2_instances[0];
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
         pdfViewer.serverActionSettings.download = "SaveDocument";
         pdfViewer.download();
         pdfViewer.serverActionSettings.download = "Download";

@@ -58,7 +58,7 @@ public ActionResult GetDocument()
 **Step 4:** Use the following code snippet to load PDF document using document name.
 
 ```html
-<button type="button" onclick="load2()">LoadDocumentFromBase64</button>
+<button type="button" onclick="load2()">LoadDocumentFromFileName</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").Render()
@@ -67,7 +67,7 @@ public ActionResult GetDocument()
 <script>
     // load document using document name.
     function load2() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.load("HTTP Succinctly.pdf", null)
     }
 </script>

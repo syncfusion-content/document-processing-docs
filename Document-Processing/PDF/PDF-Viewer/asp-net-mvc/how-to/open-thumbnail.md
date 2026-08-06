@@ -29,7 +29,7 @@ The following steps explain how to open the thumbnail pane.
 
 <script>
     function openThumbnail() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Open Thumbnail Pane.
         viewer.thumbnailViewModule.openThumbnailPane();
     }
@@ -46,7 +46,7 @@ The following steps explain how to open the thumbnail pane.
 
 <script>
     function openThumbnail() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Open Thumbnail Pane.
         viewer.thumbnailViewModule.openThumbnailPane();
     }

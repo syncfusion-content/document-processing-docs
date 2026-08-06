@@ -15,6 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer can 
 Set `retryTimeout` to define how long (in seconds) the viewer waits before retrying the failed request, and use `retryCount` to control how many attempts occur before the viewer reports an error. By default, `retryTimeout` is `0`, which disables the retry delay and causes the viewer to keep the request open indefinitely, while `retryCount` defaults to `0`, meaning no additional attempts occur.
 
 Assign positive values to both properties to limit how long the viewer waits for a response and how many retries should run before surfacing an error message.
+
 Use the properties in Razor markup as shown below. This sample demonstrates a server-backed viewer configuration.
 
 ```html

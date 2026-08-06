@@ -21,6 +21,8 @@ Start by following the instructions provided in the [getting started guide](http
 
 Once your PDF Viewer is set up, you can set the author name for annotations using the following JavaScript code snippet. This typically goes within your view, often at the end of the `<body>` tag or in a dedicated script file, after the PDF Viewer component has been initialized.
 
+N> Wire the function to the viewer by adding the `DocumentLoad("documentLoad")` option in the Razor markup so the handler runs when the document loads.
+
 ```html
 
 <script>

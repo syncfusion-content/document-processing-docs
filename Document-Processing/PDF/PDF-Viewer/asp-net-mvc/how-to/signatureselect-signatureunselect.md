@@ -45,7 +45,7 @@ function signatureSelect(args) {
 };
 
 function signatureUnselect(args) {
-    console.log('Signature selected:', args);
+    console.log('Signature unselected:', args);
 };
 </script>
 
@@ -66,7 +66,7 @@ function signatureSelect(args) {
 };
 
 function signatureUnselect(args) {
-    console.log('Signature selected:', args);
+    console.log('Signature unselected:', args);
 };
 </script>
 

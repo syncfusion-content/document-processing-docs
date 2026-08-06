@@ -58,7 +58,7 @@ The Document pointer does not exist in the cache exception in the Syncfusion<sup
 
 To resolve this issue, you can follow these steps:
 
-**Step 1: Clear the cache.***
+**Step 1: Clear the cache.**
 Locate the cache directory, which is specified in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer’s settings or configuration files. Once found, delete the contents of the folder to remove any corrupted or outdated cache data.
 
 **Step 2: Reload the document.**

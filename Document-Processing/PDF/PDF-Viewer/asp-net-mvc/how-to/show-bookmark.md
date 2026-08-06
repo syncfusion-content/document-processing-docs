@@ -16,7 +16,7 @@ N> The default value of `enableBookmark` is `true`, so the bookmark pane remains
 
 Follow these steps to show the bookmark pane:
 
-**Step 1:** Create a PDF Viewer sample by using the [ASP.NET MVC getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) so that the required scripts, styles, and controller endpoints are configured.
+**Step 1:** Create a PDF Viewer sample by using the [ASP.NET MVC getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) so that the required scripts, styles, and controller endpoints are configured.
 
 **Step 2:** Enable the bookmark pane in the Razor markup, as shown in the following samples.
 
