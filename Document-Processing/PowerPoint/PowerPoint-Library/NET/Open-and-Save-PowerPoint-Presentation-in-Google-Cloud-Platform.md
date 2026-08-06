@@ -1,20 +1,23 @@
 --- 
 title: Open and save Presentation in GCP | Syncfusion 
-description: Learn how to open and save Presentation in Google Cloud Platform (GCP) using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies. 
+description: Learn how to open and save PowerPoint presentations in Google Cloud Platform using the .NET PowerPoint library without Microsoft PowerPoint.
 platform: document-processing
-control: PowerPoint 
-documentation: UG 
---- 
+control: PowerPoint
+documentation: UG
+---
 
-# Open and save Presentation in Google Cloud Platform (GCP)
+# Open and Save PowerPoint Presentation in Google Cloud Platform (GCP)
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Google Cloud Platform (GCP)** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint Presentation in Google Cloud Platform (GCP)** within a few lines of code.
 
-N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to open and save Presentation in C# using the PowerPoint library (Presentation) in GCP. 
+N> If this is your first time working with Google Cloud Platform (GCP), refer to the [Google Cloud documentation](https://docs.cloud.google.com/docs) for general setup help. This page lists the supported GCP hosting options for the PowerPoint library and links to the detailed steps for each.
 
-## Prerequisites 
+## Prerequisites
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled.
+* The [Google Cloud SDK (`gcloud` CLI)](https://docs.cloud.google.com/sdk/docs/install-sdk) installed and initialized (`gcloud init`).
+* The **App Engine Admin API** enabled for your project. For steps, see [Enabling APIs](https://docs.cloud.google.com/service-usage/docs/enable-disable).
+* Visual Studio with the **.NET 8 SDK** and the **ASP.NET and web development** workload installed.
 
 ## Google Cloud Platform (GCP)
 

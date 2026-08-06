@@ -247,7 +247,6 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
-| **Spreadsheet not rendering** | Ensure the `Syncfusion.Blazor.Spreadsheet` and `Syncfusion.Blazor.Themes` NuGet packages are installed, the theme and CSS are registered in `Program.cs`/`wwwroot`, and the license key is configured. |
 
 ## Privacy & Security
 
