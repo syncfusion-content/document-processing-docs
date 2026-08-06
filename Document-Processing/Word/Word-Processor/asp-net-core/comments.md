@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in DOCX Editor Control | Syncfusion
-description: Learn here all about comments in Syncfusion DOCX Editor control of Syncfusion Essential JS 2 and more.
+title: Comments in ASP.NET Core DOCX Editor Control | Syncfusion
+description: Learn here all about comments in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments
 documentation: ug
 ---
 
 
-# Comments in ASP.NET Core DOCX Editor Component
+# Comments in ASP.NET Core Document Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) lets you add comments to documents. You can add, navigate, and remove comments in code and from the UI.
 
@@ -41,7 +41,7 @@ var commentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the DOCX Editor.
+// Insert the comment with the specified properties into the Document Editor.
 documentEditor.editor.insertComment('Hello world', commentProperties);
 ```
 
@@ -65,15 +65,15 @@ var commentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the DOCX Editor.
+// Insert the comment with the specified properties into the Document Editor.
 var comment = documentEditor.editor.insertComment('Hello world', commentProperties);
-// Insert a reply comment with specified properties into the DOCX Editor
+// Insert a reply comment with specified properties into the Document Editor
 documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
 ```
 
 ## Get Comments
 
-DOCX Editor lets you get the comments along with their replies and comment properties using `getComments`. The returned object is an array of comments, where each comment exposes `id`, `author`, `dateTime`, `isResolved`, and a `replies` array containing the reply comments with the same properties.
+Document Editor lets you get the comments along with their replies and comment properties using `getComments`. The returned object is an array of comments, where each comment exposes `id`, `author`, `dateTime`, `isResolved`, and a `replies` array containing the reply comments with the same properties.
 
 ```typescript
 //Get Comments in the document along with the properties author, date, status.
@@ -120,9 +120,9 @@ documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments only mode
 
-DOCX Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user can only add or edit comments in the document.
+Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user can only add or edit comments in the document.
 
-DOCX Editor provides an option to protect and unprotect the document using `enforceProtection` and `stopProtection` API.
+Document Editor provides an option to protect and unprotect the document using `enforceProtection` and `stopProtection` API.
 
 
 {% tabs %}
@@ -145,7 +145,7 @@ N> In enforce Protection method, first parameter denotes password and second par
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the `@` character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in DOCX Editor
+The following example illustrates how to enable mention support in Document Editor
 
 
 {% tabs %}
@@ -176,4 +176,4 @@ To demonstrate a specific use case, let’s consider an example where we want to
 
 ## Online Demo
 
-Explore how to add, view, and manage comments in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/comments#/tailwind3).
+Explore how to add, view, and manage comments in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/comments#/tailwind3).
