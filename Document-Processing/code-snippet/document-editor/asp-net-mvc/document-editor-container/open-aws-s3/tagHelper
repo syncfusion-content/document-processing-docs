@@ -1,7 +1,7 @@
 <ejs-button id="load">Open Document From AWS S3 Bucket</ejs-button>
 <ejs-documenteditorcontainer id="container"></ejs-documenteditorcontainer>
 <script>
-    var documenteditor;
+    var container;
     document.addEventListener('DOMContentLoaded', function () {
         var documenteditorElement = document.getElementById("container");        
         container = documenteditorElement.ej2_instances[0];
