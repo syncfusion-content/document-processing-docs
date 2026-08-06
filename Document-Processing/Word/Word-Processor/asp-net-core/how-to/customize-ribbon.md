@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize Ribbon in ASP.NET Core Document Editor Component
 
-The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) provides an extensive and flexible set of APIs to customize the built-in ribbon UI. You can:
+The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an extensive and flexible set of APIs to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
 - Add the Backstage menu instead of File menu.
