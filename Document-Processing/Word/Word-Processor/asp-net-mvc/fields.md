@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fields in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about Fields in Syncfusion ASP.NET MVC DOCX Editor control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Fields in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields
 documentation: ug

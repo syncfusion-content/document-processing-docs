@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find And Replace in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about find and replace in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about find and replace in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find And Replace
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Fields in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about Form Fields in Syncfusion ASP.NET MVC DOCX Editor control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Form Fields in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Form Fields
 documentation: ug
