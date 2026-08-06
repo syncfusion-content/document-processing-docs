@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert page number and navigate to page in DOCX Editor | Syncfusion
-description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion DOCX Editor Component
+description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Document Editor Component
 platform: document-processing
 control: Insert Page number And Navigate To Specific Page
 documentation: ug

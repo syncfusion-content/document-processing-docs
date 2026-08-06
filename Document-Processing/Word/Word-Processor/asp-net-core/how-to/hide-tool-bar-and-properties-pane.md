@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide toolbar and properties pane in DOCX Editor | Syncfusion
-description: Learn how to hide the default toolbar and properties pane from the Syncfusion DOCX Editor component.
+description: Learn how to hide the default toolbar and properties pane from the Syncfusion Document Editor component.
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
 documentation: ug

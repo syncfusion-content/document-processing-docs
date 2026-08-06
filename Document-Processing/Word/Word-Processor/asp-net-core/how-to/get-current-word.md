@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get current Word/Para in Syncfusion DOCX Editor control | Syncfusion
-description: Learn how to select and retrieve the current word and paragraph from the Syncfusion DOCX Editor component.
+description: Learn how to select and retrieve the current word and paragraph from the Syncfusion Document Editor component.
 platform: document-processing
 control: Get The Current Word And Paragraph
 documentation: ug

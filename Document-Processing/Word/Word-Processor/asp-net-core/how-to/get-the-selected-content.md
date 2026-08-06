@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get Selected Content in Syncfusion DOCX Editor Component | Syncfusion
-description: Learn here all about getting the selected content in the Syncfusion DOCX Editor component of Essential JS 2 and more.
+description: Learn here all about getting the selected content in the Syncfusion Document Editor component of Essential JS 2 and more.
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
