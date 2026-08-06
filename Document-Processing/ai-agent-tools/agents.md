@@ -9,7 +9,7 @@ documentation: ug
 
 # What AI Agents Can Do with Syncfusion Document SDK
 
-Give any AI agent full control over Word, Excel, PDF, and PowerPoint - no document-processing code required. This page shows the **outcomes an AI agent can deliver** when it has the [Syncfusion Document SDK AI Agent Tools](./overview) in its toolbox.
+Give any AI agent full control over Word, Excel, PDF, and PowerPoint - no document-processing code required. This page shows the **outcomes an AI agent can deliver** when it has the [Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) in its toolbox.
 
 > Looking for the API reference? See [Overview](./overview), [Tools](./tools), or [Getting Started](./getting-started).
 
