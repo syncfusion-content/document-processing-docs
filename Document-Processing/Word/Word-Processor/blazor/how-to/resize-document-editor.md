@@ -11,9 +11,9 @@ documentation: ug
 
 In this article, we are going to see how to change the height and width of the Document Editor.
 
-## Change Height of Document Editor
+## Change height of Document Editor
 
-[`Blazor Document Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component (Document Editor) initially renders with a default height. You can change the height of the Document Editor using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Height) property; the value is in pixels.
+Blazor DOCX Editor initially renders with a default height. You can change the height of the Document Editor using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Height) property; the value is in pixels.
 
 The following example code illustrates how to change the height of the Document Editor.
 
@@ -24,9 +24,9 @@ The following example code illustrates how to change the height of the Document 
 
 Similarly, you can use the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_Height) property for the Document Editor also.
 
-## Change Width of Document Editor
+## Change width of Document Editor
 
-[`Blazor Document Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component (Document Editor) initially renders with a default width. You can change the width of the Document Editor using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Width) property; the value is in percent.
+Blazor Document Editor initially renders with a default width. You can change the width of the Document Editor using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Width) property; the value is in percent.
 
 The following example code illustrates how to change the width of the Document Editor.
 
