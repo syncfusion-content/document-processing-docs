@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clipboard in DOCX Editor Component | Syncfusion
+title: Clipboard in ASP.NET Core DOCX Editor Component | Syncfusion
 description: Learn here all about clipboard in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Clipboard
@@ -10,7 +10,7 @@ documentation: ug
 
 # Clipboard in ASP.NET Core Document Editor Component
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 
 ## Copy
 
