@@ -15,7 +15,7 @@ The annotation toolbar can be customized by showing or hiding default items and 
 
 Show or hide the annotation toolbar programmatically during initialization or at runtime.
 
-Use the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableAnnotationToolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showannotationtoolbar) method to toggle visibility.
+Use the [EnableAnnotationToolbar](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableAnnotationToolbar) property or the [showAnnotationToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method to toggle visibility.
 
 To toggle the visibility at runtime, use the `showAnnotationToolbar` method on the toolbar instance.
 

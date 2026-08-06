@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Mobile Toolbar Interface in ASP.NET MVC PDF Viewer
+# Mobile Toolbar Customization in ASP.NET MVC PDF Viewer
 
 The Mobile PDF Viewer supports viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users can also enable the desktop toolbar features in mobile mode for an extended set of actions.
 
