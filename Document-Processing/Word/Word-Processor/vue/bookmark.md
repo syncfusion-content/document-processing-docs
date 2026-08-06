@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Bookmark in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Bookmark in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Bookmark 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in Vue DOCX Editor component
+# Bookmark in Vue Document Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -79,7 +79,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World'
 
 ## Show or Hide bookmark
 
-You can show or hide the square brackets around bookmarked items in DOCX Editor component.
+You can show or hide the square brackets around bookmarked items in Document Editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
@@ -89,7 +89,7 @@ this.$refs.container.ej2Instances.documentEditorSettings.showBookmarks = true;
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in DOCX Editor.
+The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ The following example shows how to open bookmark dialog in DOCX Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage bookmarks in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 
