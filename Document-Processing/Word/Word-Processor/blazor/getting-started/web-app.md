@@ -8,7 +8,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App Document Editor
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a Blazor Web App.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a Blazor Web App.
 
 ## Prerequisites
 
