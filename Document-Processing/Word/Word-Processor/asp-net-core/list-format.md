@@ -10,7 +10,7 @@ documentation: ug
 
 # Working with Lists in ASP.NET Core Document Editor
 
-[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to a paragraph using the supported APIs.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to a paragraph using the supported APIs.
 
 ## Create bullet list
 
