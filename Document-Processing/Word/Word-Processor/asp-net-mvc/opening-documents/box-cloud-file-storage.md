@@ -81,9 +81,8 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
     var items = await client.FoldersManager.GetFolderItemsAsync(_folderID, 1000, autoPaginate: true);
     var files = items.Entries.Where(i => i.Type == "file");
 
-    // Filter the files based on the documentName
-    var documentName = jsonObject["documentName"];
-    var matchingFile = files.FirstOrDefault(file => file.Name == documentName);
+    // Filter the files based on the objectName
+    var matchingFile = files.FirstOrDefault(file => file.Name == objectName);
 
     // Fetch the file from Box storage by its name
     var fileStream = await client.FilesManager.DownloadAsync(matchingFile.Id);
