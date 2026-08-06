@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Image in React Document Editor component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 
 {% raw %}
 
