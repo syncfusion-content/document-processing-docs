@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Print in Document Editor Control
+# Print in ASP.NET MVC Document Editor component
 
 To print the document, use the `print` method from the document editor instance.
 
