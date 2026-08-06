@@ -1,9 +1,9 @@
 ﻿---
 layout: post
 title: Deploy the DOCX Editor component for mobile | Syncfusion
-description: Learn here all about deploying the DOCX Editor component for mobile in the Syncfusion DOCX Editor component and more.
+description: Learn here all about deploying the Document Editor component for mobile in the Syncfusion Document Editor component and more.
 platform: document-processing
-control: Deploy the DOCX Editor component for mobile
+control: Deploy the Document Editor component for mobile
 documentation: ug
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable ruler in Syncfusion DOCX Editor Component
-description: Learn how to enable the ruler in the Syncfusion DOCX Editor component to set margins, tab stops, and indentations for consistent formatting and more.
+description: Learn how to enable the ruler in the Syncfusion Document Editor component to set margins, tab stops, and indentations for consistent formatting and more.
 platform: document-processing
 control: Enable Ruler
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disable Optimized Text Measuring in Syncfusion DOCX Editor Component
-description: Learn here all about disabling optimized text measuring in the Syncfusion DOCX Editor component and more.
+description: Learn here all about disabling optimized text measuring in the Syncfusion Document Editor component and more.
 platform: document-processing
 control: Disable Optimized Text Measuring
 documentation: ug

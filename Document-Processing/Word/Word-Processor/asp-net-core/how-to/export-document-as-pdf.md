@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export PDF in Syncfusion DOCX Editor Component | Syncfusion
-description: Learn here all about exporting the document as PDF in the Syncfusion DOCX Editor component of Essential JS 2 and more.
+description: Learn here all about exporting the document as PDF in the Syncfusion Document Editor component of Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
