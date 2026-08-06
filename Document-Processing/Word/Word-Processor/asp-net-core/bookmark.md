@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Bookmark in DOCX Editor Component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Bookmark in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Bookmark
 documentation: ug
 ---
 
 
-# Bookmarks in ASP.NET Core DOCX Editor Component
+# Bookmarks in ASP.NET Core Document Editor Component
 
 Bookmark is a powerful tool that helps to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides a built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using the built-in hyperlink dialog. You can also delete bookmarks from a document.
+[ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides a built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using the built-in hyperlink dialog. You can also delete bookmarks from a document.
 
 N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
@@ -62,7 +62,7 @@ container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide Bookmark
 
-You can show or hide the bookmark indicators around bookmarked items in DOCX Editor component.
+You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
 
 The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
@@ -92,7 +92,7 @@ container.documentEditor.editor.insertText("Hello World");
 
 ## Bookmark Dialog
 
-The following example shows how to open the bookmark dialog in DOCX Editor.
+The following example shows how to open the bookmark dialog in Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -105,7 +105,7 @@ The following example shows how to open the bookmark dialog in DOCX Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage bookmarks in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 

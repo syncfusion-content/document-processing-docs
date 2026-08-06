@@ -2,13 +2,13 @@
 layout: post
 title: Collaborative Editing in ASP.NET Core DOCX Editor | Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion DOCX Editor control of Syncfusion Essential JS 2 and more.
+description: Learn about collaborative editing in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in ASP.NET Core DOCX Editor
+# Collaborative Editing in ASP.NET Core Document Editor
 
 Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
@@ -34,7 +34,7 @@ To support collaborative editing, it is crucial to have a backing system that te
 
 Using the distributed cache or database, all the editing operations are queued in order and conflict resolution is performed using the `Operational Transformation` algorithm.
 
-N> 1. To calculate the average requests per second of your application, assume the DOCX Editor in your live application is actively used by 1000 users, and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
+N> 1. To calculate the average requests per second of your application, assume the Document Editor in your live application is actively used by 1000 users, and each user's edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
 
 N> 2. The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app's traffic and choose a configuration that best suits your needs.
 
