@@ -24,31 +24,9 @@ Every workflow on this page follows the same loop:
 
 ## Quick Start
 
-### Path A - Tell Your Agent
-
-> *"Use the Syncfusion Document SDK AI Agent Tools to handle this document. The package is available on NuGet as `Syncfusion.DocumentSDK.AI.AgentTools`. Follow the getting-started guide at our docs."*
-
-### Path B - Install It Yourself
-
-```bash
-dotnet add package Syncfusion.DocumentSDK.AI.AgentTools
-```
+You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools), and the full source is on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools) if you want to extend any tool or register a custom document manager.
 
 Then follow [Getting Started](./getting-started) to register the document managers and expose the tools to your agent framework.
-
-## End-to-End Agent Loop
-
-A typical self-serve agent run - prompt, plan, execute, deliver - looks like this:
-
-1. **Prompt:** *"Take `contract.pdf` in `~/work`, redact every email address and SSN, sign it with our company certificate, and save the result as `contract_signed.pdf`."*
-2. **Plan:** The agent reads the file, identifies candidates for redaction, decides the order of operations, and confirms the desired output.
-3. **Load:** Calls [PdfDocumentAgentTools](./tools#pdf) to load `contract.pdf` into the working document manager.
-4. **Extract:** Calls [PdfContentExtractionAgentTools](./tools#pdf) to find email and SSN regions with bounding-box coordinates.
-5. **Redact:** Calls [PdfSecurityAgentTools](./tools#pdf) to permanently cover the detected regions with black redaction marks.
-6. **Sign:** Calls [PdfSecurityAgentTools](./tools#pdf) again to apply a digital signature from `company.pfx`.
-7. **Export:** Calls [PdfDocumentAgentTools](./tools#pdf) to save the result as `contract_signed.pdf`.
-
-No human opens the file. No Office installation is involved. The same pattern extends to every scenario below.
 
 ## Real-World Agents
 
@@ -56,14 +34,14 @@ No human opens the file. No Office installation is involved. The same pattern ex
 
 > *"Load contract.pdf. Redact all PII. Export a compliance-ready PDF."*
 
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Load `contract.pdf` into the agent's working memory | [PdfDocumentAgentTools](./tools#pdf) | PDF lifecycle |
-| 2 | Extract text so PII regions (names, SSNs, addresses, signatures) can be detected | [PdfContentExtractionAgentTools](./tools#pdf) | Content extraction |
-| 3 | Redact the detected PII regions | [PdfSecurityAgentTools](./tools#pdf) | Redaction |
-| 4 | Apply organization watermark | [PdfAnnotationAgentTools](./tools#pdf) | Watermarking |
-| 5 | Apply a digital signature | [PdfSecurityAgentTools](./tools#pdf) | Digital signing |
-| 6 | Export as compliance-ready PDF/A | [PdfConverterAgentTools](./tools#pdf) | Conversion |
+**Workflow**
+
+1. **Load** `contract.pdf` into the agent's working memory.
+2. **Extract text** so PII regions (names, SSNs, addresses, signatures) can be located with bounding-box coordinates.
+3. **Redact** the detected regions so the original content is permanently covered.
+4. **Apply an organization watermark** to mark the document as reviewed.
+5. **Sign** the document using a company certificate.
+6. **Export** the result as a compliance-ready PDF/A.
 
 **Outcome:** A redacted, signed, archived PDF ready for legal review - produced without a human opening the file.
 
@@ -71,14 +49,14 @@ No human opens the file. No Office installation is involved. The same pattern ex
 
 > *"Open revenue.xlsx. Generate charts. Convert to PDF. Distribute the report."*
 
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Open `revenue.xlsx` | [ExcelWorkbookAgentTools](./tools#excel) | Excel lifecycle |
-| 2 | Populate the worksheet with the raw data | [ExcelWorksheetAgentTools](./tools#excel) | Worksheet management |
-| 3 | Generate charts and pivot tables from the raw data | [ExcelChartAgentTools](./tools#excel), [ExcelPivotTableAgentTools](./tools#excel) | Charts, Pivot tables |
-| 4 | Apply conditional formatting and validation | [ExcelConditionalFormattingAgentTools](./tools#excel), [ExcelDataValidationAgentTools](./tools#excel) | Conditional formatting, Data validation |
-| 5 | Convert the workbook to PDF | [OfficeToPdfAgentTools](./tools#conversion) | Conversion |
-| 6 | Distribute the report | - | - |
+**Workflow**
+
+1. **Open** `revenue.xlsx`.
+2. **Populate the worksheet** with the raw data.
+3. **Generate charts and pivot tables** from the data.
+4. **Apply conditional formatting and validation** so anomalies and key values stand out.
+5. **Convert the workbook to PDF**.
+6. **Distribute** the board-ready report.
 
 **Outcome:** A board-ready PDF generated from raw data - no analyst touch-up required.
 
@@ -86,14 +64,14 @@ No human opens the file. No Office installation is involved. The same pattern ex
 
 > *"Merge employee records. Generate offer letters. Export signed PDFs."*
 
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Load the offer-letter template | [WordDocumentAgentTools](./tools#word) | Word lifecycle |
-| 2 | Merge employee records into the template | [WordMailMergeAgentTools](./tools#word) | Mail merge |
-| 3 | Convert the merged Word documents to PDF | [OfficeToPdfAgentTools](./tools#conversion) | Conversion |
-| 4 | Apply organization branding (watermark) to the PDFs | [PdfAnnotationAgentTools](./tools#pdf) | Watermarking |
-| 5 | Apply PDF encryption / password protection | [PdfSecurityAgentTools](./tools#pdf) | Encryption |
-| 6 | Apply a digital signature to each PDF | [PdfSecurityAgentTools](./tools#pdf) | Digital signing |
+**Workflow**
+
+1. **Load** the offer-letter template.
+2. **Merge** employee records into the template so each hire gets a personalized letter.
+3. **Convert** the merged Word documents to PDF.
+4. **Apply organization branding** (a watermark) to the PDFs.
+5. **Encrypt** each PDF with a password so only the intended recipient can open it.
+6. **Sign** each PDF with a digital signature.
 
 **Outcome:** A signed offer letter for every new hire, produced in minutes rather than days.
 
@@ -101,14 +79,14 @@ No human opens the file. No Office installation is involved. The same pattern ex
 
 > *"Scan this document set. Strip sensitive content. Lock it down."*
 
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Open the document set (PDF, Word, or image scans) | [PdfDocumentAgentTools](./tools#pdf), [WordDocumentAgentTools](./tools#word) | PDF / Word lifecycle |
-| 2 | OCR scanned pages to surface sensitive content | [PdfOcrAgentTools](./tools#pdf) | OCR |
-| 3 | Extract text so sensitive content can be located | [PdfContentExtractionAgentTools](./tools#pdf), [WordFindAndReplaceAgentTools](./tools#word) | Content extraction, Find & replace |
-| 4 | Redact PII, financial data, or restricted terms | [PdfSecurityAgentTools](./tools#pdf) | Redaction |
-| 5 | Apply encryption and permissions | [PdfSecurityAgentTools](./tools#pdf), [WordSecurityAgentTools](./tools#word) | Encryption, Permissions |
-| 6 | Export as PDF/A for long-term archival | [PdfConverterAgentTools](./tools#pdf) | Conversion |
+**Workflow**
+
+1. **Open** the document set - PDFs, Word files, or image scans.
+2. **OCR** the scanned pages to surface any sensitive content hidden in images.
+3. **Extract text** so PII, financial data, and restricted terms can be located.
+4. **Redact** sensitive content so it is permanently removed.
+5. **Apply encryption and permissions** to lock the document down.
+6. **Export** the result as PDF/A for long-term archival.
 
 **Outcome:** A compliant, encrypted archive that meets retention and access policies.
 
@@ -116,32 +94,17 @@ No human opens the file. No Office installation is involved. The same pattern ex
 
 > *"Read these invoices. Extract totals, line items, and vendors. Export to Excel."*
 
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Open invoice PDFs or scanned images | [PdfDocumentAgentTools](./tools#pdf) | PDF lifecycle |
-| 2 | Run OCR on image-based invoices | [PdfOcrAgentTools](./tools#pdf) | OCR |
-| 3 | Extract structured fields (totals, dates, line items, vendor) | [DataExtractionAgentTools](./tools#data-extraction) | Data extraction |
-| 4 | Create the destination workbook | [ExcelWorkbookAgentTools](./tools#excel) | Excel lifecycle |
-| 5 | Populate the workbook with the extracted data | [ExcelWorksheetAgentTools](./tools#excel) | Worksheet management |
-| 6 | Add data-validation rules to flag anomalies | [ExcelDataValidationAgentTools](./tools#excel) | Data validation |
-| 7 | Export the workbook as Excel, JSON, or PDF | [ExcelConversionAgentTools](./tools#excel), [OfficeToPdfAgentTools](./tools#conversion) | Conversion |
+**Workflow**
+
+1. **Open** the invoice PDFs or scanned images.
+2. **Run OCR** on image-based invoices so the text is searchable.
+3. **Extract structured fields** (totals, dates, line items, vendor) into a clean payload.
+4. **Create the destination workbook**.
+5. **Populate the workbook** with the extracted data.
+6. **Add data-validation rules** to flag anomalies.
+7. **Export** the workbook as Excel, JSON, or PDF for downstream systems.
 
 **Outcome:** Clean, structured invoice data delivered into ERP, accounting, or analytics systems.
-
-### Autonomous Document Agent - Open-Ended Goals
-
-> *"Prepare this report for the Q4 board review."*
-
-| Step | Action | Tool Class | Tool Category |
-|---|---|---|---|
-| 1 | Read the user's intent from the prompt | - | - |
-| 2 | Plan the steps: which documents to load, which operations to apply | - | - |
-| 3 | Load the source documents | [PdfDocumentAgentTools](./tools#pdf), [WordDocumentAgentTools](./tools#word), [ExcelWorkbookAgentTools](./tools#excel), [PresentationDocumentAgentTools](./tools#powerpoint) | Document lifecycle |
-| 4 | Execute the plan by calling tools in sequence (merge, split, redact, sign, convert, etc.) | Any combination of the [available tools](./tools) | Any combination |
-| 5 | Validate the output and surface any issues | [PdfOperationsAgentTools](./tools#pdf), [WordRevisionAgentTools](./tools#word), [ExcelDataValidationAgentTools](./tools#excel) | Validation, Find issues |
-| 6 | Deliver the result or hand it back to the user | [PdfConverterAgentTools](./tools#pdf), [OfficeToPdfAgentTools](./tools#conversion), [ExcelConversionAgentTools](./tools#excel) | Conversion |
-
-**Outcome:** The user describes the goal. The agent figures out the rest - load, edit, convert, sign, distribute.
 
 ## Why an Agent Chooses Syncfusion
 

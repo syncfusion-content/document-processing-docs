@@ -18,70 +18,22 @@ You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion
 
 ## What Can Agents Build?
 
-The library targets three audiences. Each gets a different set of outcomes, and every outcome is backed by the same [tool classes](./tools).
+The library enables AI agents to autonomously:
 
-**For Developers:**
-- Build document-processing pipelines without writing Office automation code - no `Microsoft.Office.Interop`, no headless Office installs.
-- Automate report generation from databases, APIs, or test results.
-- Process documents in bulk - find and replace, style updates, page reordering, compression - inside CI/CD.
-- Headless document automation in Docker and containerized environments.
+- Build document-processing pipelines without writing Office automation code - no `Microsoft.Office.Interop`, no headless Office installs required
+- Create, read, edit, and export documents in Word, Excel, PDF, and PowerPoint formats
+- Extract, redact, sign, and secure documents with encryption and digital signatures
+- Merge, split, reorder, and convert between document formats
+- Automate workflows like mail merge, template population, and structured data extraction
+- Process documents at scale in Docker containers, serverless functions, and CI/CD pipelines
 
-**For AI Agents:**
-- Read text, structure, and metadata from any Word, Excel, PDF, or PowerPoint document.
-- Apply changes to existing documents - redact, watermark, sign, merge, split, convert.
-- Generate new documents from a prompt, a template, or structured data.
-- Validate and check document quality before delivery.
-
-**For Teams:**
-- Clone a template and populate it with data, then ship a signed, encrypted PDF in one pass.
-- Run an OCR + data-extraction agent over incoming invoices and hand structured data to your ERP.
-- Produce board-ready financial reports, signed offer letters, or compliance archives on demand.
-
-See concrete walkthroughs for each on the [AI Agents View](./agents) page.
+See concrete walkthroughs on the [AI Agents View](./agents) page.
 
 ## How It Works
 
 ![How AI Agent Tool Execution Works](how-it-works.png)
 
 A typical agent run follows four steps: the user describes a goal, the agent picks the right tools, the tools read or modify the document, and the output is delivered. The [AI Agents View](./agents) page shows this loop for six real-world scenarios.
-
-## Quick Start
-
-### Path A - Tell Your Agent
-
-> *"Use the Syncfusion Document SDK AI Agent Tools to handle this document. The package is available on NuGet as `Syncfusion.DocumentSDK.AI.AgentTools`. Follow the getting-started guide at our docs."*
-
-### Path B - Install It Yourself
-
-```bash
-dotnet add package Syncfusion.DocumentSDK.AI.AgentTools
-```
-
-Then follow [Getting Started](./getting-started) to register the document managers and expose the tools to your agent framework.
-
-## End-to-End Example
-
-A complete agent run - prompt to delivered file - takes a handful of tool calls and no human in the loop:
-
-1. **Prompt:** *"Take `contract.pdf`, redact every email and SSN, sign it with our certificate, save as `contract_signed.pdf`."*
-2. **Load:** [PdfDocumentAgentTools](./tools#pdf) opens `contract.pdf` in the working manager.
-3. **Extract:** [PdfContentExtractionAgentTools](./tools#pdf) finds email and SSN regions with bounding-box coordinates.
-4. **Redact:** [PdfSecurityAgentTools](./tools#pdf) permanently covers the detected regions.
-5. **Sign:** [PdfSecurityAgentTools](./tools#pdf) applies a digital signature from `company.pfx`.
-6. **Export:** [PdfDocumentAgentTools](./tools#pdf) saves `contract_signed.pdf`.
-
-The same loop powers the [six scenarios on the AI Agents View](./agents) page.
-
-## Why an Agent Chooses Syncfusion
-
-| Affordance | What it means for the agent |
-|---|---|
-| **Framework-agnostic** | Works with Microsoft Agent Framework and any `IChatClient` (OpenAI, Claude, Gemini). |
-| **Deterministic tools** | Each tool has a clear contract - predictable input, predictable output. |
-| **Headless / CI-ready** | Runs in containers, on servers, and in CI/CD pipelines. No Office installation required. |
-| **Comprehensive coverage** | Word, Excel, PDF, PowerPoint, Markdown, and structured data extraction in one library. |
-| **Multiple execution modes** | In-memory for desktop and console; storage-backed for web and scalable services. |
-| **.NET 8.0, 9.0, 10.0** | Long-term support, no upgrade pressure. |
 
 ## Key Capabilities
 
@@ -193,11 +145,6 @@ The table below is an at-a-glance summary of the formats and operations that bac
     </tr>
   </tbody>
 </table>
-
-## See It in Action
-
-Looking for ready-to-use prompts? See [Example Prompts](./example-prompts).
-End-to-end scenarios? See [Example Use Cases](./example-use-cases).
 
 ## Related Resources
 
