@@ -49,7 +49,8 @@ You can scale the contents in the Document Editor from 10% to 500% of the actual
 {% include code-snippet/document-editor/asp-net-core/scrolling-zooming/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-zooming.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Page Fit
@@ -62,7 +63,8 @@ Apart from specifying the zoom factor as a value, the Document Editor provides a
 {% include code-snippet/document-editor/asp-net-core/scrolling-page-fit/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-page-fit.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Zoom option using UI
