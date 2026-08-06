@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Document management in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Document management in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Document management in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Document management 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in Vue DOCX Editor component
+# Document management in Vue Document Editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
@@ -63,7 +63,7 @@ The following code shows the base editor setup required to render the Restrict E
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/getting-started-cs1" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## See Also
 

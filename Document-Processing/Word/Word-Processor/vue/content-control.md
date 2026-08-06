@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Content control in Vue DOCX Editor control | Syncfusion
-description: Learn here all about Content control in Syncfusion Vue DOCX Editor control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Content control in Syncfusion Vue Document Editor control of Syncfusion Essential JS 2 and more.
 control: Content control 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in Vue DOCX Editor control
+# Content control in Vue Document Editor control
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
