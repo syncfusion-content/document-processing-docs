@@ -18,8 +18,8 @@ documentation: ug
 {% include code-snippet/document-editor/asp-net-core/image/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Image.cs" %}
-{% include code-snippet/document-editor/asp-net-core/image/document-editor.cs %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
