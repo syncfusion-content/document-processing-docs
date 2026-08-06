@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header Footer in DOCX Editor Component | Syncfusion
-description: Learn here all about Header Footer in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: Header Footer in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about Header Footer in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Header Footer
 documentation: ug
 ---
 
 
-# Headers and Footers in ASP.NET Core DOCX Editor Component
+# Headers and Footers in ASP.NET Core Document Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
@@ -87,7 +87,7 @@ documenteditor.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headersandfooters#/tailwind3).
+Explore how to add and customize headers and footers in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headersandfooters#/tailwind3).
 
 
 ## See Also

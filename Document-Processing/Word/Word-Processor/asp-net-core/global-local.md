@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global Local in Syncfusion DOCX Editor Component
-description: Learn here all about Global Local in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: Global Local in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about Global Local in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global Local
 documentation: ug
 ---
 
 
-# Globalization in ASP.NET Core DOCX Editor Component
+# Globalization in ASP.NET Core Document Editor Component
 
 ## Localization
 
@@ -16,9 +16,9 @@ The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/
 
 N> Refer the [Locale](https://github.com/syncfusion/ej2-locale).
 
-## DOCX Editor
+## Document Editor
 
-The following list of properties and its values are used in the DOCX Editor.
+The following list of properties and its values are used in the Document Editor.
 
 Locale keywords |Text
 -----|-----
@@ -363,9 +363,9 @@ Reject Changes | Reject Changes
 User | User
 View | View
 
-## DOCX Editor Container
+## Document Editor Container
 
-The following list of properties and its values are used in the DOCX Editor container.
+The following list of properties and its values are used in the Document Editor container.
 
 Locale keywords |Text
 -----|-----

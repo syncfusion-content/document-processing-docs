@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in DOCX Editor Component | Syncfusion
-description: Learn here all about history in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: History in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about history in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: History
 documentation: ug
 ---
 
 
-# History in ASP.NET Core DOCX Editor Component
+# History in ASP.NET Core Document Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
@@ -27,7 +27,7 @@ Inject the `EditorHistory` module in your application to provide history preserv
 {% endtabs %}
 
 
-You can enable or disable history preservation for a DOCX Editor instance any time using the `enableEditorHistory` property.
+You can enable or disable history preservation for a Document Editor instance any time using the `enableEditorHistory` property.
 
 ```typescript
 editor.enableEditorHistory = false;
@@ -35,7 +35,7 @@ editor.enableEditorHistory = false;
 
 ## Undo and redo
 
-You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. DOCX Editor exposes API to do it programmatically. To undo the last editing operation in DOCX Editor, refer to the following sample code.
+You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document Editor exposes API to do it programmatically. To undo the last editing operation in Document Editor, refer to the following sample code.
 
 ```typescript
 editor.editorHistory.undo();
@@ -49,7 +49,7 @@ editor.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, DOCX Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit.
+History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit.
 
 ```typescript
 editor.editorHistory.undoLimit = 400;

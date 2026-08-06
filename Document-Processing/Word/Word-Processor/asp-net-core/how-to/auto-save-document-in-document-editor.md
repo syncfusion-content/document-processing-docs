@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto Save Document in DOCX Editor Component | Syncfusion
-description: Learn here all about auto save document in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: Auto Save Document in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about auto save document in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Auto Save Document In DOCX Editor
+control: Auto Save Document In Document Editor
 documentation: ug
 ---
 
 
-# How to auto save the document of DOCX Editor component into AWS S3
+# How to auto save the document of Document Editor component into AWS S3
 
 This article explains how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps to reduce the risk of data loss by saving an open document automatically at customized intervals.
 
