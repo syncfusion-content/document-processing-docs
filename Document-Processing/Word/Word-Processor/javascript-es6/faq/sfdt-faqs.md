@@ -2,7 +2,7 @@
 layout: post
 title: FAQs about SFDT in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn all about FAQs on SFDT in the Syncfusion JavaScript (ES6) DOCX Editor component, including its structure and usage.
-control: SFDT format 
+control: SFDT format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in JavaScript (ES6) DOCX Editor
 
-The frequently asked questions about SFDT in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is listed below:
+The frequently asked questions about SFDT in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) are listed below:
 
-## What is SFDT format?
+## What is the SFDT format?
 
-SFDT (Syncfusion Document Text) is a JSON-based representation of a DOCX document used internally by the Document Editor. It is not a new or separate file format; instead, it is a structured JSON equivalent of a DOCX file, designed to represent the same document content. SFDT uses a hierarchical key–value structure to describe document elements such as sections, paragraphs, text, styles, tables, and images, closely matching the structure of a Word document.
+SFDT (Syncfusion Document Text) is a JSON-based representation of a DOCX document used internally by the Document Editor. It is not a new or separate file format. Instead, it is a structured JSON equivalent of a DOCX file, designed to represent the same document content. SFDT uses a hierarchical key-value structure to describe document elements such as sections, paragraphs, text, styles, tables, and images, closely matching the structure of a Word document.
 
 ## Is it possible to modify SFDT?
 
@@ -34,7 +34,7 @@ SFDT is optimized for web-based document editing scenarios.
 
 SFDT is suitable in the following scenarios:
 
-- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor
+- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor.
 
 - Use cases that require efficient storage in a database and quick reloading for further editing
 
