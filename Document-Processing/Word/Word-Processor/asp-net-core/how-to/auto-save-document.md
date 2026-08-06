@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auto Save Document in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn how to Auto save document in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+description: Learn how to Auto save document in Document Editor in Syncfusion ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Auto Save Document In Document Editor
 documentation: ug
