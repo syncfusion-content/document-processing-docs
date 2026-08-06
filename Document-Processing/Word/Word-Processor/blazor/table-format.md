@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Table Formatting in Blazor Document Editor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) customizes the formatting of a table or table cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or the table in detail.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) customizes the formatting of a table or table cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or the table in detail.
 
 ## Cell margins
 

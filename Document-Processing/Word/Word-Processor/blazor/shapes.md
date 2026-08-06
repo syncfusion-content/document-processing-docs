@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Shapes in Blazor Document Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) does not support inserting shapes. However, if the document contains a shape while importing, it will be preserved properly.
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) does not support inserting shapes. However, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 

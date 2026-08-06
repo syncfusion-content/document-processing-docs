@@ -13,7 +13,7 @@ The table of contents in a document is the same as the list of chapters at the b
 
 ## Inserting table of contents
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. The settings for a table of contents can be specified explicitly. Otherwise, the default settings are applied.
+Blazor Document Editor exposes an API to insert a table of contents at the cursor position programmatically. The settings for a table of contents can be specified explicitly. Otherwise, the default settings are applied.
 
 [`TableOfContentsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.TableOfContentsSettings.html) contain the following properties:
 * **startLevel**: Specifies the start level for constructing a table of contents.
