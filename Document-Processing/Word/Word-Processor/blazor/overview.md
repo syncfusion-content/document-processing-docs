@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of the Blazor Document Editor
 
-The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables you to create, edit, view, and print Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables you to create, edit, view, and print Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 
 ![Output of Blazor Document Editor](./images/docx-editor.png)
 

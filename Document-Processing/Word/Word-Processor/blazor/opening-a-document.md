@@ -13,7 +13,7 @@ You might need to open and view Word documents from various locations. In this s
 
 ## Opening a document from URL
 
-If you have your Word document file in the web, you can open it in [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) using a URL. The following code example explains how to open a Word document file from a URL.
+If you have your Word document file in the web, you can open it in [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) using a URL. The following code example explains how to open a Word document file from a URL.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
