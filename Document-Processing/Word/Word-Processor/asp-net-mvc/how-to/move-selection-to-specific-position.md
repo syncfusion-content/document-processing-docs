@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Move the selection to specific position in DOCX Editor | Syncfusion
-description: Learn how to move the selection to a specific position in a document from the ASP.NET MVC DOCX Editor Component
+description: Learn how to move the selection to a specific position in a document from the ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Move The Selection To Specific Position
 documentation: ug

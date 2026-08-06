@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Document By Address in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about opening a document by address in the Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about opening a document by address in the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Document By Address
 documentation: ug
