@@ -1,125 +1,140 @@
 ---
-title: Open and save Presentation in Azure Functions Flex Consumption | Syncfusion
-description: Open and save Presentation in Azure Functions Flex Consumption using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+title: Open and Save Presentations in Azure Flex Functions | Syncfusion
+description: Open and save Presentation in Azure Functions Flex Consumption using the .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Open and save Presentation in Azure Functions (Flex Consumption)
+# Open and save Presentation in Azure Functions Flex Consumption
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save Presentation in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit, and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint Presentation in Azure Functions deployed on the Flex Consumption plan**.
 
-## Steps to open and save Presentation in Azure Functions (Flex Consumption)
+N> **Prerequisites:** An active [Azure subscription](https://azure.microsoft.com/en-us/free/), Visual Studio 2022 (or later) with the **Azure development** workload installed, and the latest **Azure Functions Core Tools**. This article targets the **Azure Functions Flex Consumption** plan with the **.NET 8.0 (Long Term Support)** isolated worker model.
 
-Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Open_and_Save_PowerPoint_Presentation.png)
+## Steps to open and save Presentation in Azure Functions Flex Consumption
 
-Step 2: Create a project name and select the location.
-![Create a project name](Azure-Images/Functions-Flex-Consumption/Configuration-Open-and-Save-PowerPoint.png)
+Step 1: Create a new Azure Functions project. Select the **Azure Functions** template and choose the **HTTP trigger** function type.
+![Create an Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
+Step 2: Configure the project name and select the location.
+![Configure the project name and location](Azure-Images/Functions-Flex-Consumption/Configuration-Open-and-Save-PowerPoint.png)
+
+Step 3: Select the function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and choose a Flex Consumption hosting plan that supports the isolated worker model.
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Open_and_Save_PowerPoint_Presentation.png)
 
 Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you also have to add the **Syncfusion.Licensing** assembly reference and include a license key in your project. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 5: Include the following namespaces in the **Function1.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the following code snippet in **Run** method of **Function1** class to perform **open the existing Presentation in Azure Functions** and return the resultant **PowerPoint Presentation** to client end.
+Step 6: Add the following complete **Run** method to the **Function1** class to open the existing PowerPoint Presentation, modify a shape on the first slide, and return the modified Presentation in the HTTP response. The function uses an **HTTP trigger** with `AuthorizationLevel.Function`; the client posts a `Template.pptx` (any sample PowerPoint file) in the request body. The `Presentation.Open(Stream)` / `Save(Stream)` overloads are used because the function has no local file path; the path-based overloads (`Presentation.Open("File.pptx")`, `presentation.Save("File.pptx")`) are not applicable in this serverless scenario.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+[Function("Function1")]
 public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+{
+    try
     {
-        try
+        // Register the Syncfusion license key (only required once per app domain).
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+
+        // Create a memory stream to hold the incoming request body (PowerPoint Presentation bytes)
+        await using MemoryStream inputStream = new MemoryStream();
+        // Copy the request body into the memory stream
+        await req.Body.CopyToAsync(inputStream);
+        // Check if the stream is empty (no file content received)
+        if (inputStream.Length == 0)
+            return new BadRequestObjectResult("No file content received in request body.");
+        // Reset stream position to the beginning for reading
+        inputStream.Position = 0;
+        // Load the PowerPoint Presentation from the stream
+        using IPresentation pptxDoc = Presentation.Open(inputStream);
+        // Get the first slide from the PowerPoint presentation
+        ISlide slide = pptxDoc.Slides[0];
+        // Get the first shape of the slide (with null-checks for shapes that have no text body)
+        IShape shape = slide.Shapes[0];
+        if (shape != null && shape.TextBody != null && shape.TextBody.Text == "Company History")
         {
-            // Create a memory stream to hold the incoming request body (PowerPoint Presentation bytes)
-            await using MemoryStream inputStream = new MemoryStream();
-            // Copy the request body into the memory stream
-            await req.Body.CopyToAsync(inputStream);
-            // Check if the stream is empty (no file content received)
-            if (inputStream.Length == 0)
-                return new BadRequestObjectResult("No file content received in request body.");
-            // Reset stream position to the beginning for reading
-            inputStream.Position = 0;
-            // Load the PowerPoint Presentation from the stream
-            using IPresentation pptxDoc = Presentation.Open(inputStream);
-            //Gets the first slide from the PowerPoint presentation
-            ISlide slide = pptxDoc.Slides[0];
-            //Gets the first shape of the slide
-            IShape shape = slide.Shapes[0] as IShape;
-            //Change the text of the shape
-            if (shape.TextBody.Text == "Company History")
-                shape.TextBody.Text = "Company Profile";
-            MemoryStream memoryStream = new MemoryStream();
-            //Saves the PowerPoint document file.
-            pptxDoc.Save(memoryStream);
-            memoryStream.Position = 0;
-            var bytes = memoryStream.ToArray();
-            return new FileContentResult(bytes, "application/vnd.openxmlformats-officedocument.presentationml.presentation")
-            {
-                FileDownloadName = "presentation.pptx"
-            };
+            // Change the text of the shape
+            shape.TextBody.Text = "Company Profile";
         }
-        catch(Exception ex)
+        // Save the modified PowerPoint Presentation to a memory stream
+        using MemoryStream memoryStream = new MemoryStream();
+        pptxDoc.Save(memoryStream);
+        memoryStream.Position = 0;
+        return new FileContentResult(memoryStream.ToArray(), "application/vnd.openxmlformats-officedocument.presentationml.presentation")
         {
-            // Log the error with details for troubleshooting
-            _logger.LogError(ex, "Error open and save PowerPoint Presentation.");
-            // Prepare error message including exception details
-            var msg = $"Exception: {ex.Message}\n\n{ex}";
-            // Return a 500 Internal Server Error response with the message
-            return new ContentResult { StatusCode = 500, Content = msg, ContentType = "text/plain; charset=utf-8" };
-        }
+            FileDownloadName = "presentation.pptx"
+        };
     }
-	
+    catch (Exception ex)
+    {
+        // Log the error with details for troubleshooting
+        _logger.LogError(ex, "Error opening and saving PowerPoint Presentation.");
+        // Return a 500 Internal Server Error response (do not leak the full exception to the client)
+        return new ContentResult
+        {
+            StatusCode = 500,
+            Content = $"An error occurred while processing the request: {ex.Message}",
+            ContentType = "text/plain; charset=utf-8"
+        };
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
-![Create a new profile in the Publish Window](Azure-Images/Functions-v1/Publish-Open-and-Save-PowerPoint.png)
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the **Publish** window.
+![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish-Open-and-Save-PowerPoint.png)
 
-Step 8: Select the target as **Azure** and click **Next** button.
+Step 8: Select the target as **Azure** and click the **Next** button.
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 9: Select the specific target as **Azure Function App** and click **Next** button.
-![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Specific_Target_Open_and_Save_PowerPoint_Presentation.png)
+Step 9: Select the specific target as **Azure Function App** and click the **Next** button.
+![Select the specific target as Azure Function App](Azure-Images/Functions-Flex-Consumption/Specific_Target_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 10: Select the **Create new** button.
+Step 10: Click the **Create new** button.
 ![Configure Hosting Plan](Azure-Images/Functions-Flex-Consumption/Function_Instance_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 11: Click **Create** button. 
+Step 11: Click the **Create** button.
 ![Select the plan type](Azure-Images/Functions-Flex-Consumption/Hosting_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 12: After creating app service then click **Finish** button. 
-![Creating app service](Azure-Images/Functions-Flex-Consumption/Finish_Open_and_Save_PowerPoint_Presentation.png)
+Step 12: After the Function App is created, click the **Finish** button.
+![Creating Function App](Azure-Images/Functions-Flex-Consumption/Finish_Open_and_Save_PowerPoint_Presentation.png)
 
 Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 14: Publish has been succeed.
+Step 14: Publishing has succeeded.
 ![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_Open_and_Save_PowerPoint_Presentation.png)
 
-Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **open and save Presentation** using the template PowerPoint document). You will get the output **PowerPoint Presentation** as follows.
+Step 15: Go to the Azure portal and select **Function App**. After the function is running, click **Get Function URL** and copy it. Then, paste the URL into the client sample in the next section (which will request the Azure Function to open and save a PowerPoint Presentation using the template PowerPoint document). The output PowerPoint Presentation is shown below.
 
-![PowerPoint to Image in Azure Functions v1](Workingwith-Core/Open-and-Save-output-image.png)
+![Output PowerPoint Presentation in Azure Functions Flex Consumption](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## Steps to post the request to Azure Functions
 
-Step 1: Create a console application to request the Azure Functions API.
+Step 1: Create a .NET 8.0 console application to request the Azure Functions API. Add a folder named **Data** to the project and place a sample PowerPoint file named `Input.pptx` inside it.
 
-Step 2: Add the following code snippet into **Main** method to post the request to Azure Functions with template PowerPoint document and get the resultant PowerPoint Presentation.
+Step 2: Add the following code snippet into the **Main** method to post the request to Azure Functions with the template PowerPoint document and save the returned PowerPoint Presentation to disk.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -157,7 +172,8 @@ Step 2: Add the following code snippet into **Main** method to post the request 
         }
         catch (Exception ex)
         {
-            throw;
+            // Log the error so callers can diagnose failures without crashing the process
+            Console.Error.WriteLine($"Error posting request to Azure Functions: {ex.Message}");
         }
     }
 

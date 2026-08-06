@@ -18,14 +18,14 @@ Step 1: Create a new **AWS Lambda project** as follows.
 Step 2: Select Blueprint as Empty Function and click **Finish**.
 ![Select Blueprint as Empty Function](AWS_Images/Lambda_Images/Blueprint-AWS-PowerPoint-Presentation-to-PDF.png)
 
-Step 3: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 Nuget Package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-PPTXtoPDF.png)
+![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 NuGet Package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-PPTXtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -52,6 +52,7 @@ Step 7: Include the following namespaces in **Function.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using Amazon.Lambda.Core;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using Syncfusion.Drawing;
@@ -105,8 +106,8 @@ private void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs 
 {% endhighlight %}
 {% endtabs %}
 
-N> If using an older version of Syncfusion and Skiasharp NuGet as v2.88.8, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
-To resolve this, refer to the code snippet provided in the documentation [here]( https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux).
+N> If using an older version of Syncfusion and SkiaSharp NuGet as v2.88.8, there is a chance of encountering a libSkiaSharp not found exception during the conversion process.
+To resolve this, refer to the code snippet provided in the documentation [here](https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux).
 
 Step 9: Right-click the project and select **Publish to AWS Lambda**.
 ![Publish to AWS Lambda](AWS_Images/Lambda_Images/Publish-PowerPoint-Presentation-to-PDF.png)
@@ -128,7 +129,7 @@ Step 13: Edit Memory size and Timeout as maximum in General configuration of the
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-PowerPoint-Presentation-to-PDF.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
