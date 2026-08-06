@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Working with Table Formatting
+# Table Formatting in ASP.NET Core Document Editor
 
 [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) customizes the formatting of a table or its cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 
@@ -135,7 +135,8 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 {% include code-snippet/document-editor/asp-net-core/row-height/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ### Header row

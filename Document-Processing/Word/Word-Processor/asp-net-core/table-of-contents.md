@@ -39,7 +39,8 @@ documenteditor.editor.insertTableOfContents(tocSettings);
 {% include code-snippet/document-editor/asp-net-core/table-of-contents/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Table-of-contents.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Update or edit the table of contents

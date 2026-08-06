@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Text formatting
+# Text Formatting in ASP.NET Core Document Editor
 
 [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) supports several text formatting options such as bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
