@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Print in PDF Viewer
+# Print in ASP.NET MVC PDF Viewer
 
 The PDF Viewer supports printing the loaded PDF file. Enable or disable printing using the following example.
 
