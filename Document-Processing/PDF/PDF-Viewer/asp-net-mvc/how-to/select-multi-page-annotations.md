@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Select multi page annotations in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Select multi page annotations in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Select multi-page annotations in PDF Viewer | Syncfusion
+description: Learn here all about how to select annotations across multiple pages in Syncfusion PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

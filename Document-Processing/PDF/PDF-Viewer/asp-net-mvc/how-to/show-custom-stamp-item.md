@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Display custom stamp items in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to configure custom stamp settings in the Syncfusion ASP.NET MVC PDF Viewer so users can apply personalized stamps from the custom stamp dropdown.
+title: Display custom stamp items in PDF Viewer | Syncfusion
+description: Learn how to Configure custom stamp settings in Syncfusion PDF Viewer for personalized stamp applications.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

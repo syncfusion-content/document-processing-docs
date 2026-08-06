@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically in ASP.NET MVC PDF Viewer | Syncfusion
+title: Open thumbnail pane in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET MVC PDF Viewer by calling the openThumbnailPane method after the document loads.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
