@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Agents | AI Agent Tools | Syncfusion
-description: Discover what AI agents can do with Syncfusion Document SDK - real-world workflows for Legal, Finance, HR, Compliance, Invoice Processing, and Autonomous Document agents.
+description: Real-world AI agent workflows for document automation - Legal, Finance, HR, Compliance, and Invoice Processing.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
@@ -35,7 +35,7 @@ Then follow [Getting Started](./getting-started) to register the document manage
 **Workflow**
 
 1. **Load** `contract.pdf` into the agent's working memory.
-2. **Extract text** so PII regions (names, SSNs, addresses, signatures) can be located with bounding-box coordinates.
+2. **Extract text** so PII regions (names, Social Security Numbers, addresses, signatures) can be located with bounding-box coordinates.
 3. **Redact** the detected regions so the original content is permanently covered.
 4. **Apply an organization watermark** to mark the document as reviewed.
 5. **Sign** the document using a company certificate.
@@ -106,9 +106,9 @@ Then follow [Getting Started](./getting-started) to register the document manage
 
 ## Why an Agent Chooses Syncfusion
 
-The use cases above run on a small set of guarantees. These are the affordances that make the workflows possible:
+The use cases above run on a small set of guarantees. These are the key strengths that power these workflows:
 
-| Affordance | What it means for the agent |
+| Capability | What it means for the agent |
 |---|---|
 | **Framework-agnostic** | Works with Microsoft Agent Framework and any `IChatClient` (OpenAI, Claude, Gemini). |
 | **Deterministic tools** | Each tool has a clear contract - predictable input, predictable output. |
