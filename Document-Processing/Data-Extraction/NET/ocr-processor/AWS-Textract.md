@@ -38,10 +38,17 @@ Include the following code in the **Program.cs** file to register the license ke
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 using Syncfusion.Licensing;
 
-// Register Syncfusion license at application startup
-SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Register Syncfusion license at application startup
+        SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
