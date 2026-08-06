@@ -9,7 +9,7 @@ documentation: ug
 
 # Change the Cursor Color in Blazor Document Editor
 
-The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component uses a black cursor by default. However, this color can be customized by overriding the `.e-de-blink-cursor` CSS class.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component uses a black cursor by default. However, this color can be customized by overriding the `.e-de-blink-cursor` CSS class.
 
 The editor's blinking cursor is styled using the `.e-de-blink-cursor` CSS class. To change its color, define a new style for this class with the desired `border-left` color.
 

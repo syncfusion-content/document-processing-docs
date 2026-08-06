@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to customize the color picker in the Document Editor Container
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides options to customize the color picker using [`ColorPickerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_ColorPickerSettings) in the document editor settings. The color picker offers customization options for its default appearance, including the ability to select between Picker and Palette modes for font and border colors.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides options to customize the color picker using [`ColorPickerSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_ColorPickerSettings) in the document editor settings. The color picker offers customization options for its default appearance, including the ability to select between Picker and Palette modes for font and border colors.
 
 The following example code illustrates how to customize the color picker in the Document Editor container.
 
