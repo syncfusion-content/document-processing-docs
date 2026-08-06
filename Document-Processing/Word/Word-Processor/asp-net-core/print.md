@@ -10,7 +10,7 @@ documentation: ug
 
 # Print in ASP.NET Core Document Editor
 
-To print the document, use the `print` method from the [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) instance.
+To print the document, use the `print` method from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) instance.
 
 
 {% tabs %}
@@ -45,7 +45,8 @@ The Document Editor provides an option to improve the print quality using `print
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/print/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -61,7 +62,8 @@ You can print the document in the Document Editor by passing the window instance
 {% include code-snippet/document-editor/asp-net-core/print-window/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-window.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Page setup
@@ -79,7 +81,8 @@ However, you can customize margins, paper, and layout options by modifying the s
 {% include code-snippet/document-editor/asp-net-core/print-dialog/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Print-dialog.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 By customizing margins, paper, and layouts, the document layout will change in the Document Editor. To modify these options during the print operation, serialize the document as SFDT using the `serialize` method on a Document Editor instance and open the SFDT data in another Document Editor instance in a separate window.
