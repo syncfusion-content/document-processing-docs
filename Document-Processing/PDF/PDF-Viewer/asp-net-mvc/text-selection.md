@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text_selection in ASP.NET MVC PDF Viewer Component
+title: Text selection in ASP.NET MVC PDF Viewer Component
 description: Learn here all about Text_selection in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text_selection

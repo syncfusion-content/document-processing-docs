@@ -105,8 +105,6 @@ The following example demonstrates how to customize print quality using the Prin
 {% endhighlight %}
 {% endtabs %}
 
-## Additional print options
-
 ## EnablePrintRotation in the PDF Viewer
 
 The `EnablePrintRotation` property controls whether landscape pages are auto-rotated to best fit when printing. The default value is `true`. Set to `false` to preserve the original page orientation and suppress automatic rotation during print.

@@ -44,7 +44,7 @@ Effortlessly add new pages to your document with the following options:
 
 ### Deleting PDF pages
 
-Removing unwanted pages from your document is straight forward:
+Removing unwanted pages from your document is straightforward:
 
 * `Select pages to delete`: Click on the page thumbnails you wish to remove. You can select multiple pages at once.
 * `Delete selected pages`: Use the delete option in the organize pages pane to remove the selected pages from the document.
@@ -91,7 +91,7 @@ Witness instant changes in page organization reflected within the PDF Viewer. Si
 
 Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
 
-## API's supported
+## APIs supported
 
 **enablePageOrganizer:** This API enables or disables the page organizer feature in the PDF Viewer. By default, it is set to `true`, indicating that the page organizer is enabled.
 

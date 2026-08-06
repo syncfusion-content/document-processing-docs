@@ -38,7 +38,7 @@ The primary toolbar includes the following options:
 
 ## Show/Hide the built-in toolbar
 
-The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this by using the following two ways.,
+The PDF Viewer has an option to show or hide the complete built-in toolbar. You can achieve this in two ways:
 
 * **Show/Hide toolbar using enableToolbar API as in the following code snippet.**
 
@@ -100,7 +100,7 @@ The PDF Viewer has an option to show or hide these grouped items in the built-in
 ```html
 <button id="viewer" onclick="enableToolbarItem()">EnableToolbarItem</button>
 <div style="width:100%;height:600px">
-     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings{ ShowTooltip = true, ToolbarItem = "OpenOption" ).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableToolbar(false).ToolbarSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings{ ShowTooltip = true, ToolbarItems = "OpenOption" }).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 <script>
     function enableToolbarItem() {
@@ -165,11 +165,11 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
         var toolItem4 = {
             type: 'Input',
             tooltipText: 'Text',
-            align: 'Right',
+            align: 'Left',
             cssClass: 'find',
             id: 'textbox',
             template: new ej.inputs.TextBox({ width: 125, placeholder: 'Type Here', created: onCreate })
-        }; align: 'left'
+        };
         function onCreate() {
             this.addIcon('prepend', 'e-icons e-search');
         }
@@ -276,11 +276,11 @@ N> When customizing toolbar items, you have the flexibility to include either ic
 
 ## Custom Toolbar
 
-The PDF Viewer provides API for user interactions options provided in it's built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
+The PDF Viewer provides API for user interactions options provided in its built-in toolbar. Using this we can create our own User Interface for toolbar actions in application level by hiding the built-in toolbar. The following steps are used to create the custom toolbar for PDF Viewer,
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** Add EJ2 Toolbar for perform primary actions like Open, Previous page, Next page, Go to page,Print and Download using the following code snippet,
+**Step 2:** Add an EJ2 Toolbar to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download using the following code snippet,
 
 ```html
 @using Syncfusion.EJ2.Navigations;

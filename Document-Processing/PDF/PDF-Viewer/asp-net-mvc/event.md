@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Events in ASP.NET MVC PDF Viewer control | Syncfusion
 description: Learn here all about Events in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing

@@ -150,7 +150,7 @@ The following text search methods are available in the PDF Viewer,
 * **Search text** - Searches the target text in the PDF document and highlights the occurrences in the pages.
 * **Search next** - Searches the next occurrence of the searched text from the current occurrence of the PDF Viewer.
 * **Search previous** - Searches the previous occurrence of the searched text from the current occurrence of the PDF Viewer.
-* **Cancel text search** - The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+* **Cancel text search** - The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed.
 
 ![Alt text](./images/search.png)
 
@@ -171,7 +171,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -186,7 +186,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -207,7 +207,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -222,7 +222,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -243,7 +243,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -258,7 +258,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -279,7 +279,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 
@@ -294,7 +294,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 
