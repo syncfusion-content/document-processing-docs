@@ -2,7 +2,7 @@
 layout: post
 title: Collaborative Editing in DOCX Editor Component | Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn about collaborative editing in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
