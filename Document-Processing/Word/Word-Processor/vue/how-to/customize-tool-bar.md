@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the toolbar in the Vue DOCX Editor component | Syncfusion
-description: Learn here all about how to customize the toolbar in the Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to customize the toolbar in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Customize the toolbar
 platform: document-processing
 documentation: ug
