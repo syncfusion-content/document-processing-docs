@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Import in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Import in Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Import in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Import
 documentation: ug
 ---
 
 
-# Importing in the ASP.NET MVC Document Editor Component
+# Importing in the ASP.NET MVC Document Editor component
 
 In [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 

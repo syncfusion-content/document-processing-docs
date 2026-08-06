@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show or Hide a Spinner in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about how to show or hide a spinner while opening a document in the Syncfusion ASP.NET MVC DOCX Editor component
+description: Learn here all about how to show or hide a spinner while opening a document in the Syncfusion ASP.NET MVC Document Editor component
 platform: document-processing
 control: Show or Hide a Spinner
 documentation: ug
