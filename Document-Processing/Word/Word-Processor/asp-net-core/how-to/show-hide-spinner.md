@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show Hide Spinner in DOCX Editor Component | Syncfusion
-description: Learn here all about how to show hide spinner in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to show hide spinner in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show Hide Spinner
 documentation: ug

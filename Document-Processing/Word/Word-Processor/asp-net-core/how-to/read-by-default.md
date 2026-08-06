@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Read By Default in DOCX Editor Component | Syncfusion
-description: Learn here all about read by default in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about read by default in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read By Default
 documentation: ug

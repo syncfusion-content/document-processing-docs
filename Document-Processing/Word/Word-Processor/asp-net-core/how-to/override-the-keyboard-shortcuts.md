@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Override The Keyboard Shortcuts in DOCX Editor | Syncfusion
-description: Learn here all about how to override the keyboard shortcuts in the Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to override the keyboard shortcuts in the Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override The Keyboard Shortcuts
 documentation: ug
