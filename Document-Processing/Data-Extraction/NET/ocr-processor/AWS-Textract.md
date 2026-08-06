@@ -38,6 +38,7 @@ Include the following code in the **Program.cs** file to register the license ke
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
+
 using Syncfusion.Licensing;
 
 // Register Syncfusion license at application startup
