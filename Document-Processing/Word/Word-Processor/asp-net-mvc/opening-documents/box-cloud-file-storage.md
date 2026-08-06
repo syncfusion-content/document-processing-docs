@@ -67,7 +67,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 
 public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string> jsonObject)
 {
-    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+    if (jsonObject == null || !jsonObject.ContainsKey("documentName"))
     {
       return null;
     }
