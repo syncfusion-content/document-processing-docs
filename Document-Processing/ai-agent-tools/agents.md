@@ -11,8 +11,6 @@ documentation: ug
 
 Give any AI agent full control over Word, Excel, PDF, and PowerPoint - no document-processing code required. This page shows the **outcomes an AI agent can deliver** when it has the [Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) in its toolbox.
 
-> Looking for the API reference? See [Overview](./overview), [Tools](./tools), or [Getting Started](./getting-started).
-
 ## The Agent Loop
 
 Every workflow on this page follows the same loop:
@@ -121,17 +119,11 @@ The use cases above run on a small set of guarantees. These are the affordances 
 
 For a complete reference of every tool class, see the [Tools](./tools) page. For install and configuration, see [Getting Started](./getting-started).
 
-## See It in Action
+## See Also
 
-Looking for ready-to-use prompts? See [Example Prompts](./example-prompts).
-End-to-end scenarios? See [Example Use Cases](./example-use-cases).
-
-
-## Related Resources
-
-- [Overview](./overview) - what the library is and how it works
-- [Tools](./tools) - full reference for every agent tool class
-- [Getting Started](./getting-started) - install, configure, and run your first agent
-- [Customization](./customization) - extend tools or register custom storage
-- [Example Prompts](./example-prompts) - ready-to-use prompts to try
-- [Example Use Cases](./example-use-cases) - end-to-end scenarios
+- [Overview](./overview)
+- [Tools](./tools)
+- [Getting Started](./getting-started)
+- [Customization](./customization)
+- [Example Prompts](./example-prompts)
+- [Example Use Cases](./example-use-cases)
