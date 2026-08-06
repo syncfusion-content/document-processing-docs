@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Global local in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Global local in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Global local 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue DOCX Editor component
+# Global local in Vue Document Editor component
 
 ## Localization
 
-The Localization library allows you to localize the default text content of the DOCX Editor. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that you can change to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and the translation object.
+The Localization library allows you to localize the default text content of the Document Editor. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that you can change to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and the translation object.
 
 Note: Please refer to the [Locale](https://github.com/syncfusion/ej2-locale) repository.
 
-## DOCX Editor
+## Document Editor
 
-The table below lists the locale keywords used by the DOCX Editor (for find & replace, the context menu, and the built-in dialogs) and their corresponding localized text values.
+The table below lists the locale keywords used by the Document Editor (for find & replace, the context menu, and the built-in dialogs) and their corresponding localized text values.
 
 Locale keywords | Text
 ---|---
@@ -363,9 +363,9 @@ Reject Changes | Reject Changes
 User | User
 View | View
 
-## DOCX Editor Container
+## Document Editor Container
 
-The table below lists locale keywords localized by the DOCX Editor Container (the toolbar, status bar, and the HTML/rich-text rendering surface). The following list of properties and their values are used in the DOCX Editor container.
+The table below lists locale keywords localized by the Document Editor Container (the toolbar, status bar, and the HTML/rich-text rendering surface). The following list of properties and their values are used in the Document Editor container.
 
 Locale keywords | Text
 ---|---

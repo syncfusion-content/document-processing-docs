@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Fields in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Fields in Syncfusion Vue DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Fields in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in Vue DOCX Editor component
+# Fields in Vue Document Editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
@@ -24,11 +24,11 @@ let fieldResult: string = '«First Name»';
 this.$refs.documenteditor.ej2Instances.editor.insertField(fieldCode, fieldResult);
 ```
 
->Note: DOCX Editor does not validate or process the field code and field result. It simply inserts the field with the specified field information.
+>Note: Document Editor does not validate or process the field code and field result. It simply inserts the field with the specified field information.
 
 ## Update fields
 
-DOCX Editor provides support for updating bookmark cross-reference fields. The following example code illustrates how to update bookmark cross-reference fields.
+Document Editor provides support for updating bookmark cross-reference fields. The following example code illustrates how to update bookmark cross-reference fields.
 
 ```ts
 //Update all the bookmark cross-reference fields in the document.
@@ -39,7 +39,7 @@ Bookmark cross-reference fields can be updated through UI by using the update fi
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following types of fields are automatically updated in DOCX Editor, independent of the bookmark cross-reference update above:
+The following types of fields are automatically updated in Document Editor, independent of the bookmark cross-reference update above:
 
 * NUMPAGES
 * SECTION

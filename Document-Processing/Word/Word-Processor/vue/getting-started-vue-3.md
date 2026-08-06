@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with Vue 3 DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Vue 3 application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+description: Learn how to create a Document Editor in a Vue 3 application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
 control: Getting started vue 3
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue DOCX Editor (Vue 3)
+# Getting Started with Vue Document Editor (Vue 3)
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -77,11 +77,11 @@ cd documenteditor-app
 yarn install
 ```
 
-## Install the DOCX Editor packages
+## Install the Document Editor packages
 
-The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
+The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor).
 
-To install the DOCX Editor component, use the following command:
+To install the Document Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-documenteditor --save
@@ -89,14 +89,14 @@ npm install @syncfusion/ej2-vue-documenteditor --save
 
 ## Register a Syncfusion License Key
 
-Before initializing the Vue DOCX Editor control, generate a Syncfusion license key and register it in your application.
+Before initializing the Vue Document Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in Vue](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#vuejs)
 
 ## Import the required CSS styles
 
-Add the following DOCX Editor and dependent component style definitions to the `src/style.css` file.
+Add the following Document Editor and dependent component style definitions to the `src/style.css` file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/style.css" %}
@@ -116,9 +116,9 @@ Add the following DOCX Editor and dependent component style definitions to the `
 
 N> Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-## Initialize the DOCX Editor
+## Initialize the Document Editor
 
-Import and register the DOCX Editor component in the `<script>` section of `src/App.vue`. If you use the `Composition API`, add the `setup` attribute to the `<script>` tag. Then, define the component in the `<template>` section.
+Import and register the Document Editor component in the `<script>` section of `src/App.vue`. If you use the `Composition API`, add the `setup` attribute to the `<script>` tag. Then, define the component in the `<template>` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -185,15 +185,15 @@ Run the application using the following command:
 npm run dev
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Vue DOCX Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+After the application starts, open the localhost URL shown in the terminal. The Vue Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
 
-![Output of Vue 3 DOCX Editor](./images/vue_3_getting_started.png)
+![Output of Vue 3 Document Editor](./images/vue_3_getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
 
 ## Server-side dependencies
 
-The DOCX Editor component requires server-side interactions for the following operations:
+The Document Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
@@ -205,7 +205,7 @@ N> If you do not require the above functionalities, you can deploy the component
 
 For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
 
-N> Looking for the full Vue DOCX Editor component overview, features, pricing, and documentation? Visit the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) page.
+N> Looking for the full Vue Document Editor component overview, features, pricing, and documentation? Visit the [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) page.
 
 ## See also
 
