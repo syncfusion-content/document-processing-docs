@@ -18,8 +18,7 @@ documentation: ug
 {% highlight cshtml tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-core/web-layout/tagHelper %}
 {% endhighlight %}
-{% highlight c# tabtitle="Web-layout.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endtabs %}
 
 ### Online demo
 
