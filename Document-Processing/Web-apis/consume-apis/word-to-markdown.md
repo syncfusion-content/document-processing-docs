@@ -12,7 +12,7 @@ The API is useful for documentation websites, knowledge bases, content managemen
 
 ## Convert Word to Markdown
 
-To convert a Word document to Markdown format, send a request to the /v1/conversion/word-to-md endpoint with the Word document and conversion settings in the request body.
+To convert a Word document to Markdown format, send a request to the /v1/conversion/word-to-markdown endpoint with the Word document and conversion settings in the request body.
 
 {% tabs %}
 
