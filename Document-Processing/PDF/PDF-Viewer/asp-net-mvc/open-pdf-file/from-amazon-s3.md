@@ -4,11 +4,10 @@ title: Open PDF from AWS S3 in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to load PDFs from AWS S3 in the Syncfusion ASP.NET MVC PDF Viewer component using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF from AWS S3
+# Open PDF from AWS S3 in ASP.NET MVC
 
 The ASP.NET MVC PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 

@@ -4,7 +4,6 @@ title: Open PDF from Box cloud storage in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to load PDFs from Box cloud storage in the Syncfusion ASP.NET MVC PDF Viewer component using a server-backed approach.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

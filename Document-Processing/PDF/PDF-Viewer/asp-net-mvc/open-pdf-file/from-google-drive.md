@@ -4,7 +4,6 @@ title: Open PDF from Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to load PDFs from Google Drive in the Syncfusion ASP.NET MVC PDF Viewer component using a server-backed approach.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

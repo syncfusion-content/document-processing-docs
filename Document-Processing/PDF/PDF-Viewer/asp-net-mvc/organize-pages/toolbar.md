@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in ASP.NET MVC PDF Viewer control | Syncfusion
+title: Organize Page Toolbar Customization in MVC PDF Viewer | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
