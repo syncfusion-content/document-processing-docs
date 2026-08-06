@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change Document View in DOCX Editor Component | Syncfusion
-description: Learn here all about how to change document view in Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+title: Change Document View in ASP.NET Core DOCX Editor | Syncfusion
+description: Learn here all about how to change document view in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change Document View
 documentation: ug
 ---
 
 
-# Change document view in ASP.NET Core DOCX Editor Component
+# Change document view in ASP.NET Core Document Editor Component
 
 ## How to change the document view in DocumentEditor component
 
