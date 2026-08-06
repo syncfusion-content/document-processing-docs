@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and Replace in Blazor Document Editor Component
 
-In long documents, you may need to search for specific text and replace it with the desired content. This [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides a built-in navigation pane, like Microsoft Word, on the left of the editor.
+In long documents, you may need to search for specific text and replace it with the desired content. This [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides a built-in navigation pane, like Microsoft Word, on the left of the editor.
 
 The search box at the top of the navigation pane can be used to find all instances of a specific word or phrase. Entering a word in the search box and performing a search highlights all occurrences in the document, which are then displayed in the pane. Clicking a search result moves the cursor directly to that location in the document.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Document Editor in Blazor WASM
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through creating a Document Editor in a Blazor WebAssembly (WASM) application.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through creating a Document Editor in a Blazor WebAssembly (WASM) application.
 
 ## Prerequisites
 

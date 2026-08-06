@@ -9,7 +9,7 @@ documentation: ug
 
 # Form Fields in Blazor Document Editor Component
 
-The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
