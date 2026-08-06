@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Collaborative Editing in Vue DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in Vue DOCX Editor to allow multiple users to work on a document simultaneously.
+title: Collaborative Editing in Vue using ASP.NET Core | Syncfusion
+description: Learn how to enable collaborative editing in Vue Document Editor to allow multiple users to work on a document simultaneously.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Vue DOCX Editor
+# Collaborative editing in Vue with Redis in ASP.NET Core
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in DOCX Editor.
+The following are needed to enable collaborative editing in Document Editor.
 
 - SignalR
 - Redis
@@ -113,7 +113,7 @@ The configuration and storage size of the Redis cache can be adjusted based on t
 
 Collaborative editing is built using three main components:
 
-### Client (Vue DOCX Editor)
+### Client (Vue Document Editor)
 
 - Captures user edits in the document
 
@@ -139,15 +139,15 @@ Collaborative editing is built using three main components:
 
 ## Integrate collaborative editing in client side
 
-### Step 1: Integrate DOCX Editor in Vue sample
+### Step 1: Integrate Document Editor in Vue sample
 
-Refer to the following documentation to get started with the [Vue DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/vue/getting-started)
+Refer to the following documentation to get started with the [Vue Document Editor](https://help.syncfusion.com/document-processing/word/word-processor/vue/getting-started)
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the DOCX Editor.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
 
-The following code snippet demonstrates how to enable collaborative editing in the DOCX Editor.
+The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
 
 ```javaScript
 
@@ -183,7 +183,7 @@ export default {
     onCreated() {
     // Inject collaborative editing module.
       DocumentEditor.Inject(CollaborativeEditingHandler);
-      // Enable collaborative editing in DOCX Editor.
+      // Enable collaborative editing in Document Editor.
       this.$refs.doceditcontainer.ej2Instances.documentEditor.enableCollaborativeEditing = true;
       this.initializeSignalR();
       this.loadDocumentFromServer();
@@ -198,7 +198,7 @@ export default {
 
 To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in the Vue application. 
 
-The following code snippet demonstrates how to configure SignalR in the DOCX Editor.
+The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
 ```javaScript
 import { HubConnectionBuilder, HttpTransportType, HubConnectionState } from '@microsoft/signalr';
@@ -313,7 +313,7 @@ methods: {
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the DOCX Editor.
+The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
 
 ```javaScript
 methods: {
@@ -327,7 +327,7 @@ methods: {
 ```
 ## Integrate collaborative editing in server side
 
-### Step 1: Create the DOCX Editor web service project
+### Step 1: Create the Document Editor web service project
 
 Create an ASP.NET Core web service to handle server-side operations.
 
