@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Section Formatting in Blazor Document Editor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
