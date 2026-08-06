@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs about SFDT in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET MVC DOCX Editor component, including its structure and usage.
+description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET MVC Document Editor component, including its structure and usage.
 control: SFDT format
 platform: document-processing
 documentation: ug
