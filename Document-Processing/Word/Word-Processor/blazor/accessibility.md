@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Document Editor Component
 
-The [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) used to evaluate accessibility compliance.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) used to evaluate accessibility compliance.
 
 The accessibility compliance for the Blazor Document Editor component is outlined below.
 
@@ -139,7 +139,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |<kbd>Backspace</kbd> | <kbd>Backspace</kbd> | Deletes the character to the left of the cursor.|
 |<kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the character to the right of the cursor.|
 |<kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undoes the last performed action.|
-|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redoes the last undone action.|
+|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redoes the last undo action.|
 
 ### Insert special characters
 
@@ -156,7 +156,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |<kbd>Ctrl</kbd> + <kbd>D</kbd> | <kbd>⌘</kbd> + <kbd>D</kbd> | Opens the font dialog.|
 |<kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog.|
 
-Refer to the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to learn how to render and configure the Document Editor.
+Refer to the Blazor Document Editor feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to learn how to render and configure the Document Editor.
 
 ## Ensuring accessibility
 
