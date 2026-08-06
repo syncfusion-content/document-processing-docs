@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrieve Document and Bookmark Text in DOCX Editor | Syncfusion 
-description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion ASP.NET MVC DOCX Editor Component
+description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Retrieve the Whole Document and Bookmark Content as Text
 documentation: ug

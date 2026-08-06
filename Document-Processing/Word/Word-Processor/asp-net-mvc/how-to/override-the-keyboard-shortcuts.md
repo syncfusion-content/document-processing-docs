@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Override Keyboard Shortcuts in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to override the keyboard shortcuts in the Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn how to override the keyboard shortcuts in the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Override the Keyboard Shortcuts
 documentation: ug

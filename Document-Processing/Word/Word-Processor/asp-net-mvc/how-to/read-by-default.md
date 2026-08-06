@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Read by Default in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about read by default in the Syncfusion ASP.NET MVC DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about read by default in the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Read by Default
 documentation: ug
 ---
 
 
-# How to open a document in read-only mode by default in Document Editor
+# How to open document in read-only mode by default in Document Editor
 
 This article explains how to open a document in read-only mode by default in Document Editor & Document Editor Container.
 

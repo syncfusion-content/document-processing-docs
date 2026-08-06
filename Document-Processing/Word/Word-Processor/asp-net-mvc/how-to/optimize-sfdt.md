@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Optimize the SFDT file in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to optimize the SFDT file in the Syncfusion ASP.NET MVC DOCX Editor component to reduce the file size with backward compatibility support.
+description: Learn how to optimize the SFDT file in the Syncfusion ASP.NET MVC Document Editor component to reduce the file size with backward compatibility support.
 platform: document-processing
 control: Optimize the SFDT file
 documentation: ug
