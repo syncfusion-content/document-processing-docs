@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Default Format In Document Editor in DOCX Editor | Syncfusion
-description: Learn here all about how to set default format in Document Editor in Syncfusion DOCX Editor component of Syncfusion and more.
+description: Learn here all about how to set default format in Document Editor in Syncfusion Document Editor component of Syncfusion and more.
 platform: document-processing
 control: Set Default Format In Document Editor
 documentation: ug

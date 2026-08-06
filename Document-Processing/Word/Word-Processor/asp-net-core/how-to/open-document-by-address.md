@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Document By Address in DOCX Editor | Syncfusion
-description: Learn here all about how to open a document by address in the Syncfusion DOCX Editor component of Syncfusion Essential JS 2 and more.
+description: Learn here all about how to open a document by address in the Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open Document By Address
 documentation: ug

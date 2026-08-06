@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Optimize the SFDT file in DOCX Editor | Syncfusion
-description: Learn here all about how to optimize the SFDT file in the Syncfusion DOCX Editor component of Syncfusion and more.
+description: Learn here all about how to optimize the SFDT file in the Syncfusion Document Editor component of Syncfusion and more.
 platform: document-processing
 control: Optimize the SFDT file
 documentation: ug
 ---
 
-# How to optimize the SFDT file in ASP.NET Core DOCX Editor
+# How to optimize the SFDT file in ASP.NET Core Document Editor
 
 Starting from version v21.1.x, the SFDT file generated in the Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 

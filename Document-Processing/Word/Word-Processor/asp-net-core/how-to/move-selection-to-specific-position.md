@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Move selection to a specific position in DOCX Editor | Syncfusion
-description: Learn how to move the selection to a specific position in a document using the Syncfusion DOCX Editor component.
+description: Learn how to move the selection to a specific position in a document using the Syncfusion Document Editor component.
 platform: document-processing
 control: Move The Selection To Specific Position
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert text or image in a table in DOCX Editor | Syncfusion
-description: Learn how to insert text or an image in a table programmatically in the Syncfusion DOCX Editor component.
+description: Learn how to insert text or an image in a table programmatically in the Syncfusion Document Editor component.
 platform: document-processing
 control: Insert Text Or Image In Table
 documentation: ug
