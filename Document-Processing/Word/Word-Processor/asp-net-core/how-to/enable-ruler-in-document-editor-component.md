@@ -1,17 +1,19 @@
 ---
 layout: post
-title: how to enable ruler in Document Editor Component
-description: Learn how to enable ruler in Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to enable ruler in Syncfusion DOCX Editor Component
+description: Learn how to enable the ruler in the Syncfusion Document Editor component to set margins, tab stops, and indentations for consistent formatting and more.
 platform: document-processing
 control: Enable Ruler
 documentation: ug
 ---
 
+# How to enable ruler in Document Editor component
+
 ## How to enable ruler in ASP.NET Core Document Editor component
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
+Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
-The following example illustrates how to enable ruler in Document Editor
+The following example illustrates how to enable the ruler in the Document Editor.
 
 
 {% tabs %}
@@ -27,9 +29,9 @@ The following example illustrates how to enable ruler in Document Editor
 
 ## How to enable ruler in Document Editor Container component
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
+Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the Document Editor Container.
 
-The following example illustrates how to enable ruler in Document Editor Container.
+The following example illustrates how to enable the ruler in the Document Editor Container.
 
 
 {% tabs %}
