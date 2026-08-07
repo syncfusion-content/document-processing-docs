@@ -9,9 +9,9 @@ documentation: UG
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the [WField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html) and [WFieldMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WFieldMark.html) instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 
-To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#)
+To learn various types of Microsoft Word supported fields and their syntax, refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#)
 
-From v16.1.0.24, the entire field code is included in Document Object Model(DOM). Hence, adding a field will automatically include the following elements in DOM:
+From v16.1.0.24, the entire field code is included in Document Object Model (DOM). Hence, adding a field will automatically include the following elements in DOM:
 
 1. [WField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html): Represents the starting of a Field.
 
@@ -505,7 +505,7 @@ paragraph = section.AddParagraph() as WParagraph;
 //Gets the collection of bookmark start in the word document
 List<Entity> items = document.GetCrossReferenceItems(ReferenceType.Bookmark);
 paragraph.AppendText("Bookmark Cross Reference starts here ");
-//Appends the cross reference for bookmark “Title” with ContentText as reference kind
+//Appends the cross reference for bookmark "Title" with ContentText as reference kind
 paragraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
 //Updates the document Fields
 document.UpdateDocumentFields();
@@ -533,7 +533,7 @@ paragraph = section.AddParagraph() as WParagraph;
 //Gets the collection of bookmark start in the word document
 List<Entity> items = document.GetCrossReferenceItems(ReferenceType.Bookmark);
 paragraph.AppendText("Bookmark Cross Reference starts here ");
-//Appends the cross reference for bookmark “Title” with ContentText as reference kind
+//Appends the cross reference for bookmark "Title" with ContentText as reference kind
 paragraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items[0], true, false, false, string.Empty);
 //Updates the document Fields
 document.UpdateDocumentFields();
@@ -558,7 +558,7 @@ paragraph = TryCast(section.AddParagraph(), WParagraph)
 'Gets the collection of bookmark start in the word document
 Dim items As List(Of Entity) = document.GetCrossReferenceItems(ReferenceType.Bookmark)
 paragraph.AppendText("Bookmark Cross Reference starts here ")
-'Appends the cross reference for bookmark “Title” with ContentText as reference kind
+'Appends the cross reference for bookmark "Title" with ContentText as reference kind
 paragraph.AppendCrossReference(ReferenceType.Bookmark, ReferenceKind.ContentText, items(0), True, False, False, String.Empty)
 'Updates the document Fields
 document.UpdateDocumentFields()
@@ -646,14 +646,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>  XE (Index Entry) fields cannot be unlinked.
 
 ## Sequence Field
-You can use the Sequence (SEQ) field to automatically numbers the chapters, tables, figures, and other items in a Word document. When you add, delete, or move an item in Word document (along with SEQ fields), you can update the remaining SEQ fields with a new sequence.
+You can use the Sequence (SEQ) field to automatically number the chapters, tables, figures, and other items in a Word document. When you add, delete, or move an item in Word document (along with SEQ fields), you can update the remaining SEQ fields with a new sequence.
 
 You can format the SEQ field using below switches.
 
 \c --  Repeats the closest preceding sequence number.
 \h --  Hides the field result unless a general-formatting-switch is also present.
 \n --  Inserts the next sequence number for the specified items. This is the default switch.
-\r  -- Resets the sequence number to the number following “r”.
+\r --  Resets the sequence number to the number following "r".
 \s -- Resets the sequence number at the heading level following the "s".
 
 ### Apply Number format
@@ -841,7 +841,7 @@ seqField.BookmarkName = "BkmkPurchase";
 paragraph = document.LastSection.Paragraphs[5] as WParagraph;
 seqField = paragraph.ChildEntities[1] as WSeqField;
 //Adds bookmark reference to the sequence field
-seqField.BookmarkName = "BkkmUnitPrice";
+seqField.BookmarkName = "BkmkUnitPrice";
 //Updates the document fields
 document.UpdateDocumentFields();
 //Saves the Word document to MemoryStream
@@ -852,7 +852,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an exixting word document
+//Opens an existing word document
 WordDocument document = new WordDocument("Template.docx");
 //Accesses sequence field in the document
 WParagraph paragraph = document.LastSection.Body.ChildEntities[4] as WParagraph;
@@ -863,7 +863,7 @@ seqField.BookmarkName = "BkmkPurchase";
 paragraph = document.LastSection.Paragraphs[5] as WParagraph;
 seqField = paragraph.ChildEntities[1] as WSeqField;
 //Adds bookmark reference to the sequence field
-seqField.BookmarkName = "BkkmUnitPrice";
+seqField.BookmarkName = "BkmkUnitPrice";
 //Updates the document fields
 document.UpdateDocumentFields();
 //Saves and closes the Word document
@@ -872,7 +872,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an exixting word document
+'Opens an existing word document
 Dim document As WordDocument = New WordDocument("Template.docx")
 'Accesses sequence field in the document
 Dim paragraph As WParagraph = CType(document.LastSection.Body.ChildEntities(4), WParagraph)
@@ -883,7 +883,7 @@ seqField.BookmarkName = "BkmkPurchase"
 paragraph = CType(document.LastSection.Paragraphs(5), WParagraph)
 seqField = CType(paragraph.ChildEntities(1), WSeqField)
 'Adds bookmark reference to the sequence field
-seqField.BookmarkName = "BkkmUnitPrice"
+seqField.BookmarkName = "BkmkUnitPrice"
 'Updates the document fields
 document.UpdateDocumentFields()
 'Saves and closes the Word document
@@ -900,7 +900,7 @@ By executing the above code example, it generates output Word document as follow
 ![Output document of Bookmark referred in SEQ field](workingwithfields_images/file-formats-word-seql-field-bookmark-output.png)
 
 ### Reset numbering 
-You can reset the numbering for sequence field (\r) using [ResetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSeqField.html#Syncfusion_DocIO_DLS_WSeqField_ResetNumber) property and reset the numbering based on heading level (\s) in the Word document using [ResetHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSeqField.html#Syncfusion_DocIO_DLS_WSeqField_ResetHeadingLevel) property. 
+You can reset the numbering for sequence field (\r) using [ResetNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSeqField.html#Syncfusion_DocIO_DLS_WSeqField_ResetNumber) property and reset the numbering based on the heading level (\s) in the Word document using [ResetHeadingLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSeqField.html#Syncfusion_DocIO_DLS_WSeqField_ResetHeadingLevel) property. 
 
 The following code example shows how to reset the numbering for sequence field.
 
@@ -1534,7 +1534,7 @@ WordDocument document = CreateDocument();
 //Accesses sequence field in the document
 WTable table = document.LastSection.Body.ChildEntities[1] as WTable;
 WSeqField field = ((table[2, 1].ChildEntities[0] as WParagraph).ChildEntities[0] as WSeqField);
-//Enables a flag to to hide the sequence field result 
+//Enables a flag to hide the sequence field result 
 field.HideResult = true;
 //Accesses sequence field in the document
 field = ((table[4, 1].ChildEntities[0] as WParagraph).ChildEntities[0] as WSeqField);
@@ -1555,7 +1555,7 @@ WordDocument document = CreateDocument();
 //Accesses sequence field in the document
 WTable table = document.LastSection.Body.ChildEntities[1] as WTable;
 WSeqField field = ((table[2, 1].ChildEntities[0] as WParagraph).ChildEntities[0] as WSeqField);
-//Enables a flag to to hide the sequence field result 
+//Enables a flag to hide the sequence field result 
 field.HideResult = true;
 //Accesses sequence field in the document
 field = ((table[4, 1].ChildEntities[0] as WParagraph).ChildEntities[0] as WSeqField);
@@ -1574,7 +1574,7 @@ Dim document As WordDocument = CreateDocument()
 'Accesses sequence field in the document
 Dim table As WTable = CType(document.LastSection.Body.ChildEntities(1), WTable)
 Dim field As WSeqField = CType(CType(table(2, 1).ChildEntities(0), WParagraph).ChildEntities(0), WSeqField)
-'Enables a flag to to hide the sequence field result 
+'Enables a flag to hide the sequence field result 
 field.HideResult = True
 'Accesses sequence field in the document
 field = CType(CType(table(4, 1).ChildEntities(0), WParagraph).ChildEntities(0), WSeqField)
@@ -1779,7 +1779,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an exixting word document
+//Opens an existing word document
 WordDocument document = new WordDocument("Template.docx");
 //Accesses sequence field in the document
 WParagraph paragraph = document.LastSection.Body.ChildEntities[4] as WParagraph;
@@ -1794,7 +1794,7 @@ document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an exixting word document
+'Opens an existing word document
 Dim document As WordDocument = New WordDocument("Template.docx")
 
 'Accesses sequence field in the document

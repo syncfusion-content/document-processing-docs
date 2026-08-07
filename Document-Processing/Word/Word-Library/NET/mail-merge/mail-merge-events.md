@@ -8,15 +8,15 @@ documentation: UG
 
 # Event support for Mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup>&reg;</sup> DocIO during Mail merge process:
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides event support to customize the document contents and merge image data during the Mail merge process. The following events are supported by Syncfusion<sup>&reg;</sup> DocIO during Mail merge process:
 
-* [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html)- occurs when a **Mail merge field** except image Mail merge field is encountered.
+* [MergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeFieldEventHandler.html) — occurs when a **Mail merge field** except image Mail merge field is encountered.
 
-* [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html)- occurs when an **image Mail merge field** is encountered.
+* [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) — occurs when an **image Mail merge field** is encountered.
 
-* [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html)- occurs when an **unmerged field** is encountered.
+* [BeforeClearField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearFieldEventHandler.html) — occurs when an **unmerged field** is encountered.
 
-* [BeforeClearGroupField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html)- occurs when an **unmerged group field** is encountered.
+* [BeforeClearGroupField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BeforeClearGroupFieldEventHandler.html) — occurs when an **unmerged group field** is encountered.
 
 ## MergeField Event
 
@@ -106,8 +106,8 @@ End Sub
 
 {% endtabs %}
 
-N>  1. While executing mail merge, DocIO internally uses a copy of a particular region for populating the contents. Sometimes, unexpected problems may arise due to inserting multiple body items into the region through the mail merge process. So, to insert multiple body items using the merge field event handler, you are recommended to use this [approach](https://www.syncfusion.com/kb/11701/how-to-replace-merge-field-with-html-string-using-mail-merge) at your side.
-N>  2. The [ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method is not supported on the UWP platform.
+N>  1. While executing mail merge, DocIO internally uses a copy of a particular region for populating the contents. Sometimes, unexpected problems may arise due to inserting multiple body items into the region through the mail merge process. So, to insert multiple body items using the merge field event handler, we recommend using this [approach](https://www.syncfusion.com/kb/11701/how-to-replace-merge-field-with-html-string-using-mail-merge).
+N>  2. The [ExecuteGroup(DataTable)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method is not supported on the UWP platform. The cross-platform sample above is not valid for UWP; use an alternative data-binding approach on UWP.
 
 The following code example shows GetDataTable method which is used to get data for mail merge.
 
@@ -170,7 +170,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can format the merged image like resizing the image and more during mail merge process using the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) Event. 
 
-N> The [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event triggers only for image merge fields. Ensure you have a valid image merge field in the template document, following the syntax: **{ MERGEFIELD Image:logo }**.
+N> The [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event triggers only for image merge fields. Ensure you have a valid image merge field in the template document, following the syntax: **{ MERGEFIELD Image:Logo }**.
 
 The following code example shows how to use the [MergeImageField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MergeImageFieldEventHandler.html) event during Mail merge process.
 
@@ -183,9 +183,9 @@ WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 //Uses the mail merge events handler for image fields
 document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_ProductImage);
 //Specifies the field names and field values
-string[] fieldNames = new string[] { "Logo"};
-string[] fieldValues = new string[] { "Logo.png"};
-//Executes the mail merge with groups
+string[] fieldNames = new string[] { "Logo" };
+string[] fieldValues = new string[] { "Logo.png" };
+//Executes the mail merge
 document.MailMerge.Execute(fieldNames, fieldValues);
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
@@ -200,9 +200,9 @@ WordDocument document = new WordDocument("Template.docx");
 //Uses the mail merge events handler for image fields
 document.MailMerge.MergeImageField += new MergeImageFieldEventHandler(MergeField_ProductImage);
 //Specifies the field names and field values
-string[] fieldNames = new string[] { "Logo"};
-string[] fieldValues = new string[] { "Logo.png"};
-//Executes the mail merge with groups
+string[] fieldNames = new string[] { "Logo" };
+string[] fieldValues = new string[] { "Logo.png" };
+//Executes the mail merge
 document.MailMerge.Execute(fieldNames, fieldValues);
 //Saves and closes WordDocument instance
 document.Save("Sample.docx");
@@ -217,7 +217,7 @@ AddHandler document.MailMerge.MergeImageField, AddressOf MergeField_ProductImage
 'Specifies the field names and field values
 Dim fieldNames As String() = New String() {"Logo"}
 Dim fieldValues As String() = New String() {"Logo.png"}
-'Executes the mail merge with groups
+'Executes the mail merge
 document.MailMerge.Execute(fieldNames, fieldValues)
 'Saves and closes WordDocument instance
 document.Save("Sample.docx")
@@ -298,10 +298,10 @@ The following code example shows how to use the [BeforeClearField](https://help.
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Mail-Merge/Event-to-bind-data-for-unmerged-fields/.NET/Event-to-bind-data-for-unmerged-fields/Program.cs" %}
 //Opens the template document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-WordDocument document = new WordDocument(fileStreamPath);
-//Sets “ClearFields” to true to remove empty mail merge fields from document
+WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
+//Sets “ClearFields” to false to keep empty mail merge fields in the document
 document.MailMerge.ClearFields = false;
-//Uses the mail merge event to clear the unmerged field while perform mail merge execution
+//Uses the mail merge event to clear the unmerged field while performing mail merge execution
 document.MailMerge.BeforeClearField += new BeforeClearFieldEventHandler(BeforeClearFieldEvent);
 //Execute mail merge
 document.MailMerge.ExecuteGroup(GetDataTable());
@@ -315,9 +315,9 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens the template document 
 WordDocument document = new WordDocument("Template.docx");
-//Sets “ClearFields” to true to remove empty mail merge fields from document
+//Sets “ClearFields” to false to keep empty mail merge fields in the document
 document.MailMerge.ClearFields = false;
-//Uses the mail merge event to clear the unmerged field while perform mail merge execution
+//Uses the mail merge event to clear the unmerged field while performing mail merge execution
 document.MailMerge.BeforeClearField += new BeforeClearFieldEventHandler(BeforeClearFieldEvent);
 //Execute mail merge
 document.MailMerge.ExecuteGroup(GetDataTable());
@@ -329,10 +329,10 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document 
 Dim document As WordDocument = New WordDocument("Template.docx")
-'Sets “ClearFields” to true to remove empty mail merge fields from document
+'Sets “ClearFields” to false to keep empty mail merge fields in the document
 document.MailMerge.ClearFields = False
-'Uses the mail merge event to clear the unmerged field while perform mail merge execution
-document.MailMerge.BeforeClearField += New BeforeClearFieldEventHandler(AddressOf BeforeClearField)
+'Uses the mail merge event to clear the unmerged field while performing mail merge execution
+AddHandler document.MailMerge.BeforeClearField, AddressOf BeforeClearFieldEvent
 'Execute mail merge
 document.MailMerge.ExecuteGroup(GetDataTable())
 'Saves and closes the WordDocument instance
@@ -559,13 +559,13 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the template document 
 Dim document As WordDocument = New WordDocument("Template.docx")
-'Sets “ClearFields” to true to remove empty mail merge fields from document
+'Sets “ClearFields” to false to keep empty mail merge fields in the document
 document.MailMerge.ClearFields = False
-'Uses the mail merge event to clear the unmerged field while perform mail merge execution
+'Uses the mail merge event to clear the unmerged field while performing mail merge execution
 AddHandler document.MailMerge.BeforeClearGroupField, AddressOf BeforeClearFields
 'Gets the employee details as “IEnumerable” collection
 Dim employeeList As List(Of Employees) = GetEmployees()
-'Creates an instance of MailMergeDataTableby specifying mail merge group name and “IEnumerable” collection
+'Creates an instance of MailMergeDataTable by specifying mail merge group name and “IEnumerable” collection
 Dim dataTable As MailMergeDataTable = New MailMergeDataTable("Employees", employeeList)
 'Performs Mail merge
 document.MailMerge.ExecuteNestedGroup(dataTable)
@@ -589,6 +589,7 @@ private static void BeforeClearFields(object sender, BeforeClearGroupFieldEventA
         string[] groupName = args.GroupName.Split(':');
         if (groupName[groupName.Length - 1] == "Orders")
         {
+            //Gets the field names in the group
             string[] fields = args.FieldNames;
             List<OrderDetails> orderList = GetOrders();
             //Binds the data to the unmerged fields in group as alternative values
@@ -626,16 +627,16 @@ private static void BeforeClearFields(object sender, BeforeClearGroupFieldEventA
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub BeforeClearFields(ByVal sender As Object, ByVal args As BeforeClearGroupFieldEventArgs)
     If Not args.HasMappedGroupInDataSource Then
-        ‘Gets the Current unmerged group name from the event argument
+        'Gets the Current unmerged group name from the event argument
         Dim groupName As String() = args.GroupName.Split(":"c)
         If groupName(groupName.Length - 1) = "Orders" Then
             'Gets the field names in the group
             Dim fields As String() = args.FieldNames
             Dim orderList As List(Of OrderDetails) = GetOrders()
-            ‘Binds the data to the unmerged fields in group as alternative values
+            'Binds the data to the unmerged fields in group as alternative values
             args.AlternateValues = orderList
         Else
-            ‘If group value is empty, you can set whether the unmerged merge group field can be clear or not
+            'If group value is empty, you can set whether the unmerged merge group field can be clear or not
             args.ClearGroup = True
         End If
     End If
@@ -698,7 +699,7 @@ public static List<Employees> GetEmployees()
 'Gets orders list
 Private Shared Function GetOrders() As List(Of OrderDetails)
     Dim orders As List(Of OrderDetails) = New List(Of OrderDetails)()
-    orders.Add(New OrderDetails("10835", New DateTime(2015, 1, 5), New DateTime(2015, 1, 12), New DateTime(2015, 1, 21)))
+    orders.Add(New OrderDetails("10952", New DateTime(2015, 2, 5), New DateTime(2015, 2, 12), New DateTime(2015, 2, 21)))
     Return orders
 End Function
 
