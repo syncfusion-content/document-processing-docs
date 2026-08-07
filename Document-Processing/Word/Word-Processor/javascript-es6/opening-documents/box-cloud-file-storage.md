@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in JavaScript (ES6) Document Editor
+# Open document from Box cloud file storage in JavaScript (ES6)
 
 To load a document from Box cloud file storage, you can follow the steps below.
 

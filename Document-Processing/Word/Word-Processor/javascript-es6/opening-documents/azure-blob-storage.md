@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in JavaScript (ES6) Document Editor
+# Open document from Azure Blob Storage in JavaScript (ES6)
 
 To load a document from Azure Blob Storage, follow the steps below.
 
