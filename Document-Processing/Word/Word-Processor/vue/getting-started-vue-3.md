@@ -12,6 +12,100 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
+{% tabcontents %}
+
+{% tabcontent Syncfusion CLI %}
+
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
+## Install the Syncfusion CLI 
+
+Install the Syncfusion CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install -g @syncfusion/syncfusion-cli
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set up the Vite project using Syncfusion CLI
+
+You can create a Vue application with [Vite](https://vite.dev/) using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+sf new syncfusion-vue-app --framework vue --template DOCX-Editor --theme tailwind3
+
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates a Vue application with Vite and configured it with the Syncfusion® Document Editor component. The generated project uses the TypeScript and the Composition API.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+sf
+
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... syncfusion-vue-app
+√ Choose Framework: » Vue
+√ Choose Language: » JavaScript
+√ Choose Template: » DOCX-Editor
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate a Vue application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd syncfusion-vue-app
+npm install
+npm run dev
+
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Output of Vue3 DOCX Editor Using Syncfusion CLI](./images/syncfusion_cli_getting_started.png)
+
+{% endtabcontent %}
+
+{% tabcontent Vite CLI %}
 
 ## Prerequisites
 
@@ -190,6 +284,10 @@ After the application starts, open the localhost URL shown in the terminal. The 
 ![Output of Vue 3 DOCX Editor](./images/vue_3_getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Server-side dependencies
 
