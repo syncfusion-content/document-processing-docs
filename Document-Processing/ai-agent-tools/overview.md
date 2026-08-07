@@ -9,9 +9,6 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools Overview
 
-> **Looking for what AI agents can actually *do* with this?**
-> See the [AI Agents View](./agents) - outcome-first walkthrough for Legal, Finance, HR, Compliance, Invoice Processing, and Autonomous Document agents.
-
 [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 
 You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). To extend or customize, the source is available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
@@ -148,7 +145,7 @@ The table below is an at-a-glance summary of the formats and operations that bac
 
 ## Related Resources
 
-- [AI Agents View](./agents) - what agents can do with this (outcome-first)
+- [AI Agents View](./agents)
 - [Tools](./tools)
 - [Getting Started](./getting-started)
 - [Customization](./customization)
