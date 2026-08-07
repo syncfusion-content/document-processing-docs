@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Mail merge
+# Working with Mail merge in Word Library
 
 Mail merge is a process of merging data from a data source into a Word template document. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) class provides support to bind template document and data source. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) instance is replaced with the actual data retrieved from the data source for the given merge field name in a template document.
 
