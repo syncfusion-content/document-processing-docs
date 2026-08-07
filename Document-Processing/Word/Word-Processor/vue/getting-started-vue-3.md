@@ -49,7 +49,7 @@ sf new syncfusion-vue-app --framework vue --template DOCX-Editor --theme tailwin
 {% endhighlight %}
 {% endtabs %}
 
-In this mode, the project configuration is passed directly in the command. The above command creates a Vue application with Vite and configured it with the Syncfusion® Document Editor component. The generated project uses the TypeScript and the Composition API.
+In this mode, the project configuration is passed directly in the command. The above command creates a Vue application with Vite and configured it with the Syncfusion® DOCX Editor component. The generated project uses the TypeScript and the Composition API.
 
 ### Interactive mode
 
@@ -81,7 +81,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 {% endhighlight %}
 {% endtabs %}
 
-The above selections generate a Vue application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+The above selections generate a Vue application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
 
