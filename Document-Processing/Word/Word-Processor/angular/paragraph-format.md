@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph format in Angular Document editor component | Syncfusion
-description: Learn here all about Paragraph format in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph format in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Paragraph format in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in Angular Document editor component
+# Paragraph format in Angular Document Editor component
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
@@ -23,7 +23,7 @@ this.documentEditor.selection.paragraphFormat.rightIndent= 24;
 
 ## Special indentation
 
-You can define special indent for first line of the paragraph using the following sample code.
+You can define a special indent for the first line of the paragraph using the following sample code.
 
 ```typescript
 this.documentEditor.selection.paragraphFormat.firstLineIndent= 24;
@@ -31,7 +31,7 @@ this.documentEditor.selection.paragraphFormat.firstLineIndent= 24;
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can increase the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```typescript
 this.documentEditor.editor.increaseIndent();
@@ -39,7 +39,7 @@ this.documentEditor.editor.increaseIndent();
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can decrease the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```typescript
 this.documentEditor.editor.decreaseIndent();
@@ -87,27 +87,11 @@ this.documentEditor.selection.paragraphFormat.spaceBeforeAuto = true;
 this.documentEditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
->Note: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
-## Pagination properties
+## Paragraph border
 
-You can enable or disable the following pagination properties for the paragraphs in a Word document.
-
-* Widow/Orphan control - whether the first and last lines of the paragraph are to remain on the same page as the rest of the paragraph when paginating the document.
-* Keep with next - whether the specified paragraph remains on the same page as the paragraph that follows it while paginating the document.
-* Keep lines together - whether all lines in the specified paragraphs remain on the same page while paginating the document.
-
-The following example code illustrates how to enable or disable these pagination properties for the selected paragraphs.
-
-```typescript
-this.documenteditor.selection.paragraphFormat.widowControl = false;
-this.documenteditor.selection.paragraphFormat.keepWithNext = true;
-this.documenteditor.selection.paragraphFormat.keepLinesTogether = true;
-```
-
-## Paragraph Border
-
-You can apply borders to the paragraphs in a Word document. Using borders, decorate the paragraphs to set them apart from other paragraphs in the document.
+You can apply borders to the paragraphs in a Word document. Using borders, you can decorate the paragraphs to set them apart from other paragraphs in the document.
 
 The following example code illustrates how to apply box border for the selected paragraphs.
 
@@ -131,14 +115,29 @@ this.documenteditor.selection.paragraphFormat.borders.top.color = "#000000";
 this.documenteditor.selection.paragraphFormat.borders.bottom.lineStyle = 'Single';
 this.documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3;
 this.documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
-
 ```
 
-Note: At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+
+## Pagination properties
+
+You can enable or disable the following pagination properties for the paragraphs in a Word document.
+
+* Widow/Orphan control - whether the first and last lines of the paragraph are to remain on the same page as the rest of the paragraph when paginating the document.
+* Keep with next - whether the specified paragraph remains on the same page as the paragraph that follows it while paginating the document.
+* Keep lines together - whether all lines in the specified paragraphs remain on the same page while paginating the document.
+
+The following example code illustrates how to enable or disable these pagination properties for the selected paragraphs.
+
+```typescript
+this.documenteditor.selection.paragraphFormat.widowControl = false;
+this.documenteditor.selection.paragraphFormat.keepWithNext = true;
+this.documenteditor.selection.paragraphFormat.keepLinesTogether = true;
+```
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -162,11 +161,11 @@ The following sample demonstrates the paragraph formatting options using a toolb
   
 {% previewsample "/document-processing/samples/document-editor/angular/paragraph-formatting-cs1" %}
 
-## Online Demo
+## Online demo
 
 Explore how to apply paragraph formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/paragraph-formatting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Paragraph dialog](./dialog#paragraph-dialog)
