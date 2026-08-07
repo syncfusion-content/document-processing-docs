@@ -44,7 +44,7 @@ sf new my-app --framework react --type ts --template spreadsheet-editor --theme 
 {% endhighlight %}
 {% endtabs %}
 
-In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component.
+In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor`.
 
 ### Interactive mode
 
@@ -56,7 +56,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor`, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
