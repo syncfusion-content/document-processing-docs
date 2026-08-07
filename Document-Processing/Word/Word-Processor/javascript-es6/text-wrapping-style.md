@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text wrapping style in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Text wrapping style in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Text wrapping style in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text wrapping style 
