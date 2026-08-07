@@ -61,7 +61,7 @@ export default {
   },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     };
   },
