@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with document Fields
+# Working with document Fields in a Word Library
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the [WField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html) and [WFieldMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WFieldMark.html) instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 

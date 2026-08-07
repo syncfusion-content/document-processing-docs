@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Mail merge for a group
+# Mail merge for a group in Word Library
 
 You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region is bounded by start and end group merge fields. The region gets repeated for every record from the data source.
 
