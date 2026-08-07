@@ -1,16 +1,16 @@
 ---
 layout: post
 title: FAQs about SFDT in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET Core DOCX Editor component, including its structure and usage.
-control: SFDT format 
+description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET Core Document Editor component, including its structure and usage.
+control: SFDT format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# FAQs about SFDT in ASP.NET Core DOCX Editor
+# FAQs about SFDT in ASP.NET Core Document Editor
 
-The frequently asked questions about SFDT in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) is listed below:
+The frequently asked questions about SFDT in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) are listed below:
 
 ## What is SFDT format?
 
@@ -26,7 +26,7 @@ SFDT is optimized for web-based document editing scenarios.
 
 - It is lightweight and easier to process.
 
-- As SFDT is a Base64 string by default, it can be stored directly in databases.
+- Because SFDT is a JSON string, it can be stored directly in a database text column without binary handling.
 
 - Server-side dependencies are not required for loading and saving SFDT.
 
@@ -40,7 +40,7 @@ SFDT is suitable in the following scenarios:
 
 ## Can SFDT be converted back to DOCX?
 
-Yes. You can easily convert SFDT back to DOCX or other [supported formats](../supported-fileformats) in the Document Editor.
+Yes. You can easily convert SFDT back to DOCX or other [supported formats](../supported-fileformats) in the Document Editor using the `save` API (for example, `documentEditor.save('sample', 'Docx')`). See the [Export](../export) documentation for details.
 
 ## Are any features unavailable when using SFDT?
 
