@@ -85,9 +85,13 @@ export default {
     },
     unhideAnnotations() {
       const viewer = this.$refs.pdfviewer.ej2Instances;
-      if (this.exportObject) {
-        const parsedObject = JSON.parse(this.exportObject);
-        viewer.importAnnotation(JSON.parse(parsedObject));
+      try {
+        if (this.exportObject) {
+          const parsedObject = JSON.parse(this.exportObject);
+          viewer.importAnnotation(JSON.parse(parsedObject));
+        }
+      } catch (error) {
+        console.error('Error showing annotations:', error);
       }
     }
   }
@@ -98,6 +102,6 @@ export default {
 
 ## Conclusion
 
-These steps add the ability to toggle annotation visibility in a PDF Viewer application for selective viewing.
+These steps enable toggling annotation visibility in a PDF Viewer application for selective viewing.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)
