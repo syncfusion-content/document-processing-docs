@@ -17,7 +17,7 @@ documentation: ug
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
 ## Remove Form Fields Programmatically
-Use **deleteFormField()** with a field reference or ID.
+Use [deleteFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner#deleteformfield) with a field reference or ID.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +75,7 @@ export default {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
