@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bookmark navigation in Vue PDF Viewer component | Syncfusion
-description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Vue PDF Viewer.
+description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Vue PDF Viewer component. Learn how to enable and manage bookmarks efficiently.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -232,8 +232,6 @@ export default {
 
 Use the **goToBookmark** method to navigate to a bookmark programmatically. The method expects valid bookmark coordinates (zero-based page index and a Y offset). If the specified bookmark does not exist, the call may throw an error—guard calls with error handling or verify existence first using `getBookmarks()`.
 
-The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
-
 {% tabs %}
 {% highlight html tabtitle="Composition API" %}
 
@@ -366,11 +364,10 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Use the [**getBookmarks**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/bookmark/#getbookmarks) method to retrieve the bookmark collection. Each item contains the bookmark title, destination page, and position information.
+Use the [**getBookmarks**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#bookmark) method to retrieve the bookmark collection. Each item contains the bookmark title, destination page, and position information.
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Page navigation](page)
+- [Page thumbnail navigation](page-thumbnail)
 
