@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
 
 ## Blazor Web App (Server)
 
@@ -518,3 +518,4 @@ By executing the program, you will get the **Markdown document** as follows.
 
 N> While the Markdown library functions in WASM Standalone, server-side deployment is recommended. Running the Markdown library client-side in WASM Standalone increases the application payload size because the library assemblies are downloaded to the browser.
 
+N> Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
