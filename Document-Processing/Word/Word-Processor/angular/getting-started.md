@@ -44,7 +44,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the sf command, the CLI prompts you to select the required project configuration. To create an Angular application with the Syncfusion® DOCX Editor component, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create an Angular application with the Syncfusion® `DOCX Editor` component, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -61,7 +61,7 @@ When you run the sf command, the CLI prompts you to select the required project 
 {% endhighlight %}
 {% endtabs %}
 
-The above selections generate an Angular application configured with the Syncfusion® DOCX Editor component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+The above selections generate an Angular application configured with the Syncfusion® `DOCX Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
 
 The Syncfusion® CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
 
