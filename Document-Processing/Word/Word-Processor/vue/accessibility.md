@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Document editor component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Document Editor component
+# Accessibility in Vue Document editor component
 
 The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component is outlined below.
 
@@ -38,13 +38,13 @@ The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.co
 
 ## Keyboard interaction
 
-Document Editor supports [keyboard shortcuts](./keyboard-shortcut).
+Document editor supports [keyboard shortcuts](./keyboard-shortcut).
 
 ## Ensuring accessibility
 
-The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Document editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
+The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/wordprocessor.html" %}
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Chart in Vue Document editor component | Syncfusion
+description: Learn here all about Chart in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Chart 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in Vue Document Editor component
+# Chart in Vue Document editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
@@ -25,10 +25,9 @@ The following example shows chart preservation in Document Editor.
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/chart-cs1" %}
 
-## Supported Chart Types
+# Supported Chart Types
 
-The following chart types are supported in Document Editor:
-
+The following chart types are supported in Document Editor
 * Scatter_Markers
 * Bubble
 * Area
@@ -52,8 +51,3 @@ The following chart types are supported in Document Editor:
 ## Online Demo
 
 Explore how to preserve charts in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/chart.html).
-
-## See Also
-
-* [Feature modules](./feature-module)
-* [Getting started](./getting-started)
