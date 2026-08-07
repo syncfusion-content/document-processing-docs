@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table in JavaScript (ES6) Document Editor control | Syncfusion
+title: Table in JavaScript (ES6) DOCX Editor control | Syncfusion
 description: Learn here all about Table in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table 

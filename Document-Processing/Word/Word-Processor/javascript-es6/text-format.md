@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text format in JavaScript (ES6) Document Editor control | Syncfusion
+title: Text format in JavaScript (ES6) DOCX Editor control | Syncfusion
 description: Learn here all about Text format in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Text format 
