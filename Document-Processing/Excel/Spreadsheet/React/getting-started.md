@@ -44,7 +44,7 @@ sf new my-app --framework react --type ts --template spreadsheet-editor --theme 
 {% endhighlight %}
 {% endtabs %}
 
-In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor`.
+In this mode, the project configuration is passed directly in the command. The above command creates a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component.
 
 ### Interactive mode
 
@@ -56,7 +56,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor`, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a React Vite application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -65,7 +65,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 √ Choose Framework: » React
 √ Choose Build Tool: » Vite
 √ Choose Language: » TypeScript
-√ Choose Template: » Empty
+√ Choose Template: » Spreadsheet Editor
 √ Choose Theme: » Tailwind3
 √ Choose Style Format: » CSS
 √ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
@@ -75,17 +75,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 {% endhighlight %}
 {% endtabs %}
 
-#### Add Spreadsheet Editor in project
-
-The above selections generate a React Vite application configured with no component. Now we'll configure `Spreadsheet Editor` in application in the following step,
-
-{% tabs %}
-{% highlight bash tabtitle="CMD" %}
-sf add spreadsheet-editor
-{% endhighlight %}
-{% endtabs %}
-
-Now, the React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor`. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+The above selections generate a React Vite application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
 
