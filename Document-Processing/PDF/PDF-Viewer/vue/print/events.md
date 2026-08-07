@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Events in Vue PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Syncfusion Vue PDF Viewer component.
+description: Learn how to configure print events and track usage and implement workflows in the Syncfusion Vue PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -111,7 +111,7 @@ export default {
 
 This event is emitted after the printing completes. Use to finalize analytics, clear temporary state, or notify users.
 
-Arguments - ([`PrintEndEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printendeventargs)):
+**Arguments** - ([`PrintEndEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/printendeventargs)):
 
 - `fileName` - The printed document name.
 

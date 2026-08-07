@@ -3,7 +3,7 @@ layout: post
 title: Redaction in mobile view in Vue PDF Viewer | Syncfusion
 description: Learn how to apply redactions in mobile view using the Syncfusion Vue PDF Viewer with a complete toolbar setup and redaction workflow.
 platform: document-processing
-control: PdfViewer
+control: Pdf Viewer
 documentation: ug
 ---
 
@@ -132,7 +132,7 @@ Function: Redacts complete pages or page ranges with a single action.
 Options available:
 - Odd Pages: Redacts only odd-numbered pages (1, 3, 5, etc.)
 - Even Pages: Redacts only even-numbered pages (2, 4, 6, etc.)
-- Specific Page: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
+- Specific Pages: Specify single pages, ranges (e.g., 1-5, 10-15), or comma-separated lists (e.g., 1,3,5-7)
 - Current Page: Redacts only the currently displayed page
 
 Usage:
@@ -146,15 +146,16 @@ The Redaction Properties tool allows customization of redaction appearance befor
 
 ![Redaction Properties Mobile View](./redaction-annotations-images/redaction-properties-annot.png)
 
-Function: Customize the visual appearance of redaction overlays and text replacement
+Function: Customize the visual appearance of redaction overlays and text replacement.
+
 Customizable properties:
-- Fill Color: Change the redaction overlay color (default: black)
-- Outline Color: Set outline color for redaction boxes (optional)
-- Overlay Text: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL")
-- Text Color: Change overlay text color for better visibility
-- Text Font: Select font family for overlay text
-- Text Alignment: Position overlay text within redaction boxes
-- Text Size: Adjust overlay text size relative to redaction area
+- **Fill Color**: Change the redaction overlay color (default: black).
+- **Outline Color**: Set outline color for redaction boxes (optional).
+- **Overlay Text**: Add custom text to appear on redacted areas (e.g., "REDACTED", "CONFIDENTIAL").
+- **Text Color**: Change overlay text color for better visibility.
+- **Text Font**: Select font family for overlay text.
+- **Text Alignment**: Position overlay text within redaction boxes.
+- **Text Size**: Adjust overlay text size relative to redaction area.
 
 ![Redaction Properties Dialog Mobile View](./redaction-annotations-images/redaction-properties-dialog-annot.png)
 
@@ -195,13 +196,13 @@ Step 3: Configure your redaction parameters using the selected tool interface.
 
 N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
 
-Once you have configured redactions using any combination of tools.
+Once you have configured redactions using any combination of the tools described above, follow the steps below to apply them.
 
 Step 1: Review all redaction marks and configurations.
 
 ![Review Redaction Annotation](./redaction-annotations-images/review-redaction-annotation-mv-annot.png)
 
-Step 2: Tap the Apply Redactions button in the redaction toolbar
+Step 2: Tap the Apply Redactions button in the redaction toolbar.
 
 ![Apply Redaction Button](./redaction-annotations-images/apply-redaction-button-mv.png)
 
@@ -217,9 +218,9 @@ The selected content will be permanently removed and replaced according to your 
 
 To remove existing redaction annotations before they are applied:
 
-- Step 1: Tap the Redaction Edit button in the mobile toolbar to enter annotation editing mode
-- Step 2: Tap on any existing redaction annotation you wish to remove
-- Step 3: Select Delete from the context menu that appears
+- Step 1: Tap the `RedactionEditTool` button in the primary mobile toolbar to enter annotation editing mode.
+- Step 2: Tap on any existing redaction annotation you wish to remove.
+- Step 3: Select Delete from the context menu that appears.
 
 Alternative: Tap redaction annotation → Use delete button in annotation properties panel
 
