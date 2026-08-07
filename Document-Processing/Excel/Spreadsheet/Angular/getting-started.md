@@ -91,7 +91,7 @@ ng serve
 
 The output will appear as follows:
 
-![Scheduler Component](images/syncfusion-cli.png)
+![Spreadsheet Editor Component](images/syncfusion-cli.png)
 
 {% endtabcontent %}
 
