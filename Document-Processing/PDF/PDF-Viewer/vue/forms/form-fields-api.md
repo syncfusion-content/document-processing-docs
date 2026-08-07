@@ -666,6 +666,12 @@ Enables or disables built-in validation for required and constrained fields.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
+  </div>
+</template>
+
 <script>
 import {
   PdfViewerComponent,
@@ -685,25 +691,7 @@ export default {
   provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-    };
-  },
-  mounted() {
-    const element = document.getElementById('checkFormFieldDocument');
-    if (element) {
-      element.onclick = () => {
-        const pdfviewer = this.$refs.pdfviewer.ej2Instances;
-        console.log(pdfviewer.isFormFieldDocument);
-      };
-    }
-  },
-};
-</script>
-  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     };
   },
