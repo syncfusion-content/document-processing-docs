@@ -52,7 +52,7 @@ When you enter redaction mode in mobile view, a specialized redaction toolbar ap
 
 ### Redaction Annotation Tool
 
-The Redaction Annotation tool is the primary redaction feature that allows you to drawing redaction rectangles on specific content:
+The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
 
 Function: Creates visual redaction annotations that mark content for permanent removal
 Usage: Touch and drag to draw rectangular redaction overlays on any content area.

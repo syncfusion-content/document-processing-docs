@@ -33,13 +33,14 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enablePrint: true,
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -54,7 +55,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -139,9 +141,9 @@ if (printButton) {
 - Enable or disable printing with the enablePrint property
 - Start printing from UI (toolbar Print) or programmatically using print.print()
 - Control output quality with the printScaleFactor property (0.5–5)
-- Auto‑rotate pages during print using enablePrintRotation
+- Auto-rotate pages during print using enablePrintRotation
 - Choose where printing happens with printMode (Default or NewWindow)
- - Track the lifecycle with printStart and printEnd events
+- Track the lifecycle with printStart and printEnd events
 
 N> Ensure the `resourceUrl` value matches the deployed `ej2-pdfviewer-lib` version. Calling `print()` launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 

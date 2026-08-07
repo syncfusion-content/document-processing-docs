@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy Docker image to Azure App Service for Containers in JavaScript PDF Viewer | Syncfusion
+title: Deploy Docker Image to Azure Container in JS | Syncfusion
 description: Step-by-step guide to deploy the Syncfusion PDF Viewer server Docker image to Azure App Service for Containers and connect it to a JavaScript client.
 platform: document-processing
 control: PDF Viewer
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Docker image to Azure App Service for Containers
+# Deploy Docker image to Azure App Service for Containers in JS
 
 ## Prerequisites
 
-- [Azure account](https://azure.microsoft.com/) and [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest) installed.
+- [Azure account](https://azure.microsoft.com/) and [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) installed.
 - Sign in to [Azure](https://azure.microsoft.com/)
 
 ```console
@@ -41,10 +41,10 @@ az webapp create --resource-group pdfviewerresourcegroup --plan pdfviewerappserv
 
 **Step 4:** Browse to the app.
 
-Open the app at `https://<app_name>.azurewebsites.net` (for example, `https://pdfviewerappservice.azurewebsites.net`). Use HTTPS in production. Verify the server API returns a default response at `https://<app_name>.azurewebsites.net/api/pdfviewer`.
+Open the app at the Azure-provided default domain, for example, `https://pdfviewer-server.azurewebsites.net`. Use HTTPS in production. Verify the server API returns a default response at the corresponding `/api/pdfviewer` path on the same domain.
 
-Append the service endpoint (for example, `https://pdfviewerappservice.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client's `serviceUrl`.
+Append the service endpoint (for example, `https://pdfviewer-server.azurewebsites.net/api/pdfviewer`) to the PDF Viewer client's `serviceUrl`.
 
 See the PDF Viewer getting started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
-For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://docs.microsoft.com/azure/app-service/containers/quickstart-multi-container
+For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://learn.microsoft.com/azure/app-service/containers/quickstart-multi-container
