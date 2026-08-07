@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Export in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Export in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Export in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Export in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Export 
+control: Export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in JavaScript (ES6) Document editor control
+# Export in JavaScript (ES6) Document Editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
-We are providing two types of save APIs as mentioned below.
+Two save APIs are provided as mentioned below.
 
 |API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
@@ -21,7 +21,7 @@ We are providing two types of save APIs as mentioned below.
 
 ## SFDT export
 
-The following example shows how to export documents in Document Editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in the Document Editor as Syncfusion Document Text (.sfdt).
 
  
 
@@ -49,9 +49,9 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 ## Word export
 
-The following example shows how to export the document as Word document (.docx).
+The following example shows how to export the document as a Word document (.docx).
 
->Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
  
 

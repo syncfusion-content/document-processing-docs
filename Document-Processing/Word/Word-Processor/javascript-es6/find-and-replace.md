@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Find and replace in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Find and replace in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Find and Replace in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Find and Replace in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Find and replace 
+control: Find and Replace
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in JavaScript (ES6) Document editor control
+# Find and Replace in JavaScript (ES6) Document Editor control
 
-The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
+The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with the selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bold, and more.
 
 ## Options pane
 
-This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
+This provides the options to search for a portion of text in the document. After the search operation is completed, the search results will be displayed in a list with options to navigate between them. The current occurrence of the matched text or all occurrences with another text can be replaced by switching to the `Replace` tab. This pane is opened using the keyboard shortcut `Ctrl + F`. You can also open it programmatically using the following sample code.
 
  
 
@@ -29,7 +29,7 @@ This provides the options to search for a portion of text in the document. After
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/find-cs1" %}
 
-You can close the options pane by pressing `Esc` key.
+You can close the options pane by pressing the `Esc` key.
 
 ## Search
 

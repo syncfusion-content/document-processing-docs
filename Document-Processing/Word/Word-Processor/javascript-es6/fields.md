@@ -1,47 +1,45 @@
 ---
 layout: post
-title: Fields in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Fields in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Fields in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Fields in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Fields 
+control: Fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in JavaScript (ES6) Document editor control
+# Fields in JavaScript (ES6) Document Editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) has preservation support for all types of fields in an existing Word document without any data loss.
 
 ## Adding Fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertfield) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
 
-The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
+The following example code illustrates how to insert a merge field programmatically by providing the field code and field result.
 
 ```ts
-
 let fieldCode: string = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
 let fieldResult: string = '«First Name»';
 documenteditor.editor.insertField(fieldCode, fieldResult);
-
 ```
 
->Note: Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
+N> The Document Editor does not validate/process the field code/field result. It simply inserts the field with the specified field information.
 
 ## Update fields
 
-Document Editor provides support for updating bookmark cross reference field. The following example code illustrates how to update bookmark cross reference field.
+The Document Editor provides support for updating bookmark cross-reference fields. The following example code illustrates how to update bookmark cross-reference fields.
 
 ```ts
 //Update all the bookmark cross reference field in the document.
 documentEditor.updateFields();
 ```
 
-Bookmark cross reference fields can be updated through UI by using update fields option in `Toolbar`.
+Bookmark cross-reference fields can be updated through the UI by using the Update Fields option in the `Toolbar`.
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following type of fields are automatically updated in Document Editor.
+The following types of fields are automatically updated in the Document Editor.
 
 * NUMPAGES
 * SECTION
@@ -49,18 +47,18 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/documentation/api/document-editor/selection/) module.
+You can get the field code and field result of the current selected field by using the [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/documentation/api/document-editor/selection/) module.
 
 ```ts
 //Gets the field information of the selected field.
 let fieldInfo: FieldInfo = documentEditor.selection.getFieldInfo();
 ```
 
->Note: For nested fields, this method returns combined field code and result.
+N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using the [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
 
 ```ts
 //Gets the field information for the selected field.
@@ -76,7 +74,7 @@ fieldInfo.result = '«First Name»';
 documentEditor.editor.setFieldInfo(fieldInfo);
 ```
 
->Note: For nested field, entire field gets replaced completely with the specified field information.
+N> For a nested field, the entire field gets replaced completely with the specified field information.
 
 ## See Also
 
