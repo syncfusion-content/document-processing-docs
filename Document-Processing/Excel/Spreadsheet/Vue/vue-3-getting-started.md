@@ -62,7 +62,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 
 √ Project name? ... my-project
 √ Choose Framework: » Vue
-√ Choose Language: » JavaScript
+√ Choose Language: » TypeScript
 √ Choose Template: » Spreadsheet Editor
 √ Choose Theme: » Material3
 √ Choose Style Format: » CSS
