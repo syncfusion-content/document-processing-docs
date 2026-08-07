@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Accepting or Rejecting Track Changes
+# Accepting or Rejecting Track Changes .NET Word
 
 Track changes is used to keep track of the changes made to a Word document. It helps to maintain the record of the author, date, and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 
