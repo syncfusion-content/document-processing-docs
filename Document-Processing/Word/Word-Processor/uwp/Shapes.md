@@ -4,38 +4,44 @@ description: Learn here all about Shapes support in Syncfusion UWP RichTextBox (
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: shapes, text-box
+keywords: shapes,text-box,rectangle,text-wrapping,shape-resizer
 ---
 # Shapes in UWP RichTextBox (SfRichTextBoxAdv)
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, RichTextBox does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
-N> Starting from v18.3.0.x, the shape preservation is supported.
+Shapes are drawing objects such as text boxes, rectangles, lines, curves, and circles. Shapes follow a preset or custom geometry. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) does not support inserting shapes. However, if the document contains a shape during import, the shape is preserved.
+
+N> Shape preservation is supported starting from Syncfusion UWP RichTextBox v18.3.0.X.
 
 ## Supported shapes
-The RichTextBox has preservation support for Text box and Rectangle shapes.
+
+`SfRichTextBoxAdv` has preservation support for text box and rectangle shapes.
 
 ![List of supported shapes in RichTextBox](Shapes_images/Supported_Shapes.PNG)
 
-## Text box Shape
-A text box is a rectangular area on the document where you can enter text. When you click in a text box, a flashing cursor will display indicating that you can begin typing. It allows you to enter multiple lines of text with all text formatting.
+## Text box shape
 
-![Text box shape view in RichTextBox](Shapes_images/TextBox_Shape.PNG)
+A text box is a rectangular area in the document where you can enter text. When you click in a text box, a flashing cursor displays, indicating that you can begin typing. You can enter multiple lines of text with the full range of text formatting.
 
-## Shape Resizer
-The RichTextBox also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
+![Text box shape in SfRichTextBoxAdv, showing the border and cursor inside the text area](Shapes_images/TextBox_Shape.PNG)
 
-![Shape resizer view in RichTextBox](Shapes_images/Shape_Resizer.PNG)
+## Shape resizer
+
+`SfRichTextBoxAdv` also supports a built-in shape resizer that lets you resize shapes in the document. The shape resizer accepts both touch and mouse interactions.
+
+![SfRichTextBoxAdv shape resizer with selection handles around a text box](Shapes_images/Shape_Resizer.PNG)
 
 ## Text wrapping style
-Text wrapping refers to how shapes fit with surrounding text in a document. Please [refer to this page](/uwp/richtextbox/text-wrapping-style) for more information about text wrapping styles available in Word documents.
+
+Text wrapping refers to how shapes are positioned relative to the surrounding text in a document. Refer to the [Text wrapping style](https://help.syncfusion.com/uwp/richtextbox/text-wrapping-style) page for more information about the text wrapping styles available in `SfRichTextBoxAdv`.
 
 ## Positioning the shape
-Starting from v19.1.0.x, RichTextBox preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
 
-N> At present, the shape with text wrapping style `In-Line with Text` can only be dragged and dropped anywhere in the document.
+Starting from Syncfusion UWP RichTextBox v19.1.0.X, `SfRichTextBoxAdv` preserves the position properties of the shape and displays the shape based on those properties. It does not support modifying the position properties. A shape positioned relative to the line or paragraph is automatically moved as the surrounding text is edited.
 
+N> At present, a shape with the `Inline` text wrapping style can be dragged and dropped anywhere in the document.
 
+## See also
 
-
-
-
+- [Text wrapping style in UWP RichTextBox](./Text-Wrapping-Style)
+- [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)
+- [Image support in UWP RichTextBox](./Image)
