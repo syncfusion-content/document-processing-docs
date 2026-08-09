@@ -4,16 +4,20 @@ description: Learn here all about Automatic Suggestion support in Syncfusion UWP
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: automatic-suggestion, @mentions
+keywords: automatic-suggestion,@mentions,mention-character,suggestion-box,name-suggestion-provider
 ---
 # Automatic Suggestion in UWP RichTextBox (SfRichTextBoxAdv)
 
-### Automatic Suggestion functionality for using @mentions
-RichTextBox control shows an inline dropdown with a list of suggested names while type the mention character (@ symbol). The list of names will filter as you type more letters. You can use up or down arrow key to move selection and Tab or Enter key to insert selected item in keyboard or use mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
+## Using @mentions with automatic suggestion
+The SfRichTextBoxAdv control shows an inline dropdown with a list of suggested names while typing the mention character (`@` symbol). The list of names filters as you type more letters. You can use the up or down arrow keys to move selection, and Tab or Enter to insert the selected item via keyboard, or use the mouse to click any option in the list. The selected item from the suggestion list inserts as a hyperlink with the display text and its corresponding link.
+
+The suggestion feature is configured through the [SuggestionSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SuggestionSettings.html), [ISuggestionProvider](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.ISuggestionProvider.html), and [NameSuggestionProvider](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.NameSuggestionProvider.html) classes, with suggestion items supplied via [NameSuggestionItem](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.NameSuggestionItem.html).
+
+N> The `suggestionItems` collection referenced by `{x:Bind suggestionItems}` in the XAML sample must be defined in your code-behind as a public property (for example, `public ObservableCollection<NameSuggestionItem> SuggestionItems { get; }`) and populated with `NameSuggestionItem` instances, as shown in the C# sample below.
 
 ![Automatic Suggestion](Automatic-Suggestion_images/autosuggestion1.PNG)
 
-The following sample code demonstrates how to use @mentions in RichTextBox.
+The following sample code demonstrates how to use @mentions in SfRichTextBoxAdv.
 {% tabs %}
 {% highlight xaml %}
 <Grid>
@@ -38,21 +42,21 @@ List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
 NameSuggestionItem suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Nancy Davolio";
 suggestionItem.Link = "mailto:nancy.davolio@northwindtraders.com";
-BitmapImage bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle0.png").FullName));
+BitmapImage bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle0.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
 suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Andrew Fuller";
 suggestionItem.Link = "mailto:andrew.fuller@northwindtraders.com";
-bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle5.png").FullName));
+bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle5.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
 suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Steven Buchanan";
 suggestionItem.Link = "mailto:steven.buchanan@northwindtraders.com";
-bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle14.png").FullName));
+bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle14.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
@@ -91,8 +95,8 @@ richTextBoxAdv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Automatic%20Suggestion)
 
-### Customize the SuggestionBox ItemTemplate and Style
-By default, the drop-down window lists the filtered items as an image, display text and link. If you want to remove the image or link. You can write your own item Template.
+## Customize the suggestion box item template and style
+By default, the drop-down window lists the filtered items as an image, display text, and link. To remove the image or link, write your own item template.
 
 ![Modify Suggestion Box Item](Automatic-Suggestion_images/autosuggestion2.PNG)
 
@@ -134,8 +138,8 @@ The following sample code demonstrates how to modify the suggestion box item tem
 {% endtabs %}
 
 
-### Custom mention character
-Any character can be used as mention character, default value is **@**.
+## Custom mention character
+Any character can be used as the mention character; the default value is `@`.
 
 ![Mention Character](Automatic-Suggestion_images/autosuggestion3.PNG)
 
@@ -167,12 +171,12 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 {% endtabs %}
 
 
-### Multiple Suggestion provider
-Two or more suggestion providers can be used at a time but, each suggestion provider should have different mention character. And each suggestion provider can have different item source and suggestion box style.
+## Multiple suggestion provider
+Two or more suggestion providers can be used at a time, but each suggestion provider must use a different mention character. Each suggestion provider can have its own item source and suggestion box style.
 
 <table><tr><td><img src="Automatic-Suggestion_images/autosuggestion1.PNG"/><br/></td><td><img src="Automatic-Suggestion_images/autosuggestion3.PNG"/><br/></td></tr></table>
 
-The following sample code demonstrates how to use two suggestion providers. Here we have used ‘@’ and ‘#’ as mention characters.
+The following sample code demonstrates how to use two suggestion providers. Here, `@` and `#` are used as mention characters.
 {% tabs %}
 {% highlight xaml %}
 <Page.Resources>
@@ -218,21 +222,21 @@ List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
 NameSuggestionItem suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Nancy Davolio";
 suggestionItem.Link = "mailto:nancy.davolio@northwindtraders.com";
-BitmapImage bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle0.png").FullName));
+BitmapImage bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle0.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
 suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Andrew Fuller";
 suggestionItem.Link = "mailto:andrew.fuller@northwindtraders.com";
-bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle5.png").FullName));
+bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle5.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
 suggestionItem = new NameSuggestionItem();
 suggestionItem.Name = "Steven Buchanan";
 suggestionItem.Link = "mailto:steven.buchanan@northwindtraders.com";
-bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms - appx:..\..\Assets\People_Circle14.png").FullName));
+bitmapImage = new BitmapImage(new Uri(new DirectoryInfo(@"ms-appx:..\..\Assets\People_Circle14.png").FullName));
 suggestionItem.ImageSource = bitmapImage;
 suggestionItems.Add(suggestionItem);
 
@@ -270,11 +274,11 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProviderAppT
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Multiple%20Suggestion%20Provider)
 
-### Display error message when suggestions are empty
-When the entered item is not in the suggestion list, suggestion box displays a text indicating that “We couldn’t find the person you were looking for.”. The text to be displayed for this can be customized using the SuggestionBoxErrorMessage property in resource file (.resx). 
-•	Right click your project and add new folder named Resources.
-•	Add [default resource file](https://github.com/syncfusion/uwp-controls-localization-resource-files/tree/master/Syncfusion.SfRichTextBoxAdv.UWP) of RichTextBox control into Resources folder.
-•	Modify the value of resource key SuggestionBoxErrorMessage in resource file.
+## Display error message when suggestions are empty
+When the entered item is not in the suggestion list, the suggestion box displays the message "We couldn't find the person you were looking for." The text to be displayed for this can be customized using the `SuggestionBoxErrorMessage` property in the resource file (`.resx`).
+* Right-click your project and add a new folder named `Resources`.
+* Add the [default resource file](https://github.com/syncfusion/uwp-controls-localization-resource-files/tree/master/Syncfusion.SfRichTextBoxAdv.UWP) of the RichTextBox control into the `Resources` folder.
+* Modify the value of the resource key `SuggestionBoxErrorMessage` in the resource file.
 
 ![Display message](Automatic-Suggestion_images/autosuggestion5.PNG)
 
@@ -282,7 +286,7 @@ When the entered item is not in the suggestion list, suggestion box displays a t
 
 
 ### Custom suggestion provider
-By default, we have implemented [NameSuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.NameSuggestionProvider.html) as suggestion provider. And you can implement your own suggestion provider, inheriting from [ISuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ISuggestionProvider.html). Which helps you to customize the search and insert selected item functionalities.
+By default, we have implemented [NameSuggestionProvider](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.NameSuggestionProvider.html) as suggestion provider. And you can implement your own suggestion provider, inheriting from [ISuggestionProvider](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.ISuggestionProvider.html). Which helps you to customize the search and insert selected item functionalities.
 
 The following sample code demonstrates how to create your own suggestion provider inherited from ISuggestionProvider.
 {% tabs %}
@@ -450,6 +454,9 @@ public void InsertSelectedItem(SfRichTextBoxAdv richTextBoxAdv, object selectedI
 N> This feature is supported from V18.4.0.30.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Custom%20Suggestion%20Provider)
- 
 
+## See also
 
+- [Commands in UWP RichTextBox](./Commands)
+- [Document Structure in UWP RichTextBox](./Document-Structure)
+- [Document Properties in UWP RichTextBox](./Document-Properties)
