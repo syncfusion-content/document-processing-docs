@@ -1,6 +1,6 @@
 ---
-title: Automatic Suggestion in WPF RichTextBox control | Syncfusion
-description: Learn here all about Automatic Suggestion support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Automatic Suggestion in WPF RichTextBox Control | Syncfusion
+description: Learn about the Automatic Suggestion support in the Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -8,8 +8,8 @@ keywords: automatic-suggestion, @mentions
 ---
 # Automatic Suggestion in WPF RichTextBox (SfRichTextBoxAdv)
 
-### Automatic Suggestion functionality for using @mentions
-[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control shows an inline dropdown with a list of suggested names while type the mention character (@ symbol). The list of names will filter as you type more letters. You can use up or down arrow key to move selection and Tab or Enter key to insert selected item in keyboard or use mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
+## Automatic Suggestion functionality for using @mentions
+[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control shows an inline dropdown with a list of suggested names while typing the mention character (@ symbol). The list of suggested names filters as you type additional characters. You can use the up or down arrow keys to move the selection and the Tab or Enter key to insert the selected item. You can also use the mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
 
 ![WPF RichTextBox displays Automatic Suggestion](Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG)
 
@@ -36,7 +36,7 @@ The following sample code demonstrates how to use @mentions in RichTextBox.
         </RichTextBoxAdv:SfRichTextBoxAdv>
     </Grid>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 	ISuggestionProvider suggestionProvider = new NameSuggestionProvider();
 	List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
 
@@ -90,14 +90,21 @@ The following sample code demonstrates how to use @mentions in RichTextBox.
 	suggestionItems.Add(suggestionItem)
 	
 	TryCast(suggestionProvider, NameSuggestionProvider).ItemsSource = suggestionItems
-    richTextBoxAdv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider)
+    richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider)
 {% endhighlight %}
 {% endtabs %}
 
-[View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Automatic%20Suggestion)
+For details on the API surface used in the samples above, see the following references:
 
-### Customize the SuggestionBox ItemTemplate and Style
-By default, the drop-down window lists the filtered items as an image, display text and link. If you want to remove the image or link. You can write your own item Template.
+| Type / Member | API reference |
+| --- | --- |
+| `NameSuggestionItem` (the `Name`, `Link`, and `ImageSource` properties) | [NameSuggestionItem](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.NameSuggestionItem.html) |
+| `SuggestionSettings` and `SuggestionSettings.SuggestionProviders` | [SuggestionSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SuggestionSettings.html) |
+
+N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Automatic%20Suggestion)
+
+## Customize the SuggestionBox ItemTemplate and Style
+By default, the drop-down window lists the filtered items as an image, display text and link. If you want to remove the image or link, you can write your own item template.
 
 ![Modifying Suggestion Box Item in WPF RichTextBox](Automatic-Suggestion_images/wpf-richtextbox-modify-suggestion.PNG)
 
@@ -140,11 +147,65 @@ The following sample code demonstrates how to modify the suggestion box item tem
         </RichTextBoxAdv:SfRichTextBoxAdv>
     </Grid>
 {% endhighlight %}
+{% highlight c# %}
+ISuggestionProvider suggestionProvider = new NameSuggestionProvider();
+List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
+
+NameSuggestionItem suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Nancy Davolio";
+suggestionItem.Link = "mailto:nancy.davolio@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+
+suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Andrew Fuller";
+suggestionItem.Link = "mailto:andrew.fuller@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+
+suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Steven Buchanan";
+suggestionItem.Link = "mailto:steven.buchanan@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+
+// Build the SuggestionBoxStyle
+Style suggestionBoxStyle = new Style(typeof(ListBox));
+suggestionBoxStyle.Setters.Add(new Setter(ListBox.MinWidthProperty, 300.0));
+suggestionBoxStyle.Setters.Add(new Setter(ListBox.MinHeightProperty, 250.0));
+suggestionBoxStyle.Setters.Add(new Setter(ListBox.BackgroundProperty, new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFDBF5FB"))));
+
+DataTemplate itemTemplate = new DataTemplate(typeof(NameSuggestionItem));
+FrameworkElementFactory stackPanel = new FrameworkElementFactory(typeof(StackPanel));
+stackPanel.SetValue(StackPanel.OrientationProperty, Orientation.Vertical);
+stackPanel.SetValue(StackPanel.HeightProperty, 50.0);
+stackPanel.SetValue(StackPanel.VerticalAlignmentProperty, VerticalAlignment.Center);
+stackPanel.SetValue(StackPanel.MarginProperty, new Thickness(12, 15, 0, 0));
+
+FrameworkElementFactory nameBlock = new FrameworkElementFactory(typeof(TextBlock));
+nameBlock.SetBinding(TextBlock.TextProperty, new Binding("Name"));
+nameBlock.SetValue(TextBlock.FontFamilyProperty, new FontFamily("microsoft sans serif"));
+nameBlock.SetValue(TextBlock.FontSizeProperty, 14.0);
+
+FrameworkElementFactory linkBlock = new FrameworkElementFactory(typeof(TextBlock));
+linkBlock.SetBinding(TextBlock.TextProperty, new Binding("Link"));
+linkBlock.SetValue(TextBlock.FontFamilyProperty, new FontFamily("microsoft sans serif"));
+linkBlock.SetValue(TextBlock.ForegroundProperty, Brushes.Gray);
+linkBlock.SetValue(TextBlock.FontSizeProperty, 10.0);
+
+stackPanel.AppendChild(nameBlock);
+stackPanel.AppendChild(linkBlock);
+
+itemTemplate.VisualTree = stackPanel;
+suggestionBoxStyle.Setters.Add(new Setter(ListBox.ItemTemplateProperty, itemTemplate));
+this.Resources["SuggestionBoxStyle"] = suggestionBoxStyle;
+
+(suggestionProvider as NameSuggestionProvider).ItemsSource = suggestionItems;
+(suggestionProvider as NameSuggestionProvider).SuggestionBoxStyle = suggestionBoxStyle;
+richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
+{% endhighlight %}
 {% endtabs %}
 
 
-### Custom mention character
-Any character can be used as mention character, default value is @.
+## Custom mention character
+Any character can be used as a mention character, and the default value is @.
 
 ![WPF RichTextBox with Custom Mention Character](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
 
@@ -157,24 +218,41 @@ The following sample code demonstrates how to use ‘#’ as mention character.
             <RichTextBoxAdv:SuggestionSettings>
                 <RichTextBoxAdv:SuggestionSettings.SuggestionProviders>
                     <RichTextBoxAdv:NameSuggestionProvider MentionCharacter="#" 
-							   ItemsSource="{StaticResource suggestionItems}">
+                                                               ItemsSource="{StaticResource suggestionItems}">
                     </RichTextBoxAdv:NameSuggestionProvider>
                 </RichTextBoxAdv:SuggestionSettings.SuggestionProviders>
-			</RichTextBoxAdv:SuggestionSettings>
-		</RichTextBoxAdv:SfRichTextBoxAdv.SuggestionSettings>
-	</RichTextBoxAdv:SfRichTextBoxAdv>
+            </RichTextBoxAdv:SuggestionSettings>
+        </RichTextBoxAdv:SfRichTextBoxAdv.SuggestionSettings>
+    </RichTextBoxAdv:SfRichTextBoxAdv>
 </Grid>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 ISuggestionProvider suggestionProvider = new NameSuggestionProvider();
+List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
+NameSuggestionItem suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Nancy Davolio";
+suggestionItem.Link = "mailto:nancy.davolio@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+
+suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Andrew Fuller";
+suggestionItem.Link = "mailto:andrew.fuller@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+
+suggestionItem = new NameSuggestionItem();
+suggestionItem.Name = "Steven Buchanan";
+suggestionItem.Link = "mailto:steven.buchanan@northwindtraders.com";
+suggestionItems.Add(suggestionItem);
+(suggestionProvider as NameSuggestionProvider).ItemsSource = suggestionItems;
+
 suggestionProvider.MentionCharacter = '#';
 richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 {% endhighlight %}
 {% endtabs %}
 
 
-### Multiple Suggestion provider
-Two or more suggestion providers can be used at a time but, each suggestion provider should have different mention character. And each suggestion provider can have different item source and suggestion box style.
+## Multiple Suggestion Providers
+Two or more suggestion providers can be used at a time, but each suggestion provider should have a different mention character. Additionally, each suggestion provider can have a different item source and suggestion box style.
 
 <table><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td></tr></table>
 
@@ -228,7 +306,7 @@ The following sample code demonstrates how to use two suggestion providers. Here
 	</RichTextBoxAdv:SfRichTextBoxAdv>
 </Grid>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# %}
 ISuggestionProvider suggestionProvider = new NameSuggestionProvider();
 List<NameSuggestionItem> suggestionItems = new List<NameSuggestionItem>();
 
@@ -257,6 +335,8 @@ suggestionItems.Add(suggestionItem3);
 richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 
 ISuggestionProvider suggestionProviderAppType = new NameSuggestionProvider();
+// Reads the SuggestionBoxStyle defined in Window.Resources (in the XAML sample above).
+// Returns null if the resource is not found; the suggestion box then uses its default style.
 suggestionProviderAppType.SuggestionBoxStyle = this.Resources["SuggestionBoxStyle"] as System.Windows.Style;
 suggestionProviderAppType.MentionCharacter = '#';
 List<NameSuggestionItem> appTypes = new List<NameSuggestionItem>();
@@ -264,19 +344,16 @@ List<NameSuggestionItem> appTypes = new List<NameSuggestionItem>();
 NameSuggestionItem desktopApp = new NameSuggestionItem();
 desktopApp.Name = "Desktop App";
 desktopApp.Link = "10 queries";
-desktopApp.ImageSource = bitmapImage;
 appTypes.Add(desktopApp);
 
 NameSuggestionItem mobileApp = new NameSuggestionItem();
 mobileApp.Name = "Mobile App";
 mobileApp.Link = "13 queries";
-mobileApp.ImageSource = bitmapImage;
 appTypes.Add(mobileApp);
 
 NameSuggestionItem webApp = new NameSuggestionItem();
 webApp.Name = "Web App";
 webApp.Link = "15 queries";
-webApp.ImageSource = bitmapImage;
 appTypes.Add(webApp);
 
 (suggestionProviderAppType as NameSuggestionProvider).ItemsSource = appTypes;
@@ -284,25 +361,37 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProviderAppT
 {% endhighlight %}
 {% endtabs %}
 
-[View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Multiple%20Suggestion%20Provider)
+N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Multiple%20Suggestion%20Provider)
 
-### Display error message when suggestions are empty
-When the entered item is not in the suggestion list, suggestion box displays a text indicating that “We couldn’t find the person you were looking for.”. The text to be displayed for this can be customized using the SuggestionBoxErrorMessage property in resource file (.resx). 
+## Display error message when suggestions are empty
+When the entered item is not in the suggestion list, the suggestion box displays a message indicating that no match was found. The default text is **“We couldn't find the person you were looking for.”** and is defined by the `SuggestionBoxErrorMessage` resource key in the default [Syncfusion.SfRichTextBoxAdv.WPF.resx](https://github.com/syncfusion/wpf-controls-localization-resx-files/blob/master/Syncfusion.SfRichTextBoxAdv.WPF/Syncfusion.SfRichTextBoxAdv.WPF.resx) file shipped with the control. The relevant entry in the resource file looks like this:
+
+```xml
+<data name="SuggestionBoxErrorMessage" xml:space="preserve">
+    <value>We couldn't find the person you were looking for.</value>
+</data>
+```
+
+To customize this message, follow these steps:
 •	Right click your project and add new folder named Resources.
-•	Add [default resource file](https://github.com/syncfusion/wpf-controls-localization-resx-files/tree/master/Syncfusion.SfRichTextBoxAdv.WPF) of RichTextBox control into Resources folder.
-•	Modify the value of resource key SuggestionBoxErrorMessage in resource file.
+•	Add the [default resource file](https://github.com/syncfusion/wpf-controls-localization-resx-files/tree/master/Syncfusion.SfRichTextBoxAdv.WPF) of the RichTextBox control into the Resources folder.
+•	Modify the value of the `SuggestionBoxErrorMessage` resource key in the resource file.
+
+The following image illustrates the error message displayed when no matching suggestion is found.
 
 ![WPF RichTextBox displays Message](Automatic-Suggestion_images/wpf-richtextbox-message.PNG)
+
+The following image shows the default resource file used to modify the error message.
 
 ![WPF RichTextBox displays Resource File](Automatic-Suggestion_images/wpf-richtextbox-resource-file.PNG)
 
 
-### Custom suggestion provider
-By default, we have implemented [NameSuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.NameSuggestionProvider.html) as suggestion provider. And you can implement your own suggestion provider, inheriting from [ISuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ISuggestionProvider.html). Which helps you to customize the search and insert selected item functionalities.
+## Custom suggestion provider
+[NameSuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.NameSuggestionProvider.html) is the default suggestion provider. You can implement your own suggestion provider by inheriting from [ISuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ISuggestionProvider.html), which helps you customize the search and insert selected item functionalities.
 
 The following sample code demonstrates how to create your own suggestion provider inherited from ISuggestionProvider.
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 internal class AppTypeSuggestionProvider : DependencyObject, ISuggestionProvider
 {
 #region Property
@@ -371,17 +460,17 @@ public static DependencyProperty SuggestionBoxStyleProperty
 /// <summary>
 /// Identifies the MentionCharacter dependency property.
 /// </summary>
-private static DependencyProperty mentionCharacterProperty = DependencyProperty.Register("MentionCharacter", typeof(char), typeof(NameSuggestionProvider), new PropertyMetadata('@'));
+private static DependencyProperty mentionCharacterProperty = DependencyProperty.Register("MentionCharacter", typeof(char), typeof(AppTypeSuggestionProvider), new PropertyMetadata('@'));
 
 /// <summary>
 /// Identifies the ItemSource dependency property.
 /// </summary>
-private static DependencyProperty itemsSourceProperty = DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(NameSuggestionProvider), new PropertyMetadata(null));
+private static DependencyProperty itemsSourceProperty = DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(AppTypeSuggestionProvider), new PropertyMetadata(null));
 
 /// <summary>
 /// Identifies the SuggestionBoxStyle dependency property.
 /// </summary>
-private static DependencyProperty suggestionBoxStyleProperty = DependencyProperty.Register("SuggestionBoxStyle", typeof(Style), typeof(NameSuggestionProvider), new PropertyMetadata(null));
+private static DependencyProperty suggestionBoxStyleProperty = DependencyProperty.Register("SuggestionBoxStyle", typeof(Style), typeof(AppTypeSuggestionProvider), new PropertyMetadata(null));
 #endregion
 
 public void Dispose()
@@ -420,16 +509,29 @@ public List<object> Search(string searchText)
 {% endhighlight %}
 {% endtabs %}
 
-[View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Custom%20Suggestion%20Provider)
+The following table lists the [ISuggestionProvider](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ISuggestionProvider.html) members used in the sample above:
 
-### Customize search
-In default searching, it list the items which contains the typed text. And you can modify the searching logic like list the items starts or ends with typed text, by implementing your own suggestion provider and overriding the Search method.
+| Member | Purpose |
+| --- | --- |
+| `MentionCharacter` | Character that triggers the suggestion pop-up. Defaults to `@`. |
+| `SuggestionBoxStyle` | The `Style` applied to the suggestion pop-up's `ListBox`. |
+| `ItemsSource` | Collection of items shown in the suggestion list. |
+| `Search(string searchText)` | Filters `ItemsSource` for items matching the typed text; returns the matches. |
+| `InsertSelectedItem(SfRichTextBoxAdv richTextBoxAdv, object selectedItem)` | Inserts the selected item into the document (default: as a hyperlink; can be customized to insert plain text). |
+| `Dispose()` | Releases the dependency-property values and disposes each `NameSuggestionItem` in `ItemsSource`. |
 
-<table><tr><td>Search – contains</td><td>Search – starts with</td></tr><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Auto Suggestion"/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-search.PNG" alt="Customizing Search Text in WPF RichTextBox"/></td></tr></table>
+N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Custom%20Suggestion%20Provider)
+
+## Customize search
+
+By default, the suggestion list is filtered as you type using the `Contains` matching logic, meaning items whose `Name` contains the entered text are displayed. You can customize this behavior, such as showing only items whose names start with or end with the entered text, by implementing a custom suggestion provider and overriding the `Search` method.
+
+<table><tr><td>Default search – contains</td><td>Custom search – starts with</td></tr><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Auto Suggestion"/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-search.PNG" alt="Customizing Search Text in WPF RichTextBox"/></td></tr></table>
 
 The following sample code demonstrates how to override search operation in your suggestion provider.
+
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 public List<object> Search(string searchText)
 {
 	List<object> matchedItems = new List<object>();
@@ -445,14 +547,15 @@ public List<object> Search(string searchText)
 {% endhighlight %}
 {% endtabs %}
 
-### Customize insert item
-By default, the selected item from the suggestions list is inserted as hyperlink. And you can insert it as plain text or without link, by implementing your own suggestion provider and overriding the “InsertSelectedItem” method.
+## Customize insert item
+By default, the selected item from the suggestions list is inserted as a hyperlink. You can customize the insertion behavior—for example, to insert the selected item as plain text instead of a hyperlink—by implementing your own suggestion provider and overriding the `InsertSelectedItem` method.
 
-![WPF RichTextBox wih Custom Search Item](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
+![WPF RichTextBox with Custom Insert Item](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
 
-The following sample code demonstrates how to override insert selected item operation in your suggestion provider.
+The following sample code demonstrates how to override the insert selected item operation in your suggestion provider. In this example, the selected item is inserted as plain text using `InsertText`, so no hyperlink is added. If you want to insert the item as a hyperlink, use the [InsertHyperlink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_InsertHyperlink_System_String_System_String_System_String_) API instead.
+
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 public void InsertSelectedItem(SfRichTextBoxAdv richTextBoxAdv, object selectedItem)
 {
 	NameSuggestionItem nameSuggestionItem = selectedItem as NameSuggestionItem;
@@ -461,10 +564,6 @@ public void InsertSelectedItem(SfRichTextBoxAdv richTextBoxAdv, object selectedI
 {% endhighlight %}
 {% endtabs %}
 
+N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Custom%20Suggestion%20Provider)
+
 N> This feature is supported from V18.4.0.30.
-
-[View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Automatic%20Suggestion/Custom%20Suggestion%20Provider)
-
-N> You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools. 
-
-
