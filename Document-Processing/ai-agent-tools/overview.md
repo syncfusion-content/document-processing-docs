@@ -9,15 +9,32 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools Overview
 
-[Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
+[Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 
-You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). If you want to add new functionality or customize existing functionality, you can use the source code available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
+You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). To extend or customize, the source is available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0 or later.
+
+## What Can Agents Build?
+
+The library enables AI agents to autonomously:
+
+- Build document-processing pipelines without writing Office automation code - no `Microsoft.Office.Interop`, no headless Office installs required
+- Create, read, edit, and export documents in Word, Excel, PDF, and PowerPoint formats
+- Extract, redact, sign, and secure documents with encryption and digital signatures
+- Merge, split, reorder, and convert between document formats
+- Automate workflows like mail merge, template population, and structured data extraction
+- Process documents at scale in Docker containers, serverless functions, and CI/CD pipelines
+
+Explore real-world scenarios on the [AI Agents View](./agents) page.
 
 ## How It Works
 
 ![How AI Agent Tool Execution Works](how-it-works.png)
 
+A typical agent run follows four steps: the user describes a goal, the agent picks the right tools, the tools read or modify the document, and the output is delivered. The [AI Agents View](./agents) page shows this loop for five real-world scenarios.
+
 ## Key Capabilities
+
+The table below is an at-a-glance summary of the formats and operations that back the use cases above. For a complete reference of every tool class, see the [Tools](./tools) page.
 
 <table>
   <thead>
@@ -36,7 +53,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
           <li>Redaction</li>
           <li>Watermarking</li>
           <li>OCR</li>
-          <li>Encryption</li>
+          <li>Encryption and decryption</li>
           <li>Merge or split</li>
           <li>Compression</li>
           <li>Page reordering</li>
@@ -117,7 +134,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
         <ul>
           <li>Structured data</li>
           <li>Table</li>
-          <li>Form extraction from pdf and image files</li>
+          <li>Form extraction from PDF and image files</li>
           <li>PDF and table to Markdown conversion</li>
         </ul>
       </td>
@@ -128,6 +145,7 @@ You can quickly deploy it to your infrastructure via [NuGet](https://www.nuget.o
 
 ## Related Resources
 
+- [AI Agents View](./agents)
 - [Tools](./tools)
 - [Getting Started](./getting-started)
 - [Customization](./customization)
