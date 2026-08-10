@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document Management in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Document Management in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Document Management in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Document Management

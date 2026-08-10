@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Adding Fields
 
-You can add a field to the document by using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertfield) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertfield) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor) module.
 
 The following example code illustrates how to insert a merge field programmatically by providing the field code and field result.
 
@@ -47,7 +47,7 @@ The following types of fields are automatically updated in the Document Editor.
 
 ## Get field info
 
-You can get the field code and field result of the current selected field by using the [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/documentation/api/document-editor/selection/) module.
+You can get the field code and field result of the current selected field by using the [`getFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/documentation/api/document-editor/selection) module.
 
 ```ts
 //Gets the field information of the selected field.
@@ -58,7 +58,7 @@ N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using the [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using the [`setFieldInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/documentation/api/document-editor/editor) module.
 
 ```ts
 //Gets the field information for the selected field.

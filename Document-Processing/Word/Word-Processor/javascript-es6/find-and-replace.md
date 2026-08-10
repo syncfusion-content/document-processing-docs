@@ -33,12 +33,12 @@ You can close the options pane by pressing the `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/documentation/api/document-editor/search/) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/documentation/api/document-editor/search) module of Document Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
 |[`findAll()`](https://ej2.syncfusion.com/documentation/api/document-editor/search#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
-|[`searchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/searchResults/).|
+|[`searchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/searchResults).|
 |[`find()`](https://ej2.syncfusion.com/documentation/api/document-editor/search#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
 
 ### Find the immediate occurrence in the document
@@ -67,7 +67,7 @@ documenteditor.search.findAll('Some text', 'None');
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/documentation/api/document-editor/searchResults) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -116,7 +116,7 @@ container.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-[`DocumentEditor`](https://ej2.syncfusion.com/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/documentation/api/document-editor#searchresultschange) event that will be triggered whenever search results are changed. Consider the following scenarios:
+[`DocumentEditor`](https://ej2.syncfusion.com/documentation/api/document-editor) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/documentation/api/document-editor#searchresultschange) event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.
