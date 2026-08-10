@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieve the Bookmark Content as Text in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Retrieve Bookmark Content as Text in JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about retrieving the bookmark content as text in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Retrieve the Bookmark Content as Text
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the Bookmark Content as Text in JavaScript (ES6) Document Editor control
+# Retrieve Bookmark Content as Text in JavaScript (ES6) DOCX Editor
 
 You can get the bookmark or whole document content from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
