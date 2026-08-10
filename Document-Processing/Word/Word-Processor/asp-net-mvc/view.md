@@ -19,7 +19,8 @@ The Document Editor allows you to change the view to web layout using the [`layo
 {% include code-snippet/document-editor/asp-net-mvc/web-layout/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Web-layout.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Online demo
 
