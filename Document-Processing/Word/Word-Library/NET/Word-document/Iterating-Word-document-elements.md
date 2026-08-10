@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Iterating Word document elements
 
-The following are the important points to be remembered while iterating the document elements.
+The following are the important points to be remembered while iterating the document elements
 
 * Document consists of one or more sections.
 * Section contains the contents present in Headers, Footers and main document through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html).
@@ -28,7 +28,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Autom
 {
     foreach (WSection section in document.Sections)
     {
-        //Accesses the Body of section where all the contents in document reside
+        //Accesses the Body of section where all the contents in document are apart
         WTextBody sectionBody = section.Body;
         IterateTextBody(sectionBody);
         WHeadersFooters headersFooters = section.HeadersFooters;
@@ -41,8 +41,6 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Autom
     document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
-    //Saves the MemoryStream to a file
-    File.WriteAllBytes("Result.docx", stream.ToArray());
 }
 {% endhighlight %}
 
@@ -52,7 +50,7 @@ WordDocument document = new WordDocument("Template.docx");
 //Processes the body contents for each section in the Word document
 foreach (WSection section in document.Sections)
 {
-    //Accesses the Body of section where all the contents in document reside
+    //Accesses the Body of section where all the contents in document are apart
     WTextBody sectionBody = section.Body;
     IterateTextBody(sectionBody);
     WHeadersFooters headersFooters = section.HeadersFooters;
@@ -71,7 +69,7 @@ document.Close();
 Dim document As New WordDocument("Template.docx")
 'Processes the body contents for each section in the Word document
 For Each section As WSection In document.Sections
-    'Accesses the Body of section where all the contents in document reside
+    'Accesses the Body of section where all the contents in document are apart
     Dim sectionBody As WTextBody = section.Body
     IterateTextBody(sectionBody)
     Dim headersFooters As WHeadersFooters = section.HeadersFooters
@@ -120,7 +118,7 @@ private static void IterateTextBody(WTextBody textBody)
                 break;
             case EntityType.BlockContentControl:
                 BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
-                //Iterates through the body items of Block Content Control.
+                //Iterates to the body items of Block Content Control.
                 IterateTextBody(blockContentControl.TextBody);
                 break;
         }
@@ -157,7 +155,7 @@ private static void IterateTextBody(WTextBody textBody)
                 break;
             case EntityType.BlockContentControl:
                 BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
-                //Iterates through the body items of Block Content Control.
+                //Iterates to the body items of Block Content Control.
                 IterateTextBody(blockContentControl.TextBody);
                 break;
         }
@@ -173,7 +171,7 @@ For i As Integer = 0 To textBody.ChildEntities.Count - 1
     'Accesses the body items (should be either paragraph, table or block content control) as IEntity
     Dim bodyItemEntity As IEntity = textBody.ChildEntities(i)
     'A Text body has 3 types of elements - Paragraph, Table and Block Content Control
-    'Determines the element type using EntityType
+    'decide the element type using EntityType
     Select Case bodyItemEntity.EntityType
         Case EntityType.Paragraph
             Dim paragraph As WParagraph = TryCast(bodyItemEntity, WParagraph)
@@ -190,7 +188,7 @@ For i As Integer = 0 To textBody.ChildEntities.Count - 1
         Exit Select
         Case EntityType.BlockContentControl
             Dim BlockContentControl As BlockContentControl = TryCast(bodyItemEntity, BlockContentControl)
-            'Iterates through the body items of Block Content Control.
+            'Iterates to the body items of Block Content Control.
             IterateTextBody(BlockContentControl.TextBody)
         Exit Select
     End Select
@@ -258,7 +256,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modify Hyperlink Uri
 
-The following code example shows how to iterate throughout the paragraph and modify the hyperlink ([Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html)) Uri and specific text ([WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html)) with another. The sample also replaces the text "Andrew" with "Fuller" and updates any hyperlink whose display text is "HTML" to point to `http://www.w3schools.com/`. These values are sample-specific; update them to suit your document.
+The following code example shows how to iterate throughout the paragraph and modify the hyperlink ([Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html)) Uri and specific text ([WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html)) with another.
 
 {% tabs %}
 
@@ -269,7 +267,7 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Autom
 {
     foreach (WSection section in document.Sections)
     {
-        //Accesses the Body of section where all the contents in document reside
+        //Accesses the Body of section where all the contents in document are apart
         WTextBody sectionBody = section.Body;
         IterateTextBody(sectionBody);
         WHeadersFooters headersFooters = section.HeadersFooters;
@@ -282,8 +280,6 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Autom
     document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
-    //Saves the MemoryStream to a file
-    File.WriteAllBytes("Result.docx", stream.ToArray());
 }
 {% endhighlight %}
 
@@ -293,11 +289,11 @@ WordDocument document = new WordDocument("Template.docx");
 //Processes the body contents for each section in the Word document
 foreach (WSection section in document.Sections)
 {
-    //Accesses the Body of section where all the contents in document reside
+    //Accesses the Body of section where all the contents in document are apart
     WTextBody sectionBody = section.Body;
     IterateTextBody(sectionBody);
     WHeadersFooters headersFooters = section.HeadersFooters;
-    //Consider that OddHeader and OddFooter are applied to this document
+    //consider that OddHeader & OddFooter are applied to this document
     //Iterates through the TextBody of OddHeader and OddFooter
     IterateTextBody(headersFooters.OddHeader);
     IterateTextBody(headersFooters.OddFooter);
@@ -311,13 +307,12 @@ document.Close();
 Dim document As New WordDocument("Template.docx")
     'Processes the body contents for each section in the Word document
     For Each section As WSection In document.Sections
-        'Accesses the Body of section where all the contents in document reside
+        'Accesses the Body of section where all the contents in document are apart
         Dim sectionBody As WTextBody = section.Body
         IterateTextBody(sectionBody)
         Dim headersFooters As WHeadersFooters = section.HeadersFooters
-        'Assume that OddHeader and OddFooter are applied to this document
-        'Iterates through the TextBody of OddHeader and OddFooter
-        IterateTextBody(headersFooters.OddHeader)
+        'Considers that OddHeader and OddFooter are applied to this document
+        'Iterates through the TextBody of OddHeader and OddFooterIterateTextBody(headersFooters.OddHeader)
         IterateTextBody(headersFooters.OddFooter)
     Next
 'Saves and closes the document instance
@@ -357,7 +352,7 @@ private static void IterateTextBody(WTextBody textBody)
                 break;
             case EntityType.BlockContentControl:
                 BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
-                //Iterates through the body items of Block Content Control.
+                //Iterates to the body items of Block Content Control.
                 IterateTextBody(blockContentControl.TextBody);
                 break;
         }
@@ -391,7 +386,7 @@ private static void IterateTextBody(WTextBody textBody)
                 break;
             case EntityType.BlockContentControl:
                 BlockContentControl blockContentControl = bodyItemEntity as BlockContentControl;
-                //Iterates through the body items of Block Content Control.
+                //Iterates to the body items of Block Content Control.
                 IterateTextBody(blockContentControl.TextBody);
                 break;
         }
@@ -422,7 +417,7 @@ For i As Integer = 0 To textBody.ChildEntities.Count - 1
         Exit Select
         Case EntityType.BlockContentControl
             Dim BlockContentControl As BlockContentControl = TryCast(bodyItemEntity, BlockContentControl)
-            'Iterates through the body items of Block Content Control.
+            'Iterates to the body items of Block Content Control.
             IterateTextBody(BlockContentControl.TextBody)
         Exit Select
     End Select
@@ -522,17 +517,17 @@ private static void IterateParagraph(ParagraphItemCollection paraItems)
                 }
                 break;
             case EntityType.TextBox:
-                //Iterates through the body items of textbox.
+                //Iterates to the body items of textbox.
                 WTextBox textBox = entity as WTextBox;
                 IterateTextBody(textBox.TextBoxBody);
                 break;
             case EntityType.Shape:
-                //Iterates through the body items of shape.
+                //Iterates to the body items of shape.
                 Shape shape = entity as Shape;
                 IterateTextBody(shape.TextBody);
                 break;
             case EntityType.InlineContentControl:
-                //Iterates through the paragraph items of inline content control.
+                //Iterates to the paragraph items of inline content control.
                 InlineContentControl inlineContentControl = entity as InlineContentControl;
                 IterateParagraph(inlineContentControl.ParagraphItems);
                 break;
@@ -573,17 +568,17 @@ private static void IterateParagraph(ParagraphItemCollection paraItems)
                 }
                 break;
             case EntityType.TextBox:
-                //Iterates through the body items of textbox.
+                //Iterates to the body items of textbox.
                 WTextBox textBox = entity as WTextBox;
                 IterateTextBody(textBox.TextBoxBody);
                 break;
             case EntityType.Shape:
-                //Iterates through the body items of shape.
+                //Iterates to the body items of shape.
                 Shape shape = entity as Shape;
                 IterateTextBody(shape.TextBody);
                 break;
             case EntityType.InlineContentControl:
-                //Iterates through the paragraph items of inline content control.
+                //Iterates to the paragraph items of inline content control.
                 InlineContentControl inlineContentControl = entity as InlineContentControl;
                 IterateParagraph(inlineContentControl.ParagraphItems);
                 break;
@@ -618,17 +613,17 @@ For i As Integer = 0 To paraItems.Count - 1
             End If
         Exit Select
         Case EntityType.TextBox
-            'Iterates through the body items of textbox.
+            'Iterates to the body items of textbox.
             Dim textBox As WTextBox = TryCast(entity, WTextBox)
             IterateTextBody(textBox.TextBoxBody)
         Exit Select
         Case EntityType.Shape
-            'Iterates through the body items of shape.
+            'Iterates to the body items of shape.
             Dim shape As Shape = TryCast(entity, Shape)
             IterateTextBody(shape.TextBody)
         Exit Select
         Case EntityType.InlineContentControl
-            'Iterates through the paragraph items of inline content control.
+            'Iterates to the paragraph items of inline content control.
             Dim inlineContentControl As InlineContentControl = TryCast(entity, InlineContentControl)
             IterateParagraph(inlineContentControl.ParagraphItems)
         Exit Select
