@@ -115,7 +115,7 @@ The use cases above run on a small set of guarantees. These are the key strength
 | **Headless / CI-ready** | Runs in containers, on servers, and in CI/CD pipelines. No Office installation required. |
 | **Comprehensive coverage** | Word, Excel, PDF, PowerPoint, Markdown, and structured data extraction in one library. |
 | **Multiple execution modes** | In-memory for desktop and console; storage-backed for web and scalable services. |
-| **.NET 8.0, 9.0, 10.0** | Long-term support, no upgrade pressure. |
+| **.NET 8.0 or later** | Long-term support, no upgrade pressure. |
 
 For a complete reference of every tool class, see the [Tools](./tools) page. For install and configuration, see [Getting Started](./getting-started).
 

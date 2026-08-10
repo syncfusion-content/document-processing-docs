@@ -9,9 +9,9 @@ documentation: ug
 
 # Syncfusion Document SDK AI Agent Tools Overview
 
-[Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
+[Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 
-You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). To extend or customize, the source is available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0, 9.0, and 10.0.
+You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools). To extend or customize, the source is available on [GitHub](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools). Compatible with .NET 8.0 or later.
 
 ## What Can Agents Build?
 
@@ -30,7 +30,7 @@ Explore real-world scenarios on the [AI Agents View](./agents) page.
 
 ![How AI Agent Tool Execution Works](how-it-works.png)
 
-A typical agent run follows four steps: the user describes a goal, the agent picks the right tools, the tools read or modify the document, and the output is delivered. The [AI Agents View](./agents) page shows this loop for six real-world scenarios.
+A typical agent run follows four steps: the user describes a goal, the agent picks the right tools, the tools read or modify the document, and the output is delivered. The [AI Agents View](./agents) page shows this loop for five real-world scenarios.
 
 ## Key Capabilities
 
