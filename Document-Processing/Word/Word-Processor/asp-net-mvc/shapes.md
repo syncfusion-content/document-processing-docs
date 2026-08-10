@@ -42,4 +42,4 @@ The Document Editor preserves the position properties of shapes and displays the
 
 ## Online Demo
 
-Explore how to preserve auto shapes and grouped shapes in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/autoshapes#/tailwind3).
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/autoshapes#/tailwind3).

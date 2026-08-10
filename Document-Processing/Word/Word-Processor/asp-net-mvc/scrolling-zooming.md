@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling and Zooming in ASP.NET MVC DOCX Editor Component | Syncfusion
+title: Scrolling and Zooming in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn here all about scrolling and zooming in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling Zooming
