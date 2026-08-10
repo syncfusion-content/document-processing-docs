@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the Default Search Highlight Color in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Change Search Highlight Color in JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Change the Default Search Highlight Color in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Change the Default Search Highlight Color
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the Default Search Highlight Color in JavaScript (ES6) Document Editor control
+# Change the Default Search Highlight Color in JavaScript (ES6) Document Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in the Document Editor settings. The highlight color specified in [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor-container#documenteditorsettings) will be applied to the searched text. By default, the search highlight color is `yellow`.
 
