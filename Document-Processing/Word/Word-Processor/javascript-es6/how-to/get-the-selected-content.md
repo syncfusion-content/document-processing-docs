@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the Selected Content in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Get the Selected Content in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Get the Selected Content in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get the Selected Content
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the Selected Content in JavaScript (ES6) Document Editor control
+# Get the Selected Content in JavaScript (ES6) DOCX Editor
 
 You can get the selected content from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

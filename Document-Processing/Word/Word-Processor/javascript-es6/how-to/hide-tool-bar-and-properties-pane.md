@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide Toolbar and Properties Pane in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Hide Toolbar and Properties Pane in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Hide Toolbar and Properties Pane in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Hide Toolbar and Properties Pane
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide Toolbar and Properties Pane in JavaScript (ES6) Document Editor control
+# Hide Toolbar and Properties Pane in JavaScript (ES6) DOCX Editor
 
 **Document Editor Container** provides the main document view area along with the built-in toolbar and properties pane.
 
@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 ## Hide the properties pane
 
-By default, the Document Editor Container has a built-in properties pane which contains options for formatting text, table, image, and headers and footers. You can use the [`showPropertiesPane`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the properties pane.
+By default, the Document Editor Container has a built-in properties pane which contains options for formatting text, table, image, and headers and footers. You can use the [`showPropertiesPane`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel) to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 
@@ -38,7 +38,7 @@ N> Positioning and customizing the properties pane in the Document Editor Contai
 
 ## Hide the toolbar
 
-You can use the [`enableToolbar`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the existing toolbar.
+You can use the [`enableToolbar`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel) to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 
