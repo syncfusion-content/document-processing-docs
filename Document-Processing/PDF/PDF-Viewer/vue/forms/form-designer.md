@@ -32,10 +32,10 @@ You can add the following form fields to the PDF:
 You can move, resize, align, distribute, copy, paste, and undo or redo changes to form fields.
 
 **Set Field Properties**
-You can configure field properties such as name, value, font, color, border, alignment, visibility, tab order, and required or read only state.
+You can configure field properties such as name, value, font, color, border, alignment, visibility, tab order, and required or read-only state.
 
 **Control Field Behavior**
-You can enable or disable read only mode, show or hide fields, and control whether fields appear when printing the document.
+You can enable or disable read-only mode, show or hide fields, and control whether fields appear when printing the document.
 
 **Manage Form Fields**
 You can select, group or ungroup, reorder, and delete form fields as needed.
@@ -122,7 +122,7 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
-You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) property. This allows the application to display or hide the Form Designer tools in the PDF Viewer based on user or workflow requirements.
+You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) property. This allows the application to display or hide the Form Designer tools in the PDF Viewer based on user or workflow requirements.
 
 **Use this property to:**
 - Show the Form Designer toolbar when form design is required
@@ -256,7 +256,7 @@ You can remove a form field from the PDF document by selecting the field and usi
 - Press the `Delete key` on the keyboard after selecting the form field.
 
 The selected form field and its associated widget annotation are permanently removed from the page.
-For more information, see  [Deleting Form Fields](./manage-form-fields/remove-form-fields)
+For more information, see [Deleting Form Fields](./manage-form-fields/remove-form-fields)
 
 ## See Also
 

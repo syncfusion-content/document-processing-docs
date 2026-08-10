@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Load N number of pages in Angular PDF Viewer component | Syncfusion
-description: Learn how to Load N number of pages on initial loading in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn how to load N number of pages on initial loading in the Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Load N number of pages on initial loading
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load N pages initially
+# Load N pages initially in Angular
 
 Control the number of pages the PDF Viewer renders on the initial load to improve perceived performance and reduce initial memory usage. Additional pages are rendered dynamically as the user scrolls through the document, allowing quick access to early pages without loading the entire file.
 
-Set the [initialRenderPages](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/#initialrenderpages) property to specify how many pages to render initially. For large documents, avoid high values for `initialRenderPages` because rendering many pages at once increases memory use and may slow loading. Typical ranges of 10–20 pages work well for most documents; adjust based on document size and client capabilities.
+Set the [initialRenderPages](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#initialrenderpages) property to specify how many pages to render initially. For large documents, avoid high values for `initialRenderPages` because rendering many pages at once increases memory use and may slow loading. Typical ranges of 10–20 pages work well for most documents; adjust based on document size and client capabilities.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
