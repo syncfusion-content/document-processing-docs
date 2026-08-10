@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Optimize SFDT in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about optimizing SFDT in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Optimize sfdt in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Optimize sfdt in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Optimize SFDT
+control: Optimize sfdt 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Optimize SFDT in JavaScript (ES6) Document Editor control
+# Optimize sfdt in JavaScript (ES6) Document editor control
 
-Starting from version v21.1.x, the SFDT file generated in the Document Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
-* File transfer between the client and server through the internet is faster.
+Starting from version v21.1.x, the SFDT file generated in Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
+* File transfer between client and server through the internet gets faster.
 * The new optimized SFDT files require less storage space than the old SFDT files.
+Hence, the optimized SFDT file can't be directly manipulated as JSON string.
 
-Hence, the optimized SFDT file can't be directly manipulated as a JSON string.
+> This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
 
-N> This feature comes with a public API to switch between the old and new optimized SFDT formats, allowing backward compatibility.
-
-For backward compatibility to create older-format SFDT files, refer to the following code changes.
+As a backward compatibility to create older format SFDT files, refer the following code changes,
 
 <table>
 <tr>
@@ -65,7 +64,7 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 <td>Server-side Java</td>
 <td>
 {% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% highlight c# tabtitle="Import"%}
 String sfdtDocument = WordProcessorHelper.load(stream, formatType);
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +79,7 @@ String sfdtDocument = WordProcessorHelper.load(stream, formatType, false);
 </tr>
 </table>
 
-To convert a new optimized SFDT file to the older SFDT format, refer to the following code example.
+To convert from older format SFDT from a new optimized SFDT file, refer the following code example,
 
 <table>
 <tr>
@@ -101,7 +100,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ documentE
 <td>
 {% tabs %} 
 {% highlight c# tabtitle="Import"%}
-using (Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
+using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
    sfdtDocument = WordDocument.Load(docIODocument);
    sfdtDocument.OptimizeSfdt = false;
    string oldSfdt = JsonSerializer.Serialize(sfdtDocument);
