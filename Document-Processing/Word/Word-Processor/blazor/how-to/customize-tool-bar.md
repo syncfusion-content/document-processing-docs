@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Customize the Toolbar in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to Customize the existing toolbar in Syncfusion Blazor DocumentEditor component and much more.
+title: Customize the Toolbar in Blazor DOCX Editor Component | Syncfusion
+description: Learn how to customize the existing toolbar in the Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
-# Customize existing toolbar in Blazor Document Editor Component
 
-## How to customize existing toolbar in Document Editor Container
+# How to customize the existing toolbar in Blazor Document Editor
 
-[`Blazor DOCX Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component (Document Editor) component allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+## Customize the existing toolbar in the Document Editor Container
 
-* Add - New items can defined by [`CustomToolbarItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CustomToolbarItemModel.html) and with existing items in [`toolbarItems`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorContainerEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorContainerEvents_OnToolbarClick).
-* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems property. Pre-defined toolbar items are available with [`ToolbarItem`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ToolbarItem.html.
-* Enable, Disable -  Toolbar items can be enabled or disable using [`EnableItemAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ToolbarModule.html#Syncfusion_Blazor_DocumentEditor_ToolbarModule_EnableItemAsync_System_Int32_System_Boolean_)
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
+
+* Add - New items can be defined by the [`CustomToolbarItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CustomToolbarItemModel.html) and with existing items in the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems) property. The click action for newly added items can be defined in the [`OnToolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorContainerEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorContainerEvents_OnToolbarClick) event.
+* Show, Hide - Existing items can be shown or hidden using the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ToolbarItems) property. Pre-defined toolbar items are available with the [`ToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ToolbarItem.html).
+* Enable, Disable - Toolbar items can be enabled or disabled using the [`EnableItemAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.ToolbarModule.html#Syncfusion_Blazor_DocumentEditor_ToolbarModule_EnableItemAsync_System_Int32_System_Boolean_).
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items">
@@ -22,25 +23,25 @@ documentation: ug
 
 @code {
     SfDocumentEditorContainer container;
-    string[] Items = new string[4] { "New", "Undo", "Redo", "Comments"};
+    string[] Items = new string[4] { "New", "Undo", "Redo", "Comments" };
 }
 ```
 
-### How to add a new custom toolbar item in Document Editor Container
+### How to add a new custom toolbar item in the Document Editor Container
 
- The following code example illustrates how to add a new custom toolbar item in Document editor container.
+The following code example illustrates how to add a new custom toolbar item in the Document Editor Container.
 
 ```csharp
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items"> 
-</SfDocumentEditorContainer> 
- 
-@code { 
-    SfDocumentEditorContainer container; 
-    List<Object> Items = new List<Object> { new CustomToolbarItemModel() { Id = "save", Text = "Save" }, "New", "Undo", "Redo", "Separator", "Image", "Table", "Hyperlink", "Bookmark", "TableOfContents", "Separator", "Header", "Footer", "PageSetup", "PageNumber", "Break", "InsertFootnote", "InsertEndnote", "Separator", "Find", "Separator", "Comments", "TrackChanges", "Separator", "LocalClipboard", "RestrictEditing", "Separator", "FormFields", "UpdateFields" }; 
-} 
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    List<Object> Items = new List<Object> { new CustomToolbarItemModel() { Id = "save", Text = "Save" }, "New", "Undo", "Redo", "Separator", "Image", "Table", "Hyperlink", "Bookmark", "TableOfContents", "Separator", "Header", "Footer", "PageSetup", "PageNumber", "Break", "InsertFootnote", "InsertEndnote", "Separator", "Find", "Separator", "Comments", "TrackChanges", "Separator", "LocalClipboard", "RestrictEditing", "Separator", "FormFields", "UpdateFields" };
+}
 ```
 
-N> Default value of `ToolbarItems` are `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields']`.
+N> The default value of `ToolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields']`.
 
 ## Online Demo
 

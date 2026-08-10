@@ -1,35 +1,35 @@
 ---
 layout: post
-title: Working with Shapes in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about the Shapes in Syncfusion Blazor DocumentEditor component and more.
+title: Working with Shapes in Blazor DOCX Editor Component | Syncfusion
+description: Learn how to work with shapes in the Syncfusion Blazor Document Editor component, including viewing, resizing, and preserving shapes in Word documents.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Working with Shapes in Blazor DocumentEditor
+# Working with Shapes in Blazor Document Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) does not support inserting shapes. However, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 
-The DocumentEditor has preservation support for Lines, Rectangle, Basic Shapes, Block Arrows, Equation Shapes, Flowchart and Stars and Banners.
+The Document Editor has preservation support for Lines, Rectangles, Basic Shapes, Block Arrows, Equation Shapes, Flowchart, and Stars and Banners.
 
-![List of supported shapes in DocumentEditor](images/Shapes_images/supported_shapes.png)
+![List of supported shapes in Document Editor](images/Shapes_images/supported_shapes.png)
 
 N> When using ASP.NET MVC service, the unsupported shapes will be converted as image and preserved as image.
 
-## Text box Shape
+## Text box shape
 
 A text box is a rectangular area on the document where you can enter text. Clicking in a text box displays a flashing cursor, indicating that text can be entered. It allows you to enter multiple lines of text with all text formatting.
 
-![Text box shape view in DocumentEditor](images/Shapes_images/textbox_shape.png)
+![Text box shape view in Document Editor](images/Shapes_images/textbox_shape.png)
 
-## Shape Resizer
+## Shape resizer
 
-The DocumentEditor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
+The Document Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
 
-![Shape resizer view in DocumentEditor](images/Shapes_images/shape_resizer.png)
+![Shape resizer view in Document Editor](images/Shapes_images/shape_resizer.png)
 
 ## Text wrapping style
 
@@ -37,8 +37,8 @@ Text wrapping refers to how shapes fit with surrounding text in a document. [Ref
 
 ## Positioning the shape
 
-DocumentEditor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+The Document Editor preserves the position properties of the shape and displays the shape based on the position properties. It does not support modifying the position properties. However, the shape will be automatically moved along with the text edited if it is positioned relative to the line or paragraph.
 
-## Online Demo
+## Online demo
 
-Explore how to preserve auto shapes in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/autoshapes?theme=fluent2).
+Explore how to preserve AutoShapes in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/autoshapes?theme=fluent2).
