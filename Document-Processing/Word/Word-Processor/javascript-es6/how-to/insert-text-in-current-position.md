@@ -1,22 +1,22 @@
 ---
 layout: post
-title: How to Insert Text in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about inserting text at the current position in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: How to insert text in JavaScript (ES6) Document editor | Syncfusion
+description: Learn here all about Insert text in current position in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Insert Text in Current Position
+control: Insert text in current position 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Text at the Current Position in JavaScript (ES6) Document Editor
+# Insert text in current position in JavaScript (ES6) Document editor
 
-You can insert the text, paragraph, and rich-text content in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
+You can insert the text, paragraph and rich-text content in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 
-## Insert text at the current cursor position
+## Insert text in current cursor position
 
-You can use the [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserttext) API in the editor module to insert text at the current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
-The following example illustrates how to add text in the current selection.
+The following example illustrates how to add the text in current selection.
 
 ```ts
     let hostUrl: string = 'https://document.syncfusion.com/web-services/word-editor/';
@@ -26,35 +26,35 @@ The following example illustrates how to add text in the current selection.
     container.appendTo('#container');
 
     document.getElementById('insert').addEventListener('click',function(){
-    // It will insert the provided text in the current selection
+    // It will insert the provided text in current selection
     container.documentEditor.editor.insertText('Syncfusion');
     });
 ```
 
-Please check the gif below which illustrates how to insert text at the current cursor position on button click:
+Please check below gif which illustrates how to insert text in current cursor position on button click:
 
-![Insert Text at the Current Cursor Position in JavaScript Document Editor](../images/insert_text.gif)
+![Insert text in current cursor position in Javascript document editor](../images/insert_text.gif)
 
-## Insert paragraph at the current cursor position
+## Insert paragraph in current cursor position
 
-To insert a new paragraph at the current selection, you can use the [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserttext) API with the parameter as `\r\n` or `\n`.
+To insert new paragraph at current selection, you can can use [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
 
-The following example code illustrates how to add a new paragraph in the current selection.
+The following example code illustrates how to add the new paragraph in current selection.
 
 ```ts
-// It will add a new paragraph in the current selection
+// It will add the new paragraph in current selection
 container.documentEditor.editor.insertText('\n');
 ```
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT format using a [`web service`](../web-services-overview). Then use the [`paste`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#paste) API to insert the SFDT at the current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#paste) API to insert the sfdt at current cursor position.
 
-N> The HTML string should be well-formatted. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.
+>Note: HTML string should be well formatted. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
-The following example illustrates how to insert the HTML content at the current cursor position.
+The following example illustrates how to insert the HTML content at current cursor position.
 
-* Send the HTML content to the server side for SFDT conversion. Refer to the following example to send the HTML content to the server side and insert it at the current cursor position.
+* Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
 
 ```ts
 import {
@@ -83,10 +83,10 @@ document.getElementById('export').addEventListener('click', () => {
   http.onreadystatechange = function () {
     if (http.readyState === 4) {
       if (http.status === 200 || http.status === 304) {
-        // Insert the SFDT content at the cursor position using the paste API
+        // Insert the sfdt content in cursor position using paste API
         container.documentEditor.editor.paste(http.response);
       } else {
-        alert('Failed.');
+        alert('failed;');
       }
     }
   };
@@ -96,7 +96,7 @@ document.getElementById('export').addEventListener('click', () => {
 });
 ```
 
-* Please refer to the following code example for the server-side web implementation for HTML conversion using DocumentEditor.
+* Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 
 ```c#
 //API controller for the conversion.
@@ -112,8 +112,8 @@ public string LoadString([FromBody]InputParameter data)
 
 public class InputParameter
 {
-    public string content { get; set; }
+    public string content {get; set; }
 }
 ```
 
-N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+>Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
