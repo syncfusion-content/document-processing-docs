@@ -146,10 +146,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N>
-1. Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your application name, and the path to the JSON file.
-2. The **FolderId** is the unique identifier for the folder. For example, if your folder URL is `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
-3. The JSON file (`credentials.json`) downloaded from the Google Cloud Console contains your OAuth 2.0 **Client ID** and **Client Secret**. Use these credentials to interface your application with the Google Drive API.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your application name, and the path to the JSON file.
+
+N> The **FolderId** is the unique identifier for the folder. For example, if your folder URL is `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+
+N> The JSON file (`credentials.json`) downloaded from the Google Cloud Console contains your OAuth 2.0 **Client ID** and **Client Secret**. Use these credentials to interface your application with the Google Drive API.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
