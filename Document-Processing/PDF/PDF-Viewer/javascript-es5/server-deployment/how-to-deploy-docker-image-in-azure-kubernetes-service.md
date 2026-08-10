@@ -97,4 +97,4 @@ Browse to http://<external-ip>/api/pdfviewer to verify the default GET response.
 
 **Step 6:** Use the service endpoint (for example, `https://<external-ip>/api/pdfviewer`) as the client's `serviceUrl`. See the PDF Viewer getting-started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
-For guidance on production deployments and AKS configuration, see the Azure Kubernetes Service walkthrough: https://learn.microsoft.com/azure/aks/kubernetes-walkthrough
+For guidance on production deployments and AKS configuration, see the Azure Kubernetes Service walkthrough: https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli

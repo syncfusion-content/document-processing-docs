@@ -39,4 +39,4 @@ domainurl: ##DomainURL##
 
 Use the service endpoint (for example, https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer) as the PDF Viewer client's serviceUrl. Refer to the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started)
 
-For Azure App Service deployment guidance, see: https://learn.microsoft.com/visualstudio/deployment/
+For Azure App Service deployment guidance, see: https://learn.microsoft.com/en-us/visualstudio/deployment/?view=visualstudio

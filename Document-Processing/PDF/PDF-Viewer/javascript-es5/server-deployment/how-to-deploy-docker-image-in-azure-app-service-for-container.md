@@ -47,4 +47,4 @@ Append the service endpoint (for example, `https://pdfviewer-server.azurewebsite
 
 See the PDF Viewer getting started guide for client configuration: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
-For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://learn.microsoft.com/azure/app-service/containers/quickstart-multi-container
+For guidance on deploying multi-container apps to Azure App Service for Containers, see the Azure quickstart: https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container-sidecar
