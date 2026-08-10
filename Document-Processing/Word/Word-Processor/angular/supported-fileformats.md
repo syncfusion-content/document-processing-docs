@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported File Formats in Angular DOCX Editor
+# Supported File Formats in Angular Document Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Angular DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
 
 ## Supported File Formats
 
@@ -34,10 +34,10 @@ N> * Requires server-side interactions for the operations.
 
 ## Supported platforms for server-side dependencies
 
-You can deploy web APIs for the server-side dependencies of the Document Editor component on the following platforms.
+You can deploy Web Services for the server-side dependencies of the Document Editor component on the following platforms.
 
-- 	[ASP.NET Core](./web-services/core)
-- 	[ASP.NET MVC](./web-services/mvc)
-- 	[Java](./web-services/java)
+- [ASP.NET Core](./web-services/core)
+- [ASP.NET MVC](./web-services/mvc)
+- [Java](./web-services/java)
 
-To know more about server-side dependencies, refer to this [page](./web-services-overview).
+For more information about server-side dependencies, refer to this [page](./web-services-overview).
