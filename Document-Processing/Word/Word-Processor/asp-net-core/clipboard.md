@@ -68,9 +68,7 @@ container.documentEditor.editor.pasteLocal();
 |False|Allows pasting content from the system clipboard. Hence, content copied from both the Document Editor component and outside can be pasted.<br>The browser limitation of pasting from the system clipboard using API and context menu options will remain.|
 
  
-N>
-* Keyboard shortcut for pasting will work properly in both cases.
-* Copying content from the Document Editor component and pasting outside will work properly in both cases.
+N> Keyboard shortcut for pasting will work properly in both cases. Copying content from Document editor component and pasting outside will work properly in both cases.
 
 ### Paste options in context menu
 
