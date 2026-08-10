@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about Print in the Syncfusion JavaScript (ES6) DOCX Editor of Essential JS 2 and more.
+description: Learn about Print in the Syncfusion JavaScript (ES6) DOCX Editor of Essential JS 2 and more details on how to print Word documents.
 platform: document-processing
 control: Print 
 documentation: ug
