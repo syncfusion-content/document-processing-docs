@@ -14,7 +14,7 @@ In this article, we are going to see how to auto save the document in AWS S3. Yo
 
 The following example illustrates how to auto save the document in AWS S3.
 
-* On the client side, using the content change event, we can automatically save the edited content in regular intervals of time. Based on the `contentChanged` boolean value, the document is sent as Docx format to the server side using the [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveasblob) method.
+* On the client side, using the content change event, we can automatically save the edited content in regular intervals of time. Based on the `contentChanged` boolean value, the document is sent as DOCX format to the server side using the [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveasblob) method.
 
 ```ts
 import {

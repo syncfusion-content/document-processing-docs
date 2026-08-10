@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
-DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/documentation/api/document-editor/customToolbarItemModel/) along with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs/).
+DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/documentation/api/document-editor/customToolbarItemModel) along with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs).
 
  
 ```ts
