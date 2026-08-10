@@ -7,7 +7,8 @@ control: Word processor server docker image overview
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Word processor server docker image overview in JavaScript (ES6) Document Editor component
+
+# Word Processor Server Docker Image Overview in JavaScript (ES6)
 
 The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 

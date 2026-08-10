@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Publish Syncfusion DOCX Editor Web API to Azure App Service
+title: Publish Syncfusion JavaScript (ES6) DOCX Editor Web API to Azure App Service
 description: Learn here all about publishing Document Editor Web API application in Azure App Service from Visual Studio in the Syncfusion Document Editor.
 platform: document-processing
 control: How to publish documenteditor web api application in azure app service from visual studio 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Publish Syncfusion Document Editor Web API to Azure App Service
+# Publish JavaScript (ES6) Document Editor Web API to Azure App Service
 
 ## Prerequisites
 
