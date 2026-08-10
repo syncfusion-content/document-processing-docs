@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Link in Angular Document editor component | Syncfusion
-description: Learn here all about Link in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Link in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Link in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in Angular Document editor component
+# Link in Angular Document Editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
-Document Editor triggers `requestNavigate` event whenever user clicks Ctrl key or tap a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+Document Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
-The following example illustrates how to add requestNavigate event for DocumentEditor.
+The following example illustrates how to add the `requestNavigate` event for the DocumentEditor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -34,7 +34,7 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
-The following example illustrates how to add requestNavigate event for DocumentEditorContainer component.
+The following example illustrates how to add the `requestNavigate` event for the DocumentEditorContainer component.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -72,7 +72,7 @@ export class AppComponent {
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-If the selection is in hyperlink, trigger this event by calling `navigateHyperlink` method of `Selection` instance. Refer to the following example.
+If the selection is in a hyperlink, trigger this event by calling the `navigateHyperlink` method of the `Selection` instance. Refer to the following example.
 
 ```typescript
 this.documentEditor.selection.navigateHyperlink();
@@ -80,7 +80,7 @@ this.documentEditor.selection.navigateHyperlink();
 
 ## Copy link
 
-Document Editor copies link text of a hyperlink field to the clipboard if the selection is in hyperlink. Refer to the following example.
+Document Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
 
 ```typescript
 this.documentEditor.selection.copyHyperlink();
@@ -112,19 +112,19 @@ Refer to the following example.
 
 ## Customize screen tip
 
-You can customize the screen tip text for the hyperlink by using below sample code.
+You can customize the screen tip text for the hyperlink by using the sample code below.
 
 ```typescript
 this.documentEditor.editor.insertHyperlink('https://www.google.com', 'Google', '<<Screen tip text>>');
 ```
 
-Screen tip text can be modified through UI by using the [Hyperlink dialog](./dialog#hyperlink-dialog)
+Screen tip text can be modified through the UI by using the [Hyperlink dialog](./dialog#hyperlink-dialog).
 
 ![Add or modify the screen tip text for hyperlinks in a Word document.](images/screentip.png)
 
 ## Remove hyperlink
 
-To remove link from hyperlink in the document, press Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use ‘removeHyperlink’ method of ‘Editor’ instance if the selection is in hyperlink. Refer to the following example.
+To remove the link from a hyperlink in the document, press the Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use the `removeHyperlink` method of the `Editor` instance if the selection is in a hyperlink. Refer to the following example.
 
 ```typescript
 this.documentEditor.editor.removeHyperlink();
@@ -146,17 +146,17 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
   
 {% previewsample "/document-processing/samples/document-editor/angular/link-cs4" %}
 
-You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
+You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in a hyperlink.
 
 | Key Combination | Description |
 |-----------------|-------------|
-|Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
+|Ctrl + K | Open hyperlink dialog that allows you to create or edit a hyperlink|
 
-## Online Demo
+## Online demo
 
-Explore how to insert and manage hyperlinks in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/links-bookmarks).
+Explore how to insert and manage hyperlinks in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/links-bookmarks).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Hyperlink dialog](./dialog#hyperlink-dialog)
