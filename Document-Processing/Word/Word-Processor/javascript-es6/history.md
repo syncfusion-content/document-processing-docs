@@ -1,30 +1,30 @@
 ---
 layout: post
-title: History in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about History in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: History in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about History in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: History
+control: History 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in JavaScript (ES6) Document Editor control
+# History in JavaScript (ES6) Document editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) tracks the history of all editing actions performed in the document, enabling undo and redo functionality.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 
-Inject the `EditorHistory` module in your application to provide history preservation functionality for the `DocumentEditor`. Refer to the following code example.
+Inject the ‘EditorHistory’ module in your application to provide history preservation functionality for ‘DocumentEditor’. Refer to the following code example.
 
 ```ts
-//Inject required modules.
+//Inject require modules.
 DocumentEditor.Inject(Editor, Selection, EditorHistory);
 let editor: DocumentEditor = new DocumentEditor({ enableEditor: true, isReadOnly: false });
 //Enable editor history module.
 editor.enableEditorHistory = true;
 ```
 
-You can enable or disable history preservation for a Document Editor instance at any time using the `enableEditorHistory` property. Refer to the following sample code.
+You can enable or disable history preservation for a Document Editor instance any time using the ‘enableEditorHistory’ property. Refer to the following sample code.
 
 ```ts
 editor.enableEditorHistory = false;
@@ -32,9 +32,9 @@ editor.enableEditorHistory = false;
 
 ## Undo and redo
 
-You can perform undo and redo using the `Ctrl + Z` and `Ctrl + Y` keyboard shortcuts. The Document Editor exposes an API to do it programmatically.
+You can perform undo and redo by ‘CTRL+Z’ and ‘CTRL+Y’ keyboard shortcuts. Document Editor exposes API to do it programmatically.
 
-To undo the last editing operation in the Document Editor, refer to the following sample code.
+To undo the last editing operation in Document Editor, refer to the following sample code.
 
 ```ts
 editor.editorHistory.undo();
@@ -48,7 +48,7 @@ editor.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions will be maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of undo and redo stacks to 500 each, respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```ts
 //Set undo limit.
