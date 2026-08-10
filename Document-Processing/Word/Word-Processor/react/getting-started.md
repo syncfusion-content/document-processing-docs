@@ -16,6 +16,11 @@ domainurl: ##DomainURL##
 
 {% tabcontent Syncfusion CLI %}
 
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
 ## Install the Syncfusion CLI 
 
 Install the Syncfusion CLI globally using the following command:
