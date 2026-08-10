@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Collaborative Editing in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing
@@ -70,7 +70,7 @@ Changes made on the client side need to be sent to the server side to broadcast 
 
 ### Step 1: Configure SockJS hub to create room for collaborative editing session
 
-To manage groups for each document, create a folder named "Hub" and add a file named `DocumentEditorHub.java` inside it. Add the following code to the file to manage SockJS groups using room names.
+To manage groups for each document, create a folder named "Hub" and add a file named `DocumentEditorHub.Java` inside it. Add the following code to the file to manage SockJS groups using room names.
 
 Join the group by using the unique ID of the document by using the `joinGroup` method.
 
@@ -257,7 +257,7 @@ spring.datasource.redisport= "<Redis port number>"
 
 #### Step 2: Publish each editing operation to a Redis channel
 
-Publish each editing operation to a Redis channel with the room name. This will send notifications to all the users (in different servers) subscribed to that specific channel. Refer to the `publishToRedis()` method in `DocumentEditorHub.java` for details.
+Publish each editing operation to a Redis channel with the room name. This will send notifications to all the users (in different servers) subscribed to that specific channel. Refer to the `publishToRedis()` method in `DocumentEditorHub.Java` for details.
 
 ```java
 try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {                           
@@ -269,7 +269,7 @@ try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {
 
 #### Step 3: Subscribe to the specific channel using the Redis cache `Subscribe` option
 
- Redis cache will be initialized and will subscribe to the specific channel using the Redis cache `Subscribe` option. This ensures that users in any server will get notified when an editing operation is published to the Redis cache using the `onMessage()` API. Refer to the code snippet in `RedisSubscriber.java` for details.
+ Redis cache will be initialized and will subscribe to the specific channel using the Redis cache `Subscribe` option. This ensures that users in any server will get notified when an editing operation is published to the Redis cache using the `onMessage()` API. Refer to the code snippet in `RedisSubscriber.Java` for details.
 
  ```java
 @PostConstruct
