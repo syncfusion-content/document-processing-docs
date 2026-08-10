@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display a custom tooltip for annotations in PDF Viewer
 
-Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer#annotationmouseover) and `annotationMouseLeave` events.
+Display custom tooltips for annotations by handling the [annotationMouseover](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationmouseover) and `annotationMouseLeave` events.
 
 - Include the JavaScript PDF Viewer script and the `Annotation` module on the page.
 - Include the `ej.popups` module or equivalent tooltip library used in the example.

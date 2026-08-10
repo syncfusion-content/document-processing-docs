@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print a document in JavaScript PDF Viewer
 
-Print a PDF document programmatically using the [print](https://ej2.syncfusion.com/documentation/api/pdfviewer#print) method in the Print module.
+Print a PDF document programmatically using the [print](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#print) method in the Print module.
 
 The following steps are used to print the PDF document programmatically.
 

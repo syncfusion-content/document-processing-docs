@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Focus on a form field after loading in JavaScript PDF Viewer
 
-The JavaScript PDF Viewer library enables setting focus on a specific form field by using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer#focusformfield) API.
+The JavaScript PDF Viewer library enables setting focus on a specific form field by using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#focusformfield) API.
 
 Follow these steps to bring a form field into focus during document load and on demand.
 

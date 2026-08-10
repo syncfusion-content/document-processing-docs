@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Download document on window closing in JavaScript PDF Viewer
 
-The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the before unload event.
+The JavaScript PDF Viewer can automatically download the loaded PDF document when the browser window is refreshed or closed by handling the [before unload](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event) event.
 
 ## Prerequisites
 
