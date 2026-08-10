@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Export PDF in Document Editor Component |Syncfusion
-description: Learn here all about export document as PDF in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export PDF in Syncfusion DOCX Editor Component | Syncfusion
+description: Learn here all about exporting the document as PDF in the Syncfusion Document Editor component of Essential JS 2 and more.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
 ---
 
 
-# How to export the document as PDF in React Document Editor
+# How to export the document as PDF in ASP.NET Core Document Editor
 
-This article explains how to export the document as PDF format. You can export the document as PDF in following ways:
+This article explains how to export the document as a PDF. You can export the document as PDF in the following ways:
 
-## Export the document as PDF in client-side
+## Export the document as PDF on the client-side
 
-Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using `exportAsImage` API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
+Use the [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) at the application level to export the document as PDF using the `exportAsImage` API. Here, all pages will be converted to images and inserted as PDF pages (works like print as PDF).
 
->Note: 
-* The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
-* Text search is not supported in the exported PDF, as the content is stored as images.
-* You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
+N> 1. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) exports PDFs by converting pages into images on the client side, which may slightly increase the file size compared to text-based PDFs.
+N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
+N> 3. You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 
 
 {% tabs %}
@@ -33,13 +32,13 @@ Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-e
 
 
 
-## Export document as PDF in server-side using DocIO
+## Export document as PDF on the server-side using DocIO
 
-With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF in server-side. Here, you can search the text.
+With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF on the server-side. Here, you can search the text.
 
-The following way illustrates how to convert the document as PDF:
+The following steps illustrate how to convert the document as PDF:
 
-* Using `serialize` API, convert the document as Sfdt and send it to server-side.
+* Using the `serialize` API, convert the document as SFDT and send it to the server-side.
 
 
 {% tabs %}
@@ -53,8 +52,8 @@ The following way illustrates how to convert the document as PDF:
 
 
 
-* Using Save API in server-side, you can convert the sfdt to stream.
-* Finally, convert the stream to PDF using `Syncfusion.DocIORenderer.Net.Core` library.
+* Using the Save API on the server-side, you can convert the SFDT to a stream.
+* Finally, convert the stream to a PDF using the `Syncfusion.DocIORenderer.Net.Core` library.
 
 ```csharp
 [AcceptVerbs("Post")]
