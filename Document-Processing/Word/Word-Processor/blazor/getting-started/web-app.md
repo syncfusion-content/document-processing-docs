@@ -73,7 +73,7 @@ If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you n
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory (where the `.csproj` file is located).
-* Run the following command to install 
+* Run the following command to install:
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
@@ -198,7 +198,7 @@ N> If the interactivity location is set to **Global** in your Blazor Web App, yo
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This launches the application and displays the DOCX Editor in your default web browser. The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The application opens and displays the DOCX Editor in your default web browser. The output will appear as follows:
 
 ![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
 
