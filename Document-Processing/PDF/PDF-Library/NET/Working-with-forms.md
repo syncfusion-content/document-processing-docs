@@ -1842,7 +1842,7 @@ The following code example illustrates how to add complex script support for all
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-complex-script-to-all-the-supported-fields-in-PDF/.NET/Add-complex-script-to-all-the-supported-fields-in-PDF/Program.cs" %}
 
 using System.Drawing;
 using System.IO;
@@ -1950,6 +1950,8 @@ document.Close(True)
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-complex-script-to-all-the-supported-fields-in-PDF).
 
 You can also flatten the existing form fields with complex script layout by using the following code snippet.
 
@@ -4680,7 +4682,7 @@ The following code example illustrates how to enable or disable unison functiona
 
 {% tabs %}  
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Radio-button-behavior-in-PDF-forms-with-AllowUnisonSelection/.NET/Radio-button-behavior-in-PDF-forms-with-AllowUnisonSelection/Program.cs" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Interactive;
@@ -4823,7 +4825,7 @@ document.Close(True)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Radio-button-behavior-in-PDF-forms-with-AllowUnisonSelection/.NET).
 
 The screenshot below highlights the difference between having the radio button unison feature disabled versus enabled.
 

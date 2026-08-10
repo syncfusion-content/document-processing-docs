@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Search text and redact in ASP.NET MVC PdfViewer
 
-You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the extractTextCompleted event, triggers text extraction, performs a search, and places redaction annotations for every result.
+You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below calls `findTextAsync` to perform the search, iterates through the returned bounds, and places a redaction annotation for every result.
 
 N> Prerequisites: Add the PdfViewer control to your ASP.NET MVC application and ensure a document is loaded. Make sure the redaction feature is available in the version you are using. Once applied, redaction permanently removes the selected content.
 

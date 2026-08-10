@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Resolve “Unable to find an entry point named FPDFText_GetCharAngle” error in ASP.NET MVC PDF Viewer | Syncfusion
-description: Resolve the “Unable to find an entry point named FPDFText_GetCharAngle” error in the Syncfusion ASP.NET MVC PDF Viewer by updating the PDFium assemblies and republishing the service.
-control: PDF Viewer
+title: Resolve FPDFText_GetCharAngle error in PDF Viewer | Syncfusion
+description: Resolve the FPDFText_GetCharAngle error in Syncfusion PDF Viewer by updating PDFium assemblies and republishing the service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve "Unable to find an entry point named FPDFText_GetCharAngle" error
+# Resolve FPDFText_GetCharAngle error in PDF Viewer
 
 Starting with Essential Studio<sup style="font-size:70%">&reg;</sup> 21.1.0.35 (2023 Volume 1), the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer ships an updated PDFium package to improve text search, text selection, and rendering performance. If an application still references the older native PDFium binaries after upgrading the NuGet packages, the viewer may throw the exception **"Unable to find an entry point named FPDFText_GetCharAngle"** and the client can display the **"Web-Service is not listening"** status. Inspect the Network tab to confirm that the service response fails due to missing or outdated Pdfium assemblies.
 
