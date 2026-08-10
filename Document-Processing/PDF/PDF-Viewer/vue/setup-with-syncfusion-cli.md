@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Up Vue PDF Viewer Using Syncfusion CLI | Syncfusion
-description: Learn how to set up a Vue PDF Viewer project quickly using the Syncfusion CLI. This guide covers both non-interactive and interactive setup modes with step-by-step instructions for developers.
+description: Learn how to set up a Vue PDF Viewer project quickly using the Syncfusion CLI. This guide covers both non-interactive and interactive setup modes.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -16,51 +16,19 @@ This guide shows you how to set up a Vue PDF Viewer project using the Syncfusion
 
 Before you begin, ensure you have the following:
 
-- **Node.js 24+ (LTS recommended)** — [Download Node.js](https://nodejs.org/)
+- **Node.js 24+ (LTS recommended)** — [Download Node.js](https://nodejs.org/en)
 - A command-line terminal (PowerShell, Terminal, or Command Prompt)
 - Basic familiarity with npm and Vue
 
-## Step 1: Configure npm Registry
+## Step 1: Install the Syncfusion CLI
 
-The Syncfusion CLI requires access to the Syncfusion development registry. Create a `.npmrc` file in your project folder with the following configuration:
-
-```
-registry=https://registry.npmjs.org/
-@syncfusion:registry=https://nexus.syncfusioninternal.com/repository/ej2-development
-```
-
-This file tells npm where to download Syncfusion packages from.
-
-## Step 2: Create package.json and Install Syncfusion CLI
-
-Create a `package.json` file in your project directory with the following content:
-
-```json
-{
-  "name": "pdf-viewer-app",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {},
-  "dependencies": {
-    "@syncfusion/cli": "*"
-  }
-}
-```
-
-Then install the Syncfusion CLI by running:
+Install the Syncfusion CLI globally using the following command:
 
 ```bash
-npm install
+npm install -g @syncfusion/syncfusion-cli
 ```
 
-Or install directly:
-
-```bash
-npm install @syncfusion/cli
-```
-
-## Step 3: Create a Vue PDF Viewer Project
+## Step 2: Create a Vue PDF Viewer Project
 
 The Syncfusion CLI provides two ways to create a project: **non-interactive** and **interactive** mode.
 
@@ -69,7 +37,7 @@ The Syncfusion CLI provides two ways to create a project: **non-interactive** an
 Create a project directly with a single command:
 
 ```bash
-npx sf new my-pdf-viewer-app --framework vue --template pdf-viewer
+sf new my-pdf-viewer-app --framework vue --template pdf-viewer
 ```
 
 This command instantly creates a Vue Vite application configured with the EJ2 PDF Viewer component. Replace `my-pdf-viewer-app` with your desired project name.
@@ -79,7 +47,7 @@ This command instantly creates a Vue Vite application configured with the EJ2 PD
 For a guided setup, run the CLI in interactive mode:
 
 ```bash
-npx sf
+sf
 ```
 
 The CLI will prompt you to select your project configuration. Follow these steps:
@@ -110,7 +78,7 @@ Example output:
 ✓ Install dependencies and start app now? ... yes
 ```
 
-## Step 4: Run Your Project
+## Step 3: Run Your Project
 
 If you selected `no` for automatic setup, navigate to your project and start the development server:
 
