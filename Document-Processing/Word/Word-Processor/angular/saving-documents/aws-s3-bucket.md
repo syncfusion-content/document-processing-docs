@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Save document to AWS S3 in Angular Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in Angular Document editor of Syncfusion Essential JS 2 and more details.
+title: Save document to AWS S3 in Angular DOCX Editor control | Syncfusion
+description:  Learn about how to save a document to AWS S3 in Angular Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3
+# Save document to AWS S3 in Angular Document Editor
 
-To save a document to AWS S3, you can follow the steps below
+To save a document to AWS S3, follow the steps below.
 
-**Step 1:** Create a Simple [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) sample in Angular
+**Step 1:** Create a simple Angular Document Editor sample in Angular.
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
-* Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
-* Open the `DocumentEditorController.cs` file in your web service project.
+2. Open the `DocumentEditorController.cs` file in your web service project.
 
-* Import the required namespaces at the top of the file:
+3. Import the required namespaces at the top of the file:
 
 ```csharp
 using System.IO;
@@ -31,7 +31,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -50,7 +50,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToS3()` method to save the document to AWS S3 bucket
+5. Create the `SaveToS3()` method to save the document to AWS S3 bucket.
 
 ```csharp
 
@@ -58,7 +58,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToS3")]
-//Post action for save the document to AWS S3
+//Post action to save the document to AWS S3
 
 public void SaveToS3(IFormCollection data)
 {
@@ -97,7 +97,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -114,11 +114,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:** Modify the index file in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in AWS S3 Bucket.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in an AWS S3 Bucket.
 
 ```typescript
 
@@ -166,4 +166,4 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
+N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
