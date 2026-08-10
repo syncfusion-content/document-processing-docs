@@ -40,17 +40,17 @@ export class AppComponent {
 
 * Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
-## Enable spellCheck
+## Enable SpellCheck
 
 To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
-## Disable spellCheck
+## Disable SpellCheck
 
 To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
-### Remove underline
+### Remove Underline
 
 By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the [`removeUnderline`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#removeunderline) API and now, the squiggly lines will never be rendered for mis-spelled words.
 
@@ -142,7 +142,7 @@ Right click on error word to open the context menu with spell check options. Ple
 
 Context menu shows the suggestions for mis-spelled words. By clicking on the required word from suggestion, the error word gets replaced automatically.
 
-### Add To dictionary
+### Add To Dictionary
 
 Using this option, you can add the current word to the dictionary. So that the spell checker does not consider that word as error in future.
 

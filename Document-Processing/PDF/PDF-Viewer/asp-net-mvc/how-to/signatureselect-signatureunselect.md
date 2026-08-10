@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Handle signatureSelect and signatureUnselect events in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to respond to signatureSelect and signatureUnselect events in the Syncfusion ASP.NET MVC PDF Viewer to track handwritten signature interactions.
+title: Handle signature events in PDF Viewer | Syncfusion
+description: Respond to signatureSelect and signatureUnselect events in Syncfusion PDF Viewer to track signature interactions.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -45,7 +44,7 @@ function signatureSelect(args) {
 };
 
 function signatureUnselect(args) {
-    console.log('Signature selected:', args);
+    console.log('Signature unselected:', args);
 };
 </script>
 
@@ -66,7 +65,7 @@ function signatureSelect(args) {
 };
 
 function signatureUnselect(args) {
-    console.log('Signature selected:', args);
+    console.log('Signature unselected:', args);
 };
 </script>
 

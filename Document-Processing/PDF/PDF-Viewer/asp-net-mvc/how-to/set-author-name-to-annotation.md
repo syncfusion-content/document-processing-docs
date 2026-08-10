@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Author Name to Annotation in PDF Viewer
-description: Learn how to set the author name for annotations in the Syncfusion ASP.NET MVC PDF Viewer component of Essential JS 2, enhancing collaboration and tracking.
+title: Set Author Name to Annotation | Syncfusion
+description: Set author name for annotations in Syncfusion PDF Viewer to enhance collaboration and track changes made by different users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -15,11 +15,13 @@ Follow these steps to set the author name for annotations in the PDF Viewer:
 
 **Step 1: Create a Basic PDF Viewer Sample**
 
-Start by following the instructions provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to set up a basic PDF Viewer application.
+Start by following the instructions provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to set up a basic PDF Viewer application.
 
 **Step 2: Set the Author Name**
 
 Once your PDF Viewer is set up, you can set the author name for annotations using the following JavaScript code snippet. This typically goes within your view, often at the end of the `<body>` tag or in a dedicated script file, after the PDF Viewer component has been initialized.
+
+N> Wire the function to the viewer by adding the `DocumentLoad("documentLoad")` option in the Razor markup so the handler runs when the document loads.
 
 ```html
 
