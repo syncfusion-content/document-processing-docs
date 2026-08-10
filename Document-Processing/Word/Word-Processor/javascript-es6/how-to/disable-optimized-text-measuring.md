@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable Optimized Text Measuring in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Disable Optimized Text Measuring in JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Disable Optimized Text Measuring in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable Optimized Text Measuring
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable Optimized Text Measuring in JavaScript (ES6) Document Editor control
+# Disable Optimized Text Measuring in JavaScript (ES6) DOCX Editor
 
 Starting from v19.3.0.x, the accuracy of text size measurements in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is improved to better match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in the Document Editor settings.
 

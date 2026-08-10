@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable Header and Footer Edit in JavaScript (ES6) DOCX Editor | Syncfusion
+title: Disable Header/Footer Edit - JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about disabling editing in the header and footer of the JavaScript (ES6) Document Editor control.
 platform: document-processing
 control: Disable Header and Footer Edit in Document Editor
