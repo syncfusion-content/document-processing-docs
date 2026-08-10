@@ -26,7 +26,7 @@ SFDT is optimized for web-based document editing scenarios.
 
 - It is lightweight and easier to process.
 
-- Because SFDT is a JSON string, it can be stored directly in a database text column without binary handling.
+- As SFDT is a Base64 string by default, it can be stored directly in databases.
 
 - Server-side dependencies are not required for loading and saving SFDT.
 
