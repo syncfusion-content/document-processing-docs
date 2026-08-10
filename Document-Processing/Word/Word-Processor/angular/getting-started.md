@@ -16,6 +16,11 @@ domainurl: ##DomainURL##
 
 {% tabcontent Syncfusion CLI %}
 
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
 ## Create a new Angular application using Syncfusion CLI
 
 You can create an Angular application using the Syncfusion CLI. The CLI provides two ways to create a project:
