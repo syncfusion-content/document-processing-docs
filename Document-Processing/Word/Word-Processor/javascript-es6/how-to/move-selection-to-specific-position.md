@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move Selection to a Specific Position in JavaScript (ES6) DOCX Editor | Syncfusion
+title: Move Selection to a Specific Position in JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about moving the selection to a specific position in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Move Selection to a Specific Position
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move Selection to a Specific Position in JavaScript (ES6) Document Editor
+# Move Selection to Specific Position in JavaScript (ES6) DOCX Editor
 
 Using the [`select`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#select) API in the selection module, you can set the cursor position anywhere in the document.
 
@@ -64,7 +64,7 @@ The Document Editor has a [`selectionChange`](https://ej2.syncfusion.com/documen
 
 ## Select the content based on left and top positions
 
-Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/documentation/api/document-editor/selectionSettings/) to select the content based on the left and top positions.
+Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/documentation/api/document-editor/selectionSettings) to select the content based on the left and top positions.
 
 The `x` value denotes the left position, the `y` value denotes the top position, and the `extend` value denotes whether to extend or update the selection.
 

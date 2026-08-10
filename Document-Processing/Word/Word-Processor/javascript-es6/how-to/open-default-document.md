@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a Default Document in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Open a Default Document in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about opening a default document in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open a Default Document

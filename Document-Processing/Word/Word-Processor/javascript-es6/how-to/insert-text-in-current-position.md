@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Text at the Current Position in JavaScript (ES6) Document Editor
+# Insert Text at Current Position in JavaScript (ES6) Document Editor
 
 You can insert the text, paragraph, and rich-text content in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 

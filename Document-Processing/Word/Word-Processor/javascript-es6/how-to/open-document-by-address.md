@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a Document by Address in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Open a Document by Address in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about opening a document by address in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open a Document by Address
