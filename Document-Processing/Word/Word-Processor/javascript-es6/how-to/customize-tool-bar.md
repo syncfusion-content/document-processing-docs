@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Toolbar in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Customize Toolbar in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Customize Toolbar in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn how to customize the toolbar in Syncfusion JavaScript (ES6) DOCX Editor to add, remove, or modify toolbar items for your documents.
 platform: document-processing
 control: Customize Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Toolbar in JavaScript (ES6) Document Editor control
+# Customize Toolbar in JavaScript (ES6) Document Editor
 
 ## How to customize the existing toolbar in DocumentEditorContainer
 
