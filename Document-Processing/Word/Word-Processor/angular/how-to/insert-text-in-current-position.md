@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Insert Text in Angular Document Editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Insert text in current position in Angular DOCX Editor | Syncfusion
+description: Learn here all about Insert text in current position in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Insert text in current position 
+control: Insert text in current position
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Text at Current Position in Angular Document Editor
+# Insert Text in Current Position in Angular Document Editor component
 
-You can insert the text, paragraph and rich-text content in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component.
+You can insert text, paragraphs, and rich-text content in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component.
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext) API in editor module to insert the text in current cursor position.
 
-The following example illustrates how to add the text in current selection.
+The following example code illustrates how to add the text at the current cursor position.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -54,13 +54,13 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Insert paragraph in current cursor position
 
-To insert new paragraph at current selection, you can can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#inserttext) API with parameter as `\r\n` or `\n`.
+To insert a new paragraph at the current selection, you can use [`insertText`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#inserttext) API with parameter as `\r\n` or `\n`.
 
-The following example code illustrates how to add the new paragraph in current selection.
+The following example code illustrates how to add the new paragraph in the current selection.
 
 ```typescript
 // It will add the new paragraph in current selection
@@ -69,11 +69,11 @@ this.container.documentEditor.editor.insertText('\n');
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#paste) API to insert the sfdt at current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT format using [`web service`](../web-services-overview). Then use [`paste`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#paste) API to insert the SFDT at the current cursor position.
 
->Note: Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> The HTML string should be well-formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.
 
-The following example illustrates how to insert the HTML content at current cursor position.
+The following example illustrates how to insert the HTML content at the current cursor position.
 
 * Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
 
@@ -127,7 +127,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 
@@ -152,4 +152,4 @@ public class InputParameter
 }
 ```
 
->Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
