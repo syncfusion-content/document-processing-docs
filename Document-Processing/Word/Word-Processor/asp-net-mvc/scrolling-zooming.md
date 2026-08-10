@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling and Zooming in ASP.NET MVC DOCX Editor Component
+title: Scrolling and Zooming in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about scrolling and zooming in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling Zooming
@@ -50,7 +50,8 @@ You can scale the contents in the Document Editor, ranging from 10% to 500% of t
 {% include code-snippet/document-editor/asp-net-mvc/scrolling-zooming/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-zooming.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -64,7 +65,8 @@ Apart from specifying the zoom factor as a value, the Document Editor provides a
 {% include code-snippet/document-editor/asp-net-mvc/scrolling-page-fit/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-page-fit.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
