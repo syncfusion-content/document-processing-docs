@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global and Local in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Global and Local in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Localization in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn how to localize the default text content of Syncfusion JavaScript (ES6) DOCX Editor to support multiple cultures and languages.
 platform: document-processing
 control: Global and Local
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global and Local in JavaScript (ES6) Document Editor control
+# Localization in JavaScript (ES6) Document Editor
 
 ## Localization
 
