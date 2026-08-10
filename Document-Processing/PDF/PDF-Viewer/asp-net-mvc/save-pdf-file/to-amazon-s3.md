@@ -4,7 +4,6 @@ title: Save PDF files to AWS S3 in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to save PDF files to AWS S3 using the Syncfusion ASP.NET MVC PDF Viewer component in standalone and server-backed configurations.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -47,7 +46,7 @@ N> Replace **Your Region** with the actual Region of your AWS S3 account and **Y
 
 ```csharp
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this to your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -146,10 +145,10 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-3. Modify the `Download()` method to save the downloaded PDF files to AWS S3 bucket
+2. Modify the `Download()` method to save the downloaded PDF files to AWS S3 bucket
 
 ```csharp
- private readonly string _accessKey = "Your Access Key from AWS S35";
+ private readonly string _accessKey = "Your Access Key from AWS S3";
  private readonly string _secretKey = "Your Secret Key from AWS S3";
  private readonly string _bucketName = "Your Bucket name from AWS S3";
 
