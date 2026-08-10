@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save to Dropbox cloud file storage in ASP.NET MVC DOCX Editor | Syncfusion
+title: Save to Dropbox Cloud in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn about how to save a document to Dropbox cloud file storage in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save a Document to Dropbox Cloud File Storage in ASP.NET MVC Document Editor
+# Save a Document to Dropbox Cloud in ASP.NET MVC DOCX Editor
 
 To save a document to Dropbox cloud file storage, follow these steps:
 

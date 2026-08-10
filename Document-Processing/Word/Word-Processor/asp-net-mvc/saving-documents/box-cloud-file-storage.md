@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save a Document to Box Cloud File Storage in ASP.NET MVC Document Editor
+# Save a Document to Box Cloud in ASP.NET MVC Document Editor
 
 To save a document to Box cloud file storage, follow these steps:
 
