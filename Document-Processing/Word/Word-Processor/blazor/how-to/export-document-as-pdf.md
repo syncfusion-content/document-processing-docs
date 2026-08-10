@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Export a Document as a PDF in Blazor DocumentEditor | Syncfusion
-description: Learn how to export the document as PDF in Syncfusion Blazor DocumentEditor component and much more.
+title: Export a Document as a PDF in Blazor DOCX Editor | Syncfusion
+description: Learn how to export the document as PDF in Syncfusion Blazor Document Editor component and much more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
 # How to export the document as PDF in Blazor Document Editor
 
-In this article, we are going to see how to export the document as PDF format.
+In this article, we are going to see how to export the document as a PDF format.
 
-With the help of [`Syncfusion`<sup style="font-size:70%">&reg;</sup>` DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF.
+With the help of [`Syncfusion`<sup style="font-size:70%">&reg;</sup>` DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as a PDF.
 
-The following way illustrates how to convert the document as PDF:
+The following example illustrates how to convert the document to PDF:
 
-* Using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) API, convert the document as Base64String, then convert to stream and send it to Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO.
-* Finally, convert the stream to PDF using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
+* Using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) API, convert the document to a Base64 string, then convert it to a stream and pass it to Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO.
+* Finally, convert the stream to PDF using the [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
 
 The following example code illustrates how to process the sfdt in server-side.
 

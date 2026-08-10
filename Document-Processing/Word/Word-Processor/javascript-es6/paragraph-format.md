@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES6) Document editor | Syncfusion
-description: Learn here all about Paragraph format in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Paragraph format in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn about paragraph formatting in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in JavaScript (ES6) Document editor control
+# Paragraph format in JavaScript (ES6) Document Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
@@ -23,7 +23,7 @@ documenteditor.selection.paragraphFormat.rightIndent = 24;
 
 ## Special indentation
 
-You can define special indent for first line of the paragraph using the following sample code.
+You can define a special indent for the first line of the paragraph using the following sample code.
 
 ```ts
 documenteditor.selection.paragraphFormat.firstLineIndent = 24;
@@ -31,7 +31,7 @@ documenteditor.selection.paragraphFormat.firstLineIndent = 24;
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can increase the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```ts
 documenteditor.editor.increaseIndent()
@@ -39,7 +39,7 @@ documenteditor.editor.increaseIndent()
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can decrease the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```ts
 documenteditor.editor.decreaseIndent()
@@ -53,13 +53,13 @@ You can get or set the text alignment of selected paragraphs using the following
 documenteditor.selection.paragraphFormat.textAlignment = 'Center' | 'Left' | 'Right' | 'Justify';
 ```
 
->Note: Starting from `v19.4.0.x`, the text justification of Document editor component matches alignment of Microsoft Word 2013 and newer versions based on the compatibility mode present in the document. The DOCX document created using Microsoft Word 2013 and newer versions will have the compatibility mode `Word2013` and follows a special behavior in justifying the text. You can retain the text justification behavior like old versions by modifying the compatibility mode as `Word2010`.
+N> Starting from `v19.4.0.x`, the text justification of the Document Editor component matches the alignment of Microsoft Word 2013 and newer versions based on the compatibility mode present in the document. The Document document created using Microsoft Word 2013 and newer versions will have the compatibility mode `Word2013` and follows a special behavior in justifying the text. You can retain the text justification behavior like old versions by modifying the compatibility mode as `Word2010`.
 
 ```ts
 documenteditor.documentSettings.compatibilityMode = 'Word2010';
 ```
 
->Note: The Document editor component assumes the compatibility mode as `Word2013` by default, if it is not defined for a document.
+N> The Document Editor component assumes the compatibility mode as `Word2013` by default, if it is not defined for a document.
 
 ![Image](images/word2013justification.png)
 
@@ -97,7 +97,7 @@ documenteditor.selection.paragraphFormat.spaceBeforeAuto = true;
 documenteditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
->Note: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N> If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
 ## Pagination properties
 
@@ -115,9 +115,9 @@ documenteditor.selection.paragraphFormat.keepWithNext = true;
 documenteditor.selection.paragraphFormat.keepLinesTogether = true;
 ```
 
-## Paragraph Border
+## Paragraph border
 
-You can apply borders to the paragraphs in a Word document. Using borders, decorate the paragraphs to set them apart from other paragraphs in the document.
+You can apply borders to the paragraphs in a Word document. Using borders, you can decorate the paragraphs to set them apart from other paragraphs in the document.
 
 The following example code illustrates how to apply box border for the selected paragraphs.
 
@@ -143,11 +143,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3;
 documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-Note: At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
