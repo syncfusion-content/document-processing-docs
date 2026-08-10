@@ -7,7 +7,7 @@ control: Track Changes
 documentation: ug
 ---
 
-# Track Changes in Document Editor Component
+# Working with Track Changes in ASP.NET MVC Document Editor
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 
