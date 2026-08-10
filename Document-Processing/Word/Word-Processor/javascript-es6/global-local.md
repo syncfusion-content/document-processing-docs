@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/documentation/api/base/l10n/) library allows you to localize the default text content of the Document Editor. The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component has static text in some features (like find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and a translation object. Please refer to the sample link [RTL](https://ej2.syncfusion.com/demos/document-editor/right-to-left/).
+The [`Localization`](https://ej2.syncfusion.com/documentation/api/base/l10n) library allows you to localize the default text content of the Document Editor. The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component has static text in some features (like find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and a translation object. Please refer to the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/right-to-left.html).
 
 N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale/tree/master/src).
 
