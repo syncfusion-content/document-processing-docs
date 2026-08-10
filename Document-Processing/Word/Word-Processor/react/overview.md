@@ -54,4 +54,4 @@ You can deploy web APIs for the server-side dependencies of the Document Editor 
 
 To know more about server-side dependencies, refer to this [page](./web-services-overview).
 
-N> If you don't require the above functionalities, then you can deploy it as a pure client-side component without any server-side interactions
+N> If you don't require the above functionalities, then you can deploy it as a pure client-side component without any server-side interactions.
