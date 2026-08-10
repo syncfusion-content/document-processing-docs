@@ -1,22 +1,23 @@
 ---
 layout: post
-title: Optimize the SFDT file in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Blazor DocumentEditor component and more.
+title: Optimize the SFDT file in Blazor DOCX Editor Component | Syncfusion
+description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Blazor Document Editor component and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# How to optimize the SFDT file
+# How to optimize the SFDT file in Blazor Document Editor
 
-Starting from version v21.1.x, the SFDT file generated in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
-* File transfer between client and server through the internet gets faster.
+Starting from version v21.1.x, the SFDT file generated in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
+* Faster file transfer between client and server through the internet.
 * The new optimized SFDT files require less storage space than the old SFDT files.
-Hence, the optimized SFDT file can't be directly manipulated as JSON string.
 
-> This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
+Hence, the optimized SFDT file can't be directly manipulated as a JSON string.
 
-As a backward compatibility to create older format SFDT files, refer the following code changes,
+N> This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
+
+For backward compatibility, to create older-format SFDT files, refer to the following code changes:
 
 <table>
 <tr>
@@ -68,7 +69,7 @@ string sfdt = JsonSerializer.Serialize(sfdtDocument);
 
 </table>
 
-To convert from older format SFDT from a new optimized SFDT file, refer the following code example,
+To convert a new optimized SFDT file to the older SFDT format, refer to the following code example:
 
 <table>
 <tr>
