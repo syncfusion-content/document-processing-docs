@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unsupported features in ASP.NET MVC DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the ASP.NET MVC Docx Editor to understand its limitations
+description: Learn about the list of unsupported features in the ASP.NET MVC DOCX Editor to understand its limitations
 control: Unsupported features
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in ASP.NET MVC DOCX Editor
 
-This section describes the unsupported elements in Syncfusion® ASP.NET MVC DOCX Editor (Document Editor) 
+This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX Editor (Document Editor).
 
 ## Document formatting
 
@@ -21,22 +21,22 @@ This section describes the unsupported elements in Syncfusion® ASP.NET MVC DOCX
 |  | Suppress line numbers | No |
 |  | Don’t hyphenate | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
-| Text Properties | Shading  | No |
+| Text Properties | Shading | No |
 |  |  Position | No |
 |  |  Font kerning | No |
 |  |  Ligatures | No |
 |  |  Number spacing | No |
 |  |  Number forms | No |
 |  |  Stylistic sets | No |
-|  |  Contextual alternates| No |
+|  |  Contextual alternates | No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Section Formatting | Mirror margins | No |
-| | Gutter | No |
-| | Line numbers | No |
-| | Bi-direction | No |
+|  | Gutter | No |
+|  | Line numbers | No |
+|  | Bidirectional | No |
 | Page background | Page background color or image | No |
-| Watermark  |  Text and Picture watermark| No |
+| Watermark | Text and Picture watermark | No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 
 ## Word Document Elements
