@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature Vue PDF Viewer control
+# Handwritten signature in Vue PDF Viewer control
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
@@ -29,7 +29,7 @@ Add a handwritten signature using the annotation toolbar.
 
 ![Place the handwritten signature on the page](../images/create_sign.png)
 
-## Adding a handwritten signature to the PDF document Programmatically
+## Adding a handwritten signature to the PDF document programmatically
 
 With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [addAnnotation()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
@@ -299,7 +299,7 @@ Here is an example of adding a handwritten signature programmatically using addA
 <script setup>
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, DisplayMode
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, DisplayMode,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
@@ -447,7 +447,7 @@ export default {
 <script setup>
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
-  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, DisplayMode
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection, DisplayMode,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
