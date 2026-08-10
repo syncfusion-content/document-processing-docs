@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically in ASP.NET MVC PDF Viewer | Syncfusion
+title: Open thumbnail pane in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET MVC PDF Viewer by calling the openThumbnailPane method after the document loads.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
 # Open thumbnail pane programmatically
 
-The Syncfusion<sup style="font-size:70%">®</sup> ASP.NET MVC PDF Viewer lets you open the thumbnail pane programmatically by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method after the document loads. This approach helps highlight page navigation immediately or in response to user actions.
+The Syncfusion<sup style="font-size:70%">®</sup> ASP.NET MVC PDF Viewer lets you open the thumbnail pane programmatically by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) method after the document loads. This approach helps highlight page navigation immediately or in response to user actions.
 
 The following steps explain how to open the thumbnail pane.
 
@@ -29,7 +28,7 @@ The following steps explain how to open the thumbnail pane.
 
 <script>
     function openThumbnail() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Open Thumbnail Pane.
         viewer.thumbnailViewModule.openThumbnailPane();
     }
@@ -46,7 +45,7 @@ The following steps explain how to open the thumbnail pane.
 
 <script>
     function openThumbnail() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Open Thumbnail Pane.
         viewer.thumbnailViewModule.openThumbnailPane();
     }
