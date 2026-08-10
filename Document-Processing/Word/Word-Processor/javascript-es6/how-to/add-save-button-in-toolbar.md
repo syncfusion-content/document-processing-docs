@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Save Button in JavaScript (ES6) DOCX Editor toolbar | Syncfusion
-description: Learn here how to add a save button in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Add save button in JavaScript (ES6) DOCX Editor toolbar | Syncfusion
+description: Learn how to add a save button to the toolbar in Syncfusion JavaScript (ES6) DOCX Editor for quick document saving.
 platform: document-processing
 control: Add Save Button in Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Save Button in JavaScript (ES6) Document Editor toolbar
+# Add Save Button in JavaScript (ES6) Document Editor Toolbar
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 

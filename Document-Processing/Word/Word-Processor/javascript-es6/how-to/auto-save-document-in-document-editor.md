@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto Save Document in the Document Editor in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Auto Save Document in the Document Editor in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Auto Save Document in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn how to auto save documents in Syncfusion JavaScript (ES6) DOCX Editor to prevent data loss and preserve your work automatically.
 platform: document-processing
 control: Auto Save Document in Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto Save Document in the Document Editor in JavaScript (ES6) Document Editor control
+# Auto Save Document in JavaScript (ES6) Document Editor
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customizable intervals.
 
