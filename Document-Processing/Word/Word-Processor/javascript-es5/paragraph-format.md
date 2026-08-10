@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES5) DOCX Editor component | Syncfusion
+title: Paragraph format in JavaScript (ES5) DOCX Editor | Syncfusion
 description: Learn about paragraph formatting in the Syncfusion JavaScript (ES5) Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Paragraph format 

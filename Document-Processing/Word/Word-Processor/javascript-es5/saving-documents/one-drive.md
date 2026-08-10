@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to OneDrive
+# Save document to OneDrive using JavaScript (ES5) DOCX Editor
 
 To save a document to OneDrive, you can follow the steps below.
 
