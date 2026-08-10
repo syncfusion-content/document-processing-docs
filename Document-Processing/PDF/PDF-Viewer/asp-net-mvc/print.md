@@ -4,11 +4,10 @@ title: Print in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to enable, invoke, and customize printing in the Syncfusion ASP.NET MVC PDF Viewer, including quality and behavior settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Print
+# Print in ASP.NET MVC PDF Viewer
 
 The PDF Viewer supports printing the loaded PDF file. Enable or disable printing using the following example.
 
@@ -104,8 +103,6 @@ The following example demonstrates how to customize print quality using the Prin
 ```
 {% endhighlight %}
 {% endtabs %}
-
-## Additional print options
 
 ## EnablePrintRotation in the PDF Viewer
 
