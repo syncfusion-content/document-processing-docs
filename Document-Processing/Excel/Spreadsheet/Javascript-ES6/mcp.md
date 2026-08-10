@@ -14,8 +14,6 @@ The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application devel
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for TypeScript Spreadsheet applications.
 
-> The previously available Agentic UI Builder (`#sf_typescript_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/documentation/mcp). The AI Coding Assistant (`#sf_typescript_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
-
 ## Key benefits
 
 - **Spreadsheet-specific guidance**: Access relevant documentation for data binding, formulas, open and save operations, charts, conditional formatting, sorting, filtering, hyperlinks, scrolling, and other Spreadsheet features.

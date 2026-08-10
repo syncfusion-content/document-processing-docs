@@ -1,21 +1,19 @@
 ---
 layout: post
-title: How to disable header and footer edit in ASP.NET MVC Document Editor Component
-description: Learn how to to disable header and footer edit in Document from the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS2 and more.
+title: Disable header and footer edit in ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn here all about how to disable header and footer edit in the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Disable Header And Footer
 documentation: ug
 ---
 
-# How to disable header and footer edit in  Document Editor component
+# How to disable header and footer edit in ASP.NET MVC Document Editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 
-You can use [`restrictEditing`] property to disable header and footer editing based on selection context type.
+You can use the [`restrictEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_RestrictEditing) property to disable header and footer editing based on the selection context type. The `restrictEditing` property restricts document modification and makes the document read-only. To disable header and footer editing, handle the selection-change event of the Document Editor and set `restrictEditing` to `true` whenever the selection is inside a header or footer region.
 
-RestrictEditing allows you to restrict the document modification and makes the Document read only mode. So, by using this property, and if selection inside header or footer, you can set this property as true.
-
-The following example code illustrates how to header and footer edit in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable header and footer edit in the `DocumentEditorContainer` instance.
 
 
 {% tabs %}
@@ -23,11 +21,14 @@ The following example code illustrates how to header and footer edit in `Documen
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`] API in selection module.
+### Disable header and footer edit using the closeHeaderFooter API
 
-The following example code illustrates how to close header and footer when selection is inside header or footer in `DocumentEditorContainer` instance.
+Otherwise, you can disable clicking inside a header or footer by using the `closeHeaderFooter` API in the selection module.
+
+The following example code illustrates how to close the header and footer when the selection is inside a header or footer region in the `DocumentEditorContainer` instance.
 
 
 {% tabs %}
@@ -35,17 +36,19 @@ The following example code illustrates how to close header and footer when selec
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer-close/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use [`isReadOnly`] property in Document editor to disable header and footer edit.
+Like `restrictEditing`, you can use the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in the Document Editor to disable header and footer edit.
 
-The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
+The following example code illustrates how to disable header and footer edit in the `DocumentEditor` instance.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/disable-header-footer-documenteditor/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
