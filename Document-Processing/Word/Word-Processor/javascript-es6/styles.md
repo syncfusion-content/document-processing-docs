@@ -187,7 +187,7 @@ let characterStyles = documentEditor.getStyles('Character');
 
 ## Modify an existing style
 
-You can modify an existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/#createStyle) method. If `modifyExistingStyle` parameter is set to `true`, the style properties are updated to the existing style.
+You can modify an existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#createStyle) method. If `modifyExistingStyle` parameter is set to `true`, the style properties are updated to the existing style.
 
 The following example illustrates how to modify an existing style.
 
