@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Global and Local in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Global and Local in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Global local in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Global local in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Global and Local
+control: Global local 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global and Local in JavaScript (ES6) Document Editor control
+# Global local in JavaScript (ES6) Document editor control
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/documentation/api/base/l10n/) library allows you to localize the default text content of the Document Editor. The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component has static text in some features (like find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and a translation object. Please refer to the sample link [RTL](https://ej2.syncfusion.com/demos/document-editor/right-to-left/).
+The [`Localization`](https://ej2.syncfusion.com/documentation/api/base/l10n/) library allows you to localize default text content of the DocumentEditor. The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://ej2.syncfusion.com/demos/document-editor/right-to-left/)
 
-N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale/tree/master/src).
+Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale/tree/master/src).
 
 ## Document Editor
 
-The following list of properties and their values are used in the Document Editor.
+The following list of properties and its values are used in the Document Editor.
 
-Locale keyword | Text
+Locale keywords |Text
 -----|-----
 Table | Table
 Row | Row
@@ -228,7 +228,7 @@ Edit Field | Edit Field
 Bookmark | Bookmark
 Page Setup | Page Setup
 No bookmarks found | No bookmarks found
-Number format tooltip information | Single-level number format: <br>[PREFIX]%[LEVELNUMBER][SUFFIX]<br> For example, 'Chapter %1.' will display numbering like<br>Chapter 1. Item<br>Chapter 2. Item<br>… <br>Chapter N. Item<br> <br>Multilevel number format:<br>[PREFIX]%[LEVELNUMBER][SUFFIX]+[PREFIX]%[LEVELNUMBER][SUFFIX]<br>For example, '%1.%2.' will display numbering like<br>1.1. Item<br>1.2. Item<br>…<br>1.N. Item
+Number format tooltip information | Single-level number format: </br>[PREFIX]%[LEVELNUMBER][SUFFIX]</br> For example, 'Chapter %1.' will display numbering like</br>Chapter 1. Item</br>Chapter 2. Item</br>… </br>Chapter N. Item</br> </br>Multilevel number format:</br>[PREFIX]%[LEVELNUMBER][SUFFIX]+[PREFIX]%[LEVELNUMBER][SUFFIX]</br>For example, '%1.%2.' will display numbering like</br>1.1. Item</br>1.2. Item</br>…</br>1.N. Item
 Format | Format
 Create New Style | Create New Style
 Modify Style | Modify Style
@@ -365,9 +365,9 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and their values are used in the Document Editor container.
+The following list of properties and its values are used in the Document Editor container.
 
-Locale keyword | Text
+Locale keywords |Text
 -----|-----
 New | New
 Open | Open
@@ -497,7 +497,7 @@ Add or edit the footer | Add or edit the footer.
 Open the page setup dialog | Open the page setup dialog.
 Add page numbers | Add page numbers.
 Find Text | Find text in the document (Ctrl+F).
-Toggle between the internal clipboard and system clipboard | Toggle between the internal clipboard and system clipboard.<br>Access to system clipboard through script is denied due to browsers security policy. Instead, <br> 1. You can enable internal clipboard to cut, copy and paste within the component.<br> 2. You can use the keyboard shortcuts (Ctrl+X, Ctrl+C and Ctrl+V) to cut, copy and paste with system clipboard.
+Toggle between the internal clipboard and system clipboard | Toggle between the internal clipboard and system clipboard.</br>Access to system clipboard through script is denied due to browsers security policy. Instead, </br> 1. You can enable internal clipboard to cut, copy and paste within the component.</br> 2. You can use the keyboard shortcuts (Ctrl+X, Ctrl+C and Ctrl+V) to cut, copy and paste with system clipboard.
 Current Page Number | The current page number in the document. Click or tap to navigate specific page.
 Read only | Read only
 Protections | Protections
@@ -518,9 +518,9 @@ Show properties pane | Show properties pane
 
 ## Color Picker
 
-The following list of properties and their values are used in the color picker.
+The following list of properties and its values are used in the color picker.
 
-Locale keyword | Text
+Locale keywords |Text
 -----|-----
 Apply | Apply
 Cancel | Cancel
