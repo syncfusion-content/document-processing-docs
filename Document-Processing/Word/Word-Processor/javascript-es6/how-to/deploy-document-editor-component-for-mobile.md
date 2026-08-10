@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy Document Editor Component for Mobile in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Deploy DOCX Editor Component for Mobile, JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Deploy Document Editor Component for Mobile in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Deploy Document Editor Component for Mobile
@@ -8,13 +8,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Document Editor Component for Mobile in JavaScript (ES6) Document Editor control
+# Deploy DOCX Editor Component for Mobile, JavaScript (ES6) DOCX Editor
 
 ## Document Editor component for mobile
 
 At present, the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component is not responsive on mobile, and we haven't ensured the editing functionality in mobile browsers. However, it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document Editor component to read-only mode in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/documentation/api/document-editor#fitpage) method with the [`FitPageWidth`](https://ej2.syncfusion.com/documentation/api/document-editor/pageFitType/) parameter in the document change event to display one full page by adjusting the zoom factor.
+Hence, it is recommended to switch the Document Editor component to read-only mode in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/documentation/api/document-editor#fitpage) method with the [`FitPageWidth`](https://ej2.syncfusion.com/documentation/api/document-editor/pageFitType) parameter in the document change event to display one full page by adjusting the zoom factor.
 
 The following example code illustrates how to deploy the Document Editor component for mobile.
 

@@ -14,9 +14,9 @@ domainurl: ##DomainURL##
 
 DocumentEditorContainer allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
 
-* Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/documentation/api/document-editor/customToolbarItemModel/) along with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs/).
+* Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/documentation/api/document-editor/customToolbarItemModel) along with the existing items in the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. The click action for the newly added item can be defined in [`toolbarClick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs).
 
-* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. Predefined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/document-editor/toolbarItem/).
+* Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbaritems) property. Predefined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/document-editor/toolbarItem).
 
 * Enable, Disable - Toolbar items can be enabled or disabled using [`enableItems`](https://ej2.syncfusion.com/documentation/api/document-editor-container/toolbar#enableItems).
 

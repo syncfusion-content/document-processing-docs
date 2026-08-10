@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Font Family Drop-Down in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Customize Font Family Drop-Down in JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Customize Font Family Drop-Down in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Font Family Drop-Down
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Font Family Drop-Down in JavaScript (ES6) Document Editor control
+# Customize Font Family Drop-Down in JavaScript (ES6) DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides an option to customize the font family drop-down list values using [`fontfamilies`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in the Document Editor settings. Fonts added to the `fontFamilies` of [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor-container#documenteditorsettings) will be displayed in the font drop-down list of the text properties pane and the font dialog.
 

@@ -229,4 +229,4 @@ Explore how to customize the ribbon in the JavaScript DOCX Editor for working wi
 
 ## Related Links
 
-- [File menu Customization Demo](https://ej2.syncfusion.com/demos#/material/document-editor/ribbon-customization)
+- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/ribbon-customization.html)

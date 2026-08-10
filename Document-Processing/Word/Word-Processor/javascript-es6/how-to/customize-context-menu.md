@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Context Menu in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: Customize Context Menu in JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn here all about Customize Context Menu in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Customize Context Menu
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Context Menu in JavaScript (ES6) Document Editor control
+# Customize Context Menu in JavaScript (ES6) DOCX Editor
 
 ## How to customize the context menu in the Document Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add a custom option to the context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method, and the custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/documentation/api/document-editor/customContentMenuEventArgs/).
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add a custom option to the context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method, and the custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/documentation/api/document-editor/customContentMenuEventArgs).
 
 ### Add Custom Option
 
@@ -75,7 +75,7 @@ documentEditor.contextMenu.addCustomMenu(menuItems, true);
 
 #### Customize added context menu items
 
-The following code shows how to hide/show the added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
+The following code shows how to hide/show the added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs).
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
