@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move Selection to a Specific Position in JS (ES6) DOCX Editor | Syncfusion
+title: Move Selection to Specific Position, JS (ES6) DOCX Editor | Syncfusion
 description: Learn here all about moving the selection to a specific position in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Move Selection to a Specific Position
