@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Open OneDrive Files in ASP.NET Core Document editor | Syncfusion
-description: Learn about how to Open document from One Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open OneDrive Files in ASP.NET Core Docx Editor | Syncfusion
+description: Learn how to open a document from OneDrive in the ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Open document from One Drive
+control: Open document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive
+# Open document from OneDrive
 
-To load a document from One Drive in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
+To load a document from OneDrive in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
 
-**Step 1:** Create the Microsoft graph API.
+**Step 1:** Register a Microsoft Graph API application
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
+Create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in this [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a simple Document Editor sample in ASP.NET Core
 
 Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
 
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,7 +54,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromOneDrive()` method to load the document from One Drive.
+* Create the `LoadFromOneDrive()` method to load the document from OneDrive.
 
 ```csharp
 [AcceptVerbs("Post")]
@@ -111,7 +111,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project, and add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -133,7 +133,7 @@ N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+On the client side, the document returned from the web service is opened using the `open` method.
 
 
 {% tabs %}
@@ -146,7 +146,7 @@ In the client-side, the document is returned from the web service is opening usi
 {% endtabs %}
 
 
-N> The following NuGet packages are required to use the previous code example
+N> The following NuGet packages are required to use the preceding code example
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**
