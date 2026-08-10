@@ -4,7 +4,6 @@ title: Load documents dynamically in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to load or switch PDF documents dynamically in the Syncfusion ASP.NET MVC PDF Viewer using the load method.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -58,7 +57,7 @@ public ActionResult GetDocument()
 **Step 4:** Use the following code snippet to load PDF document using document name.
 
 ```html
-<button type="button" onclick="load2()">LoadDocumentFromBase64</button>
+<button type="button" onclick="load2()">LoadDocumentFromFileName</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").Render()
@@ -67,7 +66,7 @@ public ActionResult GetDocument()
 <script>
     // load document using document name.
     function load2() {
-        var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.load("HTTP Succinctly.pdf", null)
     }
 </script>
