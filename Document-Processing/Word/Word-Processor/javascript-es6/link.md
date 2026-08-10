@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Link in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Link in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Link in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Link in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in JavaScript (ES6) Document editor control
+# Link in JavaScript (ES6) Document Editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
-Document Editor triggers ‘requestNavigate’ event whenever user clicks Ctrl key or tap a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+Document Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
-The following example illustrates how to add requestNavigate event for DocumentEditor.
+The following example illustrates how to add the `requestNavigate` event for the DocumentEditor.
 
  
 
@@ -35,7 +35,7 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 ### Add the requestNavigate event for DocumentEditorContainer component
 
-The following example illustrates how to add requestNavigate event for DocumentEditorContainer component.
+The following example illustrates how to add the `requestNavigate` event for the DocumentEditorContainer component.
 
 ```ts
 import { DocumentEditor, SfdtExport, Selection, RequestNavigateEventArgs } from '@syncfusion/ej2-documenteditor';
@@ -65,7 +65,7 @@ container.documentEditor.requestNavigate = (args: RequestNavigateEventArgs) => {
 };
 ```
 
-If the selection is in hyperlink, trigger this event by calling ‘navigateHyperlink’ method of ‘Selection’ instance. Refer to the following example.
+If the selection is in a hyperlink, trigger this event by calling the `navigateHyperlink` method of the `Selection` instance. Refer to the following example.
 
 ```ts
 documenteditor.selection.navigateHyperlink();
@@ -73,7 +73,7 @@ documenteditor.selection.navigateHyperlink();
 
 ## Copy link
 
-Document Editor copies link text of a hyperlink field to the clipboard if the selection is in hyperlink. Refer to the following example.
+Document Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
 
 ```ts
 documenteditor.selection.copyHyperlink();
@@ -83,11 +83,11 @@ documenteditor.selection.copyHyperlink();
 
 To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
-> `<http://>`<br>
-> `<https://>`<br>
-> `file:///`<br>
-> `www.`<br>
-> `mailto:`<br>
+N> `<http://>`
+N> `<https://>`
+N> `file:///`
+N> `www.`
+N> `mailto:`
 
 Refer to the following example.
 
@@ -104,7 +104,7 @@ Refer to the following example.
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/hyperlink-cs2" %}
 
-Also Document Editor expose API [`insertHyperlink()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserthyperlink)to insert hyperlink.
+Also, Document Editor exposes the API [`insertHyperlink()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserthyperlink) to insert a hyperlink.
 
 Refer to the following sample code.
 
@@ -114,19 +114,19 @@ documenteditor.editor.insertHyperlink('https://www.google.com', 'Google');
 
 ## Customize screen tip
 
-You can customize the screen tip text for the hyperlink by using below sample code.
+You can customize the screen tip text for the hyperlink by using the sample code below.
 
 ```ts
 documenteditor.editor.insertHyperlink('https://www.google.com', 'Google', '<<Screen tip text>>');
 ```
 
-Screen tip text can be modified through UI by using the [Hyperlink dialog](./dialog#hyperlink-dialog)
+Screen tip text can be modified through the UI by using the [Hyperlink dialog](./dialog#hyperlink-dialog).
 
 ![Add or modify the screen tip text for hyperlinks in a Word document.](images/screentip.png)
 
 ## Remove hyperlink
 
-To remove link from hyperlink in the document, press Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use ‘removeHyperlink’ method of ‘Editor’ instance if the selection is in hyperlink. Refer to the following example.
+To remove the link from a hyperlink in the document, press the Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use the `removeHyperlink` method of the `Editor` instance if the selection is in a hyperlink. Refer to the following example.
 
 ```ts
 documenteditor.editor.removeHyperlink();
@@ -149,11 +149,11 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/dialog-cs16" %}
 
-You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
+You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in a hyperlink.
 
 | Key Combination | Description |
 |-----------------|-------------|
-|Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
+|Ctrl + K | Open hyperlink dialog that allows you to create or edit a hyperlink|
 
 ## Online Demo
 
