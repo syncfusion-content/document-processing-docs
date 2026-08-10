@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 Angular DOCX Editor allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs) event.
 
-### Add custom option
+### Add Custom Option
 
 The following code shows how to add a custom option to the context menu.
 
@@ -86,11 +86,11 @@ export class AppComponent implements OnInit {
 
 N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
-### Customize custom option in context menu
+### Customize Custom Option in Context Menu
 
 The Document Editor allows you to customize an added custom option and also to hide or show default context menu items.
 
-#### Hide default context menu items
+#### Hide Default Context Menu Items
 
 Using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextmenu#addcustommenu) method, you can replace the default context menu by setting the second parameter to `true`.
 
@@ -144,7 +144,7 @@ export class AppComponent implements OnInit {
 
 N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
-#### Customize added context menu items
+#### Customize Added Context Menu Items
 
 The following code shows how to show or hide an added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs) event.
 
@@ -216,7 +216,7 @@ The following is the output of the custom context menu with customization.
 
 N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
-#### Customize context menu with sub-menu items
+#### Customize Context Menu with Sub-Menu Items
 
 The Document Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
@@ -284,6 +284,6 @@ export class AppComponent implements OnInit {
 
 N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
-## Online demo
+## Online Demo
 
 Explore how to customize the context menu in the Angular Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/custom-context-menu).
