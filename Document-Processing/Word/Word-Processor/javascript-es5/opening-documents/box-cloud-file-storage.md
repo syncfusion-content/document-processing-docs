@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in JavaScript (ES5) Document Editor
+# Open document from Box cloud file storage in JavaScript (ES5)
 
 To load a document from Box cloud file storage in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below.
 
@@ -122,7 +122,7 @@ N> Replace **Your_Box_Storage_Access_Token** with your actual Box access token, 
 
 **Step 4:**  Modify the index file in the Document Editor sample
 
-On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

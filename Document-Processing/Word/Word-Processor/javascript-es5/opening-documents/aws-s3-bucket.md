@@ -110,7 +110,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:**  Modify the index file in the Document Editor sample
 
-On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

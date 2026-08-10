@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in JavaScript (ES5) Document Editor
+# Open document from Azure Blob Storage in JavaScript (ES5)
 
 To load a document from Azure Blob Storage in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below.
 
