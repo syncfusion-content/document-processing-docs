@@ -173,7 +173,7 @@ The following code snippet demonstrates how to send changes to the server using 
 {% endhighlight %}
 {% endtabs %}
 
-The complete version of the code discussed above is available at the following [GitHub repository](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Client%20side%20with%20dotnet/JavaScript).
+The complete version of the code discussed above is available at the following [GitHub repository](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Client%20side%20with%20dotnet/Javascript).
 
 ## Integrate collaborative editing in server side
 

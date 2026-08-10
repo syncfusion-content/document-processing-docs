@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) DOCX Editor Component | Syncfusion
+title: Collaborative Editing in JavaScript (ES5) DOCX Editor | Syncfusion
 description: Learn about collaborative editing in Syncfusion JavaScript (ES5) Document Editor control and how to implement real-time document collaboration.
 platform: document-processing
 control: Collaborative Editing
