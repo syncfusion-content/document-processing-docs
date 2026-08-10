@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open Azure Blob Files in ASP.NET Core Document editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Azure Blob Files in ASP.NET Core DOCX Editor | Syncfusion
+description:  Learn how to open a document from Azure Blob Storage in ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from Azure Blob Storage
 
-To load document from Azure Blob Storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
+To load document from Azure Blob Storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 
 
 **Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
@@ -30,7 +30,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 
 ```csharp
@@ -92,11 +92,11 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
+N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, and **Your container name in Azure** with the actual container name.
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+On the client side, the document returned from the web service is opened using the `open` method.
 
 
 {% tabs %}
