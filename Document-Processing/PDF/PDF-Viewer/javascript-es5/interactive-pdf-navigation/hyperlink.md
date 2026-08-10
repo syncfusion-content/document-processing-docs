@@ -100,7 +100,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
-
+pdfviewer.resourceUrl='https://cdn.syncfusion.com/ej2/34.1.32/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

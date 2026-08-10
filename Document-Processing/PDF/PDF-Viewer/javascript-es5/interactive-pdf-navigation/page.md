@@ -143,7 +143,7 @@ ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, 
 
 var viewer = new ej.pdfviewer.PdfViewer ({
     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
 });
 
 viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
