@@ -180,7 +180,7 @@ The following table illustrates the reasons for pagination (page-by-page display
 |Any unsupported elements or formatting present in your document |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.   Syncfusion<sup style="font-size:70%">&reg;</sup> implements unsupported features incrementally in future releases based on feature importance, customer interest, efforts involved, and technological feasibility. Also, suggests an alternate approach for possible cases.|
 |Technical limitation related to framework   For example, there is a known case with a slight fractional difference in text size measured using HTML and Microsoft Word's display.|Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.  Syncfusion<sup style="font-size:70%">&reg;</sup> does research about alternate approaches to overcome the technical limitation/behaviors and process it same as a feature. N>: Here the challenge is, time schedule for implementation varies based on the alternate solution and its reliability.|
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)
