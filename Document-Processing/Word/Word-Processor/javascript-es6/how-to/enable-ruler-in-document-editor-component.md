@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Enable Ruler in JavaScript (ES6) DOCX Editor control | Syncfusion
+title: how to enable ruler in JavaScript (ES6) Document editor control | Syncfusion
 component: "DocumentEditor"
-description: Learn how to enable the ruler in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+description: Learn how to enable ruler in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Enable Ruler
+control: Enable ruler 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## How to enable the ruler in the JavaScript (ES6) Document Editor component
+## How to enable ruler in JavaScript (ES6) Document Editor component
 
-Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
+Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable ruler in Document Editor
 
  
 
@@ -29,11 +29,11 @@ The following example illustrates how to enable the ruler in the Document Editor
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/ruler-cs1" %}
 
 
-## How to enable the ruler in the Document Editor Container component
+## How to enable ruler in Document Editor Container component
 
-Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the Document Editor Container.
+Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
 
-The following example illustrates how to enable the ruler in the Document Editor Container.
+The following example illustrates how to enable ruler in Document Editor Container.
 
  
 

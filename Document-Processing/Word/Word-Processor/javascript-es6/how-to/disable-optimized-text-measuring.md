@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Disable Optimized Text Measuring in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Disable Optimized Text Measuring in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Disable optimized text measuring in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Disable optimized text measuring in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Disable Optimized Text Measuring
+control: Disable optimized text measuring 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable Optimized Text Measuring in JavaScript (ES6) Document Editor control
+# Disable optimized text measuring in JavaScript (ES6) Document editor control
 
-Starting from v19.3.0.x, the accuracy of text size measurements in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is improved to better match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in the Document Editor settings.
+Starting from v19.3.0.x, the accuracy of text size measurements in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
 
-If you want the Document Editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions, then you can disable this optimized text measuring improvement by setting the [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of the JavaScript Document Editor component to `false`.
+If you want the Document editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of  JavaScript Document Editor component.
 
-## Disable optimized text measuring in a `DocumentEditorContainer` instance
+## Disable optimized text measuring in `DocumentEditorContainer` instance
 
-The following example code illustrates how to disable the optimized text measuring improvement in a `DocumentEditorContainer` instance.
+The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -33,21 +33,21 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 
-## Disable optimized text measuring in a `DocumentEditor` instance
+## Disable optimized text measuring in `DocumentEditor` instance
 
-The following example code illustrates how to disable the optimized text measuring improvement in a `DocumentEditor` instance.
+The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
 
 ```ts
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
 
-let documentEditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
+let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, height: '370px', serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' });
 
-documentEditor.enableAllModules();
+documenteditor.enableAllModules();
 
 // Disable optimized text measuring improvement
-documentEditor.documentEditorSettings = { enableOptimizedTextMeasuring: false };
+documenteditor.documentEditorSettings = { enableOptimizedTextMeasuring: false };
 
-documentEditor.appendTo('#DocumentEditor');
+documenteditor.appendTo('#DocumentEditor');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
