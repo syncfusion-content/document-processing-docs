@@ -15,16 +15,10 @@ You can quickly install it via [NuGet](https://www.nuget.org/packages/Syncfusion
 
 ## What Can Agents Build?
 
-The library enables AI agents to autonomously:
+Syncfusion Document SDK AI Agent Tools help AI agents automate document-driven business workflows using natural language instructions. Agents can coordinate tasks across document processes and deliver completed outcomes with minimal human intervention.<br>
+Organizations can use these tools to streamline operations, reduce manual effort, and improve consistency across business functions, enabling teams to work more efficiently and focus on higher-value tasks.
 
-- Build document-processing pipelines without writing Office automation code - no `Microsoft.Office.Interop`, no headless Office installs required
-- Create, read, edit, and export documents in Word, Excel, PDF, and PowerPoint formats
-- Extract, redact, sign, and secure documents with encryption and digital signatures
-- Merge, split, reorder, and convert between document formats
-- Automate workflows like mail merge, template population, and structured data extraction
-- Process documents at scale in Docker containers, serverless functions, and CI/CD pipelines
-
-Explore real-world scenarios on the [AI Agents View](./agents) page.
+Explore real-world scenarios on the [AI Agents](./agents) page.
 
 ## How It Works
 
