@@ -7,7 +7,7 @@ control: Document Editor
 documentation: ug
 ---
 
-# How to hide the toolbar and properties pane in Blazor Document Editor
+# How to hide the Toolbar and Properties Pane in Blazor Document Editor
 
 **[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) container** provides the main document view area along with the built-in toolbar and properties pane.
 
