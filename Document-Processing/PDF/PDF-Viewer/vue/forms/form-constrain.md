@@ -34,7 +34,7 @@ The following flags are supported in the PDF Viewer:
 ## Key Actions
 
 ### Make Fields Read Only
-Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre filled or calculated values that should not be changed by the user.
+Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed by the user.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -299,7 +299,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Update flags on Existing Fields programmatically
+### Update flags on existing fields programmatically
 Use the [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) method to modify constraint values on existing form fields.
 
 {% tabs %}
