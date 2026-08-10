@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in JavaScript (ES6) DOCX Editor
+# Unsupported Features in JavaScript (ES6) Document Editor
 
 This section describes the unsupported elements in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
