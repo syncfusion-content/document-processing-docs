@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Comments in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Comments in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Comments in JavaScript (ES6) Document editor control | Syncfusion
+description: Learn here all about Comments in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Comments
+control: Comments 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in JavaScript (ES6) Document Editor control
+# Comments in JavaScript (ES6) Document editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate, and remove comments in code and from the UI.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 
-Comments can be inserted into the selected text.
+Comments can be inserted to the selected text.
 
 ```ts
-//Add new comment in the document.
+//Add new commnt in the document.
 documentEditor.editor.insertComment('Test comment');
 ```
 
 ## Add a New Comment with Date, Author, and Status
 
-Comments can be inserted into the selected text with a specified date, author, and status using [`insertComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertcomment).
+Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertcomment).
 
 {% highlight ts %}
 // In this example, a comment with the text "Hello world"
@@ -48,7 +48,7 @@ documentEditor.editor.insertComment('Hello world', commentProperties);
 
 ## Add a Reply Comment with Date, Author, and Status
 
-Reply comments can be inserted into the parent comment with a specified date, author, and status using [`insertReplyComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertreplycomment).
+Reply comments can be inserted into the parent comment with a specified date, author using [`insertReplyComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertreplycomment).
 
 {% highlight ts %}
 // In this example, a comment with the text "Hello world"
@@ -74,7 +74,7 @@ documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentPrope
 
 ## Get Comments
 
-The Document Editor allows you to get the comments along with their reply and comment properties using [`getComments`](https://ej2.syncfusion.com/documentation/api/document-editor#getComments).
+Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/documentation/api/document-editor#getComments).
 
 {% highlight ts %}
 //Get Comments in the document along with the properties author, date, status.
@@ -96,7 +96,7 @@ documentEditor.selection.navigatePreviousComment();
 
 ## Delete comment
 
-Current comment can be deleted using [`deleteComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletecomment).
+Current comment can be be deleted using [`deleteComment`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletecomment).
 
 {% highlight ts %}
 //Delete the current selected comment.
@@ -105,14 +105,14 @@ container.documentEditor.editor.deleteComment();
 //Get Comments in the document along with the properties author, date, status.
 let commentinfo: CommentInfo[] = container.documentEditor.getComments();
 
-//Delete the particular parent comment and all of its reply comments
+//Delete the particular parent comments and all of its reply comments
 container.documentEditor.editor.deleteComment(commentinfo[0].id);
 
 //Delete the particular reply comment.
 container.documentEditor.editor.deleteComment(commentinfo[0].replies[0].id);
 {% endhighlight %}
 
-## Delete all comments
+## Delete all comment
 
 All the comments in the document can be deleted using the below code snippet.
 
@@ -121,13 +121,13 @@ All the comments in the document can be deleted using the below code snippet.
 documentEditor.editor.deleteAllComments();
 ```
 
-## Protect the document in comments-only mode
+## Protect the document in comments only mode
 
-The Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
+Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
 
-The Document Editor provides an option to protect and unprotect the document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in the Document Editor container.
+The following example code illustrates how to enforce and stop protection in Document editor container.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({
@@ -146,17 +146,17 @@ container.documentEditor.editor.enforceProtection('123', 'CommentsOnly');
 container.documentEditor.editor.stopProtection('123');
 ```
 
-Comment only protection can be enabled in the UI by using the [Restrict Editing pane](./document-management#restrict-editing-pane)
+Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
 ![Enable comment only protection](images/commentsonly.png)
 
-N> In the enforce Protection method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly`. In the stop protection method, the parameter denotes the password.
+>Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
 
 ## Mention Support in comments
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the @ character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in the Document Editor.
+The following example illustrates how to enable mention support in Document Editor
 
 ```ts
 let mentionData: any = [
@@ -179,9 +179,9 @@ container.appendTo('#container');
 
 ## Events
 
-The Document Editor provides [beforeCommentAction](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like post, edit, reply, resolve, and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
-To demonstrate a specific use case, let's consider an example where we want to restrict the delete functionality based on the author's name. The following code snippet illustrates how to allow only the author of a comment to delete:
+To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
 ```ts
 
