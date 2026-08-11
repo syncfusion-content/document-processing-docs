@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Working with Tables in ASP.NET MVC Document Editor
+# Table in ASP.NET MVC Document Editor
 
 Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through keyboard, mouse, or touch interactions. It exposes a rich set of APIs to perform these operations programmatically.
 

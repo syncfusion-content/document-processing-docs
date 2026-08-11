@@ -7,7 +7,7 @@ control: View
 documentation: ug
 ---
 
-# View in Document Editor
+# View in ASP.NET MVC Document Editor
 
 ## Web layout
 

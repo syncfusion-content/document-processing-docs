@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Working with Text Formatting in ASP.NET MVC Document Editor
+# Text Formatting in ASP.NET MVC Document Editor
 
 Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

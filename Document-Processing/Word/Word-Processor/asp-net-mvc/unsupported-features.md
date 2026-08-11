@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in ASP.NET MVC DOCX Editor
+# Unsupported Features in ASP.NET MVC Document Editor
 
 This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX Editor (Document Editor).
 

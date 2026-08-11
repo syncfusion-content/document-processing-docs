@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Working with Track Changes in ASP.NET MVC Document Editor
+# Text Wrapping Style in ASP.NET MVC Document Editor
 
 Text wrapping refers to how images and shapes are fitted with surrounding text in a document. Currently, Document Editor has only preservation support for image and text box shapes with the following wrapping styles.
 
