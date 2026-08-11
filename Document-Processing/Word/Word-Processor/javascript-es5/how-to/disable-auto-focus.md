@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Disable auto focus in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Disable auto focus in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Disable Auto Focus in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to disable auto focus in Syncfusion JavaScript (ES5) DOCX Editor to prevent the editor from capturing focus on page load.
 platform: document-processing
-control: Disable auto focus 
+control: Disable Auto Focus
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable auto focus in JavaScript (ES5) Document editor control
+# Disable Auto Focus in JavaScript (ES5) Document Editor
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is focused automatically when the page loads. To prevent the Document Editor from being focused automatically, set the `enableAutoFocus` property to `false`.
 
-The following example illustrates to disable the auto focus in DocumentEditorContainer.
-
-```ts
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px', enableAutoFocus: false});
-```
-
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#enableautofocus) property is `true`.
-
-The following example illustrates to disable the auto focus in DocumentEditor.
+The following example illustrates how to disable the auto focus in DocumentEditorContainer.
 
 ```ts
-let editor: DocumentEditor = new DocumentEditor({ height: '590px', enableAutoFocus: false});
+let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px', enableAutoFocus: false });
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#enableautofocus) property is `true`.
+N> Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#enableautofocus) property is `true`.
+
+The following example illustrates how to disable the auto focus in DocumentEditor.
+
+```ts
+let editor: DocumentEditor = new DocumentEditor({ height: '590px', enableAutoFocus: false });
+```
+
+N> Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#enableautofocus) property is `true`.
