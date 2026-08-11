@@ -20,19 +20,19 @@ The following table lists the supported form field events and their descriptions
 
 | Form field events | Description |
 |---|---|
-| [formFieldAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
-| [formFieldClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
-| [formFieldDoubleClick](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
-| [formFieldFocusOut](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
-| [formFieldMouseLeave](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
-| [formFieldMouseOver](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
-| [formFieldMove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldMoveArgs) | Triggered when a form field is moved to a new position. |
-| [formFieldPropertiesChange](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) | Fired when any form field property changes, such as font, color, or constraint values. |
-| [formFieldRemove](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldRemoveArgs) | Triggered when a form field is deleted from the document. |
-| [formFieldResize](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldResizeArgs) | Fired when a form field is resized. |
-| [formFieldSelect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldSelectArgs) | Fired when a form field is selected in the Form Designer. |
-| [formFieldUnselect](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formFieldUnselectArgs) | Fired when a previously selected form field is unselected. |
-| [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/validateFormFieldsArgs) | Fired when form field validation fails during print or download actions. |
+| [formFieldAdd](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
+| [formFieldClick](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
+| [formFieldDoubleClick](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
+| [formFieldFocusOut](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
+| [formFieldMouseLeave](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
+| [formFieldMouseOver](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
+| [formFieldMove](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldMoveArgs) | Triggered when a form field is moved to a new position. |
+| [formFieldPropertiesChange](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldPropertiesChangeArgs) | Fired when any form field property changes, such as font, color, or constraint values. |
+| [formFieldRemove](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldRemoveArgs) | Triggered when a form field is deleted from the document. |
+| [formFieldResize](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldResizeArgs) | Fired when a form field is resized. |
+| [formFieldSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldSelectArgs) | Fired when a form field is selected in the Form Designer. |
+| [formFieldUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/formFieldUnselectArgs) | Fired when a previously selected form field is unselected. |
+| [validateFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/validateFormFieldsArgs) | Fired when form field validation fails during print or download actions. |
 
 **Common use cases**
 

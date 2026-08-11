@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add custom fonts in Angular PDF Viewer | Syncfusion
-description: Learn how to add and load custom TTF fonts for documents displayed in the Angular PDF Viewer using the customFonts property.
+description: Learn how to add and load custom TTF fonts for form fields displayed in the Angular PDF Viewer using the customFonts property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -93,6 +93,6 @@ Custom fonts can be applied to the following form field types:
 - If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
 - The same content displays correctly in the **Syncfusion PDF Viewer**.
 
-## To avoid rendering issues:
+## To avoid rendering issues
 - Use an appropriate font size that fits within the form field.
 - Increase the size of the form field before saving or downloading the PDF.

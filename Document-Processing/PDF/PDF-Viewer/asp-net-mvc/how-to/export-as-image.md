@@ -4,7 +4,6 @@ title: Export pages as images in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to export pages as Base64-encoded images in the Syncfusion ASP.NET MVC PDF Viewer using the ExportAsImage method family.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -102,7 +101,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     // Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -122,7 +121,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -142,7 +141,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i =0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```
@@ -162,7 +161,7 @@ Bitmap[] bitmapimage = pdfExportImage.ExportAsImage(0, pdfExportImage.PageCount-
 for (int i = 0; i < pdfExportImage.PageCount; i++)
 {
     //Save the exported image in disk
-    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage.png");
+    bitmapimage[i].Save(@"currentDirectory/../../../../Images/" + "bitmapImage" + i + ".png");
 }
 
 ```

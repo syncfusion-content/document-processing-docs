@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+title: Import and Export Events in the TypeScript PDF Viewer | Syncfusion
+description: Learn how to manage import and export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -27,15 +27,15 @@ Each event provides detailed context through typed event arguments such as [Impo
 
 ```ts
 // ...viewer initialization...
-viewer.importStart = (args: any) => {
+viewer.importStart = (args: ImportStartEventArgs) => {
   console.log('Import started', args);
   // e.g. show spinner, validate inputs
 };
-viewer.importSuccess = (args: any) => {
+viewer.importSuccess = (args: ImportSuccessEventArgs) => {
   console.log('Import success', args);
   // e.g. hide spinner, show toast
 };
-viewer.importFailed = (args: any) => {
+viewer.importFailed = (args: ImportFailureEventArgs) => {
   console.error('Import failed', args);
   // e.g. show error dialog
 };
@@ -50,15 +50,15 @@ viewer.importFailed = (args: any) => {
 
 ```ts
 // ...viewer initialization...
-viewer.exportStart = (args: any) => {
+viewer.exportStart = (args: ExportStartEventArgs) => {
   console.log('Export started', args);
   // e.g. disable export UI
 };
-viewer.exportSuccess = (args: any) => {
+viewer.exportSuccess = (args: ExportSuccessEventArgs) => {
   console.log('Export success', args);
   // e.g. enable UI, provide download link
 };
-viewer.exportFailed = (args: any) => {
+viewer.exportFailed = (args: ExportFailureEventArgs) => {
   console.error('Export failed', args);
   // e.g. re-enable UI, notify user
 };
@@ -78,5 +78,4 @@ viewer.exportFailed = (args: any) => {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)
