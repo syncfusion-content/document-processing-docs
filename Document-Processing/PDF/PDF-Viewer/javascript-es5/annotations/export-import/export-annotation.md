@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 PDF Viewer provides support for exporting annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
-- Programmatically (export to JSON, XFDF, or as a JSON object for custom handling)
+- Programmatically (export to JSON, XFDF, or as an object for custom handling)
 
 ## Export using the UI (Comments panel)
 

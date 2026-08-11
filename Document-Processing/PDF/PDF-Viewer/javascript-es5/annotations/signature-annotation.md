@@ -77,7 +77,7 @@ if (handWrittenSignature) {
 
 ### Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 ```html
@@ -341,7 +341,7 @@ pdfviewer.enableHandwrittenSignature  = false;
 {% endhighlight %}
 {% endtabs %}
 
-Note: When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
+N> When `enableHandwrittenSignature` is set to `false`, the handwritten signature toolbar and related UI are disabled; existing handwritten signature annotations remain in the document unless removed. The `canSave` option in annotation examples controls whether a signature can be saved for reuse; when `canSave` is `false`, signatures are not persisted in the signature collection for later reuse.
 
 ## See also
 

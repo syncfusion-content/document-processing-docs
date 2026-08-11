@@ -105,7 +105,7 @@ document.getElementById('setNone').addEventListener('click', function() {
 
 ### Add a line annotation programmatically
 
-The PDF Viewer library allows adding shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+The PDF Viewer library allows adding shape annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 ```html
 <button id="addLineAnnotation">Add Line annotation programmatically</button>

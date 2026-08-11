@@ -81,7 +81,7 @@ if (setNone) {
 
 ### Add ink annotation programmatically
 
-The PDF Viewer library allows adding ink annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+The PDF Viewer library allows adding ink annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 ```html
 <button id="addInkAnnotationProgram"> Add Ink Annotation Programmatically</button>
