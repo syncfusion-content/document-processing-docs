@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Chart in JavaScript (ES5) Document Editor Control | Syncfusion
-description: Learn here all about Chart in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Chart in JavaScript (ES5) DOCX Editor Component | Syncfusion
+description: Learn here all about Chart in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Chart 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in JavaScript (ES5) Document Editor Control
+# Chart in JavaScript (ES5) Document Editor Component
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
 
-The following example shows chart preservation in Document Editor.
+The following example shows chart preservation in the Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -27,7 +27,7 @@ The following example shows chart preservation in Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in Document Editor
+The following chart types are supported in the Document Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -50,4 +50,4 @@ The following chart types are supported in Document Editor
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/chart.html).
+Explore how to preserve charts in Word documents using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/chart).
