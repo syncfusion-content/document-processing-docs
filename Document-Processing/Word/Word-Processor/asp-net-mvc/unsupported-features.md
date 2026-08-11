@@ -54,4 +54,4 @@ This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No 
+| Comment reactions | No |
