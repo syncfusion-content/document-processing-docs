@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table of contents in Vue Document editor component | Syncfusion
-description: Learn here all about Table of contents in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Table of contents in Vue DOCX Editor component | Syncfusion
+description: Learn here all about Table of contents in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Table of contents 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in Vue Document editor component
+# Table of contents in Vue Document Editor component
 
 The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
 
@@ -67,10 +67,10 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
-## Online Demo
+## Online demo
 
 Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
 
-## See Also
+## See also
 
 * [Table of contents dialog](./dialog#table-of-contents-dialog)
