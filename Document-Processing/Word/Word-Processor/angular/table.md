@@ -195,7 +195,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
   
 {% previewsample "/document-processing/samples/document-editor/angular/tables-cs1" %}
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)
