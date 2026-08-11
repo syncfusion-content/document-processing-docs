@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Global Local in Syncfusion Document Editor Component
+title: Global Local in ASP.NET Core DOCX Editor Component | Syncfusion
 description: Learn here all about Global Local in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Global Local
@@ -8,17 +8,17 @@ documentation: ug
 ---
 
 
-# Globalization in ASP.NET Core in Document Editor Component
+# Globalization in ASP.NET Core Document Editor Component
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows to localize default text content of the DocumentEditor. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Refer the sample link [RTL](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
+The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows you to localize the default text content of the Document Editor. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, German, French, and more) by defining the locale value and translation object. To see the editor rendered with right-to-left flow, refer to the [Right-to-Left (RTL) sample](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
 
 N> Refer the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## Document Editor
 
-The following list of properties and its values are used in the document editor.
+The following list of properties and its values are used in the Document Editor.
 
 Locale keywords |Text
 -----|-----
@@ -162,7 +162,7 @@ Leading zero | Leading zero
 Bullet | Bullet
 Ordinal | Ordinal
 Ordinal Text | Ordinal Text
-For East | For East
+Far East | Far East
 No Restart | No Restart
 Font | Font
 Font style | Font style
@@ -184,7 +184,7 @@ Open Hyperlink | Open Hyperlink
 Copy Hyperlink | Copy Hyperlink
 Remove Hyperlink | Remove Hyperlink
 Paragraph | Paragraph
-Linked Style | Linked(Paragraph and Character)
+Linked Style | Linked (Paragraph and Character)
 Character | Character
 Merge Cells | Merge Cells
 Insert Above | Insert Above
@@ -365,7 +365,7 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and its values are used in the document editor container.
+The following list of properties and its values are used in the Document Editor container.
 
 Locale keywords |Text
 -----|-----
