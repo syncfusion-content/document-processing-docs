@@ -39,7 +39,7 @@ Non-interactive mode allows you to create a project directly using a single comm
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
-sf new my-project --framework vue --template spreadsheet-editor
+sf new my-project --framework vue --template spreadsheet-editor --theme tailwind3
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,7 +64,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 √ Choose Framework: » Vue
 √ Choose Language: » TypeScript
 √ Choose Template: » Spreadsheet Editor
-√ Choose Theme: » Material3
+√ Choose Theme: » Tailwind3
 √ Choose Style Format: » CSS
 √ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
 √ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      
