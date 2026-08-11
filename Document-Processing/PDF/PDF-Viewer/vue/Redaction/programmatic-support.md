@@ -3,7 +3,7 @@ layout: post
 title: Redaction Programmatic support in Vue PDF Viewer | Syncfusion
 description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion Vue PDF Viewer.
 platform: document-processing
-control: Pdf Viewer
+control: PDF Viewer
 documentation: ug
 ---
 
