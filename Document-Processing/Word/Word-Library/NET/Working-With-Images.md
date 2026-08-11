@@ -705,9 +705,12 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Add-svg-image/.NET).
 
+## Online Demo
+
+* Explore how to insert an image into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/imageinsertion#/tailwind). 
+
 ## See Also
 
-* [How to insert an image into a Word document (live demo)](https://document.syncfusion.com/demos/word/imageinsertion#/tailwind) using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 * [How to extract Images from Word document in C# and VB?](https://support.syncfusion.com/kb/article/11829/how-to-extract-images-from-word-document-in-c-and-vb)
 * [How to replace an image with same size in a Word document](https://support.syncfusion.com/kb/article/17796/how-to-replace-an-image-with-same-size-in-a-word-document)
 * [How to find and replace an image title in a Word document?](https://support.syncfusion.com/kb/article/18808/how-to-find-and-replace-an-image-title-in-a-word-document)
