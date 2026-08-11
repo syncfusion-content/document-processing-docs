@@ -79,4 +79,4 @@ The following example demonstrates how to enable the heading navigation pane in 
 
 ### Online demo
 
-Explore how to navigate through headings in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation).
+Explore how to navigate through headings in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation.html).
