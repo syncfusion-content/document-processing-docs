@@ -100,11 +100,11 @@ The Syncfusion CLI creates a fully configured project with a predefined PDF View
 
 After completing this guide, you will have a working Angular PDF Viewer project. You can now:
 
-- **Customize the PDF Viewer** — See [Customize Toolbar](./toolbar-customization) to modify toolbars and controls
+- **Customize the PDF Viewer** — See [Customize Toolbar](./toolbar-customization/overview) to modify toolbars and controls
 - **Handle Events** — Learn about PDF Viewer events in [Event Handling](./events)
 - **Add Annotations** — Explore annotation features in [Annotation](./annotation/overview)
 - **Open PDF Files** — See [Open PDF Files](./open-pdf-files) for file handling
-- **Deploy Your App** — Refer to [Deployment Integration](./deployment-integration/overview) for production setup
+- **Deploy Your App** — Refer to [Deployment Integration](./deployment-integration/ionic-angular) for production setup
 
 For more information, visit the [Getting Started with Angular PDF Viewer](./getting-started) guide or the [PDF Viewer Overview](../overview).
 
