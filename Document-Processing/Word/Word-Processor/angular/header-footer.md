@@ -25,7 +25,7 @@ this.documentEditor.selection.sectionFormat.differentFirstPage = true;
 this.documentEditor.selection.sectionFormat.differentOddAndEvenPages = true;
 ```
 
-## Go to Header and Footer Region
+## Go to header and footer region
 
 Double click in the header or footer region to move the selection into it. You can also do this by using the following code.
 
@@ -37,7 +37,7 @@ this.documentEditor.selection.goToHeader();
 this.documentEditor.selection.goToFooter();
 ```
 
-## Link to Previous
+## Link to previous
 
 The Link to Previous option is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
 
@@ -63,7 +63,7 @@ this.container.documentEditor.selection.sectionFormat.evenPageFooter.linkToPrevi
 
 N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is in disabled state in UI and set to return false for the first section.
 
-## Header and Footer Distance
+## Header and footer distance
 
 You can define the distance of header region content from the top of the page. Refer to the following sample code.
 
@@ -77,7 +77,7 @@ In the same way, you can define the distance of footer region content from the b
 this.documentEditor.selection.sectionFormat.footerDistance = 36;
 ```
 
-## Close Header and Footer Region
+## Close header and footer region
 
 Move the selection to the document body from header or footer region by double clicking or tapping the document area. You can also perform this by using the following sample code.
 
@@ -85,10 +85,10 @@ Move the selection to the document body from header or footer region by double c
 this.documentEditor.selection.closeHeaderFooter();
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to add and customize headers and footers in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/headers-footers).
 
-## See Also
+## See also
 
 * [Working with Section Formatting](./section-format)
