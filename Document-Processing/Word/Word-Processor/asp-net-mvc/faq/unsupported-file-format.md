@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Unsupported file in ASP.NET MVC Document Editor Component | Syncfusion
+title: Unsupported file in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about Unsupported file in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unsupported file
 documentation: ug
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document in ASP.NET MVC?
+# Why Do I Get an Unsupported Warning When Opening Docs in ASP.NET MVC?
 
-If you receive an "The file format you have selected isn't supported. Please choose valid format." message when opening a document in the Document Editor, it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
+If you receive the "The file format you have selected isn't supported. Please choose a valid format." message when opening a document in the Document Editor, it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
 2.	Corrupted Document: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
 To avoid this warning, always use the recommended document formats and features supported by the Document Editor. 
