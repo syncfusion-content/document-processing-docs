@@ -63,7 +63,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
