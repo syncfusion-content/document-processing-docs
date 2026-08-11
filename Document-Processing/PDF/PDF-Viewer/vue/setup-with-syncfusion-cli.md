@@ -100,11 +100,9 @@ The Syncfusion CLI creates a fully configured project with a predefined PDF View
 
 After completing this guide, you will have a working Vue PDF Viewer project. You can now:
 
-- **Customize the PDF Viewer** — See [Customize Toolbar](./toolbar-customization) to modify toolbars and controls
+- **Customize the PDF Viewer** — See [Customize Toolbar](./toolbar) to modify toolbars and controls
 - **Handle Events** — Learn about PDF Viewer events in [Event Handling](./event)
-- **Add Annotations** — Explore annotation features in [Annotations](./annotation/overview)
+- **Add Annotations** — Explore annotation features in [Annotations](./annotation/text-markup-annotation)
 - **Open PDF Files** — See [Open PDF Files](./open-pdf-files) for file handling
-- **Deploy Your App** — Refer to [Deployment Integration](./deployment-integration/overview) for production setup
-
 For more information, visit the [Getting Started with Vue PDF Viewer](./getting-started) guide or the [PDF Viewer Overview](../overview).
 
