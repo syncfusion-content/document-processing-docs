@@ -1,23 +1,39 @@
 ---
-title: XlsIO support for multi threading | Syncfusion
-description: This page explains whether the .NET Excel Library provides support for multi threading.
+title: Does XlsIO support multithreading? | XlsIO | Syncfusion
+description: Explains whether Syncfusion XlsIO is safe to use from multiple threads, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO library support multithreading and thread-safe?
+# Does XlsIO support multithreading?
 
-Yes, the XlsIO library supports multithreading and is thread-safe. It allows you to create multiple workbook instances for tasks like creating, reading, editing, and converting Excel documents.
+Syncfusion<sup>&reg;</sup> XlsIO **supports multithreading, but with one important caveat**: each thread must use its own [`ExcelEngine`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelEngine.html) instance. A single `ExcelEngine` (or any object obtained from it, such as `IApplication`, `IWorkbook`, or `IWorksheet`) is **not** thread-safe and must not be shared across threads. As long as every thread creates and disposes its own engine, the library as a whole can be used safely to create, read, edit, and convert many Excel documents in parallel.
 
-The following code example illustrates how to create multiple workbook instances to read several copies of the same Excel document using multithreading in C#:
+The following code example runs 1,000 independent `ExcelEngine` instances concurrently, each reading a copy of `InputTemplate.xlsx`, making a small edit, and writing the result to a `MemoryStream`. Each task owns its own engine, workbook, and streams, so no state is shared.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup **once, before any threads start**:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook called `InputTemplate.xlsx` in the application's working directory. Each task opens its own stream to the same file, so the file must be readable concurrently.
+## Run multiple ExcelEngine instances in parallel
+
+The flow is: spawn `TaskCount` tasks on the thread pool, run `ReadEditExcel()` on each task, and wait for all of them to finish with `Task.WhenAll`. Each `ReadEditExcel()` call creates its own `ExcelEngine`, opens the input file as a `FileStream`, edits a few cells, and saves to a `MemoryStream`. The `using` blocks guarantee that the engine, workbook, and streams are released at the end of each task.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 class MultiThreading
 {
-    //Defines the number of threads to be created
-    private const int TaskCount = 1000;
+  //Defines the number of tasks to run in parallel
+  private const int TaskCount = 1000;
 
     public static async Task Main()
     {

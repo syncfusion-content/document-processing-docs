@@ -11,6 +11,19 @@ documentation: UG
 
 The following code samples demonstrate how to set the "Invert if negative" option for a chart using C# (Cross-platform and Windows-specific) and VB.NET for XLSX files. For XLS (binary) file format, see the section below.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` - for `Path.GetFullPath` (XLSX cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IChart`, `ISeries`.
+  - `using Syncfusion.XlsIO.Implementation;` - for the internal `ChartSerieImpl` type. This namespace is part of the XlsIO assembly but is not part of the public API. Using internal types is a code-smell and may break in future releases.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`, `Imports Syncfusion.XlsIO.Implementation`.
+- The XLSX example expects an input file at `Data/InputTemplate.xlsx` (XLSX cross-platform tab) or `InputTemplate.xlsx` (XLSX Windows-specific and VB.NET tabs). The XLS example expects `InputTemplate.xls` (XLS cross-platform and VB.NET tabs) or `InputTemplatexlsx.xls` (XLS Windows-specific tab).
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -138,3 +151,9 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+* [ChartInvertIfNegative on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1007137-ChartInvert/FAQ/Chart/.NET/ChartInvertIfNegative)
+* [Charts in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts)
+* [Working with Chart Series](https://help.syncfusion.com/document-processing/excel/excel-library/net/charts/chart-series)

@@ -1,6 +1,6 @@
 ---
-title: How to read filtered rows in Excel? |Syncfusion
-description: This page shows how to read the filtered data from the Excel file using .NET Excel Library.
+title: How to read filtered rows in Excel? | XlsIO | Syncfusion
+description: Explains how to read only the rows that are not filtered (or hidden) from an XlsIO worksheet using the RowHeight property.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,9 +8,28 @@ documentation: UG
 
 # How to read filtered rows in Excel?
 
-The filtered rows in an Excel document can be read through [RowHeight](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight) property. The filtered rows, also called as hidden rows, will have the row height as 0. The following code explains this.
+In Syncfusion<sup>&reg;</sup> XlsIO, a row that has been hidden — whether by an autofilter rule or by the user hiding the row manually — has its [`IRange.RowHeight`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight) property set to `0`. You can therefore read the visible (non-filtered) rows of a worksheet by iterating the used range and skipping any row whose height is `0`. The following code example demonstrates this pattern.
 
-{% tabs %}  
+> **Important:**
+> * The `RowHeight == 0` check does not distinguish between rows hidden by an autofilter and rows that the user has hidden manually. The sample reads both as "filtered". If you need to detect only autofiltered rows, use the worksheet's `AutoFilter` API instead (see `IRange.AutoFilter` and `IAutoFilter.FilteredRows` if exposed in your build) and cross-reference the row index against the hidden state.
+> * `IRange.IsHidden` (on a row) is the modern, explicit way to check whether a row is hidden. The sample uses `RowHeight == 0` for compatibility with older XlsIO builds; in new code, prefer `worksheet.Rows[row].Hidden` (or `IRow.Hidden`) over the row-height check.
+> * `IRange.Value` returns `null` for empty cells. Coerce the value to a string (`Convert.ToString(value)` or `value?.ToString()`) before placing it in a `string[]` to avoid storing `null`s in the array.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Have a workbook called `Sample.xlsx` in the application's working directory. The workbook should contain an autofilter (or manually hidden rows) so the `RowHeight == 0` check has something to skip.
+* Ensure the output directory is writable if you choose to save a modified copy of the workbook.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -83,7 +102,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Next
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

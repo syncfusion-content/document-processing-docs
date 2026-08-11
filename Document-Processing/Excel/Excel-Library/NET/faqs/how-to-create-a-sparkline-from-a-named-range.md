@@ -1,6 +1,6 @@
 ---
 title: How to create a sparkline from a named range | XlsIO | Syncfusion
-description: This page demonstrates to create a sparkline from a named range using .NET Excel Library.
+description: Learn how to create a sparkline from a named range in an Excel worksheet using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,52 +8,71 @@ documentation: UG
 
 # How to create a sparkline from a named range?
 
-You can create a [sparkline](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#sparkline) from a [named range](https://help.syncfusion.com/document-processing/excel/excel-library/net/faq#how-to-use-named-ranges-with-xlsio) with the help of the following code.
+You can create a [sparkline](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#sparkline) from a [named range](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-use-named-ranges-with-xlsio) using the following code example.
 
-{% tabs %}  
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or the platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF` for Windows-specific scenarios).
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Sparklines require **Excel 2010 or later**; the sample uses `ExcelVersion.Excel2016`.
+* Ensure the output directory is writable; the output file is created or overwritten when the code runs.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.XlsIO;
+using System.Drawing;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Excel2016;
+
+  //Workbooks.Create(int) creates a workbook with the given number of worksheets
   IWorkbook workbook = application.Workbooks.Create(1);
   IWorksheet worksheet = workbook.Worksheets[0];
 
-  //Add sample data
+  //Add sample data (using indexer syntax; Range["A1"] is equivalent)
   worksheet["A1"].Number = 6911;
   worksheet["B1"].Number = 8261;
   worksheet["C1"].Number = 812;
   worksheet["D1"].Number = 166;
 
-  //Add SparklineGroups
+  //Add a sparkline group to the worksheet
   ISparklineGroup sparklineGroup = worksheet.SparklineGroups.Add();
-
-  //Add SparkLineType
   sparklineGroup.SparklineType = SparklineType.Line;
   sparklineGroup.MarkersColor = Color.BlueViolet;
 
-  //Add sparklines
+  //Create a sparklines collection within the group
   ISparklines sparklines = sparklineGroup.Add();
 
-  //Create named ranges
-  IName name1 = workbook.Names.Add("Data_Range");
-  name1.RefersToRange = worksheet.Range["A1:D1"];
+  //Create the named ranges for the data and the sparkline location
+  IName dataName = workbook.Names.Add("Data_Range");
+  dataName.RefersToRange = worksheet.Range["A1:D1"];
   IRange dataRange = worksheet.Range["Data_Range"];
 
-  IName name2 = workbook.Names.Add("Sparkline_Range");
-  name2.RefersToRange = worksheet.Range["E1"];
+  IName sparklineName = workbook.Names.Add("Sparkline_Range");
+  sparklineName.RefersToRange = worksheet.Range["E1"];
   IRange referenceRange = worksheet.Range["Sparkline_Range"];
 
-  //Add a sparkline
+  //Add the sparkline (first arg: data range; second arg: location range)
   sparklines.Add(dataRange, referenceRange);
  
   workbook.SaveAs("SparklineFromNamedRange.xlsx");
   workbook.Close();
-  excelEngine.Dispose();
 }
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+using Syncfusion.XlsIO;
+using System.Drawing;
+
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
@@ -67,33 +86,32 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet["C1"].Number = 812;
   worksheet["D1"].Number = 166;
 
-  //Add SparklineGroups
+  //Add a sparkline group and configure the type and marker color
   ISparklineGroup sparklineGroup = worksheet.SparklineGroups.Add();
-
-  //Add SparkLineType
   sparklineGroup.SparklineType = SparklineType.Line;
   sparklineGroup.MarkersColor = Color.BlueViolet;
 
-  //Add sparklines
-  ISparklines sparklines = sparklineGroup.Add();
-
-  //Create named ranges
-  IName name1 = workbook.Names.Add("Data_Range");
-  name1.RefersToRange = worksheet.Range["A1:D1"];
+  //Create the named ranges for the data and the sparkline location
+  IName dataName = workbook.Names.Add("Data_Range");
+  dataName.RefersToRange = worksheet.Range["A1:D1"];
   IRange dataRange = worksheet.Range["Data_Range"];
 
-  IName name2 = workbook.Names.Add("Sparkline_Range");
-  name2.RefersToRange = worksheet.Range["E1"];                
+  IName sparklineName = workbook.Names.Add("Sparkline_Range");
+  sparklineName.RefersToRange = worksheet.Range["E1"];
   IRange referenceRange = worksheet.Range["Sparkline_Range"];
 
-  //Add a sparkline
+  //Add the sparkline (first arg: data range; second arg: location range)
   sparklines.Add(dataRange, referenceRange);
 
   workbook.SaveAs("SparklineFromNamedRange.xlsx");
+  workbook.Close();
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Imports Syncfusion.XlsIO
+Imports System.Drawing
+
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2016
@@ -106,29 +124,25 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet("C1").Number = 812
   worksheet("D1").Number = 166
 
-  'Add SparklineGroups
+  'Add a sparkline group and configure the type and marker color
   Dim sparklineGroup As ISparklineGroup = worksheet.SparklineGroups.Add()
-
-  'Add SparkLineType
   sparklineGroup.SparklineType = SparklineType.Line
   sparklineGroup.MarkersColor = Color.BlueViolet
 
-  'Add sparklines
-  Dim sparklines As ISparklines = sparklineGroup.Add()
-
-  'Create named ranges
-  Dim name1 As IName = workbook.Names.Add("Data_Range")
-  name1.RefersToRange = worksheet.Range("A1:D1")
+  'Create the named ranges for the data and the sparkline location
+  Dim dataName As IName = workbook.Names.Add("Data_Range")
+  dataName.RefersToRange = worksheet.Range("A1:D1")
   Dim dataRange As IRange = worksheet.Range("Data_Range")
 
-  Dim name2 As IName = workbook.Names.Add("Sparkline_Range")
-  name2.RefersToRange = worksheet.Range("E1")
+  Dim sparklineName As IName = workbook.Names.Add("Sparkline_Range")
+  sparklineName.RefersToRange = worksheet.Range("E1")
   Dim referenceRange As IRange = worksheet.Range("Sparkline_Range")
 
-  'Add a sparkline
+  'Add the sparkline (first arg: data range; second arg: location range)
   sparklines.Add(dataRange, referenceRange)
 
   workbook.SaveAs("SparklineFromNamedRange.xlsx")
+  workbook.Close()
 End Using
 {% endhighlight %}
 {% endtabs %}

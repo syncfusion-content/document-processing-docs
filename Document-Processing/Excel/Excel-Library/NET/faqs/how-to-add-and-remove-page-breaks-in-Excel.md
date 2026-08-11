@@ -1,6 +1,6 @@
 ---
-title: How to add and remove page breaks in a worksheet | Syncfusion
-description: This page shows how to add and remove page breaks in a worksheet using the .NET Excel Library.
+title: How to add and remove page breaks in an Excel worksheet | Syncfusion
+description: This page shows how to add and remove horizontal and vertical page breaks in a worksheet using the Syncfusion .NET Excel Library (XlsIO).
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,19 @@ documentation: UG
 
 # How to add and remove page breaks in a worksheet?
 
-Page breaks in Excel separate large datasets into different pages for better organization. You can add or remove horizontal page breaks using [HPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HPageBreaks) and vertical page breaks using [VPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VPageBreaks) with the IWorksheet interface.
+Page breaks in Excel separate large datasets into different pages for better organization and printing. With the [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface, you can add or remove horizontal page breaks using [HPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HPageBreaks) and vertical page breaks using [VPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VPageBreaks). The page break is anchored to the first cell of the row or column below/after the break.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;`.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output file is written to the application's current working directory by `SaveAs`.
+- The example also sets `worksheet.View = SheetView.PageBreakPreview` so the breaks are visible in Excel's Page Break Preview view.
+
+## Code example
 
 The following code example illustrates how to add or remove page breaks in a worksheet.
 
@@ -102,3 +114,8 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [How to set print titles](how-to-set-print-titles.md)
+- [How to convert the required range in Excel to PDF](how-to-convert-the-required-range-in-excel-to-pdf.md)

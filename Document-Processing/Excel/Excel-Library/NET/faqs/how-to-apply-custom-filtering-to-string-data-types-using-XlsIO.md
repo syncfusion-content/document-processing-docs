@@ -1,6 +1,6 @@
 ---
 title: Apply custom filtering to string data types using XlsIO | Syncfusion
-description: Code example to apply custom filtering to string data types using .NET Excel Library.
+description: Learn how to apply custom filters to string data in Excel worksheets using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -9,6 +9,19 @@ documentation: UG
 # How to apply custom filtering to string data types using XlsIO?
 
 The following code snippets illustrate how to apply custom filtering to string data types in C# (cross-platform and Windows-specific) and VB.NET.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives: `using Syncfusion.XlsIO;` and (for the cross-platform sample) `using System.IO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The cross-platform C# sample expects the input file at `Data/Input.xlsx` relative to the working directory and writes the output to `Output/Output.xlsx`.
+- The Windows-specific C# sample reads `Input.xlsx` from the working directory and writes `Output.xlsx`.
+- The VB.NET sample reads `Sample.xlsx` from the working directory and writes `Output.xlsx`.
+- The input workbook must contain at least 11 rows of string data in column A (the AutoFilter range is `A1:A11`); otherwise the AutoFilter has nothing to filter.
+
+## Code example
 
 {% tabs %}                                                                                       
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Filtering/.NET/Custom%20Filter%20String%20Type/CustomFilterStringType/Program.cs,180" %}
@@ -77,4 +90,10 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply custom filtering to string data types using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Filtering/.NET/Custom%20Filter%20String%20Type">this GitHub page</a>.  
+A complete working example to apply custom filtering to string data types is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Filtering/.NET/Custom%20Filter%20String%20Type).
+
+## See also
+
+- [How to use AND/OR operators in the filter](how-to-use-and-or-operators-in-the-filters.md)
+- [How to remove AutoFilter from an Excel worksheet](how-to-remove-autofilter-in-an-Excel.md)
+- [How to read filtered rows in Excel](how-to-read-filtered-rows-in-excel.md)  

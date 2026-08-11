@@ -10,6 +10,18 @@ documentation: UG
 
 You can programmatically make the first item in a data-validation list the default selection in an Excel file by using Syncfusion XlsIO. The following examples in C# (cross-platform and Windows-specific) and VB.NET demonstrate the process.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive at the top of the file:
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IDataValidation`.
+- The VB.NET equivalent: `Imports Syncfusion.XlsIO`.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+- The cross-platform tab saves to `../../../Output/ListValidation.xlsx`; the Windows-specific and VB.NET tabs save to `../../Output/ListValidation.xlsx`. Confirm that the path matches your project's working directory.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/List%20Validation/.NET/List%20Validation/List%20Validation/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -105,3 +117,10 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 A complete working example to set the first item in a list as the default selected value in an Excel File is available on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/List%20Validation/.NET/List%20Validation">this GitHub page</a>.
+
+## See also
+
+* [ListValidation on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/List%20Validation/.NET/List%20Validation)
+* [Data Validation in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation)
+* [How to remove data validation from a cell in an Excel worksheet](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data-validation#remove-data-validation)
+

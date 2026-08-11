@@ -1,6 +1,6 @@
 ---
 title: How to retain cell values after removing formula in Excel | Syncfusion
-description: This page shows how to retain cell values after removing formulas in Excel using the .NET Excel Library.
+description: Explains how to replace every formula in a workbook with its calculated value, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -9,6 +9,20 @@ documentation: UG
 # How to retain cell values after removing formulas in Excel?
 
 You can remove a formula from a cell while retaining its calculated value by first retrieving the calculated value, clearing the cell's content, and then assigning the value back to the cell.
+
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Provide an input `InputTemplate.xlsx` in the working directory. The file should contain at least one formula on at least one sheet.
+* Ensure the working directory is writable; the example writes `Output.xlsx`.
 
 The following code example demonstrates how to remove a formula while retaining its calculated value.
 
@@ -105,3 +119,9 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [IWorksheet.EnableSheetCalculations API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html)
+* [IRange.CalculatedValue API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)
+* [ExcelClearOptions enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html)

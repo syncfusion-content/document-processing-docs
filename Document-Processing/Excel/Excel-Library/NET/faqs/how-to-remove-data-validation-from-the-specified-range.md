@@ -1,16 +1,28 @@
 ---
-title: How to remove data validation from the specified range | Syncfusion
-description: This page shows how to remove data validation from the specified range in Excel using the .NET Excel Library.
+title: How to remove data validation from a specified range? | Syncfusion
+description: Explains how to remove data validation rules from a range in XlsIO using ExcelClearOptions.ClearDataValidations, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to remove data validation from the specified range?
+# How to remove data validation from a specified range?
 
-You can remove data validation from the specified range using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear_Syncfusion_XlsIO_ExcelClearOptions_) method with the [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) of ClearDataValidations option.
+The [`IRange.Clear`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html) method with the [`ExcelClearOptions.ClearDataValidations`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) value removes every data validation rule that applies to the cells in the range. The example below clears the validations on `A1:C5` of the first sheet.
 
-The following code example demonstrates how to remove data validation from the specified range.
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`).
+* Register a valid Syncfusion license at application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Provide an input `InputTemplate.xlsx` in the working directory. The file should have a data validation rule on the range `A1:C5` of the first sheet so the clear has something to do.
+* Ensure the working directory is writable; the example writes `Output.xlsx`.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -61,3 +73,9 @@ End Using
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [IRange.Clear API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html)
+* [ExcelClearOptions enum reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html)
+* [IValidations API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IValidations.html)

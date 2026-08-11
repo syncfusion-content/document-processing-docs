@@ -1,6 +1,6 @@
 ---
 title: Find and Replace text in Hyperlinks | Syncfusion
-description: This page shows how to find and replace text in hyperlinks using the .NET Excel Library.
+description: Explains how to find and replace text in the cell hyperlinks of a worksheet with XlsIO using a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to find and replace text in hyperlinks?
 
-The following code illustrates how to find and replace text in hyperlinks.
+A worksheet's [`IHyperLinks`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html) collection returns one [`IHyperLink`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html) entry per cell hyperlink. Each `IHyperLink` exposes two text properties that you may want to update:
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

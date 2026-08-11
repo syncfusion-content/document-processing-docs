@@ -17,6 +17,19 @@ Deleting the source worksheet and refreshing the PivotTable may work in the curr
 
 The following code illustrate how to disable the IsRefreshOnLoad property.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console` and exception handling.
+  - `using System.IO;` - for `FileStream` / `FileMode` if you replace the `Workbooks.Open` overload with a stream-based one. Not required for the path-based overload used in the samples.
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `PivotTableImpl` (C# and VB.NET).
+- The VB.NET equivalents: `Imports System`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Data/Sample.xlsx` (cross-platform and Windows-specific C# tabs) or `../../Data/Sample.xlsx` (VB.NET tab). The input workbook must contain a PivotTable anchored to a worksheet whose data is in a different worksheet.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -99,7 +112,9 @@ worksheet.Visibility = WorksheetVisibility.Hidden
 {% endhighlight %}
 {% endtabs %}  
 
-## See Also
+## See also
 
 * [Hide Excel Worksheets](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/hide-excel-worksheets)
 * [Working with Pivot Tables](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables)
+* [Pivot Table in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-pivot-tables#pivot-table)
+

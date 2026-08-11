@@ -12,6 +12,17 @@ As per the Microsoft Excel UI Behavior, while applying the styles to the single 
 
 The following examples show how to apply border styles for merged cells in C# (cross-platform and Windows-specific) and VB.NET.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IStyle`, `ExcelBordersIndex`, `ExcelLineStyle`, `ExcelKnownColors`.
+- The VB.NET equivalent: `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `../../../Data/Input.xlsx` (cross-platform tab) or `../../Data/Input.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with at least one merged region.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}                                          
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells/Borderstylesformergedcells/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -98,4 +109,10 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells">this GitHub page</a>.  
+A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells">this GitHub page</a>.
+
+## See also
+
+* [Borderstylesformergedcells on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells)
+* [Borders in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/apply-borders-in-excel)
+* [Working with Styles](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#create-a-style)

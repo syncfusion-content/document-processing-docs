@@ -12,6 +12,19 @@ Formulas are calculated during execution. Once calculated, you can check if the 
 
 The example below shows how to iterate the used range of a worksheet, check each cell for `HasFormulaErrorValue`, and print the `FormulaErrorValue` and the cell address.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console.WriteLine`.
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `UsedRange`, `HasFormulaErrorValue`, `FormulaErrorValue`.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example expects an input file at `Input/InputTemplate.xlsx` (cross-platform tab) or `InputTemplate.xlsx` (Windows-specific and VB.NET tabs). The input workbook must contain at least one worksheet with at least one cell that has a formula returning an error (e.g., `=1/0` for `#DIV/0!` or `=NA()` for `#N/A`).
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -98,3 +111,9 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1014444-FormulaError/FAQ/FormulaError%20Value/.NET/FormulaError%20Value">this GitHub page</a>.
+
+## See also
+
+* [FormulaError Value on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1014444-FormulaError/FAQ/FormulaError%20Value/.NET/FormulaError%20Value)
+* [Formulas in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-formulas)
+* [Working with Cells](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-cells-manipulation)

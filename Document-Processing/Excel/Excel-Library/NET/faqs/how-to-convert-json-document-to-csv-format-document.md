@@ -1,14 +1,25 @@
 ---
 title: How to convert JSON document to CSV format document |Syncfusion.
-description: This page explains how to convert JSON document to CSV format document using .NET Excel Library.
+description: Learn how to convert JSON data into CSV format programmatically using the .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert JSON document to CSV format document?
+# How to convert a JSON document to a CSV format document?
 
 The following code illustrates how to convert JSON document to CSV format document.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Install the **Newtonsoft.Json** NuGet package (`JsonConvert` is not part of the BCL).
+- Add the required `using` directives: `using Syncfusion.XlsIO;`, `using System.Data;`, `using System.IO;`, and `using Newtonsoft.Json;` (or `Imports` equivalents in VB.NET).
+- The example expects `Input.json` in the working directory (or in `Data/Input.json`, depending on the tab) and writes the output to `Output/Sample.csv` (cross-platform tab) or `Output.csv` (Windows / VB tabs).
+
+## Code example
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Conversions/.NET/JSON%20to%20CSV/JSON%20to%20CSV/Program.cs,180" %}
@@ -79,6 +90,12 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
     workbook.SaveAs("Output.csv", ",")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-A complete working example to convert JSON document to CSV format document using C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conversions/.NET/JSON%20to%20CSV).
+A complete working example to convert a JSON document to a CSV format document is available on [GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Conversions/.NET/JSON%20to%20CSV).
+
+## See also
+
+- [How to preserve line breaks when saving excel as CSV](how-to-preserve-line-breaks-when-saving-excel-as-csv.md)
+- [Why text with double quotes gets enclosed in double quotes when saving as CSV](why-text-with-double-quotes-gets-enclosed-in-double-quotes-when-saving-as-csv.md)
+- [How to save a file to stream](how-to-save-a-file-to-stream.md)

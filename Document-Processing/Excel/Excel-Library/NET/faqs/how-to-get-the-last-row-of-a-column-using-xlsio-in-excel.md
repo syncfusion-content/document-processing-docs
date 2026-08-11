@@ -12,6 +12,24 @@ Finding the last row of a specific column helps you determine the exact extent o
 
 The following code example illustrates how to find the last row containing data in a specific column.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console.WriteLine`.
+  - `using System.IO;` - for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IApplication`, `IWorkbook`, `IWorksheet`.
+  - `using Syncfusion.XlsIO.Implementation;` - for the internal `WorksheetImpl` type. This namespace is part of the XlsIO assembly but is not part of the public API. Using internal types is a code-smell and may break in future releases.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports Syncfusion.XlsIO`, `Imports Syncfusion.XlsIO.Implementation`.
+- **The example also uses additional internal types that are not declared in the samples**:
+  - `RowStorage` and `RowStorageEnumerator` - internal types in the XlsIO implementation. The `using` directive for these is not declared. The samples will not compile until the directive is added.
+  - `WorksheetHelper` - internal helper class in the XlsIO implementation. The `using` directive is not declared. The samples will not compile until the directive is added.
+  - `WorksheetImpl.RecordExtractor` - internal property on `WorksheetImpl`. The property is accessed in the helper method. The samples will not compile until the property is accessible.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -162,3 +180,9 @@ End Function
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1005966-Last-Row/FAQ/Last%20Row/.NET/Last%20Row">this GitHub page</a>.
+
+## See also
+
+* [Last Row on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1005966-Last-Row/FAQ/Last%20Row/.NET/Last%20Row)
+* [How to retrieve the first cell in the used range in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-retrieve-the-first-cell-in-the-used-range-in-Excel)
+* [Working with Ranges](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange)

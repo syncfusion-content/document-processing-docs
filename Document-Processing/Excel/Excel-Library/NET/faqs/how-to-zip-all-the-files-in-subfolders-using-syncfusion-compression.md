@@ -1,16 +1,35 @@
 ---
 title: Zip all files in subfolders using Syncfusion's Compression |Syncfusion
-description: This page illustrates with an example to zip all the files in subfolders using the Syncfusion.Compression.Zip namespace.
+description: Code example that zips every file in a folder and its subfolders using the Syncfusion.Compression.Zip namespace.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to zip all the files in subfolders using Syncfusion&reg;'s Compression?
+# How to Zip All Files in Subfolders Using Syncfusion Compression?
 
-You can compress and decompress the files with our Compression library. The following code example illustrates this. Additionally, it shows how to delete the source files from the given path after compression.
+You can compress a folder along with all of its subfolders into a single zip archive by recursively enumerating files with the `Syncfusion.Compression.Zip` namespace in Syncfusion<sup>&reg;</sup> Document Processing. The code example below demonstrates the full flow: enumerating the source folder, adding every file to a `ZipArchive`, saving the archive, and (optionally) cleaning up the source folder.
 
-{% tabs %} 
+## Prerequisites
+
+Before running the code example, make sure the following are in place:
+
+* Install the [Syncfusion.XlsIO.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core) NuGet package (or a platform-specific package such as `Syncfusion.XlsIO.WinForms` / `Syncfusion.XlsIO.WPF`). This transitively brings in `Syncfusion.Compression.Base` and `Syncfusion.Compression.Zip`.
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
+
+* Replace `folderPath` with the path to an existing source folder that contains the files you want to archive. The path can be absolute or relative to `Environment.CurrentDirectory`; file paths are case-sensitive on Linux.
+* Make sure the relative output path (`../../Output/`) is writable. The code creates the `Output` directory if it does not exist; the relative path is resolved against the application's working directory.
+* Use a test folder the first time you run this. The `DeleteFolderContents` call removes the source files after archiving, which is destructive and cannot be undone.
+
+## Zip every file in a folder and its subfolders
+
+The flow is: enumerate the source folder recursively, add each file's stream to a `ZipArchive`, save the archive, then dispose the streams and (optionally) delete the source folder. The recursive enumeration collects every subdirectory into `arrOfItems`; `AddRootFiles` adds files at the top level and `AddSubFoldersFiles` adds files inside each subdirectory.
+
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using System;
 using System.Collections.Generic;
@@ -19,16 +38,19 @@ using Syncfusion.Compression.Zip;
 
 class Program
 {
+    // Static state: a single ZipArchive and helper lists shared across helper methods
     private static List<DirectoryInfo> arrOfItems = new List<DirectoryInfo>();
     private static ZipArchive zipArchive = new ZipArchive();
-
-    // Enter the folder path
-    private static string folderPath = "Your_folder_path";
     private static List<Stream> arrOfStreamItems = new List<Stream>();
+
+    // Replace with the path of the folder you want to zip
+    private static string folderPath = "Your_folder_path";
 
     private static void SubFoldersFiles(string path)
     {
         DirectoryInfo dInfo = new DirectoryInfo(path);
+
+        //Recurse into subdirectories; collect them so the caller can iterate later
         foreach (DirectoryInfo d in dInfo.GetDirectories())
         {
             SubFoldersFiles(d.FullName);
@@ -36,7 +58,6 @@ class Program
         }
     }
 
-    // Zip and save the file.
     private static void ZipAndSave()
     {
         SubFoldersFiles(folderPath);
@@ -80,7 +101,6 @@ class Program
         foreach (DirectoryInfo dInfo in arrOfItems)
         {
             FileInfo[] fInfo = dInfo.GetFiles();
-            string mainDirectoryPath = Path.GetFullPath(folderPath);
             foreach (FileInfo file in fInfo)
             {
                 // Get the File name with its current folder and ignoring the Main Directory
@@ -99,7 +119,6 @@ class Program
         }
     }
 
-    // Unzipping the Folder
     private static void UnZipFiles()
     {
         ZipArchive zip = new ZipArchive();
@@ -143,13 +162,14 @@ class Program
         Console.WriteLine("File has been Unzipped");
     }
 
-    // Delete the source folder files
     private static void DeleteFolderContents(string path)
     {
+        //Dispose every source stream after the archive has been saved
         foreach (Stream stream in arrOfStreamItems)
         {
             stream.Dispose();
         }
+        arrOfStreamItems.Clear();
 
         if (path != null && Directory.Exists(path))
         {
@@ -165,8 +185,7 @@ class Program
                 DeleteFolder(directory);
             }
 
-            Console.WriteLine("Folder contents deleted successfully!");
-        }
+        Console.WriteLine("Folder contents deleted successfully!");
     }
 
     private static void DeleteFolder(string path)
@@ -197,7 +216,6 @@ class Program
         UnZipFiles();
     }
 }
-
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -548,7 +566,7 @@ Module Module1
   End Sub
 End Module
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 ## See Also
 

@@ -1,6 +1,6 @@
 ---
 title: How to access a table in Excel document using its name | Syncfusion
-description: This page shows how to access a table in Excel document using the table name using .NET Excel Library.
+description: Explains how to access an Excel table (ListObject) by name in XlsIO using the IListObjects indexer, with a C# and VB.NET example.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # How to access a table in Excel document using the table name?
 
-The following code example illustrates how to access a table in Excel document using the table name.
+An Excel *table* (also called a **ListObject**) is a structured range with a name shown in the **Table Design** tab. Syncfusion<sup>&reg;</sup> XlsIO exposes the tables on a worksheet through the [`IListObjects`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html) collection, which supports a **name indexer**: `worksheet.ListObjects["TableName"]` returns the [`IListObject`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html) directly, with no need to walk the collection manually. If the name is not present, the indexer throws `KeyNotFoundException`; wrap the call in a `try/catch` (or check `ContainsKey`) to handle that case.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -101,3 +101,8 @@ Using excelEngine As New ExcelEngine()
 End Using
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+
+* [IListObject API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObject.html)
+* [IListObjects API reference](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IListObjects.html)

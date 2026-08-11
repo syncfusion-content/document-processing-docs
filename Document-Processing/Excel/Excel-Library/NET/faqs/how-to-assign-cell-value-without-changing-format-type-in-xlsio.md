@@ -12,6 +12,18 @@ Assigning a value to a cell using the `Value` property can change the cell's for
 
 The following examples show both approaches.
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directives at the top of the file:
+  - `using System.IO;` — for `Path.GetFullPath` (cross-platform tab).
+  - `using Syncfusion.XlsIO;` — for the XlsIO types and `IRange`, `Text`, `Value`, `NumberFormat`.
+- The VB.NET equivalents: `Imports System.IO`, `Imports Syncfusion.XlsIO`.
+- The example creates a new workbook with `Workbooks.Create(1)`, so no input file is required.
+- The output folder (`Output`) must exist or be created by the application before calling `SaveAs`. `SaveAs` does not create missing parent directories on its own.
+
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
@@ -71,3 +83,11 @@ End Using
 {% endtabs %}
 
 A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/991935-Cell-Value-Format/FAQ/Cell%20Value%20Without%20Changing%20Format/.NET/Cell%20Value%20Without%20Changing%20Format">this GitHub page</a>.
+
+## See also
+
+* [Cell Value Without Changing Format on GitHub](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/991935-Cell-Value-Format/FAQ/Cell%20Value%20Without%20Changing%20Format/.NET/Cell%20Value%20Without%20Changing%20Format)
+* [Cell Values in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#create-a-style)
+* [Number Formatting in Excel](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#apply-number-formats)
+* [Working with Ranges](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/list-of-apis-under-irange)
+

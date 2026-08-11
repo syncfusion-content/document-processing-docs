@@ -12,6 +12,20 @@ Yes, the XlsIO library supports multithreaded Excel to PDF conversion, and the c
 
 The following code example illustrates how to create multiple workbook instances to read several copies of the same Excel document and convert them to PDF using multithreading in C#:
 
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIORenderer** NuGet package. This single metapackage transitively pulls in `Syncfusion.XlsIO`, `Syncfusion.Pdf`, and all required dependencies - no separate `Syncfusion.XlsIO` or `Syncfusion.Pdf` install is needed.
+- Add the required `using` directives at the top of the file:
+  - `using System;` - for `Console`, `DateTime`.
+  - `using System.IO;` - for `FileStream`, `FileMode`, `FileAccess`, `MemoryStream`.
+  - `using System.Threading.Tasks;` - for `Task`, `Task.Run`, `Task.WhenAll`.
+  - `using Syncfusion.XlsIO;` - for the XlsIO types and `IApplication`, `IWorkbook`, `IWorksheet`.
+  - `using Syncfusion.Pdf;` - for the `PdfDocument` type.
+- The VB.NET equivalents: `Imports System`, `Imports System.IO`, `Imports System.Threading.Tasks`, `Imports Syncfusion.XlsIO`, `Imports Syncfusion.Pdf`, `Imports Syncfusion.XlsIO.Implementation`.
+- The example expects an input file named `InputTemplate.xlsx` in the application's working directory. The file is opened 1000 times concurrently (one per task). On Windows, opening the same file concurrently may fail due to file-sharing restrictions. The documentation owner should reduce `TaskCount` to a more reasonable value (e.g., 10 or 100) or use a separate file per task.
+
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 class MultiThreading
@@ -162,3 +176,6 @@ Module MultiThreading
 End Module
 {% endhighlight %}
 {% endtabs %}
+## See also
+
+* [Excel to PDF Conversion in XlsIO](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-conversion)

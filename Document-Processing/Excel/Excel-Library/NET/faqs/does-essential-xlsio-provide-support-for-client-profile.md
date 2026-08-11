@@ -1,6 +1,6 @@
 ---
 title: Does Essential XlsIO provide support for Client Profile | Syncfusion
-description: This page tells whether the .NET Excel Library provides support for Client Profile.
+description: Explains whether the .NET Excel library (XlsIO) supports the .NET Client Profile and which assemblies to reference.
 platform: document-processing
 control: XlsIO
 documentation: UG
@@ -10,9 +10,19 @@ documentation: UG
 
 Yes, Essential&reg; XlsIO provides support for Client Profile. In order to use Essential&reg; XlsIO in an application (which targeted to Client Profile), the user should include the following assemblies.
 
-* Syncfusion.Compression.Base.dll
-* Syncfusion.XlsIO.ClientProfile.dll
+## Prerequisites (legacy Client Profile setup)
 
+> **Important:**
+> The information in this section applies only to legacy projects that target the .NET Framework 3.5/4.0 **Client Profile**. For modern .NET Framework 4.5+ or .NET Core/.NET 5+ projects, use the standard `Syncfusion.XlsIO.Base` package instead of the Client Profile assemblies.
+
+Before you build a Client Profile application that uses XlsIO, make sure the following are in place:
+
+* Target the **.NET Framework 3.5 Client Profile** or **.NET Framework 4.0 Client Profile** in the Visual Studio project properties.
+* Register a valid Syncfusion license at the application startup:
+
+```csharp
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+```
 ## See Also
 
 * [What are the assemblies required for working with XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)

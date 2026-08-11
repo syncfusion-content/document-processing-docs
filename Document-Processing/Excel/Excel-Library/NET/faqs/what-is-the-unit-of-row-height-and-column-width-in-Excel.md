@@ -1,10 +1,10 @@
---- 
+---
 title: Unit of row height and column width in Excel | Syncfusion 
 description: This page explains about the default unit of measurement for row height and column width in Excel using .NET Excel library.
-platform: document-processing 
-control: XlsIO 
-documentation: UG 
---- 
+platform: document-processing
+control: XlsIO
+documentation: UG
+---
 
 # What is the unit of row height and column width in Excel?
 
@@ -16,6 +16,16 @@ Use <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO
 Use <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidth_System_Int32_">GetColumnWidth</a> and <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeight_System_Int32_">GetRowHeight</a> to retrieve dimensions in points. 
 
 If you need pixel values, XlsIO provides pixel based APIs:  <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidthInPixels_System_Int32_">GetColumnWidthInPixels</a>, <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeightInPixels_System_Int32_">GetRowHeightInPixels</a>, <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetColumnWidthInPixels_System_Int32_System_Int32_">SetColumnWidthInPixels</a>, <a href="http://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_SetRowHeightInPixels_System_Int32_System_Double_">SetRowHeightInPixels</a>.
+
+## Prerequisites
+
+Before running the code example, make sure the following prerequisites are met:
+
+- Install the **Syncfusion.XlsIO.WinForms** NuGet package (for Windows) or the **Syncfusion.XlsIO.Net.Core** package (for .NET Core / .NET 6+ cross-platform targets).
+- Add the required `using` directive: `using Syncfusion.XlsIO;` (or `Imports Syncfusion.XlsIO` in VB.NET).
+- The code samples reference an `IWorksheet` named `sheet`. Make sure `sheet` is the result of `workbook.Worksheets[0]` (or another worksheet) and that the workbook has been opened or created before the calls.
+
+## Code example
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -108,3 +118,10 @@ Dim heightPixels As Integer = sheet.GetRowHeightInPixels(1)
 Console.WriteLine("Row height in pixels: " & heightPixels)
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+* [How to get the column width and row height in pixels](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-get-the-column-width-and-row-height-in-pixels)
+* [How to convert inches to points in Syncfusion XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-convert-inches-to-points-in-syncfusion-xlsio)
+* [How to convert a value from pixel to points with scaling percentage](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-convert-a-value-from-pixel-to-points-with-scaling-percentage)
+* [What is the maximum row height in Excel?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/what-is-the-maximum-row-height-in-excel)
