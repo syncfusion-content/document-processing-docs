@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Text format in Vue Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Text format in Vue DOCX Editor component | Syncfusion
+description: Learn here all about Text format in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
 control: Text format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in Vue Document editor component
+# Text format in Vue Document Editor component
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
-The bold formatting for selected text can be get or set by using the following sample code.
+The bold formatting for selected text can be retrieved or set by using the following sample code.
 
 ```ts
 
@@ -24,7 +24,7 @@ let bold : boolean = this.$refs.documenteditor.ej2Instances.selection.characterF
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.bold = true;
 ```
 
-You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the bold formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.toggleBold();
@@ -32,16 +32,16 @@ this.$refs.documenteditor.ej2Instances.editor.toggleBold();
 
 ## Italic
 
-The Italic formatting for selected text can be get or set by using the following sample code.
+The italic formatting for selected text can be retrieved or set by using the following sample code.
 
 ```ts
 //Gets the value for italic formatting of selected text.
-let italic : boolean = this.$refs.documenteditor.ej2instances.selection.characterFormat.italic;
+let italic : boolean = this.$refs.documenteditor.ej2Instances.selection.characterFormat.italic;
 //Sets italic formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.italic= true|false;
 ```
 
-You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the italic formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.toggleItalic();
@@ -49,16 +49,16 @@ this.$refs.documenteditor.ej2Instances.editor.toggleItalic();
 
 ## Underline property
 
-The underline style for selected text can be get or set by using the following sample code.
+The underline style for selected text can be retrieved or set by using the following sample code.
 
 ```ts
 //Gets the value for underline formatting of selected text.
-let underline : Underline = this.$refs.documenteditor.ej2instances.selection.characterFormat.underline;
+let underline : Underline = this.$refs.documenteditor.ej2Instances.selection.characterFormat.underline;
 //Sets underline formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.underline='Single' | 'None';
 ```
 
-You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the underline style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.toggleUnderline('Single');
@@ -66,16 +66,16 @@ this.$refs.documenteditor.ej2Instances.editor.toggleUnderline('Single');
 
 ## Strikethrough property
 
-The strikethrough style for selected text can be get or set by using the following sample code.
+The strikethrough style for selected text can be retrieved or set by using the following sample code.
 
 ```ts
 //Gets the value for strikethrough formatting of selected text.
-let strikethrough : Strikethrough = this.$refs.documenteditor.ej2instances.selection.characterFormat.strikethrough;
+let strikethrough : Strikethrough = this.$refs.documenteditor.ej2Instances.selection.characterFormat.strikethrough;
 //Sets strikethrough formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.strikethrough='Single' | 'Normal';
 ```
 
-You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the strikethrough style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.toggleStrikethrough();
@@ -87,7 +87,7 @@ The selected text can be made superscript by using the following sample code.
 
 ```ts
 //Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = this.$refs.documenteditor.ej2instances.selection.characterFormat.baselineAlignment;
+let baselineAlignment : BaselineAlignment = this.$refs.documenteditor.ej2Instances.selection.characterFormat.baselineAlignment;
 //Sets baselineAlignment formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.baselineAlignment='Superscript';
 ```
@@ -104,7 +104,7 @@ The selected text can be made subscript by using the following sample code.
 
 ```ts
 //Gets the value for baselineAlignment formatting of selected text.
-let baselineAlignment : BaselineAlignment = this.$refs.documenteditor.ej2instances.selection.characterFormat.baselineAlignment;
+let baselineAlignment : BaselineAlignment = this.$refs.documenteditor.ej2Instances.selection.characterFormat.baselineAlignment;
 //Sets baselineAlignment formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.baselineAlignment='Subscript';
 ```
@@ -131,35 +131,35 @@ this.$refs.documenteditor.ej2Instances.documentEditor.editor.changeCase('Upperca
 
 ## Size
 
-The size of selected text can be get or set using the following code.
+The size of selected text can be retrieved or set using the following code.
 
 ```ts
 //Gets the value for fontSize formatting of selected text.
-let fontSize : number = this.$refs.documenteditor.ej2instances.selection.characterFormat.fontSize;
+let fontSize : number = this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontSize;
 //Sets fontSize formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontSize= 32;
 ```
 
 ## Color
 
-### Change Font Color by UI Option
+### Change font color by UI option
 
 In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
 
-This Font Color option appear as follows.
+This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
-### Change Font Color by Code
+### Change font color by code
 
-The color of selected text can be get or set using the following code.
+The color of selected text can be retrieved or set using the following code.
 
 ```ts
 //Gets the value for fontColor formatting of selected text.
-let fontColor : string = this.$refs.documenteditor.ej2instances.selection.characterFormat.fontColor;
+let fontColor : string = this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontColor;
 //Sets fontColor formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontColor= 'Pink';
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontColor= '#FFC0CB';
@@ -167,22 +167,22 @@ this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontColor= '#FF
 
 ## Font
 
-The font style of selected text can be get or set using the following sample code.
+The font style of selected text can be retrieved or set using the following sample code.
 
 ```ts
 //Gets the value for fontFamily formatting of selected text.
-let baselineAlignment : string = this.$refs.documenteditor.ej2instances.selection.characterFormat.fontFamily;
+let baselineAlignment : string = this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontFamily;
 //Sets fontFamily formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.fontFamily= 'Arial';
 ```
 
 ## Highlight color
 
-The highlight color of the selected text can be get or set using the following sample code.
+The highlight color of the selected text can be retrieved or set using the following sample code.
 
 ```ts
 //Gets the value for highlightColor formatting of selected text.
-let highlightColor : HighlightColor = this.$refs.documenteditor.ej2instances.selection.characterFormat.highlightColor;
+let highlightColor : HighlightColor = this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor;
 //Sets highlightColor formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor= 'Pink';
 ```
@@ -261,7 +261,7 @@ const toolbarButtonClick = function (arg) {
       documenteditor.value.ej2Instances.editor.toggleBold();
       break;
     case 'italic':
-      //Toggles the Italic of selected content
+      //Toggles the italic of selected content
       documenteditor.value.ej2Instances.editor.toggleItalic();
       break;
     case 'underline':
@@ -396,7 +396,7 @@ export default {
           this.$refs.documenteditor.ej2Instances.editor.toggleBold();
           break;
         case 'italic':
-          //Toggles the Italic of selected content
+          //Toggles the italic of selected content
           this.$refs.documenteditor.ej2Instances.editor.toggleItalic();
           break;
         case 'underline':
@@ -464,11 +464,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Online Demo
+## Online demo
 
 Explore how to apply text formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/character-formatting.html).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Font dialog](./dialog#font-dialog)
