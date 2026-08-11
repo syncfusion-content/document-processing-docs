@@ -17,7 +17,7 @@ N> In mobile view, the redaction toolbar appears at the bottom of the viewer for
 
 ## Adding Redaction in Mobile View
 
-To enable redaction functionality in your JavaScript (ES6) application, configure the PDF Viewer with the following setup:
+To enable redaction functionality in your JavaScript (ES6) application, configure the PDF Viewer with the following setup. The `RedactionEditTool` toolbar item adds the Redaction button to the mobile toolbar, which activates the redaction mode.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
@@ -53,7 +53,7 @@ When you enter redaction mode in mobile view, a specialized redaction toolbar ap
 
 ### Redaction Annotation Tool
 
-The Redaction Annotation tool is the primary redaction feature that allows you to drawing redaction rectangles on specific content:
+The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
 
 Function: Creates visual redaction annotations that mark content for permanent removal
 Usage: Touch and drag to draw rectangular redaction overlays on any content area.
@@ -138,7 +138,7 @@ Step 3: Configure your redaction parameters using the selected tool interface.
 
 N> Applying redactions is permanent. After applying, the underlying content and text are removed from the document and cannot be recovered.
 
-Once you have configured redactions using any combination of tools.
+Once you have configured redactions using any combination of tools, follow these steps to apply them.
 
 Step 1: Review all redaction marks and configurations.
 
