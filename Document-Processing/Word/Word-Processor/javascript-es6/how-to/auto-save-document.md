@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auto Save Document in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to auto save documents in Syncfusion JavaScript (ES6) DOCX Editor to prevent data loss and preserve your work automatically.
+description: Learn how to auto save documents in Syncfusion JavaScript (ES6) Document Editor to reduce the risk of data loss at customizable intervals.
 platform: document-processing
 control: Auto Save Document
 documentation: ug

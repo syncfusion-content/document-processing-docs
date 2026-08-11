@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Document View in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to change document view in Syncfusion JavaScript (ES6) DOCX Editor to switch between page, print, and web layouts.
+description: Learn how to change document view in Syncfusion JavaScript (ES6) Document Editor to switch between Pages and Continuous layouts.
 platform: document-processing
 control: Change Document View
 documentation: ug
