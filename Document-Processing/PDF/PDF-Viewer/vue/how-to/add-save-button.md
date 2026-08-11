@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
-- Add: New items can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/documentation/api/pdfviewer/customToolbarItemModel) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/documentation/api/toolbar/clickEventArgs).
+- Add: New items can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/customtoolbaritemmodel) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#toolbarsettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#toolbarclick).
 
-- Show or hide: Show or hide predefined items through [ToolbarSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarSettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbarItem).
+- Show or hide: Show or hide predefined items through [ToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#toolbarsettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbaritem).
 
-- Enable or disable: Enable or disable toolbar items using [`enabletoolbaritem`](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbar#enabletoolbaritem).
+- Enable or disable: Enable or disable toolbar items using [`enabletoolbaritem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#enabletoolbaritem).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
