@@ -83,7 +83,7 @@ export class AppComponent {
 
 **Set `enableTextSelection` to false**
 
-Use the [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property during initialization to disable or enable text selection. The following example disables the text selection during initialization.
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property during initialization to disable or enable text selection. The following example disables text selection during initialization.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -248,5 +248,5 @@ If text selection remains active, ensure that the [`TextSelectionService`](https
 
 ## See also
 
-- [Text Selection API reference](../text-selection/reference)
+- [Text Selection API Events](../text-selection/text-selection-api-events)
 - [Angular PDF Viewer events](../events)

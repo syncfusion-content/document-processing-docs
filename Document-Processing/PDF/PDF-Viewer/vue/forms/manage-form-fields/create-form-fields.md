@@ -14,6 +14,8 @@ You can create or add new form fields either visually using the [Form Designer U
 ## Create Form Fields Using the Form Designer UI 
 Use this approach when you want to design forms manually without writing code.
 
+Before you begin, ensure the `FormDesigner` module is included in the `provide` block of the PDF Viewer component.
+
 **Steps:**
 
 1. Enable [Form Designer](../form-designer) mode in the PDF Viewer.
@@ -299,13 +301,13 @@ export default {
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Male',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 100, Y: 270, Width: 16, Height: 16 }
       });
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Female',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 160, Y: 270, Width: 16, Height: 16 }
       });
     },
@@ -626,8 +628,8 @@ export default {
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Style form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
-- [Form Fields API](../form-fields-api)
+- [Form fields API](../form-fields-api)

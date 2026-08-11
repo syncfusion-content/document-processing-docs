@@ -27,7 +27,7 @@ This page explains how to:
 
 ## Add Custom Data While Creating PDF Form Fields
 
-You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of `addFormField()`.
+You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of [addFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addformfields).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -193,7 +193,7 @@ export default {
 {% endtabs %}
 
 **Tip:**
-Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
+Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
 
 ## Read Custom Data from PDF Form Fields
 
