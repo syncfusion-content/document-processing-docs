@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Fields in Document Editor Component | Syncfusion
-description: Learn here all about overview of Fields in the ASP.NET Core of Syncfusion Document Editor Component.
+title: Fields in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn here all about overview of Fields in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Fields
 documentation: ug
 ---
 
-# Fields in Document Editor Component
+# Fields in ASP.NET Core Document Editor Component
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
-## Adding Fields
+## Adding fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#insertfield) method in `Editor` module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield) method in `Editor` module.
 
 ```typescript
 
@@ -23,7 +23,7 @@ documenteditor.editor.insertField(fieldCode, fieldResult);
 
 ```
 
-N> Document editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
+N> Document Editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
@@ -46,7 +46,7 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/#getfieldinfo) method in the `Selection` module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo) method in the `Selection` module.
 
 ```typescript
 //Gets the field information of the selected field.
@@ -57,7 +57,7 @@ N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#setfieldinfo) method in the `Editor` module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo) method in the `Editor` module.
 
 ```typescript
 //Gets the field information for the selected field.

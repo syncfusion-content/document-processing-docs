@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Unsupported features in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn about the list of unsupported features in the ASP.NET Core Docx Editor to understand its limitations
+description: Learn about the list of unsupported features in the ASP.NET Core Document Editor to understand its limitations.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in ASP.NET Core DOCX Editor
+# Unsupported features in ASP.NET Core Document Editor
 
-This section describes the unsupported elements in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) 
+This section describes the unsupported elements in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
 ## Document formatting
 
@@ -19,7 +19,7 @@ This section describes the unsupported elements in [ASP.NET Core DOCX Editor](ht
 | Paragraph Properties | Shading | No |
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
-|  | Don’t hyphenate | No |
+|  | Don't hyphenate | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Text Properties | Shading  | No |
 |  |  Position | No |
@@ -39,7 +39,7 @@ This section describes the unsupported elements in [ASP.NET Core DOCX Editor](ht
 | Watermark  |  Text and Picture watermark| No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 
-## Word Document Elements
+## Word document elements
 
 | Feature | Supported |
 |--------|----------------|
@@ -54,4 +54,4 @@ This section describes the unsupported elements in [ASP.NET Core DOCX Editor](ht
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No 
+| Comment reactions | No |
