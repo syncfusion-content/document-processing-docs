@@ -1,36 +1,36 @@
 ---
 layout: post
-title: Open document by address in JavaScript (ES5) Docx editor | Syncfusion
-description: Learn here all about Open document by address in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Open Document by Address in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to open a document from a URL in Syncfusion JavaScript (ES5) Document Editor using XMLHttpRequest to load SFDT content from the server side.
 platform: document-processing
-control: Open document by address 
+control: Open a Document by Address
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in JavaScript (ES5) Document editor control
+# Open Document by Address - JavaScript (ES5) Document Editor
 
-## How to open a document from URL in DocumentEditor
+## How to Open a Document from a URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor)
+In this article, we are going to see how to open a document from a URL in the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-please refer below example for client-side code
+Please refer to the example below for the client-side code.
 
 ```js
-//Initialize Document Editor Container component.
+// Initialize the Document Editor Container component.
 var container = new ej.documenteditor.DocumentEditorContainer();
 container.appendTo('#DocumentEditorContainer');
 document.getElementById('import').addEventListener('click', function () {
     var http = new XMLHttpRequest();
-    //add your url in which you want to open document inside the ""
+    // Add the URL from which you want to open the document inside the ""
     var content = { fileUrl: "" };
-    var baseurl = "/api/documenteditor/ImportFileURL";
-    http.open("POST", baseurl, true);
+    var baseUrl = "/api/documenteditor/ImportFileURL";
+    http.open("POST", baseUrl, true);
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     http.onreadystatechange = function () {
         if (http.readyState === 4) {
             if (http.status === 200 || http.status === 304) {
-                //open the SFDT text in Document Editor
+                // Open the SFDT text in the Document Editor
                 container.documentEditor.open(http.responseText);
             }
         }
@@ -39,7 +39,7 @@ document.getElementById('import').addEventListener('click', function () {
 });
 ```
 
-please refer below example for server-side code
+Please refer to the example below for the server-side code.
 
 ```c#
     [AcceptVerbs("Post")]
