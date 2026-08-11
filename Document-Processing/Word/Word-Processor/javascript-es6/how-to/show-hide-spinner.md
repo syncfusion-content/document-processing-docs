@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show or Hide Spinner in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to show or hide a spinner in Syncfusion JavaScript (ES6) DOCX Editor to indicate document loading status to end users.
+description: Learn how to show or hide a spinner in Syncfusion JavaScript (ES6) Document Editor while opening a document.
 platform: document-processing
 control: Show or Hide Spinner
 documentation: ug

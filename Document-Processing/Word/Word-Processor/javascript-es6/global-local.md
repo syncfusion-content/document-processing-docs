@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to localize the default text content of Syncfusion JavaScript (ES6) DOCX Editor to support multiple cultures and languages.
+description: Learn how to localize the default text content of Syncfusion JavaScript (ES6) Document Editor to support multiple cultures and languages.
 platform: document-processing
 control: Global and Local
 documentation: ug

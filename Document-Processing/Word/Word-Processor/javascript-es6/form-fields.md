@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Fields in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to insert and configure Text, CheckBox, and DropDown form fields in Syncfusion JavaScript (ES6) DOCX Editor for interactive documents.
+description: Learn how to insert and configure Text, CheckBox, and DropDown form fields in Syncfusion JavaScript (ES6) Document Editor.
 platform: document-processing
 control: Form Fields
 documentation: ug
