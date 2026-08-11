@@ -186,7 +186,7 @@ let viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     annotationMouseLeave: function (args: any) {
-        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.annotationId);
+        console.log('Annotation mouse leave event is triggered for annotation with ID: ' + args.pageIndex);
     }
 });
 viewer.appendTo('#pdfViewer');
