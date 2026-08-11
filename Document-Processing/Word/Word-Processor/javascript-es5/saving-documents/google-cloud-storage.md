@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage using JavaScript (ES5) Document Editor
+# Save document to Google Cloud Storage in JavaScript (ES5)
 
 To save a document to Google Cloud Storage, you can follow the steps below.
 

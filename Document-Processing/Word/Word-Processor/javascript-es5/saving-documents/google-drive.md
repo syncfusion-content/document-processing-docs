@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive using JavaScript (ES5) Document Editor
+# Save document to Google Drive in JavaScript (ES5) Document Editor
 
 To save a document to Google Drive, you can follow the steps below.
 

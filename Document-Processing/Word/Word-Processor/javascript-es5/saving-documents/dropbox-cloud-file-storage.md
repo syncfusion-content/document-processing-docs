@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage using JavaScript (ES5) Document Editor
+# Save document to Dropbox cloud file storage in JavaScript (ES5)
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 
