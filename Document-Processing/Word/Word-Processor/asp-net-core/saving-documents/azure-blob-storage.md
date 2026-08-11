@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Save to Azure Blob in Document editor | Syncfusion
-description:  Learn about how to Save document to Azure Blob Storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Azure Blob in DOCX Editor | Syncfusion
+description:  Learn about how to Save document to Azure Blob Storage in ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage in ASP.NET Core
+# Save document to Azure Blob Storage in Document Editor Component
 
-To save a document to Azure Blob Storage, you can follow the steps below
+To save a document to Azure Blob Storage, follow these steps:
 
 
 **Step 1:** Create a Simple [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -32,7 +32,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and a constructor to the `DocumentEditorController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -47,7 +47,7 @@ public DocumentEditorController(IConfiguration configuration, ILogger<DocumentEd
 }
 ```
 
-* Create then 'SaveToAzure' method to save the downloaded documents to Azure Blob Storage container
+* Create the `SaveToAzure()` method to save the document to the Azure Blob Storage container
 
 ```csharp
 
@@ -56,7 +56,7 @@ public DocumentEditorController(IConfiguration configuration, ILogger<DocumentEd
 [Route("[controller]/SaveToAzure")]
 //Post action for downloading the documents
 
-public void Download(IFormCollection data)
+public void SaveToAzure(IFormCollection data)
 {
   if (data.Files.Count == 0)
     return;
@@ -66,10 +66,11 @@ public void Download(IFormCollection data)
 
   IFormFile file = data.Files[0];
   string documentName = this.GetValue(data, "documentName");
-  string result = Path.GetFileNameWithoutExtension(documentName);
+  // Derive the blob name from the original document name (without extension)
+  string documentNameWithoutExt = Path.GetFileNameWithoutExtension(documentName);
 
   // Get a reference to the blob
-  BlobClient blobClient = containerClient.GetBlobClient(result + "_downloaded.docx");
+  BlobClient blobClient = containerClient.GetBlobClient(documentNameWithoutExt + "_downloaded.docx");
 
   Stream stream = new MemoryStream();
   file.CopyTo(stream);
@@ -77,23 +78,9 @@ public void Download(IFormCollection data)
   // Upload the document to Azure Blob Storage
   blobClient.Upload(stream, true);
 }
-
-private string GetValue(IFormCollection data, string key)
-{
-    if (data.ContainsKey(key))
-    {
-        string[] values = data[key];
-        if (values.Length > 0)
-        {
-            return values[0];
-        }
-    }
-    return "";
-}
-
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -109,11 +96,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
+N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, and **Your container name in Azure** with the actual container name.
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Azure Blob Storage container.
+On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in the Azure Blob Storage container.
 
 
 {% tabs %}
@@ -126,4 +113,4 @@ In the client-side, to export the document into blob the document using `saveAsB
 {% endtabs %}
 
 
-N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the code above.
