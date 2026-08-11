@@ -193,7 +193,7 @@ export default {
 
 ### Set eraser size programmatically
 
-Use the `inkEraserSize` property to control the width of the eraser:
+Use the `inkEraserSize` property to control the width of the eraser. The default value is `20` pixels; recommended range is `1`–`20` pixels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

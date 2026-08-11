@@ -19,7 +19,7 @@ Follow these steps to instantiate the component dynamically:
 
 ```html
 
-<button id="loadPDF Viewer" onclick="loadPDFViewer()">Load PDF Viewer</button>
+<button id="loadPDFViewer" onclick="loadPDFViewer()">Load PDF Viewer</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

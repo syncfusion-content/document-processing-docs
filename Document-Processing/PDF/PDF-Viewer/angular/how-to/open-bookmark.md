@@ -19,7 +19,7 @@ Follow these steps to call the bookmark APIs from the application.
 **Step 2:** Insert the following code snippet to implement opening the bookmark pane:
 
 ```html
-<button (click)="openBookmark()">Open Thumbnail Pane</button>
+<button (click)="openBookmark()">Open Bookmark Pane</button>
 ```
 
 ```ts
@@ -29,7 +29,7 @@ openBookmark() {
   viewer.bookmarkViewModule.openBookmarkPane();
 }
 ```
-Similarly, to close the Bookmark pane programmatically, employ the following code snippet:
+Similarly, to close the bookmark pane programmatically, use the following code snippet:
 
 ```html
 <button (click)="closeBookmark()">Close Bookmark Pane</button>
