@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
+title: Navigate Hyperlinks in the PDF Viewer | Syncfusion
 description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for TypeScript.
 platform: document-processing
 control: PDF Viewer
@@ -16,7 +16,7 @@ N> The table of contents pane and hyperlink interactions share the same navigati
 
 ## Required modules
 
-Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`. `Annotation` is required only when working with PDF annotations in addition to hyperlinks.
 
 ## Table of contents navigation
 
@@ -189,6 +189,6 @@ viewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark)
+- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page)
+- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail)

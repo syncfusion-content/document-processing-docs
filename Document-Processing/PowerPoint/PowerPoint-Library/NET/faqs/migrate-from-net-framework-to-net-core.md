@@ -214,7 +214,7 @@ You can save the document as stream and then download from browser.
 N> If you want to migrate without any code changes from the [Syncfusion.Presentation.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4) NuGet in an application targeting .NET Framework, you can use any of the following packages:
 N> * [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms)
 N> * [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf)
-N> * [Syncfusion.Presentation.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4)
+N> * [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc5)
 N>
 N> *This approach is not recommended for new development.*
 
