@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Auto Save Document In Document Editor in ASP.NET MVC Document Editor Component
-description: Learn here all about auto save document in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
+title: Auto Save Document in DOCX Editor in ASP.NET MVC | Syncfusion
+description: Learn here all about auto save document in Document Editor in Syncfusion ASP.NET MVC Document Editor component of Syncfusion and more.
 platform: document-processing
 control: Auto Save Document In Document Editor
 documentation: ug
 ---
 
 
-# How to auto save the document of Document Editor component into AWS S3
+# How to auto save in ASP.NET MVC Document Editor component into AWS S3
 
 This article explains how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps to reduce the risk of data loss by saving an open document automatically at customized intervals.
 
-* In the client-side, using content change event, the edited content can be automatically saved in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using `saveAsBlob` method.
+* In the client-side, using content change event, the edited content can be automatically saved in regular intervals of time. Based on `contentChanged` boolean, the document is sent as DOCX format to server-side using `saveAsBlob` method at a customized polling interval.
 
 
 {% tabs %}
@@ -20,11 +20,13 @@ This article explains how to auto save the document in AWS S3. You can automatic
 {% include code-snippet/document-editor/asp-net-mvc/auto-save/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Auto-save.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
-* Configure the access key and secret key in `web.config` file and register profile in `startup.cs`.
+* Configure the access key and secret key in `web.config` file.
+* Register the profile in `startup.cs`.
 
 In `web.config`, add key like below format:
 
@@ -56,7 +58,7 @@ public string SaveToS3()
     file.CopyTo(stream);
     UploadFileStreamToS3(stream, "documenteditor", "", "GettingStarted.docx");
     stream.Close();
-    return "Sucess";
+    return "Success";
 }
 
 public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketName, string subDirectoryInBucket, string fileNameInS3)
@@ -68,18 +70,18 @@ public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketNa
 
     if (subDirectoryInBucket == "" || subDirectoryInBucket == null)
     {
-        request.BucketName = bucketName; //no subdirectory just bucket name  
+        request.BucketName = bucketName; //no subdirectory just bucket name.
     }
     else
-    {   // subdirectory and bucket name  
+    {   // subdirectory and bucket name.  
         request.BucketName = bucketName + @"/" + subDirectoryInBucket;
     }
-    request.Key = fileNameInS3; //file name up in S3  
+    request.Key = fileNameInS3; //file name up in S3.
     request.InputStream = localFilePath;
-    utility.Upload(request); //commensing the transfer  
+    utility.Upload(request); //commencing the transfer  
 
-    return true; //indicate that the file was sent  
+    return true; //indicate that the file was sent.
 }
 ```
 
-Get the complete working sample in this [`link`](https://github.com/SyncfusionExamples/Auto-Save-documents-in-Word-Processor).
+Get the complete working sample in [`Auto-Save-documents-in-Word-Processor`](https://github.com/SyncfusionExamples/Auto-Save-documents-in-Word-Processor).

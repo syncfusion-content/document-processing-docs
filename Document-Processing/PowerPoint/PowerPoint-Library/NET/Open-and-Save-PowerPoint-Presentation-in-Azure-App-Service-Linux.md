@@ -88,7 +88,7 @@ public IActionResult OpenAndSavePowerPoint()
     pptxDoc.Save(pptxStream);
     pptxStream.Position = 0;
     //Download the PowerPoint document in the browser.
-    return File(pptxStream, "application/powerpoint", "Result.pptx");
+    return File(pptxStream, "application/vnd.openxmlformats-officedocument.presentationml.presentation", "Result.pptx");
 }
 
 {% endhighlight %}

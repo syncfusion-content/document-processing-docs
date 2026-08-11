@@ -14,8 +14,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor MCP 
 
 These tools speed up development and reinforce best practices for the JavaScript DOCX Editor (Document Editor) component integration.
 
-> The previously available **Agentic UI Builder** (`#sf_javascript_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://ej2.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (`#sf_javascript_assistant`) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
-
 ## Key Benefits
 
 - **Expert DOCX Editor Knowledge** - Deep understanding of the JavaScript DOCX Editor component (Document Editor) and its implementation patterns.
@@ -164,8 +162,30 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the JavaScript DOCX Editor.
 
 {% promptcards %}
-{% promptcard Track changes %}
-#search_docs How to enable track changes in JavaScript DOCX Editor ?
+{% promptcard Track Changes %}
+#search_docs How to enable Track Changes in JavaScript DOCX Editor?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Add Comments %}
+#search_docs How to add comments in JavaScript DOCX Editor?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Unsupported File Format %}
+#search_docs Why does JavaScript DOCX Editor show an unsupported file format message?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Document Loading Issue %}
+#search_docs Why does JavaScript DOCX Editor fail to load a document with a 404 error?
 {% endpromptcard %}
 {% endpromptcards %}
 
