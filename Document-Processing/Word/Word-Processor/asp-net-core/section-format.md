@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Section Format in Document Editor Control | Syncfusion
-description: Learn here all about section format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Section Format in ASP.NET Core DOCX Editor Component | Syncfusion
+description: Learn how to configure page size, margins, header distance, footer distance, and section formatting in the Syncfusion ASP.NET Core Document Editor.
 platform: document-processing
 control: Section Format
 documentation: ug
 ---
 
 
-# Working with Section Formatting
+# Section Formatting in ASP.NET Core Document Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
-You can get or set the size of a section at cursor position by using the following sample code.
+You can get or set the size of a section at the cursor position by using the following sample code.
 
 ```typescript
 documenteditor.selection.sectionFormat.pageWidth = 500;
@@ -25,7 +25,7 @@ You can change the orientation of the page by swapping the values of page width 
 
 ## Page margins
 
-Left and right page margin defines the gap between the document content from left and right side of the page respectively. Top and bottom page margins defines the gap between the document content from header and footer of the page respectively.
+The left and right page margins define the gap between the document content and the left and right sides of the page. The top and bottom page margins define the gap between the document content and the header and footer of the page.
 
 ```typescript
 documenteditor.selection.sectionFormat.leftMargin = 10;
@@ -34,7 +34,7 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
->Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+N> The maximum value of `Margin` is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -52,10 +52,10 @@ You can define the distance of footer content from the bottom of the page by usi
 documenteditor.selection.sectionFormat.footerDistance = 72;
 ```
 
-## Online Demo
+## Online demo
 
-Explore how to apply section formatting in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
+Explore how to apply section formatting in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
 
-## See Also
+## See also
 
-* [Pagesetup dialog](../asp-net-core/dialog#page-setup-dialog)
+* [Page setup dialog](../asp-net-core/dialog#page-setup-dialog)

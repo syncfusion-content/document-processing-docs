@@ -80,7 +80,7 @@ Load a confidential board-level financial model workbook ‘Board_Financial_Mode
 Load a sales analysis workbook ‘Sales_Pivot_Analysis.xlsx’ from {InputDir}. Create new worksheet named as "Pivot_table" and create a pivot table at cell A3 and use the data from ‘Raw_Data’ sheet and the range A1:F13. use Region as the row field (index 1), Product as the column field (index 3), and Revenue as the data field (index 5) with a Sum subtotal. Apply the built-in style ‘PivotStyleMedium2’ to the pivot table and layout the pivot to materialize the values. Export the workbook to {OutputDir}.
 {% endpromptcard %}
 {% promptcard Create Chart and Convert to PDF %}
-Load a sales performance dashboard workbook ‘Car_Brands.xlsx’ from {InputDir}. Create a clustered column chart from the `Car_Brands’ sheet data range A1:C10, positioning it in rows 12–35 and columns 1–10. Set the chart title to ‘Premium car sales’, set the category axis title to ‘Brands’, and the value axis title to ‘Price (USD)’. Enable the chart legend at the bottom. Convert the workbook into a PDF to {OutputDir}.
+Load a sales performance dashboard workbook ‘Car_Brands.xlsx’ from {InputDir}. Create a clustered column chart from the `Car_Brands` sheet data range A1:C10, positioning it in rows 12–35 and columns 1–10. Set the chart title to ‘Premium car sales’, set the category axis title to ‘Brands’, and the value axis title to ‘Price (USD)’. Enable the chart legend at the bottom. Convert the workbook into a PDF to {OutputDir}.
 {% endpromptcard %}
 {% endpromptcards %}
 

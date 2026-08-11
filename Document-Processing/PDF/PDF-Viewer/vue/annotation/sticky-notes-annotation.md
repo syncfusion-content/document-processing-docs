@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes annotation in Vue PDF Viewer control
+# Sticky note annotation in Vue PDF Viewer control
 
 The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 
@@ -43,7 +43,7 @@ The following example shows how to add a sticky note annotation programmatically
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -80,7 +80,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -126,7 +126,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -163,7 +163,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -218,7 +218,7 @@ The following example shows how to modify an existing sticky note annotation usi
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -258,7 +258,7 @@ const editAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -307,7 +307,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -347,7 +347,7 @@ const editAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>

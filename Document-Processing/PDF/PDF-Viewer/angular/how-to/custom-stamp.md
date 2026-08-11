@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add the custom stamp based on the free text bounds | Syncfusion
-description: Learn how to add the custom stamp based on the free text bounds in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Add a custom stamp based on the free text bounds | Syncfusion
+description: Learn how to add a custom stamp based on the free text bounds in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Add the custom stamp based on the free text bounds
+control: Add a custom stamp based on the free text bounds
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add the custom stamp based on the free text bounds
+# Add a custom stamp based on the free text bounds
 
 When adding a stamp programmatically, the PDF Viewer expects offset values in points (1 point = 1/72 inch). Typical displays use 96 DPI for pixels, so convert pixels to points using: points = pixels * 72 / 96. Also consider page scale and rotation when positioning stamps so the stamp appears at the expected location on the page.
 
