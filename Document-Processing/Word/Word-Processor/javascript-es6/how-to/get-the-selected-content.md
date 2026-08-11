@@ -102,5 +102,5 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 You can add the following custom options using this API:
 
 * Save or export the selected content as an SFDT file.
-* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the [`selectbookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) API.
+* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the [`selectBookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) API.
 * Create template content that can be inserted into multiple documents at the cursor position using the [`paste`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#paste) API.
