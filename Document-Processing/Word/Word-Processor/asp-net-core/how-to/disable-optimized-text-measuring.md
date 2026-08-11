@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Disable optimized text measuring in Document Editor
+# Disable optimized text measuring in ASP.NET Core Document Editor
 
 Starting from v19.3.0.x, the accuracy of text size measurements in the Document Editor is improved to match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API `enableOptimizedTextMeasuring` in the Document Editor settings.
 
