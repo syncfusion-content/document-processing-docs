@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Delete annotation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Delete annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Delete a specific annotation in Angular PDF Viewer | Syncfusion
+description: Learn here all about Delete a specific annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Delete annotation
+control: Delete a specific annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -24,6 +24,8 @@ The following steps are used to delete a specific annotation from PDF Document:
 
 ```typescript
 // Delete Annotation by id.
+// Note: viewer.annotationCollection must contain at least one annotation,
+// otherwise accessing index [0] will throw an error.
 deleteAnnotationbyId() {
   var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
   viewer.annotationModule.deleteAnnotationById(

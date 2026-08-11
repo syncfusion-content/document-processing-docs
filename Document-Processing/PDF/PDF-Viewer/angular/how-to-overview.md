@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQ Section in Angular PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in Angular PDF Viewer control.
+description: In this section, you can know about the various questions asked about manipulation in Angular PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

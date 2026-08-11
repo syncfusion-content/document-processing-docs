@@ -2,7 +2,7 @@
 layout: post
 title: Annotation Events in Vue PDF Viewer control | Syncfusion
 description: Learn here all about Annotation Events in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Annotation Events
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -33,7 +33,7 @@ The annotation events supported by the PDF Viewer control are:
 | [resizeSignature](#resizesignature)                  | Triggers when a signature is resized.                             |
 | [signaturePropertiesChange](#signaturepropertieschange) | Triggers when signature properties change.                        |
 | [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
-| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |            |
+| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
 ### annotationAdd
 

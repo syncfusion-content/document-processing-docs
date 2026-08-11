@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Include Authorization token to header
+# Include an authorization token in the request header
 
 The PDF Viewer component enables adding authorization tokens to each AJAX request through the `ajaxHeaders` collection in `AjaxRequestSettings`, ensuring the header is appended to every call initiated by the viewer.
 
