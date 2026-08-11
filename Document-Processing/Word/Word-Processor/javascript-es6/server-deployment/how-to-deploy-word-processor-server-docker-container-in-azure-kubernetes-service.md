@@ -67,6 +67,7 @@ spec:
   selector:
     matchLabels:
       app: documenteditorserver
+  strategy: {}
   template:
     metadata:
       labels:
