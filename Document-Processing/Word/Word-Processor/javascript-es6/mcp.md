@@ -14,8 +14,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> TypeScript DOCX Editor MCP 
 
 These tools speed up development and reinforce best practices for the TypeScript DOCX Editor (Document Editor) component integration.
 
-> The previously available **Agentic UI Builder** (`#sf_typescript_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://ej2.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (`#sf_typescript_assistant`) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
-
 ## Key Benefits
 
 - **Expert DOCX Editor Knowledge** - Deep understanding of the TypeScript DOCX Editor component (Document Editor) and its implementation patterns.
@@ -164,18 +162,30 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 Get step-by-step help for adding specific features to the TypeScript DOCX Editor.
 
 {% promptcards %}
-{% promptcard DOCX Editor Configuration %}
-#search_docs How do I configure the Syncfusion TypeScript DOCX Editor Component?
+{% promptcard Track Changes %}
+#search_docs How to enable Track Changes in TypeScript DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
-**Implement Features**
+{% promptcards %}
+{% promptcard Add Comments %}
+#search_docs How to add comments in TypeScript DOCX Editor?
+{% endpromptcard %}
+{% endpromptcards %}
 
-Get step-by-step help for adding specific features to the TypeScript DOCX Editor.
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
-{% promptcard Track changes %}
-#search_docs How to enable track changes in TypeScript DOCX Editor ?
+{% promptcard Unsupported File Format %}
+#search_docs Why does TypeScript DOCX Editor show an unsupported file format message?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Document Loading Issue %}
+#search_docs Why does TypeScript DOCX Editor fail to load a document with a 404 error?
 {% endpromptcard %}
 {% endpromptcards %}
 

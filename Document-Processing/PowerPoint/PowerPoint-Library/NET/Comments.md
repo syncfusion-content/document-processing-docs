@@ -13,7 +13,13 @@ A comment is a text note attached to a location on a slide. Each comment contain
 ## Adding a comment
 The `Add` method appends a new comment to the slide at the specified location. The signature used below is:
 
-`slide.Comments.Add(int left, int top, string authorName, string authorInitials, string text, DateTime dateTime)`
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+slide.Comments.Add(int left, int top, string authorName, string authorInitials, string text, DateTime dateTime)
+{% endhighlight %}
+
+{% endtabs %}
 
 where `left` and `top` specify the X and Y position of the comment on the slide (in points).
 

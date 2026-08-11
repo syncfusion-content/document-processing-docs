@@ -76,13 +76,13 @@ In this mode, the panning and scrolling of the pages by touch can be performed i
 
 ![Alt text](./images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+You can switch the interaction mode of PDF Viewer by using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    interactionMode: 'Pan'
+                    interactionMode: 'Pan',
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
@@ -92,7 +92,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% highlight js tabtitle="Server-Backed" %}
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    interactionMode: 'Pan'
+                    interactionMode: 'Pan',
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });

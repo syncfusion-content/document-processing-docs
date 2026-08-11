@@ -119,12 +119,12 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## Deployment notes
 
--Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted from any deployment bundle:
+- Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted from any deployment bundle:
 
   - `pdfium.js`
   - `pdfium.wasm`
 
-- For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+- For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1).
 
 - For AWS environments, use the following packages:
 
