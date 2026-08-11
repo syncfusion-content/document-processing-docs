@@ -14,7 +14,7 @@ Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/ap
 
 AnnotationSelectorSettingsModel
 
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/accumulation-chart/accumulationAnnotationSettingsModel) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationsettingsmodel) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
 Steps to configure annotation selector settings
 
