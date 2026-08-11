@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Override Keyboard Shortcuts in JavaScript (ES6) DOCX Editor | Syncfusion
+title: Override Keyboard Shortcuts JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn how to override keyboard shortcuts in Syncfusion JavaScript (ES6) DOCX Editor using the keyDown event and isHandled property.
 platform: document-processing
 control: Override Keyboard Shortcuts
