@@ -53,6 +53,6 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 DocumentEditor preserves the position properties of the image and displays the image based on these position properties. It does not support modifying the position properties. The image will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

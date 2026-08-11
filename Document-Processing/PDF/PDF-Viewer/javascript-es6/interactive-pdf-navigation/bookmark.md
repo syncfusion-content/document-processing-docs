@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in TypeScript PDF Viewer
+# Bookmark Navigation in the Syncfusion TypeScript PDF Viewer
 
 Bookmarks embedded in PDF files are loaded and exposed for quick navigation. Use the following code snippet to enable or disable bookmark navigation.
 
@@ -44,12 +44,12 @@ To navigate to a bookmark programmatically, use the **goToBookmark** method. The
 Example usage is shown below; ensure the viewer instance variable used in these snippets is the same across your integration (for example `pdfviewer`).
 
 ```
-  <button id="gotobookmark">Specfic Page</button>
+  <button id="gotobookmark">Specific Page</button>
 ```
 
 ```ts
 document.getElementById('gotobookmark').addEventListener('click', () => {
-  viewer.bookmark.goToBookmark(x, y);
+  pdfviewer.bookmark.goToBookmark(x, y);
 });
 ```
 
@@ -66,7 +66,7 @@ Example usage is shown below.
 
 ```ts
 document.getElementById('getBookmarks').addEventListener('click', () => {
-  var getBookmarks = viewer.bookmark.getBookmarks();
+  var getBookmarks = pdfviewer.bookmark.getBookmarks();
   console.log(getBookmarks)
 });
 ```

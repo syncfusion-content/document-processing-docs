@@ -1,14 +1,14 @@
 ---
 layout: post
 title: RTL Localization in JavaScript ES6 PDF Viewer | Syncfusion
-description: Learn about the Localization and Right to Left Lanugage Support in Syncfusion JavaScript ES6 PDF Viewer component.
+description: Learn about the Localization and Right to Left Language Support in Syncfusion JavaScript ES6 PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL language support in TypeScript PDF Viewer
+# RTL language support in the JavaScript ES6 PDF Viewer
 
 Use RTL support to render the viewer interface for right-to-left languages.
 - Enable `enableRtl` to apply right-to-left layout.
@@ -31,10 +31,10 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
-    locale: 'ar-AE', //Using locale updates culture
-    enableRtl: true, //To enbale Right to Left rendering.
+    locale: 'ar-AE', // Using locale to update culture
+    enableRtl: true, // To enable Right to Left rendering.
 });
-//Load culutre files here
+// Load culture files here
     L10n.load({
                 'ar-AE': {
                     'PdfViewer': {

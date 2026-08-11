@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable and disable the delete button based on annotation | Syncfusion
-description: Learn to enable and disable delete button based on annotation events in Syncfusion Angular PDF Viewer component and more.
+title: Enable or disable the delete button on annotation events | Syncfusion
+description: Learn to enable and disable the delete button based on annotation selection and unselection events in Syncfusion Angular PDF Viewer component and more.
 platform: document-processing
 control: How to enable and disable the delete button based on annotation selection and unselection events
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable and disable the delete button based on annotation selection and unselection events
+# Enable or disable the delete button using annotation events in Angular
 
 This article demonstrates how to enable and disable a toolbar delete button in response to annotation selection and unselection events using `annotationSelect` and `annotationUnSelect`.
 
@@ -51,7 +51,7 @@ Example:
         id ="DeleteButton"
         disabled="true"
         (click)="deleteSelectedAnnotation()">
-    </e-items>
+    </e-item>
 </ejs-toolbar>
 ```
 
