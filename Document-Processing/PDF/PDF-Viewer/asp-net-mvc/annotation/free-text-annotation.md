@@ -63,7 +63,7 @@ The following example switches to free text annotation mode using a button click
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 
