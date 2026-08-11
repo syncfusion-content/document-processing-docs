@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ribbon in JavaScript (ES6) Document editor | Syncfusion
-description: Learn here all about the Ribbon UI in Syncfusion JavaScript (ES6) Document editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn here all about the Ribbon UI in the Syncfusion JavaScript (ES6) Document Editor, how to switch between Ribbon and Toolbar modes.
 platform: document-processing
 control: Ribbon
 documentation: ug
@@ -16,14 +16,14 @@ You can switch between the classic **Toolbar** and the new **Ribbon** UI, and yo
 
 ## Enable Ribbon Mode
 
-To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container/#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable Ribbon in the Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/documentation/api/document-editor-container#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
 
 - **'Toolbar'** - The traditional toolbar UI.
 - **'Ribbon'** - The Ribbon UI, which provides a tabbed interface with grouped commands.
 
 By default, `toolbarMode` is `Toolbar`.
 
-The following code shows the how to enable the `Ribbon` in Document Editor.
+The following code shows how to enable the `Ribbon` in the Document Editor.
 
 ```ts
 
@@ -42,14 +42,14 @@ container.appendTo('#container');
 
 ## Ribbon Layouts
 
-Document Editor provides two different Ribbon layouts:
+The Document Editor provides two different Ribbon layouts:
 
 - **Classic**: A traditional Office-like ribbon with detailed grouping and larger icons
 - **Simplified**: A more compact ribbon design with streamlined controls
 
 By default, `ribbonLayout` is set to `Simplified`. 
 
-The following code shows the how to configure the ribbon layout in Document Editor:
+The following code shows how to configure the ribbon layout in the Document Editor:
 
 ```ts
 
