@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unsupported file in JavaScript (ES5) DOCX editor control | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion JavaScript (ES5) DOCX Er control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Unsupported file in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Unsupported file 
 documentation: ug
