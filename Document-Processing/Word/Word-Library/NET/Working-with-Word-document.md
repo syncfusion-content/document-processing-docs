@@ -5,7 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Word document
+# Working with Word document in .NET Word (DocIO) Library
 
 ## Cloning a Word document
 

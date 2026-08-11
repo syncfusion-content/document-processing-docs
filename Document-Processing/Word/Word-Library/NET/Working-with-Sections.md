@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Working with Sections
+# Working with Sections in a Word document
 
 A section contains the contents of the headers, footers, and main document body through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html). A section also has a specific set of properties used to define the page settings, number of columns, headers and footers and so on that decide how the text appears. [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) represents a group of paragraphs and tables, etc.
 
