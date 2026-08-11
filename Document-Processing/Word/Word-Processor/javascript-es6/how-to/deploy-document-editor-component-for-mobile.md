@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy for Mobile in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to deploy the Syncfusion JavaScript (ES6) DOCX Editor for mobile devices to enable mobile-friendly document editing.
+description: Learn how to deploy the Syncfusion JavaScript (ES6) Document Editor for mobile devices by switching to read-only mode.
 platform: document-processing
 control: Deploy Document Editor Component for Mobile
 documentation: ug

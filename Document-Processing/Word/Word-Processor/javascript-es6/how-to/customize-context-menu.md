@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Context Menu in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to customize the context menu in Syncfusion JavaScript (ES6) DOCX Editor to add or modify actions for your documents.
+description: Learn how to customize the context menu in Syncfusion JavaScript (ES6) Document Editor to add a custom option using the addCustomMenu method.
 platform: document-processing
 control: Customize Context Menu
 documentation: ug
