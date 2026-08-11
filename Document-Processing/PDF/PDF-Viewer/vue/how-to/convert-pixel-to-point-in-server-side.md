@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert pixel to point in server side in Vue PDF Viewer control
+# Convert pixel to point on the server side in Vue PDF Viewer
 
-PDF viewer will get the bounds of the annotations as the pixel in the Client-side. But while using it in the back end, we need to convert the pixel into point by using the below calculation. And the 0.75 is constant for all the calculations in the back end.
+The PDF Viewer returns annotation bounds in pixels on the client side. To use them on the server side, convert pixels to points using the calculation below. The 0.75 multiplier (72/96) is the standard point-to-pixel ratio used for all server-side calculations.
 
 ```ts
 
