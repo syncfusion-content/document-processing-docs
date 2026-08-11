@@ -87,7 +87,7 @@ this.documentEditor.selection.paragraphFormat.spaceBeforeAuto = true;
 this.documentEditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
-N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N> If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
 ## Paragraph border
 
