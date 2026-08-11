@@ -128,5 +128,5 @@ By executing the program, you will get the **PowerPoint** as follows.
 ![Output PowerPoint in .NET Framework console application](Workingwith-Core/Open-and-Save-output-image.png)
 
 ## See Also
-[Open and save Presentation in Windows Forms](./Open-and-Save-PowerPoint-Presentation-in-Windows-Forms)
-[Open and save Presentation in ASP.NET Core](./Open-and-Save-PowerPoint-Presentation-in-ASP-NET-Core)
+- [Open and save Presentation in Windows Forms](./Open-and-Save-PowerPoint-Presentation-in-Windows-Forms)
+- [Open and save Presentation in ASP.NET Core](./Open-and-Save-PowerPoint-Presentation-in-ASP-NET-Core)

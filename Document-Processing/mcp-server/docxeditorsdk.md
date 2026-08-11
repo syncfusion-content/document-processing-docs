@@ -27,7 +27,7 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for React DOCX Editor](../Word/Word-Processor/react/mcp)
 - [MCP Server for Vue DOCX Editor](../Word/Word-Processor/vue/mcp)
 - [MCP Server for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/mcp)
-- [MCP Server for TypeScript EDOCX Editor](../Word/Word-Processor/javascript-es6/mcp)
+- [MCP Server for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/mcp)
 - [MCP Server for ASP.NET MVC DOCX Editor](../Word/Word-Processor/asp-net-mvc/mcp)
 - [MCP Server for ASP.NET Core DOCX Editor](../Word/Word-Processor/asp-net-core/mcp)
 - [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/mcp)

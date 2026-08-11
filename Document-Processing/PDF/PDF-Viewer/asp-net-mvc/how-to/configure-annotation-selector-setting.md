@@ -15,9 +15,9 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js
 
 ### How to Configure Annotation Selector Settings
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create simple PDF Viewer sample and include the required EJ2 script and style assets in the layout or view.
+**Step 1:** Follow the steps provided in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample and include the required EJ2 script and style assets in the layout or view.
 
-**Step 2:** Set Up PDF Viewer in Your View: Add the following code snippet to your view (e.g., Index.cshtml)
+**Step 2:** Set up the PDF Viewer in your view. Add the following code snippet to your view (e.g., Index.cshtml):
 
 ```
 @{
@@ -34,7 +34,7 @@ The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js
 </div>
 ```
 
-**Step 3:**	 Add JavaScript for Annotation Selector Settings: Below the PDF Viewer in your view, include the following script to configure the annotationSelectorSettings.
+**Step 3:** Add JavaScript for annotation selector settings. Below the PDF Viewer in your view, include the following script to configure the `annotationSelectorSettings`.
 
 ```
 <script type="text/javascript">

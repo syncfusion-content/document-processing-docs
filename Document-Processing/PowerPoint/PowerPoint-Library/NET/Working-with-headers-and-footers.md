@@ -825,6 +825,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [Syncfusion Presentation NuGet package](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/)
 * [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation)
 * [NuGet Packages Required](NuGet-Packages-Required)
