@@ -16,7 +16,7 @@ N> Prerequisites: Add the PDF Viewer control to your Vue application and ensure 
 
 ## Steps to add redaction annotations on search text bounds
 
-**Step 1:** Follow the steps in [PDF Viewer - Getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps in [PDF Viewer - Getting started](../getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code snippets to add redaction annotations to search text bounds.
 
