@@ -3403,7 +3403,7 @@ This example shows how to validate and identify different types of digital signa
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %}
 
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
@@ -3614,7 +3614,7 @@ Next
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET).
 
 ## Deferred signing in a PDF document
 

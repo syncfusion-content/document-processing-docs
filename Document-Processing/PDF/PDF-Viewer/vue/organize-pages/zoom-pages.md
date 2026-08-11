@@ -55,7 +55,7 @@ To enable or disable the **Zoom Pages** button in the Organize Pages toolbar, up
 To enable the zoom pages feature with the zoom slider, use the following code snippet:
 
 {% tabs %}
-{% highlight html tabtitle="App.vue" %}
+{% highlight html tabtitle="Standalone" %}
 <template>
   <div id="app">
     <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :pageOrganizerSettings="{ showImageZoomingSlider: true }">

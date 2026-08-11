@@ -5,6 +5,7 @@ description: Learn how to customize PDF form fields using the UI and programmati
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Customize the appearance of PDF Form Fields in MVC PDF Viewer
@@ -18,7 +19,7 @@ Use the **Properties** panel to adjust:
 - Background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
+## Customize Form Fields Programmatically
 Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) to apply styles:
 
 {% tabs %}

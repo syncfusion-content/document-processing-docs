@@ -18,16 +18,18 @@ When strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/stri
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self';
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     style-src 'self' 'unsafe-inline';
     font-src 'self'  data:;" />
+</head>
 
 {% endhighlight %}
 {% endtabs %}
 
 * The Syncfusion **material** and **tailwind** built-in themes reference the [`Roboto external font`](https://fonts.googleapis.com/css?family=Roboto:400,500), which strict CSP also blocks. Permit these external fonts by adding their URLs to both the [`style-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) and [`font-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src) directives in the meta tag.
 
-The resulting meta tag must be placed within the `<head>` element to resolve CSP violations when using the PDF Viewer control with the material and tailwind themes.
+The resulting meta tag must be placed within the `<head>` element to resolve CSP violations when using the PDF Viewer control with the material and tailwind themes. The example below shows the meta tag within the `<head>` element.
 
 {% tabs %}
 {% highlight razor tabtitle="HTML" %}

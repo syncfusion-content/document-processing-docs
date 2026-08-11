@@ -16,12 +16,11 @@ The following example illustrates how to auto save the document in AWS S3.
 
 * In the client-side, using the content change event, we can automatically save the edited content at regular intervals of time. Based on the `contentChanged` boolean, the document is sent as DOCX format to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveasblob) method.
 
-   ```
+   ```ts
        import * as ReactDOM from 'react-dom';
        import * as React from 'react';
-       import {
-      DocumentEditorContainerComponent,
-     Toolbar,
+       import { DocumentEditorContainerComponent,
+       Toolbar,
     }  from '@syncfusion/ej2-react-documenteditor';
 
   DocumentEditorContainerComponent.Inject(Toolbar);
@@ -106,7 +105,7 @@ In `startup.cs`, register the profile in the following format:
 
 * In the server-side, receive the stream content from the client-side and process it to save the document in AWS S3. Add a Web API in the controller file like below to save the document in AWS S3.
 
-  ```
+  ```c#
   [AcceptVerbs("Post")]
   [HttpPost]
   [EnableCors("AllowAllOrigins")]

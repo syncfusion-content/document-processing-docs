@@ -3,7 +3,7 @@ layout: post
 title: Redaction Programmatic support in Vue PDF Viewer | Syncfusion
 description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion Vue PDF Viewer.
 platform: document-processing
-control: PdfViewer
+control: PDF Viewer
 documentation: ug
 ---
 
@@ -736,5 +736,5 @@ The redaction property panel allows users to update annotation properties throug
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

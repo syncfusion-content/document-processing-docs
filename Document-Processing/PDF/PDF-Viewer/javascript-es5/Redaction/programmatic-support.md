@@ -178,12 +178,12 @@ viewer.redactionSettings= {
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
 
-![Redaction property panel showing overlay text and color options](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+![Redaction property panel showing overlay text and color options](redaction-annotations-images/redaction-property-panel-icon.png)
 
 ## See also
 
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

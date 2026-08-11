@@ -3,7 +3,7 @@ layout: post
 title: Text selection in Vue PDF Viewer | Syncfusion
 description: Learn the text selection concepts, copy behavior, and interaction capabilities of the Syncfusion Vue PDF Viewer.
 platform: document-processing
-control: Text selection
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -32,7 +32,7 @@ Copying is available through several user interaction methods.
 
 ### Using the context menu
 
-When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard. See the [context menu](../context-menu/builtin-context-menu#text-menu-items) documentation for further explanation.
+When text is selected, the built‑in context menu shows a Copy option. Selecting this option copies the highlighted text to the clipboard.
 
 ### Using keyboard shortcuts
 

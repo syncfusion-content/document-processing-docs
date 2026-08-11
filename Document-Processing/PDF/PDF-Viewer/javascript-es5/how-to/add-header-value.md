@@ -9,9 +9,9 @@ documentation: ug
 
 # Add header values in the JavaScript PDF Viewer
 
-Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
+Use the `ajaxHeaders` property inside the PDF Viewer's [ajaxRequestSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
 
-Example: Add a custom Authorization header using `ajaxRequestSettings` in an JavaScript component
+Example: Add a custom Authorization header using `ajaxRequestSettings` in a JavaScript component
 
 ```ts
 
