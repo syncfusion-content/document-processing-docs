@@ -2,7 +2,7 @@
 layout: post
 title: Enable Ruler in JavaScript (ES6) DOCX Editor | Syncfusion
 component: "DocumentEditor"
-description: Learn how to enable the ruler in Syncfusion JavaScript (ES6) DOCX Editor to set margins, tab stops, and indentations for precise formatting.
+description: Learn how to enable the ruler in Syncfusion JavaScript (ES6) Document Editor to set margins, tab stops, and indentations for consistent formatting.
 platform: document-processing
 control: Enable Ruler
 documentation: ug
