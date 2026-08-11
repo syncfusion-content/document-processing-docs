@@ -160,7 +160,7 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 To get started quickly with Vue PDF Viewer, you can watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=wCGPrGahcJg" %}
+{% youtube "https://www.youtube.com/watch?v=17aW6rOoyWQ" %}
 
 ## See also
 
