@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with Blazor Web App DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Blazor Web App application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
-component: DocumentEditor
+description: Learn how to create a Document Editor in a Blazor Web App application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+component: Document Editor
 documentation: ug
 ---
 
-# Getting Started with Blazor Web App DOCX Editor
+# Getting Started with Blazor Web App Document Editor
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Blazor Web App.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in a Blazor Web App.
 
 ## Prerequisites
 
@@ -25,14 +25,14 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating the Blazor Web App.
 
-## Install DOCX Editor NuGet packages
+## Install Document Editor NuGet packages
 
-To add **Syncfusion Blazor DOCX Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+To add **Syncfusion Blazor Document Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
 
 - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
     
-Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, use the following package manager commands:
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -67,13 +67,13 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## Install DOCX Editor NuGet packages
+## Install Document Editor NuGet packages
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install DOCX Editor NuGet packages within the client project.
+If you use the `WebAssembly` or `Auto` render modes in the Blazor Web App, you need to install the Document Editor NuGet packages within the client project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure the terminal is in the project root directory (where the `.csproj` file is located).
-* Run the following command to install 
+* Run the following commands to install the packages:
     - [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
@@ -116,7 +116,7 @@ Add the following import statement to the **`~/_Imports.razor`** file:
 
 ## Register a Syncfusion License Key
 
-Before initializing the Blazor DOCX Editor control, generate a Syncfusion license key and register it in your application.
+Before initializing the Blazor Document Editor control, generate a Syncfusion license key and register it in your application.
 
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in Blazor Web Application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
@@ -161,11 +161,11 @@ The theme stylesheet can be accessed from NuGet through [Static Web Assets](http
 
 ## Add script resources
 
-Include the script reference at the end of the `<body>` section in the **~/Components/App.razor**  file.
+Include the script reference at the end of the `<body>` section in the **~/Components/App.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="Components/App.razor" %}
- <!-- Add the DOCX Editor script -->
+ <!-- Add the Document Editor script -->
 <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
@@ -173,9 +173,9 @@ Include the script reference at the end of the `<body>` section in the **~/Compo
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add the DOCX Editor component
+## Add the Document Editor component
 
-Add the DOCX Editor component in the `~/Components/Pages/Home.razor` file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the component, as follows:
+Add the Document Editor component in the `~/Components/Pages/Home.razor` file. If the interactivity location is set to `Per page/component`, define a render mode at the top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -198,31 +198,31 @@ N> If the interactivity location is set to **Global** in your Blazor Web App, yo
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This launches the application and displays the DOCX Editor in your default web browser. The output will appear as follows:
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This launches the application and displays the Document Editor in your default web browser. The output will appear as follows:
 
-![Blazor DOCX Editor in Web app](../images/blazor-docx-editor.png)
+![Blazor Document Editor in Web app](../images/blazor-docx-editor.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
 
 ## Online Demo
 
-Explore how to create, edit, and print Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
+Explore how to create, edit, and print Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
 
-N> Looking for the full Blazor DOCX Editor component overview, features, pricing, and documentation? Visit the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
+N> Looking for the full Blazor Document Editor component overview, features, pricing, and documentation? Visit the [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) page.
 
 ## Troubleshooting
 
-If the DOCX Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
+If the Document Editor control does not render as expected, use the following checklist to resolve the most common setup and configuration issues.
 
-**1. DOCX Editor does not render / script errors in console**
+**1. Document Editor does not render / script errors in the console**
 - Confirm the script reference is added at the end of the `<body>` section in **~/Components/App.razor**.
-- For **WebAssembly** or **Auto** render modes, ensure the DOCX Editor NuGet packages are installed in the **client project** (not just the server project).
+- For **WebAssembly** or **Auto** render modes, ensure the Document Editor NuGet packages are installed in the **client project** (not just the server project).
 
 **2. Component renders but is non-interactive**
 - Verify a render mode directive (`@rendermode InteractiveAuto`, `InteractiveWebAssembly`, or `InteractiveServer`) is present at the top of the page when interactivity location is set to `Per page/component`.
 
 **3. Licensing errors at runtime**
-- Ensure you have generated and registered your [Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) before initializing the DOCX Editor control.
+- Ensure you have generated and registered your [Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) before initializing the Document Editor control.
 
 
 ## See also
