@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Page Number and Navigate Page in JavaScript (ES6) DOCX Editor | Syncfusion
+title: Page Number, Navigate Page JavaScript (ES6) DOCX Editor | Syncfusion
 description: Learn how to insert page numbers and navigate to pages in Syncfusion JavaScript (ES6) DOCX Editor for efficient document organization.
 platform: document-processing
 control: Insert Page Number and Navigate to Page
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Page Number and Navigate Page in JavaScript (ES6) Document Editor
+# Insert Page Number and Navigate to Page in JavaScript (ES6) DOCX Editor
 
 You can insert a page number and navigate to a specific page in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component in the following ways.
 
