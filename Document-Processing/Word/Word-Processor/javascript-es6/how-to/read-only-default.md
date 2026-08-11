@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Read-Only by Default in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about opening a document in read-only mode by default in Syncfusion JavaScript (ES6) DOCX Editor of Syncfusion Essential JS 2 and more.
+description: Learn how to open a document in read-only mode by default in Syncfusion JavaScript (ES6) DOCX Editor for DocumentEditor and DocumentEditorContainer.
 platform: document-processing
 control: Read-Only by Default
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read-Only by Default in JavaScript (ES6) DOCX Editor
+# Read-Only by Default in JavaScript (ES6) Document Editor
 
 In this article, we are going to see how to open a document in read-only mode by default in the DocumentEditor and DocumentEditorContainer.
 
