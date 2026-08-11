@@ -18,7 +18,7 @@ For details about the built-in toolbar and common toolbar options, see the Toolb
 
 The form designer toolbar can be shown or hidden programmatically during initialization or at runtime.
 
-Use the [enableFormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfViewerModel/#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#showformdesignertoolbar) method at runtime to toggle visibility.
+Use the [enableFormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfviewermodel#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method at runtime to toggle visibility.
 
 The following code snippet explains how to show or hide the toolbar using the `showFormDesignerToolbar` method.
 
@@ -175,7 +175,7 @@ export default {
 
 Select which tools appear and control their order in the form designer toolbar.
 
-Configure [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/) and set the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems) property to specify available form-design tools. This property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formDesignerToolbarItem/) values; included items are displayed in the listed order and omitted items are hidden. This produces a consistent, streamlined form-design experience across devices.
+Configure [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings) and set the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) property to specify available form-design tools. This property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesignertoolbaritem) values; included items are displayed in the listed order and omitted items are hidden. This produces a consistent, streamlined form-design experience across devices.
 
 - ToolbarSettings: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/
 - formDesignerToolbarItems: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems
@@ -342,10 +342,10 @@ export default {
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Primary toolbar customization](./primary-toolbar)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)
