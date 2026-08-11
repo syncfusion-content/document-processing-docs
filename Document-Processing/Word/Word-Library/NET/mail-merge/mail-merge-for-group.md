@@ -6,9 +6,9 @@ control: DocIO
 documentation: UG
 ---
 
-# Mail merge for a group in Word Library
+# Mail Merge for a group in Word Library
 
-You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region is bounded by start and end group merge fields. The region gets repeated for every record from the data source.
+You can perform Mail Merge and append multiple records from data source within a specified region to a template document. The region is bounded by start and end group merge fields. The region gets repeated for every record from the data source.
 
 The following table illustrates the supported mail merge overloads for ExecuteGroup method.
 
@@ -35,27 +35,27 @@ The following table illustrates the supported mail merge overloads for ExecuteGr
 
 ## Create template for group mail merge
 
-The region where the Mail merge operations are to be performed must be marked by two merge fields with the following names.
+The region where the Mail Merge operations are to be performed must be marked by two merge fields with the following names.
 
   * «TableStart:TableName» and «BeginGroup:GroupName» - For the entry point of the region.
   * «TableEnd:TableName» and «EndGroup:GroupName» - For the end point of the region.
 
-  * *TableStart* and *TableEnd* regions are preferred for performing Mail merge inside the table cell.
-  * *BeginGroup* and *EndGroup* regions are preferred for performing Mail merge inside the document body contents.
+  * *TableStart* and *TableEnd* regions are preferred for performing Mail Merge inside the table cell.
+  * *BeginGroup* and *EndGroup* regions are preferred for performing Mail Merge inside the document body contents.
 
 For example, consider that you have a template document as shown.
 
 ![Mail merge for a group](../MailMerge_images/Group_mail_merge_template.png)
 
-In this template, Employees is the group name and the same name should be used while performing Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
+In this template, Employees is the group name and the same name should be used while performing Mail Merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail Merge group.
 
 ## Execute group mail merge
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail merge within a group from various data sources. 
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for [ExecuteGroup](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ExecuteGroup_System_Data_DataTable_) method to perform Mail Merge within a group from various data sources. 
 
 N> For group mail merge, declare a class with the field names, create a list, and pass it to [MailMergeDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMergeDataTable.html). Ensure that the property and field names in the input document match when creating the data table.
 
-The following code example shows how to perform Mail merge in the specific region with **data source retrieved from SQL connection**.
+The following code example shows how to perform Mail Merge in the specific region with **data source retrieved from SQL connection**.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -138,9 +138,9 @@ The resultant document looks as follows.
 
 ![Group resultant document](../MailMerge_images/Group_mail_merge_output.png)
 
-## Mail merge with .NET objects
+## Mail Merge with .NET objects
 
-You can perform Mail merge with .NET objects in a template document. The following code snippet shows how to perform Mail merge with business objects.
+You can perform Mail Merge with .NET objects in a template document. The following code snippet shows how to perform Mail Merge with business objects.
 
 {% tabs %}
 

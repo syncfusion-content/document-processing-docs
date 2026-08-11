@@ -49,7 +49,7 @@ The following table illustrates the supported mail merge overloads for Execute m
 </tbody>
 </table>
 
-## Mail merge with string arrays
+## Mail Merge with string arrays
 
 The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform a mail merge from various data sources. The mail merge operation replaces the matching merge fields with the respective data. Unmatched merge fields are left unchanged in the output document by default.
 
