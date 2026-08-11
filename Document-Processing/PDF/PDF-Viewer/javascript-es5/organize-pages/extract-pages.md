@@ -77,14 +77,15 @@ Use the `showExtractPagesOption` API to show or hide the Extract Pages option. W
 
 Use the following code snippet to remove the Extract Pages option:
 ```js
-// Remove the Extract Pages option entirely from the UI (redacted example as provided)
+// Remove the Extract Pages option entirely from the UI
 viewer.pageOrganizerSettings = { showExtractPagesOption: false }
 ```
 
 ### Extract pages and load the result programmatically
 
-You can extract pages programmatically using the `extractPages` method.
-The following example extracts pages 1 and 2, then immediately loads the extracted pages back into the viewer. The returned value is a byte array (e.g., Uint8Array) representing the PDF file contents.
+You can extract pages programmatically using the `extractPages` method. The method accepts a page-selection string (for example, `"1,2"` or `"2-4"`) and returns the extracted PDF as a `Uint8Array`, which can be passed directly to `viewer.load()` or saved as a file.
+
+The following example extracts pages 1 and 2, then immediately loads the extracted pages back into the viewer.
 
 ```html
 <button id="extractPage">Extract Pages</button>
