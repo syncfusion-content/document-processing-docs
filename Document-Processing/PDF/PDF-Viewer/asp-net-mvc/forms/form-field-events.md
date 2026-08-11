@@ -98,7 +98,7 @@ You can wire up form field events on the PDF Viewer instance to execute custom l
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](./overview)  
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)  
@@ -106,6 +106,6 @@ You can wire up form field events on the PDF Viewer instance to execute custom l
 - [Edit form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)  
 - [Add custom data to form fields](./custom-data)  
-- [Form Field Flags](./form-constrain) 
+- [Form field flags](./form-constrain)
 - [Form validation](./form-validation)  
 - [Form fields API](./form-fields-api)
