@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to insert text or image in table programmatically in Document Editor Component
-description: Learn how to insert text or image in table programmatically in Document Editor Component
+title: Insert text or image in a table in DOCX Editor | Syncfusion
+description: Learn how to insert text or an image in a table programmatically in the Syncfusion Document Editor component.
 platform: document-processing
 control: Insert Text Or Image In Table
 documentation: ug
 ---
 
-# How to insert text or image in table programmatically in  Document Editor component
+# Insert text or image in a table in ASP.NET Core Document Editor
 
-Using [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) API's, you can insert [`text`] or [`image`] in [`table`] programmatically based on your requirement.
+Using the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) APIs, you can insert [`text`] or [`image`] in a [`table`] programmatically based on your requirement.
 
-Use [`selection`] API's to navigate between rows and cells.
+Use the [`selection`] APIs to navigate between rows and cells.
 
-The following example illustrates how to create 2*2 table and then add text and image programmatically.
+The following example illustrates how to create a 2x2 table and then add text and an image programmatically.
 
 
 {% tabs %}
@@ -21,8 +21,10 @@ The following example illustrates how to create 2*2 table and then add text and 
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/insert-text-image-table/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-text-image-table" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-The output will be like below.
+The output will be as shown below.
+
 ![Insert text or image in table programmatically](../images/table-image.png)
