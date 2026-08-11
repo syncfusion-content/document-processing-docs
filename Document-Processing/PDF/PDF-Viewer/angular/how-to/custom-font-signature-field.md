@@ -1,6 +1,6 @@
 ---
-Layout: post
-title: To change the font family in Syncfusion Angular PDF Viewer component
+layout: post
+title: Change the font family in Syncfusion Angular PDF Viewer component
 description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -18,7 +18,7 @@ The following steps are used to include custom fonts for signature and initial f
 
 **Step 1:** Follow the steps in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) guide to create a simple PDF Viewer sample.
 
-**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in Signature field.
+**Step 2:** Insert the following code snippet to implement the functionality for using custom fonts in the signature field.
 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >
@@ -30,7 +30,7 @@ The following steps are used to include custom fonts for signature and initial f
 ```ts
 changeFontFamily(){
 	var pdfviewer=(<any>document.getElementById('pdfviewer')).ej2_instances[0];
-	pdfviewer.SignatureFieldSettings.typeSignatureFonts = [
+	pdfviewer.signatureFieldSettings.typeSignatureFonts = [
       'Allura',
       'Tangerine',
       'Sacramento',
@@ -40,7 +40,8 @@ changeFontFamily(){
 
 ```
 ### Initial Field
-Insert the following code snippet to implement the functionality for using custom fonts in Initial field.
+
+Insert the following code snippet to implement the functionality for using custom fonts in the initial field.
 
 ```html
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura" >
@@ -52,7 +53,7 @@ Insert the following code snippet to implement the functionality for using custo
 ```ts
 changeFontFamily(){
 	var pdfviewer=(<any>document.getElementById('pdfviewer')).ej2_instances[0];
-	pdfviewer.InitialFieldSettings.typeInitialFonts = [
+	pdfviewer.initialFieldSettings.typeInitialFonts = [
       'Allura',
       'Tangerine',
       'Sacramento',
@@ -61,4 +62,4 @@ changeFontFamily(){
    }
 ```
 
-Implementing this enables use of custom fonts in form-field signature and initial fields.
+Implementing this enables the use of custom fonts in form-field signature and initial fields.

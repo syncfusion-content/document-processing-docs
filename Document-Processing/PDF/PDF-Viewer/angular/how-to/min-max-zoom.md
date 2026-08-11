@@ -108,7 +108,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService, FormFieldsService, FormDesignerService,
          PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import  {Browser} from '@syncfusion/ej2-base';
+import { Browser } from '@syncfusion/ej2-base';
 
 @Component({
   selector: 'app-container',
@@ -135,7 +135,7 @@ import  {Browser} from '@syncfusion/ej2-base';
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
-          viewer.minZoom = 10;
+        viewer.minZoom = 10;
       }
       else {
         viewer.zoomMode = 'Default';
@@ -153,7 +153,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService, FormFieldsService, FormDesignerService,
          PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import  {Browser} from '@syncfusion/ej2-base';
+import { Browser } from '@syncfusion/ej2-base';
 
 @Component({
   selector: 'app-container',
@@ -181,7 +181,7 @@ import  {Browser} from '@syncfusion/ej2-base';
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
-          viewer.minZoom = 10;
+        viewer.minZoom = 10;
       }
       else {
         viewer.zoomMode = 'Default';
