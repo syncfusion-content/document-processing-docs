@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Save document to Dropbox cloud file storage in JavaScript (ES5) Document editor control | Syncfusion
-description:  Learn about how to Save document to Dropbox cloud file storage in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Dropbox cloud storage in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to save a document to Dropbox cloud file storage in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage
+# Save Document To Dropbox Cloud File Storage
 
-To save a document to Dropbox cloud file storage, you can follow the steps below
+To save a document to Dropbox cloud file storage, you can follow the steps below.
 
 **Step 1:** Create a Dropbox API
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, you should follow the official documentation provided by [Dropbox](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 **Step 2:** Create a Simple Document Editor sample in JavaScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -34,7 +34,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -59,7 +59,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToDropBox")]
-//Post action for downloading the document
+//Post action for uploading the document to Dropbox
 
 public void SaveToDropBox(IFormCollection data)
 {
@@ -99,7 +99,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -119,7 +119,7 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Dropbox cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Dropbox cloud file storage.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
