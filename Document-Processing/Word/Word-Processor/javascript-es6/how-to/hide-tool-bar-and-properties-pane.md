@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide Toolbar and Properties JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to hide the toolbar and properties pane in Syncfusion JavaScript (ES6) DOCX Editor to create a cleaner document editing view.
+description: Learn how to hide the toolbar and properties pane in Syncfusion JavaScript (ES6) Document Editor using the showPropertiesPane and enableToolbar options.
 platform: document-processing
 control: Hide Toolbar and Properties Pane
 documentation: ug
