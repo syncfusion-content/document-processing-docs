@@ -364,7 +364,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Use the [**getBookmarks**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#bookmark) method to retrieve the bookmark collection. Each item contains the bookmark title, destination page, and position information.
+Use the [**getBookmarks**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/bookmarkview#getbookmarks) method to retrieve the bookmark collection. Each item contains the bookmark title, destination page, and position information.
 
 ## See also
 
