@@ -117,7 +117,7 @@ public void handleWebSocketDisconnectListener(SessionDisconnectEvent event) thro
 
 Configure the Redis that stores temporary data for the collaborative editing session. Provide the Redis connection string in the `application.properties` file.
 
-```properties
+```java
 //Redis configuration
 spring.datasource.redishost= "<Redis host string>"
 spring.datasource.redisport= "<Redis port>"
@@ -249,7 +249,7 @@ Refer to the below steps to know about the Redis pub/sub implementation to sync 
 
 #### Step 1: Configure Redis at the application level to establish the connection
 
-```properties
+```java
 //Redis configuration
 spring.datasource.redishost= "<Redis host link>"
 spring.datasource.redisport= "<Redis port number>"
