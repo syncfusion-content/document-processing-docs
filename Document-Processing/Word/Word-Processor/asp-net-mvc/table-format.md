@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table Format in ASP.NET MVC DOCX Editor Component
+title: Table Format in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn all about table formatting in the Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2.
 platform: document-processing
 control: Table Format

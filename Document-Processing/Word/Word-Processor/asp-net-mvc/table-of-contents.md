@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table of Contents in ASP.NET MVC DOCX Editor Component
+title: Table of Contents in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about table of contents in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table Of Contents
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Table of contents
+# Table of Contents in ASP.NET MVC DOCX Editor
 
 The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where that heading starts, with various options to customize the appearance.
 
