@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrieving Base64 Value from a PDF in Angular PDF Viewer|Syncfusion.
+title: Retrieving Base64 Value from a PDF in Angular PDF Viewer | Syncfusion
 description: Learn here all about how to retrieve the Base64 value of a loaded PDF document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve Base64 from a PDF in Angular PDF Viewer
+# Retrieve the Base64 value of a PDF in Angular PDF Viewer
 
 ### Overview
 
@@ -161,6 +161,6 @@ export class AppComponent implements OnInit {
 
 ### Conclusion
 
-By implementing these steps in the Angular component, a PDF document loaded in the PDF Viewer can be converted into a Base64-encoded data URL when a button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
+By implementing these steps in the Angular component, you can convert a PDF document loaded in the PDF Viewer into a Base64-encoded data URL when the button is clicked. This facilitates the manipulation or transfer of PDF data as needed.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

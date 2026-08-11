@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Read only default in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Read only default in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Read-Only by Default in JavaScript (ES6) DOCX Editor | Syncfusion
+description: Learn how to open a document in read-only mode by default in Syncfusion JavaScript (ES6) DOCX Editor for DocumentEditor and DocumentEditorContainer.
 platform: document-processing
-control: Read only default 
+control: Read-Only by Default
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read only default in JavaScript (ES6) Document editor control
+# Read-Only by Default in JavaScript (ES6) Document Editor
 
-In this article, we are going to see how to open a document in read only mode by default in DocumentEditor & DocumentEditorContainer.
+In this article, we are going to see how to open a document in read-only mode by default in the DocumentEditor and DocumentEditorContainer.
 
-## Opening a document in read only mode by default in DocumentEditor
+## Opening a document in read-only mode by default in the DocumentEditor
 
- 
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/document-editor/javascript-es6/read-cs1/index.ts %}
 {% endhighlight %}
@@ -24,16 +22,12 @@ In this article, we are going to see how to open a document in read only mode by
 {% include code-snippet/document-editor/javascript-es6/read-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/read-cs1" %}
 
+## Opening a document in read-only mode by default in the DocumentEditorContainer
 
-
-## Opening a document in ready only mode by default in DocumentEditorContainer
-
- 
-
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/document-editor/javascript-es6/read-container-cs1/index.ts %}
 {% endhighlight %}
@@ -41,9 +35,7 @@ In this article, we are going to see how to open a document in read only mode by
 {% include code-snippet/document-editor/javascript-es6/read-container-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/read-container-cs1" %}
 
-
-
->Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+N> You can use the [`restrictEditing`](https://ej2.syncfusion.com/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change the component to read-only mode.

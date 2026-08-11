@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize text search color in PDF Viewer
+# Customize text search color in JavaScript PDF Viewer
 
 Change the text search and highlight colors using the `textSearchColorSettings` properties. Set `searchColor` for matched text and `searchHighlightColor` for the active result. Both properties accept hexadecimal color values.
 
@@ -28,12 +28,12 @@ viewer.textSearchColorSettings.searchHighlightColor = "#0000FF";
 
 The above sets the active result highlight to blue.
 
-- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
-- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
+- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings#searchcolor)
+- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings#searchhighlightcolor)
 
 Example: buttons to control search flow
 
-```
+```html
 
 <button id="search">SearchText</button>
 <button id="searchNext">SearchNext</button>

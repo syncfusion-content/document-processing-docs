@@ -1,6 +1,6 @@
 ---
 layout: post
-ttitle: Open PDF from Dropbox cloud storage in Vue PDF Viewer | Syncfusion
+title: Open PDF from Dropbox cloud storage in Vue PDF Viewer | Syncfusion
 description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion Vue PDF Viewer component using standalone and server-backed approaches.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Dropbox cloud storage
+# Open PDF from Dropbox cloud storage in Vue
 
 The Vue PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following sections walk through both approaches.
 

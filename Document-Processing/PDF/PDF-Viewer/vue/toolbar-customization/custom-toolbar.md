@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar in Vue PDF Viewer Component | Syncfusion
-description: Learn here all about creating a custom toolbar in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn all about creating a custom toolbar in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -426,10 +426,8 @@ Sample:
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Primary toolbar customization](./primary-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)

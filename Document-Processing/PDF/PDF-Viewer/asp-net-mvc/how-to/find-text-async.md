@@ -4,7 +4,6 @@ title: Use findTextAsync in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to search text asynchronously with findTextAsync in the Syncfusion ASP.NET MVC PDF Viewer and retrieve match bounds.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 

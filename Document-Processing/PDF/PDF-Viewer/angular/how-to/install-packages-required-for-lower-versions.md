@@ -16,7 +16,7 @@ npm install @syncfusion/ej2-angular-pdfviewer@ngcc --save
 
 To reference the ngcc package in the `package.json` file, append the `-ngcc` suffix to the package version:
 
-```bash
+```json
 "@syncfusion/ej2-angular-pdfviewer": "20.2.38-ngcc"
 ```
 
