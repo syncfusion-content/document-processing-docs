@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save to Dropbox cloud storage in JavaScript (ES5) DOCX Editor | Syncfusion
+title: Save to Dropbox Cloud Storage in JavaScript (ES5) | Syncfusion
 description: Learn how to save a document to Dropbox cloud file storage in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save Document To Dropbox Cloud File Storage
+# Save Document To Dropbox Cloud File Storage in JavaScript (ES5)
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 
