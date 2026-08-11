@@ -14,7 +14,7 @@ Follow these steps to load a PDF from Box cloud storage using the server-backed 
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
+Create a developer account and a Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
 
 **Step 2:** Create a PDF Viewer sample in Vue
 
@@ -129,7 +129,7 @@ N> Replace the placeholders with the actual Box values: Access Token, Folder ID,
 
 **Step 4:** Configure the Vue PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in the Box folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set `documentPath` to the PDF file name to load from Box cloud storage. Ensure the document name exists in the Box folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
