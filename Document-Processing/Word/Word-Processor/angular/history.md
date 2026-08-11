@@ -65,7 +65,7 @@ this.documentEditor.editorHistory.undoLimit = 400;
 this.documentEditor.editorHistory.redoLimit = 400;
 ```
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Keyboard shortcuts](./keyboard-shortcut)

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Opening a Document in the Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Opening a document in Syncfusion Blazor DocumentEditor component and more.
+title: Opening a Document in the Blazor DOCX Editor Component | Syncfusion
+description: Learn how to open and load Word documents in the Syncfusion Blazor Document Editor component from URLs, cloud storage, databases, and local files.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Opening a Document in Blazor DocumentEditor Component
+# Opening a Document in Blazor Document Editor Component
 
-You might need to open and view Word documents from various location. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.
+You might need to open and view Word documents from various locations. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.
 
 ## Opening a document from URL
 
-If you have your Word document file in the web, you can open it in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) using URL. The following code example explains how to open a Word document file from URL.
+If you have your Word document file in the web, you can open it in [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) using a URL. The following code example explains how to open a Word document file from a URL.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -58,9 +58,9 @@ N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/is
 
 ## Opening a document from Cloud
 
-You can open the Word documents from Cloud storage. The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
+You can open the Word documents from cloud storage. The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
 
-To open and save document from cloud quickly with Blazor DocumentEditor component, you can check the video below.
+To open and save a document from the cloud quickly with the Blazor Document Editor component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=sVINSXKPM4E" %}
 
@@ -160,7 +160,7 @@ N> The **Microsoft.Azure.Storage.File** NuGet package must be installed in your 
 
 ## Opening a document from database
 
-The following code example shows how to open the Word document file in viewer from SQL Server database.
+The following code example shows how to open the Word document file in the viewer from a SQL Server database.
 
 ```cshtml
 @using System.IO;
@@ -215,7 +215,7 @@ N> The **System.Data.SqlClient** package must be installed in your application t
 
 ## Opening a document from file system
 
-There is an UI option in built-in toolbar to open the Word documents from local file system. If you want to achieve the same functionality when design your own toolbar, you can use the following code example to load and open the Word documents. In this sample, the Syncfusion’s Uploader control is used for Blazor.
+There is a UI option in the built-in toolbar to open the Word documents from the local file system. If you want to achieve the same functionality when designing your own toolbar, you can use the following code example to load and open the Word documents. In this sample, the Syncfusion Uploader control is used for Blazor.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -290,13 +290,13 @@ The Word document can be opened on control initialization, in this sample, the d
 }
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to see how to render and configure the document editor.
 
 ## Opening a document with TIFF, EMF and WMF images
 
-The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+Web browsers do not support displaying metafile images like EMF and WMF and TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document Editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `BitMiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image is a metafile (WMF, EMF) or a TIFF format image. In the example below, we have converted the TIFF to a raster image in the `ConvertTiffToRasterImage()` method using `BitMiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 

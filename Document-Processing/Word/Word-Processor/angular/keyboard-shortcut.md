@@ -128,6 +128,6 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + D| Opens font dialog.|
 |Ctrl + K| Opens hyperlink dialog.|
 
-## See Also
+## See also
 
 * [How to override the keyboard shortcuts](./how-to/override-the-keyboard-shortcuts)
