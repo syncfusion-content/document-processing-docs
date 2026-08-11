@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy Syncfusion JavaScript (ES6) DOCX Editor in Azure Kubernetes Service
+title: Deploy Syncfusion TypeScript DOCX Editor in Azure Kubernetes Service
 description: Learn here all about deploying word processor server docker container in Azure Kubernetes Service in the Syncfusion JavaScript (ES6) Document Editor.
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
