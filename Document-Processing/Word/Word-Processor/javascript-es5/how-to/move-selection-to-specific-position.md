@@ -1,33 +1,33 @@
 ---
 layout: post
-title: Move to specific position in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Move selection to specific position in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Move to Specific Position in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to move the selection to a specific position in Syncfusion JavaScript (ES5) Document Editor using the select API and hierarchical index.
 platform: document-processing
-control: Move selection to specific position 
+control: Move Selection to a Specific Position
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move selection to specific position in JavaScript (ES5) Document editor
+# Move Selection to Specific Position - JavaScript (ES5) Document Editor
 
-Using [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in selection module, You can set cursor position to anywhere in the document.
+Using the [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in the selection module, you can set the cursor position anywhere in the document.
 
-## Selects content based on start and end hierarchical index
+## Select Content Based on Start and End Hierarchical Index
 
-Hierarchical index will be in below format.
+The hierarchical index will be in the format below.
 
 `sectionIndex;blockIndex;offset`
 
-The following code snippet illustrate how to select using hierarchical index.
+The following code snippet illustrates how to select using the hierarchical index.
 
 ```ts
-// Selection will occur between provided start and end offset
-documentEdContainerIns.documentEditor.editor.insertText("Welcome");
-// The below code will select the letters “We” from inserted text “Welcome”
-documentEdContainerIns.documentEditor.selection.select("0;0;0", "0;0;2");
+// Selection will occur between the provided start and end offset
+container.documentEditor.editor.insertText("Welcome");
+// The below code will select the letters "We" from the inserted text "Welcome"
+container.documentEditor.selection.select("0;0;0", "0;0;2");
 ```
 
-The following table illustrates about Hierarchical index in detail.
+The following table illustrates the hierarchical index in detail.
 
 | Element |Hierarchical Format | Explanation |
 |-----------------|-------------|----|
@@ -36,11 +36,11 @@ The following table illustrates about Hierarchical index in detail.
 |Move selection to header|pageIndex;H;sectionIndex;blockIndex;offset<br>**Ex:** 1;H;0;0;0|It moves cursor to the header in second page.|
 |Move selection to Footer|pageIndex;F;sectionIndex;blockIndex;offset<br>**Ex:** 1;F;0;0;0|It moves cursor to the footer in second page.|
 
-## Get the selection start and end hierarchical index
+## Get the Selection Start and End Hierarchical Index
 
-Using [`startOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#startoffset), you can get start hierarchical index which denotes the start index of current selection. Similarly, using [`endOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#endoffset), you can get end hierarchical index which denotes the end index of current selection.
+Using [`startOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#startoffset), you can get the start hierarchical index which denotes the start index of the current selection. Similarly, using [`endOffset`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#endoffset), you can get the end hierarchical index which denotes the end index of the current selection.
 
-The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
+The following code snippet illustrates how to get the selection start and end offset on selection changes in the document.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -51,25 +51,25 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToo
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = hostUrl + 'api/documenteditor/';
 container.appendTo('#container');
-// Event gets triggered on selection change in document
+// Event gets triggered on selection change in the document
 container.selectionChange = (): void => {
-//Get the start index of current selection
+// Get the start index of the current selection
 let startOffset:string = container.documentEditor.selection.startOffset;
-//Get the end index of current selection
+// Get the end index of the current selection
 let endOffset:string = container.documentEditor.selection.endOffset;
 };
 ```
 
-Document editor have [`selectionChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in Document.
+The Document Editor has a [`selectionChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in the document.
 
-## Selects the content based on left and top position
+## Select Content Based on Left and Top Position
 
-Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selectionSettings/) to select the content based on left and top position.
+Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selectionSettings/) to select the content based on the left and top positions.
 
-x denotes the left position and y denotes the top position and extend denotes whether to extend or update selection.
+x denotes the left position, y denotes the top position, and extend denotes whether to extend or update the selection.
 
-Please check below code sample for reference.
+Please check the code sample below for reference.
 
 ```ts
-Container.documentEditor.selection.select({ x: 188.4814208984375 , y: 662.00005, extend: true });
+container.documentEditor.selection.select({ x: 188.4814208984375 , y: 662.00005, extend: true });
 ```

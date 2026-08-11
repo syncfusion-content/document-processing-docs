@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Open default document in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Open default document in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Open Default Document in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to open a default document in Syncfusion JavaScript (ES5) Document Editor using the open and created APIs to load SFDT content on startup.
 platform: document-processing
-control: Open default document 
+control: Open a Default Document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open default document in JavaScript (ES5) Document editor
+# Open Default Document in JavaScript (ES5) Document Editor
 
-In this article, we are going to see how to open a default document when DocumentEditor & DocumentEditorContainer is initialized.
+In this article, we are going to see how to open a default document when DocumentEditor and DocumentEditorContainer are initialized.
 
-## Opening a default document in DocumentEditor
+## Opening a Default Document in DocumentEditor
 
-By default, [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) will open blank document. You can use [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) API in Document Editor to open the sfdt content.
+By default, [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) API in the Document Editor to open the SFDT content.
 
-Document editor have [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) event which gets triggered once Document editor control created. So, if you want to open the document by default, you can use [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) and [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) API.
+The Document Editor has a [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) event which is triggered once the Document Editor control is created. To open the document by default, use the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) and [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) APIs.
 
-The following example illustrates how to open the default SFDT content once Document editor control gets created.
+The following example illustrates how to open the default SFDT content once the Document Editor control is created.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -31,11 +31,11 @@ The following example illustrates how to open the default SFDT content once Docu
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/open-default-document-cs1" %}
 
-## Opening a default document in DocumentEditorContainer
+## Opening a Default Document in DocumentEditorContainer
 
-By default, Document Editor Container will open a blank document. You can use [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) API in Document Editor to open the SFDT content.
+By default, the Document Editor Container will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) API in the Document Editor to open the SFDT content.
 
-Document editor Container have [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) event which gets triggered once Document editor container control created. So, if you want to open the document by default, you can use [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) and [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) API.
+The Document Editor Container has a [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) event which is triggered once the Document Editor Container control is created. To open the document by default, use the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) and [`created`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#created) APIs.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
