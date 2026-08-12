@@ -64,7 +64,7 @@ The Document Editor has a [`selectionChange`](https://ej2.syncfusion.com/javascr
 
 ## Select Content Based on Left and Top Position
 
-Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selectionSettings/) to select the content based on the left and top positions.
+Here, you can specify the [`selection settings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selectionSettings) to select the content based on the left and top positions.
 
 x denotes the left position, y denotes the top position, and extend denotes whether to extend or update the selection.
 
