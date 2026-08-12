@@ -148,7 +148,7 @@ Install the SkiaSharp.Linux NuGet package for the .NET Core application in Linux
 
 ## Multithreading
 
-* [Does the PowerPoint library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/multithreading-powerpoint-reading-faqs#does-the-powerpoint-library-support-multithreading-and-thread-safety)  
+* [Does the PowerPoint library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/multithreading-in-powerpoint-library-faqs#does-the-powerpoint-library-support-multithreading-and-thread-safety)  
 
 ## Does a PPTX file support sensitivity labels?
 No. The Presentation library processes the file-level information of a PowerPoint file. Sensitivity labels are organization-level settings applied through Microsoft Purview and are not stored within the PPTX file itself. As a result, the Presentation library does not support setting, getting, or preserving sensitivity labels. For background, see [Microsoft sensitivity labels overview](https://learn.microsoft.com/en-us/purview/sensitivity-labels).

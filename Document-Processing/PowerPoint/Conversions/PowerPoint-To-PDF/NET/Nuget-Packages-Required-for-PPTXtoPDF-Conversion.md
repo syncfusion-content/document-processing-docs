@@ -61,7 +61,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 
 T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -193,7 +193,7 @@ ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 

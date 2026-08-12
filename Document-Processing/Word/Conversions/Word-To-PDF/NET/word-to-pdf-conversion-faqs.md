@@ -1,12 +1,12 @@
 ﻿---
-title: Word to PDF conversion FAQs | DocIO | Syncfusion
+title: Word-to-PDF conversion FAQs | DocIO | Syncfusion
 description: Learn about the frequently asked questions of Word to PDF conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Frequently Asked Questions (Word to PDF)
+# Frequently Asked Questions (Word-to-PDF)
 
 The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below. This page addresses common questions on chart conversion, PDF conformance, font handling, form fields, track changes, and platform-specific issues.
 
@@ -95,8 +95,8 @@ For more details on configuring fallback fonts for missing glyphs, refer to the 
     </tr>
     <tr>
       <td><b>Documentation link</b></td>
-      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf">Fallback fonts</a></td>
-      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf">Font substitution</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf" aria-label="Learn about fallback fonts in Word to PDF conversion">Fallback fonts</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf" aria-label="Learn about font substitution in Word to PDF conversion">Font substitution</a></td>
     </tr>
   </tbody>
 </table>

@@ -7,6 +7,7 @@ documentation: UG
 ---
 # NuGet Packages Required for PowerPoint Library
 
+## Working with PowerPoint Presentations
 To work with PowerPoint Presentations, install the following NuGet packages in your application:
 
 <table>

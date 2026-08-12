@@ -17,7 +17,7 @@ The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library
 Refer to the following links for the assemblies and NuGet packages required based on your platform to convert a Word document to PDF.
 
 * [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
-* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
+* [Word to PDF conversion NuGet packages](./Nuget-packages-required-word-to-pdf)
 
 For a quick walkthrough on converting a Word document to a PDF, check out this video:
 {% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
@@ -43,7 +43,7 @@ For a quick walkthrough on converting a Word document to a PDF, check out this v
 The following prerequisites are required before running the code samples in this section:
 
 * Create a new .NET console, class library, or web application targeting a supported version of .NET Framework, .NET Core.
-* Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf).
+* Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](./Nuget-packages-required-word-to-pdf).
 
 The following namespaces are required to compile the code:
 
