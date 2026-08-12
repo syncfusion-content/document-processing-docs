@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Custom toolbar n ASP.NET MVC PDF Viewer
+# Custom toolbar in ASP.NET MVC PDF Viewer
 
 The PDF Viewer exposes APIs for the interactions available in the built-in toolbar. Using these, you can build your own UI for toolbar actions at the application level by hiding the built-in toolbar. Follow these steps to create a custom toolbar for the PDF Viewer:
 
@@ -30,10 +30,10 @@ new ToolbarItem { Type = ItemType.Button,  PrefixIcon = "e-pv-download-document-
 <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;">
 ```
 
-**Step 3:** Add an EJ2 Toolbar to perform magnification actions in the PDF Viewer using the following code snippet:
+**Step 3:** Add the EJ2 PDF Viewer with the built-in toolbar disabled using the following code snippet:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 ```html
 @Html.EJS().PdfViewer("pdfviewer")
@@ -42,7 +42,7 @@ new ToolbarItem { Type = ItemType.Button,  PrefixIcon = "e-pv-download-document-
 .DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 ```html
 @Html.EJS().PdfViewer("pdfviewer")
@@ -54,7 +54,7 @@ new ToolbarItem { Type = ItemType.Button,  PrefixIcon = "e-pv-download-document-
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4:** Add the following styles to achieve the custom toolbar styling:
+**Step 4:** Add an EJ2 Toolbar to perform magnification actions in the PDF Viewer using the following code snippet:
 
 ```html
 
@@ -66,7 +66,7 @@ new ToolbarItem { Type = ItemType.Button, PrefixIcon = "e-pv-zoom-out-icon", Too
 
 ```
 
-**Step 5:** Add the following style to achieve the custom toolbar styling,
+**Step 5:** Add the following styles to achieve the custom toolbar styling,
 
 ```html
 <style>
@@ -169,7 +169,7 @@ new ToolbarItem { Type = ItemType.Button, PrefixIcon = "e-pv-zoom-out-icon", Too
 
 N> The icons are embedded in the font file used in the previous code snippet.
 
-**Step 5:** Add the following scripts to perform user interactions in the PDF Viewer:
+**Step 6:** Add the following scripts to perform user interactions in the PDF Viewer:
 
 ```html
 <script type="text/javascript">
@@ -306,7 +306,7 @@ N> The icons are embedded in the font file used in the previous code snippet.
             toolbarObj.enableItems(document.getElementById('zoomIn'), true);
             toolbarObj.enableItems(document.getElementById('zoomOut'), false);
             toolbarObj.enableItems(document.getElementById('fitPage'), true);
-        } else if (viewer.zoomPercentage >= 400) {
+        } else if (pdfViewer.zoomPercentage >= 400) {
             toolbarObj.enableItems(document.getElementById('zoomIn'), false);
             toolbarObj.enableItems(document.getElementById('zoomOut'), true);
             toolbarObj.enableItems(document.getElementById('fitPage'), true);

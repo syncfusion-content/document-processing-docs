@@ -17,9 +17,9 @@ N> For Angular 17+, see the following links:
 * [Create a Standalone PDF Viewer in Angular 17 and above with-no-standalone-flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 
-## Setup Angular Environment
+## Set Up Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to set up your Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
@@ -162,7 +162,7 @@ View the sample in GitHub to [load PDF Viewer with local resources](https://gith
 
 ## Run the application
 
-Use the following command to run the application in browser.
+Use the following command to run the application in the browser.
 
 ```javascript
 ng serve --open

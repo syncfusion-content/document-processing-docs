@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Search text and redact in Typescript PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion TypeScript PDF Viewer.
+title: Search text and redact in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn how to find text and add redaction annotations programmatically in the Syncfusion JavaScript (ES6) PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and places redaction annotations for every result.
 
-N> Prerequisites: Add the PDF Viewer control to your TypeScript application and ensure a document is loaded. Confirm the redaction feature is available in the viewer version in use and that text extraction is enabled (`isExtractText: true`). Redaction is permanent once applied.
+N> Prerequisites: Add the PDF Viewer control to your JavaScript (ES6) application and ensure a document is loaded. Confirm the redaction feature is available in the viewer version in use and that text extraction is enabled (`isExtractText: true`). Redaction is permanent once applied.
 
 ## Steps to add redaction annotations on search text bounds
 
@@ -98,7 +98,7 @@ document.getElementById("applyRedaction")?.addEventListener('click', ()=>{
 [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
 ## Notes
-- Ensure the PDF is fully loaded before triggering extraction and search.
+- Ensure the PDF is fully loaded before triggering extraction and search.`viewer.annotation.redact()` method as shown in the Apply Redaction example above
 - Bounds from search are in points (72 DPI). Convert to pixels (96 DPI) to align with annotation coordinates.
 - Customize overlay text, colors, and typography as needed.
 - Adding a redaction annotation covers the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or equivalent API if available in your version.

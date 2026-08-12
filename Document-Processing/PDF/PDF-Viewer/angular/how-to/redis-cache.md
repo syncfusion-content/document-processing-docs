@@ -3,7 +3,7 @@ layout: post
 title: Redis cache in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Redis cache in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Redis cache
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -35,12 +35,9 @@ public void ConfigureServices(IServiceCollection services)
 
 ```
 
-**Step 5:** Use the Redis cache in the PDF Viewer controller action:
+5. Use the Redis cache in the PDF Viewer controller:
 
-To use Redis Cache in PDF Viewer, you can implement the IDistributedCache interface and use the Redis Cache service to store and
-retrieve
-
-the PDF document bytes.
+To use Redis Cache in PDF Viewer, you can implement the IDistributedCache interface and use the Redis Cache service to store and retrieve the PDF document bytes.
 
 ```cs
     private readonly IHostingEnvironment _hostingEnvironment;

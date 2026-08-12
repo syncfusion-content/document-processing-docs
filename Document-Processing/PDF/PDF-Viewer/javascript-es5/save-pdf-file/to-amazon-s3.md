@@ -30,7 +30,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (such as AWS STS) or perform uploads via a trusted server.
 
 ```javascript
 AWS.config.update({
@@ -68,7 +68,7 @@ pdfviewer.toolbarClick = function (args) {
 N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket and object key. Ensure the S3 bucket is configured with appropriate permissions and CORS rules to allow browser uploads.
 
 ```javascript
-private s3 = new AWS.S3();
+var s3 = new AWS.S3();
 
 function saveDocument() {
   pdfviewer.saveAsBlob().then(function (value) {
@@ -140,7 +140,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -198,7 +198,7 @@ N> Replace the placeholders with the appropriate AWS credentials and bucket name
 
 **Step 3:** Set the PDF Viewer properties in the JavaScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 ```javascript
 // Inject required modules

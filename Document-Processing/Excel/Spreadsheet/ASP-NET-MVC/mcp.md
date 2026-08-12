@@ -14,8 +14,6 @@ The Syncfusion® ASP.NET MVC MCP Server accelerates Spreadsheet application deve
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for ASP.NET MVC Spreadsheet applications.
 
-> The previously available Agentic UI Builder (`#sf_aspnetmvc_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/mcp). The AI Coding Assistant (`#sf_aspnetmvc_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
-
 ## Key benefits
 
 - **Spreadsheet-specific guidance**: Access relevant documentation for data binding, formulas, open and save operations, charts, conditional formatting, sorting, filtering, hyperlinks, scrolling, and other Spreadsheet features.
