@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Custom Data in annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use add custom Data in annotation in Syncfusion TypeScript PDF Viewer
+description: Learn how to add and manage custom data in PDF annotations using Syncfusion TypeScript PDF Viewer APIs for enhanced metadata handling and workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations
+# Manage Custom Annotation Properties
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 
@@ -130,15 +130,15 @@ document.getElementById('CustomData')?.addEventListener('click', () => {
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](./create-modify-annotation)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)

@@ -5,6 +5,7 @@ description: Learn about sticky note annotations in the Syncfusion ASP.NET MVC P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Sticky notes in ASP.NET MVC PDF Viewer control
@@ -153,17 +154,17 @@ Modify or delete comments or replies, and change status using the menu options i
 
 Default properties for sticky note annotations can be set before creating the control using StickyNotesSettings.
 
-After changing default opacity using the Edit Opacity tool, the selected value is applied. The following example sets default sticky note annotation settings.
+After changing the default opacity using the Edit Opacity tool, the selected value is applied to subsequent annotations. The following example sets default sticky note annotation settings.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 ```html
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").StickyNotesSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStickyNotesSettings { Author = "Syncfusion" }).Render()
     </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 ```html
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").StickyNotesSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerStickyNotesSettings { Author = "Syncfusion" }).Render()
@@ -177,14 +178,14 @@ After changing default opacity using the Edit Opacity tool, the selected value i
 The PDF Viewer control provides an option to disable sticky note annotations. The following example disables the feature.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 ```html
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").EnableStickyNotesAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
     </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 ```html
     <div style="width:100%;height:600px">
         @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).EnableStickyNotesAnnotation(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

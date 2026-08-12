@@ -17,7 +17,7 @@ Export pages as Base64-encoded images using `exportAsImage()` for a single page 
 **Step 1:** Create a simple PDF Viewer sample by following the getting-started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 
 **Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images. Place the button elements in the HTML and attach event handlers after the viewer is initialized.
-```
+```html
 
  <button id="exportAsImage">ExportAsImage</button>
 
@@ -38,7 +38,7 @@ document.getElementById('exportAsImage').addEventListener('click', () => {
 
 Export a specified page as a Base64-encoded image with a custom size:
 
-```
+```html
 
  <button id="exportAsImageWithSize">ExportAsImageWithSize</button>
 
@@ -59,7 +59,7 @@ document.getElementById('exportAsImageWithSize').addEventListener('click', () =>
 ```
 Export a range of pages as Base64-encoded image strings:
 
-```
+```html
 
  <button id="exportAsImages">ExportAsImages</button>
 
@@ -80,7 +80,7 @@ document.getElementById('exportAsImages').addEventListener('click', () => {
 
 Export a range of pages as Base64-encoded images with a custom size:
 
-```
+```html
 
  <button id="exportAsImagesWithSize">ExportAsImagesWithSize</button>
 

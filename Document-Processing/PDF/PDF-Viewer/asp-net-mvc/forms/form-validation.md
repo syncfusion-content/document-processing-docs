@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Form validation in the MVC PDF Viewer component | Syncfusion
-description: Learn how to enable built in form field validation and validate missing required fields in the Syncfusion MVC PDF Viewer.
+description: Learn how to enable built-in form field validation and validate missing required fields in the Syncfusion MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Validate PDF Form Fields in MVC PDF Viewer

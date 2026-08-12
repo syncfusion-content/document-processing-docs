@@ -5,11 +5,12 @@ description: Learn what the Form Designer in Syncfusion MVC PDF Viewer offers, s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Overview of Forms in MVC PDF Viewer
 
-The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through both the intuitive user interface and powerful programmatic APIs.
+The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through the intuitive user interface and powerful programmatic APIs.
 
 The viewer also includes smooth import and export support for form data, making integration effortless. Developers benefit from extensive API control, while end users enjoy a clean and simple interface designed for a seamless and stress-free form-filling experience.
 
@@ -33,8 +34,8 @@ Use the following ASP.NET MVC code-snippet to enable basic PDF Viewer rendering.
 
 ![FormFilling](../../javascript-es6/images/FormFields.gif)
 
-1. [Programmatically Form fill](./form-filling#fill-pdf-forms-programmatically)
-2. [Form Fill Using UI](./form-filling#fill-pdf-forms-through-the-user-interface)
+1. [Programmatic Form Filling](./form-filling#fill-pdf-forms-programmatically)
+2. [Form Fill Using the UI](./form-filling#fill-pdf-forms-through-the-user-interface)
 3. [Import the Form data](./form-filling#fill-pdf-forms-through-import-data)
 
 ## Form Designer
@@ -59,10 +60,10 @@ Use the following ASP.NET MVC code-snippet to enable the Form Designer rendering
 
 Create and customize interactive fields directly on the PDF page.
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
-- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
+- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field)
 - [Edit Form Field](./manage-form-fields/modify-form-fields)
-- [Remove Form Field](./manage-form-fields/remove-form-fields) 
-- [Form Field Constraints](./form-constrain) 
+- [Remove Form Field](./manage-form-fields/remove-form-fields)
+- [Form Field Constraints](./form-constrain)
 
 ## Supported form field types
 

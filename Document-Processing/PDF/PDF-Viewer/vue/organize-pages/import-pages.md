@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 This guide explains how to import another PDF document into the current document using the **Organize Pages** UI in the EJ2 Vue PDF Viewer. 
 
-**Outcome**: Imported document appear as thumbnails and are merged into the original document when saved or exported.
+**Outcome**: Imported pages appear as thumbnails and are merged into the original document when saved or exported.
 
 ## Prerequisites
 
