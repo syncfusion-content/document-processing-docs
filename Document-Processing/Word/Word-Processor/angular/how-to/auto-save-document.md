@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in Angular Document editor component
+# Auto Save Document in Angular Document Editor component
 
 In this article, we are going to see how to auto save the document to the server. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
@@ -107,9 +107,9 @@ public string AutoSave()
 }
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to automatically save Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/auto-save).
 
-## See Also
+## See also
 * [Auto Save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Set Default Format In Document Editor in ASP.NET MVC Document Editor Component
-description: Learn here all about how to set default format in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
+title: Set the Default Format in Syncfusion ASP.NET MVC DOCX Editor Component
+description: Learn here all about how to set the default character, paragraph, and section format in the Syncfusion ASP.NET MVC Document Editor component
 platform: document-processing
-control: Set Default Format In Document Editor
+control: Set Default Format in the Document Editor
 documentation: ug
 ---
 
 
-# How to set the default character, paragraph and section format in Document Editor component
+# Set Default Format in the ASP.NET MVC Document Editor component
 
-You can set the default character format, paragraph format and section format in Document editor.
+You can set the default character format, paragraph format, and section format in the Document Editor.
 
 ## Set the default character format
 
-You can use `setDefaultCharacterFormat` method to set the default character format. For example, Document editor default font size is 11 and you can change it as any valid value.
+You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the default font size of the Document Editor is `11`, and you can change it to any valid value.
 
 
 {% tabs %}
@@ -22,11 +22,12 @@ You can use `setDefaultCharacterFormat` method to set the default character form
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/character-format-font/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format-font.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
-Similarly, you can change the required `CharacterFormatProperties` default value.
+Similarly, you can change the required `CharacterFormatProperties` default values.
 
 
 {% tabs %}
@@ -34,13 +35,14 @@ Similarly, you can change the required `CharacterFormatProperties` default value
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/character-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 ## Set the default paragraph format
 
-You can use `setDefaultParagraphFormat` API to set the default paragraph format. You can change the required `ParagraphFormatProperties` default value.
+You can use the `setDefaultParagraphFormat` API to set the default paragraph format. You can change the required `ParagraphFormatProperties` default values.
 
 
 {% tabs %}
@@ -48,13 +50,14 @@ You can use `setDefaultParagraphFormat` API to set the default paragraph format.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/paragraph-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 ## Set the default section format
 
-You can use `setDefaultSectionFormat` API to set the default section format. You can change the required `SectionFormatProperties` default value.
+You can use the `setDefaultSectionFormat` API to set the default section format. You can change the required `SectionFormatProperties` default values.
 
 
 {% tabs %}
@@ -62,5 +65,6 @@ You can use `setDefaultSectionFormat` API to set the default section format. You
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/section-format/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Section-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
