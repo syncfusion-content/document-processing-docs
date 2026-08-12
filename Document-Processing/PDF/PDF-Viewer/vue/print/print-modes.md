@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Modes in the Vue PDF Viewer
+# Print modes in Vue PDF Viewer
 
 This guide shows how to set the PDF Viewer [`printMode`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printmode) so PDFs print from the current window or from a new window/tab.
 
@@ -99,7 +99,7 @@ export default {
 
 **Step 3:** Print mode can also be changed at runtime after the viewer is created:
 
-```html
+```js
 // switch to NewWindow at runtime
 pdfviewer.ej2Instances.printMode = 'NewWindow';
 ```

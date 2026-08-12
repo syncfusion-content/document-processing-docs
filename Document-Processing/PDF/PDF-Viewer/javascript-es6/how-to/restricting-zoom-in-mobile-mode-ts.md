@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices | Syncfusion
+title: Control Syncfusion PDF Viewer Zoom Levels on Mobile Screens
 description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion TypeScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -27,7 +27,7 @@ pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfview
 pdfviewer.appendTo('#PdfViewer');
 
 pdfviewer.documentLoad = (): void => {
-    if (Browser.isDevice && !viewer.enableDesktopMode) {
+    if (Browser.isDevice && !pdfviewer.enableDesktopMode) {
         pdfviewer.maxZoom = 200;
         pdfviewer.minZoom = 10;
     }
@@ -52,7 +52,7 @@ pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.
 pdfviewer.appendTo('#PdfViewer');
 
 pdfviewer.documentLoad = (): void => {
-    if (Browser.isDevice && !viewer.enableDesktopMode) {
+    if (Browser.isDevice && !pdfviewer.enableDesktopMode) {
         pdfviewer.maxZoom = 200;
         pdfviewer.minZoom = 10;
     }

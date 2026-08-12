@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Restrict editing in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the JavaScript (ES6) DOCX Editor to securely manage document access and control user modifications.
+description: Learn how to enable Restrict Editing in the JavaScript (ES6) Document Editor to securely manage document access and control user modifications.
 platform: document-processing
 control: Restrict editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict Editing in JavaScript (ES6) DOCX Editor
+# Restrict Editing in JavaScript (ES6) Document Editor
 
 Syncfusion® JavaScript (ES6) DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 
 ## Configure on client side
 
-Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restricting editing operations.
+The Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restrict-editing operations.
 
-### Read only mode
+### Read-only mode
 
-Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
+The Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
 
 The following example code illustrates how to enforce or remove read-only protection in the Document Editor.
 
@@ -109,7 +109,7 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 
 ### Form filling mode
 
-Document Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
+The Document Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
 
 The following example code illustrates how to enforce or remove form-filling restrictions in the Document Editor.
 
@@ -200,7 +200,7 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 
 ### Comments only mode
 
-Document Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
+The Document Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
 
 The following example code illustrates how to enforce and remove comments-only protection in the Document Editor.
 
@@ -292,7 +292,7 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 
 ### Track changes only mode
 
-Document Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
+The Document Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
 
 The following example code illustrates how to enforce and remove revisions-only protection in the Document Editor.
 
@@ -383,7 +383,7 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 
 ### Format restrictions
 
-Enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents limitToFormatting, and the third parameter represents isReadOnly.
+The Document Editor enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents `limitToFormatting`, and the third parameter represents `isReadOnly`.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -409,9 +409,9 @@ For more information on configuring restrict editing on the server side, refer t
 
 ## Set current user
 
-The [`currentUser`](https://ej2.syncfusion.com/documentation/api/document-editor#currentuser) property can be used to authorize the current document user by name, email, or user group.
+The [currentUser](https://ej2.syncfusion.com/documentation/api/document-editor-container/documenteditor#currentuser) property can be used to authorize the current document user by name, email, or user group.
 
-The following code example demonstrates how to set the currentUser.
+The following code example demonstrates how to set the `currentUser`.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -422,10 +422,12 @@ container.documentEditor.currentUser = 'engineer@mycompany.com';
 {% endtabs %}
 
 ## Protect document with editable region
-User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
+
+Users can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
 ### Insert editable region
-Use the [insertEditingRegion](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+
+Use the [insertEditingRegion](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable. This allows you to control editing by giving access to all users or only selected users.
 
 The following example shows how to insert an editable region.
 {% tabs %}
@@ -475,8 +477,8 @@ Restrict Editing Pane provides the following options to manage the document:
 * To apply editing restrictions to the current document, select the read only check box.
 * To add users to the current document, select more users option and add user from the popup dialog.
 * To include range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
-* To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a   password to protect.
-* To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
+* To apply the chosen editing restrictions, click the **YES, START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
+* To stop protection, select the **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
 The following code shows Restrict Editing Pane. To unprotect the document, use password '123'.
 
@@ -491,4 +493,4 @@ The following code shows Restrict Editing Pane. To unprotect the document, use p
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/data-protection-cs2" %}
 
-N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).

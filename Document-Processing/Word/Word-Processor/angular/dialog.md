@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Dialog in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
-## Font Dialog
+## Font dialog
 
 The Font dialog allows you to modify all text properties for selected contents at once, such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
@@ -161,7 +161,7 @@ export class AppComponent {
 }
 ```
 
-## Styles Dialog
+## Styles dialog
 
 This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create a new style with the help of the 'Style dialog'. Refer to the following example.
 
@@ -497,6 +497,6 @@ To open this dialog, refer to the following example.
   
 {% previewsample "/document-processing/samples/document-editor/angular/dialog-cs6" %}
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

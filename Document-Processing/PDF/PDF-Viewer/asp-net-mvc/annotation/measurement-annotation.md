@@ -5,6 +5,7 @@ description: Learn about measurement annotations in the Syncfusion ASP.NET MVC P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Measurement annotation in ASP.NET MVC PDF Viewer control
@@ -76,11 +77,11 @@ Here is an example showing how to add measurement annotations programmatically u
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="addDistanceAnnotation()">Add Distance Annotation programatically</button>
-<button onclick="addPerimeterAnnotation()">Add Perimeter Annotation programatically</button>
-<button onclick="addAreaAnnotation()">Add Area Annotation programatically</button>
-<button onclick="addRadiusAnnotation()">Add Radius Annotation programatically</button>
-<button onclick="addVolumeAnnotation()">Add Volume Annotation programatically</button>
+<button onclick="addDistanceAnnotation()">Add Distance Annotation programmatically</button>
+<button onclick="addPerimeterAnnotation()">Add Perimeter Annotation programmatically</button>
+<button onclick="addAreaAnnotation()">Add Area Annotation programmatically</button>
+<button onclick="addRadiusAnnotation()">Add Radius Annotation programmatically</button>
+<button onclick="addVolumeAnnotation()">Add Volume Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -133,11 +134,11 @@ Here is an example showing how to add measurement annotations programmatically u
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="addDistanceAnnotation()">Add Distance Annotation programatically</button>
-<button onclick="addPerimeterAnnotation()">Add Perimeter Annotation programatically</button>
-<button onclick="addAreaAnnotation()">Add Area Annotation programatically</button>
-<button onclick="addRadiusAnnotation()">Add Radius Annotation programatically</button>
-<button onclick="addVolumeAnnotation()">Add Volume Annotation programatically</button>
+<button onclick="addDistanceAnnotation()">Add Distance Annotation programmatically</button>
+<button onclick="addPerimeterAnnotation()">Add Perimeter Annotation programmatically</button>
+<button onclick="addAreaAnnotation()">Add Area Annotation programmatically</button>
+<button onclick="addRadiusAnnotation()">Add Radius Annotation programmatically</button>
+<button onclick="addVolumeAnnotation()">Add Volume Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -199,11 +200,11 @@ Here is an example of using **editAnnotation()**:
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="editDistanceAnnotation()">edit Distance Annotation programatically</button>
-<button onclick="editPerimeterAnnotation()">edit Perimeter Annotation programatically</button>
-<button onclick="editAreaAnnotation()">edit Area Annotation programatically</button>
-<button onclick="editRadiusAnnotation()">edit Radius Annotation programatically</button>
-<button onclick="editVolumeAnnotation()">edit Volume Annotation programatically</button>
+<button onclick="editDistanceAnnotation()">edit Distance Annotation programmatically</button>
+<button onclick="editPerimeterAnnotation()">edit Perimeter Annotation programmatically</button>
+<button onclick="editAreaAnnotation()">edit Area Annotation programmatically</button>
+<button onclick="editRadiusAnnotation()">edit Radius Annotation programmatically</button>
+<button onclick="editVolumeAnnotation()">edit Volume Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -275,11 +276,11 @@ Here is an example of using **editAnnotation()**:
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="editDistanceAnnotation()">edit Distance Annotation programatically</button>
-<button onclick="editPerimeterAnnotation()">edit Perimeter Annotation programatically</button>
-<button onclick="editAreaAnnotation()">edit Area Annotation programatically</button>
-<button onclick="editRadiusAnnotation()">edit Radius Annotation programatically</button>
-<button onclick="editVolumeAnnotation()">edit Volume Annotation programatically</button>
+<button onclick="editDistanceAnnotation()">edit Distance Annotation programmatically</button>
+<button onclick="editPerimeterAnnotation()">edit Perimeter Annotation programmatically</button>
+<button onclick="editAreaAnnotation()">edit Area Annotation programmatically</button>
+<button onclick="editRadiusAnnotation()">edit Radius Annotation programmatically</button>
+<button onclick="editVolumeAnnotation()">edit Volume Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -369,7 +370,7 @@ The stroke color of the annotation can be edited using the color palette provide
 
 ### Edit thickness
 
-Edit border thickness using the range slider provided in the Edit Thickness tool.
+The border thickness can be edited using the range slider provided in the Edit Thickness tool.
 
 ![CalibrateThickness](../images/calibrate_thickness.png)
 
