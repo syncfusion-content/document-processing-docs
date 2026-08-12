@@ -484,7 +484,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown_with_Encoding).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown-with-Encoding).
 
 N> Set the encoding value before saving the document as per the above code example.
 

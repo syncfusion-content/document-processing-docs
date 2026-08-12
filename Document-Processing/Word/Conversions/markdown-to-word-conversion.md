@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Markdown to Word Conversion
+# Markdown to Word Conversion in .NET using Markdown Library
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports converting Markdown files to Word documents, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -315,7 +315,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Open-Word-document-from-Markdown).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Open-Word-Document-From-Markdown).
 
 ## Supported Markdown Syntax
 
