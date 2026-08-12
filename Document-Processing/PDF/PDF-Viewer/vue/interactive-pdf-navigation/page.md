@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page navigation in PDF Viewer
+# Page navigation in Vue PDF Viewer
 
 The Vue PDF Viewer supports internal and external navigation methods.
 
@@ -16,11 +16,11 @@ The Vue PDF Viewer supports internal and external navigation methods.
 
 The PDF Viewer default toolbar includes the following page navigation options:
 
-* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to a specified page in the PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page in the PDF document.
-* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page in the PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage):- Navigates to the first page of the PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of the PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotopage):- Navigates to a specified page in the PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotonextpage):- Navigates to the next page in the PDF document.
+* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotopreviouspage):- Navigates to the previous page in the PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotofirstpage):- Navigates to the first page of the PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotolastpage):- Navigates to the last page of the PDF document.
 
 Enable or disable the page navigation option in the PDF Viewer using the following code snippet.
 
@@ -528,8 +528,7 @@ For a runnable example, explore the [PDF Viewer page navigation sample](https://
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-thumbnail-navigation/)
-
-- [Feature modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/feature-module/)
+- [Bookmark navigation](bookmark)
+- [Page navigation](page)
+- [Page thumbnail navigation](page-thumbnail)
+- [Feature modules](../feature-module)

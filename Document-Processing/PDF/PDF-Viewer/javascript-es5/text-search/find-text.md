@@ -255,7 +255,7 @@ document.getElementById('textbounds').addEventListener('click', function () {
 
 The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
 
-### Find text with findTextAsync in TypeScript PDF Viewer
+### Find text with findTextAsync in JavaScript PDF Viewer
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
@@ -267,8 +267,7 @@ Example 1: Search for a single string ('pdf') case-insensitively across all page
  <button id="findText">Find Text</button>
  <button id="findTexts">Find Texts</button>
 ```
-```ts
-// ...existing code...
+```js
 ej.pdfviewer.PdfViewer.Inject(
   ej.pdfviewer.Toolbar,
   ej.pdfviewer.Magnification,
@@ -293,18 +292,18 @@ viewer.appendTo('#PdfViewer');
 var findTextButton = document.getElementById('findText');
 if (findTextButton) {
   findTextButton.addEventListener('click', function () {
-    viewer.textSearchModule.findTextAsync('pdf', false).then(function (res) {
+    viewer.textSearch.findTextAsync('pdf', false).then(function (res) {
       console.log(res); // Logs the search result for the term 'pdf'
     });
   });
 }
 ```
 Example 2: Search for multiple strings (['pdf', 'the']) case-insensitively across all pages
-```ts
+```js
 var findTextButtons = document.getElementById('findTexts');
 if (findTextButtons) {
   findTextButtons.addEventListener('click', function () {
-    viewer.textSearchModule.findTextAsync(['pdf', 'the'], false).then(function (res) {
+    viewer.textSearch.findTextAsync(['pdf', 'the'], false).then(function (res) {
       console.log(res); // Logs the search result for the terms 'pdf' and 'the'
     });
   });

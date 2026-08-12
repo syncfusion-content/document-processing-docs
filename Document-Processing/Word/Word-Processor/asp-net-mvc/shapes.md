@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shapes in ASP.NET MVC Document Editor Component | Syncfusion
+title: Shapes in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about shapes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Shapes
@@ -8,29 +8,29 @@ documentation: ug
 ---
 
 
-# Shapes in DocumentEditor
+# Shapes in ASP.NET MVC Document Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, DocumentEditor does not have support to insert shapes. However, if the document contains a shape while importing, it will be preserved properly.
+Shapes are drawing objects that include text boxes, rectangles, lines, curves, circles, and so on. They can be preset or custom geometry. The Document Editor does not currently support inserting shapes. However, if the imported document contains a shape, the shape is preserved.
 
 ## Supported shapes
 
-The DocumentEditor has preservation support for Lines, Rectangle, Basic Shapes, Block Arrows, Equation Shapes,Flowchart and Stars and Banners.
+The Document Editor has preservation support for lines, rectangles, basic shapes, block arrows, equation shapes, flowchart shapes, and stars and banners.
 
-![List of supported shapes in DocumentEditor](images/Shapes_images/supported_shapes.png)
+![List of supported shapes in the Document Editor](images/Shapes_images/supported_shapes.png)
 
-N> When using ASP.NET MVC service, the unsupported shapes will be converted as image and preserved as image.
+N> When using the ASP.NET MVC service, the unsupported shapes are converted into images and preserved as images.
 
-## Text box Shape
+## Text Box Shape
 
-A text box is a rectangular area on the document where you can enter text. When you click in a text box, a flashing cursor will display indicating that you can begin typing. It allows you to enter multiple lines of text with all text formatting.
+A text box is a rectangular area on the document where you can enter text. When you click in a text box, a flashing cursor displays, indicating that you can begin typing. It supports multiple lines of text with all text formatting.
 
-<img src="images/Shapes_images/textbox_shape.png" alt="Text box shape view in DocumentEditor" style="width:550px">
+<img src="images/Shapes_images/textbox_shape.png" alt="Text box shape view in the Document Editor" style="width:550px">
 
 ## Shape Resizer
 
-The DocumentEditor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
+The Document Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
 
-![Shape resizer view in DocumentEditor](images/Shapes_images/shape_resizer.png)
+![Shape resizer view in the Document Editor](images/Shapes_images/shape_resizer.png)
 
 ## Text wrapping style
 
@@ -38,8 +38,8 @@ Text wrapping refers to how shapes fit with surrounding text in a document. [Ref
 
 ## Positioning the shape
 
-DocumentEditor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+The Document Editor preserves the position properties of shapes and displays them based on those properties. It does not support modifying the position properties. However, a shape positioned relative to a line or paragraph moves automatically when the surrounding text is edited.
 
 ## Online Demo
 
-Explore how to preserve auto shapes and grouped shapes in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/autoshapes#/tailwind3).
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/autoshapes#/tailwind3).

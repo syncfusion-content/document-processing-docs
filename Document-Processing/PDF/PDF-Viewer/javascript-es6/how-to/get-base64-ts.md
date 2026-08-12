@@ -22,7 +22,7 @@ Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf
 
 **Step 2:** Set up the TypeScript component**
 
-Create an TypeScript component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
+Create a TypeScript component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 ```html
 <button id="getBase64">Get Base64</button>

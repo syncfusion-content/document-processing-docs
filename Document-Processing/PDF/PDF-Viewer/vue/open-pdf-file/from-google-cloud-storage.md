@@ -54,9 +54,9 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
   // Create a storage client with Application Default Credentials
   _storageClient = StorageClient.Create(credentials);
 
-   _configuration = configuration;
+  _configuration = configuration;
 
-   _bucketName = _configuration.GetValue<string>("BucketName");
+  _bucketName = _configuration.GetValue<string>("BucketName");
 }
 ```
 
@@ -115,7 +115,7 @@ N> Replace `path/to/service-account-key.json` with the configured file path or p
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in the bucket.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in the bucket.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

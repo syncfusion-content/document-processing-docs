@@ -15,7 +15,7 @@ Custom fonts are embedded and preserved when form fields are modified or saved, 
 
 ## When dynamic fonts are used
 Dynamic fonts are currently used in the following scenarios:
-- **Text annotations** — When users enter text annotations that use non standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering. 
+- **Text annotations** — When users enter text annotations that use non-standard fonts, the viewer dynamically loads the required fonts to ensure correct character rendering. 
 - **PDF forms** — When users fill form fields that rely on fonts not included by default, dynamic font loading ensures the entered text is rendered correctly.
 
 ## How Custom Fonts Work
@@ -74,9 +74,9 @@ Custom fonts can be applied to the following form field types:
 - [DropDown](../forms/manage-form-fields/create-form-fields#dropdown)
 
 ## Notes and Limitations
-- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third party PDF viewers.
+- If text rendered using a custom font exceeds the form field’s bounds, the downloaded PDF may render incorrectly in some third-party PDF viewers.
 - The same content displays correctly in the **Syncfusion PDF Viewer**.
 
-## To avoid rendering issues:
+### To avoid rendering issues:
 - Use an appropriate font size that fits within the form field.
 - Increase the size of the form field before saving or downloading the PDF.

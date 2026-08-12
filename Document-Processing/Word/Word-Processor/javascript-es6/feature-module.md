@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Feature module in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Feature module in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Feature Module in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Feature Module in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Feature module 
+control: Feature Module
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in JavaScript (ES6) Document editor control
+# Feature Module in JavaScript (ES6) Document Editor control
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the Document Editor that can be included as needed:
 * **Print** - Prints the document.
-* **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
-* **Selection** - Selects a portion of the document and copy it to the clipboard.
-* **Search** - Searches specific text and navigate between the results.
-* **WordExport** - Exports the document as Word Document (.DOCX) file.
-* **TextExport** - Exports the document as Text Document (.TXT) file.
-* **Editor** - Performs all kind of editing operations.
+* **SfdtExport** - Exports the document as Syncfusion Document Text (.sfdt) file.
+* **Selection** - Selects a portion of the document and copies it to the clipboard.
+* **Search** - Searches specific text and navigates between the results.
+* **WordExport** - Exports the document as Word Document (.docx) file.
+* **TextExport** - Exports the document as Text Document (.txt) file.
+* **Editor** - Performs all kinds of editing operations.
 * **EditorHistory** - Maintains the history of editing operations so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
 
->In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a Document Editor instance.
+N> In addition to injecting the required modules in your application, enable the corresponding properties to extend the functionality for a Document Editor instance.
 Refer to the following table.
 
-| Module | Dependent modules to be injected for extending the functionality of Document Editor in your application | Property to enable the functionality for a Document Editor instance |
+| Module | Dependent modules to be injected for extending the functionality of the Document Editor in your application | Property to enable the functionality for a Document Editor instance |
 |---|---|---|
 |Print|`DocumentEditor.Inject(Print)`|`let documenteditor: DocumentEditor = new DocumentEditor({ enablePrint: true });`|
 |SfdtExport|`DocumentEditor.Inject(SfdtExport)`|`let documenteditor: DocumentEditor = new DocumentEditor({ enableSfdtExport: true });`|
@@ -47,9 +47,9 @@ Refer to the following table.
 |TableOfContentsDialog|`DocumentEditor.Inject(Selection, Editor, TableOfContentsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTableOfContentsDialog: true });`|
 |ListDialog|`DocumentEditor.Inject(Selection, Editor, ListDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableListDialog: true });`|
 |TablePropertiesDialog|`DocumentEditor.Inject(Selection, Editor, TablePropertiesDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTablePropertiesDialog: true });`|
-|CellOptionsDialog|`DocumentEditor.Inject(Selection, Editor, CellOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTablePropertiesDialog: true });`|
+|CellOptionsDialog|`DocumentEditor.Inject(Selection, Editor, CellOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableCellOptionsDialog: true });`|
 |BordersAndShadingDialog|`DocumentEditor.Inject(Selection, Editor, BordersAndShadingDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableBordersAndShadingDialog: true });`|
 |TableOptionsDialog|`DocumentEditor.Inject(Selection, Editor, TableOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTableOptionsDialog: true });`|
-|StylesDialog|`DocumentEditor.Inject(Selection, Editor, StylesDialog,StyleDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true ,enableStylesDialog: true });`|
+|StylesDialog|`DocumentEditor.Inject(Selection, Editor, StylesDialog, StyleDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true, enableStylesDialog: true });`|
 |StyleDialog|`DocumentEditor.Inject(Selection, Editor, StyleDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true });`|
 |BulletsAndNumberingDialog|`DocumentEditor.Inject(Selection, Editor, BulletsAndNumberingDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true });`|
