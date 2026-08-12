@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Events in PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the MVC PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+description: Learn about the events available for Organize Pages in the ASP.NET MVC PDF Viewer, including pageOrganizerSaveAs and pageOrganizerZoomChanged.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -63,8 +63,8 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 Event arguments:
 
-- `previousZoomValue`: The previous zoom value.
-- `currentZoomValue`: The current zoom value.
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -75,8 +75,8 @@ Event arguments:
 
 <script>
     function pageOrganizerZoomChanged(args) {
-        console.log('Previous Zoom Value is' + args.previousZoom);
-        console.log('Current Zoom Value is' + args.currentZoom);
+        console.log('Previous Zoom Value is ' + args.previousZoom);
+        console.log('Current Zoom Value is ' + args.currentZoom);
     }
 </script>
 
@@ -89,8 +89,8 @@ Event arguments:
 
 <script>
     function pageOrganizerZoomChanged(args) {
-        console.log('Previous Zoom Value is' + args.previousZoom);
-        console.log('Current Zoom Value is' + args.currentZoom);
+        console.log('Previous Zoom Value is ' + args.previousZoom);
+        console.log('Current Zoom Value is ' + args.currentZoom);
     }
 </script>
 
