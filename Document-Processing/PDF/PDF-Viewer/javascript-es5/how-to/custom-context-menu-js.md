@@ -272,7 +272,7 @@ The following is the output of the custom context menu with customization.
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following `serviceUrl` in the `index.ts` file:
+N> To set up the server-backed PDF Viewer, add the following `serviceUrl` in the `index.js` file:
 
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';`
 

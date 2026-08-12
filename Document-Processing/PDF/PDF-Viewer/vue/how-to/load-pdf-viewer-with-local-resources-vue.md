@@ -40,7 +40,7 @@ public/
     └── pdfsuccinctly.pdf
 ```
 
-### Step 3: Update the documentPath and resourcesUrl
+### Step 3: Update the documentPath and resourceUrl
 
 Configure the PDF Viewer to use local paths as shown below.
 
@@ -70,7 +70,7 @@ The following code summarizes the complete setup for loading the PDF Viewer with
 
 <template>
   <ejs-pdfviewer
-    :resourcesUrl="resourceUrl"
+    :resourceUrl="resourceUrl"
     :documentPath="documentPath">
   </ejs-pdfviewer>
 </template>

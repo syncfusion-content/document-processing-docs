@@ -16,7 +16,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ![Browser print dialog from PDF Viewer](../../javascript-es6/images/print.gif)
 
-## Enable or Disable Print in Vue PDF Viewer
+## Enable or Disable print in Vue PDF Viewer
 
 The Syncfusion Vue PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the [`enablePrint`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableprint) property (`true` enables printing; `false` disables it).
 
@@ -174,12 +174,12 @@ export default {
 
 ## Key capabilities
 
-- Enable or disable printing with the [`enablePrint`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableprint) property
+- Enable or disable printing with the [`enablePrint`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableprint) property.
 - Start printing from UI (toolbar Print) or programmatically using [`print.print()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/print#print-1).
-- Control output quality with the [`printScaleFactor`](./print-quality) property (0.5–5)
-- Auto‑rotate pages during print using [`enablePrintRotation`](./enable-print-rotation)
-- Choose where printing happens with [`printMode`](./print-modes) (Default or NewWindow)
-- Track the life cycle with [`printStart` and `printEnd` events](./events)
+- Control output quality with the [`printScaleFactor`](./print-quality) property (0.5–5).
+- Auto‑rotate pages during print using [`enablePrintRotation`](./enable-print-rotation).
+- Choose where printing happens with [`printMode`](./print-modes) (Default or NewWindow).
+- Track the life cycle with [`printStart` and `printEnd` events](./events).
 
 ## Troubleshooting
 
@@ -188,7 +188,7 @@ export default {
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See Also
+## See also
 
 - [Print quality](./print-quality)
 - [Enable print rotation](./enable-print-rotation)

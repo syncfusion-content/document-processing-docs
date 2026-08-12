@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Rectangle Annotation via Text Search | Syncfusion
+title: Add Rectangle Annotations via Text Search | Syncfusion
 description: Learn to add rectangle annotations using text search bounds in the Angular PDF Viewer component, including initialization and search controls.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Add Rectangle Annotations via Text Search in Angular PDF Viewer
 
-A concise guide that demonstrates how to add rectangle annotations at highlighted text search results in the Angular PDF Viewer. The guide explains where to wire the callback, required services, and quick troubleshooting steps.
+Learn how to add rectangle annotations at highlighted text search results in the Angular PDF Viewer by wiring a callback to the `textSearchHighlight` event.
 
 ## Steps to add rectangle annotations on search result highlight
 
