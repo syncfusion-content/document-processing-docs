@@ -24,7 +24,7 @@ Use the Vue PDF Viewer’s [locale](https://ej2.syncfusion.com/vue/documentation
 
 ## Quick start (set German)
 1. **Load translations** with `L10n.load` at app start (only include the keys you want to change).
-2. **Set the culture** by passing `locale` value to `<PdfViewerComponent/>`.
+2. **Set the culture** by passing the `locale` value to `<PdfViewerComponent/>`.
 3. **Render the viewer** as usual. Missing keys will automatically fall back to `en-US`.
 
 {% tabs %}
@@ -99,7 +99,7 @@ export default {
 L10n.load({
   'de': {
     'PdfViewer': {
-              'PdfViewer': 'PDF-Viewer',
+        'PdfViewer': 'PDF-Viewer',
         'Cancel': 'Abbrechen',
         'Download file': 'Datei herunterladen',
         'Download': 'Herunterladen',

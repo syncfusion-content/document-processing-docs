@@ -149,7 +149,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Highlight context|Highlight|
 |Underline context|Underline|
 |Strikethrough context|Strike through|
-|Server error|Web-service is not listening. PDF Viewer depends on web-service for all it's features. Please start the web service to continue.|
+|Server error|Web-service is not listening. PDF Viewer depends on web-service for all its features. Please start the web service to continue.|
 |Open text|Open|
 |First text|First Page|
 |Previous text|Previous Page|
@@ -189,15 +189,15 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Add circle|Add Circle|
 |Add polygon|Add Polygon|
 |Add Comments|Add Comments|
-|Comments| Comments|
+|Comments|Comments|
 |No Comments Yet|No Comments Yet|
-|Accepted| Accepted|
-|Completed| Completed|
-|Cancelled| Cancelled|
-|Rejected| Rejected|
+|Accepted|Accepted|
+|Completed|Completed|
+|Cancelled|Cancelled|
+|Rejected|Rejected|
 |Leader Length|Leader Length|
 |Scale Ratio|Scale Ratio|
-|Calibrate| Calibrate|
+|Calibrate|Calibrate|
 |Calibrate Distance|Calibrate Distance|
 |Calibrate Perimeter|Calibrate Perimeter|
 |Calibrate Area|Calibrate Area|
@@ -234,7 +234,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Text Align|Text Align|
 |Text Properties|Text Properties|
 |Draw Signature|Draw Signature|
-|Create| Create|
+|Create|Create|
 |Font family|Font Family|
 |Font size|Font Size|
 |Free Text|Free Text|

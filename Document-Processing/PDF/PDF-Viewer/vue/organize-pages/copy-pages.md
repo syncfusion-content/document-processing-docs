@@ -33,21 +33,17 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 3. Duplicate selected pages
 
-	- Click the **Copy Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails.
+	- Click the **Copy Pages** button in the Organize Pages toolbar; duplicated pages are inserted to the right of the selected thumbnails. When multiple thumbnails are selected, every selected page is duplicated in order.
 
-4. Duplicate multiple pages at once
+	![Copy pages in organize view](../images/organize-copy.png)
 
-	- When multiple thumbnails are selected, the Copy action duplicates every selected page in order.
+4. Undo or redo changes
 
-	![Copy pages in organize view](../../react/images/organize-copy.png)
+	- Use **Undo** (Ctrl+Z) or **Redo** (Ctrl+Y) to revert or reapply recent changes.
 
-5. Undo or redo changes
+	![Undo and redo Organize Pages toolbar](../images/undo-redo.png)
 
-	- Use **Undo** (Ctrl+Z) or **Redo** to revert or reapply recent changes.
-
-	![Undo and redo Organize Pages toolbar](../../react/images/undo-redo.png)
-
-6. Persist duplicated pages
+5. Persist duplicated pages
 
 	- Click **Save** or **Save As** to include duplicated pages in the saved/downloaded PDF.
 
@@ -61,7 +57,7 @@ To enable or disable the **Copy Pages** button in the Organize Pages toolbar, up
 
 ## Code snippet
 
-To enable the copy pages feature, use the following code snippet:
+To enable the copy pages feature, use the following code snippet. The `canCopy` property defaults to `true`; set it to `false` to disable the **Copy Pages** button.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

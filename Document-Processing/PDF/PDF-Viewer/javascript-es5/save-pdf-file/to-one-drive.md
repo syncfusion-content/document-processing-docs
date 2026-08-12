@@ -113,7 +113,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 
