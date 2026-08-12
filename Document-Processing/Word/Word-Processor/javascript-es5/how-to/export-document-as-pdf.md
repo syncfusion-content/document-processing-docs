@@ -14,7 +14,7 @@ In this article, we are going to see how to export the document as PDF. You can 
 
 ## Export the Document as PDF on the Client Side
 
-Use the [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) at the application level to export the document as PDF using the [`exportAsImage`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#exportasimage) API. Here, all pages will be converted to images and inserted as PDF pages (works like print as PDF).
+Use the [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) at the application level to export the document as PDF using the [`exportAsImage`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportasimage) API. Here, all pages will be converted to images and inserted as PDF pages (works like print as PDF).
 
 N> 1. The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
 N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
@@ -73,7 +73,7 @@ With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/d
 
 The following steps illustrate how to convert the document to PDF:
 
-* Using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#serialize) API, convert the document to SFDT and send it to the server side.
+* Using the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#serialize) API, convert the document to SFDT and send it to the server side.
 
 The following example code illustrates how to convert the document to SFDT and pass it to the server side.
 
