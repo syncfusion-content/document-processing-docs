@@ -213,7 +213,6 @@ using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
             }
         }
     }
-}
 {% endhighlight %}
 
 {% endtabs %}
