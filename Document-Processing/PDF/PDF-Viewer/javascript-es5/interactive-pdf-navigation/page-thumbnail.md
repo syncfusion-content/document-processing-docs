@@ -16,7 +16,6 @@ Use the following code snippet to enable or disable the thumbnail pane.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
-
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification,
 ej.pdfviewer.Navigation, ej.pdfviewer.Annotation, ej.pdfviewer.LinkAnnotation,
 ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection);
@@ -47,8 +46,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ![Page thumbnails pane in PDF Viewer](../images/thumbnail.png)
 
-
 ## See also
 
 * [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/toolbar)
-* [Feature Modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module)
+* [Feature modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/feature-module)

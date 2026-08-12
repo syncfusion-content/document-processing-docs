@@ -123,7 +123,7 @@ Remove redaction annotations using the toolbar or keyboard shortcuts:
 
 ## Redact Entire Pages
 
-The viewer supports redacting entire pages that contain sensitive information. Use the built-in dialog to select specific pages, page ranges, or all pages, or invoke the same behavior programmatically.
+The viewer supports redacting entire pages that contain sensitive information. Use the built-in dialog to select specific pages, page ranges, or all pages, or invoke the same behavior programmatically using the `addPageRedactions` method.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 

@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language in the TypeScript PDF Viewer
+# Set a new language in the JavaScript ES6 PDF Viewer
 
 Localize the PDF Viewer UI by:
 - Registering culture-specific strings with `L10n.load` at the application level
-- Setting the [`locale`]((https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale)) property on the `PdfViewer` instance to the desired culture
+- Setting the [`locale`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#locale) property on the `PdfViewer` instance to the desired culture
 
 ![German Locale](../images/locale-de.gif)
 
