@@ -1,4 +1,4 @@
----
+﻿---
 title: Frequently Asked Question for PowerPoint Presentation |Syncfusion
 description: This section illustrates about frequently asked questions in various options by using Essential<sup>&reg;</sup> Syncfusion<sup>&reg;</sup> Presentation library.
 platform: document-processing

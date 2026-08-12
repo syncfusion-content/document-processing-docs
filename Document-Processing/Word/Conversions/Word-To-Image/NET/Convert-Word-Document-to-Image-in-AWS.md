@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert Word to Image in AWS | Syncfusion
 description: Learn how to convert a Word document to image in Amazon Web Services (AWS) using Syncfusion .NET Core Word (DocIO) library in C#.
 platform: document-processing
@@ -30,12 +30,12 @@ NuGet package name<br/></th></tr></thead>
 <td>
 {{'[AWS Lambda](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-aws-lambda)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}} <br/>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)' | markdownify}} <br/>
 </td></tr>
 <tr>
 <td>
 {{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/convert-word-document-to-image-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}} <br/>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)' | markdownify}} <br/>
 </td></tr>
 </table>

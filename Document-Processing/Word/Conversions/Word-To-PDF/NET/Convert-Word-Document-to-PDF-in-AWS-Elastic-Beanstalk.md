@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert Word to PDF in AWS Elastic Beanstalk | Syncfusion
 description: Convert Word to PDF without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
 platform: document-processing
@@ -26,11 +26,11 @@ Step 1: Create a new **ASP.NET Core Web App (Model-View-Controller)** project ta
 Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
+* [SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)
 * [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) (required for v16.2.0.x and later)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
-![Install SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1 NuGet Package](AWS_Images/Elastic_Beanstalk_Images/Nuget-Convert-WordtoPDF.png)
+![Install SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1 NuGet Package](AWS_Images/Elastic_Beanstalk_Images/Nuget-Convert-WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add a **Syncfusion.Licensing** NuGet package reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering a Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
