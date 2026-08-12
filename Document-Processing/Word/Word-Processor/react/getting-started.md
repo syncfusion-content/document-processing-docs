@@ -110,8 +110,17 @@ The output will appear as follows:
 
 ## Prerequisites
 
+{% tabs %}
+{% highlight markdown tabtitle="TypeScript" %}
 * [System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
+{% endhighlight %}
+
+{% highlight markdown tabtitle="JavaScript" %}
+* [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a new React application
 
@@ -241,15 +250,15 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React DOCX Editor](./images/react_getting_started.png)
 
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 You can also explore the DOCX Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Online Demo
 

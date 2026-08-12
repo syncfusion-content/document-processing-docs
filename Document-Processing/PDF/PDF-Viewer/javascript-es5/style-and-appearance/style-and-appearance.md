@@ -16,26 +16,28 @@ Override the default CSS classes to tailor the Syncfusion JavaScript PDF Viewer 
 
 Use the following CSS to adjust the border of the PDF Viewer root element. Prefer CSS variables for color values so themes can be changed centrally.
 
-```
+```css
 .e-pdfviewer{
-    border: 3px solid rgb(119, 249, 238);
+  border: 3px solid rgb(119, 249, 238);
 }
 ```
+
 ## Customize the PDF Viewer container
 
 Use the following CSS to update the background color of the PDF Viewer container. Use semantic variables for accessible theming.
 
-```
+```css
 /* To specify background color*/
 .e-pv-viewer-container  {
-    background-color: rgb(119, 249, 238);
+  background-color: rgb(119, 249, 238);
 }
 ```
+
 ## Customize the PDF Viewer page container
 
 Use the following CSS to update the page container background within the PDF Viewer. If a distinct selector exists for page elements (for example, `.e-pv-page-container`), target that selector instead.
 
-```
+```css
 /* To specify background color*/
 .e-pv-viewer-container  {
         background-color: rgb(119, 249, 238);
@@ -46,27 +48,26 @@ Use the following CSS to update the page container background within the PDF Vie
 
 Use the following CSS to adjust the bookmark icon color in the PDF Viewer toolbar. Use `rem` for hover and base sizes to remain responsive.
 
-```
+```css
 /* To specify color of the bookmark */
-  .e-pdfviewer .e-pv-bookmark-icon{
-    color: rgb(24, 182, 231);
-  }
-  .e-pdfviewer .e-pv-bookmark-icon:hover{
-    color: rgb(226, 76, 11);
-  }
-
+.e-pdfviewer .e-pv-bookmark-icon{
+  color: rgb(24, 182, 231);
+}
+.e-pdfviewer .e-pv-bookmark-icon:hover{
+  color: rgb(226, 76, 11);
+}
 ```
+
 ## Customize the thumbnail icon
 
 Use the following CSS to adjust the thumbnail icon color in the PDF Viewer toolbar.
 
-```
-/* To specify color of the bookmark */
-  .e-pdfviewer .e-pv-thumbnail-view-icon{
-    color: rgb(24, 182, 231);
-  }
-  .e-pdfviewer .e-pv-thumbnail-view-icon:hover{
-    color: rgb(226, 76, 11);
-  }
-
+```css
+/* To specify color of the thumbnail */
+.e-pdfviewer .e-pv-thumbnail-view-icon{
+  color: rgb(24, 182, 231);
+}
+.e-pdfviewer .e-pv-thumbnail-view-icon:hover{
+  color: rgb(226, 76, 11);
+}
 ```

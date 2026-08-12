@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Azure Active Directory in TypeScript PDF Viewer | Syncfusion
+title: View PDFs from Azure AD in TypeScript PDF Viewer | Syncfusion
 description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory
+# View PDFs Using Azure Active Directory Authentication
 
 ### Overview
 
@@ -59,7 +59,7 @@ N> Avoid embedding client secrets directly in source control or client-side code
 2. **Assign Role**:
    - Assign the **Storage Blob Data Contributor** role to your registered application.
    - In the **Assign access to** dropdown, select **User, group, or service principal**.
-   - Click on **Select members** and search for your registered application by name or client ID.
+   - Click **Select members** and search for your registered application by name or client ID.
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 

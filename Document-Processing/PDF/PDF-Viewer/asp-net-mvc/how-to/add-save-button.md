@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Add a Save button to the built-in toolbar
+# Add a Save action to the built-in toolbar
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
@@ -42,7 +42,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
         }
         pdfViewer.toolbarSettings = {
             showTooltip: true,
-            toolbarItems: ['OpenOption', toolItem1'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+            toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
         };
 
     };

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Include authorization token in Angular PDF Viewer component | Syncfusion
+title: Include authorization token in Angular | Syncfusion
 description: Learn here all about Include authorization token in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Include authorization token
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Include the authorization token
+# Include the authorization token in Angular PDF Viewer component
 
 The PDF Viewer supports adding an authorization token to every AJAX request by configuring the `ajaxRequestSettings.ajaxHeaders` property. Set the header once and the library includes it in all requests initiated by the viewer.
 
-The following steps are used to include the authorization token to the PDF viewer control.
+The following steps show how to include the authorization token in the PDF Viewer control.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create simple PDF Viewer sample in Angular.
 

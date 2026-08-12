@@ -80,7 +80,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Form designer UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../images/FormDesigner.gif)
 
@@ -197,7 +197,7 @@ Move, resize, and edit an existing form field directly in the PDF Viewer using t
 
 - Resize a field using the handles displayed on the field boundary.
 
-![Moving and resizing a form field](..//images/move-resize-forms.gif)
+![Moving and resizing a form field](../images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows modification of form field and widget annotation properties. Changes are reflected immediately in the viewer and saved when the properties popover is closed.
 For more information, see Editing Form Fields
