@@ -150,7 +150,7 @@ sourcePptx.Close()
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Split-PowerPoint-presentation/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Sections/Split-PowerPoint-by-Sections/.NET).
 
 ## Printing a PowerPoint Presentation
 
