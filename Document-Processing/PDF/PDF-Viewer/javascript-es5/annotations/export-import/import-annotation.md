@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import annotations in JavaScript PDF Viewer | Syncfusion
+title: Import annotations in JavaScript PDF Viewer ES5 | Syncfusion
 description: Learn how to import annotations in Syncfusion JavaScript PDF Viewer using UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import annotations in JavaScript PDF Viewer
+# Import annotations in PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 
@@ -18,7 +18,7 @@ The Comments panel provides import options in its overflow menu:
 - Import annotations from JSON file
 - Import annotations from XFDF file
 
-Steps:
+Follow the steps to import annotations:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose the appropriate import option and select the file.
