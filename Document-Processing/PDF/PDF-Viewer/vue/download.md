@@ -2,7 +2,7 @@
 layout: post
 title: Download in Vue PDF Viewer | Syncfusion
 description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion Vue PDF Viewer, including download events and base64 handling.
-control: Download
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -171,4 +171,4 @@ export default {
 ## See also
 
 * [Toolbar items](./toolbar)
-* [Feature Modules](./feature-module)
+* [Feature modules](./feature-module)

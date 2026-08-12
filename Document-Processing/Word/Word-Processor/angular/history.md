@@ -56,7 +56,7 @@ To redo the last undone action, refer to the following code example.
 this.documentEditor.editorHistory.redo();
 ```
 
-## Stack Size
+## Stack size
 
 History of editing actions is maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
@@ -65,7 +65,7 @@ this.documentEditor.editorHistory.undoLimit = 400;
 this.documentEditor.editorHistory.redoLimit = 400;
 ```
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Keyboard shortcuts](./keyboard-shortcut)

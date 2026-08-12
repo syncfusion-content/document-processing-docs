@@ -187,7 +187,7 @@ export default {
       const array = viewer.extractPages('1,2');
       //Load extracted Pages
       viewer.load(array,'');
-      //Print Base64 to ensure pages are extracted
+      //Log the extracted pages (Uint8Array) to verify
       console.log(array);
     }
   },

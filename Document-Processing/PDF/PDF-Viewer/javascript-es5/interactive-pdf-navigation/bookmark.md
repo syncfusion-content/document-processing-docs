@@ -46,19 +46,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ![Bookmarks panel](../images/bookmark.png)
 
-![Bookmarks panel and navigation](../images/bookmark.png)
-
 To navigate to a bookmark programmatically, use the **goToBookmark** method. The method throws an error if the specified bookmark does not exist in the document.
 
 Example usage is shown below; ensure the viewer instance variable used in these snippets is the same across your integration (for example `pdfviewer`).
 
 ```
-  <button id="gotobookmark">Specfic Page</button>
+  <button id="gotobookmark">Specific Page</button>
 ```
 
 ```js
 document.getElementById('gotobookmark').addEventListener('click', () => {
-  viewer.bookmark.goToBookmark(x, y);
+  pdfviewer.bookmark.goToBookmark(x, y);
 });
 ```
 
@@ -76,7 +74,7 @@ Example usage is shown below.
 
 ```js
 document.getElementById('getBookmarks').addEventListener('click', () => {
-  var getBookmarks = viewer.bookmark.getBookmarks();
+  var getBookmarks = pdfviewer.bookmark.getBookmarks();
   console.log(getBookmarks)
 });
 ```

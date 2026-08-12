@@ -143,7 +143,7 @@ documenteditor.selection.characterFormat.fontSize= 32;
 
 ## Color
 
-### Change Font Color by UI Option
+### Change font color by UI option
 
 In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
@@ -154,7 +154,7 @@ This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
-### Change Font Color by Code
+### Change font color by code
 
 The color of selected text can be retrieved or set using the following code.
 
@@ -399,11 +399,11 @@ export class AppComponent {
   }
 }
 ```
-## Online Demo
+## Online demo
 
 Explore how to apply text formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/character-formatting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Font dialog](./dialog#font-dialog)

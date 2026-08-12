@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion PDF Viewer control TypeScript
+# Accessibility in Syncfusion TypeScript PDF Viewer
 
 The PDF Viewer complies with widely adopted accessibility standards and guidance, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and WAI-ARIA roles. The following table summarizes the component's accessibility coverage.
 The accessibility compliance for the PDF Viewer component is summarized below.
@@ -80,9 +80,9 @@ The PDF Viewer follows WAI-ARIA [keyboard interaction](https://www.w3.org/WAI/AR
 |||**Shortcut for Text Search**|
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|
-|<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation of the form field|
-|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation or form field|
+| <kbd>CONTROL + C</kbd> | <kbd>COMMAND + C</kbd> | Copy the selected text or annotation or form field |
+| <kbd>CONTROL + X</kbd> | <kbd>COMMAND + X</kbd> |Cut the selected text or annotation or form field|
+|<kbd>CONTROL + V</kbd> | <kbd>COMMAND + V</kbd> |Paste the selected text or annotation or form field|
 |||**Shortcuts for the general operation**|
 | <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
 |<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Redo the action|
