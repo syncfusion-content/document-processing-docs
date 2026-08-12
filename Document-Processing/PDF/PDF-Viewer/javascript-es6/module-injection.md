@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Module Injection for TypeScript PDF Viewer | Syncfusion
-description: Syncfusion Typescript PDF Viewer to enable optional features like toolbar, navigation, annotations, search.
+description: Syncfusion TypeScript PDF Viewer to enable optional features like toolbar, navigation, annotations, search.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
