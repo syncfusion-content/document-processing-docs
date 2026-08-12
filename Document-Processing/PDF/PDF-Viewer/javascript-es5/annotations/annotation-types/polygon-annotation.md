@@ -18,10 +18,11 @@ Polygon is a shape annotation used to outline irregular regions, highlight areas
 
 ### Add polygon annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation** dropdown.
-- Choose **Polygon**, then draw on the page.
+Use the annotation toolbar to add a polygon annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Shape Annotation** dropdown.
+3. Choose **Polygon**, then draw on the page.
 
 N> When in pan mode, selecting shape annotations switches the viewer to text select mode.
 
@@ -220,7 +221,9 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ### Edit an existing polygon annotation programmatically
 
-Use editAnnotation on items from annotationCollection.
+To modify an existing polygon annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editPolygonAnnotation">Edit Polygon annotation programmatically</button>
@@ -348,11 +351,11 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `PolygonSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Polygon settings.
+Refer to the following code snippet to set the properties while adding a Polygon annotation.
 
 ```html
 <button id="Polygon">Add Polygon</button>
@@ -387,13 +390,13 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#ff0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#ff0000'
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -422,9 +425,9 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#ff0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#ff0000'
     });
 });
 {% endhighlight %}
