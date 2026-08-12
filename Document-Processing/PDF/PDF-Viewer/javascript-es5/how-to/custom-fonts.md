@@ -63,7 +63,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 // Create viewer instance
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-  documentPath: window.location.origin + '/resouces/pdf-succinctly.pdf',
+  documentPath: window.location.origin + '/resources/pdf-succinctly.pdf',
   resourceUrl: window.location.origin + '/resources/ej2-pdfviewer-lib',
   customFonts: [
     'simsun.ttc',

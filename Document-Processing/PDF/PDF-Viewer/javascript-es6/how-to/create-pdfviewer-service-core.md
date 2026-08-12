@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create PDF Viewer service in TypeScript PDF Viewer | Syncfusion
-description: Learn how to create an ASP.NET Core Web API service for the TypeScript PDF Viewer to handle server-side processing for rendering, text extraction, thumbnails, and more.
+description: Learn how to create an ASP.NET Core Web API service for the TypeScript PDF Viewer to support rendering, text extraction, thumbnails, and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,7 @@ Follow these steps to create the PDF Viewer service
 
 **Step 1:**  In Visual Studio, choose File > New > Project to create a new application.
 
-![Visual Studio: New Project menu](./images/Start.png)
+![Visual Studio New Project menu](./images/Start.png)
 
 **Step 2:** Select the ASP.NET Core Web Application template and click **Next**.
 
@@ -40,7 +40,7 @@ Follow these steps to create the PDF Viewer service
 **Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency using the NuGet Package Manager.
 
 Open the NuGet Package Manager and install the `Syncfusion.EJ2.PdfViewer.AspNet.Core` package.
-![Alt text](./images/Nugetpackage.png)
+![Install the Syncfusion.EJ2.PdfViewer.AspNet.Core NuGet package](./images/Nugetpackage.png)
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 

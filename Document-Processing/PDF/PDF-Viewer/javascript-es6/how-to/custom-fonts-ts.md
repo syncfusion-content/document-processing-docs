@@ -60,7 +60,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-N>Ensure that the font file names match the specified font names.
+N> Ensure that the font file names match the specified font names.
 
 ## Supported Form Fields
 Custom fonts can be applied to the following form field types:

@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text option in the JavaScript PDF Viewer
+# Enable Text Extraction in Syncfusion JavaScript PDF Viewer
 
 The `extractTextOption` property controls the amount of text and layout information returned by the viewer. Adjusting this value helps balance memory usage and the level of detail required for downstream processing. The viewer exposes four options:
 
@@ -49,8 +49,8 @@ N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOptio
 
 ## See Also
 
-[Text Search Features](../text-search/text-search-features)
-[Find Text](../text-search/find-text)
-[Text Search Events](../text-search/text-search-events)
-[Extract Text](../how-to/extract-text-ts.md)
-[Extract Text Completed](./extract-text-completed-ts)
+- [Text Search Features](../text-search/text-search-features)
+- [Find Text](../text-search/find-text)
+- [Text Search Events](../text-search/text-search-events)
+- [Extract Text](../how-to/extract-text-ts.md)
+- [Extract Text Completed](./extract-text-completed-ts.md)
