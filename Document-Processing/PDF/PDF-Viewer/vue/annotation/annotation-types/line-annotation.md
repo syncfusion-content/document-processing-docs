@@ -18,8 +18,8 @@ Line annotations allow users to draw straight connectors or callouts on PDFs for
 
 To enable Line annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -153,7 +153,7 @@ export default {
 
 ### Add Line Programmatically
 
-You can add line annotations using the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API.
+You can add line annotations using the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -201,7 +201,7 @@ export default {
 
 ## Customize Line Appearance
 
-Configure default line appearance using the [`lineSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#linesettings) property.
+Configure default line appearance using the [`lineSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#linesettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -324,7 +324,7 @@ Use the [**Comments panel**](../comments) to add, view, and reply to threaded di
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual line annotations using the [`lineSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#linesettings) API or by passing per‑annotation values during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Set properties for individual line annotations using the [`lineSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#linesettings) API or by passing per‑annotation values during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -392,7 +392,7 @@ export default {
 
 ## Disable Line Annotation
 
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableshapeannotation) property.
+Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableshapeannotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

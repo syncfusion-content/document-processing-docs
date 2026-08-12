@@ -17,8 +17,8 @@ Rectangle annotations let users highlight regions, group content, or draw callou
 
 To enable Rectangle annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -147,7 +147,7 @@ export default {
 {% endtabs %}
 
 ### Add Rectangle Programmatically
-Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API to draw a rectangle at a specific location.
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API to draw a rectangle at a specific location.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -192,7 +192,7 @@ export default {
 {% endtabs %}
 
 ## Customize Rectangle Appearance
-Configure default rectangle appearance (fill color, stroke color, thickness, opacity) using the [`rectangleSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#rectanglesettings) property.
+Configure default rectangle appearance (fill color, stroke color, thickness, opacity) using the [`rectangleSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#rectanglesettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -312,7 +312,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to rectangle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation
-Set properties for individual rectangle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Set properties for individual rectangle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -375,7 +375,7 @@ export default {
 {% endtabs %}
 
 ## Disable Rectangle Annotation
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableshapeannotation) property.
+Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableshapeannotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
