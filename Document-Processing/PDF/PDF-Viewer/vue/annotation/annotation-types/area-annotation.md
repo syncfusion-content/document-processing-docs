@@ -17,8 +17,8 @@ Area is a measurement annotation used to calculate the surface of a closed regio
 
 To enable Area annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -147,7 +147,7 @@ export default {
 {% endtabs %}
 
 ### Add Area Programmatically
-Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API to draw an area by providing **vertexPoints** for a closed region.
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API to draw an area by providing **vertexPoints** for a closed region.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -196,7 +196,7 @@ export default {
 {% endtabs %}
 
 ## Customize Area Appearance
-Configure default properties using the [`areaSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`areaSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -307,7 +307,7 @@ export default {
 Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
-Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#areasettings) property.
+Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#areasettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -347,7 +347,7 @@ export default {
 {% endtabs %}
 
 ## Set Properties While Adding Individual Annotation
-Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -406,7 +406,7 @@ export default {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#measurementsettings).
+Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#measurementsettings).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

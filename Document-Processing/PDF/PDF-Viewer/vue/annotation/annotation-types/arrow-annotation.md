@@ -17,8 +17,8 @@ Arrow annotations let users point, direct attention, or indicate flow on PDFs—
 
 To enable Arrow annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -146,7 +146,7 @@ export default {
 {% endtabs %}
 
 ### Add Arrow Programmatically
-Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API to draw an arrow at a specific location (defined by two **vertexPoints**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API to draw an arrow at a specific location (defined by two **vertexPoints**).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -193,7 +193,7 @@ export default {
 {% endtabs %}
 
 ## Customize Arrow Appearance
-Configure default arrow appearance (fill color, stroke color, thickness, opacity) using the [`arrowSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#arrowsettings) property.
+Configure default arrow appearance (fill color, stroke color, thickness, opacity) using the [`arrowSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#arrowsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -316,7 +316,7 @@ Use the [**Comments panel**](../comments) to add, view, and reply to threaded di
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual arrow annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Set properties for individual arrow annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -386,7 +386,7 @@ export default {
 
 ## Disable Arrow Annotation
 
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableshapeannotation) property.
+Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableshapeannotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

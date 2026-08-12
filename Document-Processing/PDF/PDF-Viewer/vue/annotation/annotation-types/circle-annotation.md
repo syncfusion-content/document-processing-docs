@@ -17,8 +17,8 @@ Circle annotations let users highlight circular regions or draw emphasis bubbles
 
 To enable Circle annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -150,7 +150,7 @@ export default {
 {% endtabs %}
 
 ### Add Circle Programmatically
-Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API to draw a circle (ellipse) at a specific location.
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API to draw a circle (ellipse) at a specific location.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -195,7 +195,7 @@ export default {
 {% endtabs %}
 
 ## Customize Circle Appearance
-Configure default circle appearance (fill color, stroke color, thickness, opacity) using the [`circleSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#circlesettings) property.
+Configure default circle appearance (fill color, stroke color, thickness, opacity) using the [`circleSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#circlesettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -316,7 +316,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to circle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation
-Set properties for individual circle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Set properties for individual circle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -379,7 +379,7 @@ export default {
 {% endtabs %}
 
 ## Disable Circle Annotation
-Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableshapeannotation) property.
+Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableshapeannotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

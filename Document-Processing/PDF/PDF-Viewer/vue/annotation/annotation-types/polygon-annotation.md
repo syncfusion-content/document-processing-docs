@@ -17,8 +17,8 @@ Polygon annotations allow users to outline irregular regions, draw custom shapes
 
 To enable Polygon annotations, inject the following modules into the Vue PDF Viewer:
 
-- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#annotation)
-- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#toolbar)
+- [**Annotation**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotation)
+- [**Toolbar**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#toolbar)
 
 
 {% tabs %}
@@ -152,7 +152,7 @@ export default {
 {% endtabs %}
 
 ### Add Polygon Programmatically
-Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation) API to draw a polygon by specifying multiple `vertexPoints`.
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation) API to draw a polygon by specifying multiple `vertexPoints`.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -200,7 +200,7 @@ export default {
 {% endtabs %}
 
 ## Customize Polygon Appearance
-Configure default polygon appearance (fill color, stroke color, thickness, opacity) using the [`polygonSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#polygonsettings) property.
+Configure default polygon appearance (fill color, stroke color, thickness, opacity) using the [`polygonSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#polygonsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -322,7 +322,7 @@ See [**Delete Annotation**](../remove-annotations) for full behavior and workflo
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to polygon annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation
-Configure per-annotation appearance while adding a polygon using [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#addannotation).
+Configure per-annotation appearance while adding a polygon using [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#addannotation).
 
 
 {% tabs %}
@@ -394,7 +394,7 @@ export default {
 {% endtabs %}
 
 ## Disable Shape Annotation
-Disable shape annotations (Polygon, Line, Rectangle, Circle, Arrow) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableshapeannotation) property.
+Disable shape annotations (Polygon, Line, Rectangle, Circle, Arrow) using the [`enableShapeAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enableshapeannotation) property.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
