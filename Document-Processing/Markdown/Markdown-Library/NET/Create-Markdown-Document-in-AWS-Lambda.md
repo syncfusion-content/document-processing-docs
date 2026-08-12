@@ -131,7 +131,7 @@ return File(stream, "text/markdown", "Sample.md");
 {% endtabs %}
 
 Step 8: Right-click the project and select **Publish to AWS Lambda**.
-![Publish to AWS Lambda](AWS_Images/Lambda_Images/Publish-WordtoPDF.png)
+![Publish to AWS Lambda](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-Markdown-Document.png)
 
 Step 9: Create a new AWS profile in the Upload Lambda Function Window. To create a profile, you need your AWS access key ID, secret access key, and region. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-WordtoPDF.png)

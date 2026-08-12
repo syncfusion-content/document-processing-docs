@@ -293,7 +293,7 @@ gcloud app deploy --version v0
 {% endhighlight %}
 {% endtabs %}
 
-![Deploy the application to App Engine](GCP_Images/Docker-File-Create-Markdown-Document.png)
+![Deploy the application to App Engine](GCP_Images/Deploy-Docker-File-Create-Markdown-Document.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
 ![Application running in the browser](GCP_Images/Browser-Create-Markdown-Document.png)
