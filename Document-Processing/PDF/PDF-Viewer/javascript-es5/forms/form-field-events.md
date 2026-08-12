@@ -49,7 +49,7 @@ Form field events can be used to:
 You can wire up form field events on the PDF Viewer instance to execute custom logic when specific actions occur.
 
 ```js
-var pdfviewer = new PdfViewer({
+var pdfviewer = new ej.pdfviewer.PdfViewer({
   // Basic examples for common form-field events
   formFieldAdd: function (args) { console.log('formFieldAdd', args); },
   formFieldRemove: function (args) { console.log('formFieldRemove', args); },
