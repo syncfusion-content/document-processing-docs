@@ -261,7 +261,7 @@ You can programmatically switch between Ink drawing mode and Eraser mode for a s
 - **Partial erasing**: You can erase any portion of an ink stroke without affecting other strokes.
 - **Real-time erasing**: Erased content is immediately removed as the eraser moves across the stroke.
 - **Undo/Redo support**: Eraser actions can be undone and redone using the toolbar buttons or keyboard shortcuts (Ctrl+Z, Ctrl+Y).
-- **Size adjust-ability**: The eraser size can be changed at any time without exiting eraser mode.
+- **Adjustable size**: The eraser size can be changed at any time without exiting eraser mode.
 - **Mouse and touch input**: The eraser works with mouse, stylus, and touch input on supported devices.
 
 ### Programmatic control behavior

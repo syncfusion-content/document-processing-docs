@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Cloud Storage
+# Save PDF files to Google Cloud Storage in Vue
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
@@ -33,7 +33,7 @@ using Google.Apis.Auth.OAuth2;
 4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
-// Private readonly object _storageClient
+// Storage client for Google Cloud Storage
 private readonly StorageClient _storageClient;
 
 private IConfiguration _configuration;

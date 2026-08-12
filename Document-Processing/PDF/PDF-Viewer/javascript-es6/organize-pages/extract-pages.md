@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Extract Pages in TypeScript PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Extract Pages in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn how to extract pages from a PDF in the JavaScript (ES6) PDF Viewer using the Organize Pages UI and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in TypeScript PDF Viewer
+# Extract pages in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 
@@ -61,7 +61,7 @@ You can control the Extract Pages experience via settings and invoke extraction 
 
 Use the `canExtractPages` API to enable or disable the Extract Pages option. When set to `false`, the Extract Pages tool is disabled in the toolbar. The default value is `true`.
 
-Use the following code snippet to enable or disable the Extract Pages option:
+Use the following code snippets to enable or disable the Extract Pages option:
 
 ```ts
 // Enable the Extract Pages Tool

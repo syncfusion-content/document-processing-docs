@@ -59,7 +59,7 @@ Dark themes provide a better viewing experience in low-light environments. The A
 
 N> Update the viewer container background color when switching to dark theme for visual consistency.
 
-### How-to: Toggle Dark Mode
+### Toggle Dark Mode
 
 You can dynamically change the theme by swapping the linked stylesheet.
 
