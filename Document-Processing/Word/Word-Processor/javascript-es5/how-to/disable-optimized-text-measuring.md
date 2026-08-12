@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Disable Optimized Measuring in JavaScript (ES5) DOCX Editor | Syncfusion
+title: Disable Optimized Measuring JavaScript (ES5) DOCX Editor | Syncfusion
 description: Learn how to disable optimized text measuring in Syncfusion JavaScript (ES5) DOCX Editor to revert to the page-by-page pagination behavior.
 platform: document-processing
 control: Disable Optimized Text Measuring
