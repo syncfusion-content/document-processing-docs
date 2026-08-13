@@ -1,4 +1,4 @@
-﻿---
+---
 title: Convert an Excel document to Image on Linux | Syncfusion
 description: Convert an Excel document to an image in a .NET Core application on Linux using the Syncfusion .NET Core Excel library (XlsIO), without Microsoft Office.
 platform: document-processing

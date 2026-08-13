@@ -1,4 +1,4 @@
-﻿---
+---
 title: Convert an Excel document to Image on Mac | Syncfusion
 description: Convert an Excel document to an image on Mac using the Syncfusion .NET Core Excel library (XlsIO), without Microsoft Office.
 platform: document-processing
