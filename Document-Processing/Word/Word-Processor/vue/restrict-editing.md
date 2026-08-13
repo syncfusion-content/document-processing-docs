@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Restrict Editing in Vue DOCX Editor
 
-Syncfusion® Vue DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 
 ## Configure on client side
 
-Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restricting editing operations.
+The Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restrict-editing operations.
 
-### Read only mode
+### Read-only mode
 
 Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
 
@@ -298,7 +298,7 @@ export default {
 
 ### Format restrictions
 
-Enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents limitToFormatting, and the third parameter represents isReadOnly.
+The Document Editor enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents `limitToFormatting`, and the third parameter represents `isReadOnly`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -380,10 +380,12 @@ this.$refs.doceditcontainer.ej2Instances.documentEditor.currentUser = 'engineer@
 ```
 
 ## Protect document with editable region
-User can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
+
+Users can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
 ### Insert editable region
-Use the [insertEditingRegion](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable.This allows you to control editing by giving access to all users or only selected users.
+
+Use the [insertEditingRegion](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#inserteditingregion) method to mark specific paragraphs as editable. This allows you to control editing by giving access to all users or only selected users.
 
 The following example shows how to insert an editable region.
 {% tabs %}
@@ -426,7 +428,7 @@ this.$refs.doceditcontainer.ej2Instances.documentEditor.documentEditorSettings.h
 {% endhighlight %}
 {% endtabs %}
 
-## Restrict Editing Pane
+## Restrict editing pane
 
 Restrict Editing Pane provides the following options to manage the document:
 * To apply formatting restrictions to the current document, select the allow formatting check box.
