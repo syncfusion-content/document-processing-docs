@@ -1,11 +1,11 @@
 ---
-title: Working with Markdown document in C# | Markdown | Syncfusion
-description: Learn to clone and merge Markdown documents with ease, as well as iterate through DOM elements using .NET Markdown library.
+title: Markdown Documents in .NET Markdown Library | Syncfusion
+description: Learn how to clone, merge, and traverse elements in Markdown documents programmatically using the .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
-# Working with Markdown document
+# Markdown documents in .NET Markdown Library
 
 ## Cloning a Markdown document
 
