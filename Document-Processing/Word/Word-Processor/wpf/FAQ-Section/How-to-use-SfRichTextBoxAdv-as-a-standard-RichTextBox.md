@@ -1,5 +1,5 @@
 ---
-title: How to use WPF SfRichTextBoxAdv as a standard RichTextBox | Syncfusion
+title: How to use SfRichTextBoxAdv as a standard RichTextBox. | Syncfusion
 description: Learn how to use WPF SfRichTextBoxAdv as a standard RichTextBox along with its core key features and usage.
 platform: document-processing
 control: SfRichTextBoxAdv
@@ -7,7 +7,7 @@ documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox
 ---
 
-# Use WPF SfRichTextBoxAdv as a Standard RichTextBox
+# Use SfRichTextBoxAdv as a standard RichTextBox
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 

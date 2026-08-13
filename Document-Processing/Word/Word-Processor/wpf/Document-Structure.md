@@ -1,6 +1,6 @@
 ---
 title: Document Structure in WPF RichTextBox control | Syncfusion
-description: Learn about the Document Structure support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn here all about Document Structure support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
