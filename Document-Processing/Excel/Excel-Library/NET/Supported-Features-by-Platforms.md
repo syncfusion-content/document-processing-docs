@@ -1,12 +1,12 @@
 ---
-title: Syncfusion Excel (XlsIO) Supported Features by Platforms
-description: Learn about the supported and unsupported features of Syncfusion XlsIO across .NET Framework, .NET (Core/Standard/5+), and Blazor platforms.
+title: Supported Platforms in .NET Excel Library | Syncfusion
+description: Platform compatibility describes supported and unsupported Syncfusion XlsIO features across .NET and Blazor platforms.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by Platforms
+# Supported Platforms in .NET Excel Library
 
 The following tables list the supported and unsupported Excel features of *Essential<sup>&reg;</sup> XlsIO* across the supported platforms. Use these tables to confirm whether a feature is available in your target environment before designing your solution.
 

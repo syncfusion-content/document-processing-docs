@@ -1,12 +1,12 @@
 ---
-title: How to get the column color | Syncfusion.
-description: This page explains how to get the styled column color when column cells have different colors in an Excel document using .NET Excel Library.
+title: How to Get Column Colors in .NET Excel Library | Syncfusion
+description: Get the styled column color when column cells have different colors using the .NET Excel Library in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the column color when column cells have different colors?
+# How to get column colors in .NET Excel Library
 
 According to Microsoft Excel behavior, when a column's cells have different fill colors, the column color property returns an empty value. Syncfusion XlsIO mirrors this behavior, as Excel doesn't set a unified column color in such cases. This can lead to issues when trying to retrieve color using column cell style properties.
 The following code example illustrates how to get the column color when column cells have different colors in an Excel document.

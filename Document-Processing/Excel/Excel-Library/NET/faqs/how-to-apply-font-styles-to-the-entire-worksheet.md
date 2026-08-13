@@ -1,12 +1,12 @@
 ---
-title: How to apply styles to an Entire Excel Worksheet | Syncfusion 
-description: Learn how to apply font settings and fill color to an entire Excel worksheet using the .NET Excel Library in C# and VB.NET.
+title: How to Apply Worksheet Styles in .NET Excel Library | Syncfusion
+description: Apply font settings and fill colors to an entire Excel worksheet using the .NET Excel Library in C# and VB.NET.
 platform: document-processing 
 control: XlsIO 
 documentation: UG
 ---
 
-# How to apply styles to the entire worksheet in Excel?
+# How to apply worksheet styles in .NET Excel Library
 
 The following examples show how to apply font attributes (name and size) and fill color to an entire worksheet using C# (cross-platform and Windows-specific) and VB.NET.
 

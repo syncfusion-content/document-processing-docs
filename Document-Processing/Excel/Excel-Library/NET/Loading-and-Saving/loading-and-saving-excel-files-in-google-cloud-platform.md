@@ -1,12 +1,12 @@
 ---
-title: Loading and Saving Excel in GCP | Syncfusion
-description: Learn how to load and save an Excel files in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO).
+title: Loading and Saving Excel in GCP Excel Library | Syncfusion
+description: GCP Excel file handling explains how to load and save Excel files using .NET Core Excel Library in cloud apps.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Loading and Saving Excel files in Google Cloud Platform (GCP)
+# Loading and Saving Files in GCP Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **load and save an Excel document in Google Cloud Platform (GCP)** within a few lines of code.
 

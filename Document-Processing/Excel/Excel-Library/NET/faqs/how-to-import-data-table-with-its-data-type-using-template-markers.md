@@ -1,12 +1,12 @@
 ---
-title: Import data table with data type using template markers | Syncfusion
-description: Code example of .NET Excel Library to import data table with its data type using template markers.
+title: How to Import Data with Template Markers in .NET Excel | Syncfusion
+description: Import a data table with its data type using template markers in the .NET Excel Library for workbook data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to import data table with its data type using template markers?
+# How to import data types with template markers in .NET Excel Library
 
 You can import data table with its data type using template markers by setting the [VariableTypeAction](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.VariableTypeAction.html) to None. The following code snippet illustrates this.
 

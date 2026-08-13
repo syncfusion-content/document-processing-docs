@@ -1,12 +1,12 @@
 ---
-title: Cell or Range Formatting | Syncfusion
-description: This section covers various formatting options for a cell or a range in XlsIO, including styles, alignment, borders, fonts, colors, number formats, wrap text, auto-fit, and HTML/Rich-Text formatting.
+title: Cell and Range Formatting in .NET Excel Library | Syncfusion
+description: Cell formatting describes how styles, alignment, borders, fonts, colors, number formats, wrap text, and autofit are applied.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Cell or Range Formatting
+# Cell and Range Formatting in .NET Excel Library
 
 This section covers the various formatting options in a cell or a range.
 

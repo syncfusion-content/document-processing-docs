@@ -1,12 +1,12 @@
 ---
-title: Unmerge Cells in Excel | Syncfusion
-description: This page explains with an example on how to unmerge cells in Excel using Interop and Essential XlsIO.
+title: Cell Unmerging in .NET Excel Library | Syncfusion
+description: Programmatically unmerge cells in Excel using Interop and XlsIO with merged cell handling in worksheet ranges.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Unmerge Cells in Excel
+# Unmerging Cells in .NET Excel Library
 
 Merged cells can be unmerged at any time.
 

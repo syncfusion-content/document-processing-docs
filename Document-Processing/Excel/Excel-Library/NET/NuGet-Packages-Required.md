@@ -1,11 +1,11 @@
 ---
-title: NuGet Packages for XlsIO | Syncfusion
-description: This section illustrates the NuGet packages required to use .NET Excel Library in various platforms and frameworks.
+title: NuGet Packages Required for .NET Excel Library | Syncfusion
+description: The NuGet packages section describes the packages required to use the .NET Excel Library across platforms and frameworks.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# NuGet Packages Required for XlsIO
+# NuGet Packages Required for .NET Excel Library
 
 ## Installing Syncfusion<sup>&reg;</sup> XlsIO through NuGet Packages 
 

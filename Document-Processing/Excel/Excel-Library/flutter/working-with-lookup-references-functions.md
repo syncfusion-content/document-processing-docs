@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Lookup and References Function Syncfusion Flutter XlsIO.
-description: Learn how to apply Lookup and References function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Lookup Functions in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO lookup and reference formulas let users find and retrieve worksheet values using Excel functions.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Lookup and References Function Formulas
+# Lookup and Reference Formulas in Flutter Excel Library
 
 Lookup and References Function Formulas includes the following functions:
 

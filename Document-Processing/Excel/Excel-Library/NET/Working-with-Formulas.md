@@ -1,12 +1,12 @@
 ---
-title: Working with Formulas | Syncfusion
-description: Learn how to create, read, edit, and calculate formulas in an Excel file using Syncfusion XlsIO.
+title: Formulas in .NET Excel Library | Syncfusion
+description: Excel formulas describe how Syncfusion XlsIO creates, reads, edits, and calculates formulas in Excel files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel formula, cell formula, add formula, write excel, update excel, syncfusion, xlsio
 ---
-# Working with Formulas
+# Formulas in .NET Excel Library
 
 [Formulas](https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173?redirectsourcepath=%252fen-us%252farticle%252foverview-of-formulas-7abfda78-eff3-4cc6-b4a7-6350d512d2dc) are entries in Excel that contain equations used to calculate values. A typical formula might contain cell references, constants, and even functions.
 

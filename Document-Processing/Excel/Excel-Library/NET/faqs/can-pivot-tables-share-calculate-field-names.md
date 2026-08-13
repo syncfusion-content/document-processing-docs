@@ -1,12 +1,12 @@
 ---
-title: Calculated field naming across PivotTables | Syncfusion
-description: This page explains whether multiple PivotTables can use calculated fields with the same name in .NET Excel Library.
+title: Calculated Field Naming in .NET Excel Library | Syncfusion
+description: PivotTable calculated fields describe whether multiple pivot tables can use calculated fields with the same name.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Can PivotTables have the same name for multiple calculated fields?
+# Calculated Fields in .NET Excel Library
 
 In **Microsoft Excel**, calculated fields are scoped to the pivot cache, not to individual PivotTables. 
 

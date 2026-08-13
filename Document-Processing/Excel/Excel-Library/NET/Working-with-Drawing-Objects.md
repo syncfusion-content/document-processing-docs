@@ -1,12 +1,12 @@
 ---
-title: Working with Drawing Objects | Syncfusion
-description: This section explains about drawing objects in Essential XlsIO. XlsIO provides Option button support only for XLSX format.
+title: Drawing Objects in .NET Excel Library | Syncfusion
+description: Drawing objects describe how XlsIO adds worksheet objects, including option buttons for the XLSX format.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Drawing Objects 
+# Drawing Objects in .NET Excel Library
 
 ## Form Controls 
 

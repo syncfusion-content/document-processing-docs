@@ -1,12 +1,12 @@
 ---
-title: Convert Markdown to Excel in C# | XlsIO | Syncfusion
-description: Lists how to convert a Markdown file to an Excel workbook using the Syncfusion .NET Excel (XlsIO) library, with no Microsoft Office or interop dependencies.
+title: About Syncfusion .NET Markdown to Excel | Syncfusion
+description: Learn about introduction of converting Markdown files to Excel workbooks using Syncfusion .NET XlsIO and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Markdown to Excel Conversion
+# About Syncfusion Markdown to Excel Conversion
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Markdown to an Excel document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 

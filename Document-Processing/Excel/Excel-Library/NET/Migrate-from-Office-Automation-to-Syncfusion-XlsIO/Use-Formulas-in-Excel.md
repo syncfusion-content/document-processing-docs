@@ -1,12 +1,12 @@
 ---
-title: Use Formulas in Excel | Syncfusion
-description: Explains with an example on how to use formulas or functions (predefined formulas) in Excel using Interop and XlsIO.
+title: Formulas in .NET Excel Library | Syncfusion
+description: Use formulas and predefined functions in Excel worksheets using Interop and XlsIO formula calculation support.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Use Formulas in Excel
+# Formulas in .NET Excel Library
 
 A formula is an expression that operates on values in one or more cells. Functions are predefined formulas in Excel.
 

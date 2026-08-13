@@ -1,12 +1,12 @@
 ---
-title: How to sort two or more columns in a pivot table | Syncfusion
-description: Code example to sort two or more columns in a pivot table using .NET Excel library.
+title: How to Sort Pivot Columns in .NET Excel Library | Syncfusion
+description: Sort two or more columns in a PivotTable using the .NET Excel Library in an Excel document PivotTable.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to sort two or more columns in a pivot table?
+# How to sort multiple columns in pivot tables in .NET Excel Library
 
 You can sort two or more columns in a pivot table by using the [AutoSort()](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPivotField.html#Syncfusion_XlsIO_IPivotField_AutoSort_Syncfusion_XlsIO_PivotFieldSortType_System_Int32_) method each time with the respective column index. The following code snippet illustrates this.
 

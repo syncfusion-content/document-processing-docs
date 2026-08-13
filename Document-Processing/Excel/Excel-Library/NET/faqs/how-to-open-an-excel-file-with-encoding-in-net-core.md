@@ -1,12 +1,12 @@
 ---
-title: How to open an Excel file with encoding | XlsIO | Syncfusion
-description: This page demonstrates with an example to open an Excel file with encoding in .NET Core using .NET Excel Library.
+title: How to Open Encoded Files in .NET Excel Library | Syncfusion
+description: Open an Excel file with encoding in .NET Core using the .NET Excel Library for encoded file loading.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to open an Excel file with encoding in .NET Core?
+# How to open encoded Excel files in .NET Excel Library
 
 XlsIO do not have direct support to open an Excel file with encoding in .NET Core. But this can be acheived through below workaround.
 

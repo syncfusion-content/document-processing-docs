@@ -1,12 +1,12 @@
 ---
-title: Apply Borders in Excel | Syncfusion
-description: Explains with an example on how to programmatically apply borders in Excel with different line styles using Interop and XlsIO.
+title: Borders in .NET Excel Library | Syncfusion
+description: Applying Excel borders programmatically explains how to use different line styles with Interop and XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Apply Borders in Excel
+# Borders in .NET Excel Library
 
 Applying borders around specific cells makes those cells stand out to people who view the document. For example, you might use borders to highlight totals, specific numbers, or words in the file. Alternatively, since borders are thicker and more noticeable than the default grid lines, you can add border lines around all the cells to prevent them from blending together when users view the document. You can also use different line styles for borders.
 

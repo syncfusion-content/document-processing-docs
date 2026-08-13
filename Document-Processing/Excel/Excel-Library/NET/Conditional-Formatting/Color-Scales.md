@@ -1,12 +1,12 @@
 ---
-title: Color Scales | Excel library | Syncfusion
-description: Learn how to apply color-scale conditional formatting rules in an Excel document using Syncfusion XlsIO.
+title: Color Scales in .NET Excel Library | Syncfusion
+description: Color-scale conditional formatting describes how Syncfusion XlsIO applies color-scale rules in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Color Scales in Conditional Formatting
+# Color Scales in .NET Excel Library
 
 Color scales apply cell shading to visually indicate how the value of a cell compares to the other values in a range. Unlike data bars, color scales use cell background color rather than an embedded bar to communicate relative values.
 

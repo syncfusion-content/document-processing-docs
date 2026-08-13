@@ -1,11 +1,11 @@
 ---
-title: Loading and saving Excel document in Azure Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in Azure Cloud Storage using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel in Azure Storage Excel Library | Syncfusion
+description: Azure Cloud Storage file handling explains how to load and save Excel files using .NET Core Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in Azure Cloud Storage
+# Loading and Saving Files in Azure Storage Excel Library
 
 This article explains how to **load an Excel file from Azure Cloud Storage** and **save an Excel file to Azure Cloud Storage** using Syncfusion XlsIO.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Formula of Syncfusion Flutter XlsIO.
-description: Learn how to apply formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Formulas in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO formulas let users perform calculations in Excel worksheet cells and update calculated results.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Formulas
+# Formulas in Flutter Excel Library
 
 Formulas are entries in Excel that have equations, by which values are calculated. A typical formula might contain cell references, constants, and even functions.
 

@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in UWP | Syncfusion
-description: Convert an Excel document to PDF in UWP using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to PDF in UWP Excel Library | Syncfusion
+description: UWP Excel to PDF conversion describes how to convert Excel documents to PDF using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in UWP
+# Excel to PDF Conversion in UWP Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

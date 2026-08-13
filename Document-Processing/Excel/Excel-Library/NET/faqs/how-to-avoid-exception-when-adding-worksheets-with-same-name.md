@@ -1,12 +1,12 @@
 ---
-title: Avoid exception when adding worksheets with same name | Syncfusion
-description: This page helps to avoid exception when adding worksheets with same name in .NET Excel Library.
+title: How to Avoid Worksheet Name Conflicts in .NET Excel | Syncfusion
+description: Avoid duplicate worksheet name exceptions when adding sheets to Excel workbooks using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to avoid exception when adding worksheets with same name?
+# How to avoid duplicate worksheet names in .NET Excel Library
 
 Microsoft Excel throws exception when adding worksheet with existing worksheet name in a workbook and XlsIO does the same. But in some case, if you want to add worksheets with the same name using XlsIO then you can avoid the exception in XlsIO by setting [IgnoreSheetNameException](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html#Syncfusion_XlsIO_IApplication_IgnoreSheetNameException) property of [IApplication](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IApplication.html) as true.
 

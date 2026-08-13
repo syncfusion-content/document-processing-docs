@@ -1,12 +1,12 @@
 ---
-title: Set Background for Excel Worksheet | Syncfusion
-description: Explains with an example on how to set background for Excel Worksheet with a single image to be tiled to fill the whole screen using Interop and XlsIO.
+title: Worksheet Backgrounds in .NET Excel Library | Syncfusion
+description: Set a tiled single-image background for an Excel worksheet using Interop and XlsIO worksheet background options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Set Background for Excel Worksheet
+# Worksheet Backgrounds in .NET Excel Library
 
 Adding a picture to the background, either as a watermark of a company's logo or as a relevant image, improves the appearance of the document. When you set a background picture on a worksheet, the picture is tiled to fill the worksheet area.
 

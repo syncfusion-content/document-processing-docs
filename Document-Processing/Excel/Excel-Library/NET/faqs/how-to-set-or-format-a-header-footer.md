@@ -1,12 +1,12 @@
 ---
-title: How to set or format a Header/Footer | XlsIO | Syncfusion
-description: This page explains with an example to set or format a Header/Footer using .NET Excel Library.
+title: How to Format Headers and Footers in .NET Excel Library | Syncfusion
+description: Set or format the header and footer in an Excel document using the .NET Excel Library for page layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set or format a Header/Footer?
+# How to set headers and footers in .NET Excel Library
 
 Script commands are used to set header/ footer formatting. The following code snippet illustrate this. For more information on formatting the string, see [Inserting and Formatting Text in Headers and Footers](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2007/bb225426(v=office.12))
 

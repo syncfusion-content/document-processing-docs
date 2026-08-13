@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Conditional Formatting Syncfusion Flutter XlsIO
-description: Learn how to create and use conditional formatting operations in Excel worksheet using Syncfusion Flutter XlsIO.
+title: Excel Conditional Formatting in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO conditional formatting lets users highlight worksheet data using rules, conditions, and custom formats.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Conditional Formatting
+# Conditional Formatting in Flutter Excel Library
 
 Conditional formatting allows to format the contents of a cell dynamically. This can be defined and applied in XlsIO through the **ConditionalFormat** class.
 

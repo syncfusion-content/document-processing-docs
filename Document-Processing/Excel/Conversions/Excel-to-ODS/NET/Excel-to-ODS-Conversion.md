@@ -1,12 +1,12 @@
 ---
 title: Excel to ODS Conversion in .NET Excel Library | Syncfusion
-description: Lists how to convert an Excel workbook to an ODS document using the Syncfusion .NET Excel (XlsIO) library.
+description: Excel to ODS conversion describes how Syncfusion XlsIO converts Excel workbooks into ODS document files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to ODS Conversion
+# Excel to ODS Conversion in .NET Excel Library
 
 The OpenDocument Format (ODF) is an XML-based file format for spreadsheets, charts, presentations, and word-processing documents. The OpenDocument Spreadsheet format is the spreadsheet counterpart used by OpenOffice. XlsIO converts XLS and XLSX workbooks to ODS.
 

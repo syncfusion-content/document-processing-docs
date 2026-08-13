@@ -1,12 +1,12 @@
 ---
-title: Fill Series Feature in Excel | Syncfusion
-description: In this section, you can learn how to use the Fill Series feature in Excel using C# with the Syncfusion XlsIO library.
+title: Fill Series in .NET Excel Library | Syncfusion
+description: Use the Fill Series feature in Excel using C# with the Syncfusion XlsIO library for worksheet data filling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Fill Series
+# Fill Series in .NET Excel Library
 
 The **Fill Series** feature in Syncfusion<sup>&reg;</sup> XlsIO lets you programmatically fill a range with a sequence of values based on the specified direction (row or column), series type, step value, and stop value.
 

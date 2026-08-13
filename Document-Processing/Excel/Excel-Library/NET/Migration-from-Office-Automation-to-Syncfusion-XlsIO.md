@@ -1,12 +1,12 @@
 ---
-title: Migration from Office Automation to Syncfusion XlsIO
-description: This section explains how to migrate from Excel Interop to Syncfusion's XlsIO.
+title: Office Automation Migration in .NET Excel Library | Syncfusion
+description: Excel Interop migration describes how to move from Microsoft Excel Interop to Syncfusion Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Migration from Office Automation to Syncfusion<sup>&reg;</sup> XlsIO
+# Office Automation Migration in .NET Excel Library
 
 ## Why Syncfusion<sup>&reg;</sup>'s XlsIO over Office Automation?
 

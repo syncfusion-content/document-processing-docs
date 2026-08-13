@@ -1,12 +1,12 @@
 ---
-title: Does Essential XlsIO provide support for Client Profile | Syncfusion
-description: This page tells whether the .NET Excel Library provides support for Client Profile.
+title: Client Profile Support in .NET Excel Library | Syncfusion
+description: Client Profile compatibility describes whether the .NET Excel Library works with Client Profile-based projects.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does Essential&reg; XlsIO provide support for Client Profile?
+# Client Profile Support in .NET Excel Library
 
 Yes, Essential&reg; XlsIO provides support for Client Profile. In order to use Essential&reg; XlsIO in an application (which targeted to Client Profile), the user should include the following assemblies.
 

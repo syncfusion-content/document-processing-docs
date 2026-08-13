@@ -1,12 +1,12 @@
 ---
-title: Memory (RAM) Usage Metrics for Syncfusion Excel (XlsIO) Library
-description: Peak memory usage of Syncfusion XlsIO during Create and Save and Load and Read of Text, DateTime, Number, Boolean, and Formula data.
+title: Memory Usage Metrics in .NET Excel Library | Syncfusion
+description: Memory usage details describe peak memory consumption while creating, saving, loading, and reading Excel data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Memory usage metrics in Excel (XlsIO) library
+# Memory Usage Metrics in .NET Excel Library
 
 This section reports the peak memory usage of XlsIO for the `Text`, `DateTime`, `Number`, `Boolean`, and `Formula` data types during Create and save and Load and read operations. Peak memory is the maximum value observed during a single run; the values below are reference points from a single machine and XlsIO version, and your results will vary based on hardware, .NET runtime, and the GC mode.
 

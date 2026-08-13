@@ -1,12 +1,12 @@
 ---
-title: Loading and saving workbook |Syncfusion|
-description: Explains the various types of the load and save operations in present in the Syncfusion XlsIO control
+title: Loading and Saving Workbooks in .NET Excel Library | Syncfusion
+description: Load and save operations describe the available ways to open, process, and save Excel workbooks in applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Loading and Saving Workbook
+# Loading and Saving Workbooks in .NET Excel Library
 
 There are various types of load and save operations in Syncfusion<sup>&reg;</sup> XlsIO. Please specific operations are documented under below re-directions.
 

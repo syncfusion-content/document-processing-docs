@@ -1,12 +1,12 @@
 ---
-title: Hyperlink | Excel Library | Syncfusion
-description: In this section, you can learn how to add, modify, and remove hyperlinks in an Excel worksheet using the .NET Excel Library.
+title: Hyperlinks in .NET Excel Library | Syncfusion
+description: Hyperlink management describes how the .NET Excel Library adds, modifies, and removes hyperlinks in Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Hyperlink in Excel Worksheet
+# Hyperlinks in .NET Excel Library
 
 ## Create Hyperlink
 

@@ -1,12 +1,12 @@
 ---
-title: How to set print titles | XlsIO | Syncfusion
-description: This page demonstrates with an example to set print titles using .NET Excel Library.
+title: How to Set Print Titles in .NET Excel Library | Syncfusion
+description: Set print titles in an Excel document using the .NET Excel Library for worksheet printing settings options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set print titles?
+# How to set print titles in .NET Excel Library
 
 **Printing** **Title** **Rows**
 

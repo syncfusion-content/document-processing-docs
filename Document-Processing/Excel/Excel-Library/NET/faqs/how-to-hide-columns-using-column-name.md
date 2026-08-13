@@ -1,12 +1,12 @@
 ---
-title: How to hide columns using column name |Syncfusion.
-description: This page explains how to hide columns using column name using .NET Excel Library.
+title: How to Hide Columns in .NET Excel Library | Syncfusion
+description: Hide columns by column name in an Excel worksheet using the .NET Excel Library in workbook sheet columns.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to hide columns using column name?
+# How to hide columns by name in .NET Excel Library
 
 The following code illustrates how to hide columns using column name.
 

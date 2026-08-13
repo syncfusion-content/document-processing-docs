@@ -1,12 +1,12 @@
 ---
-title: Get Worksheet Names | Excel library | Syncfusion
-description: In this section, you can learn about how to get all worksheet names or visible worksheet names or hidden worksheet names in an Excel workbook using .NET Excel Library.
+title: How to Get Worksheet Names in .NET Excel Library | Syncfusion
+description: Get all worksheet names, visible worksheet names, or hidden worksheet names using the .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the list of worksheet names in an Excel workbook?
+# How to get worksheet names in .NET Excel Library
 
 You can get the list of worksheet names in an Excel workbook using Syncfusion XlsIO. This can include all worksheets or only visible worksheets or only hidden worksheets, based on your requirement.
 

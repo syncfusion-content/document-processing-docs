@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in ASP.NET Core | Syncfusion
-description: Convert Excel to image in ASP.NET Core using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to Image in ASP.NET Core Excel Library | Syncfusion
+description: ASP.NET Core Excel to image conversion describes how to convert Excel files to images without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in ASP.NET Core
+# Excel to Image Conversion in ASP.NET Core Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-sdk/net-excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in ASP.NET Core**.
 

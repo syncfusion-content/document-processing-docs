@@ -1,12 +1,12 @@
 ---
-title: Chart Appearance | Excel library | Syncfusion
-description: In this section, you can learn about the appearance of charts in an Excel document using .NET Excel Library.
+title: Chart Appearance in .NET Excel Library | Syncfusion
+description: Chart appearance describes how the .NET Excel Library customizes the visual style of charts in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Appearance in an Excel document
+# Chart Appearance in .NET Excel Library
 
 Chart appearance refers to the customization of visual elements within charts in Excel documents. Using XlsIO, you can **customize the chart appearance**.
 

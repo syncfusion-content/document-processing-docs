@@ -1,12 +1,12 @@
 ---
-title: Filtering | Excel Library | Syncfusion
-description: In this section, you can learn about how to filter data in an Excel document using .NET Excel Library.
+title: Filtering in .NET Excel Library | Syncfusion
+description: Data filtering in the .NET Excel Library describes how to filter data in Excel worksheets using defined filter options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Filtering Data in Excel Worksheet
+# Data Filtering in .NET Excel Library
 
 Using AutoFilters, data can be filtered to provide a quick and easy way to find and work with a subset of data in a range of cells. When the data is filtered, entire rows are hidden if values in one or more columns do not meet the filtering criteria. The following types of filters are available in XlsIO through the [IAutoFilter](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IAutoFilter.html) interface:
 

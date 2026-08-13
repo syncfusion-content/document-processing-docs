@@ -1,11 +1,11 @@
 ---
-title: Working with Data Validation | Syncfusion
-description: Learn how to create and remove data validation rules in an Excel worksheet using Syncfusion XlsIO.
+title: Data Validation in .NET Excel Library | Syncfusion
+description: Data validation describes how Syncfusion XlsIO creates and removes validation rules in Excel worksheet cells.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Data Validation
+# Data Validation in .NET Excel Library
 
 Data validation restricts the values that can be entered in a cell based on rules that you define. Rules are applied in XlsIO through the [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface, which exposes the following key members:
 

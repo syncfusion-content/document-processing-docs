@@ -1,12 +1,12 @@
 ---
-title: How to open an Excel 2013 Macro Enabled Template | XlsIO | Syncfusion
-description: Code example to open an Excel 2013 Macro Enabled Template using .NET Excel Library.
+title: How to Open Macro Templates in .NET Excel Library | Syncfusion
+description: Open an Excel 2013 macro-enabled template using the .NET Excel Library for Excel template file handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to open an Excel 2013 Macro Enabled Template?
+# How to open Excel macro templates in .NET Excel Library
 
 You can open and save an Excel 2013 Macro Enabled Template to XLSM (Excel 2013 Macro Enabled Document) format. The following code snippet illustrates this.
 

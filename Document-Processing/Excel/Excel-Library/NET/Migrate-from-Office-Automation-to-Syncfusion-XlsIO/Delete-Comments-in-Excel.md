@@ -1,12 +1,12 @@
 ---
-title: Delete Comments in Excel | Syncfusion
-description: Explains with an example on how to programmatically delete Excel comments using Interop and Essential XlsIO.
+title: Comment Deletion in .NET Excel Library | Syncfusion
+description: Deleting Excel comments programmatically explains how to remove comments from worksheets using Interop and XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Delete Comments in Excel
+# Deleting Comments in .NET Excel Library
 
 You can also delete comments in Excel, which removes the red triangle from a cell.
 

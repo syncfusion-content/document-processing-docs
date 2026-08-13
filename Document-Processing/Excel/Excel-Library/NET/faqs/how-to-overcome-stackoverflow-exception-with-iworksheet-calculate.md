@@ -1,12 +1,12 @@
 ---
-title: Avoid StackOverflow exception with IWorksheet Calculate() |Syncfusion
-description: This page shows how to overcome StackOverflow exception while calling Calculate method of IWorksheet using XlsIO.
+title: How to Avoid StackOverflow in .NET Excel Library | Syncfusion
+description: Overcome StackOverflowException while calling the Calculate method of IWorksheet using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to overcome StackOverflow exception with IWorksheet's Calculate()?
+# How to fix StackOverflow errors in .NET Excel Library
 
 StackOverflow exception occurs when the number of **IterationMaxCount**, **MaximumRecursiveCalls** and **MaxStackDepth** exceeds in the [CalcEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_CalcEngine). To avoid this StackOverflow exception while computing the formulas iteratively exceeding the maximum capacity, you need to set the values for these properties before calling the [Calculate](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_Calculate) method of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 

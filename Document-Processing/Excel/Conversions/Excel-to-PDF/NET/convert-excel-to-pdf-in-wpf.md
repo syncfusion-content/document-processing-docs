@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in WPF | Syncfusion
-description: Convert an Excel document to PDF in WPF using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to PDF in WPF Excel Library | Syncfusion
+description: WPF Excel to PDF conversion describes how to convert Excel documents to PDF using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in WPF
+# Excel to PDF Conversion in WPF Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

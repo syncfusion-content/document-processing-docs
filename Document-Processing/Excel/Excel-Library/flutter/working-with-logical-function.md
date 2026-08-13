@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Logical Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply logical function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Logical Functions in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO logical formulas let users evaluate conditions in worksheet cells and return logical results.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with logical Function Formulas
+# Logical Function Formulas in Flutter Excel Library
 
 Logical Function Formulas includes the following functions:
 

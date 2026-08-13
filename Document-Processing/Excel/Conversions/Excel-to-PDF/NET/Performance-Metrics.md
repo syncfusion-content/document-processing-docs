@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics for Syncfusion Excel to PDF Conversion
-description: This section lists benchmark results for converting Excel workbooks to PDF using the Syncfusion Excel (XlsIO) library.
+title: Excel to PDF Performance in .NET Excel Library | Syncfusion
+description: Excel to PDF benchmark results describe performance metrics for converting Excel workbooks to PDF using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics for Excel to PDF Conversion
+# Performance Metrics for Excel to PDF in .NET Excel Library
 
 The following benchmark measures the time required by the Syncfusion Excel (XlsIO) library to convert a workbook of 100,000 rows × 50 columns to PDF. Each row uses one data type: text, DateTime, number, boolean, or formula.
 

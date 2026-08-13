@@ -1,11 +1,11 @@
 ---
-title: Loading and saving Excel document in Dropbox Storage | Syncfusion
-description: Explains how to load and save Excel files in Dropbox Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel in Dropbox Excel Library | Syncfusion
+description: Dropbox Cloud Storage file handling explains how to load and save Excel files using .NET Core Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in Dropbox Cloud Storage
+# Loading and Saving Files in Dropbox Excel Library
 
 ## Prerequisites
 

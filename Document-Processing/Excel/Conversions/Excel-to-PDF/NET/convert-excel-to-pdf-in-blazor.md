@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in Blazor | Syncfusion
-description: Convert an Excel document to PDF in Blazor using Syncfusion Blazor Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to PDF in Blazor Excel Library | Syncfusion
+description: Blazor Excel to PDF conversion describes how to convert Excel documents to PDF using Syncfusion Blazor Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in Blazor
+# Excel to PDF Conversion in Blazor Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

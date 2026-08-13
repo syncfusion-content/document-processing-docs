@@ -1,12 +1,12 @@
 ---
-title: Move or Copy Options | Syncfusion
-description: In this section, you can learn how to use the copy and move operation in an Excel using Syncfusion Essential XlsIO.
+title: Move and Copy Options in .NET Excel Library | Syncfusion
+description: Use copy and move operations in Excel worksheets using Syncfusion XlsIO for workbook content handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Move and Copy in Excel Document
+# Move and Copy Operations in .NET Excel Library
 
 This article explains how to **copy** and **move** components of an Excel workbook — including entire workbooks, worksheets, rows, columns, and cell ranges — using Syncfusion<sup>&reg;</sup> XlsIO.
 

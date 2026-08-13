@@ -1,12 +1,12 @@
 ---
-title: Wrap Text in Excel | Syncfusion
-description: Explains with an example on how to apply wrap text in Excel that allows to fit a long text in a single cell using Interop and XlsIO.
+title: Text Wrapping in .NET Excel Library | Syncfusion
+description: Apply wrap text in Excel to fit long text in a single cell using Interop and XlsIO cell formatting options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply Wrap Text in Excel
+# Wrap Text in .NET Excel Library
 
 When text is too long for the width of a cell, the lengthy text will spill over into the cell to its right when that cell is empty. If the cell to the right is occupied, only a portion of the lengthy text appears. Wrapping text in Excel is a key feature that allows you to fit long text in a single cell.
 

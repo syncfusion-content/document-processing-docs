@@ -1,12 +1,12 @@
 ---
-title: How to add and remove page breaks in a worksheet | Syncfusion
-description: This page shows how to add and remove page breaks in a worksheet using the .NET Excel Library.
+title: How to Manage Page Breaks in .NET Excel Library | Syncfusion
+description: Add and remove page breaks in Excel worksheets using the .NET Excel Library for better print layout control.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to add and remove page breaks in a worksheet?
+# How to add and remove page breaks in .NET Excel Library
 
 Page breaks in Excel separate large datasets into different pages for better organization. You can add or remove horizontal page breaks using [HPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_HPageBreaks) and vertical page breaks using [VPageBreaks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_VPageBreaks) with the IWorksheet interface.
 

@@ -1,12 +1,12 @@
 ---
-title: Convert hidden worksheets alone to image | Syncfusion
-description: This page shows how to convert hidden worksheets alone to image using the .NET Excel Library.
+title: How to Convert Hidden Sheets in .NET Excel Library | Syncfusion
+description: Convert hidden Excel worksheets to images using the .NET Excel Library without rendering visible sheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert hidden worksheets alone to image?
+# How to convert hidden worksheets to images in .NET Excel Library
 
 Worksheet hiding and unhiding can be achieved easily through [Visibility](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITabSheet.html#Syncfusion_XlsIO_ITabSheet_Visibility) property of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.WorksheetVisibility.html) interface. Essential&reg; XlsIO also supports strong hidden, which makes the worksheet very hidden and cannot be unhidden easily. To know more about strong hidden, please see [documentation](https://www.syncfusion.com/kb/4878/how-to-set-worksheet-visibility-to-very-hidden).
 

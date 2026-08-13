@@ -1,12 +1,12 @@
 ---
-title: How to get the column width and row height in pixels | Syncfusion
-description: Code example showing how to retrieve column width and row height in pixels using the .NET Excel Library.
+title: How to Get Dimensions in .NET Excel Library | Syncfusion
+description: Retrieve column width and row height in pixels using the .NET Excel Library in an Excel worksheet layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to get the column width and row height in pixels?
+# How to get pixel dimensions in .NET Excel Library
 
 In Essential&reg; XlsIO, you can obtain column widths and row heights in pixels by using the [GetColumnWidthInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetColumnWidthInPixels_System_Int32_) and [GetRowHeightInPixels](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_GetRowHeightInPixels_System_Int32_) methods. The below code snippet demonstrates this.
 

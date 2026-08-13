@@ -1,12 +1,12 @@
 ---
 title: Memory Limitations in Syncfusion Compression | Syncfusion
-description: This page tells why out of memory exception is thrown when handling large documents.
+description: Large Excel document processing explains why out-of-memory exceptions occur when handling large documents in XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Why out of memory exception is thrown when handling large documents which is having size more than 2GB?
+# Out of Memory Exceptions in .NET Excel Library
 
 Syncfusion.Compression uses MemoryStream object to handle the file data which can support upto 2GB memory. When the file size is exceeded this size limit, exception is thrown.
 

@@ -1,12 +1,12 @@
 ---
-title: Create Pie Chart in Excel | Syncfusion
-description: Explains with an example on how to programmatically create pie chart in Excel and to position the chart in a worksheet using Interop and XlsIO.
+title: Pie Charts in .NET Excel Library | Syncfusion
+description: Creating Excel pie charts programmatically explains how to create and position pie charts using Interop and XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Create Pie Chart in Excel
+# Pie Charts in .NET Excel Library
 
 Pie charts display the contribution of each value (slice) to a total, making it easy to compare proportions. Pie charts always use one data series.
 

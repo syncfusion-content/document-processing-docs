@@ -1,12 +1,12 @@
 ---
-title: Import to Excel Worksheet | .NET XlsIO | Syncfusion
-description: Learn to import data into Excel worksheets from DataTables, collections, arrays, grids, HTML tables, and XML files using XlsIO.
+title: Importing Worksheets in .NET Excel Library | Syncfusion
+description: Data import in XlsIO explains how to load data from DataTables, collections, arrays, grids, HTML tables, and XML files into Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Import to Excel Worksheet
+# Importing Data to Worksheets in .NET Excel Library
 
 ## DataTable to Excel
 

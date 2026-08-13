@@ -1,11 +1,11 @@
 ---
-title: Understanding FitToPagesTall and FitToPagesWide Settings in Excel Print Layout | Syncfusion
-description: This page explains the behavior of FitToPagesTall and FitToPagesWide.
+title: FitToPages Settings in .NET Excel Library | Syncfusion
+description: FitToPages settings describe the behavior of FitToPagesTall and FitToPagesWide in Excel page layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the behavior of FitToPagesTall and FitToPagesWide?
+# FitToPagesTall and FitToPagesWide in .NET Excel Library
 
 The FitToPagesTall and FitToPagesWide decides the page layout of the worksheet when printing or converting Excel document to PDF. When these options are set, the existing page breaks will be disabled.

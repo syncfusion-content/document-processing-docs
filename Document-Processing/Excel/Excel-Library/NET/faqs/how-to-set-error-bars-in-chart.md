@@ -1,12 +1,12 @@
 ---
-title: How to set error bars in chart | Syncfusion
-description: This page demonstrates with an example on how to set error bars in chart with .NET Excel Library.
+title: How to Set Error Bars in .NET Excel Library | Syncfusion
+description: Set error bars in an Excel chart using the .NET Excel Library for chart error bar formatting in documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set error bars in chart?
+# How to set chart error bars in .NET Excel Library
 
 Charts can be enhanced by adding error bars which help to view the margin errors and deviations. The following code snippet shows how to set error bar in a chart series.
 

@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in Blazor Server Web application | Syncfusion
-description: Learn how to convert Excel to Image in Blazor Server Web application using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to Image in Blazor Server Excel Library | Syncfusion
+description: Blazor Server Excel to image conversion describes how to convert Excel files to images using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in Blazor Server Web application
+# Excel to Image Conversion in Blazor Server Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Blazor Server Web application**.
 

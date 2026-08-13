@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel NumberFormat of Syncfusion Flutter XlsIO.
-description: Learn how to apply number format to cell or range of cells in Excel worksheet using Syncfusion Flutter XlsIO.
+title: Excel Number Formatting in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO number formatting lets users display cell values as dates, currency, percentages, decimals, and custom formats.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Number Formats
+# Number Formats in Flutter Excel Library
 
 Number Formats are codes that helps to control the appearance of cell values especially numbers in an Excel document. Excel recognizes the numbers in various formats like:
 

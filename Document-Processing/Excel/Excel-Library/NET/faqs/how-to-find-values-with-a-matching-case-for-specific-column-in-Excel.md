@@ -1,12 +1,12 @@
 ---
-title: Values with matching case for specific column in an Excel |Syncfusion
-description: This page shows how to find values with matching case for specific column in an Excel worksheet using .NET Excel Library.
+title: How to Find Case Sensitive Values in .NET Excel Library | Syncfusion
+description: Find values with matching case in a specific Excel worksheet column using the .NET Excel Library and workbook data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to find values with a matching case for specific column in Excel?
+# How to find case-sensitive values in .NET Excel Library
 XlsIO allows finding values with matching case for specific column in Excel worksheet using **MatchCase** option of [ExcelFindOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ExcelFindOptions.html) enumeration through [Find](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html#Syncfusion_XlsIO_Implementation_WorksheetImpl_Find_Syncfusion_XlsIO_IRange_System_String_Syncfusion_XlsIO_ExcelFindType_Syncfusion_XlsIO_ExcelFindOptions_System_Boolean_) method of [WorksheetImpl](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Implementation.WorksheetImpl.html). The following code illustrates this.
 
 {% tabs %}  

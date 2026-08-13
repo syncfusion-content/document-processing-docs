@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in Linux Docker | Syncfusion
-description: Convert an Excel document to PDF in Linux Docker using Sycfusion .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to PDF in Linux Docker Excel Library | Syncfusion
+description: Linux Docker Excel to PDF conversion describes how to convert Excel documents to PDF without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in Linux Docker
+# Excel to PDF Conversion in Linux Docker Excel Library
 
 Docker is an open platform for developing, shipping, and running applications. You can use Essential<sup>&reg;</sup> XlsIO in a Docker container to create, read, edit, and convert Microsoft Excel documents to various formats. On this page, you will learn how to convert an Excel document to PDF in a Linux Docker container using the Syncfusion<sup>&reg;</sup> XlsIO library (Essential<sup>&reg;</sup> XlsIO).
 

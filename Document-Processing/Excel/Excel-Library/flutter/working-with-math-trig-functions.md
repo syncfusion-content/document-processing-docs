@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Math and Trig Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply Math and Trig function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Math & Trig Functions in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO math and trigonometric formulas let users perform mathematical calculations in worksheet cells.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Math and Trig Function Formulas
+# Math and Trig Formulas in Flutter Excel Library
 
 Math and Trig Function Formulas includes the following functions:
 

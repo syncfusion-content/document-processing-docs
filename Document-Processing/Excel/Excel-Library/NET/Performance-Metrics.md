@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics for Syncfusion Excel (XlsIO) Library
-description: Benchmark results for the Syncfusion XlsIO library across common read, create, and save operations for Text, DateTime, Number, Boolean, and Formula data types.
+title: Performance Metrics in .NET Excel Library | Syncfusion
+description: Benchmark results describe Syncfusion XlsIO performance for reading, creating, and saving common Excel data types.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics in Excel (XlsIO) Library
+# Performance Metrics in .NET Excel Library
 
 This section reports the measured performance of XlsIO for common read, create, and save operations across the Text, DateTime, Number, Boolean, and Formula data types. The numbers below are reference values from a single reference machine and XlsIO version; your results will vary based on hardware, .NET runtime, GC behavior, and input size.
 

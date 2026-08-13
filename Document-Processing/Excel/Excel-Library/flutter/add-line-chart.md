@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Line Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the Line chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Line Chart in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO line chart lets users create, add, and customize line charts in Excel worksheets with chart options.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Line Chart to Excel worksheet
+# Line Chart in Syncfusion Excel Library
 
 A line chart is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.
 

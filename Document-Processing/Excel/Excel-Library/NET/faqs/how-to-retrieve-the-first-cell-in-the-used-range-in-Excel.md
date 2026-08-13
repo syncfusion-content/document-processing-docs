@@ -1,12 +1,12 @@
 ---
-title: Retrieve the first cell in the used range in Excel | Syncfusion
-description: Code example to retrieve the first cell in the used range in an Excel worksheet using .NET Excel Library.
+title: How to Retrieve First Used Cell in .NET Excel Library | Syncfusion
+description: Retrieve the first cell in the used range of an Excel worksheet using the .NET Excel Library with used range details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to retrieve the first cell in the used range in Excel?
+# How to retrieve the first used cell in .NET Excel Library
 
 The following code examples demonstrate retrieving the first cell in the used range of an Excel worksheet using C# (Cross-platform and Windows-specific) and VB.NET.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion Excel web installer - Syncfusion
-description: Learn here about how to download Syncfusion Excel web installer from our Syncfusion website with license.
+title: How to Download Web Installer in .NET Excel Library | Syncfusion
+description: Download the Syncfusion Excel web installer from the Syncfusion website with a valid license for setup.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion&reg; Excel web Installer
+# How to download web installer in .NET Excel Library
 
 [XlsIO](https://www.syncfusion.com/document-processing/excel-framework/net) controls will be included in the Syncfusion&reg; Excel installer. You can either download the licensed installer or try our trial installer depending on your license. 
 

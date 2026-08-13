@@ -1,11 +1,11 @@
-﻿---
-title: Create, read, edit Excel in Azure App Service on Linux | Syncfusion
-description: Explains how to create, read, and edit Excel files in Azure App Service on Linux using Syncfusion XlsIO.
+---
+title: Create, Read, and Edit Excel in Azure Linux Apps | Syncfusion
+description: The Azure App Service on Linux platform lets users create, read, and edit Excel files with Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in Azure App Service on Linux
+# Excel Files in Azure App Service Linux with Excel Library
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel files in Azure App Service on Linux.
 

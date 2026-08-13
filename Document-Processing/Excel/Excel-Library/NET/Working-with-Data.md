@@ -1,12 +1,12 @@
 ---
-title: Working with Excel Data | .NET XlsIO | Syncfusion
-description: Learn how to import data into an Excel worksheet from DataTable, DataColumn, DataView, collections, arrays, Microsoft Grid controls, and HTML tables, and how to export data from Excel to DataTable objects or collections using the .NET Excel Library.
+title: Excel Data in .NET Excel Library | Syncfusion
+description: Data import and export describe how the .NET Excel Library moves data between Excel worksheets and data sources.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Excel Data
+# Excel Data in .NET Excel Library
 
 XlsIO supports importing and exporting data to and from Excel. This includes handling various data formats and structures, enabling you to integrate Excel with different data sources and to use Excel's capabilities for data manipulation and analysis.
 

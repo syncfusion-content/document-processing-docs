@@ -1,12 +1,12 @@
 ---
-title: XlsIO Assemblies Required | Syncfusion
-description: Briefs the assemblies required to convert excel document to PDF, excel worksheet to image & excel chart to image for various platforms and frameworks.
+title: Assemblies Required for .NET Excel Library | Syncfusion
+description: The assemblies required for .NET Excel library that allows to create Excel files and manipulate data from existing files programatically.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Assemblies Required for XlsIO
+# Assemblies Required for .NET Excel Library
 
 The following assemblies need to be referenced in your application based on the platform.
 <table>

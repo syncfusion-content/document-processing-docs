@@ -1,12 +1,12 @@
 ---
-title: Set Default List Item in Excel Data Validation | Syncfusion
-description: Learn to programmatically select the first item in an Excel data-validation list with Syncfusion's .NET Excel Library using C# and VB.NET.
+title: How to Set Default List Items in .NET Excel Library | Syncfusion
+description: Select the first item in an Excel data-validation list using Syncfusion .NET Excel Library in C# and VB.NET.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set the first item in a list as the default value in an Excel?
+# How to set default list values in .NET Excel Library
 
 You can programmatically make the first item in a data-validation list the default selection in an Excel file by using Syncfusion XlsIO. The following examples in C# (cross-platform and Windows-specific) and VB.NET demonstrate the process.
 

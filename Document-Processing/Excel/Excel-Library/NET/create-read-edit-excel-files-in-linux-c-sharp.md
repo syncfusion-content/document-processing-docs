@@ -1,11 +1,11 @@
 ---
-title: Create, read, and edit Excel files on Linux | Syncfusion
-description: Create, read, and edit Excel files in .NET Core application on Linux using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Office
+title: Create and Edit Excel Files in Linux Excel Library | Syncfusion
+description: .NET Core on Linux lets users create, read, and edit Excel files using Syncfusion Excel Library without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files on Linux
+# Create and Edit Excel Files in Linux Excel Library
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

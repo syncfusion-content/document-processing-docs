@@ -1,12 +1,12 @@
 ---
-title: Assign Cell Value Without Changing Format | Syncfusion
-description: Demonstrates assigning values to cells in Syncfusion XlsIO without changing formats, using Text or setting NumberFormat before Value.
+title: How to Assign Cell Values in .NET Excel Library | Syncfusion
+description: Assign values to Excel cells in Syncfusion XlsIO without changing existing formats by using text or number formats.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to assign cell value without changing the format type in XlsIO?
+# How to assign values without format changes in .NET Excel Library
 
 Assigning a value to a cell using the `Value` property can change the cell's format type based on the assigned value. If you want to preserve the existing display/format, write the value using the `Text` property. Alternatively, set the desired `NumberFormat` (for example text format "@") before assigning with `Value`.
 

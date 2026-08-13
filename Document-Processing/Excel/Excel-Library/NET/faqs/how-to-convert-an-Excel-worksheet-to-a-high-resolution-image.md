@@ -1,12 +1,12 @@
 ---
-title: How to convert an worksheet to a high-resolution image | Syncfusion
-description: This page shows how to convert an Excel worksheet to a high-resolution image using the .NET Excel Library.
+title: How to Convert Worksheets to Images in .NET Excel | Syncfusion
+description: Convert an Excel worksheet to a high-resolution image using the .NET Excel Library for clear output.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert an Excel worksheet to a high-resolution image?
+# How to convert worksheets to images in .NET Excel Library
 
 Essential&reg; XlsIO allows you to convert an Excel worksheet to a high-resolution image. This can be achieved by converting the worksheet to a Metafile and then resetting the resolution using a custom ResetResolution method.
 

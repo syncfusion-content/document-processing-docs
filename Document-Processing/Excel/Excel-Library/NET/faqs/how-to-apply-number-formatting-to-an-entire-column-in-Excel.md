@@ -1,12 +1,12 @@
 ---
-title: Apply number formatting to an entire column in Excel | Syncfusion
-description: Code example to apply number formatting to an entire column in Excel using .NET Excel Library.
+title: How to Format Columns in .NET Excel Library | Syncfusion
+description: Apply number formatting to an entire Excel column using the .NET Excel Library for consistent column value display.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply number formatting to an entire column in Excel?
+# How to apply column number formats in .NET Excel Library
 
 The following code examples demonstrate applying number formatting to an entire column in Excel using C# (Cross-platform and Windows-specific) and VB.NET.
 

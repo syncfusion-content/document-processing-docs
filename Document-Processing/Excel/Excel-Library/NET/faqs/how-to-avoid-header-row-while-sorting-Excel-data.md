@@ -1,12 +1,12 @@
 ---
-title: How to avoid header row while sorting Excel data | XlsIO | Syncfusion
-description: Code example to avoid header row while sorting Excel data using .NET Excel Library.
+title: How to Sort Without Headers in .NET Excel Library | Syncfusion
+description: Avoid sorting the header row when sorting Excel worksheet data using the .NET Excel Library with custom sort options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to avoid header row while sorting Excel data?
+# How to exclude header rows while sorting in .NET Excel Library
 
 Syncfusion&reg; XlsIO considers first row in the sort range as header. In order to disable this behavior and consider the first row in sorting, the [HasHeader](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataSort.html#Syncfusion_XlsIO_IDataSort_HasHeader) property of [IDataSort](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataSort.html) interface should be disabled. Please find the code snippet below.
 

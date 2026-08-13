@@ -1,12 +1,12 @@
 ---
-title: Create Excel document in Microsoft Azure | Syncfusion
-description: Learn how to create an Excel document in Azure services using Syncfusion .NET Excel (XlsIO) library in C#.
+title: Create Excel Documents in Azure .NET Excel Library | Syncfusion
+description: The Azure platform lets users create Excel documents with Syncfusion .NET XlsIO in C# applications easily.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Create Excel document in Azure Platform 
+# Excel Documents in Azure with .NET Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **create an Excel document in Azure services** within a few lines of code.
 

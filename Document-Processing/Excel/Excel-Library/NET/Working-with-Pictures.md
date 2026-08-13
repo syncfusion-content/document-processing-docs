@@ -1,11 +1,11 @@
 ---
-title: Working with Pictures | Syncfusion
-description: Describes how to insert pictures in Essential XlsIO. It provides various simple and interactive options to insert pictures into a worksheet.
+title: Pictures in .NET Excel Library | Syncfusion
+description: Picture insertion describes how XlsIO adds images to worksheets using simple picture insertion options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Pictures
+# Pictures in .NET Excel Library
 
 XlsIO supports inserting pictures into a worksheet. Refer to the following code snippet.
 {% tabs %}

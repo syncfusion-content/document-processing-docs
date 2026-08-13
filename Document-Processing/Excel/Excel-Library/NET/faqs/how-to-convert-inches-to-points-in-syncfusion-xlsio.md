@@ -1,12 +1,12 @@
 ---
-title: How to convert inches to points in Syncfusion XlsIO? | Syncfusion
-description: Shows how to convert inches to points using `IApplication.InchesToPoints` in Syncfusion XlsIO. Useful for precise sizing of cells, shapes, and page layouts.
+title: How to Convert Inches to Points in .NET Excel Library | Syncfusion
+description: Convert inches to points using IApplication.InchesToPoints in Syncfusion XlsIO for accurate layout sizing.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert inches to points in Syncfusion XlsIO?
+# How to convert inches to points in .NET Excel Library
 
 Converting measurements between units is common when laying out Excel content programmatically. Syncfusion XlsIO exposes an `InchesToPoints` helper on the `IApplication` instance that converts a measurement in inches to points.
 

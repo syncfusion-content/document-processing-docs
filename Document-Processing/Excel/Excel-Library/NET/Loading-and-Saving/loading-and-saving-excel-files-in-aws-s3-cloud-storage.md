@@ -1,11 +1,11 @@
 ---
-title: Loading and Saving Excel files in AWS S3 Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in AWS S3 Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel in AWS S3 Excel Library | Syncfusion
+description: AWS S3 Cloud Storage file handling explains how to load and save Excel files using .NET Core Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in AWS S3 Cloud Storage
+# Loading and Saving Files in AWS S3 Excel Library
 
 This article explains how to **load an Excel file from AWS S3 Cloud Storage** and **save an Excel file to AWS S3 Cloud Storage** using Syncfusion XlsIO.
 

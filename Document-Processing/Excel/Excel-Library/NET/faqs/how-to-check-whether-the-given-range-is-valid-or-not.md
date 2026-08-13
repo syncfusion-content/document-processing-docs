@@ -1,12 +1,12 @@
 ---
-title: How to check whether the given range is valid or not | Syncfusion
-description: This page tells how to check whether given range is valid or not using .NET Excel Library.
+title: How to Validate Ranges in .NET Excel Library | Syncfusion
+description: Check whether a given Excel range is valid using the .NET Excel Library before applying worksheet operations.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to check whether the given range is valid or not?
+# How to check valid ranges in .NET Excel Library
 
 In the given range, if the first row and first column are less than or equal to last row and last column respectively, then the range is valid. XlsIO do not have direct support to check whether the given range is valid or not. But this can be achieved with a simple workaround. Please find the code snippet below.
 

@@ -1,12 +1,12 @@
 ---
-title: Hide Excel Worksheets | Syncfusion
-description: This documentation explains with an example on how to hide Excel worksheets programmatically using Interop and XlsIO.
+title: Worksheet Hiding in .NET Excel Library | Syncfusion
+description: Programmatically hide Excel worksheets in a workbook using Interop and XlsIO with worksheet visibility options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Hide Excel Worksheets
+# Hiding Worksheets in .NET Excel Library
 
 You can hide any sheet in a workbook so that users cannot see it when they open the workbook. However, you must always leave at least one sheet visible.
 A sheet can be visible, hidden, or very hidden.

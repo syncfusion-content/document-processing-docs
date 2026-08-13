@@ -1,12 +1,12 @@
 ---
-title: XlsIO support digitally signed Excel files with macros | Syncfusion
-description: This page tells whether the Syncfusion XlsIO supports Excel files with macros that are digitally signed.
+title: Digital Signatures in .NET Excel Library | Syncfusion
+description: Digitally signed macros explains whether Syncfusion XlsIO can process Excel files that contain signed macros.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support Excel files with macros that are digitally signed?
+# Digitally Signed Macros in .NET Excel Library
 Yes. XlsIO preserves the digital signature from the macro-enabled Excel document. But, it does not have support for remove and modify the signatures.
 
 ## See Also

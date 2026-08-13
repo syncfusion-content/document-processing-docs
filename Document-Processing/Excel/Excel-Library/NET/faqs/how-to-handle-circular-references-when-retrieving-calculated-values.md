@@ -1,12 +1,12 @@
 ---
-title: Handle circular references when get calculated values | Syncfusion
-description: This FAQ explains how to handle circular references in Excel formulas when retrieving calculated values using Syncfusion XlsIO's calculation engine properties.
+title: How to Handle Circular References in .NET Excel Library | Syncfusion
+description: Handle circular references in Excel formulas when retrieving calculated values using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to handle circular references when retrieving calculated values?
+# How to handle circular references in .NET Excel Library
 
 Circular references occur when a formula refers back to one of its own cells, creating a loop that Excel must resolve through iteration. XlsIO provides properties in the [CalcEngine](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ICalcEngine.html) to control how circular references are handled, including enabling iteration, setting maximum iteration count, and configuring exception handling.
 

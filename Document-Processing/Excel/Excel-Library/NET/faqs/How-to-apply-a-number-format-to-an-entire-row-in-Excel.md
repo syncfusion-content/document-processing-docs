@@ -1,12 +1,12 @@
 ---
-title:  Apply a number format to an entire row in Excel | Syncfusion
-description: Learn how to apply a number format to an entire row in Excel using the Syncfusion .NET Excel (XlsIO) library. 
+title: How to Format Rows in .NET Excel Library | Syncfusion
+description: Apply number formats to an entire Excel row using Syncfusion XlsIO to format row values consistently.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply a number format to an entire row in Excel?
+# How to apply row number formats in .NET Excel Library
 
 The following examples illustrate how to apply a number format to an entire row in Excel in C# (cross-platform and Windows-specific) and VB.NET.
 

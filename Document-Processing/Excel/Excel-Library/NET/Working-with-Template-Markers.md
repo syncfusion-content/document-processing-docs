@@ -1,11 +1,11 @@
 ---
-title: Working with Template Markers | Syncfusion
-description: This section illustrates how to create template markers in an Excel template that appends multiple records from a data source into a worksheet.
+title: Template Markers in .NET Excel Library | Syncfusion
+description: Template markers in XlsIO describe how to append multiple records from a data source into an Excel worksheet.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Template Markers
+# Template Markers in .NET Excel Library
 
 A template marker is a special marker symbol created in an Excel template that appends multiple records from a data source into a worksheet. This marker automatically maps the column name in the data source and names of the marker fields in the template Excel document and fills the data (text or image). Essential<sup>&reg;</sup> XlsIO allows you to bind the template markers to data from various sources, such as
 

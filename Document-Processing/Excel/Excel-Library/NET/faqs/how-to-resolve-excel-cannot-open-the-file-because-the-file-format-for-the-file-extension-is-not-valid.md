@@ -1,12 +1,12 @@
 ---
-title: Excel cannot open the file in Document Processing XlsIO | Syncfusion
-description: This page shows how to resolve "Excel cannot open the file because the Document Processing is not valid..." using XlsIO.
+title: How to Resolve File Open Errors in .NET Excel Library | Syncfusion
+description: Resolve the Excel cannot open the file because Document Processing is not valid error using Syncfusion XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to resolve "Excel cannot open the file 'filename.xlsx'..." error?
+# How to resolve Excel file open errors in .NET Excel Library
 
 This error "Excel cannot open the file 'filename.xlsx' because the file format for the file extension is not valid. Verify that the file has not been corrupted and that the file extension matches the format of the file" occurs when there is a mismatch between the file format and its extension. The default workbook creation version in XlsIO is Excel97-2003 (.xls). The application version set to the required version should match its file format during save, as in the below code. 
 

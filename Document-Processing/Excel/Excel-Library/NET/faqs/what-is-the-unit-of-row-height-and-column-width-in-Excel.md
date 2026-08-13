@@ -1,12 +1,12 @@
 --- 
-title: Unit of row height and column width in Excel | Syncfusion 
-description: This page explains about the default unit of measurement for row height and column width in Excel using .NET Excel library.
+title: Row Height and Column Width Units in .NET Excel Library | Syncfusion
+description: Row height and column width units describe the default measurement units used in Excel by the .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
 documentation: UG 
 --- 
 
-# What is the unit of row height and column width in Excel?
+# Row Height and Column Width Units in .NET Excel Library
 
 By default, XlsIO uses **points** as the unit of measurement for both row height and column width.
 

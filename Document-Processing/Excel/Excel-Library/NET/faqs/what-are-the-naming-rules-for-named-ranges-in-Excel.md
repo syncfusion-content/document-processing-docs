@@ -1,12 +1,12 @@
 ---
-title: Naming rules for named ranges in Excel | Syncfusion
-description: Learn the naming conventions for Excel named ranges in XlsIO, including allowed characters, restrictions, and length limits.
+title: Named Range Rules in .NET Excel Library | Syncfusion
+description: Named range conventions describe allowed characters, restrictions, and length limits for Excel named ranges in XlsIO.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What are the naming rules for named ranges in Excel?
+# Named Range Rules in .NET Excel Library
 
 When defining a named range in Excel, the following rules apply:
 

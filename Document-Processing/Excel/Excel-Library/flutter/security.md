@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Security using Syncfusion Flutter XlsIO
-description: Learn how to apply Excel security to Excel documents using Flutter XlsIO and briefs about Security in Flutter XlsIO.
+title: Excel Security in Flutter Excel Library | Syncfusion
+description: The Flutter XlsIO security options let users protect Excel workbooks and worksheets with password-based protection.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Excel Security using Flutter XlsIO
+# Excel Security in Flutter Excel Library
 
 You can protect an anonymous user from viewing, moving, editing or deleting important data from a worksheet or workbook by [protecting a worksheet or workbook](https://support.office.com/en-us/article/Password-protect-worksheet-or-workbook-elements-dbf706e0-ba22-4a08-84d8-552db16eef11), with or without a password.
 

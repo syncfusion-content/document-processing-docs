@@ -1,12 +1,12 @@
 ---
-title: How to retain cell values after removing formula in Excel | Syncfusion
-description: This page shows how to retain cell values after removing formulas in Excel using the .NET Excel Library.
+title: How to Retain Values After Formula Removal in .NET Excel | Syncfusion
+description: Retain cell values after removing formulas from Excel worksheets using the .NET Excel Library in cell ranges.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to retain cell values after removing formulas in Excel?
+# How to retain values after removing formulas in .NET Excel Library
 
 You can remove a formula from a cell while retaining its calculated value by first retrieving the calculated value, clearing the cell's content, and then assigning the value back to the cell.
 

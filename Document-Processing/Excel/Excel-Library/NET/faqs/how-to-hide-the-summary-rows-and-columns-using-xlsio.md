@@ -1,12 +1,12 @@
 ---
-title: Hide the summary rows and columns using XlsIO | Syncfusion
-description: This page shows how to hide the summary rows and columns using .NET Excel Library.
+title: How to Hide Summary Rows in .NET Excel Library | Syncfusion
+description: Hide summary rows and columns in an Excel worksheet using the .NET Excel Library in workbook sheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to hide the summary rows and columns using XlsIO?
+# How to hide summary rows and columns in .NET Excel Library
 
 You can hide the summary rows and columns by using the [IsSummaryRowBelow](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryRowBelow) and [IsSummaryColumnRight](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_IsSummaryColumnRight) properties. The following code snippet illustrates this.
 

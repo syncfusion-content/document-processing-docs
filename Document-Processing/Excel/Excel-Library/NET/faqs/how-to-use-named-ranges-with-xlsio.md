@@ -1,12 +1,12 @@
 ---
-title: How to use Named Ranges with XlsIO | Syncfusion
-description: This page demonstrates with an example on how to use named ranges in .NET Excel library.
+title: How to Use Named Ranges in .NET Excel Library | Syncfusion
+description: Use named ranges in Excel documents with the .NET Excel Library for named range operations in worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to use Named Ranges with XlsIO?
+# How to use named ranges in .NET Excel Library
 
 A named range can be added to worksheet or workbook based on the required scope, the following code snippet illustrate this. For more information, see [Named Range](https://support.microsoft.com/en-us/office/define-and-use-names-in-formulas-4d0f13ac-53b7-422e-afd2-abd7ff379c64?ui=en-us&rs=en-us&ad=us)
 

@@ -1,12 +1,12 @@
 ---
-title: Sorting and Filtering of Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to sort and filter pivot table in Excel document using .NET Excel Library.
+title: Pivot Table Sorting and Filtering in .NET Excel Library | Syncfusion
+description: Sort and filter pivot tables in an Excel document using the .NET Excel Library for data organization.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Sorting and Filtering
+# Sorting and Filtering in .NET Excel Library
 
 ## Sorting
 

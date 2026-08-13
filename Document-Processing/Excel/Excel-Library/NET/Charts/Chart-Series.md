@@ -1,12 +1,12 @@
 ---
-title: Chart Series | Excel library | Syncfusion
-description: In this section, you can learn about chart series in an Excel document using .NET Excel Library with clear guidance and practical examples.
+title: Chart Series in .NET Excel Library | Syncfusion
+description: Chart series settings describe how the .NET Excel Library creates and formats data series in Excel charts.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Series in an Excel document
+# Chart Series in .NET Excel Library
 
 In a chart, a **series** represents a set of related data points, often depicted using lines, bars, or markers to show data trends or comparisons. Using XlsIO, you can **customize the series**.
 

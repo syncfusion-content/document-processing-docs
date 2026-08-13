@@ -1,12 +1,12 @@
 ---
-title: FAQ about using XlsIO on Linux | Syncfusion
-description: Find answers to common Syncfusion XlsIO Linux issues, including Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
+title: Linux FAQ in .NET Excel Library | Syncfusion
+description: The Linux troubleshooting section describes Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Frequently asked questions about using XlsIO on Linux
+# Linux FAQ in .NET Excel Library
 
 This page covers common questions and fixes for using Syncfusion XlsIO in Linux environments, including Docker containers, font installation, locale setup, and SkiaSharp native dependencies. The font-related sections are only relevant for Excel-to-PDF or Excel-to-image conversion; reading and writing XLSX does not require fonts.
 

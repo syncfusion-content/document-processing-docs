@@ -1,11 +1,11 @@
 ---
-title: Create, read, and edit Excel files in WinUI | Syncfusion
-description: Explains how to create, read, and edit Excel documents in WinUI applications using .NET Excel Library.
+title: Create, Read, and Edit Excel in WinUI | Syncfusion
+description: WinUI applications let users create, read, and edit Excel documents using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in WinUI
+# Excel Files in WinUI with Excel Library
 
 Syncfusion<sup>&reg;</sup> Excel library for WinUI platform can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

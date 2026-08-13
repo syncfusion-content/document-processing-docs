@@ -1,12 +1,12 @@
 ---
-title: Protect Excel Workbook | Syncfusion
-description: Explains with an example on how to protect Excel workbook with password programmatically, using Interop and XlsIO.
+title: Workbook Protection in .NET Excel Library | Syncfusion
+description: Programmatically protect an Excel workbook with a password using Interop and XlsIO workbook security options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Protect Excel Workbook
+# Workbook Protection in .NET Excel Library
 
 Workbooks are protected by their structure and window.
 

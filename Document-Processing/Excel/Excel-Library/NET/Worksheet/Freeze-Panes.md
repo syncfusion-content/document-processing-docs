@@ -1,12 +1,12 @@
 ---
-title: Freeze or Unfreeze Panes | Syncfusion
-description: In this section, you can learn about how to use the freeze panes in an Excel worksheets using Syncfusion Essential XlsIO.
+title: Freeze and Unfreeze Panes in .NET Excel Library | Syncfusion
+description: Use freeze panes in Excel worksheets using Syncfusion XlsIO worksheet view options for rows and columns.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Freeze and Unfreeze Panes in Excel Document
+# Freeze and Unfreeze Panes in .NET Excel Library
 
 This article explains how to **freeze**, **unfreeze**, and **split** panes in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
 

@@ -1,12 +1,12 @@
 ---
-title: Support for auto-correcting formulas | Syncfusion
-description: This page explains whether Syncfusion XlsIO supports auto-correcting formulas using .NET Excel Library.
+title: Formula Auto Correction in .NET Excel Library | Syncfusion
+description: Formula handling in Syncfusion XlsIO explains whether formulas can be corrected automatically in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support auto-correcting formulas?
+# Formula Auto-Correction in .NET Excel Library
 
 No, Syncfusion XlsIO does not support auto-correcting or recalculating formulas automatically when loading Excel files. To resolve this, open and resave the Excel file using Microsoft Excel. This triggers formula evaluation and updates the cached results. Once resaved, XlsIO can process the file and return the correct values.
 

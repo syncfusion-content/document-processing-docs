@@ -1,11 +1,11 @@
 ---
-title: Working with Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to create and use pivot tables operations in Excel document using XlsIO
+title: Pivot Tables in .NET Excel Library | Syncfusion
+description: Pivot table operations in XlsIO describe how to create and use pivot tables in Excel documents effectively.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Pivot Tables
+# Pivot Tables in .NET Excel Library
 
 You can easily arrange and summarize complex data in a [Pivot Table](https://support.microsoft.com/en-gb/office/create-a-pivottable-in-excel-74ce8afc-2446-4816-80ee-20ca7fb71793?redirectSourcePath=%252fen-us%252farticle%252fPivotTable-I-Get-started-with-PivotTable-reports-in-Excel-2007-bfe774d3-3e20-46f7-b6a3-f7984855d665). 
 

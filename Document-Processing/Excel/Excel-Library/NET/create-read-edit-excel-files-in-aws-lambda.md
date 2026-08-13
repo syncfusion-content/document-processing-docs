@@ -1,12 +1,12 @@
-﻿---
-title: Create, read, and edit Excel files in AWS Lambda | Syncfusion
-description: This page explains how to create, read, and edit Excel files in AWS Lambda using the .NET Excel Library.
+---
+title: Create, Read, and Edit Excel in AWS Lambda | Syncfusion
+description: The AWS Lambda platform lets users create, read, and edit Excel files with the .NET Excel Library in cloud apps.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Create, read, and edit Excel files in AWS Lambda
+# Excel Files in AWS Lambda with Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in AWS Lambda functions.
 

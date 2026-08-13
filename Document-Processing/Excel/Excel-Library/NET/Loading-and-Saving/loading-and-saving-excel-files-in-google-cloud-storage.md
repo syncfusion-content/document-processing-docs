@@ -1,11 +1,11 @@
 ---
-title: Loading and Saving Excel files in Google Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in Google Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel in Google Cloud Storage | Syncfusion
+description: Loading and saving Excel files in Google Cloud Storage using the .NET Core Excel Library without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in Google Cloud Storage
+# Loading and Saving Files in Google Cloud Storage Excel Library
 
 This article explains how to **load an Excel file from Google Cloud Storage** and **save an Excel file to Google Cloud Storage** using Syncfusion XlsIO.
 

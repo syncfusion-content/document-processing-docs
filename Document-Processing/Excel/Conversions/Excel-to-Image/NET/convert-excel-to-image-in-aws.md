@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in AWS | Syncfusion
-description: Learn how to convert an Excel document to Image in Amazon Web Services (AWS) using Syncfusion .NET Core Excel (XlsIO) library in C#.
+title: Excel to Image in AWS XlsIO Library | Syncfusion
+description: AWS Excel to image conversion describes how to convert Excel documents to images using Syncfusion .NET Core Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel to Image in Amazon Web Services (AWS)
+# Excel to Image Conversion in AWS Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, **convert an Excel document to Image in Amazon Web Services (AWS)** within a few lines of code. 
 

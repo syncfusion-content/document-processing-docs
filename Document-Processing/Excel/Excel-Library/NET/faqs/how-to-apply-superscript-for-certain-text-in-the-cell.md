@@ -1,12 +1,12 @@
 ---    
-title: Apply Superscript to Text in an Excel Cell | Syncfusion
-description: Learn how to apply superscript to specific text in an Excel cell without affecting existing styles using the .NET Excel Library.
+title: How to Apply Superscript in .NET Excel Library | Syncfusion
+description: Apply superscript to specific text in an Excel cell using the .NET Excel Library without changing existing styles.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply superscript to certain text in a cell?
+# How to apply superscript text in .NET Excel Library
 
 The following code example illustrates how to apply superscript to certain text in a cell without affecting the existing style in C# (cross-platform and Windows-specific) and VB.NET.
 {% tabs %}  

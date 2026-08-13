@@ -1,11 +1,11 @@
 ---
-title: Document Object Model representation | Syncfusion
-description: This section describes the structure of Document Object Model structure for Syncfusion Essential XlsIO
+title: Document Object Model in .NET Excel Library | Syncfusion
+description: The document object model describes the structure used to create and manipulate Excel workbook elements.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Document Object Model
+# Document Object Model in .NET Excel Library
 
 When an existing document is opened or a new document is created, the XlsIO library creates a **Document Object Model** (DOM) of the document in main memory. This object model can be used to manipulate the document as needed.
 

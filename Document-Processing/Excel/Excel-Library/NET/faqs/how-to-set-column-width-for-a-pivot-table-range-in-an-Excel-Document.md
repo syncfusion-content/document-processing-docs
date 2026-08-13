@@ -1,12 +1,12 @@
 ---
-title: How to set column width for a pivot table range in Excel | Syncfusion
-description: Code example to set column width for a pivot table range in an Excel Document using .NET Excel Library.
+title: How to Set Pivot Column Widths in .NET Excel Library | Syncfusion
+description: Set column width for a PivotTable range in an Excel document using the .NET Excel Library for PivotTable layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set column width for a pivot table range in an Excel Document?
+# How to set pivot table column widths in .NET Excel Library
 
 In a Pivot Table, there is an option called **Autofit column widths on update**. If this option is enabled, Excel automatically applies autofit to the Pivot Table columns every time it is refreshed. This is the default behavior in Microsoft Excel.
 

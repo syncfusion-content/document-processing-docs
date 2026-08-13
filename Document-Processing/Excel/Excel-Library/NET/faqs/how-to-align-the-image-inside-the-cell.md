@@ -1,12 +1,12 @@
 ---
-title: Align a picture inside a cell in an Excel worksheet | Syncfusion
-description: Learn how to align an image precisely within a worksheet cell using the Syncfusion .NET Excel (XlsIO) library, including positioning, fitting to the cell.
+title: How to Align Pictures in .NET Excel Library | Syncfusion
+description: Align images precisely within Excel worksheet cells using Syncfusion XlsIO by positioning and fitting images to cells.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to align a picture inside a cell in an Excel worksheet?
+# How to align pictures in cells in .NET Excel Library
 Image can be aligned in the cell as required using the **TopRowOffset** and **LeftColumnOffset** properties of **ShapeImpl**. In the Microsoft Excel UI, the image is dragged to the required position manually. In the same way, there are no specific values for this property. The values can only be assigned manually. 
 
 The following example shows how to align a picture inside a worksheet cell using the Syncfusion .NET Excel (XlsIO) library.

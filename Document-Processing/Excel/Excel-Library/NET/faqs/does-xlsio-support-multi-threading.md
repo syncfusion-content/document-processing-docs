@@ -1,12 +1,12 @@
 ---
-title: XlsIO support for multi threading | Syncfusion
-description: This page explains whether the .NET Excel Library provides support for multi threading.
+title: Multithreading in .NET Excel Library | Syncfusion
+description: Multithreading in the .NET Excel Library explains whether Excel documents can be processed in multithreaded scenarios.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO library support multithreading and thread-safe?
+# Multithreading in .NET Excel Library
 
 Yes, the XlsIO library supports multithreading and is thread-safe. It allows you to create multiple workbook instances for tasks like creating, reading, editing, and converting Excel documents.
 

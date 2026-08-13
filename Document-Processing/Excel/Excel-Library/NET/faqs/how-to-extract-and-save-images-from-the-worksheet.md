@@ -1,12 +1,12 @@
 ---
-title: How to extract and save images from an Excel worksheet | Syncfusion
-description: This page explains how to extract and save images from an Excel worksheet using .NET Excel Library.
+title: How to Extract Worksheet Images in .NET Excel Library | Syncfusion
+description: Extract and save images from Excel worksheets using the .NET Excel Library for image reuse outside the workbook.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to extract and save images from an Excel worksheet?
+# How to extract images from worksheets in .NET Excel Library
 
 You can extract all images from the worksheet using XlsIO. The following code example demonstrates how to retrieve images from a worksheet and save them to a specified directory.
 

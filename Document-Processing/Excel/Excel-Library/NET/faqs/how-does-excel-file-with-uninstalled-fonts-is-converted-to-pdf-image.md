@@ -1,12 +1,12 @@
 ---
-title: Excel file with uninstalled fonts converted to PDF/Image | Syncfusion
-description: This page tells what happens when an Excel file containing uninstalled fonts is converted to PDF/Image using XlsIO.
+title: How to Convert Uninstalled Fonts in .NET Excel Library | Syncfusion
+description: Convert Excel files with uninstalled fonts to PDF or images using XlsIO and understand how missing fonts are handled.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How does Excel file with uninstalled fonts is converted to PDF/Image?
+# How to convert missing fonts to PDF/Image in .NET Excel Library
 
 When the fonts used in particular Excel document are not installed in the machine, the desired characters will be missing in the PDF/Image conversion. However, XlsIO comes up with a font substitution method through [SubstituteFontEventHandler](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Implementation.SubstituteFontEventHandler.html) event. This will enable user to specify alternate font name to render the characters in the specified alternate font. Otherwise, Microsoft Sans Serif is used as the default one.
 

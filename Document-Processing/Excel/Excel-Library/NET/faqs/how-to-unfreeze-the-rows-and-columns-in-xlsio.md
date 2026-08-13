@@ -1,12 +1,12 @@
 ---
-title: How to unfreeze the rows and columns in XlsIO | XlsIO | Syncfusion
-description: This page demonstrates with an example to unfreeze the rows and columns using .NET Excel library.
+title: How to Unfreeze Rows and Columns in .NET Excel Library | Syncfusion
+description: Unfreeze rows and columns in Excel worksheets using the .NET Excel Library for worksheet view management.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to unfreeze the rows and columns in XlsIO?
+# How to unfreeze rows and columns in .NET Excel Library
 
 You can unfreeze rows and columns in XlsIO by using the [RemovePanes](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_RemovePanes) method. The following code snippet illustrates this.
 

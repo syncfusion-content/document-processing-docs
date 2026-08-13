@@ -1,11 +1,11 @@
 ---
-title: Loading and Saving Excel files in OneDrive Cloud Storage | Syncfusion
-description: Explains how to load and save Excel files in OneDrive Cloud Storage using the .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Loading and Saving Excel in OneDrive | Syncfusion
+description: Loading and saving Excel files in OneDrive Cloud Storage using the .NET Core Excel Library without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in OneDrive Cloud Storage
+# Loading and Saving Files in OneDrive Excel Library
 
 ## Prerequisites
 

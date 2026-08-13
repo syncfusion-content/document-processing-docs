@@ -1,12 +1,12 @@
 ---
-title: Supported Features by File Formats in Syncfusion XlsIO | Syncfusion
-description: Learn about the supported and non-supported features of Syncfusion XlsIO across Excel file formats (XLS and XLSX).
+title: Supported File Formats in .NET Excel Library | Syncfusion
+description: File format compatibility describes supported and unsupported Syncfusion XlsIO features across XLS and XLSX formats.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by File Formats in Syncfusion XlsIO
+# Supported File Formats in .NET Excel Library
 
 The following table lists the supported and non-supported Excel document-processing features in *Essential<sup>&reg;</sup> XlsIO*. *XLS* represents the Excel 97 to 2003 format and *XLSX* represents the Excel 2007 and above formats.
 

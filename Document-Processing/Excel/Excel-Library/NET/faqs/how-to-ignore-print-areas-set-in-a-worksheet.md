@@ -1,12 +1,12 @@
 ---
-title: How to ignore print areas set in a worksheet | XlsIO | Syncfusion
-description: This page shows how to ignore print areas set in a worksheet using .NET Excel Library.
+title: How to Ignore Print Areas in .NET Excel Library | Syncfusion
+description: Ignore print areas set in an Excel worksheet using the .NET Excel Library during worksheet handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to ignore print areas set in a worksheet?
+# How to ignore print areas in .NET Excel Library
 
 You can set the print area to null or empty to ignore the print areas in a worksheet as below. Setting the [PrintArea](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPageSetup.html#Syncfusion_XlsIO_IPageSetup_PrintArea) property will impact the process of exporting to PDF. If the print area is set, the export to PDF includes only the print area.
 
