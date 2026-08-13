@@ -1,6 +1,6 @@
 ---
 title: Commands in WPF RichTextBox control | Syncfusion
-description: Learn about the Commands support in the Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and how Commands can be used within the editor.
+description: Learn here all about Commands support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
