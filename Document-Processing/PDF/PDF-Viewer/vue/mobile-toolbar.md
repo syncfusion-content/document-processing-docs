@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Vue PDF Viewer component | Syncfusion
+title: Mobile Toolbar Interface in Vue PDF Viewer | Syncfusion
 description: Learn All About the Mobile Toolbar Interface in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
 control: Mobile Toolbar Interface
 platform: document-processing

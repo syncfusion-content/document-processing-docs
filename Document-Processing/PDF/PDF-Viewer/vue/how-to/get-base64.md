@@ -22,7 +22,7 @@ Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf
 
 **Step 2: Set up the Vue component**
 
-Create an Vue component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
+Create a Vue component and update the template to include a button that triggers conversion to a Base64 string. The samples below show both standalone and server-backed viewer configurations.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

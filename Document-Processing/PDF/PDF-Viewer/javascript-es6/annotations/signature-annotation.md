@@ -82,12 +82,12 @@ if (handWrittenSignature) {
 
 ### Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 
 ```html
-<button id="addHandwrittenSignature "> Add Handwritten signature Programmatically</button>
+<button id="addHandwrittenSignature"> Add Handwritten signature Programmatically</button>
 ```
 
 {% tabs %}
@@ -338,8 +338,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableHandwrittenSignature  = false
-
+pdfviewer.enableHandwrittenSignature = false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -352,8 +351,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-pdfviewer.enableHandwrittenSignature  = false
-
+pdfviewer.enableHandwrittenSignature = false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
