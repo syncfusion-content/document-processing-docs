@@ -1,6 +1,6 @@
 ---
-title: Automatic Suggestion in WPF RichTextBox Control | Syncfusion
-description: Learn about the Automatic Suggestion support in the Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Automatic Suggestion in WPF RichTextBox control | Syncfusion
+description: Learn here all about Automatic Suggestion support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
