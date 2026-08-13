@@ -1,13 +1,13 @@
 ---
-title: Create, read, edit, convert PDF files in .NET | Syncfusion
+title: About Syncfusion .NET PDF Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
-description: Essential PDF is a .NET PDF library to convert PDF files in Windows Forms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Flutter applications
+description: Learn about the Syncfusion Essential Studio .NET PDF Library, its features, capabilities, and usage details.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Overview of PDF Library
+# About Syncfusion .NET PDF Library
 
 The PDF library is a feature-rich [.NET PDF class library](https://www.syncfusion.com/document-sdk/net-pdf-library) developed with 100% managed C# code that can be used to create, read and write PDF. The library can be used in [Windows Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [WPF](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Web Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET MVC](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Core](https://www.syncfusion.com/document-sdk/net-pdf-library), [Blazor](https://www.syncfusion.com/document-sdk/net-pdf-library), [UWP](https://www.syncfusion.com/document-sdk/net-pdf-library), [Flutter](https://www.syncfusion.com/document-sdk/flutter-pdf-library), [WinUI](https://www.syncfusion.com/document-sdk/net-pdf-library) and [.NET MAUI](https://www.syncfusion.com/document-sdk/net-pdf-library) applications and Unity platform without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and the latest PDF 2.0 (ISO 32000-2) specifications.
 

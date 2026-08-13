@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics of the Syncfusion PDF Library
-description: This section provides a detailed overview of the performance metrics and capabilities of the Syncfusion PDF processing library.
+title: Performance Metrics in .NET PDF Library | Syncfusion
+description: Learn about the detailed performance metrics and processing capabilities of Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Performance Metrics in PDF Library
+# Performance Metrics in .NET PDF Library
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides high-performance APIs to create, read, edit, and secure PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of key operations, demonstrating how the PDF library handles large-scale document processing in real-world scenarios.
 

@@ -1,11 +1,11 @@
 ---
-title: Converting HTML to PDF with IE | Syncfusion
+title: HTML to PDF Conversion in IE .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using IE rendering engine with various features like HTML string to PDF, PDF A1B etc.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Conversion using IE Rendering
+# HTML to PDF conversion in IE .NET PDF Library 
 
 Essential<sup>&reg;</sup> PDF makes use of the Microsoft MSHTML library to convert HTML pages to PDF. The output would like how it is viewed in the Internet Explorer browser.
 

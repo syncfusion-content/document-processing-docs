@@ -1,11 +1,11 @@
 ---
-title: Working with Barcode | PDF library | Syncfusion
-description: Learn to add 1D and 2D barcodes to PDF documents, customize appearance, control size and placement, and export them as images.
+title: Barcodes in .NET PDF Library | Syncfusion
+description: Learn how to add 1D and 2D barcodes to PDF documents, customize appearance, and export them as images using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Barcode
+# Barcodes in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF provides support to add barcodes to a PDF document. The following barcode types are supported:
 

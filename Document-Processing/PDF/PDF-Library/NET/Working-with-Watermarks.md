@@ -1,11 +1,11 @@
 ---
-title: Working with Watermarks | Syncfusion
-description: This section explains how to add text and image watermarks to a new PDF document and to an existing PDF document using the Syncfusion .NET PDF library.
+title: Watermarks in .NET PDF Library | Syncfusion
+description: Learn how to add text and image watermarks to new and existing PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Watermarks
+# Watermarks in .NET PDF Library
 
 The Essential<sup>&reg;</sup> PDF provides support to add watermark or stamp with text and images in the PDF document.
 
