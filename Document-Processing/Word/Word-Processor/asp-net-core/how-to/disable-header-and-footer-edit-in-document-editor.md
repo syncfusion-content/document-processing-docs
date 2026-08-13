@@ -1,21 +1,21 @@
----
+﻿---
 layout: post
-title: How to disable header and footer edit in Document Editor Component
-description: Learn how to to disable header and footer edit in Document from the Syncfusion Document Editor component of Syncfusion Essential JS2 and more.
+title: How to disable header and footer edit in Syncfusion DOCX Editor
+description: Learn how to disable header and footer editing in the Syncfusion Document Editor component of Essential JS 2 and more.
 platform: document-processing
 control: Disable Header And Footer
 documentation: ug
 ---
 
-# How to disable header and footer edit in  Document Editor component
+# Disable header and footer edit in ASP.NET Core Document Editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 
-You can use [`restrictEditing`] property to disable header and footer editing based on selection context type.
+You can use the [`restrictEditing`] property to disable header and footer editing based on selection context type.
 
-RestrictEditing allows you to restrict the document modification and makes the Document read only mode. So, by using this property, and if selection inside header or footer, you can set this property as true.
+RestrictEditing allows you to restrict the document modification and makes the document read-only mode. So, by using this property, and if the selection is inside header or footer, you can set this property as true.
 
-The following example code illustrates how to header and footer edit in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable header and footer edit in the `DocumentEditorContainer` instance.
 
 
 {% tabs %}
@@ -23,11 +23,12 @@ The following example code illustrates how to header and footer edit in `Documen
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`] API in selection module.
+Otherwise, you can disable clicking inside Header or Footer by using the [`closeHeaderFooter`] API in the selection module.
 
-The following example code illustrates how to close header and footer when selection is inside header or footer in `DocumentEditorContainer` instance.
+The following example code illustrates how to close header and footer when the selection is inside header or footer in the `DocumentEditorContainer` instance.
 
 
 {% tabs %}
@@ -35,14 +36,15 @@ The following example code illustrates how to close header and footer when selec
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer-close/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Disable header and footer edit in DocumentEditor instance
 
-Like restrictEditing, you can use [`isReadOnly`] property in Document editor to disable header and footer edit.
+Like restrictEditing, you can use the [`isReadOnly`] property in the Document Editor to disable header and footer edit.
 
-The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
+The following example code illustrates how to disable header and footer edit in the `DocumentEditor` instance.
 
 
 {% tabs %}
@@ -50,5 +52,6 @@ The following example code illustrates how to header and footer edit in `Documen
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/disable-header-footer-documenteditor/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="document-editor.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 

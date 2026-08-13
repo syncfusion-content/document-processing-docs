@@ -14,12 +14,11 @@ The Syncfusion **Vue PDF Viewer** provides built-in support for **validating for
 ## How PDF Form Validation Works
 
 Form field validation follows this flow:
- - Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
- - Handle the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
- - When validation is enabled and an end user attempts to print, download, or submit the document:
- - The [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
- - Unfilled required fields are listed in `args.nonFillableFields`.
- - The application can cancel the action, display an error message, or move focus to an invalid field.
+- Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
+- Handle the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
+- When validation is enabled and an end user attempts to print, download, or submit the document, the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+- Unfilled required fields are listed in `args.nonFillableFields`.
+- The application can cancel the action, display an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
@@ -82,7 +81,7 @@ export default {
     onDocumentLoad() {
       const pdfviewer = this.$refs.pdfviewer.ej2Instances;
 
-      // 1) Default for new Textbox fields
+      // 1) Default for new textbox fields
       pdfviewer.textFieldSettings = { isRequired: true };
 
       // 2) Validation wiring

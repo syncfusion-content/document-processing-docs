@@ -109,7 +109,6 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
     object value = await request.UploadAsync();
   }
   return Content(documentBase);
-}eturn Content(documentBase);
 }
 ```
 

@@ -34,9 +34,9 @@ This guide describes inserting new blank pages into a PDF using the **Organize P
 
 3. Insert a blank page
 
-	- Click the **Insert Left** / **Insert Right** option and choose the position (Before / After). A new blank thumbnail appears in the sequence.
+	- Click the **Insert Left** / **Insert Right** option to add the blank page at the chosen position (Before / After). A new blank thumbnail appears in the sequence.
 
-    ![Insert pages in Organize Pages](../../react/images/organize-insert.png)
+    ![Insert pages in Organize Pages](../images/organize-insert.png)
 
 4. Adjust and confirm
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in Vue PDF Viewer component
+# Get Page Info in Vue PDF Viewer
 
 The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available.
 
@@ -80,9 +80,9 @@ export default {
         const pdfviewer = this.$refs.pdfviewer.ej2Instances;
         // Set the page index for which info is required
         const pageIndex = 0;
-        // To Retrieve and log the page information
+        // To retrieve and log the page information
         console.log(pdfviewer.getPageInfo(pageIndex));
-        // To Log the specific page information details to the console
+        // To log the specific page information details to the console
         const pageInfo = pdfviewer.getPageInfo(pageIndex);
         if (pageInfo) {
           console.log(`Page Info for Page Index ${pageIndex}:`);

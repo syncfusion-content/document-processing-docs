@@ -11,7 +11,7 @@ documentation: ug
 
 The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
-- [FDF](#import-as-fdf)
+- [FDF](#import-fdf)
 - [XFDF](#import-xfdf)
 - [JSON](#import-json)
 
