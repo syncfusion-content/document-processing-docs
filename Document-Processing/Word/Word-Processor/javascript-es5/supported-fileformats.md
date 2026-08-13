@@ -14,7 +14,7 @@ JavaScript (ES5) DOCX Editor (Document Editor) supports a wide range of Microsof
 
 ## Supported File Formats
 
-The following table describes supported formats and their conversion capabilities in the Document Editor.
+The following table describes the supported formats and their conversion capabilities in the Document Editor.
 
 | File Format                          | Open   | Export |
 |--------------------------------------|--------|--------|
@@ -32,12 +32,12 @@ The following table describes supported formats and their conversion capabilitie
 
 N> * Requires server-side interactions for the operations.
 
-## Supported platforms for server-side dependencies
+## Supported Platforms for Server-Side Dependencies
 
-You can deploy web APIs for the server-side dependencies of the Document Editor component on the following platforms.
+You can deploy the Document Editor's server-side web APIs on the following platforms.
 
-- 	[ASP.NET Core](./web-services/core)
-- 	[ASP.NET MVC](./web-services/mvc)
-- 	[Java](./web-services/java)
+- [ASP.NET Core](./web-services/core)
+- [ASP.NET MVC](./web-services/mvc)
+- [Java](./web-services/java)
 
-To know more about server-side dependencies, refer to this [page](./web-services-overview).
+To know more about server-side dependencies, refer to the [server-side dependencies overview](./web-services-overview).
