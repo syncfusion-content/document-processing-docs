@@ -1,11 +1,11 @@
 ---
-title: Print Word documents in C# | DocIO | Syncfusion
-description: Learn how to print the Word documents into one using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Print Word documents in .NET Word | Syncfusion
+description: Learn how to print the Word documents into one using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Print Word documents
+# Print Word documents in .NET Word
 
 You can print a Word document by utilizing DocIO’s capability to convert the document into images and .NET framework’s [PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0&viewFallbackFrom=net-5.0) class
 

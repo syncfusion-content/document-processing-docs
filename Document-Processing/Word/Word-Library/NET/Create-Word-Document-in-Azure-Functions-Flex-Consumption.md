@@ -1,12 +1,12 @@
 ---
-title: Create Word document in Azure Functions Flex Consumption | Syncfusion
-description: Create Word document in Azure Functions Flex Consumption using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Create Word document in Azure Functions | Syncfusion
+description: Describe how to substitute missing fonts during Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Azure Functions (Flex Consumption)
+# Create Word document in Azure Functions
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **Create Word document in Azure Functions deployed on Flex (Consumption) plan**.
 

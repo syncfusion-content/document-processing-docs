@@ -1,6 +1,6 @@
 ---
 title: Create Word document in AWS Lambda | Syncfusion
-description: Create Word document in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Describe how to convert Word documents to images in UWP applications using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

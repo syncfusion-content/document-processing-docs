@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>&reg;</sup> Word offline installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to download the Syncfusion<sup>&reg;</sup> Word offline installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to download Syncfusion® Word offline installer | Syncfusion
+description: Learn here about how to download the Syncfusion® Word offline installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> Word offline installer
+# How to download Syncfusion® Word offline installer
 
 [DocIO](https://www.syncfusion.com/word-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> Word installer. You can either download the licensed installer or try our trial installer depending on your license. 
 

@@ -1,11 +1,11 @@
 ---
-title: Mail merge a Word document in C# | DocIO | Syncfusion
-description: Learn how to mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) using the .NET Word (DocIO) library.
+title: Mail merge a Word document in .NET Word | Syncfusion
+description: Learn how to mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Mail merge
+# Mail merge a Word document in .NET Word
 
 Mail merge is a process of merging data from data source to a Word template document. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) class provides support to bind template document and data source. The [WMergeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WMergeField.html) instance is replaced with the actual data retrieved from data source for the given merge field name in a template document.
 

@@ -1,11 +1,11 @@
 ---
-title: Accepting or Rejecting Track Changes | Word library | Syncfusion
-description: This section illustrates how to Accept or Reject the Track changes in the Word document using Syncfusion Word library (Essential DocIO)
+title: Track Changes in Java Word | Syncfusion
+description: This section illustrates how to Accept or Reject the Track changes in the Word document using Syncfusion Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Accepting or Rejecting Track Changes
+# Track Changes in Java Word
 
 It is used to keep track of the changes made to a Word document. It helps to maintain the record of author, name and time for every insertion, deletion, or modification in a document. This can be enabled by using the TrackChanges property of the Word document.
 

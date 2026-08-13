@@ -1,12 +1,12 @@
 ---
-title: Compare Word Documents in C# | DocIO | Syncfusion
-description: Learn how to compare two Word documents in C# using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Compare Word Documents in .NET Word | Syncfusion
+description: Learn how to compare two Word documents in C# using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Compare Word documents in C#
+# Compare Word Documents in .NET Word
 
 Comparing two Word documents allows you to identify the changes between two versions of a document. The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
 *	Insertions

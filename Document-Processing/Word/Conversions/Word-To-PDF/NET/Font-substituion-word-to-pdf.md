@@ -1,6 +1,6 @@
 ---
-title: Font Substitution in Word to PDF Conversion in C# | DocIO | Syncfusion
-description: Learn about how to substitute font during Word to PDF conversion using the .NET Word (DocIO) library.
+title: Font Substitution in Word to PDF Conversion | Syncfusion
+description: This section illustrates how to substitute fonts during Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
