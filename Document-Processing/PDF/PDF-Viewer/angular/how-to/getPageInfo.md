@@ -92,6 +92,6 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-By following these steps, you can successfully integrate and use the get page info API in the EJ2 PDF Viewer.
+By following these steps, you can successfully integrate and use the `getPageInfo` API in the EJ2 PDF Viewer.
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

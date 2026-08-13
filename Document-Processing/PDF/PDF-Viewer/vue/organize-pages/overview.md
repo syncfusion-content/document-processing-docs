@@ -29,8 +29,7 @@ Select **Save** to overwrite the current document, or **Save As** to download a 
 
 See also
 
-- [UI interactions for Organize Pages](./organize-pdf/ui-interactions-organize-page)
-- [Toolbar items for Organize Pages](./organize-pdf/toolbar-organize-page)
-- [Programmatic support for Organize Pages](./organize-pdf/programmatic-support-for-organize-page)
-- [Organize Pages events](./organize-pdf/organize-pdf-events)
-- [Organize Pages in mobile view](./organize-pdf/organize-page-mobile-view)
+- [Toolbar items for Organize Pages](./toolbar)
+- [Programmatic support for Organize Pages](./programmatic-support)
+- [Organize Pages events](./events)
+- [Organize Pages in mobile view](./mobile-view)

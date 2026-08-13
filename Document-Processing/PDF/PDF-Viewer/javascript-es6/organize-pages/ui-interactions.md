@@ -1,14 +1,14 @@
 ---
 layout: post
-title: UI Interactions for Organizing Pages in TypeScript PDF Viewer | Syncfusion
-description: Learn about the UI interactions for organizing pages in the Syncfusion TypeScript PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
+title: Page Organization UI Interactions in JavaScript (ES6) | Syncfusion
+description: Learn UI interactions for organizing PDF pages in Syncfusion JavaScript (ES6) PDF Viewer, including rotate, reorder, insert, delete, and copy actions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UI Interactions for Organizing Pages in TypeScript PDF Viewer
+# UI Interactions for Organizing Pages in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides an interface for managing and organizing pages within a PDF document. This section describes the UI interactions available in the `Organize Pages` dialog.
 

@@ -5,6 +5,7 @@ description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Export PDF Form Data from MVC PDF Viewer
