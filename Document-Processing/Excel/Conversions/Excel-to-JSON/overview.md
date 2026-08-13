@@ -1,12 +1,12 @@
 ---
-title: About Syncfusion .NET Excel to JSON | Syncfusion
+title: About Syncfusion .NET Excel to JSON Conversion | Syncfusion
 description: Learn about introduction of converting Excel workbooks, worksheets, or ranges to JSON using Syncfusion .NET XlsIO and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# About Syncfusion Excel to JSON Conversion
+# About Syncfusion .NET Excel to JSON Conversion
 
 Essential<sup>&reg;</sup> XlsIO supports to convert Excel data as JSON files by simply saving the workbook using the [SaveAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_) method. This support includes the features:
 

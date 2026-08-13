@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion Excel Document Processing Solutions | Syncfusion
-description: Learn about introduction of Syncfusion Excel Document Processing Library and editor component for Excel file processing and more details.
+description: Learn about introduction of Syncfusion Excel Document Processing Library, converters, and editor component for Excel file processing and more details.
 platform: document-processing
 control: general
 documentation: UG

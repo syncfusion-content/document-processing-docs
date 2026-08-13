@@ -1,12 +1,12 @@
 ---
-title: About Syncfusion .NET Chart to Image | Syncfusion
+title: About Syncfusion .NET Chart to Image Conversion | Syncfusion
 description: Learn about overview of converting Excel charts to images using Syncfusion XlsIO and setting image quality and format.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# About Syncfusion Excel Chart to Image Conversion
+# About Syncfusion .NET Excel Chart to Image Conversion
 
 XlsIO exposes two API surfaces for converting an Excel chart to an image:
 
