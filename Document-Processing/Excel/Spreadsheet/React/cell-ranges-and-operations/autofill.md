@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Autofill in React Spreadsheet component | Syncfusion
-description: Learn here how to apply autofill to a range of cells in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Autofill in React Spreadsheet | Syncfusion
+description: Learn about autofill in the Syncfusion React Spreadsheet component and extend data patterns across rows, columns, and cell ranges.
 control: Spreadsheet
 platform: document-processing
 documentation: ug

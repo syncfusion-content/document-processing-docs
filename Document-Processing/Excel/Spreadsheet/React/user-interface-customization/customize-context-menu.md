@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context menu item in React Spreadsheet component | Syncfusion
-description: Learn here how to customize the context menu by adding or hiding items in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu Item in React Spreadsheet | Syncfusion
+description: Learn about customizing context menu items in the Syncfusion React Spreadsheet component.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Customize Context Menu
+# Context Menu Item in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides an easy way to customize the context menu. You can add custom menu items, hide default items, or change what happens when a user selects a menu option. This giving access to useful actions. You can perform the following context menu customization options in the spreadsheet
 

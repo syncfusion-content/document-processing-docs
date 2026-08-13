@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Clipboard in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Clipboard in ASP.NET MVC Spreadsheet | Syncfusion
+description: Use clipboard operations in the Syncfusion ASP.NET MVC Spreadsheet control to cut, copy, and paste data efficiently across worksheets.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
 
-# Clipboard in ASP.NET MVC Spreadsheet control
+# Clipboard in ASP.NET MVC Spreadsheet
 
 The Spreadsheet supports clipboard operations such as cut, copy, and paste. Use the [enableClipboard](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableClipboard) property to enable or disable clipboard operations in the Spreadsheet.
 

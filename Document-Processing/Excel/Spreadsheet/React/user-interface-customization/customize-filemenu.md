@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom file menu in React Spreadsheet component | Syncfusion
-description: Learn here how to customize the File menu in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Custom File Menu in React Spreadsheet | Syncfusion
+description: Learn about customizing the file menu in the Syncfusion React Spreadsheet component.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Customize File Menu in React Spreadsheet
+# Custom File Menu in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component lets you customize the File menu. You can hide file menu items, disable items, and add your own custom items with click actions. This helps you build a clear, task-focused menu. You can perform the following file menu customization options in the Spreadsheet:
 

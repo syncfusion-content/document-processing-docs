@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create a object structure in React Spreadsheet component | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Create an Object Structure in React Spreadsheet | Syncfusion
+description: Learn how to create an object structure in the Syncfusion React Spreadsheet component for organizing spreadsheet data.
 control: Create a object structure 
 platform: document-processing
 documentation: ug
 ---
 
-# Create a object structure in React Spreadsheet component
+# How to Create an Object Structure in React Spreadsheet
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 

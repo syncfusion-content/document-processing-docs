@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert Worksheet in React Spreadsheet component | Syncfusion
-description: Learn here all about how to insert a worksheet in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about inserting worksheets in the Syncfusion React Spreadsheet component.
 control: Worksheet 
 platform: document-processing
 documentation: ug

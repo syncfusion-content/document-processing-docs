@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Selection in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to select cells, rows, columns, and ranges in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Selection
 documentation: ug
 ---
 
 
-# Selection in ASP.NET MVC Spreadsheet Control
+# Selection in ASP.NET MVC Spreadsheet
 
 Selection highlights the selected cell, row, or column in the Spreadsheet. You can select cells using mouse, touch, or keyboard interactions.
 

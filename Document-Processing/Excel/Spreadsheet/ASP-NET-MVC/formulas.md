@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formulas in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about Formulas in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Formulas in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to use built-in formulas and calculations in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Formulas
 documentation: ug
 ---
 
 
-# Formulas in ASP.NET MVC Spreadsheet Control
+# Formulas in ASP.NET MVC Spreadsheet
 
 Formulas are used to calculate data in a worksheet. A formula can reference cells in the same worksheet or in other worksheets.
 

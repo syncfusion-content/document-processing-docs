@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of the Blazor Spreadsheet Control | Syncfusion
-description: Explore the Syncfusion Blazor Spreadsheet control, a powerful component for creating, editing, and analyzing data in a familiar Excel-like interface.
+title: About Syncfusion Blazor Spreadsheet Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio Blazor Spreadsheet control and more details
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Overview of the Blazor Spreadsheet Control
+# About Syncfusion Blazor Spreadsheet Control
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) is a user-interactive component designed to organize and analyze data in a tabular format with configuration options for customization. It will load data by importing an Excel file or from local file paths and Base64 string data. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
 

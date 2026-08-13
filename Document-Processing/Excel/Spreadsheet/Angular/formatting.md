@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Angular Spreadsheet| Syncfusion
+description: Formatting in Angular Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
 control: Formatting 
 documentation: ug
 ---
 
-# Formatting in Angular Spreadsheet component
+# Formatting in Angular Spreadsheet 
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting

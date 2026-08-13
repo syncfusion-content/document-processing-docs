@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Open in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open in Javascript Spreadsheet | Syncfusion
+description: Open in JavaScript Spreadsheet enables users to import and load workbook files for viewing, editing, and data management.
 platform: document-processing
 control: Open 
 documentation: ug
 ---
 
-# Open in EJ2 Javascript Spreadsheet control
+# Open in Javascript Spreadsheet 
 
 The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet/#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet/#openurl) property.
 

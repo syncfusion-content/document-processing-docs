@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Save in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Save in Javascript Spreadsheet | Syncfusion
+description: Save in JavaScript Spreadsheet enables users to export and store workbook data in supported file formats for future use.
 platform: document-processing
 control: Save 
 documentation: ug
 ---
 
-# Save in EJ2 Javascript Spreadsheet control
+# Save in Javascript Spreadsheet 
 
 The Spreadsheet control saves its data, style, format, and more as Excel file document. To enable this feature, set [`allowSave`](../api/spreadsheet/#allowsave) to `true` and assign service url to the [`saveUrl`](../api/spreadsheet/#saveurl) property.
 

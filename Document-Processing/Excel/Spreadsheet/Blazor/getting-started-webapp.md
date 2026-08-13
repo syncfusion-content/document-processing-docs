@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Spreadsheet Component in Blazor Web App.
+title: Getting Started with Blazor Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Spreadsheet in a Blazor Web App.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with the Blazor Spreadsheet in Blazor Web App
+# Getting Started with Blazor Spreadsheet
 
 This section briefly explains how to include the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 

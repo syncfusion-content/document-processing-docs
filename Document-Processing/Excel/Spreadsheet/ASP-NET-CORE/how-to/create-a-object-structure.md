@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create an object structure in ASP.NET Core Spreadsheet | Syncfusion
-description: Learn here all about how to create an object structure in ASP.NET Core Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: How to Create Objects in ASP.NET Core Spreadsheet | Syncfusion
+description: Create an object structure in ASP.NET Core Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create a object structure 
 documentation: ug
 ---
 
-# Create an object structure in ASP.NET Core Spreadsheet Control
+# How to Create an Object Structure in ASP.NET Core Spreadsheet
 
 This topic explains how to construct a JSON object that can be passed to the `openFromJson` method to render the Spreadsheet. The JSON object contains a `Workbook` key whose value defines the Spreadsheet properties.
 

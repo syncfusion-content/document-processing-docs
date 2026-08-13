@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Duplicate Worksheet in React Spreadsheet component | Syncfusion
-description: Learn here all about how to duplicate a worksheet in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about duplicating worksheets in the Syncfusion React Spreadsheet component.
 control: Worksheet 
 platform: document-processing
 documentation: ug

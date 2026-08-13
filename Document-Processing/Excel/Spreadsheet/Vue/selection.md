@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Selection in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Selection in Vue Spreadsheet | Syncfusion
+description: Learn how to select cells, rows, columns, and ranges in the Syncfusion Vue Spreadsheet.
 control: Selection 
 platform: document-processing
 documentation: ug
 ---
 
-# Selection in Vue Spreadsheet component
+# Selection in Vue Spreadsheet
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 

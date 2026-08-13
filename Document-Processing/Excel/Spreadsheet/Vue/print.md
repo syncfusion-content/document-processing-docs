@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in Vue Spreadsheet component | Syncfusion
-description: Learn here all about print feature in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Printing in Vue Spreadsheet | Syncfusion
+description: Learn how to print worksheets and configure print settings in the Syncfusion Vue Spreadsheet.
 control: Print
 platform: document-processing
 documentation: ug
 ---
 
-# Print in Vue Spreadsheet Component
+# Printing in Vue Spreadsheet
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Feature list in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Feature list in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Feature list in Angular Spreadsheet | Syncfusion
+description: The feature list in Angular Spreadsheet provides an overview of key capabilities, helping users explore and utilize spreadsheet functions effectively.
 platform: document-processing
 control: Feature list 
 documentation: ug
 ---
 
-# Feature list in Angular Spreadsheet component
+# Feature list in Angular Spreadsheet 
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

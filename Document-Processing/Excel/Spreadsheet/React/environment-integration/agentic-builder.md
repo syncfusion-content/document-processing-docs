@@ -1,13 +1,13 @@
 ---
 layout: post
-title: React Spreadsheet getting started with Agentic UI Builder | Syncfusion
-description:  Checkout and learn about how to use React Spreadsheet component of Syncfusion Essential JS 2 with Agentic UI Builder.
+title: Getting Started with React Spreadsheet Agentic UI Builder | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component using Agentic UI Builder. Explore setup, features, and usage options.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Create a React Spreadsheet Application with Agentic UI Builder
+# Getting Started with React Spreadsheet Agentic UI Builder
 
 This guide shows you how to create a [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component simply by typing what you want using natural language commands — with the [**Syncfusion® React Agentic UI Builder**](https://www.syncfusion.com/explore/mcp-servers/) (powered by Syncfusion's MCP Server). Just describe it, and the tool builds the complete implementation of the spreadsheet component for you.
 

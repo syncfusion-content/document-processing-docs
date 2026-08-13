@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Feature list in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Feature list in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Feature List of Vue Spreadsheet | Syncfusion
+description: Explore the complete feature set and capabilities available in the Syncfusion Vue Spreadsheet
 control: Feature list 
 platform: document-processing
 documentation: ug
 ---
 
-# Feature list in Vue Spreadsheet Component
+# Feature List of Vue Spreadsheet
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

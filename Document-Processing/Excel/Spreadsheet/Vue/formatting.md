@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Vue Spreadsheet | Syncfusion
+description: Apply cell, text, number, and conditional formatting in the Syncfusion Vue Spreadsheet to improve data presentation.
 control: Formatting 
 platform: document-processing
 documentation: ug
 ---
 
-# Formatting in Vue Spreadsheet component
+# Formatting in Vue Spreadsheet
 
 Formatting options make your data easier to view and understand. The Spreadsheet supports the following types of formatting:
 * Number Formatting

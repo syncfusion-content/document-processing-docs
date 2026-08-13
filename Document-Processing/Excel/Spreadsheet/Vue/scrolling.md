@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Scrolling in Vue Spreadsheet | Syncfusion
+description: Explore scrolling functionality in the Syncfusion Vue Spreadsheet for smooth worksheet navigation.
 control: Scrolling 
 platform: document-processing
 documentation: ug
 ---
 
-# Scrolling in Vue Spreadsheet component
+# Scrolling in Vue Spreadsheet
 
 Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowscrolling) as true.
 

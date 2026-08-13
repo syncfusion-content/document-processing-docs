@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in React Spreadsheet component | Syncfusion
-description: Learn here all about print feature in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Print in React Spreadsheet | Syncfusion
+description: Learn about printing in the Syncfusion React Spreadsheet component, including print options, page layout, and worksheet printing.
 control: Print
 platform: document-processing
 documentation: ug
 ---
 
-# Print in React Spreadsheet component
+# Print in React Spreadsheet
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 

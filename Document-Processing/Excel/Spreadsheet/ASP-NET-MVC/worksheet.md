@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Worksheet in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about Worksheet in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Worksheet in ASP.NET MVC Spreadsheet | Syncfusion
+description: Create, manage, and customize worksheets in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Worksheet
 documentation: ug
 ---
 
 
-# Worksheet in ASP.NET MVC Spreadsheet control
+# Worksheet in ASP.NET MVC Spreadsheet
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 

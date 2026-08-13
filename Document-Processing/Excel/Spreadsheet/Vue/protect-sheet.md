@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Protect sheet in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sheet Protection in Vue Spreadsheet | Syncfusion
+description: Secure worksheets and cells using sheet protection features in the Syncfusion Vue Spreadsheet.
 control: Protect sheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Protect sheet in Vue Spreadsheet component
+# Sheet Protection in Vue Spreadsheet
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
