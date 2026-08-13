@@ -4,7 +4,6 @@ title: Configure extractTextOption in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to use the extractTextOption property in the Syncfusion ASP.NET MVC PDF Viewer to control text extraction and memory usage.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -42,14 +41,14 @@ The following example demonstrates how to configure the `extractTextOption` prop
 <script type="text/javascript">
     window.onload = function () {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.extractTextOption  = 'None';  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
+        viewer.extractTextOption = 'None';  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
     }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Description of each option
+### Description of each option:
 **extractTextOption.TextAndBounds (default):** Returns both plain text and positional data (bounds). Use this option when you need both the content of the PDF and its layout for further processing.
 
 **extractTextOption.TextOnly:** Returns only the plain text from the PDF. No positional data is included. Text search functionality is disabled when using this option; use `findTextAsync` for searching.

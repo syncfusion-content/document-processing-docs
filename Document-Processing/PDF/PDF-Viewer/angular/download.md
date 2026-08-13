@@ -3,7 +3,7 @@ layout: post
 title: Download in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Download in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Download
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -79,7 +79,7 @@ To invoke download programmatically, use the following snippet:
 ```html
 <script>
     window.onload = function () {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
+        var pdfViewer = document.getElementById('pdfViewer').ej2_instances[0];
         pdfViewer.download();
     }
 </script>
@@ -88,5 +88,5 @@ To invoke download programmatically, use the following snippet:
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

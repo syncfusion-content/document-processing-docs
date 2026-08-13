@@ -9,6 +9,8 @@ documentation: ug
 
 # Handle signature selection events in TypeScript PDF Viewer
 
+Before proceeding, ensure the PDF Viewer is initialized as described in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide.
+
 The PDF Viewer exposes events for monitoring the selection state of handwritten signature annotations: [signatureSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/signatureSelectEventArgs) and [signatureUnselect](https://ej2.syncfusion.com/documentation/api/pdfviewer/signatureUnselectEventArgs). These events enable applications to respond when a signature annotation is selected or cleared—for example, updating the UI, enabling contextual actions, or recording metadata.
 
 **signatureSelect**

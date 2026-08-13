@@ -120,7 +120,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;

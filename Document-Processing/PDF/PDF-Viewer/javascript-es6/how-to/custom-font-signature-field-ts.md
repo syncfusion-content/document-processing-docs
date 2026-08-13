@@ -30,6 +30,8 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inspiration">
 ```
 
+N> Add the preceding `<link>` elements inside the `<head>` of your `index.html` so the fonts are available before the PDF Viewer is initialized.
+
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';
 PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
