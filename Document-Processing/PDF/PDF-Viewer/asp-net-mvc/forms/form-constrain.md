@@ -5,6 +5,7 @@ description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # PDF form field flags in MVC PDF Viewer
@@ -156,7 +157,7 @@ N> Printing can be triggered programmatically using **pdfviewer.print()**. Form 
 **Steps**
 1. Enable **Form Designer** mode in the PDF Viewer.  
 2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
+3. The **Right-click to open the context menu → Properties** popover is displayed.
 4. Configure the required constraint options.  
 5. Click “Ok” and Close the properties popover to apply the changes.  
 
@@ -285,5 +286,6 @@ You can configure default flag values so that form fields added using the [Form 
 - [Modify form fields](./manage-form-fields/modify-form-fields)  
 - [Group form fields](./group-form-fields)  
 - [Add custom data to PDF form fields](./custom-data)  
-- [Form Validation](./form-validation)  
+- [Form validation](./form-validation)  
+- [Form field events](./form-field-events)
 - [Form fields API](./form-fields-api)

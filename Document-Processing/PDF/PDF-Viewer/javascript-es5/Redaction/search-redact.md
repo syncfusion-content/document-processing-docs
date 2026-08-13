@@ -25,7 +25,7 @@ N> Prerequisites: Add the PDF Viewer control to your JavaScript application and 
     <button id="applyRedaction">Apply Redaction</button>
 ```
 ```js
-const pdfviewer: PdfViewer = new PdfViewer({
+var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
 });

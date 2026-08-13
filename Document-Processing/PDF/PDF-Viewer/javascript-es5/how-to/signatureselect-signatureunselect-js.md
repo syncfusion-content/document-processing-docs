@@ -28,7 +28,7 @@ pdfviewer.signatureSelect = (args: any) => {
  };
 
 pdfviewer.signatureUnselect = (args: any) => {
-    console.log('Signature selected:', args);
+    console.log('Signature unselected:', args);
 };
 ```
 

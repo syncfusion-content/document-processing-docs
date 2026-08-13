@@ -23,46 +23,46 @@ By default, the PDF Viewer uses the en-US culture and requires no additional con
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
-      ej.pdfviewer.TextSelection,
-      ej.pdfviewer.TextSearch,
-      ej.pdfviewer.Print,
-      ej.pdfviewer.Navigation,
-      ej.pdfviewer.Toolbar,
-      ej.pdfviewer.Magnification,
-      ej.pdfviewer.Annotation,
-      ej.pdfviewer.FormDesigner,
-      ej.pdfviewer.FormFields,
-      ej.pdfviewer.PageOrganizer
-    );
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.PageOrganizer
+);
 
-    var pdfviewer = new ej.pdfviewer.PdfViewer({
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-     locale: 'ar-AE' //Using locale update culture (en-US by default)
-    });
-    pdfviewer.appendTo('#pdfViewer');
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+  locale: 'en-US' //Using locale update culture (en-US by default)
+});
+pdfviewer.appendTo('#pdfViewer');
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 
 ej.pdfviewer.PdfViewer.Inject(
-      ej.pdfviewer.TextSelection,
-      ej.pdfviewer.TextSearch,
-      ej.pdfviewer.Print,
-      ej.pdfviewer.Navigation,
-      ej.pdfviewer.Toolbar,
-      ej.pdfviewer.Magnification,
-      ej.pdfviewer.Annotation,
-      ej.pdfviewer.FormDesigner,
-      ej.pdfviewer.FormFields,
-      ej.pdfviewer.PageOrganizer
-    );
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.PageOrganizer
+);
 
-    var pdfviewer = new ej.pdfviewer.PdfViewer({
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
-     locale: 'ar-AE' //Using locale update culture (en-US by default)
-    });
-    pdfviewer.appendTo('#pdfViewer');
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+  locale: 'en-US' //Using locale update culture (en-US by default)
+});
+pdfviewer.appendTo('#pdfViewer');
 {% endhighlight %}
 {% endtabs %}
 

@@ -14,25 +14,25 @@ The [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) component is
 
 * Accurate, reliable rendering of PDF pages.
 * Easy page navigation with:
-    * [Thumbnail page view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/page-thumbnail)
+    * [Page thumbnail](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/page-thumbnail)
     * [Bookmark panel](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/bookmark)
     * [Hyperlink navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/hyperlink)
     * [Table of contents navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interactive-pdf-navigation/hyperlink#table-of-contents-navigation)
 * Core interactions:
     * [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/magnification) and [panning](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/interaction-mode)
-    * [Text searching](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/text-search)
+    * [Text search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/text-search)
     * Text selection and copy
 * [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/print) PDF files.
 * Annotate PDFs with:
-    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/stamp-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/free-text-annotation)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/sticky-notes-annotation)
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/annotation-types/highlight-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/annotation-types/rectangle-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/annotation-types/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/annotation-types/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/annotation-types/sticky-notes)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/forms/overview)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/annotation/signature-annotation)
-* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/toolbar-customization/annotation-toolbar) - Built-in toolbar and custom toolbars for common viewer actions.
 * [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/localization/default-language) - Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started)
 

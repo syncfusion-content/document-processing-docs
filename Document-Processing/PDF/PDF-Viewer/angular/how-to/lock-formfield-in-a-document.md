@@ -3,7 +3,7 @@ layout: post
 title: Lock Form Fields in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Lock Form Fields in a document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Lock Form Fields in a document
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---

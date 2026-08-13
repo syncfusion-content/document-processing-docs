@@ -15,14 +15,14 @@ The `extractText` method retrieves text content and, optionally, positional data
 **Parameters overview:**
 - `startIndex` — Starting page index (0-based).
 - `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
-- `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
+- `options` (optional) — An options string such as `TextOnly` or `TextAndBounds` that controls whether bounds are included.
 
 **Returned object shape (example):**
 
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
+### Usage of extractText in Vue Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 

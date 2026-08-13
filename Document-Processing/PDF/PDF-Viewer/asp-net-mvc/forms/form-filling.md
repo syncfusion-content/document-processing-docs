@@ -162,7 +162,7 @@ By enabling [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetmv
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)

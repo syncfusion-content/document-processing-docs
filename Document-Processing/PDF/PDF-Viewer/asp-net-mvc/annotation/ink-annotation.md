@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Ink annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about ink annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+description: Learn about ink annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): add, edit, and default settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Ink annotation in ASP.NET MVC PDF Viewer control

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize PDF Pages in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn how to programmatically organize PDF pages in the JavaScript (ES6) PDF Viewer, including dialog control and page management options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic Support for Organize Pages in TypeScript PDF Viewer control
+# Programmatic Page Organization in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 
@@ -92,7 +92,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.pageOrganizerSettings = {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true,  imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
+pdfviewer.pageOrganizerSettings = {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true,  imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5};
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

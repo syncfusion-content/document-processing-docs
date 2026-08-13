@@ -1,14 +1,14 @@
 ---
 layout: post
 title: RTL Localization in Vue PDF Viewer | Syncfusion
-description: Learn about the Localization and Right to Left Lanugage Support in Syncfusion Vue PDF Viewer component.
+description: Learn about the Localization and Right to Left Language Support in Syncfusion Vue PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL and Localization Page in Vue PDF Viewer
+# RTL and Localization in Vue PDF Viewer
 
 Use RTL support to render the viewer interface for right-to-left languages.
 - Enable [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enablertl) to apply right-to-left layout.
@@ -90,7 +90,7 @@ export default {
     ],
   },
 };
-//Load culutre files here
+//Load culture files here
     L10n.load({
                 'ar-AE': {
                     'PdfViewer': {
@@ -162,7 +162,7 @@ export default {
                         'End Arrow': 'نهاية السهم',
                         'Line Style': 'أسلوب الخط',
                         'Fill Color': 'ملء اللون',
-                        'Line Color': ' الخط اللون',
+                        'Line Color': 'لون الخط',
                         'None': 'لا شيء',
                         'Open Arrow': 'افتح',
                         'Closed Arrow': 'مغلق',

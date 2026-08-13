@@ -48,7 +48,7 @@ This guide explains how to rotate individual or multiple pages using the **Organ
    - Use **Undo** (Ctrl+Z) to revert the last rotation.
    - Use the reverse rotation button (Rotate Left/Rotate Right) until the page returns to 0°.
 
-   ![Undo and redo Organize Pages toolbar](../../react/images/undo-redo.png)
+   ![Undo and redo Organize Pages toolbar](../images/undo-redo.png)
 
 6. Persist rotations
 
@@ -61,7 +61,7 @@ This guide explains how to rotate individual or multiple pages using the **Organ
 
 ## Enable or disable Rotate Pages button
 
-To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#show-or-hide-the-rotate-option) for the guidelines
+To enable or disable the **Rotate Pages** button in the Organize Pages toolbar, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rotate-option) for the guidelines
 
 ## Code snippet
 
