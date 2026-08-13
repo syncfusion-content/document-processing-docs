@@ -2,7 +2,7 @@
 layout: post
 title: Free text annotation in Vue PDF viewer component | Syncfusion
 description: Learn about free text annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
-control: Free text annotation
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -627,7 +627,7 @@ Select a color from the Font Color palette to change the font color.
 
 Use the Text Align tool to set the annotation text alignment.
 
-![FreeTextAnnotation](../images/textalign.png)
+![Set free text alignment](../images/textalign.png)
 
 ### Font styles
 
@@ -694,7 +694,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Optiions API (Standalone)" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -732,7 +732,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-backed)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">

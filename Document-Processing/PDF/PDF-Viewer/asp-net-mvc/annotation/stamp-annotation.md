@@ -5,6 +5,7 @@ description: Learn about stamp annotations in the Syncfusion ASP.NET MVC PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Stamp annotation in ASP.NET MVC PDF Viewer control

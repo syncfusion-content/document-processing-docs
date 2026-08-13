@@ -5,6 +5,7 @@ description: Learn how to attach, update, and read custom data on PDF form field
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Add Custom Data to PDF Form Fields in MVC PDF Viewer
@@ -170,8 +171,9 @@ You can access the customData property from any form field at any point in your 
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./overview-create-forms)
-- [Group form fields](../group-form-fields)
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
+- [Group form fields](./group-form-fields)
 - [Form flags](./form-constrain)
 - [Form validation](./form-validation)
 - [Form fields API](./form-fields-api)

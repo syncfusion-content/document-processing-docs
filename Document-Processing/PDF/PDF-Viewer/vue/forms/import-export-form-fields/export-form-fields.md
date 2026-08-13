@@ -65,7 +65,7 @@ export default {
   methods: {
     exportFdf() {
       const pdfviewer = this.$refs.pdfviewer.ej2Instances;
-      // Destination is optional; if omitted the browser will prompt.
+      // Destination is optional; if omitted, the browser prompts the user to save the file.
       pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
     }
   }
@@ -220,7 +220,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+## Common use cases
 
 - Save user-entered data to your server without altering the original PDF.
 - Export as JSON for REST API integration.

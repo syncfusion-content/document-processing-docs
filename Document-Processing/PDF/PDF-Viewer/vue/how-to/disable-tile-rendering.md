@@ -9,7 +9,7 @@ documentation: ug
 
 # Disable tile rendering in Vue PDF Viewer
 
-Use the `tileRenderingSettings.enableTileRendering` property to enable or disable tile rendering, which affects performance based on document size.
+Use the [`tileRenderingSettings.enableTileRendering`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/tilerenderingsettings#enabletilerendering) property to enable or disable tile rendering, which affects rendering performance based on document size.
 
 Set `enableTileRendering` to `false` to disable tile rendering. It is enabled by default and typically benefits large documents.
 

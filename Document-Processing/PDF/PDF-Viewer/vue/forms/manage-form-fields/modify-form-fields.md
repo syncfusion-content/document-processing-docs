@@ -270,9 +270,9 @@ export default {
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -322,9 +322,9 @@ export default {
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -385,9 +385,9 @@ export default {
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -448,9 +448,9 @@ export default {
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -506,9 +506,9 @@ export default {
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -565,12 +565,12 @@ export default {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

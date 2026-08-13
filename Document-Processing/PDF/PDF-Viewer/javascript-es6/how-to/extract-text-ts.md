@@ -152,7 +152,6 @@ if (btnTextAndBounds) {
 
 ## See Also
 
-[Extract Text Options](./extract-text-option-ts)
-[Find Text](../text-search/find-text)
-[Text Search Features](../text-search/text-search-events)
-[Text Search Events](../text-search/text-search-events)
+- [Extract Text Options](./extract-text-option-ts)
+- [Find Text](../text-search/find-text)
+- [Text Search Events](../text-search/text-search-events)

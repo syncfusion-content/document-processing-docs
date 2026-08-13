@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save to One Drive in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to One Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to OneDrive in ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn about how to save a document to OneDrive in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Save document to One Drive
+control: Save document to OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to One Drive in ASP.NET MVC
+# Save a Document to OneDrive in ASP.NET MVC Document Editor
 
-To save a document to One Drive, you can follow the steps below
+To save a document to OneDrive, follow these steps:
 
 **Step 1:** Create the Microsoft graph API.
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
+Create a Microsoft Graph API application and obtain the necessary credentials, specifically the application ID and tenant ID. Follow the steps in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,14 +54,14 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToOneDrive()` method to save the downloaded document to One Drive bucket
+* Create the `SaveToOneDrive()` method to save the uploaded document to a OneDrive folder.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToOneDrive")]
-//Post action for downloading the document
+// Post action for uploading the document to OneDrive
 
 public void SaveToOneDrive(IFormCollection data)
 {
@@ -115,7 +115,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project, and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -127,17 +127,17 @@ private string GetValue(IFormCollection data, string key)
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
-  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
+  "ApplicationId": "Your_Application_ID",
+  "FolderName": "Your_Folder_Name_To_Access_The_Files_In_OneDrive"
 }
 
 ```
 
 N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:** Modify the Index.cshtml File in the Document Editor Sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in One Drive.
+On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in OneDrive.
 
 
 {% tabs %}
