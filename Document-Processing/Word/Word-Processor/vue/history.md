@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # History in Vue Document editor component
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) tracks the history of all editing actions performed in the document, which allows undo and redo functionality.
 
 ## Enable or disable history
 
-Inject the `EditorHistory` module in your application to provide history preservation functionality for `DocumentEditor`. Refer to the following code example.
+Inject the `EditorHistory` module in your application to provide history preservation functionality for the `DocumentEditor`. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +91,7 @@ this.$refs.documenteditor.ej2Instances.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions will be maintained in a stack, so that the last item is reverted first. By default, Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.editorHistory.undoLimit = 400;
