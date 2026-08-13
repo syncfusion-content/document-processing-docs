@@ -5,6 +5,7 @@ description: Learn about comments, replies, and status in the Syncfusion ASP.NET
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Comments in ASP.NET MVC PDF Viewer control
@@ -115,7 +116,7 @@ Comments added to the PDF document can be read using the annotation's `comments`
 The following example logs comments in response to a button click.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
@@ -143,7 +144,7 @@ The following example logs comments in response to a button click.
 
 {% endhighlight %}
 
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>

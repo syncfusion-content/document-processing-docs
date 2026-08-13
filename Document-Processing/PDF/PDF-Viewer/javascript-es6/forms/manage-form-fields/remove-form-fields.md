@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Remove PDF form fields from a PDF 
+# Remove PDF form fields from a PDF
 
 ## Remove form fields using the UI
 **Steps:**
@@ -43,7 +43,7 @@ Use [`deleteFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

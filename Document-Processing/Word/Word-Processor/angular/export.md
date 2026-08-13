@@ -196,10 +196,10 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 }
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to export Word documents in various formats using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/advanced-exporting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

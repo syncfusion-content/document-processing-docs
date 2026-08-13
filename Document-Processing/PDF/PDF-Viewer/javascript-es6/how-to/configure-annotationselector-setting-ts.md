@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Configure annotation selector settings in TypeScript PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the TypeScript PDF Viewer using annotationSelectorSettings and related options.
+title: Configure Annotation Selector in TypeScript PDF Viewer | Syncfusion
+description: Learn how to configure annotation selector settings in the Syncfusion TypeScript PDF Viewer, including styles, borders, and selection behavior.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings
+# Customize Annotation Selection Borders in TypeScript PDF Viewer
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and behavior of the annotation selector in the UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and behavior of the annotation selector in the UI.
 
 AnnotationSelectorSettingsModel
 
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/accumulation-chart/accumulationAnnotationSettingsModel/) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationsettingsmodel) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
 Steps to configure annotation selector settings
 
 - Step 1: Create a PdfViewer instance and initialize it.
-- Step 2: Set the annotationSelectorSettings property to customize selector behavior.
+- Step 2: Set the `annotationSelectorSettings` property to customize selector behavior.
 
 ```ts
  let viewer: PdfViewer = new PdfViewer();
@@ -48,7 +48,7 @@ Key properties
 - `selectionBorderThickness`: Specifies the thickness of the selection border.
 - `resizerShape`: Sets the shape of the resizer handles (for example, `Circle` or `Square`).
 - `selectorLineDashArray`: Specifies the dash pattern for the selector line.
-- `resizerLocation`: Determines where the resizers appear relative to the annotation (for example, `Corners` or `Edges`).
+- `resizerLocation`: Determines where the resizer appear relative to the annotation (for example, `Corners` or `Edges`).
 - `resizerCursorType`: Sets the cursor style when hovering over a resizer.
 
 N> In the example code block `selectionBorderColor` is left empty for demonstration; supply a color string when configuring the viewer. Also ensure `resizerShape` and `resizerBorderColor` use the correct value types — `resizerShape` expects a shape name (for example, `Circle`) while `resizerBorderColor` expects a color value.

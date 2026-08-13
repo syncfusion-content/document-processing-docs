@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in ASP.NET MVC PDF Viewer | Syncfusion
+title: Save PDF files to Box cloud storage in ASP.NET MVC | Syncfusion
 description: Learn how to save PDF files to Box cloud storage using the Syncfusion ASP.NET MVC PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF files to Box cloud storage in ASP.NET MVC
 
 To save a PDF file to Box cloud storage using the ASP.NET MVC PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
@@ -71,7 +70,7 @@ public async Task<ActionResult> Download(jsonObjects jsonObject)
 
 ```
 
-N> Replace the placeholders with your actual Box access token and the target folder ID. Use valid Box API credentials for Client ID and Client Secret.
+N> Replace the placeholders with your actual Box Client ID, Client Secret, Access Token, Refresh Token, and the target Folder ID. Use valid Box API credentials.
 
 **Step 4:** Set the PDF Viewer properties in the ASP.NET MVC PDF Viewer component
 

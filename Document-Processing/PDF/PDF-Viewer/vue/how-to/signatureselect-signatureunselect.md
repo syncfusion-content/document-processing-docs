@@ -96,7 +96,7 @@ export default {
       console.log('Signature selected:', args);
     },
     signatureUnselect: function (args) {
-       console.log('Signature unselected:', args);
+      console.log('Signature unselected:', args);
     }
   }
 }
@@ -176,7 +176,7 @@ export default {
       console.log('Signature selected:', args);
     },
     signatureUnselect: function (args) {
-       console.log('Signature unselected:', args);
+      console.log('Signature unselected:', args);
     }
   }
 }

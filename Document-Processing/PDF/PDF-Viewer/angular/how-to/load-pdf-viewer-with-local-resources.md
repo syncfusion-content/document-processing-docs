@@ -91,7 +91,7 @@ export class AppComponent {
 }
 ```
 
-### Step 5: Run the Application
+### Step 4: Run the Application
 
 Run the Angular application:
 

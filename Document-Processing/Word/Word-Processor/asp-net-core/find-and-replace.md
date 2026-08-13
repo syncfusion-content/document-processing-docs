@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find And Replace in Document Editor Component | Syncfusion
+title: Find And Replace in ASP.NET Core DOCX Editor Component | Syncfusion
 description: Learn here all about find and replace in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Find And Replace
@@ -14,7 +14,7 @@ The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-ne
 
 ## Options pane
 
-This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`.
+This provides the options to search for a portion of text in the document. After the search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`.
 
 
 {% tabs %}
@@ -44,24 +44,24 @@ The `Search` module of Document Editor exposes the following APIs:
 Using `find()` method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
 ```typescript
-documenteditor.search.find('Some text', 'None');
+documentEditor.search.find('Some text', 'None');
 ```
 
-N> Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional and it denotes find options. Possible values of find options are `'None' | 'WholeWord' | 'CaseSensitive' | 'CaseSensitiveWholeWord'`.
 
 ### Find all the occurrences in the document
 
 Using `findAll()` method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
 
 ```typescript
-documenteditor.search.findAll('Some text', 'None');
+documentEditor.search.findAll('Some text', 'None');
 ```
 
-N> Second parameter is optional parameter and it denotes to find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional and it denotes find options. Possible values of find options are `'None' | 'WholeWord' | 'CaseSensitive' | 'CaseSensitiveWholeWord'`.
 
 ## Search results
 
-The `SearchResults` class provides information about the search results after search operation is completed that can be identified using the `searchResultsChange` event. This will expose the following APIs:
+The `SearchResults` class provides information about the search results after the search operation is completed, that can be identified using the `searchResultsChange` event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -82,9 +82,9 @@ documentEditor.search.searchResults.replaceAll("Mike");
 
 ### Replace
 
-Using `insertText`, you can replace the current searched text with specified text and it replaces single occurrence.
+Using `Editor.insertText`, you can replace the current searched text with the specified text and it replaces a single occurrence.
 
-N>Note: This `insertText` API accepts following control characters.
+N> This `insertText` API accepts the following control characters.
 <br/>* New line characters ("\r", "\r\n", "\n") - Inserts a new paragraph and appends the remaining text to the new paragraph.
 <br/>* Line break character ("\v") - Moves the remaining text to start in new line.
 <br/>* Tab character ("\t") - Allocates a tab space and continue the next character.
@@ -106,14 +106,14 @@ container.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-`DocumentEditor` exposes the `searchResultsChange’`event that will be triggered whenever search results are changed. Consider the following scenarios:
+`DocumentEditor` exposes the `searchResultsChange` event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.
 * The results are cleared explicitly.
 
 ```typescript
-documenteditor.searchResultsChange = function() {
+documentEditor.searchResultsChange = function() {
 
 };
 ```

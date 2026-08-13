@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Get current Word/Para in ASP.NET MVC Document editor control | Syncfusion
+title: Get current Word/Para in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn how to select and retrieve current word and Paragraph from the Syncfusion ASP.NET MVC Document Editor Component
 platform: document-processing
 control: Get The Current Word And Paragrapgh
 documentation: ug 
 ---
 
-# How to select and retrieve the word and paragraph in current cursor position in Document Editor component
+# Select and retrieve word and paragraph at cursor in Document Editor
 
-You can get the current word or paragraph content from the  Document Editor component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the Document Editor component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 
