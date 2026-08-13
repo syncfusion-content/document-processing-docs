@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in JavaScript DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in JavaScript DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in JavaScript (ES5) Document editor control
+# Keyboard Shortcuts in JavaScript DOCX Editor
 
 ## Text formatting
 

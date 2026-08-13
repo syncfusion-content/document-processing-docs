@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable drag and drop in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Disable drag and drop in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Disable Drag and Drop in JavaScript DOCX Editor | Syncfusion
+description: Disable drag and drop functionality in Syncfusion® JavaScript DOCX Editor to prevent users from moving content within the document editor component.
 platform: document-processing
 control: Disable drag and drop 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable drag and drop in JavaScript (ES5) Document editor control
+# How to Disable Drag and Drop in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support to drag and drop contents within the component and it can be customized(enable and disable) using [`allowDragAndDrop`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettings#allowDragAndDrop) property in Document editor settings.
 

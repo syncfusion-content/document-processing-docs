@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DOCX Editor Component | Syncfusion
-description: Check out and learn all about accessibility in Syncfusion Blazor Document Editor component and more.
+title: Accessibility in Blazor DOCX Editor | Syncfusion
+description: The accessibility support in Blazor DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Accessibility in Blazor Document Editor Component
+# Accessibility in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) used to evaluate accessibility compliance.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in Vue Document editor component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Clipboard in Vue DOCX Editor | Syncfusion
+description: The clipboard support in Vue DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 control: Clipboard 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in Vue Document editor component
+# Clipboard in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) takes advantage of system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports clipboard.
 

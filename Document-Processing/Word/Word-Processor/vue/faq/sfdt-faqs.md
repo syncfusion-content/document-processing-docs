@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs about SFDT in Vue DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion Vue DOCX Editor component, including its structure and usage.
+description: Find frequently asked questions about SFDT format in the Vue DOCX Editor control, including its structure and usage.
 control: SFDT format 
 platform: document-processing
 documentation: ug

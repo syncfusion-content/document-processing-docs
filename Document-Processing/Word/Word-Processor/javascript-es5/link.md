@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Link in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Hyperlink in JavaScript DOCX Editor | Syncfusion
+description: The hyperlink feature in JavaScript DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in JavaScript (ES5) Document editor control
+# Hyperlink in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 

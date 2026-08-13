@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in ASP.NET MVC Document Editor Component
-description: Learn here all about Bookmark in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Bookmarks in ASP.NET MVC DOCX Editor | Syncfusion
+description: The bookmark feature in ASP.NET MVC DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
 control: Bookmark
 documentation: ug
 ---
 
 
-# Bookmarks
+# Bookmarks in ASP.NET MVC DOCX Editor
 
 Bookmark is a powerful tool that helps to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 

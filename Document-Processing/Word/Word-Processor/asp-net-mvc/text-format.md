@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text Format in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about text format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: Text format properties in ASP.NET MVC DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text Format
 documentation: ug
 ---
 
 
-# Text Formatting in ASP.NET MVC Document Editor
+# Text Format in ASP.NET MVC DOCX Editor
 
 Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

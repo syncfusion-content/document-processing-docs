@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) Document editor | Syncfusion
-description: Learn how to enable collaborative editing using Redis in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in JavaScript using ASP.NET Core | Syncfusion
+description: The collaborative editing feature in JavaScript DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in javascript-es5 with Redis in ASP.NET Core
+# Collaborative Editing in JavaScript DOCX Editor using ASP.NET Core
 
 Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

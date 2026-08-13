@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the cursor color in document editor in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Change the cursor color in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Change Cursor Color in JavaScript DOCX Editor | Syncfusion
+description: Change the default cursor color in Syncfusion® JavaScript DOCX Editor by overriding CSS properties and customizing the editor appearance.
 platform: document-processing
 control: Change the cursor color in document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the cursor color in document editor in JavaScript (ES5) Document editor control
+# How to Change Cursor Color in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) default cursor color is black. The user can change the color by overriding the css property using class name. The Document editor cursor css have a class named `e-de-blink-cursor`.
 

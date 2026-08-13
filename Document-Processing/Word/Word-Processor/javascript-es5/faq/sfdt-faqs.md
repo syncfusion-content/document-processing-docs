@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQs about SFDT in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion JavaScript (ES5) DOCX Editor component, including its structure and usage.
+title: FAQs about SFDT in JavaScript DOCX Editor | Syncfusion
+description: Find frequently asked questions about SFDT format in the JavaScript DOCX Editor control, including its structure and usage.
 control: SFDT format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# FAQs about SFDT in JavaScript (ES5) DOCX Editor
+# FAQs about SFDT in JavaScript DOCX Editor
 
 The frequently asked questions about SFDT in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is listed below:
 

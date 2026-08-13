@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in React DOCX Editor component | Syncfusion
-description: Learn here all about Shapes in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Shapes in React DOCX Editor | Syncfusion
+description: The shapes feature in React DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 control: Shapes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in React Document Editor component
+# Shapes in React DOCX Editor
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. They can have preset or custom geometry.
 

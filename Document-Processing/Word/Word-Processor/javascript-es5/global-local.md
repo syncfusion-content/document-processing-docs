@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Global local in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in JavaScript DOCX Editor | Syncfusion
+description: Global localization in JavaScript DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global local 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in JavaScript (ES5) Document editor control
+# Globalization and Localization in JavaScript DOCX Editor
 
 ## Localization
 

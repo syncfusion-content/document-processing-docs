@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to publish documenteditor web api application in azure app service from visual studio in ##javascript-es6## Document editor control | Syncfusion
-description: Learn here all about How to publish documenteditor web api application in azure app service from visual studio in Syncfusion ##javascript-es6## Document editor control of Syncfusion Essential JS 2 and more.
+title: Publish TypeScript DOCX Editor Web API to Azure App | Syncfusion
+description: Publish the Syncfusion® TypeScript DOCX Editor Web API to Azure App Service in React applications, including deployment and configuration steps.
 platform: document-processing
 control: How to publish documenteditor web api application in azure app service from visual studio 
 publishingplatform: ##javascript-es6##

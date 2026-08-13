@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Vue Document editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue DOCX Editor | Syncfusion
+description: The accessibility support in Vue DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 control: Accessibility 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Document editor component
+# Accessibility in Vue DOCX Editor
 
 The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component is outlined below.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in Vue Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in Vue DOCX Editor | Syncfusion
+description: The comments feature in Vue DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents
 control: Comments 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Vue Document editor component
+# Comments in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 

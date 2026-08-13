@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart in Vue Document editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Charts in Vue DOCX Editor | Syncfusion
+description: Chart support in Vue DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 control: Chart 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in Vue Document editor component
+# Charts in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 

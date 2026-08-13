@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Deploy DOCX Editor Java Web API in Azure | Syncfusion
-description: Learn how to deploy the Document Editor Java Web API in Azure in  Syncfusion JavaScript (ES6) Document Editor.
+title: How to Deploy TypeScript DOCX Editor Java API in Azure | Syncfusion
+description: Deploy the Syncfusion® TypeScript DOCX Editor Java Web API in Azure App for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy documenteditor java web api in azure 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Document Editor Java Web API in Azure
+# How to Deploy TypeScript DOCX Editor Java Web API in Azure App
 
 ## Prerequisites
 

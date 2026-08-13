@@ -1,12 +1,12 @@
 ---
-title: Radial Menu in UWP RichTextBox control | Syncfusion
-description: Learn here all about Radial Menu support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Radial Menu in UWP DOCX Editor | Syncfusion
+description: The radial menu in UWP DOCX Editor offers built-in rich text formatting options like bold and italic, with enable or disable configuration support.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: radial-menu
 ---
-# Radial Menu in UWP RichTextBox (SfRichTextBoxAdv)
+# Radial Menu in UWP DOCX Editor
 
 The SfRichTextBoxAdv supports built-in radial menu to provide rich text formatting options such as bold, italic etc.
 The following screenshot shows built-in radial menu for SfRichTextBoxAdv control.

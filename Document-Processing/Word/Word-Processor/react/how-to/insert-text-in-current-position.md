@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert text in current position in React DOCX Editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Insert Content at Cursor in React DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® React DOCX Editor control, its elements and more.
 control: Insert text in current position
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in React Document Editor component
+# How to Insert Content at Cursor in React DOCX Editor
 
 You can insert text, paragraphs, and rich-text content in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
