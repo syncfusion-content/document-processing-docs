@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion license registration - Syncfusion
+title: How to register license key for Document Solutions | Syncfusion
 description: Learn here about how to register Syncfusion Document Processing license key for Document Processing application for license validation.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Register Syncfusion<sup>&reg;</sup> License key in Document Processing application
+# How to register license key for Document Solutions
 
 The generated license key is just a string that needs to be registered before any Syncfusion<sup>&reg;</sup> control is initiated. The following code is used to register the license.
 
