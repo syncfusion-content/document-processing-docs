@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to perform mail merge in React Document Editor
 
-You can perform mail merge in the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) using the following approaches:
+You can perform mail merge in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) using the following approaches:
 
 1. Insert merge fields programmatically using Document Editor APIs.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fix 404 Error When Loading Documents in React Document Editor
 
-If document loading fails and you see a 404 error in the browser console, the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is unable to reach a valid Web Service endpoint.
+If document loading fails and you see a 404 error in the browser console, the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is unable to reach a valid Web Service endpoint.
 
 ## Reasons
 

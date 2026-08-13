@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open document from OneDrive in React Document Editor
 
-To load a document from OneDrive in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from OneDrive in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create the Microsoft Graph API.
 

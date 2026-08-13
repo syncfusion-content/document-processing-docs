@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to Customize Context Menu in the Document Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contextmenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customContentMenuEventArgs) event.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/react/documentation/api/document-editor/contextmenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customContentMenuEventArgs) event.
 
 ### Add Custom Option
 
