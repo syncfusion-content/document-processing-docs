@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting started with React Document Editor in Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Prerequisites
 

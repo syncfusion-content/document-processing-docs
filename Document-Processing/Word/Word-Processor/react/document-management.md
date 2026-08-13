@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Document management in React Document Editor component
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing. When the protected document includes range permissions, only the unique user or user group is authorized to edit a separate text area.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing. When the protected document includes range permissions, only the unique user or user group is authorized to edit a separate text area.
 
 ## Set current user
 
