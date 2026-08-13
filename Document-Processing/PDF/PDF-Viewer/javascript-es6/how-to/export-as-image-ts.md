@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export pages as images in PDF Viewer
+# Configure PDF Page Export to Image Format
 
 Export pages as Base64-encoded images using `exportAsImage()` for a single page or `exportAsImages()` for a range. These APIs return Base64-encoded image strings suitable for further processing or download.
 
@@ -18,14 +18,11 @@ Steps to export pages as images
 
 **Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images. Place the button elements in the HTML and attach event handlers after the viewer is initialized.
 
-```
-
- <button id="exportAsImage">ExportAsImage</button>
-
+```html
+<button id="exportAsImage">ExportAsImage</button>
 ```
 
 ```ts
-
 document.getElementById('exportAsImage').addEventListener('click', () => {
   let imageDetail: any;
   let pageIndex: number = 1;
@@ -34,19 +31,15 @@ document.getElementById('exportAsImage').addEventListener('click', () => {
       console.log(imageDetail);
   });
 });
-
 ```
 
 Export a specified page as a Base64-encoded image with a custom size:
 
-```
-
- <button id="exportAsImageWithSize">ExportAsImageWithSize</button>
-
+```html
+<button id="exportAsImageWithSize">ExportAsImageWithSize</button>
 ```
 
 ```ts
-
 document.getElementById('exportAsImageWithSize').addEventListener('click', () => {
   let imageDetail: any;
   let pageIndex: number = 1;
@@ -56,52 +49,43 @@ document.getElementById('exportAsImageWithSize').addEventListener('click', () =>
       console.log(imageDetail);
   });
 });
-
 ```
 
 Export a range of pages as Base64-encoded image strings:
 
-```
-
- <button id="exportAsImages">ExportAsImages</button>
-
+```html
+<button id="exportAsImages">ExportAsImages</button>
 ```
 
 ```ts
-
 document.getElementById('exportAsImages').addEventListener('click', () => {
   let imageDetail: any;
   let startPageIndex: number = 1;
   let endPageIndex: number = 5;
   viewer.exportAsImages(startPageIndex, endPageIndex).then(function (value) {
-      imageDetails = value;
-      console.log(imageDetails);
+      imageDetail = value;
+      console.log(imageDetail);
   });
 });
-
 ```
 
 Export a range of pages as Base64-encoded images with a custom size:
 
-```
-
- <button id="exportAsImagesWithSize">ExportAsImagesWithSize</button>
-
+```html
+<button id="exportAsImagesWithSize">ExportAsImagesWithSize</button>
 ```
 
 ```ts
-
 document.getElementById('exportAsImagesWithSize').addEventListener('click', () => {
   let imageDetail: any;
   let startPageIndex: number = 1;
   let endPageIndex: number = 5;
   let size: any = {width:200, height:500};
   viewer.exportAsImages(startPageIndex, endPageIndex, size).then(function (value) {
-      imageDetails = value;
-      console.log(imageDetails);
+      imageDetail = value;
+      console.log(imageDetail);
   });
 });
-
 ```
 
 These APIs enable exporting viewer pages as images for further processing or download.

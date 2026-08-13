@@ -35,13 +35,13 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 	- Select multiple thumbnails using Ctrl or Shift, then drag the selected group to the new location.
 
-    ![Rearrange pages animation showing drag-and-drop behavior](../../react/images/rotate-rearrange.gif)
+    ![Rearrange pages animation showing drag-and-drop behavior](../images/rotate-rearrange.gif)
 
 4. Verify and undo
 
 	- Use **Undo** / **Redo** options to revert accidental changes.
 
-    ![Undo and redo Organize Pages toolbar](../../react/images/undo-redo.png)
+    ![Undo and redo Organize Pages toolbar](../images/undo-redo.png)
 
 5. Persist the updated order
 
@@ -53,7 +53,7 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 ## Enable or disable reorder option
 
-To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#show-or-hide-the-rearrange-option) for the guidelines
+To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines
 
 ## Code snippet
 
