@@ -14,7 +14,7 @@ The primary toolbar of the PDF Viewer can be customized by rearranging existing 
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfviewermodel#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide the primary toolbar.
 
 Show or hide the toolbar using the `enableToolbar` property:
 
@@ -169,10 +169,9 @@ Within the template, configure the PDF Viewer by adding the :serviceUrl="service
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)

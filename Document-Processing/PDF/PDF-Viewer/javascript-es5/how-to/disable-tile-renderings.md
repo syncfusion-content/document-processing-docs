@@ -17,7 +17,7 @@ Use the `enableTileRendering` property to enable or disable tile rendering. Tile
 
 Example: disable tile rendering with a button
 
-```
+```html
 <button id="disable">Disable tile rendering</button>
 
 ```

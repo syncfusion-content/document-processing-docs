@@ -95,7 +95,7 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
     ej.pdfviewer.TextSelection,
-    ej.Pdfviewer.TextSearch
+    ej.pdfviewer.TextSearch
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -118,7 +118,7 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
     ej.pdfviewer.TextSelection,
-    ej.Pdfviewer.TextSearch
+    ej.pdfviewer.TextSearch
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -187,7 +187,7 @@ The following text search methods are available in the PDF Viewer,
 * [**Search previous**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#searchprevious): Searches the previous occurrence of the current query from the active match.
 * [**Cancel text search**](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearch#canceltextsearch): Cancels the current text search and removes the highlighted occurrences from the PDF Viewer.
 
-![Alt text](../images/search.png)
+![Programmatic text search with SearchText API](../images/search.png)
 
 Use the following code snippet to implement text search using the SearchText API
 

@@ -71,7 +71,7 @@ If required fields are empty, validation can prevent further actions.
 // 1) Default for new Textbox fields
 pdfviewer.textFieldSettings = { isRequired: true };
 
-// 2) Validation wiring
+// 2) Wire up the validateFormFields event (fires when required fields are empty on submit/validate)
 pdfviewer.enableFormFieldsValidation = true;
 pdfviewer.validateFormFields = (args: any) => {
   // Triggers when required fields are empty on submit/validate

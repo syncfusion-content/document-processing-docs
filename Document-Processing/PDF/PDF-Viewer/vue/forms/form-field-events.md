@@ -22,7 +22,7 @@ The following table lists all supported form field events and their descriptions
 |---|---|
 | [formFieldAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
 | [formFieldClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
-| [formFieldDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
+| [formFieldDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double-clicked. |
 | [formFieldFocusOut](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
 | [formFieldMouseLeave](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
 | [formFieldMouseOver](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
@@ -125,7 +125,7 @@ export default {
 **Event Behavior Notes**
 
 - Events triggered through the UI and programmatic APIs use the same event handlers.
-- Property related events are raised immediately when changes occur.
+- Property-related events are raised immediately when changes occur.
 - Validation events are triggered only during print or download operations.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)

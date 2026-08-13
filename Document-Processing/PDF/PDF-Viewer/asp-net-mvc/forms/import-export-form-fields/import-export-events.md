@@ -5,6 +5,7 @@ description: Learn how to handle Import/Export events for PDF form fields in the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # PDF Form Import and Export Events in MVC
@@ -99,5 +100,4 @@ Each event provides detailed context through typed event arguments such as [Impo
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
 - [Form validation](../form-validation)
-- [Form fields API](../form-fields-api)
 - [Form fields API](../form-fields-api)

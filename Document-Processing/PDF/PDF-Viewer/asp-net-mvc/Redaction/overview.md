@@ -77,7 +77,7 @@ Redaction annotations can be removed easily:
 
 ## Redact Entire Pages
 
-The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built‑in dialog, or perform the same action programmatically.
+The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built-in dialog, or perform the same action programmatically.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 

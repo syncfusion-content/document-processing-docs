@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Optimize the SFDT file in ASP.NET MVC Document Editor Component
-description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
+title: Optimize the SFDT file in ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn how to optimize the SFDT file in the Syncfusion ASP.NET MVC Document Editor component to reduce the file size with backward compatibility support.
 platform: document-processing
 control: Optimize the SFDT file
 documentation: ug
 ---
 
-# How to optimize the SFDT file
+# Optimize the SFDT file in ASP.NET MVC Document Editor
 
-Starting from version v21.1.x, the SFDT file generated in Word Processor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits,
+Starting from version v21.1.x, the SFDT file generated in Document Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 * File transfer between client and server through the internet gets faster.
 * The new optimized SFDT files require less storage space than the old SFDT files.
 Hence, the optimized SFDT file can't be directly manipulated as JSON string.
 
 > This feature comes with a public API to switch between the old and new optimized SFDT format, allowing backward compatibility.
 
-As a backward compatibility to create older format SFDT files, refer the following code changes,
+As a backward compatibility to create older format SFDT files, refer to the following code changes:
 
 <table>
 <tr>
@@ -67,7 +67,7 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 </tr>
 </table>
 
-To convert from older format SFDT from a new optimized SFDT file, refer the following code example,
+To convert from the new optimized SFDT format to the older SFDT format, refer to the following code example:
 
 <table>
 <tr>
