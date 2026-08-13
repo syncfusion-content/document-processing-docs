@@ -1,5 +1,5 @@
 ---
-title: How to use SfRichTextBoxAdv as a standard RichTextBox | Syncfusion
+title: How to use SfRichTextBoxAdv as a standard RichTextBox. | Syncfusion
 description: Learn how to use UWP SfRichTextBoxAdv as a standard RichTextBox along with its core key features and usage.
 platform: document-processing
 control: SfRichTextBoxAdv
@@ -7,7 +7,7 @@ documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbar
 ---
 
-# Use SfRichTextBoxAdv as a standard RichTextBox in UWP
+# Use SfRichTextBoxAdv as a standard RichTextBox
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 

@@ -6,6 +6,7 @@ control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception,out-of-memory,large-documents,ui-virtualization,memory-limit
 ---
+# Why does SfRichTextBoxAdv throw out of memory on large documents
 
 # Why does an out of memory exception occur in UWP SfRichTextBoxAdv?
 
