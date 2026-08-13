@@ -155,7 +155,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}    
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Mac/Convert%20Excel%20to%20Image">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Mac/Convert%20Excel%20to%20Image" target="_blank" aria-label="Mac Convert Excel to Image sample project on GitHub">this GitHub page</a>.
 
 By executing the program, you will get the **Image** as follows.
 
