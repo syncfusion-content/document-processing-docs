@@ -7,6 +7,7 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
+
 # Mobile Toolbar Interface in TypeScript PDF Viewer control
 
 The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
@@ -127,6 +128,6 @@ The Print option is not available in mobile mode by default. Enabling the deskto
 ### How to Use Print on Mobile:
 
 - Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
-- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device
+- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
 
 N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.
