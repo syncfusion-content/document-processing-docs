@@ -1,6 +1,6 @@
 ---
 title: Document Styles in WPF RichTextBox control | Syncfusion
-description: Learn about the Document Styles support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+description: Learn here all about Document Styles support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
@@ -14,19 +14,19 @@ In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
 
 A style in a document should have the following properties:
 
-**Name** â€“ Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
+**Name** – Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 
-**Type** â€“ Specifies the document elements that the style will target. For example, paragraph or character.
+**Type** – Specifies the document elements that the style will target. For example, paragraph or character.
 
-**Next** â€“ Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
+**Next** – Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
 
-**Link** â€“ Provides a relation between the paragraph and character style.
+**Link** – Provides a relation between the paragraph and character style.
 
-**CharacterFormat** â€“ Specifies the properties of paragraph and character style.
+**CharacterFormat** – Specifies the properties of paragraph and character style.
 
-**ParagraphFormat** â€“ Specifies the properties of paragraph style.
+**ParagraphFormat** – Specifies the properties of paragraph style.
 
-**BasedOn** â€“ Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
+**BasedOn** – Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
 
 N> The style type should match the inherited style type. For example, it is not possible to have a character style inherit a paragraph style.
 
