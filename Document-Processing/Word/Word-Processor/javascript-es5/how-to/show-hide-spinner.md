@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Show hide spinner in JavaScript (ES5) Document editor
 
-Using [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show/hide spinner while opening document in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
+Using the [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show or hide the spinner while opening a document in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-Example code snippet to show/hide spinner
+The following example shows how to show or hide the spinner.
 
-```ts
+```js
 // showSpinner() will make the spinner visible
 showSpinner(document.getElementById('container'));
 
-// hideSpinner() method used hide spinner
+// hideSpinner() method used to hide spinner
 hideSpinner(document.getElementById('container'));
 ```
 
@@ -35,4 +35,4 @@ Refer to the following example.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/spinner-cs1" %}
 
->Note: In above example, we have used setInterval to hide spinner, just for demo purpose.
+N> In the above example, `setInterval` is used to hide the spinner, just for demo purposes.

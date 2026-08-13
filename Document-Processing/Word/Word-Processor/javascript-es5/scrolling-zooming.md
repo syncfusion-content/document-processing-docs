@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling zooming in JavaScript (ES5) Document editor control
 
-The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using 'scrollToPage()' method of Document Editor instance. Refer to the following code example.
+The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages using the mouse wheel or touch interactions. You can also scroll through the page by using the `scrollToPage()` method of the Document Editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -23,9 +23,9 @@ The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascri
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/scrolling-zooming-cs1" %}
 
-> Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
+N> Calling this method brings the specified page into view but does not move the selection. Hence this method will work by default. That is, it works even if the selection is not enabled.
 
-In case, if you wish to move the selection to any page in Document Editor and bring it into view, you can use ‘goToPage()’ method of selection instance. Refer to the following code example.
+If you wish to move the selection to any page in the Document Editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -40,13 +40,10 @@ In case, if you wish to move the selection to any page in Document Editor and br
 
 ## Zooming
 
-You can scale the contents in Document Editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use ‘zoomFactor’ property of Document Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
+You can scale the contents in the Document Editor in a range from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the Document Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
-```ts
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
-
-//Initialize the Document Editor module.
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 
@@ -60,12 +57,10 @@ documenteditor.zoomFactor = 3;
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as value, the Document Editor provides option to specify page fit options such as fit to full page or fit to page width. You can set this option using ‘fitPage’ method of Document Editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the Document Editor provides the option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the Document Editor instance. Refer to the following code example.
 
-```ts
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
-//Initialize the Document Editor module.
-let documenteditor: DocumentEditor = new DocumentEditor({
+```js
+var documenteditor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false, serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 
@@ -79,7 +74,7 @@ documenteditor.fitPage('FitPageWidth');
 
 ## Zoom option using UI
 
-The following code example shows how to provide zoom options in Document Editor.
+The following code example shows how to provide zoom options in the Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
