@@ -68,10 +68,6 @@ If the comment panel is already open, select the annotation and add comments usi
 
 ![Set status for a comment](../images/commentstatus.png)
 
-### Editing the comments and comments replies of the annotations
-
-Comments, replies, and status can be edited using the comment panel.
-
 ### Editing the Comment or Comment Replies
 
 Edit comments and replies in the following ways:
@@ -111,11 +107,11 @@ Edit comments and replies in the following ways:
 
 ## Add Comments to the annotation Programmatically
 
-### How to Add Commnets and Replies programmatically
+### How to Add Comments and Replies programmatically
 
 Comments can be added to the PDF document programmatically using the `editAnnotation` property.
 
-The following example Shows how to add comments and reply in response to a button click.
+The following example shows how to add comments and reply in response to a button click.
 
 ```html
 <button id="addComment">Add Comments</button>
@@ -202,7 +198,7 @@ document.getElementById("addReply")?.addEventListener("click", function() {
 
 Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
 
-The following example Shows how to edit comments and reply in response to a button click.
+The following example shows how to edit comments and reply in response to a button click.
 
 ```html
 <button id="editComment">Edit Comments</button>
@@ -352,15 +348,15 @@ document.getElementById('checkComments').addEventListener('click', function () {
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](./create-modify-annotation)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)

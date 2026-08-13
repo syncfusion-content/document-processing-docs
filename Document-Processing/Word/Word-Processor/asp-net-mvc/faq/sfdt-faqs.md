@@ -1,20 +1,20 @@
 ---
 layout: post
 title: FAQs about SFDT in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET MVC DOCX Editor component, including its structure and usage.
-control: SFDT format 
+description: Learn all about FAQs on SFDT in the Syncfusion ASP.NET MVC Document Editor component, including its structure and usage.
+control: SFDT format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# FAQs about SFDT in ASP.NET MVC DOCX Editor
+# FAQs about SFDT in ASP.NET MVC Document Editor
 
-The frequently asked questions about SFDT in Document Editor is listed below:
+The frequently asked questions about SFDT in Document Editor are listed below:
 
 ## What is SFDT format?
 
-SFDT (Syncfusion Document Text) is a JSON-based representation of a DOCX document used internally by the Document Editor. It is not a new or separate file format; instead, it is a structured JSON equivalent of a DOCX file, designed to represent the same document content. SFDT uses a hierarchical key–value structure to describe document elements such as sections, paragraphs, text, styles, tables, and images, closely matching the structure of a Word document.
+SFDT (Syncfusion Document Text) is a JSON-based representation of a DOCX document used internally by the Document Editor. It is not a new or separate file format; instead, it is a structured JSON equivalent of a DOCX file, designed to represent the same document content. SFDT uses a hierarchical key-value structure to describe document elements such as sections, paragraphs, text, styles, tables, and images, closely matching the structure of a Word document.
 
 ## Is it possible to modify SFDT?
 

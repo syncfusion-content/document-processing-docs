@@ -21,25 +21,25 @@ Localize the PDF Viewer UI by:
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
-      ej.pdfviewer.TextSelection,
-      ej.pdfviewer.TextSearch,
-      ej.pdfviewer.Print,
-      ej.pdfviewer.Navigation,
-      ej.pdfviewer.Toolbar,
-      ej.pdfviewer.Magnification,
-      ej.pdfviewer.Annotation,
-      ej.pdfviewer.FormDesigner,
-      ej.pdfviewer.FormFields,
-      ej.pdfviewer.PageOrganizer
-    );
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.PageOrganizer
+);
 
-    var pdfviewer = new ej.pdfviewer.PdfViewer({
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-      locale: 'de', //Using German locale updates culture
-    });
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+  locale: 'de', //Using German locale updates culture
+});
 
-    ej.base.L10n.load({
+ej.base.L10n.load({
                 'de': {
                     'PdfViewer': {
                     'PdfViewer': 'PDF-Viewer',
@@ -300,11 +300,11 @@ ej.pdfviewer.PdfViewer.Inject(
                     'Example: 1,3,5-12': 'Example: 1,3,5-12',
                     'No matches': 'Der Viewer hat die Suche im Dokument abgeschlossen. ',
                     'No Text Found': 'Kein Text gefunden'
-                    }
                 }
-    });
+            }
+});
 
-    pdfviewer.appendTo('#pdfViewer');
+pdfviewer.appendTo('#pdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
