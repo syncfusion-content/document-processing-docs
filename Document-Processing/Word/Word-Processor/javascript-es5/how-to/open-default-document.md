@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Default Document in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to open a default document in Syncfusion JavaScript (ES5) Document Editor using the open and created APIs to load SFDT content on startup.
+title: Open default document in JavaScript (ES5) Document editor | Syncfusion
+description: Learn here all about Open default document in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open a Default Document
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open Default Document in JavaScript (ES5) Document Editor
+# Open default document in JavaScript (ES5) Document editor
 
 In this article, we are going to see how to open a default document when DocumentEditor and DocumentEditorContainer are initialized.
 

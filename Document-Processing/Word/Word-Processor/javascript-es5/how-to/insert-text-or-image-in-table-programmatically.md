@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert Text/Image in Table - JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to insert text or image in a table programmatically in Syncfusion JavaScript (ES5) Document Editor using the selection and editor APIs.
+title: Insert text or image in table programmatically in JavaScript (ES5) Document editor control | Syncfusion
+description: Learn here all about Insert text or image in table programmatically in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Insert Text or Image in a Table Programmatically
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text/Image in Table Programmatically, JavaScript (ES5) Document Editor
+# Insert text or image in table programmatically in JavaScript (ES5) Document editor control
 
 Using [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) APIs, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or an [`image`](../image#images) in a [`table`](../table#create-a-table) programmatically based on your requirements.
 
