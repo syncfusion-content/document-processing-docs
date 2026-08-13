@@ -33,7 +33,7 @@ The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library
 Refer to the following links for assemblies required based on platforms to convert the Word document to PDF.
 
 * [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
-* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/word-library/net/nuget-packages-required#converting-a-word-document-to-pdf)
+* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
 
 To quickly start converting a Word document to a PDF, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
