@@ -5,6 +5,7 @@ description: Learn how to enable, add programmatically, and customize handwritte
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Handwritten Signature Annotation in ASP.NET MVC PDF Viewer
@@ -28,7 +29,7 @@ The following example shows how to enable handwritten signatures in the PDF View
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a handwritten signature to the PDF document
+## Add a handwritten signature to the PDF document
 
 A handwritten signature can be added using the annotation toolbar:
 
@@ -156,7 +157,7 @@ Use the **addAnnotation()** method to add a handwritten signature programmatical
 
 Edit the stroke color, thickness, and opacity of a handwritten signature using the annotation toolbar’s edit stroke color, edit thickness, and edit opacity tools.
 
-![SignatureProperties](../images/signature_properties.png)
+![Edit handwritten signature properties in the annotation toolbar](../images/signature_properties.png)
 
 Use the following example to set default handwritten signature settings.
 

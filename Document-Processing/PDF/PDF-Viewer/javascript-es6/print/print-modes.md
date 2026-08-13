@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Modes in TypeScript PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF Documents in the Syncfusion TypeScript PDF Viewer component.
+description: Learn how to configure print modes for PDF documents in the Syncfusion TypeScript PDF Viewer component.
 platform: document-processing
 control: Print
 documentation: ug
@@ -16,7 +16,7 @@ The `printMode` property accepts the following string values:
 -   `Default`: Prints the document from the same browser window. Use this when printing should remain in the current browsing context.
 -   `NewWindow`: Prints the document from a new window or tab. Use this to avoid interference with the current page; note that some browsers may block pop-ups.
 
-![Print in New Window](../images/print-newwindow.gif)
+![Print in New Window](../../javascript-es6/images/print-newwindow.gif)
 
 N> Browser pop-up blockers must allow new windows or tabs when using `pdfviewer.printMode = "NewWindow"`.
 

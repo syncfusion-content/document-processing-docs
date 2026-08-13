@@ -61,7 +61,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 Attach an event listener to handle annotation visibility changes and document download.
 
 ```js
-    // Add event listener to the button with ID 'download'
+    // Add event listener to the button with ID 'save'
     document.getElementById('save').addEventListener('click', save);
 ```
 

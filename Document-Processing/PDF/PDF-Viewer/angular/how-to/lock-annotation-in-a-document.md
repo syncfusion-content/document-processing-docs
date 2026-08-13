@@ -3,7 +3,7 @@ layout: post
 title: Lock annotation in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Lock annotation in a document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Lock annotation in a document
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -45,7 +45,6 @@ The following sample shows how to set `IsLocked` for custom stamp annotations wh
 ```typescript
 //Method to lock the custom stamp annotation.
 public fireAjaxRequestSuccess(event: any, data: any) {
-  debugger;
   if (event.action == 'RenderAnnotationComments') {
     for (var i = data.startPageIndex; i < data.endPageIndex; i++) {
       for (

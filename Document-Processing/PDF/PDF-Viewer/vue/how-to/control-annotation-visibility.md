@@ -18,7 +18,7 @@ This guide shows how to display annotations in the Vue PDF Viewer while preventi
 
 Steps to control annotation visibility
 
-**Step 1:** Follow the steps in the getting-started guide (https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a basic PDF Viewer sample.
+**Step 1:** Follow the steps in the [getting-started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a basic PDF Viewer sample.
 
 
 **Step 2:** Add controls for annotation modification and downloading
