@@ -53,7 +53,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Print programmatically in Typescript PDF Viewer
+## Print programmatically in TypeScript PDF Viewer
 
 To start printing from code, call the `pdfviewer.print.print()` method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
 

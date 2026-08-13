@@ -1,5 +1,5 @@
 ---
-title: Annotations Events in JavaScript PDF Viewer control | Syncfusion
+title: Annotation Events in JavaScript PDF Viewer control | Syncfusion
 description: Learn here all about Annotations Events in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
@@ -32,6 +32,7 @@ This page documents annotation-related events for the JavaScript PDF Viewer and 
 | [`signatureSelect`](#signatureselect)                              | Triggers when a signature is selected on a page in the PDF document.               |
 | [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
+## Events
 
 ### annotationAdd
 

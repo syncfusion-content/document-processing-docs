@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Export as image in Angular PDF Viewer component
+# Export as image in Angular PDF Viewer component
 
 The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
-The following steps are used to exportAsImage.
+The following steps are used to implement exportAsImage.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
@@ -65,6 +65,7 @@ Export a page range; the method returns an array of Base64-encoded image strings
 
 ```ts
 exportAsImages() {
+  let imageDetails;
   let startPageIndex: number = 1;
   let endPageIndex: number = 5;
   var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
@@ -85,6 +86,7 @@ Pass a `Size` object when exporting a page range to control the output image dim
 
 ```ts
 exportAsImageWithSize() {
+  let imageDetails;
   let startPageIndex: number = 1;
   let endPageIndex: number = 5;
   let size: Size = new Size(200,500);

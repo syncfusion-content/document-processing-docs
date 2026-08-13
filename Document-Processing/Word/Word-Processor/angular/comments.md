@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Comments in Angular Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in Angular DOCX Editor component | Syncfusion
+description: Learn here all about Comments in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Comments 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Angular Document editor component
+# Comments in Angular Document Editor component
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 
@@ -72,7 +72,7 @@ this.documentEditor.editor.insertReplyComment(comment.id, 'Hello world', comment
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getcomments).
+Document Editor allows you to get the comments along with their replies and comment properties using [`getComments`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getcomments).
 
 ```typescript
 //Get Comments in the document along with the properties author, date, status.
@@ -119,11 +119,11 @@ this.documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments only mode
 
-Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
+Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, users are allowed to add or edit comments alone in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -173,11 +173,11 @@ export class AppComponent implements OnInit {
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
+Comment only protection can be enabled in the UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
 ![Enable comment only protection](images/commentsonly.png)
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In the enforceProtection method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In the stopProtection method, the parameter denotes the password.
 
 ## Mention support in Comments
 
@@ -210,7 +210,7 @@ export class AppComponent implements OnInit {
 
 ## Events
 
-DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/angular/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/angular/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+DocumentEditor provides the [beforeCommentAction](https://ej2.syncfusion.com/angular/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions such as Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on these comment actions. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/angular/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let’s consider an example where we want to restrict the delete functionality based on the author’s name. The following code snippet illustrates how to allow only the author of a comment to delete:
 

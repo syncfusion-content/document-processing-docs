@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Feature Module in ASP.NET MVC Document Editor Component
+title: Feature Module in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about Feature Module in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature Module
@@ -8,24 +8,24 @@ documentation: ug
 ---
 
 
-# Feature modules
+# Feature modules in ASP.NET MVC Document Editor
 
-Document editor features are segregated into individual feature-wise modules to enable selective referencing. By default, the document editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of document editor that can be included as required:
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the Document Editor that can be included as required:
 * **Print** - Prints the document.
-* **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
-* **Selection** - Selects a portion of the document and copy it to the clipboard.
-* **Search** - Searches specific text and navigate between the results.
-* **WordExport** - Exports the document as Word Document (.DOCX) file.
-* **TextExport** - Exports the document as Text Document (.TXT) file.
-* **Editor** - Performs all kind of editing operations.
+* **SfdtExport** - Exports the document as a Syncfusion Document Text (.sfdt) file.
+* **Selection** - Selects a portion of the document and copies it to the clipboard.
+* **Search** - Searches for specific text and navigates between the results.
+* **WordExport** - Exports the document as a Word Document (.docx) file.
+* **TextExport** - Exports the document as a Text Document (.txt) file.
+* **Editor** - Performs all kinds of editing operations.
 * **EditorHistory** - Maintains the history of editing operations so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
 
-N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a document editor instance.
+N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a Document Editor instance.
 
 Refer to the following table.
 
-| Module |  Property to Enable the functionality for a document editor instance |
+| Module |  Property to enable the functionality for a Document Editor instance |
 |---|---|---|
 |Print|`@Html.EJS().DocumentEditor("container").EnablePrint(true).Render()`|
 |SfdtExport|`@Html.EJS().DocumentEditor("container").EnableSfdtExport(true).Render()`|

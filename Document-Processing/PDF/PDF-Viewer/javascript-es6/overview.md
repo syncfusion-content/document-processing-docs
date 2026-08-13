@@ -1,9 +1,11 @@
 ---
+layout: post
 title: Overview of JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn here all about the Syncfusion TypeScript PDF Viewer, its capabilities, and supported platforms.
 platform: document-processing
 control: PDF Viewer
-documentation: UG
+documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Overview of JavaScript (ES6) PDF Viewer

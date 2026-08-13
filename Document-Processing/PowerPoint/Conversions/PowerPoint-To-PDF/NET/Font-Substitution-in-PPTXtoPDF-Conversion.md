@@ -138,7 +138,7 @@ using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 /// </summary>
 /// <param name="sender">FontSettings type of the Presentation in which the specified font stream is used but unavailable in production environment. </param>
 /// <param name="args">Retrieves the unavailable font name and receives the substitute font stream for conversion. </param>
-private static void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
+private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     if (args.OriginalFontName == "Arial" && args.FontStyle == FontStyle.Bold)
         args.AlternateFontStream = new FileStream("cambriab.ttf", FileMode.Open);

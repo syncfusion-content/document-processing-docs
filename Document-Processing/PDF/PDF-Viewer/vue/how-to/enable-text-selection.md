@@ -232,5 +232,5 @@ If text selection remains active, ensure that the [`TextSelection`](https://ej2.
 
 ## See also
 
-- [Text Selection API reference](../text-selection/reference)
-- [Vue PDF Viewer events](../events)
+- [Text Selection API reference](../text-selection/text-selection-api-events)
+- [Vue PDF Viewer events](../event)

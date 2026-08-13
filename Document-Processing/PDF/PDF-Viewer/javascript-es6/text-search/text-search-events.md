@@ -28,7 +28,7 @@ const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchStart: function (args: any) {
         // args.searchText contains the term being searched
-        // args.cancel can be set to true to stop the default search
+        // args.cancel is available on the event arguments to stop the default search when set to true
         console.log(`Text search started for: "${args.searchText}"`);
     }
 });
@@ -76,7 +76,7 @@ The [textSearchComplete](https://ej2.syncfusion.com/documentation/api/pdfviewer#
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchComplete: (args: any) => {
-        // args.totalMatches may indicate how many results were found (when available)
+        // args.totalMatches contains the total number of matches found
         console.log('Text search completed.', args);
     }
 });
@@ -87,8 +87,8 @@ viewer.appendTo('#pdfViewer');
 
 ## See Also
 
-[Text Search Features](./text-search-features)
-[Find Text](./find-text)
-[Extract Text](../how-to/extract-text-ts)
-[Extract Text Options](../how-to/extract-text-option-ts)
-[Extract Text Completed](../how-to/extract-text-completed-ts)
+- [Text Search Features](./text-search-features)
+- [Find Text](./find-text)
+- [Extract Text](../how-to/extract-text-ts)
+- [Extract Text Options](../how-to/extract-text-option-ts)
+- [Extract Text Completed](../how-to/extract-text-completed-ts)

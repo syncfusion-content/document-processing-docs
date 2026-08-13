@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Blazor
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **convert a PowerPoint to image in Blazor**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -18,8 +18,8 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 
 **Prerequisites:**
 
-*   Visual Studio 2022.
-*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+* Visual Studio 2022.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new C# Blazor Web app project.
 *   Select "Blazor Web App" from the template and click **Next**.
@@ -34,9 +34,7 @@ Step 1: Create a new C# Blazor Web app project.
 
 ![Select the framework in Blazor Web App Server in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
 
-Step 2: Install the `Syncfusion.PresentationRenderer.Net.Core` NuGet package.
-
-To convert a **PowerPoint presentation to Image in a Web App Server**, Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to the project from [NuGet.org](https://www.nuget.org/).
+Step 2: To convert a **PowerPoint presentation to PDF in a Blazor Web App Server**, install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
@@ -116,26 +114,22 @@ Create a new `MemoryStream` method in the `PowerPointService` and include the fo
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream.
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Opens an existing PowerPoint presentation from the wwwroot folder.
+using (IPresentation pptxDoc = Presentation.Open(Path.Combine("wwwroot", "Input.pptx")))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        // Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        // Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
-        {
-            // Save the converted image file to MemoryStream.
-            MemoryStream Stream = new MemoryStream();
-            stream.CopyTo(Stream);
-            Stream.Position = 0;
-            // Download image file in the browser.
-            return Stream;
-        }
+        //Save the converted image file to MemoryStream.
+        MemoryStream outputStream = new MemoryStream();
+        stream.CopyTo(outputStream);
+        outputStream.Position = 0;
+        //Return the image stream for download in the browser.
+        return outputStream;
     }
-}  
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +145,7 @@ builder.Services.AddScoped<PowerPointService>();
 
 {% endhighlight %}
 {% endtabs %}
-            
+
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
 
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
@@ -179,9 +173,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -192,7 +186,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -240,7 +234,7 @@ Upon executing the program, the **Image** will be generated as follows.
 ![PowerPoint to Image in Blazor Web App Server](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
 {% endtabcontent %}
- 
+
 {% tabcontent Visual Studio Code %}
 
 **Prerequisites:**
@@ -341,26 +335,22 @@ Create a new `MemoryStream` method in the `PowerPointService` and include the fo
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream.
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Opens an existing PowerPoint presentation from the wwwroot folder.
+using (IPresentation pptxDoc = Presentation.Open(Path.Combine("wwwroot", "Input.pptx")))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        // Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        // Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
-        {
-            // Save the converted image file to MemoryStream.
-            MemoryStream Stream = new MemoryStream();
-            stream.CopyTo(Stream);
-            Stream.Position = 0;
-            // Download image file in the browser.
-            return Stream;
-        }
+        //Save the converted image file to MemoryStream.
+        MemoryStream outputStream = new MemoryStream();
+        stream.CopyTo(outputStream);
+        outputStream.Position = 0;
+        //Return the image stream for download in the browser.
+        return outputStream;
     }
-}  
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -376,7 +366,7 @@ builder.Services.AddScoped<PowerPointService>();
 
 {% endhighlight %}
 {% endtabs %}
-            
+
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
 
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
@@ -404,9 +394,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -417,7 +407,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -481,17 +471,17 @@ Upon executing the program, the **Image** will be generated as follows.
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor Web app project.
+Step 1: Open JetBrains Rider and create a new Blazor Web app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Web.
+* In the **New Solution** dialog, select **Project Type** as **Web**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Choose template as **Blazor Web App**.
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-Server-application.png)
 
@@ -583,32 +573,28 @@ Create a new `MemoryStream` method in the `PowerPointService` and include the fo
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream.
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Opens an existing PowerPoint presentation from the wwwroot folder.
+using (IPresentation pptxDoc = Presentation.Open(Path.Combine("wwwroot", "Input.pptx")))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        // Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        // Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
-        {
-            // Save the converted image file to MemoryStream.
-            MemoryStream Stream = new MemoryStream();
-            stream.CopyTo(Stream);
-            Stream.Position = 0;
-            // Download image file in the browser.
-            return Stream;
-        }
+        //Save the converted image file to MemoryStream.
+        MemoryStream outputStream = new MemoryStream();
+        stream.CopyTo(outputStream);
+        outputStream.Position = 0;
+        //Return the image stream for download in the browser.
+        return outputStream;
     }
-}  
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 Step 8: Add the service in `Program.cs`.
- 
+
 Add the following line to the `Program.cs` file to register `PowerPointService` as a scoped service in the Blazor application.
 
 {% tabs %}
@@ -618,7 +604,7 @@ builder.Services.AddScoped<PowerPointService>();
 
 {% endhighlight %}
 {% endtabs %}
-            
+
 Step 9: Create `FileUtils.cs` for JavaScript interoperability.
 
 Create a new class file named `FileUtils` in the project and add the following code to invoke the JavaScript action for file download in the browser.
@@ -646,9 +632,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -659,7 +645,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -699,8 +685,6 @@ Click the **Build** button in the toolbar or press <kbd>Ctrl</kbd>+<kbd>Shift</k
 Step 13: Run the project.
 
 Click the **Run** button (green arrow) in the toolbar or press <kbd>F5</kbd> to run the app.
-
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Blazor/Web-Server-App).
 
@@ -901,7 +885,6 @@ N> To convert PPTX to Image, it is necessary to access the font stream internall
 {% tabcontent Visual Studio Code %}
 
 **Prerequisites:**
-
 * Visual Studio Code.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
@@ -1095,17 +1078,17 @@ N> To convert PPTX to Image, it is necessary to access the font stream internall
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project.
+Step 1: Open JetBrains Rider and create a new Blazor WASM Standalone app project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
 ![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
-* In the new Solution dialog, select Project Type as Web.
+* In the **New Solution** dialog, select **Project Type** as **Web**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Choose template as **Blazor WebAssembly Standalone App**.
+* Choose **Template** as **Blazor WebAssembly Standalone App**.
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-WASM-application.png)
 

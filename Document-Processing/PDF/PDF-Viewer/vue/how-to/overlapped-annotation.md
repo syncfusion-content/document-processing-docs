@@ -9,7 +9,7 @@ documentation: ug
 
 # Get overlapped annotations on click in Vue PDF Viewer
 
-Use the [`annotationCollection`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationcollection) property of the [`annotationSelect`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event to get overlapped annotations when the user clicks an annotation.
+Use the [`annotationCollection`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationcollection) property of the [`annotationSelect`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationselect) event to get overlapped annotations when the user clicks an annotation.
 
 The following example shows how to access overlapped annotations on click:
 

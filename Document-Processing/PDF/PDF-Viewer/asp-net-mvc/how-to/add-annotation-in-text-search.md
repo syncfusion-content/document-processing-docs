@@ -17,7 +17,7 @@ A concise guide to adding rectangle annotations at highlighted text search resul
 
 **Step 2:** Configure the PDF Viewer to add rectangle annotations based on the bounds of highlighted search text.
 
-```cs
+```html
 @using Syncfusion.EJ2
 @{
     ViewBag.Title = "Home Page";

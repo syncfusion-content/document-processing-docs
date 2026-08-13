@@ -15,9 +15,9 @@ Use the `enableTileRendering` property to enable or disable tile rendering. Tile
 - Include the JavaScript PDF Viewer script and the `ThumbnailView`/`Navigation` modules if using related features.
 - Initialize the viewer instance before changing tile rendering settings at runtime.
 
-Example: disable tile rendering with a button
+## Example: disable tile rendering with a button
 
-```
+```html
 
 <button id="disable">Disable tile rendering</button>
 

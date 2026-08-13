@@ -38,7 +38,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -58,7 +58,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## Keyboard interaction
 
-The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easy for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component:
+The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) guidelines, making it easy for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component:
 
 | **Press (Windows)** | **Press (Macintosh)** | **To do this** |
 | --- | --- | --- |

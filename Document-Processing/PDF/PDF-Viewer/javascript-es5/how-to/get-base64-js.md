@@ -16,7 +16,7 @@ This guide shows how to obtain the Base64-encoded value of a PDF document loaded
 
 ### How to retrieve the Base64 value
 
-**Step 1:**  Create the PDF Viewer sample**
+**Step 1:**  Create the PDF Viewer sample
 
 Follow the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide for the JavaScript PDF Viewer.
 

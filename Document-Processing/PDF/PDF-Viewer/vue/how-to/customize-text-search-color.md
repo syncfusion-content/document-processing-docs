@@ -26,10 +26,10 @@ viewer.textSearchColorSettings.searchHighlightColor = '#0000FF';
 
 The above sets the active result highlight to blue.
 
-- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
-- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
+- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textsearchcolorsettings#searchcolor)
+- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textsearchcolorsettings#searchhighlightcolor)
 
-Example: Buttons to control search flow
+The following example adds buttons to control the search flow:
 
 ```html
 <template>
