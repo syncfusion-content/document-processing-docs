@@ -14,7 +14,7 @@ The PDF Viewer provides two interaction modes for working with a loaded PDF docu
 
 ## Selection mode
 
-Selection mode allows users to select and copy text from the loaded PDF. Touch-based panning and page scrolling are disabled in this mode. Enable or disable text selection using the following code snippet.
+Selection mode allows users to select and copy text from the loaded PDF. Touch-based panning and page scrolling are disabled in this mode. Enable text selection using the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
