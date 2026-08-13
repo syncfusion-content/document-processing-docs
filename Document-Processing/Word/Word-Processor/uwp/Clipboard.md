@@ -6,7 +6,7 @@ control: SfRichTextBoxAdv
 documentation: ug
 keywords: clipboard,cut,copy,paste,cutcommand,copycommand,pastecommand,rich-text-format,clipboard-formats
 ---
-# Clipboard support in UWP RichTextBox (SfRichTextBoxAdv)
+# Clipboard in UWP RichTextBox (SfRichTextBoxAdv)
 
 SfRichTextBoxAdv supports the clipboard through the [`CutCommand`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.CutCommand.html), [`CopyCommand`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.CopyCommand.html), and [`PasteCommand`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.PasteCommand.html), enabling you to copy and paste content in the following formats.
 
