@@ -142,7 +142,7 @@ Right click on error word to open the context menu with spell check options. Ple
 
 Context menu shows the suggestions for mis-spelled words. By clicking on the required word from suggestion, the error word gets replaced automatically.
 
-### Add To dictionary
+### Add to dictionary
 
 Using this option, you can add the current word to the dictionary. So that the spell checker does not consider that word as error in future.
 

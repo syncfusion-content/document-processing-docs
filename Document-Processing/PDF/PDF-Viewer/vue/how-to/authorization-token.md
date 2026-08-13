@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 The PDF Viewer supports adding an authorization token to every AJAX request by configuring the `ajaxRequestSettings.ajaxHeaders` property. Set the header once and the library includes it in all requests initiated by the viewer.
 
-The following steps are used to include the authorization token to the PDF viewer control.
+The following steps are used to include the authorization token in the PDF viewer control.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) to create simple PDF Viewer sample in React.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue.
 
 **Step 2:** Add the following code snippet to include the authorization token.
 

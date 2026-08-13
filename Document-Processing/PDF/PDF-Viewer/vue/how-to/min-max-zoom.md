@@ -2,7 +2,7 @@
 layout: post
 title: Configure minZoom and maxZoom in Vue PDF Viewer | Syncfusion
 description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the Syncfusion Vue PDF Viewer.
-control: Open thumbnail
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Configure minimum and maximum zoom properties
 
-The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
+The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices. Both properties are specified as percentages; the default `minZoom` is `10` and the default `maxZoom` is `400`.
 
 ### minZoom
 

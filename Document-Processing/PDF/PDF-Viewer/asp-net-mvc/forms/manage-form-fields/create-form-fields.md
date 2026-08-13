@@ -5,6 +5,7 @@ description: Learn how to add each PDF form field using the PDF Viewer UI and ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Create PDF Form Fields in MVC PDF Viewer
@@ -393,7 +394,7 @@ You can edit form fields using the UI or API.
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Customize form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

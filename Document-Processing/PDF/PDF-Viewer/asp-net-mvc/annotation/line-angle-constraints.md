@@ -5,11 +5,12 @@ description: Learn to add, edit, delete, and configure highlight, underline, str
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Line angle constraints in ASP.NET MVC PDF Viewer
 
-The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency across technical drawings and measurements across your PDF documents.
+The PDF Viewer control provides robust **line angle constraints** functionality. This allows users to draw line type annotations with controlled angle snapping, improving accuracy and consistency in technical drawings and measurements within your PDF documents.
 
 ## Enable line angle constraints
 Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
@@ -84,7 +85,7 @@ Angle snapping rules:
 
 When line angle constraints are enabled:
 
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, Perimeter, Area, or Volume).
 - The segment snaps to the nearest allowed angle.
 - A visual indicator reflects snapping in real time.
 - Release to complete the annotation.

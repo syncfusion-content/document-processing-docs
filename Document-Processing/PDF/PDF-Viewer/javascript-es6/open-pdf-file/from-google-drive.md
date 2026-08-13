@@ -11,11 +11,11 @@ documentation: ug
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
-**Step 1** Set up Google Drive API
+**Step 1:** Set up Google Drive API
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
+**Step 2:** Create a simple PDF Viewer sample in TypeScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Drive.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Drive.
 
 ```csharp
 [HttpPost("Load")]
@@ -147,7 +147,7 @@ N> The Folder ID is the unique identifier for the folder. For example, if your f
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in your Drive folder.
 
 ```typescript
 
