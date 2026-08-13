@@ -390,14 +390,26 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
 });
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
-
-const pdfviewer: PdfViewer = new PdfViewer();
+var pdfviewer = new ej.pdfviewer.PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
+
 //Apply Rectangle Settings while adding individual Annotation
 document.getElementById('Rectangle')?.addEventListener('click', function () {
     pdfviewer.annotation.addAnnotation('Rectangle', {
@@ -409,7 +421,7 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
         strokeColor: '#FF0000',
         fillColor: '#000fff#',
         author: 'User1'
-    } as RectangleSettings);
+    });
 });
 {% endhighlight %}
 {% endtabs %}
