@@ -8,7 +8,7 @@ keywords: out-of-memory-exception,out-of-memory,large-documents,ui-virtualizatio
 ---
 # Why does SfRichTextBoxAdv throw out of memory on large documents
 
-# Why does an out of memory exception occur in UWP SfRichTextBoxAdv?
+## Why does an out of memory exception occur in UWP SfRichTextBoxAdv?
 
 This page explains why an `OutOfMemoryException` is thrown when opening large documents in the [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) control and provides guidance on how to avoid it.
 
