@@ -1,5 +1,5 @@
 ---
-title: Create Markdown document in Azure Functions Flex Consumption | Syncfusion
+title: Create Markdown file in Azure Functions Flex Consumption | Syncfusion
 description: Create Markdown document in Azure Functions Flex Consumption using .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
