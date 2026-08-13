@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Interaction mode in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Interaction Mode in Angular PDF Viewer component | Syncfusion
+description: Learn all about Interaction Mode in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Interaction mode
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -79,7 +79,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ![PDF Viewer selection mode](images/selection.png)
 
-## Panning Mode
+## Panning mode
 
 Panning mode enables touch-based panning and page scrolling of the loaded PDF; text selection is disabled in this mode.
 
@@ -144,5 +144,5 @@ You can switch the interaction mode of the PDF Viewer using the following code s
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

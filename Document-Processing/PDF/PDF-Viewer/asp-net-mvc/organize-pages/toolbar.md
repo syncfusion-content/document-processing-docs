@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in ASP.NET MVC PDF Viewer control | Syncfusion
+title: Organize Page Toolbar Customization in MVC PDF Viewer | Syncfusion
 description: Learn here all about Organize Page Toolbar Customization in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -14,7 +13,7 @@ The PDF Viewer allows you to customize the toolbar for the organize pages featur
 
 ## Show or hide the insert option
 
-The `canInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar.
+The `CanInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -35,7 +34,7 @@ The `canInsert` property controls the visibility of the insert tool. When set to
 
 ## Show or hide the delete option
 
-The `canDelete` property controls the visibility of the delete tool. When set to `false`, the delete tool will be hidden.
+The `CanDelete` property controls the visibility of the delete tool. When set to `false`, the delete tool will be hidden.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -56,7 +55,7 @@ The `canDelete` property controls the visibility of the delete tool. When set to
 
 ## Show or hide the rotate option
 
-The `canRotate` property controls the visibility of the rotate tool. When set to `false`, the rotate tool will be hidden.
+The `CanRotate` property controls the visibility of the rotate tool. When set to `false`, the rotate tool will be hidden.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -77,12 +76,63 @@ The `canRotate` property controls the visibility of the rotate tool. When set to
 
 ## Show or hide the copy option
 
-The `canCopy` property controls the visibility of the copy tool. When set to `false`, the copy tool will be hidden.
+The `CanCopy` property controls the visibility of the copy tool. When set to `false`, the copy tool will be hidden.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanCopy = false }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Server-Backed" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanCopy = false }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Show or hide the import option
 
-The `canImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden.
+The `CanImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanImport = false }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Server-Backed" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanImport = false }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Show or hide the rearrange option
 
 The `canRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanRearrange = false }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Server-Backed" %}
+
+<div id="e-pv-e-sign-pdfViewer-div">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanRearrange = false }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}

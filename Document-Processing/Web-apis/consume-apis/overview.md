@@ -28,6 +28,9 @@ The document Processing API provides following capabilities
 - [XPS to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/xps-to-pdf)
 - [Organize PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/organize-pdf)
 - [OCR PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/ocr-pdf)
-
+- [HTML to Markdown](https://help.syncfusion.com/document-processing/web-apis/consume-apis/html-to-markdown)
+- [PDF to Markdown](https://help.syncfusion.com/document-processing/web-apis/consume-apis/pdf-to-markdown)
+- [Word to Markdown](https://help.syncfusion.com/document-processing/web-apis/consume-apis/word-to-markdown)
+- [Markdown to PDF](https://help.syncfusion.com/document-processing/web-apis/consume-apis/markdown-to-pdf)
 
 N> The Syncfusion Document Processing API is now available as a Docker-based solution. [Try it out](https://hub.docker.com/r/syncfusion/document-processing-apis)

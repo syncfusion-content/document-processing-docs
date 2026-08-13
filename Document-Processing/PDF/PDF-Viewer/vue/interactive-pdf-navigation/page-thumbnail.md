@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page thumbnail navigation in PDF Viewer
+# Page thumbnail navigation in Vue PDF Viewer
 
 Thumbnails are miniature representations of PDF pages that let users navigate visually. This feature displays page thumbnails and supports quick navigation between pages.
 
@@ -197,5 +197,5 @@ export default {
 
 ## See also
 
-* [Toolbar items](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar/)
-* [Feature modules](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/feature-module/)
+* [Toolbar items](../toolbar)
+* [Feature modules](../feature-module)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Table in ASP.NET MVC Document Editor Component | Syncfusion
+title: Table in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Learn here all about table in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Table
@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Tables
+# Table in ASP.NET MVC Document Editor
 
-Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through keyboard, mouse, or touch interactions. It exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
-You can create and insert a table at cursor position by specifying the required number of rows and columns.
+You can create and insert a table at the cursor position by specifying the required number of rows and columns.
 
 ```typescript
  documenteditor.editor.insertTable(3,3);
@@ -42,11 +42,11 @@ You can use the `maximumRows` property to set the maximum number of rows allowed
 ```
 
 
-When the maximum row limit is reached, an alert will appear, as follow 
+When the maximum row limit is reached, an alert will appear, as follows.
 
-![Row Limit Alert](images/Row_Limit_Alert.PNG) 
+![Row Limit Alert](images/Row_Limit_Alert.PNG)
 
->Note: The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
+N> The maximum number of rows is 32767, as per Microsoft Word application, and you can set any value less than or equal to 32767 to this property.
 
 ## Set the maximum number of Columns when inserting a table
 
@@ -72,15 +72,15 @@ Refer to the following sample code.
 ```
 
 
-When the maximum column limit is reached, an alert will appear, as follow 
+When the maximum column limit is reached, an alert will appear, as follows.
 
-![Column Limit Alert](images/Column_Limit_Alert.PNG) 
+![Column Limit Alert](images/Column_Limit_Alert.PNG)
 
->Note: The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
+N> The maximum number of columns is 63, as per Microsoft Word application, and you can set any value less than or equal to 63 to this property.
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the `insertRow` method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at the cursor position by using the `insertRow` method. This method accepts the following parameters:
 
 | Parameter | Type | Description |
 |----------|------|-------------|
@@ -91,16 +91,16 @@ Refer to the following sample code.
 
 ```typescript
 //Inserts a row below the row at cursor position
-documentedior.editor.insertRow();
+documenteditor.editor.insertRow();
 //Inserts a row above the row at cursor position
-documentedior.editor.insertRow(false);
+documenteditor.editor.insertRow(true);
 //Inserts three rows below the row at cursor position
-documentedior.editor.insertRow(true, 3)
+documenteditor.editor.insertRow(false, 3);
 ```
 
 ## Insert columns
 
-You can add a column (or several columns) to the left or right of the column at cursor position by using the `insertColumn` method. This method accepts the following parameters:
+You can add a column (or several columns) to the left or right of the column at the cursor position by using the `insertColumn` method. This method accepts the following parameters:
 
 | Parameter | Type | Description |
 |----------|------|-------------|
@@ -110,11 +110,11 @@ You can add a column (or several columns) to the left or right of the column at 
 
 ```typescript
 //Insert a column to the right of the column at cursor position.
-documentedior.editor.insertColumn();
+documenteditor.editor.insertColumn();
 //Insert a column to the left of the column at cursor position.
-documentedior.editor.insertColumn(false);
+documenteditor.editor.insertColumn(true);
 //Insert two columns to the left of the column at cursor position.
-documentedior.editor.insertColumn(false, 2);
+documenteditor.editor.insertColumn(true, 2);
 ```
 
 ### Select an entire table
@@ -133,7 +133,7 @@ You can select the entire row at cursor position by using the following sample c
 documenteditor.selection.selectRow();
 ```
 
-If current selection spans across cells of different rows, all these rows will be selected.
+If the current selection spans across cells of different rows, all these rows will be selected.
 
 ### Select column
 
@@ -143,7 +143,7 @@ You can select the entire column at cursor position by using the following sampl
 documenteditor.selection.selectColumn();
 ```
 
-If current selection spans across cells of different columns, all these columns will be selected.
+If the current selection spans across cells of different columns, all these columns will be selected.
 
 ### Select cell
 
@@ -155,7 +155,7 @@ documenteditor.selection.selectCell();
 
 ## Delete table
 
-Document editor allows to delete the entire table. You can use the `deleteTable()` method of editor instance, if selection is in table.
+The Document Editor allows you to delete the entire table. You can use the `deleteTable()` method of the editor instance if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteTable();
@@ -163,7 +163,7 @@ documenteditor.editor.deleteTable();
 
 ## Delete row
 
-Document editor allows to delete the selected number of rows. You can use the `deleteRow()` method of editor instance to delete the selected number of rows, if selection is in table.
+The Document Editor allows you to delete the selected number of rows. You can use the `deleteRow()` method of the editor instance to delete the selected number of rows, if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteRow();
@@ -171,7 +171,7 @@ documenteditor.editor.deleteRow();
 
 ## Delete column
 
-Document editor allows to delete the selected number of columns. You can use the `deleteColumn ()` method of editor instance to delete the selected number of columns, if selection is in table.
+The Document Editor allows you to delete the selected number of columns. You can use the `deleteColumn()` method of the editor instance to delete the selected number of columns, if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteColumn();
@@ -179,15 +179,15 @@ documenteditor.editor.deleteColumn();
 
 ## Merge cells
 
-You can merge cells vertically, horizontally, or combination of both to a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
+You can merge cells vertically, horizontally, or a combination of both to a single cell. To vertically merge the cells, the columns within the selection should be equal in the left and right directions. To horizontally merge the cells, the rows within the selection should be equal in the top and bottom directions.
 
 ```typescript
-documenteditor.editor.mergeCells()
+documenteditor.editor.mergeCells();
 ```
 
 ## Positioning the table
 
-Document Editor preserves the position properties of the table and displays the table based on position properties. It does not support modifying the position properties. Whereas the table will be automatically moved along with text edited if it is positioned relative to the paragraph.
+Document Editor preserves the position properties of the table and displays the table based on the position properties. It does not support modifying the position properties. The table will be automatically moved along with the text while editing if it is positioned relative to the paragraph.
 
 ## How to work with tables
 
@@ -205,7 +205,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)

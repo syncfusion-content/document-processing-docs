@@ -19,7 +19,6 @@ Assembly
 </th>
 </tr>
 </thead>
-<tbody>
 <tr>
 <td>
 												 
@@ -57,7 +56,7 @@ T> * Upgrade quickly with no manual effort.
 T> Note: To avoid trial watermark when using NuGet packages, it is recommended to register license key in application. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) for information on registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 T> Refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required) for more information on the required NuGet packages.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -94,7 +93,6 @@ Assembly
 </th>
 </tr>
 </thead>
-<tbody>
 <tr>
 <td>
 												 
@@ -136,7 +134,7 @@ Syncfusion.PresentationRenderer.NET<br/>Syncfusion.Pdf.Imaging.NET<br/>Syncfusio
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -184,7 +182,6 @@ Assembly
 </th>
 </tr>
 </thead>
-<tbody>
 <tr>
 <td>
 {{'[WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf)' | markdownify}}, {{'[Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms)' | markdownify}} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc)' | markdownify}}<br/></td><td>
@@ -232,7 +229,7 @@ Syncfusion.SfChart.UWP<br/>
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -279,7 +276,6 @@ Assembly
 </th>
 </tr>
 </thead>
-<tbody>
 <tr>
 <td>
 WPF, Windows Forms and ASP.NET MVC<br/>
@@ -298,10 +294,9 @@ Syncfusion.OfficeChartToImageConverter.Portable<br/>
 Syncfusion.SfChart.Portable<br/>
 </td>
 </tr>
-</tbody>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 

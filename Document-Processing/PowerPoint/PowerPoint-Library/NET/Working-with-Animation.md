@@ -31,7 +31,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add bounce effect to the shape
@@ -47,7 +47,7 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add bounce effect to the shape
@@ -63,7 +63,7 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add bounce effect to the shape
@@ -89,9 +89,9 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
-//Add a shape to act as button
-IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300);
+//Add a shape to act as button.
+IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50);
 //Create the interactive sequence to make the animation effects interactive by triggering with button click
 ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
 //Add Fly effect with top subtype to animate the shape as fly from top
@@ -107,9 +107,9 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
-    //Add a shape to act as button
-    IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300);
+    //Add a shape to act as button.
+    IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50);
     //Create the interactive sequence to make the animation effects interactive by triggering with button click
     ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
     //Add Fly effect with top subtype to animate the shape as fly from top
@@ -125,9 +125,9 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300)
     'Add a shape to act as button
-    Dim buttonShape As IShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100, 100, 50, 50)
+    Dim buttonShape As IShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50)
     'Create the interactive sequence to make the animation effects interactive by triggering with button click
     Dim interactiveSequence As ISequence = slide.Timeline.InteractiveSequences.Add(buttonShape)
     'Add Fly effect with top subtype to animate the shape as fly from top
@@ -212,7 +212,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add random bars effect to the shape
@@ -230,7 +230,7 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add random bars effect to the shape
@@ -248,7 +248,7 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add random bars effect to the shape
@@ -827,8 +827,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -948,8 +950,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1029,10 +1033,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1052,8 +1058,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1073,10 +1081,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1096,8 +1106,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1117,9 +1129,11 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> FontBold </li>
 <li> FontItalic </li>
 <li> FontUnderline </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1139,10 +1153,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Instant </li>
 <li> Gradual </li>
 <li> GradualAndCycleClockwise </li>
 <li> GradualAndCycleCounterClockwise </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1162,8 +1178,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Vertical </li>
 <li> Across </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1183,8 +1201,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1344,10 +1364,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
 <li> Bottom </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1467,8 +1489,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1588,8 +1612,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> None </li>
 <li> Center </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1709,6 +1735,7 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
@@ -1717,6 +1744,7 @@ Yes
 <li> TopRight </li>
 <li> BottomLeft </li>
 <li> BottomRight </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3176,10 +3204,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Bottom </li>
 <li> Left </li>
 <li> Right </li>
 <li> Top </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3219,8 +3249,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3240,8 +3272,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3401,10 +3435,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> HorizontalIn </li>
 <li> HorizontalOut </li>
 <li> VerticalIn </li>
 <li> VerticalOut </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3424,11 +3460,13 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Right </li>
 <li> Left </li>
 <li> Top </li>
 <li> Bottom </li>
 <li> Across </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3448,10 +3486,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> UpLeft </li>
 <li> UpRight </li>
 <li> DownLeft </li> 
 <li> DownRight </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3511,8 +3551,10 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Horizontal </li>
 <li> Vertical </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3672,11 +3714,13 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Wheel1 </li>
 <li> Wheel2 </li>
 <li> Wheel3 </li>
 <li> Wheel4 </li>
 <li> Wheel8 </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3716,10 +3760,12 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> Top </li>
 <li> Right </li>
 <li> Bottom </li>
 <li> Left </li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3759,6 +3805,7 @@ Yes
 -
 </td>
 <td>
+<ul>
 <li> In </li>
 <li> Out </li>
 <li> InCenter - only for Entrance type </li>
@@ -3767,6 +3814,7 @@ Yes
 <li> InSlightly </li>
 <li> OutCenter - only for Exit type </li>
 <li> InBottom - only for Exit type </li>
+</ul>
 </td>
 </tr>
 </table>

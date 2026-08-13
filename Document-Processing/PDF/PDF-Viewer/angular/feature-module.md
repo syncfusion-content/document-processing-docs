@@ -3,7 +3,7 @@ layout: post
 title: Feature module in Angular PDF Viewer component | Syncfusion
 description: Learn here all about Feature module in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Feature module
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -46,5 +46,5 @@ N> In addition to registering the required modules, enable the corresponding com
 
 ## See also
 
-* [Toolbar items](./toolbar)
-* [Toolbar customization](./how-to/toolbar_customization)
+* [Toolbar items](./toolbar-customization/overview)
+* [Toolbar customization](./toolbar-customization/custom-toolbar)
