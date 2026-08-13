@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Document by Address in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to open a document from a URL in Syncfusion JavaScript (ES5) Document Editor using XMLHttpRequest to load SFDT content from the server side.
+title: Open document by address in JavaScript (ES5) Docx editor | Syncfusion
+description: Learn here all about Open document by address in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Open a Document by Address
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open Document by Address - JavaScript (ES5) Document Editor
+# Open document by address in JavaScript (ES5) Document editor control
 
 ## How to Open a Document from a URL in DocumentEditor
 
