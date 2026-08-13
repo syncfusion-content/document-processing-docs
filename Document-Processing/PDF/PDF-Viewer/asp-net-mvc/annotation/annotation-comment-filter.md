@@ -27,7 +27,7 @@ Comment filtering is most useful in these scenarios:
 - **Color-coded reviews**: Filter by annotation color to organize feedback by priority or type
 - **Time-based review**: Filter by modification date to see recent changes
 - **Document collaboration**: Use "Filter document and comments panel" to synchronize your view with the document
-- **Focused comments panel**: Use panel-only filtering to study all comments without hiding annotations in the document
+- **Focused comments panel**: Use the panel-only filtering to study all comments without hiding annotations in the document
 
 ## UI-based filtering
 

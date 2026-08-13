@@ -14,7 +14,7 @@ The Vue PDF Viewer component supports saving PDF files to Azure Blob Storage usi
 
 ## Using Standalone PDF Viewer
 
-Follow the steps below to save a PDF file to Azure Blob Storage from an Vue PDF Viewer.
+Follow the steps below to save a PDF file to Azure Blob Storage from a Vue PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in Vue
 
@@ -80,7 +80,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 {% endhighlight %}
 {% endtabs %}
 
-4. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer and upload the ArrayBuffer to Azure Blob Storage using `BlockBlobClient`.
+3. Retrieve the PDF Viewer instance and save the current PDF as a Blob. Then, read the Blob as an ArrayBuffer and upload the ArrayBuffer to Azure Blob Storage using `BlockBlobClient`.
 
 N> Replace **Your SAS Url in Azure** with the SAS URL generated for the target blob. For production, generate short-lived SAS tokens on the server rather than embedding SAS URLs in client code.
 
@@ -155,7 +155,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the Azure Blob Storage container.
 
 ```csharp
 
@@ -211,7 +211,7 @@ N> Replace the placeholders with the actual Azure Storage connection string and 
 
 **Step 3:**   Set the PDF Viewer properties in the Vue PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

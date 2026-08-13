@@ -14,8 +14,6 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer MCP Server accel
 
 These tools speed up development and reinforce best practices for Vue PDF Viewer integration.
 
-> The previously available **Agentic UI Builder** (`#sf_vue_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://ej2.syncfusion.com/vue/documentation/agentic-ui-builder). The **AI Coding Assistant** (#sf_vue_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
-
 ## Key Benefits
 
 - **Expert PDF Viewer Knowledge** - Deep understanding of the Vue PDF Viewer component (SfPdfViewer) and its implementation patterns.
@@ -238,4 +236,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+* [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

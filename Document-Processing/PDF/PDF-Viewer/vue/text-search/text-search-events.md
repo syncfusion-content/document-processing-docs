@@ -14,7 +14,7 @@ The Vue PDF Viewer triggers events during text search operations, allowing you t
 
 ## textSearchStart
 
-The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#textsearchstart) event fires as soon as a search begins from the toolbar interface or through the [`textSearch.searchText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch#searchtext) method. Use to reset UI state, log analytics, or cancel the default search flow before results are processed.
+The [textSearchStart](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#textsearchstart) event fires as soon as a search begins from the toolbar interface or through the [`textSearch.searchText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch#searchtext) method. Use this event to reset UI state, log analytics, or cancel the default search flow before results are processed.
 
 - Event arguments: [TextSearchStartEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textSearchStartEventArgs) exposes:
   - `searchText`: the term being searched.
@@ -189,7 +189,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
 ## See Also
 

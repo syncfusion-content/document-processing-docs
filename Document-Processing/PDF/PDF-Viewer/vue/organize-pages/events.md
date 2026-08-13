@@ -105,7 +105,7 @@ The event arguments provide information about the save event:
 
 The `pageOrganizerZoomChanged` event is triggered when the zoom level of the page organizer changes.
 
-- Fired when the user interacts with the zoom slider in the page organizer. Ensure `showImageZoomingSlider` is set to `true` in `pageOrganizerSettings`.
+- Fired when the user interacts with the zoom slider in the page organizer. The zoom slider is only rendered when `showImageZoomingSlider` is set to `true` in `pageOrganizerSettings`.
 
 Event arguments:
 

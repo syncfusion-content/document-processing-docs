@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Restrict Zoom Percentage in Angular PDF Viewer component | Syncfusion
-description: Learn here all how to restrict zoom percentage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Learn here how to restrict the zoom percentage in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict zoom percentage on mobile devices
+# Restrict zoom percentage on mobile devices in Angular
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 
@@ -21,7 +21,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService, FormFieldsService, FormDesignerService,
          PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import  {Browser} from '@syncfusion/ej2-base';
+import { Browser } from '@syncfusion/ej2-base';
 
 @Component({
   selector: 'app-container',
@@ -48,7 +48,7 @@ import  {Browser} from '@syncfusion/ej2-base';
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
-          viewer.minZoom = 10;
+        viewer.minZoom = 10;
       }
       else {
         viewer.zoomMode = 'Default';
@@ -66,7 +66,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService, FormFieldsService, FormDesignerService,
          PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-import  {Browser} from '@syncfusion/ej2-base';
+import { Browser } from '@syncfusion/ej2-base';
 
 @Component({
   selector: 'app-container',
@@ -94,7 +94,7 @@ import  {Browser} from '@syncfusion/ej2-base';
       var viewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
-          viewer.minZoom = 10;
+        viewer.minZoom = 10;
       }
       else {
         viewer.zoomMode = 'Default';

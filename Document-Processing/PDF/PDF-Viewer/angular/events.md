@@ -842,7 +842,7 @@ export class AppComponent {
   ];
 
   public onCustomContextMenuBeforeOpen(args: any): void {
-    console.log(`Before open context menu at page ${args.name}`);
+    console.log(`Before open context menu at page: ${args.name}`);
   }
 
   public onDocumentLoad(): void {
@@ -3172,5 +3172,5 @@ export class AppComponent {
 See also:
 
 - [Annotation events](./annotation/annotation-event)
-- [Form field events](./form-designer/form-field-events)
-- [Organize PDF events](./organize-pdf/organize-pdf-events)
+- [Form field events](./forms/form-field-events)
+- [Organize PDF events](./organize-pages/events)

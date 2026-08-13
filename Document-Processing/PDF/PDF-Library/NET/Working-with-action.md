@@ -810,7 +810,7 @@ The [PdfRemoteGoToAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-GoTo-action-to-the-PDF-document/.NET/Add-GoTo-action-to-the-PDF-document/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
