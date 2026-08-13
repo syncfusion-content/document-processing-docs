@@ -1,5 +1,5 @@
 ---
-title: Create Markdown file in Azure Functions Flex Consumption | Syncfusion
+title: Create Markdown document in Azure Functions Flex Consumption | Syncfusion
 description: Create Markdown document in Azure Functions Flex Consumption using .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
@@ -8,20 +8,24 @@ documentation: UG
 
 # Create Markdown document in Azure Functions (Flex Consumption)
 
-Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit, and convert Markdown documents programmatically without external dependencies. Using this library, you can **Create Markdown document in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit, and convert Markdown documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Azure Functions deployed on the Flex Consumption plan**.
 
-## Steps to Create Markdown document in Azure Functions (Flex Consumption)
+## Steps to create a Markdown document in Azure Functions (Flex Consumption)
 
 Step 1: Create a new Azure Functions project.
-![Create a Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Markdown.png)
+
+![Create an Azure Functions project](Azure-Images/Functions-Flex-Consumption/Azure_Markdown.png)
 
 Step 2: Create a project name and select the location.
+
 ![Create a project name](Azure-Images/Functions-Flex-Consumption/Configure_Your_Project_Markdown.png)
 
-Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
+Step 3: Select the function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target **Flex Consumption** hosting, which is suitable for the isolated worker.
+
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_Markdown.png)
 
 Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
@@ -135,28 +139,36 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Right click the project and select **Publish**. Then, create a new profile in the Publish Window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the **Publish** window.
+
 ![Create a new profile in the Publish Window](Azure-Images/Functions-Flex-Consumption/Publish-Create-Markdown-Document.png)
 
-Step 8: Select the target as **Azure** and click **Next** button.
+Step 8: Select the target as **Azure** and click the **Next** button.
+
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Target_Markdown_Document.png)
 
-Step 9: Select the specific target as **Azure Function App** and click **Next** button.
+Step 9: Select the specific target as **Azure Function App** and click the **Next** button.
+
 ![Select the target as Azure](Azure-Images/Functions-Flex-Consumption/Specific_Target_Markdown_Document.png)
 
-Step 10: Select the **Create new** button.
+Step 10: Click the **Create new** button.
+
 ![Configure Hosting Plan](Azure-Images/Functions-Flex-Consumption/Function_Instance_Markdown_Document.png)
 
-Step 11: Click **Create** button. 
+Step 11: Click the **Create** button.
+
 ![Select the plan type](Azure-Images/Functions-Flex-Consumption/Hosting_Markdown_Document.png)
 
-Step 12: After creating app service then click **Finish** button. 
+Step 12: After the App Service is created, click the **Finish** button.
+
 ![Creating app service](Azure-Images/Functions-Flex-Consumption/Finish_Markdown_Document.png)
 
 Step 13: Click the **Publish** button.
+
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_Markdown_Document.png)
 
-Step 14: Publish has been succeed.
+Step 14: Publishing has succeeded.
+
 ![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_Markdown.png)
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **create a Markdown document** using the template Markdown document). You will get the output Markdown document as follows.
@@ -190,8 +202,8 @@ static async Task Main()
             string outputPath = mediaType.Contains("word", StringComparison.OrdinalIgnoreCase)
                 || mediaType.Contains("officedocument", StringComparison.OrdinalIgnoreCase)
                 || mediaType.Equals("text/markdown", StringComparison.OrdinalIgnoreCase)
-                ? Path.GetFullPath("../../../Output/Output.md")
-                : Path.GetFullPath("../../../Output/function-error.txt");
+                ? Path.GetFullPath(Path.GetFullPath(@"Output/Output.md"))
+                : Path.GetFullPath(Path.GetFullPath(@"Output/function-error.txt"));
             // Write the response bytes to the output markdown file
             await File.WriteAllBytesAsync(outputPath, resBytes);
             Console.WriteLine($"Saved: {outputPath}");
@@ -204,7 +216,7 @@ static async Task Main()
 {% endhighlight %}
 {% endtabs %}
 
-From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Console_App_Flex_Consumption) and [Azure Functions Flex Consumption](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_Flex_Consumption).
+From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Console_App_Flex_Consumption) and the [Azure Functions Flex Consumption](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_Flex_Consumption) project.
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_Flex_Consumption/Create-Markdown-Document/Data) and place it in the application's `Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 

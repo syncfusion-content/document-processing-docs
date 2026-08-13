@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdow
 
 ## Steps to create a Markdown document in AWS Elastic Beanstalk
 
-Step 1: Create a new **ASP.NET Core Web application (Model-View-Controller)** project targeting **.NET 8.0** (or later). No authentication is required for this sample.
+Step 1: Create a new **ASP.NET Core Web App (Model-View-Controller)** project targeting **.NET 8.0** (or later). No authentication is required for this sample.
 
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
@@ -47,9 +47,9 @@ using Syncfusion.Office.Markdown;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in HomeController.cs. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named `Index` is present in `HomeController.cs`. Right-click the `Index` method and select **Go To View**, where you will be directed to its associated view page, **Index.cshtml**.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below. Because the action only downloads a file (no side effects), `FormMethod.Get` is used and the controller action is decorated as an HTTP GET endpoint.
+Step 5: Add a new button in **Index.cshtml** as shown below. Because the action only downloads a file (no side effects), `FormMethod.Get` is used and the controller action is decorated as an HTTP GET endpoint.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -138,29 +138,38 @@ return File(stream, "text/markdown", "Sample.md");
 
 ## Steps to publish as an AWS Elastic Beanstalk application
 
-Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option. (This menu requires the AWS Toolkit for Visual Studio — see [Prerequisites](#prerequisites).)
+Step 1: Right-click the project and select the **Publish to AWS Elastic Beanstalk (Legacy)** option. (This menu requires the AWS Toolkit for Visual Studio — see [Prerequisites](#prerequisites).)
+
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-Markdown-Document.png)
 
-Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next**.
+Step 2: Select **Create a new application environment** as the **Deployment Target** and click **Next**.
+
 ![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Convert-WordtoPDF.png)
 
-Step 3: Choose the **Environment Name** from the dropdown list. The **URL** will be assigned automatically; verify the URL is available. If available, click **Next**; otherwise, change the **URL**.
+Step 3: Choose the **Environment Name** from the dropdown list. The **URL** is assigned automatically; verify that the URL is available. If it is available, click **Next**; otherwise, change the **URL**.
+
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-Word-Document.png)
 
-Step 4: Select the instance type as **t3a.micro** from the dropdown list (sufficient for this lightweight Markdown workload; choose a larger instance for heavier document generation). Configure the platform branch to one that matches your target .NET runtime, then click **Next**.
+Step 4: Select **t3a.micro** as the instance type from the dropdown list (sufficient for this lightweight Markdown workload; choose a larger instance for heavier document generation). Configure the platform branch to match your target .NET runtime, then click **Next**.
+
 ![Launch Configuration in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Convert-WordtoPDF.png)
 
-Step 5: Review the IAM permissions page. Ensure your AWS credentials/profile has the Elastic Beanstalk service and EC2 permissions required to publish. Click **Next** to proceed.
+Step 5: Review the IAM permissions page. Ensure that your AWS credentials or profile has the Elastic Beanstalk service and EC2 permissions required to publish. Click **Next** to proceed.
+
 ![Permissions in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Permissions-Convert-WordtoPDF.png)
 
 Step 6: Review the application options, then click **Deploy** to deploy the sample to AWS Elastic Beanstalk.
+
 ![Application Options and Review in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Application-Options-Convert-WordtoPDF.png)
+
 ![Deploy the sample in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Review-Convert-WordtoPDF.png)
 
 Step 7: After the status changes from **Updating** to **Environment is healthy**, click the **URL**.
+
 ![Status check in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Status-Convert-WordtoPDF.png)
 
 Step 8: After opening the provided **URL**, click the **Create Markdown document** button to download the Markdown document.
+
 ![Click button to Create a Markdown document](AWS_Images/Elastic_Beanstalk_Images/Browser-Create-Markdown-Document.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/AWS_Elastic_Beanstalk).

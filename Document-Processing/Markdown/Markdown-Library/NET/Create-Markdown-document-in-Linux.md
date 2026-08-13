@@ -51,7 +51,7 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Add the following Namespaces in Program.cs file.
+Step 3: Add the following namespaces in the **Program.cs** file.
 
 {% tabs %}
 
@@ -62,12 +62,12 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
+Step 4: Add the following code snippet in the **Program.cs** file. If you are using a licensed or trial Syncfusion package, register the license key at the start of the program:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
- // Creates a new instance of MarkdownDocument.
+// Creates a new instance of MarkdownDocument.
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Adds a heading to the Markdown document.
 MdParagraph mdHeadingParagraph = markdownDocument.AddParagraph();
@@ -160,7 +160,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Linux/Create-Markdown-document/Data) and place it in the application's `Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 
-By executing the program, you will get the **Markdown document** as follows. The output will be saved alongside the Program.cs file.
+By executing the program, you will get the **Markdown document** as follows. The output will be saved alongside the **Program.cs** file.
 
 ![Markdown document generated on Linux](GettingStarted_images/GettingStarted_Output1.png)
 

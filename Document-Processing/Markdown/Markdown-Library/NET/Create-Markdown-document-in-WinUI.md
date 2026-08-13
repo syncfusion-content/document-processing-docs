@@ -29,7 +29,7 @@ Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the
 
 ![Set the target version](WinUI_Images/Target_Version.png)
 
-Step 4: Install the Syncfusion.Markdown NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Markdown NuGet package](WinUI_Images/Install_Nuget.png)
 
@@ -76,7 +76,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 7: Add a new action method **CreateDocument** in MainWindow.xaml.cs and include the below code snippet to **create a Markdown document**.
+Step 7: Add a new action method **CreateDocument** in the **MainWindow.xaml.cs** file and include the following code snippet to **create a Markdown document**.
 
 {% tabs %}
 
@@ -170,7 +170,7 @@ Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the
 
 ![Set the target version](WinUI_Images/Target_Version.png)
 
-Step 4: Install the Syncfusion.Markdown NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Markdown NuGet package](WinUI_Images/Install_Nuget.png)
 
@@ -225,7 +225,7 @@ using Windows.Storage.Pickers;
 
 {% endtabs %}
 
-Step 7: Register the Syncfusion license key at application startup (e.g., in the `App` constructor or the `CreateDocument` method) before using any Markdown APIs.
+Step 7: Add a new action method **CreateDocument** in the **MainPage.xaml.cs** file and include the following code snippet to **create a Markdown document**. Register the Syncfusion license key at application startup (e.g., in the `App` constructor or the `CreateDocument` method) before using any Markdown APIs.
 
 {% tabs %}
 
@@ -304,9 +304,9 @@ N> The code sample references an image file (`photo.jpg`). Download this asset f
 
 By executing the program, you will get the **Markdown document** as follows.
 
-![WinUI UWP output Markdown document](GettingStarted_images/GettingStarted_Output1.png) 
+![WinUI UWP output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 
-### Save Markdown document in UWP
+### Save a Markdown document in UWP
 
 {% tabs %}
 

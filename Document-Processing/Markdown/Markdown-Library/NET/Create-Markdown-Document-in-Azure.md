@@ -12,9 +12,9 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdow
 
 This page is an index of the supported Azure services. Select a service below to open the step-by-step guide for creating a Markdown document in that environment.
 
-## Prerequisites 
+## Prerequisites
 
-* An active **Microsoft Azure subscription** is required. If you don't have one, create a free account before starting.
+* An active **Microsoft Azure subscription** is required. If you don't have one, create a free account before you begin.
 * An IDE such as Visual Studio 2022 or later, or Visual Studio Code.
 
 For troubleshooting common installation and runtime issues, see [Installation errors](https://help.syncfusion.com/common/essential-studio/installation/installation-errors) and [Licensing errors](https://help.syncfusion.com/common/essential-studio/licensing/licensing-errors).
@@ -23,7 +23,7 @@ For troubleshooting common installation and runtime issues, see [Installation er
 
 Choose your Azure service below to follow the detailed procedure. Each row lists the Markdown NuGet package required for that environment.
 
-N> Azure Functions v1 is **out of support** per Microsoft and is listed here only for legacy reference. For new projects, use Azure Functions v4 with the `Syncfusion.Markdown` package.
+N> Azure Functions v1 is **out of support** by Microsoft and is listed here only for legacy reference. For new projects, use Azure Functions v4 with the `Syncfusion.Markdown` package.
 
 <table>
 <thead>
@@ -34,7 +34,7 @@ NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
 App Service (Windows)<br/></td><td>
-{{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}</td></tr>
+{{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/></td></tr>
 <tr>
 <td>
 App Service (Linux)<br/></td><td>

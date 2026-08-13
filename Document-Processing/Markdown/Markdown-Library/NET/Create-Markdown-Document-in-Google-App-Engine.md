@@ -1,6 +1,6 @@
 ---
-title: Create Markdown document in GAE | Syncfusion
-description: Create Markdown document in Google App Engine using .NETMarkdown library without external dependencies.
+title: Create Markdown document in Google App Engine | Syncfusion
+description: Create Markdown document in Google App Engine using .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
@@ -8,16 +8,18 @@ documentation: UG
 
 # Create Markdown document in Google App Engine
 
-Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) that allows you to create, read, edit, and convert Markdown documents programmatically, without the need for external dependencies. Using this library, you can **create Markdown document in Google App Engine**.
+Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) that allows you to create, read, edit, and convert Markdown documents programmatically, without the need for external dependencies. Using this library, you can **create a Markdown document in Google App Engine**.
 
 N> This sample targets **.NET 8**. Install the .NET 8 SDK before you begin. You also need a Google Cloud project with **billing enabled** and the **App Engine Admin API** enabled. Install the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install) (or use the pre-provisioned Cloud Shell) and run `gcloud auth login` before proceeding.
 
 ## Set up App Engine
 
 Step 1: Open the **Google Cloud Console** and click the **Activate Cloud Shell** button.
+
 ![Activate Cloud Shell](GCP_Images/Activate-Cloud-Shell-Create-Markdown.png)
 
 Step 2: Click the **Cloud Shell Editor** button to view the **Workspace**.
+
 ![Open Editor in Cloud Shell](GCP_Images/Authentication-Create-Markdown.png)
 
 Step 3: Open **Cloud Shell Terminal**, and run the following **command** to confirm authentication.
@@ -33,17 +35,21 @@ gcloud auth list
 ![Authentication for App Engine](GCP_Images/Editor-Button-Create-Markdown.png)
 
 Step 4: Click the **Authorize** button to grant the Cloud Shell session the permissions it needs to manage your App Engine application.
+
 ![Click Authorize button](GCP_Images/Authorize-Create-Markdown.png)
 
 ## Create an application for App Engine
 
 Step 1: Open Visual Studio and select the ASP.NET Core Web app (Model-View-Controller) template.
+
 ![Create ASP.NET Core Web application in Visual Studio](ASP-NET-Core_images/CreateProjectforConversion.png)
 
 Step 2: Configure your new project according to your requirements.
+
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Configuration-Create-Markdown-Document.png)
 
 Step 3: Click the **Create** button.
+
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Additional-Information-Markdown.png)
 
 Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -70,9 +76,9 @@ using Syncfusion.Office.Markdown;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: A default action method named Index will be present in HomeController.cs. Right-click on the Index method and select **Go To View**. You will be directed to its associated view page **Index.cshtml**.
+Step 6: A default action method named `Index` is present in `HomeController.cs`. Right-click the `Index` method and select **Go To View**, where you will be directed to its associated view page, **Index.cshtml**.
 
-Step 7: Add a new button in the Index.cshtml as shown below.
+Step 7: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -90,7 +96,7 @@ Step 7: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add a new action method **CreateDocument** in HomeController.cs and include the below code snippet to **create Markdown document** and download it.
+Step 8: Add a new action method **CreateDocument** in `HomeController.cs` and include the following code snippet to **create a Markdown document** and download it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -163,9 +169,11 @@ return File(stream, "text/markdown", "Sample.md");
 ## Move application to App Engine
 
 Step 1: Open the **Cloud Shell editor**.
+
 ![Cloud Shell Editor](GCP_Images/Cloud-Shell-Editor-MD.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
+
 ![Open the Home Workspace](GCP_Images/Workspace-Create-Md-Document.png)
 
 N> If you have your sample application in your local machine, drag and drop it into the Workspace. If you created the sample using the Cloud Shell terminal command, it will be available in the Workspace.
@@ -208,12 +216,15 @@ dotnet run --urls=http://localhost:8080
 ![Run the application using command](GCP_Images/Run-Application-Command-Create-Markdown-Document.png)
 
 Step 6: Verify that the application is running properly by accessing the **Web View** -> **Preview on port 8080**.
+
 ![Verify the application is running properly](GCP_Images/Web-View-Create-Markdown-Document.png)
 
 Step 7: Now you can see the sample output on the preview page.
+
 ![Sample output in browser](GCP_Images/Browser-Create-Markdown-Document.png)
 
 Step 8: Close the preview page and return to the terminal, then press **Ctrl+C**, which will stop the process.
+
 ![Press Ctrl+C in Cloud Shell Terminal](GCP_Images/Stop-Process-Create-Markdown-Document.png)
 
 ## Publish the application
@@ -231,6 +242,7 @@ dotnet publish -c Release
 ![Publish the application](GCP_Images/Publish-Create-Markdown-Document.png)
 
 Step 2: Run the following command in **Cloud Shell Terminal** to navigate to the publish folder. The folder name matches your target framework (for example, `net8.0`); adjust it if you targeted a different TFM.
+
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
 
@@ -279,6 +291,7 @@ EOT
 ![Add required files to publish folder](GCP_Images/Docker-File-Create-Markdown-Document.png)
 
 Step 3: You can ensure **Dockerfile** and **app.yaml** files are added in **Workspace**.
+
 ![Add required files to publish folder](GCP_Images/Check-Docker-File-in-Workspace-Create-Markdown-Document.png)
 
 ## Deploy to App Engine
@@ -296,13 +309,14 @@ gcloud app deploy --version v0
 ![Deploy the application to App Engine](GCP_Images/Deploy-Docker-File-Create-Markdown-Document.png)
 
 Step 2: Open the **URL** to access the application, which has been successfully deployed.
+
 ![Application running in the browser](GCP_Images/Browser-Create-Markdown-Document.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/GCP/Google_App_Engine).
 
 N> The code sample references image files (photo.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/GCP/Google_App_Engine/Create-Markdown-Document/Data) and place them in the application's `Data` folder so the relative paths in the code resolve correctly at runtime.
 
-By executing the program, you will get the **Markdown document** as follows. The output will be saved in **bin** folder.
+By executing the program, you will get the **Markdown document** as follows. The output will be saved in the **bin** folder.
 
 ![Create Markdown document in Google App Engine](GettingStarted_images/GettingStarted_Output1.png)
 

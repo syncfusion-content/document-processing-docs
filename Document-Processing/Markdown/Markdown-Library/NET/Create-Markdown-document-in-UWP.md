@@ -54,7 +54,7 @@ Step 3: Add a new button in the MainPage.xaml as shown below.
 
 {% endtabs %}
 
-Step 4: Include the following namespaces in the MainPage.xaml.cs file.
+Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% tabs %}
 
@@ -68,7 +68,7 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 5: Include the below code snippet in the click event of the button in MainPage.xaml.cs to **create a Markdown document** and save it as a physical file. The file will be opened for viewing automatically.
+Step 5: Include the following code snippet in the click event of the button in **MainPage.xaml.cs** to **create a Markdown document** and save it as a physical file. The file will be opened for viewing automatically.
 
 {% tabs %}
 
@@ -144,12 +144,12 @@ private async void OnButtonClicked(object sender, RoutedEventArgs e)
 
 {% endtabs %}
 
-## Save Markdown document in UWP
+## Save a Markdown document in UWP
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Saves the Markdown document
+// Saves the Markdown document.
 async void Save(MemoryStream streams, string filename)
 {
     streams.Position = 0;
@@ -193,7 +193,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Assets folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/UWP/Create-Markdown-document/Assets) and place it in the application's `Assets` folder so the `MdPicture.Url` value (`"Assets/photo.jpg"`) resolves correctly at runtime.
 
-By executing the program, you will get the Markdown document as follows.
+By executing the program, you will get the **Markdown document** as follows.
 
 ![UWP output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 

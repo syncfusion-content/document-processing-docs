@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown document in Azure Functions v4
 
-Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit and convert Markdown documents programmatically without **Microsoft Markdown** or interop dependencies. Using this library, you can **create a Markdown document in Azure Functions v4**.
+Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit, and convert Markdown documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Azure Functions v4**.
 
 ## Prerequisites
 
@@ -20,15 +20,19 @@ Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syn
 ## Steps to create a Markdown document in Azure Functions v4
 
 Step 1: Create a new Azure Functions project.
+
 ![Create an Azure Functions project](Azure-Images/Functions-v1/Azure_Function_Markdown.png)
 
 Step 2: Create a project name and select the location.
+
 ![Create a project name](Azure-Images/Functions-v1/Configure_Your_Project_Markdown.png)
 
 Step 3: Select the function worker as **.NET 8.0 (Long Term Support)** and the **Isolated** worker model.
+
 ![Select function worker](Azure-Images/Functions-v4/Additional_Information_Markdown.png)
 
 Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
@@ -136,28 +140,35 @@ return response;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Right-click the project and select **Publish**. Then, create a new profile in the Publish window.
+Step 7: Right-click the project and select **Publish**. Then, create a new profile in the **Publish** window.
+
 ![Create a new profile in the Publish window](Azure-Images/Functions-v1/Publish-Create-Markdown-Document.png)
 
 Step 8: Select the target as **Azure** and click the **Next** button.
+
 ![Select the target as Azure](Azure-Images/Functions-v1/Target_Markdown.png)
 
-Step 9: Select the **Create new** button.
+Step 9: Click the **Create new** button.
+
 ![Configure Hosting Plan](Azure-Images/Functions-v1/Function_Instance_Markdown.png)
 
 Step 10: Click the **Create** button.
+
 ![Select the plan type](Azure-Images/Functions-v1/Hosting-Plan-Create-Markdown-Document.png)
 
-Step 11: After the app service is created, click the **Finish** button.
+Step 11: After the **App Service** is created, click the **Finish** button.
+
 ![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
 
 Step 12: Click the **Publish** button.
+
 ![Click Publish Button](Azure-Images/Functions-v4/Before-Publish-Create-Markdown-Document.png)
 
-Step 13: Publish succeeded.
+Step 13: Publishing has succeeded.
+
 ![Publish succeeded](Azure-Images/Functions-v4/After-Publish-Create-Markdown-Document.png)
 
-Step 14: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Functions to create a Markdown document. You will get the output Markdown document as follows.
+Step 14: Go to the Azure portal and select **App Services**. After running the service, click **Get Function URL** and copy it. Then, use it in the client sample below, which requests the Azure Function to create a Markdown document. You will get the output **Markdown document** as follows.
 
 ![Create a Markdown document in Azure Functions v4](GettingStarted_images/GettingStarted_Output1.png)
 
@@ -181,7 +192,7 @@ Step 2: Add the following code snippet into the **Main** method to post a reques
 {% highlight c# tabtitle="C#" %}
 
 //Reads the template Markdown document.
-FileStream fs = new FileStream(@"../../Data/Input.md", FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
+FileStream fs = new FileStream(Path.GetFullPath(@"Data/Input.md"), FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
 fs.Position = 0;
 //Saves the Markdown document in memory stream.
 MemoryStream inputStream = new MemoryStream();
@@ -220,7 +231,7 @@ catch (Exception ex)
 {% endhighlight %}
 {% endtabs %}
 
-From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Console_Application) and [Azure Functions v4](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4).
+From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Console_Application) and the [Azure Functions v4](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4) project.
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Azure/Azure_Functions/Azure_Functions_v4/Create-Markdown-document/Data) and place it in the application's `Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 

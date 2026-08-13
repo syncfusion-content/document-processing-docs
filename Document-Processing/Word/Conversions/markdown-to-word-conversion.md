@@ -267,7 +267,7 @@ The following code example demonstrates how to open a Markdown document and save
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 // Opens an existing Markdown document.
-using (MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath("Input.md")))
+using (MarkdownDocument markdownDocument = new MarkdownDocument("Input.md"))
 {
     // Creates a new WordDocument instance.
     using (WordDocument wordDocument = new WordDocument())
@@ -275,7 +275,7 @@ using (MarkdownDocument markdownDocument = new MarkdownDocument(Path.GetFullPath
         // Loads the Markdown document content into the Word document.
         wordDocument.Open(markdownDocument);
         // Saves the Word document as a DOCX file.
-        wordDocument.Save(Path.GetFullPath("Output.docx"), FormatType.Docx);
+        wordDocument.Save("Output.docx", FormatType.Docx);
     }
 }
 

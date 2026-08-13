@@ -27,7 +27,7 @@ Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfus
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespaces in the MainWindow.xaml.cs file.
+Step 3: Include the following namespaces in the **MainWindow.xaml.cs** file.
 
 {% tabs %}
 
@@ -39,7 +39,7 @@ using Syncfusion.Office.Markdown;
 
 {% endtabs %}
 
-Step 4: Add a new button in **MainWindow.xaml** to create Markdown file as follows.
+Step 4: Add a new button in **MainWindow.xaml** to create a Markdown document as follows.
 
 {% tabs %}
 
@@ -134,7 +134,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/WPF).
 
@@ -143,3 +143,5 @@ By executing the program, you will get the **Markdown document** as follows.
 ![WPF output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 
 Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
+
+An online sample link to [create a Markdown document](https://document.syncfusion.com/demos/markdown/createmarkdown#/tailwind) in ASP.NET Core.

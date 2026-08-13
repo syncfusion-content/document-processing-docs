@@ -15,14 +15,14 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdow
 ## Prerequisites
 
 * Visual Studio 2022.
-* Install .NET desktop development workload with necessary .NET Framework SDK.
+* Install the .NET desktop development workload along with the required .NET Framework SDK.
 * .NET Framework 4.6.2 or later (4.8 recommended). This sample targets .NET Framework (not .NET / .NET Core).
 
 Step 1: Create a new Windows Forms application project.
 
 ![Create Windows Forms application in Visual Studio](Windows-Forms_images/Create-Project.png)
 
-Step 2: Install [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Markdown NuGet package](Windows-Forms_images/Install_Nuget.png)
 
@@ -51,7 +51,7 @@ using System.Windows.Forms;
 
 {% endtabs %}
 
-Step 4: Add a new button in **Form1.Designer.cs** to create Markdown file as follows. The `btnCreate_Click` handler referenced below is added in **Form1.cs** in Step 5.
+Step 4: Add a new button in **Form1.Designer.cs** to create a Markdown document as follows. The `btnCreate_Click` handler referenced below is added in **Form1.cs** in Step 5.
 
 {% tabs %}
 
@@ -161,7 +161,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Windows-Forms).
 
@@ -170,3 +170,5 @@ By executing the program, you will get the **Markdown document** as follows.
 ![Windows Forms output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
 
 Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
+
+An online sample link to [create a Markdown document](https://document.syncfusion.com/demos/markdown/createmarkdown#/tailwind) in ASP.NET Core.

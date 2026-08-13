@@ -1,10 +1,10 @@
---- 
-title: Create Markdown document in GCP | Syncfusion 
-description: Learn how to create a Markdown document in Google Cloud Platform (GCP) using .NET Markdown library in C#. 
+---
+title: Create Markdown document in GCP | Syncfusion
+description: Learn how to create a Markdown document in Google Cloud Platform (GCP) using .NET Markdown library in C#.
 platform: document-processing
-control: Markdown 
-documentation: UG 
---- 
+control: Markdown
+documentation: UG
+---
 
 # Create Markdown document in Google Cloud Platform (GCP)
 
@@ -18,7 +18,7 @@ N> If this is your first time working with Google Cloud Platform (GCP), please r
 
 ## Google Cloud Platform (GCP)
 
-The following GCP compute service is supported for creating Markdown documents with the Markdown library.
+The following Google Cloud Platform (GCP) hosting service is supported for creating Markdown documents with the Markdown library.
 
 <table>
 <thead>

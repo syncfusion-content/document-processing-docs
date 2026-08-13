@@ -40,7 +40,7 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 4: Include the following Namespaces in the Program.cs file.
+Step 4: Include the following namespaces in the **Program.cs** file.
 
 {% tabs %}
 
@@ -51,7 +51,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 5: Add the following code snippet in Program.cs file.
+Step 5: Add the following code snippet in the **Program.cs** file.
 
 {% tabs %}
 
@@ -127,7 +127,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 7: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 N> The code sample references image files (photo.jpg). Download these assets from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/Mac/Create-Markdown-document/Data) and ensure they are present in the project's output directory (e.g., `bin/Debug/net8.0/`). If the images are missing, a `FileNotFoundException` will be thrown at runtime. You can copy the images to the output directory by setting their **Build Action** to **Content** and **Copy to Output Directory** to **Copy if newer** in the file properties.
 

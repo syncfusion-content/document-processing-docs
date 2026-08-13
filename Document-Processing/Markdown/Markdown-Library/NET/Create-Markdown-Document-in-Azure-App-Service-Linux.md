@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown document in Azure App Service on Linux
 
-Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit and convert Markdown documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Azure App Service on Linux**.
+Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, edit, and convert Markdown documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Azure App Service on Linux**.
 
 ## Prerequisites
 
@@ -41,12 +41,13 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 5: Add the image assets used by the sample. Create a `Data` folder under `wwwroot` and add the following images to it:
+Step 5: Add the image asset used by the sample. Create a `Data` folder under `wwwroot` and add the following image to it:
+
 * `photo.jpg`
 
-The code in Step 8 reads these images from `wwwroot/Data/` at runtime. You can obtain the images from the complete working sample linked at the end of this article.
+The code in Step 8 reads this image from `wwwroot/Data/` at runtime. You can obtain it from the complete working sample linked at the end of this article.
 
-Step 6: Add a new button in **Index.cshtml** as shown below.
+Step 6: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -64,7 +65,7 @@ Step 6: Add a new button in **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the following namespaces in **HomeController.cs**.
+Step 7: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -76,7 +77,7 @@ using Syncfusion.Office.Markdown;
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Include the below code snippet in **HomeController.cs** to create a Markdown document.
+Step 8: Include the following code snippet in **HomeController.cs** to create a Markdown document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -163,36 +164,47 @@ Step 9: Build and run the project locally (F5) to verify the **Create Markdown D
 An active Azure subscription, a resource group, and an App Service plan are required. You can create them during publishing if you have the necessary permissions.
 
 Step 1: Right-click the project and select the **Publish** option.
+
 ![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-Markdown-Document.png)
 
 Step 2: Click the **Add a Publish Profile** button.
+
 ![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_Markdown.png)
 
 Step 3: Select the publish target as **Azure**.
+
 ![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_Markdown.png)
 
 Step 4: Select the Specific target as **Azure App Service (Linux)**.
+
 ![Select the publish target](Azure-Images/App-Service-Linux/Specific_Target_Markdown.png)
 
-Step 5: To create a new app service, click the **Create new** option.
+Step 5: To create a new App Service, click the **Create new** option.
+
 ![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_Markdown.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
+
 ![Click the Create button](Azure-Images/App-Service-Linux/Hosting-Plan-Create-Markdown-Document.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
+
 ![Click the Finish button](Azure-Images/App-Service-Linux/App-Service-Create-Markdown.png)
 
 Step 8: Click the **Close** button.
+
 ![Finish the publish profile](Azure-Images/App-Service-Linux/Publish_Finish_Markdown.png)
 
 Step 9: Click the **Publish** button.
+
 ![Click the Publish button](Azure-Images/App-Service-Linux/Before-Publish-Create-Markdown-Document.png)
 
-Step 10: Publish has succeeded.
+Step 10: Publishing has succeeded.
+
 ![Publish succeeded](Azure-Images/App-Service-Linux/After-Publish-Create-Markdown-Document.png)
 
-Step 11: The published webpage will open in the **browser**.
+Step 11: The published webpage will open in a browser.
+
 ![Browser will open after publish](Azure-Images/App-Service-Linux/Browser-Create-Markdown-Document.png)
 
 Step 12: Click the **Create Markdown Document** button to create a Markdown document. You will get the output **Markdown document** as follows:

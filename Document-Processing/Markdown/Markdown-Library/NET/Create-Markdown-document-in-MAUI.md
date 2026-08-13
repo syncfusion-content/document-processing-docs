@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown document in .NET MAUI
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in .NET MAUI**
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in .NET MAUI**.
 
 ## Steps to create Markdown document programmatically in .NET MAUI
 
@@ -80,12 +80,12 @@ using System.Reflection;
 
 {% endtabs %}
 
-Step 6: Add a new action method **CreateDocument** in MainPage.xaml.cs and include the below code snippet to **create a Markdown document**.
+Step 6: Add a new action method **CreateDocument** in the **MainPage.xaml.cs** file and include the following code snippet to **create a Markdown document**.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
- // Creates a new instance of MarkdownDocument.
+// Creates a new instance of MarkdownDocument.
 MarkdownDocument markdownDocument = new MarkdownDocument();
 // Adds a heading to the Markdown document.
 MdParagraph mdHeadingParagraph = markdownDocument.AddParagraph();
@@ -143,9 +143,9 @@ using MemoryStream ms = new();
 //Saves the Markdown document to the memory stream.
 markdownDocument.Save(ms);
 ms.Position = 0;
-//Saves the memory stream as file.
+// Saves the memory stream as file.
 SaveService saveService = new();
-saveService.SaveAndView("Sample.md", "application/msword", ms);
+saveService.SaveAndView("Sample.md", "text/markdown", ms);
 {% endhighlight %}
 
 {% endtabs %}
@@ -159,7 +159,7 @@ Step 8: Run the application.
 
 ## Helper files for .NET MAUI
 
-Refer the helper files to be added into the mentioned project. These helper files allow you to **save the stream as a physical file and open the file for viewing**.
+Refer to the helper files that should be added to your project. These helper files allow you to **save the stream as a physical file and open the file for viewing**.
 
 <table>
   <tr>
@@ -218,10 +218,10 @@ Refer the helper files to be added into the mentioned project. These helper file
     iOS
   </td>
   <td>
-    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/.NET-MAUI/Create-Markdown-document/Platforms/iOS/SaveIOS.cs)' | markdownify}} 
+    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/.NET-MAUI/Create-Markdown-document/Platforms/iOS/SaveIOS.cs)' | markdownify}}
   </td>
   <td>
-    Save implementation for iOS device
+    Save implementation for iOS device.
   </td>
   </tr>
   <tr>
@@ -241,6 +241,6 @@ N> The code sample references an image file (`photo.jpg`). Download this asset f
 
 By executing the program, you will get the **Markdown document** as follows.
 
-Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page. 
+Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
 
 An online sample link to [create a Markdown document](https://document.syncfusion.com/demos/markdown/createmarkdown#/tailwind) in ASP.NET Core.

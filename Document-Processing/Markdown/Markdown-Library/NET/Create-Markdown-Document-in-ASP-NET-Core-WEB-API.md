@@ -49,7 +49,7 @@ using Syncfusion.Office.Markdown;
 
 {% endtabs %}
 
-Step 5: Add a new action method CreateDocument in **ValuesController.cs** and include the below code snippet to create an Markdown file and download it.
+Step 5: Add a new action method `CreateDocument` in **ValuesController.cs** and include the following code snippet to create a Markdown file and download it.
 
 {% tabs %}
 
@@ -165,11 +165,12 @@ A complete working sample is available on [GitHub](https://github.com/Syncfusion
 ## Steps for accessing the Web API using HTTP requests
 
 Step 1: Create a console application.
+
 ![Create a Console application in Visual Studio](ASP-NET-Core-WEB-API-images/Console-Template-Net-Core.png)
 
-N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. The port number comes from the Web API's `launchSettings.json` adjust it to match your environment.
+N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. The port number comes from the Web API's `launchSettings.json`; adjust it to match your environment.
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. This example uses C# top-level statements with `await` (supported in .NET 6+ and later).
+Step 2: Add the following code snippet in the **Program.cs** file to access the Web API using HTTP requests. This example uses C# top-level statements with `await` (supported in .NET 6 and later).
 
 This method sends a GET request to the Web API endpoint to retrieve and save the generated Markdown document.
 
@@ -189,7 +190,7 @@ This method sends a GET request to the Web API endpoint to retrieve and save the
          {
              // Read the content as a string
              Stream responseBody = await response.Content.ReadAsStreamAsync();
-             FileStream fileStream = File.Create("../../../Output/Output.md");
+             FileStream fileStream = File.Create(Path.GetFullPath(@"Output/Output.md"));
              responseBody.CopyTo(fileStream);
              fileStream.Close();
          }

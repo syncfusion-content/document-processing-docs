@@ -22,6 +22,7 @@ Before you begin, ensure the following are in place:
 ## Steps to create Markdown document in AWS Lambda
 
 Step 1: Create a new **AWS Lambda project** as follows.
+
 ![AWS Lambda project](AWS_Images/Lambda_Images/Project-Template-WordtoPDF.png)
 
 Step 2: Select Blueprint as Empty Function and click **Finish**.
@@ -41,17 +42,19 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 4: Create a folder named `Data` in the project root and copy the following required image files into it. Include the files in the project.
+Step 4: Create a folder named `Data` in the project root and copy the following required image file into it. Then include the file in the project.
 
 * `photo.jpg`
 
-You can obtain these images from the [Markdown examples repository](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/AWS_Lambda/Create-Markdown-Document/Data).
+You can obtain this image from the [Markdown examples repository](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/AWS_Lambda/Create-Markdown-Document/Data).
+
 ![Create a folder](AWS_Images/Lambda_Images/Data-Folder-WordtoPDF.png)
 
-Step 5: Open the properties of each data file and set **Copy to Output Directory** to **Copy if newer**.
+Step 5: Open the properties of the image file and set **Copy to Output Directory** to **Copy if newer**.
+
 ![Property change for data files](AWS_Images/Lambda_Images/Data-Folder-Create-Word-Document.png)
 
-Step 6: Include the following namespaces in **Function.cs** file.
+Step 6: Include the following namespaces in the **Function.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -61,7 +64,7 @@ using Syncfusion.Office.Markdown;
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code snippet in **Function.cs** to **create a Markdown document**.
+Step 7: Add the following code snippet in **Function.cs** to **create a Markdown document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -131,23 +134,29 @@ return File(stream, "text/markdown", "Sample.md");
 {% endtabs %}
 
 Step 8: Right-click the project and select **Publish to AWS Lambda**.
+
 ![Publish to AWS Lambda](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-Markdown-Document.png)
 
-Step 9: Create a new AWS profile in the Upload Lambda Function Window. To create a profile, you need your AWS access key ID, secret access key, and region. After creating the profile, add a name for the Lambda function to publish. Then, click **Next**.
+Step 9: Create a new AWS profile in the **Upload Lambda Function** window. To create a profile, you need your AWS access key ID, secret access key, and region. After creating the profile, specify a name for the Lambda function to publish. Then, click **Next**.
+
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-WordtoPDF.png)
 
-Step 10: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
+Step 10: In the **Advanced Function Details** window, select a role based on an AWS managed policy for the **Role Name**. After selecting the role, click the **Upload** button to deploy your application.
+
 ![Advance Function Details](AWS_Images/Lambda_Images/Advanced-AWS-WordtoPDF.png)
 
-Step 11: After deploying the application, you can see the published Lambda function in **the AWS console**.
+Step 11: After deploying the application, you can see the published Lambda function in the **AWS console**.
+
 ![After deploying the application](AWS_Images/Lambda_Images/Function-WordtoPDF.png)
 
-Step 12: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
+Step 12: Set **Memory size** and **Timeout** to their maximum values in the **General configuration** of the AWS Lambda function.
+
 ![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-WordtoPDF.png)
 
-## Steps to invoke the AWS Lambda function from a console app
+## Steps to invoke the AWS Lambda function from a console application
 
-Step 1: Create a new console project.
+Step 1: Create a new console application project.
+
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-WordtoPDF.png)
 
 Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
@@ -155,11 +164,14 @@ Step 2: Install the following **NuGet packages** in your application from [NuGet
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
+
 ![Install AWSSDK.Core NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Core-WordtoPDF.png)
+
 ![Install AWSSDK.Lambda NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-AWSSDK-Lambda-WordtoPDF.png)
+
 ![Install Newtonsoft.Json NuGet Package](AWS_Images/Lambda_Images/Nuget-Package-Newton-Json-WordtoPDF.png)
 
-Step 3: Include the following namespaces in **Program.cs** file.
+Step 3: Include the following namespaces in the **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -210,7 +222,7 @@ By executing the program, you will get the **Markdown document** as follows.
 
 ![Create a Markdown document in AWS Lambda](GettingStarted_images/GettingStarted_Output1.png)
 
-From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/Console_Application) and [AWS Lambda](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/AWS_Lambda) project.
+From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/Console_Application) and [AWS Lambda](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/AWS/AWS_Lambda) projects.
 
 Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
 

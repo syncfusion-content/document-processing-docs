@@ -6,7 +6,7 @@ control: Markdown
 documentation: UG
 ---
 
-# Create a Markdown document in Console Application
+# Create Markdown document in Console Application
 
 Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown documents** programmatically without external dependencies. Using this library, you can **create a Markdown document in Console Application**.
 
@@ -19,6 +19,7 @@ Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syn
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new **.NET Core console application** project.
+
 ![Create a Console application in Visual Studio](Console-Images/NET/Console-Template-Net-Core.png)
 
 Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
@@ -35,7 +36,7 @@ N> ```
 N>
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Include the following namespaces in **Program.cs** file.
+Step 3: Include the following namespaces in the **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -46,7 +47,7 @@ using System.IO;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Include the below code snippet in **Program.cs** to **create a Markdown document**.
+Step 4: Include the following code snippet in **Program.cs** to **create a Markdown document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -106,7 +107,7 @@ MdTableCell cell2 = dataRow.AddTableCell();
 cell2.Items.Add(new MdTextRange { Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company." });
 
 //Save the Markdown document to  FileStream
-using FileStream outputStream = new FileStream(Path.GetFullPath(@"../../../Output/Result.md"), FileMode.Create);
+using FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/Result.md"), FileMode.Create);
 markdownDocument.Save(outputStream);
 markdownDocument.Dispose();
 
@@ -119,7 +120,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 6: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/.NET/Create-Markdown-document/Data) and place it in the application's `Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 
@@ -137,9 +138,10 @@ By running the project, you will get the following **Markdown document**.
 * Install **.NET desktop development** workload with necessary .NET Framework SDK.
 
 Step 1: Create a new **.NET Framework console application** project.
+
 ![Create a Console application in Visual Studio](Console-Images/NET-FrameWork/Console-Template-Net-FrameWork.png)
 
-Step 2: Install [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your .NET Framework console application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Markdown NuGet package](Console-Images/NET-FrameWork/Install_Nuget.png)
 
@@ -150,7 +152,7 @@ N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_
 N> ```
 N> For more information about generating and registering a license key, refer to the [Syncfusion<sup>&reg;</sup> licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-Step 3: Include the following namespaces in **Program.cs** file.
+Step 3: Include the following namespaces in the **Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -161,7 +163,7 @@ using System.Windows.Forms;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: Include the below code snippet in **Program.cs** to **create a Markdown document**.
+Step 4: Include the following code snippet in **Program.cs** to **create a Markdown document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -233,7 +235,7 @@ Click on Build → Build Solution or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd
 
 Step 6: Run the project.
 
-Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
+Click the Start button (green arrow) or press <kbd>F5</kbd> to run the application.
 
 N> The code sample references an image file (`photo.jpg`). Download this asset from the [GitHub sample Data folder](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Getting-Started/.NET-Framework/Create-Markdown-document/Data) and place it in the application's `Data` folder so the `MdPicture.Url` value (`"Data/photo.jpg"`) resolves correctly at runtime.
 

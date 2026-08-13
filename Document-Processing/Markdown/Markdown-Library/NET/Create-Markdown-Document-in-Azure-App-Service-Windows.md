@@ -13,17 +13,20 @@ Syncfusion<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syn
 ## Steps to create Markdown document in Azure App Service on Windows
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
+
 ![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-Project-Markdown.png)
 
 Step 2: Create a project name and select the location.
+
 ![Configure your new project](Azure-Images/App-Service-Windows/Configure_Your_Project_Markdown.png)
 
 Step 3: Click the **Create** button.
+
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_Markdown.png)
 
 Step 4: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Markdown Nuget Package](ASP-NET-Core_images/Install_Nuget.png)
+![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
 N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
@@ -53,7 +56,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespaces in **HomeController.cs**.
+Step 6: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -63,7 +66,7 @@ using Syncfusion.Office.Markdown;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** to **create a Markdown document**.
+Step 7: Include the following code snippet in **HomeController.cs** to create a Markdown document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -146,36 +149,47 @@ public ActionResult CreateMarkdownDocument()
 ## Steps to publish as Azure App Service on Windows
 
 Step 1: Right-click the project and select the **Publish** option.
+
 ![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-Markdown-Document.png)
 
 Step 2: Click the **Add a Publish Profile** button.
+
 ![Click the Add a Publish Profile](Azure-Images/App-Service-Linux/Publish_Profile_Markdown.png)
 
 Step 3: Select the publish target as **Azure**.
+
 ![Select the publish target as Azure](Azure-Images/App-Service-Linux/Publish_Target_Markdown.png)
 
-Step 4: Select the Specific target as **Azure App Service (Windows)**.
+Step 4: Select **Azure App Service (Windows)** as the **Specific target**.
+
 ![Select the publish target](Azure-Images/App-Service-Windows/Specific_Target_Markdown.png)
 
-Step 5: To create a new app service, click the **Create new** option.
+Step 5: To create a new App Service, click the **Create new** option.
+
 ![Click create new option](Azure-Images/App-Service-Linux/Create_New_App_Service_Markdown.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
+
 ![Click the Create button](Azure-Images/App-Service-Windows/Hosting-Plan-Create-Markdown-Document.png)
 
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
+
 ![Click the Finish button](Azure-Images/App-Service-Windows/App-Service-Create-Markdown.png)
 
 Step 8: Click the **Close** button.
+
 ![Click the Close button](Azure-Images/App-Service-Windows/Publish_Finish_Markdown.png)
 
 Step 9: Click the **Publish** button.
+
 ![Click the Publish button](Azure-Images/App-Service-Windows/Before-Publish-Create-Markdown-Document.png)
 
-Step 10: The publish has now succeeded.
+Step 10: Publishing has succeeded.
+
 ![Publish has been succeeded](Azure-Images/App-Service-Windows/After-Publish-Create-Markdown-Document.png)
 
-Step 11: The published webpage will open in the browser.
+Step 11: The published webpage will open in a browser.
+
 ![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Create-Markdown-Document.png)
 
 Step 12: On the published page, click **Create Markdown Document** to generate the document. You will get the output **Markdown document** as follows.

@@ -244,7 +244,7 @@ private void ImageNodeVisited(object sender, MdImageNodeVisitedEventArgs args)
     if (args.Uri == "Road-550.png")
     {
         // Replace it by loading another image from local file
-        args.ImageStream = new FileStream(Path.GetFullPath(@"../../Data/Mountain-200.png"), FileMode.Open);
+        args.ImageStream = new FileStream(Path.GetFullPath(@"Data/Mountain-200.png"), FileMode.Open);
     }
 }
 
@@ -256,7 +256,7 @@ Private Sub ImageNodeVisited(sender As Object, args As MdImageNodeVisitedEventAr
     ' Check if the current image URI
     If args.Uri = "Road-550.png" Then
         ' Replace it by loading another image from local file
-        args.ImageStream = New FileStream(Path.GetFullPath("../../../Data/Mountain-200.png"), FileMode.Open)
+        args.ImageStream = New FileStream(Path.GetFullPath(@"Data/Mountain-200.png"), FileMode.Open)
     End If
 End Sub
 
@@ -579,7 +579,7 @@ markdownDocument.Dispose();
 {% highlight vb.net tabtitle="VB.NET" %}
 
 ' Opens an existing Markdown document.
-Dim markdownDocument As MarkdownDocument = New MarkdownDocument("../../Data/Input.md")
+Dim markdownDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath(@"Data/Input.md"))
 ' To-Do some manipulation
 ' Retrieves the Markdown document content as text.
 Dim mdContent As String = markdownDocument.GetMarkdownText()
