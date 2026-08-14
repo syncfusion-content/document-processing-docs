@@ -176,7 +176,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Find and get the bounds of the list of text on desired page
+### Find and get the bounds of the list of text on the desired page
 
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
 
@@ -230,7 +230,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
 ## Find text with findTextAsync
 

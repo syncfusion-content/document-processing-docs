@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Managing Local Storage in PDF Viewer
 
-The PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
+The PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored, such as annotations and form field values created during the current session. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
 
 ### Using the `enableLocalStorage` property
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Content Security Policy with Vue PDF Viewer component | Syncfusion
-description: Learn here all about Content Security Policy with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
-control: CSP
+description: Learn about configuring Content Security Policy with the Syncfusion Vue PDF Viewer component and related best practices.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -39,7 +39,7 @@ The PDF Viewer is rendered with calculated inline styles and base64-encoded font
 Include the following directives to permit inline styles and external fonts:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     style-src 'self' https://fonts.googleapis.com/ blob:;
@@ -51,7 +51,7 @@ Include the following directives to permit inline styles and external fonts:
 The meta tag should be placed within the `<head>` section of the HTML document to resolve CSP violations when using material or tailwind themes:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 
 <head>
     ...
@@ -68,7 +68,7 @@ The meta tag should be placed within the `<head>` section of the HTML document t
 When images are added as blob or base64 data to the PDF Viewer, they are blocked in strict CSP mode. To permit these resources, include the [`img-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive in the CSP meta tag:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 <head>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     script-src 'self' 'wasm-unsafe-eval' blob:;
@@ -84,7 +84,7 @@ When images are added as blob or base64 data to the PDF Viewer, they are blocked
 The PDF Viewer uses WebAssembly and web workers for processing and rendering. Both are blocked in strict CSP mode. To enable these features, include the [`script-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src), [`worker-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src), and [`connect-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src) directives:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 <head>
  <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     script-src 'self' 'wasm-unsafe-eval' blob:;

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Set Default Format In Document Editor in Document Editor Component
-description: Learn here all about how to set default format in Document Editor in Syncfusion Document Editor component of syncfusion and more.
+title: Set Default Format In Document Editor in DOCX Editor | Syncfusion
+description: Learn here all about how to set default format in Document Editor in Syncfusion Document Editor component of Syncfusion and more.
 platform: document-processing
 control: Set Default Format In Document Editor
 documentation: ug
 ---
 
 
-# How to set the default character, paragraph and section format in Document Editor component
+# Set the default character, paragraph and section format
 
 You can set the default character format, paragraph format and section format in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
 ## Set the default character format
 
-You can use `setDefaultCharacterFormat` method to set the default character format. For example, Document editor default font size is 11 and you can change it as any valid value.
+You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the Document Editor default font size is 11 and you can change it to any valid value.
 
 
 {% tabs %}
@@ -22,7 +22,8 @@ You can use `setDefaultCharacterFormat` method to set the default character form
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/character-format-font/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format-font.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 Similarly, you can change the required `CharacterFormatProperties` default value.
@@ -32,12 +33,13 @@ Similarly, you can change the required `CharacterFormatProperties` default value
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/character-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Character-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Set the default paragraph format
 
-You can use `setDefaultParagraphFormat` API to set the default paragraph format. You can change the required `ParagraphFormatProperties` default value.
+You can use the `setDefaultParagraphFormat` API to set the default paragraph format. You can change the required `ParagraphFormatProperties` default value.
 
 
 {% tabs %}
@@ -45,13 +47,14 @@ You can use `setDefaultParagraphFormat` API to set the default paragraph format.
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/paragraph-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Paragraph-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 ## Set the default section format
 
-You can use `setDefaultSectionFormat` API to set the default section format. You can change the required `SectionFormatProperties` default value.
+You can use the `setDefaultSectionFormat` API to set the default section format. You can change the required `SectionFormatProperties` default value.
 
 
 {% tabs %}
@@ -59,5 +62,6 @@ You can use `setDefaultSectionFormat` API to set the default section format. You
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/section-format/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Section-format.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 

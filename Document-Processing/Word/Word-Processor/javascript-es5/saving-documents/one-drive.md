@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save document to OneDrive in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to save a document to OneDrive in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more details.
+description: Learn how to save a document to OneDrive in the Syncfusion JavaScript (ES5) DOCX Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to OneDrive in JavaScript (ES5) Document Editor
+# Save document to OneDrive using JavaScript (ES5) DOCX Editor
 
 To save a document to OneDrive, you can follow the steps below.
 
@@ -130,7 +130,6 @@ private string GetValue(IFormCollection data, string key)
   "applApplicationIdicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
-
 ```
 
 N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.

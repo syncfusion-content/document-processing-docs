@@ -23,7 +23,7 @@ Imagine reviewing a PDF document with feedback from 5 team members, resulting in
 Comment filtering is most useful in these scenarios:
 
 - **Team reviews**: Filter annotations by author to see feedback from specific reviewers
-- **Status tracking**: Filter by status (Accepted, Rejected, Canceled) to track document workflow progress
+- **Status tracking**: Filter by status (Accepted, Rejected, Cancelled) to track document workflow progress
 - **Color-coded reviews**: Filter by annotation color to organize feedback by priority or type
 - **Time-based review**: Filter by modification date to see recent changes
 - **Document collaboration**: Use "Filter document and comments panel" to synchronize your view with the document
@@ -36,8 +36,8 @@ The JavaScript PDF Viewer provides a comment filter dialog in the comments panel
 ### Filter options
 
 - **Author**: Filter annotations by the author who created them. Use the "Include replies" checkbox to also include comments where the author has replied to other annotations.
-- **Annotation Type**: Filter by specific annotation types such as Highlight, Underline, Strikethrough, Text Box, Sticky Notes, and more.
-- **Status**: Filter annotations by their status (e.g., Accepted, Rejected, Canceled, Completed, None).
+- **Annotation Type**: Filter by specific annotation types such as Highlight, Underline, Strikethrough, Free Text, Sticky Notes, and more.
+- **Status**: Filter annotations by their status (e.g., Accepted, Rejected, Cancelled, Completed, None).
 - **Date**: Filter annotations by their modification date.
 - **Color**: Filter annotations by their color.
 
@@ -63,7 +63,7 @@ Follow these steps to filter annotations by their type and status:
 
 1. Click the **filter icon** in the comments panel toolbar
 2. In the **Annotation Type** dropdown, select the annotation types you want to view (e.g., Highlight, Underline)
-3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected, Pending)
+3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected, Completed)
 4. Click **APPLY** to see only annotations matching your criteria
 5. Use the **CLEAR** button to reset all filters
 
@@ -127,7 +127,6 @@ This approach is useful when you want to:
 ### Applying filters programmatically
 
 Use the `applyCommentFilter` method to apply filters with specific criteria:
-
 
 ```html
 <button id="applyFilterBtn">Apply Filter</button>

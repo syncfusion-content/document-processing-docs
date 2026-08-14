@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Module Injection for Angular PDF Viewer | Syncfusion
-description: Syncfusion Angular PDF Viewer to enable optional features like toolbar, navigation, annotations, search.
+description: Learn how to enable optional features like toolbar, navigation, annotations, and search in the Syncfusion Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
