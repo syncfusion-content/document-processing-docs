@@ -217,7 +217,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Customize-image-path).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Customize-Image-Path).
 
 ### Encoding
 

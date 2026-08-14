@@ -194,7 +194,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Customize-image-data).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Customize-Image-Data).
 
 N> Hook the event handler before opening a PowerPoint Presentation as per the above code example.
  
