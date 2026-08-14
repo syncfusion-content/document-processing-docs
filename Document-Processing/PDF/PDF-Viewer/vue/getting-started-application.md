@@ -206,12 +206,6 @@ After the application starts, open the URL shown in the terminal (typically `htt
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
 
-## Video tutorial
-
-To get started quickly with Vue PDF Viewer, you can watch this video:
-
-{% youtube "https://www.youtube.com/watch?v=17aW6rOoyWQ" %}
-
 ## See also
 
 - [Getting Started with Standalone Vue 2 PDF Viewer](./getting-started)
