@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open excel from Google Drive in React Spreadsheet control | Syncfusion
-description: Learn about how to Open an Excel file from Google Drive in React Spreadsheet control of Syncfusion Essential JS 2.
+title: Open excel from Google Drive in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+description: Learn about how to Open an Excel file from Google Drive in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Open file from Google Drive
 documentation: ug
 ---
 
-# Open file from Google Drive
+# Open file from Google Drive in ASP.NET Core Spreadsheet
 
 To load a file from Google Drive in a Spreadsheet Component, you can follow the steps below
 
@@ -15,9 +15,9 @@ To load a file from Google Drive in a Spreadsheet Component, you can follow the 
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple Spreadsheet Sample in React
+**Step 2:** Create a Simple Spreadsheet Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core) to create a simple Spreadsheet sample in ASP.NET Core. This will give you a basic setup of the Spreadsheet component.
 
 **Step 3:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
@@ -149,7 +149,7 @@ public class FileOptions
 
 N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
-**Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and process the Excel file from the Google Drive and load the JSON result into the client-side spreadsheet using the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method.
+**Step 4:** Modify the index File in the Spreadsheet sample to make a fetch call to the server to retrieve and process the Excel file from the Google Drive and load the JSON result into the client-side spreadsheet using the [openFromJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#openfromjson) method.
 
 ```typescript
 <button className="e-btn" onClick={openFromGoogleDrive} style={{ marginLeft: '10px' }}>
@@ -184,5 +184,3 @@ const openFromGoogleDrive = () => {
 ```
 
 N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration)

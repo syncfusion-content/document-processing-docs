@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save excel to Google Cloud in React Spreadsheet control | Syncfusion
-description: Learn about how to Save an Excel file from Google Cloud Storage in React Spreadsheet control of Syncfusion Essential JS 2.
+title: Save excel to Google Cloud in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+description: Learn about how to Save an Excel file from Google Cloud Storage in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Save file to Google Cloud Storage
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 To save a file to Google Cloud Storage in a Spreadsheet Component, you can follow the steps below
 
-**Step 1:** Create a Simple Spreadsheet Sample in React
+**Step 1:** Create a Simple Spreadsheet Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core) to create a simple Spreadsheet sample in ASP.NET Core. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
@@ -79,7 +79,7 @@ public async Task<IActionResult> SaveToGoogleCloud([FromForm] SaveSettings saveS
 }
 ```
 
-**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
 ```js
 <button class="e-btn" onClick={saveToGoogleCloud}>

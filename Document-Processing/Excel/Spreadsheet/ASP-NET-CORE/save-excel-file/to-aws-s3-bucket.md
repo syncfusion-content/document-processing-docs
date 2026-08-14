@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Saving Excel to AWS S3 in React Spreadsheet control | Syncfusion
-description: Learn how to save an Excel file to AWS S3 in the React Spreadsheet control of Syncfusion Essential JS 2.
+title: Saving excel to AWS S3 in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+description: Learn how to save a Excel file from AWS S3 in EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save file to AWS S3
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 To save a file to the AWS S3, you can follow the steps below.
 
-**Step 1:** Create a Simple Spreadsheet Sample in React
+**Step 1:** Create a Simple Spreadsheet Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core) to create a simple Spreadsheet sample in ASP.NET Core. This will give you a basic setup of the Spreadsheet component.
 
 **Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
@@ -116,7 +116,7 @@ public async Task<IActionResult> SaveToS3([FromForm] SaveSettings saveSettings)
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
-**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
 
 ```js
 // Function to save the current spreadsheet to AWS S3 via an API call

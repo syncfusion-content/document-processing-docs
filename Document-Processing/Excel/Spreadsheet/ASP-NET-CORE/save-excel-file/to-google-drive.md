@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save excel to Google Drive in React Spreadsheet control | Syncfusion
-description: Learn about how to Save an Excel file to Google Drive from React Spreadsheet control of Syncfusion Essential JS 2.
+title: Save excel to Google Drive in EJ2 ASP.NET Core Spreadsheet control | Syncfusion
+description: Learn about how to Save an Excel file to Google Drive from EJ2 ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2.
 platform: document-processing
 control: Save file to Google Drive
 documentation: ug
@@ -15,9 +15,9 @@ To save a file to Google Drive in a Spreadsheet Component, you can follow the st
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/workspace/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple Spreadsheet Sample in React
+**Step 2:** Create a Simple Spreadsheet Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core) to create a simple Spreadsheet sample in ASP.NET Core. This will give you a basic setup of the Spreadsheet component.
 
 **Step 3:** Modify the `SpreadsheetController.cs` File in the Web Service Project
 
@@ -156,7 +156,7 @@ public async Task<IActionResult> SaveExcelToGoogleDrive([FromForm] SaveSettings 
 
 N> Replace the **credential path**, **folderId** and **application name** in json file with your actual Google drive folder ID , your name for your application and the path for the JSON file.
 
-**Step 4:** Modify the index file in the Spreadsheet sample to save the Spreadsheet as JSON data using the [`saveAsJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method and send the saved JSON to the server via fetch call.
+**Step 4:** Modify the index file in the Spreadsheet sample to save the Spreadsheet as JSON data using the [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method and send the saved JSON to the server via fetch call.
 
 ```typescript
 <button class="e-btn" onClick={saveToGoogleDrive}>
@@ -196,5 +196,3 @@ const saveToGoogleDrive = () => {
 ```
 
 N> The Google.Apis.Drive.v3 NuGet package must be installed in your application to use the previous code example.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/syncfusion-react-spreadsheet-google-drive-integration)
