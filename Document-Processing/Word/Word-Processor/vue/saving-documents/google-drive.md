@@ -147,7 +147,7 @@ N> You must use a unique `Client_ID` from json file to interface your applicatio
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Drive.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Drive.
 
 ```typescript
 <template>
