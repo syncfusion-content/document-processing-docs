@@ -236,4 +236,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+* [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
