@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set default format in document editor in Vue Document editor component | Syncfusion
+title: How to Set Default Format in Vue DOCX Editor | Syncfusion
 description: Learn here all about Set default format in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Set default format in document editor 
 platform: document-processing
