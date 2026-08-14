@@ -22,7 +22,7 @@ domainurl: ##DomainURL##
 
 Create a resource group using the [`az group create`](https://docs.microsoft.com/en-us/cli/azure/group#az-group-create) command.
 
-The following example creates a resource group named documenteditorresourcegroup in the eastus location.
+The following example creates a resource group named documenteditorresourcegroup in the East US location.
 
 ```
 az group create --name documenteditorresourcegroup --location "East US"
@@ -38,7 +38,7 @@ az aks create --resource-group documenteditorresourcegroup --name documenteditor
 
 **Step 3:** Connect to the cluster.
 
-Install the [`kubectl`](https://kubernetes.io/docs/reference/kubectl/kubectl/) into the workspace using the following command.
+Install [`kubectl`](https://kubernetes.io/docs/reference/kubectl/kubectl/) using the following command.
 
 ```
 az aks install-cli
@@ -108,8 +108,8 @@ Run the following command to get the Kubernetes cluster deployed service details
 kubectl get all
 ```
 
-Browse the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default get method response.
+Browse to the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default GET method response.
 
-**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
+**Step 6:** Append the Kubernetes service running URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
 
 For more details about the Azure Kubernetes service, please look deeper into [`Microsoft Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.
