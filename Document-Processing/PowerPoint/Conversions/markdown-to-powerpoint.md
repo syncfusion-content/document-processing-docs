@@ -56,6 +56,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Convert-Markdown-to-PPTX).
+
 T> You can also save the markdown file as [PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/overview), [Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/overview), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
 N> 1. Hook the event handler before opening a PowerPoint presentation as per the below code example.
@@ -192,6 +194,8 @@ End Sub
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Customize-Image-Data).
+
 N> Hook the event handler before opening a PowerPoint Presentation as per the above code example.
  
 ### Encoding
@@ -254,6 +258,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Load-Options-Encoding).
+
 N> Provide the encoding values before opening a PowerPoint Presentation as per the above code example.
 
 ### Use Thematic Break As ContentBreak
@@ -315,6 +321,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Use-Thematic-Break-As-ContentBreak).
 
 ## Supported Markdown Syntax
 

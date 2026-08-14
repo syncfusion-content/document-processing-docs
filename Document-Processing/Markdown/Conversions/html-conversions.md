@@ -8,7 +8,7 @@ documentation: UG
 
 # Markdown to HTML and HTML to Markdown Conversions
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library supports converting Markdown to an HTML document and vice versa.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> [.NET Word (DocIO) library](https://www.syncfusion.com/document-sdk/net-word-library) supports converting Markdown to an HTML document and vice versa.
 
 ## Assemblies and NuGet packages required
 
@@ -19,7 +19,7 @@ Refer to the following links for the assemblies and NuGet packages required, bas
 
 ## Convert Markdown to HTML
 
-Convert an existing markdown file to a HTML document using the .NET Word library.
+Convert an existing markdown file to a HTML document using the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 The following code example shows how to convert Markdown to HTML document.
 
@@ -55,13 +55,15 @@ End Using
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Convert-Markdown-to-HTML/.NET).
+
 ## Load Options
 
-When opening an existing Markdown document, the .NET Word library provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported.
+When opening an existing Markdown document, the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides custom import settings through the **MdImportSettings** class. This allows you to customize how the Markdown content is parsed and imported.
 
 ### Customize image data
 
-The .NET Word library provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
+The [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides an `ImageNodeVisited` event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this `ImageNodeVisited` event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
 
@@ -172,11 +174,13 @@ End Sub
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Customize-image-data/.NET).
+
 N> Hook the event handler before opening a Markdown document as shown in the above code example.
  
 ### Encoding
 
-The .NET Word library provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
+The [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) provides an `Encoding` property to specify the character encoding to use when opening a Markdown file. This property is useful when you need to open Markdown files that are saved with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
 
 The following code example shows how to open a Markdown file with a specific encoding.
 
@@ -220,11 +224,13 @@ document.Close()
 
 {% endtabs %}
 
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Load-Options-Encoding/.NET).
+
 N> Provide the encoding values before opening a Markdown document as per the above code example.
 
 ## Convert HTML to Markdown
 
-Convert an existing HTML file to a Markdown document using the .NET Word library.
+Convert an existing HTML file to a Markdown document using the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library).
 
 The following code example shows how to convert HTML to Markdown document.
 
@@ -257,6 +263,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Convert-HTML-to-Markdown/.NET).
 
 ## Save Options
 
@@ -303,6 +311,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Customize-image/.NET).
 
 The following code examples show the event handler to customize the image path and save the image in an external folder.
 
@@ -389,5 +399,7 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/HTML-conversions/Save-Options-Encoding/.NET).
 
 N> Set the encoding value before saving the document as per the above code example.

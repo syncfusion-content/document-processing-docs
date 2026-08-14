@@ -484,6 +484,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown-with-Encoding).
+
 N> Set the encoding value before saving the document as per the above code example.
 
 ## Get Markdown document
@@ -533,6 +535,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Get_Markdown_document).
 
 ## Supported Word document elements
 

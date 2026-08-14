@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown document in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET MVC**.
 
 ## Steps to create Markdown document programmatically
 
@@ -25,7 +25,7 @@ Step 2: Select the MVC application.
 
 ![Select MVC application in Visual Studio](ASP-NET-MVC_images/MVC.png)
 
-Step 3: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). Install the latest stable release of the package.
 
 ![Install Syncfusion.Markdown NuGet package](ASP-NET-Core_images/Install_Nuget.png)
 
@@ -54,7 +54,7 @@ using System.IO;
 
 Step 5: A default action method named **Index** will be present in HomeController.cs. Right-click on this action method and select **Go To View**. You will be directed to its associated view page **Index.cshtml**.
 
-Step 6: Add a new button in the Index.cshtml as shown below.
+Step 6: Add a new button to the `Index.cshtml` as shown below. This button submits a GET request to the `CreateDocument` action method of the `Home` controller that you will create in the next step.
 
 {% tabs %}
 
@@ -159,4 +159,6 @@ N> The code sample references an image file (`photo.jpg`). Download this asset f
 
 By executing the program, you will get the Markdown document as follows.
 
-![ASP.Net MVC output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
+![ASP.NET MVC output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
+
+N> Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
