@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Google Drive in Vue Document editor control | Syncfusion
+title: Save to Google Drive in Vue DOCX Editor | Syncfusion
 description:  Learn about how to Save document to Google Drive in Vue Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Drive
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive
+# Save Documents to Google Drive in Vue DOCX Editor
 
 To save a document to Google Drive, you can follow the steps below.
 
