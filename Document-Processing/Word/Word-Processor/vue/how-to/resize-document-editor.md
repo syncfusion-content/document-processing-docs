@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Resize document editor in Vue Document editor component
 
-In this article, we are going to see how to change height and width of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
+In this article, we are going to see how to change the height and width of the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 ## Change height of Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixel.
+DocumentEditorContainer initially renders with default height. You can change the height of the Document Editor using the [`height`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixels.
 
-The following example code illustrates how to change height of Document Editor.
+The following example code illustrates how to change the height of Document Editor.
 
 ```
  <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
@@ -26,9 +26,9 @@ Similarly, you can use [`height`](https://ej2.syncfusion.com/vue/documentation/a
 
 ## Change width of Document Editor
 
-DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#width) property, the value which is in percent.
+DocumentEditorContainer initially renders with default width. You can change the width of the Document Editor using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#width) property, the value which is in percentages.
 
-The following example code illustrates how to change width of Document Editor.
+The following example code illustrates how to change the width of Document Editor.
 
 ```
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" width="100%" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
@@ -38,9 +38,9 @@ Similarly, you can use [`width`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ## Resize Document Editor
 
-Using [`resize`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#resize) method, you change height and width of Document editor.
+Using the [`resize`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#resize) method, you can change the height and width of the Document Editor.
 
-The following example code illustrates how to fit Document Editor to browser window size.
+The following example code illustrates how to fit the Document Editor to the browser window size.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -58,15 +58,15 @@ import { provide, ref } from 'vue';
 const container = ref(null);
 const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
-//Inject require modules.
+//Inject required modules.
 provide('DocumentEditorContainer', [Toolbar]);
 
 const onWindowResize = function () {
-  //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+  //Resizes the Document Editor component to fit full browser window automatically whenever the browser is resized.
   updateDocumentEditorSize();
 }
 const updateDocumentEditorSize = function () {
-  //Resizes the document editor component to fit full browser window.
+  //Resizes the Document Editor component to fit full browser window.
   let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
   container.value.ej2Instances.resize(windowWidth, windowHeight);
@@ -102,16 +102,16 @@ export default {
     };
   },
   provide: {
-    //Inject require modules.
+    //Inject required modules.
     DocumentEditorContainer: [Toolbar]
   },
   methods: {
     onWindowResize: function () {
-      //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+      //Resizes the Document Editor component to fit full browser window automatically whenever the browser is resized.
       this.updateDocumentEditorSize();
     },
     updateDocumentEditorSize: function () {
-      //Resizes the document editor component to fit full browser window.
+      //Resizes the Document Editor component to fit full browser window.
       let windowWidth = window.innerWidth;
       let windowHeight = window.innerHeight;
       this.$refs.container.ej2Instances.resize(windowWidth, windowHeight);
@@ -130,4 +130,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
