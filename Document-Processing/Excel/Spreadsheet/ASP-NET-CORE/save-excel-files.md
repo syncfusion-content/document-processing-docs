@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Save Excel Files in React Spreadsheet component | Syncfusion
-description: Learn here all about Saving Excel files in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Save Excel Files in EJ2 ASP.NET Core Spreadsheet Control | Syncfusion
+description: Learn here all about Saving Excel files in Syncfusion ASP.NET Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Save 
 documentation: ug
 ---
 
-# Save Excel Files in Syncfusion React Spreadsheet
+# Save Excel Files in Syncfusion ASP.NET Core Control
 
-The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
+The [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
 The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to convert the JSON data into a fully formatted Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 
-Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles, and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
+Since the server is responsible for generating the final Excel file, the total export time can vary depending on the workbook’s complexity. Factors such as the level of formatting, styles and the use of advanced features like formulas or conditional formatting can influence processing time. After the file is successfully generated, it is sent back to the client for download.
 
 In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `saveUrl` property. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
 
@@ -55,7 +55,7 @@ For spreadsheet open and save operations, install the following NuGet packages b
 
 For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
-To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
+To enable saving Excel files, set the [`allowSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property to **true** and specify the service URL using the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
 For a quick walkthrough on how the save functionality works, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
@@ -64,26 +64,18 @@ For a quick walkthrough on how the save functionality works, refer to the follow
 
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
+The following sample shows the `Save` option by using the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/open-save-cs5/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs5/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs5/app/datasource.tsx %}
+{% highlight c# tabtitle="OpenSaveController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/open-save-cs5/openSaveController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs5" %}
-
-Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event arguments.
+Please find the below table for the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event arguments.
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
@@ -97,59 +89,58 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 
-> * The default value of [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
+> * The default value of [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSave) property in previous code snippet.
 > * Demo purpose only, we have used the online web service url link.
 
 ## Save Excel files programmatically
 
-To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) property is properly configured, as it is required for processing and generating the file on the server.
 
-Please find the below table for the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method arguments.
+Please find the below table for the [`save`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#save) method arguments.
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
-| options               | [`SaveOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/saveoptions)                 | Options for opening the JSON object.                            |
-| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
+| options               | [`SaveOptions`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/saveoptions)                 | Options for opening the JSON object.                            |
+| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 
-```js
-import React, { useRef } from 'react';
-import { createRoot } from 'react-dom/client';
-import { salesData } from './data';
-import { SpreadsheetComponent, SheetsDirective, RangesDirective, RangeDirective,SheetDirective} from '@syncfusion/ej2-react-spreadsheet';
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+@{
+    ViewBag.SalesData = new List<object>()
+    {
+        new { CustomerName = "Romona Heaslip", Model = "Taurus", Color = "Aquamarine", PaymentMode = "Debit Card", DeliveryDate = "07/11/2015", Amount = "8529.22" },
+        new { CustomerName = "Clare Batterton", Model = "Sparrow", Color = "Pink", PaymentMode = "Cash On Delivery", DeliveryDate = "7/13/2016", Amount = "17866.19" },
+        new { CustomerName = "Eamon Traise", Model = "Grand Cherokee", Color = "Blue", PaymentMode = "Net Banking", DeliveryDate = "09/04/2015", Amount = "13853.09" }
+    };
+}
 
-const App = () => {
-  const spreadsheetRef = useRef(null);
-  const onClick = () => {
-    spreadsheetRef.current?.save({
-      url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
-      fileName: 'Worksheet',
-      saveType: 'Xlsx',
-    });
-  };
+<div>
+    <ejs-spreadsheet id="spreadsheet">
+        <e-spreadsheet-sheets>
+            <e-spreadsheet-sheet name="Car Sales Report">
+                <e-spreadsheet-ranges>
+                    <e-spreadsheet-range dataSource="ViewBag.SalesData" startCell="A1"></e-spreadsheet-range>
+                </e-spreadsheet-ranges>
+            </e-spreadsheet-sheet>
+        </e-spreadsheet-sheets>
+    </ejs-spreadsheet>
+    <button onclick="saveSpreadsheet()">Save</button>
+</div>
 
-  return (
-    <div>
-      <SpreadsheetComponent ref={spreadsheetRef}>
-        <SheetsDirective>
-          <SheetDirective name="Car Sales Report">
-            <RangesDirective>
-              <RangeDirective dataSource={salesData} />
-            </RangesDirective>
-          </SheetDirective>
-        </SheetsDirective>
-      </SpreadsheetComponent>
-      <button onClick={onClick}>Save</button>
-    </div>
-  );
-};
-
-export default App;
-
-const root = createRoot(document.getElementById('spreadsheet'));
-root.render(<App />);
-```
+<script>
+    function saveSpreadsheet() {
+        let spreadsheet = document.getElementById("spreadsheet").ej2_instances[0];
+        spreadsheet.save({
+            url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
+            fileName: 'Worksheet',
+            saveType: 'Xlsx'
+        });
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Supported Excel file formats for Save
 
@@ -164,43 +155,36 @@ The following file formats are supported when saving the Spreadsheet component:
 
 ### Save Excel files as Blob
 
-By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set `needBlobData` property to **true** and `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event. You can then post the blob data to the server endpoint for saving.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set `needBlobData` property to **true** and `isFullPost` property to **false** in the [beforeSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeOpen) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveComplete) event. You can then post the blob data to the server endpoint for saving.
 
 Please find below the code to retrieve blob data from the Spreadsheet control below.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-blob/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/save-as-blobdata-cs1/app/app.tsx %}
+{% highlight c# tabtitle="SaveController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-blob/savecontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
 ### Save Workbook as JSON
 
 Our Spreadsheet component allows you to export an entire workbook as a JSON object. This JSON output includes all workbook details such as sheets, cell values, formulas, styles, and formatting.
 
-You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method to exclude specific features from the exported JSON. For example, you can choose to ignore styles, formulas, number formats, images, or conditional formatting. These options are fully optional—if they are not provided, the method exports the workbook with all details preserved by default.
+You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method to exclude specific features from the exported JSON. For example, you can choose to ignore styles, formulas, number formats, images, or conditional formatting. These options are fully optional—if they are not provided, the method exports the workbook with all details preserved by default.
 
 The following example demonstrates how to save a workbook as JSON from the Spreadsheet component.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/save-as-json-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/save-as-json-cs1/app/app.tsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-json-cs1/tagHelper %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-json-cs1" %}
-
 ### Save Excel files to a server
 
-By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
 
 **Client Side**:
 
@@ -264,24 +248,30 @@ Before proceeding with the save process, you should deploy the spreadsheet open/
 
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
+After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
 
 On the server side, the save service will take the received JSON data, pass it to the workbook `Save` method, and return the result as a base64 string. The fetch success callback will receive the Excel file in base64 string format on the client side. Finally, you can then convert the base64 string back to a file on the client end to obtain a non-corrupted Excel file.
 
 The following code example shows how to save an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
-```js
-function Default() {
-    let spreadsheet;
-    let saveInitiated;
-    const beforeSaveHandler = (eventArgs) => {
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+
+<ejs-spreadsheet id="spreadsheet" saveUrl="https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save" allowSave="true" beforeSave="beforeSave">
+
+</ejs-spreadsheet>
+
+<script>
+    var spreadsheet = ej.base.getComponent(document.getElementById('spreadsheet'), 'spreadsheet');
+    var saveInitiated;
+    function beforeSave(eventArgs) {
         if (!saveInitiated) {
             eventArgs.cancel = true; // Preventing default save action.
             saveInitiated = true; // The "beforeSave" event will trigger for "saveAsJson" action also, so we are preventing for the "saveAsJson".
             saveAsExcel(eventArgs);
         }
     };
-    const saveAsExcel = (eventArgs) => {
+    function saveAsExcel(eventArgs) {
         // Convert the spreadsheet workbook to JSON data.
         spreadsheet.saveAsJson().then(Json => {
             saveInitiated = false;
@@ -327,15 +317,10 @@ function Default() {
             });
         });        
     };
-    return (<div className='control-pane'>
-            <div className='control-section spreadsheet-control'>
-                <SpreadsheetComponent saveUrl='https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save' ref={(ssObj) => { spreadsheet = ssObj; }} beforeSave={beforeSaveHandler}>
-                </SpreadsheetComponent>
-            </div>
-        </div>);
-}
-export default Default;
-```
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ```csharp
 public string Save([FromForm]SaveSettings saveSettings)
@@ -349,26 +334,24 @@ public string Save([FromForm]SaveSettings saveSettings)
 
 In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
 
-> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event.
+> You can get the Spreadsheet data as blob in the [saveComplete](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveComplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/base-64-string/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/base-64-string/app/app.tsx %}
+{% highlight c# tabtitle="OpenController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/base-64-string/opencontroller.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/base-64-string" %}
 
 ## Advanced Save options
 
 ### Configure JSON serialization
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
@@ -393,38 +376,28 @@ spreadsheet.saveAsJson({ onlyValues: true });
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/save-as-json/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-json/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/save-as-json/app/app.tsx %}
+{% highlight c# tabtitle="SaveController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-as-json/saveController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-json" %}
 
 ## Customization
 
 ### Pass custom parameters during Save
 
-Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event.
+Passing the custom parameters from client to server by using [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs6/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-params/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs6/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs6/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs6/app/datasource.tsx %}
+{% highlight c# tabtitle="CustomParamsController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/custom-params/customParamsController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs6" %}
 Server side code snippets:
 
 ```csharp
@@ -438,28 +411,20 @@ Server side code snippets:
 
 ### Add custom headers to Save requests
 
-You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#filemenuitemselect) event, the custom header can be added to the request during save action.
+You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_FileMenuItemSelect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs7/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-header/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs7/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs7/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs7/app/datasource.tsx %}
+{% highlight c# tabtitle="CustomHeaderController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/save-header/CustomHeaderController.cs %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs7" %}
-
 ### Customize PDF export orientation
 
-By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event.
+By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_BeforeSave) event.
 
 The possible values are:
 
@@ -467,18 +432,10 @@ The possible values are:
 * **Landscape** - Used to display content in a horizontal layout.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs8/app/app.jsx %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/pdf-orientation/tagHelper %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs8/app/app.tsx %}
-{% endhighlight %}
-{% highlight js tabtitle="datasource.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs8/app/datasource.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="datasource.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs8/app/datasource.tsx %}
+{% highlight c# tabtitle="pdfOrientationController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/pdf-orientation/pdfOrientationController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs8" %}

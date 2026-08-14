@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Spreadsheet Docker to AWS EKS Cluster | Syncfusion
-description: Learn how to deploy the Syncfusion Spreadsheet server Docker image to AWS EKS and connect it to the React Spreadsheet component.
+description: Learn how to deploy the Syncfusion Spreadsheet server Docker image to AWS EKS and connect it to the EJ2 ASP.NET Core Spreadsheet component.
 control: How to deploy spreadsheet server to AWS EKS using Docker
 platform: document-processing
 documentation: ug
@@ -113,16 +113,17 @@ kubectl get svc spreadsheet-server-service
 
 * Retrieve the external address from the Service output. Use `https://` only if the Load Balancer is configured with TLS (use ACM for certificates).
 
-**Step 5:** Configure the React client
+**Step 5:** Configure the ASP.NET Core client
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Spreadsheet sample in React. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) properties of your React Spreadsheet component:
+Start by following the steps provided in this [link](../getting-started-core) to create a simple Spreadsheet sample in ASP.NET Core. This will give you a basic setup of the Spreadsheet component. Once the Service reports an external address (e.g., a1b2c3d4e5f6-1234567890.us-east-1.elb.amazonaws.com), update the [`openUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenUrl) and [`saveUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SaveUrl) properties of your ASP.NET Core Spreadsheet component:
 
-```js
+```cshtml
 
-<SpreadsheetComponent
-	openUrl={`http://${serviceDNS}:5000/api/spreadsheet/open`}
-	saveUrl={`http://${serviceDNS}:5000/api/spreadsheet/save`}
-/>
+<ejs-spreadsheet
+  id="spreadsheet"
+  openUrl="@($"http://{serviceDNS}:5000/api/spreadsheet/open")"
+  saveUrl="@($"http://{serviceDNS}:5000/api/spreadsheet/save")">
+</ejs-spreadsheet>
 
 ```
 
@@ -136,6 +137,6 @@ Start by following the steps provided in this [link](../getting-started) to crea
 For more information on deploying Spreadsheet docker image in Amazon EKS kindly refer to this [`Blog`](https://www.syncfusion.com/blogs/post/spreadsheet-server-eks-deployment)
 
 ## See Also
-* [Docker Image Overview in React Spreadsheet](./spreadsheet-server-docker-image-overview)
+* [Docker Image Overview in ASP.NET Core Spreadsheet](./spreadsheet-server-docker-image-overview)
 * [Publish Spreadsheet Server to Azure App Service using Visual Studio](./publish-spreadsheet-server-to-azure-using-visual-studio)
 * [Deploy Spreadsheet Docker to Azure App Service using Azure CLI](./deploy-spreadsheet-docker-to-azure-using-azure-cli)
