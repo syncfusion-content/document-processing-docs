@@ -30,7 +30,7 @@ Follow the steps to export annotations:
 
 This generates and downloads the selected format containing all annotations in the current document.
 
-![Export Annotation](../images/export-annot.png)
+![Export Annotation](../../../javascript-es6/annotations/annotation-images/export-annot.png)
 
 ## Export programmatically
 

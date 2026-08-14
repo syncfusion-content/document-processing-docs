@@ -17,9 +17,9 @@ Annotations can be removed using the built-in UI or programmatically. This page 
 A selected annotation can be deleted in three ways:
 
 - Context menu: right-click the annotation and choose Delete.
-![Delete via context menu](../images/delete-annot-context-menu.png)
+![Delete via context menu](../../javascript-es6/annotations/annotation-images/delete-annot-context-menu.png)
 - Annotation toolbar: select the annotation and click the Delete button on the annotation toolbar.
-![Delete via annotation toolbar](../images/delete-annot.png)
+![Delete via annotation toolbar](../../javascript-es6/annotations/annotation-images/delete-annot.png)
 - Keyboard: select the annotation and press the `Delete` key.
 
 ## Delete programmatically

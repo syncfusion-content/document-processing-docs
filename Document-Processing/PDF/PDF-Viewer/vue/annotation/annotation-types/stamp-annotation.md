@@ -55,7 +55,7 @@ export default {
 2. Select a stamp type from the dropdown.
 3. Click on the PDF page to place the stamp.
 
-![Stamp Tool](../../../javascript-es6/annotations/annotation-images/stamp-tool.png)
+![Stamp Tool](../../../javascript-es6/images/stamp_tool.png)
 
 ### Add Stamp Using the Context Menu
 

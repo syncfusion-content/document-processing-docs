@@ -238,10 +238,9 @@ export default {
 #### Edit Strikethrough Appearance (UI)
 
 Use the annotation toolbar:
-- **Edit Color** tool  
-![Edit color](../../../javascript-es6/annotations/annotation-images/edit_color.png)
+![Edit color](../../../javascript-es6/images/edit_color.png)
 - **Edit Opacity** slider  
-![Edit opacity](../../../javascript-es6/annotations/annotation-images/edit_opacity.png)
+![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
 
 #### Edit Strikethrough Programmatically
 

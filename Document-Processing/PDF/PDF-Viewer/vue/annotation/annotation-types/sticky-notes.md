@@ -55,7 +55,7 @@ export default {
 2. Click on any location on the PDF page to place a note marker.
 3. A comment popup appears where you can type your note.
 
-![Sticky Note Tool](../../../javascript-es6/annotations/annotation-images/sticky-note-tool.png)
+![Sticky Note Tool](../../images/stickynotes_tool.png) 
 
 ### Add Sticky Note Using the Context Menu
 
@@ -193,7 +193,7 @@ export default {
 - Edit the comment text directly in the popup.
 - Use the context menu for additional options like **Note Icon** selection.
 
-![Sticky Note Edit](../../../javascript-es6/annotations/annotation-images/sticky-note-edit.png)
+![Sticky Note Edit](../../images/sticky_editbtn.png) 
 
 #### Edit Sticky Note Programmatically
 

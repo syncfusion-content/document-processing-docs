@@ -233,9 +233,9 @@ export default {
 
 Use the annotation toolbar:
 - **Edit Color** tool  
-![Edit color](../../../javascript-es6/annotations/annotation-images/edit_color.png)
+![Edit color](../../../javascript-es6/images/edit_color.png)
 - **Edit Opacity** slider  
-![Edit opacity](../../../javascript-es6/annotations/annotation-images/edit_opacity.png)
+![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
 
 #### Edit Squiggly Programmatically
 Modify an existing squiggly programmatically using `editAnnotation()`.

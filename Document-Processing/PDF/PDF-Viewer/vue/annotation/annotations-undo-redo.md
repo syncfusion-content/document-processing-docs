@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer supports undo and redo for annotations.
 
-![Undo-redo](../images/annotation-undo-redo.png)
+![Undo-redo](../../javascript-es6/annotations/annotation-images/annotation-undo-redo.png)
 
 Undo and redo actions can be performed by using either of the following methods:
 
