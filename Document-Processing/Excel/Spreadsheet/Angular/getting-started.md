@@ -143,7 +143,7 @@ Before initializing the Syncfusion Angular Spreadsheet component, generate a Syn
 
 ## Add CSS references
 
-o apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
+To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
 
 ```bash
 npm install @syncfusion/ej2-tailwind3-theme
