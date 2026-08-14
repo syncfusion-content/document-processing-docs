@@ -544,7 +544,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Restart numbering in lists
 
-You can restart the list numbering for each record while performing mail merge for a group in Word document (https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html).
+You can restart the list numbering for each record while performing mail merge for a group in Word document.
 
 The following code example shows how to restart the list numbering in a Word document while performing mail merge.
 
