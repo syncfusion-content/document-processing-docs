@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save document to Dropbox cloud file storage in Vue Document editor control | Syncfusion
+title: Save to Dropbox Cloud Storage in Vue DOCX Editor | Syncfusion
 description:  Learn about how to Save document to Dropbox cloud file storage in Vue Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage
+# Save Documents to Dropbox Cloud Storage in Vue DOCX Editor
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 
