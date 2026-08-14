@@ -61,26 +61,23 @@ Before initializing any Syncfusion components, generate a Syncfusion license key
 
 ## Add CSS references
 
-Add the following style references for the Spreadsheet component and its dependent components.
+To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+The installed theme package includes an `index.css` file that automatically imports all the required dependency styles. Add the following style references for the Spreadsheet component.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-spreadsheet/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a TypeScript application.
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `ej2-tailwind3-theme` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme#theme-packages) for information about the available themes and the different ways to include theme styles in a TypeScript application.
 
 
 ## Add the Syncfusion® Spreadsheet Component to the Application
