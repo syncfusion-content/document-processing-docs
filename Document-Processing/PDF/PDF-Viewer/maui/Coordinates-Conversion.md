@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Coordinate Conversion in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to convert between PDF page coordinates and viewer coordinates in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
