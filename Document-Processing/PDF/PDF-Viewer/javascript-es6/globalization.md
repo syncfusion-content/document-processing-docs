@@ -64,7 +64,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Highlight context|Highlight|
 |Underline context|Underline|
 |Strikethrough context|Strike through|
-|Server error|Web-service is not listening. PDF Viewer depends on web-service for all it's features. Please start the web service to continue.|
+|Server error|Web-service is not listening. PDF Viewer depends on web-service for all its features. Please start the web service to continue.|
 |Open text|Open|
 |First text|First Page|
 |Previous text|Previous Page|

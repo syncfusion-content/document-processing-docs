@@ -22,7 +22,7 @@ This topic explains:
 
 The following flags are supported in the PDF Viewer:
 
-- [isReadOnly](#make-fields-read-only)  
+- [isReadOnly](#make-fields-read-only)
   Prevents users from modifying the form field in the UI while still allowing updates through APIs.
 
 - [isRequired](#mark-fields-as-required)  
@@ -33,7 +33,7 @@ The following flags are supported in the PDF Viewer:
 
 ## Key actions
 
-### Make fields read only
+### Make fields read-only
 Use the `isReadOnly` property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
 ```js
