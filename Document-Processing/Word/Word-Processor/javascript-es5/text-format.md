@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in JavaScript (ES5) Document Editor control
+# Text format in JavaScript (ES5) Document editor control
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports several formatting options for text such as bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
