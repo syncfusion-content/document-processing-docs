@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Accessibility in Vue PDF Viewer | Syncfusion
-description: Learn about accessibility in the Syncfusion Vue PDF Viewer, including compliance with WCAG 2.2, Section 508, ADA standards, and keyboard navigation support.
+description: Accessibility features in the Vue PDF Viewer help all users read and interact with PDF content using assistive technologies.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion Vue PDF Viewer
+# Accessibility in Vue PDF Viewer
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in TypeScript PDF Viewer | Syncfusion
-description: Learn how to localize the Syncfusion TypeScript PDF Viewer using culture-specific strings, configure the locale property, and load translations with L10n.
+title: Globalization in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the globalization in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in TypeScript PDF Viewer
+# Globalization in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports localization using culture-specific string collections. By default, the component uses the "en-US" culture.
 

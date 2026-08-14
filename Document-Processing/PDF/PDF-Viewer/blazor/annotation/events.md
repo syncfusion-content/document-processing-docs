@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation Events in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to subscribe to and handle annotations and signature annotation events in the Blazor SfPdfViewer.
+title: Annotation Events in Blazor PDF Viewer  | Syncfusion
+description: Learn how to subscribe to and handle annotations and signature annotation events in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotation Events in Blazor SfPdfViewer Component
+# Annotation Events in Blazor PDF Viewer 
 
 Annotation events notify the application when annotations are added, selected, moved, resized, modified, or removed. Subscribe to these events by using the `PdfViewerEvents` tag inside the `SfPdfViewer` component.
 

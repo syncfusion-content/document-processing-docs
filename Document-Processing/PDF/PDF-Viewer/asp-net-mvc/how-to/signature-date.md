@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Date to Signature Field in ASP.NET MVC PDF Viewer
-description: Learn how to add the current date to the signature text in the Syncfusion ASP.NET MVC PDF Viewer using the updateFormFieldsValue method.
+title: How to Configure the Signature Date in ASP.NET MVC PDF | Syncfusion
+description: Display or configure the date that appears with a handwritten signature in the ASP.NET MVC PDF Viewer for audit and review purposes.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Add Date to Signature Field
+# How to Configure the Signature Date in ASP.NET MVC PDF Viewer
 
 In the PDF Viewer, you can programmatically add the current date alongside signature text for compliance, audit trails, or legal documentation. Use the `updateFormFieldsValue()` method to modify the signature field value after retrieving it with `retrieveFormFields()`.
 

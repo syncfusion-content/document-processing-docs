@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Blazor PDF Viewer Component | Syncfusion
-description: Learn about Blazor SfPdfViewer including performance, offline loading, annotations, form filling, printing, and support for Server & WebAssembly.
+title: About Syncfusion Blazor PDF Viewer Component | Syncfusion
+description: Learn about Blazor PDF Viewer component including performance, offline loading, annotations, form filling, printing, and support for Server & WebAssembly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Overview of Blazor PDF Viewer Component
+# About Syncfusion Blazor PDF Viewer Component
 
 The Blazor `SfPdfViewer` component enables viewing, annotating, printing, and downloading PDF files in Blazor applications without requiring a separate server-side PDF service. It provides fast, responsive rendering and is straightforward to integrate into both Blazor Server and Blazor WebAssembly (WASM) applications.
 

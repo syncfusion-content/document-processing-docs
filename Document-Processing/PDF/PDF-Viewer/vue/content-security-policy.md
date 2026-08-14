@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content Security Policy with Vue PDF Viewer component | Syncfusion
-description: Learn here all about Content Security Policy with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Content Security Policy in Vue PDF Viewer | Syncfusion
+description: Configure Content Security Policy headers for the Vue PDF Viewer so the viewer loads correctly while keeping the host page secure.
 control: CSP
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Security Policy in Vue PDF Viewer
+# Content Security Policy with Vue PDF Viewer
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps protect against attacks such as cross-site scripting (XSS) and data injection. It restricts the sources from which content can be loaded on a web page.
 

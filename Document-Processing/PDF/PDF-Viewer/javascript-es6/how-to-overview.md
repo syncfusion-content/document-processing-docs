@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in PDF Viewer control.
+title: About how to section of JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the frequently asked questions in how to section of Syncfusion JavaScript (ES6) PDF Viewer control and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Frequently Asked Questions in TypeScript PDF Viewer
+# About how to section of Syncfusion JavaScript (ES6) PDF Viewer
 
 The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are listed below.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in Vue PDF Viewer | Syncfusion
-description: Learn about the various UI interactions in Redaction annotations of the Syncfusion Vue PDF Viewer component and more
+title: Ui Interaction in Vue PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in Vue PDF Viewer
+# Ui Interaction in Vue PDF Viewer
 
 ## Add redaction annotations from the toolbar
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perimeter annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Perimeter measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Perimeter Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Perimeter measurement annotations in the JavaScript (ES5) PDF Viewer to calculate the perimeter of a region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perimeter annotation in JavaScript PDF Viewer
+# Perimeter Annotation in JavaScript (ES5) PDF Viewer
 
 Perimeter is a measurement annotation used to measure the length around a closed polyline in the PDF.
 

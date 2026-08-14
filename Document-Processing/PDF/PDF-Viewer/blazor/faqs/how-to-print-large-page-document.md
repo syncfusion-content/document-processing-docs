@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print large page document in SfPdfViewer | Syncfusion
-description: Learn how to print large PDF documents in the Blazor SfPdfViewer using a custom toolbar action and a Blob URL.
+title: How to Print large page document in PDF Viewer | Syncfusion
+description: Learn how to print large PDF documents in the Blazor PDF Viewer using a custom toolbar action and a Blob URL.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Print large-page documents in Blazor SfPdfViewer
+# How to Print large page document in PDF Viewer
 
 This article shows how to print large PDFs in the Blazor SfPdfViewer component. A custom toolbar action retrieves the loaded PDF as a byte array and uses JavaScript interop to open it in a new tab and trigger the browser's print dialog.
 

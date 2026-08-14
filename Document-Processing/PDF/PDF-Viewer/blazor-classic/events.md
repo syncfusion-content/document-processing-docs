@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor PDF Viewer component and much more details.
+title: Events in Blazor PDF Viewer Classic| Syncfusion
+description: Checkout and learn here all about events in Syncfusion Blazor PDF Viewer  and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Events in Blazor PDF Viewer Component
+# Events in Blazor PDF Viewer Classic
 
 The events provided in PDF Viewer component are listed out as follows:
 

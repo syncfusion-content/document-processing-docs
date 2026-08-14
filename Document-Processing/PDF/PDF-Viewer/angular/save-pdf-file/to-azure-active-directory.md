@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF To AAD in Angular PDF Viewer Component | Syncfusion
-description: Learn how to Save PDF To AAD in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: To Azure Active Directory in Angular PDF Viewer | Syncfusion
+description: Learn about the to azure active directory in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Save PDF To AAD
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Azure Active Directory (AAD) in Angular
+# To Azure Active Directory in Angular PDF Viewer
 
 ### Overview
 

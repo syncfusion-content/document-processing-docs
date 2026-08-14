@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in JavaScript PDF Viewer control | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion JavaScript PDF Viewer control (Essential JS 2).
+title: Comments in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the JavaScript (ES5) PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in JavaScript PDF Viewer
+# Comments in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete comments for the following annotation types in PDF documents:
 

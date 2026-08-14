@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Perimeter Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Perimeter annotations in the Blazor SfPdfViewer component.
+title: Add Perimeter Annotations in Blazor PDF Viewer  | Syncfusion
+description: Learn how to enable, draw, customize, and manage Perimeter annotations in the Blazor PDF Viewer .
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Perimeter Annotations in Blazor SfPdfViewer Component
+# Add Perimeter Annotations in Blazor PDF Viewer 
 Perimeter is a measurement annotation used to calculate the length around a closed polyline on a PDF page—useful for technical markups and reviews. 
 
 ![Perimeter overview](../../images/blazor-pdfviewer-perimeter-annotation.png)

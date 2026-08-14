@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer Toolbar Customization in TypeScript PDF Viewer Component | Syncfusion
-description: Learn here all about form designer toolbar customization in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form Designer Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the Form Designer toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default form design actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization in TypeScript
+# Customize the Form Designer Toolbar in JavaScript (ES6) PDF Viewer
 
 Customize the form designer toolbar by showing or hiding default items and controlling the order in which items appear.
 

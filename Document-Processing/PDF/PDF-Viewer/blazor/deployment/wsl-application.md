@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with SfPdfViewer in Blazor WSL | Syncfusion
-description: Learn how to run the Blazor SfPdfViewer control in a Blazor app using Windows Subsystem for Linux (WSL).
+title: Getting started with Blazor WSL PDF Viewer | Syncfusion
+description: Learn how to run the Blazor PDF Viewer  in a Blazor app using Windows Subsystem for Linux (WSL).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting started with the Blazor PDF Viewer in WSL mode
+# Getting started with Blazor WSL PDF Viewer 
 
 Follow these steps to set up Windows Subsystem for Linux (WSL), install the .NET SDK, and run the [Blazor PDF Viewer (Next-Gen)](../getting-started/server-side-application) component in WSL mode.
 

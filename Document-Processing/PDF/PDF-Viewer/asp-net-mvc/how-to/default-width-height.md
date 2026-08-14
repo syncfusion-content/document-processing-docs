@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set Width and Height of ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to set the width and height of the Syncfusion ASP.NET MVC PDF Viewer component to control its dimensions in your web application.
+title: How to Set the Default Width and Height in ASP.NET MVC | Syncfusion
+description: Set the default width and height of the ASP.NET MVC PDF Viewer so it fits the layout of the page or container where it is rendered.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Set width and height of PDF Viewer
+# How to Set the Default Width and Height in ASP.NET MVC PDF Viewer
 
 To control the dimensions of the Syncfusion ASP.NET MVC PDF Viewer, you can modify its `Width` and `Height` properties.
 

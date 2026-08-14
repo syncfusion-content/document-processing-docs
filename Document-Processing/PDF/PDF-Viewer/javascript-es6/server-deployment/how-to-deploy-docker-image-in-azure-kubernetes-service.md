@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy TypeScript PDF Viewer server to Azure Kubernetes Service (AKS)
-description: Deploy the Syncfusion PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it securely, and connect it to the TypeScript PDF Viewer client.
+title: How to Deploy the PDF Viewer Docker Image to Azure | Syncfusion
+description: Deploy the Syncfusion PDF Viewer Docker image to Azure Kubernetes Service from a JavaScript (ES6) application for scalable production hosting.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Deploy Docker image to Azure Kubernetes Service (AKS)
+# How to Deploy the PDF Viewer Docker Image to Azure Kubernetes Service
 
 Host the Syncfusion PDF Viewer server container on Azure Kubernetes Service (AKS) to deliver PDFs to the TypeScript PDF Viewer client at scale. The following workflow provisions the infrastructure, deploys the published image from Docker Hub, and exposes a public endpoint for the component’s `serviceUrl`.
 

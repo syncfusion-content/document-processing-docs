@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export and Import Form Field Data in Blazor SfPdfViewer | Syncfusion
+title: Export and Import Form Field Data in Blazor PDF Viewer | Syncfusion
 description: Learn how to export and import form field data in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Export and import form field data in Blazor SfPdfViewer
+# Export and import form field data in Blazor PDF Viewer
 
 The `SfPdfViewer` control supports exporting and importing form field data in the following formats:
 

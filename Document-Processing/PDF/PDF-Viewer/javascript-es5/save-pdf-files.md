@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files in JavaScript PDF Viewer | Syncfusion
-description: Learn how to save updated documents from the Syncfusion JavaScript PDF Viewer component to a server, database, or local file system.
+title: Save Pdf Files in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Save edited or annotated PDFs from the JavaScript (ES5) PDF Viewer to a server, database, or local file system using the server-backed web service.
 platform: document-processing
 control: Saving PDF files
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF files
+# Save PDF Files in JavaScript (ES5) PDF Viewer
 
 After annotating or editing a document, use the JavaScript PDF Viewer component to persist the updated PDF to a server, local storage, or a database.
 

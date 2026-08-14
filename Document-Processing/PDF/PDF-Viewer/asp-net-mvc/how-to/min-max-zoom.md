@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set min and max zoom levels in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to limit the minimum and maximum zoom percentages in the Syncfusion ASP.NET MVC PDF Viewer by using the minZoom and maxZoom properties for responsive, consistent viewing.
+title: How to Configure MinZoom and MaxZoom in ASP.NET MVC PDF | Syncfusion
+description: Configure the minimum and maximum zoom levels in the ASP.NET MVC PDF Viewer using minZoom and maxZoom to control the zoom range for users.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Minimum and maximum zoom properties
+# How to Configure MinZoom and MaxZoom in ASP.NET MVC PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer lets developers control zoom limits for every document view. Configure the `minZoom` and `maxZoom` properties to prevent users from zooming beyond the range that keeps content legible and maintains predictable performance.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Magnifying PDF documents | Windows Forms | Syncfusion®
-description: Learn about Magnifying PDF documents support in Syncfusion<sup>&reg;</sup> WinForms Pdf Viewer control, its elements and more.
+title: Magnifying PDF documents in Windows Forms PDF Viewer | Syncfusion
+description: The magnification feature provides zoom in, zoom out, and fit-to-page options to improve document readability and viewing experience.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Adjust magnification of PDF documents using WinForms PDF Viewer
+# Magnifying PDF documents in Windows Forms PDF Viewer
 
 The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) has a predefined set of zoom tools in the built-in toolbar that allows you to change the magnification of the PDF document that is being displayed.
 

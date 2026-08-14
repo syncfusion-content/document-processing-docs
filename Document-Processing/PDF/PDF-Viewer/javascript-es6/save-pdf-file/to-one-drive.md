@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to OneDrive in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to OneDrive using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
+title: To One Drive in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to OneDrive using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to OneDrive
+# Save PDF Files to OneDrive in JavaScript (ES6) PDF Viewer
 
 This article describes how to save a PDF file to OneDrive from the Syncfusion TypeScript PDF Viewer using a server-side web service. Follow the steps below.
 

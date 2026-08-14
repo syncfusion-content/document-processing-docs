@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion JavaScript PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+title: Customize Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Customize the appearance and behavior of annotations in the JavaScript (ES5) PDF Viewer through UI settings and programmatic configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize annotations
+# Customize Annotations in JavaScript (ES5) PDF Viewer
 
 Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 

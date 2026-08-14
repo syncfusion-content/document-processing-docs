@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile in UWP Pdf Viewer control | Syncfusion
+title: Mobile in UWP Pdf Viewer | Syncfusion
 description: Learn here all about Mobile support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control, its elements, and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# UI design for mobile in UWP Pdf Viewer
+# Mobile in UWP Pdf Viewer
 
 ![UWP Pdf Viewer in custom toolbar](CustomToolbarImages/CustomToolbarImage23.png)
 

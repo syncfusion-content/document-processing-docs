@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read and Extract PDF Form Field Values in Blazor SfPdfViewer
+# Bookmark navigation in Blazor PDF Viewer
 
 The Blazor SfPdfViewer allows you to read the values of interactive PDF form fields including textboxes, checkboxes, radio buttons, dropdowns, signatures, and more. Use the APIs below to retrieve form data programmatically for validation, submission, or syncing with your app state.
 

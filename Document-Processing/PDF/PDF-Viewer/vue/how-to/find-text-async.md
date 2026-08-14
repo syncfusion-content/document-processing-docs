@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Use findTextAsync in Vue PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion Vue PDF Viewer and retrieve match bounds.
+title: How to Use FindTextAsync in Vue PDF Viewer | Syncfusion
+description: Search text asynchronously in the Vue PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find text using findTextAsync method in Vue PDF Viewer
+# How to Use FindTextAsync in Vue PDF Viewer
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 

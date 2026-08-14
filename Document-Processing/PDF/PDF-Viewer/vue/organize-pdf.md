@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Organize Pdf in Vue PDF Viewer | Syncfusion
+description: Reorder, rotate, insert, delete, and save pages in the Vue PDF Viewer using the Organize Pages panel and its programmatic APIs.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Vue PDF Viewer component
+# Organize Pages in Vue PDF Viewer
 
 The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and copy or duplicate pages, the PDF Viewer facilitates these tasks effortlessly.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change the font family in Syncfusion Angular PDF Viewer component
-description: Learn how to change the font family in Form Field's Type Signature in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Change the Font for Type Signatures in Angular | Syncfusion
+description: Change the font family for type signatures and initials in the Angular PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# To Change the Font Family
+# How to Change the Font for Type Signatures in Angular PDF Viewer
 Change the font family in the type signature of the PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
 ### Signature Field

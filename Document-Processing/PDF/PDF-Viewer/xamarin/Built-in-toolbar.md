@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with Built-In Toolbar in Xamarin Pdf Viewer (SfPdfViewer)
+# Built-In Toolbar in Xamarin Pdf Viewer Control
 
 The SfPdfViewer has a built-in toolbar that has provisions to perform majority of the operations in the PDF Viewer and that can be shown or hidden. You can hide the built-in toolbar and develop your own toolbar.
 

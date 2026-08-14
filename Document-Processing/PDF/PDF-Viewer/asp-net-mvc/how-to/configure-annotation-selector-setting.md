@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure selector settings in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to customize annotation selector settings in the Syncfusion ASP.NET MVC PDF Viewer component for Essential JS 2.
+title: How to Configure Annotation Selectors in ASP.NET MVC PDF | Syncfusion
+description: Configure annotation selector settings in the ASP.NET MVC PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# How to Initialize Annotation Selector Settings
+# How to Configure Annotation Selectors in ASP.NET MVC PDF Viewer
 
 ### Annotation Selector Settings
 

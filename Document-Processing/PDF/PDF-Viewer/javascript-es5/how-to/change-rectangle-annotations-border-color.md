@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change rectangle annotation border color in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to change the rectangle annotation border color in the Syncfusion JavaScript PDF Viewer control by configuring rectangleSettings.
+title: How to Change the Rectangle Annotation Border Color  | Syncfusion
+description: Change the border color of rectangle annotations in the JavaScript (ES5) PDF Viewer to match your application design or highlight specific areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change rectangle annotation border color in JavaScript PDF Viewer
+# How to Change the Rectangle Annotation Border Color in JavaScript
 
 The JavaScript PDF Viewer enables customizing rectangle annotation appearance through the [rectangleSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#rectanglesettings) API, including border color updates.
 

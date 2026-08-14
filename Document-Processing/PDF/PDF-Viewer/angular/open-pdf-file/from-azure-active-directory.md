@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF From AAD in Angular PDF Viewer Component | Syncfusion
-description: Learn how to Open PDF From AAD in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: From Azure Active Directory in Angular PDF Viewer | Syncfusion
+description: Learn about the from azure active directory in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Active Directory in Angular PDF Viewer
+# From Azure Active Directory in Angular PDF Viewer
 
 ### Overview
 

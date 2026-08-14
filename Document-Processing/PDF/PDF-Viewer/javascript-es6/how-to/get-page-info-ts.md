@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get page info in TypeScript PDF Viewer | Syncfusion
-description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion TypeScript PDF Viewer.
+title: How to Get Page Info in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Retrieve page height, width, and rotation in the JavaScript (ES6) PDF Viewer using the getPageInfo method for custom layout and rendering logic.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Get page info in TypeScript PDF Viewer
+# How to Get Page Info in JavaScript (ES6) PDF Viewer
 
 Use the **getPageInfo()** method to retrieve metadata for a specified page, including height, width, and rotation. The method returns an object with numeric `height` and `width` values (in CSS pixels) and a `rotation` value (degrees).
 

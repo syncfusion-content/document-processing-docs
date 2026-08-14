@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy TypeScript PDF Viewer server to Azure App Service for Containers
-description: Deploy the Syncfusion PDF Viewer server Docker image to Azure App Service for Containers and connect it to the TypeScript PDF Viewer client.
+title: How to Deploy the PDF Viewer Docker Image to Azure App | Syncfusion
+description: Deploy the Syncfusion PDF Viewer Docker image to Azure App Service for Containers from a JavaScript (ES6) application for production hosting.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Deploy Docker image to Azure App Service for Containers
+# How to Deploy the PDF Viewer Docker Image to Azure App Service in
 
 Deploy the Syncfusion PDF Viewer server container to Azure App Service for Containers to host the backend for the TypeScript PDF Viewer client without managing infrastructure. The steps below provision platform resources, configure the Docker image, and expose the service endpoint required for the component’s `serviceUrl`.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Arrow annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Arrow Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the JavaScript (ES5) PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow annotation in JavaScript PDF Viewer
+# Arrow Annotation in JavaScript (ES5) PDF Viewer
 
 Arrow is a shape annotation used to point, direct attention, or indicate flow. Common use cases include callouts, direction markers, and connectors in technical reviews.
 

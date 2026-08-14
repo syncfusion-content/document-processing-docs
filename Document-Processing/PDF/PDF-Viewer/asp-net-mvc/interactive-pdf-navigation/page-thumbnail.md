@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Thumbnail Navigation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Discover how to navigate PDF pages using thumbnails in the Syncfusion ASP.NET MVC PDF Viewer control for a visual and intuitive experience.
+title: Page Thumbnail in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use page thumbnail navigation in the ASP.NET MVC PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Page Thumbnail navigation
+# Page Thumbnail Navigation in ASP.NET MVC PDF Viewer
 
 Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
 You can enable/disable thumbnail navigation by using the following code snippet.,

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: TypeScript PDF Viewer server Docker image overview
-description: Run the Syncfusion PDF Viewer server Docker image, configure licensing and Redis cache, and connect it to the TypeScript PDF Viewer client.
+title: About Syncfusion JavaScript (ES6) Server Deployment | Syncfusion
+description: Run and connect to the Syncfusion JavaScript (ES6) PDF Viewer server Docker image, set the license key, and configure Redis cache for the Server Deployment
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# PDF Viewer server Docker image overview
+# About Syncfusion JavaScript (ES6) PDF Viewer Server Deployment
 
 The Syncfusion PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 

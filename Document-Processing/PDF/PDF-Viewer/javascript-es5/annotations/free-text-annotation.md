@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about free text annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Free Text Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the JavaScript (ES5) PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in JavaScript PDF Viewer control
+# Free Text Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 

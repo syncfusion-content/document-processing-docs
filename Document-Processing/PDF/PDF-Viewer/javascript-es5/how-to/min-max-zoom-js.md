@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure minZoom and maxZoom in JavaScript PDF Viewer | Syncfusion
-description: Learn how to configure minimum and maximum zoom levels using minZoom and maxZoom in the Syncfusion JavaScript PDF Viewer.
+title: How to Configure MinZoom and MaxZoom in JavaScript (ES5) | Syncfusion
+description: Configure the minimum and maximum zoom levels in the JavaScript (ES5) PDF Viewer using minZoom and maxZoom to control the zoom range for users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure minZoom and maxZoom in JavaScript PDF Viewer
+# How to Configure MinZoom and MaxZoom in JavaScript (ES5) PDF Viewer
 
 Control zoom levels in the PDF Viewer using the [minZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#minzoom) and [maxZoom](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#maxzoom) properties to ensure a consistent viewing experience.
 

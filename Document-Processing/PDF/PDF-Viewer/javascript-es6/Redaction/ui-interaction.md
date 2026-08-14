@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in JavaScript (ES6) PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion JavaScript (ES6) PDF Viewer component.
+title: Ui Interaction in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in JavaScript (ES6) PDF Viewer
+# Ui Interaction in JavaScript (ES6) PDF Viewer
 
 ## Add redaction annotations from the toolbar
 

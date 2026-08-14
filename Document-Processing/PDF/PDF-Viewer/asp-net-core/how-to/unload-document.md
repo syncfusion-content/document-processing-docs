@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Unload a PDF document programmatically in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to call the unload method in the Syncfusion ASP.NET Core PDF Viewer to clear the current PDF document programmatically.
+title: How to Unload a Document in ASP.NET Core PDF Viewer | Syncfusion
+description: Unload the current document in the ASP.NET Core PDF Viewer to free resources and prepare the viewer for loading a different PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Unload PDF documents programmatically in ASP.NET Core PDF Viewer
+# How to Unload a Document in ASP.NET Core PDF Viewer
 
 Clear the current PDF document and release associated resources by calling the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) method. This resets the viewer UI and is useful when switching between documents or clearing sensitive content after review.
 

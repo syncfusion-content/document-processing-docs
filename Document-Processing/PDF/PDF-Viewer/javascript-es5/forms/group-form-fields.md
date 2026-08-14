@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group form fields in the JavaScript PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion JavaScript PDF Viewer by assigning the same name to multiple widgets.
+title: Group Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Group PDF form fields in the JavaScript (ES5) PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Group form fields in JavaScript PDF Viewer
+# Group Form Fields in JavaScript (ES5) PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** allows you to group multiple form fields into a single logical field by assigning the same `name` property to them. Grouped form fields share their values and states automatically based on the field type. Grouping is available in the Form Designer UI and programmatically via the form designer APIs, making it easy to keep related fields synchronized across the PDF document.
 

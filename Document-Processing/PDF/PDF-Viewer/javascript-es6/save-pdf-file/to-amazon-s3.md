@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to AWS S3 using the Syncfusion TypeScript PDF Viewer component in standalone and server-backed configurations.
+title: To Amazon S3 in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to AWS S3 in TypeScript
+# Save PDF Files to AWS S3 in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports saving PDF files to AWS S3 using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include notes on prerequisites and security considerations for production use.
 

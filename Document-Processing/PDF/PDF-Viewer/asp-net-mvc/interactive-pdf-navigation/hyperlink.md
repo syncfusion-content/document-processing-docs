@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink navigation in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for ASP.NET MVC.
+title: Hyperlink in ASP.NET MVC PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the ASP.NET MVC PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Hyperlink navigation in ASP.NET MVC PDF Viewer
+# Hyperlink Navigation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 

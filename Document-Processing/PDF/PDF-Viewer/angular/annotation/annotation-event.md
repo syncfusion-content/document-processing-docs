@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Events in Angular Pdfviewer Control | Syncfusion
-description: Learn here all about annotation events in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Event in Angular PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the Angular PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer annotation events in Angular
+# Annotation Events in Angular PDF Viewer
 
 The PDF Viewer raises events for annotation and signature interactions (add, remove, move, resize, select, etc.). Handle these events to integrate custom workflows, telemetry, or UI updates.
 

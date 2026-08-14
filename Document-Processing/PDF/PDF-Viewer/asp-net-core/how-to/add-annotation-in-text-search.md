@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Rectangle Annotation via Text Search in ASP.NET Core | Syncfusion
-description: Learn to add rectangle annotations using text search bounds in the Syncfusion ASP.NET Core PDF Viewer component, including initialization and search controls.
+title: How to Add Annotations From Text Search in ASP.NET Core | Syncfusion
+description: Add annotations from text search results in the ASP.NET Core PDF Viewer by responding to text search events and using the search bounds.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add rectangle annotations using text search in ASP.NET Core
+# How to Add Annotations From Text Search in ASP.NET Core PDF Viewer
 
 Highlight search results automatically by adding rectangle annotations at match locations. This guide explains how to use text search bounds to programmatically emphasize document content in the ASP.NET Core PDF Viewer.
 

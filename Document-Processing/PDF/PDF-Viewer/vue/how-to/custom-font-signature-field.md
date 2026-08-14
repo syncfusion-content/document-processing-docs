@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change font family in Vue PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the Vue PDF Viewer using typeSignatureFonts and typeInitialFonts.
+title: How to Change the Font for Type Signatures in Vue PDF | Syncfusion
+description: Change the font family for type signatures and initials in the Vue PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the font family for type signatures in Vue
+# How to Change the Font for Type Signatures in Vue PDF Viewer
 
 Change the font family in the type signature and initial fields of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the `typeSignatureFonts` and `typeInitialFonts` properties. To apply the selected font, include the corresponding Google Fonts link in the HTML `head` section of the host page.
 

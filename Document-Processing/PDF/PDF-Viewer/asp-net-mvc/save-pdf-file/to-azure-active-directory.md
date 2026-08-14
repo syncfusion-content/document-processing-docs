@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Azure AD in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion ASP.NET MVC PDF Viewer component and a server-backed web service.
+title: To Azure Active Directory in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the to azure active directory in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Azure Active Directory (AAD) in ASP.NET MVC
+# To Azure Active Directory in ASP.NET MVC PDF Viewer
 
 ### **Overview**
 

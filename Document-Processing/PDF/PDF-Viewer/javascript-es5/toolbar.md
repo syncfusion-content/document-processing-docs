@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Javascript Pdfviewer control | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Javascript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES5) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in JavaScript PDF Viewer
+# Customize the Organize Pages Toolbar in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer includes a built-in toolbar for common actions such as page navigation, text search, view mode, download, print, bookmarks, and thumbnails.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use extractText in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Syncfusion TypeScript PDF Viewer to extract text and bounds from one or more pages.
+title: How to Use the ExtractText Method in JavaScript (ES6) | Syncfusion
+description: Use the extractText method in the JavaScript (ES6) PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text using `extractText` in TypeScript PDF Viewer
+# How to Use the ExtractText Method in JavaScript (ES6) PDF Viewer
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 

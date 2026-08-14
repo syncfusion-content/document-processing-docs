@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Measurement annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the measurement annotation in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in JavaScript PDF Viewer control
+# Measurement Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 

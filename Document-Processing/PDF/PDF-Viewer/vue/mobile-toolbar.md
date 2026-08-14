@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Vue PDF Viewer | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar in Vue PDF Viewer | Syncfusion
+description: The mobile toolbar in the Vue PDF Viewer adapts the touch interface so users can access core features on small screens.
 control: Mobile Toolbar Interface
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile toolbar interface in Vue PDF Viewer
+# Mobile Toolbar in Vue PDF Viewer
 
 The Vue PDF Viewer provides a mobile-optimized toolbar interface for viewing, searching, annotating, and managing PDF documents on mobile devices. The toolbar includes Syncfusion<sup style="font-size:70%">&reg;</sup> tools for search, download, bookmarking, annotation, and page organization. For advanced use cases, the desktop toolbar can be enabled on mobile devices to access additional features and controls.
 

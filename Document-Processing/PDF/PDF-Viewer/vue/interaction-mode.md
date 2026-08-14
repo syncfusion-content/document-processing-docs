@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interaction mode in Vue PDF Viewer | Syncfusion
-description: Learn how to use interaction modes in the Syncfusion Vue PDF Viewer, including selection mode and panning mode, and how to switch between them.
+title: Interaction Mode in Vue PDF Viewer | Syncfusion
+description: Switch between selection mode and panning mode in the Vue PDF Viewer to control how users interact with PDF pages and content.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in Vue PDF Viewer
+# Interaction Mode in Vue PDF Viewer
 
 The PDF Viewer provides two interaction modes for working with a loaded PDF document: Selection mode and Panning mode.
 

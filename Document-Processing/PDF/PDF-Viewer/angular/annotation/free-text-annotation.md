@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in Angular PDF Viewer component | Syncfusion
-description: Learn about free text annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Free Text Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the Angular PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: Free text annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in Angular PDF Viewer control
+# Free Text Annotation in Angular PDF Viewer
 
 The PDF Viewer control supports adding, editing, and deleting free text annotations. This article explains how to add free text annotations using the toolbar and programmatically, modify their properties, and manage selection and focus.
 

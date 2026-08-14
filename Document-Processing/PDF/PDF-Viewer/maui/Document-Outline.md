@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Document outline in .NET MAUI PDF Viewer
+# Document Outline in .NET MAUI PDF Viewer
 
 A PDF document may optionally have a document outline (also called bookmarks) which allows the user to navigate from one part of the document to another. The PDF viewer control displays the document outline in a tree-structured hierarchy of outline elements.
 

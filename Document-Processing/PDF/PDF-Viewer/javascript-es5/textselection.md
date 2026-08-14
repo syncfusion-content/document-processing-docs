@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text selection in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion JavaScript PDF Viewer.
+title: Textselection in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the textselection in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text selection in JavaScript PDF Viewer
+# Textselection in JavaScript (ES5) PDF Viewer
 
 The TextSelection module allows users to highlight and copy text from the loaded PDF. Text selection is enabled by default and can be configured or monitored programmatically to match application workflows.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Polygon annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Polygon annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Polygon Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Polygon annotations in the JavaScript (ES5) PDF Viewer to outline irregular shapes on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon annotation in JavaScript PDF Viewer
+# Polygon Annotation in JavaScript (ES5) PDF Viewer
 
 Polygon is a shape annotation used to outline irregular regions, highlight areas, or create custom callouts.
 

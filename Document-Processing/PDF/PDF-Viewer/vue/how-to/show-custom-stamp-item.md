@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show custom items in Custom Stamp dropdown in Vue | Syncfusion
-description: Learn how to display custom items in the Custom Stamp dropdown using customStampSettings in the Syncfusion Vue PDF Viewer.
+title: How to Show Custom Stamp Items in Vue PDF Viewer | Syncfusion
+description: Display custom items in the custom stamp dropdown in the Vue PDF Viewer using customStampSettings to provide tailored stamp options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Displaying custom items in custom stamp dropdown in Vue PDF Viewer
+# How to Show Custom Stamp Items in Vue PDF Viewer
 
 ### Overview
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue PDF Viewer | Syncfusion
-description: Check out and learn about getting Started with the Quasar Framework and Vue PDF Viewer Component of Syncfusion Essential JS 2 and more details.
+title: Quasar in Vue PDF Viewer | Syncfusion
+description: Get started with the Quasar Framework and the Syncfusion Vue PDF Viewer, including setup, configuration, and running examples.
 control: Quasar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue PDF Viewer in Quasar Framework
+# Getting Started with Quasar Framework and Vue PDF Viewer
 
 This section explains step-by-step instructions for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component into a [Quasar Framework](https://quasar.dev/) project using the Composition API.
 

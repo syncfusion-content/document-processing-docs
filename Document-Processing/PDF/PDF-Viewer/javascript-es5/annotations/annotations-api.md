@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations API in JavaScript PDF Viewer | Syncfusion
-description: Learn how to read and configure annotations using APIs in the Syncfusion JavaScript PDF Viewer.
+title: Annotations Api in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use the annotations API in the JavaScript (ES5) PDF Viewer to read, add, update, and delete annotations programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations API in JavaScript PDF Viewer
+# Annotations API in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides APIs to read the loaded annotations and to configure global defaults for creating/editing annotations.
 

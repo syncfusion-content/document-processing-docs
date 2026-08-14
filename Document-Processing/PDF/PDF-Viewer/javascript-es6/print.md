@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable, customize, and monitor printing in the Syncfusion TypeScript PDF Viewer component.
+title: Print in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the print in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Print in TypeScript PDF Viewer
+# Print in JavaScript (ES6) PDF Viewer
 
 The Syncfusion JavaScript PDF Viewer component allows users to print a loaded PDF document through the built-in toolbar or programmatic calls. Control printing availability by setting the `enablePrint` property.
 

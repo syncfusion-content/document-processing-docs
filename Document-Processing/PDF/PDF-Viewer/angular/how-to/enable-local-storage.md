@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Managing Local Storage in Angular PDF Viewer component | Syncfusion
-description: Learn how to manage local storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Enable Local Storage in Angular PDF Viewer | Syncfusion
+description: Control session-specific data storage in the Angular PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Managing Local Storage in PDF Viewer
+# How to Enable Local Storage in Angular PDF Viewer
 
 The PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored, such as annotations and form field values created during the current session. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
 

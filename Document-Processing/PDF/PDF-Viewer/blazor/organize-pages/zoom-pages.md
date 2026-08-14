@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Zoom pages using the Organize Pages tool in Blazor
+# Zoom pages in Organize Pages in Blazor PDF Viewer
 
 ## Overview
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add a Save Button to the Toolbar in Syncfusion React PDF Viewer
-description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the React PDF Viewer component.
+title: How to Add a Save Button to the Toolbar in React PDF | Syncfusion
+description: Add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the React PDF Viewer using toolbar settings.
 control: Toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add a Save Button to the Built-in Toolbar in React PDF Viewer
+# How to Add a Save Button to the Toolbar in React PDF Viewer
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 

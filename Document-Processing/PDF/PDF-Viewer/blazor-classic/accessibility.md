@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor PDF Viewer Component | Syncfusion
-description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer component and more.
+title: Accessibility in Blazor PDF Viewer Classic| Syncfusion
+description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer  and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Accessibility in Syncfusion® Blazor PDF Viewer Component
+# Accessibility in Syncfusion® Blazor PDF Viewer Classic
 
 The Blazor PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

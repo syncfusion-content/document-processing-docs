@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show or hide annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion JavaScript PDF Viewer by exporting and importing annotations.
+title: How to Show or Hide Annotations in JavaScript (ES5) PDF | Syncfusion
+description: Show or hide annotations in the JavaScript (ES5) PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show or hide annotations in PDF Viewer
+# How to Show or Hide Annotations in JavaScript (ES5) PDF Viewer
 
 ### Overview
 

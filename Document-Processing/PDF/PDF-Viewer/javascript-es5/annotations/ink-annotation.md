@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about ink annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Ink Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the JavaScript (ES5) PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in JavaScript PDF Viewer control
+# Ink Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete ink annotations.
 

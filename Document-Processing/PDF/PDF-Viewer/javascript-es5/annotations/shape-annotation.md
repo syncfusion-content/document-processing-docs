@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shape annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion JavaScript PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in JavaScript PDF Viewer control
+# Shape Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 

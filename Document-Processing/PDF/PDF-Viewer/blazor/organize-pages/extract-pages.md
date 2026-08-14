@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract Pages in Blazor PDF Viewer | Syncfusion
-description: Learn all about extracting pages using the Organize Pages tool in the Blazor PDF Viewer component and more.
+description: Learn all about extracting pages using the Organize Pages tool in the Blazor PDF Viewer  and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

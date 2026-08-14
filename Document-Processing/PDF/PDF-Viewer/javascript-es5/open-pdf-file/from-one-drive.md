@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from OneDrive in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion JavaScript PDF Viewer component using a server-backed approach.
+title: From One Drive in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from OneDrive
+# Open PDF from OneDrive in JavaScript (ES5) PDF Viewer
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 

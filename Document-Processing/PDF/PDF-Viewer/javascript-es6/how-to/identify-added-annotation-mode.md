@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Identify added annotation mode in TypeScript PDF Viewer | Syncfusion
-description: Learn how to determine whether an added annotation was drawn, imported, or existing using the annotationSelect event in the TypeScript PDF Viewer.
+title: How to Identify the Added Annotation Mode in JavaScript | Syncfusion
+description: Identify the annotation mode that was used to add an annotation in the JavaScript (ES6) PDF Viewer so you can branch on the annotation type in your code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Identify added annotation mode in TypeScript PDF Viewer
+# How to Identify the Added Annotation Mode in JavaScript (ES6) PDF
 
 Determine whether an added annotation was UI-drawn, imported, or existing using the [annotationAddMode](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationadd) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselect) event.
 

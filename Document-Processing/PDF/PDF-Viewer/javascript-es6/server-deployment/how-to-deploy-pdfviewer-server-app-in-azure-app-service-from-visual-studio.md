@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy TypeScript PDF Viewer server app to Azure App Service from Visual Studio
-description: Publish the Syncfusion PDF Viewer Web API from Visual Studio to Azure App Service and connect it to the TypeScript PDF Viewer client.
+title: How to Deploy the PDF Viewer Server App to Azure App | Syncfusion
+description: Deploy the Syncfusion PDF Viewer server app to Azure App Service directly from Visual Studio for a JavaScript (ES6) application.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Deploy PDF Viewer server app to Azure App Service from Visual Studio
+# How to Deploy the PDF Viewer Server App to Azure App Service in
 
 Publish the Syncfusion PDF Viewer Web API from Visual Studio to Azure App Service to host the backend required by the TypeScript PDF Viewer client. This workflow packages the project, deploys it to Azure, and provides a public endpoint for the component’s `serviceUrl`.
 

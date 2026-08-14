@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Measurement annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the measurement annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in ASP.NET MVC PDF Viewer control
+# Measurement Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 

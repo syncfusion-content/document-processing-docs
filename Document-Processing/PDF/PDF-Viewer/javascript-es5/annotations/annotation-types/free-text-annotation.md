@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Free Text annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Free Text Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the JavaScript (ES5) PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in JavaScript PDF Viewer
+# Free Text Annotation in JavaScript (ES5) PDF Viewer
 
 Free Text is a text box annotation used to place formatted text anywhere on the page for notes, labels, or callouts.
 

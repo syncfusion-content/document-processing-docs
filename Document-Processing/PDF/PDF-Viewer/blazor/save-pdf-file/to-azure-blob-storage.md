@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF file to Azure Blob Storage in Blazor SfPdfViewer | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Blazor SfPdfViewer component, including setup, and persistence workflow.
+title: Save PDF file to Azure Blob Storage in Blazor PDF Viewer | Syncfusion
+description: Learn how to save PDF files to Azure Blob Storage using the Blazor PDF Viewer , including setup, and persistence workflow.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Save PDF file to Azure Blob Storage in Blazor SfPdfViewer Component
+# Save PDF file to Azure Blob Storage in Blazor PDF Viewer 
 
 Follow these steps to save a PDF from the SfPdfViewer to Azure Blob Storage.
 

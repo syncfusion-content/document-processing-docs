@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Delete an annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn how to delete a specific annotation in the JavaScript PDF Viewer using the deleteAnnotationById method.
+title: How to Delete an Annotation in JavaScript (ES5) PDF | Syncfusion
+description: Delete a specific annotation in the JavaScript (ES5) PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Delete an annotation in JavaScript PDF Viewer
+# How to Delete an Annotation in JavaScript (ES5) PDF Viewer
 
 Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 

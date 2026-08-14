@@ -1,13 +1,13 @@
 ---
-title: Annotations Events in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Event in ASP.NET MVC PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the ASP.NET MVC PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations Events in ASP.NET MVC PDF Viewer control
+# Annotation Events in ASP.NET MVC PDF Viewer
 
 The PDF Viewer component triggers various events based on user interactions and changes in the component's state. These events can be used to perform actions when a specific event occurs. This section describes the events available in the PDF Viewer component.
 

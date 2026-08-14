@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Initialize PDF Viewing Services in MVC Application | Syncfusion
-description: Learn how to create an ASP.NET MVC Web API service for the TypeScript PDF Viewer to handle server-side processing for rendering and related operations.
+title: How to Create a Custom PDF Viewer Service in JavaScript | Syncfusion
+description: Create a custom PDF Viewer web service for the JavaScript (ES6) PDF Viewer, with code samples and configuration tips for common setups.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Configure and Register a PDF Viewer Service in ASP.NET MVC
+# How to Create a Custom PDF Viewer Service in JavaScript (ES6) PDF
 
 The JavaScript PDF Viewer requires a server-side service to process PDF documents for rendering. This document explains how to create an ASP.NET MVC Web API service that performs server-side preprocessing and operations used by the client.
 

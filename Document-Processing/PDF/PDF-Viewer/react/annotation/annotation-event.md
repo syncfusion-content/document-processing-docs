@@ -1,6 +1,6 @@
 ---
-title: Annotations Events in React Pdfviewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Event in React PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the React PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation events in React PDF Viewer component
+# Annotation Events in React PDF Viewer
 
 The PDF Viewer raises events for annotation and signature interactions (add, remove, move, resize, select, etc.). Handle these events to integrate custom workflows, telemetry, or UI updates. Code samples below demonstrate typical handlers — code blocks are preserved unchanged.
 

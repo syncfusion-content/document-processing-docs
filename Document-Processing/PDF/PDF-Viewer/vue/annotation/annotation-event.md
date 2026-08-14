@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation Events in Vue PDF Viewer control | Syncfusion
-description: Learn here all about Annotation Events in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Event in Vue PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the Vue PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer annotation events in Vue
+# Annotation Events in Vue PDF Viewer
 
 The PDF Viewer control supports several annotation events that enable applications to respond to user interactions—adding, moving, resizing, selecting, and removing annotations. Examples in this article reference the resource URL shown in the code samples.
 

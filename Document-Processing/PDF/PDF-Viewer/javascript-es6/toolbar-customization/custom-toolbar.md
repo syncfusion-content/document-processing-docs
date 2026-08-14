@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom Toolbar in TypeScript PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Create a custom toolbar in the JavaScript (ES6) PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Toolbar in TypeScript PDF Viewer
+# Custom Toolbar in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 

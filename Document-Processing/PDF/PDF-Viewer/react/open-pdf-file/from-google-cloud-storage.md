@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Google Cloud Storage in React PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Cloud Storage in the Syncfusion React PDF Viewer component using a server-backed approach.
+title: From Google Cloud Storage in React PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Cloud Storage in the React PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from Google Cloud Storage in React
+# Open PDF from Google Cloud Storage in React PDF Viewer
 
 These steps describe how to load a PDF stored in Google Cloud Storage into the React PDF Viewer using a server-backed web service.
 

@@ -1,12 +1,12 @@
 ---
-title: Overview of Vue PDF Viewer Component | Syncfusion
-description: Learn here all about the Syncfusion Vue PDF Viewer, features, its capabilities, and supported platforms.
+title: About Syncfusion Vue PDF Viewer Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio Vue PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of Vue PDF Viewer Component
+# About Syncfusion Vue PDF Viewer Control
 
 The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight, modular viewer for displaying and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 

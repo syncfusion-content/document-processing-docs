@@ -1,13 +1,13 @@
 ---
-title: Annotations Events in JavaScript PDF Viewer control | Syncfusion
-description: Learn here all about Annotations Events in Syncfusion JavaScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Annotation Event in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the JavaScript (ES5) PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation events in JavaScript PDF Viewer
+# Annotation Events in JavaScript (ES5) PDF Viewer
 
 This page documents annotation-related events for the JavaScript PDF Viewer and when to use them. The PDF Viewer triggers events for user interactions and component state changes; use these events to run handlers that respond to specific occurrences. The sections below list each event, the associated event-args type, and an example handler.
 

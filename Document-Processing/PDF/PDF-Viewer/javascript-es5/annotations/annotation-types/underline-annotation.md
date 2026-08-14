@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Underline text markup annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Underline Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Underline annotations in the JavaScript (ES5) PDF Viewer to highlight text with a horizontal line below it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline annotation in JavaScript PDF Viewer
+# Underline Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Underline annotations on text. You can add underlines via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 

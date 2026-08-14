@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in Angular | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion Angular PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Form Designer in Angular PDF Viewer | Syncfusion
+description: Use the Form Designer in the Angular PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

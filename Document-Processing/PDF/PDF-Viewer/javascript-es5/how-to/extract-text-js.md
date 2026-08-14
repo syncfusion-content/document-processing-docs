@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use extractText in JavaScript PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Syncfusion JavaScript PDF Viewer to extract text and bounds from one or more pages.
+title: How to Use the ExtractText Method in JavaScript (ES5) | Syncfusion
+description: Use the extractText method in the JavaScript (ES5) PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text in the JavaScript PDF Viewer
+# How to Use the ExtractText Method in JavaScript (ES5) PDF Viewer
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 

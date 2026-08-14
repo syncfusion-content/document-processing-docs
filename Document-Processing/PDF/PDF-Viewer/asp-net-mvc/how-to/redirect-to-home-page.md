@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redirect to home page after PDF form submit in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to redirect to a home page after submitting PDF forms using the ExportSuccess event in the Syncfusion ASP.NET MVC PDF Viewer.
+title: How to Redirect to the Home Page in ASP.NET MVC PDF | Syncfusion
+description: Redirect the user to the home page from the ASP.NET MVC PDF Viewer after a print, save, or download action completes successfully.
 platform: document-processing
 control: PDF Viewer
 publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Redirect to a home page after submitting PDF forms
+# How to Redirect to the Home Page in ASP.NET MVC PDF Viewer
 
 Use the Syncfusion ASP.NET MVC PDF Viewer’s [**ExportSuccess**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExportSuccess) event to redirect users to a home page after form submission. The **ExportSuccess** event fires when form field export completes successfully. In the handler, navigate to the target page (for example, the home page) using window.open with the _self target to replace the current page.
 

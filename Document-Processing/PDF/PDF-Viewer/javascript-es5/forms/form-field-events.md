@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Field Events in JavaScript PDF Viewer control | Syncfusion
-description: Learn here all about different form field events in the Syncfusion JavaScript PDF Viewer component and more.
+title: Form Field Events in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Subscribe to form field events in the JavaScript (ES5) PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form field events in JavaScript PDF Viewer
+# Form Field Events in JavaScript (ES5) PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** exposes form field events that let developers react to user interactions, respond to form changes, and implement custom business logic. Use these events for validation, UI updates, logging, and workflow automation.
 

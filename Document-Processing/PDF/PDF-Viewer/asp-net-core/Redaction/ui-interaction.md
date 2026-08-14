@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in Core PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion ASP.NET Core PDF Viewer component.
+title: Ui Interaction in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in ASP.NET Core PdfViewer
+# Ui Interaction in ASP.NET Core PDF Viewer
 
 ## Add redaction annotations from the toolbar
 

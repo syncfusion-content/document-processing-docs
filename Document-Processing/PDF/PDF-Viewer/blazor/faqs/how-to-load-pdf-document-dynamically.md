@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load PDF documents dynamically in Blazor SfPdfViewer| Syncfusion
-description: Learn here all about how to load PDF documents dynamically in Blazor SfPdfViewer component and more.
+title: How to Load PDF documents dynamically in Blazor PDF Viewer| Syncfusion
+description: Learn here all about how to load PDF documents dynamically in Blazor PDF Viewer component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Load PDF documents dynamically in Blazor SfPdfViewer Component
+# How to Load PDF documents dynamically in Blazor PDF Viewer
 
 In many scenarios, a PDF document must be switched or reloaded after the initial load. Use the [LoadAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_String_System_String_) method of the SfPdfViewer component to load a PDF at runtime. The `LoadAsync` method accepts a data URI string (for base64 content) or an accessible file/URL path as its first argument, and an optional document password as the second argument.
 

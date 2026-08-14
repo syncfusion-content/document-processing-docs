@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create form fields in the Blazor SfPdfViewer | Syncfusion
-description: How to add PDF form fields in the Blazor SfPdfViewer using the Form Designer UI and the API.
+title: Create form fields in the Blazor PDF Viewer | Syncfusion
+description: How to add PDF form fields in the Blazor PDF Viewer using the Form Designer UI and the API.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF Form Fields in Blazor SfPdfViewer
+# Create PDF Form Fields in Blazor PDF Viewer
 
 Add new form fields visually with the Form Designer UI or programmatically using the Blazor SfPdfViewer API. This guide covers both methods and includes a runnable example and per‑field samples.
 

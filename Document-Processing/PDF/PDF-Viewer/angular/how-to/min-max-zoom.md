@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Minimum and Maximum Zoom in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Minimum and Maximum Zoom in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Configure MinZoom and MaxZoom in Angular PDF | Syncfusion
+description: Configure the minimum and maximum zoom levels in the Angular PDF Viewer using minZoom and maxZoom to control the zoom range for users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Minimum and maximum zoom
+# How to Configure MinZoom and MaxZoom in Angular PDF Viewer
 
 The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 

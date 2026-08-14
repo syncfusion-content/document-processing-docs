@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink Eraser in JavaScript PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion JavaScript PDF Viewer with UI and programmatic control.
+title: Ink Eraser in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the JavaScript (ES5) PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink Eraser in JavaScript PDF Viewer
+# Ink Eraser in JavaScript (ES5) PDF Viewer
 
 ## Overview
 

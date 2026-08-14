@@ -1,12 +1,12 @@
 ---
-title: Overview of ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about the Syncfusion ASP.NET Core PDF Viewer, its capabilities, and supported platforms.
+title: About Syncfusion ASP.NET Core PDF Viewer Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio ASP.NET Core PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of ASP.NET Core PDF Viewer
+# About Syncfusion ASP.NET Core PDF Viewer Control
 
 The [`ASP.NET Core`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a lightweight, modular component for viewing and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in JavaScript PDF Viewer | Syncfusion
-description: Comprehensive list of events in the Syncfusion JavaScript PDF Viewer with descriptions, event arguments, and usage examples to integrate custom logic.
+title: Event in JavaScript (ES5) PDF Viewer | Syncfusion
+description: A complete list of events in the JavaScript (ES5) PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in JavaScript PDF Viewer
+# Events in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer component triggers events for creation, page navigation, document lifecycle, context menu interactions, comments, bookmarks, download and export, hyperlinks, annotation import/export, custom keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into application workflows.
 
