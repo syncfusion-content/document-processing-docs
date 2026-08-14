@@ -37,12 +37,15 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Compare-two-Word-documents/.NET/Compare-Word-documents/Program.cs" %}
 
-//Load the original document.
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
 using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
 {
     using (WordDocument originalDocument = new WordDocument(originalDocumentStreamPath, FormatType.Docx))
     {
-        //Load the revised document.
+        // Load the revised document.
         using (FileStream revisedDocumentStreamPath = new FileStream("Data/RevisedDocument.docx", FileMode.Open, FileAccess.Read))
         {
             using (WordDocument revisedDocument = new WordDocument(revisedDocumentStreamPath, FormatType.Docx))
@@ -50,38 +53,48 @@ using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocu
                 // Compare the original and revised Word documents.
                 originalDocument.Compare(revisedDocument);
 
-                //Save the Word document to MemoryStream
-                MemoryStream stream = new MemoryStream();
-                originalDocument.Save(stream, FormatType.Docx);
+                // Save the Word document to MemoryStream.
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    originalDocument.Save(stream, FormatType.Docx);
+                    // Save the stream to a file.
+                    File.WriteAllBytes("Result.docx", stream.ToArray());
+                }
             }
-        }                 
-    }                           
+        }
+    }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the original document.
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
 using (WordDocument originalDocument = new WordDocument("Data/OriginalDocument.docx", FormatType.Docx))
 {
-    //Load the revised document.
+    // Load the revised document.
     using (WordDocument revisedDocument = new WordDocument("Data/RevisedDocument.docx", FormatType.Docx))
-   {
+    {
         // Compare the original and revised Word documents.
         originalDocument.Compare(revisedDocument);
-        //Save the Word document.
-        originalDocument.Save("Result.docx");          
+        // Save the Word document.
+        originalDocument.Save("Result.docx");
     }
 }
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.DocIO
+Imports Syncfusion.DocIO.DLS
+
 ' Load the original document.
 Using originalDocument As New WordDocument("Data/OriginalDocument.docx", FormatType.Docx)
     ' Load the revised document.
     Using revisedDocument As New WordDocument("Data/RevisedDocument.docx", FormatType.Docx)
-        ' Compare the original document and revised documents.
+        ' Compare the original and revised Word documents.
         originalDocument.Compare(revisedDocument)
         ' Save the Word document.
         originalDocument.Save("Result.docx")
@@ -97,61 +110,74 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set Author and Date 
 
-Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default setting for the "author" field is "Author", and the default setting for the "dateTime" field is the current time.
+Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default author is "Author" and the default date/time is the current time. The following sample uses an overload of the [`Compare`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) method that accepts an author and date.
 
 The following code example shows how to set the author and date for revision while comparing two Word documents.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Set-author-and-date/.NET/Program.cs" %}
 
-//Load the original document.
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
 using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
 {
     using (WordDocument originalDocument = new WordDocument(originalDocumentStreamPath, FormatType.Docx))
     {
-        //Load the revised document.
+        // Load the revised document.
         using (FileStream revisedDocumentStreamPath = new FileStream("Data/RevisedDocument.docx", FileMode.Open, FileAccess.Read))
         {
             using (WordDocument revisedDocument = new WordDocument(revisedDocumentStreamPath, FormatType.Docx))
             {
                 // Compare the original and revised Word documents.
-                originalDocument.Compare(revisedDocument,"Nancy Davolio", DateTime.Now.AddDays(-1));
+                originalDocument.Compare(revisedDocument, "Nancy Davolio", DateTime.Now.AddDays(-1));
 
-                //Save the Word document to MemoryStream
-                MemoryStream stream = new MemoryStream();
-                originalDocument.Save(stream, FormatType.Docx);
+                // Save the Word document to MemoryStream.
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    originalDocument.Save(stream, FormatType.Docx);
+                    // Save the stream to a file.
+                    File.WriteAllBytes("Result.docx", stream.ToArray());
+                }
             }
-        }                 
-    }                           
+        }
+    }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the original document.
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
 using (WordDocument originalDocument = new WordDocument("Data/OriginalDocument.docx", FormatType.Docx))
 {
-    //Load the revised document.
+    // Load the revised document.
     using (WordDocument revisedDocument = new WordDocument("Data/RevisedDocument.docx", FormatType.Docx))
-   {
-        // Compare the original document and revised documents.
-        originalDocument.Compare(revisedDocument,"Nancy Davolio", DateTime.Now.AddDays(-1));
-        //Save the Word document.
-        originalDocument.Save("Result.docx");          
+    {
+        // Compare the original and revised Word documents.
+        originalDocument.Compare(revisedDocument, "Nancy Davolio", DateTime.Now.AddDays(-1));
+        // Save the Word document.
+        originalDocument.Save("Result.docx");
     }
 }
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Open the original Word document.
-Using originalDocument As New WordDocument(originalFilePath, FormatType.Docx)
-    ' Open the revised Word document.
-    Using revisedDocument As New WordDocument(revisedFilePath, FormatType.Docx)
-        ' Compare the original document with the revised document.
+Imports Syncfusion.DocIO
+Imports Syncfusion.DocIO.DLS
+
+' Load the original document.
+Using originalDocument As New WordDocument("Data/OriginalDocument.docx", FormatType.Docx)
+    ' Load the revised document.
+    Using revisedDocument As New WordDocument("Data/RevisedDocument.docx", FormatType.Docx)
+        ' Compare the original and revised Word documents.
         originalDocument.Compare(revisedDocument, "Nancy Davolio", DateTime.Now.AddDays(-1))
         ' Save the Word document.
-        originalDocument.Save(resultFilePath)
+        originalDocument.Save("Result.docx")
     End Using
 End Using
 
@@ -176,25 +202,30 @@ The following code example illustrates how to compare two Word documents by igno
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Compare-Word-documents/Ignore-format-changes/.NET/Ignore-format-changes/Program.cs" %}
 
-//Load the original document
-using (FileStream originalDocumentStreamPath = new FileStream("OriginalDocument.docx", FileMode.Open, FileAccess.Read))
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
+using (FileStream originalDocumentStreamPath = new FileStream("Data/OriginalDocument.docx", FileMode.Open, FileAccess.Read))
 {
     using (WordDocument originalDocument = new WordDocument(originalDocumentStreamPath, FormatType.Docx))
     {
-        //Load the revised document
-        using (FileStream revisedDocumentStreamPath = new FileStream("RevisedDocument.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        // Load the revised document.
+        using (FileStream revisedDocumentStreamPath = new FileStream("Data/RevisedDocument.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
         {
-            using (WordDocument revisedDocument = new WordDocument(revisedDocumentStreamPath, FormatType.Automatic))
+            using (WordDocument revisedDocument = new WordDocument(revisedDocumentStreamPath, FormatType.Docx))
             {
-                //Set the Comparison option to detect format changes, whether to detect format changes while comparing two Word documents.
+                // Set whether to detect format changes while comparing two Word documents.
                 ComparisonOptions compareOptions = new ComparisonOptions();
                 compareOptions.DetectFormatChanges = false;
-                //Compare the original document with the revised document
+                // Compare the original and revised Word documents.
                 originalDocument.Compare(revisedDocument, "Syncfusion", DateTime.Now, compareOptions);
-                //Save the Word document to MemoryStream
+                // Save the Word document to MemoryStream.
                 using (MemoryStream stream = new MemoryStream())
                 {
                     originalDocument.Save(stream, FormatType.Docx);
+                    // Save the stream to a file.
+                    File.WriteAllBytes("Result.docx", stream.ToArray());
                 }
             }
         }
@@ -204,36 +235,42 @@ using (FileStream originalDocumentStreamPath = new FileStream("OriginalDocument.
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Load the original document 
-using (WordDocument originalDocument = new WordDocument("OriginalDocument.docx"))
+using Syncfusion.DocIO;
+using Syncfusion.DocIO.DLS;
+
+// Load the original document.
+using (WordDocument originalDocument = new WordDocument("Data/OriginalDocument.docx", FormatType.Docx))
 {
-    //Load the revised document
-    using (WordDocument revisedDocument = new WordDocument("RevisedDocument.docx"))
+    // Load the revised document.
+    using (WordDocument revisedDocument = new WordDocument("Data/RevisedDocument.docx", FormatType.Docx))
     {
-        //Set the Comparison option detect format changes, whether to detect format changes while comparing two Word documents.
+        // Set whether to detect format changes while comparing two Word documents.
         ComparisonOptions compareOptions = new ComparisonOptions();
         compareOptions.DetectFormatChanges = false;
-        //Compare the original document with the revised document
+        // Compare the original and revised Word documents.
         originalDocument.Compare(revisedDocument, "Syncfusion", DateTime.Now, compareOptions);
-        //Save the Word document.
-        originalDocument.Save(output);
-    }                 
-} 
+        // Save the Word document.
+        originalDocument.Save("Result.docx");
+    }
+}
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Load the original document
-Using originalDocument As New WordDocument("OriginalDocument.docx")
-    'Load the revised document
-    Using revisedDocument As New WordDocument("RevisedDocument.docx")
-        'Set the Comparison option to detect format changes
+Imports Syncfusion.DocIO
+Imports Syncfusion.DocIO.DLS
+
+' Load the original document.
+Using originalDocument As New WordDocument("Data/OriginalDocument.docx", FormatType.Docx)
+    ' Load the revised document.
+    Using revisedDocument As New WordDocument("Data/RevisedDocument.docx", FormatType.Docx)
+        ' Set whether to detect format changes while comparing two Word documents.
         Dim compareOptions As New ComparisonOptions()
         compareOptions.DetectFormatChanges = False
-        'Compare the original document with the revised document
+        ' Compare the original and revised Word documents.
         originalDocument.Compare(revisedDocument, "Syncfusion", DateTime.Now, compareOptions)
-        'Save the Word document
-        originalDocument.Save(output)
+        ' Save the Word document.
+        originalDocument.Save("Result.docx")
     End Using
 End Using
 

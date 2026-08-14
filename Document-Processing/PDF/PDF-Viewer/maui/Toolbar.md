@@ -119,6 +119,8 @@ The names of these toolbars and their description are listed in the following se
 
 ![Desktop Annotations Toolbar](Images/AnnotationsToolbar.png)
 
+
+
 <table>
 <tr>
 <td>Keys</td>
