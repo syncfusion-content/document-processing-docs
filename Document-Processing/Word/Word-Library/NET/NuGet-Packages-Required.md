@@ -1,4 +1,4 @@
----
+﻿---
 title: NuGet Packages for .NET Word (DocIO) library | Syncfusion
 description: Learn the NuGet packages required to use .NET Word (DocIO) library in various platforms and frameworks without Microsoft Word or interop dependencies.
 platform: document-processing
@@ -115,7 +115,7 @@ Install-Package Syncfusion.DocIO.NET
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -264,7 +264,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -307,7 +307,7 @@ Install-Package Syncfusion.Xamarin.DocIORenderer
 </table>
 
 N> 1. Please refer to the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
-N> 2. From v32.1.19, the dependent package SkiaSharp is upgraded from version 3.116.1 to 3.119.1, and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.119.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 packages for converting Word documents to PDF in Linux environments.
+N> 2. From v32.1.19, the dependent package SkiaSharp is upgraded from version 3.116.1 to 4.150.1, and it is mandatory to use SkiaSharp.NativeAssets.Linux v4.150.1 and HarfBuzzSharp.NativeAssets.Linux v14.2.1.1 packages for converting Word documents to PDF in Linux environments.
 N> 3. DocIO supports Word to PDF conversion in UWP applications using DocIORenderer. For further information, refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp).
 
 ### Additional NuGet packages required for Linux
@@ -326,8 +326,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -339,7 +339,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -451,7 +451,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -509,8 +509,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -522,7 +522,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -600,7 +600,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 

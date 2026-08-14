@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert Word to PDF in AWS Lambda | Syncfusion
 description: Convert Word to PDF in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
@@ -28,7 +28,7 @@ Step 2: Select **Blueprint as Empty Function** and click **Finish**.
 Step 3: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)
+* [SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
 ![Install SkiaSharp.NativeAssets.Linux.NoDependencies NuGet Package](AWS_Images/Lambda_Images/SkiaSharp-Nuget-Package-WordtoPDF.png)

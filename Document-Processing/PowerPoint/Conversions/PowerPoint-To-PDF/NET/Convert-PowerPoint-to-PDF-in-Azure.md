@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert PPTX to PDF in Microsoft Azure | Syncfusion
 description: Learn how to convert a PPTX to PDF in Azure services using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
@@ -32,7 +32,7 @@ NuGet packages required<br/></th></tr></thead>
 {{'[App Service (Linux)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-app-service-linux)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)' |markdownify}} <br/></td></tr>
 <tr>
 <td>
 {{'[Azure Functions v1](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-functions-v1)' | markdownify}}
@@ -48,5 +48,5 @@ NuGet packages required<br/></th></tr></thead>
 {{'[Azure Functions (Flex Consumption)](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure-functions-flex-consumption)' | markdownify}}
 <br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)' | markdownify}}<br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)' | markdownify}}<br/></td></tr>
 </table>

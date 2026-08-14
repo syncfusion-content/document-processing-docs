@@ -1,4 +1,4 @@
----
+﻿---
 title: Required NuGet Packages for PowerPoint Library | Syncfusion
 description: This section illustrates the NuGet packages required to use Syncfusion PowerPoint Library (Essential Presentation) in various platforms and frameworks
 platform: document-processing
@@ -7,6 +7,7 @@ documentation: UG
 ---
 # NuGet Packages Required for PowerPoint Library
 
+## Working with PowerPoint Presentations
 To work with PowerPoint Presentations, install the following NuGet packages in your application:
 
 <table>
@@ -215,8 +216,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -228,7 +229,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -355,8 +356,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -368,7 +369,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
