@@ -72,16 +72,16 @@ export default {
 <tr>
 <td>Server-side C#</td>
 <td>
-{% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% tabs %}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 {% endhighlight %}
 {% endtabs %}
 </td>
 <td>
-{% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% tabs %}
+{% highlight c# tabtitle="Import" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 sfdtDocument.OptimizeSfdt = false;
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
@@ -92,15 +92,15 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 <tr>
 <td>Server-side Java</td>
 <td>
-{% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% tabs %}
+{% highlight java tabtitle="Import" %}
 String sfdtDocument = WordProcessorHelper.load(stream, formatType);
 {% endhighlight %}
 {% endtabs %}
 </td>
 <td>
-{% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% tabs %}
+{% highlight java tabtitle="Import" %}
 String sfdtDocument = WordProcessorHelper.load(stream, formatType, false);
 {% endhighlight %}
 {% endtabs %}
@@ -154,8 +154,8 @@ export default {
 <tr>
 <td>Server-side C#</td>
 <td>
-{% tabs %} 
-{% highlight c# tabtitle="Import"%}
+{% tabs %}
+{% highlight c# tabtitle="Import" %}
 using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
 sfdtDocument = WordDocument.Load(docIODocument);
 sfdtDocument.OptimizeSfdt = false;
@@ -168,8 +168,8 @@ string oldSfdt = JsonSerializer.Serialize(sfdtDocument);
 <tr>
 <td>Server-side Java</td>
 <td>
-{% tabs %} 
-{% highlight java tabtitle="Import"%}
+{% tabs %}
+{% highlight java tabtitle="Import" %}
 WordDocument docIODocument = WordProcessorHelper.save(optimizedSfdt);
 String oldSfdt = WordProcessorHelper.load(docIODocument, false);
 {% endhighlight %}

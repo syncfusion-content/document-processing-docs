@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert text or image in table programmatically in Vue Document editor component | Syncfusion
+title: How to Insert Text or Image in Table in Vue DOCX Editor | Syncfusion
 description: Learn here all about Insert text or image in table programmatically in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Insert text or image in table programmatically 
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text or image in table programmatically in Vue Document editor component
+# How to Insert Text or Image in Table in Vue DOCX Editor
 
 Using [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) APIs, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../image#images) in a [`table`](../table#create-a-table) programmatically based on your requirement.
 
