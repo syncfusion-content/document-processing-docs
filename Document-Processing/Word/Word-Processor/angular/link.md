@@ -152,11 +152,11 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit a hyperlink|
 
-## Online Demo
+## Online demo
 
 Explore how to insert and manage hyperlinks in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/links-bookmarks).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Hyperlink dialog](./dialog#hyperlink-dialog)

@@ -5,6 +5,7 @@ description:  Learn how to import PDF form field data (FDF, XFDF, JSON) using th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import PDF Form Data into MVC PDF Viewer

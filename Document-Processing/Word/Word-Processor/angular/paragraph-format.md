@@ -87,7 +87,7 @@ this.documentEditor.selection.paragraphFormat.spaceBeforeAuto = true;
 this.documentEditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
-N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N> If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
 ## Paragraph border
 
@@ -161,11 +161,11 @@ The following sample demonstrates the paragraph formatting options using a toolb
   
 {% previewsample "/document-processing/samples/document-editor/angular/paragraph-formatting-cs1" %}
 
-## Online Demo
+## Online demo
 
 Explore how to apply paragraph formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/paragraph-formatting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Paragraph dialog](./dialog#paragraph-dialog)

@@ -26,7 +26,7 @@ domainurl: ##DomainURL##
 
 Image files are internally converted to base64 strings, whereas online images are preserved as URLs.
 
-N>: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N> EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 
 ## Image resizing
 
@@ -43,7 +43,7 @@ this.documentEditor.selection.imageFormat.width = 800;
 this.documentEditor.selection.imageFormat.height = 800;
 ```
 
-N>: Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
+N> Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
 
 ## Text wrapping style
 
@@ -53,6 +53,6 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 DocumentEditor preserves the position properties of the image and displays the image based on these position properties. It does not support modifying the position properties. The image will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

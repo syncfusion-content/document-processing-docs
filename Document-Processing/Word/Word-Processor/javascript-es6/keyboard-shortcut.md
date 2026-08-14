@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcut in JavaScript (ES6) DOCX Editor control | Syncfusion
+description: Learn here all about Keyboard shortcut in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in JavaScript (ES6) Document editor control
+# Keyboard shortcut in JavaScript (ES6) Document Editor control
 
 ## Text formatting
 
@@ -21,8 +21,8 @@ The following table lists the default keyboard shortcuts in [TypeScript DOCX Edi
 |Ctrl + U | Toggles the underline property of selected text.|
 |Ctrl + + | Toggles the subscript formatting of selected text.|
 |Ctrl + Shift + + | Toggles the superscript formatting of selected contents.|
-| Ctrl + } | Increases the actual font size of selected text by one point.|
-| Ctrl + { | Decreases the actual font size of selected text by one point.|
+| Ctrl + } | Increases the font size of selected text by one point.|
+| Ctrl + { | Decreases the font size of selected text by one point.|
 
 ## Paragraph formatting
 
@@ -30,17 +30,17 @@ The following table lists the default keyboard shortcuts for formatting the para
 
 | Key combination | Description |
 |-----------------|-------------|
-|Ctrl + E | Selected paragraphs are center aligned.|
+|Ctrl + E | Selected paragraphs are center-aligned.|
 |Ctrl + J |Selected paragraphs are justified.|
-|Ctrl + L | Selected paragraphs are left aligned.|
-|Ctrl + R | Selected paragraphs are right aligned.|
-|Ctrl + 1 | Single line spacing is applied for selected paragraphs.|
-|Ctrl + 5 | 1.5 line spacing is applied for selected paragraphs.|
-|Ctrl + 2 | Double spacing is applied for selected paragraphs.|
-|Ctrl + 0 | No spacing is applied before the selected paragraphs.|
+|Ctrl + L | Selected paragraphs are left-aligned.|
+|Ctrl + R | Selected paragraphs are right-aligned.|
+|Ctrl + 1 | Applies single line spacing to the selected paragraphs.|
+|Ctrl + 5 | Applies 1.5 line spacing to the selected paragraphs.|
+|Ctrl + 2 | Applies double line spacing to the selected paragraphs.|
+|Ctrl + 0 | Applies no spacing before the selected paragraphs.|
 |Ctrl + M | Increases the left indent of selected paragraphs by a factor of 36 points.|
 |Ctrl + Shift + M | Decreases the left indent of selected paragraphs by a factor of 36 points.|
-|Ctrl + * | Show/Hide the hidden characters like spaces, tab, paragraph marks, and breaks.|
+|Ctrl + * | Shows or hides hidden characters such as spaces, tabs, paragraph marks, and breaks.|
 
 ## Clipboard
 
@@ -80,7 +80,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Shift + Down arrow| Extends selection one line downward.|
 |Shift + Up arrow| Extends selection one line upward.|
 |Shift + Home| Extends selection to the start of a line.|
-|Shift + End| Extends Selection to the end of a line.|
+|Shift + End| Extends selection to the end of a line.|
 |Ctrl + A| Extends selection to the entire document.|
 |Ctrl + Shift + Left arrow| Extends selection one word to the left.|
 |Ctrl + Shift + Right arrow| Extends selection one word to the right.|
@@ -96,11 +96,11 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + F| Opens options pane.|
 |Ctrl + H| Opens replace tab in options pane.|
 
-## Create, Save and Print document
+## Create, Save, and Print document
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + N| Opens empty document.|
+|Ctrl + N| Opens an empty document.|
 |Ctrl + S| Saves the document in SFDT format.|
 |Ctrl + P| Prints the document.|
 

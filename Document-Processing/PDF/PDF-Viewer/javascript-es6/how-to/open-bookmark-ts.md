@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open or close the Bookmark pane programmatically | Syncfusion
+title: Programmatically Show or Hide the Bookmark Pane | Syncfusion
 description: Learn how to open and close the Bookmark pane programmatically in the Syncfusion TypeScript PDF Viewer using openBookmarkPane and closeBookmarkPane.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open or close the Bookmark pane programmatically
+# Programmatically Show or Hide the Bookmark Pane
 
 The PDF Viewer exposes APIs to open and close the bookmark pane programmatically. Use `openBookmarkPane()` and `closeBookmarkPane()` to control the bookmark pane from application code.
 
@@ -36,7 +36,7 @@ To close the Bookmark pane programmatically, use the following code:
 
 ```ts
 document.getElementById('closeBookmark').addEventListener('click', () => {
-  // close Bookmark pane
+  // Close Bookmark pane
   viewer.bookmarkViewModule.closeBookmarkPane();
 });
 ```

@@ -20,42 +20,76 @@ The **PDF Viewer** lets you import values into interactive form fields in the cu
 
 N> For server-backed viewers, set `serviceUrl` before importing. The method triggers import events (`importStart`, `importSuccess`, `importFailed`); see the import/export events page for recommended handling.
 
-### Import FDF
+### Import FDF, XFDF, and JSON
+
+The following example demonstrates importing form field data in different formats:
 
 ```html
-<button id="importFdf">Import FDF</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+<!-- Action Buttons for Import -->
+<div style="margin-bottom: 12px; display: flex; gap: 8px;">
+  <button id="importFdf">Import FDF</button>
+  <button id="importXfdf">Import XFDF</button>
+  <button id="importJson">Import JSON</button>
+</div>
+
+<!-- PDF Viewer Container -->
+<div id="PdfViewer" style="height: 640px; width: 100%"></div>
 ```
 
 ```js
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the viewer
+var viewer = new ej.pdfviewer.PdfViewer();
+viewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+viewer.resourceUrl  = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+viewer.appendTo('#PdfViewer');
+
+// Helper: open a native file picker, read the chosen file as text,
+// then call viewer.importFormFields(stringData, format).
+function importFile(format) {
+    var input = document.createElement('input');
+    input.type   = 'file';
+    input.accept = '.' + format.toLowerCase(); // .fdf | .xfdf | .json
+    input.onchange = function (e) {
+        var file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        var reader = new FileReader();
+        reader.onload = function (ev) {
+            // ev.target.result is a STRING — what importFormFields actually wants
+            viewer.importFormFields(ev.target.result, format);
+        };
+        reader.readAsText(file);
+    };
+    input.click();
+}
+
+// --- Import Form Fields ---
 document.getElementById('importFdf').addEventListener('click', function () {
-  // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Fdf');
+    importFile('Fdf');
 });
-```
 
-### Import XFDF
-
-```html
-<button id="importXfdf">Import XFDF</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
-```
-```js
 document.getElementById('importXfdf').addEventListener('click', function () {
-  // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Xfdf');
+    importFile('Xfdf');
 });
-```
 
-### Import JSON
-
-```html
-<button id="importJson">Import JSON</button>
-```
-```js
 document.getElementById('importJson').addEventListener('click', function () {
-  // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', 'Json');
+    importFile('Json');
 });
 ```
 

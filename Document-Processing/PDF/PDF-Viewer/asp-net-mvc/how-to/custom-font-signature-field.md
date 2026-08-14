@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Change font family in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the Syncfusion ASP.NET MVC PDF Viewer using typeSignatureFonts and typeInitialFonts.
+description: Learn how to customize the font family for type signatures and initials in the Syncfusion ASP.NET MVC PDF Viewer using typeSignatureFonts and typeInitialFonts.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -16,7 +15,7 @@ Change the font family for Type Signature and Initial fields by adding a stylesh
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code to apply custom fonts to the Signature field.
 

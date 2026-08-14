@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in Angular Document Editor component
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
 Two types of save APIs are provided as mentioned below.
 
@@ -196,10 +196,10 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 }
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to export Word documents in various formats using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/advanced-exporting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

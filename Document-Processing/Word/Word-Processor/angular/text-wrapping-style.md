@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 
-## In-Line with Text
+## In-Line with text
 
 In this option, the image or shape is placed on the same line surrounded by text like any other word or letter. This image or shape will be automatically moved along with the text while editing, whereas the other options denote that the image or shape stays in a fixed position while the text shifts and wraps around it.
 
 ![view of image with inline wrapping style in DocumentEditor](images/Text-Wrapping-Style_images/inline-textwrapping.PNG)
 
-## In Front of Text
+## In front of text
 
 In this option, the image or shape is placed in front of the text. This can be used to overlay an image over text or to add a shape to highlight a part in a paragraph.
 

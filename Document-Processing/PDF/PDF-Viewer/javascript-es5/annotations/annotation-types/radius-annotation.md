@@ -104,7 +104,7 @@ document.getElementById('setNone').addEventListener('click', function() {
 
 ### Add a radius annotation programmatically
 
-Add radius annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#annotation) method.
+Add radius annotations programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 ```html
 <button id="addRadiusAnnotation">Add Radius annotation programmatically</button>
