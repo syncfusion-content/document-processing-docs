@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations API in JavaScript PDF Viewer | Syncfusion
-description: Learn how to read and configure annotations using APIs in the Syncfusion JavaScript PDF Viewer.
+description: Learn how to read and configure annotations using APIs in the Syncfusion JavaScript PDF Viewer for enhanced document interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -1334,11 +1334,11 @@ pdfviewer.appendTo('#PdfViewer');
 
 - [Annotation Overview](../overview)
 - [Annotation Types](../annotations/annotation-types/area-annotation)
-- [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
-- [Export and Import Annotation](../../annotations/export-import/export-annotation)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Customize Annotation](../annotations/customize-annotation)
+- [Remove Annotation](../annotations/delete-annotation)
+- [Handwritten Signature](../annotations/signature-annotation)
+- [Export and Import Annotation](../annotations/export-import/export-annotation)
+- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
+- [Annotation Events](../annotations/annotation-event)

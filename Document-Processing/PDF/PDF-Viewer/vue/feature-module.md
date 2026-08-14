@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature modules in Vue PDF viewer Control
+# Feature modules in Vue PDF Viewer Control
 
-The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
+The Vue PDF Viewer exposes functionality as feature modules that can be imported selectively. Import and register only the modules required by an application to keep bundle sizes small and enable specific capabilities on demand. The following feature modules are available:
 
 * **Toolbar**: Built-in toolbar for user interaction.
 * **Magnification**: Zoom and fit options for improved viewing.
@@ -42,8 +42,9 @@ N> In addition to registering the required modules, enable the corresponding com
 |Annotation|`<ejs-pdfviewer :enableAnnotation="true" ></ejs-pdfviewer>`|
 |FormFields|`<ejs-pdfviewer :enableFormFields="true" ></ejs-pdfviewer>`|
 |FormDesigner|`<ejs-pdfviewer :enableFormDesigner="true" ></ejs-pdfviewer>`|
+|StickyNotesAnnotation|`<ejs-pdfviewer :enableStickyNotesAnnotation="true" ></ejs-pdfviewer>`|
 
 ## See also
 
-* [Toolbar items](../pdfviewer/toolbar)
-* [Toolbar customization](../pdfviewer/how-to/toolbar-customization)
+* [Toolbar items](./toolbar)
+* [Toolbar customization](./toolbar-customization/custom-toolbar)
