@@ -53,8 +53,6 @@ Two options appear in the secondary toolbar:
 
 ## Programmatic options and APIs
 
-## Programmatic options and APIs
-
 You can control the Extract Pages experience via settings and invoke extraction through code.
 
 ### Enable/disable Extract Pages
