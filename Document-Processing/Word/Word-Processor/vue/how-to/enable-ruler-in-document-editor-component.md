@@ -1,5 +1,5 @@
 ---
-title: "how to enable ruler in document edior  | Syncfusion"
+title: How to Enable Ruler in Vue DOCX Editor | Syncfusion
 component: "DocumentEditor"
 description: "Learn how to enable ruler in Vue Document Editor component."
 platform: document-processing
