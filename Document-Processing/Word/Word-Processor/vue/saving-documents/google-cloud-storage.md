@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Save document to Google Cloud Storage
 
-To save a document to Google Cloud Storage, you can follow the steps below
+To save a document to Google Cloud Storage, you can follow the steps below.
 
 **Step 1:** Create a Simple [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) sample in Vue
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -30,7 +30,7 @@ using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 // Private readonly object _storageClient
@@ -67,7 +67,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToGoogleCloud")]
-//Post action for downloading the document
+//Post action for uploading the document to Google Cloud Storage
 public void SaveToGoogleCloud(IFormCollection data)
 {
    if (data.Files.Count == 0)
@@ -80,12 +80,25 @@ public void SaveToGoogleCloud(IFormCollection data)
   string bucketName = _bucketName;
 
   Stream stream = new MemoryStream();
-  file.CopyTo(stream);
+  try
+  {
+    file.CopyTo(stream);
+    stream.Position = 0;
 
-  // Upload the document to Google Cloud Storage
-  _storageClient.UploadObject(bucketName, result + "_downloaded.docx", null, stream);
+    // Upload the document to Google Cloud Storage
+    _storageClient.UploadObject(bucketName, result + "_downloaded.docx", null, stream);
+  }
+  catch (Exception ex)
+  {
+    // Log or handle the upload failure (e.g., invalid credentials, bucket not found, permission denied)
+    throw;
+  }
+  finally
+  {
+    stream.Dispose();
+  }
 
-}   
+}
 
 private string GetValue(IFormCollection data, string key)
 {
@@ -116,13 +129,13 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket
+N> Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket.
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Google Cloud Storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Cloud Storage.
 
 ```typescript
 <template>
