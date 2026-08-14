@@ -102,7 +102,6 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
             header1.Items.Add(new MdTextRange { Text = "Profile picture" });
             MdTableCell header2 = headerRow.AddTableCell();
             header2.Items.Add(new MdTextRange { Text = "Description" });
-
             // Adds a data row.
             MdTableRow dataRow = table.AddTableRow();
             MdTableCell cell1 = dataRow.AddTableCell();
@@ -112,8 +111,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
             cell1.Items.Add(picture);
             MdTableCell cell2 = dataRow.AddTableCell();
             cell2.Items.Add(new MdTextRange { Text = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company." });
-            
-
+            // Create memory stream
             MemoryStream memoryStream = new MemoryStream();
             //Saves the Markdown document file.
             markdownDocument.Save(memoryStream);

@@ -133,7 +133,6 @@ public ActionResult CreateMarkdownDocument()
     header1.Items.Add(new MdTextRange { Text = "Profile picture" });
     MdTableCell header2 = headerRow.AddTableCell();
     header2.Items.Add(new MdTextRange { Text = "Description" });
-
     // Adds a data row.
     MdTableRow dataRow = table.AddTableRow();
     MdTableCell cell1 = dataRow.AddTableCell();
@@ -149,7 +148,6 @@ public ActionResult CreateMarkdownDocument()
     stream.Position = 0;
     // Disposes the document.
     markdownDocument.Dispose();
-
     //Download Markdown document in the browser.
     return File(stream, "text/markdown", "Sample.md");
 }
