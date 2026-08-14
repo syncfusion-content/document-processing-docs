@@ -1,6 +1,6 @@
 ---
 title: XLSB to XLSX Conversion in .NET Excel Library | Syncfusion
-description: XLSB to XLSX conversion explains how Syncfusion XlsIO converts binary Excel workbooks into XLSX files.
+description: XLSB to XLSX conversion explains how Syncfusion .NET Excel Library converts binary Excel workbooks into XLSX files.
 platform: document-processing
 control: XlsIO
 documentation: UG

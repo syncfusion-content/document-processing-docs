@@ -1,6 +1,6 @@
 ---
 title: How to Override Excel Files in .NET Excel Library | Syncfusion
-description: Override an existing Excel document using the .NET Excel Library while saving updated Excel content.
+description: Override an existing Excel document using the Syncfusion .NET Excel Library while saving updated Excel content.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Improve Delete Performance in .NET Excel Library | Syncfusion
-description: Resolve performance issues when deleting a large number of rows in Excel using the .NET Excel Library.
+description: Resolve performance issues when deleting a large number of rows in Excel using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

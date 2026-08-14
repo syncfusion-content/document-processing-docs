@@ -1,6 +1,6 @@
 ---
 title: How to Format Columns in .NET Excel Library | Syncfusion
-description: Apply number formatting to an entire Excel column using the .NET Excel Library for consistent column value display.
+description: Apply number formatting to an entire Excel column using the Syncfusion .NET Excel Library for consistent column value display.
 platform: document-processing
 control: XlsIO
 documentation: UG

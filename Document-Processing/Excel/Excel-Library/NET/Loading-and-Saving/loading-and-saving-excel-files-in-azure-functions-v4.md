@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Excel in Azure Functions v4 | Syncfusion
-description: Azure Functions v4 file handling explains how to load and save Excel files using Syncfusion XlsIO in functions.
+description: Azure Functions v4 Excel file handling section explains how to load and save Excel files in Azure Functions v4 using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Files in Azure Functions v4 Excel Library
+# Loading and Saving Files in Azure Functions v4
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) that can be used to create, read, edit Excel files in Azure Functions v4.
 

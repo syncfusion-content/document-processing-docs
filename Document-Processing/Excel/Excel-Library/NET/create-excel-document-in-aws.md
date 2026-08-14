@@ -1,12 +1,12 @@
 ---
-title: Create Excel Documents in AWS .NET Excel Library | Syncfusion
-description: The AWS platform lets users create Excel documents with Syncfusion .NET XlsIO in C# applications easily.
+title: Create Excel Documents in AWS using .NET Excel Library | Syncfusion
+description: Syncfusion .NET Excel Library supports creating Excel documents in AWS using C# applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel Documents in AWS with .NET Excel Library
+# Create Excel Documents in AWS using .NET Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **create an Excel document in Amazon Web Services (AWS)** within a few lines of code.
 

@@ -1,6 +1,6 @@
 ---
 title: Named Range Rules in .NET Excel Library | Syncfusion
-description: Named range conventions describe allowed characters, restrictions, and length limits for Excel named ranges in XlsIO.
+description: Named range conventions describes allowed characters, restrictions, and length limits for Excel named ranges in Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

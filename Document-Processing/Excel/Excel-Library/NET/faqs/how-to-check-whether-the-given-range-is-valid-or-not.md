@@ -1,6 +1,6 @@
 ---
 title: How to Validate Ranges in .NET Excel Library | Syncfusion
-description: Check whether a given Excel range is valid using the .NET Excel Library before applying worksheet operations.
+description: Check whether a given Excel range is valid using the Syncfusion .NET Excel Library before applying worksheet operations.
 platform: document-processing
 control: XlsIO
 documentation: UG

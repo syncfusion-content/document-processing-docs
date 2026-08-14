@@ -1,12 +1,12 @@
 ---
-title: Excel to Image in Microsoft Azure Excel Library | Syncfusion
-description: Azure Excel to image conversion describes how to convert Excel documents to images using the .NET Excel Library.
+title: Excel to Image conversion in Microsoft Azure | Syncfusion
+description: Azure Excel to Image section explains how to convert Excel documents to images in Azure using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to Image Conversion in Azure Excel Library
+# Excel to Image Conversion in Azure using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Azure Platform** within a few lines of code.
 

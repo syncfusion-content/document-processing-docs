@@ -1,6 +1,6 @@
 ---
 title: How to Read Filtered Rows in .NET Excel Library | Syncfusion
-description: Read filtered data from an Excel file using the .NET Excel Library with filtered worksheet data handling.
+description: Read filtered data from an Excel file using the Syncfusion .NET Excel Library with filtered worksheet data handling.
 platform: document-processing
 control: XlsIO
 documentation: UG

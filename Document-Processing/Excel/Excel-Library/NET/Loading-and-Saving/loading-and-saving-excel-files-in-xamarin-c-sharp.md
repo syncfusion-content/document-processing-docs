@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Workbooks in Xamarin | Syncfusion
-description: Loading and saving Excel files in Xamarin applications using Syncfusion XlsIO for Excel file operations.
+description: Xamarin Excel file handling section explains how to load and save Excel files in Xamarin applications using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Workbooks in Xamarin Excel Library
+# Loading and Saving Workbooks in Xamarin
 
 ## Opening an existing workbook from stream
 

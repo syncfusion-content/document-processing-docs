@@ -1,6 +1,6 @@
 ---
 title: How to Ignore Error Markers in .NET Excel Library | Syncfusion
-description: Ignore the green error marker in Excel worksheets using the .NET Excel Library in workbook cell ranges.
+description: Ignore the green error marker in Excel worksheets using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

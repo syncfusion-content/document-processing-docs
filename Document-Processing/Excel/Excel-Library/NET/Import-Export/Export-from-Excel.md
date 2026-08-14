@@ -1,6 +1,6 @@
 ---
 title: Exporting Excel Documents in .NET Excel Library | Syncfusion
-description: Data export in Syncfusion XlsIO explains how to export data from Excel documents for extraction and integration.
+description: Data export in Syncfusion .NET Excel Library explains how to export data from Excel documents for extraction and integration.
 platform: document-processing
 control: XlsIO
 documentation: UG

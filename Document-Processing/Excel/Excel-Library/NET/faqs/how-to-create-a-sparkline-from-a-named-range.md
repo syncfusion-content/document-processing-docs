@@ -1,6 +1,6 @@
 ---
 title: How to Create Sparklines in .NET Excel Library | Syncfusion
-description: Create sparklines from named ranges in Excel worksheets using the .NET Excel Library for compact data visuals.
+description: Create sparklines from named ranges in Excel worksheets using the Syncfusion .NET Excel Library for compact data visuals.
 platform: document-processing
 control: XlsIO
 documentation: UG

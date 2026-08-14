@@ -1,6 +1,6 @@
 ---
 title: Formulas in .NET Excel Library | Syncfusion
-description: Excel formulas describe how Syncfusion XlsIO creates, reads, edits, and calculates formulas in Excel files.
+description: Excel formulas section describes how Syncfusion .NET Excel Library creates, reads, edits, and calculates formulas in Excel files.
 platform: document-processing
 control: XlsIO
 documentation: UG

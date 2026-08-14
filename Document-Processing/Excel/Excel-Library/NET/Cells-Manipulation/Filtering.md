@@ -1,6 +1,6 @@
 ---
 title: Filtering in .NET Excel Library | Syncfusion
-description: Data filtering in the .NET Excel Library describes how to filter data in Excel worksheets using defined filter options.
+description: Data filtering in the Syncfusion .NET Excel Library describes how to filter data in Excel worksheets using defined filter options.
 platform: document-processing
 control: XlsIO
 documentation: UG

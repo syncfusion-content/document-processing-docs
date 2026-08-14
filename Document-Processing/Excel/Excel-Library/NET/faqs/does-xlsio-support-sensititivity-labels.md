@@ -1,6 +1,6 @@
 ---
 title: Sensitivity Labels in .NET Excel Library | Syncfusion
-description: Microsoft sensitivity labels explains whether the .NET Excel Library supports sensitivity labels in Excel documents.
+description: Microsoft sensitivity labels explains whether the Syncfusion .NET Excel Library supports sensitivity labels in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

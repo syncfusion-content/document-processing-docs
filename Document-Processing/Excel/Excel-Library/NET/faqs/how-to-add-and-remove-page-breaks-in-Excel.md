@@ -1,6 +1,6 @@
 ---
 title: How to Manage Page Breaks in .NET Excel Library | Syncfusion
-description: Add and remove page breaks in Excel worksheets using the .NET Excel Library for better print layout control.
+description: Add and remove page breaks in Excel worksheets using the Syncfusion .NET Excel Library for better print layout control.
 platform: document-processing
 control: XlsIO
 documentation: UG

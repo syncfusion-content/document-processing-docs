@@ -1,6 +1,6 @@
 ---
 title: How to Convert XLSX to XLS in .NET Excel Library | Syncfusion
-description: Open an existing XLSX workbook and save it as XLS using the .NET Excel Library for format conversion.
+description: Open an existing XLSX workbook and save it as XLS using the Syncfusion .NET Excel Library for format conversion.
 platform: document-processing
 control: XlsIO
 documentation: UG

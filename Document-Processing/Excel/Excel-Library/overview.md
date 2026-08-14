@@ -1,7 +1,7 @@
 ---
 title: About Syncfusion Excel Document Processing Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
-description: Learn about introduction of Syncfusion Excel library XlsIO for creating and converting Excel files and more details.
+description: Learn about introduction of Syncfusion .NET Excel Library Excel Library for creating and converting Excel files with more details.
 platform: document-processing
 control: XlsIO
 documentation: UG

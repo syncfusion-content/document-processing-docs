@@ -1,6 +1,6 @@
 ---
 title: Named Ranges in .NET Excel Library | Syncfusion
-description: Creating Excel named ranges programmatically explains how to define named ranges using Interop and XlsIO.
+description: Creating Excel named ranges programmatically explains how to define named ranges using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

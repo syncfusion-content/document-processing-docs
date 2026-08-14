@@ -1,6 +1,6 @@
 --- 
 title: Row Height and Column Width Units in .NET Excel Library | Syncfusion
-description: Row height and column width units describe the default measurement units used in Excel by the .NET Excel Library.
+description: Row height and column width units describes the default measurement units used in Excel by the Syncfusion .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
 documentation: UG 

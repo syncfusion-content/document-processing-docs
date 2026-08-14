@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Download Offline Installer in .NET Excel Library | Syncfusion
-description: Download the Syncfusion Excel offline installer from the Syncfusion website with a valid license for setup.
+description: Syncfusion Excel offline installer download section explains how to download the offline installer from the Syncfusion website with a valid license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug

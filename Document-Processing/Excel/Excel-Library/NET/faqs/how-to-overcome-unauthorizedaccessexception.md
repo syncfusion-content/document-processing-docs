@@ -1,6 +1,6 @@
 ---
 title: How to Resolve Access Errors in .NET Excel Library | Syncfusion
-description: Overcome UnauthorizedAccessException when using the .NET Excel Library to work with Excel documents.
+description: Overcome UnauthorizedAccessException when using the Syncfusion .NET Excel Library to work with Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

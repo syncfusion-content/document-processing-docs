@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Security in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO security options let users protect Excel workbooks and worksheets with password-based protection.
+description: The Flutter Excel Library lets users protect Excel workbooks and worksheets with password-based security.
 platform: document-processing
 control: Excel
 documentation: ug

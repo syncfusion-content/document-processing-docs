@@ -1,12 +1,12 @@
 ---
 title: Create, Read, and Edit Excel in AWS Beanstalk | Syncfusion
-description: The AWS Elastic Beanstalk platform lets users create, read, and edit Excel files with the .NET Excel Library.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in AWS Elastic Beanstalk.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel Files in AWS Elastic Beanstalk with Excel Library
+# Create Excel Files in AWS Elastic Beanstalk with Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in AWS Elastic Beanstalk.
 

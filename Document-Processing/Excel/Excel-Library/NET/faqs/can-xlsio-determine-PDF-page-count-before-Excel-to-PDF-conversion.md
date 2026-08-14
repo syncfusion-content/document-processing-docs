@@ -1,6 +1,6 @@
 ---
 title: PDF Page Count Support in .NET Excel Library | Syncfusion
-description: PDF page count detection describes whether Syncfusion XlsIO can get the total page count before Excel to PDF conversion.
+description: PDF page count detection describes whether Syncfusion .NET Excel Library can get the total page count before Excel to PDF conversion.
 platform: document-processing
 control: XlsIO
 documentation: UG

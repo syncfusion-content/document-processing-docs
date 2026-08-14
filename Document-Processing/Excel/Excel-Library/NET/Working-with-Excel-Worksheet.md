@@ -1,6 +1,6 @@
 ---
 title: Worksheets in .NET Excel Library | Syncfusion
-description: Worksheet operations describe how Syncfusion XlsIO creates, accesses, edits, and manages Excel worksheets.
+description: Worksheet operations section describes how Syncfusion .NET Excel Library creates, accesses, edits, and manages Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

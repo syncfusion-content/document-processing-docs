@@ -1,6 +1,6 @@
 ---
 title: How to Resolve Workbook Stream Errors in .NET Excel | Syncfusion
-description: Resolve the File does not contain workbook stream error in Syncfusion.XlsIO.Base.dll while opening Excel files.
+description: Resolve the file does not contain workbook stream error when opening Excel files using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

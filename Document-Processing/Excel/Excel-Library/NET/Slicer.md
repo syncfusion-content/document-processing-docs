@@ -1,6 +1,6 @@
 ---
 title: Slicers in .NET Excel Library | Syncfusion
-description: Excel slicers in Syncfusion XlsIO describe slicers and their various features in the .NET Excel Library.
+description: Excel slicers section describe slicers and their various features in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

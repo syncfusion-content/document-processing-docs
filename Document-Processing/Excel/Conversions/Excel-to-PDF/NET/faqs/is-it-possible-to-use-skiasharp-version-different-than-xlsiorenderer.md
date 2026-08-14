@@ -1,6 +1,6 @@
 ---
 title: SkiaSharp Compatibility in .NET Excel Library | Syncfusion
-description: SkiaSharp compatibility explains runtime errors caused by incompatible SkiaSharp versions with XlsIORenderer.
+description: SkiaSharp compatibility explains runtime errors caused by incompatible SkiaSharp versions with Excel Library converters.
 platform: document-processing
 control: XlsIO
 documentation: UG

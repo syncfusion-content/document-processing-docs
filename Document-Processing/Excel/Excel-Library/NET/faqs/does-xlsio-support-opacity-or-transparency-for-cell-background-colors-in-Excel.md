@@ -1,6 +1,6 @@
 ---
 title: Cell Background Transparency in .NET Excel Library | Syncfusion
-description: Cell background transparency explains whether Syncfusion XlsIO can set opacity or transparency for Excel cell colors.
+description: Cell background transparency explains whether Syncfusion .NET Excel Library can set opacity or transparency for Excel cell colors.
 platform: document-processing
 control: XlsIO
 documentation: UG

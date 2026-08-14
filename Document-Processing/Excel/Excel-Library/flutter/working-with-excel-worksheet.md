@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Worksheets in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO worksheet operations let users create, access, and modify worksheets within an Excel workbook.
+description: The Flutter Excel Library lets users create, access, and modify worksheets within Excel workbooks.
 platform: document-processing
 control: Excel
 documentation: ug

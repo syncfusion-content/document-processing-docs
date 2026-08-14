@@ -1,6 +1,6 @@
 ---
 title: Charts in .NET Excel Library | Syncfusion
-description: Excel charts describe how the .NET Excel Library adds, edits, and removes charts in Excel documents without Microsoft Excel.
+description: Excel charts section describes how the Syncfusion .NET Excel Library adds, edits, and removes charts in Excel documents without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Extract Worksheet Images in .NET Excel Library | Syncfusion
-description: Extract and save images from Excel worksheets using the .NET Excel Library for image reuse outside the workbook.
+description: Extract and save images from Excel worksheets using the Syncfusion .NET Excel Library to reuse the images outside the workbook.
 platform: document-processing
 control: XlsIO
 documentation: UG

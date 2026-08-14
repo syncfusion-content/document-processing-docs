@@ -1,6 +1,6 @@
 ---
 title: How to Get Last Column Row in .NET Excel Library | Syncfusion
-description: Find the last row with data in a specific Excel worksheet column using Syncfusion XlsIO and used range boundaries.
+description: Find the last row with data in a specific Excel worksheet column using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

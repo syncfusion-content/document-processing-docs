@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion .NET Excel to ODS Conversion | Syncfusion
-description: Learn about introduction of converting Excel workbooks to ODS documents using Syncfusion .NET XlsIO and more details.
+description: Learn about introduction of converting Excel workbooks to ODS documents using the Syncfusion .NET Excel Library and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG

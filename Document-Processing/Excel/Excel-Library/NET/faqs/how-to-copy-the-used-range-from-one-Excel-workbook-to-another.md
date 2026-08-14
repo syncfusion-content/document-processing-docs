@@ -1,6 +1,6 @@
 ---
 title: How to Copy Used Ranges in .NET Excel Library | Syncfusion
-description: Copy the used range from one Excel workbook to another using the .NET Excel Library for workbook data reuse.
+description: Copy the used range from one Excel workbook to another using the Syncfusion .NET Excel Library for workbook data reuse.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Open Active Excel Files in .NET Excel Library | Syncfusion
-description: Open an Excel document already open in Microsoft Excel using the .NET Excel Library for workbook access.
+description: Open an Excel document already open in Microsoft Excel using the Syncfusion .NET Excel Library for workbook access.
 platform: document-processing
 control: XlsIO
 documentation: UG

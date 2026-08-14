@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in AWS Excel Library | Syncfusion
-description: AWS Excel to PDF conversion describes how to convert Excel documents to PDF using Syncfusion .NET Core Excel Library in C#.
+title: Excel to PDF conversion in AWS | Syncfusion
+description: AWS Excel to PDF section explains how to convert Excel documents to PDF in AWS using Syncfusion .NET Excel Library in C#.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in AWS Excel Library
+# Excel to PDF Conversion in AWS using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, **convert an Excel document to PDF in Amazon Web Services (AWS)** within a few lines of code. 
 

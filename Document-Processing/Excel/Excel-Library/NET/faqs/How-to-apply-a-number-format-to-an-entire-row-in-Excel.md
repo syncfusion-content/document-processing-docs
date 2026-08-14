@@ -1,6 +1,6 @@
 ---
 title: How to Format Rows in .NET Excel Library | Syncfusion
-description: Apply number formats to an entire Excel row using Syncfusion XlsIO to format row values consistently.
+description: Apply number formats to an entire Excel row using the Syncfusion .NET Excel Library to format row values consistently.
 platform: document-processing
 control: XlsIO
 documentation: UG

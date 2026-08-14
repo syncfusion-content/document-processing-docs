@@ -1,6 +1,6 @@
 ---
 title: How to Remove Data Validation in .NET Excel Library | Syncfusion
-description: Remove data validation from the specified range in Excel using the .NET Excel Library in a worksheet.
+description: Remove data validation from the specified range in Excel using the Syncfusion .NET Excel Library in a worksheet.
 platform: document-processing
 control: XlsIO
 documentation: UG

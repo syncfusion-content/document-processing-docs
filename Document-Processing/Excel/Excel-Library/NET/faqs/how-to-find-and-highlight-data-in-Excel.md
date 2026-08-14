@@ -1,6 +1,6 @@
 ---
 title: How to Find and Highlight Data in .NET Excel Library | Syncfusion
-description: Find and highlight data in Excel worksheets using the .NET Excel Library for workbook search operations.
+description: Find and highlight data in Excel worksheets using the Syncfusion .NET Excel Library for workbook search operations.
 platform: document-processing
 control: XlsIO
 documentation: UG

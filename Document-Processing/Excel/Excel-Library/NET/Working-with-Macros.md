@@ -1,6 +1,6 @@
 ---
 title: Macros in .NET Excel Library | Syncfusion
-description: Macro operations in XlsIO describe how to create, edit, remove, and perform macro operations in Excel.
+description: Macro operations section describes how to create, edit, remove, and perform macro operations in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG

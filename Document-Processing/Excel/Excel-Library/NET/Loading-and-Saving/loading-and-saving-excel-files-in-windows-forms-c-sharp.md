@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Workbooks in Windows Forms | Syncfusion
-description: Loading and saving Excel files in Windows Forms applications using Syncfusion XlsIO for Excel file operations.
+description: Windows Forms Excel file handling section explains how to load and save Excel files in Windows Forms applications using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Workbooks in Windows Forms Excel Library
+# Loading and Saving Workbooks in Windows Forms
 
 ## Prerequisites
 

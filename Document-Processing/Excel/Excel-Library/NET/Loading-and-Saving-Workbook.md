@@ -1,6 +1,6 @@
 ---
 title: Loading and Saving Workbooks in .NET Excel Library | Syncfusion
-description: Load and save operations describe the available ways to open, process, and save Excel workbooks in applications.
+description: Load and save operations section describes the available ways to open, process, and save Excel workbooks in applications.
 platform: document-processing
 control: XlsIO
 documentation: UG

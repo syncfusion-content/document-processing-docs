@@ -1,7 +1,7 @@
 ---
-title: Create Excel Files in C# & VB.NET Excel Library | Syncfusion
+title: Create Excel Files in C# & VB.NET using Excel Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
-description: The Excel file creation option in XlsIO lets users create files from data sources or scratch and generate formatted Excel reports.
+description: Syncfusion .NET Excel Library supports creating Excel files from scratch or data sources and generating formatted Excel reports.
 platform: document-processing
 control: XlsIO
 documentation: UG

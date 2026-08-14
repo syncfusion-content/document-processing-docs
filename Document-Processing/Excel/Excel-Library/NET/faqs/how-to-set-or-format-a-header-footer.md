@@ -1,6 +1,6 @@
 ---
 title: How to Format Headers and Footers in .NET Excel Library | Syncfusion
-description: Set or format the header and footer in an Excel document using the .NET Excel Library for page layout.
+description: Set or format the header and footer in an Excel document using the Syncfusion .NET Excel Library for page layout.
 platform: document-processing
 control: XlsIO
 documentation: UG

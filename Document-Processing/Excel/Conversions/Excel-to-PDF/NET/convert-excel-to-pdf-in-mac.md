@@ -1,11 +1,11 @@
 ---
-title: Excel to PDF in Mac Excel Library | Syncfusion
-description: macOS Excel to PDF conversion describes how to convert Excel documents to PDF using Syncfusion .NET Core Excel Library.
+title: Excel to PDF conversion in Mac | Syncfusion
+description: MacOS Excel to PDF section explains how to convert Excel documents to PDF in macOS using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel to PDF Conversion in Mac Excel Library
+# Excel to PDF Conversion in Mac using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

@@ -1,6 +1,6 @@
 ---
-title: Markdown to Excel Conversion in .NET Excel Library | Syncfusion
-description: Markdown to Excel conversion describes how Syncfusion XlsIO converts Markdown files into Excel workbooks without Microsoft Office.
+title: Markdown to Excel Conversion using .NET Excel Library | Syncfusion
+description: Markdown to Excel conversion describes how Syncfusion .NET Excel Library converts Markdown files into Excel workbooks without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG

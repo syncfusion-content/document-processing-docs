@@ -1,6 +1,6 @@
 ---
 title: How to Open Encoded Files in .NET Excel Library | Syncfusion
-description: Open an Excel file with encoding in .NET Core using the .NET Excel Library for encoded file loading.
+description: Open an Excel file with encoding using the Syncfusion .NET Excel Library for loading encoded files.
 platform: document-processing
 control: XlsIO
 documentation: UG

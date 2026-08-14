@@ -1,6 +1,6 @@
 ---
 title: Drawing Objects in .NET Excel Library | Syncfusion
-description: Drawing objects describe how XlsIO adds worksheet objects, including option buttons for the XLSX format.
+description: Drawing objects section describes how Excel Library adds worksheet objects, including option buttons for the XLSX format.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in Console Apps Excel Library | Syncfusion
-description: Console application Excel to PDF conversion describes how to convert Excel files to PDF without Microsoft Excel.
+title: Excel to PDF conversion in Console Apps | Syncfusion
+description: Console Application Excel to PDF section explains how to convert Excel files to PDF in console applications without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in Console Applications Excel Library
+# Excel to PDF Conversion in Console Applications using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

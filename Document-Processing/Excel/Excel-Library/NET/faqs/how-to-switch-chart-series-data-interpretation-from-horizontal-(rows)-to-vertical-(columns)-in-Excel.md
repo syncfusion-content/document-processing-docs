@@ -1,6 +1,6 @@
 ---
 title: How to Change Chart Series Data in .NET Excel Library | Syncfusion
-description: Switch chart series data interpretation from rows to columns in Excel using the .NET Excel Library options.
+description: Switch chart series data interpretation from rows to columns in Excel using the Syncfusion .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
 documentation: UG

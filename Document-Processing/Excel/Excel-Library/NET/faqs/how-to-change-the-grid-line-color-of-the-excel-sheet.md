@@ -1,6 +1,6 @@
 ---
 title: How to Change Grid Colors in .NET Excel Library | Syncfusion
-description: Change Excel worksheet gridline colors using the .NET Excel Library for customized sheet appearance.
+description: Change Excel worksheet gridline colors using the Syncfusion .NET Excel Library for customized sheet appearance.
 platform: document-processing
 control: XlsIO
 documentation: UG

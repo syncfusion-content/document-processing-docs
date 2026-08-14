@@ -1,6 +1,6 @@
 ---
 title: How to Retrieve Merged Cell Data in .NET Excel Library | Syncfusion
-description: Retrieve values from merged cells by checking IRange.IsMerged and reading the MergeArea top-left cell using Syncfusion XlsIO.
+description: Retrieve values from merged cells using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

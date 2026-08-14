@@ -1,6 +1,6 @@
 ---
 title: How to Check Empty Worksheets in .NET Excel Library | Syncfusion
-description: Check whether an Excel worksheet is empty using the .NET Excel Library before processing workbook data.
+description: Check whether an Excel worksheet is empty using the Syncfusion .NET Excel Library before processing workbook data.
 platform: document-processing
 control: XlsIO
 documentation: UG

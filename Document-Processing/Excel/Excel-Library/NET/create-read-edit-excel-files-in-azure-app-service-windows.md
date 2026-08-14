@@ -1,11 +1,11 @@
 ---
 title: Create, Read, and Edit Excel in Azure Windows Apps | Syncfusion
-description: The Azure App Service on Windows platform lets users create, read, and edit Excel files with Syncfusion XlsIO.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Azure App Service on Windows.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel Files in Azure App Service Windows with Excel Library
+# Create Excel Files in Azure App Service Windows with Excel Library
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel files in Azure App Service on Windows.
 

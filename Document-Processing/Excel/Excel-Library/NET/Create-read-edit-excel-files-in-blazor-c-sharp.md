@@ -1,11 +1,11 @@
 ---
 title: Create, Read, and Edit Excel in Blazor | Syncfusion
-description: The Blazor platform lets users create, read, and edit Excel files with the .NET Excel Library in web applications.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Blazor web applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel Files in Blazor with Excel Library
+# Create Excel Files in Blazor with Excel Library
 
 [.NET Excel Library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 

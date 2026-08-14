@@ -1,6 +1,6 @@
 ---
 title: Custom XML Support in .NET Excel Library | Syncfusion
-description: Custom XML in Excel documents lets users create and edit XML parts using Syncfusion .NET Excel Library.
+description: Syncfusion .NET Excel Library lets users to create and edit XML parts in Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG

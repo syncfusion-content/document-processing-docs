@@ -1,6 +1,6 @@
 ---
 title: How to Avoid StackOverflow in .NET Excel Library | Syncfusion
-description: Overcome StackOverflowException while calling the Calculate method of IWorksheet using Syncfusion XlsIO.
+description: Overcome StackOverflowException while calling the Calculate method of IWorksheet using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

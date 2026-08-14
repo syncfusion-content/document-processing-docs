@@ -1,6 +1,6 @@
 ---
 title: How to Access Tables in .NET Excel Library | Syncfusion
-description: Access an Excel table by its table name using the .NET Excel Library and work with table data programmatically.
+description: Access an Excel table by its table name using the Syncfusion .NET Excel Library and work with table data programmatically.
 platform: document-processing
 control: XlsIO
 documentation: UG

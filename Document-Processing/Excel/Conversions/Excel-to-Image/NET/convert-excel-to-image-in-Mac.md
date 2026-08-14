@@ -1,11 +1,11 @@
 ---
-title: Excel to Image in Mac Excel Library | Syncfusion
-description: macOS Excel to image conversion describes how to convert Excel documents to images using Syncfusion XlsIO.
+title: Excel to Image conversion in Mac | Syncfusion
+description: MacOS Excel to Image section explains how to convert Excel documents to images in macOS using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel to Image Conversion in Mac Excel Library
+# Excel to Image Conversion in Mac using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to an image on Mac**.
 

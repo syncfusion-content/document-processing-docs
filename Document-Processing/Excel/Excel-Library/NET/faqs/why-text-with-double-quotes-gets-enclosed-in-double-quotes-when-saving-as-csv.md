@@ -1,6 +1,6 @@
 ---
 title: CSV Double Quotes in .NET Excel Library | Syncfusion
-description: CSV export behavior explains why Excel wraps fields with double quotes and escapes quotes by doubling them.
+description: CSV export behavior explains why Excel wraps fields with double quotes and escapes quotes in CSV.
 platform: document-processing
 control: XlsIO
 documentation: UG

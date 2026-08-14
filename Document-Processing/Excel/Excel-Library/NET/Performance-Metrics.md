@@ -1,6 +1,6 @@
 ---
 title: Performance Metrics in .NET Excel Library | Syncfusion
-description: Benchmark results describe Syncfusion XlsIO performance for reading, creating, and saving common Excel data types.
+description: Benchmark results section describes Syncfusion .NET Excel Library performance for reading, creating, and saving common Excel data types.
 platform: document-processing
 control: XlsIO
 documentation: UG

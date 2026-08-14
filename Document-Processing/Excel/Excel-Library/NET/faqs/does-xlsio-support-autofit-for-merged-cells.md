@@ -1,6 +1,6 @@
 ---
 title: Merged Cell Autofit in .NET Excel Library | Syncfusion
-description: Autofit for merged cells explains whether Syncfusion XlsIO can adjust row height and column width in merged Excel cells.
+description: Autofit for merged cells explains whether Syncfusion .NET Excel Library can adjust row height and column width in merged Excel cells.
 platform: document-processing
 control: XlsIO
 documentation: UG

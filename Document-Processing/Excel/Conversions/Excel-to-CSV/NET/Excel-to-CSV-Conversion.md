@@ -1,6 +1,6 @@
 ---
 title: Excel to CSV Conversion in .NET Excel Library | Syncfusion
-description: Excel to CSV conversion in Syncfusion XlsIO describes how to convert Excel workbooks into CSV or TSV documents.
+description: Excel to CSV conversion in Syncfusion .NET Excel Library describes how to convert Excel workbooks into CSV or TSV documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

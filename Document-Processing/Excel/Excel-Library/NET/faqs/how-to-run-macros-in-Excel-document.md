@@ -1,6 +1,6 @@
 ---
 title: How to Run Macros in .NET Excel Library | Syncfusion
-description: Learn about macro support in Excel documents using the .NET Excel Library for macro-enabled Excel files.
+description: Learn about macro support in Excel documents using the Syncfusion .NET Excel Library for macro-enabled Excel files.
 platform: document-processing
 control: XlsIO
 documentation: UG

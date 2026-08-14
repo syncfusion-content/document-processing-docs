@@ -1,6 +1,6 @@
 ---
 title: How to Retrieve First Used Cell in .NET Excel Library | Syncfusion
-description: Retrieve the first cell in the used range of an Excel worksheet using the .NET Excel Library with used range details.
+description: Retrieve the first cell in the used range of an Excel worksheet using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

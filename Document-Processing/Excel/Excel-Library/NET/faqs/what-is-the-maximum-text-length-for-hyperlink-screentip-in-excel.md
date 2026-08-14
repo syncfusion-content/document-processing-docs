@@ -1,6 +1,6 @@
 ---
 title: Hyperlink ScreenTip Limits in .NET Excel Library | Syncfusion
-description: Hyperlink ScreenTip limit describes the maximum supported ScreenTip text length in Microsoft Excel and Syncfusion XlsIO.
+description: Hyperlink ScreenTip limit describes the maximum supported ScreenTip text length in Microsoft Excel and Syncfusion .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
 documentation: UG

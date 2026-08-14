@@ -1,6 +1,6 @@
 ---
 title: Rows and Columns Manipulation in .NET Excel Library | Syncfusion
-description: Row and column manipulation in XlsIO describes how to insert, delete, hide, and manage rows and columns in Excel.
+description: Row and column manipulation in Excel Library describes how to insert, delete, hide, and manage rows and columns in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG

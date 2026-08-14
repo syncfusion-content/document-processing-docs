@@ -1,6 +1,6 @@
 ---
 title: How to Apply Borders in .NET Excel Library | Syncfusion
-description: Apply border styles to merged cells in Excel using Syncfusion XlsIO while maintaining the merged cell layout.
+description: Apply border styles to merged cells in Excel using the Syncfusion .NET Excel Library while maintaining the merged cell layout.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in .NET MAUI Excel Library | Syncfusion
-description: .NET MAUI Excel to PDF conversion describes how to convert Excel documents to PDF without Microsoft Excel.
+title: Excel to PDF conversion in .NET MAUI | Syncfusion
+description: .NET MAUI Excel to PDF section explains how to convert Excel documents to PDF in .NET MAUI without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in .NET MAUI Excel Library
+# Excel to PDF Conversion in .NET MAUI using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET MAUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/maui/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in .NET MAUI**.
 

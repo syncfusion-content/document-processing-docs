@@ -1,6 +1,6 @@
 ---
 title: Worksheet Cells Manipulation in .NET Excel Library | Syncfusion
-description: Cell manipulation in the .NET Excel Library describes how to edit and manage cells in Excel worksheets.
+description: Cell manipulation in the Syncfusion .NET Excel Library describes how to edit and manage cells in Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

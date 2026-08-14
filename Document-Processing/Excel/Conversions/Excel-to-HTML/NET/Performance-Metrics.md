@@ -1,6 +1,6 @@
 ---
-title: Excel to HTML Performance in .NET Excel Library | Syncfusion
-description: Excel to HTML benchmark results describe performance metrics for converting Excel files to HTML using Syncfusion XlsIO.
+title: Excel to HTML conversion Performance metrics | Syncfusion
+description: Excel to HTML benchmark results provides the performance metrics for converting Excel files to HTML using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

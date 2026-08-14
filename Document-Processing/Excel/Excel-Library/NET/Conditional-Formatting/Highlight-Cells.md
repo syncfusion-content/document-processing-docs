@@ -1,6 +1,6 @@
 ---
 title: Highlight Cells in .NET Excel Library | Syncfusion
-description: Highlight-cell conditional formatting describes how Syncfusion XlsIO applies highlight-cell rules in Excel documents.
+description: Highlight-cell conditional formatting describes how Syncfusion .NET Excel Library applies highlight-cell rules in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

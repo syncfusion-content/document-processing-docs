@@ -1,6 +1,6 @@
 ---
 title: Pivot Table Cell Editing in .NET Excel Library | Syncfusion
-description: PivotTable cell editing describes whether Syncfusion XlsIO allows editing cell values inside pivot tables.
+description: PivotTable cell editing describes whether Syncfusion .NET Excel Library allows editing cell values inside pivot tables.
 platform: document-processing
 control: XlsIO
 documentation: UG

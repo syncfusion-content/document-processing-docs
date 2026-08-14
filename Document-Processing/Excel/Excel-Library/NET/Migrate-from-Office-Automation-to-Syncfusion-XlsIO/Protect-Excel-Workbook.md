@@ -1,6 +1,6 @@
 ---
 title: Workbook Protection in .NET Excel Library | Syncfusion
-description: Programmatically protect an Excel workbook with a password using Interop and XlsIO workbook security options.
+description: Programmatically protect an Excel workbook with a password using Interop and Syncfusion .NET Excel Library workbook security options.
 platform: document-processing
 control: XlsIO
 documentation: UG

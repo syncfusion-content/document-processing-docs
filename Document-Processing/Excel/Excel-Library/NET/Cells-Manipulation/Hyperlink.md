@@ -1,6 +1,6 @@
 ---
 title: Hyperlinks in .NET Excel Library | Syncfusion
-description: Hyperlink management describes how the .NET Excel Library adds, modifies, and removes hyperlinks in Excel worksheets.
+description: Hyperlink management describes how the Syncfusion .NET Excel Library adds, modifies, and removes hyperlinks in Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

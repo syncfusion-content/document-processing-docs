@@ -1,6 +1,6 @@
 ---
 title: Worksheet Unhiding in .NET Excel Library | Syncfusion
-description: Programmatically unhide hidden Excel worksheets in a workbook using Interop and XlsIO visibility settings.
+description: Programmatically unhide hidden Excel worksheets in a workbook using Interop and Syncfusion .NET Excel Library visibility settings.
 platform: document-processing
 control: XlsIO
 documentation: UG

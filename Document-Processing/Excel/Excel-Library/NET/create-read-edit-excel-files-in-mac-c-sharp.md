@@ -1,11 +1,11 @@
 ---
-title: Create and Edit Excel Files in macOS Excel Library | Syncfusion
-description: .NET Core on macOS lets users create, read, and edit Excel files using Syncfusion Excel Library without Microsoft Office.
+title: Create and Edit Excel Files in macOS | Syncfusion
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in .NET Core macOS applications without Microsoft Office.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create and Edit Excel Files in macOS Excel Library
+# Create and Edit Excel Files in macOS using Excel Library
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

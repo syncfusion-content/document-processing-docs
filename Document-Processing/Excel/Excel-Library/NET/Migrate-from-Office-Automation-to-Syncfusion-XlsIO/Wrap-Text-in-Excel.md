@@ -1,6 +1,6 @@
 ---
 title: Text Wrapping in .NET Excel Library | Syncfusion
-description: Apply wrap text in Excel to fit long text in a single cell using Interop and XlsIO cell formatting options.
+description: Apply wrap text in Excel to fit long text in a single cell using Interop and Syncfusion .NET Excel Library cell formatting options.
 platform: document-processing
 control: XlsIO
 documentation: UG

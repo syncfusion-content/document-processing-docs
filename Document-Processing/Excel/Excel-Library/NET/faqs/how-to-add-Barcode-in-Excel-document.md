@@ -1,6 +1,6 @@
 ---
 title: How to Add Barcodes in .NET Excel Library | Syncfusion
-description: Add barcode images to Excel documents using the .NET Excel Library and generate worksheet content with barcodes.
+description: Add barcode images to Excel documents using the Syncfusion .NET Excel Library and generate worksheet content with barcodes.
 platform: document-processing
 control: XlsIO
 documentation: UG

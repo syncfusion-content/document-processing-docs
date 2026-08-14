@@ -1,6 +1,6 @@
 ---
 title: Formulas in .NET Excel Library | Syncfusion
-description: Use formulas and predefined functions in Excel worksheets using Interop and XlsIO formula calculation support.
+description: Use formulas and predefined functions in Excel worksheets using Interop and Syncfusion .NET Excel Library formula calculation support.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: Memory Limitations in Syncfusion Compression | Syncfusion
-description: Large Excel document processing explains why out-of-memory exceptions occur when handling large documents in XlsIO.
+description: Large Excel document processing explains why out-of-memory exceptions occur when handling large documents in Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

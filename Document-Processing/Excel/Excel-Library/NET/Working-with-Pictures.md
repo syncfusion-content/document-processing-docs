@@ -1,6 +1,6 @@
 ---
 title: Pictures in .NET Excel Library | Syncfusion
-description: Picture insertion describes how XlsIO adds images to worksheets using simple picture insertion options.
+description: Pictures section describes how to add images to worksheets along with picture insertion options.
 platform: document-processing
 control: XlsIO
 documentation: UG

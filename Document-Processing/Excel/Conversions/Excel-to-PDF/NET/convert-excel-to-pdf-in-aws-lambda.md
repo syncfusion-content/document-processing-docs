@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in AWS Lambda Excel Library | Syncfusion
-description: AWS Lambda Excel to PDF conversion describes how to convert Excel files to PDF without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in AWS Lambda | Syncfusion
+description: AWS Lambda Excel to PDF section explains how to convert Excel files to PDF in AWS Lambda without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in AWS Lambda Excel Library
+# Excel to PDF Conversion in AWS Lambda using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert a Excel document to PDF in AWS Lambda**.
 

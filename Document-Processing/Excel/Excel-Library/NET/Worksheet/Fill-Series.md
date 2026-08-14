@@ -1,6 +1,6 @@
 ---
 title: Fill Series in .NET Excel Library | Syncfusion
-description: Use the Fill Series feature in Excel using C# with the Syncfusion XlsIO library for worksheet data filling.
+description: Use the Fill Series feature in Excel using the Syncfusion .NET Excel Library to autofill series in a worksheet.
 platform: document-processing
 control: XlsIO
 documentation: UG

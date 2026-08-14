@@ -1,11 +1,11 @@
 ---
 title: Create, Read, and Edit Excel in Console Apps | Syncfusion
-description: The console application platform lets users create Excel files with Syncfusion Excel XlsIO library in C# applications.
+description: Syncfusion .NET Excel Library supports creating Excel files in C# console applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel Files in Console Applications with Excel Library
+# Create Excel Files in Console Applications with Excel Library
 
 [.NET Excel Library for .NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

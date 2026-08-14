@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Formatting in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO cell formatting lets users apply styles, fonts, colors, borders, and alignment to worksheet cells or ranges.
+description: The Flutter Excel Library lets users apply styles, fonts, colors, borders, and alignment to worksheet cells or ranges.
 platform: document-processing
 control: Excel
 documentation: ug

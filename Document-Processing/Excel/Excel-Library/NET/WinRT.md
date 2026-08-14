@@ -1,11 +1,11 @@
 ---
-title: WinRT Support in .NET Excel Library | Syncfusion
-description: WinRT load and save operations describe how Excel documents are opened and saved using Syncfusion XlsIO.
+title: Deploying .NET Excel Library in WinRT | Syncfusion
+description: WinRT load and save operations page describes how Excel documents are opened and saved in WinRT using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# WinRT in .NET Excel Library
+# Deploying .NET Excel Library in WinRT | Syncfusion
 
 In order to use XlsIO in your WinRT application, please add the required assemblies in your WinRT application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 

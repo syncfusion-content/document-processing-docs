@@ -1,6 +1,6 @@
 ---
 title: Empty Excel to PDF in .NET Excel Library | Syncfusion
-description: Empty workbook conversion explains whether Syncfusion XlsIO can convert a blank Excel document to PDF.
+description: Empty workbook conversion explains whether Syncfusion .NET Excel Library can convert a blank Excel document to PDF.
 platform: document-processing
 control: XlsIO
 documentation: UG

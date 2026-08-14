@@ -1,6 +1,6 @@
 ---
 title: Digital Signatures in .NET Excel Library | Syncfusion
-description: Digitally signed macros explains whether Syncfusion XlsIO can process Excel files that contain signed macros.
+description: Digitally signed macros explains whether Syncfusion .NET Excel Library can process Excel files that contain signed macros.
 platform: document-processing
 control: XlsIO
 documentation: UG

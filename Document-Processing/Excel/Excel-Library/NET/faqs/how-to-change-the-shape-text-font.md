@@ -1,6 +1,6 @@
 ---
 title: How to Set Shape Fonts in .NET Excel Library | Syncfusion
-description: Configure font settings for shape text in Excel documents using the .NET Excel Library with formatting options.
+description: Configure font settings for shape text in Excel documents using the Syncfusion .NET Excel Library with formatting options.
 platform: document-processing
 control: XlsIO
 documentation: UG

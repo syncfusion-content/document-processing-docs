@@ -1,6 +1,6 @@
 ---
 title: Tables in .NET Excel Library | Syncfusion
-description: Excel tables describe how Syncfusion XlsIO creates, formats, and manages tables in Excel worksheets.
+description: Excel tables section describes how Syncfusion .NET Excel Library creates, formats, and manages tables in Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

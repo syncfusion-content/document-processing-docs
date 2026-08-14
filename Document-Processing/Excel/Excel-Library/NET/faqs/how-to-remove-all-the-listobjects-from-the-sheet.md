@@ -1,6 +1,6 @@
 ---
 title: How to Remove ListObjects in .NET Excel Library | Syncfusion
-description: Remove all ListObjects or Excel tables from a worksheet by iterating in reverse using Syncfusion XlsIO in C# and VB.NET.
+description: Remove all ListObjects or Excel tables from a worksheet by iterating in reverse using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: Borders in .NET Excel Library | Syncfusion
-description: Applying Excel borders programmatically explains how to use different line styles with Interop and XlsIO.
+description: Applying Excel borders programmatically explains how to use different line styles with Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

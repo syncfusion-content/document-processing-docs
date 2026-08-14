@@ -1,11 +1,11 @@
 ---
-title: Excel to PDF in Linux Excel Library | Syncfusion
-description: .NET on Linux Excel to PDF conversion describes how to convert Excel documents to PDF without Microsoft Excel.
+title: Excel to PDF conversion in Linux | Syncfusion
+description: Linux Excel to PDF section explains how to convert Excel documents to PDF in Linux without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel to PDF Conversion in Linux Excel Library
+# Excel to PDF Conversion in Linux using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

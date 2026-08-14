@@ -1,6 +1,6 @@
 ---
 title: How to Convert Pixels to Points in .NET Excel Library | Syncfusion
-description: Convert pixel values to points with scaling percentage using the .NET Excel Library for accurate layout sizing.
+description: Convert pixel values to points with scaling percentage using the Syncfusion .NET Excel Library for accurate layout sizing.
 platform: document-processing
 control: XlsIO
 documentation: UG

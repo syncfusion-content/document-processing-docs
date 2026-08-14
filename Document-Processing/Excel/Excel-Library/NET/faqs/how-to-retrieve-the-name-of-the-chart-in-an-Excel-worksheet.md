@@ -1,6 +1,6 @@
 ---
 title: How to Retrieve Chart Names in .NET Excel Library | Syncfusion
-description: Retrieve the name of a chart in an Excel worksheet using the .NET Excel Library for chart identification.
+description: Retrieve the name of a chart in an Excel worksheet using the Syncfusion .NET Excel Library for chart identification.
 platform: document-processing
 control: XlsIO
 documentation: UG

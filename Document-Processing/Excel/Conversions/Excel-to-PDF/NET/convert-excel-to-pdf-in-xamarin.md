@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in Xamarin Excel Library | Syncfusion
-description: Xamarin Excel to PDF conversion describes how to convert Excel documents to PDF without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in Xamarin | Syncfusion
+description: Xamarin Excel to PDF section explains how to convert Excel documents to PDF in Xamarin without Microsoft Excel or interop dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in Xamarin Excel Library
+# Excel to PDF Conversion in Xamarin using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [Xamarin Excel library](https://www.syncfusion.com/document-processing/excel-framework/xamarin/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Xamarin**.
 

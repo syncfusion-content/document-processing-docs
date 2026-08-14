@@ -1,6 +1,6 @@
 ---
 title: How to Format Pivot Tables in .NET Excel Library | Syncfusion
-description: Apply formatting to pivot tables in Excel Protected View using the .NET Excel Library with supported formatting options.
+description: Apply formatting to pivot tables in Excel Protected View using the Syncfusion .NET Excel Library with supported formatting options.
 platform: document-processing
 control: XlsIO
 documentation: UG

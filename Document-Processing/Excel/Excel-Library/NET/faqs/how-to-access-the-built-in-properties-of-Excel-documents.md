@@ -1,6 +1,6 @@
 ---
 title: How to Access Properties in .NET Excel Library | Syncfusion
-description: Access built-in properties of Excel documents using the .NET Excel Library to read workbook metadata details.
+description: Access built-in properties of Excel documents using the Syncfusion .NET Excel Library to read workbook metadata details.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Detect Macros in .NET Excel Library | Syncfusion
-description: Check whether an Excel document contains macros using the .NET Excel Library before workbook processing.
+description: Check whether an Excel document contains macros using the Syncfusion .NET Excel Library before workbook processing.
 platform: document-processing
 control: XlsIO
 documentation: UG

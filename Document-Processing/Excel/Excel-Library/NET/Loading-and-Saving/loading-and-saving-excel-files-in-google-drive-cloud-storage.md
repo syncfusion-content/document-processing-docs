@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Excel in Google Drive | Syncfusion
-description: Loading and saving Excel files in Google Drive Cloud Storage using the .NET Core Excel Library without Microsoft Excel.
+description: This section explains how to load and save Excel files in Google Drive using the Syncfusion .NET Excel Library without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Files in Google Drive Excel Library
+# Loading and Saving Files in Google Drive
 
 ## Prerequisites
 

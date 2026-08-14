@@ -1,6 +1,6 @@
 ---
 title: How to Replace Hyperlink Text in .NET Excel Library | Syncfusion
-description: Find and replace text in Excel hyperlinks using the .NET Excel Library in an Excel workbook document.
+description: Find and replace text in Excel hyperlinks using the Syncfusion .NET Excel Library in an Excel document.
 platform: document-processing
 control: XlsIO
 documentation: UG

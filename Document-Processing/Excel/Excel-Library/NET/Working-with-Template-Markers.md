@@ -1,6 +1,6 @@
 ---
 title: Template Markers in .NET Excel Library | Syncfusion
-description: Template markers in XlsIO describe how to append multiple records from a data source into an Excel worksheet.
+description: Template markers in Excel Library describes how to import data to a predefined Excel template.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Assign Cell Values in .NET Excel Library | Syncfusion
-description: Assign values to Excel cells in Syncfusion XlsIO without changing existing formats by using text or number formats.
+description: Assign values to Excel cells in Syncfusion .NET Excel Library without changing existing formats by using text or number formats.
 platform: document-processing
 control: XlsIO
 documentation: UG

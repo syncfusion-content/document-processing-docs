@@ -1,6 +1,6 @@
 ---
 title: Icon Set Colors in .NET Excel Library | Syncfusion
-description: Icon set customization explains whether Syncfusion XlsIO can change built-in icon colors in Excel conditional formatting.
+description: Icon set customization explains whether Syncfusion .NET Excel Library can change built-in icon colors in Excel conditional formatting.
 platform: document-processing
 control: XlsIO
 documentation: UG

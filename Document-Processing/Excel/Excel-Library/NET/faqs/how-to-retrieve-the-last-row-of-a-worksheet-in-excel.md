@@ -1,6 +1,6 @@
 ---
 title: How to Retrieve Last Worksheet Row in .NET Excel Library | Syncfusion
-description: Retrieve the last row of the used range in an Excel worksheet using the .NET Excel Library with used range details.
+description: Retrieve the last row of the used range in an Excel worksheet using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

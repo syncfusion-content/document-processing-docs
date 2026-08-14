@@ -1,6 +1,6 @@
 ---
 title: Cell and Range Formatting in .NET Excel Library | Syncfusion
-description: Cell formatting describes how styles, alignment, borders, fonts, colors, number formats, wrap text, and autofit are applied.
+description: Cell formatting section describes how cell alignment, borders, fonts, colors, number formats, wrap text, and autofit are applied in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

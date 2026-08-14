@@ -1,6 +1,6 @@
 ---
 title: How to Edit Workbook Links in .NET Excel Library | Syncfusion
-description: Edit existing external workbook reference links in Excel documents using the .NET Excel Library with code examples.
+description: Edit existing external workbook reference links in Excel documents using the Syncfusion .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG

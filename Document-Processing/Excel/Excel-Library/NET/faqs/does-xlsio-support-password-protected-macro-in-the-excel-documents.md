@@ -1,6 +1,6 @@
 ---
 title: Password Protected Macros in .NET Excel Library | Syncfusion
-description: Password-protected macros explains whether Syncfusion XlsIO can process Excel documents that contain protected macros.
+description: Password-protected macros explains whether Syncfusion .NET Excel Library can process Excel documents that contain protected macros.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Workbooks in .NET MAUI | Syncfusion
-description: Loading and saving Excel files in .NET MAUI applications using the .NET Excel Library for MAUI projects.
+description: .NET MAUI Excel file handling section explains how to load and save Excel files in .NET MAUI applications using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Workbooks in .NET MAUI Excel Library
+# Loading and Saving Workbooks in .NET MAUI
 
 ## Prerequisites
 

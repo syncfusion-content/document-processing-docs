@@ -1,12 +1,12 @@
 ---
-title: Loading and Saving Excel in AWS Lambda Excel Library | Syncfusion
-description: AWS Lambda Excel file handling explains how to load and save Excel files using .NET Core Excel Library without Microsoft Excel.
+title: Loading and Saving Excel in AWS Lambda | Syncfusion
+description: AWS Lambda Excel file handling section explains how to load and save Excel files in AWS Lambda using the Syncfusion .NET Excel Library without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Loading and Saving Files in AWS Lambda Excel Library
+# Loading and Saving Files in AWS Lambda
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and convert Excel documents programmatically without **Microsoft Excel** or interop dependencies. This article explains how to **load and save an Excel file in AWS Lambda** using Syncfusion XlsIO.
 

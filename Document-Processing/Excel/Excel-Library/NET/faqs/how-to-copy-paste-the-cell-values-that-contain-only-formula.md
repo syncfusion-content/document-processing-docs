@@ -1,6 +1,6 @@
 ---
 title: How to Copy Formula Values in .NET Excel Library | Syncfusion
-description: Copy and paste values from formula cells in Excel worksheets using Syncfusion XlsIO without copying formulas.
+description: Copy and paste values from formula cells in Excel worksheets using the Syncfusion .NET Excel Library without copying formulas.
 platform: document-processing
 control: XlsIO
 documentation: UG

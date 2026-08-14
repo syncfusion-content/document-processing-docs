@@ -1,6 +1,6 @@
 ---
 title: How to Skip Unused Sheets in .NET Excel Library | Syncfusion
-description: Avoid processing unnecessary worksheets when opening Excel documents using the .NET Excel Library for better performance.
+description: Avoid processing unnecessary worksheets when opening Excel documents using the Syncfusion .NET Excel Library for better performance.
 platform: document-processing
 control: XlsIO
 documentation: UG

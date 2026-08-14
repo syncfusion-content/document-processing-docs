@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Workbooks in UWP | Syncfusion
-description: Loading and saving Excel files in UWP applications using Syncfusion XlsIO for Excel file operations.
+description: UWP Excel file handling section explains how to load and save Excel files in UWP applications using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Workbooks in UWP Excel Library
+# Loading and Saving Workbooks in UWP
 
 ## Prerequisites
 

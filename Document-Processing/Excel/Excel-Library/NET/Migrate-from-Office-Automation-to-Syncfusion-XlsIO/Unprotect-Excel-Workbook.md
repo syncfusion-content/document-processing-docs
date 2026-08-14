@@ -1,6 +1,6 @@
 ---
 title: Workbook Unprotection in .NET Excel Library | Syncfusion
-description: Unprotect a password-protected Excel workbook using Interop and XlsIO workbook security options for passwords.
+description: Unprotect a password-protected Excel workbook using Interop and Syncfusion .NET Excel Library security options.
 platform: document-processing
 control: XlsIO
 documentation: UG

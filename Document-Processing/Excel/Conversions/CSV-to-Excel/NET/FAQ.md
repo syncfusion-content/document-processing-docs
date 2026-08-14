@@ -1,12 +1,12 @@
 ---
-title: CSV to Excel FAQ in .NET Excel Library | Syncfusion
-description: CSV to Excel FAQ content describes common questions about converting CSV files to Excel workbooks using XlsIO.
+title: FAQ of CSV to Excel Conversion in .NET Excel Library | Syncfusion
+description: FAQ of CSV section provides the frequently asked questions about converting CSV files to Excel workbooks using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# CSV to Excel Conversion FAQ in .NET Excel Library
+# FAQ of CSV to Excel Conversion in .NET Excel Library
 
 The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed below.
 

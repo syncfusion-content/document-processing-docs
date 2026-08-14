@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Number Formatting in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO number formatting lets users display cell values as dates, currency, percentages, decimals, and custom formats.
+description: The Flutter Excel Library lets users display cell values as dates, currency, percentages, decimals, and custom formats.
 platform: document-processing
 control: Excel
 documentation: ug

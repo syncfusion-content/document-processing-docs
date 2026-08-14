@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion Flutter Excel Library | Syncfusion
-description: Learn about overview of Syncfusion .NET Excel Library for creating Excel files in Windows Forms and more details.
+description: Learn about overview of the Syncfusion Flutter Excel Library for creating Excel documents.
 platform: document-processing
 control: Excel
 documentation: ug

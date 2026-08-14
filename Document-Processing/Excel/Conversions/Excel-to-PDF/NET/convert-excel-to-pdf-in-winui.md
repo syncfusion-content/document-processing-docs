@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF in WinUI Excel Library | Syncfusion
-description: WinUI Excel to PDF conversion describes how to convert Excel documents to PDF using the .NET Excel Library.
+title: Excel to PDF conversion in WinUI | Syncfusion
+description: WinUI Excel to PDF section explains how to convert Excel documents to PDF in WinUI using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to PDF Conversion in WinUI Excel Library
+# Excel to PDF Conversion in WinUI using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [WinUI Excel library](https://www.syncfusion.com/document-processing/excel-framework/winui/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

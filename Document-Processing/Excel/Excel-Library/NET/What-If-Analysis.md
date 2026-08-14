@@ -1,6 +1,6 @@
 ---
 title: What-If Analysis in .NET Excel Library | Syncfusion
-description: What-If Analysis Scenario Manager describes how Syncfusion XlsIO creates and manages scenarios in Excel worksheets.
+description: What-If Analysis Scenario Manager section describes how Syncfusion .NET Excel Library creates and manages scenarios in Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

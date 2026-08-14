@@ -1,6 +1,6 @@
 ---
 title: Multithreading in .NET Excel Library | Syncfusion
-description: Multi-threading support explains whether the .NET Excel Library supports concurrent processing during conversions.
+description: Multi-threading support explains whether the Syncfusion .NET Excel Library supports concurrent processing during conversions.
 platform: document-processing
 control: XlsIO
 documentation: UG

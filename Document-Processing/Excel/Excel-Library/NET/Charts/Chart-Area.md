@@ -1,6 +1,6 @@
 ---
 title: Chart Area in .NET Excel Library | Syncfusion
-description: Chart area settings describe how the .NET Excel Library defines and formats the chart area in Excel documents.
+description: Chart area settings describes how the Syncfusion .NET Excel Library defines and formats the chart area in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

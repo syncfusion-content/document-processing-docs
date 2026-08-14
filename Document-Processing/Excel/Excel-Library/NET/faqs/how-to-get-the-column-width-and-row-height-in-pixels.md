@@ -1,6 +1,6 @@
 ---
 title: How to Get Dimensions in .NET Excel Library | Syncfusion
-description: Retrieve column width and row height in pixels using the .NET Excel Library in an Excel worksheet layout.
+description: Retrieve column width and row height in pixels using the Syncfusion .NET Excel Library in an Excel worksheet layout.
 platform: document-processing
 control: XlsIO
 documentation: UG

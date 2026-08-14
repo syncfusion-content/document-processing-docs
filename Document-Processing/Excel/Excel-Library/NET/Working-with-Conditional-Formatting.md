@@ -1,6 +1,6 @@
 ---
 title: Conditional Formatting in .NET Excel Library | Syncfusion
-description: Conditional formatting describes how Syncfusion XlsIO creates, reads, and removes rules in Excel worksheets.
+description: Conditional formatting section describes how the Syncfusion .NET Excel Library supports highlighting data in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

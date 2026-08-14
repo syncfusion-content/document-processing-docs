@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Statistical Functions in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO statistical formulas let users analyze worksheet data and calculate statistical values in Excel cells.
+description: The Flutter Excel Library lets users analyze worksheet data and calculate statistical values in Excel cells.
 platform: document-processing
 control: Excel
 documentation: ug

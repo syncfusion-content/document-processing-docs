@@ -1,6 +1,6 @@
 ---
 title: Maximum Hyperlinks in .NET Excel Library | Syncfusion
-description: Hyperlink limit describes the maximum number of hyperlinks supported in an Excel worksheet using the .NET Excel Library.
+description: Hyperlink limit describes the maximum number of hyperlinks supported in an Excel worksheet using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

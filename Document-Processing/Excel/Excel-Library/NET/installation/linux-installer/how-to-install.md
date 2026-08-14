@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Install Linux Installer in .NET Excel Library | Syncfusion
-description: Install the Syncfusion Excel Linux installer after downloading it from the Syncfusion website for setup.
+description: Syncfusion Excel Linux installer installation section explains how to install the Linux installer after downloading it from the Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug

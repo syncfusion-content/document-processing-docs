@@ -1,6 +1,6 @@
 ---
 title: How to Use Named Ranges in .NET Excel Library | Syncfusion
-description: Use named ranges in Excel documents with the .NET Excel Library for named range operations in worksheets.
+description: Use named ranges in Excel documents with the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

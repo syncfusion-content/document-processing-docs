@@ -1,6 +1,6 @@
 ---
 title: How to Apply Worksheet Styles in .NET Excel Library | Syncfusion
-description: Apply font settings and fill colors to an entire Excel worksheet using the .NET Excel Library in C# and VB.NET.
+description: Apply font settings and fill colors to an entire Excel worksheet using the Syncfusion .NET Excel Library in C# and VB.NET.
 platform: document-processing 
 control: XlsIO 
 documentation: UG

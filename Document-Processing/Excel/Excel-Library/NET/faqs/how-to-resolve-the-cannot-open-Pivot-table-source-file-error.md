@@ -1,6 +1,6 @@
 ---
 title: How to Fix PivotTable Source Errors in .NET Excel | Syncfusion
-description: Resolve the Can't open PivotTable source file error in Excel documents using the .NET Excel Library.
+description: Resolve the Can't open PivotTable source file error in Excel documents using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

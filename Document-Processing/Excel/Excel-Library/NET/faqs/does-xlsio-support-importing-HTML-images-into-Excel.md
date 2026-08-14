@@ -1,6 +1,6 @@
 ---
 title: HTML Image Import in .NET Excel Library | Syncfusion
-description: HTML image import explains whether Syncfusion XlsIO can import images from HTML content into Excel worksheets.
+description: Import HTML images explains whether Syncfusion .NET Excel Library can import images from HTML content into Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG

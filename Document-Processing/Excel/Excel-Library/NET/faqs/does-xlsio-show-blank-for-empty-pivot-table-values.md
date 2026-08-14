@@ -1,6 +1,6 @@
 ---
 title: How to Show Blank Pivot Values in .NET Excel Library | Syncfusion
-description: Handle empty or null PivotTable cells in Syncfusion XlsIO by displaying “(blank)” values like Microsoft Excel behavior.
+description: Handle blank cells in pivot table describes how to show the blank cells in the pivot table using the word "blank"
 platform: document-processing
 control: XlsIO
 documentation: UG

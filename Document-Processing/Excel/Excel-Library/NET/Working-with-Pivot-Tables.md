@@ -1,6 +1,6 @@
 ---
 title: Pivot Tables in .NET Excel Library | Syncfusion
-description: Pivot table operations in XlsIO describe how to create and use pivot tables in Excel documents effectively.
+description: Pivot table operations in Excel Library describes how to create and use pivot tables in Excel documents effectively.
 platform: document-processing
 control: XlsIO
 documentation: UG

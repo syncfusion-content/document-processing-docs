@@ -1,6 +1,6 @@
 ---
 title: How to Merge Cells in .NET Excel Library | Syncfusion
-description: Merge a range using Syncfusion XlsIO while keeping the top-left cell value and applying its formatting.
+description: Merge a range using the Syncfusion .NET Excel Library while keeping the top-left cell value and applying its formatting.
 platform: document-processing
 control: XlsIO
 documentation: UG

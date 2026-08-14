@@ -1,6 +1,6 @@
 ---
 title: How to Prevent ParseException in .NET Excel Library | Syncfusion
-description: Prevent ParseException when modifying formulas with undefined named ranges using the .NET Excel Library.
+description: Prevent ParseException when modifying formulas with undefined named ranges using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

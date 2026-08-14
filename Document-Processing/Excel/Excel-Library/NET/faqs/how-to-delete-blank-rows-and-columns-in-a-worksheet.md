@@ -1,6 +1,6 @@
 ---
 title: How to Delete Blank Rows and Columns in .NET Excel | Syncfusion
-description: Delete blank rows and columns in Excel worksheets using the .NET Excel Library to clean workbook data.
+description: Delete blank rows and columns in Excel worksheets using the Syncfusion .NET Excel Library to clean workbook data.
 platform: document-processing
 control: XlsIO
 documentation: UG

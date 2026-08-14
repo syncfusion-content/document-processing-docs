@@ -1,6 +1,6 @@
 ---
 title: Worksheet Backgrounds in .NET Excel Library | Syncfusion
-description: Set a tiled single-image background for an Excel worksheet using Interop and XlsIO worksheet background options.
+description: Set image background for an Excel worksheet using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

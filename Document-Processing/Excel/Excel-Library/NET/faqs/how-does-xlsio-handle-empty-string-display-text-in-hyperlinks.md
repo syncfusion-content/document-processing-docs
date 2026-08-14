@@ -1,6 +1,6 @@
 ---
 title: How to Handle Hyperlink Text in .NET Excel Library | Syncfusion
-description: Handle empty display text in Excel hyperlinks using Syncfusion XlsIO with behavior consistent with Microsoft Excel.
+description: Handle empty display text in Excel hyperlinks using the Syncfusion .NET Excel Library with behavior consistent with Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG

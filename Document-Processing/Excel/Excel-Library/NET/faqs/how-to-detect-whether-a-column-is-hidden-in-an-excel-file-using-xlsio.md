@@ -1,6 +1,6 @@
 ---
 title: How to Detect Hidden Columns in .NET Excel Library | Syncfusion
-description: Detect hidden Excel columns using Syncfusion XlsIO by checking the IsHidden property in worksheet columns.
+description: Detect hidden Excel columns using the Syncfusion .NET Excel Library by checking the IsHidden property in worksheet columns.
 platform: document-processing
 control: XlsIO
 documentation: UG

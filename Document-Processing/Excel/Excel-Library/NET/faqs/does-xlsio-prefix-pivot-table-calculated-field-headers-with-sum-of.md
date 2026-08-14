@@ -1,6 +1,6 @@
 ---
 title: Pivot Field Header Prefix in .NET Excel Library | Syncfusion
-description: PivotTable calculated field headers describe whether Syncfusion XlsIO adds the 'Sum of' prefix to calculated field headers.
+description: PivotTable calculated field headers describes whether Syncfusion .NET Excel Library adds the 'Sum of' prefix to calculated field headers.
 platform: document-processing 
 control: XlsIO 
 documentation: UG

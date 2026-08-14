@@ -1,6 +1,6 @@
 ---
 title: Deprecated APIs in .NET Excel Library | Syncfusion
-description: Deprecated API details describe old .NET Excel Library APIs and their corresponding new API replacements.
+description: Deprecated API details describes old .NET Excel Library APIs and their corresponding new API replacements.
 platform: document-processing
 control: XlsIO
 documentation: UG

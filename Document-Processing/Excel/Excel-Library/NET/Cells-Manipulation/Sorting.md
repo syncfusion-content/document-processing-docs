@@ -1,6 +1,6 @@
 ---
 title: Sorting in .NET Excel Library | Syncfusion
-description: Data sorting describes how the .NET Excel Library sorts worksheet data by cell values, font color, and cell color.
+description: Data sorting describes how the Syncfusion .NET Excel Library sorts worksheet data by cell values, font color, and cell color.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,11 +1,11 @@
 ---
 title: Create, Read, and Edit Excel in UWP | Syncfusion
-description: UWP applications let users create, read, and edit Excel files using Syncfusion Excel Library for application development.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in UWP applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel Files in UWP with Excel Library
+# Create Excel Files in UWP with Excel Library
 
 The Syncfusion [.NET Excel Library (XlsIO) for UWP platform](https://www.syncfusion.com/document-processing/excel-framework/uwp/excel-library) can be used to create, read, and edit Excel files. It can also convert Excel files to PDF.
 

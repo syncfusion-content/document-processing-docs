@@ -1,6 +1,6 @@
 ---
 title: Chart Legend in .NET Excel Library | Syncfusion
-description: Chart legend settings describe how the .NET Excel Library displays and formats legends in Excel charts.
+description: Chart legend settings describes how the Syncfusion .NET Excel Library displays and formats legends in Excel charts.
 platform: document-processing
 control: XlsIO
 documentation: UG

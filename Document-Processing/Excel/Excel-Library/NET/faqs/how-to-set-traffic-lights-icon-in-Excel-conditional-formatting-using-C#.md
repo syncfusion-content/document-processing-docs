@@ -1,6 +1,6 @@
 ---
 title: How to Set Traffic Icons in .NET Excel Library | Syncfusion
-description: Set traffic lights icons in Excel conditional formatting using the .NET Excel Library for conditional formatting rules.
+description: Set traffic lights icons in Excel conditional formatting using the Syncfusion .NET Excel Library for conditional formatting rules.
 platform: document-processing
 control: XlsIO
 documentation: UG

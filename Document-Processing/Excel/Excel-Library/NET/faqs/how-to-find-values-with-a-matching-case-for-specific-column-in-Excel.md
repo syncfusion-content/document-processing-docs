@@ -1,6 +1,6 @@
 ---
 title: How to Find Case Sensitive Values in .NET Excel Library | Syncfusion
-description: Find values with matching case in a specific Excel worksheet column using the .NET Excel Library and workbook data.
+description: Find values with matching case in a specific Excel worksheet column using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

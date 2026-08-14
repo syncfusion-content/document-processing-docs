@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Tables in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO Excel tables let users organize worksheet data by creating, formatting, and removing structured tables.
+description: The Flutter Excel Library lets users create, format, and remove structured Excel tables to organize worksheet data.
 platform: document-processing
 control: Excel
 documentation: ug

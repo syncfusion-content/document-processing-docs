@@ -1,6 +1,6 @@
 ---
 title: How to Hide Columns in .NET Excel Library | Syncfusion
-description: Hide columns by column name in an Excel worksheet using the .NET Excel Library in workbook sheet columns.
+description: Hide columns by column name in an Excel worksheet using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: PDF Background Images in .NET Excel Library | Syncfusion
-description: Excel to PDF conversion explains whether the .NET Excel Library supports watermarks and background images.
+description: Excel to PDF conversion explains whether the Syncfusion .NET Excel Library supports watermarks and background images.
 platform: document-processing
 control: XlsIO
 documentation: UG

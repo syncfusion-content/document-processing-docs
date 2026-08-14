@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Chart in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO column chart lets users create, add, and customize column charts in Excel worksheets with chart options.
+description: The Flutter Excel Library allows users create, add, and customize column charts in Excel worksheets with chart options.
 platform: document-processing
 control: Excel
 documentation: ug

@@ -1,11 +1,11 @@
 ---
 title: Create, Read, and Edit Excel in Azure Functions v1 | Syncfusion
-description: The Azure Functions v1 platform lets users create, read, and edit Excel files with Syncfusion XlsIO.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Azure Functions v1.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Excel Files in Azure Functions v1 with Excel Library
+# Create Excel Files in Azure Functions v1 with Excel Library
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

@@ -1,6 +1,6 @@
 ---
 title: How to Create Charts in .NET Excel Library | Syncfusion
-description: Create an Excel chart with a discontinuous range using the .NET Excel Library for non-adjacent data points.
+description: Create an Excel chart with a discontinuous range using the Syncfusion .NET Excel Library for non-adjacent data points.
 platform: document-processing
 control: XlsIO
 documentation: UG

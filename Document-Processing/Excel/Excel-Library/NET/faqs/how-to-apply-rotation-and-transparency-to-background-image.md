@@ -1,6 +1,6 @@
 ---
 title: How to Set Background Images in .NET Excel Library | Syncfusion
-description: Apply rotation and transparency to background images in Excel worksheets using the .NET Excel Library.
+description: Apply rotation and transparency to background images in Excel worksheets using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

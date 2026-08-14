@@ -1,11 +1,11 @@
 ---
 title: Loading and Saving Workbooks in Linux | Syncfusion
-description: Loading and saving Excel files in Linux applications using Syncfusion XlsIO library for Excel file operations.
+description: Linux Excel file handling section explains how to load and save Excel files in Linux applications using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Workbooks in Linux Excel Library
+# Loading and Saving Workbooks in Linux
 
 ## Prerequisites
 

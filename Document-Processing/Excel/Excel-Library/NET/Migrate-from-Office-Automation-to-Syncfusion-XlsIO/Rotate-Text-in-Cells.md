@@ -1,6 +1,6 @@
 ---
 title: Text Rotation in .NET Excel Library | Syncfusion
-description: Programmatically rotate text in Excel cells using Interop and XlsIO to improve spreadsheet presentation.
+description: Programmatically rotate text in Excel cells using Interop and Syncfusion .NET Excel Library to improve spreadsheet presentation.
 platform: document-processing
 control: XlsIO
 documentation: UG

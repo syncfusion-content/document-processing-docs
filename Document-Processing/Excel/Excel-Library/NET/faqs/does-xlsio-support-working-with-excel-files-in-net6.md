@@ -1,6 +1,6 @@
 ---
 title: .NET 6 Support in .NET Excel Library | Syncfusion
-description: .NET 6.0 compatibility explains whether Syncfusion XlsIO can create, edit, and convert Excel documents in .NET 6.0.
+description: .NET 6.0 compatibility explains whether Syncfusion .NET Excel Library can create, edit, and convert Excel documents in .NET 6.0.
 platform: document-processing
 control: XlsIO
 documentation: UG

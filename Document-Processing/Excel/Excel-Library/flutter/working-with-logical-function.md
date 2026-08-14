@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Logical Functions in Flutter Excel Library | Syncfusion
-description: The Flutter XlsIO logical formulas let users evaluate conditions in worksheet cells and return logical results.
+description: The Flutter Excel Library lets users evaluate conditions in worksheet cells and return logical results.
 platform: document-processing
 control: Excel
 documentation: ug

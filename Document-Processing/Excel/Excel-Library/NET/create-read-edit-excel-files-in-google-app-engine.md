@@ -1,12 +1,12 @@
 ---
 title: Create, Read, and Edit Excel in GCP | Syncfusion
-description: The Google App Engine platform lets users create, read, and edit Excel files with the .NET Excel Library.
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Google App Engine.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel Files in Google App Engine with Excel Library
+# Create Excel Files in Google App Engine with Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) that can be used to create, read, and edit Excel files. This library supports manipulating Excel documents in Google App Engine.
 

@@ -1,6 +1,6 @@
 ---
 title: Pivot Table Column Width in .NET Excel Library | Syncfusion
-description: PivotTable refresh behavior describes whether Syncfusion XlsIO changes column widths when pivot table data is refreshed.
+description: PivotTable refresh behavior describes whether Syncfusion .NET Excel Library changes column widths when pivot table data is refreshed.
 platform: document-processing
 control: XlsIO
 documentation: UG

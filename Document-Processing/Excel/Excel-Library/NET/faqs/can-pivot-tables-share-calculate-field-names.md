@@ -1,6 +1,6 @@
 ---
 title: Calculated Field Naming in .NET Excel Library | Syncfusion
-description: PivotTable calculated fields describe whether multiple pivot tables can use calculated fields with the same name.
+description: PivotTable calculated fields describes whether multiple pivot tables can use calculated fields with the same name.
 platform: document-processing
 control: XlsIO
 documentation: UG

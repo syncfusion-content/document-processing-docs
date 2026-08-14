@@ -1,6 +1,6 @@
 ---
 title: Formula Auto Correction in .NET Excel Library | Syncfusion
-description: Formula handling in Syncfusion XlsIO explains whether formulas can be corrected automatically in Excel documents.
+description: Formula handling in Syncfusion .NET Excel Library explains whether formulas can be corrected automatically in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

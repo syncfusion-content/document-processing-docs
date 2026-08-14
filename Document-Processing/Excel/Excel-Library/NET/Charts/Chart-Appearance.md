@@ -1,6 +1,6 @@
 ---
 title: Chart Appearance in .NET Excel Library | Syncfusion
-description: Chart appearance describes how the .NET Excel Library customizes the visual style of charts in Excel documents.
+description: Chart appearance describes how the Syncfusion .NET Excel Library customizes the visual style of charts in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG

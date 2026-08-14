@@ -1,6 +1,6 @@
 ---
 title: How to Calculate File Size in .NET Excel Library | Syncfusion
-description: Compute the size of an Excel file using the .NET Excel Library for workbook storage and validation needs.
+description: Compute the size of an Excel file using the Syncfusion .NET Excel Library for workbook storage and validation needs.
 platform: document-processing
 control: XlsIO
 documentation: UG

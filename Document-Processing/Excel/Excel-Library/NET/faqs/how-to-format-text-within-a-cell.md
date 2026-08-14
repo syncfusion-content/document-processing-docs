@@ -1,6 +1,6 @@
 ---
 title: How to Format Cell Text in .NET Excel Library | Syncfusion
-description: Format text within an Excel cell using the .NET Excel Library in an Excel worksheet cell format settings.
+description: Format text within an Excel cell using the Syncfusion .NET Excel Library with the cell style settings.
 platform: document-processing
 control: XlsIO
 documentation: UG

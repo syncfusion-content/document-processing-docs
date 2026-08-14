@@ -1,12 +1,12 @@
 ---
 title: Create, Read, and Edit Excel in ASP.NET Web API | Syncfusion
-description: The ASP.NET Core Web API platform lets users create Excel files with Syncfusion XlsIO in Web API applications.
+description: Syncfusion .NET Excel Library supports creating Excel files in ASP.NET Core Web API applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel Files in ASP.NET Core Web API with Excel Library
+# Create Excel Files in ASP.NET Core Web API with Excel Library
 
 [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel documents using a Web API.
 

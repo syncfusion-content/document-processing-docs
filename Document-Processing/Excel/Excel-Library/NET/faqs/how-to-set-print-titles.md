@@ -1,6 +1,6 @@
 ---
 title: How to Set Print Titles in .NET Excel Library | Syncfusion
-description: Set print titles in an Excel document using the .NET Excel Library for worksheet printing settings options.
+description: Set print titles in an Excel document using the Syncfusion .NET Excel Library for Excel to PDF conversion.
 platform: document-processing
 control: XlsIO
 documentation: UG

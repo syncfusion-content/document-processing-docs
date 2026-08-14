@@ -1,6 +1,6 @@
 ---
 title: How to Sort Data in .NET Excel Library | Syncfusion
-description: Sort a column by including the first row using XlsIO in C# and VB.NET for Excel worksheet data sorting.
+description: Sort a column by including the first row using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 title: How to Unfreeze Rows and Columns in .NET Excel Library | Syncfusion
-description: Unfreeze rows and columns in Excel worksheets using the .NET Excel Library for worksheet view management.
+description: Unfreeze rows and columns in Excel worksheets using the Syncfusion .NET Excel Library for worksheet view management.
 platform: document-processing
 control: XlsIO
 documentation: UG

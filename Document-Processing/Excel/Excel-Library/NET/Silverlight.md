@@ -1,11 +1,11 @@
 ---
-title: Silverlight Support in .NET Excel Library | Syncfusion
-description: Silverlight load and save operations describe how Excel documents are opened and saved using Syncfusion XlsIO.
+title: Deploying .NET Excel Library in Silverlight | Syncfusion
+description: Silverlight load and save operations section describes how Excel documents are opened and saved using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Silverlight in .NET Excel Library
+# Deploying .NET Excel Library in Silverlight | Syncfusion
 
 In order to use XlsIO in your Silverlight application, please add the required assemblies in your Silverlight application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 

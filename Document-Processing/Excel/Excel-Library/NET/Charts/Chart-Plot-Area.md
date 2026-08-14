@@ -1,6 +1,6 @@
 ---
 title: Chart Plot Area in .NET Excel Library | Syncfusion
-description: Chart plot area settings describe how the .NET Excel Library formats the plot area in Excel charts with options.
+description: Chart plot area settings describes how the Syncfusion .NET Excel Library formats the plot area in Excel charts with options.
 platform: document-processing
 control: XlsIO
 documentation: UG

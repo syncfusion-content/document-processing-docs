@@ -1,6 +1,6 @@
 ---
 title: How to Open Macro Templates in .NET Excel Library | Syncfusion
-description: Open an Excel 2013 macro-enabled template using the .NET Excel Library for Excel template file handling.
+description: Open an Excel 2013 macro-enabled template using the Syncfusion .NET Excel Library for Excel template file handling.
 platform: document-processing
 control: XlsIO
 documentation: UG

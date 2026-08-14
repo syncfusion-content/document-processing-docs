@@ -1,6 +1,6 @@
 ---
-title: Excel to PDF FAQ in .NET Excel Library | Syncfusion
-description: Excel to PDF FAQ content describes common questions about converting Excel documents to PDF using Syncfusion XlsIO.
+title: FAQ of Excel to PDF conversion in .NET Excel Library | Syncfusion
+description: Excel to PDF FAQ content describes common questions about converting Excel documents to PDF using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

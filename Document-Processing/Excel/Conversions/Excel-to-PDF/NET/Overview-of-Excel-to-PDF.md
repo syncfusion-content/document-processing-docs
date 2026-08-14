@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion .NET Excel to PDF Conversion Library | Syncfusion
-description: Learn about overview of Syncfusion XlsIO for creating, reading, editing, and converting Excel files to PDF across .NET platforms.
+description: Learn about overview of Syncfusion .NET Excel Library for creating, reading, editing, and converting Excel files to PDF across .NET platforms.
 platform: document-processing
 control: XlsIO
 documentation: UG

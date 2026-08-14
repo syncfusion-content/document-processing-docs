@@ -1,6 +1,6 @@
 ---
 title: Header Row Detection in .NET Excel Library | Syncfusion
-description: Header row detection describes whether the .NET Excel Library provides an API to identify a header row in a range.
+description: Header row detection describes whether the Syncfusion .NET Excel Library provides an API to identify a header row in a range.
 platform: document-processing
 control: XlsIO
 documentation: UG
