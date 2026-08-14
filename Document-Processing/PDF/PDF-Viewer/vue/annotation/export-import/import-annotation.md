@@ -26,7 +26,7 @@ Steps:
 
 All annotations in the selected file are applied to the current document.
 
-![Import Annotation](../images/import-annot.png)
+![Import Annotation](../../../javascript-es6/annotations/annotation-images/import-annot.png)
 
 ## Import programmatically (from object)  
 

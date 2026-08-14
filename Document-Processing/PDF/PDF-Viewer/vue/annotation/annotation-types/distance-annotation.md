@@ -375,9 +375,9 @@ export default {
 ## Scale Ratio and Units
 
 - Use **Scale Ratio** from the context menu to set the actual-to-page scale.  
-  ![Scale ratio](../../../javascript-es6/annotations/annotation-images/calibrate_scaleratio.png)
+  ![Scale ratio](../../images/calibrate_scaleratio.png)
 - Supported units include **Inch, Millimeter, Centimeter, Point, Pica, Feet**.  
-  ![Scale dialog](../../../javascript-es6/annotations/annotation-images/calibrate_scaledialog.png)
+  ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
 Configure scale defaults using `measurementSettings`.
