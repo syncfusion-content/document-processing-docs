@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in JavaScript (ES5) DOCX Editor
 
-This section describes the unsupported elements in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) 
+This section describes the unsupported features in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 ## Document formatting
 
@@ -28,7 +28,7 @@ This section describes the unsupported elements in [JavaScript DOCX Editor](http
 |  |  Number spacing | No |
 |  |  Number forms | No |
 |  |  Stylistic sets | No |
-|  |  Contextual alternates| No |
+|  |  Contextual alternates | No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Section Formatting | Mirror margins | No |
@@ -36,7 +36,7 @@ This section describes the unsupported elements in [JavaScript DOCX Editor](http
 | | Line numbers | No |
 | | Bi-direction | No |
 | Page background | Page background color or image | No |
-| Watermark  |  Text and Picture watermark| No |
+| Watermark | Text and Picture Watermark | No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 
 ## Word Document Elements
@@ -50,8 +50,8 @@ This section describes the unsupported elements in [JavaScript DOCX Editor](http
 | Video or audio files | No |
 | Macros | No |
 | Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/chart) |
-| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
+| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es5/shapes) *(Shape Properties: Fill types, borders, rotation, and effects are not supported)* |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No 
+| Comment reactions | No | 
