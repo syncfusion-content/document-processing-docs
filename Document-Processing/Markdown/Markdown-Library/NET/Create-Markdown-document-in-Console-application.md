@@ -26,7 +26,7 @@ Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfus
 
 ![Install Syncfusion.Markdown NuGet Package](Console-Images/NET/Install_Nuget.png)
 
-N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
+N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application.
 N>
 N> Install the [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) NuGet package and register the license key during application startup.
 N>
@@ -145,7 +145,7 @@ Step 2: Install the [Syncfusion.Markdown](https://www.nuget.org/packages/Syncfus
 
 ![Install Syncfusion.Markdown NuGet package](Console-Images/NET-FrameWork/Install_Nuget.png)
 
-N> **Starting with v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application. Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup:
+N> **Starting with v34.x.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must add a reference to the **Syncfusion.Licensing** assembly and include a valid license key in your application. Install the https://www.nuget.org/packages/Syncfusion.Licensing NuGet package and register the license key during application startup:
 N>
 N> ```csharp
 N> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
