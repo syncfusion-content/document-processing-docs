@@ -44,45 +44,47 @@ End Using
 
 A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Working-with-Markdown-document/Clone-whole-Markdown-document/.NET).
 
-You can also create a deep copy of Markdown document elements such as paragraphs, headings, blockquotes, code blocks, lists, tables, images, and more. The following code example illustrates how to clone blocks of a Markdown document and save each cloned blocks as a separate Markdown document.
+## Merging Markdown documents
+
+You can merge multiple Markdown documents by combining blocks from a source document into a destination document. This is useful when you want to consolidate content from multiple Markdown files into one unified document. The merge operation allows you to clone and add blocks from a source document to a destination document while preserving the formatting and structure of both documents.
+
+The following code example demonstrates how to merge two Markdown documents:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Opens an existing Markdown document
-MarkdownDocument sourceDocument = new MarkdownDocument("Input.md");
+//Opens an existing Markdown documents
+MarkdownDocument sourceDocument = new MarkdownDocument(Path.GetFullPath("Data/SourceDocument.md"));
+MarkdownDocument destinationDocument = new MarkdownDocument(Path.GetFullPath("Data/DestinationDocument.md"));
 //Processes each blocks in the Markdown document
 for (int i = 0; i < sourceDocument.Blocks.Count; i++)
 {
-    //Creates new MarkdownDocument instance to add cloned section
-    MarkdownDocument destinationDocument = new MarkdownDocument();
     //Clones and adds source document Blocks to the destination document
     destinationDocument.Blocks.Add((IMdBlock)sourceDocument.Blocks[i].Clone());
-    //Saves and closes the document instance
-    destinationDocument.Save("Block_" + i + ".md");
-    destinationDocument.Dispose();
 }
+//Saves and closes the document instance
+destinationDocument.Save(Path.GetFullPath("Output/MergedDocument.md"));
+destinationDocument.Dispose();
 //Closes the source document instance
 sourceDocument.Dispose();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET" %}
-'Opens an existing Markdown document
-Dim sourceDocument As MarkdownDocument = New MarkdownDocument("Input.md")
+'Opens an existing Markdown documents
+Dim sourceDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Data/SourceDocument.md"))
+Dim destinationDocument As MarkdownDocument = New MarkdownDocument(Path.GetFullPath("Data/DestinationDocument.md"))
 'Processes each blocks in the Markdown document
 For i As Integer = 0 To sourceDocument.Blocks.Count - 1
-    'Creates new MarkdownDocument instance to add cloned section
-    Dim destinationDocument As New MarkdownDocument()
     'Clones and adds source document Blocks to the destination document
     destinationDocument.Blocks.Add(CType(sourceDocument.Blocks(i).Clone(), IMdBlock))
-    'Saves and closes the document instance
-    destinationDocument.Save("Block_" + i + ".md")
-    destinationDocument.Dispose()
 Next
+'Saves and closes the document instance
+destinationDocument.Save(Path.GetFullPath("Output/MergedDocument.md"))
+destinationDocument.Dispose()
 'Closes the source document instance
 sourceDocument.Dispose()
 {% endhighlight %}
 
 {% endtabs %}
 
-A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Working-with-Markdown-document/Split-by-blocks/.NET).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Working-with-Markdown-document/Merge-Markdown/.NET).
