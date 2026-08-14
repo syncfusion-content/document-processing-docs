@@ -1172,8 +1172,6 @@ You can ungroup group shapes in a Word document so that each shape is preserved 
 
 The following code example illustrates how to ungroup the group shape in Word document.
 
-The following code example illustrates how to ungroup a group shape in a Word document.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Shapes/Ungroup-shapes/.NET/Ungroup-shapes/Program.cs" %}
