@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Save document to One Drive in JavaScript (ES5) Document editor control | Syncfusion
-description:  Learn about how to Save document to One Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save document to OneDrive in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to save a document to OneDrive in the Syncfusion JavaScript (ES5) DOCX Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
-control: Save document to One Drive
+control: Save document to OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to One Drive
+# Save document to OneDrive using JavaScript (ES5) DOCX Editor
 
-To save a document to One Drive, you can follow the steps below
+To save a document to OneDrive, you can follow the steps below.
 
-**Step 1:** Create the Microsoft graph API.
+**Step 1:** Create the Microsoft Graph API.
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
+You must create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
-**Step 2:** Create a Simple [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in JavaScript
+**Step 2:** Create a Simple [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in JavaScript (ES5)
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -35,7 +35,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,14 +54,14 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToOneDrive()` method to save the downloaded document to One Drive bucket
+* Create the `SaveToOneDrive()` method to save the downloaded document to OneDrive.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToOneDrive")]
-//Post action for downloading the document
+//Post action for uploading the document to OneDrive
 
 public void SaveToOneDrive(IFormCollection data)
 {
@@ -115,7 +115,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -130,14 +130,13 @@ private string GetValue(IFormCollection data, string key)
   "applApplicationIdicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
-
 ```
 
-N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in One Drive.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in OneDrive.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -145,7 +144,7 @@ In the client-side, to export the document into blob the document using [`saveAs
 {% endhighlight %}
 {% endtabs %}
 
-N> The following NuGet packages are required to use the previous code example
+N> The following NuGet packages are required to use the previous code example:
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**
