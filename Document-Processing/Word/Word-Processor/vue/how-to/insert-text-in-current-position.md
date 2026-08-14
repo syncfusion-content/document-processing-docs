@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Insert text in current position in Vue Document editor component | Syncfusion
+title: How to Insert Content at Cursor in Vue DOCX Editor | Syncfusion
 description: Learn here all about Insert text in current position in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Insert text in current position 
 platform: document-processing
