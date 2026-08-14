@@ -129,7 +129,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Box cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Box cloud file storage.
 
 ```typescript
 <template>
