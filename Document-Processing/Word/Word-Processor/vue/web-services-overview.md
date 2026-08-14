@@ -116,7 +116,7 @@ export default {
 
 ## Add custom headers to XMLHttpRequest
 
-Document Editor component provides an option to add custom headers to the XMLHttpRequest using the [`headers`](https://help.syncfusion.com/document-processing/word/word-processor/vue/header-footer).
+Document Editor component provides an option to add custom headers to the XMLHttpRequest using the [`headers`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#headers).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
