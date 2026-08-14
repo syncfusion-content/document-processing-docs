@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy document editor component for mobile in Vue Document editor component | Syncfusion
+title: How to Deploy Vue DOCX Editor for Mobile | Syncfusion
 description: Learn here all about Deploy document editor component for mobile in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Deploy document editor component for mobile 
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy document editor component for mobile in Vue Document editor component
+# How to Deploy Vue DOCX Editor for Mobile
 
 ## Document Editor component for mobile
 
