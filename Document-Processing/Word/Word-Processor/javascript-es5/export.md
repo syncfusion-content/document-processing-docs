@@ -3,16 +3,16 @@ layout: post
 title: Export in JavaScript DOCX Editor | Syncfusion
 description: The export feature in JavaScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting
 platform: document-processing
-control: Export 
+control: Export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Export in JavaScript DOCX Editor
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
-We are providing two types of save APIs as mentioned below.
+Two types of save APIs are provided as mentioned below.
 
 |API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
@@ -21,7 +21,7 @@ We are providing two types of save APIs as mentioned below.
 
 ## SFDT export
 
-The following example shows how to export documents in Document Editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in the Document Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -45,11 +45,13 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs1" %}
 
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+
 ## Word export
 
 The following example shows how to export the document as Word document (.docx).
 
->Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+> Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -73,11 +75,13 @@ The following example shows how to export the document as Word document (.docx).
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs2" %}
 
-## Word Template Export 
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+
+## Word template export
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -100,6 +104,8 @@ The following example shows how to export the document as Word Template (.dotx).
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs4" %}
+
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
 ## Text export
 
@@ -126,6 +132,8 @@ The following example shows how to export document as text document (.txt).
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/export-container-cs3" %}
+
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
 ## Export as blob
 
@@ -170,7 +178,7 @@ In client-side, you can consume this web service and save the document as Rich T
 
 ```js
 document.getElementById('export').addEventListener('click', function () {
-    // Expor the document as `Blob` object.
+    // Export the document as `Blob` object.
     documenteditor.saveAsBlob('Docx').then(function (exportedDocument) {
         // The blob can be processed further
         var formData = new FormData();
@@ -229,8 +237,9 @@ function download(fileName, extension, buffer, downloadLink, hasDownloadAttribut
 
 ## Online Demo
 
-Explore how to export Word documents in various formats using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/advanced-exporting.html).
+Explore how to export Word documents in various formats using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/advanced-exporting.html).
 
 ## See Also
 
 * [Feature modules](./feature-module)
+* [How to export the document as pdf?](./how-to/export-document-as-pdf)

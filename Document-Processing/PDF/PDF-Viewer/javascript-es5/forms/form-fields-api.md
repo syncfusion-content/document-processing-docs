@@ -39,7 +39,7 @@ Updates the value of one or more form fields programmatically.
 ```
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-var btn = document.getElementById('updateFormFields');
+var btn = document.getElementById('updateFormFieldsValue');
 if (btn) {
   btn.onclick = function () {
     // Retrieve form fields collection
@@ -218,7 +218,7 @@ Clears values of specified or all fields without removing the fields themselves.
 ```
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-var btn = document.getElementById('clearFormFields');
+var btn = document.getElementById('clearformfield');
 if (btn) {
   btn.onclick = function () {
     var field = pdfviewer.retrieveFormFields();
@@ -248,8 +248,7 @@ if (element) {
 
 ## isFormDesignerToolbarVisible
 
-Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
-and get the form designer Toolbar Visible status.
+Gets whether the Form Designer toolbar is currently visible.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -320,4 +319,4 @@ pdfviewer.enableFormDesignerToolbar(true); // show
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
-- [Form fields Validation](./form-validation)
+- [Form Validation](./form-validation)

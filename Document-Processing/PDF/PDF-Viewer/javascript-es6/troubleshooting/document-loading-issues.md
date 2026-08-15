@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve Document Loading Issues in JavaScript (ES6) PDF Viewer
+# Troubleshoot Document Loading Issues in JavaScript (ES6) PDF Viewer v23.1+
 
 If a document does not render in the viewer when using version 23.1 or newer, follow these steps:
 
@@ -33,7 +33,7 @@ pdfviewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null
 5. Confirm initialization order: instantiate the viewer, call `dataBind()`, then call `load()`.
 6. Upgrade to the latest viewer release; the issue may be fixed in newer versions.
 7. Configure CORS correctly for cross-origin documents so the viewer can retrieve remote files.
-8. Review Content Security Policy (CSP) settings and permit any external resources required by the viewer. See the Content Security Policy troubleshooting guide in the Syncfusion documentation for details.
+8. Review Content Security Policy (CSP) settings and permit any external resources required by the viewer.
 
 N> For v23.1 and later, ensure `dataBind()` is called before `load()`; earlier releases may not require this call.
 

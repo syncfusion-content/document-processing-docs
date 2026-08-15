@@ -82,7 +82,7 @@ The PDF Viewer follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/ap
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation of the form field|
+|<kbd>CONTROL + X</kbd> |<kbd>CONTROL + X</kbd> |Cut the selected text, annotation, or form field|
 |<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation or form field|
 |||**Shortcuts for the general operation**|
 | <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|

@@ -14,7 +14,7 @@ The PDF Viewer provides tools to organize PDF documents by inserting, deleting, 
 
 ## Getting started
 
-To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel/) for configuration options.
+To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel) for configuration options.
 
 ![Organize Pages dialog showing page thumbnails](./images/organize-page.png)
 
@@ -40,8 +40,6 @@ Insert blank pages to the left or right of a selected page using the respective 
 ### Deleting PDF pages
 
 Duplicate pages by selecting thumbnails and using the copy action; duplicates are inserted to the right of the selected page.
-
-![Insert, delete, and copy page actions shown in the organizer](./images/insert-delete-copy.gif)
 
 ### Copying PDF pages
 
@@ -185,8 +183,8 @@ document.getElementById('openPageOrganizer').addEventListener('click', function 
 ```
 ```ts
 document.getElementById('closePageOrganizer').addEventListener('click', function () {
-  viewer.pageOrganizer.openPageOrganizer();
-}
+  viewer.pageOrganizer.closePageOrganizer();
+});
 ```
 ## Keyboard shortcuts
 The following keyboard shortcuts are available at the organize pages dialog.
@@ -195,6 +193,6 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 ![Undo and redo controls in organizer](./images/undo-redo.png)
 
-#### Conclusion
+### Conclusion
 The Organize Pages feature provides a set of tools for editing the page structure of PDF documents inside the viewer. Use the toolbar and organizer panel to insert, delete, rotate, rearrange, copy, import, and save changes to documents.
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/How%20to/Organize%20pdf)

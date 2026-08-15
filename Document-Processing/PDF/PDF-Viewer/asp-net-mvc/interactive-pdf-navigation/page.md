@@ -13,15 +13,15 @@ The ASP.NET MVC PDF Viewer supports different internal and external navigations.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of PDF Viewer contains the following navigation options:
 
 * **Go to page** :- Navigates to the specific page of a PDF document.
-* **Show next page** :- Navigates to the next page of PDF a document.
+* **Show next page** :- Navigates to the next page of a PDF document.
 * **Show previous page** :- Navigates to the previous page of a PDF document.
 * **Show first page** :-  Navigates to the first page of a PDF document.
 * **Show last page** :- Navigates to the last page of a PDF document.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+You can enable/disable page navigation option in PDF Viewer using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -48,7 +48,7 @@ Also, you can programmatically perform page navigation options as follows.
 {% highlight cshtml tabtitle="Standalone" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>
@@ -84,7 +84,7 @@ Also, you can programmatically perform page navigation options as follows.
 {% highlight cshtml tabtitle="Server-Backed" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>

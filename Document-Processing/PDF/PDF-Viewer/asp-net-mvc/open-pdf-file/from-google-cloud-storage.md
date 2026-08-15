@@ -1,10 +1,9 @@
 ---
 layout: post
-title: From Google Cloud Storage in ASP.NET MVC PDF Viewer | Syncfusion
+title: Open PDF from Google Cloud Storage MVC PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Cloud Storage in the ASP.NET MVC PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -14,11 +13,11 @@ Follow these steps to load a PDF from Google Cloud Storage using the server-back
 
 **Step 1:** Create a Service Account
 
-Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. Click `Create Service Account`.` Enter a name, assign roles (e.g., Storage Object Admin), and create a key in JSON format. Download the key file securely. Utilize the downloaded key file in your applications or services for authentication and access to the Google Cloud Storage bucket. For additional details, refer to the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create).
+Open the Google Cloud Console. Navigate to `IAM & Admin` > `Service accounts`. Click `Create Service Account`. Enter a name, assign roles (e.g., Storage Object Admin), and create a key in JSON format. Download the key file securely. Utilize the downloaded key file in your applications or services for authentication and access to the Google Cloud Storage bucket. For additional details, refer to the [official documentation](https://cloud.google.com/iam/docs/service-accounts-create).
 
 **Step 2:** Create a PDF Viewer sample in ASP.NET MVC
 
-Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC
+Follow instructions provided in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer Getting Started [Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started-with-server-backed) to create a simple PDF Viewer sample in ASP.NET MVC.
 
 **Step 3:** Modify the `HomeController.cs` file in the project
 
@@ -31,7 +30,7 @@ using Google.Apis.Auth.OAuth2;
 
 ```
 
-2. Add the following private fields and constructor parameters to the `HomeController.cs` class, In the constructor, assign the values from the configuration to the corresponding fields
+2. Add the following private fields and constructor parameters to the `HomeController.cs` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 

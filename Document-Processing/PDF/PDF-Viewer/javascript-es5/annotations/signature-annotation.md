@@ -33,7 +33,7 @@ The handwritten signature can be added to the PDF document using the annotation 
 
 Refer to the following code sample to switch to the handwritten signature mode programmatically.
 ```html
-<button id="handWrittenSignature">HandWritten Signature mode</button>
+<button id="handWrittenSignature">Handwritten signature mode</button>
 ```
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -77,11 +77,11 @@ if (handWrittenSignature) {
 
 ### Add a handwritten signature programmatically
 
-With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+With the PDF Viewer library, you can programmatically add a handwritten signature to the PDF Viewer control using the [**addAnnotation()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Here is an example of adding a handwritten signature programmatically using the `addAnnotation()` method:
 ```html
-<button id="addHandwrittenSignature "> Add HandWritten signature Programmatically</button>
+<button id="addHandwrittenSignature">Add handwritten signature programmatically</button>
 ```
 
 {% tabs %}
@@ -252,7 +252,7 @@ document.getElementById('Signature')?.addEventListener('click', function () {
                 height: 65,
                 signatureItem: ['Signature'],
                 signatureDialogSettings: {
-                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                    displayMode: ej.pdfviewer.DisplayMode.Text, hideSaveSignature: false
                 },
                 canSave: false,
                 path: 'Syncfusion',
@@ -290,7 +290,7 @@ document.getElementById('Signature')?.addEventListener('click', function () {
                 height: 65,
                 signatureItem: ['Signature'],
                 signatureDialogSettings: {
-                    displayMode: DisplayMode.Text, hideSaveSignature: false
+                    displayMode: ej.pdfviewer.DisplayMode.Text, hideSaveSignature: false
                 },
                 canSave: false,
                 path: 'Syncfusion',

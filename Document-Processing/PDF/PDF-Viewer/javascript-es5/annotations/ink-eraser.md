@@ -131,7 +131,6 @@ document.getElementById('disableBtn').addEventListener('click', function() {
 
 Use the `inkEraserSize` property to control the width of the eraser:
 
-
 ```html
 <button id="smallBtn">Small (10px)</button>
 <button id="mediumBtn">Medium (15px)</button>
@@ -189,7 +188,6 @@ function applyRoleBasedEraserSettings() {
 ### Combine with Ink drawing
 
 You can programmatically switch between Ink drawing mode and Eraser mode for a seamless workflow:
-
 
 ```html
 <button id="drawModeBtn" style="background-color: #007bff; color: white; cursor: pointer;">Draw Mode</button>

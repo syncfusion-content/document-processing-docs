@@ -32,6 +32,7 @@ This page documents annotation-related events for the JavaScript PDF Viewer and 
 | [`signatureSelect`](#signatureselect)                              | Triggers when a signature is selected on a page in the PDF document.               |
 | [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
+## Events
 
 ### annotationAdd
 

@@ -14,27 +14,25 @@ domainurl: ##DomainURL##
 
 ## Adding Fields
 
-You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield/) method in [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
+You can add a field to the document by using [`insertField`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertfield) method in [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor) module.
 
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
 ```ts
-
 let fieldCode: string = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
 let fieldResult: string = '«First Name»';
 documenteditor.editor.insertField(fieldCode, fieldResult);
-
 ```
 
->Note: Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
+N> Document Editor does not validate/process the field code/field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
-Document Editor provides support for updating bookmark cross reference field. The following example code illustrates how to update bookmark cross reference field.
+Document Editor provides support for updating bookmark cross reference fields. The following example code illustrates how to update bookmark cross reference fields.
 
 ```ts
-//Update all the bookmark cross reference field in the document.
-documentEditor.updateFields();
+//Update all the bookmark cross reference fields in the document.
+documenteditor.updateFields();
 ```
 
 Bookmark cross reference fields can be updated through UI by using update fields option in `Toolbar`.
@@ -49,22 +47,22 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo/) method in the [`Selection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/) module.
+You can get field code and field result of the current selected field by using [`getFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getfieldinfo) method in the [`Selection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection) module.
 
 ```ts
 //Gets the field information of the selected field.
-let fieldInfo: FieldInfo = documentEditor.selection.getFieldInfo();
+let fieldInfo: FieldInfo = documenteditor.selection.getFieldInfo();
 ```
 
->Note: For nested fields, this method returns combined field code and result.
+N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo/) method in the [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/) module.
+You can modify the field code and field result of the current selected field by using [`setFieldInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#setfieldinfo) method in the [`Editor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor) module.
 
 ```ts
 //Gets the field information for the selected field.
-let fieldInfo: FieldInfo = documentEditor.selection.getFieldInfo();
+let fieldInfo: FieldInfo = documenteditor.selection.getFieldInfo();
 
 //Modify field code
 fieldInfo.code = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
@@ -73,10 +71,10 @@ fieldInfo.code = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
 fieldInfo.result = '«First Name»';
 
 //Modify field code and result of the current selected field.
-documentEditor.editor.setFieldInfo(fieldInfo);
+documenteditor.editor.setFieldInfo(fieldInfo);
 ```
 
->Note: For nested field, entire field gets replaced completely with the specified field information.
+N> For nested field, entire field gets replaced completely with the specified field information.
 
 ## See Also
 

@@ -38,13 +38,15 @@ To use local scripts and styles for the DOCX Editor, follow these steps:
 
 1. Download and install the [DOCX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-2. Create a `resources` folder in your application (for example, `docx-editor-app/resources`).
+2. Create a `resources` folder in your application (for example, `documenteditor-app/resources`).
 
 3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 
 ```text
 <Install path>/Syncfusion/Essential Studio/DOCX Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
+
+N> Replace `{VERSION}` in the path above with the installed DOCX Editor SDK version (for example, `34.1.29`). Use the same version segment in the CDN URLs in the next tab to keep the local and CDN resources in sync.
 
 4. After copying the files, add the DOCX Editor and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
@@ -172,7 +174,7 @@ Add a container element for the Document Editor in the `index.html` file and the
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
 // Initialize Document Editor Container component
-var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
     height: '590px'
 });

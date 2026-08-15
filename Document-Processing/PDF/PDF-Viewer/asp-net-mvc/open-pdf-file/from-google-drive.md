@@ -4,7 +4,6 @@ title: From Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Drive in the ASP.NET MVC PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -32,7 +31,7 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 ```
 
-2. Modify the `Load()` method to load the PDF files from Google drive.
+2. Modify the `Load()` method to load the PDF files from Google Drive.
 
 ```csharp
 
@@ -117,9 +116,9 @@ private readonly string tokenjson = "Path to create token.json file";
  }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your application name, and the path to the JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The **folderId** value is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 **Step 4:** Configure the PDF Viewer component
 

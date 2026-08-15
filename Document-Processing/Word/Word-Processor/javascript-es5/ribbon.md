@@ -16,14 +16,14 @@ You can switch between the classic **Toolbar** and the new **Ribbon** UI, and yo
 
 ## Enable Ribbon Mode
 
-To enable Ribbon in Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable Ribbon in the Document Editor, use the [`toolbarMode`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#toolbarmode) property of `DocumentEditorContainer`. The available toolbar modes are:
 
 - **'Toolbar'** - The traditional toolbar UI.
 - **'Ribbon'** - The Ribbon UI, which provides a tabbed interface with grouped commands.
 
 By default, `toolbarMode` is `Toolbar`.
 
-The following code shows the how to enable the `Ribbon` in Document Editor.
+The following code shows how to enable the `Ribbon` in the Document Editor.
 
 ```js
 
@@ -47,7 +47,7 @@ Document Editor provides two different Ribbon layouts:
 
 By default, `ribbonLayout` is set to `Simplified`. 
 
-The following code shows the how to configure the ribbon layout in Document Editor:
+The following code shows how to configure the ribbon layout in the Document Editor:
 
 ```ts
 

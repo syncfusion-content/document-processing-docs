@@ -23,13 +23,13 @@ Use the table of contents to quickly navigate to headings and sections defined i
 
 ![Table of contents pane in PDF Viewer](../images/toc.png)
 
-## Hyperlink Navigation
+## Hyperlink navigation
 
 The PDF Viewer provides robust support for hyperlink navigation within PDF documents. This allows users to interact with embedded links, which can point to external websites or other locations within the same document. This section covers how to configure hyperlink behavior, including enabling or disabling links, controlling how they open, and responding to hyperlink-related events.
 
 ![Hyperlink Navigation in PDF Viewer](../images/link.png)
 
-### Enabling and Disabling Hyperlinks
+### Enabling and disabling hyperlinks
 
 By default, the PDF Viewer automatically detects and enables all hyperlinks present in a loaded document. This behavior can be controlled using the `enableHyperlink` property.
 
@@ -45,21 +45,22 @@ The following example demonstrates how to disable hyperlink navigation:
 {% highlight html tabtitle="Standalone" %}
 ```html
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").EnableHyperlink(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    @Html.EJS().PdfViewer("pdfviewer").EnableHyperlink(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 ```html
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableHyperlink(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableHyperlink(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
 {% endtabs %}
 
 > Note: Disabling hyperlinks only affects the viewer's behavior and does not alter the original PDF document.
-### Controlling Link Behavior
+
+### Controlling link behavior
 
 The `hyperlinkOpenState` property determines how external URLs are opened when a hyperlink is clicked.
 
@@ -88,7 +89,7 @@ The following example configures hyperlinks to open in a new tab:
 {% endhighlight %}
 {% endtabs %}
 
-### Handling Hyperlink Events
+### Handling hyperlink events
 
 The PDF Viewer exposes events that allow for monitoring and customizing hyperlink interactions.
 

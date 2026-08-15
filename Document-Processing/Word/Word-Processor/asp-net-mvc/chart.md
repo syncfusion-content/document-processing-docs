@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts in ASP.NET MVC DOCX Editor | Syncfusion
+title: Charts in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Chart support in ASP.NET MVC DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart
@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# Charts in ASP.NET MVC DOCX Editor
+# Charts in ASP.NET MVC DOCX Editor Component
 
-Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can see the chart reports from your Word document.
 
 
 {% tabs %}
@@ -27,7 +27,7 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 
 ## Supported Chart Types
 
-The following chart types are supported in document editor
+The following chart types are supported in the Document Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -50,4 +50,4 @@ The following chart types are supported in document editor
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/chart#/tailwind3).
+Explore how to preserve charts in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/chart#/tailwind3).

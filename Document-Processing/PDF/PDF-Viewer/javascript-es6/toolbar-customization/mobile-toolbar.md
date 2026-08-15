@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+title: Customize Mobile Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the JavaScript (ES6) PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
@@ -127,6 +127,6 @@ The Print option is not available in mobile mode by default. Enabling the deskto
 ### How to Use Print on Mobile:
 
 - Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
-- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device
+- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
 
 N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.

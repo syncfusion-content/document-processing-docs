@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Quasar in Vue PDF Viewer | Syncfusion
+title: Getting Started with Quasar and Vue PDF Viewer | Syncfusion
 description: Get started with the Quasar Framework and the Syncfusion Vue PDF Viewer, including setup, configuration, and running examples.
-control: Quasar
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Quasar Framework and Vue PDF Viewer
+# Getting Started with Vue PDF Viewer in Quasar Framework
 
 This section explains step-by-step instructions for integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component into a [Quasar Framework](https://quasar.dev/) project using the Composition API.
 
@@ -87,7 +87,7 @@ N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appe
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component
 
-Add the PDF Viewer component to your Quasar application. The component is added to the root `src/App.vue` file, which is the default entry point for a Quasar Vite project.
+Add the PDF Viewer component to your Quasar application. The component is added to the root `src/App.vue` file, which is the default entry point for a Quasar project.
 
 ### Import and register the PDF Viewer
 

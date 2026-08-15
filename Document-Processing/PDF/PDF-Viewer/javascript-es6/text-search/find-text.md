@@ -25,7 +25,7 @@ Searches for the specified text within the document and returns the bounding rec
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -42,7 +42,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -70,7 +70,7 @@ Searches for the specified text within the document and returns the bounding rec
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -87,7 +87,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -115,7 +115,7 @@ Searches for an array of strings within the document and returns the bounding re
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -132,7 +132,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -160,7 +160,7 @@ Searches for an array of strings within the document and returns the bounding re
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -177,7 +177,7 @@ document.getElementById('textbounds')?.addEventListener('click', function() {
 {% endhighlight %}
 {% highlight ts tabtitle="Server-backed" %}
 
-import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields, PageInfoModel } from '@syncfusion/ej2-pdfviewer';
+import { PdfViewer, TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-pdfviewer';
 
 // Inject required modules
 PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnification, Annotation, FormDesigner, FormFields);
@@ -214,8 +214,7 @@ Example 1: Search for a single string ('pdf') case-insensitively across all page
 ```
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
-    TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner, PageOrganizer,
-    ExtractTextOption} from '@syncfusion/ej2-pdfviewer';
+    TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
 
 PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,
     TextSelection, TextSearch, Print, Annotation, FormFields, FormDesigner, PageOrganizer);
@@ -275,8 +274,8 @@ This will search for the terms "pdf" and "the" in a case-insensitive manner only
 
 ## See Also
 
-[Text Search Features](./text-search-features)
-[Text Search Events](./text-search-events)
-[Extract Text](../how-to/extract-text-ts)
-[Extract Text Options](../how-to/extract-text-option-ts)
-[Extract Text Completed](../how-to/extract-text-completed-ts)
+- [Text Search Features](./text-search-features)
+- [Text Search Events](./text-search-events)
+- [Extract Text](../how-to/extract-text-ts)
+- [Extract Text Options](../how-to/extract-text-option-ts)
+- [Extract Text Completed](../how-to/extract-text-completed-ts)

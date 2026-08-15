@@ -30,6 +30,7 @@ This page explains how to:
 You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of `addFormField()`.
 
 ```js
+// Ensure the viewer instance (var viewer = new ej.pdfviewer.PdfViewer({ ... })) is created and appended before this code runs.
 viewer.documentLoad = function () {
   var meta = { businessId: 'C-1024', tags: ['profile','kiosk'], requiredRole: 'admin' };
   viewer.formDesignerModule.addFormField('Textbox', {
@@ -70,7 +71,7 @@ viewer.checkBoxFieldSettings = {
 
 ## Update or Replace PDF Form Field Custom Data
 
-Modify the `customData` of an existing form field using [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields). The field can be identified using its object reference or field ID.
+Modify the `customData` of an existing form field using [`updateFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields). The field can be identified using its object reference or field ID.
 
 ```js
 // Retrieve existing fields
@@ -85,7 +86,7 @@ if (target) {
 ```
 
 **Tip:**
-Merge new values with the existing `customData` object before calling [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
+Merge new values with the existing `customData` object before calling [`updateFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
 
 ## Read Custom Data from PDF Form Fields
 
@@ -121,7 +122,7 @@ viewer.documentLoad = function () {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./overview-create-forms)
-- [Group form fields](../group-form-fields)
+- [Group form fields](./group-form-fields)
 - [Form flags](./form-constrain)
 - [Form validation](./form-validation)
 - [Form fields API](./form-fields-api)

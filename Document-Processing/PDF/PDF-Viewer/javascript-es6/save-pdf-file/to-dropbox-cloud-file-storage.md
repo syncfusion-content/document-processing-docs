@@ -1,13 +1,13 @@
 ---
 layout: post
-title: To Dropbox Cloud File Storage in JavaScript (ES6) PDF | Syncfusion
+title: Save PDF files to Dropbox in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES6) PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF Files to Dropbox in JavaScript (ES6) PDF Viewer
+# Save PDF Files to Dropbox Cloud Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -19,11 +19,11 @@ To save a PDF file to Dropbox, follow these steps:
 
 To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
+**Step 2:** Create a PDF Viewer sample in TypeScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
 
-**Step 3:** Modify the `src/app/app.ts` file in the Angular project
+**Step 3:** Modify the `src/app/app.ts` file in the TypeScript project
 
 1. Import the required namespaces at the top of the file:
 
@@ -125,7 +125,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to the Dropbox storage.
+5. Modify the [Download()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to the Dropbox storage.
 
 ```csharp
 
@@ -162,7 +162,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in the web service project and add the following entries below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in the web service project and add the following entries below the existing `"AllowedHosts"` configuration.
 
 ```json
 {

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Customize Font Family in JavaScript DOCX Editor
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides an options to customize the font family drop down list values using [`fontFamilies`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts which are added in fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditorsettings) will be displayed on font drop down list of text properties pane and font dialog.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts added in the fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditorsettings) will be displayed in the font drop-down list of the Text Properties pane and the Font dialog.
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
@@ -30,6 +30,6 @@ container.appendTo('#container');
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Output will be like below:
+The output will be as shown below:
 
 ![Font](../images/font-family.png)

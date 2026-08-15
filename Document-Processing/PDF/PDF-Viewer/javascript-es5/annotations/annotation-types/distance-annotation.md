@@ -18,10 +18,11 @@ Distance is a measurement annotation used to measure the length between two poin
 
 ### Add distance annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Measurement Annotation** dropdown.
-- Choose **Distance**, then draw on the page.
+Use the annotation toolbar to add a distance annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Measurement Annotation** dropdown.
+3. Choose **Distance**, then draw on the page.
 
 N> When in pan mode, selecting a measurement annotation switches the viewer to text select mode.
 
@@ -185,7 +186,7 @@ You can select, move, and resize Distance annotations directly in the viewer:
 
 The fill color, stroke color, thickness, and opacity can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-##### Edit fill color
+#### Edit fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
@@ -211,7 +212,9 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ### Edit an existing distance annotation programmatically
 
-Use editAnnotation on items from annotationCollection.
+To modify an existing distance annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editDistanceAnnotation">Edit Distance annotation programmatically</button>
@@ -337,17 +340,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `DistanceSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Distance settings.
+Refer to the following code snippet to set the properties while adding a Distance annotation.
 
 ```html
 <button id="Distance">Add Distance</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -377,7 +380,7 @@ document.getElementById('Distance')?.addEventListener('click', function () {
     });
   });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,

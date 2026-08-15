@@ -78,5 +78,4 @@ viewer.exportFailed = function (args) {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)

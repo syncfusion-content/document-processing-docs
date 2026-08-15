@@ -253,7 +253,7 @@ document.getElementById('addPasswordField').addEventListener('click', function (
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Style form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

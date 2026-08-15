@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Custom Toolbar in JavaScript (ES6) PDF Viewer
 
-The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
+The PDF Viewer exposes APIs for the user-interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
 Follow these steps to create a custom toolbar for the PDF Viewer:
 
@@ -125,12 +125,12 @@ Add Syncfusion EJ2 Toolbar components to perform primary actions like Open, Prev
         items: [
             { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openDocument.bind(this) },
             { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
             { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-            { template: ele, tooltipText: 'Page Number', align: 'Center' },
+            { template: elem, tooltipText: 'Page Number', align: 'Center' },
             { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
             { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
             { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
@@ -336,7 +336,6 @@ Add the following scripts for handling user interactions with the custom toolbar
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
-```ts
 
 import {
     PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print,
@@ -353,7 +352,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
  */
 
 let inputTemplate: string = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
-let ele: string = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
+let elem: string = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 let isBookmarkOpen: boolean = false;
 let isBookmarkClick: boolean = false;
 let isTextSearchBoxOpen: boolean = false;
@@ -389,12 +388,12 @@ function bookmarkClicked(): void {
                 {
                     dataSource: bookmarks,
                     id: 'Id',
-                    parentID: 'Pid',
+                    parentID: 'Pi',
                     text: 'Title',
                     hasChildren: 'HasChild',
                 }, nodeSelected: nodeClick
             });
-            treeObj.appendTo('#bookmarkview');
+            treeObj.appendTo('#bookmarkView');
             bookmarkPopup.show();
             isBookmarkOpen = true;
             isBookmarkClick = true;
@@ -463,7 +462,7 @@ function onCurrentPageBoxKeypress(event: KeyboardEvent): boolean {
         event.preventDefault();
         return false;
     } else {
-        // tslint:disable-next-line:radix
+        // ts lint:disable-next-line:radix
         let currentPageNumber: number = parseInt((currentPageBox as HTMLInputElement).value);
         if (event.which === 13) {
             if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
@@ -482,13 +481,13 @@ function onCurrentPageBoxClicked(): void {
 }
 
 function  readFile(args:  any):  void  {
-    // tslint:disable-next-line
-    let  upoadedFiles:  any  =  args.target.files;
+    // ts lint:disable-next-line
+    let  uploadedFiles:  any  =  args.target.files;
     if  (args.target.files[0]  !==  null) {
-        let  uploadedFile:  File  =  upoadedFiles[0];
+        let  uploadedFile:  File  =  uploadedFiles[0];
         if  (uploadedFile) {
             let  reader:  FileReader  =  new  FileReader();
-            let filename: string = upoadedFiles[0].name;
+            let filename: string = uploadedFiles[0].name;
             reader.readAsDataURL(uploadedFile);
             // tslint:disable-next-line
             reader.onload  =  (e:  any):  void  =>  {
@@ -497,7 +496,7 @@ function  readFile(args:  any):  void  {
                 viewer.fileName = filename;
                 (currentPageBox as HTMLInputElement).value = '1';
                 document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
-                document.getElementById('bookmarkview').innerHTML = '';
+                document.getElementById('bookmarkView').innerHTML = '';
                 isBookmarkOpen = false;
             };
         }
@@ -540,14 +539,14 @@ function updateZoomButtons(): void {
 function nodeClick(args: NodeSelectEventArgs): boolean {
     let bookmarksDetails: any = viewer.bookmark.getBookmarks();
     let bookmarksDestination: any = bookmarksDetails.bookmarksDestination;
-    let bookid: number = Number(args.nodeData.id);
-    let pageIndex: number = bookmarksDestination.bookMarkDestination[bookid].PageIndex;
-    let Y: number = bookmarksDestination.bookMarkDestination[bookid].Y;
+    let bookId: number = Number(args.nodeData.id);
+    let pageIndex: number = bookmarksDestination.bookMarkDestination[bookId].PageIndex;
+    let Y: number = bookmarksDestination.bookMarkDestination[bookId].Y;
     viewer.bookmark.goToBookmark(pageIndex, Y);
     return false;
 }
 
-function searchInputKeypressed(event: KeyboardEvent): void {
+function searchInputKeypress(event: KeyboardEvent): void {
     enablePrevButton(true);
     enableNextButton(true);
     if (event.which === 13) {
@@ -628,12 +627,12 @@ function updateSearchInputIcon(isEnable: boolean): void {
         items: [
             { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openDocument.bind(this) },
             { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
             { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-            { template: ele, tooltipText: 'Page Number', align: 'Center' },
+            { template: elem, tooltipText: 'Page Number', align: 'Center' },
             { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
             { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
             { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
@@ -660,7 +659,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     searchInput = document.getElementById('searchInput');
     bookmarkPopup = new Dialog({
         showCloseIcon: true, header: 'Bookmarks', closeOnEscape: false, isModal: false, target: document.getElementById('pdfViewer'),
-        content: '<div class="e-pv-bookmarks" id="bookmarkview"></div>',
+        content: '<div class="e-pv-bookmarks" id="bookmarkView"></div>',
         buttons: [{
             buttonModel: {},
         }], position: { X: 'left', Y: 'top' }, cssClass: 'e-bookmark-popup', beforeClose: (): void => {
@@ -680,7 +679,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     let previousSearch: Button = new Button({ iconCss: 'e-pv-previous-search' });
     previousSearch.appendTo('#previousSearch');
 
-    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-btn' });
+    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-button' });
     nextSearch.appendTo('#nextSearch');
 
     let matchCaseCheck: CheckBox = new CheckBox({ label: 'Match case', change: checkBoxChanged });
@@ -695,10 +694,10 @@ function updateSearchInputIcon(isEnable: boolean): void {
         document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
         updatePageNavigation();
     };
-    searchButton = document.getElementById('searchBtn');
+    searchButton = document.getElementById('searchButton');
     searchInput.addEventListener('focus', () => { searchInput.parentElement.classList.add('e-input-focus'); });
     searchInput.addEventListener('blur', () => { searchInput.parentElement.classList.remove('e-input-focus'); });
-    searchInput.addEventListener('keypress', searchInputKeypressed);
+    searchInput.addEventListener('keypress', searchInputKeypress);
     document.getElementById('previousSearch').addEventListener('click', previousSearchClicked);
     document.getElementById('nextSearch').addEventListener('click', nextSearchClicked);
     currentPageBox.addEventListener('keypress', onCurrentPageBoxKeypress);
@@ -709,10 +708,8 @@ function updateSearchInputIcon(isEnable: boolean): void {
     enableNextButton(false);
     enablePrevButton(false);
 
-```
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
-```ts
 
 import {
     PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print,
@@ -729,7 +726,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
  */
 
 let inputTemplate: string = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
-let ele: string = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
+let elem: string = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 let isBookmarkOpen: boolean = false;
 let isBookmarkClick: boolean = false;
 let isTextSearchBoxOpen: boolean = false;
@@ -765,12 +762,12 @@ function bookmarkClicked(): void {
                 {
                     dataSource: bookmarks,
                     id: 'Id',
-                    parentID: 'Pid',
+                    parentID: 'Pi',
                     text: 'Title',
                     hasChildren: 'HasChild',
                 }, nodeSelected: nodeClick
             });
-            treeObj.appendTo('#bookmarkview');
+            treeObj.appendTo('#bookmarkView');
             bookmarkPopup.show();
             isBookmarkOpen = true;
             isBookmarkClick = true;
@@ -839,7 +836,7 @@ function onCurrentPageBoxKeypress(event: KeyboardEvent): boolean {
         event.preventDefault();
         return false;
     } else {
-        // tslint:disable-next-line:radix
+        // ts lint:disable-next-line:radix
         let currentPageNumber: number = parseInt((currentPageBox as HTMLInputElement).value);
         if (event.which === 13) {
             if (currentPageNumber > 0 && currentPageNumber <= viewer.pageCount) {
@@ -858,13 +855,13 @@ function onCurrentPageBoxClicked(): void {
 }
 
 function  readFile(args:  any):  void  {
-    // tslint:disable-next-line
-    let  upoadedFiles:  any  =  args.target.files;
+    // ts lint:disable-next-line
+    let  uploadedFiles:  any  =  args.target.files;
     if  (args.target.files[0]  !==  null) {
-        let  uploadedFile:  File  =  upoadedFiles[0];
+        let  uploadedFile:  File  =  uploadedFiles[0];
         if  (uploadedFile) {
             let  reader:  FileReader  =  new  FileReader();
-            let filename: string = upoadedFiles[0].name;
+            let filename: string = uploadedFiles[0].name;
             reader.readAsDataURL(uploadedFile);
             // tslint:disable-next-line
             reader.onload  =  (e:  any):  void  =>  {
@@ -873,7 +870,7 @@ function  readFile(args:  any):  void  {
                 viewer.fileName = filename;
                 (currentPageBox as HTMLInputElement).value = '1';
                 document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
-                document.getElementById('bookmarkview').innerHTML = '';
+                document.getElementById('bookmarkView').innerHTML = '';
                 isBookmarkOpen = false;
             };
         }
@@ -916,14 +913,14 @@ function updateZoomButtons(): void {
 function nodeClick(args: NodeSelectEventArgs): boolean {
     let bookmarksDetails: any = viewer.bookmark.getBookmarks();
     let bookmarksDestination: any = bookmarksDetails.bookmarksDestination;
-    let bookid: number = Number(args.nodeData.id);
-    let pageIndex: number = bookmarksDestination.bookMarkDestination[bookid].PageIndex;
-    let Y: number = bookmarksDestination.bookMarkDestination[bookid].Y;
+    let bookId: number = Number(args.nodeData.id);
+    let pageIndex: number = bookmarksDestination.bookMarkDestination[bookId].PageIndex;
+    let Y: number = bookmarksDestination.bookMarkDestination[bookId].Y;
     viewer.bookmark.goToBookmark(pageIndex, Y);
     return false;
 }
 
-function searchInputKeypressed(event: KeyboardEvent): void {
+function searchInputKeypress(event: KeyboardEvent): void {
     enablePrevButton(true);
     enableNextButton(true);
     if (event.which === 13) {
@@ -1004,12 +1001,12 @@ function updateSearchInputIcon(isEnable: boolean): void {
         items: [
             { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openDocument.bind(this) },
             { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
-            // tslint:disable-next-line:max-line-length
+            // ts lint:disable-next-line:max-line-length
             { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
             { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-            { template: ele, tooltipText: 'Page Number', align: 'Center' },
+            { template: elem, tooltipText: 'Page Number', align: 'Center' },
             { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
             { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
             { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
@@ -1036,7 +1033,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     searchInput = document.getElementById('searchInput');
     bookmarkPopup = new Dialog({
         showCloseIcon: true, header: 'Bookmarks', closeOnEscape: false, isModal: false, target: document.getElementById('pdfViewer'),
-        content: '<div class="e-pv-bookmarks" id="bookmarkview"></div>',
+        content: '<div class="e-pv-bookmarks" id="bookmarkView"></div>',
         buttons: [{
             buttonModel: {},
         }], position: { X: 'left', Y: 'top' }, cssClass: 'e-bookmark-popup', beforeClose: (): void => {
@@ -1056,7 +1053,7 @@ function updateSearchInputIcon(isEnable: boolean): void {
     let previousSearch: Button = new Button({ iconCss: 'e-pv-previous-search' });
     previousSearch.appendTo('#previousSearch');
 
-    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-btn' });
+    let nextSearch: Button = new Button({ iconCss: 'e-pv-next-search-button' });
     nextSearch.appendTo('#nextSearch');
 
     let matchCaseCheck: CheckBox = new CheckBox({ label: 'Match case', change: checkBoxChanged });
@@ -1071,10 +1068,10 @@ function updateSearchInputIcon(isEnable: boolean): void {
         document.getElementById('totalPage').textContent = 'of ' + viewer.pageCount;
         updatePageNavigation();
     };
-    searchButton = document.getElementById('searchBtn');
+    searchButton = document.getElementById('searchButton');
     searchInput.addEventListener('focus', () => { searchInput.parentElement.classList.add('e-input-focus'); });
     searchInput.addEventListener('blur', () => { searchInput.parentElement.classList.remove('e-input-focus'); });
-    searchInput.addEventListener('keypress', searchInputKeypressed);
+    searchInput.addEventListener('keypress', searchInputKeypress);
     document.getElementById('previousSearch').addEventListener('click', previousSearchClicked);
     document.getElementById('nextSearch').addEventListener('click', nextSearchClicked);
     currentPageBox.addEventListener('keypress', onCurrentPageBoxKeypress);
@@ -1085,7 +1082,6 @@ function updateSearchInputIcon(isEnable: boolean): void {
     enableNextButton(false);
     enablePrevButton(false);
 
-```
 {% endhighlight %}
 {% endtabs %}
 

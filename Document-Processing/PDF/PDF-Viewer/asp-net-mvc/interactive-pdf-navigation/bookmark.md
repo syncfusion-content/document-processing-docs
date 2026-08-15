@@ -10,7 +10,7 @@ documentation: ug
 # Bookmark Navigation in ASP.NET MVC PDF Viewer
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
-You can enable/disable bookmark navigation by using the following code snippet.,
+You can enable/disable bookmark navigation by using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -38,7 +38,7 @@ Here is an example of how to use the **goToBookmark** method:
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-<button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
+<button id="gotobookmark" onclick="gotobookmark()">Specific Page</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
@@ -54,7 +54,7 @@ Here is an example of how to use the **goToBookmark** method:
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
-<button id="gotobookmark" onclick="gotobookmark()">Specfic Page</button>
+<button id="gotobookmark" onclick="gotobookmark()">Specific Page</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
@@ -70,9 +70,9 @@ Here is an example of how to use the **goToBookmark** method:
 {% endhighlight %}
 {% endtabs %}
 
-x - Specifies the pageIndex for Navigate.
+x - Specifies the page index to navigate to.
 
-y - Specifies the Y coordinates value of the Page.
+y - Specifies the Y coordinate value of the page.
 
 Also, you can use the **getBookmarks** method to retrieve a list of all the bookmarks in a PDF document. This method returns a List of Bookmark objects, which contain information about each bookmark.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primary Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+title: Customize Primary Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the primary toolbar in the JavaScript (ES6) PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.
 platform: document-processing
 control: PDF Viewer
@@ -14,9 +14,9 @@ The primary toolbar of the PDF Viewer can be customized by rearranging existing 
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar] (https://ej2.syncfusion.com/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar] (https://ej2.syncfusion.com/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.method to show or hide the primary toolbar.
 
-### Show or hide the toolbar using the `enableToolbar` property:
+### Show or hide the toolbar using the `enableToolbar` property
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

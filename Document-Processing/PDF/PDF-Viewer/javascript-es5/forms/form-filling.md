@@ -37,7 +37,7 @@ The following example demonstrates how to update PDF form field values programma
 // Wire up the button click
 document.getElementById('updateBtn').onclick = function () {
   // Retrieve form fields
-  var fields = pdfviewer.retrieveFormFields?.() || pdfviewer.formFieldCollection || [];
+  var fields = pdfviewer.retrieveFormFields() || [];
   // Get form fields by name
   var field = fields.find(function (f) { return f && f.name === 'name'; }) || fields[0];
 
@@ -73,8 +73,9 @@ Imported form field data is automatically mapped to the corresponding form field
 ```
 ```js
 document.getElementById('importJson').addEventListener('click', function () {
+  // Ensure the viewer instance (var pdfviewer = new ej.pdfviewer.PdfViewer({ ... })) is created and appended before this code runs.
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', FormFieldDataFormat.Json);
+  pdfviewer.importFormFields('File', 'Json');
 });
 ```
 
@@ -132,7 +133,7 @@ pdfviewer.validateFormFields = function (args) {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)

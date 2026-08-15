@@ -100,7 +100,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration.
 
 ```json
 {

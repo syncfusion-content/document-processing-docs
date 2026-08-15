@@ -185,6 +185,6 @@ N> The following NuGet packages are commonly required by the example and can be 
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-N> Install packages using the NuGet Package Manager or `dot net` CLI and confirm package versions match target framework compatibility.
+N> Install packages using the NuGet Package Manager or `dotnet` CLI and confirm package versions match target framework compatibility.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

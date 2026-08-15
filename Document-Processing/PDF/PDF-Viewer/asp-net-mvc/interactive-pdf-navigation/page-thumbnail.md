@@ -10,7 +10,7 @@ documentation: ug
 # Page Thumbnail Navigation in ASP.NET MVC PDF Viewer
 
 Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation.
-You can enable/disable thumbnail navigation by using the following code snippet.,
+You can enable/disable thumbnail navigation by using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

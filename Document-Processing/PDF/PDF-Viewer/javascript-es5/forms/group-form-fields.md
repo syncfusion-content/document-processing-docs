@@ -100,7 +100,7 @@ pdfviewer.documentLoad = function () {
 
 ## See also
 
-- [Form Designer overview](../overview)
+- [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./manage-form-fields/create-form-fields)
 - [Modify form fields](./manage-form-fields/modify-form-fields)
