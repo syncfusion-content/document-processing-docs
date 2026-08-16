@@ -19,7 +19,7 @@ Follow the steps below to save a PDF file to AWS S3 from a browser-based TypeScr
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in typescript. This will set up the basic structure of your PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.ts` file in the Angular project
+**Step 2:** Modify the `src/app/app.ts` file in the TypeScript project
 
 1. Import the required namespaces at the top of the file:
 
@@ -29,11 +29,11 @@ import * as AWS from 'aws-sdk';
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognition, STS) or perform uploads via a trusted server.
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this with your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -135,7 +135,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
+5. Modify the [Download()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -193,7 +193,7 @@ N> Replace the placeholders with the appropriate AWS credentials and bucket name
 
 **Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 ```typescript
 

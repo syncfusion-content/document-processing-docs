@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Coordinate Conversion in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to convert between PDF page coordinates and viewer coordinates in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
@@ -58,6 +58,7 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 PDF page coordinates are represented in terms of a device-independent coordinate system called user space, which is independent of the output device that will be used for printing or display. The user space coordinates system is initialized to a default state for each page of a PDF document. The length of a unit is 1/72 inch, which is equivalent to one point (pt). As an example, the dimensions of a letter-sized paper in PDF page coordinates are shown in the diagram below.
 
 ![Page coordinates in .NET MAUI PDF Viewer](Images/Coordinates-Conversion/Page-Coordinates.png)
+
 ## Scroll coordinates
 
 Scroll coordinates in the MAUI PDF Viewer denote pixel-based positions as pages are scrolled. They indicate precise locations within the entire document. The coordinate system originates from the top-left corner of the visible area.

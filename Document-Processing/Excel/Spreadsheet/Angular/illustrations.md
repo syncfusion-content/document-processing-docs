@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Illustrations in Angular Spreadsheet component | Syncfusion
 description: Learn here all about Illustrations in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.

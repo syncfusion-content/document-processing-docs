@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create, read, edit Excel files in AWS Elastic Beanstalk | Syncfusion
 description: This page explains how to create, read, and edit Excel files in AWS Elastic Beanstalk using the .NET Excel Library.
 platform: document-processing
