@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Localization in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to localize the static text in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages.
@@ -709,7 +709,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr>
 <td>StickyNoteEditorPlaceholder</td>
-<td>Write Your Notehttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui.</td>
+<td>Write Your Note…</td>
 </tr>
 <tr>
 <td>StickyNoteIcons</td>

@@ -76,7 +76,7 @@ The [textSearchComplete](https://ej2.syncfusion.com/javascript/documentation/api
 var viewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     textSearchComplete: function(args) {
-        // args.totalMatches may indicate how many results were found (when available)
+        // args.totalMatches contains the total number of matches found
         console.log('Text search completed.', args);
     }
 });

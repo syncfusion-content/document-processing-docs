@@ -105,7 +105,7 @@ repoCollection.AddManager(DocumentType.PDF,        pdfManager);
 repoCollection.AddManager(DocumentType.PowerPoint, presentationManager);
 ```
 
-N> Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html) require the [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html).
+N> Cross-format tools like [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html) require the [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html); single-format tools take their manager directly. See [Tools Reference](./tools#available-document-managers) for details.
 
 N> Each manager is thread-safe. When the application shuts down, dispose the `DocumentManagerCollection` (or call `Dispose` on each manager) to release the in-memory objects immediately rather than waiting for the eviction timer.
 

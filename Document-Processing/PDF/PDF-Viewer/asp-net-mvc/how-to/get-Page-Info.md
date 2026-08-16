@@ -4,7 +4,6 @@ title: Get page info in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
@@ -12,7 +11,7 @@ documentation: ug
 
 Use the **getPageInfo()** method to retrieve information for a specified page, including height, width, and rotation.
 
-The following steps show how to use `getPageInfo`.
+The following steps show how to use `getPageInfo`:
 
 **Step 1:** Follow the steps in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a sample.
 

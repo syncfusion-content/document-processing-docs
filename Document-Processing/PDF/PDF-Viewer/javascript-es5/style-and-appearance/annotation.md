@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize annotation toolbar icons in JavaScript PDF Viewer | Syncfusion
+title: Customize Annotation Toolbar in JavaScript PDF Viewer | Syncfusion
 description: Learn how to customize annotation toolbar icons in the Syncfusion JavaScript PDF Viewer by applying targeted CSS styles.
 platform: document-processing
 control: PDF Viewer
@@ -16,112 +16,112 @@ Apply custom CSS to modify the annotation toolbar icons in the JavaScript PDF Vi
 
 Use the following CSS to adjust the Highlight annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-highlight-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-highlight-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the Underline icon
 
 Use the following CSS to update the Underline annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-underline-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-underline-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the Strikethrough icon
 
 Use the following CSS to update the Strikethrough annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-strikethrough-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-strikethrough-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the shape annotation icon
 
 Use the following CSS to update the Shape Annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-annotation-shape-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-annotation-shape-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the calibration icon
 
 Use the following CSS to update the Calibration annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-annotation-calibrate-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-annotation-calibrate-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the free-text icon
 
 Use the following CSS to update the Free Text annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-freetext-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-freetext-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the handwritten signature icon
 
 When the icon is rendered via a pseudo-element, target the pseudo-element explicitly.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-handwritten-icon::before{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-handwritten-icon::before{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the ink annotation icon
 
 Use the following CSS to update the Ink annotation toolbar icon.
 
-```
+```css
 /* To specify font size and color */
 
-  .e-pdfviewer .e-pv-inkannotation-icon{
-    color: rgb(143, 89, 219);
-    font-size: 20px;
-  }
+.e-pdfviewer .e-pv-inkannotation-icon{
+  color: rgb(143, 89, 219);
+  font-size: 20px;
+}
 ```
 
 ## Customize the close icon
 
 Use the following CSS to hide the Close icon.
 
-```
- #pdfViewer_annotation_closeIcon{
-    display: none
-  }
+```css
+#pdfViewer_annotation_closeIcon{
+  display: none;
+}
 ```

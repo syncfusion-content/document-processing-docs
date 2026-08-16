@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Mobile PDF Viewer Vue
+# Organize Pages in Mobile View in Vue PDF Viewer
 
 The PDF Viewer provides a mobile-responsive layout for the `Organize Pages` feature, optimized for touch interactions on small screens. The toolbar and navigation adapt to the device viewport so page-management controls remain accessible on phones and tablets.
 
@@ -35,3 +35,10 @@ To perform actions on a page thumbnail, tap and hold (long-press) the thumbnail 
 To rearrange pages, tap and hold a thumbnail to select it, then drag it to the desired position; a blue line indicates the drop location. Supported gestures include `tap`, `long-press` (open context menu), and `drag` (reorder). The layout adapts to portrait and landscape orientations to preserve usability on different devices.
 
 The mobile interface enables efficient page management on phones and tablets without sacrificing the functionality available in the desktop viewer.
+
+## Related topics
+
+- [Insert blank pages in Organize Pages](./insert-blank-pages)
+- [Programmatic support for Organize Pages](./programmatic-support)
+- [Remove pages in Organize Pages](./remove-pages)
+- [Reorder pages in Organize Pages](./reorder-pages)
