@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show hide spinner in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Show hide spinner in JavaScript (ES5) Document Editor | Syncfusion
+description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES5) Document Editor component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide spinner in JavaScript (ES5) Document editor
+# Show hide spinner in JavaScript (ES5) Document Editor
 
 Using the [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show or hide the spinner while opening a document in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 

@@ -113,7 +113,7 @@ Edit comments and replies in the following ways:
 
 ### How to add comments and replies programmatically
 
-Comments can be added to the PDF document programmatically using the `editAnnotation` property.
+Comments can be added to the PDF document programmatically using the `editAnnotation` method.
 
 The following example shows how to add comments and a reply in response to a button click.
 
@@ -184,7 +184,7 @@ document.getElementById("addReply")?.addEventListener("click", function() {
 
 ### How to edit comments programmatically
 
-Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
+Comments can be edited in the PDF document programmatically using the `editAnnotation` method.
 
 The following example shows how to edit comments and a reply in response to a button click.
 
