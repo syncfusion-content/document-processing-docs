@@ -42,4 +42,4 @@ Document Editor preserves the position properties of the shape and displays the 
 
 ## Online Demo
 
-Explore how to preserve auto shapes and grouped shapes in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/autoshapes.html).
+Explore how to preserve autoshapes and grouped shapes in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/autoshapes.html).
