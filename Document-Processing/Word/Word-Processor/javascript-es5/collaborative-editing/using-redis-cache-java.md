@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) Document editor | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in javascript-es5 with Redis in Java
+# Collaborative Editing in JavaScript (ES5) with Redis in Java
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
 
 ## Prerequisites
@@ -54,7 +54,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -191,7 +191,7 @@ private ActionInfo addOperationsToCache(ActionInfo action) throws Exception {
 ```
 
 #### Add Web API to get previous operation as a backup to get lost operations
-On the client side, messages send from server using SockJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the Redis.
+On the client side, messages sent from server using SockJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the Redis.
 Using the following method, we can retrieve all operations after the last successful client-synced version and return all missing operations to the requesting client. 
 
 ```java
@@ -233,9 +233,9 @@ public String getActionsFromServer(@RequestBody ActionInfo param) throws ClassNo
 ## How to perform Scaling in Collaborative Editing.
 
 ### Role of Scaling in Collaborative editing
-As the number of users increases, collaborative application face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
+As the number of users increases, collaborative applications face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
 
-During scaling the users may connected to different servers, so collaborative editing application introduces a specific challenge like, updating the edit operations to all the users connected in different serves. To overcome this issue you need to use ``` Redis Cache pub/sub ``` for message relay(syncing the editing operations to the users connected to different server instance)
+During scaling, users may be connected to different servers, so collaborative editing applications introduce specific challenges, such as updating edit operations to all users connected to different server instances. To overcome this issue, you need to use ``` Redis Cache pub/sub ``` for message relay (syncing the editing operations to the users connected to different server instances).
 
 ### Use of Redis Pub/Sub in scaling environment
 Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple AWS services without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views. 
@@ -256,7 +256,7 @@ Publish each editing operation to Redis channel with the room name. This will se
 
 ```java
 try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {                           
-jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
+jedis.publish("collaborativeediting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
     break;
     } catch (JedisConnectionException e) {
     }
@@ -269,7 +269,7 @@ jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.Object
 @PostConstruct
       public void subscribeToInstanceChannel() {
             //Subscriber to `collaborativeediting`
-            String channel = "collaborativeedtiting";
+            String channel = "collaborativeediting";
              new Thread(() -> {
                    JedisPoolConfig poolConfig = new JedisPoolConfig();
                     jedisPool = new JedisPool(poolConfig, REDIS_HOST, REDIS_PORT);
