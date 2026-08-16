@@ -156,11 +156,9 @@ var annoToolbar = new Tool({
 annoToolbar.appendTo('#annotationToolbar');
 ```
 
-Note
-
-- `setAnnotationMode` accepts the annotation type name. Common values include: `Highlight`, `Underline`, `Strikethrough`, `StickyNotes`, `FreeText`, `Ink`, `Rectangle`, `Circle`, `Line`, `Arrow`, `Polygon`, `Polyline`, `Distance`, `Perimeter`, `Area`, `Radius`, and `None` to exit.
-- Default annotation styles can be predefined using the corresponding settings properties (for example, `areaSettings`).
-- To combine with a fully custom viewer toolbar, see Custom Toolbar in JavaScript PDF Viewer.
+N> `setAnnotationMode` accepts the annotation type name. Common values include: `Highlight`, `Underline`, `Strikethrough`, `StickyNotes`, `FreeText`, `Ink`, `Rectangle`, `Circle`, `Line`, `Arrow`, `Polygon`, `Polyline`, `Distance`, `Perimeter`, `Area`, `Radius`, and `None` to exit.
+N> Default annotation styles can be predefined using the corresponding settings properties (for example, `areaSettings`).
+N> To combine with a fully custom viewer toolbar, see Custom Toolbar in JavaScript PDF Viewer.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 
