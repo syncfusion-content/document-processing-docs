@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn how to select cells, rows, columns, and ranges in the Syncfusion ASP.NET MVC Spreadsheet.
+description: Learn how to select cells, rows, columns, and ranges in the Syncfusion ASP.NET MVC Spreadsheet component.
 platform: document-processing
 control: Selection
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Move a Worksheet in React Spreadsheet component | Syncfusion
-description: Learn about moving worksheets in the Syncfusion React Spreadsheet component.
+description: Learn about moving worksheets in an Excel document using the Syncfusion React Spreadsheet component and more details.
 control: Worksheet 
 platform: document-processing
 documentation: ug

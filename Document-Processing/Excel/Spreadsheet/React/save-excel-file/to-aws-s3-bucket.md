@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save Excel to AWS S3 in React Spreadsheet | Syncfusion
-description: Learn how to save Excel files from the Syncfusion React Spreadsheet control to AWS S3 storage.
+description: Learn about how to save Excel documents using the Syncfusion React Spreadsheet control to AWS S3 storage.
 platform: document-processing
 control: Save file to AWS S3
 documentation: ug

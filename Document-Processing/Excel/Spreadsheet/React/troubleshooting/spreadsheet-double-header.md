@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Double header issue in React Spreadsheet | Syncfusion
-description: Learn how to resolve double header rendering issues in the Syncfusion React Spreadsheet component.
+description: Learn about how to resolve double header rendering issues using  the Syncfusion React Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Protection in Blazor Spreadsheet Component | Syncfusion
-description: Protect and unprotect worksheets and workbooks using the Syncfusion Blazor Spreadsheet.
+description: Learn about protect and unprotect worksheets and workbooks using the Syncfusion Blazor Spreadsheet component].
 platform: document-processing
 control: Spreadsheet
 documentation: ug

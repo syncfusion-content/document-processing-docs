@@ -1,6 +1,6 @@
 ---
 title: Create Excel Documents in Azure using .NET Excel Library | Syncfusion
-description: Syncfusion .NET Excel Library supports creating Excel documents in Azure using C# applications.
+description: Syncfusion .NET Excel Library supports creating Excel documents programmatically in Azure using C# applications.
 platform: document-processing
 control: XlsIO
 documentation: UG

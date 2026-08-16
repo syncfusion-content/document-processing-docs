@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Services using ASP.NET MVC in React Spreadsheet | Syncfusion
-description: Learn about configuring ASP.NET MVC web services for open and save operations in React Spreadsheet.
+description: Learn about configuring ASP.NET MVC web services for open and save operations in React Spreadsheet component and more details.
 control: Web Services 
 platform: document-processing
 documentation: ug

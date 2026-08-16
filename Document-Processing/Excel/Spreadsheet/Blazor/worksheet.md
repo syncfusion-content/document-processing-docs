@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Worksheet Operations in Blazor Spreadsheet | Syncfusion
-description: Learn how to create, manage, and customize worksheets in the Syncfusion Blazor Spreadsheet.
+description: Learn how to create, manage, and customize worksheets in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

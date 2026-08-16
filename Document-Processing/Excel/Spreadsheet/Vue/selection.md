@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Vue Spreadsheet | Syncfusion
-description: Learn how to select cells, rows, columns, and ranges in the Syncfusion Vue Spreadsheet.
+description: Learn about how to select cells, rows, columns, and ranges in the Syncfusion Vue Spreadsheet component.
 control: Selection 
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Improve performance using a CDN | Syncfusion
-description: Learn how to improve performance in the Blazor PDF Viewer by using versioned CDN script references.
+description: Learn about how to improve the performance of  the Blazor PDF Viewer component by using versioned CDN script references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

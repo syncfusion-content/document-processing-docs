@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Form Designer and Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn here all about form designer and toolbar in Blazor SfPdfViewer component and more.
+description: Learn here all about form designer and toolbar features of the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

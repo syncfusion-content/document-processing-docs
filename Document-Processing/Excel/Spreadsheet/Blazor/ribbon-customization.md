@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ribbon Customization in Blazor Spreadsheet | Syncfusion
-description: Customize ribbon tabs, groups, items, and file menu options in the Syncfusion Blazor Spreadsheet.
+description: Customize ribbon tabs, groups, items, and file menu options in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

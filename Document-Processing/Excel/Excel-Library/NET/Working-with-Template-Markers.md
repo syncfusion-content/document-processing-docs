@@ -1,6 +1,6 @@
 ---
 title: Template Markers in .NET Excel Library | Syncfusion
-description: Template markers in Excel Library describes how to import data to a predefined Excel template.
+description: Template markers in .NET Excel Library describes how to import data to a predefined Excel template programmatically.
 platform: document-processing
 control: XlsIO
 documentation: UG

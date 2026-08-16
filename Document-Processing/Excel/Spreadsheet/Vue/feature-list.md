@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feature List of Vue Spreadsheet | Syncfusion
-description: Explore the complete feature set and capabilities available in the Syncfusion Vue Spreadsheet
+description: Explore the complete feature set and capabilities available in the Syncfusion Vue Spreadsheet component and more details.
 control: Feature list 
 platform: document-processing
 documentation: ug

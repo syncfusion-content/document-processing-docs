@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hyperlink in Blazor Spreadsheet | Syncfusion
-description: Learn how to create, edit, and manage hyperlinks in the Syncfusion Blazor Spreadsheet.
+description: Learn how to create, edit, and manage hyperlinks in Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

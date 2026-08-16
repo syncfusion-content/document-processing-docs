@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn how to use built-in formulas and calculations in the Syncfusion ASP.NET MVC Spreadsheet.
+description: Learn how to use built-in formulas and calculations in the Syncfusion ASP.NET MVC Spreadsheet component.
 platform: document-processing
 control: Formulas
 documentation: ug

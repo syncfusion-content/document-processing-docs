@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in Vue Spreadsheet | Syncfusion
-description: Perform calculations and data analysis using built-in formulas in the Syncfusion Vue Spreadsheet.
+description: Perform calculations and data analysis using built-in formulas in the Syncfusion Vue Spreadsheet component.
 control: Formulas
 platform: document-processing
 documentation: ug

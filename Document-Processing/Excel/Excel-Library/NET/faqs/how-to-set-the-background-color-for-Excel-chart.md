@@ -1,6 +1,6 @@
 ---
 title: How to Set Chart Background Colors in .NET Excel Library | Syncfusion
-description: Set the background color for an Excel chart using the Syncfusion .NET Excel Library.
+description: Learn how to set the background color for an Excel chart programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

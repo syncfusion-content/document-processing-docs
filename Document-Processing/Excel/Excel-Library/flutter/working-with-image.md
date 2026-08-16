@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Images in Flutter Excel Library | Syncfusion
-description: The Flutter Excel Library lets users add, format, and remove images in Excel worksheets.
+description: The Flutter Excel Library lets users add, format, and remove images in Excel worksheets programmatically.
 platform: document-processing
 control: Excel
 documentation: ug

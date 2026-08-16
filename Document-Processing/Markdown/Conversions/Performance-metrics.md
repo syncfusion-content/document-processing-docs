@@ -1,5 +1,5 @@
 ---
-title: Performance Benchmarks in .NET Markdown Conversion Library | Syncfusion
+title: Performance Benchmarks in Markdown Conversion | Syncfusion
 description: Explore Markdown conversion performance benchmarks across documents of varying sizes, complexities, and conversion scenarios.
 platform: document-processing
 control: Markdown

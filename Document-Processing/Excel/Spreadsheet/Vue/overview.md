@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion Vue Spreadsheet Control | Syncfusion
-description: Learn about introduction of Syncfusion Essential Studio Vue Spreadsheet control and more details.
+description: Learn about the introduction of the Syncfusion Essential Studio Vue Spreadsheet control and more details.
 platform: document-processing
 control: Index
 documentation: ug

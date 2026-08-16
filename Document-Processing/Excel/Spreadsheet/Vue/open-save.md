@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open and Save in Vue Spreadsheet | Syncfusion
-description: Learn how to open, edit, and save spreadsheet files using the Syncfusion Vue Spreadsheet.
+description: Learn about how to open, edit, and save Excel documents using the Syncfusion Vue Spreadsheet component.
 control: Open save 
 platform: document-processing
 documentation: ug

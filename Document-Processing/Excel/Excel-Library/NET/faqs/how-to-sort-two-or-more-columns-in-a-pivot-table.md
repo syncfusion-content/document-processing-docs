@@ -1,6 +1,6 @@
 ---
 title: How to Sort Pivot Columns in .NET Excel Library | Syncfusion
-description: Sort two or more columns in a PivotTable using the Syncfusion .NET Excel Library.
+description: Learn how to sort two or more columns in a PivotTable programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion Blazor PDF Viewer Classic Component | Syncfusion
-description: Learn about the Syncfusion Blazor PDF Viewer component and much more details.
+description: Learn about the overview of the Syncfusion Blazor PDF Viewer classic component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

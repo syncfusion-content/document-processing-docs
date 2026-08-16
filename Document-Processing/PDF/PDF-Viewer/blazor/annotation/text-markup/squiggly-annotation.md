@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Squiggly Annotation (Text Markup) in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Squiggly annotations in the Blazor PDF Viewer .
+description: Learn how to enable, apply, customize, and manage Squiggly annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

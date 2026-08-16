@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion Blazor Spreadsheet Control | Syncfusion
-description: Learn about introduction of Syncfusion Essential Studio Blazor Spreadsheet control and more details
+description: Learn about introduction of the Syncfusion Essential Studio Blazor Spreadsheet control and more details.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

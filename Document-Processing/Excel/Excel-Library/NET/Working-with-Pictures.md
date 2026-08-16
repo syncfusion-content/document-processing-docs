@@ -1,6 +1,6 @@
 ---
 title: Pictures in .NET Excel Library | Syncfusion
-description: Pictures section describes how to add images to worksheets along with picture insertion options.
+description: Pictures section describes how to add images to worksheets along with picture insertion options programmatically.
 platform: document-processing
 control: XlsIO
 documentation: UG

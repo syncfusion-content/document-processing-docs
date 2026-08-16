@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Toggle Rows and Columns in React Spreadsheet | Syncfusion
-description: Learn how to hide and show rows and columns in the Syncfusion React Spreadsheet component.
+description: Learn about how to hide and show rows and columns in Excel document using the Syncfusion React Spreadsheet component.
 control: Rows and Columns 
 platform: document-processing
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save Excel to Azure Blob Storage in React Spreadsheet | Syncfusion
-description: Learn how to save Excel files from the Syncfusion React Spreadsheet control to Azure Blob Storage.
+description: Learn about how to save Excel documents using the Syncfusion React Spreadsheet control to Azure Blob Storage.
 platform: document-processing
 control: Save file to Azure Blob Storage
 documentation: ug

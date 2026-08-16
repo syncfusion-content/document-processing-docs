@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sheet Visibility in React Spreadsheet component | Syncfusion
-description: Learn about worksheet visibility options in the Syncfusion React Spreadsheet component.
+description: Learn about worksheet visibility options that are supported in the Syncfusion React Spreadsheet component and more details.
 control: Worksheet 
 platform: document-processing
 documentation: ug

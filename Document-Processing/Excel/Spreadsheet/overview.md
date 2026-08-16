@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion Spreadsheet Component | Syncfusion
-description: Learn about the introduction of Syncfusion Essential Studio Spreadsheet component and more details.
+description: Learn about the introduction of the Syncfusion Essential Studio Spreadsheet component and more details.
 platform: document-processing
 control: general
 documentation: UG

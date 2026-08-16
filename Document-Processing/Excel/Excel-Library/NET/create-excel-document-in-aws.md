@@ -1,6 +1,6 @@
 ---
 title: Create Excel Documents in AWS using .NET Excel Library | Syncfusion
-description: Syncfusion .NET Excel Library supports creating Excel documents in AWS using C# applications.
+description: Syncfusion .NET Excel Library supports creating Excel documents programmatically in AWS using C# applications.
 platform: document-processing
 control: XlsIO
 documentation: UG

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Printing in Vue Spreadsheet | Syncfusion
-description: Learn how to print worksheets and configure print settings in the Syncfusion Vue Spreadsheet.
+description: Learn about how to print worksheets and configure print settings in the Syncfusion Vue Spreadsheet component.
 control: Print
 platform: document-processing
 documentation: ug
