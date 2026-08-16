@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get current word in JavaScript (ES5) Document editor control | Syncfusion
+title: How to Get Current Word in JavaScript DOCX Editor | Syncfusion
 description: Learn here all about Get current word in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get Current Word

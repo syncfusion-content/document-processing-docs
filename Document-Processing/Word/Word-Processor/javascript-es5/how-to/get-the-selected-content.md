@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the selected content in JavaScript (ES5) Document editor control | Syncfusion
+title: How to Get Selected Content in JavaScript DOCX Editor | Syncfusion
 description: Learn here all about Get the selected content in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Get the Selected Content
