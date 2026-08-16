@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling zooming in JavaScript (ES5) Document editor control | Syncfusion
+title: Scrolling and Zooming in JavaScript DOCX Editor | Syncfusion
 description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Scrolling zooming 
