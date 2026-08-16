@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Security Advisories in  JavaScript (ES5) Document Editor control | Syncfusion
+title: Security Advisories in JavaScript DOCX Editor | Syncfusion
 description: Learn here all about Security Advisories in Syncfusion  JavaScript (ES5)  Document editor control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Security advisories
@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Security Advisories in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Controls
+# Security Advisories in JavaScript DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured of the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities, such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the [SOOS](https://soos.io/) security tool.
+Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured of the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities, such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the SOOS security tool.
 
 This document provides a description of the security updates available for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS2 controls per volume release.
 
