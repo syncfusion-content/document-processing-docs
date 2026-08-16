@@ -247,7 +247,7 @@ The following example code illustrates how to write a Web API for restrict editi
 
 Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor, and it will provide suggestions for the misspelled words through a dialog and the context menu. The Document Editor client-side script requires this Web API to show error words and list suggestions in the context menu. This Web API returns the JSON type of spell-checked word, which contains details about error words, if any, and suggestions.
 
-To know more about configuring spell check, please refer to this [link](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-Web-Services/tree/master/ASP.NET%20Core#steps-to-configure-spell-checker).
+To know more about configuring spell check, please refer to this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20Core#steps-to-configure-spell-checker).
 
 In the `startup.cs` file, you can configure the spell check files as shown below:
 
