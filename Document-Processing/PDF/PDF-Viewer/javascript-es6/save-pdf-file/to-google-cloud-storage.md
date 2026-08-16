@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in TypeScript PDF Viewer | Syncfusion
+title: Save PDF Files to Google Cloud Storage in Syncfusion PDF Viewer
 description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Google Cloud Storage
+# Save and Manage PDFs in Google Cloud Storage
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
-Follow the Syncfusion getting-started instructions for the JavaScript PDF Viewer: [JavaScript PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started). This sets up the basic PDF Viewer application structure.
+Follow the Syncfusion getting-started instructions for the TypeScript PDF Viewer: [TypeScript PDF Viewer getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started). This sets up the basic PDF Viewer application structure.
 
 **Step 2:** Modify the `PdfViewerController.cs` File in the Web Service Project
 
@@ -108,7 +108,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to the
 
 **Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Google Cloud Storage, and ensure that the document exists in the target bucket.
 
 ```typescript
 
