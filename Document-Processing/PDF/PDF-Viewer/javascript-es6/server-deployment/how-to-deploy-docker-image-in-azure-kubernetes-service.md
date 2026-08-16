@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Deploy TypeScript PDF Viewer server to Azure Kubernetes Service (AKS)
+title: Deploy Syncfusion PDF Viewer Server to Azure Kubernetes Service
 description: Deploy the Syncfusion PDF Viewer server Docker image to Azure Kubernetes Service (AKS), expose it securely, and connect it to the TypeScript PDF Viewer client.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Deploy Docker image to Azure Kubernetes Service (AKS)
+# Manage Docker Image Deployments in Azure Kubernetes Service
 
 Host the Syncfusion PDF Viewer server container on Azure Kubernetes Service (AKS) to deliver PDFs to the TypeScript PDF Viewer client at scale. The following workflow provisions the infrastructure, deploys the published image from Docker Hub, and exposes a public endpoint for the component’s `serviceUrl`.
 
 ## Prerequisites
 
-- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) guide.
+- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) guide.
 - Sign in to Azure before you create resources.
 
 ```console
 az login
 ```
 
-Ensure the AKS nodes can pull the `syncfusion/pdfviewerserver:latest` image from Docker Hub or from a private registry mirror if outbound internet access is restricted.
+Ensure the AKS nodes can pull the `syncfusion/pdfviewer server:latest` image from Docker Hub or from a private registry mirror if outbound internet access is restricted.
 
 ## Deploy the PDF Viewer server
 
@@ -101,7 +101,7 @@ kubectl apply -f ./pdfviewer-server.yaml
 kubectl get all
 ```
 
-It can take several minutes for Azure to provision the LoadBalancer  IP. When the external IP is available, browse to `http://<external-ip>/api/pdfviewer` to verify the default GET response. Enable HTTPS with an ingress controller or Azure Front Door for production workloads.
+It can take several minutes for Azure to provision the LoadBalancer IP. When the external IP is available, browse to `http://<external-ip>/api/pdfviewer` to verify the default GET response. Enable HTTPS with an ingress controller or Azure Front Door for production workloads.
 
 **Step 6:** Connect the client to the server endpoint.
 

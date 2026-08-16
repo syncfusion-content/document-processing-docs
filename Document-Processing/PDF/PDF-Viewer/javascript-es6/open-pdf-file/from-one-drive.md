@@ -166,6 +166,6 @@ N> Install the following NuGet packages in the server project to use the previou
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-You can install these packages using the NuGet Package Manager in Visual Studio or via the `dot net` CLI.
+You can install these packages using the NuGet Package Manager in Visual Studio or via the `dotnet` CLI.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

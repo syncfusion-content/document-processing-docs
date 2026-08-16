@@ -246,8 +246,6 @@ if (underline) {
 {% endhighlight %}
 {% endtabs %}
 
-## Edit underline annotation
-
 ## Edit underline annotations
 
 ### Edit underline annotations in UI
@@ -274,8 +272,6 @@ Use the range slider in the Edit Opacity tool to change annotation opacity.
 ### Edit existing underline annotations programmatically
 
 To modify existing underline annotations programmatically, use the `editAnnotation()` method. Example:
-
-To modify an existing underline annotation programmatically, use the editAnnotation() method. Example:
 
 ```html
 <button id="editUnderlineAnnotation">Edit Underline annotation Programmatically</button>
@@ -412,7 +408,7 @@ Set properties for individual annotations before creating the control using `und
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default highlight settings.
+Refer to the following code snippet to set the default underline settings.
 
 ```html
 <button id="underline">Add underline</button>

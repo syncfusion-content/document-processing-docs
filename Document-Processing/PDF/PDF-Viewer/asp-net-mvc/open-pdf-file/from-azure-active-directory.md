@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Open PDF from Azure Active Directory in ASP.NET MVC PDF Viewer | Syncfusion
+title: Open PDF from Azure Active Directory in MVC PDF Viewer | Syncfusion
 description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion ASP.NET MVC PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory
+# Open PDF from Azure Active Directory in ASP.NET MVC
 
-### Overview
+## Overview
 
 The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
@@ -135,13 +134,12 @@ public async Task<ActionResult> SaveToAAD(jsonObjects responseData)
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure server-side code:
-   - Open the server-side application (e.g., ASP.NET MVC) and configure the following details in the `PdfViewerController` file:
-     - `tenantId` (your Azure AD tenant ID),
-     - `clientId` (your registered application client ID),
-     - `clientSecret` (your registered application client secret),
-     - `blobServiceEndpoint` (your storage account blob service URL),
-     - `containerName` (your container name in Azure Blob Storage).
+3. Configure the server-side code with the following values in `HomeController.cs`:
+   - `tenantId` (your Azure AD tenant ID).
+   - `clientId` (your registered application client ID).
+   - `clientSecret` (your registered application client secret).
+   - `blobServiceEndpoint` (your storage account blob service URL).
+   - `containerName` (your container name in Azure Blob Storage).
 
 4. Add the following code snippet in `Index.cshtml`.
 
