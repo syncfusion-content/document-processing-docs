@@ -136,7 +136,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 		4. Newtonsoft.Json package (v10.0.1 or above)
 		
 	<b>NuGet</b>
-		 <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux</a>
+		 <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux</a>
 
 * To convert HTML to PDF in Linux using the Blink rendering engine, the following packages should be installed in the Linux machine where the conversion takes place.
 	1. $ sudo apt-get update 		
@@ -159,7 +159,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 		4. Newtonsoft.Json package (v10.0.1 or above)		
 		
 	<b>NuGet</b>
-		<a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac</a>
+		<a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac</a>
 
 ## Prerequisites for AWS
 
@@ -170,7 +170,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 * The BlinkBinariesAws folder is available in the NuGet package. There is no need to set the path of the BlinkBinaries folder. The converter will automatically sets the BlinkPath property with the BlinkBinariesAws folder.
 
 <b>NuGet</b>
-    <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws</a>
+    <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws</a>
 * Kindly refer this [link](https://support.syncfusion.com/kb/article/11992/how-to-convert-html-to-pdf-in-aws-lambda) for converting HTML to PDF in Aws.
     
 * Kindly refer this [link](https://support.syncfusion.com/kb/article/11992/how-to-convert-html-to-pdf-in-aws-lambda) for converting HTML to PDF in Aws.
@@ -2698,7 +2698,7 @@ settings.BlinkPath = Server.MapPath("~/bin/BlinkBinaries");
 <tr>
 <th style="font-size:14px">Reason
 </th>
-<td>Missing or mismatch of <a href="https://www.nuget.org/packages/Newtonsoft.Json/6.0.8">Newtonsoft.Json</a> package in the project.
+<td>Missing or mismatch of <a href="https://www.nuget.org/packages/Newtonsoft.Json/6.0.8" aria-label="NuGet link">Newtonsoft.Json</a> package in the project.
 </td>
 </tr>
 <tr>
@@ -2763,7 +2763,7 @@ settings.TempPath = "D://MyProject//bin";
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>To overcome the exception in Windows 7/Windows server 2008 environment, add the <a href="https://www.nuget.org/packages/System.Buffers/">System.Buffers.4.5.0</a> NuGet package in the sample for conversion. 
+<td>To overcome the exception in Windows 7/Windows server 2008 environment, add the <a href="https://www.nuget.org/packages/System.Buffers/" aria-label="NuGet link">System.Buffers.4.5.0</a> NuGet package in the sample for conversion. 
 </td>
 </tr>
 
@@ -2812,7 +2812,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
+<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident" aria-label="Syncfusion Support link">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
 </td>
 </tr>
 
@@ -2900,7 +2900,7 @@ settings.AdditionalDelay = 2000;
 <th style="font-size:14px">Solution
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service (which has the elevated permission and rights to access the GDI calls). 
-Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink">link</a> for more information. 
+Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB article link">link</a> for more information. 
 </td>
 </tr>
 </table>

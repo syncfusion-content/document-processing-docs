@@ -20,7 +20,7 @@ Step 2: Name the project, choose the framework, and click **Create**.
 
 ![Name the project and choose the framework version](Wpf_images/Wpf_images_img9.png)
 
-Step 3: Install the <a href="https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf">Syncfusion.XlsIO.Wpf</a> NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Base` assembly.
+Step 3: Install the <a href="https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf" aria-label="XlsIO NuGet link">Syncfusion.XlsIO.Wpf</a> NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Base` assembly.
 
 ![Install Syncfusion.XlsIO.Wpf NuGet Package](Wpf_images/Wpf_images_img10.png)
 

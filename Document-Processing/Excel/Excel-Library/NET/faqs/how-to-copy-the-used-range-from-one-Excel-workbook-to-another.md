@@ -79,4 +79,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to copy the used range from a source workbook to a destination workbook using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange">this GitHub page</a>.
+A complete working example to copy the used range from a source workbook to a destination workbook using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange" aria-label="GitHub demo link">this GitHub page</a>.

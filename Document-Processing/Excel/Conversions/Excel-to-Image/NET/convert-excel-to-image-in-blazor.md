@@ -196,4 +196,4 @@ builder.Services.AddScoped<ConvertExceltoImage.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}     
 
-A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage">this GitHub page</a>.
+A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage" aria-label="GitHub demo link">this GitHub page</a>.

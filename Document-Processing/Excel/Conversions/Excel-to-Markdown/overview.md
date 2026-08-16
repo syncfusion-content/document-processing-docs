@@ -67,7 +67,7 @@ End Using
 
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Customize image saving
 
@@ -171,7 +171,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Markdown Export Options
 

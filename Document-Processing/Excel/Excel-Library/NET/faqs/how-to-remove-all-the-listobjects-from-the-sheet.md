@@ -72,4 +72,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999438-Remove-ListObjects/FAQ/Remove%20ListObjects/.NET/Remove%20ListObjects" aria-label="GitHub demo link">this GitHub page</a>.

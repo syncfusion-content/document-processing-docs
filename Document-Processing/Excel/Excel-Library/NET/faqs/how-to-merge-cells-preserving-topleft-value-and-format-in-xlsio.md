@@ -58,4 +58,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting" aria-label="GitHub demo link">this GitHub page</a>.

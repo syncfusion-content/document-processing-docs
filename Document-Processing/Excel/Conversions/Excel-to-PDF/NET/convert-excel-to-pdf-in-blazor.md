@@ -342,7 +342,7 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
  
-An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent" aria-label="GitHub demo link">convert an Excel document to PDF</a> in Blazor.
 
 ## Excel to PDF in Blazor WASM app
 
@@ -871,4 +871,4 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent" aria-label="GitHub demo link">convert an Excel document to PDF</a> in Blazor.

@@ -80,7 +80,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1003194-Hidden-Column/FAQ/Hidden%20Column/.NET/Hidden%20Column">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1003194-Hidden-Column/FAQ/Hidden%20Column/.NET/Hidden%20Column" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## See Also
 

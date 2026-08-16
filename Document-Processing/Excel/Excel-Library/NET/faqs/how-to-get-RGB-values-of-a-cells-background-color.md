@@ -86,4 +86,4 @@ End Using
 {% endhighlight %} 
 {% endtabs %}
 
-A complete working example to get RGB values of a cell's background color is available on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/RGB%20Value%20for%20Cell%20Color/.NET/RGB%20Value%20for%20Cell%20Color">this GitHub page</a>.
+A complete working example to get RGB values of a cell's background color is available on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/RGB%20Value%20for%20Cell%20Color/.NET/RGB%20Value%20for%20Cell%20Color" aria-label="GitHub demo link">this GitHub page</a>.

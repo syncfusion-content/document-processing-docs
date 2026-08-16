@@ -98,4 +98,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells">this GitHub page</a>.  
+A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells" aria-label="GitHub demo link">this GitHub page</a>.  

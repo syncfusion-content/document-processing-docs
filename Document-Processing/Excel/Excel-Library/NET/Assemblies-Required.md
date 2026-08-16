@@ -8,6 +8,8 @@ documentation: UG
 
 # Assemblies Required for .NET Excel Library
 
+## Excel Library
+
 The following assemblies need to be referenced in your application based on the platform.
 <table>
 <tr>

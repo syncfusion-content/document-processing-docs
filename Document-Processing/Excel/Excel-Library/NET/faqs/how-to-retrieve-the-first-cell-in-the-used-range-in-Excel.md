@@ -86,4 +86,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/First%20used%20cell%20in%20used%20range/.NET/FirstUsedCellInUsedRange">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/First%20used%20cell%20in%20used%20range/.NET/FirstUsedCellInUsedRange" aria-label="GitHub demo link">this GitHub page</a>.

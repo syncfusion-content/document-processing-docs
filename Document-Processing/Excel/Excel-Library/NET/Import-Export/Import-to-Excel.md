@@ -77,7 +77,7 @@ N> XlsIO imports the data from a `DataTable` into an Excel worksheet based on th
 
 ### Preserve Data Types  
 
-To preserve data types when importing a DataTable into an Excel worksheet, set the **preserveTypes** parameter of the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Boolean_System_Int32_System_Int32_System_Boolean_">ImportDataTable</a> method to **true**.
+To preserve data types when importing a DataTable into an Excel worksheet, set the **preserveTypes** parameter of the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Boolean_System_Int32_System_Int32_System_Boolean_" aria-label="Class reference documentation link">ImportDataTable</a> method to **true**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

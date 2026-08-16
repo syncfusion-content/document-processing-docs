@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data" aria-label="GitHub demo link">this GitHub page</a>.

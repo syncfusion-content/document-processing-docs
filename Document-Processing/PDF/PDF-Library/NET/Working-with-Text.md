@@ -3193,7 +3193,7 @@ Create fonts, brushes, and pens once and reuse them throughout the document to r
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>
-Load the font directly from a <i>.ttf</i> file using a path or stream, then pass it to <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html">PdfTrueTypeFont</a>. This ensures consistent font embedding across all platforms.
+Load the font directly from a <i>.ttf</i> file using a path or stream, then pass it to <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html" aria-label="Class reference documentation link">PdfTrueTypeFont</a>. This ensures consistent font embedding across all platforms.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 

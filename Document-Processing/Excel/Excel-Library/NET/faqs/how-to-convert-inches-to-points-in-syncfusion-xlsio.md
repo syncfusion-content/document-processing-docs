@@ -51,4 +51,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/996021-Inches-To-Points/FAQ/Inches%20To%20Points/.NET/Inches%20To%20Points">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/996021-Inches-To-Points/FAQ/Inches%20To%20Points/.NET/Inches%20To%20Points" aria-label="GitHub demo link">this GitHub page</a>.

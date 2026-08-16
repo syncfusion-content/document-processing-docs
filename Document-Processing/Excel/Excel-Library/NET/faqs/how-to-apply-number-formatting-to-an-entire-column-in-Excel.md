@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
  
-A complete working example that shows how to apply number formatting to an entire column in Excel using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Column%20Number%20Format/.NET/ColumnNumberFormat">this GitHub page</a>.
+A complete working example that shows how to apply number formatting to an entire column in Excel using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Column%20Number%20Format/.NET/ColumnNumberFormat" aria-label="GitHub demo link">this GitHub page</a>.

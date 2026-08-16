@@ -117,4 +117,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1017888-Circular-Reference/FAQ/Circular%20Reference/.NET/Circular%20Reference">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1017888-Circular-Reference/FAQ/Circular%20Reference/.NET/Circular%20Reference" aria-label="GitHub demo link">this GitHub page</a>.

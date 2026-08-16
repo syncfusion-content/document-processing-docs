@@ -62,4 +62,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Freeze%20Pivot%20Table%20Header/.NET/FreezePivotTableHeader">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Freeze%20Pivot%20Table%20Header/.NET/FreezePivotTableHeader" aria-label="GitHub demo link">this GitHub page</a>.

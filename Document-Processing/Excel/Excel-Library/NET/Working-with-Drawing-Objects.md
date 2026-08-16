@@ -128,7 +128,7 @@ A complete working example to add a text box in C# is available on [this GitHub 
 
 **Lock Text in Text Box**
  
-Set the **LockText** property of <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBox.html">ITextBox</a> to prevent editing the text inside a text box. This setting takes effect only when the worksheet is protected.
+Set the **LockText** property of <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBox.html" aria-label="Class reference documentation link">ITextBox</a> to prevent editing the text inside a text box. This setting takes effect only when the worksheet is protected.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

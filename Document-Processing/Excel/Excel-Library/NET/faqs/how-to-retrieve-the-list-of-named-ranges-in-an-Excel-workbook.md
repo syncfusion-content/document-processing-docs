@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges" aria-label="GitHub demo link">this GitHub page</a>.

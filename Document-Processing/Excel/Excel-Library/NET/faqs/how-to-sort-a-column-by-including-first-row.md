@@ -110,4 +110,4 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008504-SortColumn/FAQ/Sort%20With%20First%20Column/.NET/Sort%20With%20First%20Column">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008504-SortColumn/FAQ/Sort%20With%20First%20Column/.NET/Sort%20With%20First%20Column" aria-label="GitHub demo link">this GitHub page</a>.

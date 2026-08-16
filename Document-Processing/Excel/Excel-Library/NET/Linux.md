@@ -38,7 +38,7 @@ COPY ["ProjectName/Fonts/*.*", "/usr/local/share/fonts/"]
 
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers">GitHub</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers" aria-label="GitHub demo link">GitHub</a>.
 
 ## How to install Microsoft compatible fonts on Linux?
 

@@ -68,4 +68,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Last%20row%20of%20worksheet/.NET/LastRowOfWorksheet">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Last%20row%20of%20worksheet/.NET/LastRowOfWorksheet" aria-label="GitHub demo link">this GitHub page</a>.

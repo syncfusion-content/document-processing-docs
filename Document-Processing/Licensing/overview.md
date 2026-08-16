@@ -28,7 +28,7 @@ Following licensing error will be shown if the license key is not registered in 
 
 <div id="license">
 
-This application was built using a trial version of Syncfusion<sup>&reg;</sup> Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/document-processing/licensing/overview">help topic</a> for more information 
+This application was built using a trial version of Syncfusion<sup>&reg;</sup> Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this <a href="/document-processing/licensing/overview" aria-label="Documentation Reference  link">help topic</a> for more information 
 
 </div>
 

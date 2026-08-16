@@ -1,6 +1,6 @@
 ---
-title: Getting Started with Azure Kubernetes Service OCR Processor| Syncfusion
-description: Learn how to get started with the Syncfusion Azure Kubernetes Service OCR Processor. Explore setup, features, examples, and customization options.
+title: Getting Started with OCR Processor in Azure Kubernetes | Syncfusion
+description: Learn how to get started with the Syncfusion OCR Processor in Azure Kubernetes Service. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG

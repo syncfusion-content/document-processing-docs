@@ -70,4 +70,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/CheckIfWorksheetIsEmpty">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Worksheet/.NET/CheckIfWorksheetIsEmpty" aria-label="GitHub demo link">this GitHub page</a>.

@@ -85,4 +85,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008514-ChartAxis/FAQ/Chart/.NET/Remove%20Axis">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008514-ChartAxis/FAQ/Chart/.NET/Remove%20Axis" aria-label="GitHub demo link">this GitHub page</a>.

@@ -5643,7 +5643,7 @@ System.OverflowException: `Arithmetic operation resulted in an overflow`.
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Increase the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize">EstimatedSignatureSize</a> property when configuring the PDF digital signature to ensure enough space is reserved for the full timestamp and LTV content.
+<td>Increase the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize" aria-label="Class reference documentation link">EstimatedSignatureSize</a> property when configuring the PDF digital signature to ensure enough space is reserved for the full timestamp and LTV content.
 <br><br/>
 {% tabs %}
 {% highlight C# tabtitle="C#" %}

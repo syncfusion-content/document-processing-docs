@@ -125,7 +125,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Windows%20Forms/Convert%20Excel%20to%20Image">GitHub</a>.    
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Windows%20Forms/Convert%20Excel%20to%20Image" aria-label="GitHub demo link">GitHub</a>.    
 
 By executing the program, you will get the **image** as follows.
 

@@ -132,7 +132,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel document to PDF using .NET Core is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/ConvertExcelToPDF">this GitHub page</a>.
+A complete working example of how to convert an Excel document to PDF using .NET Core is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/ConvertExcelToPDF" aria-label="GitHub demo link">this GitHub page</a>.
 
 By executing the program, you will get the **PDF document** as shown below.
 
@@ -197,7 +197,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel document to PDF using .NET Framework is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/ConvertExcelToPDF">this GitHub page</a>.
+A complete working example of how to convert an Excel document to PDF using .NET Framework is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/ConvertExcelToPDF" aria-label="GitHub demo link">this GitHub page</a>.
 
 By executing the program, you will get the **PDF document** as shown below.
 

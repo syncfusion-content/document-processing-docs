@@ -2048,7 +2048,7 @@ The following are the list of tags supported in addition to HTML string.
 * \<p></p>				- Defines a paragraph
 * \<font></font>		- Defines font, color and size of text
 * \<h1….h6></h1…h6>		- Defines HTML headings
-* \<a href></a>			- Defines a hyperlink
+* \			- Defines a hyperlink
 * \<i></i>				- Defines italic text
 * \<u></u>				- Underlines the text
 * \<b></b>				- Defines bold text

@@ -153,7 +153,7 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <table>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function">SUM</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function" aria-label="Documentation Reference  link">SUM</a>
 </td>
 <td>
 Adds its arguments
@@ -170,7 +170,7 @@ Returns the average of its arguments
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function">MAX</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function" aria-label="Documentation Reference  link">MAX</a>
 </td>
 <td>
 Returns the maximum value in a list of arguments
@@ -178,7 +178,7 @@ Returns the maximum value in a list of arguments
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function">MIN</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function" aria-label="Documentation Reference  link">MIN</a>
 </td>
 <td>
 Returns the minimum value in a list of arguments
@@ -195,7 +195,7 @@ Counts how many numbers are in the list of arguments
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function">IF</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function" aria-label="Documentation Reference  link">IF</a>
 </td>
 <td>
 Specifies a logical test to perform
@@ -203,7 +203,7 @@ Specifies a logical test to perform
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#and-function">AND</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#and-function" aria-label="Documentation Reference  link">AND</a>
 </td>
 <td>
 Returns TRUE if all of its arguments are TRUE
@@ -211,7 +211,7 @@ Returns TRUE if all of its arguments are TRUE
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#or-function">OR</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#or-function" aria-label="Documentation Reference  link">OR</a>
 </td>
 <td>
 Returns TRUE if any argument is TRUE
@@ -219,7 +219,7 @@ Returns TRUE if any argument is TRUE
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#not-function">NOT</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#not-function" aria-label="Documentation Reference  link">NOT</a>
 </td>
 <td>
 Reverses the logic of its argument
@@ -227,7 +227,7 @@ Reverses the logic of its argument
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#concatenate-function">CONCATENATE</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#concatenate-function" aria-label="Documentation Reference  link">CONCATENATE</a>
 </td>
 <td>
 Joins several text items into one text item
@@ -235,7 +235,7 @@ Joins several text items into one text item
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#trim-function">TRIM</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#trim-function" aria-label="Documentation Reference  link">TRIM</a>
 </td>
 <td>
 Removes spaces from text
@@ -243,7 +243,7 @@ Removes spaces from text
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#lower-function">LOWER</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#lower-function" aria-label="Documentation Reference  link">LOWER</a>
 </td>
 <td>
 Converts text to lowercase
@@ -251,7 +251,7 @@ Converts text to lowercase
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#upper-function">UPPER</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#upper-function" aria-label="Documentation Reference  link">UPPER</a>
 </td>
 <td>
 Converts text to uppercase
@@ -259,7 +259,7 @@ Converts text to uppercase
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#now-function">NOW</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#now-function" aria-label="Documentation Reference  link">NOW</a>
 </td>
 <td>
 Returns the serial number of the current date and time
@@ -267,7 +267,7 @@ Returns the serial number of the current date and time
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#today-function">TODAY</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#today-function" aria-label="Documentation Reference  link">TODAY</a>
 </td>
 <td>
 Returns the serial number of today's date
@@ -275,7 +275,7 @@ Returns the serial number of today's date
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#index-function">INDEX</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#index-function" aria-label="Documentation Reference  link">INDEX</a>
 </td>
 <td>
 Uses an index to choose a value from a reference or array
@@ -283,7 +283,7 @@ Uses an index to choose a value from a reference or array
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#match-function">MATCH</a>
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#match-function" aria-label="Documentation Reference  link">MATCH</a>
 </td>
 <td>
 Looks up values in a reference or array
@@ -291,7 +291,7 @@ Looks up values in a reference or array
 </tr>
 <tr>
 <td>
-<a href="">PRODUCT</a>
+<a href="" aria-label="Product Formula">PRODUCT</a>
 </td>
 <td>
 Multiplies its arguments
@@ -299,7 +299,7 @@ Multiplies its arguments
 </tr>
 <tr>
 <td>
-<a href="">SUMPRODUCT</a>
+<a href="" aria-label="SUM PRODUCT Formula">SUMPRODUCT</a>
 </td>
 <td>
 Returns the sum of the products of corresponding array components
@@ -307,7 +307,7 @@ Returns the sum of the products of corresponding array components
 </tr>
 <tr>
 <td>
-<a href="">SUMIF</a>
+<a href="" aria-label="SUMIF Formula">SUMIF</a>
 </td>
 <td>
 Adds the cells specified by a given criteria
@@ -315,7 +315,7 @@ Adds the cells specified by a given criteria
 </tr>
 <tr>
 <td>
-<a href="">VLOOKUP</a>
+<a href="" aria-label="VLOOKUP Formula">VLOOKUP</a>
 </td>
 <td>
 Looks in the first column of an array and moves across the row to return the value of a cell
@@ -323,7 +323,7 @@ Looks in the first column of an array and moves across the row to return the val
 </tr>
 <tr>
 <td>
-<a href="">COUNTIFS</a>
+<a href="" aria-label="COUNTIFS Formula">COUNTIFS</a>
 </td>
 <td>
 Counts the number of times all criteria are met.
@@ -331,7 +331,7 @@ Counts the number of times all criteria are met.
 </tr>
 <tr>
 <td>
-<a href="">MAXIFS</a>
+<a href="" aria-label="MAXIFS Formula">MAXIFS</a>
 </td>
 <td>
 Returns the maximum value among cells specified by a given set of conditions or criteria
@@ -339,7 +339,7 @@ Returns the maximum value among cells specified by a given set of conditions or 
 </tr>
 <tr>
 <td>
-<a href="">MINIFS</a>
+<a href="" aria-label="MINIFS Formula">MINIFS</a>
 </td>
 <td>
 Returns the minimum value among cells specified by a given set of conditions or criteria
@@ -347,7 +347,7 @@ Returns the minimum value among cells specified by a given set of conditions or 
 </tr>
 <tr>
 <td>
-<a href="">SUMIF</a>
+<a href="" aria-label="SUMIF Formula">SUMIF</a>
 </td>
 <td>
 Adds the cells specified by a given criteria
@@ -355,7 +355,7 @@ Adds the cells specified by a given criteria
 </tr>
 <tr>
 <td>
-<a href="">SUMIFS</a>
+<a href="" aria-label="SUMIFS Formula">SUMIFS</a>
 </td>
 <td>
 Adds all of its arguments that meet multiple criteria

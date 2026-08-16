@@ -24,27 +24,27 @@ The following benchmark measures the time required by the Syncfusion Excel (XlsI
     <tr>
       <td>Text</td>
       <td>91</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/String%20Data%20Type/.NET/String%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>DateTime</td>
       <td>105</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Number</td>
       <td>96</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Boolean</td>
       <td>81</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Formula</td>
       <td>104</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
   </tbody>
 </table>

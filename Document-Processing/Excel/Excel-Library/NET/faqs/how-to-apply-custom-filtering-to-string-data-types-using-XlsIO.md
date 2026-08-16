@@ -77,4 +77,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply custom filtering to string data types using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Filtering/.NET/Custom%20Filter%20String%20Type">this GitHub page</a>.  
+A complete working example to apply custom filtering to string data types using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Filtering/.NET/Custom%20Filter%20String%20Type" aria-label="GitHub demo link">this GitHub page</a>.  

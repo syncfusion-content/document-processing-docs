@@ -201,4 +201,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to demonstrate calculated field naming across PivotTables using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Pivot%20Tables%20Calculated%20Field%20Names/.NET/PivotTablesCalculatedFieldNames">this GitHub page</a>.  
+A complete working example to demonstrate calculated field naming across PivotTables using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Pivot%20Tables%20Calculated%20Field%20Names/.NET/PivotTablesCalculatedFieldNames" aria-label="GitHub demo link">this GitHub page</a>.  

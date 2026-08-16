@@ -69,4 +69,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to demonstrate how to apply a number format to an entire row in Excel using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Number%20format%20for%20entire%20row/.NET/Numberformatforentirerow">this GitHub page</a>.  
+A complete working example to demonstrate how to apply a number format to an entire row in Excel using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Number%20format%20for%20entire%20row/.NET/Numberformatforentirerow" aria-label="GitHub demo link">this GitHub page</a>.  

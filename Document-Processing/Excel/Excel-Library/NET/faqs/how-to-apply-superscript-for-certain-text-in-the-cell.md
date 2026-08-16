@@ -87,4 +87,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply superscript to certain text in a cell using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Superscript/.NET/Superscript%20for%20certain%20texts">this GitHub page</a>.
+A complete working example to apply superscript to certain text in a cell using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Superscript/.NET/Superscript%20for%20certain%20texts" aria-label="GitHub demo link">this GitHub page</a>.

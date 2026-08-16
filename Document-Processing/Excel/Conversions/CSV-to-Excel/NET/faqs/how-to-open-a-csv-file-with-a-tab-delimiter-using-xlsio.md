@@ -73,4 +73,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/997601-CSV-Tab/FAQ/CSV%20With%20Tab/.NET/CSV%20Wtih%20Tab">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/997601-CSV-Tab/FAQ/CSV%20With%20Tab/.NET/CSV%20Wtih%20Tab" aria-label="GitHub demo link">this GitHub page</a>.
