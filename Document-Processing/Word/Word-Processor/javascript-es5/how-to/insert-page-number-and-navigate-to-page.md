@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert page number and navigate to page in JavaScript (ES5) Document editor control
+# How to Insert Page Numbers and Navigate in JavaScript DOCX Editor
 
 You can insert a page number and navigate to a specific page in the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component in the following ways.
 
