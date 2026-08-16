@@ -1,16 +1,16 @@
 ---
 layout: post
-title: R t l in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about R t l in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Right to Left in JavaScript (ES5) DOCX Editor | Syncfusion
+description: Learn here all about Right to Left in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: R t l 
+control: Right to Left
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# R t l in JavaScript (ES5) Document editor control
+# Right to Left in JavaScript (ES5) Document Editor component
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the "enableRtl" property.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -25,4 +25,4 @@ domainurl: ##DomainURL##
 
 ## Online Demo
 
-Explore how to use right-to-left layout in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/right-to-left.html).
+Explore how to enable right-to-left layout in Word documents using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/right-to-left.html).
