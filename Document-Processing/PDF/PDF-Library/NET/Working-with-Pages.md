@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with pages | Syncfusion
 description: Add, insert, reorder, remove, and split PDF pages with Syncfusion .NET PDF, plus page numbering, page actions, and empty page detection
 platform: document-processing

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Magnification in Vue PDF viewer control
 
-The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
+The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, FitWidth, and Auto in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
 
 The following examples show how to enable magnification in the PDF Viewer.
 

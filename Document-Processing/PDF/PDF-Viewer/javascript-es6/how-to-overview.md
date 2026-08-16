@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Frequently Asked Questions in TypeScript PDF Viewer
+# Frequently Asked Questions in TypeScript PDF Viewer
 
 The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
@@ -34,7 +34,7 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to display custom tooltip for annotation?](./how-to/display-custom-tool-tip-for-annotation)
 * [How to get the download start event?](./how-to/download-start-event-ts)
 * [How to enable or disable the local storage?](./how-to/enable-local-storage-ts)
-* [Enable the resizer for text markup annotation?](./how-to/enable-resize)
+* [How to enable the resizer for text markup annotation?](./how-to/enable-resize)
 * [How to enable or disable the text selection?](./how-to/enable-text-selection-ts)
 * [How to export the PDF pages as images?](./how-to/export-as-image-ts)
 * [How to extract text from the PDF document?](./how-to/extract-text-completed-ts)
@@ -54,7 +54,7 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to get the annotation when it is overlapped with another annotation on its selection?](./how-to/overlapped-annotation)
 * [How to get the page render started and completed event?](./how-to/pagerenderstarted-pagerendercompleted-ts)
 * [How to print the PDF document silently?](./how-to/print-document)
-* [How to resolve the `Unable to find an entry point named 'FreeExportedValues' in DLL 'pdfium''?](./how-to/resolve-unable-to-find-an-entry-point-error)
+* [How to resolve the `Unable to find an entry point named 'FreeExportedValues' in DLL 'pdfium'`?](./how-to/resolve-unable-to-find-an-entry-point-error)
 * [How to restrict the zooming in mobile mode?](./how-to/restricting-zoom-in-mobile-mode-ts)
 * [How to save the PDF document to database or URL?](./how-to/save-pdf-document-to-url)
 * [How to select annotations in multi page?](./how-to/select-multi-page-annotations)
@@ -62,5 +62,5 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to show or hide a particular annotation?](./how-to/show-hide-annotation-ts)
 * [How to get the signature selected and unselected event?](./how-to/signatureselect-signatureunselect-ts)
 * [How to unload the PDF document from the viewer?](./how-to/unload-document)
-* [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [How to load document after resources loaded?](./how-to/load-document-after-resources-loaded)
 
