@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to deploy word processor server docker container in azure kubernetes service in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about How to deploy word processor server docker container in azure kubernetes service in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Deploy Syncfusion TypeScript DOCX Editor in Azure Kubernetes Service
+description: Learn here all about deploying word processor server docker container in Azure Kubernetes Service in the Syncfusion JavaScript (ES6) Document Editor.
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy word processor server docker container in azure kubernetes service in JavaScript (ES6) Document editor control
+# Deploy Word Processor Docker Container in Azure Kubernetes Service
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ az login
 
 Create a resource group using the [`az group create`](https://docs.microsoft.com/en-us/cli/azure/group#az-group-create) command.
 
-The following example creates a resource group named documenteditorresourcegroup in the eastus location.
+The following example creates a resource group named documenteditorresourcegroup in the East US location.
 
 ```
 az group create --name documenteditorresourcegroup --location "East US"
@@ -39,7 +39,7 @@ az aks create --resource-group documenteditorresourcegroup --name documenteditor
 
 **Step 3:** Connect to the cluster.
 
-Install the [`kubectl`](https://kubernetes.io/docs/reference/kubectl/kubectl/) into the workspace using the following command.
+Install [`kubectl`](https://kubernetes.io/docs/reference/kubectl/kubectl/) using the following command.
 
 ```
 az aks install-cli
@@ -56,45 +56,45 @@ az aks get-credentials --resource-group documenteditorresourcegroup --name docum
 [`Kubernetes Services`](https://kubernetes.io/docs/concepts/services-networking/service/) and [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) can be configured in a file. To run the Document Editor server, you must define a Service and a Deployment documenteditorserver. To do this, create the documenteditor-server.yml file in the current directory using the following code.
 
 ```yaml
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    labels:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: documenteditorserver
+  name: documenteditorserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
       app: documenteditorserver
-    name: documenteditorserver
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
+  strategy: {}
+  template:
+    metadata:
+      labels:
         app: documenteditorserver
-    strategy: {}
-    template:
-      metadata:
-        labels:
-          app: documenteditorserver
-      spec:
-        containers:
-        - image: syncfusion/word-processor-server:latest
-          name: documenteditorserver
-          ports:
-          - containerPort: 80
-          env:
-          - name: SYNCFUSION_LICENSE_KEY
-            value: "YOUR_LICENSE_KEY"
-  ---
-  apiVersion: v1
-  kind: Service
-  metadata:
-    labels:
-      app: documenteditorserver
-    name: documenteditorserver
-  spec:
-    ports:
-    - port: 80
-      targetPort: 80
-    selector:
-      app: documenteditorserver
-    type: LoadBalancer
+    spec:
+      containers:
+      - image: syncfusion/word-processor-server:latest
+        name: documenteditorserver
+        ports:
+        - containerPort: 80
+        env:
+        - name: SYNCFUSION_LICENSE_KEY
+          value: "YOUR_LICENSE_KEY"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: documenteditorserver
+  name: documenteditorserver
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: documenteditorserver
+  type: LoadBalancer
 ```
 
 **Step 5:** To create all Services and Deployments needed to run the Document Editor server, execute the following.
@@ -109,8 +109,8 @@ Run the following command to get the Kubernetes cluster deployed service details
 kubectl get all
 ```
 
-Browse the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default get method response.
+Browse to the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default GET method response.
 
-**Step 6:** Append the Kubernetes service running the URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
+**Step 6:** Append the Kubernetes service running URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
 
-For more details about the Azure Kubernetes service, please look deeper into [`Microsoft Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.
+For more details about the Azure Kubernetes service, refer to the [`Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.

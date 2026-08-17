@@ -298,8 +298,8 @@ document.getElementById('btnCancel')?.addEventListener('click', () => cancelText
 
 ## See Also
 
-[Find Text](./find-text)
-[Text Search Events](./text-search-events)
-[Extract Text](../how-to/extract-text-ts)
-[Extract Text Options](../how-to/extract-text-option-ts)
-[Extract Text Completed](../how-to/extract-text-completed-ts)
+- [Find Text](./find-text)
+- [Text Search Events](./text-search-events)
+- [Extract Text](../how-to/extract-text-ts)
+- [Extract Text Options](../how-to/extract-text-option-ts)
+- [Extract Text Completed](../how-to/extract-text-completed-ts)

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Working with the Toolbar in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to use, customize, and extend the built-in toolbar in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
@@ -118,6 +118,8 @@ The names of these toolbars and their description are listed in the following se
 ![Desktop Primary Toolbar](Images/PrimaryToolbar.png)
 
 ![Desktop Annotations Toolbar](Images/AnnotationsToolbar.png)
+
+
 
 <table>
 <tr>
