@@ -1,6 +1,6 @@
 ---
-title: Perform OCR on PDF and image files | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract version using Syncfusion .NET OCR library.
+title: Perform OCR on PDF and image files in .NET | Syncfusion
+description: Learn how to perform OCR on scanned PDF documents and images with different tesseract version using Syncfusion .NET OCR Processor.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # OCR Processor Features 
 
-## Performing OCR for an entire document
+## Perform OCR on PDF and image files in .NET
 
 To perform OCR for an entire PDF document using [PerformOCR](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html#Syncfusion_OCRProcessor_OCRProcessor_PerformOCR_Syncfusion_Pdf_Parsing_PdfLoadedDocument_System_String_) method of the [OCRProcessor](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.OCRProcessor.html) class. Refer to the following code example. 
 
