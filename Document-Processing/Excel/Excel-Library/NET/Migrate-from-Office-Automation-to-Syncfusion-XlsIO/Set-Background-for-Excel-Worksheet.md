@@ -165,6 +165,6 @@ End Sub
 
 ## See also
 
-- [Background image in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-page-setup#background-image)
+- [Background image in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/set-background-for-excel-worksheet)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 - [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

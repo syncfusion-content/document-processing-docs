@@ -71,4 +71,4 @@ The following table summarizes feature support on desktop and mobile devices.
 | Modern Navigation Panel | Yes | Yes |
 | Organize Pages | Yes | Yes |
 
-N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities; the [Blazor SfPdfViewer demo](https://liveviewereditorblazorapp.azurewebsites.net/demos/pdf-viewer/blazor-server/pdf-viewer/default-functionalities) is also available to explore core features interactively.
+N> See the [Blazor SfPdfViewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) for a concise overview of capabilities; the [Blazor SfPdfViewer demo](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/default) is also available to explore core features interactively.

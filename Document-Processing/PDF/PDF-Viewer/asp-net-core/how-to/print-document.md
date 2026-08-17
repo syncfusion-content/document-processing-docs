@@ -13,7 +13,7 @@ Print PDF documents programmatically by calling the **print()** method on the **
 
 Follow these steps to add print functionality to your PDF Viewer instance.
 
-**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the [Getting Started with ASP.NET Core PDF Viewer guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
 
 **Step 2:** Add the following code snippet to implement the print operation:
 

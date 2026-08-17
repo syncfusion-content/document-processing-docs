@@ -14,7 +14,7 @@ The PDF Viewer component can export pages as Base64-encoded image strings using 
 
 Steps to export pages as images
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images.
 

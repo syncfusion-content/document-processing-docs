@@ -9,7 +9,7 @@ documentation: ug
 
 # Open in Javascript Spreadsheet 
 
-The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet/#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet/#openurl) property.
+The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet#openurl) property.
 
 The following list of Excel file formats are supported in Spreadsheet:
 
@@ -32,4 +32,4 @@ The following code example shows `Open` option in the Spreadsheet control.
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-cs1" %}
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-> * The default value of the [allowOpen](../api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet/#allowopen) property in previous code snippet.
+> * The default value of the [allowOpen](../api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet#allowopen) property in previous code snippet.

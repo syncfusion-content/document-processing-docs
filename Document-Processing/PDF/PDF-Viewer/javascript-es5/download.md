@@ -101,7 +101,7 @@ document.getElementById('download').addEventListener('click', function () {
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
 
 The following code illustrates how to get the downloaded document as a base64 string.
 

@@ -60,7 +60,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Cloud Storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to load the PDF files from Google Cloud Storage.
 
 ```csharp
 [HttpPost("Load")]
@@ -115,7 +115,7 @@ N> Replace `path/to/service-account-key.json` with the actual file path to your 
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket.
 
 ```javascript
 

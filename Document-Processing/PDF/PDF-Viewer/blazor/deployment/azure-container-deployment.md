@@ -124,7 +124,7 @@ docker build -t pdfviewerwebservice:latest .
 docker run -d -p 6002:80 pdfviewerwebservice:latest
 ```
 
-If you see script errors or documents fail to load, verify the container image contains `libgdiplus` installed. See the official Microsoft guidance on [using System.Drawing.Common on Linux](https://learn.microsoft.com/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only) and the [.NET Docker samples](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md) for the recommended `libgdiplus` install steps.
+If you see script errors or documents fail to load, verify the container image contains `libgdiplus` installed. See the official Microsoft guidance on [using System.Drawing.Common on Linux](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only) and the [.NET Docker samples](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md) for the recommended `libgdiplus` install steps.
 
 ## Docker for Blazor WebAssembly Standalone (hosted on nginx)
 
@@ -275,7 +275,7 @@ Follow these UI-focused steps in the Azure portal to create an App Service (Linu
 ## Related samples
 
 * If your project uses SkiaSharp.Views.Blazor on the server or client, double-check native runtime requirements and test rendering in the container.
-* For Server interactive scenarios, register Syncfusion services in `Program.cs` and ensure SignalR message size settings match large‑file processing requirements. See the SignalR [MessagePack HubOptions configuration](https://learn.microsoft.com/aspnet/core/signalr/messagepackhubprotocol#configure-messagepack-on-the-server) for tuning `MaximumReceiveMessageSize`.
+* For Server interactive scenarios, register Syncfusion services in `Program.cs` and ensure SignalR message size settings match large‑file processing requirements. See the SignalR [MessagePack HubOptions configuration](https://learn.microsoft.com/en-us/aspnet/core/signalr/messagepackhubprotocol?view=aspnetcore-10.0#configure-messagepack-on-the-server) for tuning `MaximumReceiveMessageSize`.
 * For WebAssembly interactive render modes, ensure the `wasm-tools` workload is available when building locally or in CI: `dotnet workload install wasm-tools`.
 
 ![Published blazor server sample](../images/azure_container_published_blazor_webapps.png)

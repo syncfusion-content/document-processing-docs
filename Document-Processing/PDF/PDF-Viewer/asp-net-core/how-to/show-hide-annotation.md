@@ -59,4 +59,4 @@ ViewData["Title"] = "Home page";
 - The `resourceUrl` must match the application's PDF Viewer library version.
 - In server-backed scenarios, replace `resourceUrl` with `serviceUrl` pointing to the ASP.NET Core controller.
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/ShowHideAnnotations)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20and%20Hide%20Annotations/ShowHideAnnotations/ShowHideAnnotations)

@@ -148,7 +148,7 @@ N> The `FolderId` is the unique identifier for the Drive folder. For example, if
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in the Drive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in the Drive folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

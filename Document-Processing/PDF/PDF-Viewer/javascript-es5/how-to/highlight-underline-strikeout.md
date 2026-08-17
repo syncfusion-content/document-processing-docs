@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to Highlight, Underline, or Strike Out Text in JavaScript (ES5)
 
-Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
+Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide to create a sample.
 
 **Step 2:** Add the following code snippet to highlight, underline, and strikeout text with button click events.
 

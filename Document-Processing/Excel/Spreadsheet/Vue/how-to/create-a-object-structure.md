@@ -216,4 +216,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Sample link : [`create-a-object-structure`](https://codesandbox.io/p/sandbox/vue-template-forked-rzkpc)
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-data-binding-cs1" %}

@@ -24,11 +24,11 @@ The [`ASP.NET Core`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a 
     * Text selection and copy
 * [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/print) PDF files.
 * Annotate PDFs with:
-    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/stamp-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/free-text-annotation)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/sticky-notes-annotation)
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/highlight-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/rectangle-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/sticky-notes)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/signature-annotation)

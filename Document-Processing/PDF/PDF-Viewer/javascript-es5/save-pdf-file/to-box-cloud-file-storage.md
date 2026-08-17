@@ -56,7 +56,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]

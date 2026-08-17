@@ -176,4 +176,4 @@ class _MyHomePageState extends State<_MyHomePage> {
 
 ![PDF Viewer with Signature Pad](images/pdfviewer-with-signaturepad.jpg)
 
-To learn more about adding a digital signature to a PDF document, please refer [here](https://help.syncfusion.com/flutter/pdf/working-with-digital-signature).
+To learn more about adding a digital signature to a PDF document, please refer [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/flutter/how-to/add-signaturepad-signatures-to-syncfusion-flutter-pdfviewer).

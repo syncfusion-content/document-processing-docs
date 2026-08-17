@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Create an Object Structure in React Spreadsheet
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as the value.
 
 ```js
 { Workbook: {} }
@@ -37,7 +37,7 @@ The following table defines each property of the `Sheet`.
 | state | [`SheetState`](./worksheet/#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
 | rows | `Row[]` | Contains a list of row properties |
-| protectSettings | [`ProtectSettings`](./protect-sheet/#protect-sheet) | Configures protect and its options. |
+| protectSettings | [`ProtectSettings`](./protect-sheet#protect-sheet) | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
 The following table defines each property of the `Column`.

@@ -15,7 +15,7 @@ Use the **getPageInfo()** method to retrieve metadata for a specified page, incl
 
 The following steps show how to use `getPageInfo`.
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide to create a sample.
 
 **Step 2:** Use the following code to get the height, width, and rotation for a specified page.
 

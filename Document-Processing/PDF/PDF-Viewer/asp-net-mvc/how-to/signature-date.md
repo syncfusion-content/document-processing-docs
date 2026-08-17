@@ -16,7 +16,7 @@ Use a PDF with an existing signature field. Call `retrieveFormFields()` to get t
 
 Follow these steps to add a date to the signature field.
 
-**Step 1:** Set up a PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/). Ensure the PDF document contains at least one signature field.
+**Step 1:** Set up a PDF Viewer sample by following the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started). Ensure the PDF document contains at least one signature field.
 
 **Step 2:** Place a button in your view to trigger the signature update, and include the JavaScript function to handle it.
 

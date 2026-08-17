@@ -24,7 +24,7 @@ Follow the [getting started guide](https://help.syncfusion.com/document-processi
 
 1. Create a web service in .NET Core 3.0 or later. Refer to [How to create PDF Viewer web service in .NET Core 3.0 and above](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for detailed instructions.
 2. Open the `PdfViewerController.cs` file in the service project.
-3. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) action to save the output file on the server.
+3. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) action to save the output file on the server.
 
 ```csharp
 
@@ -59,7 +59,7 @@ N> Ensure the application pool identity or service account has write access to t
 
 **Step 3:** Set PDF Viewer service properties
 
-Specify the [`serviceUrl`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) of your web service and the document to load.
+Specify the [`serviceUrl`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) of your web service and the document to load.
 
 ```typescript
 
@@ -83,7 +83,7 @@ N> Replace the placeholder service URL and document name with your deployment va
 
 ## Download a PDF file as a copy
 
-The built-in toolbar includes a **Download** button that saves the current PDF to the local file system. You can also trigger the same behavior from custom UI by calling [`download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download).
+The built-in toolbar includes a **Download** button that saves the current PDF to the local file system. You can also trigger the same behavior from custom UI by calling [`download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download).
 
 ```html
 <button id="download">Download</button>
@@ -134,7 +134,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) action to insert the document into a database table.
+5. Update the [`Download`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) action to insert the document into a database table.
 
 ```csharp
 

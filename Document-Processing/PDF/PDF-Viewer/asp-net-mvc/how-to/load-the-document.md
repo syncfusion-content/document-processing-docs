@@ -13,7 +13,7 @@ The Syncfusion ASP.NET MVC PDF Viewer loads documents through server-side contro
 
 Follow these steps to load a PDF document.
 
-**Step 1:** Create a basic ASP.NET MVC PDF Viewer sample by following the getting started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
+**Step 1:** Create a basic ASP.NET MVC PDF Viewer sample by following the getting started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
 **Step 2:** Add the following `jsonObjects` class to the `PdfViewerController.cs` file (or a Models folder). The `document`, `isFileName`, and `password` properties are commonly used when loading a document.
 

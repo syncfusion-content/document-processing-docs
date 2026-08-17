@@ -126,7 +126,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to the Dropbox storage.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF files to the Dropbox storage.
 
 ```csharp
 

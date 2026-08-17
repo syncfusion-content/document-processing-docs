@@ -22,10 +22,12 @@ If a feature is marked **No** and is critical to your scenario, see the related 
 ## See also
 
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
-- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
 - [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
-- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/getting-started)
-- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/blazor-server-side/getting-started)
+'- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-core-c-sharp)
+
+- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp)
+
 
 ## Supported Features by .NET Framework and .NET Standard
 

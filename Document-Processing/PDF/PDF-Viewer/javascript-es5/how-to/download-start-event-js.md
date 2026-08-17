@@ -26,4 +26,4 @@ By default, `args.cancel` is `false`, so the download proceeds unless explicitly
 
 ## Flexibility
 
-Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/#downloadstart) event to apply custom rules for allowing or preventing downloads based on application logic.
+Leverage the [downloadStart](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#downloadstart) event to apply custom rules for allowing or preventing downloads based on application logic.

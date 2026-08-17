@@ -106,7 +106,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Dropbox cloud file storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to load the PDF files from Dropbox cloud file storage.
 
 ```csharp
 
@@ -170,7 +170,7 @@ N> Replace the placeholders with your actual Dropbox values: access token and fo
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
 
 ```javascript
 

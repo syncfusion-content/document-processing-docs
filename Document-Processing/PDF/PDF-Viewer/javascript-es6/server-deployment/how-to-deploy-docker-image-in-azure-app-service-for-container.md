@@ -13,7 +13,7 @@ Deploy the Syncfusion PDF Viewer server container to Azure App Service for Conta
 
 ## Prerequisites
 
-- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) article.
+- Azure subscription and Azure CLI installed. See the [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) article.
 - Sign in to Azure before you create resources.
 
 ```console

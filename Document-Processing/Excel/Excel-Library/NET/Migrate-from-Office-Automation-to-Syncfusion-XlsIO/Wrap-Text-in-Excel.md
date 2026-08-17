@@ -187,6 +187,6 @@ End Sub
 
 ## See also
 
-- [Wrap text in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-formatting#wrap-text)
+- [Wrap text in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#apply-wrap-text)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 - [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

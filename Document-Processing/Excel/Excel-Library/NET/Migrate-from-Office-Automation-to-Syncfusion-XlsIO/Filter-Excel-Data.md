@@ -301,6 +301,6 @@ End Sub
 
 ## See also
 
-- [AutoFilter in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-autofilter)
+- [AutoFilter in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 - [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

@@ -14,7 +14,7 @@ Use the Syncfusion ASP.NET MVC PDF Viewer’s [**ExportSuccess**](https://help.s
 
 The following example shows how to redirect to a home page programmatically after submitting PDF forms.
 
-**Step 1:** Create a basic PDF Viewer sample by following the Getting Started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
+**Step 1:** Create a basic PDF Viewer sample by following the Getting Started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
 **Step 2:** Add the following view pages inside a new folder (for example, Views/FormFilling): HomePage.cshtml and FormFillingData.cshtml. FormFillingData.cshtml wires the ExportSuccess event that performs the redirect.
 

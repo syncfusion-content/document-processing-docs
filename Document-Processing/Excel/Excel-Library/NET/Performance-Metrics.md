@@ -113,6 +113,6 @@ The following table shows the time required to load and read cell values from an
 
 - [Improving Performance](https://help.syncfusion.com/document-processing/excel/excel-library/net/improving-performance)
 - [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
-- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)            
 

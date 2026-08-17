@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Clear Annotations in JavaScript (ES5) PDF Viewer
 
-Use the [deleteAnnotations](https://ej2.syncfusion.com/documentation/api/pdfviewer/#deleteannotations) method to remove all annotations from the currently loaded document.
+Use the [deleteAnnotations](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#deleteannotations) method to remove all annotations from the currently loaded document.
 
 Example: clear all annotations in the loaded document
 

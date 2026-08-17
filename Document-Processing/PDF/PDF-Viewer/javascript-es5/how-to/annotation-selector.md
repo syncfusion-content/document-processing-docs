@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Customize Annotation Selectors in JavaScript (ES5) PDF Viewer
 
-Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
+Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationselectorsettings) property of the PDF Viewer.
 
 Example: Customize the selector of a shape annotation
 

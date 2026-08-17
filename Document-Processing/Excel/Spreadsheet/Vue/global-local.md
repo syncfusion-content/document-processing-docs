@@ -603,7 +603,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Internalization [`sample link`](https://codesandbox.io/p/sandbox/vue-template-forked-cthq7)
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/local-data-binding-cs2" %}
 
 ## Right to left (RTL)
 

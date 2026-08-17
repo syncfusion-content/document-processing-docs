@@ -14,7 +14,7 @@ Publish the Syncfusion PDF Viewer Web API from Visual Studio to Azure App Servic
 ## Prerequisites
 
 - Visual Studio 2017 or 2019 with the Azure development workload installed
-- Active Azure subscription. Sign up from the [Azure pricing page](https://azure.microsoft.com/pricing/)
+- Active Azure subscription. Sign up from the [Azure pricing page](https://azure.microsoft.com/en-us/pricing/)
 - Existing PDF Viewer Web API project. Follow the article [Create a PDF Viewer Web API application in ASP.NET Core](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
 - Build the project (Build > Build Solution) before publishing to catch compilation errors locally
 
@@ -42,6 +42,6 @@ Follow these steps to publish the Web API and generate the App Service endpoint 
 
 **Step 6:** Verify the API at `https://<app_name>.azurewebsites.net/api/pdfviewer`. A default GET response indicates the server is running.
 
-Update the TypeScript PDF Viewer client to use the secure service endpoint (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`) as the `serviceUrl`. Refer to the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide for client configuration steps.
+Update the TypeScript PDF Viewer client to use the secure service endpoint (for example, `https://ej2-pdfviewer-server20200513053326.azurewebsites.net/api/pdfviewer`) as the `serviceUrl`. Refer to the [Getting started with the TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide for client configuration steps.
 
-For production deployment guidance, review the [Azure App Service deployment documentation](https://learn.microsoft.com/visualstudio/deployment/azure/app-service). An architecture diagram illustrating the Visual Studio deployment process and client-to-server communication can help onboarding teams understand the workflow.
+For production deployment guidance, review the [Azure App Service deployment documentation](https://learn.microsoft.com/en-us/azure/app-service/overview). An architecture diagram illustrating the Visual Studio deployment process and client-to-server communication can help onboarding teams understand the workflow.

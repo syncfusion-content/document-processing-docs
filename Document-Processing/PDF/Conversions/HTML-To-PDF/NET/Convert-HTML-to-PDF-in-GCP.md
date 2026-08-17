@@ -12,7 +12,7 @@ The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.co
 
 ## Prerequisites 
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console) account with access to the App Engine service.
 
 ## Google Cloud Platform (GCP)
 
