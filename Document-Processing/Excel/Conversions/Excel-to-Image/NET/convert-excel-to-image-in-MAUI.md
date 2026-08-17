@@ -1,4 +1,4 @@
-﻿---
+---
 title: Convert an Excel document to Image in .NET MAUI | Syncfusion
 description: Convert an Excel document to an image in .NET MAUI using the Syncfusion .NET MAUI Excel library (XlsIO) without Microsoft Excel or interop dependencies.
 platform: document-processing
@@ -267,10 +267,10 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage" target="_blank">.NET MAUI Project</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage" target="_blank" aria-label=".NET MAUI Convert Excel to Image">.NET MAUI Project</a>
     </td>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Services/SaveService.cs" target="_blank">SaveService.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Services/SaveService.cs" target="_blank" aria-label="SaveService.cs in MAUI project">SaveService.cs</a>
     </td>
     <td>
       Represents the base class for save operation.
@@ -278,10 +278,10 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Windows" target="_blank">Windows</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Windows" target="_blank" aria-label="Windows platform project folder">Windows</a>
     </td>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Windows/SaveWindows.cs" target="_blank">SaveWindows.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Windows/SaveWindows.cs" target="_blank" aria-label="SaveWindows.cs file in Windows project">SaveWindows.cs</a>
     </td>
     <td>
       Save implementation for Windows.
@@ -289,10 +289,10 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Android" target="_blank">Android</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Android" target="_blank" aria-label="Android platform project folder">Android</a>
     </td>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Android/SaveAndroid.cs" target="_blank">SaveAndroid.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/Android/SaveAndroid.cs" target="_blank" aria-label="SaveAndroid.cs in Android project">SaveAndroid.cs</a>
     </td>
     <td>
       Save implementation for Android device.
@@ -300,10 +300,10 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/MacCatalyst" target="_blank">Mac Catalyst</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/MacCatalyst" target="_blank" aria-label="Mac Catalyst project folder">Mac Catalyst</a>
     </td>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/MacCatalyst/SaveMac.cs" target="_blank">SaveMac.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/MacCatalyst/SaveMac.cs" target="_blank" aria-label="SaveMac.cs in Mac Catalyst project">SaveMac.cs</a>
     </td>
     <td>
       Save implementation for Mac Catalyst device.
@@ -311,10 +311,10 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td rowspan="2">
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS" target="_blank">iOS</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS" target="_blank" aria-label="iOS project folder">iOS</a>
     </td>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/SaveIOS.cs" target="_blank">SaveIOS.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/SaveIOS.cs" target="_blank" aria-label="SaveIOS.cs in iOS project">SaveIOS.cs</a>
     </td>
     <td>
       Save implementation for the iOS device.
@@ -322,8 +322,8 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/PreviewControllerDS.cs" target="_blank">PreviewControllerDS.cs</a><br>
-      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/QLPreviewItemFileSystem.cs" target="_blank">QLPreviewItemFileSystem.cs</a>
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/PreviewControllerDS.cs" target="_blank" aria-label="PreviewControllerDS.cs in iOS project">PreviewControllerDS.cs</a><br>      
+      <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/blob/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage/ConvertExcelToImage/Platforms/iOS/QLPreviewItemFileSystem.cs" target="_blank" aria-label="QLPreviewItemFileSystem.cs in iOS project">QLPreviewItemFileSystem.cs</a>
     </td>
     <td>
       Helper classes for viewing the <strong>Excel document</strong> on the iOS device.
@@ -331,7 +331,7 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
 </table>
          
-A complete working example of how to convert an Excel document to Image in .NET MAUI is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage">this GitHub page</a>.
+A complete working example of how to convert an Excel document to Image in .NET MAUI is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/.NET%20MAUI/ConvertExcelToImage" target="_blank" aria-label=".NET MAUI Convert Excel to Image example">this GitHub page</a>.
 
 By executing the program, you will get the **Image** as follows.
 
