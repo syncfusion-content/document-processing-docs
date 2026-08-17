@@ -106,7 +106,14 @@ Please find the table below for the [`open`](https://ej2.syncfusion.com/vue/docu
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
 
-//Need to add proper code snippets for this topic
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Supported Excel file formats for Open
 
@@ -179,7 +186,14 @@ Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/doc
 
 The following example demonstrates how to load a workbook JSON into the Spreadsheet component.
 
-//need to add proper code snippet for this
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Load server-side Excel files into Spreadsheet
 

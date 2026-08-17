@@ -107,7 +107,14 @@ Please find the below table for the [`save`](https://ej2.syncfusion.com/vue/docu
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 
-//need to add code sample
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Supported Excel file formats for Save
 
@@ -145,7 +152,14 @@ You can optionally pass serialization options to the [saveAsJson](https://ej2.sy
 
 The following example demonstrates how to save a workbook as JSON from the Spreadsheet component.
 
-//need to add sample code
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Save Excel files to a server
 
