@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for OCR | Syncfusion
+title: Assemblies Required in .NET OCR Processor | Syncfusion
 description: This section describes the required Syncfusion assemblies needed to integrate and use the OCR Processor effectively in your applications
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required to work with OCR processor
+# Assemblies Required in .NET OCR Processor
 
 Get the following required assemblies by downloading the OCR library installer. Download and install the OCR library for Windows, Linux, and Mac respectively. Please refer to the advanced installation steps for more details.
 

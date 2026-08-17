@@ -1,13 +1,13 @@
 ---
-title: Deploy and manage with Azure Kubernetes Service | Syncfusion
-description: Learn how to deploy, scale, and manage containerized applications in Azure using Azure Kubernetes Service
+title: Getting Started with Azure Kubernetes Service OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion Azure Kubernetes Service OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
 
-# Perform OCR with Azure Kubernetes Service
+# Getting Started with Azure Kubernetes Service OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) can be integrated with external OCR engines like Azure Computer Vision and deployed on Azure Kubernetes Service (AKS) to efficiently process OCR tasks on images and PDF documents at scale.
 

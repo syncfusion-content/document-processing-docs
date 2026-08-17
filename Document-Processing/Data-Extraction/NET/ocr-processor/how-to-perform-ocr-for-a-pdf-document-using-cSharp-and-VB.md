@@ -1,12 +1,12 @@
 ---
 title: How to perform OCR for a PDF document using C# and VB.NET | Syncfusion
-description: This section explains how to perform OCR for a PDF document using syncfusion .NET OCR library in C# and VB.NET.
+description: This section explains how to perform OCR for a PDF document using Syncfusion .NET OCR Processor in C# and VB.NET.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# How to perform OCR for a PDF document using C# and VB.NET
+# How to perform OCR on a PDF document using C# and VB.NET
 
 Essential<sup>&reg;</sup> PDF provides support for Optical Character Recognition with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) OCR engine. With a few lines of code, a scanned PDF document containing a raster image is converted into a searchable and selectable PDF document.
 

@@ -1,12 +1,12 @@
 ---
-title: Getting started with OCR processor | Syncfusion
+title: Getting Started with Syncfusion .NET OCR Processor | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process"
-description: This section provides an introduction to getting started with the OCR processor and explains the basic concepts and workflow involved 
+description: Learn about how to getting started with Syncfusion .NET OCR Processor and more details.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Getting started with OCR processor
+# About Syncfusion .NET OCR Processor
 
 To quickly get started with extracting text from scanned PDF documents in .NET using the .NET OCR processor library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}

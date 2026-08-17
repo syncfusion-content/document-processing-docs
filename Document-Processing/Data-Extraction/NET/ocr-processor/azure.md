@@ -1,13 +1,12 @@
 ---
-title: Perform OCR on PDF and image files in Azure | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in Azure using Syncfusion .NET OCR library.
-platform: document-processing
+title: Getting Started with Azure OCR Processor | Syncfusion
+description: Learn how to get started with the Syncfusion Azure OCR Processor. Explore setup, features, examples, and customization options.
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
 
-# Perform OCR in Azure using C#
+# Getting Started with Azure OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Azure with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
