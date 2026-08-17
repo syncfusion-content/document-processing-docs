@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Vue DOCX Editor | Syncfusion
+title: Accessibility in Vue DOCX Editor component | Syncfusion
 description: The accessibility support in Vue DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 control: Accessibility 
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue DOCX Editor
+# Accessibility in Vue DOCX Editor component
 
 The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component is outlined below.
 
@@ -38,13 +38,13 @@ The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.co
 
 ## Keyboard interaction
 
-Document editor supports [keyboard shortcuts](./keyboard-shortcut).
+Document Editor supports [keyboard shortcuts](./keyboard-shortcut).
 
 ## Ensuring accessibility
 
-The Document editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
+The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/wordprocessor.html" %}
 

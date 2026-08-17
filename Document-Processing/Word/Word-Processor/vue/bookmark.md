@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bookmarks in Vue DOCX Editor | Syncfusion
+title: Bookmarks in Vue DOCX Editor component | Syncfusion
 description: The bookmark feature in Vue DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 control: Bookmark 
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmarks in Vue DOCX Editor
+# Bookmarks in Vue DOCX Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -30,10 +30,10 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark("Bookmark
 You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
 
 ```c#
-this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1", true)
+this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
 
->Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
+>Note: The second parameter is an optional parameter and it denotes whether to exclude the bookmark start and end from the selection. If true, excludes the bookmark start and end from the selection.
 
 ## Delete Bookmark
 
@@ -51,7 +51,7 @@ You can get all the bookmarks in the document using [`getBookmarks`](https://ej2
 this.$refs.container.ej2Instances.documentEditor.getBookmarks(false);
 ```
 
->Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+>Note: The parameter denotes whether to include hidden bookmarks. If false, hidden bookmarks are ignored.
 
 ## Get Bookmark from selection
 
@@ -67,19 +67,19 @@ You can replace bookmark content without removing the bookmark start and end for
 
 ```csharp
 this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1", true);
-this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World')
+this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World');
 ```
 
 You can replace content by removing the bookmark start and end, thus the bookmark content can't be tracked in future.
 
 ```csharp
 this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1");
-this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World')
+this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World');
 ```
 
 ## Show or Hide bookmark
 
-You can show or hide the show square brackets around bookmarked items in Document editor component.
+You can show or hide the square brackets around bookmarked items in Document Editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
