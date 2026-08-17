@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction annotation in Vue PDF Viewer
+# PDF Redaction in Vue PDF Viewer
 
 Redaction annotations permanently remove sensitive content from a PDF. You can draw redaction marks over text or graphics, redact entire pages, customize overlay text and styling, and apply redaction to finalize. 
 
@@ -65,7 +65,7 @@ export default {
     addRedactionProgrammatically() {
       const viewer = this.$refs.container.ej2_instances[0];
       viewer.annotation.addAnnotation('Redaction', {
-        bound: { x: 200, y: 480, width: 150, height: 75 },
+        bounds: { x: 200, y: 480, width: 150, height: 75 },
         pageNumber: 1,
         markerFillColor: '#000',
         markerBorderColor: '#fff',
@@ -83,7 +83,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Track additions using the `annotationAdd` event (wired above as a component prop).
+Track additions using the `annotationAdd` event on the viewer.
 
 ## Edit Redaction Annotations
 
@@ -184,7 +184,7 @@ export default {
     deleteFirstRedaction() {
       const viewer = this.$refs.container.ej2_instances[0];
       const first = (viewer.annotationCollection || []).find(a => a.subject === 'Redaction');
-      if (first) viewer.annotationModule.deleteAnnotationById(first.annotationId);
+      if (first) viewer.annotation.deleteAnnotationById(first.annotationId);
     }
   }
 };

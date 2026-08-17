@@ -71,14 +71,14 @@ export default {
   methods: {
     deleteAnnotation: function () {
       // Delete the selected annotation
-      this.$refs.pdfviewer.annotation.deleteAnnotation();
+      this.$refs.pdfviewer.ej2Instances.annotation.deleteAnnotation();
     },
     deleteAnnotationById: function () {
       const viewer = this.$refs.pdfviewer.ej2Instances;
       // Delete the first annotation using its id from the annotation collection
       if (viewer.annotationCollection && viewer.annotationCollection.length > 0) {
         const annotationId = viewer.annotationCollection[0].id;
-        viewer.annotation.ej2Instances.deleteAnnotationById(annotationId);
+        viewer.annotation.deleteAnnotationById(annotationId);
       }
     }
   }

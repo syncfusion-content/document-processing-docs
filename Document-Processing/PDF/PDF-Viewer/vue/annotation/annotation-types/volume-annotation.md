@@ -132,7 +132,7 @@ export default {
     addVolumeProgrammatically() {
       const viewer = this.$refs.container.ej2_instances[0];
       viewer.annotation.addAnnotation('Volume', {
-        bound: { x: 200, y: 300, width: 100, height: 100 },
+        bounds: { x: 200, y: 300, width: 100, height: 100 },
         pageNumber: 1
       });
     }

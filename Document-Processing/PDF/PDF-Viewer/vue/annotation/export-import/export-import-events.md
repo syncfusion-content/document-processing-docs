@@ -175,7 +175,7 @@ N> `importStart`, `importSuccess`, and `importFailed` cover the lifecycle of ann
 
 ## See also
 
-- [Annotation Overview](../../overview)
-- [Export Annotation](../export-annotation)
-- [Import Annotation](../import-annotation)
-- [Annotation Types](../../annotation-types/area-annotation)
+- [Annotation Overview](../overview)
+- [Export Annotation](./export-annotation)
+- [Import Annotation](./import-annotation)
+- [Annotation Types](../annotation-types/area-annotation)

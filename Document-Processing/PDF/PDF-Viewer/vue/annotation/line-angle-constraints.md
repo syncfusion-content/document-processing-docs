@@ -155,5 +155,5 @@ Examples:
 - [Export and Import Annotation](./export-import/export-annotation)
 - [Annotation Permission](./annotation-permission)
 - [Annotation in Mobile View](./annotations-in-mobile-view)
-- [Annotation Events](.annotation-event)
+- [Annotation Events](./annotation-event)
 - [Annotation API](./annotations-api)

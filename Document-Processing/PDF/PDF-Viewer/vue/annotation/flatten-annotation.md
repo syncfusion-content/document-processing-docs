@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flatten Annotations in the Syncfusion Vue PDF Viewer
-description: Learn how all about how to flatten annotations and formfields before saving a PDF in the Syncfusion Vue PDF Viewer.
+description: Learn how to flatten annotations and form fields before saving a PDF in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

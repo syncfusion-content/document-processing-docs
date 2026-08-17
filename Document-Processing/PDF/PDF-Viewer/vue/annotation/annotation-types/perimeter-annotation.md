@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Perimeter Measurement Annotations in Vue PDF Viewer \ Syncfusion
+title: Add Perimeter Measurement Annotations in Vue PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -192,7 +192,7 @@ Configure default properties using the [`Perimeter Settings`](https://ej2.syncfu
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 <template>
-  <ejs-pdfviewer id="container" :documentPath="documentPath" :resourceUrl="resourceUrl" :distanceSettings="distanceSettings" style="height: 650px"></ejs-pdfviewer>
+  <ejs-pdfviewer id="container" :documentPath="documentPath" :resourceUrl="resourceUrl" :perimeterSettings="perimeterSettings" style="height: 650px"></ejs-pdfviewer>
 </template>
 
 <script>
@@ -207,7 +207,7 @@ export default {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
-      distanceSettings: { fillColor: 'blue', strokeColor: 'green', opacity: 0.6 }
+      perimeterSettings: { fillColor: 'blue', strokeColor: 'green', opacity: 0.6 }
     };
   },
   provide: {
@@ -285,9 +285,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Perimeter Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`perimeterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#perimetersettings) property.

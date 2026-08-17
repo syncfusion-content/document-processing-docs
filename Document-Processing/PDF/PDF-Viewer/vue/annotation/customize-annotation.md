@@ -272,7 +272,7 @@ export default {
   },
   methods: {
     modifyAnnotation: function () {
-      const viewer = this.$refs.pdfviewer;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       const annotation = viewer.selectedAnnotation;
       if (annotation) {
         annotation.fillColor = "red";

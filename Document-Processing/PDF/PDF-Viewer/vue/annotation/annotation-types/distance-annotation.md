@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Distance Annotations in Vue PDF Viewer \ Syncfusion
+title: Add Distance Annotations in Vue PDF Viewer | Syncfusion
 description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer

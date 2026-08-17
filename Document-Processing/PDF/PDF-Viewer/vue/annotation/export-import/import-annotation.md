@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Import annotations in Vue PDF Viewer
 
-Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
+Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts a JSON string previously exported by the viewer.
 
 ## Import using the UI (Comments panel)
 
@@ -28,11 +28,11 @@ All annotations in the selected file are applied to the current document.
 
 ![Import Annotation](../../../javascript-es6/annotations/annotation-images/import-annot.png)
 
-## Import programmatically (from object)  
+## Import programmatically (from JSON)
 
-Import annotations from an object previously exported using `exportAnnotationsAsObject()`. Only objects produced by the viewer can be re-imported with the [`importAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#importannotation) API.
+Import annotations from a JSON string previously exported using `exportAnnotationsAsObject()`. Only the JSON string produced by the viewer can be re-imported with the [`importAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#importannotation) API.
 
-Example: export annotations as an object and import them back into the viewer.
+Example: export annotations as a JSON string and import them back into the viewer.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -92,8 +92,8 @@ export default {
     },
     exportAsObject() {
       this.getViewer().exportAnnotationsAsObject().then((value) => {
-        // Persist or transmit the object as needed (DB/API). Keep for future import.
-        console.log('Exported annotation object:', value);
+        // Persist or transmit the JSON string as needed (DB/API). Keep for future import.
+        console.log('Exported annotation JSON:', value);
         this.exportedObject = value;
       });
     },
@@ -121,7 +121,7 @@ N> Only objects produced by the viewer (for example, by `exportAnnotationsAsObje
 
 ## See also
 
-- [Annotation Overview](../../overview)
-- [Export Annotation](../export-annotation)
-- [Import/Export Events](../../import-export-events)
-- [Annotation Types](../../annotation-types/area-annotation)
+- [Annotation Overview](../overview)
+- [Export Annotation](./export-annotation)
+- [Import/Export Events](./export-import-events)
+- [Annotation Types](../annotation-types/area-annotation)

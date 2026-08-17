@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Radius Measurement Annotations in Vue PDF Viewer \ Syncfusion
+title: Add Radius Measurement Annotations in Vue PDF Viewer | Syncfusion
 description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -138,7 +138,7 @@ export default {
 {% endtabs %}
 
 ### Add Radius Programmatically
-Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addannotation) API to insert a Radius measurement at a specific location by providing **width** and **height**.
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -319,7 +319,7 @@ export default {
 {% endtabs %}
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#radiussettings) property.
+Pass per-annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
