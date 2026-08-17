@@ -242,6 +242,7 @@ Use the annotation toolbar:
 ![Edit color](../../../javascript-es6/images/edit_color.png)
 - **Edit Opacity** slider  
 ![Edit opacity](../../../javascript-es6/images/edit_opacity.png)
+
 #### Edit Underline Programmatically
 
 Modify an existing underline programmatically using `editAnnotation()`.

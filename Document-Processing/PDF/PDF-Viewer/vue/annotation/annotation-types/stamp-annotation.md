@@ -152,8 +152,6 @@ export default {
 
 ## Add Custom Stamp
 
-### Add Custom Stamp
-
 Create custom stamps with base64-encoded images. Set up the custom stamp array via [`stampSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#stampsettings):
 
 {% tabs %}

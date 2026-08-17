@@ -145,7 +145,7 @@ provide: {
 },
 methods: {
   onToolbarClick: function (args) {
-      console.log('triggereed');
+      console.log('triggered');
     const modeMap = {
       'highlight': 'Highlight',
       'underline': 'Underline',

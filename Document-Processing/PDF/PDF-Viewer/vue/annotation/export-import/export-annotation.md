@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
-- Programmatically (JSON, XFDF, or as an object for custom handling)
+- Programmatically (JSON file, XFDF file, or as a JSON string for custom handling)
 
 ## Export using the UI (Comments panel)
 
@@ -104,11 +104,11 @@ export default {
     exportAsXFDF() {
       this.getViewer().exportAnnotation(AnnotationDataFormat.Xfdf);
     },
-    // Export annotations as an object (for custom serialization / re-import)
+    // Export annotations as a JSON string (for custom serialization / re-import)
     exportAsObject() {
       this.getViewer().exportAnnotationsAsObject().then((value) => {
-        // Persist or transmit the object as needed (DB/API). Keep for future import.
-        console.log('Exported annotation object:', value);
+        // Persist or transmit the JSON string as needed (DB/API). Keep for future import.
+        console.log('Exported annotation JSON:', value);
       });
     },
     // Export annotations as a Base64 string
@@ -136,6 +136,6 @@ N> The exported annotations can be stored in a database or sent to a server for 
 
 ## See also
 
-- [Import Annotation](../../overview)
-- [Import/Export Events](../../import-export-events)
-- [Annotation Types](../../annotation-types/area-annotation)
+- [Import Annotation](./import-annotation)
+- [Import/Export Events](./export-import-events)
+- [Annotation Types](../annotation-types/area-annotation)
