@@ -13,7 +13,7 @@ Here’s a rephrased version of your instructions for installing the Syncfusion 
 
 ---
 
-### Installing Syncfusion PDF Viewer in an ASP.NET MVC Project
+## Installing Syncfusion PDF Viewer in an ASP.NET MVC Project
 
 To integrate the Syncfusion PDF Viewer into your ASP.NET MVC application, follow these steps:
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Change the font family in the type signature and initial fields of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the `typeSignatureFonts` and `typeInitialFonts` properties. To apply the selected font, include the corresponding Google Fonts link in the HTML `head` section of the host page.
 
-### Signature field property
+## Signature field property
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the [`typeSignatureFonts`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturefieldsettings#typesignaturefonts) and [`typeInitialFonts`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/initialfieldsettings#typeinitialfonts) properties.
 

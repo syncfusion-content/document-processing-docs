@@ -11,7 +11,7 @@ documentation: ug
 
 The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
-### Available Options:
+## Available Options:
 
 **None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
 

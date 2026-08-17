@@ -9,7 +9,7 @@ documentation: ug
 
 # From Azure Active Directory in ASP.NET Core PDF Viewer
 
-### Overview
+## Overview
 
 The ASP.NET Core PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 

@@ -34,7 +34,7 @@ The PDF Viewer raises events for annotation and signature interactions (add, rem
 | [`signatureUnselect`](#signatureunselect)                          | Fires when a signature is unselected on a page in the PDF document.             |
 
 
-### annotationAdd
+## annotationAdd
 
 The [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationaddevent) event is triggered when an annotation is added to a PDF document's page.
 

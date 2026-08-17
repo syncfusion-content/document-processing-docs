@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and behavior of the annotation selector in the UI.
 
-### AnnotationSelectorSettingsModel
+## AnnotationSelectorSettingsModel
 
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 

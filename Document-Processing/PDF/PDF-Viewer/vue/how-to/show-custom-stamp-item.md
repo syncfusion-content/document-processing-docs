@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Show Custom Stamp Items in Vue PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to add custom images to the custom stamp dropdown in the Vue PDF Viewer so users can apply personalized stamps to documents.
 

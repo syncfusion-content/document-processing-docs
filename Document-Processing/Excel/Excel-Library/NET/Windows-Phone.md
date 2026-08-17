@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Deploying .NET Excel Library in Windows Phone | Syncfusion
+# Deploying .NET Excel Library in Windows Phone
 
 In order to use XlsIO in your Windows Phone application, please add the required assemblies in your Windows Phone application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 

@@ -34,7 +34,7 @@ This page documents annotation-related events for the JavaScript PDF Viewer and 
 | [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
 
-### annotationAdd
+## annotationAdd
 
 The [annotationAdd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#annotationaddevent) event is triggered when an annotation is added to a PDF document's page.
 

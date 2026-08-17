@@ -4,7 +4,7 @@ title: How to Unload a Document in ASP.NET MVC PDF Viewer | Syncfusion
 description: Unload the current document in the ASP.NET MVC PDF Viewer to free resources and prepare the viewer for loading a different PDF document.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 

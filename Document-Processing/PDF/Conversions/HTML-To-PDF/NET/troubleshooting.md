@@ -6,7 +6,7 @@ control: PDF
 documentation: UG
 ---
 
-# Troubleshoot HTML to PDF conversion in .NET PDF Library 
+# Troubleshoot HTML to PDF conversion in .NET PDF Library
 
 ## Blink files are missing
 
@@ -490,7 +490,7 @@ settings.AdditionalDelay = 4000;
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service, which has elevated permissions and rights to access GDI calls.
-Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB articles link">link</a> for more information.
+Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB articles link">KB article</a> for more information.
 </td>
 </tr>
 </table>
@@ -664,7 +664,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To overcome this issue, use the x32 bit Blink binaries. The x32 bit Windows Blink binaries are compatible with the x32 bit Windows system environment. Please download the x32 bit Blink binaries for Windows <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BLINKB~1124441598" aria-label="Blink files link">here</a> and replace these binaries in the existing x64 bit Blink binaries folder.
+<td>To overcome this issue, use the x32 bit Blink binaries. The x32 bit Windows Blink binaries are compatible with the x32 bit Windows system environment. Please download the x32 bit <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BLINKB~1124441598" aria-label="Blink files link">Blink binaries for Windows</a> and replace these binaries in the existing x64 bit Blink binaries folder.
 </td>
 </tr>
 </table>

@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Deploying .NET Excel Library in Silverlight | Syncfusion
+# Deploying .NET Excel Library in Silverlight
 
 In order to use XlsIO in your Silverlight application, please add the required assemblies in your Silverlight application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 

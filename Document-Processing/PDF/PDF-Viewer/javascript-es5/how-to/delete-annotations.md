@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 
-### Steps to delete a specific annotation
+## Steps to delete a specific annotation
 
 **Step 1:** Follow the getting-started guide to create a simple PDF Viewer sample: [Getting started with JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started).
 

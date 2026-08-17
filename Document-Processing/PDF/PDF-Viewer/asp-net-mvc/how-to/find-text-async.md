@@ -51,7 +51,7 @@ Here is an example of how to use `findTextAsync`:
 {% endhighlight %}
 {% endtabs %}
 
-### Description
+## Description
 
 The `findTextAsync` method performs an asynchronous text search within a PDF document. You can search for a single string or multiple strings while controlling case sensitivity. By default, the search runs across all pages. Specify the optional `pageIndex` argument to limit the search to a single page.
 

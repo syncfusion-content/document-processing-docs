@@ -142,7 +142,7 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pd
 </tr>
 </table>
 
-### Limitations
+## Limitations
 
 * The `Ctrl` + mouse wheel combinations for zooming are applicable only for Windows. There is no support for this combination in macOS.
 * In Windows, it is the default behavior of UI elements to receive notification of the key pressed event only when they are focused. So, while using keyboard shortcuts in Windows, please make sure that the PDF viewer control is focused by either tapping or clicking on it. 

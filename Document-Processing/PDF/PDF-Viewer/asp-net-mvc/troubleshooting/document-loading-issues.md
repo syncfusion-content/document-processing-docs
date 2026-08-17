@@ -4,7 +4,7 @@ title: Document Loading Issues in ASP.NET MVC PDF Viewer | Syncfusion
 description: Resolve document loading issues in the ASP.NET MVC PDF Viewer v23.1 and later by using dataBind, validating URLs, and checking CORS and CSP settings.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 

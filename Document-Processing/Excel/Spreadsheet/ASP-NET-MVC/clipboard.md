@@ -60,7 +60,7 @@ Paste can be done in one of the following ways.
 
 N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
-#### Clipboard operations example
+### Clipboard operations example
 
 The following code example demonstrates how to perform cut, copy, and paste operations programmatically using the `cut`, `copy`, and `paste` methods.
 

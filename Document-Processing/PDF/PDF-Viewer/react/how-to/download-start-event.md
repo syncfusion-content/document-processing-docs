@@ -93,7 +93,7 @@ root.render(<App />);
 
 By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
 
-### Event arguments
+## Event arguments
 
 The event handler receives a [DownloadStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadStartEventArgs) object with the following properties:
 

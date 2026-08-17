@@ -195,7 +195,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 ![Undo and redo controls in organizer](./images/undo-redo.png)
 
-#### Conclusion
+### Conclusion
 
 The Organize Pages feature provides a set of tools for editing the page structure of PDF documents inside the viewer. Use the toolbar and organizer panel to insert, delete, rotate, rearrange, copy, import, and save changes to documents.
 

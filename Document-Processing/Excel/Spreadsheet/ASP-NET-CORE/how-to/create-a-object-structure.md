@@ -95,7 +95,7 @@ The following table defines each property of the `CellStyle`.
 | borderLeft | string | Specifies left border of the cell. |
 | borderRight | string | Specifies right border of the cell. |
 
-### Cell style type definitions
+## Cell style type definitions
 
 ```js
 type FontFamily = 'Arial' | 'Arial Black' | 'Axettac Demo' | 'Batang' | 'Book Antiqua' | 'Calibri' | 'Courier' | 'Courier New' | 'Din Condensed' | 'Georgia' | 'Helvetica' | 'Helvetica New' | 'Roboto' | 'Tahoma' | 'Times New Roman' | 'Verdana';

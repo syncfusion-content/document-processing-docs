@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # From Azure Active Directory in Angular PDF Viewer
 
-### Overview
+## Overview
 
 This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Syncfusion Angular PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
 

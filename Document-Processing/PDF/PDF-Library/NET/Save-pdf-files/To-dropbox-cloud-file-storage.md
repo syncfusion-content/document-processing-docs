@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to Dropbox
+# Save PDF documents to Dropbox
 
 To save a PDF file to Dropbox Cloud Storage, you can follow the steps below.
 

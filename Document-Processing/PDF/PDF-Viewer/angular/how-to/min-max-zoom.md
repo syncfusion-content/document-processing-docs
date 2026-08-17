@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer exposes `minZoom` and `maxZoom` to control the allowable zoom range for document viewing. Setting these properties helps maintain readability, performance, and a consistent experience across devices.
 
-### minZoom
+## minZoom
 
 `minZoom` sets the minimum zoom percentage the viewer supports. Use this to prevent users from zooming out to levels that make content unreadable or negatively affect layout.
 

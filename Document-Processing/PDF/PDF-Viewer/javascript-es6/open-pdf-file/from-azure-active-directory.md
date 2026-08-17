@@ -9,7 +9,7 @@ documentation: ug
 
 # From Azure Active Directory in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 The TypeScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 

@@ -34,7 +34,7 @@ In autofill we have following options,
 
 > The default autofill option is `FillSeries`, which can be referred from `fillType` property.
 
-### Copy Cells
+## Copy Cells
 
 To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
 

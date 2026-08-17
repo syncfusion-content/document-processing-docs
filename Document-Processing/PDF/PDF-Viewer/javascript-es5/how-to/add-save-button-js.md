@@ -80,7 +80,7 @@ function OnCreateSearch() {
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align property
+## Align property
 
 Specifies the alignment of the Save button within the toolbar.
 

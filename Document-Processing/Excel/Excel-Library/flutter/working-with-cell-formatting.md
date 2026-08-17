@@ -200,7 +200,7 @@ Digit placeholder. This code pads the value with zeros to fill the format.
 </tr>
 <tr>
 <td>
-#
+ #
 </td>
 <td>
 Digit placeholder. This code does not display extra zeros.

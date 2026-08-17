@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Change the font family for Type Signature and Initial fields by loading the desired fonts and assigning them in the PDF Viewer configuration. Include font stylesheet links (for example, Google Fonts) in the HTML head before initializing the viewer.
 
-### Signature field property
+## Signature field property
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 

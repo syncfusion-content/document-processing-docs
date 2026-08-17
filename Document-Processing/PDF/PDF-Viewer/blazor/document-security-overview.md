@@ -16,7 +16,7 @@ The PDF specification defines two common security configurations:
 - [Password-protected documents](./document-security/password-protected) — a password is required to decrypt and open the file.
 - [Permission-restricted documents](./document-security/permission) — an owner password sets granular permissions such as printing, copying, editing, annotating, and form filling.
 
-### Behavior and expectations
+## Behavior and expectations
 
 - When a password-protected PDF is loaded, the viewer prompts for the password. If the password is incorrect or omitted, the document does not open.
 - For permission-restricted PDFs, the viewer reads and enforces the document's security flags. Disallowed actions (for example, print, copy, or annotate) are disabled in the UI and blocked through APIs.

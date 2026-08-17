@@ -11,7 +11,7 @@ documentation: ug
 
 The `extractText` method extracts text from one or more pages and can return plain text or text with bounds for each element.
 
-### extractText method
+## extractText method
 
 Retrieves text data from one page or a range of pages based on the specified options.
 

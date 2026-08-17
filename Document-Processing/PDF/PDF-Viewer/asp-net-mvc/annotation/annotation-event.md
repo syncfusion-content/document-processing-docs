@@ -33,7 +33,7 @@ The PDF Viewer component triggers various events based on user interactions and 
 | [`signatureUnselect`](#signatureunselect)                          | Triggers when a signature is unselected on a page in the PDF document.             |
 
 
-### annotationAdd
+## annotationAdd
 
 The [annotationAdd](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationAdd) event is triggered when an annotation is added to a PDF document's page.
 

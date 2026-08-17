@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Configure Annotation Selectors in ASP.NET MVC PDF Viewer
 
-### Annotation Selector Settings
+## Annotation Selector Settings
 
 The [**annotationSelectorSettings**](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property customizes the appearance and behavior of the annotation selector in the UI. These settings control border colors, sizes, and handle styles so users can differentiate selected annotations and adjust them precisely during review workflows.
 

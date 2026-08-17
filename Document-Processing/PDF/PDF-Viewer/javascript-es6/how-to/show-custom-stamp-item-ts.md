@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Show Custom Stamp Items in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 Add and display custom items in the Custom Stamp dropdown using TypeScript. This enables users to quickly apply personalized stamps in the PDF Viewer.
 

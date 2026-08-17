@@ -4,7 +4,7 @@ title: Mobile Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the JavaScript (ES5) PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: Mobile Toolbar Interface
-publishingplatform: Javascript
+
 documentation: ug
 domainurl: ##DomainURL##
 ---

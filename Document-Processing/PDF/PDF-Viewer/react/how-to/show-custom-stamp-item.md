@@ -10,7 +10,7 @@ documentation: ug
 
 # How to Show Custom Stamp Items in React PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to add custom images to the custom stamp dropdown in the React PDF Viewer so users can apply personalized stamps to documents.
 

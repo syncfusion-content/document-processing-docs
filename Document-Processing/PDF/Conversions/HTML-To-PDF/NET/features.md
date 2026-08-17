@@ -756,7 +756,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF).
 
-### Table of contents with custom style
+## Table of contents with custom style
 
 The Blink HTML converter provides support for customizing the table of contents style. Each header tag style can be customized by using [HtmlToPdfTocStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfTocStyle.html). 
 

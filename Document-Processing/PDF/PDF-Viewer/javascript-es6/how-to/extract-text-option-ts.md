@@ -11,7 +11,7 @@ documentation: ug
 
 The `extractTextOption` property controls the amount of text and layout information returned by the viewer. Adjusting this value helps balance memory usage and the level of detail required for downstream processing. The viewer exposes four options:
 
-### Available Options:
+## Available Options:
 
 - **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
 - **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.

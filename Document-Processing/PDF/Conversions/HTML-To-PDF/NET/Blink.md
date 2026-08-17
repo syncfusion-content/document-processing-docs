@@ -925,18 +925,18 @@ padding-left: 5px;
 <h2>Introduction</h2>
 	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
-	<h4>WEB</h4>
+	<h3>WEB</h3>
 		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
+	<h3>Desktop</h3>
 		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
+	<h3>Mobile</h3>
 		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
 <h2>Consulting</h2>
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
-	<h4>About us</h4>
+	<h3>About us</h3>
 		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
+	<h3>contact us</h3>
 		Morrisville Office
 		Company Headquarters
 		2501 Aerial Center Parkway
@@ -1093,7 +1093,7 @@ padding-left: 5px;
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF).
 
-### Table of contents with custom style
+## Table of contents with custom style
 
 The Blink HTML converter provides support for customizing the table of contents style. Each header tag style can be customized by using [HtmlToPdfTocStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfTocStyle.html). 
 
@@ -2900,7 +2900,7 @@ settings.AdditionalDelay = 2000;
 <th style="font-size:14px">Solution
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service (which has the elevated permission and rights to access the GDI calls). 
-Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB article link">link</a> for more information. 
+Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB article link">KB article</a> for more information. 
 </td>
 </tr>
 </table>

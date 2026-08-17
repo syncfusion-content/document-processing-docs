@@ -61,7 +61,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-### Description of each option
+## Description of each option
 **extractTextOption.TextAndBounds (default):** This option returns both plain text and its positional data (bounds). Use this option when you need to access both the content of the PDF and its layout for further processing or analysis.
 
 **extractTextOption.TextOnly:** This option returns only the plain text from the PDF. No positional or layout data is included. Note that when using this option, text search functionality will be disabled. In such cases, it is recommended to use the [`findTextAsync`](./find-text-async) method for text searching.

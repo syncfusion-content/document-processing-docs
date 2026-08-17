@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Set `enableLocalStorage` to manage storage behavior. When `true`, session-specific data is kept in memory; when `false` (default), session storage is used.
 
-### Use enableLocalStorage
+## Use enableLocalStorage
 
 The following example sets `enableLocalStorage` to `true` so viewer data persists in the browser's local storage.
 

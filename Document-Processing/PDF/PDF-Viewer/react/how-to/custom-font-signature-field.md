@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
-### Apply custom fonts to the Signature field
+## Apply custom fonts to the Signature field
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 

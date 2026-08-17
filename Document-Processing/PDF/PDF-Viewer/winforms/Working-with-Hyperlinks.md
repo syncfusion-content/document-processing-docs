@@ -11,7 +11,7 @@ documentation: ug
 
 The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) supports URLs (hyperlinks) in the PDF document, which allows you to navigate to the destination just by clicking on it and by opening it in the default browser. This also supports a few events that are listed in the following table.
 
-### Events Table
+## Events Table
 
 <table>
 <tr>

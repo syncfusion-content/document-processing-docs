@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Save PDF to AWS S3
+# Save PDF documents to AWS S3
 
 To save a PDF file to AWS S3, you can follow the steps below.
 

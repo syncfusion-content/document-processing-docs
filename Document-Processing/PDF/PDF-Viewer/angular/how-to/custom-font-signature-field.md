@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 # How to Change the Font for Type Signatures in Angular PDF Viewer
 Change the font family in the type signature of the PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
-### Signature Field
+## Signature Field
 
 The following steps are used to include custom fonts for signature and initial field using `typeSignatureFonts` property.
 

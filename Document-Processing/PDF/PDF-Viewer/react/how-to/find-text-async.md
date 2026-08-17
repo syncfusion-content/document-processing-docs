@@ -73,7 +73,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Description
+## Description
 
 The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
 

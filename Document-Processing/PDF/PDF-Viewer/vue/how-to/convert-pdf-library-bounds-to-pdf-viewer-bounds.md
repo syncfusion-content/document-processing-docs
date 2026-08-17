@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Convert PDF Library Bounds to PDF Viewer Bounds in Vue PDF
 
-### Overview
+## Overview
 
 When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 

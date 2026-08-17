@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Show or Hide Annotations in JavaScript (ES5) PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to temporarily hide annotations and restore them later in the JavaScript PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 

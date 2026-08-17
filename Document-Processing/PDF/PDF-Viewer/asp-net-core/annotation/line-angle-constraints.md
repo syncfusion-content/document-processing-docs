@@ -14,7 +14,7 @@ The PDF Viewer provides line angle constraints functionality that allows drawing
 
 ![Line angle constraint](../../javascript-es6/annotations/annotation-images/line-angle-constraint.gif)
 
-### Enable line angle constraints
+## Enable line angle constraints
 
 Set the `enableLineAngleConstraints` property within `annotationDrawingOptions` to enable angle snapping for supported line-type annotations.
 

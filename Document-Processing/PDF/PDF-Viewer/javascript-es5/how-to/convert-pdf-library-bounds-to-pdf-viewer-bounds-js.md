@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
 
-### Steps to convert bounds values
+## Steps to convert bounds values
 
 **Step 1:** Initialize the PDF Viewer instance
 

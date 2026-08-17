@@ -33,7 +33,7 @@ The PDF Viewer raises events for annotation and signature interactions (add, rem
 | [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
 | [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
-### annotationAdd 
+## annotationAdd 
 
 The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationadd) event triggers when an annotation is added to the PDF Viewer.
 

@@ -15,7 +15,7 @@ Use the redaction tool to draw over content to be hidden. After marking, an anno
 
 ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
-#### Redaction annotations are interactive
+### Redaction annotations are interactive
 
 * **Movable** – Drag and reposition the annotation within the same page.  
 ![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)

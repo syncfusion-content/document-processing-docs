@@ -4,7 +4,7 @@ title: How to Handle Page Render Events in ASP.NET MVC PDF | Syncfusion
 description: Use the pageRenderInitiate and pageRenderComplete events in the ASP.NET MVC PDF Viewer to track page rendering and coordinate custom UI updates.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 

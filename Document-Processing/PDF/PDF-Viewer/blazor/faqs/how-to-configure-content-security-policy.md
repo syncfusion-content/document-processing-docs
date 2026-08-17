@@ -45,7 +45,7 @@ N>
 * Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.
 These directives are essential for correct behavior under strict CSP environments.
 
-### Directive usage
+## Directive usage
 
 | Directive                          | Usage                                                                                                                                                                                                                  |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

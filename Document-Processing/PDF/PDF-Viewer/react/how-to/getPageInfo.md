@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Get Page Info in React PDF Viewer
 
-### Overview
+## Overview
 
 The `getPageInfo()` method returns metadata for a specified page in the React PDF Viewer, such as `height`, `width`, and `rotation`. Use it when you need to read the rendered size or orientation of a page, for example to align overlays, custom toolbars, or to validate the loaded document.
 

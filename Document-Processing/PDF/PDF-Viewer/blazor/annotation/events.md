@@ -44,7 +44,7 @@ The table below lists every annotation and signature events in the `PdfViewerEve
 
 The [AddSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AddSignature) event triggers when a signature is added to a page.
 
-#### Event arguments
+### Event arguments
 
 See [AddSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AddSignatureEventArgs.html) for properties such as `Id` (string), `PageNumber` (int), and `Bounds` (`PdfBounds` – the rectangle of the added signature in page coordinates).
 
@@ -72,7 +72,7 @@ The following example illustrates handling the `AddSignature` event.
 
 The [AnnotationAdded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationAdded) event triggers when an annotation is added to a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationAddedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationAddedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and `Bounds` (`PdfBounds`).
 
@@ -100,7 +100,7 @@ The following example illustrates handling the `AnnotationAdded` event.
 
 The [AnnotationMouseover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMouseover) event triggers when the mouse pointer moves over an annotation.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationMouseoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMouseoverEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and the mouse cursor position via `X` and `Y` (double, in page coordinates).
 
@@ -128,7 +128,7 @@ The following example illustrates handling the `AnnotationMouseover` event.
 
 The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationMoved) event triggers when an annotation is moved on a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
@@ -156,7 +156,7 @@ The following example illustrates handling the `AnnotationMoved` event.
 
 The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationPropertiesChanged) event triggers when annotation properties are modified on a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), the changed property names, and old/new values. The class also exposes boolean change flags such as `IsColorChanged`, `IsOpacityChanged`, `IsThicknessChanged`, `IsFontFamilyChanged`, `IsFontSizeChanged`, and `IsTextChanged` that you can inspect in the handler.
 
@@ -184,7 +184,7 @@ The following example illustrates handling the `AnnotationPropertiesChanged` eve
 
 The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationRemoved) event triggers when an annotation is removed from a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
@@ -212,7 +212,7 @@ The following example illustrates handling the `AnnotationRemoved` event.
 
 The [AnnotationResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationResized) event triggers when an annotation is resized on a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationResizedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationResizedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
@@ -240,7 +240,7 @@ The following example illustrates handling the `AnnotationResized` event.
 
 The [AnnotationSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationSelected) event triggers when an annotation is selected on a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationSelectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationSelectedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
@@ -268,7 +268,7 @@ The following example illustrates handling the `AnnotationSelected` event.
 
 The [AnnotationUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_AnnotationUnselected) event triggers when an annotation is unselected on a page.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationUnselectedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationUnselectedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
@@ -296,7 +296,7 @@ The following example illustrates handling the `AnnotationUnselected` event.
 
 The [ExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportFailed) event triggers when annotation export fails.
 
-#### Event arguments
+### Event arguments
 
 See [ExportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportFailureEventArgs.html) for the `ErrorDetails` (string) describing why the export failed.
 
@@ -324,7 +324,7 @@ The following example illustrates handling the `ExportFailed` event.
 
 The [ExportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportStarted) event triggers when annotation export starts.
 
-#### Event arguments
+### Event arguments
 
 See [ExportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportStartEventArgs.html) for the `FileName` (string) of the file being exported. The export is triggered by the user's **Export annotations** action in the toolbar.
 
@@ -352,7 +352,7 @@ The following example illustrates handling the `ExportStarted` event.
 
 The [ExportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ExportSucceed) event triggers when annotation export succeeds.
 
-#### Event arguments
+### Event arguments
 
 See [ExportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ExportSuccessEventArgs.html) for details such as `FileName` (string, the name of the exported file) and the exported annotation data.
 
@@ -380,7 +380,7 @@ The following example illustrates handling the `ExportSucceed` event.
 
 The [ImportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportFailed) event triggers when annotation import fails.
 
-#### Event arguments
+### Event arguments
 
 See [ImportFailureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportFailureEventArgs.html) for the `ErrorDetails` (string) describing why the import failed.
 
@@ -408,7 +408,7 @@ The following example illustrates handling the `ImportFailed` event.
 
 The [ImportStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportStarted) event triggers when annotation import starts.
 
-#### Event arguments
+### Event arguments
 
 See [ImportStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportStartEventArgs.html) for the `FileName` (string) of the file being imported. The import is triggered by the user's **Import annotations** action in the toolbar.
 
@@ -436,7 +436,7 @@ The following example illustrates handling the `ImportStarted` event.
 
 The [ImportSucceed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ImportSucceed) event triggers when annotation import succeeds.
 
-#### Event arguments
+### Event arguments
 
 See [ImportSuccessEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ImportSuccessEventArgs.html) for the `FileName` (string) of the imported file.
 
@@ -464,7 +464,7 @@ The following example illustrates handling the `ImportSucceed` event.
 
 The [MoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_MoveSignature) event triggers when a signature is moved on a page.
 
-#### Event arguments
+### Event arguments
 
 See [MoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.MoveSignatureEventArgs.html) for details such as `Id` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
@@ -492,7 +492,7 @@ The following example illustrates handling the `MoveSignature` event.
 
 The [OnAnnotationDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnAnnotationDoubleClick) event triggers when an annotation is double-clicked.
 
-#### Event arguments
+### Event arguments
 
 See [AnnotationDoubleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationDoubleClickEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), `PageNumber` (int), and the mouse position (`X`, `Y` – double, in page coordinates).
 
@@ -520,7 +520,7 @@ The following example illustrates handling the `OnAnnotationDoubleClick` event.
 
 The [RemoveSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_RemoveSignature) event triggers when a signature is removed from a page.
 
-#### Event arguments
+### Event arguments
 
 See [RemoveSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RemoveSignatureEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 
@@ -548,7 +548,7 @@ The following example illustrates handling the `RemoveSignature` event.
 
 The [ResizeSignature](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_ResizeSignature) event triggers when a signature is resized on a page.
 
-#### Event arguments
+### Event arguments
 
 See [ResizeSignatureEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ResizeSignatureEventArgs.html) for details such as `Id` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
@@ -576,7 +576,7 @@ The following example illustrates handling the `ResizeSignature` event.
 
 The [SignaturePropertiesChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignaturePropertiesChange) event triggers when signature properties are changed on a page.
 
-#### Event arguments
+### Event arguments
 
 See [SignaturePropertiesChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignaturePropertiesChangeEventArgs.html) for details such as `Id` (string), `PageNumber` (int), and the changed property values.
 
@@ -604,7 +604,7 @@ The following example illustrates handling the `SignaturePropertiesChange` event
 
 The [SignatureSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureSelected) event triggers when a signature is selected on a page.
 
-#### Event arguments
+### Event arguments
 
 See [SignatureSelectEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 
@@ -632,7 +632,7 @@ The following example illustrates handling the `SignatureSelected` event.
 
 The [SignatureUnselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_SignatureUnselected) event triggers when a signature is unselected on a page.
 
-#### Event arguments
+### Event arguments
 
 See [SignatureSelectEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureSelectEventArgs.html) for details such as `Id` (string) and `PageNumber` (int).
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Show or Hide Annotations in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to temporarily hide annotations and restore them later in the TypeScript PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 

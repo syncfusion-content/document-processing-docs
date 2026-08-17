@@ -14,7 +14,7 @@ PdfToImageConverter uses PDFium to convert a PDF document to an image. PDFium is
 N>* PDFium is not supported in Windows XP operating system.
 N>* From v34.1.x onwards, Pdfium is upgraded to the new version which was built with the branch [chromium/7814](https://pdfium.googlesource.com/pdfium/+/refs/heads/chromium/7814).
 
-### How PDFium works with PdfToImageConverter
+## How PDFium works with PdfToImageConverter
 
 * On running your application, Syncfusion&reg; PdfToImageConverter control generates a folder named `PDFium` in the application output path folder (for example: bin/release or bin/debug) at runtime. 
 * Syncfusion&reg; PdfToImageConverter control detects the architecture of the running machine automatically.

@@ -35,7 +35,7 @@ The annotation events supported by the PDF Viewer control are:
 | [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
 | [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
-### annotationAdd
+## annotationAdd
 
 The [annotationAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationadd) event triggers when an annotation is added to a PDF document's page.
 

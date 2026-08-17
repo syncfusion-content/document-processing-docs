@@ -81,7 +81,7 @@ The **Match Any Word** option splits the entered text into individual words base
 
 While the PDF Viewer's toolbar provides a user-friendly search interface, you can also trigger and customize searches programmatically using the `textSearch.searchText()` method.
 
-#### Using `searchText`
+### Using `searchText`
 
 The `searchText` method allows you to initiate a search with specific criteria.
 

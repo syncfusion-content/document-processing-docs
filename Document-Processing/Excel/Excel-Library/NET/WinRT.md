@@ -5,7 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Deploying .NET Excel Library in WinRT | Syncfusion
+# Deploying .NET Excel Library in WinRT
 
 In order to use XlsIO in your WinRT application, please add the required assemblies in your WinRT application. Refer [Assemblies Required](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required).
 

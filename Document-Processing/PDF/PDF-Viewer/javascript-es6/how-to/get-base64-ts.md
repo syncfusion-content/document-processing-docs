@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Get the Base64 Value of a PDF in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the PDF Viewer using TypeScript. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 

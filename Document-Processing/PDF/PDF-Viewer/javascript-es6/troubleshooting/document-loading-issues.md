@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Troubleshoot Document Loading Issues in JavaScript (ES6) PDF Viewer v23.1+
+# Troubleshoot Document Load Issues in TypeScript PDF Viewer v23.1+
 
 If a document does not render in the viewer when using version 23.1 or newer, follow these steps:
 

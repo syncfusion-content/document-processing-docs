@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# How to View a DOCX File in a Blazor Application | Syncfusion
+# How to View a DOCX File in a Blazor Application
 
 DOCX files can be viewed in a Blazor application in two ways:
 

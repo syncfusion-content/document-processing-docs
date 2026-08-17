@@ -11,7 +11,7 @@ documentation: ug
 
 This article shows how to print large PDFs in the Blazor SfPdfViewer component. A custom toolbar action retrieves the loaded PDF as a byte array and uses JavaScript interop to open it in a new tab and trigger the browser's print dialog.
 
-### Implement a print handler
+## Implement a print handler
 Add a custom print toolbar item to the primary toolbar, then handle its click to retrieve the loaded PDF as a byte array and invoke a JavaScript function to print the PDF on the client-side.
 
 ```csharp

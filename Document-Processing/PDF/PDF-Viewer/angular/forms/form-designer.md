@@ -121,7 +121,7 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 
-#### Show or Hide the Built-in Form Designer Toolbar
+### Show or Hide the Built-in Form Designer Toolbar
 
 The visibility of the Form Designer toolbar is controlled by the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This method enables the application to display or hide the Form Designer tools based on requirements. Refer to the code example [here](../toolbar-customization/form-designer-toolbar#2-show-or-hide-form-designer-toolbar-at-runtime).
 

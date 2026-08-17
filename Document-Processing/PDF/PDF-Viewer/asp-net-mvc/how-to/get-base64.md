@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Get the Base64 Value of a PDF in ASP.NET MVC PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to get the base64-encoded value of a PDF loaded in the Syncfusion ASP.NET MVC PDF Viewer. Use this to send the PDF as a Base64 string or process it on the client.
 

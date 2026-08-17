@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # From Azure Active Directory in JavaScript (ES5) PDF Viewer
 
-### Overview
+## Overview
 
 The JavaScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 

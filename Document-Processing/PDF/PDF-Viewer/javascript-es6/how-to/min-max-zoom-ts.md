@@ -13,7 +13,7 @@ This section explains how to configure minimum and maximum zoom levels in the Ty
 
 Control zoom levels in the PDF Viewer using the [minZoom] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#minzoom) and [maxZoom] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#maxzoom) properties to ensure a consistent viewing experience.
 
-### minZoom
+## minZoom
 
 Specifies the minimum zoom percentage allowed. Set this value to prevent zooming out beyond a threshold that could reduce readability or impact performance.
 

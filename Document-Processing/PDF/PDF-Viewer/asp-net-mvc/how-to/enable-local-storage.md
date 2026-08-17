@@ -4,7 +4,7 @@ title: How to Enable Local Storage in ASP.NET MVC PDF Viewer | Syncfusion
 description: Control session-specific data storage in the ASP.NET MVC PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 

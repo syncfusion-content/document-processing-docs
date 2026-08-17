@@ -234,7 +234,7 @@ export default {
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align Property
+## Align Property
 
 Specifies the alignment of the Save button within the toolbar.
 

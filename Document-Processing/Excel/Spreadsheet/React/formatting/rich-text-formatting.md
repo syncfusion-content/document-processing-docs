@@ -26,7 +26,7 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 
 Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
 
-#### How to Apply Subscript and Superscript
+### How to Apply Subscript and Superscript
 
 You can apply subscript and superscript formatting in following ways:
 

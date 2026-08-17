@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the `addCustomMenu()` and [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) API.
 
-### Add a custom option
+## Add a custom option
 
 The following example adds custom options to the context menu.
 

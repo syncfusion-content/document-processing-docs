@@ -105,7 +105,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Export a single page with a custom size
+## Export a single page with a custom size
 
 Use the same API and pass a `Size` object to request a custom image size.
 

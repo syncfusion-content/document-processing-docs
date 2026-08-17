@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Export pages as Base64-encoded images using `exportAsImage()` for a single page or `exportAsImages()` for a range. These APIs return Base64-encoded image strings suitable for further processing or download.
 
-### Steps to export pages as images
+## Steps to export pages as images
 
 **Step 1:** Create a simple PDF Viewer sample by following the getting-started guide: https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/
 

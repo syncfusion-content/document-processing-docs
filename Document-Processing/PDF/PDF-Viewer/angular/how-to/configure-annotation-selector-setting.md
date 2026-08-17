@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Configure Annotation Selectors in Angular PDF Viewer
 
-### Annotation Selector Settings
+## Annotation Selector Settings
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationselectorsettings) property to customize the appearance and interaction behavior of the annotation selector in the Angular PDF Viewer UI.
 

@@ -23,7 +23,7 @@ The `extractText` method retrieves text content and, optionally, positional data
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Syncfusion PDF Viewer Control
+## Usage of extractText in Syncfusion PDF Viewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 

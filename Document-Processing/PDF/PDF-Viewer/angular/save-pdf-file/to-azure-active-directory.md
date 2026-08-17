@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # To Azure Active Directory in Angular PDF Viewer
 
-### Overview
+## Overview
 
 The Angular PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 

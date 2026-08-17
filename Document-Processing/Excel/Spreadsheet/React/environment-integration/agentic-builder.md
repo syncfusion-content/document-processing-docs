@@ -11,7 +11,7 @@ documentation: ug
 
 This guide shows you how to create a [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component simply by typing what you want using natural language commands — with the [**Syncfusion® React Agentic UI Builder**](https://www.syncfusion.com/explore/mcp-servers/) (powered by Syncfusion's MCP Server). Just describe it, and the tool builds the complete implementation of the spreadsheet component for you.
 
-### Prerequisite
+## Prerequisite
 - Make sure the **React Agentic UI Builder** is installed in your IDE. Refer to the official [Getting Started](https://ej2.syncfusion.com/react/documentation/mcp-server/agentic-ui-builder/getting-started) and [installation guide](https://ej2.syncfusion.com/react/documentation/mcp-server/installation).
 - Ensure you have a [React project](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started) set up (JavaScript or TypeScript, any supported version) before using the Agentic UI Builder.
 

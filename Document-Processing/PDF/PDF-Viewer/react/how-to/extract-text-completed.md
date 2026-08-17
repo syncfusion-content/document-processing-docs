@@ -39,7 +39,7 @@ function extractTextCompleted(args){
 ```
 {% endraw %}
 
-### Troubleshooting
+## Troubleshooting
 
 - If `extractTextCompleted` does not fire, verify that the document has finished loading.
 - If `documentTextCollection` is empty, confirm the `serviceUrl` points to a reachable PDF Viewer Web API service.

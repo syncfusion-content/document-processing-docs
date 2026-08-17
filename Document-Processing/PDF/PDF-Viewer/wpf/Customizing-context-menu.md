@@ -11,7 +11,7 @@ documentation: ug
 
 PDF Viewer now supports customization of the default context menu items. This gives users more options to adjust the viewer to fit their application's requirements. Previously, the context menus for Annotation, Text Selection, Redaction, and Signature Field did not allow modifications. With this enhancement, users can add, remove, and hide the default menu items with the help of events.
 
-### Events 
+## Events 
 
 <table>
 <tr>

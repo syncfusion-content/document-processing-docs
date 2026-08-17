@@ -4,7 +4,7 @@ title: How to Configure the Signature Date in ASP.NET MVC PDF | Syncfusion
 description: Display or configure the date that appears with a handwritten signature in the ASP.NET MVC PDF Viewer for audit and review purposes.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 

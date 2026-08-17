@@ -9,7 +9,7 @@ documentation: ug
 
 # To Azure Active Directory in ASP.NET MVC PDF Viewer
 
-### **Overview**
+## **Overview**
 
 The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
 

@@ -14,7 +14,7 @@ How to integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sd
 
 ## Quickstart for Gatsby
 
-#### Create or open your Gatsby site:
+### Create or open your Gatsby site:
 
 ```bash
 # create a new Gatsby site (or use an existing one)

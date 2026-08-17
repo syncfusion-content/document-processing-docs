@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Show Custom Stamp Items in JavaScript (ES5) PDF Viewer
 
-### Overview
+## Overview
 
 Add and display custom items in the Custom Stamp dropdown using JavaScript. This enables users to quickly apply personalized stamps in the PDF Viewer.
 

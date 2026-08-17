@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
 
-### Use enableLocalStorage
+## Use enableLocalStorage
 
 Set `enableLocalStorage` to manage storage behavior. When `true`, session-specific data is kept in memory; when `false` (default), session storage is used.
 

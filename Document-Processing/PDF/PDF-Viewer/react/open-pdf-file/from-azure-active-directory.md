@@ -9,7 +9,7 @@ documentation: ug
 
 # Open PDF from Azure Active Directory in React PDF Viewer
 
-### Overview
+## Overview
 
 The React PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 

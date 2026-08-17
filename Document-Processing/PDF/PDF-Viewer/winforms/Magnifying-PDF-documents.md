@@ -19,7 +19,7 @@ The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf
 4.	**Fit to width button**: It allows you to fit the document to the width of the control.
 5.	**Fit to page button**: It allows you to fit a whole page in the window and to view only one page at a time.
 
-### Magnify the document to a given zoom percentage
+## Magnify the document to a given zoom percentage
 
 You can magnify the document to a given zoom percentage by using the [ZoomTo](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_Forms_PdfViewer_PdfViewerControl_ZoomTo_System_Int32_) function of the PDF Viewer. Refer to the following code sample to set a specific zoom percentage.
 

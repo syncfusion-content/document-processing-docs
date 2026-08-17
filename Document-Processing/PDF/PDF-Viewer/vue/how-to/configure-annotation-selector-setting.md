@@ -14,7 +14,7 @@ Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentatio
 
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
-### How to Configure Annotation Selector Settings
+## How to Configure Annotation Selector Settings
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 
