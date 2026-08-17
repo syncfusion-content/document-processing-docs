@@ -3,20 +3,20 @@ layout: post
 title: Disable Optimized Measuring in JavaScript DOCX Editor | Syncfusion
 description: Disable optimized text measuring in Syncfusion® JavaScript DOCX Editor to retain document pagination behavior and maintain layout consistency.
 platform: document-processing
-control: Disable optimized text measuring 
+control: Disable Optimized Text Measuring
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # How to Disable Optimized Text Measuring in JavaScript DOCX Editor
 
-Starting from v19.3.0.x, the accuracy of text size measurements in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
+Starting from v19.3.0.x, the accuracy of text size measurements in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is improved to better match Microsoft Word pagination for most Word documents. This improvement is included as the default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document Editor settings.
 
-If you want the Document editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of  JavaScript Document Editor component.
+To retain the document pagination (page-by-page) behavior of v19.2.0.x and older versions, set the [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) property of the JavaScript Document Editor to `false`.
 
-## Disable optimized text measuring in `DocumentEditorContainer` instance
+## Disable Optimized Text Measuring in `DocumentEditorContainer` Instance
 
-The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable optimized text measuring improvement in the `DocumentEditorContainer` instance.
 
 ```js
 
@@ -33,9 +33,9 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 
-## Disable optimized text measuring in `DocumentEditor` instance
+## Disable Optimized Text Measuring in `DocumentEditor` Instance
 
-The following example code illustrates how to disable optimized text measuring improvement in `DocumentEditor` instance.
+The following example code illustrates how to disable optimized text measuring improvement in the `DocumentEditor` instance.
 
 ```js
 
@@ -49,4 +49,4 @@ documenteditor.documentEditorSettings = { enableOptimizedTextMeasuring: false };
 documenteditor.appendTo('#DocumentEditor');
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
