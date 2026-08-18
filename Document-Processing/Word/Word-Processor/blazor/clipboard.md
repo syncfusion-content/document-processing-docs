@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to perform cut, copy, and paste clipboard operations in the Syncfusion Blazor Document Editor component, both programmatically and through the UI.
+title: Clipboard in Blazor DOCX Editor | Syncfusion
+description: The clipboard support in Blazor DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Clipboard in Blazor Document Editor Component
+# Clipboard in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides built-in support for clipboard operations, including cut, copy, and paste. These actions can be performed through the toolbar, context menus, standard keyboard shortcuts, or programmatically via the component's APIs.
 

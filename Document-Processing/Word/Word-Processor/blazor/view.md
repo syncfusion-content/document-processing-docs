@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about the view in the Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in Blazor DOCX Editor | Syncfusion
+description: View in Blazor DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# View in Blazor Document Editor Component
+# View in Blazor DOCX Editor
 
 This topic describes view-related options in the Document Editor, including layout type (Pages or Continuous), displaying the ruler, and enabling the heading navigation pane.
 

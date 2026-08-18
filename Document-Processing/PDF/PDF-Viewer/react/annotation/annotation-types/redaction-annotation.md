@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF Redaction in React PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and apply redaction annotations in Syncfusion React PDF Viewer with UI and programmatic examples.
+title: Redaction Annotation in React PDF Viewer | Syncfusion
+description: Add, edit, delete, and apply redaction annotations in the React PDF Viewer to permanently remove sensitive content from a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

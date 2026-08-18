@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph Format in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about paragraph format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The paragraph format feature in ASP.NET MVC DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: Paragraph Format
 documentation: ug
 ---
 
 
-# Working with Paragraph Formatting in ASP.NET MVC Document Editor
+# Paragraph Format in ASP.NET MVC DOCX Editor
 
 Document editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

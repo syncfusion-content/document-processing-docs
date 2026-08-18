@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn here all about Print in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more.
+title: Print in JavaScript DOCX Editor | Syncfusion
+description: Print feature in JavaScript DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Print 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in JavaScript (ES5) Document Editor component
+# Print in JavaScript DOCX Editor
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#print) method from [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) instance.
 

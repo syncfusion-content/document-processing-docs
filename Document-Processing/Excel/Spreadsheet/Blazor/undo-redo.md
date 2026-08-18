@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo in Blazor Spreadsheet Component | Syncfusion
-description: Check out and learn about the undo and redo functionality in the Syncfusion Blazor Spreadsheet component.
+title: Undo and Redo in Blazor Spreadsheet | Syncfusion
+description: Learn how to revert and restore spreadsheet actions using undo and redo functionality in the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Undo and Redo in Blazor Spreadsheet Component
+# Undo and Redo in Blazor Spreadsheet
 
 The **Undo** and **Redo** functionality in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows users to reverse or reapply recent actions. It maintains a history of spreadsheet operations, encouraging experimentation while preserving the ability to restore previous states.
 

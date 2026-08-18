@@ -1,11 +1,11 @@
 ---
-title: Working with OLE Objects in .NET Word library | Syncfusion
-description: Learn how to work with OLE Objects in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: OLE Objects in .NET Word | Syncfusion
+description: This section illustrates how to insert and manage OLE objects in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with OLE Objects in Word Library
+# OLE Objects in .NET Word
 
 OLE (Object Linking and Embedding) objects allow embedding and linking to documents and other objects. It allows the content of one program to be used in a Word document. The objects can be inserted in the following two ways:
 

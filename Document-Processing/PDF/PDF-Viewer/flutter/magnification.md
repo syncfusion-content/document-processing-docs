@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Magnification in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about magnification feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Magnification in Flutter PDF Viewer | Syncfusion
+description: The magnification feature in SfPdfViewer allows users to adjust zoom levels for enhanced readability and detailed PDF viewing.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Magnification in Flutter PDF Viewer (SfPdfViewer)
+# Magnification in Flutter PDF Viewer
 
 The content of a document can be zoomed in and out either by pinch to zoom or by changing the zoom level factor programmatically.
 

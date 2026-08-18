@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load N pages on initial load | Syncfusion
-description: Learn how to load a specific number of pages during initial rendering in the Syncfusion React PDF Viewer for improved performance.
+title: How to Load Pages on Initial Load in React PDF Viewer | Syncfusion
+description: Load a specific number of pages during the initial render of the React PDF Viewer to improve perceived performance for large documents.
 control: Load N pages on initial load
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load Initial Pages in PDF Viewer
+# How to Load Pages on Initial Load in React PDF Viewer
 
 Control the number of pages the PDF Viewer renders on the initial load to improve perceived performance and reduce initial memory usage. Additional pages are rendered dynamically as the user scrolls through the document, allowing quick access to early pages without loading the entire file.
 

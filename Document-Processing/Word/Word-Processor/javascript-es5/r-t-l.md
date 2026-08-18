@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to Left in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn here all about Right to Left in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more.
+title: Right to Left in TypeScript DOCX Editor | Syncfusion
+description: Right-to-left support in JavaScript DOCX Editor enables RTL user interfaces, including menus, dialogs, and text direction for RTL languages.
 platform: document-processing
 control: Right to Left
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to Left in JavaScript (ES5) Document Editor component
+# Right to Left in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 

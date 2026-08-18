@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> Word Linux installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install the Syncfusion<sup>&reg;</sup> Word Linux installer after downloading from our Syncfusion<sup>&reg;</sup> website.
+title: How to install Syncfusion® Word Linux installer | Syncfusion
+description: Learn here about how to install the Syncfusion® Word Linux installer after downloading from our Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Word Linux installer
+# How to install Syncfusion® Word Linux installer
 
 ## Step-by-Step Installation
 

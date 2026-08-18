@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom AI Service Integration with Syncfusion Smart PDF Viewer
+title: Custom AI Integration in Blazor Smart PDF Viewer | Syncfusion
 description: Learn how to use the IChatInferenceService interface to integrate a custom AI service with Syncfusion Smart PDF Viewer
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Custom AI Service Integration
+# Custom AI Integration in Blazor Smart PDF Viewer
 
 ## Overview
 

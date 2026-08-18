@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track Changes in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Track Changes in Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in Blazor DOCX Editor | Syncfusion
+description: Track changes in Blazor DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Track Changes in Blazor Document Editor Component
+# Track Changes in Blazor DOCX Editor
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 

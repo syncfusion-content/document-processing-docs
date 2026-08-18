@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style form fields in the Blazor SfPdfViewer | Syncfusion
+title: Customize Style of form fields in the Blazor PDF Viewer | Syncfusion
 description: Learn how to configure typography, colors, borders, alignment, and other style settings for form fields using the UI and Programmatically.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Customize the appearance of PDF Form Fields in Blazor SfPdfViewer
+# Customize the appearance of PDF Form Fields in Blazor PDF Viewer
 
 **Styling** customizes the appearance of form fields: font, color, alignment, border, and background. For check box and radio button fields, you can also set indicator text.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Control file downloads in Angular PDF Viewer | Syncfusion
-description: Learn here how to control file downloads in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Control File Downloads in Angular PDF Viewer | Syncfusion
+description: Intercept and control file downloads in the Angular PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Controlling File Downloads in Angular Syncfusion® PDF Viewer
+# How to Control File Downloads in Angular PDF Viewer
 
 The PDF Viewer exposes a `downloadStart` event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
 
-### Using the downloadStart Event
+## Using the downloadStart Event
 
 The `downloadStart` event fires immediately before the download process starts. The event handler receives a `DownloadStartEventArgs` object (for example, `args`) that exposes properties such as `cancel` and `fileName` which can be used to inspect or stop the download.
 

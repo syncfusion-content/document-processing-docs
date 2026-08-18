@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Ribbon in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion JavaScript (ES6) Document Editor to modify file menu, backstage, tabs, groups, and items.
+title: How to Customize Ribbon in TypeScript DOCX Editor | Syncfusion
+description: Customize ribbon tabs, groups, and commands in Syncfusion® TypeScript DOCX Editor to tailor the toolbar experience and improve user productivity.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in JavaScript (ES6) Document Editor
+# How to Customize Ribbon in TypeScript DOCX Editor
 
 The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 

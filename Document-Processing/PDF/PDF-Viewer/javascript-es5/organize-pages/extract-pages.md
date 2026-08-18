@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Extract Pages in JavaScript PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Extract Pages in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Extract pages from a PDF in the JavaScript (ES5) PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in JavaScript PDF Viewer
+# Extract Pages in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 

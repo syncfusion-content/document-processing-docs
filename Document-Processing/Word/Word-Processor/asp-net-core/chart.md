@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about charts in the Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Charts in ASP.NET Core DOCX Editor | Syncfusion
+description: Chart support in ASP.NET Core DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart
 documentation: ug
 ---
 
-# Chart in ASP.NET Core Document Editor Component
+# Charts in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can view charts from your Word document.
 

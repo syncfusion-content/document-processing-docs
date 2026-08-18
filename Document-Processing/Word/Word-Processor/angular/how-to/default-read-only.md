@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Default read-only in Angular DOCX Editor | Syncfusion
-description: Learn here all about Default read-only in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open Angular DOCX Editor in Read-Only Mode | Syncfusion
+description: Open Syncfusion® Angular DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
 control: Default read-only
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Default read-only in Angular Document Editor component
+# How to Open Angular DOCX Editor in Read-Only Mode
 
 In this article, we are going to see how to open a document in read-only mode by default in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) & Document Editor Container.
 

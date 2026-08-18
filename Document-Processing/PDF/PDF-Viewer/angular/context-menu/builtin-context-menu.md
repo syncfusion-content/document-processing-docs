@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Built-in Context Menu in Angular PDF Viewer | Syncfusion
-description: Learn about the built-in context menu items available in the Syncfusion Angular PDF Viewer, including options for text, annotations, and form fields.
+title: Builtin Context Menu in Angular PDF Viewer | Syncfusion
+description: Explore the default context menu items in the Angular PDF Viewer, including options for text selection, annotations, and form fields.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-in Context Menu Items in Angular PDF Viewer
+# Built-in Context Menu in Angular PDF Viewer
 
 The Angular PDF Viewer includes a context-sensitive menu that updates dynamically based on the right-clicked element within the document. This page lists the default menu items available for different document elements.
 

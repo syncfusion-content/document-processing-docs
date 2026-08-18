@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sticky notes in Vue PDF Viewer control | Syncfusion
-description: Learn about sticky note annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Sticky Notes Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the sticky notes annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky note annotation in Vue PDF Viewer control
+# Sticky Notes Annotation in Vue PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 

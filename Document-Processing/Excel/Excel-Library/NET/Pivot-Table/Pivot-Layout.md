@@ -1,12 +1,12 @@
 ---
-title: Pivot Table Layout | Excel library | Syncfusion
-description: In this section, you can learn how to apply a layout to the pivot table in Excel document using XlsIO
+title: Pivot Table Layout in .NET Excel Library | Syncfusion
+description: Apply a layout to a pivot table in an Excel document using Excel Library pivot table layout options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Pivot Table Layout in Excel
+# Pivot Table Layouts in .NET Excel Library
 
 The [PivotTableRowLayout](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.PivotTableRowLayout.html) enumeration can be used to set the pivot table row layout to Compact, Tabular, or Outline.
 

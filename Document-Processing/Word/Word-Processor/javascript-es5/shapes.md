@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Shapes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Shapes in JavaScript DOCX Editor | Syncfusion
+description: The shapes feature in JavaScript DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in JavaScript (ES5) Document editor control
+# Shapes in JavaScript DOCX Editor
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 

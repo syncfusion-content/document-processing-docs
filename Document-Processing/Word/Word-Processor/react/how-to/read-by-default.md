@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Read by default in React DOCX Editor | Syncfusion
-description: Learn here all about Read by default in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open React DOCX Editor in Read-Only Mode | Syncfusion
+description: Open Syncfusion® React DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 control: Read by default
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read by default in React Document Editor component
+# How to Open React DOCX Editor in Read-Only Mode
 
 In this article, we are going to see how to open a document in read-only mode by default in the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) & Document Editor Container.
 
