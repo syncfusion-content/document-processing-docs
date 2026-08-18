@@ -1,12 +1,12 @@
 ---
-title: PDF support for multi-threading | Syncfusion
-description: This page provides detailed information about the multi-threading support offered by the Syncfusion .NET PDF library
+title: Multithreading in .NET PDF Library | Syncfusion
+description: Learn about multithreading support and thread-safety capabilities offered by the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Does the PDF Library Support Multithreading and Is It Thread-Safe?
+# Multithreading in .NET PDF Library
 
 Yes, the Essential<sup>&reg;</sup> PDF library supports creating or modifying PDF documents concurrently in a multi-threaded environment. Thread safety is enabled by setting the [EnableThreadSafe](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_EnableThreadSafe) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class to **true**.
 

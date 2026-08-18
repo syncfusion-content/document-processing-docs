@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Selection in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Selection in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Selection in Angular Spreadsheet | Syncfusion
+description: Selection in Angular Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
 control: Selection 
 documentation: ug
 ---
 
-# Selection in Angular Spreadsheet component
+# Selection in Angular Spreadsheet 
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
-> * The default value for `mode` in `selectionSettings` is `Multiple`.
+> The default value for `mode` in `selectionSettings` is `Multiple`.
 
 You have the following options in Selection,
 

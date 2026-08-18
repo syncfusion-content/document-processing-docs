@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React DOCX Editor in Next.js | Syncfusion
-description: Learn how to create a Document Editor in a Next.js application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to get started with Next.js application using Syncfusion React DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Next.js
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Document Editor in Next.js
+# Getting started with React DOCX Editor in Next.js
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 

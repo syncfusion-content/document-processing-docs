@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell Range in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Cell Range in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Range in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about cell ranges in the Syncfusion ASP.NET Core Spreadsheet control, including selection, formatting, editing, and data operations.
 platform: document-processing
 control: Cell Range
 documentation: ug
 ---
 
 
-# Cell Range in ASP.NET Core Spreadsheet control
+# Cell Range in ASP.NET Core Spreadsheet
 
 A group of cells in a sheet is known as a cell range.
 
@@ -85,7 +85,7 @@ The following features have some limitations in Merge:
 
 The **Data Validation** is used to prevent users from entering invalid data. You can use the [`allowDataValidation`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowDataValidation) property to enable or disable data validation.
 
-N> * The default value for `allowDataValidation` property is `true`.
+N> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 

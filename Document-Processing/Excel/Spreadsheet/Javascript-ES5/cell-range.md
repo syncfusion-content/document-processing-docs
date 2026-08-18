@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell range in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Cell range in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Cell Range in JavaScript Spreadsheet | Syncfusion
+description: Cell range in JavaScript Spreadsheet enables selecting, accessing, and managing groups of cells efficiently for data entry and manipulation.
 platform: document-processing
 control: Cell range
 documentation: ug
 ---
 
-# Cell range in EJ2 JavaScript Spreadsheet control
+# Cell range in JavaScript Spreadsheet 
 
 A group of cells in a sheet is known as a cell range.
 
@@ -84,7 +84,7 @@ The following features have limitations in Merge:
 
 Data Validation is used to restrict the user from entering invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowdatavalidation) property to enable or disable data validation.
 
-> * The default value for the `allowDataValidation` property is `true`.
+> The default value for the `allowDataValidation` property is `true`.
 
 ### Apply Validation
 

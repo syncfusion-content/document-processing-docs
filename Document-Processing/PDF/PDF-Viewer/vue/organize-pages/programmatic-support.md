@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  Programmatic Support Organize Pages in Vue PDF Viewer | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Programmatic Support in Vue PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the Vue PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic Support for Organize Pages in Vue PDF Viewer component
+# Programmatic Support for Organize Pages in Vue PDF Viewer
 
 The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 
@@ -71,7 +71,7 @@ Control whether the page organizer opens automatically when a document loads usi
           ref="pdfviewer"
           :documentPath="documentPath"
           :resourceUrl="resourceUrl"
-          :isPageOrganizerOpen = true>
+          :isPageOrganizerOpen =true>
       </ejs-pdfviewer>
   </div>
 </template>

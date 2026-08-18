@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Clipboard in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Clipboard in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about clipboard operations in the Syncfusion ASP.NET Core Spreadsheet control, including copy, cut, and paste actions for cell data.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
 
-# Clipboard in ASP.NET Core Spreadsheet control
+# Clipboard in ASP.NET Core Spreadsheet
 
 The Spreadsheet supports clipboard operations such as cut, copy, and paste. Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableClipboard) property in Spreadsheet.
 
@@ -24,7 +24,7 @@ Cut can be done in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
 * Using the `cut` method.
 
 ## Copy
@@ -37,7 +37,7 @@ Copy can be done in one of the following ways.
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
 * Using the `copy` method.
 
 ## Paste
@@ -55,7 +55,7 @@ Paste can be done in one of the following ways.
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
 * Using the `paste` method.
 
 N> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.

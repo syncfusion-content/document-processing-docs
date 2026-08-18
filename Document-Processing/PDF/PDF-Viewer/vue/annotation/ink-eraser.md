@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Eraser in Vue PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion Vue PDF Viewer with UI and programmatic control.
+title: Ink Eraser in Vue PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the Vue PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -193,7 +193,7 @@ export default {
 
 ### Set eraser size programmatically
 
-Use the `inkEraserSize` property to control the width of the eraser:
+Use the `inkEraserSize` property to control the width of the eraser. The default value is `20` pixels; recommended range is `1`–`20` pixels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

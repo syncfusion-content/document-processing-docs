@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Blazor Hybrid App | Syncfusion
-description: Learn how to get started with .NET MAUI Blazor Hybrid App using the Syncfusion Spreadsheet component.
+title: Getting Started with .NET MAUI Blazor Hybrid Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Spreadsheet component in a .NET MAUI Blazor Hybrid application.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Blazor Hybrid App
+# Getting Started with .NET MAUI Blazor Hybrid Spreadsheet
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
 
@@ -91,7 +91,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 {% endhighlight %}
 {% endtabs %}
 
-N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://help.syncfusion.com/document-processing/licensing/how-to-generate).
 
 ## Add stylesheet resource
 

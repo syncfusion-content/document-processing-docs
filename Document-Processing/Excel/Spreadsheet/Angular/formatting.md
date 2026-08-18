@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Angular Spreadsheet| Syncfusion
+description: Formatting in Angular Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
 control: Formatting 
 documentation: ug
 ---
 
-# Formatting in Angular Spreadsheet component
+# Formatting in Angular Spreadsheet 
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
@@ -239,7 +239,7 @@ The following features are not supported in Formatting:
 
 Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowconditionalformat) property.
 
-> * The default value for the `allowConditionalFormat` property is `true`.
+> The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 
@@ -354,7 +354,7 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 
 Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
 
-#### How to Apply Subscript and Superscript
+### How to Apply Subscript and Superscript
 
 You can apply subscript and superscript formatting in following ways:
 

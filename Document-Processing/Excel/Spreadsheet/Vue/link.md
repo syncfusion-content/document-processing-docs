@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Link in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Link in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Hyperlink in Vue Spreadsheet | Syncfusion
+description: Create, edit, and manage hyperlinks in the Syncfusion Vue Spreadsheet for quick navigation and references.
 control: Link 
 platform: document-processing
 documentation: ug
 ---
 
-# Link in Vue Spreadsheet component
+# Hyperlink in Vue Spreadsheet
 
 Hyperlink is used to navigate to a web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowHyperlink) property to enable or disable the hyperlink functionality.
 
-> * The default value of the `allowHyperlink` property is `true`.
+> The default value of the `allowHyperlink` property is `true`.
 
 ## Insert Link
 

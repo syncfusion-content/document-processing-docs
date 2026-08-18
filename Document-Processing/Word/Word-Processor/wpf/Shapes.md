@@ -1,13 +1,15 @@
 ---
-title: Shapes in WPF RichTextBox control | Syncfusion
-description: Learn here all about Shapes support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Shapes in WPF DOCX Editor | Syncfusion
+description: The shapes in WPF DOCX Editor offer preservation support for text box and rectangle, enabling existing shapes to be preserved during document import.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: shapes, text-box
 ---
-# Shapes in WPF RichTextBox (SfRichTextBoxAdv)
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. They can be preset or custom geometry. Currently, [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) does not support inserting shapes. However, if the document contains a shape while importing, it is preserved properly.
+# Shapes in WPF DOCX Editor
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+
+N> Starting from v18.3.0.x, the shape preservation is supported.
 
 ## Supported shapes
 The RichTextBox has preservation support for the following shapes:

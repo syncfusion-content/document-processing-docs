@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion ASP.NET MVC PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for ASP.NET MVC PDF Viewer.
+title: Mcp in ASP.NET MVC PDF Viewer | Syncfusion
+description: Set up the Syncfusion ASP.NET MVC PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Syncfusion ASP.NET MVC PDF Viewer MCP Server
+# ASP.NET MVC PDF Viewer MCP Server Setup
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer MCP Server accelerates ASP.NET MVC PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
@@ -148,6 +148,8 @@ You can install the Syncfusion ASP.NET MVC MCP server as a local tool without a 
     ````bash
     dotnet tool install Syncfusion.AspNetMVC.MCP
     ````
+
+    > If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
 
 2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 

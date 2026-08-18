@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Clipboard in Vue Spreadsheet | Syncfusion
+description: Use clipboard operations in the Syncfusion Vue Spreadsheet to cut, copy, and paste data efficiently across worksheets.
 control: Clipboard 
 platform: document-processing
 documentation: ug
 ---
 
-# Clipboard in Vue Spreadsheet component
+# Clipboard in Vue Spreadsheet
 
 The Spreadsheet supports clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
 
@@ -23,7 +23,7 @@ Cut can be done in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
 * Using the [`cut`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#cut) method.
 
 ## Copy
@@ -36,7 +36,7 @@ Copy can be done in one of the following ways.
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
 * Using the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#copy) method.
 
 ## Paste
@@ -54,7 +54,7 @@ Paste can be done in one of the following ways.
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
 * Using the [`paste`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#paste) method.
 
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.

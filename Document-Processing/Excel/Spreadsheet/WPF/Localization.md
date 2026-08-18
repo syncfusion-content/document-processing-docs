@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Localize the WPF Spreadsheet control by customizing ribbon, dialog, and UI text using resource files and culture-specific settings.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Localization in WPF Spreadsheet (SfSpreadsheet)
+# Localization in WPF Spreadsheet
 
 SfSpreadsheet provides support to localize all the static text in the Ribbon and in all dialogs to any desired language. Localization can be done by adding a resource file and setting the specific culture in the application.
 

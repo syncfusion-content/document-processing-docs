@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion license validation in CI services - Syncfusion
-description: Learn how to register and validate the Syncfusion license key for your application in CI services.
+title: How to register and validate license key in CI | Syncfusion
+description: Learn how to register and validate the license key for Syncfusion Document Processing Solutions in CI services.
 platform: file-formats
 control: Essential Studio
 documentation: ug
@@ -17,7 +17,7 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 </style>
 
 
-# Overview of Syncfusion license validation in CI services
+# How to register and validate license key in CI 
 
 Validating the Syncfusion<sup>&reg;</sup> license key as part of your CI pipeline ensures that Syncfusion<sup>&reg;</sup> Essential Studio components are properly licensed before deployment and helps prevent licensing errors in production. The following sections describe how to validate the license key in Azure Pipelines, GitHub Actions, and Jenkins, and how to validate it programmatically using the `ValidateLicense()` method or a unit test project.
 

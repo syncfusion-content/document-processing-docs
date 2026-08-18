@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell range in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Cell range in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Cell Range in TypeScript Spreadsheet | Syncfusion
+description: Cell range in TypeScript Spreadsheet enables selecting, accessing, and managing groups of cells efficiently for data entry and manipulation.
 platform: document-processing
 control: Cell range
 documentation: ug
 ---
 
-# Cell range in EJ2 TypeScript Spreadsheet control
+# Cell Range in TypeScript Spreadsheet 
 
 A group of cells in a sheet is known as cell range.
 
@@ -85,7 +85,7 @@ The following features have some limitations in Merge:
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowdatavalidation) property to enable or disable data validation.
  
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 

@@ -1,12 +1,12 @@
 ---
-title: Sorting | Excel Library | Syncfusion
-description: In this section, you can learn how to sort data in an Excel worksheet by cell values, font color, and cell color using the .NET Excel Library.
+title: Sorting in .NET Excel Library | Syncfusion
+description: Data sorting describes how the Syncfusion .NET Excel Library sorts worksheet data by cell values, font color, and cell color.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Sorting Data in Excel Worksheet
+# Data Sorting in .NET Excel Library
 
 A range of cells in Excel worksheet can be sorted based on data in one or more columns. Following types of sorting is supported in XlsIO:
 
@@ -14,7 +14,7 @@ A range of cells in Excel worksheet can be sorted based on data in one or more c
 * Font Color
 * Cell Color
 
-N> Currently XlsIO don’t support sorting based on cell icon, parsing and serialization of its sorting details.
+N> Currently XlsIO don't support sorting based on cell icon, parsing and serialization of its sorting details.
 
 ## Cell Values
 

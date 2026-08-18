@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict Editing in React DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the React Document Editor to securely manage document access and control user modifications.
+description: Restrict editing feature in React DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 control: Restrict editing 
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Restrict Editing in React Document Editor
+# Restrict Editing in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 

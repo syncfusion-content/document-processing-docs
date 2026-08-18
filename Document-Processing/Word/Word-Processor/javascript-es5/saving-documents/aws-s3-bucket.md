@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Save document to AWS S3 in JavaScript (ES5) Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in JavaScript (ES5) Document editor of Syncfusion Essential JS 2 and more details.
+title: Save Documents to AWS S3 in JavaScript DOCX Editor | Syncfusion
+description: Save documents to AWS S3 from JavaScript DOCX Editor, enabling cloud storage integration and secure document management.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3
+# Save Documents to AWS S3 in JavaScript DOCX Editor
 
-To save a document to AWS S3, you can follow the steps below
+To save a document to AWS S3, follow the steps below.
 
-**Step 1:** Create a Simple Document Editor sample in JavaScript
+**Step 1:** Create a simple [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in JavaScript (ES5).
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Javascript. This will give you a basic setup of the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -31,7 +31,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -58,7 +58,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToS3")]
-//Post action for save the document to AWS S3
+//Post action to save the document to AWS S3
 
 public void SaveToS3(IFormCollection data)
 {
@@ -97,7 +97,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -114,11 +114,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:** Modify the index file in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in AWS S3 Bucket.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in an AWS S3 Bucket.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

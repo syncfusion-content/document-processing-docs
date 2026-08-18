@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Link in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Link in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Hyperlink in ASP.NET MVC Spreadsheet | Syncfusion
+description: Create, edit, and manage hyperlinks in the Syncfusion ASP.NET MVC Spreadsheet for quick navigation and references.
 platform: document-processing
 control: Link
 documentation: ug
 ---
 
 
-# Hyperlink in ASP.NET MVC Spreadsheet control
+# Hyperlink in ASP.NET MVC Spreadsheet
 
 Hyperlinks allow users to navigate to web pages, cell references within the current worksheet, or cells in other worksheets. Use the [`allowHyperlink`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowHyperlink) property to enable or disable hyperlink functionality in the Spreadsheet.
 
-N> * The default value of the `allowHyperlink` property is `true`.
+N> The default value of the `allowHyperlink` property is `true`.
 
 ## Insert Link
 

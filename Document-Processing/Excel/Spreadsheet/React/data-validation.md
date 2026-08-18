@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Data validation in EJ2 React Spreadsheet control | Syncfusion
-description: Learn here all about Data validation in Syncfusion EJ2 React Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Data Validation in React Spreadsheet | Syncfusion
+description: Learn about data validation in the Syncfusion React Spreadsheet component, including validation rules and input restrictions.
 platform: document-processing
 control: Data validation
 documentation: ug
 ---
 
-# Data validation in React Spreadsheet component
+# Data Validation in React Spreadsheet
 
 Data validation restricts users from entering invalid data. Use the [`allowDataValidation`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
 
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ## Apply Validation
 

@@ -1,12 +1,12 @@
 ---
-title: Chart Data Labels | Excel library | Syncfusion
-description: In this section, you can learn about chart data labels in an Excel document with the .NET Excel Library through clear explanations and practical examples.
+title: Chart Data Labels in .NET Excel Library | Syncfusion
+description: Chart data labels describes how the Syncfusion .NET Excel Library displays and formats data labels in Excel charts.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Data Labels in an Excel document
+# Chart Data Labels in .NET Excel Library
 
 Data Labels on a chart make it easier to understand the chart. They show important information about the lines or points on the chart. Using XlsIO, you can **customize the data labels**.
 

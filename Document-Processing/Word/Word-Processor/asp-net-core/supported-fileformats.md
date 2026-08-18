@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported File Formats in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn more about the supported file formats in Syncfusion® ASP.NET Core DOCX Editor (Document Editor) for opening and exporting documents.
+description: Supported file formats in ASP.NET Core DOCX Editor allow importing and exporting documents across multiple file formats.
 control: Supported File Formats
 platform: document-processing
 documentation: ug
@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in ASP.NET Core DOCX Editor
 
-[ASP.NET Core Doccx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
 
-## Supported File Formats 
+## Supported file formats
 
 The following table describes supported formats and their conversion capabilities in the Document Editor.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Sort in React Spreadsheet component | Syncfusion
-description: Learn here all about Sort in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sorting in React Spreadsheet | Syncfusion
+description: Learn about sorting in the Syncfusion React Spreadsheet component, including ascending, descending, and custom sorting options.
 control: Sort 
 platform: document-processing
 documentation: ug
 ---
 
-# Sort in React Spreadsheet component
+# Sort in React Spreadsheet
 
 Sorting helps arrange the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 
-> * The default value for `allowSorting` property is `true`.
+> The default value for `allowSorting` property is `true`.
 
 By default, the `sort` module is injected internally into Spreadsheet to perform sorting.
 
@@ -54,7 +54,7 @@ The following code example demonstrates the `sort` functionality in the Spreadsh
 
 You can specify whether the selected range of cells contains header. To specify, you need to set the [`containsHeader`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#containsheader) property to `true` and pass it as `sortOption` arguments of the sort method.
 
-> * If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
+> If the `containsHeader` property is not set and active cell column’s first cell value type is differed from the second cell value type, the first row data in the range are marked as column headers.
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
@@ -74,7 +74,7 @@ By default, sorting in the Spreadsheet is **case insensitive**. To perform sorti
 
 * Case sensitive sorting applies only to cells containing alphabets.
 * In ascending order with case sensitivity enabled, cells with lowercase text appear above cells with uppercase text.  
-> * The default value for the `caseSensitive` property is `false`.
+> The default value for the `caseSensitive` property is `false`.
 
 You can also enable or disable this property using `beforeSort` event arguments,
 
@@ -93,7 +93,7 @@ When you want to perform sorting on multiple columns, it can be done by any of t
 * Select the `Custom sort…` menu item from the Ribbon toolbar item or context menu item.
 * Use the `sort` method programmatically by providing sort criteria.
 
-> * The current sorting functionality supports sorting based on cell values only.
+> The current sorting functionality supports sorting based on cell values only.
 
 ### Custom Sort Dialog
 

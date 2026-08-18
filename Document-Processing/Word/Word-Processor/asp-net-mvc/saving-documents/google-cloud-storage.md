@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Save to Google Cloud in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Cloud Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Google Cloud Storage in ASP.NET MVC DOCX Editor | Syncfusion
+description: Learn how to save a document to Google Cloud Storage in the Syncfusion ASP.NET MVC Document Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage in ASP.NET MVC
+# Save Documents to Google Cloud Storage in ASP.NET MVC DOCX Editor
 
-To save a document to Google Cloud Storage, you can follow the steps below
+To save a document to Google Cloud Storage, follow these steps:
 
 
 **Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
 
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
@@ -30,10 +30,10 @@ using Google.Cloud.Storage.V1;
 using Google.Apis.Auth.OAuth2;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
-// Private readonly object _storageClient
+// Storage client used to interact with Google Cloud Storage.
 private readonly StorageClient _storageClient;
 
 private IConfiguration _configuration;
@@ -51,7 +51,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
   // Load the service account credentials from the key file.
   var credentials = GoogleCredential.FromFile(keyFilePath);
 
-  // Create a storage client with Application Default Credentials
+  // Create a storage client using the service account credentials
   _storageClient = StorageClient.Create(credentials);
 
    _configuration = configuration;
@@ -60,14 +60,14 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleCloud()` method to save the downloaded document to Google Cloud Storage bucket
+* Create the `SaveToGoogleCloud()` method to save the uploaded document to a Google Cloud Storage bucket.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToGoogleCloud")]
-//Post action for downloading the document
+// Post action for uploading the document to Google Cloud Storage
 public void SaveToGoogleCloud(IFormCollection data)
 {
    if (data.Files.Count == 0)
@@ -101,7 +101,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project, and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -120,9 +120,9 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:** Modify the Index.cshtml File in the Document Editor Sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Cloud Storage.
+On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in Google Cloud Storage.
 
 
 {% tabs %}

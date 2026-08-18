@@ -1,21 +1,20 @@
 ---
 layout: post
-title: Save document to One Drive Document editor | Syncfusion
-description:  Learn about how to Save document to One Drive in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save Documents to OneDrive in ASP.NET Core DOCX Editor | Syncfusion
+description: Save documents to OneDrive from ASP.NET Core DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to One Drive in ASP.NET Core
+# Save Documents to OneDrive in ASP.NET Core DOCX Editor
 
-To save a document to One Drive, you can follow the steps below
+To save a document to OneDrive, follow these steps:
 
-**Step 1:** Create the Microsoft graph API.
+**Step 1:** Create the Microsoft Graph API.
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
-
+Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow the steps provided in the [Microsoft Graph training](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
@@ -35,7 +34,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields, update the constructor parameters, and assign the configuration values to the corresponding fields:
 
 ```csharp
 private IConfiguration _configuration;
@@ -127,7 +126,7 @@ private string GetValue(IFormCollection data, string key)
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 
@@ -137,7 +136,7 @@ N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in One Drive.
+On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in OneDrive.
 
 
 {% tabs %}

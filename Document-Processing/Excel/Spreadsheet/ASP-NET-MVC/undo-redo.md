@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Undo Redo in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about Undo Redo in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Undo and Redo in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to revert and restore spreadsheet actions using undo and redo functionality in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Undo Redo
 documentation: ug
 ---
 
 
-# Undo and Redo in ASP.NET MVC Spreadsheet control
+# Undo and Redo in ASP.NET MVC Spreadsheet
 
 The `Undo` option reverses the last action performed in the Spreadsheet. The `Redo` option reapplies the most recently undone action. Use the [`allowUndoRedo`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowUndoRedo) property to enable or disable undo and redo functionality in the Spreadsheet.
 
-N> * The default value of the `allowUndoRedo` property is `true`.
+N> The default value of the `allowUndoRedo` property is `true`.
 
 By default, the `UndoRedo` module is injected internally into the Spreadsheet to perform undo and redo operations.
 

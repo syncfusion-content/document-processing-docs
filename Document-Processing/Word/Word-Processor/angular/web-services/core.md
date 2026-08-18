@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Core in Angular Document editor component | Syncfusion
-description: Learn here all about Core in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: ASP.NET Core Web Service in Angular DOCX Editor | Syncfusion
+description: Configure ASP.NET Core web services in the Angular DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 platform: document-processing
 control: Core 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in Angular Document editor component
+# ASP.NET Core Web Service in  Angular DOCX Editor
 
-DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
+DocumentEditor depends on server-side interactions for the operations listed below, which can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 
 * Import Word Document
 * Paste with formatting
@@ -18,15 +18,15 @@ DocumentEditor depends on server side interaction for below listed operations ca
 * Spell Check
 * Save as file formats other than SFDT and DOCX
 
->Note: Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it in server on the go. You can also create own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer this link.[Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides a predefined [Word Processor server docker image](https://hub.docker.com/r/syncfusion/word-processor-server) targeting ASP.NET Core 2.1 framework. You can directly pull this docker image and deploy it on a server on the go. You can also create your own docker image by customizing the existing [docker project from GitHub](https://github.com/SyncfusionExamples/Word-Processor-Server-Docker). To know more, refer to this link: [Word Processor Server Docker Image Overview](../server-deployment/word-processor-server-docker-image-overview)
 
 This section explains how to create the service for DocumentEditor in ASP.NET Core.
 
-## Importing Word Document
+## Importing Word documents
 
-As the Document editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-The following example code illustrates how to write a Web API for importing Word documents into Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -52,13 +52,13 @@ The following example code illustrates how to write a Web API for importing Word
     }
 ```
 
-### Import document with TIFF, EMF and WMF images
+### Import a document with TIFF, EMF, and WMF images
 
-The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `MetafileStream` property, and you can get the `IsMetafile` boolean value to determine whether the image is a metafile image (WMF, EMF) or a TIFF format image. In the example below, the TIFF is converted to a raster image in the `ConvertTiffToRasterImage()` method using [BitMiracle.LibTiff.NET](https://www.nuget.org/packages/BitMiracle.LibTiff.NET).
 
-The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
+The following example code illustrates how to use the `MetafileImageParsed` event for creating a fallback raster image for a metafile present in a Word document.
 
 ```c#
     using SkiaSharp;
@@ -216,9 +216,9 @@ The following example code illustrates how to write a Web API for paste with for
 
 ## Restrict editing
 
-This Web API generates hash from the specified password and salt value which is required for restrict editing functionality of Document Editor component.
+This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the Document Editor component.
 
-The following example code illustrates how to write a Web API for restrict editing.
+The following example code illustrates how to write a Web API to restrict editing.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -243,11 +243,11 @@ The following example code illustrates how to write a Web API for restrict editi
 
 ## Spell Check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor client-side script requires this Web API to show error words and list suggestions in context menu. This Web API returns the json type of spell-checked word which contains details about error words if any and suggestions.
+Document Editor supports spell checking for input text. It identifies misspelled words and provides suggestions through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and suggestions. This Web API returns a JSON response containing details about misspelled words and their suggestions.
 
 To know more about configure spell check, please check this [link](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices).
 
-In startup.cs file, you can configure the spell check files like below:
+In the `Startup.cs` file, you can configure the spell check files as shown below:
 
 ```csharp
     public Startup(IConfiguration configuration, IHostingEnvironment env)
@@ -283,13 +283,13 @@ In startup.cs file, you can configure the spell check files like below:
     }
 ```
 
-Document editor provides options to spell check word by word and spellcheck page by page when loading the documents.
+Document Editor provides options to spell check word by word and spellcheck page by page when loading the documents.
 
 ### Spell check word by word
 
-This Web API performs the spell check word by word and return the json which contains information about error words and suggestions if any. By default, spell check word by word is performed in Document editor when enabling spell check in client-side.
+This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
 
-The following example code illustrates how to write a Web API for spell check word by word.
+The following example code illustrates how to write a Web API for word-by-word spell checking.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -322,9 +322,9 @@ The following example code illustrates how to write a Web API for spell check wo
 
 ### Spell check page by page
 
-This Web API performs the spell check page by page and return the json which contains information about error words and suggestions if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.
+This Web API performs spell checking page by page and returns a JSON response containing information about error words and suggestions, if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) on the client side, you can perform page-by-page spell checking when loading documents.
 
-The following example code illustrates how to write a Web API for spell check page by page.
+The following example code illustrates how to write a Web API for page-by-page spell checking.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -357,13 +357,13 @@ The following example code illustrates how to write a Web API for spell check pa
 
 ## Save as file formats other than SFDT and DOCX
 
-You can configure this API, if you want to save the document in file format other than DOCX and SFDT using server-side. You can save the document in following ways:
+You can configure this API if you want to save the document in a file format other than DOCX and SFDT on the server side. You can save the document in the following ways:
 
-### Save the document in database or file server
+### Save the document in a database or file server
 
-This Web API saves the document in the server machine. You can customize this API to save the document into databases or file servers.
+This Web API saves the document on the server. You can customize this API to save the document into databases or file servers.
 
-The following example code illustrates how to write a Web API for save document in server-side.
+The following example code illustrates how to write a Web API to save a document on the server side.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -379,7 +379,7 @@ The following example code illustrates how to write a Web API for save document 
             name = "Document1.doc";
         }
         WDocument document = WordDocument.Save(data.Content);
-        // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
+        // Saves the document to the server file system. You can customize this to save into databases or file servers based on your requirements.
         FileStream fileStream = new FileStream(name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
         document.Save(fileStream, GetWFormatType(format));
         document.Close();
@@ -395,9 +395,9 @@ The following example code illustrates how to write a Web API for save document 
 
 ### Save as other file formats by passing SFDT string
 
-This Web API converts the SFDT string to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the SFDT string to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export sfdt.
+The following example code illustrates how to write a Web API to export SFDT.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -467,9 +467,9 @@ The following example code illustrates how to write a Web API for export sfdt.
 
 ### Save as other file formats by passing DOCX file
 
-This Web API converts the DOCX document to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the DOCX document to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export.
+The following example code illustrates how to write a Web API to export.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -513,4 +513,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices).
+N> Please refer to the [ASP.NET Core Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices).

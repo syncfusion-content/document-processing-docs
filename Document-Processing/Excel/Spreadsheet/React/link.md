@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Link in React Spreadsheet component | Syncfusion
-description: Learn here all about Link in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Hyperlink in React Spreadsheet | Syncfusion
+description: Learn about hyperlinks in the Syncfusion React Spreadsheet component, including inserting, editing, and managing links.
 control: Link 
 platform: document-processing
 documentation: ug
 ---
-# Link in React Spreadsheet component
+# Hyperlink in React Spreadsheet
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 
-> * The default value for `allowHyperlink` property is `true`.
+> The default value for `allowHyperlink` property is `true`.
 
 ## Insert Link
 

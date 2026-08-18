@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Services using ASP.NET MVC in React Spreadsheet | Syncfusion
-description: Learn here all about web services using ASP.NET MVC in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about configuring ASP.NET MVC web services for open and save operations in React Spreadsheet component and more details.
 control: Web Services 
 platform: document-processing
 documentation: ug
@@ -17,7 +17,7 @@ This guide explains how to set up and connect local web services for open and sa
 
 Follow the official Microsoft tutorial to create an ASP.NET MVC 5 project:
 
-[Getting Started with ASP.NET MVC 5 | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
+[Getting Started with ASP.NET MVC 5 (Microsoft Learn)](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)
 
 ### Install Required Dependencies
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Insert Charts in React Spreadsheet component | Syncfusion
-description: Learn here how to insert charts in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Insert Charts in React Spreadsheet | Syncfusion
+description: Learn about inserting charts in the Syncfusion React Spreadsheet component to visualize worksheet data effectively.
 control: Spreadsheet
 platform: document-processing
 documentation: ug

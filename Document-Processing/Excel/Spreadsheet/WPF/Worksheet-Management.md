@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Worksheet Management in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Worksheet Management support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Manage worksheets in the WPF Spreadsheet control by adding, removing, renaming, moving, hiding, and organizing worksheet tabs.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Worksheet Management in WPF Spreadsheet (SfSpreadsheet)
+# Worksheet Management in WPF Spreadsheet
 This section explains about the operations that are performed with the worksheet.
 
 ## Insert and Delete worksheet

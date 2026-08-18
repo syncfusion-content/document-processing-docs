@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Bookmark in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Bookmarks in JavaScript DOCX Editor | Syncfusion
+description: The bookmark feature in JavaScript DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
 control: Bookmark 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in JavaScript (ES5) Document editor control
+# Bookmarks in JavaScript DOCX Editor
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
@@ -19,72 +19,76 @@ Bookmark is a powerful tool that helps you to mark a place in the document to fi
 
 ## Add bookmark
 
-Using [`insertBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#insertbookmark) method, Bookmark can be added to the selected text.
+Using [`insertBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertbookmark) method, Bookmark can be added to the selected text.
 
-```c#
-container.documentEditor.editor.insertBookmark("Bookmark1");
+```javascript
+this.container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
 ## Select Bookmark
 
-You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
+You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
 
-```c#
-container.documentEditor.selection.selectBookmark("Bookmark1", true);
+```javascript
+this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
 ```
 
->Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
+N> Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
 
 ## Delete Bookmark
 
-You can delete bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#deletebookmark) method as shown in the following code snippet.
+You can delete a bookmark in the document using [`deleteBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#deletebookmark) method as shown in the following code snippet.
 
-```c#
-container.documentEditor.editor.deleteBookmark("Bookmark1");
+```javascript
+this.container.documentEditor.editor.deleteBookmark("Bookmark1");
 ```
 
 ## Get Bookmark from document
 
-You can get all the bookmarks in the document using [`getBookmarks`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#getbookmarks) method as shown in the following code snippet.
+You can get all the bookmarks in the document using the [`getBookmarks`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#getbookmarks) method on the `DocumentEditor` instance as shown in the following code snippet.
 
-```c#
-container.documentEditor.getBookmarks(false);
+```javascript
+this.container.documentEditor.getBookmarks(false);
 ```
 
->Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+N> The boolean parameter denotes whether to include hidden bookmarks. If false, hidden bookmarks are ignored.
 
 ## Get Bookmark from selection
 
-You can get bookmarks in current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection/#getbookmarks) method as shown in the following code snippet.
+You can get bookmarks in the current selection in the document using [`getBookmarks`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#getbookmarks) method on the `Selection` instance as shown in the following code snippet.
 
-```c#
-container.documentEditor.selection.getBookmarks(false);
-```
-
-## Replace bookmark content
-
-You can replace bookmark content without removing the bookmark start and end for backtracking the bookmark content.
-
-```c#
-container.documentEditor.selection.selectBookmark("Bookmark1", true);
-container.documentEditor.editor.insertText('Hello World')
-```
-
-You can replace content by removing the bookmark start and end, thus the bookmark content can't be tracked in future.
-
-```c#
-container.documentEditor.selection.selectBookmark("Bookmark1");
-container.documentEditor.editor.insertText('Hello World')
+```javascript
+this.container.documentEditor.selection.getBookmarks(false);
 ```
 
 ## Show or Hide bookmark
 
-You can show or hide the show square brackets around bookmarked items in Document editor component.
+You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
 
-The following example code illustrates how to show or hide square brackets around bookmarked items.
+The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
-```ts
-container.documentEditorSettings.showBookmarks = true;
+```javascript
+this.container.documentEditor.documentEditorSettings.showBookmarks = true;
+```
+
+## Replace bookmark content
+
+### Preserve the bookmark while replacing content
+
+When you pass `true` for the `excludeStartEnd` parameter in `selectBookmark`, the bookmark start and end markers are preserved. The subsequent `insertText` call replaces only the content between the markers, so the bookmark remains intact and can be tracked later.
+
+```javascript
+this.container.documentEditor.selection.selectBookmark("Bookmark1", true);
+this.container.documentEditor.editor.insertText('Hello World');
+```
+
+### Remove the bookmark while replacing content
+
+When you omit the `excludeStartEnd` parameter (or pass `false`), the bookmark start and end markers are included in the selection. The subsequent `insertText` call replaces both the content and the markers, so the bookmark is removed and cannot be tracked later.
+
+```javascript
+this.container.documentEditor.selection.selectBookmark("Bookmark1");
+this.container.documentEditor.editor.insertText('Hello World');
 ```
 
 ## Bookmark Dialog
@@ -105,7 +109,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage bookmarks in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 

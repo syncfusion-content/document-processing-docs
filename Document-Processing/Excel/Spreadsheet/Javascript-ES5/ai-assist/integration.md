@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in JavaScript Spreadsheet control | Syncfusion
-description: Learn how to set up and configure AI Assist in the Syncfusion JavaScript Spreadsheet control for AI-powered features.
+title: AI Assist Integration in JavaScript Spreadsheet  | Syncfusion
+description: AI Assist integration in JavaScript Spreadsheet explains AI-powered features through configuration and seamless service integration.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in JavaScript Spreadsheet control
+# AI Assist Integration in JavaScript Spreadsheet 
 
 ## Integration
 

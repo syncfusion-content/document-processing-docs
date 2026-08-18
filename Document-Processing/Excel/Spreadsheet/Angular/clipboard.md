@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Clipboard in Angular Spreadsheet | Syncfusion
+description: Clipboard in Angular Spreadsheet enables copying, cutting, and pasting cell data efficiently while preserving formatting and content.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
-# Clipboard in Angular Spreadsheet component
+# Clipboard in Angular Spreadsheet 
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enableclipboard) property in Spreadsheet.
 
@@ -23,7 +23,7 @@ Cut can be done in one of the following ways.
 
 * Using Cut button in the Ribbon’s HOME tab to perform cut operation.
 * Using Cut option in the Context Menu.
-* Using `Ctrl + X` | `Command + X` keyboard shortcut.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
 * Using the [`cut`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cut) method.
 
 ## Copy
@@ -36,7 +36,7 @@ Copy can be done in one of the following ways.
 
 * Using Copy button in the Ribbon’s HOME tab to perform copy operation.
 * Using Copy option in the Context Menu.
-* Using `Ctrl + C` | `Command + C` keyboard shortcut.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
 * Using the [`copy`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#copy) method.
 
 ## Paste
@@ -54,10 +54,10 @@ Paste can be done in one of the following ways.
 
 * Using Paste button in the Ribbon’s HOME tab to perform paste operation.
 * Using Paste option in the Context Menu.
-* Using `Ctrl + V` | `Command + V` keyboard shortcut.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
 * Using the [`paste`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#paste) method.
 
-> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
+> If you use the Keyboard shortcut key for cut (`Ctrl + X`) or copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile responsiveness in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Mobile responsiveness in Angular Spreadsheet | Syncfusion
+description: Mobile responsiveness in Angular Spreadsheet adapts layouts and interactions for touch devices, ensuring a seamless user experience across screens.
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
 ---
 
-# Mobile responsiveness in Angular Spreadsheet component
+# Mobile responsiveness in Angular Spreadsheet 
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 

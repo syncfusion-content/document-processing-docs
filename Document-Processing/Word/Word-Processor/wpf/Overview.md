@@ -1,12 +1,12 @@
 ---
-title: About WPF RichTextBox control | Syncfusion
-description: Learn here all about introduction of Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: About Syncfusion WPF DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio WPF DOCX Editor control and more details.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
-# Overview of the Syncfusion<sup>&reg;</sup> WPF RichTextBox
+# About Syncfusion WPF DOCX Editor Control
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
 

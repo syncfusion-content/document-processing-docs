@@ -1,11 +1,11 @@
 ---
-title: Required NuGet Packages for PowerPoint Library | Syncfusion
-description: This section illustrates the NuGet packages required to use Syncfusion PowerPoint Library (Essential Presentation) in various platforms and frameworks
+title: Required NuGet Packages in .NET PowerPoint Presentation | Syncfusion
+description: Learn about the NuGet packages required to use the Syncfusion® .NET PowerPoint Presentation library across platforms and frameworks.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# NuGet Packages Required for PowerPoint Library
+# Required NuGet Packages in .NET PowerPoint Presentation
 
 To work with PowerPoint Presentations, install the following NuGet packages in your application:
 
@@ -482,7 +482,7 @@ To use NuGet package in your project, refer to the NuGet package [Installation](
 
 The PowerPoint Presentation NuGet packages can be installed and uninstalled using the Package Manager Console. In Visual Studio, select **Tools > NuGet Package Manager > Package Manager Console** and execute the following commands in respective platforms.
 
-N> The Syncfusion<sup>&reg;</sup> components are available in nuget.org
+N> The Syncfusion<sup>&reg;</sup> components are available in [NuGet.org](https://www.nuget.org/)
 
 <table>
 <tr>

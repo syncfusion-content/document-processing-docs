@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Filter in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filtering in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to filter spreadsheet data in the Syncfusion ASP.NET MVC Spreadsheet for improved analysis and data organization.
 platform: document-processing
 control: Filter
 documentation: ug
 ---
 
 
-# Filtering in ASP.NET MVC Spreadsheet control
+# Filtering in ASP.NET MVC Spreadsheet
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 
@@ -32,8 +32,8 @@ N> * Press `Alt + Up/Down` to open the filter dialog.
 
 Use the `applyFilter()` method to apply a filter based on the specified predicate and cell range. The predicate defines the filter condition, and the range specifies the cells to which the filter is applied.
 
-N> * The `beforeFilter` event will be triggered before filtering the specified range.
-<br/> * The `filterComplete` event will be triggered after the filter action is completed successfully.
+>* The `beforeFilter` event will be triggered before filtering the specified range.
+>* The `filterComplete` event will be triggered after the filter action is completed successfully.
 
 The following code example shows `filter` functionality in the Spreadsheet control.
 

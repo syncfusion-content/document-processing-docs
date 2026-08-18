@@ -1,12 +1,12 @@
 ---
-title: Working with Drawing Objects | Syncfusion
-description: This section explains about drawing objects in Essential XlsIO. XlsIO provides Option button support only for XLSX format.
+title: Drawing Objects in .NET Excel Library | Syncfusion
+description: Drawing objects section describes how Excel Library adds worksheet objects, including option buttons for the XLSX format.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Drawing Objects 
+# Drawing Objects in .NET Excel Library
 
 ## Form Controls 
 
@@ -128,7 +128,7 @@ A complete working example to add a text box in C# is available on [this GitHub 
 
 **Lock Text in Text Box**
  
-Set the **LockText** property of <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBox.html">ITextBox</a> to prevent editing the text inside a text box. This setting takes effect only when the worksheet is protected.
+Set the **LockText** property of <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ITextBox.html" aria-label="Class reference documentation link">ITextBox</a> to prevent editing the text inside a text box. This setting takes effect only when the worksheet is protected.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable or disable text selection in Vue PDF Viewer | Syncfusion
-description: Learn how to enable or disable text selection in the Vue PDF Viewer using the enableTextSelection property.
+title: How to Enable or Disable Text Selection in Vue PDF Viewer | Syncfusion
+description: Enable or disable text selection in the Vue PDF Viewer using the enableTextSelection property to control how users interact with PDF text.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable text selection in Vue PDF Viewer
+# How to Enable or Disable Text Selection in Vue PDF Viewer
 
 This guide explains how to enable or disable text selection in the Syncfusion Vue PDF Viewer using both initialization-time settings and runtime toggling.
 
@@ -232,5 +232,5 @@ If text selection remains active, ensure that the [`TextSelection`](https://ej2.
 
 ## See also
 
-- [Text Selection API reference](../text-selection/reference)
-- [Vue PDF Viewer events](../events)
+- [Text Selection API reference](../text-selection/text-selection-api-events)
+- [Vue PDF Viewer events](../event)

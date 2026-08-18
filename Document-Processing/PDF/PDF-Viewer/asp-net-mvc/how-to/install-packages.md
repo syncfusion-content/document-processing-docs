@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Install packages for ASP.NET MVC PDF Viewer
-description: Learn how to install the Syncfusion ASP.NET MVC PDF Viewer NuGet package and restore the required dependencies.
+title: How to Install Packages for the PDF Viewer in ASP.NET | Syncfusion
+description: Install the NuGet packages required to use the ASP.NET MVC PDF Viewer control in your Visual Studio project with the correct dependencies.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Install EJ2 PDF Viewer packages automatically
+# How to Install Packages for the PDF Viewer in ASP.NET MVC PDF Viewer
 
 Here’s a rephrased version of your instructions for installing the Syncfusion ASP.NET MVC PDF Viewer package:
 
 ---
 
-### Installing Syncfusion PDF Viewer in an ASP.NET MVC Project
+## Installing Syncfusion PDF Viewer in an ASP.NET MVC Project
 
 To integrate the Syncfusion PDF Viewer into your ASP.NET MVC application, follow these steps:
 
@@ -37,4 +36,4 @@ When you build the project or run `dotnet restore`, NuGet will automatically dow
 3. **Register Your Syncfusion License**  
 
 Before publishing your application, make sure to register your Syncfusion license key. This is required for the components to work properly.  
-Refer to the official Syncfusion licensing guide for instructions on how to obtain and register your license key.
+Refer to the [Syncfusion licensing guide](https://help.syncfusion.com/document-processing/licensing/how-to-generate) for instructions on how to obtain and register your license key.

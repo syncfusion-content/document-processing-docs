@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Template in React Spreadsheet component | Syncfusion
-description: Learn here all about Template in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Template in React Spreadsheet | Syncfusion
+description: Learn about cell templates in the Syncfusion React Spreadsheet component, including custom content and cell rendering options.
 control: Template 
 platform: document-processing
 documentation: ug
 ---
 
-# Template in React Spreadsheet component
+# Cell Template in React Spreadsheet
 
 Cell templates allow you to embed HTML elements and Syncfusion<sup style="font-size:70%">&reg;</sup> components directly into spreadsheet cells. This enables rich, interactive data entry experiences beyond standard cell values.
 

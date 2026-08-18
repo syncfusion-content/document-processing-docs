@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Search in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn text search in the Syncfusion ASP.NET Core PDF Viewer component, including features, programmatic search, and more.
+description: Learn about the text search in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -41,7 +41,7 @@ Text search can be enabled or disabled using the `enableTextSearch` property. Th
 {% endhighlight %}
 {% endtabs %}
 
-![Text search in PDF Viewer](../images/search.png)
+![Text search in PDF Viewer](./images/search.png)
 
 ## Text search features
 
@@ -81,7 +81,7 @@ The **Match Any Word** option splits the entered text into individual words base
 
 While the PDF Viewer's toolbar provides a user-friendly search interface, you can also trigger and customize searches programmatically using the `textSearch.searchText()` method.
 
-#### Using `searchText`
+### Using `searchText`
 
 The `searchText` method allows you to initiate a search with specific criteria.
 
@@ -104,7 +104,7 @@ To perform a case-sensitive search, set the `isMatchCase` parameter to `true`. T
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
@@ -150,7 +150,7 @@ You can search for complete words only by setting the `isMatchWholeWord` paramet
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
@@ -218,14 +218,14 @@ Searches for the specified text and returns bounding rectangles for all occurren
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -245,7 +245,7 @@ Searches for the specified text and returns bounding rectangles for all occurren
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -267,14 +267,14 @@ Searches for the specified text and returns bounding rectangles only for occurre
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -294,7 +294,7 @@ Searches for the specified text and returns bounding rectangles only for occurre
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -316,14 +316,14 @@ Searches for an array of text strings and returns bounding rectangles for all oc
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -343,7 +343,7 @@ Searches for an array of text strings and returns bounding rectangles for all oc
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -365,14 +365,14 @@ Searches for an array of text strings and returns bounding rectangles only for o
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 
@@ -392,7 +392,7 @@ Searches for an array of text strings and returns bounding rectangles only for o
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 
@@ -403,7 +403,7 @@ Searches for an array of text strings and returns bounding rectangles only for o
 
 ## Text search events
 
-The PDF Viewer provides events that allow you to monitor and respond to different stages of the text search lifecycle. Use these events to customize search behavior, validate queries, track search analytics, or implement conditional logic based on search results.
+The PDF Viewer provides events that allow you to monitor and respond to different stages of the text search life cycle. Use these events to customize search behavior, validate queries, track search analytics, or implement conditional logic based on search results.
 
 ### Text search start event
 
@@ -424,7 +424,7 @@ The [`textSearchStart`]((https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchStart="textSearchStarted">
     </ejs-pdfviewer>
 </div>
@@ -444,7 +444,7 @@ The [`textSearchStart`]((https://help.syncfusion.com/cr/aspnetcore-js2/syncfusio
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchStart="textSearchStarted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
@@ -480,7 +480,7 @@ The [`textSearchHighlight`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfu
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchHighlight="textSearchHighlighted">
     </ejs-pdfviewer>
 </div>
@@ -499,7 +499,7 @@ The [`textSearchHighlight`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfu
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchHighlight="textSearchHighlighted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>
@@ -534,7 +534,7 @@ The [`textSearchComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfus
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchComplete="textSearchCompleted">
     </ejs-pdfviewer>
 </div>
@@ -553,7 +553,7 @@ The [`textSearchComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfus
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib""
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"
                    textSearchComplete="textSearchCompleted"
                    serviceUrl="/api/PdfViewer">
     </ejs-pdfviewer>

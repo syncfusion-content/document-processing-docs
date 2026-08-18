@@ -1,30 +1,28 @@
 ---
 layout: post
-title: Save document to Google Drive in JavaScript (ES6) Document editor control | Syncfusion
-description:  Learn about how to Save document to Google Drive in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Google Drive in TypeScript DOCX Editor | Syncfusion
+description: Save documents to Google Drive from TypeScript DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
-control: Save document to Google Drive
+control: Save a Document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive
+# Save Documents to Google Drive in TypeScript DOCX Editor
 
-To save a document to Google Drive, you can follow the steps below
+To save a document to Google Drive, you can follow the steps below.
 
-**Step 1:** Set up Google Drive API
+**Step 1:** Set up the Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
-
- 
-
-**Step 2:** Create a Simple Document Editor sample in TypeScript
-
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the Document Editor component.
-
-**Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, see the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
  
+
+**Step 2:** Create a simple Document Editor sample in TypeScript
+
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in TypeScript. This will give you a basic setup of the Document Editor component.
+
+**Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
@@ -38,14 +36,14 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
 public readonly string folderId;
 public readonly string applicationName;
 public readonly string credentialPath;
-private static readonly string[] Scopes = { DriveService.Scope.DriveFile, DriveService.Scope.DriveReadonly};
+private static readonly string[] Scopes = { DriveService.Scope.DriveFile, DriveService.Scope.DriveReadonly };
 
 public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryCache cache, IConfiguration configuration)
 {
@@ -58,7 +56,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive bucket
+* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive.
 
 ```csharp
 [AcceptVerbs("Post")]
@@ -67,7 +65,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [Route("SaveToGoogleDrive")]
 //Post action for downloading the document
 
-public void SaveToGoogleDrive(IFormCollection data)
+public async void SaveToGoogleDrive(IFormCollection data)
 {
    if (data.Files.Count == 0)
     return;
@@ -79,11 +77,11 @@ public void SaveToGoogleDrive(IFormCollection data)
           
   UserCredential credential;
 
-  using (var memStream = new FileStream(credentialPath, FileMode.Open, FileAccess.Read))
+  using (var fileStream = new FileStream(credentialPath, FileMode.Open, FileAccess.Read))
   {
     string credPath = "token.json";
     credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-    GoogleClientSecrets.Load(memStream).Secrets,
+    GoogleClientSecrets.Load(fileStream).Secrets,
     Scopes,
     "user",
      CancellationToken.None,
@@ -106,10 +104,9 @@ public void SaveToGoogleDrive(IFormCollection data)
   Stream stream = new MemoryStream();
   file.CopyTo(stream);
 
-  FilesResource.CreateMediaUpload request;
-  request = service.Files.Create(fileMetadata, stream, "application/pdf");
+  FilesResource.CreateMediaUpload request = service.Files.Create(fileMetadata, stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
   request.Fields = "id";
-  object value = await request.UploadAsync();
+  await request.UploadAsync();
 }
 
 private string GetValue(IFormCollection data, string key)
@@ -126,7 +123,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -138,25 +135,23 @@ private string GetValue(IFormCollection data, string key)
   },
   "AllowedHosts": "*",
   "FolderId": "Your Google Drive Folder ID",
-  "CredentialPath": "Your Path to the OAuth 2.0 Client IDs json file",
-  "ApplicationName": "Your Application name"
+  "CredentialPath": "Your Path to the OAuth 2.0 Client IDs JSON file",
+  "ApplicationName": "Your Application Name"
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> 1. Replace **Your Google Drive Folder ID**, **Your Application Name**, and **Your Path to the OAuth 2.0 Client IDs JSON file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
+N> 2. The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> 3. You must use a unique `Client_ID` from the JSON file to interface your application with the Google Drive API in order to save the document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+**Step 4:**  Modify the index file in the Document Editor sample
 
-N> You must use a unique `Client_ID` from json file to interface your application with the Google Drive API in order to save document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
-
-**Step 4:**  Modify the index File in the Document Editor sample
-
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and sent to server-side for saving in Google Drive.
+On the client side, export the document as a blob using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving to Google Drive.
 
  
 
 {% tabs %}
-{% highlight ts tabtitle="index.js" %}
+{% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/document-editor/javascript-es6/save-google-drive/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -164,4 +159,4 @@ In the client-side, to export the document into blob the document using [`saveAs
 {% endhighlight %}
 {% endtabs %}
 
-N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the previous code example.
+N> The **Google.Apis.Drive.v3** NuGet package must be installed in your application to use the preceding code example.

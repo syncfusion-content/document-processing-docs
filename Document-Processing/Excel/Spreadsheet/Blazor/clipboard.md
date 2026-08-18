@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Clipboard in Blazor Spreadsheet component | Syncfusion
-description: Explore clipboard operations in the Syncfusion Blazor Spreadsheet component, including cut, copy, and paste operations via UI and programmatic methods.
+title: Clipboard in Blazor Spreadsheet | Syncfusion
+description: Explore clipboard operations in the Syncfusion Blazor Spreadsheet, including cut, copy, and paste functionality.
 control: Spreadsheet
 documentation: ug
 ---
 
-# Clipboard in Blazor Spreadsheet component
+# Clipboard in Blazor Spreadsheet
 
 The Spreadsheet component supports clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be managed using the [EnableClipboard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property, which is set to **true** by default.
 
@@ -499,7 +499,7 @@ The available parameters in the [PasteCellAsync()](https://help.syncfusion.com/c
 | cellAddress | string (optional) | Specifies the target cell or range of cells for pasting clipboard content. Accepts either a single cell reference from a specific worksheet (for example, **"Sheet1!A1"**) or a range of cells (for example, **"Sheet2!A1:C5"**). A valid cell selection must exist before executing the paste operation. If no parameter is provided, the currently selected cell or range will be used as the paste destination. |
 
 {% tabs %}
-{% highlight razor  tabtitle="Index.razor" %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet

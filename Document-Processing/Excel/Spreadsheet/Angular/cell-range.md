@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Range in Angular Spreadsheet Component | Syncfusion
-description: Learn here all about cell range in Syncfusion Essential Angular Spreadsheet component, it's elements and more.
+title: Cell Range in Angular Spreadsheet | Syncfusion
+description: Cell range in Angular Spreadsheet enables selecting, accessing, and managing groups of cells efficiently for data entry and manipulation.
 platform: document-processing
 control: Cell range
 documentation: ug
 ---
 
-# Cell Range in Angular Spreadsheet Component
+# Cell Range in Angular Spreadsheet 
 
 A group of cells in a sheet is known as cell range.
 
@@ -86,7 +86,7 @@ The following features have some limitations in Merge:
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 

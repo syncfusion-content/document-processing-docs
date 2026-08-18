@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set default format in document editor in Vue Document editor component | Syncfusion
-description: Learn here all about Set default format in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Set Default Format in Vue DOCX Editor | Syncfusion
+description: Set default character, paragraph, and section formatting in Syncfusion® Vue DOCX Editor for consistent document styling across documents.
 control: Set default format in document editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set default format in document editor in Vue Document editor component
+# How to Set Default Format in Vue DOCX Editor
 
 You can set the default character format, paragraph format and section format in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
