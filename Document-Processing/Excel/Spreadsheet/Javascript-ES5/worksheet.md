@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Worksheet in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Worksheet in Javascript Spreadsheet | Syncfusion
+description: Worksheets in JavaScript Spreadsheet enable users to organize, manage, and work with multiple sheets within a single workbook.
 platform: document-processing
 control: Worksheet
 documentation: ug
 ---
 
-# Worksheet in EJ2 JavaScript Spreadsheet control
+# Worksheet in JavaScript Spreadsheet
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 

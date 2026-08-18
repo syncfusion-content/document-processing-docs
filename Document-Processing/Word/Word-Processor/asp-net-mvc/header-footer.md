@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header Footer in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Header Footer in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Headers and Footers in ASP.NET MVC DOCX Editor | Syncfusion
+description: Headers and footers in ASP.NET MVC DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: Header Footer
 documentation: ug
 ---
 
 
-# Headers and Footers in ASP.NET MVC Document Editor
+# Headers and Footers in ASP.NET MVC DOCX Editor
 
 The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)  supports headers and footers in its documents. Each section in the document can have the following types of headers and footers:
 

@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting tips for Mail Merge | DocIO | Syncfusion
-description: Learn how to troubleshoot Mail Merge issues in the .NET Word (DocIO) library, including common errors.
+title: Troubleshooting tips for Mail merge in .NET Word Library | Syncfusion
+description: This section illustrates common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Troubleshooting Mail Merge Issues in .NET Word Library
+# Troubleshooting tips for Mail merge in .NET Word Library
 
 ## Why is mail merge not working correctly in DocIO?
 

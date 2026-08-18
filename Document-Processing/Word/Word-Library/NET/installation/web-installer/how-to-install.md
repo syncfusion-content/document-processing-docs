@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> Word web installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install Syncfusion<sup>&reg;</sup> Word web installer after downloading from our Syncfusion<sup>&reg;</sup> website.
+title: How to install Syncfusion® Word web installer | Syncfusion
+description: Learn here about how to install Syncfusion® Word web installer after downloading from our Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Word web installer
+# How to install Syncfusion® Word web installer
 
 
 ## Overview

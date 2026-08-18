@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change Annotation Author Name in Syncfusion PDF Viewer
-description: Learn how to change the author name and related annotation settings using the annotationSettings API in the TypeScript PDF Viewer.
+title: How to Change the Annotation Author Name in JavaScript | Syncfusion
+description: Change the author name and related annotation settings in the JavaScript (ES6) PDF Viewer using the annotationSettings API and configuration options.
 platform: document-processing
 control: PDF Viewer
 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in TypeScript PDF Viewer
+# How to Change the Annotation Author Name in JavaScript (ES6) PDF
 
 The PDF Viewer allows customizing individual annotation settings through the [`annotationSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSettings) API, which exposes properties common to all annotations. See the annotationSettings API reference for full details.
 

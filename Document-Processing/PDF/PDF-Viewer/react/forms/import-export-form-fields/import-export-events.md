@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events in the React PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion React PDF Viewer component.
+title: Import Export Events in React PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the React PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Import and Export Events in React
+# Form Field Import and Export Events in React PDF Viewer
 
 Import and export events enable tracking and customization of the full life cycle of form data imported into or exported from the PDF Viewer.
 

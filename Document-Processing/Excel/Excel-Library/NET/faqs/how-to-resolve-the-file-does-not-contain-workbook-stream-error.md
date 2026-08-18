@@ -1,12 +1,12 @@
 ---
-title: Resolve the File does not contain workbook stream error | Syncfusion
-description: This page explains how to resolve the "File does not contain workbook stream" error in Syncfusion.XlsIO.Base.dll.
+title: How to Resolve Workbook Stream Errors in .NET Excel | Syncfusion
+description: Resolve the file does not contain workbook stream error when opening Excel files using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to resolve the “File does not contain workbook stream” error?
+# How to resolve workbook stream errors in .NET Excel Library
 
 XlsIO does not support files generated prior to 97-2003 version. Hence the exception "File does not contain workbook stream" occurs. This can be checked in prior with the below code snippet. 
 

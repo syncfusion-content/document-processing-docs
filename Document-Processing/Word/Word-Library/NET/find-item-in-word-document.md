@@ -1,12 +1,12 @@
 ---
-title: Find item in Word document in .NET Word library | Syncfusion
-description: Find an item in the Word document in C# using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies
+title: Find item in Word document in .NET Word | Syncfusion
+description: Find an item in the Word document in C# using Syncfusion® .NET Word library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Find item in Word document
+# Find item in Word document in .NET Word
 
 Just like you can search for a text in a Word document, you can also search for an item (like image, content control, textbox, and so on). The .NET Word (DocIO) library supports to find an item in Word document based on its properties. With this functionality, you can:
 

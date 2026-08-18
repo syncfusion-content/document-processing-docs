@@ -1,11 +1,11 @@
 ---
-title: HTML to PDF conversion in .NET PDF Library overview | Syncfusion
-description: Understand HTML-to-PDF conversion in the Blink rendering engine, by using various features like TOC, partial web page to PDF, and more.
+title: About HTML-to-PDF Conversion in .NET PDF Library | Syncfusion
+description: Learn about HTML-to-PDF conversion in Syncfusion .NET PDF Library using Blink rendering engine, including TOC support, partial page conversion, and more.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Converting HTML to PDF File
+# About HTML-to-PDF Conversion in .NET PDF Library
 
 The [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML files to PDF using C#. It uses popular rendering engines such as Blink (Google Chrome) and is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage.
 

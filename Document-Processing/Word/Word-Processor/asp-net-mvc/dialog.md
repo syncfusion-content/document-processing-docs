@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about dialog in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in ASP.NET MVC DOCX Editor | Syncfusion
+description: The dialogs in ASP.NET MVC DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
 control: Dialog
 documentation: ug
 ---
 
 
-# Dialog in ASP.NET MVC Document Editor Component
+# Dialogs in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor)provides dialog support for major operations such as inserting or editing a hyperlink, formatting text, paragraph, style, list, and table properties.
 

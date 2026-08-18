@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open default document in React DOCX Editor | Syncfusion
-description: Learn here all about Open default document in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open a Default Document in React DOCX Editor | Syncfusion
+description: Open a default document in Syncfusion® React DOCX Editor during initialization to provide predefined content and streamline document editing workflows.
 control: Open default document
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open default document in React Document Editor component
+# How to Open a Default Document in React DOCX Editor
 
 In this article, we are going to see how to open a default document when Document Editor & Document Editor Container are initialized.
 

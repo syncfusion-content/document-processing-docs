@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Security Advisories in JavaScript DOCX Editor | Syncfusion
-description: Learn here all about Security Advisories in Syncfusion  JavaScript (ES5)  Document editor control of Syncfusion Essential JS 2 and more.
+description: Security advisories in JavaScript DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 platform: document-processing
 control: Security advisories
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbars in ASP.NET MVC PDF Viewer | Syncfusion
-description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Syncfusion ASP.NET MVC PDF Viewer component.
+title: Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the ASP.NET MVC PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Toolbars in ASP.NET MVC PDF Viewer
+# Customize the Organize Pages Toolbar in ASP.NET MVC PDF Viewer
 
 The PDF Viewer includes a built-in, responsive toolbar that surfaces common PDF actions and provides entry points to feature-specific toolbars. It adapts across desktop, tablet, and mobile, and can be customized to show or hide items, reorder commands, add custom items, and handle toolbar events.
 

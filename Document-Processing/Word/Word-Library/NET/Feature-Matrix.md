@@ -1,12 +1,12 @@
 ---
-title: Feature Matrix in .NET Word Library | Syncfusion
-description: Learn about the supported features of the .NET Word Library (DocIO) for Word 97–2003, Word 2007–2016, and RTF formats.
+title: Feature Matrix in .NET Word | Syncfusion
+description: This section illustrates common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Feature Matrix in .NET Word Library
+# Feature Matrix in .NET Word
 
 Syncfusion® Essential® DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) that provides extensive support for creating, editing, formatting, reviewing, and converting Word documents across multiple formats, including Word 97–2003, Word 2007–2016, and RTF.
 

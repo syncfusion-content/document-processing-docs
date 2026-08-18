@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion ASP.NET Core PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Import annotations into the ASP.NET Core PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import annotations in ASP.NET Core PDF Viewer
+# Import Annotations in ASP.NET Core PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 

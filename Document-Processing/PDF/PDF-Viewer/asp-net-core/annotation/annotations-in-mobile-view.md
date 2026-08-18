@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Master touch-based annotation workflows in mobile PDF Viewer. Add various types of annotations on mobile devices with step-by-step guides.
+title: Annotations in Mobile View in ASP.NET Core PDF Viewer | Syncfusion
+description: Create, edit, and manage annotations in the ASP.NET Core PDF Viewer when running on mobile devices with the touch-optimized annotation UI.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Mobile Annotations in ASP.NET Core PDF Viewer
+# Annotations in Mobile View in ASP.NET Core PDF Viewer
 
 Comprehensive guide for adding and managing annotations using the touch-optimized mobile interface. The PDF Viewer provides intuitive annotation tools designed specifically for mobile devices with streamlined workflows and accessible touch gestures.
 

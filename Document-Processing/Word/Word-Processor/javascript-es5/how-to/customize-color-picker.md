@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize color picker in JavaScript(ES5) Document Editor | Syncfusion
-description: Learn here all about Customize color picker in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Customize Color Picker in JavaScript DOCX Editor | Syncfusion
+description: Customize the color picker appearance in Syncfusion® JavaScript DOCX Editor using color picker settings to match your application's design.
 platform: document-processing
 control: Customize Color Picker 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize color picker in JavaScript (ES5) Document editor control
+# How to Customize Color Picker in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document Editor settings. The color picker allows customization of its default appearance by selecting between Picker and Palette modes for font and border colors.
 

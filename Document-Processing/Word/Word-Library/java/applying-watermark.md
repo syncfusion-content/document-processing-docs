@@ -1,12 +1,12 @@
 ---
-title: Applying Watermark | Syncfusion
-description: This section illustrates how to insert text or pictures watermark to the Word document using Syncfusion Word library (Essential DocIO)
+title: Watermark in Java Word | Syncfusion
+description: This section illustrates how to insert text or pictures watermark to the Word document using Syncfusion Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Working with Watermark
+# Watermark in Java Word
 
 Watermarks are text or pictures that appear behind the document text. You can access the watermark in the document by using the `Watermark` property of `WordDocument` class.
 

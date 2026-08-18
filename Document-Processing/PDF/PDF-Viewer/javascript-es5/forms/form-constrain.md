@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF form field flags in the JavaScript PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion JavaScript PDF Viewer.
+title: Form Constrain in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Configure form field constraints in the JavaScript (ES5) PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form field flags in JavaScript PDF Viewer
+# PDF Form Field Constraints in JavaScript (ES5) PDF Viewer
 
 The **JavaScript PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 

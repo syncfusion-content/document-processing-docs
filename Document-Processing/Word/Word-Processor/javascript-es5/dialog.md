@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in JavaScript (ES5) DOCX Editor Component | Syncfusion
-description: Learn here all about Dialog in Syncfusion JavaScript (ES5) Document Editor Component of Syncfusion Essential JS 2 and more.
+title: Dialogs in JavaScript DOCX Editor | Syncfusion
+description: The dialogs in JavaScript DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
 control: Dialog 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in JavaScript (ES5) Document Editor Component
+# Dialogs in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 

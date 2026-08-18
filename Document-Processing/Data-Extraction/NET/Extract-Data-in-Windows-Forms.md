@@ -1,13 +1,13 @@
 ---
-title: Extract Data from PDF in Windows Forms | Syncfusion
-description: Extract tables, text, and form fields from PDF documents in Windows Forms using the .NET Smart Data Extractor Library.
+title: Getting Started with Windows Forms Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion Windows Forms Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 
 ---
 
-# Extract Data in Windows Forms
+# Getting Started with Windows Forms Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in Windows Forms applications.
 

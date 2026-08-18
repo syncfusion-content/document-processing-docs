@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line angle constraints in JavaScript PDF Viewer | Syncfusion
-description: Learn to enable line angle constraints in Syncfusion JavaScript PDF Viewer for precise line-type annotations.
+title: Line Angle Constraints in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable line angle constraints in the JavaScript (ES5) PDF Viewer so line-type annotations snap to common angles while users draw them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line angle constraints in JavaScript PDF Viewer
+# Line Angle Constraints in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 

@@ -1,12 +1,12 @@
 ---
-title: Text with double quotes enclosed when saving as CSV | Syncfusion
-description: Explains why Excel encloses fields containing double quotes within double quotes when saving as CSV and how quotes inside fields are escaped by doubling them.
+title: CSV Double Quotes in .NET Excel Library | Syncfusion
+description: CSV export behavior of Syncfusion .NET Excel library explains why Excel wraps fields with double quotes and escapes quotes in CSV.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Why does text with double quotes enclosed with it when saving as CSV?
+# CSV Text Qualifiers in .NET Excel Library
 
 When saving data as a CSV file, Excel automatically adds double quotes around text that contains special characters such as commas, line breaks, or quotation marks. This is done to ensure the content is correctly understood as a single field when the CSV file is read by other applications. 
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark Navigation in React PDF Viewer control | Syncfusion
-description: Learn about bookmark navigation in the Syncfusion React PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Bookmark in React PDF Viewer | Syncfusion
+description: Navigate PDF bookmarks in the React PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in React PDF Viewer
+# Bookmark Navigation in React PDF Viewer
 
 ## Overview
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Word processor server docker image overview in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Docker image of Syncfusion JavaScript DOCX Editor Control| Syncfusion
+description: Learn about the overview of the Docker image for Syncfusion Essential Studio JavaScript DOCX Editor control and more details.
 platform: document-processing
 control: Word processor server docker image overview 
 documentation: ug

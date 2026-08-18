@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Section format in React DOCX Editor | Syncfusion
-description: Learn here all about Section format in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
+title: Section Format in React DOCX Editor | Syncfusion
+description: The section format feature in React DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 control: Section format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in React Document Editor
+# Section Format in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 

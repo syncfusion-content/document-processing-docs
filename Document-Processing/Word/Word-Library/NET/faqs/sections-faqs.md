@@ -1,11 +1,11 @@
 ---
-title: FAQ about Sections | DocIO | Syncfusion
-description: Learn about the frequently asked questions about sections in Word document in the .NET Word (DocIO) library.
+title: FAQ about Sections in .NET Word | Syncfusion
+description: Describe frequently asked questions about working with sections in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about sections in Word document
+# FAQ about Sections in .NET Word
 
 The frequently asked questions about working with sections in Word documents using DocIO are listed below.
 
