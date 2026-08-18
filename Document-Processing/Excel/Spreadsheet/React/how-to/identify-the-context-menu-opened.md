@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Identify the context menu opened in React Spreadsheet component | Syncfusion
-description: Learn here all about how to identify the context menu that has been opened in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more. 
+title: How to Identify the Context Menu in React Spreadsheet | Syncfusion
+description: Learn how to identify the opened context menu in the Syncfusion React Spreadsheet component through event handling.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-## Identify the context menu opened in React Spreadsheet component
+# How to Identify the Context Menu Opened in React Spreadsheet
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
-The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
+The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
 
 | Class name | Context menu name |
 |-------|---------|

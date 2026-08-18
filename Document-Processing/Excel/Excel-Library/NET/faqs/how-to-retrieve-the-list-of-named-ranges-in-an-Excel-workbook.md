@@ -1,12 +1,12 @@
 ---
-title: Retrieve the list of named ranges in an Excel workbook | Syncfusion
-description: Code example to retrieve the list of named ranges in an Excel workbook using .NET Excel Library.
+title: How to Retrieve Named Ranges in .NET Excel Library | Syncfusion
+description: Retrieve the list of named ranges in an Excel workbook using the Syncfusion .NET Excel Library for named range access.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to retrieve the list of named ranges in an Excel workbook?
+# How to retrieve named ranges in .NET Excel Library
 
 The following code examples demonstrate retrieving the list of named ranges in an Excel workbook using C# (Cross-platform and Windows-specific) and VB.NET.
 
@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Named%20Range/.NET/RetrieveNamedRanges" aria-label="GitHub demo link">this GitHub page</a>.

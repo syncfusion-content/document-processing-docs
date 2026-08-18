@@ -1,13 +1,13 @@
 ---
-title: Lists in JavaScript PDF Library | Syncfusion
+title: PDF Lists in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to work with lists in a PDF document using the JavaScript PDF Library to display and manage items in a structured format
+description: Create and manage ordered and unordered lists in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Lists in JavaScript PDF Library
+# PDF Lists in JavaScript PDF
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) allows you to list the content in ordered and unordered lists. The ordered list can use numbers or letters (alphabetic characters), and the unordered list can use bullets, circles, squares, and asterisks as markers.
 

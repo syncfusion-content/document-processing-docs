@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Navigation in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Navigation in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Navigation in Vue PDF Viewer | Syncfusion
+description: Move between pages in the Vue PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 control: Navigation
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Vue PDF viewer control
+# Navigation in Vue PDF Viewer
 
 The Vue PDF Viewer supports several internal and external navigation methods.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of the PDF Viewer contains the following navigation options
 
-* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopage):- Navigates to the specific page of a PDF document.
-* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotonextpage):- Navigates to the next page of PDF a document.
-* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotopreviouspage):- Navigates to the previous page of a PDF document.
-* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotofirstpage):-  Navigates to the first page of a PDF document.
-* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation/#gotolastpage):- Navigates to the last page of a PDF document.
+* [**Go to page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotopage):- Navigates to the specific page of a PDF document.
+* [**Show next page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotonextpage):- Navigates to the next page of PDF a document.
+* [**Show previous page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotopreviouspage):- Navigates to the previous page of a PDF document.
+* [**Show first page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotofirstpage):-  Navigates to the first page of a PDF document.
+* [**Show last page**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/navigation#gotolastpage):- Navigates to the last page of a PDF document.
 
 You can enable or disable page navigation in the PDF Viewer using the following code snippet.
 

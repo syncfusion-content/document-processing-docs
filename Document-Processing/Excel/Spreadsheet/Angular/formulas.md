@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Formulas in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formulas in Angular Spreadsheet | Syncfusion
+description: Formulas in Angular Spreadsheet enable users to perform calculations, automate data processing, and analyze information efficiently.
 platform: document-processing
 control: Formulas
 documentation: ug
 ---
 
-# Formulas in Angular Spreadsheet component
+# Formulas in Angular Spreadsheet 
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from same sheet or from different sheets.
 

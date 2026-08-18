@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in React DOCX Editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Comments in React DOCX Editor | Syncfusion
+description: The comments feature in React DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents
 control: Comments 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in React Document Editor component
+# Comments in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 

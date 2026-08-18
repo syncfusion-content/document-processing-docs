@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table format in React DOCX Editor component | Syncfusion
-description: Learn here all about Table format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in React DOCX Editor | Syncfusion
+description: The table format feature in React DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 control: Table format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in React Document Editor component
+# Table format in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 

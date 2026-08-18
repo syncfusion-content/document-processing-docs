@@ -1,12 +1,12 @@
 ---
-title: Comment in WPF RichTextBox control | Syncfusion
-description: Learn here all about Comment support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Comments in WPF DOCX Editor | Syncfusion
+description: The comments feature in WPF DOCX Editor offers note or annotation support, enabling viewing and editing comments in the document review pane.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: comment
 ---
-# Comment in WPF RichTextBox (SfRichTextBoxAdv)
+# Comments in WPF DOCX Editor
 
 A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
 ![WPF RichTextBox with Comment](Comment_images/wpf-richtextbox-comment.jpeg)

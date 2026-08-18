@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Azure Blob Storage in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
+title: To Azure Blob Storage in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Azure Blob Storage in Vue
+# Save PDF Files to Azure Blob Storage in Vue PDF Viewer
 
 The Vue PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 
@@ -114,7 +114,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dot net add package Azure.Storage.Blobs`.
+N> Install the Azure Storage Blob client package for browser use: `npm install @azure/storage-blob`. For server-side operations use `dotnet add package Azure.Storage.Blobs`.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage/tree/master/Open%20and%20Save%20PDF%20in%20Azure%20Blob%20Storage%20using%20Standalone).
 

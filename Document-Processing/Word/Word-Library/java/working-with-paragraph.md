@@ -1,11 +1,11 @@
 ---
-title: Working with Paragraph | Syncfusion
-description: This section explains how to work with the child elements of Paragraph in Word document using Syncfusion Java Word library (Essential DocIO) 
+title: Paragraph in Java Word | Syncfusion
+description: This section explains how to work with the child elements of Paragraph in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Paragraph
+# Paragraph in Java Word
 
 Paragraph is the basic element in a Word document that contains a textual and graphical contents. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements such as `WTextRange`, `WPicture`, and `Hyperlink` and more. The `ParagraphItem` is the base class for the child elements of paragraph. The following elements can be the child elements of a paragraph.
 

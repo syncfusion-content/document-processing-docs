@@ -1,13 +1,13 @@
 ---
 layout: post
-title: System Requirements in Document Processing - Syncfusion
+title: System Requirements of Document Processing Solutions | Syncfusion
 description: Checkout and learn here all about the system requirements needed to use Syncfusion Document Processing Components.
 platform: document-processing
 control: System Requirements
 documentation: ug
 
 ---
-# System Requirements for Document Processing Components
+# System Requirements of Document Processing Solutions
 
 The system requirements for using our Syncfusion<sup>&reg;</sup> Document Processing platform are as follows
 

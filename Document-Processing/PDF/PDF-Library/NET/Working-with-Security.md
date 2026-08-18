@@ -1,11 +1,11 @@
 ---
-title: Working with Security | Syncfusion
-description: This section explains how to protect PDF documents using encryption and set permissions for PDF document operations such as printing, editing, and copying content.
+title: Security in .NET PDF Library | Syncfusion
+description: Learn how to protect PDF documents with encryption and set permissions for printing, editing, and copying using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Security
+# Security in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF enables you to [secure PDF documents](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
 

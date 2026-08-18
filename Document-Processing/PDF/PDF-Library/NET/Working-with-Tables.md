@@ -1,12 +1,12 @@
 ---
-title: Working with Tables | Syncfusion
-description: Learn how to choose between the PdfGrid and PdfLightTable models, what customizations each supports, and which one to use for your scenario.
+title: Tables in .NET PDF Library | Syncfusion
+description: Learn the differences between PdfGrid and PdfLightTable models, supported customizations, and how to choose the right table for your scenario.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with .NET PDF Tables
+# Tables in .NET PDF Library
 
 The Syncfusion<sup>&reg;</sup> .NET PDF library provides support for two types of [PDF table](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables) models that offer different levels of customization. The two table models are:
 

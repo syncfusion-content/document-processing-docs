@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Azure Blob Storage in the Syncfusion TypeScript PDF Viewer component using standalone and server-backed approaches.
+title: From Azure Blob Storage in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Azure Blob Storage in the JavaScript (ES6) PDF Viewer using a server-backed web service for secure access.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load PDF Files from Azure Blob Storage
+# Open PDF from Azure Blob Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 

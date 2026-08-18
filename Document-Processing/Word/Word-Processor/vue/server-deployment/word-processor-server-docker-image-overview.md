@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Word processor server docker image overview in Vue Document editor component | Syncfusion
-description: Learn here all about Word processor server docker image overview in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Docker image of Syncfusion Vue DOCX Editor Control| Syncfusion
+description: Learn about the overview of the Docker image for Syncfusion Essential Studio Vue DOCX Editor control and more details.
 control: Word processor server docker image overview 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Word processor server docker image overview in Vue Document editor component
+# Docker Image of Syncfusion Vue DOCX Editor Control
 
 The **[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (also known as Document Editor)** is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 

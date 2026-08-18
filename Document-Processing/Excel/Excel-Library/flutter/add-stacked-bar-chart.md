@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Stacked Bar Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the Stacked Bar chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Stacked Bar Chart in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library allows users create and customize stacked bar charts in Excel worksheets programmatically.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Stacked Bar Chart to Excel worksheet
+# Stacked Bar Chart in Syncfusion Excel Library
 
 A stacked bar chart is a type of bar chart used in excel for the graphical representation of part-to-whole comparison over time. This helps you to represent data in a stacked manner. This type of graph is suitable for data which is represented in different parts and one as a whole.
 

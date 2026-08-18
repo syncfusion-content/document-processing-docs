@@ -1,12 +1,12 @@
 ---
-title: Clipboard in WPF RichTextBox control | Syncfusion
-description: Learn here all about Clipboard support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Clipboard in WPF DOCX Editor | Syncfusion
+description: The clipboard in WPF DOCX Editor offers copy and paste support in rich text, text, and image formats, enabling flexible content transfer.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: clipboard
 ---
-# Clipboard in WPF RichTextBox (SfRichTextBoxAdv)
+# Clipboard in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) takes advantage of the clipboard support and allows you to copy or paste contents to and from the clipboard in the following formats.
 

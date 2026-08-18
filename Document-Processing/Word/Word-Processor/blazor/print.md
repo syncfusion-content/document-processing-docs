@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing a Document in Blazor DOCX Editor | Syncfusion
-description: Learn how to print a document and improve print quality in the Syncfusion Blazor Document Editor component.
+title: Print in Blazor DOCX Editor | Syncfusion
+description: Print feature in Blazor DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Printing a Document in Blazor Document Editor
+# Print in Blazor DOCX Editor
 
 To print the document, use the [`PrintAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_PrintAsync) method on the Document Editor instance.
 

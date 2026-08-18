@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in React DOCX Editor | Syncfusion
-description: Learn how to use Spell check in the React Document Editor to detect and correct errors seamlessly, without relying on Microsoft Word.
+title: Spell Check in React DOCX Editor | Syncfusion
+description: The spell check feature in React DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 control: Spell check 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell Check in React Document Editor
+# Spell Check in React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 

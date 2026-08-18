@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Fields API in WPF PDF Viewer
+# Form Fields API in WPF Pdf Viewer
 
 The PDF Viewer provides comprehensive APIs to Add, edit, remove, import, export, and manage form fields programmatically. The following APIs are available:
 

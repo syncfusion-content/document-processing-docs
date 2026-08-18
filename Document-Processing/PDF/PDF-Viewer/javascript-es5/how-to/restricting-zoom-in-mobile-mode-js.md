@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices in JS | Syncfusion
-description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion JavaScript PDF Viewer.
+title: How to Restrict Zoom on Mobile Devices in JavaScript | Syncfusion
+description: Restrict the zoom percentage on mobile devices in the JavaScript (ES5) PDF Viewer using minZoom and maxZoom to keep the UI usable on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict zoom percentage on mobile devices in JavaScript
+# How to Restrict Zoom on Mobile Devices in JavaScript (ES5) PDF Viewer
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 

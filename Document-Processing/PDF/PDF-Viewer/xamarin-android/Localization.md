@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Xamarin.Android PDF viewer| Syncfusion
+title: Localization in Xamarin.Android PDF viewer | Syncfusion
 description: Learn here about Set localized text for the static texts used in Syncfusion<sup>®</sup> Xamarin.Android PDF Viewer Control, its elements, and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
 ---
 
-# Localization in Xamarin.Android PDF Viewer
+# Localization in Xamarin.Android PDF viewer
 
 Localization is the process of configuring the application to a specific language. PdfViewerControl supports to localize its static text.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom Data in annotations in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to add custom data in annotation in Syncfusion Angular PDF Viewer Component.
+title: Custom Data in Angular PDF Viewer | Syncfusion
+description: Attach custom metadata to annotations in the Angular PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations in Angular
+# Custom Data in Annotations in Angular PDF Viewer
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Managing Cell Ranges in the Blazor Spreadsheet Component | Syncfusion
-description: Learn how to manage cell range features such as formatting, autofill, and clear options in the Syncfusion Blazor Spreadsheet component and more.
+title: Cell Ranges in Blazor Spreadsheet | Syncfusion
+description: Learn how to manage cell ranges in the Syncfusion Blazor Spreadsheet, including formatting, autofill, and range operations.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Managing Cell Ranges in the Blazor Spreadsheet Component
+# Cell Ranges in Blazor Spreadsheet
 
 A cell range is a set of selected cells in a Spreadsheet, typically specified using A1 notation (for example, `A1:B10`). A range may be a single cell or a contiguous block of cells that can be manipulated or processed collectively.
 

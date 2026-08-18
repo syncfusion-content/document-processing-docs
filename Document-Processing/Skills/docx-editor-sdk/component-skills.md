@@ -1,13 +1,13 @@
 ---
-title: Syncfusion DOCX Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion DOCX Editor Agent Skills to help AI assistants generate accurate DOCX Editor code with DOCX Editor SDK libraries
+title: DOCX Editor SDK Agent Skills for AI Assistants | Syncfusion
+description: Install and use Syncfusion® DOCX Editor Agent Skills to help AI assistants generate accurate code and streamline development with DOCX Editor SDK libraries.
 platform: document-processing
 control: DOCX Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# Syncfusion DOCX Editor SDK Agent Skills for AI Assistants
+# DOCX Editor SDK Agent Skills for AI Assistants
 
 This guide introduces **Syncfusion DOCX Editor SDK Skills**, a knowledge package that enables AI assistants (GitHub Copilot, Code Studio, Cursor, Claude, etc.) to understand and generate accurate docx editor code using Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor SDK libraries. It also supports executing document editor operations directly via platform-specific scripts.
 

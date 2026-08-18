@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events for annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for annotations in the Syncfusion JavaScript PDF Viewer component.
+title: Export Import Events in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Handle import and export events in the JavaScript (ES5) PDF Viewer to run custom logic when annotations are loaded or saved from the control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import/Export events for annotations
+# Annotation Import and Export Events in JavaScript (ES5) PDF Viewer
 
 Import/export events let developers monitor and control annotation data as it flows into and out of the PDF Viewer. These events enable validation, progress reporting, audit logging, and conditional blocking of import/export operations.
 

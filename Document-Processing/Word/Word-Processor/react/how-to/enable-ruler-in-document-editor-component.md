@@ -1,14 +1,14 @@
 ---
-title: "How to enable ruler in React DOCX Editor | Syncfusion"
+title: How to Enable Ruler in React DOCX Editor | Syncfusion
 component: "DocumentEditor"
-description: "Learn here all about enabling the ruler in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more."
+description: Enable the ruler in Syncfusion® React DOCX Editor to set margins, tab stops, and paragraph indentations for precise document formatting.
 control: Enable Ruler
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable ruler in React Document Editor component
+# How to Enable Ruler in React DOCX Editor
 
 The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 

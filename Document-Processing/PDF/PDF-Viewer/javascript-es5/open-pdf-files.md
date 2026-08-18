@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF files in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDF files in the Syncfusion JavaScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
+title: Open Pdf Files in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Load PDF files in the JavaScript (ES5) PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files in JavaScript PDF Viewer
+# Open PDF Files in JavaScript (ES5) PDF Viewer
 
 Load documents into the PDF Viewer from hosted URLs, base64 strings, or database storage. The following sections outline each scenario and the configuration required for server-backed viewing.
 

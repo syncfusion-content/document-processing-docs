@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about shapes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Shapes in ASP.NET MVC DOCX Editor | Syncfusion
+description: The shapes feature in ASP.NET MVC DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes
 documentation: ug
 ---
 
 
-# Shapes in ASP.NET MVC Document Editor
+# Shapes in ASP.NET MVC DOCX Editor
 
 Shapes are drawing objects that include text boxes, rectangles, lines, curves, circles, and so on. They can be preset or custom geometry. The Document Editor does not currently support inserting shapes. However, if the imported document contains a shape, the shape is preserved.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text search in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about text search feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Text search in Flutter PDF Viewer | Syncfusion
+description: The text search feature in SfPdfViewer enables users to find and navigate matching text occurrences within PDF documents efficiently.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Text Search in Flutter PDF Viewer (SfPdfViewer)
+# Text Search in Flutter PDF Viewer
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to find text in the PDF document and navigate to all its occurrences.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Vue application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion Vue DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
