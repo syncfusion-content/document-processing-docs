@@ -31,12 +31,12 @@ Amazon Web Services (AWS)<br/></th><th>
 NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
-AWS Lambda<br/></td><td>
+{{'[AWS Lambda](https://helpstaging.syncfusion.com/document-processing/Markdown/Markdown-library/net/create-Markdown-document-in-aws-lambda)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/> 
 </td></tr>
 <tr>
 <td>
-AWS Elastic Beanstalk<br/></td><td>
+{{'[AWS Elastic Beanstalk](https://helpstaging.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/> 
 </td></tr>
 </table>
