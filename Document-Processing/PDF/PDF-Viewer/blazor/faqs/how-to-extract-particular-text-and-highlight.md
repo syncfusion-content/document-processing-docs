@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Extract and Highlight Text in Blazor PDF Viewer | Syncfusion
+title: How to Extract and Highlight Text in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to extract specific text and highlight it in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Extract and Highlight Text in Blazor PDF Viewer Component
+#  How to Extract and Highlight Text in Blazor PDF Viewer
 
 The Blazor PDF Viewer component allows extracting text from a PDF document and highlighting specific text. This functionality enables users to interactively process PDF content, making it easier to emphasize important information.
 

@@ -1,11 +1,11 @@
 ---
-title: Working with Compression | PDF library | Syncfusion
-description: Learn how to reduce PDF file size in .NET by compressing images, optimizing fonts and page content, and removing metadata with Syncfusion PDF.
+title: Compression in .NET PDF Library | Syncfusion
+description: Learn how to reduce PDF file size by compressing images, optimizing fonts, and removing metadata with the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Compression
+# Compression in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF allows you to [compress a PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/compress-pdf) document and thereby reduce its file size in the following ways:
 

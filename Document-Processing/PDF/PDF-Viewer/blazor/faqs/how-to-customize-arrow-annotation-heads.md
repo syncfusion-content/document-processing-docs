@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the arrow annotation head in Blazor SfPdfViewer | Syncfusion
-description: Learn how to customize or remove the start and end arrow heads in the Blazor SfPdfViewer using ArrowSettings and LineHeadStyle.
+title: How to Customize arrow heads in Blazor PDF Viewer | Syncfusion
+description: Learn how to customize or remove the start and end arrow heads in the Blazor PDF Viewer using ArrowSettings and LineHeadStyle.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Customize the arrow annotation head in Blazor SfPdfViewer Component
+# How to Customize arrow heads in Blazor PDF Viewer
 
 Use the [ArrowSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerArrowSettings.html) API to customize arrow annotations, including the start and end arrow head styles.
 

@@ -1,13 +1,13 @@
 ---
-title: Getting Started with Angular Standalone PDF Viewer | Syncfusion
-description: Learn how to set up and run the Angular Standalone PDF Viewer component using Syncfusion Essential JS 2.
+title: Getting Started with Angular PDF Viewer | Syncfusion
+description: Set up and run the standalone Angular PDF Viewer using Syncfusion Essential JS 2 to render and interact with PDF documents in the browser.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Angular Standalone PDF Viewer Component
+# Getting Started with Angular PDF Viewer
 
 This section explains how to create a simple Angular application and add the standalone [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 

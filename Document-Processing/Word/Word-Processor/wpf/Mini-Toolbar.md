@@ -1,12 +1,12 @@
 ---
-title: Mini Toolbar in WPF RichTextBox control | Syncfusion
-description: Learn here all about Mini Toolbar support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Mini Toolbar in WPF DOCX Editor | Syncfusion
+description: The mini toolbar in WPF DOCX Editor offers built-in rich text formatting options like bold and italic, with enable or disable configuration support.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: mini-toolbar,context-menu,formatting,floating-toolbar
 ---
-# Mini Toolbar in WPF RichTextBox (SfRichTextBoxAdv)
+# Mini Toolbar in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports a built-in mini toolbar to provide rich text formatting options such as Bold, Italic, etc. The mini toolbar can be enabled or disabled through the [EnableMiniToolBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_EnableMiniToolBar) property. 
 

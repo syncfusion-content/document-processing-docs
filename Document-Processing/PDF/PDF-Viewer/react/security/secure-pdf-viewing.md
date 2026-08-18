@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Secure PDF Viewing in React Apps using PDF Viewer | Syncfusion
-description: Best practices for securing PDF content in React apps using the EJ2 React PDF Viewer and server-side processing.
+title: Secure Pdf Viewing in React PDF Viewer | Syncfusion
+description: Best practices for securely viewing PDF content in React apps using the React PDF Viewer together with server-side processing and controls.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

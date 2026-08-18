@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the Vue PDF Viewer.
+title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
+description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the Vue PDF Viewer so coordinates map correctly.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# How to Convert PDF Library Bounds to PDF Viewer Bounds in Vue PDF
 
-### Overview
+## Overview
 
 When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
 
-Steps to convert bounds values
+Steps to convert bounds values:
 
 **Step 1:** Initialize the PdfViewer instance
 
@@ -114,6 +114,6 @@ export default {
 
 ### Conclusion
 
-These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, helping maintain accurate annotation placement.
+These steps convert PDF Library bounds values into PDF Viewer bounds values when handling the exportSuccess event, helping maintain accurate annotation placement.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

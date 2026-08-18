@@ -1,20 +1,20 @@
 ---
 layout: post
-title: PDF Viewer in Angular 17+ with no-standalone | Syncfusion
-description: Checkout and learn about Create a Standalone PDF Viewer in Angular 17 and above with --no-standalone flag of Syncfusion Essential JS 2 and more details.
+title: How to Create a Standalone PDF Viewer in Angular 17| Syncfusion
+description: Create a standalone Angular PDF Viewer in Angular 17 and above with the standalone flag enabled using the Syncfusion Essential JS 2 PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a PDF Viewer in Angular 17 and above with --no-standalone flag
+# How to Create a Standalone PDF Viewer in Angular 17 and Above in
 
 This article describes the steps required to create a standalone Angular PDF Viewer for Angular 17 and later using the `--no-standalone` option.
 
-## Setup Angular Environment
+## Set up Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to set up your Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
@@ -133,7 +133,7 @@ export class AppComponent implements OnInit {
 
 Use the following command to run the application in the browser.
 
-```javascript
+```bash
 ng serve --open
 ```
 

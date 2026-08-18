@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Opening PDF file in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Blazor SfPdfViewer component.
+title: Opening PDF file in Blazor PDF Viewer | Syncfusion
+description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Blazor PDF Viewer .
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF files in SfPdfViewer from various storage locations
+# Opening PDF file in Blazor PDF Viewer
 
 This article explains how to open and display PDF files in the SfPdfViewer component from multiple sources, including URL, cloud storage, database, local file system, Base64 string, and stream. The `DocumentPath` parameter accepts either a direct URL to the PDF file or a data URL that contains Base64-encoded PDF content.
 

@@ -1,87 +1,95 @@
 ---
 layout: post
-title: Collaborative Editing in Document Editor Control | Syncfusion
+title: Collaborative Editing in ASP.NET Core with Redis | Syncfusion
 component: DocumentEditor
-description: Learn how to enable and perform the collaborative editing in ASP.NET Core Syncfusion Document editor Component.
+description: The collaborative editing feature in ASP.NET Core DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing with Redis in ASP.NET Core Document Editor
+# Collaborative Editing in ASP.NET Core DOCX Editor with Redis
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports collaborative editing, which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 
-Following things are needed to enable collaborative editing in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor)
+The following are needed to enable collaborative editing in the Document Editor:
 
 - SignalR
 - Redis
 
 ## SignalR
 
-In collaborative editing, real-time communication is essential for users to see each other's changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
-
-To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either Azure SignalR Service or a Redis backplane.
+SignalR enables real-time communication by instantly sending and receiving document changes between clients and the server, ensuring seamless collaboration. In distributed environments, it can be scaled using Azure SignalR Service or a Redis backplane.
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers). 
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
-Below is a code snippet to configure Azure SignalR in an ASP.NET Core application using the ```AddAzureSignalR``` method
+The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the `Program.cs` file of the web service project.
 
 ```csharp
-builder.Services.AddSignalR() .AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => { 
-    // Specify the channel name 
+builder.Services.AddSignalR().AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => {
+    // Specify the channel name
     options.Channels.Add("document-editor");
- }); 
+});
 ```
 
 ### Scale-out SignalR using Redis
 
-Using a Redis backplane, you can achieve horizontal scaling of your SignalR application. The SignalR leverages Redis to efficiently broadcast messages across multiple servers. This allows your application to handle large user bases with minimal latency.
+A Redis backplane enables horizontal scaling in a SignalR application. SignalR uses Redis to efficiently broadcast messages across multiple servers, allowing the application to support a large number of users with minimal latency.
 
-In the SignalR app, install the following NuGet package:
-* ` Microsoft.AspNetCore.SignalR.StackExchangeRedis`
+In the SignalR application, install the following NuGet package:
 
-Below is a code snippet to configure Redis backplane in an ASP.NET Core application using the ```AddStackExchangeRedis ``` method
+- Microsoft.AspNetCore.SignalR.StackExchangeRedis
+
+The following code snippet demonstrates how to configure the Redis backplane in an ASP.NET Core application using the `AddStackExchangeRedis` method in the `Program.cs` file of the web service project.
 
 ```csharp
 builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
 ```
-Configure options as needed:
 
-The following example shows how to add a channel prefix in the ConfigurationOptions object. 
+Configure the options as required.
+
+The following example demonstrates how to add a channel prefix using the `ConfigurationOptions` object.
 
 ```csharp
 builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(connectionString, options =>
-  {
-      options.Configuration.ChannelPrefix = "document-editor";
-  });
+{
+    options.Configuration.ChannelPrefix = "document-editor";
+});
 ```
 
 ## Redis
 
-In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm. 
+In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
 
-All editing operations in collaborative editing are stored in the Redis cache. To prevent memory buildup, we can configure  a `SaveThreshold` limit at the application level. If the `SaveThreshold` is 100, editing operations up to twice the save threshold limit are kept in Redis per document. Once exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source input document.
+All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
 
-The configuration and store size of the Redis cache can be adjusted based on the following considerations.
+The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
 
-- *Storage Requirements*: A minimum of 400KB of cache memory is needed for editing a single document, with the capacity to store up to 100 editing operations. Storage needs may increase based on following factor.
-    - *Images*: Increases with the number of images added to the document.
-    - *Pasted content*: Depends on the size of the SFDT content.
-- *Connection Limits*: Redis has a limit on concurrent connections. Choose the Redis configuration based on your user base to ensure optimal performance.
+- *Storage Requirements*: A minimum of 400 KB of cache memory is required to edit a single document, with the capacity to store up to 100 editing operations. Storage requirements may increase based on the following factors:
 
-> For better performance, we recommend to have minimum `SaveThreshold` limit of 100.
+   - *Images*: Increases with the number of images added to the document.
 
-## How to enable collaborative editing in client side
+   - *Pasted content*: Depends on the size of the SFDT content.
 
-### Step 1: Enable collaborative editing in Document Editor
+- *Connection Limits*: Redis has a limit on concurrent connections. The Redis configuration should be selected based on the user base to ensure optimal performance.
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
+> For better performance, a minimum `SaveThreshold` value of 100 is recommended.
 
+## Integrate collaborative editing in client side
+
+### Step 1: Integrate Document Editor
+
+Refer to the following documentation to get started with the [ASP.NET Core Document Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/getting-started-core).
+
+### Step 2: Enable collaborative editing
+
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+
+The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -92,11 +100,11 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 {% endhighlight %}
 {% endtabs %}
 
+### Step 3: Configure SignalR to send and receive changes
 
-## Step 2: Configure SignalR to send and receive changes
+To broadcast changes and receive updates from remote users, configure SignalR in the Document Editor.
 
-To broadcast the changes made and receive changes from remote users, configure SignalR like below.
-
+The following code snippet demonstrates how to configure SignalR in the Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -105,10 +113,11 @@ To broadcast the changes made and receive changes from remote users, configure S
 {% endtabs %}
 
 
-### Step 3: Join SignalR room while opening the document
+### Step 4: Join SignalR room while opening the document
 
-When opening a document, we need to generate a unique ID for each document. These unique IDs are then used to create rooms using SignalR, which facilitates sending and receiving data from the server.
+When opening a document, a unique ID must be generated for each document. These unique IDs are then used to create rooms using SignalR, which facilitates real-time communication and collaborative editing among multiple users.
 
+The following code snippet demonstrates how to generate a unique ID and open a document.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -119,8 +128,9 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 ### Step 5: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client side must be transmitted to the server to be broadcast to other connected users.
 
+The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -136,7 +146,6 @@ Changes made on the client-side need to be sent to the server-side to broadcast 
 We are using Microsoft SignalR to broadcast the changes. Please add the following configuration to your application's Program.cs file.
 
 ```csharp
-    using Microsoft.Azure.SignalR;
     .....
     builder.Services.AddSignalR();
     .....
@@ -186,7 +195,7 @@ static Dictionary<string, ActionInfo> userManager = new Dictionary<string, Actio
                 groupManager.Add(info.RoomName, actions);
             }
         }
-       // Notify other users in the group about new user joined the collaborative editing session.
+       // Notify other users in the group about a new user joining the collaborative editing session.
         Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
     }
 
@@ -207,13 +216,13 @@ Handle user disconnection using SignalR.
             {
                 groupManager.Remove(roomName);
 //If all user disconnected from current room. Auto save the change to source document.
-CollaborativeEditingController.UpdateOperationsToSourceDocument(roomName, “<<documentpath>>”, false);
+CollaborativeEditingController.UpdateOperationsToSourceDocument(roomName, "<<documentpath>>", false);
             }
         }
 
         if (userManager.ContainsKey(Context.ConnectionId))
         {
-            //Notify other user in the group about user exit the collaborative editing session
+            //Notify other user in the group about a user exiting the collaborative editing session
             Clients.OthersInGroup(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
             Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
             userManager.Remove(Context.ConnectionId);
@@ -240,11 +249,13 @@ Configure the Redis that stores temporary data for the collaborative editing ses
 
 #### Import File
 
-1.	When opening a document, check the Redis cache for pending operations and retrieve them for the collaborative editing session.
-2.	If pending operations exist, apply them to the WordDocument instance using the `UpdateActions` method before converting it to the SFDT format.
+Used to open DOCX documents, verify the Redis cache for pending operations, and retrieve them for the collaborative editing session.
+
+1. When opening a document, check the Redis cache for pending operations and retrieve them for the collaborative editing session.
+2. If pending operations exist, apply them to the `WordDocument` instance using the `UpdateActions` method before converting it to the SFDT format.
 
 ```csharp
-public string ImportFile([FromBody] FileInfo param)
+public async Task<string> ImportFile([FromBody] FileInfo param)
  {
      .....
      .....
@@ -269,13 +280,13 @@ public string ImportFile([FromBody] FileInfo param)
 
 ```
 
-#### Update editing records to Redis cache.
+#### Update editing records to Redis cache
 
 Each edit operation made by the user is sent to the server and pushed into a Redis list data structure. Each operation is assigned a version number upon insertion into Redis.
 
 After inserting the records to the server, the position of the current editing operation must be transformed relative to any previous editing operations not yet synced with the client using the `TransformOperation` method to resolve any potential conflicts with the help of the `Operational Transformation` algorithm.
 
-Once the conflict is resolved, the current operation is broadcast to all connected users within the group.
+Once the conflict is resolved, the current operation is broadcast to all connected users within the group. The following code snippet demonstrates how the operations are cached and updated.
 
 ```csharp
 public async Task<ActionInfo> UpdateAction([FromBody] ActionInfo param)
@@ -283,7 +294,7 @@ public async Task<ActionInfo> UpdateAction([FromBody] ActionInfo param)
     try
     {
         ActionInfo modifiedAction = AddOperationsToCache(param);
-        //After transformation broadcast changes to all users in the gropu
+        //After transformation broadcast changes to all users in the group
         await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
         return modifiedAction;
     }
@@ -293,7 +304,7 @@ public async Task<ActionInfo> UpdateAction([FromBody] ActionInfo param)
     }
 }
 
-private ActionInfo AddOperationsToCache(ActionInfo action)
+private async Task<ActionInfo> AddOperationsToCache(ActionInfo action)
  {
      int clientVersion = action.Version;
      string insertScript = "-------"
@@ -319,17 +330,21 @@ private ActionInfo AddOperationsToCache(ActionInfo action)
         // Transform operations that have not been transformed yet
         previousOperations.Where(op => !op.IsTransformed).ToList().ForEach(op => CollaborativeEditingHandler.TransformOperation(op, previousOperations));
      }
-     action = actions[actions.Count - 1];
-     action.Version = updateVersion;
+     action = previousOperations[previousOperations.Count - 1];
+     action.Version = clientVersion;
      //Return the transformed operation to broadcast it to other clients.
      return action;
  }
 
 ```
 
-#### Add Web API to get previous operation as a backup to get lost operations
+#### Web API to retrieve previous operations (Backup for lost operations)
 
-On the client side, messages broadcast using SignalR might be received out of order or lost due to network issues. In such cases, we need a backup method to retrieve missing operations from Redis. By using the following method, we can retrieve all operations performed after the last successful client-synchronized version and return any missing operations to the requesting client.
+On the client side, messages broadcast using SignalR may be received out of order or lost due to network issues. In such cases, a backup mechanism is required to retrieve missing operations from Redis.
+
+Using the following method, all operations performed after the last successfully synchronized client version can be retrieved, ensuring that any missing operations are returned to the requesting client.
+
+The following code snippet demonstrates how to track and retrieve pending operations.
 
 ```csharp
 public async Task<string> GetActionsFromServer(ActionInfo param)
@@ -370,6 +385,6 @@ public async Task<string> GetActionsFromServer(ActionInfo param)
 
 ```
 
-Full version of the code discussed about can be found in below GitHub location.
+The full version of the code discussed can be found at the following GitHub location.
 
 GitHub Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collabrative-Editing)

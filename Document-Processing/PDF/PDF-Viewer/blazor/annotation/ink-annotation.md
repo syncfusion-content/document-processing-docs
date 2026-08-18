@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ink Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and programmatically manage ink annotations in the Blazor SfPdfViewer component.
+title: Ink Annotation in Blazor PDF Viewer  | Syncfusion
+description: Learn how to add, edit, and programmatically manage ink annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink Annotation in the Blazor SfPdfViewer Component
+# Ink Annotation in the Blazor PDF Viewer 
 
 The Blazor SfPdfViewer component supports adding, editing, and deleting ink annotations.
 

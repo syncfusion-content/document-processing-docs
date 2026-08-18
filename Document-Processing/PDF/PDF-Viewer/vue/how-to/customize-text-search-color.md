@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize text search color in Vue PDF Viewer | Syncfusion
-description: Learn how to customize text search and highlight colors in the Vue PDF Viewer using textSearchColorSettings.
+title: How to Customize the Text Search Color in Vue PDF Viewer | Syncfusion
+description: Customize the highlight color used for text search matches in the Vue PDF Viewer to match your application design.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize text search color in Vue PDF Viewer
+# How to Customize the Text Search Color in Vue PDF Viewer
 
 Change the text search colors using the `textSearchColorSettings` properties. Set `searchColor` for matched text and `searchHighlightColor` for the active result. Both accept hexadecimal color values.
 
@@ -26,10 +26,10 @@ viewer.textSearchColorSettings.searchHighlightColor = '#0000FF';
 
 The above sets the active result highlight to blue.
 
-- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchcolor)
-- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textSearchColorSettings/#searchhighlightcolor)
+- [searchColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textsearchcolorsettings#searchcolor)
+- [searchHighlightColor](https://ej2.syncfusion.com/documentation/api/pdfviewer/textsearchcolorsettings#searchhighlightcolor)
 
-Example: Buttons to control search flow
+The following example adds buttons to control the search flow:
 
 ```html
 <template>

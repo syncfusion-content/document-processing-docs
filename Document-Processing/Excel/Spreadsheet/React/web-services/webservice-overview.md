@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Web Services Overview in React Spreadsheet | Syncfusion
-description: Learn here all about how to connect web services using ASP.NET Core and ASP.NET MVC in React Spreadsheet of Syncfusion Essential JS 2 and more.
+title: Web Services in React Spreadsheet | Syncfusion
+description: Learn about connecting web services for open and save operations in the Syncfusion React Spreadsheet component.
 control: Web Services
 platform: document-processing
 documentation: ug
 ---
 
-# Connect Web Services for React Spreadsheet Open and Save
+# Web Services in React Spreadsheet
 
 Unlock advanced Excel file processing in your web applications by connecting the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to your own back-end web services. This overview explains the purpose, benefits, and high-level process for enabling open and save operations using ASP.NET Core and ASP.NET MVC.
 

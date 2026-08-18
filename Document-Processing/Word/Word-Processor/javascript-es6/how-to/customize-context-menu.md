@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Customize context menu in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in TypeScript DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® TypeScript DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
-control: Customize context menu 
+control: Customize Context Menu
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in JavaScript (ES6) Document editor control
+# How to Customize Context Menu in TypeScript DOCX Editor
 
-## How to customize context menu in Document Editor
+## How to customize the context menu in the Document Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/documentation/api/document-editor/customContentMenuEventArgs/)
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add a custom option to the context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method, and the custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/documentation/api/document-editor/customContentMenuEventArgs).
 
 ### Add Custom Option
 
-The following code shows how to add custom option in context menu.
+The following code shows how to add a custom option to the context menu.
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
@@ -41,20 +41,20 @@ documentEditor.customContextMenuSelect = (args: CustomContentMenuEventArgs): voi
         case id + 'search_in_google':
             let searchContent: string = documentEditor.selection.text;
             if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
-                window.open('http://google.com/search?q=' + searchContent);
+                window.open('https://google.com/search?q=' + searchContent);
             }
             break;
     }
 };
 ```
 
-### Customize custom option in context menu
+### Customize custom option in the context menu
 
-Document Editor allows you to customize the added custom option and also to hide/show default context menu.
+The Document Editor allows you to customize the added custom option and also to hide/show the default context menu.
 
 #### Hide default context menu items
 
-The following code shows how to hide default context menu and add custom option in context menu.
+The following code shows how to hide the default context menu and add a custom option to the context menu.
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
@@ -75,7 +75,7 @@ documentEditor.contextMenu.addCustomMenu(menuItems, true);
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs/).
+The following code shows how to hide/show the added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs).
 
 ```ts
 let documentEditor: DocumentEditor = new DocumentEditor({
@@ -109,14 +109,14 @@ documentEditor.customContextMenuSelect = (args: CustomContentMenuEventArgs): voi
         case id + 'search_in_google':
             let searchContent: string = documentEditor.selection.text;
             if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
-                window.open('http://google.com/search?q=' + searchContent);
+                window.open('https://google.com/search?q=' + searchContent);
             }
             break;
     }
 };
 ```
 
-The following is the output of custom context menu with customization.
+The following is the output of the custom context menu with customization.
 
  
 
@@ -135,9 +135,9 @@ The following is the output of custom context menu with customization.
 
 #### Customize Context Menu with sub-menu items
 
-Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method.
+The Document Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
-The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
+The following code shows how to add sub-items to the custom option in the context menu in the Document Editor Container.
  
 ```ts
 import {
@@ -146,10 +146,10 @@ import {
 } from '@syncfusion/ej2-documenteditor';
 import { MenuItemModel } from '@syncfusion/ej2-navigations';
 
-//Inject require modules.
+//Inject required modules.
 DocumentEditorContainer.Inject(Toolbar);
 
-// creating Custom Options
+//Creating custom options
 let menuItems: MenuItemModel[] = [
   {
     text: 'Form field',
@@ -182,15 +182,13 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 
 //Open the default document in `created` event.
 container.created = function () {
-  // adding Custom Options
+  //Adding custom options
   container.documentEditor.contextMenu.addCustomMenu(menuItems, false, true);
 };
 //Render Document Editor Container component.
 container.appendTo('#DocumentEditor');
-
-
 ```
 
 ### Online Demo
 
-Explore how to customize the context menu in the JavaScript Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/custom-context-menu.html).
+Explore how to customize the context menu in the JavaScript DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/custom-context-menu.html).

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow Annotation (Shape) in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Syncfusion React PDF Viewer.
+title: Arrow Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the React PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow Annotation (Shape) in React PDF Viewer
+# Arrow Annotation in React PDF Viewer
 Arrow annotations let users point, direct attention, or indicate flow on PDFs—useful for callouts, direction markers, and connectors during reviews. You can add arrows from the toolbar, switch to arrow mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Arrow overview](../../../javascript-es6/annotations/annotation-images/arrow-annot.png)

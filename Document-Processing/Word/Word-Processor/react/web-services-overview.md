@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Web services in the React DOCX Editor component | Syncfusion
-description: Learn here all about web services in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Web Services in Syncfusion React DOCX Editor Control| Syncfusion
+description: Learn about the overview of web services in Syncfusion Essential Studio React DOCX Editor control and more details.
 control: Web services 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web services in the React Document Editor component
+# Web Services in Syncfusion React DOCX Editor Control
 
 You can deploy web APIs for the server-side dependencies of the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component on the following platforms.
 

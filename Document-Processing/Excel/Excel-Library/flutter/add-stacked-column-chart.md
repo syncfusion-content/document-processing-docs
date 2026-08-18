@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Stacked Column Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the Stacked Column chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Stacked Column Chart in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library allows users create and customize stacked column charts in Excel worksheets.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Stacked Column Chart to Excel worksheet
+# Stacked Column Chart in Syncfusion Excel Library
 
 A stacked column chart is a basic Excel chart type to allow part-to-whole comparisons over time, or across categories and data series are stacked one on top of the other in vertical columns. Stacked column charts can show change over time because it's easy to compare total column lengths.
 

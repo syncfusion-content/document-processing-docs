@@ -1,20 +1,20 @@
 ---
 layout: post
-title: List Format in ASP.NET MVC Document Editor Component
-description: Learn here all about List Format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The list format feature in ASP.NET MVC DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List Format
 documentation: ug
 ---
 
 
-# Working with Lists
+# List Format in ASP.NET MVC DOCX Editor
 
-Document editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
+Document editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply lists to selected paragraphs using the supported APIs.
 
 ## Create bullet list
 
-Bullets are usually used for unordered lists. To apply bulleted list for selected paragraphs, use the following method of ‘Editor’ instance.
+Bullets are usually used for unordered lists. To apply bulleted list for selected paragraphs, use the following method of the `Editor` instance.
 
 N> applyBullet(bullet, fontFamily);
 
@@ -29,13 +29,13 @@ documenteditor.editor.applyBullet('\uf0b7', 'Symbol');
 
 ## Create numbered list
 
-Numbered lists are usually used for ordered lists. To apply numbered list for selected paragraphs, use the following method of ‘Editor’ instance.
+Numbered lists are usually used for ordered lists. To apply numbered list for selected paragraphs, use the following method of the `Editor` instance.
 
 N> applyNumbering(numberFormat,listLevelPattern)
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|numberFormat|string|“%n” representations in ‘numberFormat’ parameter will be replaced by respective list level’s value.“%1)” will be displayed as “1)”|
+|numberFormat|string|"%n" representations in `numberFormat` parameter will be replaced by respective list level's value. "%1)" will be displayed as "1)".|
 |listLevelPattern(optional)|string|Default value is 'Arabic'.|
 
 ```typescript
@@ -50,15 +50,17 @@ You can also clear the list formatting applied for selected paragraphs.
 documenteditor.editor.clearList();
 ```
 
-## Working with lists
+## Applying lists in a view
 
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/list/razor %}
 {% endhighlight %}
-{% highlight c# tabtitle="List.cs" %}
-{% endhighlight %}{% endtabs %}
+{% highlight c# tabtitle="Document-editor.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/list/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -66,7 +68,7 @@ documenteditor.editor.clearList();
 
 Document editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected.
 
-![Image](images/list.JPG)
+![Editing numbered list context menu](images/list.JPG)
 
 ## Online Demo
 

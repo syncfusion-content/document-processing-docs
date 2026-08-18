@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Events in Vue PDF Viewer component | Syncfusion
-description: Learn how to handle Organize Pages events in the Vue PDF Viewer, including save-as and zoom-changed events for the page organizer.
+title: Events in Vue PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the Vue PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -105,7 +105,7 @@ The event arguments provide information about the save event:
 
 The `pageOrganizerZoomChanged` event is triggered when the zoom level of the page organizer changes.
 
-- Fired when the user interacts with the zoom slider in the page organizer. Ensure `showImageZoomingSlider` is set to `true` in `pageOrganizerSettings`.
+- Fired when the user interacts with the zoom slider in the page organizer. The zoom slider is only rendered when `showImageZoomingSlider` is set to `true` in `pageOrganizerSettings`.
 
 Event arguments:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Retrieve PDF Viewer Instance Blazor PDF Viewer | syncfusion
-description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewer using component references and the DocumentLoad event.
+title: Retrieve PDF Viewer Instance in Blazor PDF Viewer | syncfusion
+description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewer using  references and the DocumentLoad event.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the Blazor PDF Viewer Instance
+# Retrieve PDF Viewer Instance in Blazor PDF Viewer 
 
 This page explains how to access the PDF Viewer instance in the Blazor PDF Viewer using Blazor component references, listen for the [DocumentLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoaded) event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF document is loaded.
 

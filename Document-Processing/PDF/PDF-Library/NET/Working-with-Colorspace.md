@@ -1,18 +1,18 @@
 ---
-title: Working with Color Spaces | PDF library | Syncfusion
-description: Learn how to apply color spaces such as CalGray, CalRGB, ICC, and Pantone colors when drawing graphics in a PDF document using the Syncfusion .NET PDF library.
+title: Color Spaces in .NET PDF Library | Syncfusion
+description: Learn how to apply CalGray, CalRGB, ICC, and Pantone color spaces when drawing graphics in a PDF using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Color Spaces
+# Color Spaces in .NET PDF Library
 
 The Syncfusion<sup>&reg;</sup> [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) allows you to apply color spaces in the following ways:
 
 * [Document color space](#working-with-color-spaces-in-a-document)
 * [Graphics color space](#working-with-color-spaces-in-graphics)
 
-## Working with color spaces in a document
+## Color Spaces in .NET PDF Library in a document
 
 You can set the color space by using the [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ColorSpace) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) class. The following color space categories are supported:
 
@@ -836,7 +836,7 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ColorSpace/Add-graphics-elemets-by-Pantone-color-in-existing-PDF).
 
-## Working with color spaces in graphics
+## Color Spaces in .NET PDF Library in graphics
 
 You can set the color space for a particular object in a PDF document by using the [ColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_ColorSpace) property of the [PdfGraphics](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html) class and specifying the color space as `GrayScale` or `CMYK` from the [PdfColorSpace](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfColorSpace.html) enumeration.
 

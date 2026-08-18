@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search and Extraction in Vue PDF Viewer | Syncfusion
-description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Syncfusion Vue PDF Viewer.
+title: About Syncfusion Vue PDF Viewer Text Search | Syncfusion
+description: Learn about introduction of the Syncfusion Vue PDF Viewer Text Search section and the key capabilities it provides.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search and extraction in Vue PDF Viewer
+# About Syncfusion Vue PDF Viewer Text Search
 
 The Vue PDF Viewer provides an integrated text search experience that supports both interactive UI search and programmatic searches. Enable the feature by importing [`TextSearch`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch) and providing it to the viewer and by setting [`enableTextSearch`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabletextsearch) as needed. To give more low-level information about text, [`findText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch#findtext) and [`findTextAsync`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch#findtextasync) methods can be used.
 
@@ -33,3 +33,4 @@ The [`extractText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#e
 - [Find Text](./find-text)
 - [Text Search Features](./text-search-features)
 - [Text Search Events](./text-search-events)
+- [Extract Text](../how-to/extract-text)

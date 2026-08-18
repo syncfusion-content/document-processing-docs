@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy Syncfusion Word Processor in Azure Kubernetes Service
-description: Learn here all about deploying word processor server docker container in Azure Kubernetes Service in the Syncfusion Angular Document Editor.
+title: How to Deploy Angular DOCX Editor Docker image on AKS | Syncfusion
+description: Deploy the Syncfusion® Angular DOCX Editor Docker image to Azure Kubernetes Service (AKS) for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in Azure Kubernetes Service
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Deploy Syncfusion Angular Document Editor in Azure Kubernetes Service
+# How to Deploy Angular DOCX Editor Docker Image on AKS
 
 ## Prerequisites
 

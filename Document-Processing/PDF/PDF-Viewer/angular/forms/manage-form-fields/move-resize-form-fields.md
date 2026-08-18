@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Move and Resize form fields in the Angular PDF Viewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion Angular PDF Viewer.
+title: Move Resize Form Fields in Angular PDF Viewer | Syncfusion
+description: Move and resize PDF form fields in the Angular PDF Viewer using the built-in UI and programmatic APIs to control the field layout.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Move and Resize PDF Form Fields in Angular
+# Move and Resize Form Fields in Angular PDF Viewer
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Editing in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Editing in Vue Spreadsheet | Syncfusion
+description: Explore cell editing capabilities in the Syncfusion Vue Spreadsheet, including validation, updates, and formulas.
 control: Editing
 platform: document-processing
 documentation: ug
 ---
 
-# Editing in Vue Spreadsheet component
+# Editing in Vue Spreadsheet
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowediting) property to enable or disable the editing feature.
 

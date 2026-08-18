@@ -1,7 +1,7 @@
 ---
-title: Create Excel file in C#, VB.NET | Getting started | Syncfusion
+title: Create Excel Files in C# & VB.NET using Excel Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
-description: Learn how to create an Excel file from data source or scratch; export & import Excel data; create formatted excel report by filling data like Mail merge.
+description: Syncfusion .NET Excel Library supports creating Excel files from scratch or data sources and generating formatted Excel reports.
 platform: document-processing
 control: XlsIO
 documentation: UG

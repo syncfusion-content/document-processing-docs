@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conditional Formatting in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Conditional Formatting support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+title: Conditional Formatting in WPF Spreadsheet Control | Syncfusion®
+description: Apply conditional formatting in the WPF Spreadsheet control to highlight data using rules, color scales, data bars, and icon sets.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Conditional Formatting in WPF Spreadsheet (SfSpreadsheet)
+# Conditional Formatting in WPF Spreadsheet
 
 This section explains how to apply conditional formatting rules programmatically at run time in SfSpreadsheet.
 

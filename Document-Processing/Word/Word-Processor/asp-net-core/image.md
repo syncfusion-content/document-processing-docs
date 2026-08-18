@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in Syncfusion ASP.NET Core DOCX Editor Component
-description: Learn here all about image in Syncfusion ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more.
+title: Image in ASP.NET Core DOCX Editor | Syncfusion
+description: Images in ASP.NET Core DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image
 documentation: ug
 ---
 
 
-# Images in ASP.NET Core Document Editor
+# Images in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the `insertImage()` method. Refer to the following sample code.
 

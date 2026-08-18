@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in WPF RichTextBox control | Syncfusion
-description: Learn here all about Localization support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Localization in WPF DOCX Editor | Syncfusion
+description: The localization in WPF DOCX Editor provides support to localize static text in ribbon and dialogs, enabling language configuration through resource files.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: localization,resx,culture,current-ui-culture,resource-file
 ---
-# Localization in WPF RichTextBox (SfRichTextBoxAdv)
+# Localization in WPF DOCX Editor
 
 Localization is the process of adapting the application to a specific language. [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support to localize all the static text in the ribbon and its dialogs, including button labels, dialog titles, command tooltips, and menu items. Localization can be done by adding a resource file (Resx) and setting the desired culture in the application. The default culture is `en-US`.
 

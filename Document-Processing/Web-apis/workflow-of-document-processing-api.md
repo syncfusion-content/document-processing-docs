@@ -1,12 +1,12 @@
 ---
-title: Workflow of Syncfusion Document Processing API
+title: Workflow of Document Processing API | Syncfusion
 description: Explore Syncfusion's Document Processing API workflow for handling asynchronous tasks efficiently. Simplify document processing with structured workflows.
 platform: document-processing
 control: general
 documentation: UG
 ---
 
-# Workflow of Document Processing Engine API
+# Workflow of Document Processing API
 
 The document processing engine is designed to handle long-running tasks. A long-running task is an operation that requires a considerable amount of server resources and/or time. To avoid blocking the client, the task is completed asynchronously without a persistent connection between the client and the server.
 

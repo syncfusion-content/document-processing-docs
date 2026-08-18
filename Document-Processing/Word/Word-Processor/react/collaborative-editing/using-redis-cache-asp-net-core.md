@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in React DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in React Document Editor to allow multiple users to work on a document simultaneously.
+title: Collaborative Editing in React using ASP.NET Core | Syncfusion
+description: The collaborative editing feature in React DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React with Redis in ASP.NET Core
+# Collaborative Editing in React DOCX Editor with Redis in ASP.NET Core
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
 
