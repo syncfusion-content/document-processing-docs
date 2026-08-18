@@ -1,12 +1,12 @@
 ---
-title: NuGet Packages for PDFToImageConverter library | Syncfusion&reg;
-description: Learn the NuGet packages required to use Syncfusion&reg; PDFToImageConverter library in various platforms and frameworks.
+title: NuGet Packages for PDF to Image Converter | Syncfusion
+description: Learn about the NuGet packages required to use the Syncfusion PDF to Image Converter Library across supported platforms.
 platform: document-processing
 control: PDF to image
 documentation: UG
 ---
 
-# NuGet Packages Required
+# NuGet Packages required for PDF to Image Converter
 
 To work with the PDFToImageConverter library, the following NuGet packages need to be installed in your application.
 

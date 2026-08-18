@@ -1,12 +1,12 @@
 ---
-title: Perform OCR on PDF and image files in Console | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in a Console App by using the Syncfusion PDF library efficiently
+title: Getting Started with Console OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion Console OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Perform OCR in Console Application
+# Getting Started with Console OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in console applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 

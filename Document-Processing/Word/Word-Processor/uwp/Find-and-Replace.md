@@ -1,12 +1,12 @@
 ---
-title: Find and Replace in UWP RichTextBox control | Syncfusion
-description: Learn here all about Find and Replace support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Find and Replace in UWP DOCX Editor | Syncfusion
+description: The find and replace in UWP DOCX Editor offers text search support, enabling scenarios like highlighting, formatting updates, or text replacement.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: search,find,replace-text,findall,findoptions,showoptionspanecommand
 ---
-# Find and Replace in UWP RichTextBox (SfRichTextBoxAdv)
+# Find and Replace in UWP DOCX Editor
 
 The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control supports searching text content in the document. When used in combination with selection, this becomes a powerful tool that enables scenarios such as highlighting specific parts of the document, applying formatting (for example, bold), or replacing text. You can extend your search by using regular expressions to find a particular pattern of text in the document.
 

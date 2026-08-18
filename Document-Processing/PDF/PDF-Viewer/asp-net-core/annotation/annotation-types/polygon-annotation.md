@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Polygon Annotation (Shape) in ASP.NET Core PDF Viewer \ Syncfusion
-description: Learn how to enable, apply, customize, and manage Polygon annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Polygon Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Polygon annotations in the ASP.NET Core PDF Viewer to outline irregular shapes on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon Annotation (Shape) in ASP.NET Core PDF Viewer
+# Polygon Annotation in ASP.NET Core PDF Viewer
 Polygon annotations allow users to outline irregular regions, draw custom shapes, highlight non-rectangular areas, or create specialized callouts on PDFs for review and markup.
 
 ![Polygon overview](../../../javascript-es6/annotations/annotation-images/polygon-annot.png)

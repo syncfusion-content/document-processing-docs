@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Migrate from Xamarin.Forms SfPdfViewer to .NET MAUI SfPdfViewer
+# Migrate from Xamarin SfPdfViewer to .NET MAUI SfPdfViewer
 
 To simplify migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) to [.NET MAUI SfPdfViewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer), most APIs from Xamarin SfPdfViewer are retained in the MAUI SfPdfViewer. However, some APIs have been renamed to maintain consistency with MAUI API naming conventions. The APIs that have changed are listed below.
 

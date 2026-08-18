@@ -1,12 +1,12 @@
 ---
-title: How to check whether the loaded file is an Excel file |Syncfusion.
-description: This page explains how to check whether the loaded file is an Excel file using .NET Excel Library.
+title: How to Verify Excel Files in .NET Excel Library | Syncfusion
+description: Check whether a loaded file is an Excel document using the Syncfusion .NET Excel Library before opening it for processing.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to check whether the loaded file is an Excel file?
+# How to check Excel files in .NET Excel Library
 
 The following code example illustrates how to check whether the loaded file is an Excel file.
 

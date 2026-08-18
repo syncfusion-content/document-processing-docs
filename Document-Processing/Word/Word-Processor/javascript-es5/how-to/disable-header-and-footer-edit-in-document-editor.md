@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Disable header and footer edit in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about disabling editing in header and footer JavaScript (ES5) Document editor control.
+title: Disable Header Footer Editing in JavaScript DOCX Editor | Syncfusion
+description: Disable header and footer editing in Syncfusion® JavaScript DOCX Editor based on selection context to restrict modifications within document sections.
 platform: document-processing
-control: Disable header and footer edit in document editor 
+control: Disable Header and Footer Edit in Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable header and footer edit in JavaScript (ES5) Document editor
+# How to Disable Header and Footer Editing in JavaScript DOCX Editor
 
-## Disable header and footer edit in DocumentEditorContainer instance
+## Disable Header and Footer Edit in DocumentEditorContainer Instance
 
-You can use [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#restrictediting) property to disable header and footer editing based on selection context type.
+You can use the [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#restrictediting) property to disable header and footer editing based on the selection context type.
 
-RestrictEditing allows you to restrict the document modification and makes the Document read only mode. So, by using this property, and if selection inside header or footer, you can set this property as true.
+The `restrictEditing` property allows you to restrict document modifications and enable read-only mode. When the selection is inside a header or footer, set this property to `true`.
 
-The following example code illustrates how to header and footer edit in `DocumentEditorContainer` instance.
+The following example code illustrates how to disable header and footer editing in the `DocumentEditorContainer` instance.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -32,7 +32,7 @@ container.selectionChange = (): void => {
   if (container.documentEditor.selection.contextType.indexOf('Header') > -1 ||
     // Check whether selection is in Footer
     container.documentEditor.selection.contextType.indexOf('Footer') > -1) {
-    // Change the document to read only mode
+    // Change the document to read-only mode
     container.restrictEditing = true;
   } else {
     // Change the document to editable mode
@@ -41,9 +41,9 @@ container.selectionChange = (): void => {
 };
 ```
 
-Otherwise, you can disable clicking inside Header or Footer by using [`closeHeaderFooter`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#closeheaderfooter) API in selection module.
+Otherwise, you can disable clicking inside a header or footer by using the [`closeHeaderFooter`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#closeheaderfooter) API in the selection module.
 
-The following example code illustrates how to close header and footer when selection is inside header or footer in `DocumentEditorContainer` instance.
+The following example code illustrates how to close the header and footer when the selection is inside a header or footer in the `DocumentEditorContainer` instance.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -66,11 +66,11 @@ container.selectionChange = (): void => {
 };
 ```
 
-## Disable header and footer edit in DocumentEditor instance
+## Disable Header and Footer Edit in DocumentEditor Instance
 
-Like restrictEditing, you can use [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#isreadonly) property in Document editor to disable header and footer edit.
+Like `restrictEditing`, you can use the [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#isreadonly) property in the Document Editor to disable header and footer editing.
 
-The following example code illustrates how to header and footer edit in `DocumentEditor` instance.
+The following example code illustrates how to disable header and footer editing in the `DocumentEditor` instance.
 
 ```ts
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
@@ -86,7 +86,7 @@ documentEditor.selectionChange = (): void => {
   if (documentEditor.selection.contextType.indexOf('Header') > -1 ||
     // Check whether selection is in Footer
     documentEditor.selection.contextType.indexOf('Footer') > -1) {
-    // Change the document to read only mode
+    // Change the document to read-only mode
     documentEditor.isReadOnly = true;
   } else {
     // Change the document to editable mode

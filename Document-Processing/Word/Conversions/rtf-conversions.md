@@ -1,12 +1,12 @@
 ---
-title: RTF conversions in C#| DocIO | Syncfusion
-description: Learn how to convert a Word document to RTF and vice versa using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to RTF and vice versa in .NET Word | Syncfusion
+description: Learn how to convert a Word document to RTF and vice versa using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# RTF Conversions in Word Library
+# Convert Word to RTF and vice versa in .NET Word
 
 ## RTF
 The [Rich Text Format (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) is one of the document formats supported by Microsoft Word and many other Word processing applications. RTF is a human-readable file format designed to interchange formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.

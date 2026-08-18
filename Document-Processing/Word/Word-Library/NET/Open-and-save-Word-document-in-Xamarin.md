@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in Xamarin | Syncfusion
-description: Open and save Word document in Xamarin application using Syncfusion<sup>&reg;</sup> Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Xamarin  | Syncfusion
+description: Open and save Word document in Xamarin application using Syncfusion® Xamarin Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document in Xamarin
+# Open and save Word document in Xamarin 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **open and save a Word document in Xamarin**.
 

@@ -1,12 +1,12 @@
 ---
-title: Working with Layers | Syncfusion
-description: Manage PDF layers (Optional Content Groups) with Syncfusion .NET PDF to add, edit, remove, and control layer visibility dynamically
+title: Layers in .NET PDF Library | Syncfusion
+description: Learn how to manage PDF layers (Optional Content Groups) to add, edit, remove, and control layer visibility using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Layers
+# Layers in .NET PDF Library
 
 Layers, also known as **Optional Content Groups** (OCG), are sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers. This capability is useful in items such as CAD drawings, layered artwork, maps, and multi-language documents.
 

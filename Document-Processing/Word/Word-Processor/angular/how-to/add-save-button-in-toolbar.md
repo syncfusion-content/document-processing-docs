@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add a Save Button in the Angular DOCX Editor Toolbar | Syncfusion
-description: Learn here to add save button in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Add Save Button in Toolbar in Angular DOCX Editor | Syncfusion
+description: Add a custom save button to the toolbar in Syncfusion® Angular DOCX Editor, customize toolbar items, and perform document save operations.
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Save Button in Angular Document Editor Toolbar
+# How to Add Save Button in Toolbar in Angular DOCX Editor
 
 ## To add a save button to the existing toolbar in the Document Editor Container
 

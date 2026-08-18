@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Google Cloud Files in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn about how to open a document from Google Cloud Storage in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Google Cloud ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from Google Cloud Storage in ASP.NET MVC DOCX Editor, enabling reliable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open Google Cloud Storage documents in ASP.NET MVC Document Editor
+# Open Documents from Google Cloud Storage in ASP.NET MVC DOCX Editor
 
 To load a document from Google Cloud Storage in a Document Editor, you can follow the steps below.
 

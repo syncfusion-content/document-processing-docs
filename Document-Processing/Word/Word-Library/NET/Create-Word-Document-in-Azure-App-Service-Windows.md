@@ -1,12 +1,12 @@
 ---
-title: Create Word document in Azure App Service on Windows | Syncfusion
-description: Create Word document in Azure App Service on Windows using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Create Word document in Azure App Service Windows | Syncfusion
+description: Describe frequently asked questions and solutions related to Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Azure App Service on Windows
+# Create Word document in Azure App Service Windows
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can **create a Word document in Azure App Service on Windows**.
 

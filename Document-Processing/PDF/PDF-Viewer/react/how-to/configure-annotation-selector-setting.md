@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure Annotation Selector Settings in Syncfusion React PDF Viewer
-description: Learn how to configure annotation selector settings in the React PDF Viewer using the AnnotationSelectorSettings and related options.
+title: How to Configure Annotation Selectors in React PDF Viewer | Syncfusion
+description: Configure annotation selector settings in the React PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Personalize Annotation Selection Settings in React PDF Viewer
+# How to Configure Annotation Selectors in React PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and interaction behavior of the annotation selector in the React PDF Viewer UI.
 

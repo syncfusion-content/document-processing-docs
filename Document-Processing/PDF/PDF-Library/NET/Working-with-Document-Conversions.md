@@ -1,11 +1,11 @@
 ---
-title: Working with Document Conversion in File Formats PDF | Syncfusion
-description: This section explains converting other document types such as Word, Excel, RTF, TIFF, XPS, and HTML to PDF.
+title: Document Conversion in .NET PDF Library | Syncfusion
+description: Learn how to convert Word, Excel, RTF, TIFF, XPS, and HTML documents to PDF using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Document Conversions in File Formats PDF
+# Document Conversion in .NET PDF Library
 
 ## Converting Word documents to PDF
 

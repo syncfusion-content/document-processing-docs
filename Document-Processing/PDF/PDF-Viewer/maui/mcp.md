@@ -7,7 +7,7 @@ control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion .NET MAUI PDF Viewer MCP Server
+# Syncfusion MAUI PDF Viewer MCP Server
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI MCP Server accelerates development of the [.NET MAUI PDF Viewer](https://help.syncfusion.com/maui/pdf-viewer/getting-started) control by providing deep, component-specific knowledge directly in your AI-powered IDE. Through [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration, you get quick access to PDF Viewer documentation, API references, and code-generation features without leaving the development environment.
 

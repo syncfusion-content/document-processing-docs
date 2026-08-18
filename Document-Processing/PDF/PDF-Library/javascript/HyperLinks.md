@@ -1,13 +1,13 @@
 ---
-title: Hyperlinks in JavaScript PDF Library | Syncfusion
+title: PDF Hyperlinks in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to add a hyperlink in a new or existing PDF document by using the JavaScript PDF Library
+description: Programmatically add hyperlinks to a new or an existing PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Hyperlinks in JavaScript PDF Library
+# PDF Hyperlinks in JavaScript PDF
 
 You can add hyperlinks to allow users to navigate to another part of a PDF file, a web page, or any other external content.
 

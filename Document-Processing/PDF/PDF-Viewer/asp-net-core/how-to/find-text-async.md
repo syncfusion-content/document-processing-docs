@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use findTextAsync in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion ASP.NET Core PDF Viewer and retrieve match bounds.
+title: How to Use FindTextAsync in ASP.NET Core PDF Viewer | Syncfusion
+description: Search text asynchronously in the ASP.NET Core PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Search for text asynchronously in ASP.NET Core PDF Viewer
+# How to Use FindTextAsync in ASP.NET Core PDF Viewer
 
 Use the `findTextAsync` method to search for text strings and retrieve bounding box coordinates for all matches. Perform case-sensitive or case-insensitive searches across the entire document or on specific pages.
 

@@ -1,12 +1,12 @@
 ---
-title: Rotate Text in Cells | Syncfusion
-description: Explains with an example on how to rotate text in cells programmatically, to add visual impact to a spreadsheet or a presentation using Interop and XlsIO.
+title: Text Rotation in .NET Excel Library | Syncfusion
+description: Programmatically rotate text in Excel cells using Interop and Syncfusion .NET Excel Library to improve spreadsheet presentation.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Rotate Text in Cells
+# Text Rotation in .NET Excel Library
 
 When text is entered, it is placed horizontally by default. However, you may need to rotate text in cells to add visual impact to a spreadsheet or presentation. Orientation allows you to rotate text in various ways.
 

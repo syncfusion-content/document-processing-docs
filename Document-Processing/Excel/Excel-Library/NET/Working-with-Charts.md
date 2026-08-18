@@ -1,11 +1,11 @@
 ---
-title: Working with Charts | Syncfusion
-description: Learn how to add, edit, and remove charts in an Excel document using the .NET Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Charts in .NET Excel Library | Syncfusion
+description: Excel charts section describes how the Syncfusion .NET Excel Library adds, edits, and removes charts in Excel documents without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with charts in an Excel document
+# Charts in .NET Excel Library
 
 Essential<sup>&reg;</sup> XlsIO has support for creating and modifying Excel charts inside a workbook or as a [chart worksheet](https://support.microsoft.com/en-us/office/create-a-chart-from-start-to-finish-0baf399e-dd61-4e18-8a73-b3fd5d5680c2?ui=en-us&rs=en-us&ad=us).
 

@@ -1,13 +1,13 @@
 ---
-title: Microsoft Word-like DOCX Editor Component | Syncfusion
-description: View, edit and print Word documents in WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications without Microsoft Office.
+title: About Syncfusion DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio DOCX Editor control and more details.
 platform: document-processing
 control: general
 documentation: UG
 keywords: Word, SDK, view, edit, read, document-editor
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> DOCX Editor Component
+# About Syncfusion DOCX Editor Control
 
 {% doccards %}
 

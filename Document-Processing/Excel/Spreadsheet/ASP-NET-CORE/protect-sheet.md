@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Protect Sheet in EJ2 ASP.NET CORE Spreadsheet Control | Syncfusion
-description: Learn here all about Protect Sheet in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Protect Sheet in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about sheet protection in the Syncfusion ASP.NET Core Spreadsheet control, including protecting worksheets and restricting edits.
 platform: document-processing
 control: Protect Sheet
 documentation: ug
 ---
 
 
-# Protection in ASP.NET Core Spreadsheet Control
+# Protection in ASP.NET Core Spreadsheet
 
 Sheet protection prevents users from modifying data in the Spreadsheet.
 

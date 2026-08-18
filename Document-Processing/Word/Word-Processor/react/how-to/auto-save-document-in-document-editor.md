@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto Save Document in React DOCX Editor Component | Syncfusion
-description: Learn here all about Auto save document in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Auto Save Document to AWS S3 in React DOCX Editor | Syncfusion
+description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® React DOCX Editor for reliable cloud-based storage.
 control: Auto save document
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Automatically Save Document in React Document Editor Component
+# How to Auto Save Document in React DOCX Editor
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 

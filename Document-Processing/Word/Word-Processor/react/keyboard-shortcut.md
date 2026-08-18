@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in React DOCX Editor component | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in React DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in React DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 control: Keyboard shortcut 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in React Document Editor component
+# Keyboard Shortcuts in React DOCX Editor
 
 ## Text formatting
 

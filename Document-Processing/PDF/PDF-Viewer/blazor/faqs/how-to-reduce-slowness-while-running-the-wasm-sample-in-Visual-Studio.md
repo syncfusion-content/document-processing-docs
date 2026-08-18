@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reduce slowness when running WASM in Visual Studio | Syncfusion
+title: How to Reduce slowness when running WASM in Visual Studio | Syncfusion
 description: Improve performance when running or debugging the Blazor WebAssembly (WASM) samples in Visual Studio.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Reduce slowness when running Blazor WebAssembly in Visual Studio
+# How to Reduce slowness when running WASM in Visual Studio
 
 You may experience slow performance when running or debugging Blazor WebAssembly apps in Visual Studio. This is caused by the **Enable .NET 9+ Mono WASM debugger** option, which can introduce overhead during debugging sessions.
 

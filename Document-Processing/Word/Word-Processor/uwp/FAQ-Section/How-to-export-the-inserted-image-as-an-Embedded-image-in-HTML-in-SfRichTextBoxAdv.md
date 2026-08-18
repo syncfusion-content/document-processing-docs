@@ -1,13 +1,13 @@
 ---
-title: Export image as Embedded in HTML in UWP SfRichTextBoxAdv | Syncfusion
-description: Learn here all about how to export the inserted image as an Embedded image in HTML in Syncfusion UWP SfRichTextBoxAdv and more.
+title: How to Export Embedded Images in HTML in UWP DOCX Editor | Syncfusion
+description: Export inserted images as embedded content in HTML from Syncfusion® UWP DOCX Editor using the ImageNodeVisited event to manage image streams.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: embedded-image-html,image-node-visited,html-import-export-settings,embedded-image,html-export,image-source
 ---
 
-# Export Image as Embedded in HTML in UWP SfRichTextBoxAdv
+# How to Export Embedded Images in HTML in UWP DOCX Editor
 
 This page explains how to export the inserted image as an Embedded image in HTML in Syncfusion&reg; UWP SfRichTextBoxAdv.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Rows and Columns in Vue Spreadsheet | Syncfusion
+description: Manage rows and columns in the Syncfusion Vue Spreadsheet, including insertion, deletion, resizing, and customization.
 control: Rows and columns 
 platform: document-processing
 documentation: ug
 ---
 
-# Rows and columns in Vue Spreadsheet component
+# Rows and Columns in Vue Spreadsheet
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection of a row and a column is called a cell. The list of operations that you can perform in rows and columns are,
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in Angular PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion Angular PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion Angular PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in Angular PDF Viewer
+# About Syncfusion Angular PDF Viewer Forms
 
 The Syncfusion PDF Viewer provides a full-featured PDF forms experience for Angular applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
 

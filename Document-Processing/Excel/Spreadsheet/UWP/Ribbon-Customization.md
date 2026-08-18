@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Ribbon Customization in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Ribbon Customization support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Personalize the  UWP Spreadsheet control by customizing ribbon tabs, groups, and commands to match application requirements.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Ribbon Customization in UWP Spreadsheet (SfSpreadsheet)
+# Ribbon Customization in UWP Spreadsheet 
 
 You can customize the ribbon in two ways:
 
