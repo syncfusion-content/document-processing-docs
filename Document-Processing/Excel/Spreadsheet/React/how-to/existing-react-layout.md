@@ -1,13 +1,13 @@
 --- 
 layout: post
-title: Integrating Spreadsheet into existing React layouts | Syncfusion
-description: Guidance on embedding the Spreadsheet into react layouts using the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Integrate Spreadsheet into Existing React Layouts | Syncfusion
+description: Learn how to integrate the Syncfusion React Spreadsheet component into existing React application layouts.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Integrate Spreadsheet into Existing React Layouts
+# How to Integrate Spreadsheet into Existing React Layouts
 
 ## Overview
 

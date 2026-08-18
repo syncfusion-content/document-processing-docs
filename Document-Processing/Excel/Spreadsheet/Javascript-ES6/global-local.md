@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global local in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Global local in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Globalization in TypeScript Spreadsheet | Syncfusion
+description: Globalization in TypeScript Spreadsheet enables adapting the user interface, formats, and locale-specific settings for global audiences.
 platform: document-processing
 control: Global local
 documentation: ug
 ---
 
-# Global local in EJ2 TypeScript Spreadsheet control
+# Globalization in TypeScript Spreadsheet 
 
 ## Localization
 

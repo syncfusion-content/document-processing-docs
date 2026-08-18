@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in Angular DOCX Editor | Syncfusion
+description: Global localization in Angular DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global local
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Angular Document Editor component
+# Globalization and Localization in Angular DOCX Editor
 
 ## Localization
 

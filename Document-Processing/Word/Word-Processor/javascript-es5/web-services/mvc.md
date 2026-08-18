@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mvc in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Mvc in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: ASP.NET MVC Web Service in JavaScript DOCX Editor | Syncfusion
+description: Configure ASP.NET MVC web services in the JavaScript DOCX Editor to handle server-side operations such as Word document import, export, and more.
 platform: document-processing
 control: Mvc 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MVC in JavaScript (ES5) Document editor control
+# ASP.NET MVC Web Service in JavaScript DOCX Editor
 
 DocumentEditor depends on server-side interaction for the operations listed below, which can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
 

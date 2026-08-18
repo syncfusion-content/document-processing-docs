@@ -1,11 +1,11 @@
 ---
-title: XlsIO support for multiple markers in a single cell | Syncfusion
-description: Learn whether Syncfusion XlsIO supports multiple markers in a single Excel cell using the .NET Excel Library.
+title: Multiple Markers in .NET Excel Library | Syncfusion
+description: Multiple template markers explains whether Syncfusion .NET Excel Library allows more than one marker in a single Excel cell.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support multiple markers in a single Excel cell?
+# Multiple Markers in .NET Excel Library
 
 No, XlsIO does not support multiple markers in a single Excel cell. Only one marker is allowed per cell when using template markers.

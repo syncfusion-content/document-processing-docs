@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Web App DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Blazor Web App application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+description: Learn how to get started with Syncfusion® Blazor DOCX Editor in Blazor Web App projects. Explore setup, features, examples, and customization options.
 component: DocumentEditor
 documentation: ug
 ---

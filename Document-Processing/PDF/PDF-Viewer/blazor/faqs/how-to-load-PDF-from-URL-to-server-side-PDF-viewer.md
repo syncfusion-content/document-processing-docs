@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load PDF from a URL in a server-side PDF Viewer | Syncfusion
-description: Learn how to download a PDF from a server-side URL and load it into the Blazor SfPdfViewer component using a base64 data.
+title: How to Load PDF from a URL in a server-side PDF Viewer | Syncfusion
+description: Learn how to download a PDF from a server-side URL and load it into the Blazor PDF Viewer component using a base64 data.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How to load PDF from URL to server-side PDF viewer.
+# How to Load PDF from a URL in a server-side PDF Viewer
 
 Syncfusion PDF Viewer supports loading PDF documents from remote URLs. For details, see Opening a PDF file. In scenarios where the document must be retrieved on the server (for example, to add authentication headers, avoid CORS issues, or protect the source URL), the following approach can be used to download the file server-side and load it into the viewer via a base64 data URI.
 

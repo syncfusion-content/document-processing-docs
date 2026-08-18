@@ -1,12 +1,12 @@
 ---
-title: Overview of JavaScript (ES5) PDF Viewer | Syncfusion
-description: Learn here all about the Syncfusion JavaScript PDF Viewer, its capabilities, and supported platforms.
+title: About Syncfusion JavaScript (ES5) PDF Viewer Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio JavaScript (ES5) PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of JavaScript (ES5) PDF Viewer
+# About Syncfusion JavaScript (ES5) PDF Viewer Control
 
 The [`JavaScript PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight, modular viewer for displaying and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Box Cloud Files in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more.
+title: Open Documents from Box Cloud in ASP.NET Core DOCX Editor | Syncfusion
+description: Open documents from Box cloud file storage in ASP.NET Core DOCX Editor, enabling secure cloud storage integration and document access.
 platform: document-processing
 control: Open document from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Box cloud file storage
+# Open Documents from Box Cloud File Storage in ASP.NET Core DOCX Editor
 
 To load a document from Box cloud file storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 

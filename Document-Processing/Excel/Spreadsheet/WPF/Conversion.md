@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conversion in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Conversion support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+title: Conversion in WPF Spreadsheet Control | Syncfusion®
+description: Convert spreadsheet documents in the WPF Spreadsheet control between supported file formats while preserving worksheet data and formatting.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Conversion in WPF Spreadsheet (SfSpreadsheet)
+# Conversion in WPF Spreadsheet 
 This section explains how to convert a workbook in SfSpreadsheet into an image, PDF, and HTML.
 
 ## Convert to Image

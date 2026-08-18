@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion Vue PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Vue PDF Viewer.
+title: Mcp in Vue PDF Viewer | Syncfusion
+description: Set up the Syncfusion Vue PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion Vue PDF Viewer MCP Server
+# Vue PDF Viewer MCP Server Setup
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer MCP Server accelerates Vue PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
@@ -236,4 +236,4 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See also
 
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+* [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)

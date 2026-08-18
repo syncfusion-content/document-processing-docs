@@ -1,11 +1,11 @@
 ---
-title: FAQ Section | DocIO | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: FAQ Section in .NET Word | Syncfusion
+description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently Asked Questions in Word Library
+# FAQ Section in .NET Word
 
 The frequently asked questions under each category in Syncfusion<sup>&reg;</sup> DocIO are listed below.
 

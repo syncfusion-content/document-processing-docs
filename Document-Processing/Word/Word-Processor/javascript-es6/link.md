@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Link in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in TypeScript DOCX Editor | Syncfusion
+description: The hyperlink feature in TypeScript DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in JavaScript (ES6) Document Editor control
+# Hyperlinks in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 

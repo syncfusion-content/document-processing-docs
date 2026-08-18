@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Organize Page Toolbar in TypeScript | Syncfusion
-description: Learn how to customize the Organize Pages toolbar in the JavaScript (ES6) PDF Viewer by showing or hiding individual tools.
+title: Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Organize Page Toolbar in JavaScript (ES6)
+# Customize the Organize Pages Toolbar in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `pageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
 

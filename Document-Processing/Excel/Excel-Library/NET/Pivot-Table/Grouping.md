@@ -1,12 +1,12 @@
 ---
-title: Grouping of Pivot Tables | Excel library | Syncfusion
-description: In this section, you can learn how to group a pivot table in an Excel document using the .NET Excel Library with clear steps and examples.
+title: Pivot Table Grouping in .NET Excel Library | Syncfusion
+description: Group a pivot table in an Excel document programmatically using the Syncfusion .NET Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Grouping in Pivot Table
+# Pivot Table Grouping in .NET Excel Library
 
 Date and time fields in the pivot table can be grouped using XlsIO.
 

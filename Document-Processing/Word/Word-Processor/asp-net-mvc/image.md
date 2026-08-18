@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about image in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Images in ASP.NET MVC DOCX Editor | Syncfusion
+description: Images in ASP.NET MVC DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image
 documentation: ug
 ---
 
 
-# Images in ASP.NET MVC Document Editor component
+# Images in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or an online image in the document using the `insertImage()` method.
 

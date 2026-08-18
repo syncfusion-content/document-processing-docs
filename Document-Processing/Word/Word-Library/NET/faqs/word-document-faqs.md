@@ -1,11 +1,11 @@
 ---
-title: FAQ about Word Document | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word documents and their manipulations in the .NET Word (DocIO) library.
+title: FAQ about Word Document in .NET Word | Syncfusion
+description: Describe common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about Word document 
+# FAQ about Word Document in .NET Word
 
 The frequently asked questions about Word document manipulation using DocIO are listed below.
 

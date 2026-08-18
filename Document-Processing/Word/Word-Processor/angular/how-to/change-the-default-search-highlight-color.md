@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Change Search Highlight Color in Angular DOCX Editor | Syncfusion
-description: Learn here all about Change the default search highlight color in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+description: Change the default search highlight color in Syncfusion® Angular DOCX Editor using the search highlight color property to customize search result highlighting.
 platform: document-processing
 control: Change the default search highlight color 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change Search Highlight Color in Angular Document Editor
+# How to Change Search Highlight Color in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in Document Editor settings. The color specified for `searchHighlightColor` within [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#documenteditorsettings) is used to highlight the searched text. By default, the search highlight color is `yellow`.
 

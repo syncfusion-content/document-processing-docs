@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fields in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Fields in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Fields in Angular DOCX Editor | Syncfusion
+description: Fields in Angular DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: Fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in Angular Document Editor component
+# Fields in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 

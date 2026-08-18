@@ -1,11 +1,11 @@
 ---
-title: FAQ about Mail merge | DocIO | Syncfusion
-description: Learn about the frequently asked questions about mail merge in Word document in the .NET Word (DocIO) library.
+title: FAQ about Mail merge in .NET Word | Syncfusion
+description: This section illustrates common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about mail merge in Word document
+# FAQ about Mail merge in .NET Word
 
 The frequently asked questions about working with mail merge in Word documents using DocIO are listed below.
 

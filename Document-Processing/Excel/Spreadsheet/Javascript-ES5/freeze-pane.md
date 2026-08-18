@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze Panes in EJ2 JavaScript Spreadsheet Control | Syncfusion
-description: Learn here all about Freeze pane in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Freeze Panes in JavaScript Spreadsheet | Syncfusion
+description: Freeze panes in JavaScript Spreadsheet keep selected rows and columns visible while scrolling, improving navigation and data analysis.
 platform: document-processing
 control: Freeze Panes 
 documentation: ug
 ---
 
-# Freeze Panes in EJ2 JavaScript Spreadsheet Control
+# Freeze Panes in JavaScript Spreadsheet 
 
 The Freeze Panes feature helps you to keep particular rows or columns visible when scrolling the sheet content in the spreadsheet. You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#frozencolumns) properties inside the [`sheets`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#sheets) property of the Spreadsheet.
 

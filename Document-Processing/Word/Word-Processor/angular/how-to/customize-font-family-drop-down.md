@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize font family dropdown in Angular DOCX Editor | Syncfusion
-description: Learn here all about Customize font family drop down in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Font Family in Angular DOCX Editor | Syncfusion
+description: Customize the font family drop down list in Syncfusion® Angular DOCX Editor by configuring available font families and controlling font selection options.
 platform: document-processing
 control: Customize font family drop down 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize font family drop down in Angular Document Editor component
+# How to Customize Font Family in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts added in the fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#documenteditorsettings) will be displayed in the font drop-down list of the Text Properties pane and the Font dialog.
 
