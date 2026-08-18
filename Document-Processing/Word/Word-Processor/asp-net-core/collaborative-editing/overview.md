@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in ASP.NET Core DOCX Editor | Syncfusion
+title: Collaborative Editing in ASP.NET Core DOCX Editor Control| Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
+description: Learn about the overview of collaborative editing in Syncfusion Essential Studio ASP.NET Core DOCX Editor control and more details.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in ASP.NET Core Document Editor
+# Collaborative Editing in Syncfusion ASP.NET Core DOCX Editor Control
 
 Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

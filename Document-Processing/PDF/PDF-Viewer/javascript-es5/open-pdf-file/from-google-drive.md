@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Google Drive in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Drive in the Syncfusion JavaScript PDF Viewer component using a server-backed approach.
+title: From Google Drive in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Drive in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Google Drive in JavaScript
+# Open PDF from Google Drive in JavaScript (ES5) PDF Viewer
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bookmarks in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to add, navigate, and manage bookmarks in the Syncfusion Blazor Document Editor component both through the UI and programmatically.
+title: Bookmarks in Blazor DOCX Editor | Syncfusion
+description: The bookmark feature in Blazor DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Bookmarks in Blazor Document Editor Component
+# Bookmarks in Blazor DOCX Editor
 
 A bookmark marks a specific place in a document so you can easily find it again. You can insert multiple bookmarks in a document and give each one a unique name for easy identification.
 

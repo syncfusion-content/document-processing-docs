@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET Core DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in an ASP.NET Core application using the Syncfusion® DOCX Editor component to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion ASP.NET Core DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting Started Core
 documentation: ug

@@ -1,12 +1,12 @@
 ---
-title: Mail merge options | Syncfusion
-description: This section illustrates the mail merge options used to customize field mapping, remove unmerged fields, unmerged mail merge groups, empty paragraphs and more.
+title: Mail merge options in Java Word | Syncfusion
+description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Perform Mail merge options
+# Mail merge options in Java Word
 
 The `MailMerge` class allows you to customize the Mail merge process with the following options.
 

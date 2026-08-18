@@ -1,12 +1,12 @@
 ---
-title: Are pivot table expand buttons preserved in PDF? | Syncfusion
-description: This page explains whether expand buttons in pivot tables are preserved during Excel to PDF conversion.
+title: Pivot Table Expand Buttons in .NET Excel Library | Syncfusion
+description: PivotTable expand buttons describes whether expand controls are preserved when Excel documents are converted to PDF.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Are pivot table expand buttons preserved in Excel to PDF conversion?
+# Pivot Table Expand Buttons in .NET Excel Library
 
 Microsoft Excel does not preserve pivot table expand/collapse buttons when exporting to PDF. The PDF output represents a static view of the worksheet, and interactive elements such as expand/collapse controls are not included. This is the default and expected behavior of Excel.
 

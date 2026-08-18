@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Angular PDF Viewer | Syncfusion
-description: Comprehensive list of events in the Syncfusion Angular PDF Viewer with descriptions, event arguments, and usage examples to integrate custom logic.
+description: Learn about the events in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize the context menu in JavaScript PDF Viewer | Syncfusion
-description: Learn how to add and customize custom context menu options in the JavaScript PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+title: How to Customize the Context Menu in JavaScript (ES5) | Syncfusion
+description: Add and customize context menu options in the JavaScript (ES5) PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the context menu in JavaScript PDF Viewer
+# How to Customize the Context Menu in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports adding custom options to the context menu using the [addCustomMenu()](https://ej2.syncfusion.com/documentation/api/pdfviewer#addcustommenu) method. Define actions for custom items with the [customContextMenuSelect()](https://ej2.syncfusion.com/documentation/api/pdfviewer#customcontextMenuselect) method.
 
-### Add a custom option
+## Add a custom option
 
 The following example adds custom options to the context menu.
 

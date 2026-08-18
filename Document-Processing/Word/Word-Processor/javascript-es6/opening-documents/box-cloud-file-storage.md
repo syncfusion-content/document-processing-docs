@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Box cloud Files in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to open a document from Box cloud file storage in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Open Documents from Box Cloud in TypeScript DOCX Editor | Syncfusion
+description: Open documents from Box cloud file storage in TypeScript DOCX Editor, enabling secure cloud storage integration and document access.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in JavaScript (ES6)
+# Open Documents from Box Cloud File Storage in TypeScript DOCX Editor
 
 To load a document from Box cloud file storage, you can follow the steps below.
 

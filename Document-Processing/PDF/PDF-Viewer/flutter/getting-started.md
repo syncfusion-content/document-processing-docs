@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Flutter PDF Viewer Widget | Syncfusion
-description: Learn here about getting started with Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget, its elements, and more.
+title: Getting Started with Flutter PDF Viewer | Syncfusion
+description: The getting started guide for SfPdfViewer introduces its core features, key elements, and essential PDF viewing capabilities.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Flutter PDF Viewer (SfPdfViewer)
+# Getting Started with Flutter PDF Viewer
 This section explains the steps to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget to your Flutter application and load a PDF document.
 
 To get started quickly, you can also check out our video tutorial below. 

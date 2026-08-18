@@ -1,12 +1,12 @@
 ---
-title: Mail merge for nested groups in C# | DocIO | Syncfusion
-description: Learn how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data using the .NET Word (DocIO) library.
+title: Mail merge for nested groups in .NET Word Library | Syncfusion
+description: Learn how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Mail merge for nested groups
+# Mail merge for nested groups in .NET Word Library
 
 You can perform nested mail merge with relational or hierarchical data source and independent data tables in a template document.
 

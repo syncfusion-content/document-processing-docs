@@ -1,13 +1,13 @@
 ---
-title: Extract data in ASP.NET Core | Syncfusion
+title: Getting Started with ASP.NET Core Smart Data Extractor | Syncfusion
 canonical_url: "https://www.syncfusioninternal.com/document-sdk/net-pdf-data-extraction"
-description: Learn how to extract data from PDF in ASP.NET Core with step‑by‑step guidance using Syncfusion .NET Core Data extraction library.
+description: Learn how to get started with the Syncfusion ASP.NET Core Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 ---
 
-# Extract Data in ASP.NET Core
+# Getting Started with ASP.NET Core Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDF and image files in ASP.NET Core applications.
 

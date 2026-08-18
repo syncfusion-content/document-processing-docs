@@ -1,11 +1,11 @@
 ---
-title: Create a simple Markdown document in C#, VB.NET | Syncfusion
-description: Learn how to use .NET Markdown library to create Markdown documents from scratch with basic elements programmatically.
+title: Getting Started with .NET Markdown Library | Syncfusion
+description: Learn how to use the .NET Markdown library to create Markdown documents from scratch programmatically using basic elements
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
-# Getting started with Markdown library
+# Getting Started with .NET Markdown Library
 
 In this page, you can learn how to create a simple Markdown document programmatically using the Syncfusion Markdown API.
 

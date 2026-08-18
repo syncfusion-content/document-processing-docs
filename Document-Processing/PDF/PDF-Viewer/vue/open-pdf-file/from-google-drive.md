@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from Google Drive in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Drive in the Syncfusion Vue PDF Viewer component using a server-backed approach.
+title: From Google Drive in Vue PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Drive in the Vue PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Drive in Vue
+# Open PDF from Google Drive in Vue PDF Viewer
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 
@@ -148,7 +148,7 @@ N> The `FolderId` is the unique identifier for the Drive folder. For example, if
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in the Drive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to the web service endpoint (replace the localhost URL with the server URL). Set documentPath to the PDF file name to load from Google Drive. Ensure the document name exists in the Drive folder.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

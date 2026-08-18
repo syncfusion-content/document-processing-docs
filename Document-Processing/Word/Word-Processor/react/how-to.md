@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to in React Document editor component | Syncfusion
-description: Learn here all about How to in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: How to in React DOCX Editor | Syncfusion
+description: Explore Syncfusion React DOCX Editor how-to guides, UI elements, features, customization options, and document editing workflows.
 control: How to 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in React Document editor component
+# How to in React DOCX Editor Control
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) triggers the [`keyDown`](./api-documentEditorKeyDownEventArgs.html) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 

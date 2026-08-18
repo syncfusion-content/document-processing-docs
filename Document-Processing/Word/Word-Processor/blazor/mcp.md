@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Blazor DOCX Editor MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Blazor DOCX Editor.
+title: MCP Server for Blazor DOCX Editor | Syncfusion
+description: The Syncfusion®Blazor MCP Server provides setup guidance, integration support, and resources to accelerate Blazor DOCX Editor development workflows.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 ---
 
-# Syncfusion Blazor DOCX Editor MCP Server
+# MCP Server for Blazor DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DOCX Editor MCP Server accelerates Blazor DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

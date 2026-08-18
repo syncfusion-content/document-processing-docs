@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Supported PDF conformance levels in Vue PDF Viewer | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels available in the Syncfusion Vue PDF Viewer component.
+title: How to Use PDF/A and PDF/X Conformance in Vue PDF Viewer | Syncfusion
+description: Learn about the PDF/A and PDF/X conformance levels supported in the Syncfusion PDF tools used together with the Vue PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported PDF conformance levels in Vue PDF Viewer
+# How to Use PDF/A and PDF/X Conformance in Vue PDF Viewer
 
 The Vue PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 

@@ -1,13 +1,13 @@
 ---
-title: Supported and Unsupported Features | Syncfusion
-description: Know more about the supported and unsupported features of the Syncfusion Presentation (PowerPoint) library and its various platforms.
+title: Feature Support in .NET PowerPoint Presentation | Syncfusion
+description: Learn about the supported and unsupported features available in the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Supported and Unsupported Features of Presentation library
 ---
 
-# Supported and Unsupported Features
+# Feature Support in .NET PowerPoint Presentation
 
 <table>
 <tr>

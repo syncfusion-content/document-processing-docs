@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Protect sheet in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Protect sheet in TypeScript Spreadsheet | Syncfusion
+description: Protect sheet in TypeScript Spreadsheet restricts editing and controls user access to worksheet content, helping maintain data integrity.
 platform: document-processing
 control: Protect sheet
 documentation: ug
 ---
 
-# Protect sheet in EJ2 TypeScript Spreadsheet control
+# Protect sheet in TypeScript Spreadsheet 
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 

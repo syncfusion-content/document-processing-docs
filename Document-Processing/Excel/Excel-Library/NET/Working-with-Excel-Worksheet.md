@@ -1,13 +1,13 @@
 ---
-title: Working with Excel Worksheet | Syncfusion
-description: In this section, you can learn about various Excel worksheet operations using Syncfusion Essential XlsIO
+title: Worksheets in .NET Excel Library | Syncfusion
+description: Worksheet operations section describes how Syncfusion .NET Excel Library creates, accesses, edits, and manages Excel worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: c#, vb.net, excel, syncfusion, xlsio, read excel, extract data, data from excel, excel worksheet, data from sheet, new worksheet, add worksheet, insert new worksheet, create new worksheet, insert worksheet, create worksheet, insert worksheet, create excel sheet, delete worksheet, delete sheet in excel, remove worksheet, remove sheet in excel, move sheet from one workbook to another, copy sheet from one worksheet to another, moving between sheets in excel, moving sheet, copying between sheets in excel, copying sheets 
 ---
 
-# Working with Excel Worksheet 
+# Excel Worksheets in .NET Excel Library
 
 A workbook contains a collection of worksheets where the actual contents reside. You can add and manipulate worksheets programmatically, and an [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) instance represents an Excel worksheet.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Bookmarks in ASP.NET CoreDOCX Editor | Syncfusion
+description: The bookmark feature in ASP.NET Core DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
 control: Bookmark
 documentation: ug
 ---
 
 
-# Bookmarks in ASP.NET Core Document Editor Component
+# Bookmarks in ASP.NET Core DOCX Editor
 
 Bookmark is a powerful tool that helps to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 

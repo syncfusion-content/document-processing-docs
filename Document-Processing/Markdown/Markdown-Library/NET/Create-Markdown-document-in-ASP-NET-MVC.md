@@ -1,12 +1,12 @@
 ---
-title: Create Markdown document in ASP.NET MVC | Syncfusion
-description: Create Markdown document without external dependencies in ASP.NET MVC application using Syncfusion<sup>&reg;</sup> .NET Markdown library.
+title: Create Markdown Documents in ASP.NET MVC | Syncfusion
+description: Learn how to create Markdown documents programmatically in ASP.NET MVC applications using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Create Markdown document in ASP.NET MVC
+# Create Markdown documents in ASP.NET MVC
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET MVC**.
 

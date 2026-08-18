@@ -1,12 +1,12 @@
 ---
-title: Working with Sections in .NET Word (DocIO) library | Syncfusion
-description: Learn how to work with sections, headers, footers, and page settings in a Word document using the .NET Word (DocIO) library, without Microsoft Word.
+title: Sections in .NET Word library | Syncfusion
+description: Learn how to work with sections, headers, footers, and page settings in a Word document using the .NET Word library, without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Working with Sections in a Word document
+# Sections in .NET Word library
 
 A section contains the contents of the headers, footers, and main document body through the instances of [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html). A section also has a specific set of properties used to define the page settings, number of columns, headers and footers and so on that decide how the text appears. [WTextBody](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBody.html) represents a group of paragraphs and tables, etc.
 

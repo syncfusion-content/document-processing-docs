@@ -1,12 +1,12 @@
 ---
-title: Working with JavaScript | Syncfusion
-description: This section explains how to add and modify JavaScript actions in PDF documents using the Syncfusion .NET PDF library.
+title: JavaScript in .NET PDF Library | Syncfusion
+description: Learn how to add and modify JavaScript actions in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with JavaScript
+# JavaScript in .NET PDF Library
 
 A JavaScript action allows execution of JavaScript code embedded in a PDF document. Syncfusion<sup>&reg;</sup> PDF supports adding JavaScript actions to a PDF document in the following ways:
 

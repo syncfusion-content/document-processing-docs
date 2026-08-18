@@ -1,12 +1,12 @@
 ---
-title: Markdown to PowerPoint in C# | PowerPoint | Syncfusion
-description: Convert Markdown to PowerPoint document in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies
+title: Markdown to PowerPoint Conversion in .NET PowerPoint | Syncfusion
+description: Convert Markdown content to PowerPoint presentations using the Syncfusion® .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Markdown to PowerPoint Conversion
+# Markdown to PowerPoint Conversion in .NET PowerPoint
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the conversion of Markdown to PowerPoint Presentation document  (.PPTX, .PPTM, .POTX, .POTM) and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
