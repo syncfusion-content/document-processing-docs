@@ -1,12 +1,12 @@
 ---
-title: Working with Lists | Syncfusion
-description: This section explains how to work with the lists in Word document using Syncfusion Java Word library (Essential DocIO) 
+title: Lists in Java Word | Syncfusion
+description: This section explains how to create and manage bulleted and numbered lists in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Working with lists
+# Document Lists in Java Word
 
 Lists can organize and format the contents of a document in hierarchical way. There are nine levels in the list, starting from level 0 to level 8. DocIO supports both built-in list styles and custom list styles. The following are the types of list supported in DocIO: 
 

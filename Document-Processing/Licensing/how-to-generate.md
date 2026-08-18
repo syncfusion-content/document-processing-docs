@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion license generation - Syncfusion
+title: How to generate license key for Document Solutions | Syncfusion
 description: Learn here about how to generate Syncfusion Document Processing license key for syncfusion Document Processing application for license validation.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Generate Syncfusion<sup>&reg;</sup> Document Processing License key
+# How to generate license key for Document Solutions
 
 License keys for Document Processing can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion<sup>&reg;</sup> account. 
 

@@ -1,12 +1,12 @@
 ---
-title: Multithreading in PdfToImageConverter library | Syncfusion®
-description: Learn the steps to implement multithreading in the PdfToImageConverter library to enhance performance and efficiency in PDF-to-image conversion.
+title: How to Perform Multithreading in Pdf To Image Converter | Syncfusion
+description: Learn how to implement multithreading in the Syncfusion PdfToImageConverter library to improve PDF-to-image conversion performance and efficiency.
 platform: document-processing
 control: PDF to image
 documentation: UG
 ---
 
-# How to perform multithreading in the PdfToImageConverter library
+# How to Perform Multithreading in PdfToImageConverter Library
 
 The steps to perform multithreading and ensure thread-safety when opening PDF documents and saving image files are listed below.
 

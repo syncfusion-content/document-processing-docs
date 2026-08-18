@@ -1,11 +1,11 @@
 ---
-title: Working with Image Extraction | Syncfusion
-description: This section explains how to extract images and image information from a PDF document using the Syncfusion .NET PDF library.
+title: Image Extraction in .NET PDF Library | Syncfusion
+description: Learn how to extract images and image information from a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Image Extraction
+# Image Extraction in .NET PDF Library
 
 Syncfusion<sup>&reg;</sup> PDF provides support to extract images from a particular page or from an entire PDF document. You can extract images from a page using the [ExtractImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_ExtractImages().html) method of the [PdfPageBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html) class. For lower memory consumption, use the [PdfDocumentExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentExtractor.html) class.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open or close the bookmark pane in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to open or close the bookmark pane programmatically in the Syncfusion ASP.NET MVC PDF Viewer by calling the bookmarkViewModule APIs.
+title: How to Open or Hide the Bookmark Pane in ASP.NET MVC PDF | Syncfusion
+description: Open or close the bookmark pane programmatically in the ASP.NET MVC PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Open or close the bookmark pane programmatically
+# How to Open or Hide the Bookmark Pane in ASP.NET MVC PDF Viewer
 
 The PDF Viewer exposes methods to toggle the bookmark pane at runtime. Call **openBookmarkPane()** to display the pane and **closeBookmarkPane()** to hide it. These APIs enable workflows where bookmarks are revealed only when users request them.
 

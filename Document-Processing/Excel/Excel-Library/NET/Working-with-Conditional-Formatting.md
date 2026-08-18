@@ -1,12 +1,12 @@
 ---
-title: Conditional Formatting | Excel library | Syncfusion
-description: Learn how to create, read, and remove conditional formatting rules in Excel using Syncfusion XlsIO.
+title: Conditional Formatting in .NET Excel Library | Syncfusion
+description: Conditional formatting section describes how the Syncfusion .NET Excel Library supports highlighting data in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Conditional Formatting
+# Conditional Formatting in .NET Excel Library
 
 Conditional formatting allows you to format the contents of a cell dynamically based on rules that you define. These rules can be created and applied in XlsIO through the [IConditionalFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IConditionalFormat.html) interface.
 

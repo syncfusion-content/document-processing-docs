@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document Load Callbacks in Flutter PDF Viewer widget | Syncfusion
-description: Learn all about the document load callbacks in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget
+title: Document load Callbacks in Flutter PDF Viewer | Syncfusion
+description: Document load callbacks in SfPdfViewer help track document loading status and handle successful or failed load events.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Document Load Callbacks in Flutter PDF Viewer (SfPdfViewer)
+# Document load Callbacks in Flutter PDF Viewer
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget supports the [onDocumentLoaded](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoaded.html) and [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoadFailed.html) callbacks to notify whether the document has been loaded completely or not.
 

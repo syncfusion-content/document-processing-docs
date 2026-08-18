@@ -1,12 +1,12 @@
 ---
-title: Clipboard in UWP RichTextBox control | Syncfusion
-description: Learn here all about Clipboard support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Clipboard in UWP DOCX Editor | Syncfusion
+description: The clipboard in UWP DOCX Editor offers copy and paste support in rich text, text, and image formats, enabling flexible content transfer.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: clipboard
 ---
-# Clipboard in UWP RichTextBox (SfRichTextBoxAdv)
+# Clipboard in UWP DOCX Editor
 
 The SfRichTextBoxAdv takes advantage of the clipboard support and allows you to copy or paste contents to and from the clipboard in the following formats.
 

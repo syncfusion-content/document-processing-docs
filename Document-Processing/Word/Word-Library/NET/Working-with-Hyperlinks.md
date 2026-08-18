@@ -1,11 +1,11 @@
 ---
-title: Working with Hyperlinks in .NET Word library | Syncfusion
-description: Learn how to work with hyperlinks in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: Hyperlinks in .NET Word | Syncfusion
+description: This section illustrates how to create and manage hyperlinks in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Hyperlinks in the Word Library
+# Hyperlinks in .NET Word
 
 Hyperlinks have two parts: the address and the display content. The Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library supports the following hyperlink types:
 

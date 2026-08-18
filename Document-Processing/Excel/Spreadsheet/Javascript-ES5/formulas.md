@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in EJ2 JavaScript Spreadsheet Control | Syncfusion
-description: Learn here all about Formulas in Syncfusion Essential EJ2 JavaScript Spreadsheet control, its elements and more.
+title: Formulas in JavaScript Spreadsheet | Syncfusion
+description: Formulas in JavaScript Spreadsheet enable users to perform calculations, automate data processing, and analyze information efficiently.
 platform: document-processing
 control: Formulas
 documentation: ug
 ---
 
-# Formulas in EJ2 JavaScript Spreadsheet Control
+# Formulas in JavaScript Spreadsheet 
 
 Formulas are used for calculating the data in a worksheet. You can refer the cell reference from the same sheet or from different sheets.
 

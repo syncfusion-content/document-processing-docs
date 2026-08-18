@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in Blazor SfPdfViewer Component | Syncfusion
+title: About Syncfusion Forms in Blazor PDF Viewer Component | Syncfusion
 description: Learn the Forms features in Blazor SfPdfViewer, including form filling, the Form Designer, supported field types, and how the topics are organized.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Overview of Forms in Blazor SfPdfViewer
+# About Syncfusion Forms in Blazor PDF Viewer Component
 
 The Blazor `SfPdfViewer` provides PDF forms capabilities that let users read, fill, add, edit, and delete form fields directly within PDF documents through the viewer UI or programmatically via the Blazor APIs.
 

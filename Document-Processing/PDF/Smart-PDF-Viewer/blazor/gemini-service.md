@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gemini AI Service with Smart PDF Viewer in Blazor App | Syncfusion
+title: Gemini AI Service in Blazor App Smart PDF Viewer | Syncfusion
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart PDF Viewer in a Blazor App.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Smart PDF Viewer using Gemini AI Service
+# Gemini AI Service in Blazor App Smart PDF Viewer
 
 This article provides step-by-step instructions for integrating and using the Syncfusion Blazor Smart PDF Viewer with Gemini AI services in a Blazor app.
 

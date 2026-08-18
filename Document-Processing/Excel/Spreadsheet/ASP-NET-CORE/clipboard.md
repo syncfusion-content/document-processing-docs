@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Clipboard in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Clipboard in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about clipboard operations in the Syncfusion ASP.NET Core Spreadsheet control, including copy, cut, and paste actions for cell data.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
 
-# Clipboard in ASP.NET Core Spreadsheet control
+# Clipboard in ASP.NET Core Spreadsheet
 
 The Spreadsheet supports clipboard operations such as cut, copy, and paste. Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableClipboard) property in Spreadsheet.
 

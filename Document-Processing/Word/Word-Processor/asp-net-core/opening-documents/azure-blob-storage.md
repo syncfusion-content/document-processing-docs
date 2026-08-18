@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Azure Blob Files in ASP.NET Core DOCX Editor | Syncfusion
-description:  Learn how to open a document from Azure Blob Storage in ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob ASP.NET Core DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in ASP.NET Core DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage
+# Open Documents from Azure Blob Storage in ASP.NET Core DOCX Editor
 
 To load document from Azure Blob Storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export PDF in Syncfusion DOCX Editor Component | Syncfusion
-description: Learn here all about exporting the document as PDF in the Syncfusion Document Editor component of Essential JS 2 and more.
+title: How to Export Document as PDF in ASP.NET Core DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® ASP.NET Core DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
 ---
 
 
-# Export the document as PDF in ASP.NET Core Document Editor
+# How to Export Document as PDF in ASP.NET Core DOCX Editor
 
 This article explains how to export the document as a PDF. You can export the document as PDF in the following ways:
 

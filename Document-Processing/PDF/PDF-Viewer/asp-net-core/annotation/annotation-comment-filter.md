@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Annotation Comment Filter in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion ASP.NET Core PDF Viewer using the comment filter panel and programmatic APIs.
+description: Filter comments and annotations in the ASP.NET Core PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in ASP.NET Core
+# Annotation Comment Filter in ASP.NET Core PDF Viewer
 
 ## Overview
 

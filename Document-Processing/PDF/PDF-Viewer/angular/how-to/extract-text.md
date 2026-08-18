@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Extract Text in Angular PDF Viewer component | Syncfusion
-description: Learn about the Extract Text in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Use the ExtractText Method in Angular PDF Viewer | Syncfusion
+description: Use the extractText method in the Angular PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text method in the Angular PDF Viewer
+# How to Use the ExtractText Method in Angular PDF Viewer
 
 The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
@@ -23,7 +23,7 @@ The `extractText` method retrieves text content and, optionally, positional data
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Syncfusion PDF Viewer Control
+## Usage of extractText in Syncfusion PDF Viewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 
@@ -99,7 +99,7 @@ extractTexts(): void {
 }
 ```
 
-#### Explanation:
+### Explanation:
 **Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.
 
 **Multiple Pages Extraction:** The second `extractText` call extracts text from pages 0 through 2 (`startIndex = 0, endIndex = 2`), using the `TextOnly` option for plain text extraction.

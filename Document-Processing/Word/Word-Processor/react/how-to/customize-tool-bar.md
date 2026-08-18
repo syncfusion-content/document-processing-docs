@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize tool bar in React DOCX Editor component | Syncfusion
-description: Learn here all about Customize tool bar in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Toolbar in React DOCX Editor | Syncfusion
+description: Customize the toolbar in Syncfusion® React DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 control: Customize tool bar 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tool bar in React Document Editor component
+# How to Customize Toolbar in React DOCX Editor
 
 ## How to customize existing toolbar in DocumentEditorContainer
 

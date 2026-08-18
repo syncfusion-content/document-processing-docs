@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Shapes in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Shapes in Angular DOCX Editor | Syncfusion
+description: The shapes feature in Angular DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in Angular Document Editor component
+# Shapes in Angular DOCX Editor
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. They can have preset or custom geometry.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion®
-description: Install Syncfusion® React UI Builder to generate production-ready React components with PDF Viewer from natural-language prompts.
+title: Ui Builder Skill in React PDF Viewer | Syncfusion
+description: Install the Syncfusion React UI Builder skill to generate production-ready React components that include the PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® React UI Builder Skill with PDF Viewer for AI Assistants
+# React UI Builder Skill with PDF Viewer
 
 **Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
 

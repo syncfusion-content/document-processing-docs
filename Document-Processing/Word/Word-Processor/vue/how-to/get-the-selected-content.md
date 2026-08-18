@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get the selected content in Vue Document editor component | Syncfusion
-description: Learn here all about Get the selected content in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Selected Content in Vue DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® Vue DOCX Editor for content extraction, processing, and customization.
 control: Get the selected content 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the selected content in Vue Document editor component
+# How to Get Selected Content in Vue DOCX Editor
 
 You can get the selected content from the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Manage local storage in Vue PDF Viewer | Syncfusion
-description: Learn how to control session-specific data storage in the Vue PDF Viewer using the enableLocalStorage property.
+title: How to Enable Local Storage in Vue PDF Viewer | Syncfusion
+description: Control session-specific data storage in the Vue PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manage local storage in Vue PDF Viewer
+# How to Enable Local Storage in Vue PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the [`enableLocalStorage`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control how session-specific viewer data is stored. Configure this property to choose between the viewer's internal storage mechanism (in-memory collection) and the browser's session storage.
 
-### Using the `enableLocalStorage` property
+## Using the `enableLocalStorage` property
 
 Set `enableLocalStorage` to control whether the viewer preserves session data in an internal (in-memory) collection or uses browser session storage. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), session storage is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 

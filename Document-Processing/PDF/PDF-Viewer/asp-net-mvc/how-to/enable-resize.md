@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable resize in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Enable resize in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: How to Enable Resize Text in ASP.NET MVC PDF Viewer | Syncfusion
+description: Enable or disable text resize inside form fields in the ASP.NET MVC PDF Viewer using the enableResizeText property for accessibility.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Enable resize in ASP.NET MVC PDF Viewer control
+# How to Enable Resize Text in ASP.NET MVC PDF Viewer
 
 To enable the resizer for the text markup annotation in Syncfusion PDF viewer, you can use the [**enableTextMarkupResizer**](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableTextMarkupResizer) property. The default value of the property is false.
 

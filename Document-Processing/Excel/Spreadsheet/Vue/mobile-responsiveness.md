@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile responsiveness in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Mobile Responsiveness in Vue Spreadsheet | Syncfusion
+description: Learn how the Syncfusion Vue Spreadsheet component adapts seamlessly across various mobile devices and screen sizes.
 control: Mobile responsiveness 
 platform: document-processing
 documentation: ug
 ---
 
-# Mobile responsiveness in Vue Spreadsheet component
+# Mobile Responsiveness in Vue Spreadsheet
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 

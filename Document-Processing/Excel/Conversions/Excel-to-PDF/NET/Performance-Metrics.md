@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics for Syncfusion Excel to PDF Conversion
-description: This section lists benchmark results for converting Excel workbooks to PDF using the Syncfusion Excel (XlsIO) library.
+title: Excel to PDF conversion Performance metrics | Syncfusion
+description: Excel to PDF benchmark results describes performance metrics for converting Excel workbooks to PDF using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics for Excel to PDF Conversion
+# Performance Metrics for Excel to PDF in .NET Excel Library
 
 The following benchmark measures the time required by the Syncfusion Excel (XlsIO) library to convert a workbook of 100,000 rows × 50 columns to PDF. Each row uses one data type: text, DateTime, number, boolean, or formula.
 
@@ -24,27 +24,27 @@ The following benchmark measures the time required by the Syncfusion Excel (XlsI
     <tr>
       <td>Text</td>
       <td>91</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/String%20Data%20Type/.NET/String%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>DateTime</td>
       <td>105</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Number</td>
       <td>96</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Boolean</td>
       <td>81</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
     <tr>
       <td>Formula</td>
       <td>104</td>
-      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub sample</a></td>
+      <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Excel%20to%20PDF/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Feature list in React Spreadsheet component | Syncfusion
-description: Learn here all about Feature list in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Feature List in React Spreadsheet | Syncfusion
+description: Learn about the features available in the Syncfusion React Spreadsheet component, including editing, formatting, formulas, and more.
 control: Feature list 
 platform: document-processing
 documentation: ug
 ---
 
-# Feature list in React Spreadsheet component
+# Feature list in React Spreadsheet
 
 The following table shows the features available in our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component.
 

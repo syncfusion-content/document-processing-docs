@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Cell Range in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Cell Range in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Range in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to work with cell ranges in the Syncfusion ASP.NET MVC Spreadsheet, including selection, formatting, and data management.
 platform: document-processing
 control: Cell Range
 documentation: ug
 ---
 
 
-# Cell Range in ASP.NET MVC Spreadsheet control
+# Cell Range in ASP.NET MVC Spreadsheet
 
 A group of cells in a sheet is known as cell range.
 

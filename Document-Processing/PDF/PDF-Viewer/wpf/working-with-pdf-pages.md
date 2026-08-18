@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with PDF Pages in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Working with PDF Pages support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: PDF Pages in WPF Pdf Viewer control | Syncfusion
+description: Customize PDF pages in Syncfusion WPF PDF Viewer with page borders and styling. Learn page customization options and border properties.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Working with PDF Pages in WPF Pdf Viewer
+# PDF Pages in WPF Pdf Viewer control
 
 ## Page Border
 

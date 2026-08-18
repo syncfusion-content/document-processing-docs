@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Read-only by default in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to open a document in read-only mode by default in Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open Blazor DOCX Editor in Read-Only Mode | Syncfusion
+description: Open Syncfusion® Blazor DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Open a Document in Read-Only Mode in Blazor Document Editor
+# How to Open Blazor DOCX Editor in Read-Only Mode
 
 In this article, we are going to see how to open a document in read-only mode by default in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component.
 
