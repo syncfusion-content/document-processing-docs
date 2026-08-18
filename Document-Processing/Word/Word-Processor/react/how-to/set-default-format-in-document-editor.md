@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set default format in React DOCX Editor | Syncfusion
-description: Learn here all about Set default format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Set Default Format in React DOCX Editor | Syncfusion
+description: Set default character, paragraph, and section formatting in Syncfusion® React DOCX Editor for consistent document styling across documents.
 control: Set default format in Document Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set Default Format in React Document Editor
+# How to Set Default Format in React DOCX Editor
 
 You can set the default character format, paragraph format, and section format in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 

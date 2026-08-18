@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text wrapping style in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Text wrapping style in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in Angular DOCX Editor | Syncfusion
+description: Text wrapping styles in Angular DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Text wrapping style 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text wrapping style in Angular Document Editor component
+# Text Wrapping Style in Angular DOCX Editor
 
 Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 

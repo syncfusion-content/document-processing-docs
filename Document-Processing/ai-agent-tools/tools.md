@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tools | AI Agent Tools | Syncfusion
+title: Tools available in Document SDK AI Agent Tools | Syncfusion
 description: Complete reference for all Syncfusion Document SDK Agent Tool classes - Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK AI Agent Tools
+# Tools available in Document SDK AI Agent Tools
 
 [Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available tools below.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet Rows and Columns Manipulation using Syncfusion Flutter XlsIO
-description: Learn how to apply and manipulate rows cells and columns cells in Excel Worksheet of workbook using Syncfusion Flutter XlsIO.
+title: Rows and Columns in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users manipulate rows, columns, and cells in Excel worksheets programmatically.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Worksheet Rows and Columns Manipulation
+# Worksheet Rows and Columns in Flutter Excel Library
 
 The Flutter XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion and adjusting the dimensions.
 

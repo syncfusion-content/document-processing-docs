@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Increase the connection buffer size in Blazor PDF Viewer Component
+# Increase the connection buffer size in Blazor PDF Viewer
 
 The Syncfusion&reg; Blazor PDF Viewer component allows to increase the connection buffer size by adding the below service in program.cs file if the size of the PDFViewer is too large.
 

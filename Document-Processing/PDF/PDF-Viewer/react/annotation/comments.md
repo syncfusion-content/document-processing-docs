@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in React PDF Viewer | Syncfusion
-description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Syncfusion React PDF Viewer.
+description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

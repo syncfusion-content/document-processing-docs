@@ -1,11 +1,11 @@
 ---
-title: Working with Mail merge | Syncfusion
+title: Mail merge in Java Word | Syncfusion
 description: This section illustrates about Mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) without MS Word or Office interop.
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Mail merge
+# Mail merge in Java Word
 
 Mail merge is a process of merging data from data source to a Word template document. The `WMergeField` class provides support to bind template document and data source. The `WMergeField` instance is replaced with the actual data retrieved from data source for the given merge field name in a template document.
 

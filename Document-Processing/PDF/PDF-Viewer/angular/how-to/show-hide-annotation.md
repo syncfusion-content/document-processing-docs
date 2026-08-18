@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Showing and Hiding Annotations in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to show and hide annotations in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Show or Hide Annotations in Angular PDF Viewer | Syncfusion
+description: Show or hide annotations in the Angular PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show and hide annotations in PDF Viewer
+# How to Show or Hide Annotations in Angular PDF Viewer
 
 ## Overview
 

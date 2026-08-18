@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set Default Format In Document Editor in DOCX Editor | Syncfusion
-description: Learn here all about how to set default format in Document Editor in Syncfusion Document Editor component of Syncfusion and more.
+title: How to Set Default Format in ASP.NET Core DOCX Editor | Syncfusion
+description: Set default character, paragraph, and section formatting in Syncfusion® ASP.NET Core DOCX Editor for consistent document styling across documents.
 platform: document-processing
 control: Set Default Format In Document Editor
 documentation: ug
 ---
 
 
-# Set the default character, paragraph and section format
+# How to Set Default Format in ASP.NET Core DOCX Editor
 
 You can set the default character format, paragraph format and section format in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 

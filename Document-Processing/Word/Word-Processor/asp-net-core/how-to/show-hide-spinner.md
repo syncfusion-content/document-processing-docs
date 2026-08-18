@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show Hide Spinner in DOCX Editor Component | Syncfusion
-description: Learn here all about how to show hide spinner in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Show and Hide Spinner in ASP.NET Core DOCX Editor | Syncfusion
+description: Show or hide loading indicators in Syncfusion® ASP.NET Core DOCX Editor when opening documents and processing content.
 platform: document-processing
 control: Show Hide Spinner
 documentation: ug
 ---
 
 
-# Show or hide spinner when opening document in Document Editor
+# How to Show and Hide Spinner in ASP.NET Core DOCX Editor
 
 Using the [`spinner`](https://ej2.syncfusion.com/aspnetcore/documentation/spinner/getting-started-asp-core) component, you can show or hide the spinner while opening a document in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 

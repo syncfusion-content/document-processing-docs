@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track Changes in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about track changes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in ASP.NET MVC DOCX Editor | Syncfusion
+description: Track changes in ASP.NET MVC DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track Changes
 documentation: ug
 ---
 
-# Track Changes in ASP.NET MVC Document Editor
+# Track Changes in ASP.NET MVC DOCX Editor
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 

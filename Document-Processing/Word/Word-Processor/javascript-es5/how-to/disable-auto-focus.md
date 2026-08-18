@@ -1,14 +1,14 @@
 ---
 layout: post
 title: How to Disable Auto Focus in JavaScript DOCX Editor | Syncfusion
-description: Learn here all about Disable auto focus in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+description: Disable the auto focus behavior in Syncfusion® JavaScript DOCX Editor to prevent the editor from automatically receiving focus when the page loads.
 platform: document-processing
 control: Disable Auto Focus
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable auto focus in JavaScript (ES5) Document editor control
+# How to Disable Auto Focus in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is focused automatically when the page loads. To prevent the Document Editor from being focused automatically, set the `enableAutoFocus` property to `false`.
 

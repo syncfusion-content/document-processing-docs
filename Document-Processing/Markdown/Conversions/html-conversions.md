@@ -1,12 +1,12 @@
 ---
-title: Convert Markdown to HTML and vice versa in C# | Syncfusion
-description: Learn how to convert Markdown document to HTML file and vice versa using .NET Word library without Microsoft Word or interop dependencies
+title: Convert Markdown to HTML and vice versa in .NET Word | Syncfusion
+description: Learn how to convert a Markdown document to an HTML file and vice versa using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: Word
 documentation: UG
 ---
 
-# Markdown to HTML and HTML to Markdown Conversions
+# Markdown to HTML and HTML to Markdown Conversion in .NET Word Library
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> [.NET Word (DocIO) library](https://www.syncfusion.com/document-sdk/net-word-library) supports converting Markdown to an HTML document and vice versa.
 

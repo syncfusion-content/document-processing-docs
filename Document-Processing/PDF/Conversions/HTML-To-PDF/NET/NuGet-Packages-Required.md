@@ -1,11 +1,11 @@
 ---
-title: NuGet Packages for HTML to PDF | Syncfusion
-description: This section outlines the NuGet packages required to perform HTML to PDF conversion using the Syncfusion PDF library across various platforms
+title: NuGet Packages Required for HTML to PDF Converter | Syncfusion
+description: This section outlines the NuGet packages required to perform HTML to PDF conversion using the Syncfusion PDF Library across various platforms
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# NuGet Packages Required for HTML to PDF
+# NuGet Packages Required for HTML to PDF Converter
 
 For converting HTML to PDF file, the following NuGet packages need to to be installed in your .NET application from [nuget.org](https://www.nuget.org/).  
 
@@ -87,7 +87,7 @@ ASP.NET MVC
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+## RETIRED PRODUCTS
 
 <table>
   <thead>

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in Vue DOCX Editor control | Syncfusion
-description: Learn about collaborative editing in Syncfusion Vue Document Editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in Vue DOCX Editor Control| Syncfusion
+description: Learn about the overview of collaborative editing in Syncfusion Essential Studio Vue DOCX Editor control and more details.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in Vue Document Editor component
+# Collaborative Editing in Syncfusion Vue DOCX Editor Control
 
 Vue Document Editor supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

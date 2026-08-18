@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the PDF Viewer toolbar, add custom items, manage visibility, and respond to toolbar actions in the Syncfusion Vue PDF Viewer component.
+title: Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the Vue PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in Vue PDF Viewer
+# Customize the Organize Pages Toolbar in Vue PDF Viewer
 
 The built-in toolbar provides quick access to essential PDF viewing features including page navigation, text search, zoom controls, printing, and downloading. You can customize the toolbar by showing/hiding items, adding custom buttons, or creating a completely custom interface.
 

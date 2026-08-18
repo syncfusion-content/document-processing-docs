@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select and Deselect Iamges in React Spreadsheet component | Syncfusion
-description: Learn here how to select and deselect images in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Select and Deselect Images in React Spreadsheet | Syncfusion
+description: Learn about selecting and deselecting images in the Syncfusion React Spreadsheet component for image management.
 control: Images
 platform: document-processing
 documentation: ug
 ---
 
-# Select and deselect images in React Spreadsheet
+# Select and Deselect Images in React Spreadsheet
 
 You can select images in the spreadsheet either by clicking them in the UI or programmatically using methods.
 

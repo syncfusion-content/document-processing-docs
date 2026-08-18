@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Publish Syncfusion DOCX Editor Web API to Azure App Service
-description: Learn here all about publishing Document Editor Web API application in Azure App Service from Visual Studio in the Syncfusion React Document Editor.
+title: How to Publish React DOCX Editor Web API to Azure App | Syncfusion
+description: Publish the Syncfusion® React DOCX Editor Web API to Azure App Service in React applications, including deployment and configuration steps.
 control: How to publish Document Editor Web API application in Azure App Service from Visual Studio 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Publish Syncfusion Document Editor Web API to Azure App Service
+# How to Publish React DOCX Editor Web API to Azure App
 
 ## Prerequisites
 

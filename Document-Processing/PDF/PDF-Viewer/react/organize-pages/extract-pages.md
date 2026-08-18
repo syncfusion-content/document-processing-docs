@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Extract Pages in React PDF Viewer | Syncfusion
-description: Learn how to extract pages in the Organize Pages panel of the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2.
+description: Extract pages from a PDF in the React PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in React PDF Viewer
+# Extract Pages in React PDF Viewer
 
 The PDF Viewer component provides an Extract Pages tool in the Organize Pages UI to export selected pages as a new PDF file. The Extract Pages tool is enabled by default.
 

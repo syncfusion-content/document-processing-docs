@@ -1,6 +1,6 @@
 ---
 title: Create Word document in Azure Functions v1 | Syncfusion
-description: Create Word document in Azure Functions v1 using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Describe the NuGet packages required for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

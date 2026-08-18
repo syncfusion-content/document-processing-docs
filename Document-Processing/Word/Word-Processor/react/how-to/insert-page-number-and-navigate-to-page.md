@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert page number and navigate in React DOCX Editor | Syncfusion
-description: Learn here all about Insert page number and navigate to page in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title:  How to Insert Page Numbers in React DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® React DOCX Editor using built-in APIs for efficient document navigation and formatting.
 control: Insert page number and navigate to page
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert page number and navigate in React Document Editor
+# How to Insert Page Numbers and Navigate in React DOCX Editor
 
 You can insert page number and navigate to specific page in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component using the following ways.
 

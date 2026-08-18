@@ -1,12 +1,12 @@
 ---
-title: Markdown Document Conversion Library | Syncfusion
-description: Syncfusion Markdown Conversion Library converts Markdown to several file formats like Word, PDF, HTML, PowerPoint, and Excel without external dependencies.
+title: About Syncfusion .NET Markdown Conversion Library | Syncfusion
+description: Learn about the Syncfusion® .NET Markdown Library for converting Markdown documents to Word, PDF, HTML, PowerPoint, and Excel formats.
 platform: document-processing
 control: general
 documentation: UG
 ---
 
-# Welcome to Syncfusion<sup>®</sup> Markdown Document Conversion Library
+# About Syncfusion .NET Markdown Conversion Library
 
 {% doccards %}
 

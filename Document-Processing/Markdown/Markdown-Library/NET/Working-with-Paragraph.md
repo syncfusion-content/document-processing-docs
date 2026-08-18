@@ -1,12 +1,12 @@
 ---
-title: Working with Paragraph in .NET Markdown Library | Syncfusion
+title: Paragraphs in .NET Markdown Library | Syncfusion
 description: Learn how to add, format, and modify paragraphs in a Markdown document using the .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Working with Paragraph in Markdown Library
+# Paragraphs in .NET Markdown Library
 
 A paragraph is the basic building block of a Markdown document. All textual content in a Markdown document is represented by the `MdParagraph` class. Each paragraph contains a collection of inline elements such as text ranges, hyperlinks, and images, which are represented by the `Inlines` property. The `IMdInline` interface is the base interface for all inline elements. The following elements can be the child elements of a paragraph:
 

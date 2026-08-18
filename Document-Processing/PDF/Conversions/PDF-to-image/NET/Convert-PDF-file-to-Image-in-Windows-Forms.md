@@ -1,13 +1,13 @@
 ---
-title: Convert a PDF document to Image in Windows-Forms | Syncfusion®
-description: Learn how to convert a PDF document to Image file in Windows-Forms with easy steps using System Drawing library.
+title: Getting Started with Windows Forms PDF to Image Library | Syncfusion
+description: Learn how to get started with the Syncfusion Windows Forms PDF to Image Library. Explore setup, features, examples, and conversion options.
 platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert PDF file to Image in Windows Forms
+# Getting Started with Windows Forms PDF to Image Library
 
 The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF document to image in Windows Forms application.
 

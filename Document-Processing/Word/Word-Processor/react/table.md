@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in React DOCX Editor component | Syncfusion
-description: Learn here all about Table in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Tables in React DOCX Editor | Syncfusion
+description: Tables in React DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 control: Table 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in React Document Editor component
+# Tables in React DOCX Editor
 
 Tables are an efficient way to present information. [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

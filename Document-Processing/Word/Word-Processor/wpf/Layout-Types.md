@@ -1,12 +1,12 @@
 ---
-title: Layout Types in WPF RichTextBox control | Syncfusion
-description: Learn here all about Layout Types support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Layout Types in WPF DOCX Editor | Syncfusion
+description: The layout types in WPF DOCX Editor offer multiple layout options, enabling users to choose between Pages, Continuous, and Block layouts.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: layout-types
 ---
-# Layout Types in WPF RichTextBox (SfRichTextBoxAdv)
+# Layout Types in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control allows you to choose between the following layout types.
 

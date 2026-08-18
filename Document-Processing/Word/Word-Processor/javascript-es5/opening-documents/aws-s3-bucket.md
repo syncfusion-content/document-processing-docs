@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open AWS S3 Files in JavaScript (ES5) DOCX Editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from AWS S3 in JavaScript DOCX Editor | Syncfusion
+description: Open documents from AWS S3 in JavaScript DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 in Document Editor
+# Open Documents from AWS S3 in JavaScript DOCX Editor
 
 To load a document from AWS S3 in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below.
 

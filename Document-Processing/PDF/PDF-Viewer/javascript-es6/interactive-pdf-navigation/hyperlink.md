@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigate Hyperlinks in the PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for TypeScript.
+title: Hyperlink in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the JavaScript (ES6) PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in TypeScript PDF Viewer
+# Hyperlink Navigation in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports hyperlink navigation for inline links and table-of-contents (TOC) entries that target destinations inside a document. These elements let users jump directly to relevant sections.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print Events in TypeScript PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implement workflows in the Syncfusion TypeScript PDF Viewer component.
+title: Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Subscribe to print events in the JavaScript (ES6) PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in TypeScript PDF Viewer
+# Print Events in JavaScript (ES6) PDF Viewer
 
 Subscribe to print life cycle events to track usage and implement custom workflows.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find and replace in React DOCX Editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in React DOCX Editor | Syncfusion
+description: The find and replace feature in React DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 control: Find and replace 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in React Document Editor component
+# Find and Replace in React DOCX Editor
 
 The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 

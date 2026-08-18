@@ -1,12 +1,12 @@
 ---
-title: Find and Replace | Excel Library | Syncfusion
-description: In this section, you can learn how to find and replace text, numbers, formulas, values, and comments in an Excel worksheet using the .NET Excel Library.
+title: Find and Replace in .NET Excel Library | Syncfusion
+description: Find and replace describes how the Syncfusion .NET Excel Library searches and replaces text, numbers, formulas, values, and comments.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Find and Replace in Excel Worksheet
+# Find and Replace in .NET Excel Library
 
 ## Find
 

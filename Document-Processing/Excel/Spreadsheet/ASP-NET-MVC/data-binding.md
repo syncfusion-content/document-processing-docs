@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Binding in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Learn here all about Data Binding in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in ASP.NET MVC Spreadsheet | Syncfusion
+description: Bind local and remote data sources to the Syncfusion ASP.NET MVC Spreadsheet for seamless spreadsheet data management.
 platform: document-processing
 control: Data Binding
 documentation: ug
 ---
 
 
-# Data Binding in ASP.NET MVC Spreadsheet Control
+# Data Binding in ASP.NET MVC Spreadsheet
 
 The Spreadsheet uses `DataManager`, which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: TypeScript Spreadsheet MCP Server Setup | Syncfusion®
-description: Install and configure the Syncfusion® TypeScript Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
+title: MCP Server Setup in TypeScript Spreadsheet | Syncfusion
+description: MCP Server setup in TypeScript Spreadsheet explains how to install and configure the MCP Server for API references, code examples, and troubleshooting.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: TypeScript Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
 ---
 
-# TypeScript Spreadsheet MCP Server
+# MCP Server setup in TypeScript Spreadsheet 
 
 The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion TypeScript documentation.
 

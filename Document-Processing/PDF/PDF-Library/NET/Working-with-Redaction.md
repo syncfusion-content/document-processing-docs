@@ -1,12 +1,12 @@
 ---
-title: Working with Redaction | Syncfusion
-description: Learn how to redact sensitive content in PDF documents with .NET PDF, including text, images, patterns, colors, and regex-based redaction
+title: Redaction in .NET PDF Library | Syncfusion
+description: Learn how to redact sensitive text, images, and patterns in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Redaction
+# Redaction in .NET PDF Library
 
 Redacting a PDF is the process of permanently removing sensitive or confidential information from PDF documents. Syncfusion's [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) provides an easy way to redact PDF documents by replacing the content within a specified rectangle with an optional fill color, overlay text, image, or pattern. The underlying text and graphics inside the redaction rectangle are removed during the [Redact](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Redact) call, so the operation cannot be undone.
 
