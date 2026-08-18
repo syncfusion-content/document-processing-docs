@@ -2,13 +2,13 @@
 layout: post
 title: Working With Spreadsheet in WPF Spreadsheet control | Syncfusion®
 canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor"
-description: Learn here all about Working With Spreadsheet support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Access worksheets, grids, and associated events in the WPF Spreadsheet control to customize and manage spreadsheet interactions.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Working with SfSpreadsheet in WPF Spreadsheet (SfSpreadsheet)
+# Working with SfSpreadsheet in WPF Spreadsheet
 
 This section explains how to access the worksheet, grid, and the events associated with SfSpreadsheet.
 

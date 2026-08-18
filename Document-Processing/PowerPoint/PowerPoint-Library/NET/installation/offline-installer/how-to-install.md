@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion® PowerPoint Offline Installer
-description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint offline installer after downloading from our Syncfusion<sup>&reg;</sup> website.
+title: How to Install Syncfusion PowerPoint Offline Installer | Syncfusion
+description: Learn here about how to install Syncfusion® PowerPoint offline installer after downloading from our Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PowerPoint offline installer
+# How to Install Syncfusion PowerPoint Offline Installer
 
 
 ## Installation Methods

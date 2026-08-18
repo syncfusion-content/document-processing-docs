@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in MVC | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion MVC PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Form Designer in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the Form Designer in the ASP.NET MVC PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in MVC PDF Viewer
+# Form Designer in ASP.NET MVC PDF Viewer
 
 When **Form Designer mode** is enabled in the Syncfusion MVC PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 

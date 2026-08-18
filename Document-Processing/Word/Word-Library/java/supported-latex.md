@@ -1,12 +1,12 @@
 ---
-title: Supported LaTeX | DocIO | Syncfusion
-description: Learn the list of LaTeX supported by Java Word library while creating equation in Word document.
+title: Supported LaTeX in Java Word | Syncfusion
+description: Learn about Supported LaTeX in the Syncfusion Java Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Supported symbols using LaTeX in Word Library
+# Supported LaTeX in Java Word
 The Java Word library allows to insert below supported symbols in equation using **LaTeX**.
 
 ## Arrows

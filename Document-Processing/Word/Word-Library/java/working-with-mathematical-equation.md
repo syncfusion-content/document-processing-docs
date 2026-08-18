@@ -1,11 +1,11 @@
 ---
-title: Working with Mathematical Equation | Syncfusion
+title: Mathematical Equation in Java Word | Syncfusion
 description: This section illustrates about create, modify and remove mathematical equation in Word document without MS Word or Office interop
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Mathematical Equation
+# Mathematical Equation in Java Word
 
 Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
 

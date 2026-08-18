@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature module in React DOCX Editor component | Syncfusion
-description: Learn here all about Feature module in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature Modules in React DOCX Editor | Syncfusion
+description: Modules in React DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 control: Feature module 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in React Document Editor component
+# Feature Modules in React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **Print** - Prints the document.

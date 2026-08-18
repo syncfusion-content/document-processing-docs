@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert text or image in a table in Angular DOCX Editor | Syncfusion
-description: Learn here all about Insert text or image in table programmatically in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Insert Text or Image in Table in Angular DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich text content at the current cursor position in Syncfusion® Angular DOCX Editor using document editing APIs.
 platform: document-processing
 control: Insert text or image in table programmatically
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Text or Image in a Table in Angular Document Editor
+# How to Insert Text or Image in Table in Angular DOCX Editor
 
 Using [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) APIs, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../image#images) in a [`table`](../table#create-a-table) programmatically based on your requirement.
 

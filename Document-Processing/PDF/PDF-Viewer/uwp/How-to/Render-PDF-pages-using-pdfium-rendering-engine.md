@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rendering PDF pages using PDFium renderer | Syncfusion
-description: The Syncfusion Essential<sup>®</sup> UWP PDF viewer provides option to render the PDF pages using PDFium rendering engine. 
+title: How to Render PDF Pages using the PDFium renderer  | Syncfusion
+description: Learn how to render pdf pages using the pdfium renderer  in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Render PDF Pages using the PDFium renderer 
+# How to Render PDF Pages using the PDFium renderer in UWP PDF Viewer
 
 The [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) allows the users to render the PDF pages using the PDFium rendering engine. The `IPdfRenderer` interface defines the methods and properties which provides the necessary values and perform the necessary operations to render the pages using the PDFium library. The user needs to add a class in their application which must implement this interface and assign an instance of this class to the Renderer property of the [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html). 
 

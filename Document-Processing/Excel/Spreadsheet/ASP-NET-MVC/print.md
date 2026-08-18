@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about print feature in EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Printing in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to print worksheets and configure print options in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Print
 documentation: ug
 ---
 
 
-# Print in ASP.NET MVC Spreadsheet control
+# Printing in ASP.NET MVC Spreadsheet
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 

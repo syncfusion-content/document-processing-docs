@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global Local in Syncfusion ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about Global Local in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in ASP.NET MVC DOCX Editor | Syncfusion
+description: Global localization in ASP.NET MVC DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global Local
 documentation: ug
 ---
 
 
-# Globalization in ASP.NET MVC Document Editor Component
+# Globalization and Localization in ASP.NET MVC DOCX Editor
 
 ## Localization
 

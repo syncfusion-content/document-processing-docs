@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Strikethrough text in PDF files using WPF PDF Viewer | Syncfusion<sup>&reg;</sup>;
-description: Learn about Strikethrough annotation support in Syncfusion<sup>&reg;</sup>; WPF PDF Viewer control, and the manipulations.
+title: Strikethrough text in WPF PDF Viewer | Syncfusion
+description: The strikethrough annotation feature in WPF PDF Viewer marks text with a horizontal line to indicate deletions, edits, or completed items.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Strikethrough text in PDF files using WPF PDF Viewer
+# Strikethrough text in PDF files using WPF Pdf Viewer
 
 The WPF PDF Viewer allows the user to strikethrough text in PDF files and provides options to edit or remove the existing strikethrough. The strikethrough inclusion mode can be enabled via the toolbar UI or the API. Once the strikethrough inclusion mode is activated, you can strikethrough the required text by selecting it. To select the text, hold down the left mouse button and drag the mouse pointer over the text.
 

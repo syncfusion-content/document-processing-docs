@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Deploy mobile DOCX Editor in Angular | Syncfusion
-description: Learn here all about deploying in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Deploy Angular DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® Angular DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 platform: document-processing
 control: Deploy Document Editor component for mobile
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Angular Document Editor component for Mobile
+# How to Deploy Angular DOCX Editor for Mobile
 
 ## Document Editor component for mobile
 

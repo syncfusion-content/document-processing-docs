@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Polygon Annotation (Shape) in Blazor PDF Viewer | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage polygon annotations in the Blazor SfPdfViewer.
+description: Learn how to add, edit, delete, and programmatically manage polygon annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Polygon Annotation (Shape) in Blazor SfPdfViewer Component
+# Polygon Annotation (Shape) in Blazor PDF Viewer 
 
 Polygon annotations let users outline irregular regions, draw custom shapes, or highlight non-rectangular areas on PDFs for review and markup. The Blazor SfPdfViewer supports adding and managing polygon annotations both from the UI and programmatically.
 

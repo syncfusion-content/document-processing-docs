@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, maui pdf viewer, maui pdf view, .net maui annotations, .net maui shape annotations
 ---
 
-# Shape Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Shape Annotations in .NET MAUI PDF Viewer
 
 The shape annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify shapes in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section explains the various types and functions available in the PDF Viewer for working with shape annotations.
 

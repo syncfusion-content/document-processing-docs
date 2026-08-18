@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize font dropdown in React DOCX Editor | Syncfusion
-description: Learn here all about Customize font family drop down in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Font Family in React DOCX Editor | Syncfusion
+description: Customize the font family drop down list in Syncfusion® React DOCX Editor by configuring available font families and controlling font selection options.
 control: Customize font family drop down 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize font family drop down in React Document Editor component
+# How to Customize Font Family in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides options to customize the font family drop-down list values using [`fontFamilies`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts added in the fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditorsettings) will be displayed in the font drop-down list of the Text Properties pane and the Font dialog.
 

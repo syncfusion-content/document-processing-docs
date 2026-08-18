@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about View in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in ASP.NET MVC DOCX Editor | Syncfusion
+description: View in ASP.NET MVC DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View
 documentation: ug
 ---
 
-# View in ASP.NET MVC Document Editor
+# View in ASP.NET MVC DOCX Editor
 
 ## Web layout
 

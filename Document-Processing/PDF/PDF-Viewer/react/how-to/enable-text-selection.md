@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable or disable text selection in React PDF Viewer | Syncfusion
-description: Learn how to enable or disable text selection in the React PDF Viewer using the enableTextSelection property.
+title: How to Enable or Disable Text Selection in React PDF | Syncfusion
+description: Enable or disable text selection in the React PDF Viewer using the enableTextSelection property to control how users interact with PDF text.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable text selection in React PDF Viewer
+# How to Enable or Disable Text Selection in React PDF Viewer
 
 This guide explains how to enable or disable text selection in the React PDF Viewer using both initialization-time settings and runtime toggling.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in React Spreadsheet control | Syncfusion
-description: Learn about the Comment feature in Syncfusion React Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comment in React Spreadsheet | Syncfusion
+description: Learn about comments in the Syncfusion React Spreadsheet component, including adding, editing, displaying, and managing cell comments.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in React Spreadsheet control
+# Comment in React Spreadsheet
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as `resolve` and `reopen` to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells that contain a comment show a small indicator. Hovering over the cell opens a preview of the comment editor. This helps maintain a clear workflow for collaboration while keeping the original data unchanged.

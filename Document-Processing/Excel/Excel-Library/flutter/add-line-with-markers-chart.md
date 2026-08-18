@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Line with Markers Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the line with markers chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Line Marker Chart in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library allows users create and customize marker-based line charts in Excel worksheets.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Stacked line Chart to Excel worksheet
+# Line Markers Chart in Syncfusion Excel Library
 
 Line marker is a line that is drawn on chart plot and bound to some value on an axis. It may be used to show a trend or mark an important value.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export pages as images in TypeScript PDF Viewer | Syncfusion
-description: Learn how to export pages as Base64-encoded images in the TypeScript PDF Viewer using exportAsImage and exportAsImages.
+title: How to Export Pages as Images in JavaScript (ES6) PDF | Syncfusion
+description: Export pages as Base64-encoded images from the JavaScript (ES6) PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure PDF Page Export to Image Format
+# How to Export Pages as Images in JavaScript (ES6) PDF Viewer
 
 Export pages as Base64-encoded images using `exportAsImage()` for a single page or `exportAsImages()` for a range. These APIs return Base64-encoded image strings suitable for further processing or download.
 

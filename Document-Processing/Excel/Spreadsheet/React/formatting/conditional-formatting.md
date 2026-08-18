@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conditional Formatting in React Spreadsheet component | Syncfusion
-description: Conditional formatting rules, data bars, color scales and icon sets in Syncfusion React Spreadsheet.
+title: Conditional Formatting in React Spreadsheet | Syncfusion
+description: Learn about Conditional formatting rules, data bars, color scales and icon sets in Syncfusion React Spreadsheet.
 control: Formatting
 platform: document-processing
 documentation: ug
 ---
 
-# Conditional Formatting
+# Conditional Formatting in React Spreadsheet
 
 Conditional formatting helps you format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowconditionalformat) property.
 

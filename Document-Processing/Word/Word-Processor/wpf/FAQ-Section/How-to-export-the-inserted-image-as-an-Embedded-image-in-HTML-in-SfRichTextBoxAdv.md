@@ -1,13 +1,13 @@
 ---
-title: Export image as Embedded in HTML in WPF SfRichTextBoxAdv | Syncfusion
-description: Learn here all about how to export the inserted image as an Embedded image in HTML in Syncfusion WPF SfRichTextBoxAdv and more.
+title: How to Export Embedded Images in HTML in WPF DOCX Editor | Syncfusion
+description: Export inserted images as embedded content in HTML from Syncfusion® WPF DOCX Editor using the ImageNodeVisited event to manage image streams.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: embedded-image-html
 ---
 
-# Export Image as Embedded in HTML in WPF SfRichTextBoxAdv
+# How to Export Embedded Images in HTML in WPF DOCX Editor
 
 This page explains how to export the inserted image as an Embedded image in HTML in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv).
 

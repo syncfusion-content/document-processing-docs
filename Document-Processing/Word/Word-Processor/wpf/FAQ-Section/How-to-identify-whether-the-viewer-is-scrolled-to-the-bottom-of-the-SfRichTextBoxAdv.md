@@ -1,13 +1,13 @@
 ---
-title: Detect viewer scrolled to bottom in WPF SfRichTextBoxAdv | Syncfusion
-description: Learn here all about how to identify whether the viewer is scrolled to the bottom in Syncfusion WPF SfRichTextBoxAdv and more.
+title: How to Detect Scrolling to the Bottom in WPF DOCX Editor | Syncfusion
+description: Detect when the document viewer reaches the bottom in Syncfusion® WPF DOCX Editor using the VerticalScrollBar ValueChanged event.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: scroll-to-bottom
 ---
 
-# Detect viewer scrolled to bottom in WPF SfRichTextBoxAdv
+# How to Detect Scrolling to the Bottom in WPF DOCX Editor
 
 This page explains how to identify whether the viewer is scrolled to the bottom in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv).
 

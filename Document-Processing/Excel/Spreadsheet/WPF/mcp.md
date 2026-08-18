@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion WPF Spreadsheet (SfSpreadsheet) MCP Server | Syncfusion
-description: Learn how to configure Syncfusion WPF MCP server for intelligent code generation, documentation, and troubleshooting in WPF Spreadsheet applications.
+title: MCP Server in WPF Spreadsheet Control|  Syncfusion®
+description: Configure the WPF Spreadsheet MCP Server to access documentation, API references, code generation, and troubleshooting in AI-powered development environments.
 platform: wpf
 control: Getting started with Syncfusion WPF Spreadsheet MCP Server
 documentation: ug
 ---
 
-# Syncfusion WPF Spreadsheet (SfSpreadsheet) MCP Server
+# MCP Server in WPF Spreadsheet
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerates WPF Spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

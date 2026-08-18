@@ -1,13 +1,13 @@
 ---
 layout: post
-title: UI Customization in React Spreadsheet component | Syncfusion
+title: UI Customization in React Spreadsheet | Syncfusion
 description: Learn here how to customize and manage the user interface in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# User Interface Customization
+# UI Customization in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides options to customize the user interface and control the behavior of its UI components.
 

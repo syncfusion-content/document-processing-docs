@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Handwritten signature in JavaScript PDF Viewer control | Syncfusion
-description: Learn about handwritten signatures in the Syncfusion JavaScript PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
+title: Signature Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Add, edit, and manage handwritten signatures in the JavaScript (ES5) PDF Viewer, including enabling or disabling the signature tool for users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature in JavaScript PDF Viewer control
+# Handwritten Signature in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: TOC Navigation in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Table of Contents Navigation support in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+title: TOC Navigation in WPF Pdf Viewer control | Syncfusion
+description: Navigate using table of contents in Syncfusion WPF PDF Viewer. Learn to access TOC destinations and navigate PDF documents efficiently.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,12 +1,12 @@
 ---
-title: Create PDF file in Console Application | Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
+title: Getting Started with .NET PDF Library in Console App | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in a Console Application and generate PDF documents efficiently.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Create or Generate a PDF file in a Console application
+# Getting Started with .NET PDF Library in Console Application
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
