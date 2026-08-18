@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sort in React Spreadsheet component | Syncfusion
-description: Learn here all about Sort in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sorting in React Spreadsheet | Syncfusion
+description: Learn about sorting in the Syncfusion React Spreadsheet component, including ascending, descending, and custom sorting options.
 control: Sort 
 platform: document-processing
 documentation: ug
 ---
 
-# Sort in React Spreadsheet component
+# Sort in React Spreadsheet
 
 Sorting helps arrange the data to a specific order in a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 

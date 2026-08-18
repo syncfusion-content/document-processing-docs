@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in Angular with Redis in Java | Syncfusion
-description: Learn about collaborative editing in Syncfusion Angular Document Editor control With Redis in Java of Syncfusion Essential JS 2 and more
+title: Collaborative Editing in Angular DOCX Editor using Java | Syncfusion
+description: The collaborative editing feature in Angular DOCX Editor supports real-time multi-user document editing using Redis with Java.
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in Angular with Redis in Java
+# Collaborative Editing in Angular DOCX Editor with Redis in Java
 
 This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

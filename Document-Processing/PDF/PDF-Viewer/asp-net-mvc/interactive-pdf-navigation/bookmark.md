@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bookmark Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn how to use bookmarks for quick navigation in the Syncfusion ASP.NET MVC PDF Viewer control, enhancing user experience and accessibility.
+title: Bookmark in ASP.NET MVC PDF Viewer | Syncfusion
+description: Navigate PDF bookmarks in the ASP.NET MVC PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Bookmark navigation in ASP.NET MVC PDF Viewer
+# Bookmark Navigation in ASP.NET MVC PDF Viewer
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation.
 You can enable/disable bookmark navigation by using the following code snippet:

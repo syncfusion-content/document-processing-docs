@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove pages using Organize Pages in React PDF Viewer | Syncfusion
-description: How to remove one or more pages from a PDF using the Organize Pages view in the Syncfusion React PDF Viewer.
+title: Remove Pages in React PDF Viewer | Syncfusion
+description: Remove one or more pages from a PDF in the React PDF Viewer using the Organize Pages panel, either through the UI or programmatically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool
+# Remove Pages in React PDF Viewer
 
 ## Overview
 

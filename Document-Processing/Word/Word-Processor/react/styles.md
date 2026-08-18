@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in React DOCX Editor component | Syncfusion
-description: Learn here all about Styles in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in React DOCX Editor | Syncfusion
+description: The styles feature in React DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 control: Styles 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in React Document Editor component
+# Styles in React DOCX Editor
 
 Styles are useful for applying a set of formatting consistently throughout the document. In the Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 

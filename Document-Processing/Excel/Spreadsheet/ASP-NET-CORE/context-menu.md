@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Context Menu in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Context Menu in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about the context menu in the Syncfusion ASP.NET Core Spreadsheet control, including customization and available menu actions.
 platform: document-processing
 control: Context Menu
 documentation: ug
 ---
 
 
-# Context Menu in ASP.NET Core Spreadsheet control
+# Context Menu in ASP.NET Core Spreadsheet
 
 The context menu provides quick access to Spreadsheet operations through a popup menu. It opens when a user right-clicks a cell, row header, column header, or worksheet tab. Use the [`enableContextMenu`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableContextMenu) property to enable or disable the context menu.
 

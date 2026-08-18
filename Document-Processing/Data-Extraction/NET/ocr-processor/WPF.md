@@ -1,6 +1,6 @@
 ---
 title: Getting Started with WPF OCR Processor | Syncfusion
-description: Learn how to get started with the Syncfusion WPF OCR Processor. Explore setup, features, examples, and customization options. 
+description: Learn how to get started with the Syncfusion WPF OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG

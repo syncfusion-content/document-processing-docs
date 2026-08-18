@@ -1,12 +1,12 @@
 ---
-title: Printing Contents in WPF RichTextBox control | Syncfusion
-description: Learn here all about Printing Contents support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Printing Contents in WPF DOCX Editor | Syncfusion
+description: The printing contents in WPF DOCX Editor offer an API to print rich text content rendered as pages, enabling printing through the print dialog.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: printing
 ---
-# Printing Contents in WPF RichTextBox (SfRichTextBoxAdv)
+# Printing Contents in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports API to print the rich text content rendered as pages using the print dialog.
 The following sample code demonstrates how to print the document content as pages.

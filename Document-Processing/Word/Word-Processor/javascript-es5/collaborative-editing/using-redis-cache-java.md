@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in JavaScript using Java | Syncfusion
+description: The collaborative editing feature in JavaScript DOCX Editor supports real-time multi-user document editing using Redis with Java.
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in JavaScript (ES5) with Redis in Java
+# Collaborative Editing in JavaScript DOCX Editor with Redis in Java
 
 This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

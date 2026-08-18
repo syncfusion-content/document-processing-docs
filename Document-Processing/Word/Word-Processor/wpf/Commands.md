@@ -1,12 +1,12 @@
 ---
-title: Commands in WPF RichTextBox control | Syncfusion
-description: Learn here all about Commands support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Commands in WPF DOCX Editor | Syncfusion
+description: The commands in WPF DOCX Editor offer a loosely coupled way to handle UI actions, enabling character and paragraph formatting, clipboard, and table operations.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: commands
 ---
-# Commands in WPF RichTextBox (SfRichTextBoxAdv)
+# Commands in WPF DOCX Editor
 
 Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports commands for mostly used operations which are classified below.
 

@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Windows Forms OCR Processor| Syncfusion
-description: Learn how to get started with the Syncfusion Windows Forms OCR Processor. Explore setup, features, examples, and customization options. 
+description: Learn how to get started with the Syncfusion Windows Forms OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 documentation: UG
 keywords: Assemblies

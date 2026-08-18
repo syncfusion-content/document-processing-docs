@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature module in JavaScript (ES5) DOCX Editor control | Syncfusion
-description: Learn here all about Feature module in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Feature Modules in JavaScript DOCX Editor | Syncfusion
+description: Modules in JavaScript DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 platform: document-processing
 control: Feature module 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in JavaScript (ES5) Document Editor control
+# Feature Modules in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 

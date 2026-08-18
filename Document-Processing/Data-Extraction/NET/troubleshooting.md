@@ -59,7 +59,7 @@ documentation: UG
     <th style="font-size:14px" width="100px">Solution</th>
     <td>
       Install the NuGet package 
-      <a href="https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0">Microsoft.ML.ONNXRuntime</a> (Version 1.18.0) manually in your sample/project. 
+      <a href="https://www.nuget.org/packages/Microsoft.ML.ONNXRuntime/1.18.0" aria-label="NuGet link of Microsoft.ML.ONNXRuntime">Microsoft.ML.ONNXRuntime</a> (Version 1.18.0) manually in your sample/project. 
       <br/>This package is required for <strong>SmartDataExtractor</strong> across .NET Framework projects.
     </td>
   </tr>

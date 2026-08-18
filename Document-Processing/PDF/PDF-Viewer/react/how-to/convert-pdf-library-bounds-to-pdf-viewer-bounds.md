@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Map PDF Library Bounds to PDF Viewer Coordinates | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the React PDF Viewer.
+title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
+description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the React PDF Viewer so coordinates map correctly.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Map PDF Library Coordinates to PDF Viewer Coordinates
+# How to Convert PDF Library Bounds to PDF Viewer Bounds in React PDF
 
 The Syncfusion PDF Library reports annotation bounds in PDF coordinates (points, origin at the bottom-left of the page), while the PDF Viewer renders them in pixel coordinates (origin at the top-left). When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so that exported annotations appear at the correct position and scale in the viewer.
 

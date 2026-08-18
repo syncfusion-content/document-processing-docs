@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Magnification in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use magnification tools (Zoom In, Zoom Out, Fit Page, Fit Width) in the Syncfusion ASP.NET Core PDF Viewer and control zoom behavior.
+description: Enable and use magnification in the ASP.NET Core PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
 
-# Viewing at Different Zoom Levels
+# Magnification in ASP.NET Core PDF Viewer
 
 The PDF Viewer includes magnification tools on the default toolbar: Zoom In, Zoom Out, Zoom, Fit Page, and Fit Width. The toolbar can be configured to show or hide magnification tools as needed.
 

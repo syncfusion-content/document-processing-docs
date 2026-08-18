@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize Document Editor in DOCX Editor | Syncfusion
-description: Learn here all about how to resize Document Editor in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Resize in ASP.NET Core DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® ASP.NET Core DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Resize Document Editor
 documentation: ug
 ---
 
 
-# Change height and width of ASP.NET Core Document Editor component
+# How to Resize in ASP.NET Core DOCX Editor 
 
 This section explains how to change height and width of [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 

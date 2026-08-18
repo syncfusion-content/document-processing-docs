@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Form Field Events in Vue PDF Viewer | Syncfusion
-description: Learn here all about form field events in the Syncfusion Vue PDF Viewer component and how to handle them.
+description: Subscribe to form field events in the Vue PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field Events in Vue
+# Form Field Events in Vue PDF Viewer
 
 The Syncfusion **Vue PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**.
 

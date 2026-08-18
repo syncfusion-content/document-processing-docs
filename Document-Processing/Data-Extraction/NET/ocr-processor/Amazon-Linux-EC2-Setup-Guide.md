@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Amazon Linux EC2 OCR Processor | Syncfusion  
+title: Getting Started with Amazon Linux EC2 OCR Processor | Syncfusion 
 description: Learn how to get started with the Syncfusion Amazon Linux 2023 EC2 OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF  

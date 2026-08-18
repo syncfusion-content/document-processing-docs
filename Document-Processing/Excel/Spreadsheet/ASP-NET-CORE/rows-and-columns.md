@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rows and columns in EJ2 ASP.NET CORE Spreadsheet | Syncfusion
-description: Learn here all about Rows And Columns in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Rows and Columns in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about rows and columns in the Syncfusion ASP.NET Core Spreadsheet control, including inserting, deleting, resizing, and managing data structures.
 platform: document-processing
 control: Rows And Columns
 documentation: ug
 ---
 
 
-# Rows and columns in ASP.NET Core Spreadsheet control
+# Rows and Columns in ASP.NET Core Spreadsheet
 
 A Spreadsheet consists of rows and columns arranged in a tabular format. The intersection of a row and a column is called a cell. You can perform the following operations on rows and columns:
 

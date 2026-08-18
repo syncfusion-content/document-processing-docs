@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Override The Keyboard Shortcuts in DOCX Editor | Syncfusion
-description: Learn here all about how to override the keyboard shortcuts in the Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Override Keyboard Shortcuts in ASP.NET Core DOCX Editor | Syncfusion
+description: Override default keyboard shortcuts in Syncfusion® ASP.NET Core DOCX Editor to customize user interactions and implement application-specific commands.
 platform: document-processing
 control: Override The Keyboard Shortcuts
 documentation: ug
 ---
 
 
-# Override the keyboard shortcuts in ASP.NET Core Document Editor
+# How to Override Keyboard Shortcuts in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) triggers the [`keyDown`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_KeyDown) event every time a key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 

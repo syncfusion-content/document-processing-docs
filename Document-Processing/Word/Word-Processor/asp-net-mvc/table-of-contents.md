@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Table of Contents in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about table of contents in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table of Contents in ASP.NET MVC DOCX Editor | Syncfusion
+description: The Table of Contents feature in ASP.NET MVC DOCX Editor enables users to generate and update a structured index for quick document navigation.
 platform: document-processing
 control: Table Of Contents
 documentation: ug
