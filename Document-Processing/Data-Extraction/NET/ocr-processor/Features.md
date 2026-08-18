@@ -1,13 +1,13 @@
 ---
-title: Perform OCR on PDF and image files | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract version using Syncfusion .NET OCR library.
+title: Perform OCR on PDF and image files in .NET | Syncfusion
+description: Learn how to perform OCR on scanned PDF documents and images with different tesseract version using Syncfusion .NET OCR Processor.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 --- 
 
-# OCR Processor Features 
+# Perform OCR on PDF and image files in .NET
 
 ## Performing OCR for an entire document
 
@@ -2058,7 +2058,7 @@ N> UnicodeFont is not supported in the framework application.
 
 For more details regarding quality improvement, refer to the following link.
 
-[https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality](https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality )
+[https://tesseract-ocr.github.io/tessdoc/ImproveQuality](https://tesseract-ocr.github.io/tessdoc/ImproveQuality)
 
 **You can set the different performance level to the OCRProcessor using [Performance](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Performance.html) enumeration.**
 

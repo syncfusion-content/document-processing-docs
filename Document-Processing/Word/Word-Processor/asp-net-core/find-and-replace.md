@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find And Replace in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about find and replace in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in ASP.NET Core DOCX Editor | Syncfusion
+description: The find and replace feature in ASP.NET Core DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: Find And Replace
 documentation: ug
 ---
 
 
-# Find and Replace in ASP.NET Core in Document Editor Component
+# Find and Replace in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 

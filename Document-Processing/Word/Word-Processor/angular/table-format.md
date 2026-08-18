@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table format in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Table format in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in Angular DOCX Editor | Syncfusion
+description: The table format feature in Angular DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in Angular Document Editor component
+# Table format in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 

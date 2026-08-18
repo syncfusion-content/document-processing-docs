@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Editing in Blazor Spreadsheet component | Syncfusion
-description: Check out and learn about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
+title: Cell Editing in Blazor Spreadsheet | Syncfusion
+description: Explore cell editing capabilities in the Syncfusion Blazor Spreadsheet, including validation, formulas, and data updates.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Cell Editing in Blazor Spreadsheet component
+# Cell Editing in Blazor Spreadsheet
 
 Cell editing in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component enables modification of cell content either directly within the spreadsheet or through the formula bar. This feature is enabled by default but can be disabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property. To disable or enable cell editing, set the value of this property accordingly.
 

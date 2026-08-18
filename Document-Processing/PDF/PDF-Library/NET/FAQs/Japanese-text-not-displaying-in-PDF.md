@@ -1,12 +1,12 @@
 ---
-title: Japanese text not displaying in PDF | Syncfusion
-description: The text is not visible due to font compatibility issues with certain viewers like Edge. To resolve this, create a TrueTypeFont using the desired font.
+title: Japanese Text in .NET PDF Library | Syncfusion
+description: Resolve font compatibility issues causing Japanese text to not display in PDF documents using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Japanese Text Not Displaying in PDF
+# Japanese Text in .NET PDF library
 
 ## Why is Japanese text not visible in my PDF document?
 

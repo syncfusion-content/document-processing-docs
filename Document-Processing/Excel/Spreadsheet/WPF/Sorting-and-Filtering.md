@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sorting and Filtering in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Sorting and Filtering support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Sort and filter worksheet data in the WPF Spreadsheet control to quickly organize, analyze, and display relevant information.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Sorting and Filtering in WPF Spreadsheet (SfSpreadsheet)
+# Sorting and Filtering in WPF Spreadsheet
 
 This section explains the sorting and filtering functionalities available in the SfSpreadsheet.
 

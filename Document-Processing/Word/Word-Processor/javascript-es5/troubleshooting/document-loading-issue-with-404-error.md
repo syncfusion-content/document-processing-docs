@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Document loading issue in JavaScript(ES5) DOCX Editor | Syncfusion
-description: Document loading may fail with a 404 error if the JavaScript (ES5) Document Editor cannot reach a valid service URL.
+title: Document Loading Issue in JavaScript DOCX Editor | Syncfusion
+description: Troubleshoot the 404 error in Syncfusion JavaScript DOCX Editor by verifying the service URL configuration and ensuring the document service is accessible.
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document loading issue with 404 error in JavaScript(ES5) DOCX Editor
+# Document Loading Issue in JavaScript DOCX Editor
 
 If document loading fails and you see a 404 error in the browser console, the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is unable to reach a valid Web Service endpoint.
 

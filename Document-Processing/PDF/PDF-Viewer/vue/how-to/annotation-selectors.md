@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize annotation selectors in Vue PDF Viewer | Syncfusion
-description: Learn how to customize annotation selectors in the Vue PDF Viewer component using annotationSelectorSettings with examples.
+title: How to Customize Annotation Selectors in Vue PDF Viewer | Syncfusion
+description: Customize annotation selectors in the Vue PDF Viewer using annotationSelectorSettings to control how users select and resize annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize annotation selectors in Vue PDF Viewer
+# How to Customize Annotation Selectors in Vue PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#annotationselectorsettings) property to configure the appearance and behavior of annotation selectors. This includes selection handles and resizer (for example, handle shape and size), which determine how users interact with annotations during editing.
 
@@ -68,7 +68,7 @@ export default {
 </script>
 ```
 
-### Composition API example
+## Composition API example
 
 ```html
 <template>

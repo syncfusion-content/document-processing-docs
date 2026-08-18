@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about View in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: View in JavaScript DOCX Editor | Syncfusion
+description: View in JavaScript DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in JavaScript (ES5) Document editor control
+# View in JavaScript DOCX Editor
 
 ## Web Layout
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Web services in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Web services in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Web Services in Syncfusion JavaScript DOCX Editor Control| Syncfusion
+description: Learn about the overview of web services in Syncfusion Essential Studio JavaScript DOCX Editor control and more details.
 platform: document-processing
 control: Web services 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web services in JavaScript (ES5) Document editor control
+# Web Services in Syncfusion JavaScript DOCX Editor Control
 
 You can deploy web APIs for server-side dependencies of [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component in the following platforms.
 

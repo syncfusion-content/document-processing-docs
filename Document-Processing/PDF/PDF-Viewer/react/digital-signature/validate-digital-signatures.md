@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Validate Digital Signatures in React PDF Viewer | Syncfusion
-description: Learn how to validate digital signatures applied to PDF forms using the Syncfusion JavaScript PDF Library with the React PDF Viewer.
+description: Validate digital signatures applied to PDF forms from a React app using the Syncfusion PDF Library together with the React PDF Viewer.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Validate Digital Signatures
+# Validate Digital Signatures in React PDF Viewer
 
 This guide explains **how to validate digital signatures** on PDFs when using the **React PDF Viewer** together with the **JavaScript PDF Library**. It clarifies what the Viewer does (display fields and signature appearances) and what the **PDF Library** does (perform **cryptographic validation** and produce validation results).
 

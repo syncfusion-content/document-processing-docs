@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with TypeScript DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a TypeScript application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion TypeScript DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug

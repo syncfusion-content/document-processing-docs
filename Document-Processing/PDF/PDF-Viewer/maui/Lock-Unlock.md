@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Lock and Unlock Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Locking and Unlocking annotations in .NET MAUI PDF Viewer
 
 You can lock an annotation to prevent it from being edited. The annotation that has been locked cannot be removed or edited further until it is unlocked. This section will go through the process of locking and unlocking annotations in a PDF document.
 

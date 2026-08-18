@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Override Keyboard Shortcuts JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to override keyboard shortcuts in Syncfusion JavaScript (ES6) DOCX Editor using the keyDown event and isHandled property.
+title: Override Keyboard Shortcuts in TypeScript DOCX Editor | Syncfusion
+description: Override default keyboard shortcuts in Syncfusion® TypeScript DOCX Editor to customize user interactions and implement application-specific commands.
 platform: document-processing
 control: Override Keyboard Shortcuts
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Override Keyboard Shortcuts in JavaScript (ES6) Document Editor
+# How to Override Keyboard Shortcuts in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) triggers the [`keyDown`](https://ej2.syncfusion.com/documentation/api/document-editor#keydown) event every time a key is pressed and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs). You can use the [`isHandled`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue Standalone PDF Viewer component | Syncfusion
-description: Learn about Getting Started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Vue PDF Viewer control. Explore setup, features, examples, and customization options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with standalone Vue PDF Viewer Component in Vue 2
+# Getting Started with Vue PDF Viewer
 
 This section explains how to create the **PDF Viewer** component and configure the PDF Viewer in a Vue 2 application using [Vue CLI](https://cli.vuejs.org/). The standalone PDF Viewer renders PDFs locally in the browser without requiring a server.
 

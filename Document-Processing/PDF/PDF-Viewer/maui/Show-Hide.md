@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show and Hide Annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to show and hide annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: How to Show and Hide Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to show and hide annotations in .net maui pdf viewer (sfpdfviewer) in Syncfusion .NET MAUI PDF Viewer with examples and implementation details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Show and Hide Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# How to Show and Hide Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
  
 You can manage the visibility of annotations using the `Hidden` property. It helps you to hide annotations containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents that are cluttered with more annotations. Like other annotation properties, you can undo and redo the hiding or showing actions. Additionally, when an annotation is locked, it cannot be hidden. Annotations that are hidden will remain hidden during import, export, printing, and saving.
 

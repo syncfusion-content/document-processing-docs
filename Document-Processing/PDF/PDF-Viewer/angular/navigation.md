@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigation in Angular PDF Viewer component | Syncfusion
-description: Learn all about Navigation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Navigation in Angular PDF Viewer | Syncfusion
+description: Move between pages in the Angular PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Angular PDF Viewer component
+# Navigation in Angular PDF Viewer
 
 The Angular PDF Viewer supports several internal and external navigation methods.
 

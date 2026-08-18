@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text Wrapping Style in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about text wrapping style in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in ASP.NET MVC DOCX Editor | Syncfusion
+description: Text wrapping styles in ASP.NET MVC DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Text Wrapping Style
 documentation: ug
 ---
 
 
-# Text Wrapping Style in ASP.NET MVC Document Editor
+# Text Wrapping Style in ASP.NET MVC DOCX Editor
 
 Text wrapping refers to how images and shapes are fitted with surrounding text in a document. Currently, Document Editor has only preservation support for image and text box shapes with the following wrapping styles.
 

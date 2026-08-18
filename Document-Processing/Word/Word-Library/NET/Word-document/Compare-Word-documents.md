@@ -1,12 +1,12 @@
 ---
-title: Compare Word Documents in C# | DocIO | Syncfusion
-description: Learn how to compare two Word documents in C# using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Compare Word Documents in .NET Word | Syncfusion
+description: Learn how to compare two Word documents in C# using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Compare Word documents in C#
+# Compare Word Documents in .NET Word
 
 Comparing two Word documents allows you to identify the changes between two versions of a document. The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
 *	Insertions
@@ -110,7 +110,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set Author and Date 
 
-Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default author is "Author" and the default date/time is the current time. The following sample uses an overload of the [`Compare`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) method that accepts an author and date.
+Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default author is "Author" and the default date/time is the current time. The following sample uses an overload of the [`Compare`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Compare_Syncfusion_DocIO_DLS_WordDocument_System_String_System_DateTime_Syncfusion_DocIO_DLS_ComparisonOptions_) method that accepts an author and date.
 
 The following code example shows how to set the author and date for revision while comparing two Word documents.
 

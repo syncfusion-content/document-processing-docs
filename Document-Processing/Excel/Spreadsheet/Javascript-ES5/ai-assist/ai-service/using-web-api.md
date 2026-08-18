@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Web API Server Setup in JavaScript Spreadsheet | Syncfusion
-description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion JavaScript Spreadsheet control.
+description: AI Assist Web API server setup in JavaScript Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug

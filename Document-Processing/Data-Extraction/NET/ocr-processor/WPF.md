@@ -1,13 +1,13 @@
 ---
-title: Perform OCR on PDF and image files in WPF | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images in WPF with different tesseract version using Syncfusion .NET OCR library. 
+title: Getting Started with WPF OCR Processor | Syncfusion
+description: Learn how to get started with the Syncfusion WPF OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 --- 
 
-# Perform OCR in WPF (Windows Presentation Foundation)
+# Getting Started with WPF OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in WPF applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 

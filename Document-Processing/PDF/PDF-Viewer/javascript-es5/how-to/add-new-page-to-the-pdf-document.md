@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add new page to PDF document - Syncfusion JavaScript PDF Viewer
-description: Learn how to append a new page to a loaded PDF document in the Syncfusion JavaScript PDF Viewer control using the PDF library service.
+title: How to Add a New Page to a PDF in JavaScript (ES5) PDF | Syncfusion
+description: Add new pages to a loaded PDF in the JavaScript (ES5) PDF Viewer using the addPage API to extend a document with additional content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add a new page to a PDF document in JavaScript PDF Viewer control
+# How to Add a New Page to a PDF in JavaScript (ES5) PDF Viewer
 
 The JavaScript PDF Viewer can append a blank page to a loaded PDF document by using the accompanying PDF library service on the server.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of Forms in MVC PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion MVC PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion ASP.NET MVC PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of Forms in MVC PDF Viewer
+# About Syncfusion ASP.NET MVC PDF Viewer Forms
 
 The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. You can read, fill, add, edit, and delete form fields directly within your PDF documents. These actions are supported through the intuitive user interface and powerful programmatic APIs.
 

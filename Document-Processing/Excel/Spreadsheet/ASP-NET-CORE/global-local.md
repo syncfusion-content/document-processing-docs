@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global Local in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Global Local in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Globalization in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about globalization in the Syncfusion ASP.NET Core Spreadsheet control, including localization, culture settings, and regional formats.
 platform: document-processing
 control: Global Local
 documentation: ug
 ---
 
-# Globalization in ASP.NET Core Spreadsheet control
+# Globalization in ASP.NET Core Spreadsheet
 
 ## Localization
 

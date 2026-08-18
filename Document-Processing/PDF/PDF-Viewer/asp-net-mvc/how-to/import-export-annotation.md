@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and export annotations in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion ASP.NET MVC PDF Viewer.
+title: How to Import and Export Annotations in ASP.NET MVC PDF | Syncfusion
+description: Import and export annotations in the ASP.NET MVC PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import and export annotations in the ASP.NET MVC PDF Viewer
+# How to Import and Export Annotations in ASP.NET MVC PDF Viewer
 
 Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [**exportAnnotationsAsObject()**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
 
