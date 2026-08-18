@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Time Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply Time function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Time Functions in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users calculate and manage time-based values in Excel worksheet cells.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Time Function Formulas
+# Time Function Formulas in Flutter Excel Library
 
 Time Function Formulas includes the following functions:
 

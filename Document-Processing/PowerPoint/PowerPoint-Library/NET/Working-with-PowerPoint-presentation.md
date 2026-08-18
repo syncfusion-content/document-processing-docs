@@ -76,6 +76,82 @@ clonedPresentation_1.Save("ClonedPresentation.pptx")
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Clone-PowerPoint-presentation/.NET).
 
+## Splitting a PowerPoint Presentation
+
+Splitting a PowerPoint presentation separates the slides from different sections into individual presentation files. This is useful when you want to organize slides by sections and create independent presentations for each section. The split operation clones the slides from each section and saves them as separate PPTX documents.
+
+The following code example demonstrates how to split a PowerPoint presentation by sections:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Split-PowerPoint-presentation/.NET/Split-PowerPoint-presentation/Program.cs" %}
+//Opens the source PPTX document
+IPresentation sourcePptx = Presentation.Open(Path.GetFullPath(@"Data/Template.pptx"));
+//Iterates through each section
+foreach (ISection section in sourcePptx.Sections)
+{
+    //Creates a destination PPTX document. Existing presentations can also be used here
+    IPresentation destinationPptx = Presentation.Create();
+    //Clones the slides from the section and moves to new PPTX document
+    foreach (ISlide slide in section.Slides)
+    {
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx);
+    }
+    //Saves the destination PPTX document
+    string outputPath = Path.Combine(Path.GetFullPath("Output"), section.Name + "_Slides.pptx");
+    destinationPptx.Save(outputPath);
+    destinationPptx.Close();
+}
+//Closes the PPTX document
+sourcePptx.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Opens the source PPTX document
+IPresentation sourcePptx = Presentation.Open(fileName);
+//Iterates through each section
+foreach (ISection section in sourcePptx.Sections)
+{
+    //Creates a destination PPTX document. Existing presentations can also be used here
+    IPresentation destinationPptx = Presentation.Create();
+    //Clones the slides from the section and moves to new PPTX document
+    foreach (ISlide slide in section.Slides)
+    {
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx);
+    }
+    //Saves the destination PPTX document
+    string outputPath = Path.Combine("Output", section.Name + "_Slides.pptx");
+    destinationPptx.Save(outputPath);
+    destinationPptx.Close();
+}
+//Closes the PPTX document
+sourcePptx.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Opens the source PPTX document
+Dim sourcePptx As IPresentation = Presentation.Open(fileName)
+'Iterates through each section
+For Each section As ISection In sourcePptx.Sections
+    'Creates a destination PPTX document. Existing presentations can also be used here
+    Dim destinationPptx As IPresentation = Presentation.Create()
+    'Clones the slides from the section and moves to new PPTX document
+    For Each slide As ISlide In section.Slides
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx)
+    Next
+    'Saves the destination PPTX document
+    Dim outputPath As String = Path.Combine("Output", section.Name + "_Slides.pptx")
+    destinationPptx.Save(outputPath)
+    destinationPptx.Close()
+Next
+'Closes the PPTX document
+sourcePptx.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Sections/Split-PowerPoint-by-Sections/.NET).
+
 ## Printing a PowerPoint Presentation
 
 You can print the Presentation document by converting the PowerPoint presentation slides to images. For more information about converting the PowerPoint presentation slides to images, see [Conversion](/document-processing/powerpoint/powerpoint-library/net/getting-started). You can use the System.Drawing.Printing.[PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?redirectedfrom=MSDN&view=dotnet-plat-ext-7.0) class to print the converted images by the default printer or to any of the available printer with customized settings.

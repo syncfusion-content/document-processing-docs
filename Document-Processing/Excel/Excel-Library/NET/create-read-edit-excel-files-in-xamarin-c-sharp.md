@@ -1,11 +1,11 @@
 ---
-title: Create, read, and edit Excel files in Xamarin | Syncfusion
-description: This section explains how to create, read, and edit Excel files in Xamarin applications using Syncfusion XlsIO
+title: Create, Read, and Edit Excel in Xamarin | Syncfusion
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Xamarin applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in Xamarin
+# Create Excel Files in Xamarin with Excel Library
 
 [.NET Excel Library for Xamarin platform](https://www.syncfusion.com/document-processing/excel-framework/xamarin/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 

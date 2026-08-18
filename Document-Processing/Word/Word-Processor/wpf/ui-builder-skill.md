@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WPF UI Builder Skill with DOCX Editor for AI Assistants | Syncfusion®
+title: UI Builder Skill with WPF DOCX Editor | Syncfusion
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with DOCX Editor from natural-language prompts.
 control: DOCX Editor
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# WPF UI Builder Skill with DOCX Editor for AI Assistants
+# UI Builder Skill with React DOCX Editor
 
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 

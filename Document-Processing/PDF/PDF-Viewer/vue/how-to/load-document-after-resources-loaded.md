@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load document after resources loaded Vue PDF Viewer | Syncfusion
-description: Learn how to load a PDF only after assets are ready in the Syncfusion Vue PDF Viewer (Standalone) using the resourcesLoaded event.
+title: How to Load a Document After Resources Are Ready in Vue | Syncfusion
+description: Load a PDF only after PDFium resources are ready in the standalone Vue PDF Viewer by using the resourcesLoaded event handler.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a PDF only after PDFium resources are ready in Vue
+# How to Load a Document After Resources Are Ready in Vue PDF Viewer
 
 When using the Standalone PDF Viewer, the component downloads the PDFium runtime assets (scripts/wasm) from the path specified in `resourceUrl`. Attempting to load a document before those assets are available can cause errors. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
 

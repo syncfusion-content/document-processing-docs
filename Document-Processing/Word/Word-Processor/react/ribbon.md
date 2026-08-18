@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Ribbon in React DOCX Editor | Syncfusion
-description: Learn here all about the Ribbon UI in the Syncfusion React Document Editor, how to switch between Ribbon and Toolbar modes.
+description: Ribbon in React DOCX Editor provides a tabbed command interface to access editing tools and manage document content efficiently.
 platform: document-processing
 control: Ribbon
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon in React Document Editor Control
+# Ribbon in React DOCX Editor
 
 The [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides a modern Ribbon interface similar to Microsoft Word's interface. This Ribbon UI provides an efficient and intuitive way to access editing features, organizing commands within well-structured tabs and groups to enhance your document editing experience. Additionally, the Ribbon interface supports contextual tabs. Contextual tabs appear only when certain elements, such as tables, images, or headers/footers, are selected in the document.
 

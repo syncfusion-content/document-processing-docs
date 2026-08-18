@@ -1,14 +1,14 @@
 ---
-title: Background in UWP RichTextBox control | Syncfusion
-description: Learn here all about Background support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Background in UWP DOCX Editor | Syncfusion
+description: The background in UWP DOCX Editor offers color customization through the Background property, enabling custom control appearance.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: background,background-color,overrides-document-background,layout-type,document-background
 ---
 
-# Setting Background for RichTextBox
-The RichTextBox control allows you to change the background color of the SfRichTextBoxAdv control. A background of a control is represented by the `Background` property of [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) class. The default value of this property is black, which is set by the control's default template.
+# Background in UWP DOCX Editor
+The RichTextBox control allows you to change background color of the control. A background of a control is represented by `Background` property of `SfRichTextBoxAdv` class. The default value of this property is black.
 
 The following code illustrates how to apply color as background to the document.
 

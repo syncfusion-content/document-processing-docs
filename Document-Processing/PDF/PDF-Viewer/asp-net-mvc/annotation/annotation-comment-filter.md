@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Annotation Comment Filter in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion ASP.NET MVC PDF Viewer using the comment filter panel and programmatic APIs.
+description: Filter comments and annotations in the ASP.NET MVC PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in ASP.NET MVC
+# Annotation Comment Filter in ASP.NET MVC PDF Viewer
 
 ## Overview
 

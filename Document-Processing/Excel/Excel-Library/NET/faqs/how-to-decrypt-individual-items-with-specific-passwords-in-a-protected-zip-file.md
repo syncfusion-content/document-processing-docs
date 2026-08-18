@@ -1,12 +1,12 @@
 ---
-title: Decrypt individual items with specific passwords | Syncfusion
-description: This page demonstrates how to decrypt individual items with specific passwords using Syncfusion.Compression.Base.
+title: How to Decrypt Items in .NET Excel Library | Syncfusion
+description: Decrypt individual compressed items with specific passwords using Syncfusion.Compression.Base in .NET applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to decrypt individual items with specific passwords using C#?
+# How to decrypt items with passwords in .NET Excel Library
 
 Syncfusion.Compression allows users to decrypt individual items within a protected ZIP file, each secured with a unique password. When decompressing the ZIP file, you can provide the correct password for each item to extract it successfully.
 

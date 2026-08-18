@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Formulas in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Formulas in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formulas in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about formulas in the Syncfusion ASP.NET Core Spreadsheet control, including built-in functions, calculations, and formula support.
 platform: document-processing
 control: Formulas
 documentation: ug
 ---
 
 
-# Formulas in ASP.NET Core Spreadsheet control
+# Formulas in ASP.NET Core Spreadsheet
 
 Formulas are used to calculate data in a worksheet. A formula can reference cells in the same worksheet or in other worksheets.
 

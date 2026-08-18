@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Save a Document in .NET MAUI PDF Viewer (SfPdfViewer)
+# Save a Document in .NET MAUI PDF Viewer
 
 After annotating, filling forms, or applying redactions, use the PDF Viewer's save methods to persist all changes back to a file stream. You can save synchronously with [SaveDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_) or asynchronously with [SaveDocumentAsync](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocumentAsync_System_IO_Stream_System_Threading_CancellationToken_) — and optionally flatten annotations or form fields into static content at the same time. 
 

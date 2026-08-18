@@ -1,11 +1,11 @@
 ---
-title: Working with Text | Syncfusion
-description: This section explains how to add text to the PDF document using different type of fonts, TrueType fonts and standard fonts
+title: Text in .NET PDF Library | Syncfusion
+description: Learn how to add text to PDF documents using different fonts, TrueType fonts, and standard fonts with the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with text in the PDF document
+# Text in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF supports adding text to a PDF document using the Syncfusion .NET PDF library. You can add text using standard, TrueType, CJK fonts, OpenType fonts, RTL text, and complex scripts.
 
@@ -3193,7 +3193,7 @@ Create fonts, brushes, and pens once and reuse them throughout the document to r
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>
-Load the font directly from a <i>.ttf</i> file using a path or stream, then pass it to <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html">PdfTrueTypeFont</a>. This ensures consistent font embedding across all platforms.
+Load the font directly from a <i>.ttf</i> file using a path or stream, then pass it to <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTrueTypeFont.html" aria-label="Class reference documentation link">PdfTrueTypeFont</a>. This ensures consistent font embedding across all platforms.
 {% tabs %}
 {% highlight C# tabtitle="C#" %}
 

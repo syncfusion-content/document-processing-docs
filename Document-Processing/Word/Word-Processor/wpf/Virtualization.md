@@ -1,12 +1,12 @@
 ---
-title: Virtualization in WPF RichTextBox control | Syncfusion
-description: Learn here all about Virtualization support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Virtualization in WPF DOCX Editor | Syncfusion
+description: The virtualization in WPF DOCX Editor offers UI Virtualization support, enabling UI elements to be created only for visible content, reducing memory use.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: virtualization
 ---
-# Virtualization in WPF RichTextBox (SfRichTextBoxAdv)
+# Virtualization in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports UI Virtualization. UI elements are created only for the contents that are visible in the viewer. The UI elements are created for the contents that become visible while scrolling the viewer. This reduces the main memory utilization and also improves UI performance.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion MVC PDF Viewer.
+title: Remove Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Remove PDF form fields in the ASP.NET MVC PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove PDF Form Fields from a PDF in MVC
+# Remove Form Fields in ASP.NET MVC PDF Viewer
 
 ## Remove Form Fields Using the UI
 **Steps:**

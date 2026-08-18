@@ -1,11 +1,11 @@
 ---
-title: Working with Form Fields | DocIO | Syncfusion
-description: Learn how to work with form fields such as Text, Checkbox and Drop-Down in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Form Fields in .NET Word | Syncfusion
+description: Learn how to work with form fields such as Text, Checkbox and Drop-Down in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Form Fields in Word Library
+# Form Fields in .NET Word
 
 You can create a template document with form fields such as Text, Checkbox, and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
 

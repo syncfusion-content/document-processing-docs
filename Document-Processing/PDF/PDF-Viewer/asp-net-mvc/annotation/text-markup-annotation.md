@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text markup annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion ASP.NET MVC PDF Viewer.
+title: Text Markup Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use text markup annotations in the ASP.NET MVC PDF Viewer, including highlight, underline, strikethrough, and squiggly, to mark up important content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in ASP.NET MVC PDF Viewer control
+# Text Markup Annotations in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including Highlight, Underline, Strikethrough, and Squiggly.
 

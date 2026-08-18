@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get the selected content in Angular DOCX Editor | Syncfusion
-description: Learn here all about Get the selected content in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Selected Content in Angular DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® Angular DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
 control: Get the selected content
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the selected content in Angular Document Editor component
+# How to Get Selected Content in Angular DOCX Editor
 
 You can get the selected content from the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component as plain text and SFDT (rich text).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Move and Resize form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion MVC PDF Viewer.
+title: Move Resize Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Move and resize PDF form fields in the ASP.NET MVC PDF Viewer using the built-in UI and programmatic APIs to control the field layout.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move and Resize PDF Form Fields in MVC PDF Viewer
+# Move and Resize Form Fields in ASP.NET MVC PDF Viewer
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 

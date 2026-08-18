@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form fields in React DOCX Editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Form Fields in React DOCX Editor | Syncfusion
+description: Form fields in React DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 control: Form fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in React Document Editor component
+# Form Fields in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Digital Signature in Flutter PDF library | Syncfusion
-description: Learn here all about internal and external Digital Signature feature of Syncfusion Flutter PDF non-UI library and more.
+title: Digital Signature in Flutter PDF Library | Syncfusion
+description: Learn about internal and external digital signature features in Syncfusion Flutter PDF non-UI Library with practical examples.
 platform: document-processing
 control: PDF
 documentation: ug

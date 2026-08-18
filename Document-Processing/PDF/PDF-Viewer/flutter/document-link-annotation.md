@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Document link annotation in Flutter PDF Viewer | Syncfusion
-description: Learn here all about document link annotation feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: Document link annotations in SfPdfViewer provide quick navigation between pages and linked destinations within PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Document Link Annotation in Flutter PDF Viewer (SfPdfViewer)
+# Document Link Annotation in Flutter PDF Viewer
 
 By default, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to navigate to a specific topic or position within a PDF document by tapping a document link annotation.
 

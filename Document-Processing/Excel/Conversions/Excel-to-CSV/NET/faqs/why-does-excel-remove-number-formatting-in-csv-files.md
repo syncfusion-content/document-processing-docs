@@ -1,12 +1,12 @@
 ---
-title: Why does Excel remove number formatting in CSV files? | Syncfusion
-description: This page explains why Microsoft Excel removes number formatting in CSV files created using Syncfusion XlsIO
+title: CSV Number Formatting in .NET Excel Library | Syncfusion
+description: CSV number formatting explains why Microsoft Excel removes number formats from CSV files created using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Why does Excel remove number formatting in CSV files?
+# CSV Number Formatting in .NET Excel Library
 
 When a CSV file is opened in Microsoft Excel, the application automatically interprets the data based on its type. If a value appears to be a number, Excel will treat it as a numeric value and apply its default formatting. As a result, any trailing zeros (such as in “100.00”) are removed, and the value is displayed simply as “100”. This behavior occurs because CSV files do not store formatting information—only raw data.
 

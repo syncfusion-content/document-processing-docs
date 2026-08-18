@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with annotations using WPF PDF Viewer | Syncfusion&reg;
-description: Learn about Selecting and Modifying the annotation's properties programmatically using WPF Pdf Viewer.
+title: Annotations in WPF PDF Viewer | Syncfusion
+description: The programmatic annotations feature in WPF PDF Viewer enables adding, selecting, and modifying annotation properties via the PdfViewerControl API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Working with annotations programmatically
+# Annotations in WPF PDF Viewer
 ## Add an annotation
 
 The PDF Viewer allows users to add annotations programmatically without user interaction. Annotations can be added to the PDF document using the [PdfViewerControl's loadedDocument](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_LoadedDocument) property in the code behind.

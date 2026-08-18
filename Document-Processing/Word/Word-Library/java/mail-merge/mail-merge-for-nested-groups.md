@@ -1,12 +1,12 @@
 ---
-title: Mail merge for nested groups | Syncfusion
-description: This section illustrates how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data.
+title: Mail merge for nested groups in Java Word | Syncfusion
+description: Describe how to migrate applications from .NET Framework to .NET Core using the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Nested Mail merge for group
+# Mail merge for nested groups in Java Word
 
 You can perform nested Mail merge with relational or hierarchical data source and independent data tables in a template document. 
 

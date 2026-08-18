@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open OneDrive Files in ASP.NET Core Docx Editor | Syncfusion
-description: Learn how to open a document from OneDrive in the ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in ASP.NET Core DOCX Editor | Syncfusion
+description: Open documents from OneDrive in ASP.NET Core DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from OneDrive
+# Open Documents from OneDrive in ASP.NET Core DOCX Editor
 
 To load a document from OneDrive in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about Spell check in Syncfusion JavaScript (ES6) Document Editor of Syncfusion Essential JS 2 and more.
+title: Spell Check in TypeScript DOCX Editor | Syncfusion
+description: The spell check feature in TypeScript DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell check 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in JavaScript (ES6) Document Editor
+# Spell Check in TypeScript DOCX Editor
 
 The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 

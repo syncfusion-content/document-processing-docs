@@ -1,12 +1,12 @@
 ---
-title: Word to PDF performance benchmark results | Syncfusion
-description: Explore the performance benchmark results of Word to PDF conversion using the .NET Word Library with different page counts
+title: Word to PDF performance benchmark in .NET Word | Syncfusion
+description: Describe the NuGet packages required for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word to PDF performance benchmarks using .NET Word Library
+# Word to PDF performance benchmark in .NET Word
 
 The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including conversion to PDF. This performance benchmark report highlights the speed and efficiency of Word to PDF conversion, demonstrating how our library performs across different conversion operations on representative workloads.
 

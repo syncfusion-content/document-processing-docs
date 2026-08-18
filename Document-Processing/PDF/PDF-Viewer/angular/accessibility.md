@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Angular PDF Viewer component | Syncfusion
-description: Learn here all about accessibility in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Angular PDF Viewer | Syncfusion
+description: Accessibility features in the Angular PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessible PDF Viewing with Syncfusion Angular Components
+# Accessibility in Angular PDF Viewer
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 

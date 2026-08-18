@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import pages using the Organize Pages tool in Blazor
+# Import pages using the Organize Pages tool in Blazor PDF Viewer
 
 ## Overview
 

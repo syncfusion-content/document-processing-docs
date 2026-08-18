@@ -1,12 +1,12 @@
 ---
-title: Getting Started with UWP RichTextBox control | Syncfusion
-description: Learn here all about getting started with Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Getting Started with UWP DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion UWP DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: getting started, docx editor
 ---
-# Getting Started with Syncfusion<sup>&reg;</sup> UWP RichTextBox
+# Getting Started with UWP DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
 

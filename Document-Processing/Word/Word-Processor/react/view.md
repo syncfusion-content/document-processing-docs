@@ -1,14 +1,14 @@
 ---
 layout: post
-title: View in the React DOCX Editor component | Syncfusion
-description: Learn here all about view options in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in React DOCX Editor | Syncfusion
+description: View in React DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 control: View 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# View in the React Document Editor component
+# View in React DOCX Editor
 
 ## Web layout
 

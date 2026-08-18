@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Area Measurement Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion React PDF Viewer.
+title: Area Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the React PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Area Measurement Annotations in React PDF Viewer
+# Area Annotation in React PDF Viewer
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
 ![Area overview](../../../javascript-es6/annotations/annotation-images/area-annot.png)

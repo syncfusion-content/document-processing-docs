@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global local in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Globalization in Vue Spreadsheet | Syncfusion
+description: Learn how to localize and globalize the Syncfusion Vue Spreadsheet with culture-specific formatting and translations.
 control: Global local 
 platform: document-processing
 documentation: ug
 ---
 
-# Global local in Vue Spreadsheet component
+# Globalization in Vue Spreadsheet
 
 ## Localization
 
@@ -603,7 +603,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Internalization [`sample link`](https://codesandbox.io/p/sandbox/vue-template-forked-cthq7)
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/local-data-binding-cs2" %}
 
 ## Right to left (RTL)
 

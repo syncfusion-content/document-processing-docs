@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stamp annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, rotate, and customize Stamp annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Stamp Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Stamp annotations in the JavaScript (ES5) PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in JavaScript PDF Viewer
+# Stamp Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 
@@ -95,6 +95,21 @@ document.getElementById('signStamp') && document.getElementById('signStamp').add
 
 document.getElementById('standardBusinessStamp') && document.getElementById('standardBusinessStamp').addEventListener('click', function () {
   pdfviewer.annotationModule.setAnnotationMode('Stamp', undefined, undefined, ej.pdfviewer.StandardBusinessStampItem.Approved);
+});
+
+document.getElementById('customStamp') && document.getElementById('customStamp').addEventListener('click', function () {
+  pdfviewer.annotation.addAnnotation('Stamp', {
+    offset: { x: 100, y: 440 },
+    width: 46,
+    height: 100,
+    pageNumber: 1,
+    isLock: true,
+    author: 'Guest',
+    customStamps: [{
+      customStampName: 'Image',
+      customStampImageSource: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...'
+    }]
+  });
 });
 {% endhighlight %}
 {% endtabs %}
@@ -273,11 +288,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
-
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotation before creating the control using `StampSettings`.
+Set properties for individual annotations before creating the control using `StampSettings`.
 
 > After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
@@ -313,7 +326,7 @@ document.getElementById('Stamp')?.addEventListener('click', function () {
      pdfviewer.annotation.addAnnotation('Stamp', {
     offset: { x: 200, y: 140 }, pageNumber: 1,
      opacity: 0.3, author: 'Guest User'
-  } ,'Approved');
+  }, ej.pdfviewer.DynamicStampItem.Approved);
 });
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
@@ -342,10 +355,12 @@ document.getElementById('Stamp')?.addEventListener('click', function () {
      pdfviewer.annotation.addAnnotation('Stamp', {
     offset: { x: 200, y: 140 }, pageNumber: 1,
      opacity: 0.3, author: 'Guest User'
-  } ,'Approved');
+  }, ej.pdfviewer.DynamicStampItem.Approved);
 });
 {% endhighlight %}
 {% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 
 ## See also
 

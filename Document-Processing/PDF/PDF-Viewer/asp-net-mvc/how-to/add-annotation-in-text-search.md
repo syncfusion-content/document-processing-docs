@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Rectangle Annotation via Text Search in ASP.NET MVC | Syncfusion
-description: Learn to add rectangle annotations using text search bounds in the Syncfusion ASP.NET MVC PDF Viewer component, including initialization and search controls.
+title: How to Add Annotations From Text Search in ASP.NET MVC | Syncfusion
+description: Add annotations from text search results in the ASP.NET MVC PDF Viewer by responding to text search events and using the search bounds.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add Rectangles to Search Highlights in ASP.NET MVC PDF Viewer
+# How to Add Annotations From Text Search in ASP.NET MVC PDF Viewer
 
 A concise guide to adding rectangle annotations at highlighted text search results in the ASP.NET MVC PDF Viewer to visually emphasize matches and improve readability.
 

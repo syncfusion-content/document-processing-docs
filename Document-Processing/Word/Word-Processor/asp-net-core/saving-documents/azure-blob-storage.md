@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Azure Blob in DOCX Editor | Syncfusion
-description:  Learn about how to Save document to Azure Blob Storage in ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more details.
+title: Save Documents to Azure Blob in ASP.NET Core DOCX Editor | Syncfusion
+description: Save documents to Azure Blob Storage from ASP.NET Core DOCX Editor, enabling scalable cloud storage and streamlined document management.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage in Document Editor Component
+# Save Documents to Azure Blob Storage in ASP.NET Core DOCX Editor
 
 To save a document to Azure Blob Storage, follow these steps:
 
