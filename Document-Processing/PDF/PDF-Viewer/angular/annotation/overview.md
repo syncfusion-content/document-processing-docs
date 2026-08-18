@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of Annotation in Angular PDF Viewer | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion Angular PDF Viewer.
+title: About Syncfusion Angular PDF Viewer Annotations | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Annotations section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations overview in Angular
+# About Syncfusion Angular PDF Viewer Annotations
 
 Annotations in the PDF Viewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations add context and feedback to PDF files, simplifying collaboration during document reviews.
 

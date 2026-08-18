@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Images in Blazor DOCX Editor Component | Syncfusion
-description:  Learn how to work with images in the Syncfusion Blazor Document Editor component, including image insertion, resizing, formatting, and positioning.
+title: Images in Blazor DOCX Editor | Syncfusion
+description: Images in Blazor DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Images in Blazor Document Editor Component
+# Images in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides robust support for working with images in documents. It supports common raster image formats like PNG, BMP, and JPEG, as well as GIF and SVG images. You can insert an image file or online image in the document using the [`InsertImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 

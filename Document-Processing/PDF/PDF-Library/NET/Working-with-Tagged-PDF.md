@@ -1,12 +1,12 @@
 ---
-title: Working with Tagged PDF | Syncfusion
-description: This section explains how to create a tagged PDF document by using Essential PDF. Tagged PDF is useful for people with vision or cognitive impairments.
+title: Tagged PDF in .NET PDF Library | Syncfusion
+description: Learn how to create tagged PDF documents programmatically to comply with accessibility standards using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with Tagged PDF
+# Tagged PDF in .NET PDF Library
 
 ## Introduction
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Measurement annotation in Angular PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotation in Angular PDF Viewer | Syncfusion
+description: Learn about the measurement annotation in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Measurement annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement Annotation in Angular PDF Viewer component
+# Measurement Annotation in Angular PDF Viewer
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 

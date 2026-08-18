@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto save document in React DOCX Editor component | Syncfusion
-description: Learn how to Auto save document in Document Editor in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Auto Save Document in React DOCX Editor | Syncfusion
+description: Automatically save edited documents to the server at regular intervals in Syncfusion® React DOCX Editor to prevent data loss.
 control: Auto save document in Document Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in React Document Editor component
+# How to Auto Save Document in React DOCX Editor
 
 In this article, we are going to see how to auto save the document to the server. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 

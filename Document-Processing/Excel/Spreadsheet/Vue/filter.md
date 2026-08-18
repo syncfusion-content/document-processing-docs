@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Filter in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue Spreadsheet | Syncfusion
+description: Filter and analyze spreadsheet data efficiently using built-in filtering capabilities in the Syncfusion Vue Spreadsheet.
 control: Filter 
 platform: document-processing
 documentation: ug
 ---
 
-# Filter in Vue Spreadsheet component
+# Filtering in Vue Spreadsheet
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 

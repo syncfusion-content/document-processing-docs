@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Print Quality in TypeScript PDF Viewer | Syncfusion
-description: Learn how to customize print quality for PDF documents in the Syncfusion TypeScript PDF Viewer component.
+title: Print Quality in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the print quality of PDF documents in the JavaScript (ES6) PDF Viewer to balance output fidelity with print performance and size.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Print Quality in TypeScript PDF Viewer
+# Customize Print Quality in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer adjusts print rendering quality using the [`printScaleFactor`](https://ej2.syncfusion.com/documentation/api/pdfviewer#printScaleFactor) property. This numeric property accepts values from 0.5 to 5. Higher values improve printed image sharpness but increase rendering time and memory usage.
 

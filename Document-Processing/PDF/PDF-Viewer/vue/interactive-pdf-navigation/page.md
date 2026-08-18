@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Page navigation in Vue PDF Viewer | Syncfusion
-description: Learn how to configure page navigation in the Syncfusion Vue PDF Viewer component using toolbar commands and custom UI.
+title: Page in Vue PDF Viewer | Syncfusion
+description: Use page navigation in the Vue PDF Viewer to move between pages and programmatically control the current page from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page navigation in Vue PDF Viewer
+# Page Navigation in Vue PDF Viewer
 
 The Vue PDF Viewer supports internal and external navigation methods.
 

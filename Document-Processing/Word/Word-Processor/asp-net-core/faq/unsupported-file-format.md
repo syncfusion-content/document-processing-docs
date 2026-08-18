@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Unsupported file in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Supported File Formats in ASP.NET Core DOCX Editor | Syncfusion
+description: Learn about the supported file formats in ASP.NET Core DOCX Editor for importing, and exporting documents.
 platform: document-processing
 control: Unsupported file
 documentation: ug
 ---
 
-# Unsupported file format warning in ASP.NET Core Document Editor
+# Supported File Formats in ASP.NET Core DOCX Editor
 
 If you receive the message "The file format you have selected isn't supported. Please choose a valid format." when opening a document in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in an ASP.NET MVC application using the Syncfusion® DOCX Editor component to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion ASP.NET MVC DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting Started
 documentation: ug

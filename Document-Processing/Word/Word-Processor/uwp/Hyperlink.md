@@ -1,12 +1,12 @@
 ---
-title: Hyperlink in UWP RichTextBox control | Syncfusion
-description: Learn here all about Hyperlink support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Hyperlinks in UWP DOCX Editor | Syncfusion
+description: The hyperlink feature in UWP DOCX Editor offers hyperlink field support, enabling linking to internet, file location, or mail address.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settings
 ---
-# Hyperlink in UWP RichTextBox (SfRichTextBoxAdv)
+# Hyperlinks in UWP DOCX Editor
 
 The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
 

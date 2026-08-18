@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about Export in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in ASP.NET Core DOCX Editor | Syncfusion
+description: The export feature in ASP.NET Core DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Export
 documentation: ug
 ---
 
 
-# Export in ASP.NET Core Document Editor Component
+# Export in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), Word Template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**. Rich Text Format (.rtf) export is also supported via a server-side conversion.
 

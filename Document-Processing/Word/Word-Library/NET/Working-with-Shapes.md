@@ -1,12 +1,12 @@
 ---
-title: Working with Shapes in .NET Word (DocIO) library | Syncfusion
-description: Learn how to add, modify, and remove shapes as well as group shapes in a Word document using the .NET Word (DocIO) library.
+title: Shapes in .NET Word library in .NET | Syncfusion
+description: Learn how to add, modify, and remove shapes as well as group shapes in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 keywords: 
 ---
-# Working with Shapes in .NET Word (DocIO) Library
+# Shapes in .NET Word library in .NET
 
 Shapes are drawing objects that can include lines, curves, circles, rectangles, and so on. A shape can have preset or custom geometry. You can create and manipulate preset shapes in DOCX and WordML format documents.
 

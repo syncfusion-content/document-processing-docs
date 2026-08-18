@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in Blazor Spreadsheet component | Syncfusion
-description: Check out and learn all about rows and columns in the Syncfusion Blazor Spreadsheet component and more.
+title: Rows and Columns in Blazor Spreadsheet | Syncfusion
+description: Learn how to manage rows and columns in the Syncfusion Blazor Spreadsheet, including resizing and customization.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Rows and columns in Blazor Spreadsheet component
+# Rows and Columns in Blazor Spreadsheet
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) is a tabular format consisting of rows and columns. The intersection of a row and a column is called a cell. The operations that you can perform on rows and columns include,
 

@@ -1,12 +1,12 @@
 ---
-title: Styles and Templates in WPF RichTextBox control | Syncfusion
-description: Learn here all about Styles and Templates support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Styles and Templates in WPF DOCX Editor | Syncfusion
+description: The styles and templates in WPF DOCX Editor define the structure and visual appearance, enabling custom appearance through Control template modification.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles-and-templates, custom-style
 ---
-# Styles and Templates in WPF RichTextBox (SfRichTextBoxAdv)
+# Styles and Templates in WPF DOCX Editor
 
 This section describes the styles and templates for the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default Control template to define a unique appearance for the control.
 The following XAML shows the default style and template for the SfRichTextBoxAdv control.

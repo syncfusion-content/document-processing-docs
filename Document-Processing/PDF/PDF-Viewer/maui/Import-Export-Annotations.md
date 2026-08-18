@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Import and Export Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Import and Export annotations in .NET MAUI PDF Viewer
 
 This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) to import and export annotations in a PDF document.
 

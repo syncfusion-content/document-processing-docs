@@ -1,12 +1,12 @@
 ---
 title: Convert Word to Image on macOS | Syncfusion
-description: Convert Word to image in ASP.NET application on macOS using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in ASP.NET  application on macOS using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image on macOS
+# Convert Word to Image on macOS
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on macOS**.
 

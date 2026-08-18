@@ -1,11 +1,11 @@
 ---
-title: FAQ about HTML and EPUB Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about HTML and EPUB conversions in the .NET Word (DocIO) library.
+title: FAQ about HTML and EPUB Conversions in .NET Word | Syncfusion
+description: Describe common questions and answers related to HTML and EPUB conversions using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about HTML and EPUB conversions 
+# FAQ about HTML and EPUB Conversions in .NET Word
 
 The frequently asked questions about HTML and EPUB conversions using DocIO are listed below.
 

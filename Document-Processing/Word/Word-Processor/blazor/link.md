@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Hyperlink and its functionality in Syncfusion Blazor Document Editor component and more.
+title: Hyperlinks in Blazor DOCX Editor | Syncfusion
+description: The hyperlink feature in Blazor DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Hyperlink in Blazor Document Editor Component
+# Hyperlinks in Blazor DOCX Editor
 
 A hyperlink is a reference in a document that links content to another location, such as a web page, an email address, or a bookmark within the same document. The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for creating, editing, and customizing hyperlinks.
 

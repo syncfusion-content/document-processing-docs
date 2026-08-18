@@ -1,12 +1,12 @@
 ---
-title: Layout Types in UWP RichTextBox control | Syncfusion
-description: Learn here all about Layout Types support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Layout Types in UWP DOCX Editor | Syncfusion
+description: The layout types in UWP DOCX Editor offer multiple layout options, enabling users to choose between Pages, Continuous, and Block layouts.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: layout-types
 ---
-# Layout Types in UWP RichTextBox (SfRichTextBoxAdv)
+# Layout Types in UWP DOCX Editor
 
 The SfRichTextBoxAdv control allows you to choose between the following layout types.
 

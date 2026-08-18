@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search and Extraction in Blazor PDF Viewer | Syncfusion
-description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Blazor PDF Viewer.
+title: Text search and Extraction in Blazor PDF Viewer Component | Syncfusion
+description: Learn text search capabilities, UI features, programmatic APIs, events and text extraction in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search in Blazor PDF Viewer
+# About Text search and Extraction in Blazor PDF Viewer Component
 
 The Blazor PDF Viewer provides an integrated text search experience that supports both interactive UI search and programmatic searches. Enable the feature by setting [`EnableTextSearch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSearch) to `true`. To start a search programmatically, call [`SearchTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_SearchTextAsync_System_String_System_Boolean_).
 

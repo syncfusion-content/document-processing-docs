@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of ASP.NET Core DOCX Editor | Syncfusion
-description: Learn about the ASP.NET Core Document Editor control, which enables you to create, edit, view, and print Word documents.
+title: About Syncfusion ASP.NET Core DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio ASP.NET Core DOCX Editor control and more details.
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
 
-# Overview of the ASP.NET Core Document Editor
+# About Syncfusion ASP.NET Core DOCX Editor Control
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 

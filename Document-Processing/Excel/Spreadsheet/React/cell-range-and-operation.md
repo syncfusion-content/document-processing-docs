@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell range in React Spreadsheet component | Syncfusion
-description: Learn here all about Cell range in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Range in React Spreadsheet | Syncfusion
+description: Learn about cell ranges in the Syncfusion React Spreadsheet component, including selection, editing, formatting, and range operations.
 control: Cell range 
 platform: document-processing
 documentation: ug
 ---
 
-# Cell Ranges and Operations in React Spreadsheet component
+# Cell Range in React Spreadsheet
 
 A **cell range** is a group of cells in a sheet. It allows you to work with multiple cells together for operations such as formatting, formulas, and data manipulation.  
 

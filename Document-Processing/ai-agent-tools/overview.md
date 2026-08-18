@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview | AI Agent Tools | Syncfusion
+title: About Syncfusion Document SDK AI Agent Tools | Syncfusion
 description: Learn about the Syncfusion Document SDK AI Agent Tools - an AI-ready toolkit for working with Word, Excel, PDF, and PowerPoint documents.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK AI Agent Tools Overview
+# About Syncfusion Document SDK AI Agent Tools
 
 [Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) is a .NET library that enables AI agents to autonomously create, manipulate, convert, and extract data from Word, Excel, PDF, PowerPoint, Markdown, and other document formats. It exposes pre-built, AI-callable tools built on [Syncfusion Document SDK](https://www.syncfusion.com/document-sdk) - no document-processing logic required in your host application.
 

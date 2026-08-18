@@ -1,12 +1,12 @@
 ---
-title: Mail merge for group | Syncfusion
-description: This section illustrates how to Mail merge for a group - replace merge fields in a region of document with data, by repeating the region for each record.
+title: Mail merge for group in Java Word | Syncfusion
+description: This section illustrates common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Mail merge for a group
+# Mail merge for group in Java Word
 
 You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region between start and end groups merge fields. It gets repeated for every record from the data source.
 

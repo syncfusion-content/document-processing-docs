@@ -1,11 +1,11 @@
 ---
-title: Overview of .NET Markdown library | Syncfusion
-description: .NET Markdown library to create, read and edit markdown documents in C#, VB.NET without external dependencies.
+title: About Syncfusion .NET Markdown Library | Syncfusion
+description: Learn about the Syncfusion® .NET Markdown Library for creating, reading, and editing Markdown documents without external dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
-# Overview of Syncfusion<sup>&reg;</sup> Markdown library
+# About Syncfusion .NET Markdown Library
 
 Essential<sup>&reg;</sup> Markdown Document Processing library is a native [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used by developers to create, read, edit, and manage Markdown documents in C# and VB.NET from Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, and .NET MAUI applications.
 

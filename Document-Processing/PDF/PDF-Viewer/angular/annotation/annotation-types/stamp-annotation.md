@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Stamp Annotation in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Stamp annotations (Dynamic, Sign Here, Standard Business, Custom) in the Syncfusion Angular PDF Viewer.
+description: Enable, apply, customize, and manage Stamp annotations in the Angular PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp Annotations in Angular PDF Viewer
+# Stamp Annotation in Angular PDF Viewer
 Stamp annotations allow you to place predefined or custom stamps (such as **Dynamic**, **Sign Here**, **Standard Business**, or **Custom**) on a PDF to communicate review states, approvals, or instructions. You can add stamps from the toolbar, switch to specific stamp modes programmatically, customize defaults (e.g., opacity/author), edit or lock them, and export them with the document.
 
 ![Stamp annotations](../../../javascript-es6/images/stamp_annot.png)

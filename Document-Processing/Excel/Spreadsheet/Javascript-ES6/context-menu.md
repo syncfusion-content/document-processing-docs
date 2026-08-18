@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context menu in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Context menu in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Context Menu in TypeScript Spreadsheet | Syncfusion
+description: The context menu in TypeScript Spreadsheet provides quick access to commonly used commands for efficient cell and worksheet operations.
 platform: document-processing
 control: Context menu
 documentation: ug
 ---
 
-# Context menu in EJ2 TypeScript Spreadsheet control
+# Context Menu in TypeScript Spreadsheet 
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/documentation/api/spreadsheet#enablecontextmenu) property to enable/disable context menu.
 

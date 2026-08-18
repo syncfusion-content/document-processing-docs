@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing progress ring in UWP PDF Viewer control | Syncfusion
+title: Customizing progress ring in UWP PDF Viewer | Syncfusion
 description: Learn here all about Customizing progress ring support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Customizing progress ring in UWP PDF Viewer (SfPdfViewer)
+# Customizing progress ring in UWP PDF Viewer
 The following code illustrates the design of the progress ring in red color foreground with dimension of 100x100. Here 'buffer' is the byte array read from the PDF file either using FileOpenPicker or from Assets folder, as illustrated in the [Viewing PDF](https://help.syncfusion.com/uwp/sfpdfviewer/concepts-and-features/viewing-pdf) section. 
 {% tabs %}
 {% highlight c# %}

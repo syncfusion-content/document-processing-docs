@@ -1,12 +1,12 @@
 ---
-title: Working with PDF templates | Syncfusion
-description: Create and use PDF templates with Syncfusion .NET PDF for headers, footers, overlays, and consistent page elements in new or existing documents
+title: PDF Templates in .NET PDF Library | Syncfusion
+description: Learn how to create and use PDF templates for headers, footers, overlays, and consistent page elements with Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Templates
+# PDF Templates in .NET PDF Library
 
 A PDF template is a drawing surface on which you can add contents. Every element that can be drawn on a [PdfPage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPage.html) can also be drawn on a [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html). A template can be drawn at any location on a page, or used to build headers, footers, watermarks, and document overlays.
 

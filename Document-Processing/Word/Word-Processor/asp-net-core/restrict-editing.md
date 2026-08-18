@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict Editing in DOCX Editor Component | Syncfusion
-description: Learn how to restrict editing in the Syncfusion ASP.NET Core Document Editor, including permission ranges, user groups, and form protection.
+title: Restrict Editing in ASP.NET Core DOCX Editor | Syncfusion
+description: Restrict editing feature in ASP.NET Core DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 platform: document-processing
 control: RestrictEditing
 documentation: ug
 ---
 
 
-# Restrict Editing in ASP.NET Core Document Editor Component
+# Restrict Editing in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides support to restrict editing. When a protected document includes range permissions, only the specified user or user group is authorized to edit their assigned text areas.
 

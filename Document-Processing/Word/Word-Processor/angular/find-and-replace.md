@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find and replace in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Angular DOCX Editor | Syncfusion
+description: The find and replace feature in Angular DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: Find and replace
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in Angular Document Editor component
+# Find and Replace in Angular DOCX Editor
 
 The [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 

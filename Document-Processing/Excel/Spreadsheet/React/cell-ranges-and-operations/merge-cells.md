@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Merge Cells in React Spreadsheet component | Syncfusion
-description: Learn here how to apply merge to a cell range in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Merge Cells in React Spreadsheet | Syncfusion
+description: Learn about merging cells in the Syncfusion React Spreadsheet component to combine multiple cells into a single cell.
 control: Spreadsheet
 platform: document-processing
 documentation: ug

@@ -1,12 +1,12 @@
 ---
-title: Image in WPF RichTextBox control | Syncfusion
-description: Learn here all about Image support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Images in WPF DOCX Editor | Syncfusion
+description: The image support in WPF DOCX Editor enables inserting, resizing, and managing images in formats such as Bitmap, JPEG, and PNG.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: image
 ---
-# Image in WPF RichTextBox (SfRichTextBoxAdv)
+# Images in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to insert images of various formats such as bitmap images (.bmp), JPEG (.jpg, .jpeg), PNG (.png) except Metafile images.
 The following code example illustrates how to insert picture into the SfRichTextBoxAdv document through UI Command.

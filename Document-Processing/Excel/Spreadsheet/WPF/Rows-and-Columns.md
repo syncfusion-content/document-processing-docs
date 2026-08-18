@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Rows and Columns in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Rows and Columns support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Manage rows and columns in the WPF Spreadsheet control with support for inserting, deleting, resizing, hiding, and unhiding data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Rows and Columns in WPF Spreadsheet (SfSpreadsheet)
+# Rows and Columns in WPF Spreadsheet
 This section explains the operations related to rows and columns in SfSpreadsheet.
 
 ## Insert Rows and Columns

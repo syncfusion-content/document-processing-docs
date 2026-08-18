@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Deploy Docker Image to Azure Container in JS | Syncfusion
-description: Step-by-step guide to deploy the Syncfusion PDF Viewer server Docker image to Azure App Service for Containers and connect it to a JavaScript client.
+title: How to Deploy the PDF Viewer Docker Image to Azure App | Syncfusion
+description: Deploy the Syncfusion PDF Viewer Docker image to Azure App Service for Containers from a JavaScript (ES5) application for production hosting.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy Docker image to Azure App Service for Containers in JS
+# How to Deploy the PDF Viewer Docker Image to Azure App Service in
 
 ## Prerequisites
 

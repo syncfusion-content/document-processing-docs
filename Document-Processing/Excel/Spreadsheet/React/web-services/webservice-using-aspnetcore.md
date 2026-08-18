@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Web Services using ASP.NET Core in React Spreadsheet | Syncfusion
-description: Learn here all about web services using ASP.NET Core in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Web Services Using ASP.NET Core in React Spreadsheet | Syncfusion
+description: Learn about configuring ASP.NET Core web services for open and save operations in React Spreadsheet.
 control: Web Services 
 platform: document-processing
 documentation: ug

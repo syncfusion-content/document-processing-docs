@@ -1,14 +1,14 @@
 ---
 layout: post
-title: List format in JavaScript (ES5) DOCX Editor control | Syncfusion
-description: Learn here all about List format in Syncfusion JavaScript (ES5) Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in JavaScript DOCX Editor | Syncfusion
+description: The list format feature in JavaScript DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# List format in JavaScript (ES5) Document Editor control
+# List Format in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
 
