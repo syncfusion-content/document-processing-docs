@@ -1,12 +1,12 @@
 ---
-title: Templates in JavaScript PDF Library | Syncfusion
+title: PDF Templates in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to create a PDF template, which is a drawing surface where contents can be added, by using the JavaScript PDF Library
+description: Create and use PDF templates to add reusable content in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Templates in JavaScript PDF Library
+# PDF Templates in JavaScript PDF
 
 A PDF template is a drawing surface where contents can be added. All the elements that can be added to a PDF page are supported in PDF template as well. The template can be drawn anywhere on a page or onto other templates, making it ideal for headers, footers, watermarks, and other repeating graphics.
 

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Insert text and rich-text in Blazor DocumentEditor | Syncfusion
-description: Learn how to insert text, paragraph and rich-text content in Blazor Document Editor component and much more.
+title: How to Insert Content at Cursor in Blazor DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® Blazor DOCX Editor control, its elements and more.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Insert Text and Rich-Text Content in Blazor DocumentEditor
+# How to Insert Content at Cursor in Blazor DOCX Editor
 
-The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component supports inserting text, paragraphs, and rich-text content.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component supports inserting text, paragraphs, and rich-text content.
 
-## Insert text in current cursor position
+## Insert text at the current cursor position
 
-Use the [`InsertTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertTextAsync_System_String_) API in the editor module to insert text at the current cursor position.
+Use the [`InsertTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertTextAsync_System_String_) API in the Editor module to insert text at the current cursor position.
 
-The following example code illustrates how to add the text in current selection.
+The following example code illustrates how to add text in the current selection.
 
 ```csharp
 // It will insert the provided text in current selection
@@ -27,7 +27,7 @@ await container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
 @code {
     SfDocumentEditorContainer container;
 
-    // It will insert the provided text in current selection
+    // It will insert the provided text in the current selection
     public async void InsertText()
     {
         await container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
@@ -35,26 +35,26 @@ await container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
 }
 ```
 
-## Insert paragraph in current cursor position
+## Insert a paragraph at the current cursor position
 
-To insert a new paragraph at the current selection, use the [`InsertTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertTextAsync_System_String_) API with `\r\n` or `\n` as the parameter.
+To insert a new paragraph at the current cursor position, use the [`InsertTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertTextAsync_System_String_) API with `\r\n` or `\n` as the parameter.
 
-The following example code illustrates how to add the new paragraph in current selection.
+The following example code illustrates how to add a new paragraph in the current selection.
 
 ```csharp
-// It will add the new paragraph in current selection
+// It will add a new paragraph in the current selection
 await container.DocumentEditor.Editor.InsertTextAsync("\n");
 ```
 
-## Insert the rich-text content
+## Insert rich-text content at the current cursor position
 
-To insert HTML content, convert the HTML to SFDT format and then use the [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_PasteAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_PasteOptions__) API to insert the sfdt at the current cursor position.
+To insert HTML content, convert the HTML to SFDT format and then use the [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_PasteAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_PasteOptions__) API to insert the SFDT at the current cursor position.
 
-N> HTML string should be well formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> HTML string should be well-formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.  
 
-The following example illustrates how to insert the HTML content at current cursor position.
+The following example illustrates how to insert HTML content at the current cursor position.
 
-* Refer to the following example for Converting the HTML content to SFDT and then insert it in current position using Pasts API.
+Refer to the following example for converting HTML content to SFDT and inserting it at the current position using the PasteAsync API.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -69,12 +69,12 @@ The following example illustrates how to insert the HTML content at current curs
 
     public async void OnCreated(object args)
     {
-        string htmltags = "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
-        // You can also load HTML file/string .
+        string htmltags = "<?xml version='1.0' encoding='utf-8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
+        // You can also load an HTML file or string.
         Syncfusion.Blazor.DocumentEditor.WordDocument document = Syncfusion.Blazor.DocumentEditor.WordDocument.LoadString(htmltags, ImportFormatType.Html); // Convert the HTML to SFDT format.
         string sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
-        // Insert the sfdt content in cursor position using paste API
+        // Insert the SFDT content at the current cursor position using the PasteAsync API
         await container.DocumentEditor.Editor.PasteAsync(sfdtString);
     }
 }

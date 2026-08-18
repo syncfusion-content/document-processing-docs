@@ -1,13 +1,13 @@
 ---
-title: PowerPoint Presentation Conversion Library | Syncfusion
-description:  The .NET PowerPoint Presentation Conversion Library converts PowerPoint presentations to PDF, and image without Microsoft Office dependencies.
+title: About Syncfusion .NET PowerPoint Conversion Library | Syncfusion
+description: Learn about the Syncfusion® .NET PowerPoint Presentation Conversion Library for converting PowerPoint presentations to PDF, images, and other formats.
 platform: document-processing
 control: general
 documentation: UG
 keywords: PowerPoint, Presentation, Slide, SDK, Automation, API, convert
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> PowerPoint Presentation Conversion Library
+# About Syncfusion .NET PowerPoint Presentation Conversion Library
 
 {% doccards %}
 

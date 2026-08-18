@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink Eraser in TypeScript PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion TypeScript PDF Viewer with UI and programmatic control.
+title: Ink Eraser in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the JavaScript (ES6) PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink Eraser in TypeScript PDF Viewer
+# Ink Eraser in JavaScript (ES6) PDF Viewer
 
 ## Overview
 
@@ -136,9 +136,9 @@ document.getElementById('disableBtn')?.addEventListener('click', () => {
 Use the `inkEraserSize` property to control the width of the eraser:
 
 ```html
-<button id="smallBtn">Small Ink </button>
-<button id="mediumBtn">Medium Ink </button>
-<button id="largeBtn">Large Ink </button>
+<button id="smallBtn">Small Eraser</button>
+<button id="mediumBtn">Medium Eraser</button>
+<button id="largeBtn">Large Eraser</button>
 <div id="PdfViewer"></div>
 ```
 ```ts

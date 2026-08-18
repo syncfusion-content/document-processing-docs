@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Accessibility with EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about accessibility in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Accessibility in ASP.NET MVC PDF Viewer | Syncfusion
+description: Accessibility features in the ASP.NET MVC PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Accessibility in Syncfusion PDF Viewer component
+# Accessibility in ASP.NET MVC PDF Viewer
 
 The PDF Viewer component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also integrates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
 
@@ -38,7 +38,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## WAI-ARIA attributes
 
-[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) (Web Accessibility Initiative – Accessible Rich Internet Applications) defines a way to make web content and web applications more accessible. It provides additional semantics to describe the role, state, and functionality of web components. The following ARIA attributes are used in the PDF Viewer component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -58,7 +58,7 @@ Below is an outline of the accessibility compliance for the PDF Viewer component
 
 ## Keyboard interaction
 
-The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guidelines, making it easy for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component:
+The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) guidelines, making it easy for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the PDF Viewer component:
 
 | **Press (Windows)** | **Press (Macintosh)** | **To do this** |
 | --- | --- | --- |

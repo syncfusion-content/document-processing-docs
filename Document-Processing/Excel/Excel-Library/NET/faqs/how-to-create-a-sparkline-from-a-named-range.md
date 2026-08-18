@@ -1,12 +1,12 @@
 ---
-title: How to create a sparkline from a named range | XlsIO | Syncfusion
-description: This page demonstrates to create a sparkline from a named range using .NET Excel Library.
+title: How to Create Sparklines in .NET Excel Library | Syncfusion
+description: Create sparklines from named ranges in Excel worksheets using the Syncfusion .NET Excel Library for compact data visuals.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to create a sparkline from a named range?
+# How to create sparklines from named ranges in .NET Excel Library
 
 You can create a [sparkline](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#sparkline) from a [named range](https://help.syncfusion.com/document-processing/excel/excel-library/net/faq#how-to-use-named-ranges-with-xlsio) with the help of the following code.
 

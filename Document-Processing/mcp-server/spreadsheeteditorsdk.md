@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Spreadsheet Editor SDK MCP Server | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Syncfusion Spreadsheet Editor SDK across multiple platforms.
+description: The Spreadsheet Editor SDK MCP Server provides installation guidance, integration support, and configuration resources for supported platforms.
 platform: document-processing
 control: AI coding assistant
 documentation: ug

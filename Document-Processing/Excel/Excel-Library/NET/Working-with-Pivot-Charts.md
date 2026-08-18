@@ -1,12 +1,12 @@
 ---
-title: Working with Pivot Charts | Syncfusion
-description: Learn here all about working with the Pivot Charts in the Syncfusion Excel (XlsIO) Library and more.
+title: Pivot Charts in .NET Excel Library | Syncfusion
+description: Pivot charts in Syncfusion .NET Excel Library describes how to create and work with pivot-based charts in Excel workbooks.
 platform: document-processing
 control: XlsIO
 documentation: UG 
 ---
 
-# Working with Pivot Charts in Excel Library
+# Pivot Charts in .NET Excel Library
 
 Pivot charts are interactive graphical representations of pivot table data that allow rapid analysis of the displayed data. In XlsIO, a pivot chart is created by instantiating an [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) and setting its `PivotSource` to the pivot table.
 

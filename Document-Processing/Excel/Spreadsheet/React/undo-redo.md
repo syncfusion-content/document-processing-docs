@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo redo in React Spreadsheet component | Syncfusion
-description: Learn here all about Undo redo in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Undo and Redo in React Spreadsheet | Syncfusion
+description: Learn about undo and redo operations in the Syncfusion React Spreadsheet component, including reversing and restoring actions.
 control: Undo redo 
 platform: document-processing
 documentation: ug
 ---
 
-# Undo redo in React Spreadsheet component
+# Undo and Redo in React Spreadsheet
 
 The Undo and Redo functionality allows you to reverse or restore actions performed in the Spreadsheet. `Undo` reverses the last action you performed, while `Redo` restores an action that was previously undone. This feature is essential for efficient data entry and editing, allowing users to experiment with changes without lose of work.
 

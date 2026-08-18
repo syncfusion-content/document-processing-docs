@@ -1,13 +1,13 @@
 ---
-title: PDF Viewer Component | Syncfusion
-description:  View, edit, and print PDF files across Windows, web, and mobile frameworks without Adobe dependencies, delivering fast, flexible integration.
+title: About PDF Viewer Component | Syncfusion
+description: Learn about Syncfusion PDF Viewer that allows to view, edit, and print PDF files across Windows, web, and mobile frameworks without Adobe dependencies.
 platform: document-processing
 control: general
 documentation: UG
 keywords: PDF, SDK, view, edit, read
 ---
 
-# Welcome to Syncfusion PDF Viewer Component
+# About Syncfusion PDF Viewer Component
 
 {% doccards %}
 

@@ -1,13 +1,13 @@
 ---
-title: Open and save PDF document in WPF | Syncfusion
-description: Open and save PDF document in WPF application using Syncfusion .NET PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in WPF | Syncfusion
+description: Learn how to open and save PDF documents in WPF applications using Syncfusion .NET PDF library without Adobe Acrobat dependency.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: wpf save pdf, wpf load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in WPF
+# Open and Save PDF Document in WPF
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in WPF**.
 

@@ -1,12 +1,12 @@
 ---
-title: About UWP RichTextBox control | Syncfusion
-description: Learn here all about introduction of Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control, its elements and more.
+title: About Syncfusion UWP DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio UWP DOCX Editor control and more details.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
-# Overview of the Syncfusion<sup>&reg;</sup> UWP RichTextBox
+# About Syncfusion UWP DOCX Editor Control
 
 The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
 

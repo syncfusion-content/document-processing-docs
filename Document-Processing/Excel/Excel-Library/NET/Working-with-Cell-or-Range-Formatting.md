@@ -1,12 +1,12 @@
 ---
-title: Cell or Range Formatting | Syncfusion
-description: This section covers various formatting options for a cell or a range in XlsIO, including styles, alignment, borders, fonts, colors, number formats, wrap text, auto-fit, and HTML/Rich-Text formatting.
+title: Cell and Range Formatting in .NET Excel Library | Syncfusion
+description: Cell formatting section describes how cell alignment, borders, fonts, colors, number formats, wrap text, and autofit are applied in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Cell or Range Formatting
+# Cell and Range Formatting in .NET Excel Library
 
 This section covers the various formatting options in a cell or a range.
 
@@ -2048,7 +2048,7 @@ The following are the list of tags supported in addition to HTML string.
 * \<p></p>				- Defines a paragraph
 * \<font></font>		- Defines font, color and size of text
 * \<h1….h6></h1…h6>		- Defines HTML headings
-* \<a href></a>			- Defines a hyperlink
+* \			- Defines a hyperlink
 * \<i></i>				- Defines italic text
 * \<u></u>				- Underlines the text
 * \<b></b>				- Defines bold text

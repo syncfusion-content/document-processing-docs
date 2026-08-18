@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Outline in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Outline support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Group rows and columns in UWP Spreadsheet control with outline options to organize and collapse worksheet data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Outline in UWP Spreadsheet (SfSpreadsheet)
+# Outline in UWP Spreadsheet 
 
 SfSpreadsheet provides support for outlines similar to Microsoft Excel, which makes your data easier to view. You can group or ungroup data either by rows or by columns.
 

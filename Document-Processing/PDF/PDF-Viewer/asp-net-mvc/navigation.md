@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Navigation in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to use page, bookmark, thumbnail, hyperlink, and table of contents navigation in the Syncfusion ASP.NET MVC PDF Viewer.
+description: Move between pages in the ASP.NET MVC PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Navigation
+# Navigation in ASP.NET MVC PDF Viewer
 
 The ASP.NET MVC PDF Viewer supports internal and external navigation options.
 

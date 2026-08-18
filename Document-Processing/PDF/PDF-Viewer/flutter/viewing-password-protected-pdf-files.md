@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Viewing password-protected PDFs in Flutter PDF Viewer | Syncfusion
-description: Learn here all about loading password-protected PDFs using the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: The password-protected PDF feature in SfPdfViewer enables users to securely open and view encrypted PDF documents using valid passwords.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Viewing Password-Protected PDFs in Flutter PDF Viewer (SfPdfViewer)
+# Viewing Password-Protected PDFs in Flutter PDF Viewer
 
 To load a password-protected document, use the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html). When the password is not provided or is invalid, the default password dialog will be displayed.
 

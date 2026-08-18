@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editing in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Editing in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Editing in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about editing in the Syncfusion ASP.NET Core Spreadsheet control, including cell editing, updating data, and editing options.
 platform: document-processing
 control: Editing
 documentation: ug
 ---
 
 
-# Editing in ASP.NET Core Spreadsheet control
+# Editing in ASP.NET Core Spreadsheet
 
 You can edit a cell's content directly in the cell or by using the formula bar. Editing is enabled by default. Use the [`allowEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowEditing) property to enable or disable editing in the Spreadsheet.
 

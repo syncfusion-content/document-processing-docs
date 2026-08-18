@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Editing support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+description: Modify worksheet content in Windows Forms Spreadsheet by editing cells, updating values, and changing formulas programmatically.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

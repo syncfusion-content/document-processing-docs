@@ -1,11 +1,11 @@
 ---
-title: Converting HTML to PDF with Blink engine | Syncfusion
+title: HTML to PDF Conversion in Blink Engine .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using Blink rendering engine with various features like TOC, partial web page to PDF etc.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Conversion using Blink Rendering
+# HTML to PDF conversion in Blink Engine .NET PDF Library
 
 The Syncfusion Essential<sup>&reg;</sup> HTML converter supports HTML to PDF conversion by using the advanced Blink rendering engine. This converter can be easily integrated into any application on .NET platforms such as Windows Forms, WPF, ASP.NET, ASP.NET MVC, and ASP.NET Core to convert URLs, HTML string, SVG, MHTML to PDF, and HTML to image.
 
@@ -136,7 +136,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 		4. Newtonsoft.Json package (v10.0.1 or above)
 		
 	<b>NuGet</b>
-		 <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux</a>
+		 <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Linux</a>
 
 * To convert HTML to PDF in Linux using the Blink rendering engine, the following packages should be installed in the Linux machine where the conversion takes place.
 	1. $ sudo apt-get update 		
@@ -159,7 +159,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 		4. Newtonsoft.Json package (v10.0.1 or above)		
 		
 	<b>NuGet</b>
-		<a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac</a>
+		<a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Mac</a>
 
 ## Prerequisites for AWS
 
@@ -170,7 +170,7 @@ N> The previously mentioned NuGet packages are available in [nuget.org](https://
 * The BlinkBinariesAws folder is available in the NuGet package. There is no need to set the path of the BlinkBinaries folder. The converter will automatically sets the BlinkPath property with the BlinkBinariesAws folder.
 
 <b>NuGet</b>
-    <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws/">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws</a>
+    <a href="https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws/" aria-label="NuGet link">Syncfusion.HtmlToPdfConverter.Blink.Net.Core.Aws</a>
 * Kindly refer this [link](https://support.syncfusion.com/kb/article/11992/how-to-convert-html-to-pdf-in-aws-lambda) for converting HTML to PDF in Aws.
     
 * Kindly refer this [link](https://support.syncfusion.com/kb/article/11992/how-to-convert-html-to-pdf-in-aws-lambda) for converting HTML to PDF in Aws.
@@ -925,18 +925,18 @@ padding-left: 5px;
 <h2>Introduction</h2>
 	Syncfusion<sup>&reg;</sup> is the enterprise technology partner of choice for software development, delivering a broad range of web, mobile, and desktop controls coupled with a service-oriented approach throughout the entire application life cycle. 
 <h2>Products</h2>
-	<h4>WEB</h4>
+	<h3>WEB</h3>
 		The most comprehensive suite for enterprise web development.
-	<h4>Desktop</h4>
+	<h3>Desktop</h3>
 		Comprehensive suite of over 115 components including the fastest chart and grid components.
-	<h4>Mobile</h4>
+	<h3>Mobile</h3>
 		Comprehensive suite of components for Xamarin.iOS, Xamarin.Android and Xamarin.Forms including the fastest chart and grid.
 <h2>Consulting</h2>
 	We can build web, mobile, and desktop applications better and faster than anyone since we build on top of our award-winning suite of components and frameworks, saving you time and money.
 <h2>Company</h2>
-	<h4>About us</h4>
+	<h3>About us</h3>
 		Syncfusion<sup>&reg;</sup> has established itself as the trusted partner worldwide for use in mission-critical applications. Founded in 2001 and headquartered in Research Triangle Park, N.C., Syncfusion<sup>&reg;</sup> has more than 12,000 customers, including large financial institutions, Fortune 100 companies, and global IT consultancies.
-	<h4>contact us</h4>
+	<h3>contact us</h3>
 		Morrisville Office
 		Company Headquarters
 		2501 Aerial Center Parkway
@@ -1093,7 +1093,7 @@ padding-left: 5px;
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/Create-TOC-while-converting-HTML-to-PDF).
 
-### Table of contents with custom style
+## Table of contents with custom style
 
 The Blink HTML converter provides support for customizing the table of contents style. Each header tag style can be customized by using [HtmlToPdfTocStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.HtmlToPdf.HtmlToPdfTocStyle.html). 
 
@@ -2698,7 +2698,7 @@ settings.BlinkPath = Server.MapPath("~/bin/BlinkBinaries");
 <tr>
 <th style="font-size:14px">Reason
 </th>
-<td>Missing or mismatch of <a href="https://www.nuget.org/packages/Newtonsoft.Json/6.0.8">Newtonsoft.Json</a> package in the project.
+<td>Missing or mismatch of <a href="https://www.nuget.org/packages/Newtonsoft.Json/6.0.8" aria-label="NuGet link">Newtonsoft.Json</a> package in the project.
 </td>
 </tr>
 <tr>
@@ -2763,7 +2763,7 @@ settings.TempPath = "D://MyProject//bin";
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>To overcome the exception in Windows 7/Windows server 2008 environment, add the <a href="https://www.nuget.org/packages/System.Buffers/">System.Buffers.4.5.0</a> NuGet package in the sample for conversion. 
+<td>To overcome the exception in Windows 7/Windows server 2008 environment, add the <a href="https://www.nuget.org/packages/System.Buffers/" aria-label="NuGet link">System.Buffers.4.5.0</a> NuGet package in the sample for conversion. 
 </td>
 </tr>
 
@@ -2812,7 +2812,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <tr>
 <th style="font-size:14px">Solution
 </th>
-<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
+<td>Please contact Syncfusion <a href="https://www.syncfusion.com/support/directtrac/incidents/newincident" aria-label="Syncfusion Support link">support</a> with input HTML, code snippet, and environment details (OS, culture settings, bit version etc.,).
 </td>
 </tr>
 
@@ -2900,7 +2900,7 @@ settings.AdditionalDelay = 2000;
 <th style="font-size:14px">Solution
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service (which has the elevated permission and rights to access the GDI calls). 
-Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink">link</a> for more information. 
+Refer to this <a href="https://support.syncfusion.com/kb/article/9022/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB article link">KB article</a> for more information. 
 </td>
 </tr>
 </table>

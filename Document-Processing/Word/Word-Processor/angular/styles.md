@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Styles in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in Angular DOCX Editor | Syncfusion
+description: The styles feature in Angular DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 platform: document-processing
 control: Styles
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in Angular Document Editor component
+# Styles in Angular DOCX Editor
 
 Styles are useful for applying a set of formatting consistently throughout the document. In the Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 

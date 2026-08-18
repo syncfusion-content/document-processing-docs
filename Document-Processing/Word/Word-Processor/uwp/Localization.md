@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in UWP RichTextBox control | Syncfusion
-description: Learn here all about Localization support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Localization in UWP DOCX Editor | Syncfusion
+description: The localization in UWP DOCX Editor provides support to localize static text in ribbon and dialogs, enabling language configuration through resource files.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: localization,resw,resource-file,culture,language,resources
 ---
-# Localization in UWP RichTextBox (SfRichTextBoxAdv)
+# Localization in UWP DOCX Editor
 
 Localization is the process of configuring the application to a specific language. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) provides support for localizing all the static text in the radial menu and in all its dialogs. Localization can be done by adding a resource file (`.resw`) and setting the desired culture in the application.
 

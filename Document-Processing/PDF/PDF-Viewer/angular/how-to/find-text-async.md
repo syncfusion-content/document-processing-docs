@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find Text Async Angular PDF Viewer component | Syncfusion
-description: Learn about the `findTextAsync` in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Use FindTextAsync in Angular PDF Viewer | Syncfusion
+description: Search text asynchronously in the Angular PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
 platform: document-processing
 control: Find Text Async
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find Text using findTextAsync Method in Syncfusion PdfViewer
+# How to Use FindTextAsync in Angular PDF Viewer
 
 The findTextAsync method in the Syncfusion PDF Viewer control allows you to search for specific text or an array of strings asynchronously within a PDF document. The method returns the bounding rectangles for each occurrence of the search term, allowing you to find and work with text positions in the document.
 
@@ -73,19 +73,19 @@ export class AppComponent implements OnInit {
     viewer.textSearchModule.findTextAsync('pdf', false).then((res: any) =>{
         console.log(res);
     });
-}
-findTexts(): void {
-  const viewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
-   //Search for multiple strings (['pdf', 'the']) with a case-insensitive search across all pages
+  }
+  findTexts(): void {
+    const viewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
+     //Search for multiple strings (['pdf', 'the']) with a case-insensitive search across all pages
     viewer.textSearchModule.findTextAsync(['pdf', 'the'], false).then((res: any) =>{
         console.log(res);
     });
-}
+  }
 }
 
 ```
 
-### Description:
+## Description:
 
 The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 

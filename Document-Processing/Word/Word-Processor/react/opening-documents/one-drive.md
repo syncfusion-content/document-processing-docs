@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open OneDrive files in the React DOCX Editor | Syncfusion
-description: Learn how to open a document from OneDrive in the React Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in React DOCX Editor | Syncfusion
+description: Open documents from OneDrive in React DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open a document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from OneDrive in React Document Editor
+# Open Documents from OneDrive in React DOCX Editor
 
 To load a document from OneDrive in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 

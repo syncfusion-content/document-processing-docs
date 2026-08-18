@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save document to Dropbox cloud in Document editor | Syncfusion
-description:  Learn about how to Save document to Dropbox cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Dropbox Cloud Storage in ASP.NET Core DOCX Editor | Syncfusion
+description: Save documents to Dropbox cloud storage from ASP.NET Core DOCX Editor, enabling cloud-based file storage and document management.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage in ASP.NET Core
+# Save Documents to Dropbox Cloud Storage in ASP.NET Core DOCX Editor
 
-To save a document to Dropbox cloud file storage, you can follow the steps below
+To save a document to Dropbox cloud file storage, follow these steps:
 
 **Step 1:** Create a Dropbox API
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API app, follow the official [Dropbox .NET tutorial](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -29,14 +29,20 @@ Start by following the steps provided in this [link](../../document-editor/getti
 * Import the required namespaces at the top of the file:
 
 ```csharp
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 using System.IO;
 using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and a constructor to the `DocumentEditorController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
+private IWebHostEnvironment _hostingEnvironment;
+private IMemoryCache _cache;
 private IConfiguration _configuration;
 public readonly string _accessToken;
 public readonly string _folderName;
@@ -51,7 +57,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToDropBox()` method to save the downloaded document to Dropbox cloud file storage bucket
+* Create the `SaveToDropBox()` method to save the document to the Dropbox cloud file storage
 
 ```csharp
 
@@ -59,7 +65,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToDropBox")]
-//Post action for downloading the document
+//Post action for saving the document to Dropbox cloud file storage
 
 public void SaveToDropBox(IFormCollection data)
 {
@@ -75,6 +81,7 @@ public void SaveToDropBox(IFormCollection data)
   {
       Stream stream = new MemoryStream();
       file.CopyTo(stream);
+      stream.Position = 0;
 
       // Upload the document to Dropbox
       var uploadedFile = await dropBox.Files.UploadAsync(
@@ -84,7 +91,11 @@ public void SaveToDropBox(IFormCollection data)
       );
   }
 }
+```
 
+* Add the following helper method `GetValue` to the `DocumentEditorController` class to read form values from the posted data
+
+```csharp
 private string GetValue(IFormCollection data, string key)
 {
     if (data.ContainsKey(key))
@@ -99,7 +110,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -119,7 +130,7 @@ N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token a
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Dropbox cloud file storage.
+On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in Dropbox cloud file storage.
 
 
 {% tabs %}
@@ -132,4 +143,4 @@ In the client-side, to export the document into blob the document using `saveAsB
 {% endtabs %}
 
 
-N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.
+N> The **Dropbox.Api** NuGet package must be installed in your web service project to use the code above.

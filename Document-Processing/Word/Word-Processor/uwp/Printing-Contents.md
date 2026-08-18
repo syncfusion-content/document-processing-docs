@@ -1,12 +1,12 @@
 ---
-title: Printing Contents in UWP RichTextBox control | Syncfusion
-description: Learn here all about Printing Contents support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Printing Contents in UWP DOCX Editor | Syncfusion
+description: The printing contents in UWP DOCX Editor offer API to retrieve each page as a bitmap image, enabling page-by-page printing through the print manager.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: printing,printmanager,printdocument,print-task,print-preview
 ---
-# Printing Contents in UWP RichTextBox (SfRichTextBoxAdv)
+# Printing Contents in UWP DOCX Editor
 
 [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports an API to retrieve each page as a bitmap image by specifying the page number. Using this API together with the UWP print manager, you can print the content of `SfRichTextBoxAdv` page by page in Universal Windows Platform applications.
 

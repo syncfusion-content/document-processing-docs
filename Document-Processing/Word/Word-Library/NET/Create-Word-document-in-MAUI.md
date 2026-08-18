@@ -1,6 +1,6 @@
 ---
 title: Create Word document in .NET MAUI | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in .NET MAUI application using Syncfusion<sup>&reg;</sup> .NET MAUI Word (DocIO) library.
+description: This section illustrates how to configure Gradle and download the required Syncfusion Java Word library packages
 platform: document-processing
 control: DocIO
 documentation: UG

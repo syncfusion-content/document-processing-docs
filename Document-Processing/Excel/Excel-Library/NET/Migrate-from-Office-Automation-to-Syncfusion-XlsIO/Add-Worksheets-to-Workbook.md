@@ -1,12 +1,12 @@
 ---
-title: Add Worksheets to Workbook | Syncfusion
-description: Explains with an example on how to programmatically add worksheets to a workbook when working with template Excel document using Interop and XlsIO.
+title: Worksheets in .NET Excel Library | Syncfusion
+description: Adding worksheets to template Excel documents explains how to update a workbook using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Add Worksheets to Workbook
+# Worksheets in .NET Excel Library
 
 While handling Excel templates, you can add worksheets to a workbook to fill in or manipulate data.
 

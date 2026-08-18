@@ -1,14 +1,14 @@
 ---
 layout: post
-title: RTL and Localization in Angular PDF Viewer | Syncfusion
-description: Learn about Right-to-Left (RTL) and localization support in the Syncfusion Angular PDF Viewer component.
+title: Rtl Language Support in Angular PDF Viewer | Syncfusion
+description: Enable right-to-left (RTL) language support in the Angular PDF Viewer so the UI mirrors correctly for languages such as Arabic and Hebrew.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL and Localization in the Angular PDF Viewer
+# RTL Language Support in Angular PDF Viewer
 
 Use RTL support to render the viewer interface for right-to-left languages.
 - Enable [enableRtl](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablertl) to apply right-to-left layout.
