@@ -1,6 +1,6 @@
 ---
-title: Extract Data in Blazor Application | Syncfusion
-description: Learn to extract tables, forms, text, and images from PDF documents and scanned images in Blazor using the Syncfusion® Smart Data Extractor .NET library.
+title: Getting Started with Blazor Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in Blazor
+# Getting Started with Blazor Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in Blazor applications.
 

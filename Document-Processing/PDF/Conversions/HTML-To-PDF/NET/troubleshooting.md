@@ -6,7 +6,7 @@ control: PDF
 documentation: UG
 ---
 
-# Troubleshooting and FAQ
+# Troubleshoot HTML to PDF conversion in .NET PDF Library
 
 ## Blink files are missing
 
@@ -442,7 +442,7 @@ RUN chmod +x /app/runtimes/linux/native/chrome && \
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To overcome this issue, add a suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay">AdditionalDelay</a> property of the HTMLConverter.
+<td>To overcome this issue, add a suitable delay for the conversion using the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.HtmlConverter.BlinkConverterSettings.html#Syncfusion_HtmlConverter_BlinkConverterSettings_AdditionalDelay" aria-label="Class reference documentation link">AdditionalDelay</a> property of the HTMLConverter.
 <br><br/>
 
 {% highlight c# %}
@@ -490,7 +490,7 @@ settings.AdditionalDelay = 4000;
 <th style="font-size:14px" width="100px">Solution
 </th>
 <td>You can convert HTML to PDF using the Blink rendering engine in Azure cloud service, which has elevated permissions and rights to access GDI calls.
-Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">link</a> for more information.
+Refer to this <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB articles link">KB article</a> for more information.
 </td>
 </tr>
 </table>
@@ -664,7 +664,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>To overcome this issue, use the x32 bit Blink binaries. The x32 bit Windows Blink binaries are compatible with the x32 bit Windows system environment. Please download the x32 bit Blink binaries for Windows <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BLINKB~1124441598">here</a> and replace these binaries in the existing x64 bit Blink binaries folder.
+<td>To overcome this issue, use the x32 bit Blink binaries. The x32 bit Windows Blink binaries are compatible with the x32 bit Windows system environment. Please download the x32 bit <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BLINKB~1124441598" aria-label="Blink files link">Blink binaries for Windows</a> and replace these binaries in the existing x64 bit Blink binaries folder.
 </td>
 </tr>
 </table>
@@ -691,7 +691,7 @@ blinkConverterSettings.CommandLineArguments.Add("--disable-setuid-sandbox");
 1. <b>Extract Annotations</b>: Before creating and drawing the PDF template, extract all annotations, specifically hyperlink annotations, from the original PDF document.<br>
 2. <b>Draw PDF Template</b>: Use the <b>CreateTemplate</b> and <b>DrawPdfTemplate</b> methods to draw the PDF content into a new document.<br>
 3. <b>Incorporate Annotations</b>: After the template has been drawn, programmatically add the extracted hyperlink annotations to the corresponding positions in the new document. This will restore the interactive functionality of the hyperlinks.<br>
-Please refer to the sample project: <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTMLtoPDF_Hyperlink/.NET">HTML-to-PDF-Hyperlink</a>
+Please refer to the sample project: <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTMLtoPDF_Hyperlink/.NET" aria-label="GitHub demo link">HTML-to-PDF-Hyperlink</a>
 </td>
 </tr>
 </table>
@@ -722,7 +722,7 @@ To install the Windows Server Essentials Media Pack, first install the Windows S
 4.In the left side menu, select <b>Server Roles</b>, then enable <b>Windows Server Essentials Experience</b>, and click <b>Next</b>.<br>
 5.The Windows Server Essentials will be installed.<br>
 6.After successful installation, install the Windows Server Essentials Media Pack.<br>
-Go to the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40837">official website</a> to download and install the Windows Server Essentials Media Pack.<br><br>
+Go to the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40837" aria-label="Official download link">official website</a> to download and install the Windows Server Essentials Media Pack.<br><br>
 
 **Note:** This version is only applicable to Windows Server 2012 R2 Standard.
 
@@ -860,7 +860,7 @@ document.Close(true);
 
 {% endhighlight %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET">GitHub</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/PDF-Examples/tree/master/HTML%20to%20PDF/Blink/HTML-Footer-Background-Colour/.NET" aria-label="GitHub demo link">GitHub</a>.
 
 </td>
 </tr>
@@ -984,10 +984,10 @@ If you are using Windows 7/8 or Windows Server 2008/2012, please use Chromium ve
 <br/><br/>
 
 Please refer to the thread below for more information:
-<a href="https://support.google.com/chrome/thread/185534985">Thread</a>
+<a href="https://support.google.com/chrome/thread/185534985" aria-label="Chomium Thread link">Thread</a>
 <br/>
 Blink binaries (Version 109.0.5414.75):
-<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898">Blink Binaries</a>
+<a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlinkBinaries_109.0.5414.7560606898" aria-label="Blink Binaries link">Blink Binaries</a>
 </td>
 </tr>
 </table>
@@ -1052,7 +1052,7 @@ fileStream.Dispose();
 <td>Internally, the Blink rendering engine is used to convert HTML to PDF. Due to the sandbox GDI limitation on Azure App Services and Functions, custom fonts are not rendered (the system-installed font is used instead) because of sandbox GDI API limitations that exist even in VM-based Azure Apps plans. As a result, the converter automatically renders with the default font.
 
 Refer to the link below for more information. This is a limitation of the Azure cloud environment.
-<a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox">Azure Web App sandbox</a>
+<a href="https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox" aria-label="Azure Web App Sandbox GitHub link">Azure Web App sandbox</a>
 
 </td>
 </tr>
@@ -1061,7 +1061,7 @@ Refer to the link below for more information. This is a limitation of the Azure 
 <td>
 This issue can be overcome by using Azure cloud service, which has elevated access permissions. Use the Azure cloud service API for converting HTML to PDF. Please refer to the link below for converting HTML to PDF in Azure cloud service. The custom font may work in Azure cloud service/Azure VM; this was verified by creating a simple sample in an Azure VM, where the font renders properly. If possible, use the Azure cloud service with a VM to resolve this issue.
 
-KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink">Convert HTML to PDF in Azure using Blink</a>
+KB: <a href="https://www.syncfusion.com/kb/10258/how-to-convert-html-to-pdf-in-azure-using-blink" aria-label="KB article link">Convert HTML to PDF in Azure using Blink</a>
 </td>
 </tr>
 
@@ -1200,7 +1200,7 @@ ENTRYPOINT ["dotnet", "Ops.PDFSearch.Web.dll"]
 	
 {% endhighlight %}
 
-A modified Dockerfile is available for your reference: <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059">Docker file</a>.<br>
+A modified Dockerfile is available for your reference: <a href="https://www.syncfusion.com/downloads/support/directtrac/general/ze/Dockerfile-431990059" aria-label="Docker file link">Docker file</a>.<br>
 
 <b>Step 2:</b> From Chromium version 128.x.x.x.x, the `--database` flag is required for the Chrome crashpad handler. This may cause the issue on your end. Try the steps below to resolve the issue.<br>
  
@@ -1230,7 +1230,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 
 {% endhighlight %}
 
-Please refer to the <a href="https://github.com/chrome-php/chrome/issues/649">Chromium forum link</a> for more information about this issue.
+Please refer to the <a href="https://github.com/chrome-php/chrome/issues/649" aria-label="Chomium Forum link">Chromium forum link</a> for more information about this issue.
 
 </td>
 </tr>
@@ -1259,10 +1259,10 @@ The Blink rendering engine is not supported for HTML to PDF conversion in <b>Azu
 
 To perform HTML to PDF conversion using the Blink rendering engine, you can use the following alternatives:<br>
 
-*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Azure App Service (Linux)</a>: The Blink rendering engine is compatible with Azure App Service running on Linux.<br>
+*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux" aria-label="Documentation Reference  link">Azure App Service (Linux)</a>: The Blink rendering engine is compatible with Azure App Service running on Linux.<br>
 
-*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.<br>
-*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.<br>
+*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-functions-linux" aria-label="Documentation Reference  link">Azure Functions (Linux)</a>: Linux-based Azure Functions can also utilize the Blink rendering engine for successful conversions.<br>
+*<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux-with-docker" aria-label="Documentation Reference  link">Azure App Service (Linux Docker)</a>: Deploying the application in a Linux-based Docker container offers another way to use Blink.<br>
 
 </td>
 </tr>
@@ -1323,7 +1323,7 @@ apt-get update && apt-get install -yq --no-install-recommends  libasound2 libatk
 {% endhighlight %}
 
 For more details on installing the dependencies through the SSH terminal window, refer to the documentation:
-<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux">Convert HTML to PDF in Azure App Service on Linux | Syncfusion</a>
+<a href="https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/convert-html-to-pdf-in-azure-app-service-linux" aria-label="Documentation Reference  link">Convert HTML to PDF in Azure App Service on Linux | Syncfusion</a>
 
 </td>
 </tr>

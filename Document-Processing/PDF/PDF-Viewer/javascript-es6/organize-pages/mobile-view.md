@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in JavaScript (ES6) Mobile PDF Viewer | Syncfusion
-description: Manage PDF pages in the JavaScript (ES6) PDF Viewer on mobile devices—rotate, reorder, insert, delete, and copy pages.
+title: Mobile View in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the JavaScript (ES6) PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in JavaScript (ES6) Mobile PDF Viewer
+# Organize Pages in Mobile View in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer offers a mobile-responsive layout for the `Organize Pages` feature, ensuring a seamless experience on smaller devices. On mobile devices, the toolbar and navigation elements adapt to screen size to provide easy access to page management tools.
 

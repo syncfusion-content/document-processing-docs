@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redaction Programmatic support in Angular PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion Angular PDF Viewer.
+title: Programmatic Support in Angular PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the Angular PDF Viewer to reorder, rotate, insert, delete, and copy pages from TypeScript or JavaScript.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic support for redaction in Angular PdfViewer
+# Programmatic Support for Organize Pages in Angular PDF Viewer
 
 The Syncfusion Angular `PdfViewer` control provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 

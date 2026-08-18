@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to AWS S3 in Angular DOCX Editor control | Syncfusion
-description:  Learn about how to save a document to AWS S3 in Angular Document Editor of Syncfusion Essential JS 2 and more details.
+title: Save Documents to AWS S3 in Angular DOCX Editor | Syncfusion
+description: Save documents to AWS S3 from Angular DOCX Editor, enabling cloud storage integration and secure document management.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3 in Angular Document Editor
+# Save Documents to AWS S3 in Angular DOCX Editor
 
 To save a document to AWS S3, follow the steps below.
 

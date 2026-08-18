@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion Vue DOCX Editor MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Vue DOCX Editor.
+title: MCP Server for Vue DOCX Editor | Syncfusion
+description: The Syncfusion®Vue MCP Server provides setup guidance, integration support, and resources to accelerate Vue DOCX Editor development workflows.
 control: DocumentEditor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion Vue DOCX Editor MCP Server
+# MCP Server for Vue DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Vue DOCX Editor MCP Server accelerates Vue DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

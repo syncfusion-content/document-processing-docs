@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open document by address in React DOCX Editor | Syncfusion
-description: Learn here all about Open document by address in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open a Document by URL in React DOCX Editor | Syncfusion
+description: Open a document from a URL in Syncfusion® React DOCX Editor to load and display remote files for viewing and editing.
 control: Open document by address
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in React Document Editor component
+# How to Open a Document by URL in React DOCX Editor
 
 ## How to open a document from URL in DocumentEditor
 

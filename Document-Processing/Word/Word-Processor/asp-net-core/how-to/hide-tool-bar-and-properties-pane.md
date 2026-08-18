@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hide toolbar and properties pane in DOCX Editor | Syncfusion
-description: Learn how to hide the default toolbar and properties pane from the Syncfusion Document Editor component.
+title: Hide Toolbar and Pane in ASP.NET Core DOCX Editor | Syncfusion
+description: Hide the toolbar and properties pane in Syncfusion® ASP.NET Core DOCX Editor to create a custom user interface and streamline the document editing experience.
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
 documentation: ug
 ---
 
-# Hide toolbar and properties pane in Document Editor component
+# How to Hide Toolbar and Properties Pane in ASP.NET Core DOCX Editor
 
 The **Document Editor container** provides the main document view area along with the built-in toolbar and properties pane.
 

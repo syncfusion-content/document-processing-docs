@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Insert text or images into tables in DOCX Editor | Syncfusion
-description: Learn how to insert text or image in a table programmatically in the ASP.NET MVC Document Editor Component
+title: Insert Text or Image in Table in ASP.NET MVC DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich text content at the current cursor position in Syncfusion® ASP.NET MVC DOCX Editor using document editing APIs.
 platform: document-processing
 control: Insert Text Or Image In Table
 documentation: ug
 ---
 
-# Add text or images to tables in ASP.NET MVC Document Editor
+# How to Insert Text or Image in Table in ASP.NET MVC DOCX Editor
 
 Using the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) APIs, you can insert [`text`] or [`image`] in a [`table`] programmatically based on your requirement.
 

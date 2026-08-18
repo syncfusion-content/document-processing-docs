@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clear Cell Contents or Formats in React Spreadsheet | Syncfusion
-description: Learn here how to apply clear cell contents or formats in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about clearing cell contents or formats in the Syncfusion React Spreadsheet component to reset data and formatting.
 control: Spreadsheet
 platform: document-processing
 documentation: ug

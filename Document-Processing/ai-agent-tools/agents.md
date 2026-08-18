@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Agents | AI Agent Tools | Syncfusion
+title: AI Agents using Document SDK AI Agent Tools | Syncfusion
 description: Real-world AI agent workflows for document automation - Legal, Finance, HR, Compliance, and Invoice Processing.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# What AI Agents Can Do with Syncfusion Document SDK
+# AI Agents using Document SDK AI Agent Tools
 
 Give any AI agent full control over Word, Excel, PDF, and PowerPoint - no document-processing code required. This page shows the **outcomes an AI agent can deliver** when it has the [Syncfusion Document SDK AI Agent Tools](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) in its toolbox.
 

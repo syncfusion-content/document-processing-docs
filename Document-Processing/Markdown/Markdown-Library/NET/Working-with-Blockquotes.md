@@ -1,12 +1,12 @@
 ---
-title: Working with Blockquotes in .NET Markdown Library | Syncfusion
+title: Blockquotes in .NET Markdown Library | Syncfusion
 description: Learn how to create, format, and manipulate blockquotes in a Markdown document using the Syncfusion .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Working with Blockquotes in Markdown Library
+# Blockquotes in .NET Markdown Library
 
 Blockquotes are used to highlight quoted text, notes, warnings, or other content that needs visual distinction from the main text. In the Syncfusion Markdown library, blockquotes are created using the `HasBlockquote` and `BlockQuoteLevel` properties of the `MdParagraph` class. Blockquotes support single-level and multi-level nesting, and can contain formatted text, links, and other inline elements.
 

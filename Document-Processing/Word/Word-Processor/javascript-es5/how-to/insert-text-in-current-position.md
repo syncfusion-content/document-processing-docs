@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to insert text in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Insert Content at Cursor in JavaScript DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® JavaScript DOCX Editor control, its elements and more.
 platform: document-processing
 control: Insert Text in Current Position
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in JavaScript (ES5) Document editor
+# How to Insert Content at Cursor in JavaScript DOCX Editor
 
 You can insert text, paragraphs, and rich-text content in the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component.
 

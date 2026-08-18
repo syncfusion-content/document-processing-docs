@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF form field flags in the Vue PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion Vue PDF Viewer.
+title: Form Constrain in Vue PDF Viewer | Syncfusion
+description: Configure form field constraints in the Vue PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form field flags in Vue PDF Viewer
+# PDF Form Field Constraints in Vue PDF Viewer
 
 The Syncfusion **Vue PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 

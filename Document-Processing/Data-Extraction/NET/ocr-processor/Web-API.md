@@ -1,13 +1,13 @@
 ---
-title: Perform OCR on PDF and image files in Web API | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in a Web API by using the Syncfusion PDF library efficiently
+title: Getting Started with Web API OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion Web API OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: pdf, core, web api, csharp
 ---
 
-# Perform OCR in ASP.NET Core Web API
+# Getting Started with Web API OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in ASP.NET Core Web API applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Formatting of Syncfusion Flutter XlsIO
-description: Learn how to create and apply different cell formatting options in a cell or range to Excel Worksheet.
+title: Cell Formatting in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users apply styles, fonts, colors, borders, and alignment to worksheet cells or ranges.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Cell Formatting
+# Cell Formatting in Flutter Excel Library
 
 This section covers the various formatting options in a cell or a range.
 
@@ -200,7 +200,7 @@ Digit placeholder. This code pads the value with zeros to fill the format.
 </tr>
 <tr>
 <td>
-#
+&#35;
 </td>
 <td>
 Digit placeholder. This code does not display extra zeros.

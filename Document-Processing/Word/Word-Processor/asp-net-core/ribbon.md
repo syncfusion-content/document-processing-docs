@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon in DOCX Editor control | Syncfusion
-description: Learn here all about the Ribbon UI in the ASP.NET Core Document Editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in ASP.NET Core DOCX Editor | Syncfusion
+description: Ribbon in ASP.NET Core DOCX Editor provides a tabbed command interface to access editing tools and manage document content efficiently.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon in Document Editor Control
+# Ribbon in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides a modern Ribbon interface similar to Microsoft Word. The Ribbon UI organizes commands in well-structured tabs and groups, giving you an efficient way to access editing features. Additionally, the Ribbon interface supports contextual tabs that appear only when elements such as tables, images, or headers/footers are selected in the document.
 

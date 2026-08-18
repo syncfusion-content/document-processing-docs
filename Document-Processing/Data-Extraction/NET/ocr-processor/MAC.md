@@ -1,13 +1,13 @@
 ---
-title: Perform OCR on PDF and Image Files in macOS | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images in macOS with different Tesseract versions using Syncfusion .NET OCR library. 
+title: Getting Started with macOS OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion macOS OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 --- 
 
-# Perform OCR on macOS
+# Getting Started with macOS OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in .NET console applications on macOS with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Thumbnail Navigation in TypeScript PDF Viewer | Syncfusion
-description: Discover how to navigate PDF pages using thumbnails in the Syncfusion TypeScript PDF Viewer control for a visual and intuitive experience.
+title: Page Thumbnail in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use page thumbnail navigation in the JavaScript (ES6) PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page thumbnail navigation in TypeScript PDF Viewer
+# Page Thumbnail Navigation in JavaScript (ES6) PDF Viewer
 
 Thumbnails are miniature representations of pages in a PDF file. The viewer displays page thumbnails to provide quick visual navigation.
 Use the following code snippet to enable or disable the thumbnail pane.

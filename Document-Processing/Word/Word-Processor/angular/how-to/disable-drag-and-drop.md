@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable drag and drop in Angular DOCX Editor | Syncfusion
-description: Learn here all about Disable drag and drop in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Disable Drag and Drop in Angular DOCX Editor | Syncfusion
+description: Disable drag and drop functionality in Syncfusion® Angular DOCX Editor to prevent users from moving content within the document editor component.
 platform: document-processing
 control: Disable drag and drop in Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Disable Drag and Drop in the Angular Document Editor
+# How to Disable Drag and Drop in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) provides support to drag and drop contents within the component and it can be customized (enable and disable) using the [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#allowDragAndDrop) property in Document Editor settings.
 

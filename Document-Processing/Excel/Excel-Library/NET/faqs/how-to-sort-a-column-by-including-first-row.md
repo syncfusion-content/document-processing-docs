@@ -1,12 +1,12 @@
 ---
-title: Sorting in Excel | Syncfusion
-description: This page tells how to sort a column by including first row using XLsIO in C# (Cross-platform and Windows-specific) and VB.NET.
+title: How to Sort Data in .NET Excel Library | Syncfusion
+description: Learn how to sort a column by including the first row programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to sort a column by including first row?
+# How to sort columns with the first row in .NET Excel Library
 
 This following code samples demonstrate how to sort a column by including first row using C# (Cross-platform and Windows-specific) and VB.NET.
 
@@ -110,4 +110,4 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008504-SortColumn/FAQ/Sort%20With%20First%20Column/.NET/Sort%20With%20First%20Column">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1008504-SortColumn/FAQ/Sort%20With%20First%20Column/.NET/Sort%20With%20First%20Column" aria-label="GitHub demo link">this GitHub page</a>.

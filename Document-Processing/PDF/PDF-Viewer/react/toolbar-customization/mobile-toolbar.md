@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize mobile toolbar in React PDF Viewer | Syncfusion
-description: Learn how to customize the toolbar for mobile devices in the Syncfusion React PdfViewer and ensure smooth touch interactions.
+title: Mobile Toolbar in React PDF Viewer | Syncfusion
+description: Customize the mobile toolbar in the React PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize mobile toolbar in React PDF Viewer
+# Customize the Mobile Toolbar in React PDF Viewer
 
 ## Overview
 

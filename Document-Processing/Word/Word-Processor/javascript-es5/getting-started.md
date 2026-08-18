@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a JavaScript application using the Syncfusion® DOCX Editor to create, edit, and view Word documents.
+title: Getting Started with JavaScript DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript (ES5) DOCX Editor
+# Getting Started with JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 

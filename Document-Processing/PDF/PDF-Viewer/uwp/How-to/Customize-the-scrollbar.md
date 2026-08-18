@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the scrollbar | Syncfusion
-description: The Syncfusion Essential<sup>®</sup> UWP PDF viewer provides option to customize the width of the vertical scrollbar and the color of the scrollbar thumb.
+title: How to Customize the Scrollbar in UWP PDF Viewer | Syncfusion
+description: Learn how to customize the scrollbar in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Customize the Scrollbar in UWP PDF Viewer
+# How to Customize the Scrollbar in UWP PDF Viewer
 
 This section explains how to customize the scrollbar appearance and width in the SfPdfViewer control.
 

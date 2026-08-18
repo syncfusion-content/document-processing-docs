@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance practices in Vue Spreadsheet component | Syncfusion
-description: Learn here all about performance best practices in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Performance Best Practices in Vue Spreadsheet | Syncfusion
+description: Improve application performance with optimization techniques and best practices for the Syncfusion Vue Spreadsheet.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in Vue Spreadsheet Component
+# Performance Best Practices in Vue Spreadsheet
 
 Performance optimization is crucial when working with large datasets in the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 

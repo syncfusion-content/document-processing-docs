@@ -1,11 +1,11 @@
 ---
-title: Create or Generate PDF file in Xamarin | Syncfusion
-description: Learn how to create or generate a PDF file in Xamarin with easy steps using Syncfusion Xamarin PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in Xamarin | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Xamarin and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Create or Generate PDF file in Xamarin
+# Getting Started with .NET PDF Library in Xamarin
 
 > **Note:** Xamarin reached end-of-life in May 2024 and is no longer supported by Microsoft. For new projects, use the [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui) equivalent of this guide.
 

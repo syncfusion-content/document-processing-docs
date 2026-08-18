@@ -1,14 +1,14 @@
 ---
 layout: post
 title: List Format in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about List Format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+description: The list format feature in ASP.NET MVC DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List Format
 documentation: ug
 ---
 
 
-# Working with Lists in ASP.NET MVC Document Editor Component
+# List Format in ASP.NET MVC DOCX Editor
 
 Document editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply lists to selected paragraphs using the supported APIs.
 
