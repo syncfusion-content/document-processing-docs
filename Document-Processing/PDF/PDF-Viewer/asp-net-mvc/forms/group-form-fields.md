@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Group form fields in the MVC PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion MVC PDF Viewer by assigning the same name to multiple widgets.
+title: Group Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Group PDF form fields in the ASP.NET MVC PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Group form fields in MVC PDF Viewer
+# Group Form Fields in ASP.NET MVC PDF Viewer
 
 The Syncfusion **MVC PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same Name** to them. Grouped form fields share their values and states automatically based on the field type. You can group form fields using the **Form Designer UI** or **programmatically using APIs**, making it easy to keep related fields synchronized across the PDF document.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Scrolling in .NET MAUI PDF Viewer (SfPdfViewer)
+# Scrolling in .NET MAUI PDF Viewer Control
 
 Keep document navigation smooth and predictable by using the PDF Viewer's built-in scrolling features. This guide shows how to programmatically control scroll position, respond to scroll events, and implement performance-friendly patterns (for example, avoid nesting the viewer inside other scrollable containers).
 

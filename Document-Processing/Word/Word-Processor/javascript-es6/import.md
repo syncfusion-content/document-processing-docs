@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Import in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Import in TypeScript DOCX Editor | Syncfusion
+description: The Import feature in TypeScript DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in JavaScript (ES6) Document Editor control
+# Import in TypeScript DOCX Editor
 
 In [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), the documents are stored in Document Editor's own format called **Syncfusion Document Text (SFDT)**.
 

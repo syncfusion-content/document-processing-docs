@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF files from AWS S3 in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Open PDF files from AWS S3 in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: From Amazon S3 in Angular PDF Viewer | Syncfusion
+description: Load and display PDF files stored in AWS S3 in the Angular PDF Viewer using both standalone and server-backed integration approaches.
 platform: document-processing
 control: Open PDF files from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files from AWS S3 in Angular PDF Viewer
+# Open PDF from AWS S3 in Angular PDF Viewer
 
 The Angular PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following sections demonstrate both approaches and include prerequisites and security guidance.
 

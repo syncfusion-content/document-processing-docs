@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Windows Forms PDF Viewer control | Syncfusion&reg;
-description: Learn about Localization support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Localization in Windows Forms PDF Viewer | Syncfusion
+description: Localization support enables developers to translate PDF Viewer UI elements and adapt the control for different regional languages and cultures.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-# Localization in Windows Forms PDF Viewer (PdfViewerControl)
+# Localization in Windows Forms PDF Viewer
 
 Localization is the process of configuring the application to a specific language. PDF Viewer provides support to localize all the static text used for tooltip and context menu contents. Localization can be done by adding resource file (Resx) in the application.
 The following table shows the default values for the common text used in the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html) which is in `en-US` culture:

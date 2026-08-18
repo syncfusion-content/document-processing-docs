@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQs for Vue PDF Viewer Control | Syncfusion
-description: Find answers to common questions related to using and customizing the Syncfusion Vue PDF Viewer control.
+title: How to Overview of the Vue PDF Viewer | Syncfusion
+description: How-to overview of the Vue PDF Viewer in Syncfusion Vue PDF Viewer (SfPdfViewer) control, with its elements and more.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Vue PDF Viewer - Frequently Asked Questions
+# How to Overview of the Vue PDF Viewer
 
 The following FAQ provides concise solutions and links to detailed how-to articles for the Vue PDF Viewer. Each entry links to a step-by-step article with examples and troubleshooting notes.
 

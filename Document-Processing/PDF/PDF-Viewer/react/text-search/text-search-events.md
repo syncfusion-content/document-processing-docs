@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Search Events in React PDF Viewer control | Syncfusion
-description: Learn how to handle text search events, and run programmatic searches in the Syncfusion React PDF Viewer.
+title: Text Search Events in React PDF Viewer | Syncfusion
+description: Handle text search events in the React PDF Viewer and run programmatic searches to integrate text search into your React application.
 platform: document-processing
 control: Text search
 documentation: ug

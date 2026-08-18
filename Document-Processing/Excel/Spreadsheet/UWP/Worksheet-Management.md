@@ -7,7 +7,7 @@ control: SfSpreadsheet
 documentation: ug
 ---
 
-# Worksheet Management in UWP Spreadsheet (SfSpreadsheet)
+# Worksheet Management in UWP Spreadsheet
 This section explains the operations that can be performed on a worksheet.
 
 ## Insert and Delete

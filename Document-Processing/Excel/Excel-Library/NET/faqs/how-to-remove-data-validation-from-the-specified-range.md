@@ -1,12 +1,12 @@
 ---
-title: How to remove data validation from the specified range | Syncfusion
-description: This page shows how to remove data validation from the specified range in Excel using the .NET Excel Library.
+title: How to Remove Data Validation in .NET Excel Library | Syncfusion
+description: Remove data validation from the specified range in Excel using the Syncfusion .NET Excel Library in a worksheet.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to remove data validation from the specified range?
+# How to remove data validation in .NET Excel Library
 
 You can remove data validation from the specified range using the [Clear](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_Clear_Syncfusion_XlsIO_ExcelClearOptions_) method with the [ExcelClearOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ExcelClearOptions.html) of ClearDataValidations option.
 

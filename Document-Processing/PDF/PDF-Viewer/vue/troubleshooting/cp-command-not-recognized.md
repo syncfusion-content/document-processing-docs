@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fix "cp is not recognized" on Windows for Syncfusion Vue PDF Viewer
-description: Use Windows-friendly copy commands to replace Unix cp when copying ej2-pdfviewer-lib assets for the Syncfusion Vue PDF Viewer—CMD and PowerShell examples.
+title: Cp Command Not Recognized in Vue PDF Viewer | Syncfusion
+description: Resolve the cp is not recognized error in the Vue PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Troubleshoot error 'cp' is not recognized as a command in Vue
+# Resolve cp Not Recognized Error in Vue PDF Viewer
 
 The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required assets.
 

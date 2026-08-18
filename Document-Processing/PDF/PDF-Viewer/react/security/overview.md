@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Permissions and security in React PDF Viewer | Syncfusion
-description: High-level security and permissions overview and recommended controls for protecting PDF content in EJ2 React PDF Viewer.
+title: About Syncfusion React PDF Viewer Security | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Security section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Permissions and Security in React PDF Viewer
+# About Syncfusion React PDF Viewer Security
 
 ## Purpose
 

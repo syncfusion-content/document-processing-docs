@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Page Organization UI Interactions in JavaScript (ES6) | Syncfusion
-description: Learn UI interactions for organizing PDF pages in Syncfusion JavaScript (ES6) PDF Viewer, including rotate, reorder, insert, delete, and copy actions.
+title: Ui Interactions in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the ui interactions in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# UI Interactions for Organizing Pages in JavaScript (ES6) PDF Viewer
+# Ui Interactions in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides an interface for managing and organizing pages within a PDF document. This section describes the UI interactions available in the `Organize Pages` dialog.
 

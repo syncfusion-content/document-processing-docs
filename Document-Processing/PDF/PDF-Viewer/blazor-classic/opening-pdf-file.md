@@ -1,5 +1,5 @@
 ---
-title: "Opening PDF file in Blazor PDF Viewer Component | Syncfusion"
+title: Opening PDF file in Blazor PDF Viewer  Classic | Syncfusion
 component: "PDF Viewer"
 description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor PDF Viewer."
 platform: document-processing
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Open PDF files in PDF Viewer for Blazor from various storage location
+# Opening PDF file in Blazor PDF Viewer Classic
 
 You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
 

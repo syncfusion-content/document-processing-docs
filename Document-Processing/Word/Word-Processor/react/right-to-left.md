@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Right to Left in React DOCX Editor | Syncfusion
-description: Learn here all about Right to Left in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+description: Right-to-left support in React DOCX Editor enables RTL user interfaces, including menus, dialogs, and text direction for RTL languages.
 control: Right to Left
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to Left in React Document Editor
+# Right to Left in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 

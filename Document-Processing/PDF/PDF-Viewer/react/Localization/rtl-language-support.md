@@ -1,14 +1,14 @@
 ---
 layout: post
-title: RTL Localization in React PDF Viewer | Syncfusion
-description: Learn about the Localization and Right-to-Left (RTL) Language Support in the Syncfusion React PDF Viewer component.
+title: Rtl Language Support in React PDF Viewer | Syncfusion
+description: Enable right-to-left (RTL) language support in the React PDF Viewer so the UI mirrors correctly for languages such as Arabic and Hebrew.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# RTL and Localization in the React PDF Viewer
+# RTL Language Support in React PDF Viewer
 
 Use RTL support to render the viewer interface for right-to-left languages.
 - Enable [enableRtl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablertl) to apply right-to-left layout.

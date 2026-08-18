@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Radius annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Radius measurement annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Radius Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Radius measurement annotations in the JavaScript (ES6) PDF Viewer to measure the radius of circular regions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radius annotation in TypeScript PDF Viewer
+# Radius Annotation in JavaScript (ES6) PDF Viewer
 
 Radius is a measurement annotation used to measure the radius of a circle in the PDF.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Submit PDF Form Data to a Server using Angular PDF Viewer | Syncfusion
-description: Submit filled PDF form data from the EJ2 Angular PDF Viewer to a backend server, with a complete frontend example and a minimal Node receiver.
+title: Submit Form Data in Angular PDF Viewer | Syncfusion
+description: Submit filled PDF form data from the Angular PDF Viewer to a backend server, with a complete frontend example to get you started.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Submit PDF Form Data to a Server in Angular
+# Submit Form Data to a Server in Angular PDF Viewer
 
 ## Overview
 

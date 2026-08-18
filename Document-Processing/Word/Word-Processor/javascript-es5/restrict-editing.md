@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict editing in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the JavaScript (ES5) DOCX Editor to securely manage document access and control user modifications.
+title: Restrict Editing in JavaScript DOCX Editor | Syncfusion
+description: Restrict editing feature in JavaScript DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 platform: document-processing
 control: Restrict editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict Editing in JavaScript (ES5) DOCX Editor
+# Restrict Editing in JavaScript DOCX Editor
 
 Syncfusion® JavaScript (ES5) DOCX Editor (Document Editor) provides support for restricting editing within a document. It enables control over how and where content can be modified. This helps limit editing so only specific sections of the document can be changed.
 

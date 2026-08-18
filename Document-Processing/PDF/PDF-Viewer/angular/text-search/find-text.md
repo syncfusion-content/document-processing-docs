@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find Text in Angular PDF Viewer control | Syncfusion
-description: Learn how to configure text search using find text and run programmatic searches in the Syncfusion Angular PDF Viewer.
+title: Find Text in Angular PDF Viewer | Syncfusion
+description: Configure text search in the Angular PDF Viewer and run programmatic searches to find and highlight matching text inside a PDF document.
 platform: document-processing
 control: Text search
 documentation: ug

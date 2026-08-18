@@ -1,12 +1,12 @@
 ---
 title: How to perform OCR on a PDF document using ASP.Net Core | Syncfusion
-description: This section explains how to perform OCR on an entire PDF document using the Syncfusion .NET Core PDF library. 
+description: This section explains how to perform OCR on an entire PDF document using the Syncfusion .NET OCR Processor. 
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# How to Perform OCR on a PDF Document Using ASP.NET Core
+# How to perform OCR on a PDF document using ASP.NET Core
 
 Optical Character Recognition (OCR) is a technology that converts scanned paper documents from PDF files or images into searchable and editable data.
 

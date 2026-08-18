@@ -1,12 +1,12 @@
 ---
-title: Supported LaTeX | DocIO | Syncfusion
-description: Learn the list of LaTeX supported by .NET Word Library (DocIO) while creating equation in Word document.
+title: Supported LaTeX in .NET Word | Syncfusion
+description: Describe the supported LaTeX equations and mathematical expressions available in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Supported symbols in LaTeX
+# Supported LaTeX in .NET Word
 
 The .NET Word (DocIO) library allows you to insert the following supported symbols in an equation using **LaTeX**.
 

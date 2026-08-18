@@ -1,12 +1,12 @@
 ---
-title: Working with pages | Syncfusion
-description: Add, insert, reorder, remove, and split PDF pages with Syncfusion .NET PDF, plus page numbering, page actions, and empty page detection
+title: Pages in .NET PDF Library | Syncfusion
+description: Learn how to add, insert, reorder, remove, and split PDF pages with page numbering and page actions using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF document Pages
+# Pages in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF provides comprehensive APIs to manage the pages of a [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html). You can create new pages, insert blank or duplicate pages, rearrange the page order, set page size, margins, orientation, and rotation, customize page numbering, remove pages, split a document, and detect blank pages.
 

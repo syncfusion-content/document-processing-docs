@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comments in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to add, navigate, reply to, and manage comments in the Syncfusion Blazor Document Editor component, including how to use comments-only protection.
+title: Comments in Blazor DOCX Editor | Syncfusion
+description: The comments feature in Blazor DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Comments in Blazor Document Editor Component
+# Comments in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides comprehensive support for adding, navigating, and managing comments within a document. These features facilitate collaborative review and feedback cycles. Operations can be performed both through the built-in user interface and programmatically using APIs.
 

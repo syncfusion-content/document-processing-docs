@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in React DOCX Editor component | Syncfusion
-description: Learn here all about Import in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in React DOCX Editor | Syncfusion
+description: The Import feature in React DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 control: Import 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in React Document Editor component
+# Import in React DOCX Editor
 
 In [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), the documents are stored in Document Editor's own format called **Syncfusion Document Text (SFDT)**.
 
