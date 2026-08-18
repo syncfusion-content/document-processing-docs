@@ -1,11 +1,11 @@
 ---
-title: Compare Word Documents | DocIO | Syncfusion
-description: Learn how to compare two Word documents using Java Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Compare Word Documents in Java Word | Syncfusion
+description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: Word library
 documentation: UG
 ---
-# Compare Word documents
+# Compare Word Documents in Java Word
 
 Comparing two Word documents allows you to identify the changes between two versions of a document. The Java Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# UI Customization in .NET MAUI PDF Viewer (SfPdfViewer)
+# UI Customization in .NET MAUI PDF Viewer
 
 This section walks you through the UI customization options supported in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 

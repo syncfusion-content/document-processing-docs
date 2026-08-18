@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Remove form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to remove PDF form fields using the UI and programmatically in the Syncfusion Vue PDF Viewer.
+title: Remove Form Fields in Vue PDF Viewer | Syncfusion
+description: Remove PDF form fields in the Vue PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Remove PDF Form Fields from a PDF in Vue
+# Remove Form Fields in Vue PDF Viewer
 
 ## Remove Form Fields Using the UI
 **Steps:**
@@ -17,7 +17,7 @@ documentation: ug
 ![Form Designer toolbar with Delete icon](../../../javascript-es6/images/ui-del-formfields.png)
 
 ## Remove Form Fields Programmatically
-Use **deleteFormField()** with a field reference or ID.
+Use [deleteFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner#deleteformfield) with a field reference or ID.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -75,7 +75,7 @@ export default {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

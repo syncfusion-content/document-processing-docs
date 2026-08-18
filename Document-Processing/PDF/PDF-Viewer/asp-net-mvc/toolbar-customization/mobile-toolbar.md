@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in MVC PDF Viewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
+description: Customize the mobile toolbar in the ASP.NET MVC PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Mobile Toolbar Interface in ASP.NET MVC PDF Viewer
 
-The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
+# Customize the Mobile Toolbar in ASP.NET MVC PDF Viewer
 
-## Mobile Mode Toolbar Configuration
-In mobile mode, the toolbar is optimized for ease of use on small screens, presenting users with the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
+The Mobile PDF Viewer supports viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools like search, download, bookmarking, annotation, and page organization. Users can also enable the desktop toolbar features in mobile mode for an extended set of actions.
+
+## Mobile mode toolbar configuration
+
+In mobile mode, the toolbar is optimized for ease of use on small screens, presenting the most common actions for interacting with a PDF document. The key features available in mobile mode are listed below:
 
 ![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
 
@@ -47,7 +49,7 @@ When you open the "more options" menu, you will see additional actions such as:
 
 ## Enabling Desktop Mode in Mobile
 
-The desktop version of the toolbar can be enabled on mobile devices by using the `EnableDesktopMode` API. This API allows you to bring desktop-like features to the mobile PDF viewer, providing access to additional toolbar actions that are typically available on desktop platforms.
+The desktop version of the toolbar can be enabled on mobile devices by using the [`EnableDesktopMode`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableDesktopMode) API. This API allows you to bring desktop-like features to the mobile PDF viewer, providing access to additional toolbar actions that are typically available on desktop platforms.
 
 ### Steps to Enable Desktop Mode:
 
@@ -56,14 +58,14 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 **Step 2:** This will replace the mobile toolbar with the desktop toolbar layout, allowing access to more actions and controls.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 ```html
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableDesktopMode(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 ```html
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableDesktopMode(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
@@ -77,14 +79,14 @@ The desktop version of the toolbar can be enabled on mobile devices by using the
 To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, it is important to enable touch gesture scrolling. You can achieve this by setting the `EnableTextSelection` option to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 ```html
 <div style="width:100%;height:600px">
      @Html.EJS().PdfViewer("pdfviewer").EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 ```
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 ```html
     <div style="width:100%;height:600px">
          @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableTextSelection(false).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()

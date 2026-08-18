@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction Programmatic support in MVC PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion ASP.NET MVC PDF Viewer.
+title: Programmatic Support in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the ASP.NET MVC PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Programmatic support for redaction in ASP.NET MVC PdfViewer
+# Programmatic Support for Organize Pages in ASP.NET MVC PDF Viewer
 
 The Syncfusion ASP.NET MVC PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 
@@ -310,12 +310,12 @@ You can configure default properties for redaction annotations (such as fill col
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
 
-![Redaction Property Panel](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+![Redaction Property Panel](redaction-annotations-images/redaction-property-panel-icon.png)
 
 ## See also
 
 * [Overview of Redaction](./overview)
 * [Redaction UI interactions](./ui-interaction)
 * [Redaction Toolbar](./toolbar)
-* [Reaction in Mobile view](./mobile-view)
+* [Redaction in Mobile view](./mobile-view)
 * [Search Text and Redact](./search-redact)

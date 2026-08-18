@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling and zooming in Angular DOCX Editor | Syncfusion
-description: Learn here all about Scrolling and zooming in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Scrolling and Zooming in Angular DOCX Editor | Syncfusion
+description: The scrolling and zooming in Angular DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling zooming
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling and zooming in Angular Document Editor
+# Scrolling and Zooming in Angular DOCX Editor
 
 The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
 

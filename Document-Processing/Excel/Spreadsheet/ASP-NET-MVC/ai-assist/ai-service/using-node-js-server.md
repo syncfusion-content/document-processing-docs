@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Node.js Server Setup in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn how to set up and connect a Node.js + Express server for the AI Assist feature in the Syncfusion ASP.NET MVC Spreadsheet component.
+description: AI Assist Node.js server setup in ASP.NET MVC Spreadsheet explains how to configure and connect a Node.js and Express server for AI-powered features.
 platform: document-processing
 control: AI Assist Node.js Server Setup
 documentation: ug

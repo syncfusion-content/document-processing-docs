@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data Binding in EJ2 ASP.NET CORE Spreadsheet Control | Syncfusion
-description: Learn here all about Data Binding in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about data binding in the Syncfusion ASP.NET Core Spreadsheet control, including binding data sources and managing cell data.
 platform: document-processing
 control: Data Binding
 documentation: ug
 ---
 
 
-# Data Binding in ASP.NET Core Spreadsheet Control
+# Data Binding in ASP.NET Core Spreadsheet
 
 The Spreadsheet supports binding data to a range from RESTful JSON services and local JavaScript object arrays through `DataManager`. The `dataSource` property accepts either a `DataManager` instance or a JavaScript object array collection.
 

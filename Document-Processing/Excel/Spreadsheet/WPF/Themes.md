@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Themes in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Themes support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control, its elements and more.
+description: Apply themes in the WPF Spreadsheet control to customize its appearance and create a consistent user experience across applications.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Themes in WPF Spreadsheet (SfSpreadsheet)
+# Themes in WPF Spreadsheet
 
 SfSpreadsheet supports built-in themes for customizing its appearance.
 

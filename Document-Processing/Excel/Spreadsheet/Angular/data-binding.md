@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data binding in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Angular Spreadsheet | Syncfusion
+description: Data binding in Angular Spreadsheet enables seamless integration with data sources, allowing users to display and manage data efficiently.
 platform: document-processing
 control: Data binding
 documentation: ug
 ---
 
-# Data binding in Angular Spreadsheet component
+# Data Binding in Angular Spreadsheet 
 
 The Spreadsheet uses [DataManager](https://ej2.syncfusion.com/angular/documentation/data), which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [DataManager](https://ej2.syncfusion.com/angular/documentation/data) or JavaScript object array collection.
 

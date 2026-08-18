@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in React DOCX Editor Component | Syncfusion
-description: Learn here all about History in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: History in React DOCX Editor | Syncfusion
+description: History in React DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 control: History 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in React Document Editor Component
+# History in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 

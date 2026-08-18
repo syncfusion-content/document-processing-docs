@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Deploy Document Editor For Mobile in ASP.NET MVC | Syncfusion
-description: Learn here all about deploy document editor component for mobile in Syncfusion ASP.NET MVC Document Editor component of syncfusion and more.
+title: How to Deploy ASP.NET MVC DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® ASP.NET MVC DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 platform: document-processing
 control: Deploy Document Editor Component For Mobile
 documentation: ug
 ---
 
 
-# Deploy Document Editor component for Mobile
+# How to Deploy ASP.NET MVC DOCX Editor for Mobile
 
 ## Document editor component for Mobile
 
-At present, Document editor component is not responsive for mobile, and the editing functionalities aren't ensured in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
+The Document Editor component is currently not responsive for mobile, and the editing functionalities are not supported in mobile browsers. However, it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke `fitPage` method with `FitPageWidth` parameter in document change event, such as to display one full page by adjusting the zoom factor.
+Hence, it is recommended to set the Document Editor component to read-only in mobile browsers by using the [`restrictEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_RestrictEditing) property in DocumentEditorContainer or the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in DocumentEditor, based on your requirement. Also, invoke the [`fitPage`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_FitPage_System_String_) method with the [`FitPageWidth`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.PageFitType.html) parameter in the document change event to display one full page by adjusting the zoom factor.
 
 
 {% tabs %}
@@ -22,8 +22,9 @@ Hence, it is recommended to switch the Document editor component as read-only in
 {% include code-snippet/document-editor/asp-net-mvc/mobile-view/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Mobile-view.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
-N> You can use the [`restrictEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_RestrictEditing) in DocumentEditorContainer and [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) in DocumentEditor based on your requirement to change component to read only mode.
+N> For more information, refer to the [`restrictEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_RestrictEditing) property in DocumentEditorContainer and the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in DocumentEditor to change the component to read-only mode.

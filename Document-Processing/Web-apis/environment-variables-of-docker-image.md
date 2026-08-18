@@ -1,11 +1,11 @@
 ---
-title: Syncfusion Docker Image Environment Variables and Configuration
-description:  Configure Docker environment variables for deploying Syncfusion Document Processing API seamlessly. Customize settings for optimal performance.
+title: Docker Image Environment Variables and Configuration | Syncfusion
+description: Configure Docker environment variables for deploying Syncfusion Document Processing API seamlessly. Customize settings for optimal performance.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Environment Variables of Docker Image
+# Docker Image Environment Variables and Configuration
 
 You may want to adjust certain settings of the Syncfusion Document Processing API to fit your application. The configuration options can be accessed through environment variables within the container environment. Here are the available options:
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize Context Menu in Angular DOCX Editor component | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in Angular DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® Angular DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
 control: Customize context menu
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Context Menu in Angular Document Editor component
+# How to Customize Context Menu in Angular DOCX Editor
 
 ## How to customize context menu in the Document Editor
 
-Angular DOCX Editor allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs) event.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor)  allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs) event.
 
 ### Add custom option
 

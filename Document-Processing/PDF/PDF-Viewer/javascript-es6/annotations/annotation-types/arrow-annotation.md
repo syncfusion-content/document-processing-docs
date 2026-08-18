@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Arrow annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Arrow Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the JavaScript (ES6) PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow annotation in TypeScript PDF Viewer
+# Arrow Annotation in JavaScript (ES6) PDF Viewer
 
 Arrow is a shape annotation used to point, direct attention, or indicate flow. Common use cases include callouts, direction markers, and connectors in technical reviews.
 
@@ -131,7 +131,7 @@ The fill color, stroke color, thickness, and opacity of arrow shape annotations 
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Edit fill color for shapes](../..//images/shape_fillColor.png)
+![Edit fill color for shapes](../../images/shape_fillColor.png)
 
 #### Editing stroke color
 
@@ -260,7 +260,7 @@ Refer to the following code snippet to set the default arrow settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, ArrowSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -283,7 +283,7 @@ document.getElementById('arrow')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, ArrowSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';

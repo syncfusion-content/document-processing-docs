@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature module in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Feature module in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature Modules in Angular DOCX Editor | Syncfusion
+description: Modules in Angular DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 platform: document-processing
 control: Feature module 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in Angular Document Editor component
+# Feature Modules in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **PrintService** - Prints the document.

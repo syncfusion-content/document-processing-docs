@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert page number and navigate to page in Vue Document editor component | Syncfusion
-description: Learn here all about Insert page number and navigate to page in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title:  How to Insert Page Numbers in Vue DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® Vue DOCX Editor using built-in APIs for efficient document navigation and formatting.
 control: Insert page number and navigate to page 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert page number and navigate to page in Vue Document editor component
+# How to Insert Page Numbers and Navigate in Vue DOCX Editor
 
 You can insert page number and navigate to specific page in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component by following ways.
 

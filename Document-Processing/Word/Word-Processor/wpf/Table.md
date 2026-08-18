@@ -1,12 +1,12 @@
 ---
-title: Table in WPF RichTextBox control | Syncfusion
-description: Learn here all about Table support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Tables in WPF DOCX Editor | Syncfusion
+description: WPF DOCX Editor allows adding tables to the rich text document, enabling insert and delete of rows and columns, and cell merging.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: table,rows,columns,cells,merge,alignment
 ---
-# Table in WPF RichTextBox (SfRichTextBoxAdv)
+# Tables in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to add tables to the rich text document. You can insert rows or columns into an existing table and can also delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally). The tables are represented using the [TableAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableAdv.html) class, with each row represented by [TableRowAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableRowAdv.html) and each cell by [TableCellAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableCellAdv.html). The cell-level layout is controlled by the [CellFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.CellFormat.html) class.
 

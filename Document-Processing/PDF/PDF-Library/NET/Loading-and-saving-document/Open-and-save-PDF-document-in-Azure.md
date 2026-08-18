@@ -1,12 +1,12 @@
 ---
-title: Open and save PDF document in Microsoft Azure | Syncfusion
-description: Learn how to open and save a PDF document in Azure services using Syncfusion .NET PDF library in C#.
+title: Open and Save PDF Document in Azure Platform | Syncfusion
+description: Learn how to open and save PDF documents in Azure services using Syncfusion .NET PDF library with C# without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Open and save PDF document in Azure Platform
+# Open and Save PDF Document in Azure Platform
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Azure Services** with a few lines of code.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in React DOCX editor component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Clipboard in React DOCX Editor | Syncfusion
+description: The clipboard support in React DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 control: Clipboard
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in React Document editor component
+# Clipboard in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move portions of the document to the clipboard in HTML format, so that it can be pasted into any application that supports clipboard operations.
 

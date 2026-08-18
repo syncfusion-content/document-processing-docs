@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Table Format in ASP.NET MVC Document Editor Component
-description: Learn here all about table format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The table format feature in ASP.NET MVC DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table Format
 documentation: ug
 ---
 
 
-# Working with Table Formatting
+# Table format in ASP.NET MVC DOCX Editor
 
-Document editor customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+Document Editor allows you to customize the formatting of tables or table cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
 You can customize the cell margins by using the following sample code.
 
 ```typescript
-//To change the left margin
+// To change the left margin
 documenteditor.selection.cellFormat.leftMargin=5.4;
 //To change the right margin
 documenteditor.selection.cellFormat.rightMargin=5.4;
@@ -27,7 +27,7 @@ documenteditor.selection.cellFormat.topMargin=5.4;
 documenteditor.selection.cellFormat.bottomMargin=5.4;
 ```
 
-You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table.
+You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from the default cell margins of the table.
 
 ```typescript
 //To change the left margin
@@ -64,7 +64,7 @@ documenteditor.selection.tableFormat.cellSpacing = 2;
 
 ## Cell vertical alignment
 
-The content is aligned within a table cell to `Top`, `Center`, or `Bottom`. You can customize this property of selected cells.
+The content within a table cell can be aligned to `Top`, `Center`, or `Bottom`. You can customize this property for selected cells.
 
 ```typescript
 documenteditor.selection.cellFormat.verticalAlignment= 'Bottom';
@@ -72,7 +72,7 @@ documenteditor.selection.cellFormat.verticalAlignment= 'Bottom';
 
 ## Table alignment
 
-The tables are aligned in document editor to `Left`, `Right`, or `Center`.
+Tables are aligned in the Document Editor to `Left`, `Right`, or `Center`.
 
 ```typescript
 documenteditor.selection.tableFormat.tableAlignment='Center';
@@ -80,7 +80,7 @@ documenteditor.selection.tableFormat.tableAlignment='Center';
 
 ## Cell width
 
-Set the desired width of table cells that will be considered when the table is layouted.
+Set the desired width of table cells that will be considered when the table is laid out.
 
 
 {% tabs %}
@@ -110,7 +110,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 ## Apply borders
 
-Document editor exposes API to customize the borders for table cells by specifying the settings.
+Document Editor exposes an API to customize the borders for table cells by specifying the settings.
 
 
 {% tabs %}
@@ -125,11 +125,11 @@ Document editor exposes API to customize the borders for table cells by specifyi
 
 ## Working with row formatting
 
-Document editor allows various row formatting such as height and repeat header.
+Document Editor allows various row formatting options, such as height and repeating headers.
 
 ### Row height
 
-You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
+You can customize the height of a table row to be `Auto`, `AtLeast`, or `Exactly`.
 
 
 {% tabs %}
@@ -137,13 +137,14 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 {% include code-snippet/document-editor/asp-net-mvc/row-height/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 ### Header row
 
-The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
+The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is in the first row of the table, then you can define whether it is a header row or not, using the following sample code.
 
 ```typescript
 documenteditor.selection.rowFormat.isHeader=true;
@@ -151,7 +152,7 @@ documenteditor.selection.rowFormat.isHeader=true;
 
 ### Allow row break across pages
 
-This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
+This property is valid if a table row does not fit on the current page during table layout. It defines whether a table row can break. If the value is false, the entire row will be moved to the start of the next page. You can modify this property for selected rows using the following sample code.
 
 ```typescript
 documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
@@ -159,7 +160,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+Document Editor exposes an API to get or set the title of the selected table. Refer to the following sample code to set the title.
 
 ```typescript
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -167,15 +168,16 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+Document Editor exposes an API to get or set the description of the selected table. Refer to the following sample code to set the description.
 
 ```typescript
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
-## Online Demo
 
-Explore how to format tables in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableformatting#/tailwind3).
+## Online demo
 
-## See Also
+Explore how to format tables in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableformatting#/tailwind3).
+
+## See also
 
 * [Table properties dialog](./dialog#table-properties-dialog)

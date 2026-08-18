@@ -1,11 +1,11 @@
 ---
-title: Accept or reject track changes | DocIO | Syncfusion
-description: Learn how to accept or reject the track changes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Track changes in .NET Word | Syncfusion
+description: This section illustrates how to create Word documents in Google Cloud Platform using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Accepting or Rejecting Track Changes .NET Word
+# Track changes in .NET Word
 
 Track changes is used to keep track of the changes made to a Word document. It helps to maintain the record of the author, date, and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 

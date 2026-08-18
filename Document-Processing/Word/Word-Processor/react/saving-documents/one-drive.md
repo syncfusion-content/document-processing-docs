@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to OneDrive in React DOCX Editor | Syncfusion
-description: Learn how to save a document to OneDrive in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
+title: Save Documents to OneDrive in React DOCX Editor | Syncfusion
+description: Save documents to OneDrive from React DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to OneDrive
+# Save Documents to OneDrive in React DOCX Editor
 
 To save a document to OneDrive, you can follow the steps below.
 

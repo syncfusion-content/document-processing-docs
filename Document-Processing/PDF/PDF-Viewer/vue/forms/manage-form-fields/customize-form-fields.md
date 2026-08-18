@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to customize PDF form fields using the UI and programmatically with APIs in the Syncfusion Vue PDF Viewer.
+title: Customize Form Fields in Vue PDF Viewer | Syncfusion
+description: Style PDF form fields in the Vue PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the appearance of PDF Form Fields in Vue PDF Viewer
+# Customize Form Field Appearance in Vue PDF Viewer
 
 **Styling** customizes appearance only (font, color, alignment, border, background, indicator text).
 
@@ -18,7 +18,7 @@ Use the **Properties** panel to adjust:
 - Background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
+## Customize Appearance of Form Fields Programmatically
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to apply styles.
 
 {% tabs %}
@@ -147,7 +147,7 @@ export default {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

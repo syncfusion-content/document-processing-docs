@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion Document SDK Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion Document SDK Mac installer after downloading from our Syncfusion website.
+title: How to install Document Solutions Mac installer | Syncfusion
+description: Learn here about how to install Syncfusion Document Processing Mac installer after downloading from our Syncfusion website.
 platform: document-SDK
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Document SDK Mac installer
+# How to install Document Solutions Mac installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
