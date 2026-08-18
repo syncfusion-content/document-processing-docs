@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Editing in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Editing in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Editing in ASP.NET MVC Spreadsheet | Syncfusion
+description: Explore editing capabilities in the Syncfusion ASP.NET MVC Spreadsheet, including cell updates, validation, and formulas.
 platform: document-processing
 control: Editing
 documentation: ug
 ---
 
 
-# Editing in Spreadsheet control
+# Editing in ASP.NET MVC Spreadsheet
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowEditing) property to enable or disable the editing feature.
 

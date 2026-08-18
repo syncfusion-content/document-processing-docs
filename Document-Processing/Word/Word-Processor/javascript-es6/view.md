@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about view options in the Syncfusion JavaScript (ES6) Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in TypeScript DOCX Editor | Syncfusion
+description: View in TypeScript DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in JavaScript (ES6) Document Editor control
+# View in TypeScript DOCX Editor
 
 ## Web layout
 

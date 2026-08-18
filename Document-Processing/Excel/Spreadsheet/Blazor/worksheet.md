@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet operations in Blazor Spreadsheet component |Syncfusion
-description: Learn about the comprehensive worksheet management functionalities in the Syncfusion Blazor Spreadsheet component and more.
+title: Worksheet Operations in Blazor Spreadsheet | Syncfusion
+description: Learn how to create, manage, and customize worksheets in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Worksheet Operations in Blazor Spreadsheet Component
+# Worksheet Operations in Blazor Spreadsheet
 
 A worksheet is a collection of cells organized in the form of rows and columns that allows for storing, formatting, and manipulating data. This feature supports data organization across multiple sheets, making it suitable for scenarios like managing department-wise records, financial reports, or project data in separate sheets.
 

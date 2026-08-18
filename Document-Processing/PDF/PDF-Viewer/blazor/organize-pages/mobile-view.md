@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Organize Pages in Mobile PDF Viewer Blazor | Syncfusion
+title: Organize Pages in Mobile  Blazor PDF Viewer | Syncfusion
 description: Learn how to organize pages in the mobile PDF Viewer, including rotating, rearranging, inserting, deleting, and duplicating pages on mobile devices.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Organize Pages in Mobile PDF Viewer Blazor
+# Organize Pages in Mobile Blazor PDF Viewer
 
 The PDF Viewer provides a mobile-responsive experience for the Organize Pages feature so users can manage pages comfortably on small screens. The mobile UI uses the same APIs as the desktop experience, so you can reuse the [programmatic support](./programmatic-support) when needed.
 

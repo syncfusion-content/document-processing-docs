@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search Events in TypeScript PDF Viewer control | Syncfusion
-description: Learn how to handle text search events, and run programmatic searches in the Syncfusion TypeScript PDF Viewer.
+title: Text Search Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Handle text search events in the JavaScript (ES6) PDF Viewer and run programmatic searches to integrate text search into your JavaScript application.
 platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text Search Events in TypeScript PDF Viewer
+# Text Search Events in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer triggers events during text search operations, allowing you to customize behavior and respond to different stages of the search process.
 

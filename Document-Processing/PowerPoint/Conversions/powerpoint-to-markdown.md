@@ -1,12 +1,12 @@
 ---
-title: PowerPoint to Markdown in C# | PowerPoint | Syncfusion
-description: Learn how to convert a PowerPoint to Markdown using the .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+title: PowerPoint to Markdown Conversion in .NET PowerPoint | Syncfusion
+description: Convert PowerPoint presentations to Markdown format using the Syncfusion® .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# PowerPoint to Markdown Conversion
+# PowerPoint to Markdown Conversion in .NET PowerPoint
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the conversion of a PowerPoint Presentation to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -113,6 +113,8 @@ async void Save(MemoryStream streams, string filename)
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Convert-PPTX-to-Markdown).
+
 ## Save Options
 
 When converting a PowerPoint Presentation to Markdown, the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides various save options to customize the output Markdown file. These options allow you to customize image paths, set character encoding, and other export behaviors.
@@ -215,6 +217,8 @@ End Sub
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Customize-Image-Path).
+
 ### Encoding
 
 The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) provides an `Encoding` property to specify the character encoding to use when saving the Markdown file. This property is useful when you need to save the output Markdown file with specific character encodings such as UTF-8, UTF-16, ASCII, or other encodings.
@@ -260,6 +264,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Save-Options-Encoding).
 
 N> Set the encoding value before saving the document as per the above code example.
 
@@ -311,3 +317,4 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Get-Markdown-document).

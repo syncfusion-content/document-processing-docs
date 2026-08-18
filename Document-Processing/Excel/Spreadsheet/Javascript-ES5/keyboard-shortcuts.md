@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard shortcuts in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcuts in JavaScript Spreadsheet | Syncfusion
+description: Keyboard shortcuts in JavaScript Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
 platform: document-processing
 control: Keyboard shortcuts
 documentation: ug
 ---
 
-# Keyboard shortcuts in EJ2 JavaScript Spreadsheet control
+# Keyboard shortcuts in JavaScript Spreadsheet 
 
 The keyboard shortcuts supported in the spreadsheet are,
 

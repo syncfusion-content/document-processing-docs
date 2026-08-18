@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Text Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply Text function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel Text Functions in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users process and format text values in Excel worksheet cells with text functions.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Text Function Formulas
+# Text Function Formulas in Flutter Excel Library
 
 Text Function Formulas includes the following functions:
 

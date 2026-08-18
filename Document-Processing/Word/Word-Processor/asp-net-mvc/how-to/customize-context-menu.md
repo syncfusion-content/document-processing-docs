@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Context Menu in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about how to customize context menu in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in ASP.NET MVC DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® ASP.NET MVC DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
 control: Customize Context Menu
 documentation: ug
 ---
 
 
-# Context menu customization in ASP.NET MVC Document Editor Component
+# How to Customize Context Menu in ASP.NET MVC DOCX Editor
 
 ## How to customize context menu in Document Editor
 

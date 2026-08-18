@@ -1,11 +1,11 @@
 ---
-title: Supported and Unsupported PDF Features | Syncfusion
-description: This section explains the features available in Essential PDF and their availability across different platforms.
+title: PDF Features in .NET PDF Library | Syncfusion
+description: Learn about the supported and unsupported features in Syncfusion PDF Library across different platforms and frameworks.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Supported and Unsupported PDF Features
+# PDF Features in .NET PDF Library
 
 The following tables list the features available in Essential<sup>&reg;</sup> PDF and their availability across different platforms.
 

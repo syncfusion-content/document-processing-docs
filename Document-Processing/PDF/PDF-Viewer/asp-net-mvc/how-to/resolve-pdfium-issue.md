@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resolve PDFium error in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about how to Fix PDFium initialization errors in Syncfusion PDF Viewer by copying binaries and configuring ReferencePath correctly.
+title: How to Resolve Pdfium Issues in ASP.NET MVC PDF Viewer | Syncfusion
+description: Resolve common Pdfium issues in the ASP.NET MVC PDF Viewer such as rendering failures, missing dependencies, and version mismatches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve the Pdfium issue
+# How to Resolve Pdfium Issues in ASP.NET MVC PDF Viewer
 
 The error “The type initializer for `Syncfusion.EJ2.PdfViewer.PdfiumNative` threw an exception” occurs when the PDF Viewer cannot unpack the required PDFium native binaries because write access is blocked or the assemblies are missing. The viewer extracts `pdfium.dll` at runtime based on the current operating system, so ensure the application can write to the target folder or manually include the binaries by copying the x64 and x86 folders into the project.
 

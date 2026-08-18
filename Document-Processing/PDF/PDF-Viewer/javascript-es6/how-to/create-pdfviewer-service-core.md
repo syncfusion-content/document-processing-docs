@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create PDF Viewer service in TypeScript PDF Viewer | Syncfusion
-description: Learn how to create an ASP.NET Core Web API service for the TypeScript PDF Viewer to support rendering, text extraction, thumbnails, and more.
+title: How to Create a Custom PDF Viewer Service in ASP.NET | Syncfusion
+description: Create a custom PDF Viewer web service in ASP.NET Core for the JavaScript (ES6) PDF Viewer, with code samples and configuration tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create a PDF Viewer service for the TypeScript PDF Viewer
+# How to Create a Custom PDF Viewer Service in ASP.NET Core in
 
 The JavaScript PDF Viewer requires a server-side service to process PDF documents for rendering. This document explains how to create an ASP.NET Core Web API service that performs server-side preprocessing and operations used by the client.
 

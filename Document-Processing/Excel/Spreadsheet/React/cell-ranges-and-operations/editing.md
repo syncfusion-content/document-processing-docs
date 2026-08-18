@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in React Spreadsheet component | Syncfusion
-description: Learn here all about Editing in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Editing in React Spreadsheet | Syncfusion
+description: Learn about editing in the Syncfusion React Spreadsheet component and modify cell values, formulas, and spreadsheet content.
 control: Editing 
 platform: document-processing
 documentation: ug
 ---
 
-# Editing in React Spreadsheet component
+# Editing in React Spreadsheet
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowediting) property to enable or disable the editing feature.
 

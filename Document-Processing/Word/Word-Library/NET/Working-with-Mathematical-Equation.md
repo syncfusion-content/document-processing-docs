@@ -1,11 +1,11 @@
 ---
-title: Working with Mathematical Equation | DocIO | Syncfusion
-description: Learn how to add and modify mathematical equations in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Mathematical Equation in .NET Word | Syncfusion
+description: Learn how to add and modify mathematical equations in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Mathematical Equation
+# Mathematical Equation in .NET Word
 
 Equations in a Word document are combinations of mathematical symbols or text. For example, you can create a Fourier series equation in a Word document.
 

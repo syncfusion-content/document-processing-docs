@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create PDF Viewer service using ASP.NET MVC in Vue | Syncfusion
-description: Learn how to create an ASP.NET MVC Web API service for the Vue PDF Viewer to handle server-side processing for rendering and related operations.
+title: How to Create a Custom PDF Viewer Service in Vue PDF | Syncfusion
+description: Create a custom PDF Viewer web service for the Vue PDF Viewer, with code samples and configuration tips for common setups.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create PDF Viewer service using ASP.NET MVC in Vue PDF Viewer
+# How to Create a Custom PDF Viewer Service in Vue PDF Viewer
 
 The Vue PDF Viewer relies on a server-side service to process PDF documents for rendering. This section explains how to create an ASP.NET MVC Web API service to perform server-side preprocessing for the client.
 

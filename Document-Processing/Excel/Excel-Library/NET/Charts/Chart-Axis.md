@@ -1,12 +1,12 @@
 ---
-title: Chart Axis | Excel library | Syncfusion
-description: In this section, you can learn about chart axis in an Excel document using .NET Excel Library with clear guidance and practical examples.
+title: Chart Axis in .NET Excel Library | Syncfusion
+description: Chart axis settings describes how the Syncfusion .NET Excel Library configures axes in Excel charts with clear options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Axis in an Excel document
+# Chart Axis in .NET Excel Library
 
 Charts typically have two axes that are used to measure and categorize data.
 - Horizontal axis (also known as category axis or x-axis).

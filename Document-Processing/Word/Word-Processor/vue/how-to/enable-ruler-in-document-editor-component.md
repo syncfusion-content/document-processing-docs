@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable ruler in Vue Document Editor component
+# How to Enable Ruler in Vue DOCX Editor
 
 The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 

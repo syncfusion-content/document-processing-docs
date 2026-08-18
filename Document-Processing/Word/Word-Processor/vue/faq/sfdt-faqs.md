@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs about SFDT in Vue DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion Vue DOCX Editor component, including its structure and usage.
+description: Find frequently asked questions about SFDT format in the Vue DOCX Editor control, including its structure and usage.
 control: SFDT format 
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # FAQs about SFDT in Vue DOCX Editor
 
-The frequently asked questions about SFDT in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) is listed below:
+The frequently asked questions about SFDT in the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) are listed below:
 
 ## What is SFDT format?
 
@@ -18,7 +18,7 @@ SFDT (Syncfusion Document Text) is a JSON-based representation of a DOCX documen
 
 ## Is it possible to modify SFDT?
 
-It is not recommended to modify SFDT directly (either manually or programmatically). The format is designed for internal use by the Document Editor, and even small changes can break the document structure or cause unexpected behavior.
+It is not recommended to modify SFDT directly (either manually or programmatically). The format is designed for internal use by the Document Editor, and even small changes can break the document structure, or cause unexpected behavior.
 
 ## What are the advantages of SFDT over DOCX?
 
@@ -26,7 +26,7 @@ SFDT is optimized for web-based document editing scenarios.
 
 - It is lightweight and easier to process.
 
-- As SFDT is a Base64 string by default, it can be stored directly in databases.
+- SFDT can be serialized as a Base64 string, so it can be stored directly in databases.
 
 - Server-side dependencies are not required for loading and saving SFDT.
 
@@ -34,9 +34,9 @@ SFDT is optimized for web-based document editing scenarios.
 
 SFDT is suitable in the following scenarios:
 
-- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor
+- Applications where documents are edited within the browser using the Document Editor, and the document state needs to be saved and reopened later in the same editor.
 
-- Use cases that require efficient storage in a database and quick reloading for further editing
+- Use cases that require efficient storage in a database and quick reloading for further editing.
 
 ## Can SFDT be converted back to DOCX?
 

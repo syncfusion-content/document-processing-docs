@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Formulas in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Formulas support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Create and calculate formulas in the  UWP Spreadsheet control using built-in functions for accurate and efficient data analysis.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Formulas in UWP Spreadsheet (SfSpreadsheet)
+# Formulas in UWP Spreadsheet
 
 SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross-sheet references. The calculation engine is preloaded with a broad range of built-in formulas covering common business functions.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance practices in React Spreadsheet component | Syncfusion
-description: Learn here all about performance best practices in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Performance Best Practices in React Spreadsheet | Syncfusion
+description: Learn about performance best practices in the Syncfusion React Spreadsheet component to optimize rendering and data processing.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in React Spreadsheet Component
+# Performance Best Practices in React Spreadsheet
 
 Performance optimization is crucial when working with large datasets in the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 

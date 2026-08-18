@@ -1,12 +1,12 @@
 ---
-title: How to preserve line breaks when saving Excel as CSV | Syncfusion
-description: Explanation of why line breaks in cell text are not preserved when saving an Excel file to CSV and the recommended alternative to retain the visual format.
+title: How to Preserve Line Breaks in .NET Excel Library | Syncfusion
+description: Understand why line breaks in cell text are not preserved when saving Excel files to CSV and the recommended alternative.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to preserve line breaks when saving Excel as CSV?
+# How to preserve line breaks in CSV export in .NET Excel Library
 
 When an Excel worksheet is saved as a CSV file, any text containing line breaks within a cell is not preserved in the same visual form. This is because CSV is a plain-text format designed to store tabular data, and it does not support Excel-specific formatting or display features such as in-cell line wrapping.
 

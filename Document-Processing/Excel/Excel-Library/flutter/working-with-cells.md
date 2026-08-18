@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Cells using Syncfusion Flutter XlsIO
-description: Learn how to add text, number, datetime and values to Excel worksheet using Syncfusion Flutter XlsIO.
+title: Working with Cells in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users add text, numbers, dates, times, and other values to Excel worksheets programmatically.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Worksheet Cells
+# Worksheet Cells in Flutter Excel Library
 
 ## Adding a Text to Excel worksheet
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Google Drive in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Drive by setting up the Google Drive API using Syncfusion JavaScript (ES6) Document Editor.
+title: Save to Google Drive in TypeScript DOCX Editor | Syncfusion
+description: Save documents to Google Drive from TypeScript DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save a Document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save Document to Google Drive in JavaScript (ES6) Document Editor
+# Save Documents to Google Drive in TypeScript DOCX Editor
 
 To save a document to Google Drive, you can follow the steps below.
 

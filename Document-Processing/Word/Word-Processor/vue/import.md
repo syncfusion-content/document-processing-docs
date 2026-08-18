@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in Vue Document editor component | Syncfusion
-description: Learn here all about Import in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Import in Vue DOCX Editor | Syncfusion
+description: The Import feature in Vue DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 control: Import 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in Vue Document editor component
+# Import in Vue DOCX Editor
 
 In [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 

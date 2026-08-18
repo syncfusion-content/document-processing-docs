@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in React Spreadsheet component | Syncfusion
-description: Learn here all about Selection in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Selection in React Spreadsheet | Syncfusion
+description: Learn about selection in the Syncfusion React Spreadsheet component, including cell, row, column, and range selection.
 control: Selection
 platform: document-processing
 documentation: ug
 ---
 
-# Selection in React Spreadsheet component
+# Selection in React Spreadsheet
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction.
 

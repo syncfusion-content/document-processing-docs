@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Google Drive Files in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn about how to open a document from Google Drive in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Google Drive ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from Google Drive in ASP.NET MVC DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Drive in ASP.NET MVC Document Editor
+# Open Documents from Google Drive in ASP.NET MVC DOCX Editor
 
 To load a document from Google Drive in a Document Editor, you can follow the steps below.
 
