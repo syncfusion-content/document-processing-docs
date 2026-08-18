@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor PDF Viewer Classic| Syncfusion
-description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer  and more.
+description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

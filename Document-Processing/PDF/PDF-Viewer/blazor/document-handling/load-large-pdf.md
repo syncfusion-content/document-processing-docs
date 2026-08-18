@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Handling in Blazor PDF Viewer  | Syncfusion
-description: Learn how to load and render large PDF files  in the Blazor PDF Viewer using chunk-based processing
+description: Learn how to load and render large PDF files in the Blazor PDF Viewer component using chunk-based processing
 control: SfPdfViewer
 platform: document-processing
 documentation: ug

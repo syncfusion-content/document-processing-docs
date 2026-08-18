@@ -36,6 +36,6 @@ To address these issues, add the following code to your .csproj file:
 ## Additional Resources
 For further insights and updates on this issue, please refer to the following resources:
 
-  * [Native Linking Problem with SkiaSharp and Emscripten](https://github.com/dotnet/runtime/issues/109289)
+  * [Native Linking Problem with SkiaSharp and Emscripten](https://github.com/dotnet/runtime/issues?q=is%3Aissue%20109289)
   * [ZipArchive is not functioning in Blazor WebAssembly when using System.IO.Compression.ZipArchive and SkiaSharp v3.118.0-preview.1.2 in .NET 9.0](https://github.com/mono/SkiaSharp/issues/3067)
   * [SkiaSharp Enhancements and Fixes for .NET 9 Blazor](https://github.com/mono/SkiaSharp/pull/3064)

@@ -1,6 +1,6 @@
 ---
 title: Create Markdown Documents in ASP.NET Core | Syncfusion
-description: Learn how to create Markdown documents programmatically in ASP.NET Core applications without external dependencies using Syncfusion<sup>&reg;</sup> .NET Core Markdown library.
+description: Learn how to create Markdown documents programmatically in ASP.NET Core applications using Syncfusion<sup>&reg;</sup> .NET Core Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG

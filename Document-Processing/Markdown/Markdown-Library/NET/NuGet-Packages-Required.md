@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages for .NET Markdown Library | Syncfusion
-description: Learn the required NuGet packages for creating, reading, editing, and processing Markdown documents using Syncfusion<sup>&reg;</sup> .NET Markdown library without external dependencies.
+description: Learn the required NuGet packages for creating, reading, editing, and processing Markdown documents using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG

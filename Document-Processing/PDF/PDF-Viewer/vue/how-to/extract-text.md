@@ -22,7 +22,7 @@ The `extractText` method retrieves text content and, optionally, positional data
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Vue Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
+## Usage of extractText in Vue Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 
@@ -106,7 +106,7 @@ export default {
 </script>
 ```
 
-#### Explanation
+### Explanation
 - Single page: Extracts text from page 1 (`startIndex = 1`) using `TextOnly`.
 - Multiple pages: Extracts text from pages 0–2 (`startIndex = 0, endIndex = 2`) using `TextOnly`.
 

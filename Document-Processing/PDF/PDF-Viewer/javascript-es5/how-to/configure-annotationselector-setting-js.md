@@ -39,7 +39,7 @@ Steps to configure annotation selector settings
 
 - Step 3: Append the viewer to the target HTML element using appendTo.
 
-#### Key properties
+### Key properties
 
 - `selectionBorderColor`: Sets the color for the border around selected annotations. Provide a color value (for example, `#4070FF`) to make the selection visible.
 - `resizerBorderColor`: Sets the color for the border of the resize handles.

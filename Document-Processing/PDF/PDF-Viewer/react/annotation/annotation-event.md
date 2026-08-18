@@ -38,7 +38,7 @@ The PDF Viewer raises events for annotation and signature interactions (add, rem
 
 The [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationaddevent) event is triggered when an annotation is added to a PDF document's page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationAddEventArgs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
@@ -110,11 +110,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationDoubleClick
+## annotationDoubleClick
 
 The [annotationDoubleClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationdoubleclickevent) event is triggered when an annotation is double-clicked.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
@@ -185,11 +185,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMouseLeave
+## annotationMouseLeave
 
 The [annotationMouseLeave](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmouseleaveevent) event is triggered when the user's mouse pointer moves away from an annotation object.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
@@ -260,11 +260,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMouseover
+## annotationMouseover
 
 The [annotationMouseover](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmouseoverevent) event is triggered when the mouse is moved over an annotation object.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
@@ -335,11 +335,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMove
+## annotationMove
 
 The [annotationMove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmoveevent) event is triggered when an annotation is moved over the page of the PDF document.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMoveEventArgs).
 
@@ -410,11 +410,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMoving
+## annotationMoving
 
 The [annotationMoving](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationmovingevent) event is triggered while an annotation is being moved.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationMovingEventArgs).
 
@@ -485,11 +485,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationPropertiesChange
+## annotationPropertiesChange
 
 The [annotationPropertiesChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationpropertieschangeevent) event is triggered when an annotation's property is modified on a PDF document page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
@@ -561,11 +561,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationRemove
+## annotationRemove
 
 The [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationremoveevent) event is triggered when an annotation is removed from a PDF document's page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
@@ -636,11 +636,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationResize
+## annotationResize
 
 The [annotationResize](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationresizeevent) event is triggered when an annotation is resized on a PDF document page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationResizeEventArgs).
 
@@ -711,11 +711,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationSelect
+## annotationSelect
 
 The [annotationSelect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationselectevent) event is triggered when an annotation is selected on a PDF document's page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationSelectEventArgs).
 
@@ -786,11 +786,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### annotationUnselect
+## annotationUnselect
 
 The [annotationUnselect](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#annotationunselectevent) event is triggered when an annotation is unselected from the PDF document's page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
@@ -861,11 +861,11 @@ export default App;
 {% endhighlight %}
 {% endtabs %}
 
-### beforeAddFreeText
+## beforeAddFreeText
 
 The [beforeAddFreeText](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#beforeaddfreetextevent) event is triggered before adding a text in the freeText annotation.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 

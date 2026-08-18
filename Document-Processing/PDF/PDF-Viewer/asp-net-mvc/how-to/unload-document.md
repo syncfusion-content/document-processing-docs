@@ -10,7 +10,7 @@ documentation: ug
 
 # How to Unload a Document in ASP.NET MVC PDF Viewer
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer exposes the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#unload) method to remove the currently displayed document, release associated resources, and reset the viewer UI. Use this approach when switching between files or clearing sensitive content after it has been reviewed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer exposes the [**unload()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#unload) method to remove the currently displayed document, release associated resources, and reset the viewer UI. Use this approach when switching between files or clearing sensitive content after it has been reviewed.
 
 Follow these steps to unload a PDF document programmatically:
 

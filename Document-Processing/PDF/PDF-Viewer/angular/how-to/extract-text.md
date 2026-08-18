@@ -99,7 +99,7 @@ extractTexts(): void {
 }
 ```
 
-#### Explanation:
+### Explanation:
 **Single Page Extraction:** The first `extractText` call extracts text from page 1 (`startIndex = 1`), using the 'TextOnly' option for plain text extraction.
 
 **Multiple Pages Extraction:** The second `extractText` call extracts text from pages 0 through 2 (`startIndex = 0, endIndex = 2`), using the `TextOnly` option for plain text extraction.

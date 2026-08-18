@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handwritten Signature in Blazor PDF Viewer  | Syncfusion
-description: Learn to how to add and edit handwritten signatures in the Blazor PDF Viewer  for PDF workflows.
+description: Learn to how to add and edit handwritten signatures in the Blazor PDF Viewer component for PDF workflows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

@@ -15,7 +15,7 @@ The `extractText` method extracts text from one or more pages and can return pla
 
 Retrieves text data from one page or a range of pages based on the specified options.
 
-#### Parameters:
+### Parameters:
 
 - **startIndex:** The starting page index for text extraction (0-based index).
 
@@ -23,19 +23,19 @@ Retrieves text data from one page or a range of pages based on the specified opt
 
 - **options (optional):** Additional options, such as `TextOnly` for plain text or `TextAndBounds` for detailed text data with bounds.
 
-#### Available Options
+### Available Options
 
 - **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
 - **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
 - **BoundsOnly** — Return layout and positional data (bounds) without the plain text content.
 - **TextAndBounds** — Return both plain text and its positional information (bounds). This is the default and is useful when both content and layout are required.
 
-#### Returns
+### Returns
 Returns a Promise with:
 - textData: An array of TextDataSettingsModel with details including bounds and page text.
 - pageText: A concatenated string of plain text from the specified page(s).
 
-### Usage of extractText in Syncfusion PdfViewer Control
+## Usage of extractText in Syncfusion PdfViewer Control
 Here is an example that demonstrates how to use the extractText method along with event handling:
 
 ```html
@@ -77,11 +77,11 @@ extractTextButtons.addEventListener('click', function () {
 }
 ```
 
-#### Explanation
+### Explanation
 - Single page: Extracts text from page 1 (`startIndex = 1`) using `TextOnly`.
 - Multiple pages: Extracts text from pages 0–2 (`startIndex = 0, endIndex = 2`) using `TextOnly`.
 
-### Programmatic Examples for Extract Text Option API
+## Programmatic Examples for Extract Text Option API
 Here is an example that demonstrates how to use the extractText Option along with event handling:
 
 ```html

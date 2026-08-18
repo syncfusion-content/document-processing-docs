@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor PDF Viewer Classic | Syncfusion
-description: Checkout and learn here all about navigation in Syncfusion Blazor PDF Viewer  and much more.
+description: Check out and learn here all about navigation in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 title: Create Markdown Documents in ASP.NET MVC | Syncfusion
-description: Learn how to create Markdown documents programmatically in ASP.NET MVC applications without external dependencies using Syncfusion<sup>&reg;</sup> .NET Markdown library.
+description: Learn how to create Markdown documents programmatically in ASP.NET MVC applications using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG

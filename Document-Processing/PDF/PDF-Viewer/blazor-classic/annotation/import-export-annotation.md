@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export annotations in Blazor PDF Viewer | Syncfusion
-description: Learn here all about import and export annotations in Syncfusion Blazor PDF Viewer  and more.
+description: Learn here all about import and export annotations in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

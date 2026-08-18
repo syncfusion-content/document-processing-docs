@@ -34,10 +34,10 @@ The following table defines each property of the `Sheet`.
 | showHeaders | boolean | Specifies to show or hide column and row headers in the sheet. |
 | showGridLines | boolean | Specifies to show or hide gridlines in the sheet. |
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
-| state | [`SheetState`](./worksheet/#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
+| state | `SheetState` | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
 | rows | `Row[]` | Contains a list of row properties |
-| protectSettings | [`ProtectSettings`](./protect-sheet#protect-sheet) | Configures protect and its options. |
+| protectSettings | `ProtectSettings` | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
 The following table defines each property of the `Column`.

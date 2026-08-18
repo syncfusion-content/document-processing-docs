@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor PDF Viewer Classic| Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor PDF Viewer  and much more details.
+description: Check out and learn here all about events in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

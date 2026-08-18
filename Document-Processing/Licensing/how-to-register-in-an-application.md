@@ -260,7 +260,7 @@ ej.base.registerLicense('License key');
 
 ## JavaScript (Essential<sup>&reg;</sup> JS 2)
 
-Syncfusion<sup>&reg;</sup> license key should be registered, if your project using Syncfusion<sup>&reg;</sup> EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1). 
+Syncfusion<sup>&reg;</sup> license key should be registered, if your project using Syncfusion<sup>&reg;</sup> EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start#configure-syncfusion-javascript-es5-control-in-the-application-1). 
 
 The following code is used to register the license.
 

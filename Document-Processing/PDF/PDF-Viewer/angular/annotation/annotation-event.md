@@ -37,7 +37,7 @@ The PDF Viewer raises events for annotation and signature interactions (add, rem
 
 The [annotationAdd](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationadd) event triggers when an annotation is added to the PDF Viewer.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationaddeventargs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
@@ -122,11 +122,11 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationDoubleClick
+## annotationDoubleClick
 
 The [annotationDoubleClick](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationdoubleclick) event triggers when an annotation is double-clicked.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
@@ -213,11 +213,11 @@ export class AppComponent {
 
 
 
-### annotationMouseLeave
+## annotationMouseLeave
 
 The [annotationMouseLeave](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseleave) event triggers when the mouse cursor leaves an annotation.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
@@ -303,11 +303,11 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMouseover
+## annotationMouseover
 
 The [annotationMouseover](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmouseover) event triggers when the mouse cursor moves over an annotation.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
@@ -385,11 +385,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMove
+## annotationMove
 
 The [annotationMove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmove) event triggers when an annotation is moved.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMoveEventArgs).
 
@@ -468,11 +468,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMoving
+## annotationMoving
 
 The [annotationMoving](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationmoving) event triggers while an annotation is being moved.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationMovingEventArgs).
 
@@ -551,11 +551,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationPropertiesChange
+## annotationPropertiesChange
 
 The [annotationPropertiesChange](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationpropertieschange) event triggers when an annotation’s properties are changed.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
@@ -636,11 +636,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationRemove
+## annotationRemove
 
 The [annotationRemove](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationremove) event triggers when an annotation is removed.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
@@ -719,11 +719,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationResize
+## annotationResize
 
 The [annotationResize](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationresize) event triggers when an annotation is resized.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationResizeEventArgs).
 
@@ -802,11 +802,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationSelect
+## annotationSelect
 
 The [annotationSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselect) event triggers when an annotation is selected.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectEventArgs).
 
@@ -885,11 +885,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### annotationUnselect
+## annotationUnselect
 
 The [annotationUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationunselect) event triggers when an annotation is unselected.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
@@ -966,11 +966,11 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-### beforeAddFreeText
+## beforeAddFreeText
 
 The [beforeAddFreeText](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#beforeaddfreetext) event triggers before adding free text to the PDF Viewer.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape annotations in Blazor PDF Viewer  | Syncfusion
-description: Checkout and learn here all about shape annotations in Syncfusion Blazor PDF Viewer  and more.
+description: Check out and learn here all about shape annotations in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
