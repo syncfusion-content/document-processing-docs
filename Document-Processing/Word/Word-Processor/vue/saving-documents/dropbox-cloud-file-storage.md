@@ -16,7 +16,7 @@ To save a document to Dropbox cloud file storage, you can follow the steps below
 
 To create a Dropbox API App, you should follow the official [Dropbox .NET tutorial](https://www.dropbox.com/developers/documentation/dotnet#tutorial) provided by Dropbox. The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-**Step 2:** Create a simple [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) sample in Vue
+**Step 2:** Create a Simple Document Editor sample in Vue
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
