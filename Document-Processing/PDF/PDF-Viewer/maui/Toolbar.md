@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Working with the Toolbar in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to use, customize, and extend the built-in toolbar in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Working with the Toolbar in .NET MAUI PDF Viewer (SfPdfViewer)
+# Working with the Toolbar in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) includes a built-in toolbar that enhances PDF viewing and editing capabilities, allowing you to perform operations such as adding and modifying annotations, searching for text, and more.
 
@@ -118,6 +118,8 @@ The names of these toolbars and their description are listed in the following se
 ![Desktop Primary Toolbar](Images/PrimaryToolbar.png)
 
 ![Desktop Annotations Toolbar](Images/AnnotationsToolbar.png)
+
+
 
 <table>
 <tr>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of PDF Viewer for Xamarin.iOS | Syncfusion
-description: Overview and key features of Xamarin.iOS PDF viewer
+title: About Syncfusion Xamarin.iOS PDF Viewer Control | Syncfusion
+description: Learn about the introduction and overview of the Syncfusion Xamarin.iOS PDF Viewer control, its key features, capabilities, and usage.
 platform: Xamarin.Android
 control: SfPdfViewer
 documentation: ug
 ---
 
-# PDFViewer
+# About Syncfusion Xamarin.iOS PDF Viewer Control
 
 PDF Viewer for Xamarin.iOS allows the user to view PDF documents within your Xamarin.iOS application. 
 

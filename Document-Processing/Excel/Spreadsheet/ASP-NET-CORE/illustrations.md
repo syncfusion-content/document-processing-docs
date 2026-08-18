@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Illustrations in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Illustrations in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Illustrations in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about illustrations in the Syncfusion ASP.NET Core Spreadsheet control, including images, shapes, and visual elements in worksheets.
 platform: document-processing
 control: Illustrations
 documentation: ug
 ---
 
 
-# Illustrations in ASP.NET Core Spreadsheet control
+# Illustrations in ASP.NET Core Spreadsheet
 
 Illustrations helps you to insert a image, shapes and graphic objects in the Essential JS 2 spreadsheet.
 

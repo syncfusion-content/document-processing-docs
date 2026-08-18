@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in MVC PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion ASP.NET MVC PDF Viewer component.
+title: Ui Interaction in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in ASP.NET MVC PdfViewer
+# Ui Interaction in ASP.NET MVC PDF Viewer
 
 ## Add redaction annotations from the toolbar
 
@@ -15,7 +15,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 
 ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
-#### Redaction annotations are interactive
+### Redaction annotations are interactive
 
 * **Movable** – Drag and reposition the annotation within the same page.  
 ![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)
@@ -27,7 +27,7 @@ N> The redaction tool is hidden by default. Customize the toolbar to include it.
 
 ## Add redaction annotations using the context menu
 
-In addition to the toolbar, you can add redaction annotations directly from the context menu. Select the text or region, right‑click (or long‑press on mobile), and choose the **Redact Annotation** option. This creates a redaction mark over the selected content.
+In addition to the toolbar, you can add redaction annotations directly from the context menu. Select the text or region, right-click (or long-press on mobile), and choose the **Redact Annotation** option. This creates a redaction mark over the selected content.
 
 ![Context menu showing Redact Annotation option](redaction-annotations-images/redact-text-context-menu.png)
 
@@ -37,19 +37,19 @@ After adding a redaction annotation, you can update its properties through the p
 
 ### Update using the property panel
 
-When a redaction annotation is selected, a two‑tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
+When a redaction annotation is selected, a two-tab property panel (General and Appearance) lets you customize text and styling. Changes are reflected instantly on the redaction mark.
 
 The property panel can be opened in two ways:
 
 * By clicking the **redaction property panel** icon in the toolbar.  
 ![Redaction Property Panel Icon](redaction-annotations-images/redaction-property-panel-icon.png)
 
-* By right‑clicking (or long‑pressing) the annotation and choosing **Properties** from the context menu.  
+* By right-clicking (or long-pressing) the annotation and choosing **Properties** from the context menu.  
 ![Redaction Property Panel via Context Menu](redaction-annotations-images/redaction-property-panel-via-context-menu.png)
 
 #### General tab
 
-Use the General tab to define how the content will look after redaction. These settings control the final, burned‑in result and provide a live preview on hover.
+Use the General tab to define how the content will look after redaction. These settings control the final, burned-in result and provide a live preview on hover.
 
 * Use Overlay Text – Enable to show text (for example, Confidential) over the redacted area.
 * Overlay Text – Enter the text to display.
@@ -83,7 +83,7 @@ When you click Apply Redaction:
 * The selected content is permanently removed from the page.
 * The redaction region is flattened into the page with a solid fill that uses the General tab Fill Color.
 * If overlay text was enabled, the text is burned into the page. If Repeat Overlay Text was enabled, the text is tiled across the region.
-* All properties become read‑only. You cannot edit overlay text, fill color, outline, or opacity after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before you apply.
+* All properties become read-only. You cannot edit overlay text, fill color, outline, or opacity after applying. Set the final look in the General tab and use the Appearance tab only to style the annotation before you apply.
 
 ## Delete redaction annotations
 
@@ -103,8 +103,8 @@ Delete redaction annotations using any of the following:
 Entire pages can be marked for redaction using the **Redact Pages** option in the toolbar. Clicking the icon opens a dialog with options:
 
 * **Current Page** – Redacts the page currently in view.  
-* **Odd Pages Only** – Redacts all odd‑numbered pages.  
-* **Even Pages Only** – Redacts all even‑numbered pages.  
+* **Odd Pages Only** – Redacts all odd-numbered pages.  
+* **Even Pages Only** – Redacts all even-numbered pages.  
 * **Specific Pages** – Enter page numbers or ranges (e.g., 1, 3–5, 7) to redact.
 
 After choosing the range, click **Save** to apply redaction marks to the selected pages.

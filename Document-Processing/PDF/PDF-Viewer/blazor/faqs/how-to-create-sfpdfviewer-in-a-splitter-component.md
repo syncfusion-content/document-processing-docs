@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Host the PDF Viewer in a Splitter pane in Blazor | Syncfusion
+title: How to Host the PDF Viewer in a Splitter pane in Blazor | Syncfusion
 description: Learn how to place the Blazor PDF Viewer inside a Splitter pane and display a document alongside other content.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create the PDF Viewer in a Splitter component in Blazor
+# How to Host the PDF Viewer in a Splitter pane in Blazor
 
 The Blazor Splitter organizes content into resizable, draggable panes. The following example shows how to place the PDF Viewer inside a Splitter pane so users can view a document alongside other UI content. The sample renders two panes a left pane with placeholder content and a right pane that hosts the `SfPdfViewer` loading the sample document.
 

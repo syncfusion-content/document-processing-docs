@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comments in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and manage comments and replies efficiently within the Blazor SfPdfViewer component.
+title: Comments in Blazor PDF Viewer  | Syncfusion
+description: Learn how to add, edit, and manage comments and replies efficiently within the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Comments in Blazor SfPdfViewer Component
+# Comments in Blazor PDF Viewer 
 
 The `SfPdfViewer` component provides options to add, edit, and delete comments for the following annotation types in PDF documents:
 

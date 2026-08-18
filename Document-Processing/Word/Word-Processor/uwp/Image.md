@@ -1,12 +1,12 @@
 ---
-title: Image in UWP RichTextBox control | Syncfusion
-description: Learn here all about Image support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Images in UWP DOCX Editor | Syncfusion
+description: The image support in UWP DOCX Editor enables inserting, resizing, and managing images in formats such as Bitmap, JPEG, and PNG.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: image,insert-picture,image-resizer,text-wrapping
 ---
-# Image in UWP RichTextBox (SfRichTextBoxAdv)
+# Images in UWP DOCX Editor
 
 The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) allows you to insert images of various formats, including bitmap (`.bmp`), JPEG (`.jpg`, `.jpeg`), and PNG (`.png`). Metafile images (`.wmf`, `.emf`) are not supported.
 

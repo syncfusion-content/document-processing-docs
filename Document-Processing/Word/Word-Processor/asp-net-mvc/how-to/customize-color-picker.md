@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize Color Picker in Syncfusion  ASP.NET MVC Document Editor Component
-description: Learn here all about how to customize color picker in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Color Picker in ASP.NET MVC DOCX Editor | Syncfusion
+description: Customize the color picker appearance in Syncfusion® ASP.NET MVC DOCX Editor using color picker settings to match your application's design.
 platform: document-processing
 control: Customize Color Picker
 documentation: ug
 ---
 
 
-# How to customize the color picker in Document Editor component
+# How to Customize Color Picker in ASP.NET MVC DOCX Editor
 
-Document editor provides an options to customize the color picker using `colorPickerSettings` in Document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
+Document Editor provides an option to customize the color picker using `colorPickerSettings` in Document Editor settings. The color picker offers customization options for the default appearance by allowing selection between Picker or Palette mode for font and border colors.
 
-Similarly, you can use `documentEditorSettings` property for DocumentEditor also.
+Similarly, you can use the `documentEditorSettings` property with the DocumentEditor control as well.
 
 
 {% tabs %}
@@ -24,15 +24,15 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% endhighlight %}
 {% endtabs %}
 
-The following table illustrates all the possible properties for the color picker.
+The following table illustrates the available properties for the color picker.
 
 | Property | Behavior |
 |---|---|
-| columns | It is used to render the ColorPicker palette with specified columns. Defaults to 10 |
-| disabled | It is used to enable / disable ColorPicker component. If it is disabled the ColorPicker popup won’t open. Defaults to false |
-| mode | It is used to render the ColorPicker with the specified mode. Defaults to ‘Picker’ |
-| modeSwitcher | It is used to show / hide the mode switcher button of ColorPicker component. Defaults to true |
-| showButtons | It is used to show / hide the control buttons (apply / cancel) of ColorPicker component. Defaults to true |
+| columns | Renders the ColorPicker palette with the specified number of columns. Defaults to 10 |
+| disabled | Enables or disables the ColorPicker component. If disabled, the ColorPicker popup does not open. Defaults to false |
+| mode | Renders the ColorPicker in the specified mode. Defaults to 'Picker' |
+| modeSwitcher | Shows or hides the mode switcher button of the ColorPicker component. Defaults to true |
+| showButtons | Shows or hides the control buttons (apply / cancel) of the ColorPicker component. Defaults to true |
 
 
 >**Note**: According to the Word document specifications, it is not possible to modify the **`Predefined Highlight colors`**. This limitation means that the range of highlight colors provided by default cannot be customized or expanded upon by the user to suit individual preferences. Consequently, users must work within the confines of the existing color palette, as no functionality currently exists to modify or personalize these predefined highlighting options.

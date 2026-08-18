@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text selection in Blazor PDF Viewer | Syncfusion
-description: Learn the text selection concepts, copy behavior, and interaction capabilities of the Blazor PDF Viewer.
+title: About Text selection in Blazor PDF Viewer Component | Syncfusion
+description: Learn about Syncfusion Blazor PDF Viewer text selection concepts, copy behavior, and interaction capabilities of the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text selection in Blazor PDF Viewer
+# About Syncfusion Text selection in Blazor PDF Viewer Component
 
 The Text Selection module in the Blazor PDF Viewer enables users to select and copy text from a loaded PDF document. Text selection is available by default and gives users direct interaction with the content through dragging, keyboard shortcuts, and context menus.
 

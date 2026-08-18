@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
-description: Learn here all about print feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Print in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about printing in the Syncfusion ASP.NET Core Spreadsheet control, including print options, page layout, and worksheet printing.
 platform: document-processing
 control: Print
 documentation: ug
 ---
 
 
-# Print in ASP.NET Core Spreadsheet control
+# Print in ASP.NET Core Spreadsheet
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 

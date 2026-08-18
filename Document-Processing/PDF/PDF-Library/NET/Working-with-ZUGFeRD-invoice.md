@@ -1,11 +1,11 @@
 ---
-title: Working with ZUGFeRD invoice | Syncfusion
-description: This section explains how to generate,add and extract process on ZUGFeRD invoice and Validating ZUGFeRD invoices using Adobe Acrobat
+title: ZUGFeRD Invoice in .NET PDF Library | Syncfusion
+description: Learn how to generate, add, extract, and validate ZUGFeRD invoices in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with ZUGFeRD invoice 
+# ZUGFeRD Invoice in .NET PDF Library
 
 The ZUGFeRD invoice is one of the uniformed data format for electronic invoices based on the ISO standard PDF/A-3, which is specifically designed for long term archiving. The ZUGFeRD invoice contains both human-readable invoice and machine-readable structured invoice data (XML).
 

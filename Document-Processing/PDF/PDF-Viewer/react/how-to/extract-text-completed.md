@@ -1,13 +1,13 @@
 ---
 layout: post
-title: extractTextCompleted event in React PDF Viewer | Syncfusion
-description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion React PDF Viewer to extract text and bounds.
+title: How to Handle the ExtractTextCompleted Event in React | Syncfusion
+description: Use the extractTextCompleted event and isExtractText property in the React PDF Viewer to extract text and bounds from a loaded PDF.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Extract text using the extractTextCompleted event in the PDF Viewer
+# How to Handle the ExtractTextCompleted Event in React PDF Viewer
 
 The PDF Viewer can extract page text along with bounding information. Enable text extraction using the `isExtractText` property and handle the `extractTextCompleted` event to receive the extracted text and bounds for the document.
 
@@ -39,7 +39,7 @@ function extractTextCompleted(args){
 ```
 {% endraw %}
 
-### Troubleshooting
+## Troubleshooting
 
 - If `extractTextCompleted` does not fire, verify that the document has finished loading.
 - If `documentTextCollection` is empty, confirm the `serviceUrl` points to a reachable PDF Viewer Web API service.

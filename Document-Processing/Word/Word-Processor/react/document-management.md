@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Document management in React DOCX Editor component | Syncfusion
-description: Learn here all about Document management in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Document Management in React DOCX Editor | Syncfusion
+description: Document management in React DOCX Editor provides editing restrictions and user permissions to secure document content.
 control: Document management 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in React Document Editor component
+# Document Management in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for restricting editing. When the protected document includes range permissions, only the unique user or user group is authorized to edit a separate text area.
 

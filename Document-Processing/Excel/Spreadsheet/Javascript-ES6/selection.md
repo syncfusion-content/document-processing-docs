@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Selection in TypeScript Spreadsheet | Syncfusion
+description: Selection in TypeScript Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
 control: Selection
 documentation: ug
 ---
 
-# Selection in EJ2 TypeScript Spreadsheet control
+# Selection in TypeScript Spreadsheet 
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 

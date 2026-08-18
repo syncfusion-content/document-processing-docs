@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in Angular DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in Angular DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in Angular Document Editor component
+# Keyboard Shortcuts in Angular DOCX Editor
 
 ## Text formatting
 
@@ -128,6 +128,6 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + D| Opens font dialog.|
 |Ctrl + K| Opens hyperlink dialog.|
 
-## See Also
+## See also
 
 * [How to override the keyboard shortcuts](./how-to/override-the-keyboard-shortcuts)

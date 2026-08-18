@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search in Vue PDF Viewer component | Syncfusion
-description:  Learn here all about how to configure text search and run programmatic searches in the Syncfusion Vue PDF Viewer.
+title: Text Search Features in Vue PDF Viewer | Syncfusion
+description: Configure text search features in the Vue PDF Viewer and run programmatic searches to find and highlight text inside a PDF document.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search in Vue PDF Viewer
+# Text Search in Vue PDF Viewer
 
 The text search feature in the Vue PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
 
@@ -115,7 +115,7 @@ While the PDF Viewer toolbar offers an interactive search experience, you can al
 Use the [`searchText`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/textsearch#searchtext) method to start a search with optional filters that control case sensitivity and whole-word behavior.
 
 ```ts
-// searchText(text: string, isMatchCase?: boolean, isMatchWholeWord?: boolean)
+// searchText(text: string, isMatchCase?: boolean)
 this.$refs.pdfViewer.ej2Instances.textSearch.searchText('search text', false);
 ```
 
@@ -222,7 +222,7 @@ export default {
 
 **Expected result:** the viewer highlights occurrences of `pdf` and navigation commands jump between matches.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
 ## See also
 

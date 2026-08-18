@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Delete Images in React Spreadsheet component | Syncfusion
-description: Learn here how to delete images in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Delete Images in React Spreadsheet | Syncfusion
+description: Learn about deleting images in the Syncfusion React Spreadsheet component and managing image elements in worksheets.
 control: Images
 platform: document-processing
 documentation: ug
 ---
 
-# Delete images in React Spreadsheet
+# Delete Images in React Spreadsheet
 
 Images added to a worksheet can be removed either through user interaction or programmatically.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF Viewer server Docker image overview in JavaScript | Syncfusion
-description: Learn how to run and connect to the Syncfusion PDF Viewer server Docker image, set the license key, and configure Redis cache in a JavaScript application.
+title: About Syncfusion JavaScript (ES5) Server Deployment | Syncfusion
+description: Run and connect to the Syncfusion JavaScript (ES5) PDF Viewer server Docker image, set the license key, and configure Redis cache for the Server Deployment
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# PDF Viewer server Docker image overview in JavaScript
+# About Syncfusion JavaScript (ES5) PDF Viewer Server Deployment
 
 The PDF Viewer component enables viewing, printing, form filling, and annotating PDF files in web applications. The client component requires a server-side Web API to process and render PDF content.
 
@@ -56,7 +56,7 @@ docker-compose up
 Alternatively, run the container directly with the license key:
 
 ```console
-docker run -d -p 6001:80 –e SYNCFUSION_LICENSE_KEY= YOUR_LICENSE_KEY syncfusion/pdfviewer-server:latest
+docker run -d -p 6001:80 -e SYNCFUSION_LICENSE_KEY=YOUR_LICENSE_KEY syncfusion/pdfviewer-server:latest
 ```
 
 In production, avoid embedding license keys in files or image tags. Use environment variable management (for example, an `.env` file loaded by Compose), Docker secrets, or a platform-managed secret store.
@@ -85,7 +85,6 @@ When the container starts, the server is available at `http://localhost:6001`. O
             <!-- Essential JS 2 PDF Viewer's global script -->
             <script src="//cdn.syncfusion.com/ej2/ej2-pdfviewer/dist/global/ej2-pdfviewer.min.js" type="text/javascript"></script>
             <script src="//cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
-       <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
 </head>
        <body>
             <!--element which is going to render-->
@@ -130,7 +129,7 @@ services:
       #Provide your license key for activation
       SYNCFUSION_LICENSE_KEY: YOUR_LICENSE_KEY
       REDIS_CACHE_CONNECTION_STRING: YOUR_REDIS_CACHE_CONNECTION_STRING
-      DOCUMENT_SLIDING_EXPIRATION_TIME: “20”
+      DOCUMENT_SLIDING_EXPIRATION_TIME: "20"
     ports:
     - "6001:80"
 ```

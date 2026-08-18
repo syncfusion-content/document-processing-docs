@@ -1,12 +1,12 @@
 ---
-title: Extract Data in Console Application | Syncfusion
-description: Learn how to extract data in a Console Application by using the .NET Smart Data Extractor Library efficiently.
+title: Getting Started with Console Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion Console Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 --- 
 
-# Extract Data from PDF in Console Application
+# Getting Started with Console Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in Console applications.
 

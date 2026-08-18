@@ -1,13 +1,13 @@
 ---
-title: Splitting PDFs in the JavaScript PDF Library | Syncfusion
+title: Splitting PDF files in the JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn how to split a PDF into individual pages, custom page ranges, or fixed-size chunks using the JavaScript PDF Library.
+description: Split PDF documents into pages, page ranges, or fixed-size sections using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Splitting PDFs in the JavaScript PDF Library
+# Splitting PDF files in the JavaScript PDF
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports splitting a PDF file into individual pages, a user-defined range of pages, or a fixed number of pages per output document.
 

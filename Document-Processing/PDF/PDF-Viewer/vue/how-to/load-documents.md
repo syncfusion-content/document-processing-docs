@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Load documents dynamically in Vue PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion Vue PDF Viewer using the load method.
-control: Load documents
+title: How to Load Documents in Vue PDF Viewer | Syncfusion
+description: Load or switch PDF documents dynamically in the Vue PDF Viewer using the load method to swap documents without reloading the page.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load documents in Vue PDF Viewer control
+# How to Load Documents in Vue PDF Viewer
 
-The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
+The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#load) method to open a document from a URL or a Base64 string.
 
 The following steps show common approaches for loading documents dynamically.
 

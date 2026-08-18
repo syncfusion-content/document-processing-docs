@@ -1,12 +1,12 @@
 ---
-title: List in UWP RichTextBox control | Syncfusion
-description: Learn here all about List support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: List in UWP DOCX Editor | Syncfusion
+description: List in UWP DOCX Editor offers single-level and multilevel list support, enabling organized data as step-by-step instructions.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: list,bullet,numbered,multilevel,single-level
 ---
-# List in UWP RichTextBox (SfRichTextBoxAdv)
+# List in UWP DOCX Editor
 
 The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports both single-level and multilevel lists, similar to Microsoft Word. Lists are used to organize data as step-by-step instructions in documents, making key points easy to understand.
 

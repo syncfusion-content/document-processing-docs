@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Export annotations in Blazor SfPdfViewer | Syncfusion
-description: Learn how to import and export annotations as JSON in the Blazor SfPdfViewer component using the toolbar and API methods.
+title: Import and Export annotations in Blazor PDF Viewer | Syncfusion
+description: Learn how to import and export annotations as JSON in the Blazor PDF Viewer  using the toolbar and API methods.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Import and Export annotations in Blazor SfPdfViewer Component
+# Import and Export annotations in Blazor PDF Viewer 
 
 The SfPdfViewer component supports importing and exporting annotations as a JSON or XFDF object in the loaded PDF document. The following sections describe how to perform these actions through the built-in toolbar and programmatically using the API.
 

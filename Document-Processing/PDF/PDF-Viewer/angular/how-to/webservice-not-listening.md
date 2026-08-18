@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Web-service is not listening to error | Syncfusion
-description: Learn how to clear Web-service is not listening to errors in Syncfusion Angular PDF Viewer component and more.
-control: How to clear Web-service is not listening to errors.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the Angular PDF Viewer with a clear troubleshooting checklist and configuration tips.
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to resolve the "Web-service is not listening" error in PDF Viewer
+# How to Resolve the Web-Service Is Not Listening Error in Angular PDF
 
 ![Alt text](../images/webservice.png)
 
 If the Angular PDF Viewer reports a "Web-service is not listening" error, use the browser's developer tools to diagnose the request and the server behavior. The steps below guide the most common troubleshooting paths and remediation actions.
 
-**Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
+**Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 
 ![Alt text](../images/networktab.png)
 
@@ -46,13 +46,13 @@ The `Document cache not found` exception in PDF Viewer typically occurs when the
 
 It's possible that you have multiple instances of the PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
 
-We can use Redis cache and distributive cache for this issue.
+We can use Redis cache and distributed cache for this issue.
 
 ### Check your network connection
 
 Ensure that your network connection is stable and strong enough to support the web service you are trying to use. Sometimes, simply restarting the web service can resolve the issue. Try stopping and starting the service again to see if it resolves the problem.
 
-## The document pointer does not exist in the cache.
+## The document pointer does not exist in the cache
 
 The `Document pointer does not exist in the cache` exception in the PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
 
@@ -66,4 +66,4 @@ To clear this error in the Angular PDF Viewer, you can try the following steps:
 
 ## Internal server error
 
-Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact support for further assistance.
+Server-side exceptions happen for various use cases. If they are document-specific, provide the document, or contact support for further assistance.

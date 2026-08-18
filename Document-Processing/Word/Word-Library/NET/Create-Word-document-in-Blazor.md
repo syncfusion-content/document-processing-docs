@@ -1,12 +1,12 @@
 ---
-title: Create Word document in Blazor | DocIO | Syncfusion 
-description: Create Word documents without Microsoft Word or interop dependencies in Blazor applications using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: Create Word document in Blazor | Syncfusion
+description: Describe how to convert Word documents to PDF in WPF applications using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word Document in Blazor
+# Create Word document in Blazor
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in Blazor**.
 

@@ -1,12 +1,12 @@
 ---
-title: How to create a Chart with a discontinuous range | XlsIO | Syncfusion
-description: Code example to create a Chart with a discontinuous range using .NET Excel Library.
+title: How to Create Charts in .NET Excel Library | Syncfusion
+description: Create an Excel chart with a discontinuous range using the Syncfusion .NET Excel Library for non-adjacent data points.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to create a Chart with a discontinuous range?
+# How to create charts with discontinuous ranges in .NET Excel Library
 
 The following code example illustrates creating a chart with discontinuous data ranges.
 

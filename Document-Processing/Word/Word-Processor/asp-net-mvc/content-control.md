@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Content Control in Syncfusion ASP.NET MVC Document Editor Component 
-description: Learn here all about Content Control in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Content Controls in ASP.NET MVC DOCX Editor | Syncfusion
+description: The content control feature in ASP.NET MVC DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control
 documentation: ug
 ---
 
 
-# Content Control in ASP.NET MVC in DocumentEditor
+# Content Controls in ASP.NET MVC DOCX Editor
 
-Document Editor provides support for inserting, editing content controls.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support for inserting and editing content controls.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
-InlineContentControl: Among inline content inside, as a child of a paragraph. BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter.
+* `InlineContentControl`: Among inline content inside, as a child of a paragraph.
+* `BlockContentControl`: Among paragraphs and tables, as a child of a Body or HeaderFooter.
 
 ## Types of Content Controls
 
@@ -27,7 +28,7 @@ InlineContentControl: Among inline content inside, as a child of a paragraph. Bl
 
 ## Insert content control
 
-Content control can be inserted using `insertContentControl` method in editor module.
+A content control can be inserted using the `insertContentControl` method in the editor module.
 
 {% highlight ts %}
 //Insert Rich Text Content Control
@@ -43,7 +44,7 @@ container.documentEditor.editor.insertContentControl('Text', 'Hello World');
 
 //Insert CheckBox Content Control
 container.documentEditor.editor.insertContentControl('CheckBox');
-//Insert CheckBox Content Control with mention checked state
+//Insert CheckBox Content Control with checked state
 container.documentEditor.editor.insertContentControl('CheckBox', true);
 
 //Insert ComboBox Content Control
@@ -53,7 +54,7 @@ container.documentEditor.editor.insertContentControl('ComboBox', 'One', ['One', 
 
 //Insert Date Content Control
 container.documentEditor.editor.insertContentControl('Date');
-//Insert Date Content Control
+//Insert Date Content Control with default date
 container.documentEditor.editor.insertContentControl('Date', '01/01/2024');
 
 //Insert DropDownList Content Control
@@ -69,17 +70,18 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Content control properties can be set using the `ContentControlInfo` and import it using `importContentControlData`
+Content control properties can be set using the `ContentControlInfo` and imported using the `importContentControlData` method.
 
 {% highlight ts %}
 var data = [];
 var contentControlData = { title: placeHolderPrefix + 'Name', tag: '', value: 'John', canDelete: false, canEdit: false, type: 'RichText' };
+data.push(contentControlData);
 container.documentEditor.importContentControlData(data);
 {% endhighlight %}
 
 ## Export content control properties
 
-Content control properties can be exported using the `exportContentControlData`
+Content control properties can be exported using the `exportContentControlData` method.
 
 {% highlight ts %}
 var contentControlInfos = container.documentEditor.exportContentControlData();
@@ -87,7 +89,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the `resetContentControlData`
+Content control properties can be reset using the `resetContentControlData` method.
 
 {% highlight ts %}
 var data = [];

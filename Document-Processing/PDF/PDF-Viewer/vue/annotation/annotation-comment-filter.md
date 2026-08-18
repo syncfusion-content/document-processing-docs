@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Annotation Comment Filter in Vue PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion Vue PDF Viewer using the comment filter panel and programmatic APIs.
+description: Filter comments and annotations in the Vue PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in Vue
+# Annotation Comment Filter in Vue PDF Viewer
 
 ## Overview
 
@@ -63,7 +63,7 @@ Follow these steps to filter annotations by their type and status:
 
 1. Click the **filter icon** in the comments panel toolbar
 2. In the **Annotation Type** dropdown, select the annotation types you want to view (e.g., Highlight, Underline)
-3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected, Pending)
+3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected)
 4. Click **APPLY** to see only annotations matching your criteria
 5. Use the **CLEAR** button to reset all filters
 
@@ -177,12 +177,10 @@ export default {
         // includereplies: true,
         applyToDocument: true
       });
-    }
-  },
-
-  handleClearFilter() {
-    if (viewerRef.current) {
-      viewerRef.current.annotation.applyCommentFilter(null);
+    },
+    clearFilter() {
+      const pdfViewer = this.$refs.pdfViewer.ej2Instances;
+      pdfViewer.annotation.applyCommentFilter(null);
     }
   },
   provide: {

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and export annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion ASP.NET Core PDF Viewer.
+title: How to Import and Export Annotations in ASP.NET Core PDF | Syncfusion
+description: Import and export annotations in the ASP.NET Core PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import and export annotations in ASP.NET Core PDF Viewer
+# How to Import and Export Annotations in ASP.NET Core PDF Viewer
 
 Save and restore PDF annotations by exporting them in various formats (JSON, XFDF, or object) and importing them back into the viewer. This enables scenarios such as saving user annotations to a database or transferring annotations between documents.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of Annotation in TypeScript PDF Viewer control | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Syncfusion TypeScript PDF Viewer.
+title: About Syncfusion JavaScript (ES6) PDF Viewer Annotations | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Annotations section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations overview
+# About Syncfusion JavaScript (ES6) PDF Viewer Annotations
 
 Annotations in the PDF Viewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations add context and feedback to PDF files, simplifying collaboration during document reviews.
 
@@ -28,7 +28,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 ## Annotation manipulation capabilities
 
 - [Create annotations](../annotations/create-modify-annotation): Use the toolbar, context menu, or APIs to add highlights, notes, shapes, and more directly onto the PDF document.
-- [Edit annotations](../annotations/create-modify-annotation.md): Modify existing annotations by moving, resizing, or updating text and style properties like color, opacity, and thickness.
+- [Edit annotations](../annotations/create-modify-annotation): Modify existing annotations by moving, resizing, or updating text and style properties like color, opacity, and thickness.
 - [Customize annotations](../annotations/customize-annotation): Adjust appearance and behavior—such as fonts, fill colors, and opacity—through the UI or configuration options.
 - [Undo and redo annotations](../annotations/annotations-undo-redo): Revert or reapply annotation actions (add, edit, delete) using toolbar buttons or corresponding APIs.
 - [Import and export annotations](../annotations/export-import/export-annotation): Save and load annotations in JSON or XFDF formats to persist markups across sessions or share them with others.
