@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interaction mode in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Interaction Mode in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Switch between selection mode and panning mode in the JavaScript (ES5) PDF Viewer to control how users interact with PDF pages and content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in JavaScript PDF Viewer control
+# Interaction Mode in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides interaction modes to control how users interact with the loaded PDF document. Two primary interaction modes are available: selection mode and panning mode.
 

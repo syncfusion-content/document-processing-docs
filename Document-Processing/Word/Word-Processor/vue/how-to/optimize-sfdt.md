@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Optimize the SFDT file in Vue Document editor component | Syncfusion
-description: Learn here all about optimize the SFDT file in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Optimize SFDT Files in Vue DOCX Editor | Syncfusion
+description: Optimize SFDT files in Syncfusion® Vue DOCX Editor to reduce file size, improve performance, and enhance document loading and processing efficiency.
 control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to optimize the SFDT file
+# How to Optimize SFDT Files in Vue DOCX Editor
 
 Starting from version v21.1.x, the SFDT file generated in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor)  (Document Editor) component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 * File transfer between client and server through the internet gets faster.

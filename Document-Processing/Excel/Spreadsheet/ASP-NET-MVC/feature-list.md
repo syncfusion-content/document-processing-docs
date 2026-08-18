@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature List in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Feature List in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Feature List of ASP.NET MVC Spreadsheet | Syncfusion
+description: Explore the complete feature comparison and capabilities available in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Feature List
 documentation: ug
 ---
 
 
-# Comparison between EJ1 & EJ2 ASP.NET MVC Spreadsheet features
+# Feature List of ASP.NET MVC Spreadsheet
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 

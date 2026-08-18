@@ -1,13 +1,13 @@
 ---
-title: XMP Metadata support in JavaScript PDF Library | Syncfusion
+title: PDF XMP Metadata in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn to create, read, edit, and manage XMP metadata in PDF documents with JavaScript PDF Library, including schemas, custom metadata, and best practices
+description: Create, read, edit, and manage XMP metadata in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# XMP Metadata support in JavaScript PDF Library
+# PDF XMP Metadata in JavaScript PDF
 
 XMP (Extensible Metadata Platform) is a standardized framework for embedding structured metadata inside documents such as PDF. It uses RDF-based XML to store information like title, author, keywords, creation date, and rights.
 

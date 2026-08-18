@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redis cache in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Redis cache in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Configure Redis Cache for the PDF Viewer Service | Syncfusion
+description: Configure Redis caching for the Angular PDF Viewer web service so document data and rendered pages are served from a fast in-memory cache.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure Redis cache
+# How to Configure Redis Cache for the PDF Viewer Service in Angular
 
 Redis is an in-memory key-value store commonly used as a distributed cache. Caching frequently requested PDF bytes in Redis reduces repeated conversion or I/O, lowers server load, and improves response times for the PDF Viewer web service. Keep in mind Redis is volatile storage: entries may be evicted or lost on restart, so the cache should be considered an optimization, not the primary data source.
 

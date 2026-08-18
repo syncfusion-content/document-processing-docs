@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Export in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in ASP.NET MVC DOCX Editor | Syncfusion
+description: The export feature in ASP.NET MVC DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Export
 documentation: ug
 ---
 
 
-# Export in ASP.NET MVC Document Editor Component 
+# Export in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 

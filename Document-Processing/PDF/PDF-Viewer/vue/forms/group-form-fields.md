@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group form fields in the Vue PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion Vue PDF Viewer by assigning the same name to multiple widgets.
+title: Group Form Fields in Vue PDF Viewer | Syncfusion
+description: Group PDF form fields in the Vue PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Group form fields in Vue PDF Viewer
+# Group Form Fields in Vue PDF Viewer
 
 The Syncfusion **Vue PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same name** to them. Grouped form fields share their values and states automatically based on the field type. Group form fields using the **Form Designer UI** or programmatically via APIs to keep related fields synchronized across a PDF document.
 

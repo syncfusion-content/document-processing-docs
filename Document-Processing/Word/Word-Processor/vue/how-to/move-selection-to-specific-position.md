@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Move Selection to a Position in Vue DOCX Editor | Syncfusion
-description: Learn here all about Move selection to specific position in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+description: Move the document selection to a specific position in Syncfusion® Vue DOCX Editor using APIs for precise navigation and content editing.
 control: Move selection to specific position 
 platform: document-processing
 documentation: ug
@@ -9,7 +9,6 @@ domainurl: ##DomainURL##
 ---
 
 # How to Move Selection to a Position in Vue DOCX Editor
-Using [`select`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#select) API in selection module, you can set the cursor position anywhere in the document.
 
 ## Select content based on start and end hierarchical index
 

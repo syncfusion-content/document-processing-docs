@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data binding in React Spreadsheet component | Syncfusion
-description: Learn here all about Data binding in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in React Spreadsheet | Syncfusion
+description: Learn about data binding in the Syncfusion React Spreadsheet component, including data source integration and data management.
 control: Data binding 
 platform: document-processing
 documentation: ug
 ---
 
-# Data binding in React Spreadsheet component
+# Data Binding in React Spreadsheet
 
 The Spreadsheet supports binding data from both **RESTful JSON services** and **local JavaScript object arrays** using the [`DataManager`](https://ej2.syncfusion.com/react/documentation/data/getting-started).  
 You can assign the `dataSource` property either with a `DataManager` instance or directly with a JavaScript object array collection.

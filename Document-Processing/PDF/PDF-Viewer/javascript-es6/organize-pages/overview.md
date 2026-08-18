@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize pages in JavaScript (ES6) PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion JavaScript (ES6) PDF Viewer component.
+title: About Syncfusion JavaScript (ES6) Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in JavaScript (ES6) PDF Viewer
+# About Syncfusion JavaScript (ES6) PDF Viewer Organize Pages
 
 The JavaScript (ES6) PDF Viewer component includes an Organize pages panel for preparing documents before sharing. Use it to tidy scanned files, reorder pages, and duplicate content without leaving the viewer.
 

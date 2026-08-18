@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mail Merge in React DOCX Editor | Syncfusion
-description: Learn here to perform mail merge in Syncfusion React Document Editor component using the Word Library as a dependency.
+title: How to Perform Mail Merge in React DOCX Editor | Syncfusion
+description: Perform mail merge in Syncfusion® React DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to perform mail merge in React Document Editor
+# How to Perform Mail Merge in React DOCX Editor
 
 You can perform mail merge in the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) using the following approaches:
 

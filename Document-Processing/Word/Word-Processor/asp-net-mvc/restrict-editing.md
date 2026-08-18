@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict Editing in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Restrict Editing in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Restrict Editing in ASP.NET MVC DOCX Editor | Syncfusion
+description: Restrict editing feature in ASP.NET MVC DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 platform: document-processing
 control: Restrict Editing
 documentation: ug
 ---
 
 
-# Restrict Editing in ASP.NET MVC Document Editor component
+# Restrict Editing in ASP.NET MVC DOCX Editor
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then only a unique user or user group is authorized to edit a separate text area.
 

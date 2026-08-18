@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change document view in React DOCX Editor component | Syncfusion
-description: Learn here all about Change document view in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Document View in React DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® React DOCX Editor using layout type settings.
 control: Change document view 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in React Document Editor component
+# How to Change Document View in React DOCX Editor
 
 ## How to change the document view in the Document Editor component
 

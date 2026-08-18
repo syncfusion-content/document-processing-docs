@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open and save a PDF file in Flutter PDF library | Syncfusion
-description: Learn here all about Open and save a PDF file feature of Syncfusion Flutter PDF non-UI library and more.
+title: Open and Save a PDF File in Flutter PDF | Syncfusion
+description: Learn how to open, load, modify, and save PDF documents using the Syncfusion Flutter PDF library with practical examples.
 platform: document-processing
 control: PDF
 documentation: ug
 ---
 
-# Open and save a PDF file in Flutter PDF
+# Open and Save a PDF File in Flutter PDF
 
 ## Opening an existing PDF document
 

@@ -1,16 +1,16 @@
 ---
-title: Hyperlink display text behavior | Syncfusion
-description: This page explains how Syncfusion XlsIO handles empty string display text in hyperlinks, consistent with Microsoft Excel behavior.
+title: How to Handle Hyperlink Text in .NET Excel Library | Syncfusion
+description: Handle empty display text in Excel hyperlinks using the Syncfusion .NET Excel Library with behavior consistent with Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How does XlsIO handle empty string display text in hyperlinks?
+# How to handle empty hyperlink text in .NET Excel Library
 
 As per Microsoft Excel behavior, hyperlinks cannot be assigned with empty display text values. When the display text of a hyperlink is set to an empty string, Excel automatically uses the hyperlink address itself as the display text. Syncfusion XlsIO follows the same behavior.
 
-If a user does not provide a <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_TextToDisplay">TextToDisplay</a> value explicitly after assigning a hyperlink <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_Address">Address</a>, XlsIO uses the address value as the display text to match Excel behavior. If <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_TextToDisplay">TextToDisplay</a> is assigned after the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_Address">Address</a>, that value is used.
+If a user does not provide a <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_TextToDisplay" aria-label="Class reference documentation link">TextToDisplay</a> value explicitly after assigning a hyperlink <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_Address" aria-label="Class reference documentation link">Address</a>, XlsIO uses the address value as the display text to match Excel behavior. If <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_TextToDisplay" aria-label="Class reference documentation link">TextToDisplay</a> is assigned after the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLink.html#Syncfusion_XlsIO_IHyperLink_Address" aria-label="Class reference documentation link">Address</a>, that value is used.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" %}

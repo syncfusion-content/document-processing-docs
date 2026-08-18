@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Search text in PDF files using WPF PDF Viewer | Syncfusion&reg;
-description: Learn about Searching Text support in Syncfusion&reg; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Search text in WPF PDF Viewer | Syncfusion
+description:  Search and highlight text in PDF files using Syncfusion WPF PDF Viewer. Learn programmatic text search and highlighting techniques.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Search text in PDF files using WPF PDF Viewer
+# Search text in PDF files using WPF Pdf Viewer
 
 N> From version 19.4.0.48, we have updated our default text extraction engine to PDFium for extracting text information from PDF documents. Based on the text information, we perform text search in PDF documents. Please refer to the [link](https://help.syncfusion.com/wpf/pdf-viewer/text-extraction-engines) for more details.
 

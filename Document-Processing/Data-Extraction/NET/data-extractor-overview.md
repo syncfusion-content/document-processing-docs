@@ -1,14 +1,14 @@
 ---
-title: Data Extraction and Conversion in .NET | Syncfusion
+title: About Syncfusion .NET Smart Data Extractor | Syncfusion
 canonical_url: "https://www.syncfusioninternal.com/document-sdk/net-pdf-data-extraction"
-description: Syncfusion Data Extraction is a .NET library that extracts tables, forms, text, and images from PDF or image files, and outputs JSON or Markdown.
+description: Learn about introduction of Syncfusion .NET Smart Data Extractor for extracting data from PDFs or scanned images and more details.
 platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
 ---
 
-# Welcome to .NET Smart Data Extractor Library
+# About Syncfusion .NET Smart Data Extractor 
 
 {% doccards %}
 

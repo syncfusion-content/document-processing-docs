@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported File in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about Unsupported File in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Supported File Formats in TypeScript DOCX Editor | Syncfusion
+description: Learn about the supported file formats in TypeScript DOCX Editor for importing, and exporting documents.
 platform: document-processing
 control: Unsupported File
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Why Do I Get the Unsupported Warning Message When Opening a Document?
+# Supported File Formats in TypeScript DOCX Editor
 
 If you receive an "The file format you have selected isn't supported. Please choose valid format." message when opening a document in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 

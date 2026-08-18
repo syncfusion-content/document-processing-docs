@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the redaction toolbar in Core PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion ASP.NET Core PDF Viewer by showing or hiding default items.
+title: Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in ASP.NET Core
+# Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer
 
 Customize the redaction toolbar by rearranging existing items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions among existing toolbar items.
 

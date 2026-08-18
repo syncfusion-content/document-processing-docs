@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Angular Spreadsheet component | Syncfusion
-description: Check out and learn about getting started with the Syncfusion Angular Spreadsheet component in the Spreadsheet Editor SDK and more details.
+title: Getting Started with Angular Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Angular Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started
 documentation: ug
 ---
 
-# Getting Started with Angular Spreadsheet Component
+# Getting Started with Angular Spreadsheet
 
 This section explains how to create a simple Angular application and add the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
