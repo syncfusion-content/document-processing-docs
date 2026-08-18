@@ -365,6 +365,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The following code example illustrates how to split the Word document using bookmarks. The [`BookmarksNavigator.MoveToBookmark`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_MoveToBookmark_System_String_) API moves the virtual cursor to a bookmark, and [`GetContent`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) returns the bookmark range as a `WordDocumentPart`; calling `WordDocumentPart.GetAsWordDocument()` produces a standalone `WordDocument` containing the bookmark's contents.
 
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Split-by-bookmark/.NET/Split-by-bookmark/Program.cs" %}
