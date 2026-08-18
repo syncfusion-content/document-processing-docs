@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export form data in the JavaScript PDF Viewer component | Syncfusion
-description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the Syncfusion JavaScript PDF Viewer component.
+title: Export Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Export PDF form field data from the JavaScript (ES5) PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF Form Data from JavaScript PDF Viewer
+# Export Form Data in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
 
@@ -26,46 +26,92 @@ The PDF Viewer allows you to export form field data in multiple formats for easy
 
 Use [`exportFormFields()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportformfields) with an optional `destination` path and the format type. If `destination` is omitted the browser prompts the user to download the exported file; when providing a server path, ensure the server is configured to accept and store uploaded files.
 
-### Export as FDF
-The following example exports form field data as FDF.
+### Export as FDF, XFDF, and JSON
+
+The following example demonstrates exporting form field data in different formats and importing data back:
 
 ```html
-<button id="exportFdf">Export FDF</button>
-<div id="pdfViewer" style="height: 640px; width: 100%"></div>
+<!-- Action Buttons for Import and Export -->
+<div style="margin-bottom: 12px; display: flex; gap: 8px;">
+  <button id="importFdf">Import FDF</button>
+  <button id="importXfdf">Import XFDF</button>
+  <button id="importJson">Import JSON</button>
+  <button id="exportFdf">Export FDF</button>
+  <button id="exportXfdf">Export XFDF</button>
+  <button id="exportJson">Export JSON</button>
+</div>
+
+<!-- PDF Viewer Container -->
+<div id="PdfViewer" style="height: 640px; width: 100%"></div>
 ```
 
 ```js
+// Inject required modules
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+// Initialize the viewer
+var viewer = new ej.pdfviewer.PdfViewer();
+viewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+viewer.resourceUrl  = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+viewer.appendTo('#PdfViewer');
+
+// Helper: open a native file picker, read the chosen file as text,
+// then call viewer.importFormFields(stringData, format).
+function importFile(format) {
+    var input = document.createElement('input');
+    input.type   = 'file';
+    input.accept = '.' + format.toLowerCase(); // .fdf | .xfdf | .json
+    input.onchange = function (e) {
+        var file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        var reader = new FileReader();
+        reader.onload = function (ev) {
+            // ev.target.result is a STRING — what importFormFields actually wants
+            viewer.importFormFields(ev.target.result, format);
+        };
+        reader.readAsText(file);
+    };
+    input.click();
+}
+
+// --- Import Form Fields ---
+document.getElementById('importFdf').addEventListener('click', function () {
+    importFile('Fdf');
+});
+
+document.getElementById('importXfdf').addEventListener('click', function () {
+    importFile('Xfdf');
+});
+
+document.getElementById('importJson').addEventListener('click', function () {
+    importFile('Json');
+});
+
+// --- Export Form Fields ---
 document.getElementById('exportFdf').addEventListener('click', function () {
-  // Destination is optional; if omitted the browser will prompt.
-  viewer.exportFormFields('FormData','Fdf');
+    viewer.exportFormFields('FormData', 'Fdf');   // downloads FormData.fdf
 });
-```
 
-### Export as XFDF
-The following example exports form field data as XFDF.
-
-```html
-<button id="exportXfdf">Export XFDF</button>
-```
-
-```js
-// ...same imports and viewer initialization as above...
 document.getElementById('exportXfdf').addEventListener('click', function () {
-  viewer.exportFormFields('FormData', 'Xfdf');
+    viewer.exportFormFields('FormData', 'Xfdf');  // downloads FormData.xfdf
 });
-```
 
-### Export as JSON
-The following example exports form field data as JSON.
-
-```html
-<button id="exportJson">Export JSON</button>
-```
-
-```js
-// ...same imports and viewer initialization as above...
 document.getElementById('exportJson').addEventListener('click', function () {
-  viewer.exportFormFields('FormData', 'Json');
+    viewer.exportFormFields('FormData', 'Json');  // downloads FormData.json
 });
 ```
 
@@ -75,6 +121,8 @@ Use [exportFormFieldsAsObject()](https://ej2.syncfusion.com/javascript/documenta
 
 ```html
 <button id="exportObj">Export Object</button>
+<button id="importObj">Import Object</button>
+
 ```
 
 ```js
@@ -90,6 +138,11 @@ document.getElementById('exportObj').addEventListener('click', function () {
   // Alternatives:
   // viewer.exportFormFieldsAsObject('Xfdf').then(...)
   // viewer.exportFormFieldsAsObject('Json').then(...)
+});
+
+// Import from previously exported object
+document.getElementById('importObj').addEventListener('click', function () {
+ viewer.importFormFields(exportedData, ej.pdfviewer.FormFieldDataFormat.Fdf);
 });
 ```
 

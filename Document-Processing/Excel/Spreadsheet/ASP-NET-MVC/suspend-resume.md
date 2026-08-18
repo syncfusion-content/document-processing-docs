@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Suspend and Resume UI Refresh in ASP.NET MVC Spreadsheet | Syncfusion
-description: Improve performance in Syncfusion ASP.NET MVC Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
+description: Improve Spreadsheet performance by using the suspendRefresh and resumeRefresh APIs to batch multiple updates and reduce unnecessary rendering operations.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

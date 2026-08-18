@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion Excel offline installer-Syncfusion
-description: Learn here about how to install Syncfusion Excel offline installer after downloading from our Syncfusion website.
+title: How to Install Offline Installer in .NET Excel Library | Syncfusion
+description: Syncfusion Excel offline installer installation section explains how to install the offline installer after downloading it from the Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion&reg; Excel offline installer
+# How to install offline installer in .NET Excel Library
 
 
 ## Installing with UI   

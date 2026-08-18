@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Comments in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion ASP.NET MVC PDF Viewer control (Essential JS 2).
+title: Comments in ASP.NET MVC PDF Viewer | Syncfusion
+description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the ASP.NET MVC PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Comments in ASP.NET MVC PDF Viewer control
+# Comments in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 
@@ -115,7 +116,7 @@ Comments added to the PDF document can be read using the annotation's `comments`
 The following example logs comments in response to a button click.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>
@@ -143,7 +144,7 @@ The following example logs comments in response to a button click.
 
 {% endhighlight %}
 
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight cshtml tabtitle="Server-Backed" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
     <button id="checkComments" onclick="checkComments()">Check Comments</button>

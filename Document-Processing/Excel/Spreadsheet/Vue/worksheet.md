@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Worksheet in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet Operations in Vue Spreadsheet | Syncfusion
+description: Learn about how to create, manage, and customize worksheets in the Syncfusion Vue Spreadsheet component.
 control: Worksheet
 platform: document-processing
 documentation: ug
 ---
 
-# Worksheet in Vue Spreadsheet component
+# Worksheet Operations in Vue Spreadsheet
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 

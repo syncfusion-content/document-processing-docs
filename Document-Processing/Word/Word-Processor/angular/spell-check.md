@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in Angular DOCX editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in Angular DOCX Editor | Syncfusion
+description: The spell check feature in Angular DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell check
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell Check in Angular Document Editor
+# Spell Check in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 
@@ -40,17 +40,17 @@ export class AppComponent {
 
 * Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
-## Enable SpellCheck
+## Enable spellCheck
 
 To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
-## Disable SpellCheck
+## Disable spellCheck
 
 To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
-### Remove Underline
+### Remove underline
 
 By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the [`removeUnderline`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#removeunderline) API and now, the squiggly lines will never be rendered for mis-spelled words.
 
@@ -142,7 +142,7 @@ Right click on error word to open the context menu with spell check options. Ple
 
 Context menu shows the suggestions for mis-spelled words. By clicking on the required word from suggestion, the error word gets replaced automatically.
 
-### Add To Dictionary
+### Add to dictionary
 
 Using this option, you can add the current word to the dictionary. So that the spell checker does not consider that word as error in future.
 

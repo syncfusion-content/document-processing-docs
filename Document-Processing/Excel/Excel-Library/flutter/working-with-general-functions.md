@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel General Function Formulas of Syncfusion Flutter XlsIO.
-description: Learn how to apply general function formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Excel General Function Formulas in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users use common Excel functions to calculate values in worksheet cells.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with General Function Formulas
+# General Function Formulas in Flutter Excel Library
 
 General Function Formulas includes the following functions:
 

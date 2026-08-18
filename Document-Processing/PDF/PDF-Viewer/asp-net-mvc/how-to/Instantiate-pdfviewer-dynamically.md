@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dynamically instantiate the ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to instantiate the Syncfusion ASP.NET MVC PDF Viewer at runtime and load PDF documents on demand.
+title: How to Instantiate the PDF Viewer Dynamically in ASP.NET | Syncfusion
+description: Instantiate the ASP.NET MVC PDF Viewer dynamically at runtime using JavaScript or C# code so the control is created only when it is needed.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Dynamically instantiate the ASP.NET MVC PDF Viewer
+# How to Instantiate the PDF Viewer Dynamically in ASP.NET MVC PDF
 
 Create the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer instance at runtime when a document request succeeds, instead of rendering it during the initial page load. This approach is useful when the PDF is determined after user input or must be fetched securely from a server endpoint.
 
@@ -19,7 +19,7 @@ Follow these steps to instantiate the component dynamically:
 
 ```html
 
-<button id="loadPDF Viewer" onclick="loadPDFViewer()">Load PDF Viewer</button>
+<button id="loadPDFViewer" onclick="loadPDFViewer()">Load PDF Viewer</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

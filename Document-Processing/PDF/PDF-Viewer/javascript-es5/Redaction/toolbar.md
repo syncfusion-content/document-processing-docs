@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the redaction toolbar in JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion JavaScript PDF Viewer by showing or hiding default items.
+title: Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES5) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in JavaScript
+# Customize the Organize Pages Toolbar in JavaScript (ES5) PDF Viewer
 
 The redaction toolbar in the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
 
@@ -46,7 +46,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Refer to the following image for the toolbar view:
 
-![Enable redaction toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Enable redaction toolbar](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ## Show or hide the redaction toolbar
 
@@ -56,7 +56,7 @@ The redaction toolbar can be toggled using the built‑in toolbar icon or progra
 
 When `RedactionEditTool` is included in the toolbar settings, clicking the redaction icon in the primary toolbar will show or hide the redaction toolbar.
 
-![Show redaction toolbar from the primary toolbar](../redaction/redaction-annotations-images/redaction-icon-toolbar.png)
+![Show redaction toolbar from the primary toolbar](redaction-annotations-images/redaction-icon-toolbar.png)
 
 ### Display the redaction toolbar programmatically
 
@@ -84,11 +84,11 @@ document.getElementById('hideRedactionToolbar').addEventListener('click', () => 
 
 Refer to the following image for details:
 
-![Programmatically show the Redaction toolbar](../redaction/redaction-annotations-images/show-redaction-toolbar.png)
+![Programmatically show the Redaction toolbar](redaction-annotations-images/show-redaction-toolbar.png)
 
 ## See also
 
-* [Adding the redaction annotation in PDF viewer](../redaction/overview)
+* [Adding the redaction annotation in PDF viewer](./overview)
 * [UI interactions](./ui-interaction)
 * [Programmatic support](./programmatic-support)
 * [Mobile view](./mobile-view)

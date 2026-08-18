@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Azure Blob Storage in ASP.NET MVC | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion ASP.NET MVC PDF Viewer component with a server-backed web service.
+title: To Azure Blob Storage in ASP.NET MVC PDF Viewer | Syncfusion
+description: Save PDF files from the ASP.NET MVC PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage in ASP.NET MVC
+# Save PDF Files to Azure Blob Storage in ASP.NET MVC PDF Viewer
 
 The ASP.NET MVC PDF Viewer component supports saving PDF files to Azure Blob Storage using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

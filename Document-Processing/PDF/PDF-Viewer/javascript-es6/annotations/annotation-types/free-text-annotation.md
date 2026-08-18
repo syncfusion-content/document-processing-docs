@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Free Text annotations in Syncfusion TypeScript PDF Viewer, with UI and programmatic examples.
+title: Free Text Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the JavaScript (ES6) PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in TypeScript PDF Viewer
+# Free Text Annotation in JavaScript (ES6) PDF Viewer
 
 Free Text is a text box annotation used to place formatted text anywhere on the page for notes, labels, or callouts.
 
@@ -295,7 +295,7 @@ Refer to the following code snippet to set the default FreeText settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FreeTextSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -321,7 +321,7 @@ document.getElementById('FreeText')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, FreeTextSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';

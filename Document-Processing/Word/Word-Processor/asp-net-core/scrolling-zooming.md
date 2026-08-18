@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Scrolling and Zooming in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn here all about scrolling and zooming in Syncfusion ASP.NET Core Document Editor component and more.
+description: The scrolling and zooming in ASP.NET Core DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling and Zooming
 documentation: ug
 ---
 
 
-# Scrolling and Zooming in ASP.NET Core Document Editor
+# Scrolling and Zooming in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll to a specific page by using the [`scrollToPage()`] method of the Document Editor instance.
 

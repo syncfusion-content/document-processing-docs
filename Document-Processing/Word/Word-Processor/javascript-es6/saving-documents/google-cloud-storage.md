@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to Google Cloud Storage in DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Cloud Storage in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Save to Google Cloud Storage in TypeScript DOCX Editor | Syncfusion
+description: Save documents to Google Cloud Storage from TypeScript DOCX Editor, enabling reliable cloud storage integration and document management.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Cloud Storage in JavaScript (ES6)
+# Save Documents to Google Cloud Storage in TypeScript DOCX Editor
 
 To save a document to Google Cloud Storage, you can follow the steps below.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Insert text and rich-text in Blazor DOCX Editor | Syncfusion
-description: Learn how to insert text, a paragraph, and rich-text content in the Blazor Document Editor component and much more.
+title: How to Insert Content at Cursor in Blazor DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® Blazor DOCX Editor control, its elements and more.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Insert text and rich-text content in Blazor Document Editor
+# How to Insert Content at Cursor in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component supports inserting text, paragraphs, and rich-text content.
 

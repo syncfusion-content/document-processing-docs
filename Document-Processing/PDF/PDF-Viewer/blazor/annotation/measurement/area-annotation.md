@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer Component.
+description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Area Annotations in Blazor SfPdfViewer Component
+# Add Area Annotations in Blazor PDF Viewer 
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 

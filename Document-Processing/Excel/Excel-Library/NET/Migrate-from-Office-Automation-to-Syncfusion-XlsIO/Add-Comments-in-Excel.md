@@ -1,12 +1,12 @@
 ---
-title: Add Comments in Excel | Syncfusion
-description: This section explains with an example on how to add Excel comments programmatically using Interop and XlsIO.
+title: Comments in .NET Excel Library | Syncfusion
+description: Adding Excel comments programmatically explains how to add comments to worksheets using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Add Comments in Excel
+# Comments in .NET Excel Library
 
 You can add comments in Excel to give feedback about the content of a cell. A red triangle in the upper-right corner of a cell indicates a comment. By default, a comment can be seen only when you hover over the cell that contains the comment.
 

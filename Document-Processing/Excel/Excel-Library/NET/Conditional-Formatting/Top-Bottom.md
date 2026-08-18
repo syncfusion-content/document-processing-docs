@@ -1,12 +1,12 @@
 ---
-title: Top/Bottom | Excel library | Syncfusion
-description: Learn how to apply top/bottom, above/below average, and standard deviation conditional formatting rules using Syncfusion XlsIO.
+title: Top and Bottom Rules in .NET Excel Library | Syncfusion
+description: Advanced conditional formatting describes how Syncfusion .NET Excel Library applies top, bottom, average, and standard deviation rules.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Top/Bottom in Conditional Formatting
+# Top and Bottom Rules in .NET Excel Library
 
 Top/Bottom rules are conditional formatting rules that help you quickly identify and emphasize the highest or lowest values within a range of cells in a worksheet.
 

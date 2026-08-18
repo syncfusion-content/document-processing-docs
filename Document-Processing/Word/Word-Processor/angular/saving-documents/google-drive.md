@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save Documents to Google Drive in Angular DOCX Editor | Syncfusion
-description:  Learn about how to Save document to Google Drive in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Google Drive in Angular DOCX Editor | Syncfusion
+description: Save documents to Google Drive from Angular DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive using React Document Editor
+# Save Documents to Google Drive in Angular DOCX Editor
 
 To save a document to Google Drive, you can follow the steps below.
 

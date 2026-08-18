@@ -1,11 +1,11 @@
 ---
-title: Working with Annotations | Syncfusion
-description: This section explains how to create, modify, or remove different types of interactive annotations by using Essential PDF.
+title: PDF Annotations in .NET PDF Library | Syncfusion
+description: Learn how to create, modify, and remove different types of interactive annotations in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Annotations
+# PDF Annotations in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF provides support for interactive [annotations](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-annotation).
 

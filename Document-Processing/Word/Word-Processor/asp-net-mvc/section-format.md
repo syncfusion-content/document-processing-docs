@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Section Format in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about section format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Section Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The section format feature in ASP.NET MVC DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
 control: Section Format
 documentation: ug
 ---
 
 
-# Working with Section Formatting
+# Section Format in ASP.NET MVC DOCX Editor
 
 The Document Editor supports various section formatting options, such as page size and page margins.
 

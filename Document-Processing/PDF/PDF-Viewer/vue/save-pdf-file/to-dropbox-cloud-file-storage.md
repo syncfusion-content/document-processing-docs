@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Dropbox in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Dropbox using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
+title: To Dropbox Cloud File Storage in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Dropbox cloud storage
+# Save PDF Files to Dropbox in Vue PDF Viewer
 
 PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -18,11 +18,11 @@ To save a PDF file to Dropbox, follow these steps:
 
 **Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up the API app. This app will allows to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up the API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
 **Step 2:** Create a Simple PDF Viewer Sample in Vue
 
-Follow the instructions[link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This sets up the basic structure of the PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF viewer sample in Vue. This sets up the basic structure of the PDF Viewer application.
 
 **Step 3:** Modify the `src/App.vue` file in the Vue project
 

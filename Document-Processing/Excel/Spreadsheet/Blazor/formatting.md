@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Blazor Spreadsheet Component | Syncfusion
-description: Learn about formatting options in the Syncfusion Blazor Spreadsheet component, including number formatting, cell and text formatting and conditional formatting.
+title: Formatting in Blazor Spreadsheet | Syncfusion
+description: Apply cell, text, number, and conditional formatting in the Syncfusion Blazor Spreadsheet to enhance data presentation.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Formatting in Blazor Spreadsheet Component
+# Formatting in Blazor Spreadsheet
 
 Formatting options improve data readability and presentation. The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides various formatting options, which can be categorized into:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard shortcut in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Keyboard shortcut in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in Vue DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in Vue DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 control: Keyboard shortcut 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard shortcut in Vue Document Editor component
+# Keyboard Shortcuts in Vue DOCX Editor
 
 ## Text formatting
 

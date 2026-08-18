@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organize Pages in WPF Pdf Viewer control | Syncfusion
-description: Learn about Organize Pages support in Syncfusion<sup>&reg;</sup> Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+description: Organize PDF pages in Syncfusion WPF PDF Viewer by rotating, rearranging, inserting, and deleting pages. Learn page management techniques.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

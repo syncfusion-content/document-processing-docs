@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Retrieve bookmark as text in Angular DOCX Editor | Syncfusion
-description: Learn here all about Retrieve the bookmark content as text in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Retrieve Bookmark Content in Angular DOCX Editor | Syncfusion
+description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® Angular DOCX Editor.
 platform: document-processing
 control: Retrieve the bookmark content as text 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in Angular Document Editor
+# How to Retrieve Bookmark Content as Text in Angular DOCX Editor
 
 You can get the bookmark or the whole document content from the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component as plain text and SFDT (rich text).
 

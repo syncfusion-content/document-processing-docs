@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in EJ2 JavaScript Spreadsheet Control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Selection in JavaScript Spreadsheet | Syncfusion
+description: Selection in JavaScript Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
 control: Selection
 documentation: ug
 ---
 
-# Selection in EJ2 JavaScript Spreadsheet Control
+# Selection in  JavaScript Spreadsheet 
 
 Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through mouse, touch, or keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 

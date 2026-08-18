@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate a PDF File in a Vue Application | Syncfusion
-description: Learn how to create a PDF file in a Vue application with easy steps using the JavaScript PDF Library without requiring Adobe Acrobat.
+title: Getting Started with JavaScript PDF in Vue app | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript PDF in Vue application. Easy steps to create PDF without depending on Adobe.
 control: PDF
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ keywords: pdf, vue, vue 3, vue 2, javascript
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue
 ---
 
-# Create or Generate a PDF File in a Vue Application
+# Getting Started with JavaScript PDF in Vue app
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill PDF forms, and secure PDF files.
 
