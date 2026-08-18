@@ -1,12 +1,12 @@
 ---
-title: Assemblies required for Data Extraction | Syncfusion
-description: This section details the Syncfusion assemblies required to configure and run Data Extraction seamlessly in .NET projects.
+title: Assemblies Required in .NET Smart Data Extractor | Syncfusion
+description: This section describes the required Syncfusion assemblies needed to integrate and use the Smart Data Extractor effectively in your applications
 platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies required for Data Extraction
+# Assemblies Required in Data Extraction
 
 ## Smart Data Extractor
 

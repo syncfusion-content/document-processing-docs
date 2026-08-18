@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Box cloud file storage in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn about how to save a document to Box cloud file storage in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
+title: Save to Box Cloud File Storage in ASP.NET MVC DOCX Editor | Syncfusion
+description: Save documents to Box cloud file storage from ASP.NET MVC DOCX Editor, enabling secure cloud storage and efficient document management.
 platform: document-processing
 control: Save document to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save a Document to Box Cloud in ASP.NET MVC Document Editor
+# Save Documents to Box Cloud File Storage in ASP.NET MVC DOCX Editor
 
 To save a document to Box cloud file storage, follow these steps:
 

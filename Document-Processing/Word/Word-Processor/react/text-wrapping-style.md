@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text wrapping style in React DOCX Editor component | Syncfusion
-description: Learn here all about Text wrapping style in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in React DOCX Editor | Syncfusion
+description: Text wrapping styles in React DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 control: Text wrapping style 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text wrapping style in React Document Editor component
+# Text Wrapping Style in React DOCX Editor
 
 Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 

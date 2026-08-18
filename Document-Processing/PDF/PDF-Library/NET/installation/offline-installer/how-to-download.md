@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion PDF offline installer - Syncfusion
-description: Learn here about how to download the Syncfusion PDF offline installer from our Syncfusion website with license.
+title: How to Download Syncfusion PDF Offline Installer | Syncfusion
+description: Learn how to download the Syncfusion PDF offline installer with a valid license for environments without internet access.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> PDF offline installer
+# How to Download Syncfusion PDF Offline Installer
 
 [PDF](https://www.syncfusion.com/document-processing/pdf-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> PDF installer. You can either download the licensed installer or try our trial installer depending on your license. 
 

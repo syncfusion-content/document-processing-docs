@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Bookmark in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Bookmarks in Vue DOCX Editor component | Syncfusion
+description: The bookmark feature in Vue DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 control: Bookmark 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in Vue Document Editor component
+# Bookmarks in Vue DOCX Editor component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line Annotation (Shape) in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion React PDF Viewer.
+title: Line Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Line annotations in the React PDF Viewer for marking straight paths on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line Annotation (Shape) in React PDF Viewer
+# Line Annotation in React PDF Viewer
 
 Line annotations allow users to draw straight connectors or callouts on PDFs for markup, review, diagrams, or measurement guides. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
 

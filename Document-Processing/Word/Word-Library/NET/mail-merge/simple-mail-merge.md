@@ -1,12 +1,12 @@
 ---
-title: Simple mail merge in C# | DocIO | Syncfusion
-description: Learn how to mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word (DocIO) library.
+title: Simple Mail merge in .NET Word Library | Syncfusion
+description: Learn how to Mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Simple mail merge in a Word document
+# Simple Mail merge in .NET Word Library
 
 You can create a Word document template using Microsoft Word application or by adding merge fields in the Word document programmatically. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge#create-word-document-template).
 

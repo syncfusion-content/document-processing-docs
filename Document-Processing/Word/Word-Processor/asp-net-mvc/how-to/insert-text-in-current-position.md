@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Text, Paragraphs, and Rich Content in DOCX Editor | Syncfusion
-description: Learn how to insert text, paragraph, and rich-text content at the current cursor position in the Syncfusion ASP.NET MVC Document Editor component.
+title: Insert Content at Cursor in ASP.NET MVC DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® ASP.NET MVC DOCX Editor control, its elements and more.
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
 ---
 
-# Insert text, paragraph and rich-text content in Document Editor
+# How to Insert Content at Cursor in ASP.NET MVC DOCX Editor
 
 You can insert text, paragraph, and rich-text content in the Document Editor component.
 

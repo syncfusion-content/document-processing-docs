@@ -1,11 +1,11 @@
 ---
-title: Working with Sections | Syncfusion
-description: This section illustrates how to Work with Sections in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Sections in Java Word | Syncfusion
+description: This section illustrates how to Work with Sections in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Sections
+# Document Sections in Java Word
 
 A section contains the contents present in the headers, footers, and the main document using the instances of `WTextBody`. A section also has a specific set of properties used to define the page settings, a number of columns, headers, and footers, and more that decide how the text appears. The `WTextBody` represents a group of paragraphs, tables, and more.
 

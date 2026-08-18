@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save a PDF document to a URL in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save a PDF document to a specific URL using the Syncfusion TypeScript PDF Viewer and a web service endpoint.
+title: How to Save the PDF to a URL in JavaScript (ES6) PDF | Syncfusion
+description: Save a PDF document from the JavaScript (ES6) PDF Viewer to a specific URL on a backend server using the downloadStart or saveAsBlob APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save a PDF document to a URL in TypeScript PDF Viewer
+# How to Save the PDF to a URL in JavaScript (ES6) PDF Viewer
 
 Save the loaded PDF document to a specific URL using a custom web service endpoint.
 

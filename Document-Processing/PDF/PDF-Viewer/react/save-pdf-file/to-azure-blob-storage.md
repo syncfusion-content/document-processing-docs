@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Azure Blob Storage in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion React PDF Viewer component in standalone and server-backed configurations.
+title: To Azure Blob Storage in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage in React
+# Save PDF Files to Azure Blob Storage in React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 

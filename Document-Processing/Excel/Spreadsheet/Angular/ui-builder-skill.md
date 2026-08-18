@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Angular UI Builder Skill with Spreadsheet | Syncfusion®
-description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with Spreadsheet from natural-language prompts.
+title: UI Builder Skill in Angular Spreadsheet | Syncfusion®
+description: UI Builder Skill in Angular Spreadsheet generates production-ready components from natural language prompts for faster application development.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skill with Spreadsheet
+# UI Builder Skill in Angular Spreadsheet
 
 **Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 

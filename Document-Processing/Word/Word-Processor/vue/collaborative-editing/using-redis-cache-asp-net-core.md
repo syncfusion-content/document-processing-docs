@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Collaborative Editing in Vue using ASP.NET Core | Syncfusion
-description: Learn how to enable collaborative editing in Vue Document Editor to allow multiple users to work on a document simultaneously.
+description: The collaborative editing feature in Vue DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Vue with Redis in ASP.NET Core
+# Collaborative Editing in Vue DOCX Editor with Redis in ASP.NET Core
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 

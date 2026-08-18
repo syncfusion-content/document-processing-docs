@@ -1,11 +1,11 @@
 ---
-title: Working with Brushes | PDF library | Syncfusion
-description: This section explains how to fill shapes in a PDF document with different brushes such as solid brush, gradient brush, tiling brush, and hatch brush.
+title: Brushes in .NET PDF Library | Syncfusion
+description: Learn how to fill shapes in a PDF document with solid, gradient, tiling, and hatch brushes using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Brushes
+# Brushes in .NET PDF Library
 
 Brushes are used to draw content on a PDF document with a specific color and style. The various brushes available in Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PDF are:
 

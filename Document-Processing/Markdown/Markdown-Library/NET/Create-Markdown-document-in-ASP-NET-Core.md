@@ -1,12 +1,12 @@
 ---
-title: Create Markdown document in ASP.NET Core | Syncfusion
-description: Create Markdown document without external dependencies in ASP.NET Core application using Syncfusion<sup>&reg;</sup> .NET Core Markdown library.
+title: Create Markdown Documents in ASP.NET Core | Syncfusion
+description: Learn how to create Markdown documents programmatically in ASP.NET Core applications using Syncfusion<sup>&reg;</sup> .NET Core Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Create Markdown document in ASP.NET Core
+# Create Markdown documents in ASP.NET Core
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Core Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET Core**.
 

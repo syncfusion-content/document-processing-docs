@@ -1,12 +1,12 @@
 ---
-title: Resolve performance issue while deleting |Syncfusion.
-description: This page explains how to resolve performance issue when deleting a large number of rows using .NET Excel Library.
+title: How to Improve Delete Performance in .NET Excel Library | Syncfusion
+description: Resolve performance issues when deleting a large number of rows in Excel using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to resolve performance issue when deleting a large number of rows?
+# How to resolve row deletion performance issues in .NET Excel Library
 
 To address the performance issue, rather than deleting the large number of blank rows using the DeleteRow method, copy the row containing values to a new worksheet and then delete the previous worksheet.
 

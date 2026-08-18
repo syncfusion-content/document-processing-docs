@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create a object structure in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Create an Object Structure in Vue Spreadsheet | Syncfusion
+description: Create an object structure in Vue Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 control: Create a object structure 
 platform: document-processing
 documentation: ug
 ---
 
-# Create an object structure in Vue Spreadsheet component
+# How to Create an Object Structure in Vue Spreadsheet
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
@@ -216,4 +216,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Sample link : [`create-a-object-structure`](https://codesandbox.io/p/sandbox/vue-template-forked-rzkpc)
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-data-binding-cs1" %}

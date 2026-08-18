@@ -1,12 +1,12 @@
 ---
-title: Working with Code Blocks in .NET Markdown library | Syncfusion
-description: Learn to add, format, and modify code blocks in a Markdown document using Syncfusion .NET Markdown library without any third-party dependencies.
+title: Code Blocks in .NET Markdown library | Syncfusion
+description: Learn how to add, format, and modify code blocks in a Markdown document using Syncfusion .NET Markdown library without any third-party dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Working with Code Blocks
+# Code Blocks in .NET Markdown Library
 
 Code blocks are fundamental elements in technical documentation and Markdown documents. They are used to display programming code, configuration files, command-line instructions, and other preformatted text. The Syncfusion<sup>&reg;</sup> .NET Markdown library enables you to create, modify, and manage code blocks programmatically in a Markdown document. Code blocks are represented by the `MdCodeBlock` class.
 

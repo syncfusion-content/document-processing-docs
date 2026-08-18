@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Formatting in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Formatting in JavaScript Spreadsheet | Syncfusion
+description: Formatting in JavaScript Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
 control: Formatting
 documentation: ug
 ---
 
-# Formatting in EJ2 JavaScript Spreadsheet control
+# Formatting in JavaScript Spreadsheet 
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
@@ -358,7 +358,7 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 
 Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
 
-#### How to Apply Subscript and Superscript
+### How to Apply Subscript and Superscript
 
 You can apply subscript and superscript formatting in the following ways:
 

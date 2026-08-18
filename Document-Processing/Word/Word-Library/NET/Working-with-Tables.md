@@ -1,11 +1,11 @@
 ---
-title: Working with Tables in .NET Word (DocIO) library | Syncfusion
-description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
+title: Tables in .NET Word library in .NET | Syncfusion
+description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Tables in a Word document
+# Tables in .NET Word library in .NET
 
 A table in Word document is used to arrange document content in rows and columns. [WTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTable.html) instance represents a table in Word document. A table must contain at least one row.
 

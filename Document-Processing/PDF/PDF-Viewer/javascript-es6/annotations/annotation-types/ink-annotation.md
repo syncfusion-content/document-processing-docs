@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink (freehand) annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and set defaults for Ink (freehand) annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Ink Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the JavaScript (ES6) PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink (freehand) annotation in TypeScript PDF Viewer
+# Ink Annotation in JavaScript (ES6) PDF Viewer
 
 Ink is a freehand drawing annotation used to sketch, sign, or mark up content.
 

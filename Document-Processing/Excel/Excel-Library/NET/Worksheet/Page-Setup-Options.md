@@ -1,12 +1,12 @@
 ---
-title: Page Setup Options | Syncfusion
-description: In this section, you can learn how to use various page setup options in an Excel worksheets using Syncfusion Essential XlsIO.
+title: Page Setup in .NET Excel Library | Syncfusion
+description: Use various page setup options in Excel worksheets using the Syncfusion .NET Excel Library for worksheet print settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Page Setup Options in Excel Document
+# Page Setup Options in .NET Excel Library
 
 This article explains how to configure page setup options — page fit, print area, print titles, headers/footers, paper size, and orientation — in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
 

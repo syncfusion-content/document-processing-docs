@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Table in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Tables in Angular DOCX Editor | Syncfusion
+description: Tables in Angular DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in Angular Document Editor component
+# Tables in Angular DOCX Editor
 
 Tables are an efficient way to present information. [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

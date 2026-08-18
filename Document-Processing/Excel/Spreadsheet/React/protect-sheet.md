@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Protect sheet in React Spreadsheet component | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Protect Sheet in React Spreadsheet | Syncfusion
+description: Learn about sheet protection in the Syncfusion React Spreadsheet component, including protecting worksheets and restricting edits.
 control: Protect sheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Protection in React Spreadsheet component
+# Protect Sheet in React Spreadsheet
 
 Sheet protection allows you to prevent users from modifying data in the Spreadsheet.  
 When a sheet is protected, editing actions such as typing, formatting, or deleting content are restricted, ensuring that important data remains secure.

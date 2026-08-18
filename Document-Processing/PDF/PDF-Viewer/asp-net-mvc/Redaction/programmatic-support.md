@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction Programmatic support in MVC PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion ASP.NET MVC PDF Viewer.
+title: Programmatic Support in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the ASP.NET MVC PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Programmatic support for redaction in ASP.NET MVC PdfViewer
+# Programmatic Support for Organize Pages in ASP.NET MVC PDF Viewer
 
 The Syncfusion ASP.NET MVC PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 

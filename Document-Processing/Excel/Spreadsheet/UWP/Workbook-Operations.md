@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workbook Operations in UWP Spreadsheet control | Syncfusion®
-description: Learn how to create, open, and save Excel workbooks, as well as how to display charts and sparklines in Syncfusion® UWP Spreadsheet.
+description: Create, open, and save Excel workbooks in the  UWP Spreadsheet control to efficiently manage and work with spreadsheet data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug

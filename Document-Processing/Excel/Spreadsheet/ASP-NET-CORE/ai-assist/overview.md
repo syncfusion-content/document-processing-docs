@@ -1,13 +1,13 @@
 ---
 layout: post
 title: AI Assist in ASP.NET Core Spreadsheet Control | Syncfusion
-description: Learn about the AI Assist feature in the Syncfusion ASP.NET Core Spreadsheet control and how to configure it.
+description: Learn about the AI Assist feature in Syncfusion ASP.NET Core Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in ASP.NET Core Spreadsheet Control
+# AI Assist Integration in ASP.NET Core Spreadsheet
 
 **AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 

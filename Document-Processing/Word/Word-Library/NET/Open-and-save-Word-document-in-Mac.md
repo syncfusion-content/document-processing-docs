@@ -1,12 +1,12 @@
 ---
 title: Open and save Word document on Mac OS | Syncfusion
-description: Open and save Word document in .NET Core application on macOS using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library.
+description: Open and save Word document in .NET Core application on macOS using Syncfusion® .NET Core Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document on Mac OS
+# Open and save Word document on Mac OS
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in .NET Core application on Mac OS**.
 

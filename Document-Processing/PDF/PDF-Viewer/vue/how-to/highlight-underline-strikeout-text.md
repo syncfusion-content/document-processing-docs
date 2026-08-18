@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight, underline, and strikeout text in Vue | Syncfusion
-description: Learn how to programmatically highlight, underline, and strikeout text in the Syncfusion Vue PDF Viewer using setAnnotationMode.
+title: How to Highlight, Underline, or Strike Out Text in Vue | Syncfusion
+description: Highlight, underline, and strike out text in the Vue PDF Viewer using the built-in text markup tools in the annotation toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight, underline, and strikeout text in Vue PDF Viewer
+# How to Highlight, Underline, or Strike Out Text in Vue PDF Viewer
 
 Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
 

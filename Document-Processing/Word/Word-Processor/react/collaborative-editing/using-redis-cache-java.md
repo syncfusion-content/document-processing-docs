@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in React using Java | Syncfusion
-description: Learn how to enable collaborative editing in Syncfusion React Document Editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in React DOCX Editor using Java | Syncfusion
+description: The collaborative editing feature in React DOCX Editor supports real-time multi-user document editing using Redis with Java.
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React with Redis in Java
+# Collaborative Editing in React DOCX Editor with Redis in Java
 
 This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

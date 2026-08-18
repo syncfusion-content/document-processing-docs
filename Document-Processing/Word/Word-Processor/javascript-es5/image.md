@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in JavaScript (ES5) DOCX Editor control | Syncfusion
-description: Learn here all about Image in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Images in JavaScript DOCX Editor | Syncfusion
+description: Images in JavaScript DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in JavaScript (ES5) Document Editor control
+# Images in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 

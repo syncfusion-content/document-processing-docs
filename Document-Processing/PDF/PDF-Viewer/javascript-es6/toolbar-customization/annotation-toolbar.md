@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation Toolbar in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Annotation Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the annotation toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default annotation actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization in TypeScript
+# Customize the Annotation Toolbar in JavaScript (ES6) PDF Viewer
 
 The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
 
