@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Move to selection position in Blazor DOCX Editor | Syncfusion
-description: Learn how to move the selection to a specific position in the Syncfusion Blazor Document Editor component and much more.
+title: How to Move Selection to a Position in Blazor DOCX Editor | Syncfusion
+description: Move the document selection to a specific position in Syncfusion® Blazor DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Move selection to a specific position in Blazor Document Editor
+# How to Move Selection to a Position in Blazor DOCX Editor
 
 The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectAsync_System_String_System_String_) API in the selection module can be used to set the cursor position anywhere in the document.
 

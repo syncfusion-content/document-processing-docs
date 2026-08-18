@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Scrolling in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Scrolling in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about scrolling in the Syncfusion ASP.NET Core Spreadsheet control, including horizontal and vertical navigation across worksheets.
 platform: document-processing
 control: Scrolling
 documentation: ug
 ---
 
 
-# Scrolling in ASP.NET Core Spreadsheet control
+# Scrolling in ASP.NET Core Spreadsheet
 
 Scrolling allows you to navigate quickly to different areas of a worksheet using the horizontal and vertical scrollbars. Set the [`allowScrolling`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowScrolling) property to `true` to enable scrolling in the Spreadsheet.
 

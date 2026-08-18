@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Google Cloud Files in Angular DOCX Editor | Syncfusion
-description: Learn about how to Open document from Google Cloud Storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Google Cloud in Angular DOCX Editor | Syncfusion
+description: Open documents from Google Cloud Storage in Angular DOCX Editor, enabling reliable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Cloud Storage in Angular Document Editor
+# Open Documents from Google Cloud Storage in Angular DOCX Editor
 
 To load a document from Google Cloud Storage in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 

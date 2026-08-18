@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get current word in Angular DOCX Editor | Syncfusion
-description: Learn here all about Get current word in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Current Word in Angular DOCX Editor | Syncfusion
+description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® Angular DOCX Editor for content processing and analysis.
 platform: document-processing
 control: Get current word
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get current word in Angular Document Editor component
+# How to Get Current Word in Angular DOCX Editor
 
 You can get the current word or paragraph content from the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

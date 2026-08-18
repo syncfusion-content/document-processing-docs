@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize Document Editor in Angular DOCX Editor | Syncfusion
-description: Learn here all about Resize in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Resize in Angular DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® Angular DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Resize Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in Angular Document Editor component
+# How to Resize in Angular DOCX Editor 
 
 In this article, we are going to see how to change the height and width of the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Headers and Footers in Blazor DOCX Editor Component | Syncfusion
-description: Check out and learn all about Headers and Footers in Syncfusion Blazor Document Editor component and more.
+title: Headers and Footers in Blazor DOCX Editor | Syncfusion
+description: Headers and footers in Blazor DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Headers and Footers in Blazor Document Editor Component
+# Headers and Footers in Blazor DOCX Editor
 
 Headers and footers are the areas in the top and bottom margins of each page in a document. They are typically used to display content that repeats across multiple pages, such as document titles, company logos, page numbers, and dates.
 

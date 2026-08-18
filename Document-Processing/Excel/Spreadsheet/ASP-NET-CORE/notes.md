@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Notes in EJ2 ASP.NET Core Syncfusion Spreadsheet Control
-description: Learn here all about the notes feature in EJ2 ASP.NET CORE Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Notes in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about notes in the Syncfusion ASP.NET Core Spreadsheet control, including adding, editing, displaying, and managing cell notes.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
-# Notes in ASP.NET Core Spreadsheet control
+# Notes in ASP.NET Core Spreadsheet
 
 The **Notes** feature allows users to add feedback, suggestions, or remarks to specific cells without changing the cell content. You can enable or disable the notes functionality using the [enableNotes](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property, which defaults to **true**.
 

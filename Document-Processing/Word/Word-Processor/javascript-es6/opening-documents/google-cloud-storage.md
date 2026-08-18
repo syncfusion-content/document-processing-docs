@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Google Cloud Files in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to open a document from Google Cloud Storage in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Open Document from Google Cloud in TypeScript DOCX Editor | Syncfusion
+description: Open documents from Google Cloud Storage in TypeScript DOCX Editor, enabling reliable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Cloud Storage in JavaScript (ES6)
+# Open Documents from Google Cloud Storage in TypeScript DOCX Editor
 
 To load a document from Google Cloud Storage, you can follow the steps below.
 

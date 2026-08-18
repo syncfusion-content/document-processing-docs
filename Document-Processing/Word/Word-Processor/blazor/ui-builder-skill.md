@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor UI Builder Skill with DOCX Editor | Syncfusion®
-description: Install Blazor UI Builder to generate production-ready Blazor components with DOCX Editor from natural-language prompts.
+title: UI Builder Skill with Blazor DOCX Editor | Syncfusion
+description: Install Syncfusion Blazor UI Builder to generate production-ready Blazor components with DOCX Editor from natural-language prompts.
 control: DOCX Editor
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# Blazor UI Builder Skill with DOCX Editor for AI Assistants
+# UI Builder Skill with Blazor DOCX Editor
 
 **Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 

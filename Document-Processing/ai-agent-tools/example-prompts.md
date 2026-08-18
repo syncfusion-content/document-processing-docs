@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Example Prompts | AI Agent Tools | Syncfusion
+title: Example Prompts of Document SDK AI Agent Tools | Syncfusion
 description: Explore example prompts for Syncfusion Document SDK AI Agent Tools to automate document processing tasks with AI agents.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Example Prompts - AI Agent Tools
+# Example Prompts of Document SDK AI Agent Tools
 
 Speed up your document automation using these example prompts for Syncfusion Document SDK AI Agent Tools. Each prompt demonstrates real-world scenarios-like document operation, data extraction, conversion, and manipulation.
 

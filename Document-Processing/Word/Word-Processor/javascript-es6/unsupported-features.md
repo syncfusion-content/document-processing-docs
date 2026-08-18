@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported features in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about the list of unsupported features in the JavaScript (ES6) Document Editor to understand its limitations.
+title: Unsupported Features in TypeScript DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in TypeScript DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in JavaScript (ES6) Document Editor
+# Unsupported Features in TypeScript DOCX Editor
 
 This section describes the unsupported elements in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 

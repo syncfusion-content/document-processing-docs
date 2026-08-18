@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Move and Resize form fields in the Blazor SfPdfViewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Blazor SfPdfViewer.
+title: Move and Resize form fields in the Blazor PDF Viewer | Syncfusion
+description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Move and Resize Form Fields in the Blazor SfPdfViewer
+# Move and Resize Form Fields in the Blazor PDF Viewer
 The PDF Viewer supports moving and resizing form fields.
 
 - **Move**: drag the form field to reposition it.

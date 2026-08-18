@@ -1,6 +1,6 @@
 ---
-title: Create, read, edit & convert PDF, Excel & Word files | Syncfusion
-description: Create, read, edit, write, and convert PDF, Excel, Word, and PowerPoint file formats in .NET applications without Microsoft Office or Adobe dependencies.
+title: About Syncfusion Document Processing Solutions | Syncfusion®
+description: Learn about overview of Syncfusion Document Solutions that process documents programmatically or a full viewing and editing experience in your application.
 platform: document-processing
 control: general
 documentation: UG
@@ -9,7 +9,7 @@ keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, ed
 
 > With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .NET 8.0 or higher.
 
-# Welcome to Syncfusion<sup>&reg;</sup> Document Processing Framework
+# About Syncfusion Document Processing Solutions
 
 Syncfusion<sup>&reg;</sup> Document Processing Framework is a collection of class libraries-including PDF, Word, Excel, PowerPoint, PDF Converter, Smart Data Extractor, and Markdown as part of the Document SDK, and the PDF Viewer SDK, DOCX Editor SDK, and Spreadsheet Editor SDK-that enable creating, editing, reading, and converting office (Word, Excel, PowerPoint) documents to PDF in .NET Framework, .NET Core, and UWP applications without Microsoft Office or Adobe dependencies. It streamlines development by providing ready-made tools for document handling, letting developers focus on their application’s core functionality.
 

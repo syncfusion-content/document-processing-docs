@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group form fields in the Blazor SfPdfViewer component | Syncfusion
+title: Group form fields in the Blazor PDF Viewer  | Syncfusion
 description: Learn how to group PDF form fields in the Blazor SfPdfViewer by assigning the same name to multiple widgets.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Group form fields in Blazor SfPdfViewer
+# Group form fields in the Blazor PDF Viewer 
 
 The Blazor `SfPdfViewer` allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 

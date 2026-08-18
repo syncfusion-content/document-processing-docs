@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing the Blazor DOCX Editor Component | Syncfusion
-description: Learn how to change the height and width of Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Resize in Blazor DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® Blazor DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# How to Change the Height and Width of Blazor Document Editor Component
+# How to Resize in Blazor DOCX Editor 
 
 In this article, we are going to see how to change the height and width of the Document Editor.
 

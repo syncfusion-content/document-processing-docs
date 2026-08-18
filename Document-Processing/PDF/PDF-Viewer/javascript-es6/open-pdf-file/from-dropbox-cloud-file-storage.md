@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load PDF from Dropbox Storage in Syncfusion TypeScript Viewer
-description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion TypeScript PDF Viewer component using standalone and server-backed approaches.
+title: From Dropbox Cloud File Storage in JavaScript (ES6) PDF | Syncfusion
+description: Load and display PDF files stored in Dropbox cloud storage in the JavaScript (ES6) PDF Viewer using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load PDF Files from Dropbox Cloud Storage
+# Open PDF from Dropbox Cloud Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 

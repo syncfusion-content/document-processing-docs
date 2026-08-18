@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in Blazor | Syncfusion
-description: Convert an Excel document to PDF in Blazor using Syncfusion Blazor Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in Blazor | Syncfusion
+description: Blazor Excel to PDF section explains how to convert Excel documents to PDF in Blazor using Syncfusion Blazor Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in Blazor
+# Excel to PDF Conversion in Blazor using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [Blazor Excel library](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
@@ -342,7 +342,7 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
  
-An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent" aria-label="GitHub demo link">convert an Excel document to PDF</a> in Blazor.
 
 ## Excel to PDF in Blazor WASM app
 
@@ -871,4 +871,4 @@ By executing the program, you will get the **PDF document** as shown below.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent">convert an Excel document to PDF</a> in Blazor.
+An online sample link to <a href="https://blazor.syncfusion.com/demos/excel/excel-to-pdf?theme=fluent" aria-label="GitHub demo link">convert an Excel document to PDF</a> in Blazor.

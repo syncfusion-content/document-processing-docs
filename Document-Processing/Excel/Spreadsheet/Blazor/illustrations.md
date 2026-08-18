@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Illustrations in Blazor Spreadsheet component | Syncfusion
-description: Check out and learn about illustrations in the Syncfusion Blazor Spreadsheet component and enhance spreadsheets with visual content.
+title: Illustrations in Blazor Spreadsheet | Syncfusion
+description: Add and manage images and visual elements in Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Images in Blazor Spreadsheet Component
+# Illustrations in Blazor Spreadsheet
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component lets you insert images into a worksheet to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, can be placed within a sheet, positioned as needed, resized, selected, or removed.
 

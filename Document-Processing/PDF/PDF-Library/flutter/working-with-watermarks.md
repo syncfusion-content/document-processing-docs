@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Watermarks in Flutter PDF library | Syncfusion
-description: Learn all about adding text and image watermarks feature of Syncfusion Flutter PDF non-UI library and more.
+title: Watermarks in Flutter PDF Library | Syncfusion
+description: Learn how to add text and image watermarks to PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug

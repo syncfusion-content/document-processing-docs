@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics for Syncfusion Excel (XlsIO) Library
-description: Benchmark results for the Syncfusion XlsIO library across common read, create, and save operations for Text, DateTime, Number, Boolean, and Formula data types.
+title: Performance Metrics in .NET Excel Library | Syncfusion
+description: Benchmark results section describes Syncfusion .NET Excel Library performance for reading, creating, and saving common Excel data types.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Performance Metrics in Excel (XlsIO) Library
+# Performance Metrics in .NET Excel Library
 
 This section reports the measured performance of XlsIO for common read, create, and save operations across the Text, DateTime, Number, Boolean, and Formula data types. The numbers below are reference values from a single reference machine and XlsIO version; your results will vary based on hardware, .NET runtime, GC behavior, and input size.
 
@@ -48,27 +48,27 @@ The following table shows the time required to create and save an XLSX document 
   <tr>
     <td>Text</td>
     <td>13</td>   
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type">GitHub page</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub page</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
     <td>15</td>  
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub page</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub page</a></td>
   </tr>
   <tr>
     <td>Number</td>
     <td>5</td>    
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub page</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub page</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
     <td>5</td>     
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub page</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub page</a></td>
   </tr>
   <tr>
     <td>Formula</td>
     <td>35</td>    
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub page</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub page</a></td>
   </tr>
 </table>
 
@@ -85,27 +85,27 @@ The following table shows the time required to load and read cell values from an
   <tr>
     <td>Text</td>
     <td>9</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
     <td>5</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Number</td>
     <td>6</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
     <td>4</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Formula</td>
     <td>9</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
 </table>
 
@@ -113,6 +113,6 @@ The following table shows the time required to load and read cell values from an
 
 - [Improving Performance](https://help.syncfusion.com/document-processing/excel/excel-library/net/improving-performance)
 - [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
-- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)            
 

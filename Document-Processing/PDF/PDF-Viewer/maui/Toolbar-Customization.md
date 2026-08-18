@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolbar item, remove toolbar item, maui pdf viewer toolbar
 ---
 
-# Toolbar Customization in .NET MAUI PDF Viewer (SfPdfViewer)
+# Customize the Toolbar in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to fully customize its built-in toolbars — including showing or hiding entire toolbars, and adding, removing, or reordering individual toolbar items. This flexibility lets you tailor the viewer's interface to match your application's workflow.
 

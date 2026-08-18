@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Display Annotations in Syncfusion PDF Viewer
-description: Learn how to import annotations in Syncfusion TypeScript PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Import annotations into the JavaScript (ES6) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import and Display PDF Annotations Using TypeScript
+# Import Annotations in JavaScript (ES6) PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 

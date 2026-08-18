@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Vue PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting Started with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Server-Backed Vue PDF Viewer | Syncfusion
+description: Get started with the Syncfusion Vue PDF Viewer in server-backed mode to process documents through a backend web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with server-backed Vue PDF Viewer Component in Vue 2
+# Getting Started with Server-Backed Vue PDF Viewer
 
 This section explains how to create the **PDF Viewer** component and configure the PDF Viewer's functionality in a Vue 2 application using Vue CLI with a server-backed architecture. In this mode, PDF rendering and processing are handled by a web service.
 

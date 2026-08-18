@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text selection in TypeScript PDF Viewer control | Syncfusion
-description: Learn how to configure text selection, react to selection events, and manage copy workflows in the Syncfusion TypeScript PDF Viewer.
+title: Textselection in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the textselection in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text selection in TypeScript PDF Viewer
+# Textselection in JavaScript (ES6) PDF Viewer
 
 The TextSelection module allows users to highlight and copy text from the loaded PDF. Text selection is enabled by default and can be configured or monitored programmatically to match application workflows.
 
@@ -86,7 +86,7 @@ Monitor user interaction with selection events to coordinate downstream actions 
 
 ### textSelectionStart
 
-The [textSelectionStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionstartevent) event fires when a user begins selecting text. Use it to reset temporary UI, pause conflicting shortcuts, or capture the starting context.
+The [textSelectionStart](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#textselectionstart) event fires when a user begins selecting text. Use it to reset temporary UI, pause conflicting shortcuts, or capture the starting context.
 
 - Event arguments: `TextSelectionStartEventArgs` supplies details such as `pageNumber`, `bounds`, and `selectionBehavior`.
 
@@ -105,7 +105,7 @@ viewer.appendTo('#PdfViewer');
 
 ### textSelectionEnd
 
-The [textSelectionEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#textselectionendevent) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or store telemetry.
+The [textSelectionEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#textselectionend) event triggers after the selection is finalized. Use it to access the selected text, toggle contextual commands, or store telemetry.
 
 - Event arguments: `TextSelectionEndEventArgs` includes `pageNumber`, `bounds`, `selectedText`, and `isSelectionCopied`.
 

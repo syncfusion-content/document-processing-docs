@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Customize form fields in the JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize PDF form fields using the UI and programmatically with APIs in the Syncfusion JavaScript PDF Viewer.
+title: Customize Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Style PDF form fields in the JavaScript (ES5) PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-## Customize the appearance of PDF form fields in JavaScript
+# Customize Form Field Appearance in JavaScript (ES5) PDF Viewer
 
 Styling customizes appearance only (font, color, alignment, border, background, indicator text).
 
-## Customize appearance of form fields using the UI
+## Customize Form Field Appearance in JavaScript (ES5) PDF ViewerCustomize appearance of form fields using the UI
 Use the **Properties** panel to adjust:
 - font family/size, text color, alignment
 - border color/thickness
 - background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance of form fields programmatically
+## Customize Form Field Appearance in JavaScript (ES5) PDF ViewerCustomize appearance of form fields programmatically
 Use [`updateFormField()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#updateformfields) to apply styles:
 ```html
 <button id="CustomizeTextboxStyle">Update Textbox Style</button>
@@ -47,7 +47,7 @@ document.getElementById('CustomizeTextboxStyle').addEventListener('click', funct
 });
 ```
 
-## Set default styles for new form fields
+## Customize Form Field Appearance in JavaScript (ES5) PDF ViewerSet default styles for new form fields
 Define defaults so fields added from the toolbar inherit styles.
 ```js
 // Apply as defaults for Textbox added from toolbar
@@ -74,7 +74,7 @@ pdfviewer.textFieldSettings = {
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
-## See also
+## Customize Form Field Appearance in JavaScript (ES5) PDF ViewerSee also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

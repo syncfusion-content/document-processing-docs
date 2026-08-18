@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Override keyboard shortcuts in React DOCX Editor | Syncfusion
-description: Learn here all about Override the keyboard shortcuts in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Override Keyboard Shortcuts in React DOCX Editor | Syncfusion
+description: Override default keyboard shortcuts in Syncfusion® React DOCX Editor to customize user interactions and implement application-specific commands.
 control: Override the keyboard shortcuts
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Override the keyboard shortcuts in React Document Editor component
+# How to Override Keyboard Shortcuts in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) triggers the [`keyDown`](https://ej2.syncfusion.com/react/documentation/api/document-editor#keydown) event every time any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs). You can use the [`isHandled`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
 

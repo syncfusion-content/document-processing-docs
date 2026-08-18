@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View PDF from Azure Blob Storage | Syncfusion
-description: Learn how to load PDFs from Azure Blob Storage in the Syncfusion ASP.NET Core PDF Viewer component using standalone and server-backed approaches.
+title: From Azure Blob Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Azure Blob Storage in the ASP.NET Core PDF Viewer using a server-backed web service for secure access.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open Documents from Azure Blob Storage
+# Open PDF from Azure Blob Storage in ASP.NET Core PDF Viewer
 
 The ASP.NET Core PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. Both approaches are demonstrated below.
 

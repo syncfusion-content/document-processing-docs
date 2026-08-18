@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Control file downloads in Vue PDF Viewer | Syncfusion
-description: Learn how to intercept and control file downloads in the Vue PDF Viewer using the downloadStart event.
+title: How to Control File Downloads in Vue PDF Viewer | Syncfusion
+description: Intercept and control file downloads in the Vue PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control file downloads in the Vue PDF Viewer
+# How to Control File Downloads in Vue PDF Viewer
 
 The PDF Viewer exposes a [`downloadStart`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#downloadstart) event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting the event's `cancel` flag.
 
-### Using the downloadStart Event
+## Using the downloadStart Event
 
 The `downloadStart` event fires immediately before the download process starts. The event handler receives a `DownloadStartEventArgs` object (for example, `args`) that exposes properties such as `cancel` and `fileName` which can be used to inspect or stop the download.
 

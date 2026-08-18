@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Saving PDF file in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about saving PDF file in Blazor SfPdfViewer component and more.
+title: Saving PDF file in Blazor PDF Viewer | Syncfusion
+description: Check out and learn here all about saving PDF file in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Saving PDF file in Blazor SfPdfViewer Component
+# Saving PDF file in Blazor PDF Viewer 
 
 After editing a PDF with annotations or form fields, the updated document can be saved to a server, persisted to a database, or downloaded to the local file system. Examples below illustrate common approaches and recommended practices.
 
