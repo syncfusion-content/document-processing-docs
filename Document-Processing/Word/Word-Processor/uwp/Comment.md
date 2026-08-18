@@ -1,12 +1,12 @@
 ---
-title: Comment in UWP RichTextBox control | Syncfusion
-description: Learn here all about Comment support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Comments in UWP DOCX Editor | Syncfusion
+description: The comments feature in UWP DOCX Editor offers note or annotation support, enabling viewing and editing comments in the document review pane.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: comment
 ---
-# Comment in UWP RichTextBox (SfRichTextBoxAdv)
+# Comments in UWP DOCX Editor
 
 A Comment is a note or annotation that an author or reviewer can add to the document. The SfRichTextBoxAdv control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
 ![Comment_img1](Comment_images/Comment_img1.jpeg)

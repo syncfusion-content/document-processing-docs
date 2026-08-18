@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open document from AWS S3 in ASP.NET MVC DOCX editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from AWS S3 in ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from AWS S3 in ASP.NET MVC DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 in ASP.NET MVC Document editor
+# Open Documents from AWS S3 in ASP.NET MVC DOCX Editor
 
 To load a document from AWS S3 in a [ASP.NET MVC Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), you can follow the steps below.
 

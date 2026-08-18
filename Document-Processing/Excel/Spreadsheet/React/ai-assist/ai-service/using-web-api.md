@@ -1,13 +1,13 @@
 ---
 layout: post
 title: AI Assist Web API Server Setup in React Spreadsheet | Syncfusion
-description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion React Spreadsheet component.
+description: AI Assist Web API server setup in React Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist — Web API (.NET) Server Setup
+# AI Assist — Web API Server Setup in React Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 

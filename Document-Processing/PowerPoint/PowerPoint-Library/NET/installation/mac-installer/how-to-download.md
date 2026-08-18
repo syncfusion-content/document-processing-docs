@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Downloading the Syncfusion<sup>&reg;</sup> PowerPoint Mac Installer
-description: Learn how to download the Syncfusion<sup>&reg;</sup> PowerPoint Mac installer from our website for licensed and trial users.
+title: How to Download Syncfusion PowerPoint Mac Installer | Syncfusion
+description: Learn how to download the Syncfusion® PowerPoint Mac installer from our website for licensed and trial users.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 --- 
 
-# Downloading Syncfusion<sup>&reg;</sup> PowerPoint Mac Installer
+# How to Download Syncfusion PowerPoint Mac Installer
 
 The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

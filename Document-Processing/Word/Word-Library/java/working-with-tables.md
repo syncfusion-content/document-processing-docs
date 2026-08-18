@@ -1,11 +1,11 @@
 ---
-title: Working With Tables | DocIO | Syncfusion
-description: This section illustrates how to work with Tables in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Tables in Java Word | Syncfusion
+description: This section illustrates how to create and customize tables in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Tables in Word document
+# Document Tables in Java Word
 
 A table in Word document is used to arrange document content in rows and columns. `WTable` instance represents a table in Word document. A table must contain at least one row.
 

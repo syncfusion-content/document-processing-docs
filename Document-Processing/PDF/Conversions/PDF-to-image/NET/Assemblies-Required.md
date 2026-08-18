@@ -1,12 +1,12 @@
 ---
-title: Assemblies required for PDFToImageConverter library | Syncfusion&reg;
-description: Learn the assemblies required to use Syncfusion&reg; PDFToImageConverter library in various platforms and frameworks.
+title: Assemblies Required for PDF to Image Converter Library | Syncfusion
+description: Learn about the assemblies required to use the Syncfusion PDF to Image Library across supported platforms and frameworks for PDF conversion.
 platform: document-processing
 control: PDF to image
 documentation: UG
 ---
 
-# Assemblies Required to work with PDFToImageConverter
+# Assemblies Required for PDF to Image Converter Library
 
 The following assemblies need to be referenced in your application based on the target platform.
 

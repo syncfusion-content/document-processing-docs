@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Server-side export in React DOCX Editor | Syncfusion
-description: Learn here all about Server-side export in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
+description: Server-side export in React DOCX Editor allows documents to be processed and exported using web services.
 control: Server-side export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server-side export in React Document Editor
+# Server-side export in React DOCX Editor
 
 ## SFDT to DOCX export
 

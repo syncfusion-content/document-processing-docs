@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Hyperlink navigation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Hyperlink Navigation in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) lets you open URLs or website links in the default browser. When a user taps or clicks a hyperlink on a PDF page, the SfPdfViewer recognizes the link and prompts a hyperlink dialog asking the user if they want to open the link.
 

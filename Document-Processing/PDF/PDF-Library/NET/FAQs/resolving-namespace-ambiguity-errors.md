@@ -1,12 +1,12 @@
 ---
-title: Resolving Namespace Ambiguity Errors| Syncfusion
-description: This page explains how to fix namespace conflicts in .NET applications caused by using Syncfusion PDF packages like Syncfusion.Pdf.Net.Core and PdfViewer
+title: Namespace Conflicts in .NET PDF library | Syncfusion
+description: Learn how to resolve namespace ambiguity errors caused by using Syncfusion PDF packages in .NET applications.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Resolving Namespace Conflicts in Syncfusion® PDF Packages
+# Namespace Conflicts in .NET PDF library
 
 ## Conflict Scenario
 

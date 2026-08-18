@@ -1,12 +1,12 @@
 ---
-title: How to avoid conflicts with multiple Syncfusion library versions
-description: This page explains about how to avoid conflicts when using multiple versions of Syncfusion libraries.
+title: How to Avoid Version Conflicts in .NET Excel Library | Syncfusion
+description: Avoid version conflicts when using multiple Syncfusion libraries by managing references and assemblies correctly.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Avoid conflicts with multiple Syncfusion library versions
+# How to avoid Syncfusion version conflicts in .NET Excel Library
 
 When working with Syncfusion across multiple projects in a solution, version mismatches can lead to build errors, runtime issues, and unexpected behavior. This FAQ outlines common problems and best practices to maintain consistency and avoid conflicts.
  

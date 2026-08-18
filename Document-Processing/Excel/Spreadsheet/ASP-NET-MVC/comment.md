@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in EJ2 ASP.NET MVC Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comments in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to add, edit, and manage comments in the Syncfusion ASP.NET MVC Spreadsheet for better collaboration and annotations.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in EJ2 ASP.NET MVC Spreadsheet control
+# Comments in ASP.NET MVC Spreadsheet
 The **Comment** feature allows users to add feedback to cells without changing their values and supports contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comments include advanced review tools such as **Resolve** and **Reopen** for tracking the status of discussions. The optional **Comments review pane** can be used to browse and manage comment threads.
 
 Cells containing comments display a small comment indicator. Hover over the indicator to preview the comment.

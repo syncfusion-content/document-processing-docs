@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize font family drop down in Vue Document editor component | Syncfusion
-description: Learn here all about Customize font family drop down in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Font Family in Vue DOCX Editor | Syncfusion
+description: Customize the font family drop down list in Syncfusion® Vue DOCX Editor by configuring available font families and controlling font selection options.
 control: Customize font family drop down 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize font family drop down in Vue Document editor component
+# How to Customize Font Family in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an options to customize the font family drop down list values using [`fontfamilies`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#fontfamilies) in Document editor settings. Fonts which are added in fontFamilies of [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditorsettings) will be displayed on font drop down list of text properties pane and font dialog.
 

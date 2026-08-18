@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations in Mobile View using SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, and manage annotations in the mobile view of the Blazor SfPdfViewer component
+title: Annotations in Mobile View in Blazor PDF Viewer | Syncfusion
+description: Learn how to add, edit, and manage annotations in the mobile view of the Blazor PDF Viewer component and more details. 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotations in Mobile View
+# Annotations in Mobile View in Blazor PDF Viewer
 
 This guide explains how to add, edit, and manage PDF annotations in the mobile view of the Syncfusion Blazor `SfPdfViewer` component. By the end, you will know how to open the annotation toolbar, add each annotation type, adjust properties, and use the comments panel on a mobile device.
 

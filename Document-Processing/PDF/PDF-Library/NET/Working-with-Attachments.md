@@ -1,11 +1,11 @@
 ---
-title: Working with Attachments | PDF library | Syncfusion
-description: This section explains how to add, remove, and extract attachments in a PDF document. Attachments can contain any kind of file with detailed information.
+title: Attachments in .NET PDF Library | Syncfusion
+description: Learn how to add, remove, and extract file attachments in a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Attachments
+# Attachments in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF provides support for file attachments in PDF documents. These attachments can include any type of file, providing additional information within the PDF.
 

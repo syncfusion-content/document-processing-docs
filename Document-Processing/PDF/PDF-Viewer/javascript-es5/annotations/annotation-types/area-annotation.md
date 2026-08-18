@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Area annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Area measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Area Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the JavaScript (ES5) PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area annotation in JavaScript PDF Viewer
+# Area Annotation in JavaScript (ES5) PDF Viewer
 
 Area is a measurement annotation used to measure the surface of a closed region in the PDF.
 

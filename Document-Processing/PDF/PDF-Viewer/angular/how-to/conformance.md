@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Supported PDF conformance levels in Angular | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels in the Syncfusion Angular PDF Viewer component.
+title: How to Use PDF/A and PDF/X Conformance in Angular PDF | Syncfusion
+description: Learn about the PDF/A and PDF/X conformance levels supported in the Syncfusion PDF tools used together with the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported PDF Conformance in an Angular PDF Viewer Component
+# How to Use PDF/A and PDF/X Conformance in Angular PDF Viewer
 
 The Angular PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 

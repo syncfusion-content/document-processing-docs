@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to enable ruler in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn how to enable the ruler in the ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Enable Ruler in ASP.NET MVC DOCX Editor | Syncfusion
+description: Enable the ruler in Syncfusion® ASP.NET MVC DOCX Editor to set margins, tab stops, and paragraph indentations for precise document formatting.
 platform: document-processing
 control: Enable Ruler
 documentation: ug
 ---
 
-# How to enable the ruler in the ASP.NET MVC Document Editor component
+# How to Enable Ruler in React ASP.NET MVC Editor
 
 To enable the ruler, set the [`showRuler`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorSettings.html) property to `true` in the `documentEditorSettings` of the Document Editor component. By default, the ruler is disabled. The ruler can be used to set specific margins, tab stops, or indentations within a document to ensure consistent formatting.
 

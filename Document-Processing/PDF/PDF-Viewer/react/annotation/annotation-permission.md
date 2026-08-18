@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in React PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion React PDF Viewer using programmatic APIs.
+title: Annotation Permission in React PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the React PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions in React
+# Annotation Permissions in React PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 

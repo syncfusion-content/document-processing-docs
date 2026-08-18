@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Server-side export in Angular DOCX Editor | Syncfusion
-description: Learn here all about Server-side export in the Syncfusion Angular Document Editor of Syncfusion Essential JS 2 and more.
+title: Export in Angular DOCX Editor | Syncfusion
+description: The export feature in Angular DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Server-side export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server-side export in Angular Document Editor
+# Server-side Export in Angular DOCX Editor
 
 ## SFDT to DOCX export
 

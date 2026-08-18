@@ -1,12 +1,12 @@
 ---
-title: Setting Invert If negative option in Chart properties | Syncfusion
-description: This page tells how to set invert if negative option for a chart using Syncfusion XlsIO in C# (Cross-platform and Windows-specific) and VB.NET.
+title: How to Invert Negative Chart Values in .NET Excel | Syncfusion
+description: Learn how to set the invert if negative option for a chart programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set invert if negative option for a chart using XlsIO?
+# How to set invert-if-negative in charts in .NET Excel Library
 
 
 The following code samples demonstrate how to set the "Invert if negative" option for a chart using C# (Cross-platform and Windows-specific) and VB.NET for XLSX files. For XLS (binary) file format, see the section below.
@@ -74,7 +74,7 @@ End Using
 {% endhighlight %}
 {% endtabs %} 
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1007137-ChartInvert/FAQ/Chart/.NET/ChartInvertIfNegative">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1007137-ChartInvert/FAQ/Chart/.NET/ChartInvertIfNegative" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## How to set invert if negative option for a chart in XLS (binary) file format?
 

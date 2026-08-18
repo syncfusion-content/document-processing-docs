@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Markdown in C# | XlsIO | Syncfusion
-description: Learn how to convert Excel workbooks or worksheets to Markdown files using Syncfusion .NET XlsIO, without Microsoft Office or Interop dependencies.
+title: Excel to Markdown Conversion using .NET Excel Library | Syncfusion
+description: Excel to Markdown conversion describes how Syncfusion .NET Excel Library converts workbooks or worksheets into Markdown files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to Markdown Conversion
+# Excel to Markdown Conversion in .NET Excel Library
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Excel to Markdown document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -67,7 +67,7 @@ End Using
 
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Customize image saving
 
@@ -171,7 +171,7 @@ End Sub
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Markdown Export Options
 

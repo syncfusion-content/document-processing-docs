@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Selection in EJ2 ASP.NET CORE Spreadsheet Control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Selection in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about selection in the Syncfusion ASP.NET Core Spreadsheet control, including cell, row, column, and range selection options.
 platform: document-processing
 control: Selection
 documentation: ug
 ---
 
 
-# Selection in ASP.NET Core Spreadsheet Control
+# Selection in ASP.NET Core Spreadsheet
 
 Selection highlights the cell, row, or column you select. You can perform selection using mouse, touch, or keyboard interactions. To enable selection, set the `mode` property in [`selectionSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_SelectionSettings) to `Single` or `Multiple`. Set it to `None` to disable UI selection.
 

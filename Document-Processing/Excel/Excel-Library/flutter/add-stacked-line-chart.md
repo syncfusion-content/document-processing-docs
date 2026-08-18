@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Stacked Line Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the Stacked line chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Stacked Line Chart in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library allows users create and customize stacked line charts in Excel worksheets.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Stacked line Chart to Excel worksheet
+# Stacked Line Chart in Syncfusion Excel Library
 
 A stacked line graph is a line graph in which lines don't overlap because they are cumulative at each point. A stacked line graph displays series as a set of points connected by a line. Values are represented on the y-axis and categories are displayed on the x-axis
 
