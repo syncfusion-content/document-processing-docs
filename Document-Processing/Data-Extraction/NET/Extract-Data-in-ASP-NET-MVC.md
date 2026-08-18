@@ -1,6 +1,6 @@
 ---
-title: Extract Data in ASP.NET MVC Application | Syncfusion
-description: Learn how to extract data in an ASP.NET MVC application with step‑by‑step guidance using the Syncfusion Data Extraction library.
+title: Getting Started with ASP.NET MVC Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET MVC Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data in ASP.NET MVC
+# Getting Started with ASP.NET MVC Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in ASP.NET MVC applications.
 

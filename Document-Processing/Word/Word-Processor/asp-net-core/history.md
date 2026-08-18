@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about history in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: History in ASP.NET Core DOCX Editor | Syncfusion
+description: History in ASP.NET Core DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
 control: History
 documentation: ug
 ---
 
 
-# History in ASP.NET Core Document Editor Component
+# History in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 

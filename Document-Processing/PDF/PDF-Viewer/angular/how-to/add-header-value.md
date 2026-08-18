@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add header values to AJAX requests in Angular PDF Viewer | Syncfusion
-description: Learn how to include custom headers in PDF Viewer AJAX requests using ajaxRequestSettings and ajaxHeaders in the Angular PDF Viewer component.
+title: How to Add Headers to AJAX Requests in Angular PDF Viewer | Syncfusion
+description: Add custom headers to PDF Viewer AJAX requests in the Angular PDF Viewer using ajaxRequestSettings and the ajaxHeaders configuration object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add header values in the Angular PDF Viewer
+# How to Add Headers to AJAX Requests in Angular PDF Viewer
 
 Use the ajaxHeaders property in the PDF Viewer's [ajaxRequestSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#ajaxrequestsettings) to include custom headers with each AJAX request.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Events in ASP.NET Core PDF Viewer | Syncfusion
-description: Comprehensive guide to annotation events in the Syncfusion ASP.NET Core PDF Viewer component with runnable examples.
+title: Annotation Event in ASP.NET Core PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the ASP.NET Core PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

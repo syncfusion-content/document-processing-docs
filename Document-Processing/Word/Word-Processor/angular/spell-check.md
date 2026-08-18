@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in Angular DOCX editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in Angular DOCX Editor | Syncfusion
+description: The spell check feature in Angular DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell check
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell Check in Angular Document Editor
+# Spell Check in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Box Cloud Files in Angular DOCX Editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion Angular Document Editor control of Syncfusion Essential JS 2 and more.
+title: Open Documents from Box Cloud in Angular DOCX Editor | Syncfusion
+description: Open documents from Box cloud file storage in Angular DOCX Editor, enabling secure cloud storage integration and document access.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in Angular Document Editor
+# Open Documents from Box Cloud File Storage in Angular DOCX Editor
 
 To load a document from Box cloud file storage in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 

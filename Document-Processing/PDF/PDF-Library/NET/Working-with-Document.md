@@ -1,11 +1,11 @@
 ---
-title: Working with Document | PDF library | Syncfusion
-description: Learn Syncfusion .NET PDF page setup, sections, document properties, viewer preferences, compression, multithreading, and URN support
+title: Document in .NET PDF Library | Syncfusion
+description: Learn about Syncfusion .NET PDF page setup, sections, document properties, viewer preferences, and compression features.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Document
+# Document in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF provides a comprehensive set of APIs for configuring the page layout, document information, viewer behavior, and runtime options of a PDF document. The following sections cover the most common scenarios:
 
@@ -521,7 +521,7 @@ SendToPrinter("Input.pdf")
 
 {% endtabs %}
 
-## Working with document properties
+## Document in .NET PDF Library properties
 
 Essential<sup>&reg;</sup> PDF allows you to set, read, and modify the document information of a PDF, such as Author, CreationDate, Subject, Title, and Producer. The [DocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_DocumentInformation) property of the [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) or [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) provides access to this information through the [PdfDocumentInformation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfDocumentInformation.html) class. These values are stored in the PDF information dictionary and are visible from the **File &gt; Properties &gt; Description** dialog in most PDF viewers.
 

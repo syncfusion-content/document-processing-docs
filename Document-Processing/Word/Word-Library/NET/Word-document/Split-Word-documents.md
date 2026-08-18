@@ -1,11 +1,11 @@
 ---
-title: Split Word documents in C# | DocIO | Syncfusion
-description: Learn how to split a large Word document into several smaller ones using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Split Word documents in .NET Word | Syncfusion
+description: Learn how to split a large Word document into several smaller ones using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Split Word documents
+# Split Word documents in .NET Word
 
 The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows you to split a large Word document into a number of smaller Word documents by section, heading, bookmark, and placeholder text programmatically.
 
@@ -363,7 +363,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Split by Bookmark
 
-The following code example illustrates how to split the Word document using bookmarks. The [`BookmarksNavigator.MoveToBookmark`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) API moves the virtual cursor to a bookmark, and [`GetContent`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html) returns the bookmark range as a `WordDocumentPart`; calling `WordDocumentPart.GetAsWordDocument()` produces a standalone `WordDocument` containing the bookmark's contents.
+The following code example illustrates how to split the Word document using bookmarks. The [`BookmarksNavigator.MoveToBookmark`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_MoveToBookmark_System_String_) API moves the virtual cursor to a bookmark, and [`GetContent`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarksNavigator.html#Syncfusion_DocIO_DLS_BookmarksNavigator_GetContent) returns the bookmark range as a `WordDocumentPart`; calling `WordDocumentPart.GetAsWordDocument()` produces a standalone `WordDocument` containing the bookmark's contents.
 
 
 {% tabs %}

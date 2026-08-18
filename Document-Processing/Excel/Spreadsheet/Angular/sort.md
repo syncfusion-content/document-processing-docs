@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sort in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Sort in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sorting in Angular Spreadsheet | Syncfusion
+description: Sorting in Angular Spreadsheet enables users to arrange data in ascending or descending order for easier analysis and organization.
 platform: document-processing
 control: Sort 
 documentation: ug
 ---
 
-# Sort in Angular Spreadsheet component
+# Sort in Angular Spreadsheet 
 
 Sorting helps arrange the data in a specific order within a selected range of cells. Use the [`allowSorting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsorting) property to enable or disable sorting functionality.
 

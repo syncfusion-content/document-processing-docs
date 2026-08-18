@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to AWS S3 using the Syncfusion React PDF Viewer component in standalone and server-backed configurations.
+title: To Amazon S3 in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to AWS S3 in React
+# Save PDF Files to AWS S3 in React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to AWS S3 using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include notes on prerequisites and security considerations for production use.
 

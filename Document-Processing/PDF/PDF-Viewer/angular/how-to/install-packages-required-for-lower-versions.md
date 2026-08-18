@@ -1,10 +1,10 @@
 ---
-title: Install packages required for versions below 12 | Syncfusion
+title: How to Install Packages for Older PDF Viewer Versions | Syncfusion
 component: "PDF Viewer"
-description: Learn here all about how to install the packages required for versions below 12 in PDF Viewer control.
+description: Install the NuGet packages required for older versions of the Syncfusion PDF Viewer web service used by the Angular PDF Viewer.
 ---
 
-# Install packages required for versions below 12
+# How to Install Packages for Older PDF Viewer Versions in Angular PDF
 
 For Angular versions below 12, use the legacy (ngcc) package of the Angular components. To download the `ngcc` package, use the commands below.
 

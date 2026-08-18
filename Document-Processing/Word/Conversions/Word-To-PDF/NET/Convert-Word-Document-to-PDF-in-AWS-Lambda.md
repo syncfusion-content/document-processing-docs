@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF in AWS Lambda | Syncfusion
-description: Convert Word to PDF in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to PDF in AWS Lambda  | Syncfusion
+description: Convert Word to PDF in AWS Lambda using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word Document to PDF in AWS Lambda
+# Convert Word to PDF in AWS Lambda 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can convert a Word document to PDF in AWS Lambda.
 

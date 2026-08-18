@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Fields in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about Form Fields in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
+title: Form Fields in ASP.NET MVC DOCX Editor | Syncfusion
+description: Form fields in ASP.NET MVC DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
 control: Form Fields
 documentation: ug
 ---
 
 
-# Form Fields in ASP.NET MVC Document Editor Control
+# Form Fields in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 

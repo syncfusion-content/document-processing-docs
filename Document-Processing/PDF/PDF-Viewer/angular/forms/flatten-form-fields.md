@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Flatten PDF form fields in Angular PDF Viewer | Syncfusion
-description: Learn how to flatten interactive PDF form fields before download or save-as in EJ2 Angular PDF Viewer.
+title: Flatten Form Fields in Angular PDF Viewer | Syncfusion
+description: Flatten interactive PDF form fields in the Angular PDF Viewer before downloading or saving the PDF so the fields become static content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Flatten PDF form fields in Angular
+# Flatten Form Fields in Angular PDF Viewer
 
 ## Overview
 

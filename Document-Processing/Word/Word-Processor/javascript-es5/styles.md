@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Styles in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Styles in JavaScript DOCX Editor | Syncfusion
+description: The styles feature in JavaScript DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 platform: document-processing
 control: Styles 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in JavaScript (ES5) Document editor control
+# Styles in JavaScript DOCX Editor
 
 Styles are useful for applying a set of formatting consistently throughout the document. In [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
 

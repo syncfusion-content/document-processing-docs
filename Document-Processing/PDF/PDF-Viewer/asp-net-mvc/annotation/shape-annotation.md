@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shape annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ASP.NET MVC PDF Viewer control
+# Shape Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 

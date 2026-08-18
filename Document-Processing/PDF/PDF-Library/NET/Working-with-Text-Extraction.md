@@ -1,11 +1,11 @@
 ---
-title: Working with Text Extraction | Syncfusion
-description: This section explains how to extract text and its bounds from a particular page or the entire PDF document.
+title: Text Extraction in .NET PDF Library | Syncfusion
+description: Learn how to extract text and its bounds from a page or the entire PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Text Extraction
+# Text Extraction in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF allows you to extract the text from a particular page or the entire PDF document. The extracted text can include the line, word, and glyph details, along with the font, color, and bounding-rectangle information needed for redaction, search, indexing, and accessibility scenarios.
 

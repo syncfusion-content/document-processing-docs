@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Thumbnail Navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Enable and use page thumbnails for navigation in ASP.NET Core PDF Viewer. Learn how to enable thumbnails and use thumbnail navigation APIs.
+title: Page Thumbnail in ASP.NET Core PDF Viewer | Syncfusion
+description: Use page thumbnail navigation in the ASP.NET Core PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Page Thumbnail navigation in ASP.NET Core PDF Viewer
+# Page Thumbnail Navigation in ASP.NET Core PDF Viewer
 
 Page thumbnails provide miniature representations of pages and enable quick navigation. Use the thumbnail pane to jump to specific pages without scrolling.
 

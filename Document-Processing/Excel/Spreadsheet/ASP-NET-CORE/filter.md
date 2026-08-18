@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Filter in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filtering in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about filtering in the Syncfusion ASP.NET Core Spreadsheet control, including applying, clearing, and managing data filters.
 platform: document-processing
 control: Filter
 documentation: ug
 ---
 
 
-# Filtering in ASP.NET Core Spreadsheet control
+# Filtering in ASP.NET Core Spreadsheet
 
 Filtering helps you to view specific rows in the Spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowFiltering) property to enable or disable filtering functionality.
 

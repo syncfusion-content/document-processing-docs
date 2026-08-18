@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to resize the editor in Syncfusion JavaScript (ES6) DOCX Editor by changing the height and width properties.
+title: How to Resize in TypeScript DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® TypeScript DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Resize the Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in JavaScript (ES6) Document Editor
+# How to Resize in TypeScript DOCX Editor 
 
 In this article, we are going to see how to change the height and width of the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 

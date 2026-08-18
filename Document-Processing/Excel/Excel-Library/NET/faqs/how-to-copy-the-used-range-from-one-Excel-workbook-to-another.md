@@ -1,12 +1,12 @@
 ---
-title: Copy used range in Excel | Syncfusion  
-description: Learn how to copy the used range from one Excel workbook to another using the .NET Excel Library.
+title: How to Copy Used Ranges in .NET Excel Library | Syncfusion
+description: Copy the used range from one Excel workbook to another using the Syncfusion .NET Excel Library for workbook data reuse.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to copy the used range from one Excel workbook to another?
+# How to copy used ranges between workbooks in .NET Excel Library
 
 The [UsedRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_UsedRange) of [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) returns the contiguous range that contains data in a worksheet. By default, Excel also considers cells that have only formatting applied as part of the used range.
 
@@ -79,4 +79,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to copy the used range from a source workbook to a destination workbook using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange">this GitHub page</a>.
+A complete working example to copy the used range from a source workbook to a destination workbook using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Copy%20Used%20Range/.NET/CopyUsedRange" aria-label="GitHub demo link">this GitHub page</a>.

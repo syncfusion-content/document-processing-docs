@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Displaying Custom Stamp Items in the Angular PDF Viewer | Syncfusion
-description: Learn how to display custom items in the custom stamp dropdown in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Show Custom Stamp Items in Angular PDF Viewer | Syncfusion
+description: Display custom items in the custom stamp dropdown in the Angular PDF Viewer using customStampSettings to provide tailored stamp options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display custom stamp items in the custom stamp dropdown
+# How to Show Custom Stamp Items in Angular PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to add custom images to the custom stamp dropdown in the Angular PDF Viewer so users can apply personalized stamps to documents.
 

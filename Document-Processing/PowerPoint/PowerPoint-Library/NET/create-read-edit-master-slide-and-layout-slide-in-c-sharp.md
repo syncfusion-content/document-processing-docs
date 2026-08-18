@@ -1,12 +1,12 @@
 ---
-title: Create, read and edit Master and Layout slides in CSharp |Syncfusion<sup>&reg;</sup>|
-description: Create, read, and edit Master slides and Layout slides using .NET PowerPoint library (Essential<sup>&reg;</sup> Presentation).
+title: Master and Layout Slides in .NET PowerPoint Presentation | Syncfusion
+description: Create, read, and edit master slides and layout slides using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Create, Read, and Edit Master and Layout slides
+# Master and Layout Slides in .NET PowerPoint Presentation
 
 To make all slides share the same format, apply your changes to the Slide Master or Layout Master. The changes are applied to every slide that inherits the master slide or layout slide.
 

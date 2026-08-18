@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Docker image deployment in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Docker Image Deployment in Angular Spreadsheet | Syncfusion
+description: Docker image deployment in Angular Spreadsheet enables containerized hosting for consistent, scalable, and efficient application delivery.
 platform: document-processing
 control: Docker deployment
 documentation: ug
 ---
 
-# Docker Image Deployment in Angular Spreadsheet Component
+# Docker Image Deployment in Angular Spreadsheet 
 
 The [**Angular Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 

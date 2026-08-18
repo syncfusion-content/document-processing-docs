@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find and Replace in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Find and Replace support in Syncfusion® Windows Forms Spreadsheet control and more details.
+description: Search worksheet content and replace matching values across cells and ranges using Find and Replace in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Scrolling and Zooming in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about scrolling and zooming in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+description: The scrolling and zooming in ASP.NET MVC DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug
 ---
 
 
-# Scrolling and Zooming
+# Scrolling and Zooming in ASP.NET MVC DOCX Editor
 
 The Document Editor renders the document page by page. You can scroll through the pages by using the mouse wheel or touch interactions. You can also scroll to a specific page by using the `scrollToPage()` method of the Document Editor instance.
 

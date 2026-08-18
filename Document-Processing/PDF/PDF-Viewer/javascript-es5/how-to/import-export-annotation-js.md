@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import and export annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion JavaScript PDF Viewer.
+title: How to Import and Export Annotations in JavaScript (ES5) | Syncfusion
+description: Import and export annotations in the JavaScript (ES5) PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and export annotations in JavaScript PDF Viewer
+# How to Import and Export Annotations in JavaScript (ES5) PDF Viewer
 
 Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [exportAnnotationsAsObject()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
 
