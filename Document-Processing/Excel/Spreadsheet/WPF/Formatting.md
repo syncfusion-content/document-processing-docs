@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Formatting in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Formatting support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Format cells in the WPF Spreadsheet control with fonts, colors, borders, alignment, number formats, and other styling options.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Formatting in WPF Spreadsheet (SfSpreadsheet)
+# Formatting in WPF Spreadsheet
 
 This section explains the formatting options available in SfSpreadsheet, similar to those in Microsoft Excel.
 

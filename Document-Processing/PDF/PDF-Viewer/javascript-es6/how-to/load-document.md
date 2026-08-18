@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load documents dynamically in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion TypeScript PDF Viewer using the load method.
+title: How to Load Documents Dynamically in JavaScript (ES6) | Syncfusion
+description: Load or switch PDF documents dynamically in the JavaScript (ES6) PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load documents dynamically in TypeScript PDF Viewer
+# How to Load Documents Dynamically in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature module in Vue Document editor component | Syncfusion
-description: Learn here all about Feature module in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Feature Modules in Vue DOCX Editor | Syncfusion
+description: Modules in Vue DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 control: Feature module 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in Vue Document editor component
+# Feature Modules in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
 * **Print** - Prints the document.

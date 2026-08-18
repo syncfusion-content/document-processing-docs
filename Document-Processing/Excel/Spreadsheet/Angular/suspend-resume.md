@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Suspend and Resume UI Refresh in Angular Spreadsheet | Syncfusion
-description: Improve performance in Syncfusion Angular Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
+description: Suspend and resume UI refresh in Angular Spreadsheet improve performance by batching multiple updates and reducing unnecessary rendering.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

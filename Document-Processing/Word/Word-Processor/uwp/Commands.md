@@ -1,12 +1,12 @@
 ---
-title: Commands in UWP RichTextBox control | Syncfusion
-description: Learn here all about Commands support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Commands in UWP DOCX Editor | Syncfusion
+description: The commands in UWP DOCX Editor offer a loosely coupled way to handle UI actions, enabling character and paragraph formatting, clipboard, and table operations.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: commands,boldcommand,italiccommand,underlinecommand,table-commands,paragraph-commands,clipboard-commands,command-parameter
 ---
-# Commands in UWP RichTextBox (SfRichTextBoxAdv)
+# Commands in UWP DOCX Editor
 
 Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports commands for the most commonly used operations, classified below.
 

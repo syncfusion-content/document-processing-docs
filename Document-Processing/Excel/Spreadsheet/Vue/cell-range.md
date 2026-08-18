@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell range in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Cell range in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Ranges in Vue Spreadsheet | Syncfusion
+description: Learn how to manage cell ranges in the Syncfusion Vue Spreadsheet, including selection, formatting, and range operations.
 control: Cell range 
 platform: document-processing
 documentation: ug
 ---
 
-# Cell range in Vue Spreadsheet component
+# Cell Ranges in Vue Spreadsheet
 
 A group of cells in a sheet is known as cell range.
 

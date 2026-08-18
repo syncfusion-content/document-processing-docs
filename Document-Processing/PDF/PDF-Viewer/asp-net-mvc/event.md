@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Events in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Event in ASP.NET MVC PDF Viewer | Syncfusion
+description: A complete list of events in the ASP.NET MVC PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Events in ASP.NET MVC PDF Viewer control
+# Events in ASP.NET MVC PDF Viewer
 
 The PDF Viewer component triggers events for creation, page navigation, document life cycle, context menu interactions, comments, bookmarks, downloads/exports, hyperlinks, import/export of annotations, keyboard commands, printing, signatures, text search, and text selection. Use these events to integrate custom logic into your application workflows.
 

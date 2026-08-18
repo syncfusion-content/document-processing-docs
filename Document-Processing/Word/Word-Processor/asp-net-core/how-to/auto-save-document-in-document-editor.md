@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto Save Document in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about auto save document in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Auto Save to AWS S3 in ASP.NET Core DOCX Editor | Syncfusion
+description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® ASP.NET Core DOCX Editor for reliable cloud-based storage.
 platform: document-processing
 control: Auto Save Document In Document Editor
 documentation: ug
 ---
 
 
-# Automatically Save Document in ASP.NET Core Document Editor Component
+# How to Auto Save Document in ASP.NET Core DOCX Editor
 
 This article explains how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps to reduce the risk of data loss by saving an open document automatically at customized intervals.
 

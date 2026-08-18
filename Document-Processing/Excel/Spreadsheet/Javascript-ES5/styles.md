@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in EJ2 JavaScript Spreadsheet Control | Syncfusion
-description: Learn here all about Styles in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Styles in JavaScript Spreadsheet | Syncfusion
+description: Styles in JavaScript Spreadsheet enable users to customize cell appearance with fonts, colors, borders, and formatting options.
 platform: document-processing
 control: Styles
 documentation: ug
 ---
 
-# Styles in EJ2 JavaScript Spreadsheet Control
+# Styles in JavaScript Spreadsheet 
 
 To modify the Spreadsheet appearance, you need to override the default CSS of the spreadsheet. Please find the CSS structure that can be used to modify the Spreadsheet appearance. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Text Format in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn here all about text format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+description: Text format properties in ASP.NET Core DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text Format
 documentation: ug
 ---
 
 
-# Text Formatting in ASP.NET Core Document Editor
+# Text Format in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports several text formatting options such as bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

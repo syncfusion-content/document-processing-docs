@@ -7,9 +7,9 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory in ASP.NET MVC
+# Open PDF from Azure Active Directory in ASP.NET MVC PDF Viewer
 
-### Overview
+## Overview
 
 The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 

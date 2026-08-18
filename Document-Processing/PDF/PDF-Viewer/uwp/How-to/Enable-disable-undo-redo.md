@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disable undo and redo in UWP PDF viewer | Syncfusion
-description: Learn here about the support to enable and disable the undo and redo operations in UWP PDF viewer control.
+title: How to Support to disable the undo and redo operations | Syncfusion
+description: Learn how to support to disable the undo and redo operations in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Support to disable the undo and redo operations
+# How to Support disable undo and redo in UWP PDF Viewer
 
 The undo operation using both the `UndoCommand` and keyboard shortcut Ctrl+Z can be enabled or disabled using the `IsUndoEnabled` property. The default value of this property is true.
 {% tabs %}

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Table of content navigation in Xamarin Pdf Viewer (SfPdfViewer)
+# Table of content navigation in Xamarin Pdf Viewer
 
 The [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) navigates to a specific destination within the PDF document.
 

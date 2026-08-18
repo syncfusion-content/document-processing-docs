@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to Export annotations in Syncfusion JavaScript PDF Viewer using UI options and programmatic APIs.
+title: Export Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Export annotations from the JavaScript (ES5) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export annotations in JavaScript PDF Viewer
+# Export Annotations in JavaScript (ES5) PDF Viewer
 
 PDF Viewer provides support for exporting annotations. You can export annotations from the PDF Viewer in two ways:
 

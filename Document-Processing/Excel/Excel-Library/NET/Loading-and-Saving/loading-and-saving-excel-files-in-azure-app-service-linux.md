@@ -1,11 +1,11 @@
 ---
-title: Loading and Saving an Excel in Azure App Service on Linux | Syncfusion
-description: Explains how to load and save an Excel files in Azure App Service on Linux using .NET Excel Library.
+title: Loading and Saving Excel in Azure Linux | Syncfusion
+description: This section explains how to load and save Excel files in Azure App Service on Linux using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Loading and Saving Excel files in Azure App Service on Linux
+# Loading and Saving Files in Azure Linux
 
 [.NET Excel Library for ASP.NET Core platform](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) can be used to create, read, and edit Excel files in Azure App Service on Linux.
 

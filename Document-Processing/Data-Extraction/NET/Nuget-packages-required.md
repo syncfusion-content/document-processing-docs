@@ -1,13 +1,13 @@
 ---
-title: NuGet Packages for Data Extraction | Syncfusion&reg;
-description: Learn the NuGet packages required to use Syncfusion&reg; Data Extraction in various platforms and frameworks.
+title: NuGet Packages required for .NET Smart Data Extractor | Syncfusion
+description: Discover the NuGet packages required to integrate Smart Data Extractor across .NET platforms and frameworks
 platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
 ---
 
-# NuGet Packages Required for Data Extraction
+# NuGet Packages required for .NET Smart Data Extractor
 
 ## Smart Data Extractor
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in React Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in React Spreadsheet | Syncfusion
+description: Learn about formatting in the Syncfusion React Spreadsheet component and customize the appearance of cells, text, and spreadsheet content.
 control: Formatting 
 platform: document-processing
 documentation: ug
 ---
 
-# Formatting Cells in React Spreadsheet Component
+# Formatting in React Spreadsheet
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are:
 

@@ -1,12 +1,12 @@
 ---
-title: Automatic Suggestion in UWP RichTextBox control | Syncfusion
-description: Learn here all about Automatic Suggestion support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Automatic Suggestion in UWP DOCX Editor | Syncfusion
+description: The automatic suggestion in UWP DOCX Editor offers a dropdown of suggested names when typing the @ symbol, enabling quick mention insertion as hyperlinks.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: automatic-suggestion,@mentions,mention-character,suggestion-box,name-suggestion-provider
 ---
-# Automatic Suggestion in UWP RichTextBox (SfRichTextBoxAdv)
+# Automatic Suggestion in UWP DOCX Editor
 
 ## Using @mentions with automatic suggestion
 The SfRichTextBoxAdv control shows an inline dropdown with a list of suggested names while typing the mention character (`@` symbol). The list of names filters as you type more letters. You can use the up or down arrow keys to move selection, and Tab or Enter to insert the selected item via keyboard, or use the mouse to click any option in the list. The selected item from the suggestion list inserts as a hyperlink with the display text and its corresponding link.

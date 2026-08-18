@@ -1,12 +1,12 @@
 ---
-title: File and directory name length in Compression | Syncfusion
-description: Describes supported file and directory name length limits in Syncfusion.Compression.dll and the exception thrown when exceeded.
+title: File and directory name length limits in Compression | Syncfusion
+description: Describes supported file and directory name length limits in Syncfusion Compression and the exception thrown when exceeded.
 platform: document-processing
 control: Compression
 documentation: UG
 ---
 
-# What are the file and directory length limits in Compression?
+# What are the File and directory name length limits in Compression?
 
 Syncfusion.Compression.dll can process paths that adhere to the traditional Windows path length limits: a fully qualified file name (including directories and file name) shorter than 260 characters, and a directory name shorter than 248 characters. If these limits are exceeded, a System.IO.PathTooLongException will be thrown.
 

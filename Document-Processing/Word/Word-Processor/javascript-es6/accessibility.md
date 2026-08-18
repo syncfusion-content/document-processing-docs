@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about Accessibility in Syncfusion JavaScript (ES6) Document Editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in TypeScript DOCX Editor | Syncfusion
+description: The accessibility support in TypeScript DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 control: Accessibility
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in JavaScript (ES6) Document Editor component
+# Accessibility in TypeScript DOCX Editor
 
 The accessibility compliance for the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component is outlined below.
 

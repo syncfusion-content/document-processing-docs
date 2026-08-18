@@ -1,11 +1,11 @@
 ---
-title: API to detect header row in a range in XlsIO | Syncfusion
-description: This page tells whether the .NET Excel Library provides API to detect a header row in a range.
+title: Header Row Detection in .NET Excel Library | Syncfusion
+description: Header row detection describes whether the Syncfusion .NET Excel Library provides an API to identify a header row in a range.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO provide an API to detect a header row in a range?
+# Header Row Detection in .NET Excel Library
 
 No, XlsIO does not provide a built-in API to detect whether a header row exists in a given range. By default, it treats the first row of the specified range as the header during operations such as sorting, filtering, importing data, and creating tables.

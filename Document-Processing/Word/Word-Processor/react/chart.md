@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart in React DOCX Editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Charts in React DOCX Editor | Syncfusion
+description: Chart support in React DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 control: Chart 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in React Document Editor component
+# Charts in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
 

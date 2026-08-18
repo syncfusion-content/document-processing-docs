@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zoom in React PDF Viewer | How-to Guide | Syncfusion
-description: Learn how to implement zoom functionality in the Syncfusion React PDF Viewer component. Enable zooming and programmatically control zoom levels.
+title: Zoom in React PDF Viewer | Syncfusion
+description: Enable zoom in the React PDF Viewer and programmatically control zoom levels so users can read document content at the size they prefer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

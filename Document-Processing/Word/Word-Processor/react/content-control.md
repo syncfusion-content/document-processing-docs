@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content Control in React DOCX Editor component | Syncfusion
-description: Learn here all about Content Control in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Content Controls in React DOCX Editor | Syncfusion
+description: The content control feature in React DOCX Editor provides built-in content controls to create structured and interactive document templates.
 control: Content Control 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Control in React Document Editor
+# Content Controls in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 

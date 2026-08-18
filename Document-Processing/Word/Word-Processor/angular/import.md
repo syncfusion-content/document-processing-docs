@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Import in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in Angular DOCX Editor | Syncfusion
+description: The Import feature in Angular DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in Angular Document Editor component
+# Import in Angular DOCX Editor
 
 In [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), the documents are stored in Document Editor's own format called **Syncfusion Document Text (SFDT)**.
 

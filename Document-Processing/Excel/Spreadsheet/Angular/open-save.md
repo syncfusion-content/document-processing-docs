@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open save in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Open save in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Open and Save in Angular Spreadsheet | Syncfusion
+description: Open and save in Angular Spreadsheet enable users to import, edit, and export workbook data seamlessly across applications.
 platform: document-processing
 control: Open and Save
 documentation: ug
 ---
 
-# Open and Save in Angular Spreadsheet component
+# Open and Save in Angular Spreadsheet 
 
 In import an excel file, it needs to be read and converted to client side Spreadsheet model. The converted client side Spreadsheet model is sent as JSON which is used to render Spreadsheet. Similarly, when you save the Spreadsheet, the client Spreadsheet model is sent to the server as JSON for processing and saved. Server configuration is used for this process.
 

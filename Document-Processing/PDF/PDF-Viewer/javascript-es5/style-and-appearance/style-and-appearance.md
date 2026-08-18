@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize appearance in JavaScript PDF Viewer | Syncfusion
-description: Learn how to override CSS in the Syncfusion JavaScript PDF Viewer to customize icons, containers, and overall appearance.
+title: Style and Appearance in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the style and appearance in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize appearance in JavaScript PDF Viewer
+# Style and Appearance in JavaScript (ES5) PDF Viewer
 
 Override the default CSS classes to tailor the Syncfusion JavaScript PDF Viewer interface. Apply the following snippets to your page or global stylesheet to update borders, backgrounds, and toolbar icons. To create a full custom theme for all JavaScript controls, use the [Syncfusion Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
