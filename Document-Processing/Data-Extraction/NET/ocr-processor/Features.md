@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 --- 
 
-# OCR Processor Features 
+# Perform OCR on PDF and image files in .NET
 
 ## Perform OCR on PDF and image files in .NET
 
@@ -2058,7 +2058,7 @@ N> UnicodeFont is not supported in the framework application.
 
 For more details regarding quality improvement, refer to the following link.
 
-[https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality](https://github.com/tesseract-ocr/tesseract/wiki/ImproveQuality )
+[https://tesseract-ocr.github.io/tessdoc/ImproveQuality](https://tesseract-ocr.github.io/tessdoc/ImproveQuality)
 
 **You can set the different performance level to the OCRProcessor using [Performance](https://help.syncfusion.com/cr/document-processing/Syncfusion.OCRProcessor.Performance.html) enumeration.**
 

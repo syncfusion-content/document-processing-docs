@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard Shortcut in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about keyboard shortcut in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in ASP.NET MVC DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in ASP.NET MVC DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
 ---
 
 
-# Keyboard Shortcuts in ASP.NET MVC Document Editor component
+# Keyboard Shortcuts in ASP.NET MVC DOCX Editor
 
 ## Text formatting
 

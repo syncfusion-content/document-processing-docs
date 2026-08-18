@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Organize pages events
+# Organize Pages Events in Blazor PDF Viewer
 
 Use the page organizer events to react to rotations, rearrangements, inserts, deletes, and other page-manipulation actions performed in the page organizer.
 

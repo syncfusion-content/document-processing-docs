@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter in React Spreadsheet component | Syncfusion
-description: Learn here all about Filter in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filtering in React Spreadsheet | Syncfusion
+description: Learn about filtering in the Syncfusion React Spreadsheet component, including applying, clearing, and managing data filters.
 control: Filter 
 platform: document-processing
 documentation: ug
 ---
 
-# Filter in React Spreadsheet Component
+# Filtering in React Spreadsheet
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 

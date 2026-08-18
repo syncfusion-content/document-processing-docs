@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Import annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to import annotations in the Syncfusion JavaScript PDF Viewer using the importAnnotations method.
+title: How to Import Annotations in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Import annotations into the JavaScript (ES5) PDF Viewer from supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import annotations in JavaScript PDF Viewer
+# How to Import Annotations in JavaScript (ES5) PDF Viewer
 
-Use the [importAnnotations()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#importannotation) method to import annotations from a file or a string when loading a PDF document.
+Use the [importAnnotations()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importannotation) method to import annotations from a file or a string when loading a PDF document.
 
 The following example shows how to import annotations during document load:
 
-**Step 1:** Follow the steps in the [Getting started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Getting started with JavaScript ES5 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) guide to create a sample.
 
 **Step 2:** Add the following code to import annotations when a PDF is loaded.
 

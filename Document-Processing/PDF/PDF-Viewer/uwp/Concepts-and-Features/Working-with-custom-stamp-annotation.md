@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom stamp annotation in UWP PDF Viewer control | Syncfusion
+title: Custom stamp annotation in UWP PDF Viewer | Syncfusion
 description: Learn about Custom stamp annotation support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 ---
 
-# Working with custom stamp annotations in UWP PDF Viewer (SfPdfViewer)
+# Custom stamp annotation in UWP PDF Viewer
 
 The PDF Viewer allows you to include any form of UIElement (Button, Entry, Label, Image, and more) anywhere in the pages of the PDF Viewer as a custom stamp annotation. You can add, move, resize, and delete the custom stamp annotations. Also, you can save and load the existing custom stamp annotation associated with a PDF document.
 

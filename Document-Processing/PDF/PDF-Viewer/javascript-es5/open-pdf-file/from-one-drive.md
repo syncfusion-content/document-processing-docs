@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from OneDrive in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion JavaScript PDF Viewer component using a server-backed approach.
+title: From One Drive in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from OneDrive
+# Open PDF from OneDrive in JavaScript (ES5) PDF Viewer
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from One Drive.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to load the PDF files from One Drive.
 
 ```csharp
 [HttpPost("Load")]
@@ -142,7 +142,7 @@ N> Replace the placeholders with your actual values: Tenant ID, Application ID, 
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set `documentPath` to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
 
 ```javascript
 

@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Azure OCR Processor | Syncfusion
 description: Learn how to get started with the Syncfusion Azure OCR Processor. Explore setup, features, examples, and customization options.
+platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies

@@ -1,14 +1,14 @@
 ---
 title: About Syncfusion .NET OCR Processor | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process"
-description: Learn about introduction of Syncfusion .NET OCR Processor for recognizing text from scanned images and more details.  
+description: Learn about introduction of Syncfusion .NET OCR Processor for recognizing text from scanned images and more details.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies 
 ---
 
-# About Syncfusion .NET OCR Processor
+# About Syncfusion .NET OCR Processor 
 
 Optical character recognition (OCR) is a technology used to convert scanned paper documents in the form of PDF files or images into searchable and editable data.  
 

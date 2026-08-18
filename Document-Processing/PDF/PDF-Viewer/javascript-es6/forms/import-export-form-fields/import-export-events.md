@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Export Events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to manage import and export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+title: Import Export Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the JavaScript (ES6) PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form import and export events in TypeScript
+# Form Field Import and Export Events in JavaScript (ES6) PDF Viewer
 
 Import/export events let users track and customize the lifecycle of form data imported into or exported from the PDF Viewer.
 Use these events to:

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rectangle annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Rectangle annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Rectangle Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Rectangle annotations in the JavaScript (ES5) PDF Viewer to outline rectangular regions on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rectangle annotation in JavaScript PDF Viewer
+# Rectangle Annotation in JavaScript (ES5) PDF Viewer
 
 Rectangle is a shape annotation used to highlight regions, group content, or draw callout boxes.
 

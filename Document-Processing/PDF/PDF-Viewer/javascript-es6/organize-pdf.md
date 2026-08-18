@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in Typescript PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion Typescript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize Pdf in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the organize pdf in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in TypeScript PDF Viewer control
+# Organize Pdf in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides tools to organize PDF documents by inserting, deleting, rotating, rearranging, copying, and importing pages. These features enable efficient page-level editing within the viewer.
 

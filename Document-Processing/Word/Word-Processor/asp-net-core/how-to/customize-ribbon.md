@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Ribbon in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion ASP.NET Core Document Editor - file menu, backstage, tabs, groups, and items.
+title: How to Customize Ribbon in ASP.NET Core DOCX Editor | Syncfusion
+description: Customize ribbon tabs, groups, and commands in Syncfusion® ASP.NET Core DOCX Editor to tailor the toolbar experience and improve user productivity.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in ASP.NET Core Document Editor Component
+# How to Customize Ribbon in ASP.NET Core DOCX Editor
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an extensive and flexible set of APIs to customize the built-in ribbon UI. You can:
 

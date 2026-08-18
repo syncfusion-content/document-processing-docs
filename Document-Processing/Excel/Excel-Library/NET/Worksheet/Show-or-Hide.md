@@ -1,12 +1,12 @@
 ---
-title: Show or Hide Options | Syncfusion
-description: In this section, you can learn how to use show or hide options in an Excel worksheets using Syncfusion Essential XlsIO.
+title: How to Show or Hide Options in .NET Excel Library | Syncfusion
+description: Use show and hide options in Excel worksheets using the Syncfusion .NET Excel Library for worksheet visibility settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Show or Hide in Excel Document
+# How to show or hide elements in .NET Excel Library
 
 This article explains how to **show or hide** rows, columns, worksheets, gridlines, row/column headers, worksheet tabs, and how to set the zoom level in an Excel worksheet using Syncfusion<sup>&reg;</sup> XlsIO.
 

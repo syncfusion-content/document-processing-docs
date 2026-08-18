@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Image in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Images in Angular DOCX Editor | Syncfusion
+description: Images in Angular DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in Angular Document Editor component
+# Images in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or an online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 

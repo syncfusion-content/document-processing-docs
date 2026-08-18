@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export PDF Document in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn here all about export document as PDF in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Export Document as PDF in ASP.NET MVC DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® ASP.NET MVC DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
 ---
 
 
-# Export the document as PDF in ASP.NET MVC Document Editor
+# How to Export Document as PDF in ASP.NET MVC DOCX Editor
 
 This article explains how to export the document as PDF format. You can export the document as PDF in the following ways:
 

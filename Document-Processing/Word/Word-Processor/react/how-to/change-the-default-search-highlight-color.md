@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change search-highlight color in React DOCX Editor | Syncfusion
-description: Learn here all about Change the default search highlight color in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Search Highlight Color in React DOCX Editor | Syncfusion
+description: Change the default search highlight color in Syncfusion® React DOCX Editor using the search highlight color property to customize search result highlighting.
 control: Change the default search highlight color in Document Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change Search Highlight Color in React Document Editor
+# How to Change Search Highlight Color in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in Document Editor settings. The color specified for `searchHighlightColor` within [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#documenteditorsettings) is used to highlight the searched text. By default, the search highlight color is `yellow`.
 

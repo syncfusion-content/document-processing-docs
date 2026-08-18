@@ -1,6 +1,6 @@
 ---
 title: Create Word document in AWS Elastic Beanstalk | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
+description: This section illustrates how to convert Word documents to images on Linux using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

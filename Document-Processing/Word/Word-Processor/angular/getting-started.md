@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Angular DOCX Editor component | Syncfusion
-description: Learn how to create a Document Editor in an Angular application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+title: Getting Started with Angular DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion Angular DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug

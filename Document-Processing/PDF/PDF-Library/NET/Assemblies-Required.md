@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for PDF | Syncfusion
-description: This section explains about the Syncfusion assemblies required to work with PDF file, and conversion such as HTML to PDF, Word to PDF, Excel to PDF, PPTX to PDF
+title: Assemblies for .NET PDF Library | Syncfusion
+description: Learn about the Syncfusion assemblies required to work with PDF files and perform conversions like HTML to PDF, Word to PDF, and Excel to PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required to Work with PDF
+# Assemblies for .NET PDF Library
 
 The following assemblies must be referenced in your application based on the target platform. Syncfusion<sup>&reg;</sup> provides platform-specific assemblies for the .NET PDF library that can be referenced either through the Essential Studio<sup>&reg;</sup> installer or through [NuGet packages](https://www.nuget.org/packages?q=syncfusion).
 

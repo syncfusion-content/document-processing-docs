@@ -1,12 +1,12 @@
 ---
-title: Working with Images in .NET Markdown library | Syncfusion
-description: Learn to add, format, and modify images in a Markdown document using Syncfusion<sup>&reg;</sup> .NET Markdown library without any third-party dependencies.
+title: Images in .NET Markdown library | Syncfusion
+description: Learn how to add, format, and modify images in a Markdown document using Syncfusion<sup>&reg;</sup> .NET Markdown library without any third-party dependencies.
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Working with Images in Markdown Library
+# Images in .NET Markdown Library
 
 Images are essential elements of Markdown documents that enhance visual communication and documentation. The Syncfusion<sup>&reg;</sup> .NET Markdown library facilitates adding, modifying, and managing images in a Markdown document. Images in Markdown are represented by the `MdPicture` class, which can be added to the inline collection of an `MdParagraph`. The library supports both URL-based and byte array-based images, allowing you to reference external image files or embed images directly into the document. Supported image formats include PNG, JPEG, BMP, GIF, WebP, and SVG.
 

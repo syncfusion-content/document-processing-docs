@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get page info in Vue PDF Viewer | Syncfusion
-description: Learn how to retrieve page height, width, and rotation using getPageInfo in the Syncfusion Vue PDF Viewer.
+title: How to Get Page Info in Vue PDF Viewer | Syncfusion
+description: Retrieve page height, width, and rotation in the Vue PDF Viewer using the getPageInfo method for custom layout and rendering logic.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in Vue PDF Viewer
+# How to Get Page Info in Vue PDF Viewer
 
 The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available.
 

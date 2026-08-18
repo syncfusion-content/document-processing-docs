@@ -1,12 +1,12 @@
 ---
-title: Example Use Cases | Syncfusion AI Agent Tools
+title: Example Use Cases of Document SDK AI Agent Tools| Syncfusion
 description: Explore example use cases for building document automation agents using Syncfusion AI Agent Tools, the Microsoft Agent Framework, and OpenAI.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Example Use Cases with AI Agent Tools
+# Example Use Cases of Document SDK AI Agent Tools
 
 ## Automated PDF Redaction Agent
 

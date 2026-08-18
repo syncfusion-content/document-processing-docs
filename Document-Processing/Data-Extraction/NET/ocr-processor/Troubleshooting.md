@@ -7,7 +7,7 @@ documentation: UG
 keywords: Assemblies
 --- 
 
-# How to troubleshoot failures in .NET OCR Processor 
+# How to troubleshoot failures in .NET OCR Processor
 
 ## Tesseract has not been initialized exception
 
@@ -84,7 +84,7 @@ Install the VC++ 2015 redistributable files in your machine to overcome an excep
 <img src="OCR-Images/Redistributable-file.png" alt="Visual C++ 2015 Redistributable file">
 <br/><br/>
 Please find the download link Visual C++ 2015 Redistributable file,<br>
-<a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Visual C++ 2015 Redistributable file</a> 
+<a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145" aria-label="Link to Visual C++ 2015 Redistributable file">Visual C++ 2015 Redistributable file</a> 
 </td>
 </tr>
 </table>
@@ -103,7 +103,7 @@ Please find the download link Visual C++ 2015 Redistributable file,<br>
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/en-us/articles/211543683-What-is-the-error-identity-of-the-developer-cannot-be-confirmed-">link</a> for more details.
+To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/en-us/articles/211543683-What-is-the-error-identity-of-the-developer-cannot-be-confirmed-" aria-label="What is the error identity of the developer cannot be confirmed">troubleshooting article</a> for more details.
 
 </td>
 </tr>
@@ -125,7 +125,7 @@ To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/e
 <td>
 The essential<sup>&reg;</sup> PDF supports all the languages the Tesseract engine supports in the OCR processor.
 The dictionary packs for the languages can be downloaded from the following online location:<br/>
-<a href="https://github.com/tesseract-ocr/tessdata">https://github.com/tesseract-ocr/tessdata</a>
+<a href="https://github.com/tesseract-ocr/tessdata" aria-label="GitHub link for Tesseract engine language dictionary pack">https://github.com/tesseract-ocr/tessdata</a>
 <br/><br/>
 It is also mandatory to change the corresponding language code in the OCRProcessor.Settings.Language property.  <br/>
 For example, to perform the optical character recognition in German, the property should be set as  <br/>
@@ -176,8 +176,8 @@ b.Copy the appropriate runtimes folder from the extracted package into your proj
 <td>
 By using the best tessdata, we can improve the OCR results. For more information,<br> please refer to the links below.
 <br/>
-<a href="https://github.com/tesseract-ocr/tessdata_best">https://github.com/tesseract-ocr/tessdata_best</a> <br>
-<b>Note:</b> For better performance, you can use the fast tessdata which is mentioned in the below link,<br/><a href="https://github.com/tesseract-ocr/tessdata_fast">https://github.com/tesseract-ocr/tessdata_fast</a> 
+<a href="https://github.com/tesseract-ocr/tessdata_best" aria-label="GitHub link for best tessdata">https://github.com/tesseract-ocr/tessdata_best</a> <br>
+<b>Note:</b> For better performance, you can use the fast tessdata which is mentioned in the below link,<br/><a href="https://github.com/tesseract-ocr/tessdata_fast" aria-label="GitHub link for fast tessdata">https://github.com/tesseract-ocr/tessdata_fast</a> 
 </td>
 </tr>
 </table>
@@ -472,7 +472,7 @@ bin\Debug\net6.0.\runtimes\osx\native
 <td>
 Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.<br>
 Please find the NuGet link below,<br>
-NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
+NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6" aria-label="NuGet link for Skiasharp Native Assets">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
 </td>
 </tr>
 </table>
