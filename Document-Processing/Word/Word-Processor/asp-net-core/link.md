@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in DOCX Editor Component | Syncfusion
-description: Learn here all about Link in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in ASP.NET Core DOCX Editor | Syncfusion
+description: The hyperlink feature in ASP.NET Core DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link
 documentation: ug
 ---
 
 
-# Hyperlink in ASP.NET Core Document Editor
+# Hyperlinks in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to the Internet or a file location, a mail address, or any text within the document.
 

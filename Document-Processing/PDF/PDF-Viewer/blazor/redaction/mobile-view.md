@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Redaction in mobile view
+# Redaction in mobile view in Blazor PDF Viewer 
 
 Redaction mode in mobile view provides a touch-optimized toolbar and tools to mark, review, and apply redactions on the go.
 

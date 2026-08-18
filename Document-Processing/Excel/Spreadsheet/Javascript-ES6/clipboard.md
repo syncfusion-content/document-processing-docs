@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Clipboard in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Clipboard in TypeScript Spreadsheet | Syncfusion
+description: Clipboard in TypeScript Spreadsheet enables copying, cutting, and pasting cell data efficiently while preserving formatting and content.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
-# Clipboard in EJ2 TypeScript Spreadsheet control
+# Clipboard in TypeScript Spreadsheet 
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
  

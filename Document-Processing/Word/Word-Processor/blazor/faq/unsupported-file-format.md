@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Unsupported file in Blazor DOCX Editor Component | Syncfusion
-description: Learn about unsupported file format warnings in the Syncfusion Blazor Document Editor component and how to use supported document formats.
+title: Supported File Formats in Blazor DOCX Editor | Syncfusion
+description: Learn about the supported file formats in Blazor DOCX Editor for importing, and exporting documents.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Why Do I Get the Unsupported File Warning When Opening a Document?
+# Supported File Formats in Blazor DOCX Editor
 
 If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons:
 

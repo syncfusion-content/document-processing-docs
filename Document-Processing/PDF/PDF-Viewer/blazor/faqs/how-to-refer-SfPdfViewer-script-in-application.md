@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Reference SfPdfViewer scripts in a Blazor application | Syncfusion
-description: Learn how to reference Blazor SfPdfViewer scripts using a CDN, static web assets, or custom resources, including deploying pdfium files.
+title: How to Reference scripts in Blazor PDF Viewer application | Syncfusion
+description: Learn how to reference Blazor PDF Viewer scripts using a CDN, static web assets, or custom resources, including deploying pdfium files.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Reference SfPdfViewer scripts in a Blazor application
+# How to Reference scripts in Blazor PDF Viewer application
 
 ## CDN Usage
 

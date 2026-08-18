@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Get Base64 from loaded PDF in TypeScript PDF Viewer | Syncfusion
-description: Learn how to retrieve the Base64 value of a loaded PDF in the Syncfusion TypeScript PDF Viewer using saveAsBlob and FileReader.
+title: How to Get the Base64 Value of a PDF in JavaScript (ES6) | Syncfusion
+description: Retrieve the Base64 value of a loaded PDF in the JavaScript (ES6) PDF Viewer using saveAsBlob and FileReader for uploads, sharing, or storage.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Retrieve Base64 from a PDF in TypeScript PDF Viewer
+# How to Get the Base64 Value of a PDF in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to obtain the Base64-encoded value of a PDF document loaded in the PDF Viewer using TypeScript. Producing a Base64 string is useful for sending the PDF to a server, embedding it in JSON payloads, or client-side processing.
 

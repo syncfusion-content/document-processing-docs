@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Ink Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Ink Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the ASP.NET Core PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Freehand Drawing (Ink) Annotations in ASP.NET Core PDF Viewer
+# Ink Annotation in ASP.NET Core PDF Viewer
 Ink annotations allow users to draw freehand strokes using mouse, pen, or touch input to mark content naturally.
 
 ![Ink overview](../../images/ink_annotation.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup annotations in Xamarin Pdf Viewer control | Syncfusion
+title: Popup annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Popup annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Popup annotations in Xamarin Pdf Viewer (SfPdfViewer)
+# Popup annotations in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) allows you to include Popup or Sticky note annotations in a PDF document and provides options to modify or remove the existing ones.
 

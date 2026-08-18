@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Chart Title | DocIO | Syncfusion
-description: Learn how to modify the appearance of chart title in a chart in a Word document using Syncfusion<sup>&reg;</sup> Word library without Microsoft Word.
+title: Modify the Appearance of Chart Title in .NET Word | Syncfusion
+description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Title
+# Modify the Appearance of Chart Title in .NET Word
 
 Chart title is a concise description at the top of a chart, offering context and clarity for the data displayed. Using DocIO, you can **customize the chart title in the chart**.
 

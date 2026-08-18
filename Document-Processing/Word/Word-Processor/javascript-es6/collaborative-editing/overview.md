@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about collaborative editing in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in TypeScript DOCX Editor Control| Syncfusion
+description: Learn about the overview of collaborative editing in Syncfusion Essential Studio TypeScript DOCX Editor control and more details.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in JavaScript (ES6)
+# Collaborative Editing in Syncfusion TypeScript DOCX Editor Control
 
 Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

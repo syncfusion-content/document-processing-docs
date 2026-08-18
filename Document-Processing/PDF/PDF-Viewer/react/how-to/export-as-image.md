@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Export pages as images in React PDF Viewer | Syncfusion
-description: Learn how to export pages as Base64-encoded images in the React PDF Viewer using exportAsImage and exportAsImages.
+title: How to Export Pages as Images in React PDF Viewer | Syncfusion
+description: Export pages as Base64-encoded images from the React PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export pages as images in PDF Viewer
+# How to Export Pages as Images in React PDF Viewer
 
 The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
 Steps to export pages as images
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Use the following code to export a specified page as a Base64-encoded image or a range of pages as Base64-encoded images.
 

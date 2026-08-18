@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the JavaScript (ES5) PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations
+# Create and Modify Annotations in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 

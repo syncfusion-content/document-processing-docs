@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance practices in Angular Spreadsheet component | Syncfusion
-description: Learn here all about performance best practices in the Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Performance practices in Angular Spreadsheet | Syncfusion
+description: Performance best practices in Angular Spreadsheet help optimize rendering, data processing, and user interactions for large datasets.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in Angular Spreadsheet Component
+# Performance Best Practices in Angular Spreadsheet 
 
 Performance optimization is crucial when working with large datasets in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 

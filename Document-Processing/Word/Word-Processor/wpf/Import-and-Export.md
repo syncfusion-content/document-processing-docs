@@ -1,12 +1,12 @@
 ---
-title: Import and Export in WPF RichTextBox control | Syncfusion
-description: Learn here all about Import and Export support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Import and Export in WPF DOCX Editor | Syncfusion
+description: The import and export in WPF DOCX Editor support multiple file formats, enabling loading and saving of word, rich text, HTML, XAML, and text documents.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: import, export, load, save, async-load, document-events, file-formats
 ---
-# Import and Export in WPF RichTextBox (SfRichTextBoxAdv)
+# Import and Export in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to import or export Word documents (.docx, .doc), Rich Text Format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml), and text documents (.txt). 
 

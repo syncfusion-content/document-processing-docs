@@ -1,12 +1,12 @@
 ---
-title: Un-protect zip files using Syncfusion.Compression.Base | Syncfusion
-description: This page demonstrates with an example to un-protect the zip files using Syncfusion.Compression.Base.
+title: How to Unprotect ZIP Files in .NET Excel Library | Syncfusion
+description: Unprotect zip files using Syncfusion.Compression.Base for password-protected zip file access and handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to un-protect the zip files using Syncfusion.Compression.Base?
+# How to unprotect ZIP files in .NET Excel Library
 
 The following complete code snippet explains how to unprotect the zip file.
 

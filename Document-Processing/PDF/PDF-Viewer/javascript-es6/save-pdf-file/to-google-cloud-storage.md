@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF Files to Google Cloud Storage in Syncfusion PDF Viewer
-description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
+title: Save PDFs To Google Cloud in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save and Manage PDFs in Google Cloud Storage
+# Save PDF Files to Google Cloud Storage in JavaScript (ES6) PDF Viewer
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 

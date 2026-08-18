@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark navigation in Vue PDF Viewer component | Syncfusion
-description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Vue PDF Viewer component. Learn how to enable and manage bookmarks efficiently.
+title: Bookmark in Vue PDF Viewer | Syncfusion
+description: Navigate PDF bookmarks in the Vue PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in Vue PDF Viewer component
+# Bookmark Navigation in Vue PDF Viewer
 
 Bookmarks embedded in PDF files are loaded and made available for quick navigation within the viewer.
 Enable or disable bookmark navigation using the examples below.

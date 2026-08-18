@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Handwritten signature in Vue PDF Viewer control | Syncfusion
-description: Learn about handwritten signatures in the Syncfusion Vue PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
+title: Signature Annotation in Vue PDF Viewer | Syncfusion
+description: Add, edit, and manage handwritten signatures in the Vue PDF Viewer, including enabling or disabling the signature tool for users.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature in Vue PDF Viewer control
+# Handwritten Signature in Vue PDF Viewer
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 

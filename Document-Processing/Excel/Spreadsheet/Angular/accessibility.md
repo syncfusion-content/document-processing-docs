@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Angular Spreadsheet | Syncfusion
+description: Accessibility in Angular Spreadsheet supports keyboard navigation, screen readers, and ARIA attributes for an inclusive user experience.
 platform: document-processing
 control: Accessibility 
 documentation: ug
 ---
 
-# Accessibility in Angular Spreadsheet component
+# Accessibility in Angular Spreadsheet
 
 The Spreadsheet component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

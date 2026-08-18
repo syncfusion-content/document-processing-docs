@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with themes in Windows Forms PDF Viewer | Syncfusion&reg;
-description: Learn about Working with themes support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Themes in Windows Forms PDF Viewer | Syncfusion
+description: The themes feature in PdfViewerControl enables users to customize the appearance of the PDF Viewer with consistent and visually appealing styles.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-# Working with themes in Windows Forms PDF Viewer (PdfViewerControl)
+# Themes in Windows Forms PDF Viewer
 
 PDF Viewer provides support for various built-in themes, using which the default appearance of elements that are present in the control can be customized. This can be achieved using the [ThemeName](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Core.BaseControl.html#Syncfusion_Windows_Forms_Core_BaseControl_ThemeName) property of [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 

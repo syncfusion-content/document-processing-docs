@@ -1,13 +1,13 @@
 ---
-title: Layers in JavaScript PDF Library | Syncfusion
+title: PDF Layers in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn to add, annotate, nest, remove, and lock or unlock PDF layers with JavaScript PDF Library to organize content and improve document structure
+description: Create, manage, annotate, lock, unlock, and organize PDF layers using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Layers in JavaScript PDF Library
+# PDF Layers in JavaScript PDF
 
 Layers, also known as Option Content, refer to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers.
 

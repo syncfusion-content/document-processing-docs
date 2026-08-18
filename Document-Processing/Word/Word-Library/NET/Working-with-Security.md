@@ -1,11 +1,11 @@
 ---
-title: Working with Word Document Protection | DocIO | Syncfusion
-description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Word Document Protection in .NET Word | Syncfusion
+description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Security
+# Word Document Protection in .NET Word
 
 You can encrypt a Word document with a password to restrict unauthorized access. You can also control the types of changes that can be made to the document.
 
