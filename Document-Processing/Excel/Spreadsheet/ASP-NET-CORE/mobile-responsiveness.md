@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Mobile Responsiveness in ASP.NET Core Spreadsheet | Syncfusion
-description: Learn about Mobile Responsiveness in ASP.NET Core Spreadsheet Control of Syncfusion Essential JS 2 and more.
+description: Learn about mobile responsiveness in the Syncfusion ASP.NET Core Spreadsheet control, including adaptive layouts and touch interactions.
 platform: document-processing
 control: Mobile Responsiveness
 documentation: ug
 ---
 
 
-# Mobile Responsiveness in ASP.NET Core Syncfusion Spreadsheet Control
+# Mobile Responsiveness in ASP.NET Core Spreadsheet
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the PDF Viewer toolbar, add custom items, manage visibility, and respond to toolbar actions in the Syncfusion Vue PDF Viewer component.
+title: Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the Vue PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in Vue PDF Viewer
+# Customize the Organize Pages Toolbar in Vue PDF Viewer
 
 The built-in toolbar provides quick access to essential PDF viewing features including page navigation, text search, zoom controls, printing, and downloading. You can customize the toolbar by showing/hiding items, adding custom buttons, or creating a completely custom interface.
 
@@ -676,6 +676,7 @@ export default {
 {% endtabs %}
 
 >Note : Default value of toolbar items is ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+
 ### Align Property
 
 The align property is used to specify the alignment of a toolbar item within the toolbar.
@@ -700,6 +701,7 @@ The prefix property is used to set the CSS class or icon that should be added as
 The id property within a CustomToolbarItemModel is a compulsory attribute that plays a vital role in toolbar customization. It serves as a unique identifier for each toolbar item, facilitating distinct references and interactions.
 
 When defining or customizing toolbar items, it is mandatory to assign a specific and descriptive id to each item.
+
 These properties are commonly used when defining custom toolbar items with the `CustomToolbarItemModel` in the context of PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, you can include these properties to customize the appearance and behavior of each toolbar item.
 
 N> When customizing toolbar items, you have the flexibility to include either icons or text based on your design preference.
@@ -1241,5 +1243,5 @@ Sample :
 
 ## See also
 
-* [Toolbar customization](./how-to/toolbar-customization)
+* [Toolbar customization](./toolbar-customization/custom-toolbar)
 * [Feature Modules](./feature-module)

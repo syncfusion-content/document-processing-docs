@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the redaction toolbar in JavaScript PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion JavaScript PDF Viewer by showing or hiding default items.
+title: Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES5) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in JavaScript
+# Customize the Organize Pages Toolbar in JavaScript (ES5) PDF Viewer
 
 The redaction toolbar in the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) can be customized by rearranging items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions within the existing toolbar.
 

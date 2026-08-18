@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize Images in React Spreadsheet component | Syncfusion
-description: Learn here how to resize images in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Resize Images in React Spreadsheet | Syncfusion
+description: Learn about resizing images in the Syncfusion React Spreadsheet component and adjusting image dimensions.
 control: Images
 platform: document-processing
 documentation: ug

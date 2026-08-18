@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide Toolbar and Panes in Angular DOCX Editor | Syncfusion
-description: Learn here all about Hide tool bar and properties pane in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Hide Toolbar and Properties Pane in Angular DOCX Editor | Syncfusion
+description: Hide the toolbar and properties pane in Syncfusion® Angular DOCX Editor to create a custom user interface and streamline the document editing experience.
 platform: document-processing
 control: Hide tool bar and properties pane 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide toolbar and properties pane in Angular Document Editor component
+# How to Hide Toolbar and Properties Pane in Angular DOCX Editor
 
 **Document Editor Container** provides the main document view area along with the built-in toolbar and properties pane.
 

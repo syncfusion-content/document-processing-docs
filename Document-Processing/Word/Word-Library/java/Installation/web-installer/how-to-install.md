@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion FileFormats web installer - Syncfusion
+title: How to install Syncfusion FileFormats web installer | Syncfusion
 description: Learn here about how to install Syncfusion FileFormats web installer after downloading from our Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer
+# How to install Syncfusion FileFormats web installer
 
 
 ## Overview

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Configure annotation selector settings in Vue PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the Vue PDF Viewer using annotationSelectorSettings and related options.
+title: How to Configure Annotation Selectors in Vue PDF Viewer | Syncfusion
+description: Configure annotation selector settings in the Vue PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
 control: AnnotationSelector Setting
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings in Vue
+# How to Configure Annotation Selectors in Vue PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationselectorsettings) property to customize the appearance and interaction behavior of the annotation selector in the Vue PDF Viewer UI.
 
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
-### How to Configure Annotation Selector Settings
+## How to Configure Annotation Selector Settings
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample.
 

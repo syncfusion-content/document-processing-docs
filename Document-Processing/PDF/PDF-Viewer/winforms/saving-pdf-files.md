@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Saving PDF Files in Windows Forms PDF Viewer control | Syncfusion&reg;
-description: Learn about Saving PDF Files support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Saving PDF Files in Windows Forms PDF Viewer | Syncfusion
+description: The PDF saving feature in PdfViewerControl enables users to save PDF documents and preserve updates made during viewing and interaction.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Saving PDF Files in Windows Forms PDF Viewer (PdfViewerControl)
+# Saving PDF Files in Windows Forms PDF Viewer
 
 The Save feature in the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html) helps you to keep the file up to date with any modifications and prevent your work from being lost by allowing you to save the file to the local disk.
 

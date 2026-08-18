@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph format in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about paragraph formatting in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more.
+title: Paragraph Format in TypeScript DOCX Editor | Syncfusion
+description: The paragraph format feature in TypeScript DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: Paragraph format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in JavaScript (ES6) Document Editor
+# Paragraph Format in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

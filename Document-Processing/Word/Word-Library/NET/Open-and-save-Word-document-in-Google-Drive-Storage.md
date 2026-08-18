@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in Google Drive Cloud Storage | Syncfusion
-description: Open and save Word document in Google Drive Cloud Storage using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Google Drive Storage  | Syncfusion
+description: Open and save Word document in Google Drive Cloud Storage using Syncfusion® .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document in Google Drive Cloud Storage
+# Open and save Word document in Google Drive Storage 
 
 ## Prerequisites  
 

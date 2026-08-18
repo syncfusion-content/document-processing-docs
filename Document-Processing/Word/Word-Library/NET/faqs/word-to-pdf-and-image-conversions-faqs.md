@@ -1,12 +1,12 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
+title: FAQ about Word to PDF and image Conversions in .NET Word | Syncfusion
+description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Frequently asked questions about Word to PDF and image conversions
+# FAQ about Word to PDF and image Conversions in .NET Word
 
 The frequently asked questions about Word to PDF and image conversions using DocIO are listed below.
 

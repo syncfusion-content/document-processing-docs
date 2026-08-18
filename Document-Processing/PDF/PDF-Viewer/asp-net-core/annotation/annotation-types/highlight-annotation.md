@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight Text in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Highlight Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Highlight annotations in the ASP.NET Core PDF Viewer to emphasize important text in a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Annotation (Text Markup) in ASP.NET Core PDF Viewer
+# Highlight Annotation in ASP.NET Core PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **ASP.NET Core PDF Viewer**.
 You can highlight text using the toolbar or context menu, programmatically invoke highlight mode, customize default settings, handle events, and export the PDF with annotations.

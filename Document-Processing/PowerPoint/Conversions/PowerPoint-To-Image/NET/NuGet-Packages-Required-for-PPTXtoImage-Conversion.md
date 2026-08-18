@@ -37,14 +37,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.Presentation.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
@@ -103,6 +95,14 @@ The following NuGet packages need to be included in your application based on th
 {{'[Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin)' | markdownify}}<br/></td>
 <td>
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ASP.NET MVC4
+</td>
+<td>
+{{'[Syncfusion.Presentation.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet.Mvc4/)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -180,14 +180,6 @@ WPF
 </tr>
 <tr>
 <td>
-ASP.NET MVC4
-</td>
-<td>
-{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 ASP.NET MVC5
 </td>
 <td>
@@ -237,6 +229,14 @@ Xamarin<br/></td>
 {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
 </td>
 </tr>
+<tr>
+<td>
+ASP.NET MVC4
+</td>
+<td>
+{{'[Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4.nupkg](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4/)'| markdownify }}
+</td>
+</tr>
 </table>
 
 ## NuGet package installation and uninstallation
@@ -279,19 +279,6 @@ WPF
 <td>
 * Uninstall-package Syncfusion.Presentation.Wpf -RemoveDependencies <br/><br/>
 * Uninstall-package Syncfusion.OfficeChartToImageConverter.Wpf -RemoveDependencies  
-</td>
-</tr>
-<tr>
-<td>
-ASP.NET MVC4
-</td>
-<td>
-* Install-package Syncfusion.Presentation.AspNet.MVC4<br/><br/>
-* Install-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4
-</td>
-<td>
-* Uninstall-package Syncfusion.Presentation.AspNet.MVC4 -RemoveDependencies <br/><br/>
-* Uninstall-package Syncfusion.OfficeChartToImageConverter.AspNet.MVC4 -RemoveDependencies  
 </td>
 </tr>
 <tr>

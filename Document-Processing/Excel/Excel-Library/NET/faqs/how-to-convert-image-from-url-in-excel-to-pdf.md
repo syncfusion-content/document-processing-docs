@@ -1,12 +1,12 @@
 ---
-title: Convert image from URL in Excel to PDF | Syncfusion
-description: This page shows how to image from URL in Excel to PDF using the .NET Excel Library.
+title: How to Convert URL Images in .NET Excel Library | Syncfusion
+description: Convert images from URLs in Excel to PDF using the Syncfusion .NET Excel Library during the workbook conversion process.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert image from URL in Excel to PDF?
+# How to convert URL images to PDF in .NET Excel Library
 
 The image added from an URL/external link will be downloaded every time the spreadsheet is opened in Microsoft Excel. The image is not physically embedded into the Excel document but points to a web resource. As the image is not present, it would not be rendered in the converted PDF document.
 

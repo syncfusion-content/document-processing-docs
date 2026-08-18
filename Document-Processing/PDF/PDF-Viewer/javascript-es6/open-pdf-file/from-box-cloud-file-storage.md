@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Box cloud storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Box cloud storage in the Syncfusion TypeScript PDF Viewer component using a server-backed approach.
+title: From Box Cloud File Storage in JavaScript (ES6) PDF | Syncfusion
+description: Load and display PDF files stored in Box cloud storage in the JavaScript (ES6) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Box cloud storage in TypeScript 
+# Open PDF from Box Cloud Storage in JavaScript (ES6) PDF Viewer
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 

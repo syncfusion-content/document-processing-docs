@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stamp annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
+title: Stamp Annotation in Vue PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Stamp annotations in the Vue PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in Vue PDF Viewer control
+# Stamp Annotation in Vue PDF Viewer
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 

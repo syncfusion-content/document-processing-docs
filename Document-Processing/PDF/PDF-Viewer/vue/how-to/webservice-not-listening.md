@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to clear the "Web-service is not listening" error | Syncfusion
-description: Learn here all about How to clear the "Web-service is not listening" error in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the Vue PDF Viewer with a clear troubleshooting checklist and configuration tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to clear the "Web-service is not listening" error
+# How to Resolve the Web-Service Is Not Listening Error in Vue PDF
 
 ![Alt text](../images/webservice.png)
 

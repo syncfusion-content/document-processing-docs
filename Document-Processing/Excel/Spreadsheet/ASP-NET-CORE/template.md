@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Template in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Template in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about cell templates in the Syncfusion ASP.NET Core Spreadsheet control, including custom content and cell rendering options.
 platform: document-processing
 control: Template
 documentation: ug
 ---
 
 
-# Cell Template in ASP.NET Core Spreadsheet Control
+# Cell Template in ASP.NET Core Spreadsheet
 
 Cell Template allows you to add HTML elements to the Spreadsheet. Use the `template` property to define a cell template and the `address` property within `ranges` to specify where the template is applied.
 

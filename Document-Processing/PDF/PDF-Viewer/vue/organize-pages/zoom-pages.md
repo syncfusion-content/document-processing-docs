@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Zoom pages in Organize Pages in Vue PDF Viewer | Syncfusion
-description: Learn here all about how to adjust thumbnail zoom levels inside the Organize Pages UI of the Syncfusion Vue PDF Viewer.
+title: Zoom Pages in Vue PDF Viewer | Syncfusion
+description: Adjust the thumbnail zoom level inside the Organize Pages panel in the Vue PDF Viewer so users can preview pages at the right size.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Zoom pages using the Organize Pages tool in Vue
+# Zoom Pages in Organize Pages in Vue PDF Viewer
 
 ## Overview
 

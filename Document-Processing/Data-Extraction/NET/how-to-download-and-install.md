@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Installing Syncfusion Data Extraction - Syncfusion
-description: Learn how to install the .NET Smart Data Extractor Library for extracting structured data from PDFs and images in .NET applications.
+title: How to install .NET Smart Data Extractor Add-on | Syncfusion
+description: Learn about how to install the Syncfusion .NET Smart Data Extractor Add-on with this step-by-step guide.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Syncfusion<sup>&reg;</sup> Data Extraction Add-On
+# How to install .NET Smart Data Extractor Add-on
 
 The Syncfusion<sup>&reg;</sup> Data Extraction Add-On can be downloaded from the [Syncfusion download page](https://www.syncfusion.com/downloads). 
 
 
-### Download Data Extraction Add-On Setup
+## Download Data Extraction Add-On Setup
 
 1. You can download the Data Extraction Add-On at any time from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page by clicking **More Download Options** (as shown in the screenshot below).
    ![Trials and downloads of the Syncfusion Data Extraction Add-On](images/license-download.png)

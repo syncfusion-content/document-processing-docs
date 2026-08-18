@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disable thumbnail view in Syncfusion Essential UWP PDF viewer.
-description: Learn here about Disable thumbnail view support in UWP PDF viewer control and how to enable or disable thumbnail view, and more.
+title: How to Disable thumbnail view in UWP PDF Viewer | Syncfusion
+description: Learn how to disable thumbnail view in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Disable thumbnail view in UWP PDF Viewer
+# How to Disable thumbnail view in UWP PDF Viewer
 The SfPdfViewer control allows you to enable and disable thumbnail view that is opened when the document is magnified below 100%. The following code illustrates the same.
 {% tabs %}
 {% highlight c# %}

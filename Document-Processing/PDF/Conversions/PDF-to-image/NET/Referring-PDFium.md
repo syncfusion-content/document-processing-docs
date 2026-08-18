@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Referring the PDFium | Syncfusion&reg;
-description: Learn about Converting PDF pages into images using Syncfusion&reg; PdfToImageConverter with the help of PDFium.
+title: PDFium Integration in PDF to Image Converter Library | Syncfusion
+description: Learn how to use PDFium with the Syncfusion PDF to Image Converter Library for accurate and efficient PDF-to-image conversion.
 platform: document-processing
 control: PDF to image
 documentation: UG
 ---
 
-# Convert PDF to image using PDFium
+# PDFium Integration in PDF to Image Converter Library
 
 PdfToImageConverter uses PDFium to convert a PDF document to an image. PDFium is used in Google Chrome for rendering PDF files. It provides accurate and robust PDF rendering. 
 
 N>* PDFium is not supported in Windows XP operating system.
 N>* From v34.1.x onwards, Pdfium is upgraded to the new version which was built with the branch [chromium/7814](https://pdfium.googlesource.com/pdfium/+/refs/heads/chromium/7814).
 
-### How PDFium works with PdfToImageConverter
+## How PDFium works with PdfToImageConverter
 
 * On running your application, Syncfusion&reg; PdfToImageConverter control generates a folder named `PDFium` in the application output path folder (for example: bin/release or bin/debug) at runtime. 
 * Syncfusion&reg; PdfToImageConverter control detects the architecture of the running machine automatically.

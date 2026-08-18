@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React DOCX Editor component | Syncfusion
-description: Learn how to create a DOCX Editor in a React application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+title: Getting started with React DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion React DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DOCX Editor
+# Getting Started with React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a React application.
 
@@ -110,17 +110,8 @@ The output will appear as follows:
 
 ## Prerequisites
 
-{% tabs %}
-{% highlight markdown tabtitle="TypeScript" %}
 * [System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
-{% endhighlight %}
-
-{% highlight markdown tabtitle="JavaScript" %}
-* [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
-* [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
-{% endhighlight %}
-{% endtabs %}
 
 ## Create a new React application
 
@@ -250,15 +241,15 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React DOCX Editor](./images/react_getting_started.png)
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can also explore the DOCX Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 ## Online Demo
 

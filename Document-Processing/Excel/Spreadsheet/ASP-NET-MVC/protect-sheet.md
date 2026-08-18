@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Protect Sheet in EJ2 ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Learn here all about Protect Sheet in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Protection in ASP.NET MVC Spreadsheet | Syncfusion
+description: Secure worksheets and cells by using protection features in the Syncfusion ASP.NET MVC Spreadsheet component.
 platform: document-processing
 control: Protect Sheet
 documentation: ug
 ---
 
 
-# Protection in ASP.NET MVC Spreadsheet Control
+# Protection in ASP.NET MVC Spreadsheet
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 

@@ -1,11 +1,11 @@
 ---
-title: FAQ about multithreading in Word to PDF | DocIO | Syncfusion
-description: Learn about multithreading and thread-safety support in Word to PDF conversion using the .NET Word (DocIO) library.
+title: FAQ about multithreading in Word to PDF in .NET Word | Syncfusion
+description: Learn about multithreading and thread-safety support in Word to PDF conversion using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Multithreading in Word to PDF conversion
+# FAQ about multithreading in Word to PDF in .NET Word
 
 This page covers multithreading and thread-safety support in Word to PDF conversion.
 

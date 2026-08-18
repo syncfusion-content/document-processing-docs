@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Using local resources in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn how to configure the ASP.NET MVC PDF Viewer control with local scripts, styles, and resources for offline deployment and restricted CDN access.
+title: How to Load the PDF Viewer with Local Resources | Syncfusion
+description: Configure the ASP.NET MVC PDF Viewer to load PDF documents and library files from local resources instead of a CDN for offline or restricted networks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Using local resources in ASP.NET MVC PDF Viewer
+# How to Load the PDF Viewer with Local Resources in ASP.NET MVC PDF
 
 ## Configuring PDF Viewer with local styles and scripts
 
