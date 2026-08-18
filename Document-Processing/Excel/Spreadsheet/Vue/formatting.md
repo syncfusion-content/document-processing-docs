@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formatting in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Vue Spreadsheet | Syncfusion
+description: Apply cell, text, number, and conditional formatting in the Syncfusion Vue Spreadsheet to improve data presentation.
 control: Formatting 
 platform: document-processing
 documentation: ug
 ---
 
-# Formatting in Vue Spreadsheet component
+# Formatting in Vue Spreadsheet
 
 Formatting options make your data easier to view and understand. The Spreadsheet supports the following types of formatting:
 * Number Formatting
@@ -306,7 +306,7 @@ To apply these formats, use the `verticalAlign` property within the style of a r
 - Set `verticalAlign: 'super'` for superscript  
 - Set `verticalAlign: 'sub'` for subscript  
 
-#### How to Apply Subscript and Superscript
+### How to Apply Subscript and Superscript
 
 You can apply subscript and superscript formatting in the following ways:
 

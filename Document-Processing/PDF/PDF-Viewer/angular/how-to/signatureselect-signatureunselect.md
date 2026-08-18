@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Signature selection events in Angular | Syncfusion
-description: Learn here all about signatureSelect and signatureUnselect events in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Handle Signature Select and Unselect Events | Syncfusion
+description: Handle the signatureSelect and signatureUnselect events in the Angular PDF Viewer to manage the selection state of handwritten signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Signature select and unselect events in Angular PDF Viewer component
+# How to Handle Signature Select and Unselect Events in Angular PDF
 
 The PDF Viewer exposes events for monitoring the selection state of handwritten signature annotations: [signatureSelect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureSelectEventArgs) and [signatureUnselect](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/signatureUnselectEventArgs). These events enable applications to respond when a signature annotation is selected or cleared—for example, updating the UI, enabling contextual actions, or recording metadata.
 

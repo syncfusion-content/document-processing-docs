@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search text and redact in Vue PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion Vue PDF Viewer.
+title: Search Redact in Vue PDF Viewer | Syncfusion
+description: Learn about the search redact in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in Vue PDF Viewer
+# Search Redact in Vue PDF Viewer
 
 You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below uses the `findTextAsync` method to perform a search and places a redaction annotation for every result.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: WinForms UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® WinForms UI Builder to generate production-ready Windows Forms controls with PDF Viewer from natural-language prompts.
+title: UI Builder Skill with PDF Viewer in WinForms PDF Viewer | Syncfusion
+description: The UI Builder Skill with PDF Viewer enables developers to generate WinForms interfaces and PDF Viewer integrations from prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® WinForms UI Builder Skill with PDF Viewer
+# UI Builder Skill with PDF Viewer in WinForms PDF Viewer
 
 **Syncfusion® WinForms UI Builder Skill** is an AI-powered agent skill that accelerates WinForms PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® WinForms components. 
 

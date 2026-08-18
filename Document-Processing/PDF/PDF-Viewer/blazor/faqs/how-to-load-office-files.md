@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load Office files in Blazor SfPdfViewer | Syncfusion
-description: Learn how to load Microsoft Word, Excel, PowerPoint, and image files by converting into PDF and load into Blazor SfPdfViewer component.
+title: How to Load Office files in Blazor PDF Viewer | Syncfusion
+description: Learn how to load Microsoft Word, Excel, PowerPoint, and image files by converting into PDF and load into Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Load Microsoft Office files in Blazor SfPdfViewer Component
+# How to Load Office files in Blazor PDF Viewer
 
 In the following example, a Word document is converted to a PDF and then loaded into the SfPdfViewer as a base64 data URL. The same approach is applied for PowerPoint, Excel, and image files.
 

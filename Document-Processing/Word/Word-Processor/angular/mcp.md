@@ -1,13 +1,13 @@
 ---
-title: Syncfusion Angular DOCX Editor MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Angular DOCX Editor.
+title: MCP Server for Angular DOCX Editor | Syncfusion
+description: The Syncfusion® Angular MCP Server provides setup guidance, integration support, and resources to accelerate Angular DOCX Editor development workflows.
 platform: document-processing
 control: DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion Angular DOCX Editor MCP Server
+# MCP Server for Angular DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Angular DOCX Editor MCP Server accelerates Angular DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

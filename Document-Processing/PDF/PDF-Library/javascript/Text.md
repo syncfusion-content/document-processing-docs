@@ -1,13 +1,13 @@
 ---
-title: Text in JavaScript PDF Library | Syncfusion
+title: PDF Text in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to add text to a PDF by using different types of fonts, including TrueType fonts and standard fonts, with the JavaScript PDF Library
+description: Add and format text with standard and TrueType fonts in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Text in JavaScript PDF Library
+# PDF Text in JavaScript PDF
 
 The JavaScript PDF Library enables precise control over text appearance and layout in PDF documents. It supports adding and formatting text using multiple font types — Standard, TrueType, and CJK — and provides layout-aware rendering for multi-page documents.
 

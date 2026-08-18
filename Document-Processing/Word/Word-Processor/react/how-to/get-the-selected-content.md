@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get selected content in React DOCX Editor | Syncfusion
-description: Learn here all about Get the selected content in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Selected Content in React DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® React DOCX Editor for content extraction, processing, and customization.
 control: Get the selected content
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the selected content in React Document Editor component
+# How to Get Selected Content in React DOCX Editor
 
 You can get the selected content from the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about table in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Tables in ASP.NET MVC DOCX Editor | Syncfusion
+description: Tables in ASP.NET MVC DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table
 documentation: ug
 ---
 
 
-# Table in ASP.NET MVC Document Editor
+# Tables in ASP.NET MVC DOCX Editor
 
 Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through keyboard, mouse, or touch interactions. It exposes a rich set of APIs to perform these operations programmatically.
 

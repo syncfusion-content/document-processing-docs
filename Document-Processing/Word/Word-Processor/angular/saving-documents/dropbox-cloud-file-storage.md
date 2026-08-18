@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save Document to Dropbox Storage in Angular DOCX Editor | Syncfusion
-description:  Learn about how to Save a document to Dropbox cloud file storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Dropbox Cloud Storage in Angular DOCX Editor | Syncfusion
+description: Save documents to Dropbox cloud storage from Angular DOCX Editor, enabling cloud-based file storage and document management.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud storage using Angular Document Editor
+# Save Documents to Dropbox Cloud Storage in Angular DOCX Editor
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 

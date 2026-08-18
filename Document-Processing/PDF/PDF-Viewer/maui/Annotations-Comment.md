@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Comments in .NET MAUI PDF Viewer (SfPdfViewer)
+# Comments in .NET MAUI PDF Viewer
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 1. Ink annotation
 2. Shape annotation

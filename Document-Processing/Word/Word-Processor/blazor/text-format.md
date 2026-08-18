@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Text Formatting in Blazor DOCX Editor | Syncfusion
-description: Learn here all about working with text formatting in the Syncfusion Blazor Document Editor component and more.
+title: Text Format in Blazor DOCX Editor | Syncfusion
+description: Text format properties in Blazor DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Working with Text Formatting in Blazor Document Editor
+# Text Format in Blazor DOCX Editor
 
 [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

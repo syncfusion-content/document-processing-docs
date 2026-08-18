@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Arrow Annotation (Shape) in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Blazor SfPdfViewer component.
+title: Arrow Annotation (Shape) in Blazor PDF Viewer  | Syncfusion
+description: Learn how to enable, apply, customize, and manage Arrow annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Arrow Annotation (Shape) in Blazor SfPdfViewer Component
+# Arrow Annotation (Shape) in Blazor PDF Viewer 
 Arrow annotations let users point, direct attention, or indicate flow on PDFs—useful for callouts, direction markers, and connectors during reviews. You can add arrows from the toolbar, switch to arrow mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Arrow overview](../../images/blazor-pdfviewer-arrow-annot.png)

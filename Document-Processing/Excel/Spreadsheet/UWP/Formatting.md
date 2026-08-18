@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Formatting in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Formatting support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Format cells in the UWP Spreadsheet control with fonts, colors, borders, alignment, number formats, and other styling options.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Formatting in UWP Spreadsheet (SfSpreadsheet)
+# Formatting in UWP Spreadsheet
 
 This section explains the formatting options similar to Excel in SfSpreadsheet.
 

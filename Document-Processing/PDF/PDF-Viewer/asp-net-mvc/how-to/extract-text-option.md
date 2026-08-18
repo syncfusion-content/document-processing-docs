@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Configure extractTextOption in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the Syncfusion ASP.NET MVC PDF Viewer to control text extraction and memory usage.
+title: How to Configure ExtractTextOption in ASP.NET MVC PDF | Syncfusion
+description: Use the extractTextOption property in the ASP.NET MVC PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Configure extractTextOption in the ASP.NET MVC PDF Viewer
+# How to Configure ExtractTextOption in ASP.NET MVC PDF Viewer
 
 The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
-### Available Options:
+## Available Options:
 
 **None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
 

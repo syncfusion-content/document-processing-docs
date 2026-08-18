@@ -1,12 +1,12 @@
 ---
-title: Create Word document in ASP.NET | Syncfusion 
-description: Create Word document without Microsoft Word or interop dependencies in ASP.NET application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: Create Word document in ASP.NET  | Syncfusion
+description: Describe the assemblies required to convert Word documents to images using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in ASP.NET
+# Create Word document in ASP.NET 
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word** documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **create a Word document in ASP.NET Web Forms**.
 

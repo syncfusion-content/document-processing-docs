@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open OneDrive Files in JavaScript (ES5) Document editor | Syncfusion
-description: Learn about how to Open document from One Drive in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in JavaScript DOCX Editor | Syncfusion
+description: Open documents from OneDrive in JavaScript DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive in JavaScript (ES5) Document editor
+# Open Documents from OneDrive in JavaScript DOCX Editor
 
 To load a document from One Drive in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
 

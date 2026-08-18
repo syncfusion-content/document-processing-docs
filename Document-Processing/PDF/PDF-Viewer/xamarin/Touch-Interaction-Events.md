@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Touch interaction events in Xamarin Pdf Viewer (SfPdfViewer)
+# Touch interaction events in Xamarin Pdf Viewer
 
 ## Tapped 
 

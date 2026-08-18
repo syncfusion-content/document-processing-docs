@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Drive using the Syncfusion Vue PDF Viewer component with a server-backed web service.
+title: To Google Drive in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Drive in Vue
+# Save PDF Files to Google Drive in Vue PDF Viewer
 
 This article describes how to save a PDF file to Google Drive from the Vue PDF Viewer using a server-side web service. Follow the steps below.
 

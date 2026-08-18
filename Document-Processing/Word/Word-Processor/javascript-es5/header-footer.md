@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header footer in JavaScript (ES5) DOCX Editor control | Syncfusion
-description: Learn here all about Header footer in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Headers and Footers in JavaScript DOCX Editor | Syncfusion
+description: Headers and footers in JavaScript DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: Header footer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header footer in JavaScript (ES5) Document Editor control
+# Headers and Footers in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
