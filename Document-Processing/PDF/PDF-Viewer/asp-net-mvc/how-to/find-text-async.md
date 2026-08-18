@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use findTextAsync in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion ASP.NET MVC PDF Viewer and retrieve match bounds.
+title: How to Use FindTextAsync in ASP.NET MVC PDF Viewer | Syncfusion
+description: Search text asynchronously in the ASP.NET MVC PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Find text with findTextAsync in the ASP.NET MVC PDF Viewer
+# How to Use FindTextAsync in ASP.NET MVC PDF Viewer
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
@@ -51,7 +51,7 @@ Here is an example of how to use `findTextAsync`:
 {% endhighlight %}
 {% endtabs %}
 
-### Description
+## Description
 
 The `findTextAsync` method performs an asynchronous text search within a PDF document. You can search for a single string or multiple strings while controlling case sensitivity. By default, the search runs across all pages. Specify the optional `pageIndex` argument to limit the search to a single page.
 

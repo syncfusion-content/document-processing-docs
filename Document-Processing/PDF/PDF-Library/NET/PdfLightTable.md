@@ -1,12 +1,12 @@
 ---
-title: Working with Tables using PdfLightTable | Syncfusion
-description: Learn how to create a table in a PDF, apply cell and built-in table styles, automatic pagination, customize rows and columns, and more using PdfLightTable.
+title: PdfLightTable in .NET PDF Library | Syncfusion
+description: Learn how to create tables in PDF with built-in styles, pagination, and row/column customization using PdfLightTable.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with .NET PDF Tables using the PdfLightTable model
+# PdfLightTable in .NET PDF Library
 
 The [.NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) supports creating [PDF tables](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/pdf-tables). The PDF table displays data from data sources or by directly binding data in a tabular format. This section demonstrates how to create a PDF table using the `PdfLightTable` model.
 

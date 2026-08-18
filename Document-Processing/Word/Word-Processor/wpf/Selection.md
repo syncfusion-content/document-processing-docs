@@ -1,12 +1,12 @@
 ---
-title: Selection in WPF RichTextBox control | Syncfusion
-description: Learn here all about Selection support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Selection in WPF DOCX Editor | Syncfusion
+description: The selection in WPF DOCX Editor supports selecting a portion of the document, enabling selection through mouse, touch, keyboard, or supported APIs.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: selection
 ---
-# Selection in WPF RichTextBox (SfRichTextBoxAdv)
+# Selection in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports selecting a portion of the document either through UI interactions by using mouse, touch, keyboard or through supported APIs.
 The following sample code demonstrates how to retrieve text position from document using paragraph instance and offset value.

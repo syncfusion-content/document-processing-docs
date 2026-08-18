@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion® PowerPoint Mac Installer Guide
+title: How to Install Syncfusion PowerPoint Mac Installer | Syncfusion
 description: Learn how to install the Syncfusion® PowerPoint (Document Processing) Mac Installer after downloading it from the Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PowerPoint Mac installer
+# How to Install Syncfusion PowerPoint Mac Installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 

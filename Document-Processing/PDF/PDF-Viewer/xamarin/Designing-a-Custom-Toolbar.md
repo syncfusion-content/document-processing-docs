@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Designing a Custom Toolbar in Xamarin Pdf Viewer (SfPdfViewer)
+# Designing a Custom Toolbar in Xamarin Pdf Viewer
 
 The built-in toolbar of the [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) can be disabled and a custom toolbar can be used at the sample. The below code snippet demonstrates how to create a simple toolbar for PDF Viewer with the options such as current page number, total page count in the PDF document, go to previous page and go to next page.
 

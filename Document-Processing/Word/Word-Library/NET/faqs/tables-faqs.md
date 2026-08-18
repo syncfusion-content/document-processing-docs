@@ -1,11 +1,11 @@
 ---
-title: FAQ about Tables | DocIO | Syncfusion
-description: Learn about the frequently asked questions about tables in Word document in the .NET Word (DocIO) library.
+title: FAQ about Tables in .NET Word | Syncfusion
+description: This section illustrates frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about tables in Word document
+# FAQ about Tables in .NET Word
 
 The frequently asked questions about working with tables in Word documents using DocIO are listed below.
 

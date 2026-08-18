@@ -1,11 +1,11 @@
 ---
-title: Working with Forms | Syncfusion
-description: Learn how to create, fill, modify, make read-only, and flatten AcroForm form fields in a PDF document using the Syncfusion .NET PDF library.
+title: Forms in .NET PDF Library | Syncfusion
+description: Learn how to create, fill, modify, and flatten AcroForm form fields in a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Forms
+# Forms in .NET PDF Library
 
 An interactive form, sometimes referred to as an AcroForm, is a collection of fields for gathering information interactively. A PDF document can contain any number of fields appearing on any combination of pages, all of which together make a single, globally interactive form spanning the entire document. Syncfusion<sup>&reg;</sup> PDF library supports creating AcroForm fields from scratch, importing them into existing documents, populating them with values, marking them as read-only, and flattening them so the form data becomes part of the page content.
 

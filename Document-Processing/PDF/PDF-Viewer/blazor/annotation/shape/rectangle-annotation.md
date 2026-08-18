@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Rectangle Annotation (Shape) in Blazor PDF Viewer | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage rectangle annotations in the Blazor SfPdfViewer.
+description: Learn how to add, edit, delete, and programmatically manage rectangle annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Rectangle Annotation (Shape) in Blazor SfPdfViewer Component
+# Rectangle Annotation (Shape) in Blazor PDF Viewer 
 
 Rectangle annotations let you highlight regions, group content, or draw callout boxes on PDFs for reviews and markups. The Blazor SfPdfViewer supports adding rectangles from the toolbar, customizing their appearance, editing or deleting them in the UI, and exporting them with the document.
 

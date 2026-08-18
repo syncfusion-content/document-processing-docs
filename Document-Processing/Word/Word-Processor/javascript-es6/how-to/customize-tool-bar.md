@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Toolbar in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to customize the toolbar in Syncfusion JavaScript (ES6) Document Editor to add, show, hide, enable, or disable existing items.
+title: How to Customize Toolbar in TypeScript DOCX Editor | Syncfusion
+description: Customize the toolbar in Syncfusion® TypeScript DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 platform: document-processing
 control: Customize Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Toolbar in JavaScript (ES6) Document Editor
+# How to Customize Toolbar in TypeScript DOCX Editor
 
 ## How to customize the existing toolbar in DocumentEditorContainer
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Edit form fields in the React PDF Viewer | Syncfusion
-description: Learn how to edit PDF form fields using the UI and programmatically with APIs in the Syncfusion React PDF Viewer.
+title: Modify Form Fields in React PDF Viewer | Syncfusion
+description: Edit PDF form fields in the React PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Modify PDF Form Field Properties in React
+# Modify Form Fields in React PDF Viewer
 
 Modify form fields using the UI or programmatically via the API.
 

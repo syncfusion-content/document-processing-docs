@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Chart Area | DocIO | Syncfusion
-description: Learn how to modify the appearance of chart area in a chart in a Word document using Syncfusion<sup>&reg;</sup> Word library without Microsoft Word.
+title: Modify the Appearance of Chart Area in .NET Word | Syncfusion
+description: Describe common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customizing Chart Area
+# Modify the Appearance of Chart Area in .NET Word
 
 Chart area refers to the space that contains the chart or graph you've inserted into a document. It includes the entire chart and all its elements, such as data points, labels, axes, and the plot area. Using DocIO, you can **customize the chart area in the chart**.
 

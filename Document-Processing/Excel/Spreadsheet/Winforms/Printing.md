@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Printing in Windows Forms Spreadsheet | Syncfusion®
-description: Learn about Printing support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+description: Print worksheets from Windows Forms Spreadsheet with page setup options, print settings, and worksheet layout customization.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

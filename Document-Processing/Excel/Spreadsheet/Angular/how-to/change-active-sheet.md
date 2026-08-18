@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change active sheet when importing Angular Spreadsheet | Syncfusion
-description: Learn here all about changing the active sheet index while importing a file in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more. 
+title: How to Change Active Sheet in Angular Spreadsheet | Syncfusion
+description: Change the active sheet index when importing a workbook in Syncfusion®  Angular Spreadsheet to display the required worksheet by default.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Change active sheet when importing Angular Spreadsheet
+# How to Change Active Sheet When Importing in Angular Spreadsheet
 
 You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#opencomplete) event.
 

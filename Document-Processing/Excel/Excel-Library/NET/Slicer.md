@@ -1,12 +1,12 @@
 ---
-title: Slicer in Excel | Excel library | Syncfusion
-description: This section illustrates about Excel Slicers and its various features in Syncfusion XlsIO (a .NET Excel library).
+title: Slicers in .NET Excel Library | Syncfusion
+description: Excel slicers section describe slicers and their various features in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Working with Excel Slicer
+# Excel Slicers in .NET Excel Library
 
 Slicers are UI filters that help to display only specific data based on the selection criteria. They provide easy and simple UI options to enable or disable the filters in a table.
 

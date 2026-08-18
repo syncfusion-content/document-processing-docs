@@ -1,12 +1,12 @@
 ---
-title: List in WPF RichTextBox control | Syncfusion
-description: Learn here all about List support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: List in WPF DOCX Editor | Syncfusion
+description: List in WPF DOCX Editor offers single-level and multilevel list support, enabling organized data as step-by-step instructions.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: list
 ---
-# List in WPF RichTextBox (SfRichTextBoxAdv)
+# List in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports both the single-level and multilevel lists similar to the Microsoft Word. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points.
 

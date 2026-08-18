@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get Selected Content in Syncfusion DOCX Editor Component | Syncfusion
-description: Learn here all about getting the selected content in the Syncfusion Document Editor component of Essential JS 2 and more.
+title: How to Get Selected Content in ASSP.NET Core DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® ASP.NET Core DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
 ---
 
 
-# Get the selected content in the ASP.NET Core Document Editor
+# How to Get Selected Content in ASP.NET Core DOCX Editor
 
 You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

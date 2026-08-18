@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Use local resources in JavaScript PDF Viewer | Syncfusion
-description: Learn how to configure local script and style references for the Syncfusion JavaScript PDF Viewer control and reference them within your application.
+title: How to Use Local Script and Style References | Syncfusion
+description: Use local script and style references for the JavaScript (ES5) PDF Viewer so it can run in offline or restricted network environments.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use local script and style references in JavaScript PDF Viewer
+# How to Use Local Script and Style References in JavaScript (ES5) PDF
 
 **Step 1:** Create an application folder named `my-app` for Essential JS 2 JavaScript components.
 

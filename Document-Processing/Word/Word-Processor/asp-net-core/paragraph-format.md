@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph Format in DOCX Editor Control | Syncfusion
-description: Learn about paragraph formatting in the Syncfusion ASP.NET Core Document Editor component, including alignment, indentation, spacing, and borders.
+title: Paragraph Format in ASP.NET Core DOCX Editor | Syncfusion
+description: The paragraph format feature in ASP.NET Core DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: ParagraphFormat
 documentation: ug
 ---
 
 
-# Working with Paragraph Formatting in ASP.NET Core Document Editor
+# Paragraph Format in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ribbon in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Ribbon in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Ribbon in Angular Spreadsheet | Syncfusion
+description: The ribbon in Angular Spreadsheet organizes commands into tabs, providing quick access to editing, formatting, and worksheet features.
 platform: document-processing
 control: Ribbon
 documentation: ug
 ---
 
-# Ribbon in Angular Spreadsheet component
+# Ribbon in Angular Spreadsheet 
 
 It helps to organize a spreadsheet’s features into a series of tabs. By clicking the expand or collapse icon, you can expand or collapse the ribbon toolbar dynamically.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: UI Interactions for Organize in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn about the UI interactions in the Syncfusion ASP.NET MVC PDF Viewer control, including rotating, rearranging, inserting, deleting, and copying pages.
+title: Ui Interactions in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the ui interactions in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# UI Interactions for Organizing Pages in ASP.NET MVC PDF Viewer
+# Ui Interactions in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides an intuitive user interface for managing and organizing pages within a PDF document. This section covers the various UI interactions available in the `Organize Pages` dialog.
 

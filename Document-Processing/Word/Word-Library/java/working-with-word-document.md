@@ -1,11 +1,11 @@
 ---
-title: Working with Word document | DocIO | Syncfusion
-description: Learn about combining multiple Word documents as one, printing Word document, applying styles, document properties, & iterating through DOM elements
+title: Word document in Java Word | Syncfusion
+description: This section illustrates how to create Word documents in Azure services using the Syncfusion .NET Word library
 platform: document-processing
 control: Word library
 documentation: UG
 ---
-# Working with Word document
+# Word document in Java Word
 
 ## Iterating through document elements
 
@@ -466,7 +466,7 @@ document.close();
 
 {% endtabs %}  
 
-## Working with Word document properties
+## Word document in Java Word properties
 
 Document properties, also known as metadata, are details about a file that describe or identify it. You can also define the additional custom document properties for the documents by using DocIO Document properties that are classified as two categories. 
 

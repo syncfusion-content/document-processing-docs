@@ -1,11 +1,11 @@
 ---
-title: Working with Silverlight
-description: This section explains how to load and save PDF document in Silverlight
+title: Silverlight in .NET PDF Library | Syncfusion
+description: Learn how to load and save PDF documents in Silverlight applications using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Silverlight 
+# Silverlight in .NET PDF Library
 
 In your Silverlight application, please add the required assemblies in order to use Essential<sup>&reg;</sup> PDF. [Refer here for assemblies required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required).
 

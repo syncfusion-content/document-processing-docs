@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in Vue Document editor component | Syncfusion
-description: Learn here all about Image in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Images in Vue DOCX Editor | Syncfusion
+description: Images in Vue DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 control: Image 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in Vue Document editor component
+# Images in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 

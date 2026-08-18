@@ -1,12 +1,12 @@
 ---
-title: Import to Excel Worksheet | .NET XlsIO | Syncfusion
-description: Learn to import data into Excel worksheets from DataTables, collections, arrays, grids, HTML tables, and XML files using XlsIO.
+title: Importing Worksheets in .NET Excel Library | Syncfusion
+description: Data import in Excel Library explains how to load data from DataTables, collections, arrays, grids, HTML tables, and XML files into Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Import to Excel Worksheet
+# Importing Data to Worksheets in .NET Excel Library
 
 ## DataTable to Excel
 
@@ -77,7 +77,7 @@ N> XlsIO imports the data from a `DataTable` into an Excel worksheet based on th
 
 ### Preserve Data Types  
 
-To preserve data types when importing a DataTable into an Excel worksheet, set the **preserveTypes** parameter of the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Boolean_System_Int32_System_Int32_System_Boolean_">ImportDataTable</a> method to **true**.
+To preserve data types when importing a DataTable into an Excel worksheet, set the **preserveTypes** parameter of the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html#Syncfusion_XlsIO_IWorksheet_ImportDataTable_System_Data_DataTable_System_Boolean_System_Int32_System_Int32_System_Boolean_" aria-label="Class reference documentation link">ImportDataTable</a> method to **true**.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

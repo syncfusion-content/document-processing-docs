@@ -1,12 +1,12 @@
 ---
-title: MVVM in UWP RichTextBox control | Syncfusion
-description: Learn here all about MVVM support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: MVVM in UWP DOCX Editor | Syncfusion
+description: The MVVM in UWP DOCX Editor offers Model-View-ViewModel pattern support, enabling clean separation through view model implementation for the editor.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: mvvm
 ---
-# MVVM in UWP RichTextBox (SfRichTextBoxAdv)
+# MVVM in UWP DOCX Editor
 
 The SfRichTextBoxAdv control can be used with Model-View-View Model (MVVM) pattern. This section will demonstrate how to use the SfRichTextBoxAdv control with MVVM pattern.
 

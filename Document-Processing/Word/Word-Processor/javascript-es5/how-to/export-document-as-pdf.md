@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export PDF in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Export document as pdf in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Export Document as PDF in JavaScript DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® JavaScript DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Export Document as PDF
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export document as pdf in JavaScript (ES5) Document editor control
+# How to Export Document as PDF in JavaScript DOCX Editor
 
 In this article, we are going to see how to export the document as PDF. You can export the document as PDF in the following ways:
 

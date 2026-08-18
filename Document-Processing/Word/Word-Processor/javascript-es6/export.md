@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Export in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Export in TypeScript DOCX Editor | Syncfusion
+description: The export feature in TypeScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in JavaScript (ES6) Document Editor control
+# Export in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 

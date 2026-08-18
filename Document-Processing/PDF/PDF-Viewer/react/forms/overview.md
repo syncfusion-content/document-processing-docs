@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in React PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion React PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion React PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in React PDF Viewer
+# About Syncfusion React PDF Viewer Forms
 
 The [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents through the viewer UI or programmatically via the React APIs.
 
