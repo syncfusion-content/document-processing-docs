@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create PDF Viewer service in Vue PDF Viewer | Syncfusion
-description: Learn how to create an ASP.NET Core Web API service for the Vue PDF Viewer to handle server-side processing for rendering, text extraction, thumbnails, and more.
+title: How to Create a Custom PDF Viewer Service in ASP.NET | Syncfusion
+description: Create a custom PDF Viewer web service in ASP.NET Core for the Vue PDF Viewer, with code samples and configuration tips for common setups.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Create PDF Viewer service in Vue PDF Viewer
+# How to Create a Custom PDF Viewer Service in ASP.NET Core in Vue PDF
 
 The PDF Viewer depends on a server-side service to process PDF documents for rendering. This section explains how to create an ASP.NET Core Web API service for the PDF Viewer to perform server-side preprocessing and operations used by the client.
 
@@ -19,33 +19,33 @@ To get started with an ASP.NET Core Web API service, refer to System requirement
 
 Follow these steps to create the PDF Viewer service
 
-**Step 1:**  Select File > New > Project, in the Visual Studio menu bar.
+**Step 1:** Select **File > New > Project** in the Visual Studio menu bar.
 
-![Alt text](./images/Start.png)
+![Alt text](../../javascript-es6/how-to/images/Start.png)
 
 **Step 2:** Select ASP.NET Core Web Application and then click **Next**.
 
-![Alt text](./images/Coreapp.png)
+![Alt text](../../javascript-es6/how-to/images/Coreapp.png)
 
 **Step 3:** In the Configure your new project dialog, enter Project Name and select **Next**.
 
-![Alt text](./images/Coreapp1.png)
+![Alt text](../../javascript-es6/how-to/images/Coreapp1.png)
 
 **Step 4:** In the Additional information dialog, select .NET 6.0 (Long-term Support) and then select **Create**.
 
-![Alt text](./images/CoreappCreate.png)
+![Alt text](../../javascript-es6/how-to/images/CoreappCreate.png)
 
-**Step 5:** After creating the project, add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) dependency to your project by using 'NuGet Package Manager'.
+**Step 5:** Add the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core) NuGet package to your project.
 
 Open the `NuGet` package manager.
-![Alt text](./images/Nugetpackage.png)
+![Alt text](../../javascript-es6/how-to/images/Nugetpackage.png)
 
 Install the **Syncfusion.EJ2.PdfViewer.AspNet.Core** package to the application.
 
-![Alt text](./images/viewer-dependency.png)
+![Alt text](../../javascript-es6/how-to/images/viewer-dependency.png)
 
 **Step 6:** Add an API controller to the project and name it `PdfViewerController`.
-![Alt text](./images/apicontroller.png)
+![Alt text](../../javascript-es6/how-to/images/apicontroller.png)
 
 **Step 7:** Add the following code to the `PdfViewerController.cs` controller.
 

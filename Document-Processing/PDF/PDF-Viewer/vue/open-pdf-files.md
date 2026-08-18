@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open PDF files in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDF files from URLs, base64 strings, and databases in the Syncfusion Vue PDF Viewer component.
+title: Open Pdf Files in Vue PDF Viewer | Syncfusion
+description: Load PDF files in the Vue PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
 control: Open PDF files
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files
+# Open PDF Files in Vue PDF Viewer
 
-This article explains how to open and display PDF files in the Syncfusion Vue PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
+This article explains how to open and display PDF files in the Vue PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local files , and as base64 string.
 
 N> Ensure that the web service is running and reachable before loading documents in the Vue PDF Viewer component.
 

@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Select text from a PDF document using .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about selecting text from PDF documents and copying it to the clipboard using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Text Selection in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to select text from a PDF document and copy it to the clipboard using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Selecting text from a PDF document in .NET MAUI PDF Viewer (SfPdfViewer)
+# Text Selection in .NET MAUI PDF Viewer
 
-Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can select text from a PDF document and copy it to the clipboard. This process allows you to easily extract text from the PDF and paste it into other applications.
+Using [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can select text from a PDF document and copy it to the clipboard. This process allows you to easily extract text from the PDF and paste it into other applications.
 
 ## Selection using the mouse
 
@@ -36,7 +37,7 @@ N> In desktop platforms, you can also use the keyboard shortcut <code>Ctrl</code
 
 ## Disabling text selection
 
-The [EnableTextSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableTextSelection) property allows you to enable or disable text selection in the `SfPdfViewer`. You can assign it a value of `False` to disable the text selection. This can be helpful in situations when you want to prevent users from selecting and copying text contents from the PDF files that are being displayed.
+The [EnableTextSelection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableTextSelection) property allows you to enable or disable text selection in the `SfPdfViewer`. You can assign it a value of `False` to disable the text selection. This can be helpful in situations when you want to prevent users from selecting and copying text contents from the PDF files that are being displayed.
 
 Refer to the following code example to disable text selection.
 
@@ -56,7 +57,7 @@ PdfViewer.EnableTextSelection = false;
 
 ## Customize the text selection highlight color
 
-The [TextSelectionSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionSettings.html) provides customizable options for the text selection. The [HighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionSettings.html#Syncfusion_Maui_PdfViewer_TextSelectionSettings_HighlightColor) property of the ‘TextSelectionSettings’ allows you to customize the color of the text highlight when you select it. 
+The [TextSelectionSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextSelectionSettings.html) provides customizable options for the text selection. The [HighlightColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextSelectionSettings.html#Syncfusion_Maui_PdfViewer_TextSelectionSettings_HighlightColor) property of the ‘TextSelectionSettings’ allows you to customize the color of the text highlight when you select it. 
 
 Refer to the following code sample to change the highlight color.
 
@@ -83,15 +84,15 @@ N> The color of the selection handles will also be modified to match the text hi
 
 ## Handling selected text from the application
 
-The [TextSelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSelectionChanged) event occurs when the text selection is completed or when the selected text is modified in any way. This event provides the selected text and the way to prevent the display of the default context menu by handling the selected text from the application level.
+The [TextSelectionChanged](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_TextSelectionChanged) event occurs when the text selection is completed or when the selected text is modified in any way. This event provides the selected text and the way to prevent the display of the default context menu by handling the selected text from the application level.
 
 The event arguments properties that are listed below are available in the text selection changed event.
 
-1.	<b>[SelectedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_SelectedText)</b> - Provides the selected text.
+1.	<b>[SelectedText](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_SelectedText)</b> - Provides the selected text.
 
-2.	<b>[PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_PageNumber)</b> - Provides the page number at which the text is selected.
+2.	<b>[PageNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_PageNumber)</b> - Provides the page number at which the text is selected.
 
-3.	<b>[Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_Handled)</b> -  A boolean value indicating whether the event has been handled or processed by an event handler. By setting the `Handled` property to true, you indicate that the event is handled at the application-level event handler and no further action is necessary. So that the default copy context menu will not appear.
+3.	<b>[Handled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html#Syncfusion_Maui_PdfViewer_TextSelectionChangedEventArgs_Handled)</b> -  A boolean value indicating whether the event has been handled or processed by an event handler. By setting the `Handled` property to true, you indicate that the event is handled at the application-level event handler and no further action is necessary. So that the default copy context menu will not appear.
 
 Refer to the following code sample that explains how to wire the event to handle the selected text at the application level and prevent the default copy context menu from appearing.
 
@@ -118,3 +119,8 @@ private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedE
 ## Limitations
 
 The text from the images cannot be selected and, the multiple-page text selection is not supported for now.
+
+## See Also
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
+- [Text Markups](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups)
+- [Copy and Annotations from Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)

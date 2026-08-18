@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Annotation Collection in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about annotation collection in the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Annotation Collection in Flutter PDF Viewer | Syncfusion
+description: The annotation collection feature in SfPdfViewer allows users to access, organize, and manage annotations within PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotation Collection in Flutter PDF Viewer widget (SfPdfViewer)
+# Annotation Collection in Flutter PDF Viewer widget
 
-The annotations in the PDF document can be accessed by the [getAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getAnnotations.html) method of the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html). The return value of the function will have the Annotation collection as soon as the document is loaded in the PDF viewer. The following code example shows how the annotation collection can be accessed.
+The annotations in the PDF document can be accessed by the [getAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/getAnnotations.html) method of the [PdfViewerController](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController-class.html). The method returns the annotation collection as soon as the document is loaded in the PDF viewer. The following code example shows how the annotation collection can be accessed.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10" %}

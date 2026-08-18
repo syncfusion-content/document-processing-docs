@@ -1,0 +1,88 @@
+<ejs-spreadsheet id="spreadsheet" created="created" showFormulaBar="false">
+
+    <e-spreadsheet-sheets>
+        <e-spreadsheet-sheet>
+
+            <e-spreadsheet-columns>
+                <e-spreadsheet-column width="200"></e-spreadsheet-column>
+            </e-spreadsheet-columns>
+
+            <e-spreadsheet-ranges>
+                <e-spreadsheet-range dataSource="ViewBag.DefaultData"></e-spreadsheet-range>
+            </e-spreadsheet-ranges>
+
+            <e-spreadsheet-rows>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Plain Text"></e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Mineral Water H2O">
+                            <e-richtextsettings>
+                                <e-richtext text="Mineral Water H"></e-richtext>
+                                <e-richtext text="2" verticalAlign="Sub"></e-richtext>
+                                <e-richtext text="O"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Energy Supplement C6H12O6">
+                            <e-richtextsettings>
+                                <e-richtext text="Energy Supplement C"></e-richtext>
+                                <e-richtext text="6" verticalAlign="Sub"></e-richtext>
+                                <e-richtext text="H"></e-richtext>
+                                <e-richtext text="12" verticalAlign="Sub"></e-richtext>
+                                <e-richtext text="O"></e-richtext>
+                                <e-richtext text="6" verticalAlign="Sub"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="H2O"></e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell></e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+            </e-spreadsheet-rows>
+
+        </e-spreadsheet-sheet>
+    </e-spreadsheet-sheets>
+
+</ejs-spreadsheet>
+
+
+<script>
+    function created() {
+
+        this.updateCell({
+            richText: [
+                { text: 'H' },
+                { text: '2', style: { verticalAlign: 'sub' } },
+                { text: 'O' }
+            ]
+        }, 'A4');
+
+        this.updateCell({
+            value: 'X2',
+            richText: [
+                { text: 'X' },
+                { text: '2', style: { verticalAlign: 'super' } }
+            ]
+        }, 'A5');
+    }
+</script>

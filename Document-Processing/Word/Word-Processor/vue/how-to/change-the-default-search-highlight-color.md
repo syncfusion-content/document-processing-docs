@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Change the default search highlight color in Vue Document editor component | Syncfusion
-description: Learn here all about Change the default search highlight color in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Search Highlight Color in Vue DOCX Editor | Syncfusion
+description: Change the default search highlight color in Syncfusion® Vue DOCX Editor using the search highlight color property to customize search result highlighting.
 control: Change the default search highlight color 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the default search highlight color in Vue Document editor component
+# How to Change Search Highlight Color in Vue DOCX Editor
 
-Document editor provides an options to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in Document editor settings. The highlight color which is given in [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditorsettings) will be highlighted on the searched text. By default, search highlight color is `yellow`.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an options to change the default search highlight color using [`searchHighlightColor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#searchhighlightcolor) in Document editor settings. The highlight color which is given in [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditorsettings) will be highlighted on the searched text. By default, search highlight color is `yellow`.
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 

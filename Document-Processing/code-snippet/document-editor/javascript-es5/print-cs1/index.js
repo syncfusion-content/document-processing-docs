@@ -1,5 +1,5 @@
 var documenteditor = new ej.documenteditor.DocumentEditor({
-    enablePrint: true
+    enablePrint: true, height: '370px'
 });
 
 documenteditor.appendTo('#DocumentEditor');

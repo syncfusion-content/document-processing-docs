@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to PDF in Google App Engine
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Google App Engine**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Google App Engine**.
 
 ## Set up App Engine
 
@@ -93,20 +93,19 @@ Step 8: Add a new action method **ConvertPPTXToPDF** in HomeController.cs and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using (FileStream inputStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PPTX document.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Opens the existing PPTX document.
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
+    //Convert the PPTX document into a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Converts PPTX document into PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        { 
-            //Saves the PDF document to MemoryStream.
-            pdfDocument.Save(stream);
-            stream.Position = 0;
-            //Download PDF document in the browser.
-            return File(stream, "application/pdf", "PPTXtoPDF.pdf");
-        }
+        //Create a MemoryStream to hold the converted PDF.
+        MemoryStream stream = new MemoryStream();
+        //Save the PDF document to the MemoryStream.
+        pdfDocument.Save(stream);
+        stream.Position = 0;
+        //Download PDF document in the browser.
+        return File(stream, "application/pdf", "PPTXtoPDF.pdf");
     }
 }
 
@@ -202,7 +201,7 @@ Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 cat <<EOT >> app.yaml
 env: flex
-runtime: custom   
+runtime: custom
 EOT
 
 {% endhighlight %}
@@ -256,6 +255,6 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 ![PowerPoint to PDF in Google App Engine](GCP_Images/Output-PowerPoint-Presentation-to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

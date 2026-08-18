@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open document from AWS S3 in ASP.NET Core Document editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from AWS S3 in ASP.NET Core DOCX Editor | Syncfusion
+description: Open documents from AWS S3 in ASP.NET Core DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3
+# Open Documents from AWS S3 in ASP.NET Core DOCX Editor
 
-To load a document from AWS S3 in a Document Editor, you can follow the steps below
+To load a document from AWS S3 in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 
 
 **Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
@@ -32,7 +32,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -107,11 +107,11 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> onObj
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+On the client side, the document returned from the web service is opened using the `open` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

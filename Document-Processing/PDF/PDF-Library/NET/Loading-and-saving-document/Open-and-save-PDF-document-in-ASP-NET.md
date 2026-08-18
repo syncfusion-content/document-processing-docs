@@ -1,15 +1,15 @@
 ---
-title: Open and save PDF document in ASP.NET | Syncfusion
-description: Open and save PDF document in ASP.NET application using Syncfusion .NET PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in ASP.NET | Syncfusion
+description: Learn how to open and save PDF documents in ASP.NET applications using Syncfusion .NET PDF library without Adobe Acrobat dependency.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net save pdf, .net load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF document in ASP.NET
+# Open and Save PDF Document in ASP.NET
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET**.
 
 ## Steps to open and save PDF document programmatically: 
 
@@ -26,7 +26,7 @@ Step 3: Add a new button in the **Default.aspx** as shown in the following.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Button ID="Button1" runat="server" Text="Load and save PDF document" OnClick="OpenAndSaveDocument" />  

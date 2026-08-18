@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Save document to Azure Blob Storage in Angular Document editor control | Syncfusion
-description:  Learn about how to Save document to Azure Blob Storage in Angular Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Azure Blob Storage in Angular DOCX Editor | Syncfusion
+description: Save documents to Azure Blob Storage from Angular DOCX Editor, enabling scalable cloud storage and streamlined document management.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage
+# Save Documents to Azure Blob Storage in Angular DOCX Editor
 
-To save a document to Azure Blob Storage, you can follow the steps below
+To save a document to Azure Blob Storage, you can follow the steps below.
 
-**Step 1:** Create a Simple Document Editor sample in Angular
+**Step 1:** Create a Simple Angular Document Editor sample in Angular.
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in angular. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -30,7 +30,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -45,14 +45,14 @@ public DocumentEditorController(IConfiguration configuration, ILogger<DocumentEd
 }
 ```
 
-* Create then 'SaveToAzure' method to save the downloaded documents to Azure Blob Storage container
+* Create the `SaveToAzure` method to save the downloaded documents to the Azure Blob Storage container.
 
 ```csharp
 
 [HttpPost("SaveToAzure")]
 [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
 [Route("[controller]/SaveToAzure")]
-//Post action for downloading the documents
+//Post action for uploading documents to Azure Blob Storage
 
 public void SaveToAzure(IFormCollection data)
 {
@@ -91,7 +91,7 @@ private string GetValue(IFormCollection data, string key)
 
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -107,11 +107,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
+N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
 **Step 3:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#saveasblob) and sent to server-side for saving in Azure Blob Storage container.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in the Azure Blob Storage container.
 
 ```typescript
 
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
           req.onreadystatechange = () => {
               if (req.readyState === 4) {
                   if (req.status === 200 || req.status === 304) {
-                      console.log('Saved sucessfully');
+                      console.log('Saved successfully');
                   }
               }
           };
@@ -159,4 +159,4 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.

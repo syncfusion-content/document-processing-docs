@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Scrolling zooming in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Scrolling and Zooming in TypeScript DOCX Editor | Syncfusion
+description: The scrolling and zooming in TypeScript DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
-control: Scrolling zooming 
+control: Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling zooming in JavaScript (ES6) Document editor control
+# Scrolling and Zooming in TypeScript DOCX Editor
 
-The Document Editor renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
+The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
 
  
 
@@ -22,12 +22,12 @@ The Document Editor renders the document as page by page. You can scroll through
 {% include code-snippet/document-editor/javascript-es6/scrolling-zooming-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/scrolling-zooming-cs1" %}
 
-> Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
+N> Calling this method brings the specified page into view but doesn't move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
-In case, if you wish to move the selection to any page in Document Editor and bring it into view, you can use ‘goToPage()’ method of selection instance. Refer to the following code example.
+If you wish to move the selection to any page in the document editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
 
  
 
@@ -39,12 +39,12 @@ In case, if you wish to move the selection to any page in Document Editor and br
 {% include code-snippet/document-editor/javascript-es6/scrolling-zooming-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/scrolling-zooming-cs2" %}
 
 ## Zooming
 
-You can scale the contents in Document Editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use ‘zoomFactor’ property of Document Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
+You can scale the contents in the document editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the `zoomFactor` property of the document editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
 ```ts
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
@@ -62,9 +62,9 @@ documenteditor.appendTo('#DocumentEditor');
 documenteditor.zoomFactor = 3;
 ```
 
-## Page Fit Type
+## Page fit type
 
-Apart from specifying the zoom factor as value, the Document Editor provides option to specify page fit options such as fit to full page or fit to page width. You can set this option using ‘fitPage’ method of Document Editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
 
 ```ts
 import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
@@ -83,8 +83,7 @@ documenteditor.fitPage('FitPageWidth');
 
 ## Zoom option using UI
 
-The following code example shows how to provide zoom options in Document Editor.
- 
+The following code example shows how to provide zoom options in the Document Editor.
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

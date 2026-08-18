@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fix "cp is not recognized" on Windows for the TypeScript PDF Viewer
-description: Use Windows-friendly copy commands to replace Unix cp when copying ej2-pdfviewer-lib assets for the TypeScript PDF Viewer—examples for CMD (xcopy) and PowerShell (Copy-Item).
+title: Cp Command Not Recognized in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Resolve the cp is not recognized error in the JavaScript (ES6) PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Troubleshoot error 'cp' is not recognized as a command
+# Resolve cp Not Recognized Error in JavaScript (ES6) PDF Viewer
 
 The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required assets.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Deploy document editor component for mobile in Vue Document editor component | Syncfusion
-description: Learn here all about Deploy document editor component for mobile in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Deploy Vue DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® Vue DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 control: Deploy document editor component for mobile 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy document editor component for mobile in Vue Document editor component
+# How to Deploy Vue DOCX Editor for Mobile
 
 ## Document editor component for Mobile
 
-At present, Document editor component is not responsive for mobile, and we haven't ensured the editing functionalities in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
+At present, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component is not responsive for mobile, and we haven't ensured the editing functionalities in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
 
 Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#fitpage) method with [`FitPageWidth`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/pageFitType/) parameter in document change event, such as to display one full page by adjusting the zoom factor.
 

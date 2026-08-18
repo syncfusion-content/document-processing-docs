@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Get current word in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Get current word in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Get Current Word in JavaScript DOCX Editor | Syncfusion
+description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® JavaScript DOCX Editor for content processing and analysis.
 platform: document-processing
 control: Get current word 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get current word in JavaScript (ES5) Document editor control
+# How to Get Current Word in JavaScript DOCX Editor
 
-You can get the current word or paragraph content from the JavaScript Document Editor component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 

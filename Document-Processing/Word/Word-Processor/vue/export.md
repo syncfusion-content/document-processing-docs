@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Export in Vue Document editor component | Syncfusion
-description: Learn here all about Export in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Export in Vue DOCX Editor | Syncfusion
+description: The export feature in Vue DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 control: Export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in Vue Document editor component
+# Export in Vue DOCX Editor
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
 We are providing two types of save APIs  as mentioned below.
 
@@ -48,7 +48,7 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 The following example shows how to export the document as Word document (.docx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The Vue Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -276,6 +276,10 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
         }
 }
 ```
+
+## Online Demo
+
+Explore how to export Word documents in various formats using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/advanced-exporting.html).
 
 ## See Also
 

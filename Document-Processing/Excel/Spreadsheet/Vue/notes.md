@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Notes in Vue Spreadsheet component | Syncfusion
-description: Learn here all about the notes feature in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Notes in Vue Spreadsheet | Syncfusion
+description: Add and manage notes in the Syncfusion Vue Spreadsheet to provide contextual information within worksheets.
 control: Notes
 platform: document-processing
 documentation: ug
 ---
 
 
-# Notes in Vue Spreadsheet component
+# Notes in Vue Spreadsheet
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 
 When opening the Excel document with notes in the Spreadsheet, they will be displayed in the control. The cells containing notes will be indicated with a red colored triangle at the top-right corner. Hovering the mouse over these cells will display the content of the notes.
 
-![Spreadsheet showing a note](./images/spreadsheet_show_note.png)
+![Adding, editing, and deleting a note in Spreadsheet](./images/spreadsheet_add_edit_delete_note.gif)
 
 In the below example, you can add, edit, save, and delete notes.
 
@@ -42,7 +42,6 @@ In the active worksheet, you can add a note in the following ways:
 
 A dialog box will open where you can enter the note content. After entering the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the note and close the dialog box.
 
-![Adding a note in Spreadsheet](./images/spreadsheet_add_note.gif)
 
 ## Editing a note
 
@@ -54,7 +53,6 @@ In the active worksheet, you can modify the content of existing notes in the doc
 
 The note editor dialog box will open with the existing content. After editing the content, you can either click on other cells or press the <kbd>Esc</kbd> button to automatically save the changes and close the dialog box.
 
-![Editing a note in Spreadsheet](./images/spreadsheet_edit_note.gif)
 
 ## Deleting a note
 
@@ -65,18 +63,19 @@ You can remove notes from cells using the following ways:
 
 The note will be removed from the cell, and the red triangle indicator will be removed.
 
-![Deleting a note in Spreadsheet](./images/spreadsheet_delete_note.gif)
 
 ## Navigating between notes
 
-The Syncfusion Spreadsheet provides intuitive navigation to quickly move between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
+The Syncfusion Spreadsheet provides navigation to move quickly between cells containing notes in your worksheet. These options are accessible through the **Notes** dropdown in the **Review** tab.
+
+![Navigating between notes in Spreadsheet](./images/spreadsheet_next_previous_note.gif)
 
 ### Previous Note
 
 To navigate to the previous note:
 
 * In the **Review** tab, open the **Notes** dropdown and select **Previous Note**.
-* The Spreadsheet will automatically select the previous note in the current worksheet, searching leftward and then upward.
+* The Spreadsheet automatically selects the previous note in the current worksheet, searching leftward and then upward.
 * If no prior note exists in the sheet, the search continues to the previous worksheet in order.
 * If the workbook contains no notes, the selection remains on the current cell.
 
@@ -84,8 +83,8 @@ To navigate to the previous note:
 
 To navigate to the next note:
 
-*  In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
-* The Spreadsheet will automatically select the next note in the current worksheet, searching rightward and then downward.
+* In the **Review** tab, open the **Notes** dropdown and select **Next Note**.
+* The Spreadsheet automatically selects the next note in the current worksheet, searching rightward and then downward.
 * If no subsequent note exists in the sheet, the search continues to the next worksheet in order.
 * If the workbook contains no notes, the selection remains on the current cell.
 
@@ -115,11 +114,13 @@ To activate:
 
 * Navigate to the **Review** tab, click the **Notes** dropdown, and select **Show All Notes**.
 
-All notes in the worksheet will appear as floating text boxes near their respective cells.
+All notes in the worksheet appear as floating text boxes near their respective cells.
 
 > **Note**: After using Show All Notes, you can hide individual notes selectively via the **Show/Hide Note** option. Additionally, any new notes added to the worksheet will automatically appear as visible sticky notes when Show All Notes is active.
 
 This functionality enhances workflow efficiency by providing flexible control over note visibility, whether for individual focus or comprehensive review.
+
+![Show/Hide notes in Spreadsheet](./images/spreadsheet_show_hide_note.gif)
 
 ## Saving the document with notes
 

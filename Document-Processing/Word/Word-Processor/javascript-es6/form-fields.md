@@ -1,35 +1,35 @@
 ---
 layout: post
-title: Form fields in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Form fields in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Form Fields in TypeScript DOCX Editor | Syncfusion
+description: Form fields in TypeScript DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
-control: Form fields 
+control: Form Fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in JavaScript (ES6) Document editor control
+# Form Fields in TypeScript DOCX Editor
 
-DocumentEditorContainer component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
 ## Insert form field
 
-Form fields can be inserted using [`insertFormField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertformfield) method in editor module.
+Form fields can be inserted using the [`insertFormField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertformfield) method in the editor module.
 
 ```ts
 //Insert Text form field
 documentEditor.editor.insertFormField('Text');
-//Insert Checkbox form field
+//Insert CheckBox form field
 documentEditor.editor.insertFormField('CheckBox');
-//Insert Drop down form field
+//Insert DropDown form field
 documentEditor.editor.insertFormField('DropDown');
 ```
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/documentation/api/document-editor#getformfieldnames).
+All the form field names from the current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/documentation/api/document-editor#getformfieldnames).
 
 ```ts
 let formFieldsNames: string[] = documentEditor.getFormFieldNames();
@@ -40,11 +40,11 @@ let formFieldsNames: string[] = documentEditor.getFormFieldNames();
 Form field properties can be retrieved using [`getFormFieldInfo()`](https://ej2.syncfusion.com/documentation/api/document-editor#getformfieldinfo).
 
 ```ts
-//Get Text form field by using bookmark name.
+//Get Text form field by using the bookmark name.
 let textfieldInfo: TextFormFieldInfo = documentEditor.getFormFieldInfo('Text1') as TextFormFieldInfo;
-//Checkbox form field by using bookmark name.
+//CheckBox form field by using the bookmark name.
 let checkboxfieldInfo: CheckBoxFormFieldInfo = documentEditor.getFormFieldInfo('Check1') as CheckBoxFormFieldInfo;
-//Dropdown form field by using bookmark name.
+//DropDown form field by using the bookmark name.
 let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
 ```
 
@@ -67,14 +67,14 @@ checkboxfieldInfo.defaultValue = true;
 checkboxfieldInfo.name = "Check2";
 documentEditor.setFormFieldInfo('Check1', checkboxfieldInfo);
 
-// Set checkbox form field properties
+// Set DropDown form field properties
 let dropdownfieldInfo: DropDownFormFieldInfo = documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
-dropdownfieldInfo.dropdownItems  = ['One', 'Two', 'Three']
+dropdownfieldInfo.dropdownItems = ['One', 'Two', 'Three'];
 dropdownfieldInfo.name = "Drop2";
 documentEditor.setFormFieldInfo('Drop1', dropdownfieldInfo);
 ```
 
->Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
+N> If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
 ## Form Field Shading
 
@@ -94,10 +94,10 @@ N> This customization only affects the application UI and will not be preserved 
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportformdata).
+Data of all the form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportformdata).
 
 ```ts
-let formFieldDate: FormFieldData[] = documentEditor.exportFormData();
+let formFieldData: FormFieldData[] = documentEditor.exportFormData();
 ```
 
 ## Import form field data
@@ -114,19 +114,19 @@ this.container.documentEditor.importFormData([textformField, checkformField, dro
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/documentation/api/document-editor#resetformfields).
+Reset all the form fields in the current document to their default values using [`resetFormFields`](https://ej2.syncfusion.com/documentation/api/document-editor#resetformfields).
 
 ```ts
 documentEditor.resetFormFields();
 ```
 
-## Protect the document in form filling mode
+## Protect the document in form-filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
+The Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
+The Document Editor provides an option to protect and unprotect the document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({
@@ -144,6 +144,10 @@ container.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
 //stop the document protection
 container.documentEditor.editor.stopProtection('123');
 ```
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In the enforce Protection method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In the stop protection method, the parameter denotes the password.
+
+## Online Demo
+
+Explore how to insert and manage form fields in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/form-fields.html).

@@ -1,12 +1,12 @@
 ---
-title: Document Properties in WPF RichTextBox control | Syncfusion
-description: Learn here all about Document Properties support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Document Properties in WPF DOCX Editor | Syncfusion
+description: The document properties in WPF DOCX Editor track document statistics, enabling easy access to word count, paragraph count, and pages count.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: Word count, paragraph count, page count, current page number.
 ---
-# Document Properties in WPF RichTextBox (SfRichTextBoxAdv)
+# Document Properties in WPF DOCX Editor
 [WPF RichTexBox](https://www.syncfusion.com/wpf-controls/richtextbox) keep tracking the statistics about your documents. These statistics contains information about word count, paragraph count and pages count.
 
 ## Word Count
@@ -100,5 +100,5 @@ End Sub
 
 N> The above PageCount and CurrentPageNumber properties are not a dependency property. And it is not notifying for dynamic changes. So, get these properties value in
 selection changed event.
-You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools. 
+You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools. 
 

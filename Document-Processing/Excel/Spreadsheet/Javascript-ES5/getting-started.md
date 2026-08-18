@@ -1,283 +1,202 @@
 ---
 layout: post
-title: Getting started with EJ2 Javascript Spreadsheet control | Syncfusion
-description:  Checkout and learn about Getting started with EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
 ---
 
-# Getting started in EJ2 Javascript Spreadsheet control
+# Getting Started with the JavaScript Spreadsheet 
 
-This section explains the steps to create a simple Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control in a JavaScript application.
+This section explains how to create a JavaScript application and add the [JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) with the minimum required configuration.
 
-## Dependencies
+## Create a JavaScript application
 
-The following list of dependencies is required to use the Spreadsheet control in your application:
+Create a folder named `spreadsheet-app` with `index.html` and `index.js` files.
 
-```js
-|-- @syncfusion/ej2-spreadsheet
-   |-- @syncfusion/ej2-base
-   |-- @syncfusion/ej2-dropdowns
-   |-- @syncfusion/ej2-navigations
-   |-- @syncfusion/ej2-grids
+Your application structure should look like this:
 
+```text
+spreadsheet-app/
+├── index.html
+├── index.js
 ```
 
-## Setup for local development
+## Add Syncfusion® Spreadsheet resources
 
-Refer to the following steps to setup your local environment.
+Add the required Syncfusion® Spreadsheet style and script references to the `index.html` file using one of the following methods:
 
-**Step 1:** Create a root folder `myapp` for your application.
+{% tabcontents %}
 
-**Step 2:** Create `myapp/resources` folder to store local scripts and styles files.
+{% tabcontent Using Local Resources %}
 
-**Step 3:** Create `myapp/index.js` and `myapp/index.html` files for initializing Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control.
+To use local scripts and styles for the Syncfusion® Spreadsheet, follow these steps:
 
-## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> resources
+1. Download and install the [Spreadsheet Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-The Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control can be initialized by using any of the following two ways:
+2. Create a `resources` folder in your application (for example, `spreadsheet-app/resources`).
 
-* Using local script and style.
-* Using CDN link for script and style.
+3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 
-### Using local script and style
+```text
+<Install path>/Syncfusion/Essential Studio/Spreadsheet Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
+```
 
-You can get the global scripts and styles from the [Essential Studio<sup style="font-size:70%">&reg;</sup> JavaScript (Essential<sup style="font-size:70%">&reg;</sup> JS 2)](https://www.syncfusion.com/downloads/essential-js2) build installed location.
+4. After copying the files, add the Spreadsheet and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
-After installing the Essential<sup style="font-size:70%">&reg;</sup> JS 2 product build, you can copy the Spreadsheet and its dependencies scripts and style file into the resources folder.
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
-Refer to the following code to find Spreadsheet's script and style file location.
+<!-- Spreadsheet dependency styles -->
+<link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<link href="resources/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-navigations/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<link href="resources/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<link href="resources/ej2-grids/styles/tailwind3.css" rel="stylesheet" type="textcss" />
+<!-- Spreadsheet styles -->
+<link href="resources/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet"type="text/css" />
+<!-- Spreadsheet dependency scripts -->
+<script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"><script>
+<script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="textjavascript"></script>
+<script src="resources/ej2-popups/dist/global/ej2-popups.min.js" type="textjavascript"></script>
+<script src="resources/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js"type="text/javascript"></script>
+<script src="resources/ej2-inputs/dist/global/ej2-inputs.min.js" type="textjavascript"></script>
+<script src="resources/ej2-lists/dist/global/ej2-lists.min.js" type="textjavascript"></script>
+<script src="resources/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"><script>
+<script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="textjavascript"></script>
+<script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="textjavascript"></script>
+<script src="resources/ej2-excel-export/dist/global/ej2-excel-export.min.js"type="text/javascript"></script>
+<script src="resources/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="textjavascript"></script>
+<script src="resources/ej2-calendars/dist/global/ej2-calendars.min.js" type="textjavascript"></script>
+<script src="resources/ej2-compression/dist/global/ej2-compression.min.js" type="textjavascript"></script>
+<script src="resources/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="textjavascript"></script>
+<script src="resources/ej2-grids/dist/global/ej2-grids.min.js" type="textjavascript"></script>
+<script src="resources/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="textjavascript"></script>
+<script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="textjavascript"></script>
+<!-- Spreadsheet scripts -->
+<script src="resources/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js" type="textjavascript"></script>
 
-**Syntax:**
+{% endhighlight %}
+{% endtabs %}
 
-> Script: `**(installed location)**/Syncfusion/Essential Studio/JavaScript-EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js`
->
-> Styles: `**(installed location)**/Syncfusion/Essential Studio/JavaScript-EJ2/{RELEASE_VERSION}/Web(Essential JS 2)/JavaScript/{PACKAGE_NAME}/styles/material.css`
+{% endtabcontent %}
 
-**Example:**
+{% tabcontent Using CDN Links %}
 
-> Script: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript-EJ2/23.1.36/Web(Essential JS 2)/JavaScript/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js`
->
-> Styles: `C:/Program Files (x86)/Syncfusion/Essential Studio/JavaScript-EJ2/23.1.36/Web(Essential JS 2)/JavaScript/ej2-spreadsheet/styles/material.css`
+Reference the scripts and styles directly from the CDN and add at the end of the **\<head\>** section in the `index.html` file.
 
-After copying the files, then you can refer the Spreadsheet's scripts and styles into the `index.html` file. The following html code example shows the minimal dependency of Spreadsheet.
+```text
+Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
+Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
+```
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<!-- Spreadsheet dependency styles -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/tailwind3.css"rel="stylesheet" type="text/css" />
+<!-- Spreadsheet styles -->
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<!-- Spreadsheet dependency scripts -->
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.minjs" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/globalej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popupsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/globalej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/dist/global/ej2-listsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-data/dist/global/ej2-data.minjs" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/dist/globalej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/dist/globalej2-navigations.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-excel-export/dist/globalej2-excel-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-pdf-export/dist/globalej2-pdf-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-calendars/dist/globalej2-calendars.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-compression/dist/globalej2-compression.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-file-utils/dist/globalej2-file-utils.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/dist/global/ej2-gridsmin.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-svg-base/dist/globalej2-svg-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-charts/dist/global/ej2-chartsmin.js" type="text/javascript"></script>
+<!-- Spreadsheet scripts -->
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/dist/globalej2-spreadsheet.min.js" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/javascript/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+
+## Register Syncfusion License Key
+
+Before initializing any Syncfusion components, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in a JavaScript-ES5 Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#javascript-es5)
+
+## Add the Syncfusion® Spreadsheet Editor
+
+Add a container element for the Spreadsheet control in the `index.html` file and then initialize the control in the `index.js` file.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml">
-       <head>
-            <title>Essential JS 2 Spreadsheet</title>
-            <!-- Essential JS 2 Spreadsheet's dependents material theme -->
-            <link href="resources/base/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/inputs/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/buttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/lists/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/navigations/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/popups/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="resources/grids/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet's material theme -->
-            <link href="resources/spreadsheet/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet's dependents script -->
-            <script src="resources/scripts/ej2-base.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-buttons.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-popups.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-splitbuttons.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-inputs.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-lists.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-data.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-dropdowns.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-navigations.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-excel-export.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-pdf-export.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-calenders.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-compression.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-file-utils.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-grids.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-svg-base.min.js" type="text/javascript"></script>
-            <script src="resources/scripts/ej2-charts.min.js" type="text/javascript"></script>
-            <!-- Essential JS 2 Spreadsheet global script -->
-            <script src="resources/scripts/ej2-spreadsheet.min.js" type="text/javascript"></script>
-       </head>
-       <body>
-       </body>
-  </html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Syncfusion JavaScript Spreadsheet</title>
+    <!-- Add your style references here -->
+</head>
+<body>
+    <!-- Element which will render as Spreadsheet -->
+    <div id="element"></div>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
 
-```
+{% endhighlight %}
+{% highlight js tabtitle="index.js" %}
 
-### Using CDN link for script and style
+// Initialize the Spreadsheet Editor
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    saveUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+});
 
-Using CDN link, you can directly refer the Spreadsheet control’s script and style into the `index.html`.
-
-Refer to the Spreadsheet's CDN links as follows.
-
-**Syntax:**
-
-> Script: `https://cdn.syncfusion.com/ej2/{RELEASE_VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js`
->
-> Styles: `https://cdn.syncfusion.com/ej2/{RELEASE_VERSION}/{PACKAGE_NAME}/styles/material.css`
-
-**Example:**
-
-> Script: [`http://cdn.syncfusion.com/ej2/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js`](http://cdn.syncfusion.com/ej2/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js)
->
-> Styles: [`http://cdn.syncfusion.com/ej2/ej2-spreadsheet/styles/material.css`](http://cdn.syncfusion.com/ej2/ej2-spreadsheet/styles/material.css)
-
-The following HTML code example shows the minimal dependency of Spreadsheet.
-
-```html
-<!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml">
-       <head>
-            <title>Essential JS 2 Spreadsheet</title>
-            <!-- Essential JS 2 Spreadsheet's dependents material theme -->
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-base/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet material theme -->
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-spreadsheet/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet's dependents script -->
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/dist/global/ej2-buttons.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/dist/global/ej2-popups.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/dist/global/ej2-inputs.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/dist/global/ej2-dropdowns.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/dist/global/ej2-navigations.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-excel-export/dist/global/ej2-excel-export.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-pdf-export/dist/global/ej2-pdf-export.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-calendars/dist/global/ej2-calendars.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-compression/dist/global/ej2-compression.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-file-utils/dist/global/ej2-file-utils.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/dist/global/ej2-grids.min.js" type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-svg-base/dist/global/ej2-svg-base.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-charts/dist/global/ej2-charts.min.js"
-            type="text/javascript"></script>
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js"
-            type="text/javascript"></script>
-       </head>
-       <body>
-       </body>
-  </html>
-```
-
-## Add Spreadsheet control
-
-Now, you can start adding Spreadsheet control in the application. For getting started, add a `div` element for Spreadsheet control in `index.html`. Then, refer the `index.js` file into the `index.html` file.
-
-```html
-<!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml">
-       <head>
-            <title>Essential JS 2 Spreadsheet</title>
-            <!-- Essential JS 2 Spreadsheet's dependents material theme -->
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-base/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css"/>
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet material theme -->
-            <link href="http://cdn.syncfusion.com/ej2/27.2.2/ej2-spreadsheet/styles/material.css" rel="stylesheet" type="text/css"/>
-            <!-- Essential JS 2 Spreadsheet's dependents script -->
-            <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-buttons/dist/global/ej2-buttons.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-popups/dist/global/ej2-popups.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-inputs/dist/global/ej2-inputs.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-dropdowns/dist/global/ej2-dropdowns.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-navigations/dist/global/ej2-navigations.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-excel-export/dist/global/ej2-excel-export.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-pdf-export/dist/global/ej2-pdf-export.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-calendars/dist/global/ej2-calendars.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-compression/dist/global/ej2-compression.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-file-utils/dist/global/ej2-file-utils.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-grids/dist/global/ej2-grids.min.js" type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-svg-base/dist/global/ej2-svg-base.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-charts/dist/global/ej2-charts.min.js"
-                    type="text/javascript"></script>
-               <script src="http://cdn.syncfusion.com/ej2/27.2.2/ej2-spreadsheet/dist/global/ej2-spreadsheet.min.js"
-                    type="text/javascript"></script>
-       </head>
-       <body>
-           <!-- Add the HTML <div> element for Spreadsheet  -->
-             <div id="element"></div>
-             <script src="index.js" type="text/javascript"></script>
-       </body>
-  </html>
-
-```
-
-Place the following Spreadsheet code in the `index.js`.
-
-```javascript
-
-//Initialize the Spreadsheet control
-var spreadsheet = new ej.spreadsheet.Spreadsheet();
-
-//Render the initialized Spreadsheet
+// Render the Spreadsheet Editor
 spreadsheet.appendTo('#element');
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** The [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) and [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) properties are used to connect the Spreadsheet control to a server-side service for Excel import and export operations. For development and production use, we recommend configuring your own local or hosted service instead of relying on demo endpoints. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
-Now, run the `index.html` in web browser, it will render the Essential<sup style="font-size:70%">&reg;</sup> JS 2 Spreadsheet control.
+Open the `index.html` file in a web browser to launch the JavaScript Spreadsheet Editor. Verify that the Spreadsheet Editor is rendered correctly, as shown in the following image.
 
-Output will be displayed as follows.
+![Rendered spreadsheet in browser](./images/spreadsheet.png)
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
+You can also explore the Spreadsheet Editor using the live sample below. The sample allows you to load an Excel file, analyze and modify its data, and save the updated data back to an Excel file.
+
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/spreadsheet/es5-getting-started-cs1" %}
 
-> You can refer to our [JavaScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/javascript-es5/#/tailwind3/spreadsheet/default.html) to knows how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+> For information about features, pricing, and related resources, visit the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) page.
 
-## See Also
+## See also
 
 * [Data Binding](./data-binding)
 * [Open and Save](./open-save)

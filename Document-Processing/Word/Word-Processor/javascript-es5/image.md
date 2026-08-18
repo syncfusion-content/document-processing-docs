@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Image in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Image in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Images in JavaScript DOCX Editor | Syncfusion
+description: Images in JavaScript DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in JavaScript (ES5) Document editor control
+# Images in JavaScript DOCX Editor
 
-Document Editor supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#insertimage) method. Refer to the following sample code.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -23,11 +23,11 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/image-cs1" %}
 
-N> 1. Image files will be internally converted to base64 string. Whereas, online images are preserved as URL. N> 2. EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N> Image files are internally converted to base64 strings, whereas online images are preserved as URLs. EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 
 ## Alternate text
 
-Document Editor expose API to get or set the alternate text of the selected image. Refer to the following sample code.
+Document Editor exposes an API to get or set the alternate text of the selected image. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.imageFormat.alternateText = 'Adventure Cycle';
@@ -35,20 +35,20 @@ documenteditor.selection.imageFormat.alternateText = 'Adventure Cycle';
 
 ## Image resizing
 
-Document Editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using a mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.png)
 
 ## Changing size
 
-Document Editor expose API to get or set the size of the selected image. Refer to the following sample code.
+Document Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.imageFormat.width = 800;
 documenteditor.selection.imageFormat.height = 800;
 ```
 
->Note: Images are stored and processed(read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
+N> Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
 
 ## Text wrapping style
 
@@ -56,8 +56,8 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 ## Positioning the image
 
-DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+DocumentEditor preserves the position properties of the image and displays the image based on these position properties. It does not support modifying the position properties. The image will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)

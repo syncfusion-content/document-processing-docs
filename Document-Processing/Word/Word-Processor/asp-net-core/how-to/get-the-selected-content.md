@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Get Selected Content in Document Editor Component | Syncfusion
-description: Learn here all about get the selected content in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Selected Content in ASSP.NET Core DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® ASP.NET Core DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
 ---
 
 
-# How to get the selected content in Document Editor component
+# How to Get Selected Content in ASP.NET Core DOCX Editor
 
-You can get the selected content from the React Document Editor component as plain text and SFDT (rich text).
+You can get the selected content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 
-You can use `text` API to get the selected content as plain text from React Document Editor component.
+You can use the `text` API to get the selected content as plain text from the ASP.NET Core Document Editor component.
 
 
 {% tabs %}
@@ -26,15 +26,15 @@ You can use `text` API to get the selected content as plain text from React Docu
 {% endtabs %}
 
 
-You can add the following custom options using this API,
+You can add the following custom options using this API:
 
-* Save or export the selected text as text file.
+* Save or export the selected text as a text file.
 * Search the selected text in Google or other search engines.
-* Show synonyms for the selected word in context menu and replace with selected synonym using the setter method of same API.
+* Show synonyms for the selected word in the context menu and replace with the selected synonym using the setter method of the same API.
 
 ## Get the selected content as SFDT (rich text)
 
-You can use `sfdt` API to get the selected content as rich text from React Document Editor component.
+You can use the `sfdt` API to get the selected content as rich text from the ASP.NET Core Document Editor component.
 
 
 {% tabs %}
@@ -46,8 +46,8 @@ You can use `sfdt` API to get the selected content as rich text from React Docum
 {% endtabs %}
 
 
-You can add the following custom options using this API,
+You can add the following custom options using this API:
 
-* Save or export the selected content as SFDT file.
-* Get the content of a bookmark in Word document as SFDT by selecting a bookmark using `select bookmark` API.
-* Create template content that can be inserted to multiple documents in cursor position using `paste` API.
+* Save or export the selected content as an SFDT file.
+* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the `selectBookmark` API.
+* Create template content that can be inserted into multiple documents at the cursor position using the `paste` API.

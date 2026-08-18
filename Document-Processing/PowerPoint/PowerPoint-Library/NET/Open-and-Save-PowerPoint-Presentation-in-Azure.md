@@ -1,48 +1,60 @@
 ---
 title: Open and save PowerPoint in Microsoft Azure | Syncfusion
-description: Learn how to open and save PowerPoint document in Azure services using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Open and save PowerPoint presentations in Azure services with the .NET PowerPoint library, without Microsoft PowerPoint or interop.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Open and save PowerPoint document in Azure Platform 
+# Open and save PowerPoint document in Azure
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save PowerPoint document in Azure Platform** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint document on Azure** in just a few lines of code.
 
-N> If this is your first time working with Azure, please refer to the dedicated Azure development resources. This section explains how to open and save PowerPoint document in C# using the PowerPoint library (Presentation) in Azure. 
+N> If you're new to Azure, refer to the Azure development resources below. This page provides an overview of the supported Azure services.
 
-## Prerequisites 
-* An active **Microsoft Azure subscription** is required. If you don’t have one, please [create an account](https://portal.azure.com/#home) before starting.
+## Prerequisites
 
-## Azure Services
+* An active **Microsoft Azure subscription** is required. If you don't have one, [create a free account](https://portal.azure.com/#home) before starting.
+* **.NET SDK 8.0 or later** installed locally.
+* **Visual Studio 2022** or later (or Visual Studio Code with the C# extension) for development and deployment.
+
+## Supported Azure Services
+
 <table>
 <thead>
 <tr>
-<th>
-Azure Services<br/></th><th>
-NuGet packages required<br/></th></tr></thead>
+<th>Azure Service</th>
+<th>Sub-page</th>
+<th>NuGet package required</th>
+</tr>
+</thead>
+<tbody>
 <tr>
-<td>
-{{'[App Service (Windows)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-app-service-windows)' | markdownify}}
-<br/></td><td>
-{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}</td></tr>
+<td>App Service (Windows)</td>
+<td>{{'[Open and save in App Service (Windows)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-app-service-windows)' | markdownify}}</td>
+<td>{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}</td>
+</tr>
 <tr>
-<td>
-{{'[App Service (Linux)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-app-service-linux)' | markdownify}}
-<br/></td><td>
-{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}
- <br/></td></tr>
+<td>App Service (Linux)</td>
+<td>{{'[Open and save in App Service (Linux)](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-app-service-linux)' | markdownify}}</td>
+<td>{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}</td>
+</tr>
 <tr>
-<td>
-{{'[Azure Functions v1](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-functions-v1)' | markdownify}}
-<br/></td><td>
-{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}
-<br/></td></tr>
+<td>Azure Functions v1</td>
+<td>{{'[Open and save in Azure Functions v1](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-functions-v1)' | markdownify}}</td>
+<td>{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}</td>
+</tr>
 <tr>
-<td>
-{{'[Azure Functions v4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-functions-v4)' | markdownify}}
-<br/></td><td>
-{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}
-<br/></td></tr>
+<td>Azure Functions v4</td>
+<td>{{'[Open and save in Azure Functions v4](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/open-and-save-powerpoint-presentation-in-azure-functions-v4)' | markdownify}}</td>
+<td>{{'[Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core)' | markdownify}}</td>
+</tr>
+</tbody>
 </table>
+
+## Next steps
+
+* [Open and Save PowerPoint in Azure App Service (Windows)](./Open-and-Save-PowerPoint-Presentation-in-Azure-App-Service-Windows)
+* [Create PowerPoint in Azure App Service (Linux)](./create-powerpoint-presentation-in-azure-app-service-linux)
+* [Create PowerPoint in Azure Functions v1](./create-powerpoint-presentation-in-azure-functions-v1)
+* [Create PowerPoint in Azure Functions v4](./create-powerpoint-presentation-in-azure-functions-v4)

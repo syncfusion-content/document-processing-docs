@@ -1,14 +1,14 @@
 ---
-title: Background in WPF RichTextBox control | Syncfusion
-description: Learn here all about Background support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Background in WPF DOCX Editor | Syncfusion
+description: The background in WPF DOCX Editor offers color customization through the Background property, enabling custom control appearance.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: background
 ---
 
-# Setting Background for WPF RichTextBox
-The [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) control allows you to change background color of the control. A background of a control is represented by `Background` property of `SfRichTextBoxAdv` class. The default value of this property is black.
+# Background in WPF DOCX Editor
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control allows you to change background color of the control. A background of a control is represented by `Background` property of `SfRichTextBoxAdv` class. The default value of this property is black.
 
 The following code illustrates how to apply color as background to the document.
 
@@ -129,4 +129,4 @@ Continuous layout:
 ![Changing Background color of Continuous Layout in WPF RichTextBox](Image_images/wpf-richtextbox-continous-background.PNG)
 
 N> This API is supported starting from release version v17.4.0.X. 
-You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.
+You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.

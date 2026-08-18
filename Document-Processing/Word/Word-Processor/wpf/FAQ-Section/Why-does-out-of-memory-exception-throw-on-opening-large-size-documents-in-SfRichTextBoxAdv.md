@@ -1,15 +1,15 @@
 ---
-title: Opening large size documents in WPF SfRichTextBoxAdv | Syncfusion
-description: Understand why out of memory exceptions occur in Syncfusion WPF SfRichTextBoxAdv when opening large documents and how to resolve them.
+title: Memory Issues with Large Documents in WPF DOCX Editor | Syncfusion
+description: Troubleshoot memory exceptions when opening large documents in Syncfusion® WPF DOCX Editor and learn techniques to improve document loading performance.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception
 ---
 
-# Opening large size documents in WPF SfRichTextBoxAdv control
+# Memory Issues with Large Documents in WPF DOCX Editor
 
-This page explains Why does out of memory exception throw on opening large size documents in WPF SfRichTextBoxAdv control and more details.
+This page explains Why does out of memory exception throw on opening large size documents in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control and more details.
 
 ## Why does out of memory exception throw on opening large size documents in WPF RichTextBox (SfRichTextBoxAdv)
 

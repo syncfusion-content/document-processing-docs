@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize Ribbon in Angular Document editor component | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion Angular Document Editor - file menu, backstage, tabs, groups, and items.
+title: How to Customize Ribbon in Angular DOCX Editor | Syncfusion
+description: Customize ribbon tabs, groups, and commands in Syncfusion® Angular DOCX Editor to tailor the toolbar experience and improve user productivity.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in Angular Document Document Editor
+# How to Customize Ribbon in Angular DOCX Editor
 
-The Syncfusion Document Editor provides an extensive and flexible API to customize the built-in ribbon UI. You can:
+The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides a rich and flexible API to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
 - Add the Backstage menu instead of File menu.
@@ -22,7 +22,7 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File Menu Customization
 
-Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#filemenuitems) property.
+Document Editor provides APIs to remove existing built-in File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#filemenuitems) property.
 
 In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
 
@@ -71,7 +71,7 @@ export class AppComponent {
 
 ## Backstage Menu Customization
 
-The Document Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
+The Document Editor provides a [`backStageMenu`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
 
 The following code example shows how to add the backstage menu items.
 
@@ -104,7 +104,7 @@ export class AppComponent {
 
     public backstageMenu = {
         text: 'File',
-        backButton: { text: 'close' },
+        backButton: { text: 'Close' },
         items: [
             { id: 'new', text: 'New', iconCss: 'e-icons e-de-ctnr-new' }
         ]
@@ -112,7 +112,7 @@ export class AppComponent {
 }
 ```
 
-Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
+Refer to this documentation to know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
 
 ## Tab Customization
 
@@ -120,9 +120,9 @@ You can customize the ribbon tabs in the Document Editor by showing, hiding, or 
 
 ### Show/Hide Tab
 
-Document editor provides the [`showTab`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#showtab) API to show and hide the existing tab using existing `RibbonTabType` and `tabId`.
+Document editor provides the [`showTab`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
 
-The following code example how to show/hide existing tab using existing tab type and tab id.
+The following code example shows how to show/hide an existing tab using the existing tab type and tab id.
 
 ```typescript
 
@@ -135,7 +135,7 @@ this.container.ribbon.showTab('custom_tab', false);
 
 ### Add Tab
 
-The Document Editor provides the [`addTab`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#addtab) API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
+The Document Editor provides the [`addTab`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#addtab) API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
 
 ```typescript
 
@@ -188,7 +188,7 @@ export class AppComponent implements AfterViewInit {
             };
             this.container.ribbon.addTab(ribbonTab);
 
-            // To add the tab before the Insert tab(exising tab)
+            // To add the tab before the Insert tab (existing tab)
 
             this.container.ribbon?.addTab(ribbonTab, 'Insert');
         })
@@ -202,9 +202,9 @@ You can also customize ribbon groups within a tab to better organize commands or
 
 ### Show/Hide Group 
 
-Document Editor provides an [`showGroup`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#showgroup) API to show or hide existing groups within a ribbon tab.
+Document Editor provides an [`showGroup`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#showgroup) API to show or hide existing groups within a ribbon tab.
 
-The following code example show how to show/hide the group using group Id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#ribbongroupinfo).
+The following code example shows how to show/hide the group using group Id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#ribbongroupinfo).
 
 ```typescript
 
@@ -281,9 +281,9 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide Item
 
-Using [`showItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#showitems) API in Document editor ribbon to enable/disable the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
+Using the [`showItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#showitems) API in the Document Editor ribbon to show/hide the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
 
-The following code example show how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#ribboniteminfo).
+The following code example shows how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#ribboniteminfo).
 
 ```typescript
 // To hide the Bold and Italic items using ribbon item information
@@ -298,7 +298,7 @@ this.container.ribbon.showItems('custom_item', false);
 
 ### Enable/Disable Item
 
-Using [`enableItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#enableitems) API in Document editor ribbon to enable/disable the existing item.
+Using the [`enableItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#enableitems) API in the Document Editor ribbon to enable/disable the existing item.
 
 ```typescript
 // To disable the underline using ribbon item info
@@ -314,7 +314,7 @@ this.container.ribbon.enableItems('custom_item', false);
 
 ### Add Item
 
-You can use the [`addItem`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon/#additem) API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
+You can use the [`addItem`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/ribbon#additem) API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
 
 ```typescript
 
@@ -360,6 +360,6 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-## Related Links
+## Online Demo
 
-- [File menu Customization Demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ribbon-customization)
+Explore how to customize the ribbon in the Angular Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ribbon-customization).

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Core in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Core in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: ASP.NET Core Web Service in JavaScript DOCX Editor | Syncfusion
+description: Configure ASP.NET Core web services in the JavaScript DOCX Editor to handle server-side operations such as Word document import, export, and more.
 platform: document-processing
 control: Core 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in JavaScript (ES5) Document editor control
+# ASP.NET Core Web Service in JavaScript DOCX Editor
 
 DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 
@@ -56,7 +56,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
+>Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using `Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 
@@ -227,11 +227,11 @@ The following example code illustrates how to write a Web API for restrict editi
     [HttpPost]
     [EnableCors("AllowAllOrigins")]
     [Route("RestrictEditing")]
-    public string[] RestrictEditing([FromBody]CustomRestrictParameter param)
+    public string[] RestrictEditing([FromBody] CustomRestrictParameter param)
     {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
 
     public class CustomRestrictParameter
@@ -239,6 +239,7 @@ The following example code illustrates how to write a Web API for restrict editi
         public string passwordBase64 { get; set; }
         public string saltBase64 { get; set; }
         public int spinCount { get; set; }
+        public string algorithmSid { get; set; }
     }
 ```
 

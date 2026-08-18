@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security in Flutter PDF library | Syncfusion
-description: Learn here all about add encryption and set permission by Security feature of Syncfusion Flutter PDF non-UI library and more.
+title: Security in Flutter PDF Library | Syncfusion
+description: Learn how to add encryption and set permissions for secure PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Security in Flutter PDF
 
-Flutter PDF allows you to protect the PDF document using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
+Flutter PDF allows you to protect the PDF document using encryption and set permissions for PDF document operations like printing, editing, copying content, and more using user password and owner password. Two types of encryption algorithms are available
 
 * Rivest Cipher 4 (RC4)
 * Advanced Encryption Standard (AES)
@@ -20,9 +20,10 @@ You can encrypt PDF document using RC4 algorithm with 40bit or 128bit key size. 
 
 User password: Prevents people from opening or viewing a PDF document. Once the User Password is set, to open the PDF document, Adobe Acrobat/Reader will prompt a user to enter this password. If it is not correct, the document will not open. By setting a PDF User password, you can secure the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Document security
@@ -45,16 +46,18 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-N> While using both user and owner passwords, please specify different user and owner password while encrypting the PDF document for better security.
+N> When using both user and owner passwords, please specify a different password for each while encrypting the PDF document for better security.
 
 You can protect the PDF document from printing, editing, copying with the [`ownerPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/ownerPassword.html) by using the following code snippet.
 
-Owner password: Sets PDF document restrictions, which can include printing, content copying, editing, page extracting, commenting, and more. Once the owner password is set, Acrobat will require this password to make any changes to the PDF document. It further secures the PDF document to set a PDF Owner Password.
+Owner password: Sets PDF document restrictions, which can include printing, content copying, editing, page extracting, commenting, and more. Once the owner password is set, Acrobat will require this password to make any changes to the PDF document. Setting a PDF owner password further secures the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Document security
@@ -84,14 +87,16 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Working with AES Encryption
 
-You can encrypt PDF document using AES algorithm with 128bit or 256bit or 256bit Revision 6 key size. The following code snippet illustrates how to encrypt the PDF document with the [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html).
+You can encrypt PDF document using AES algorithm with 128bit, 256bit, or 256bit Revision 6 key size by setting the [`algorithm`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/algorithm.html) to the corresponding [`PdfEncryptionAlgorithm`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfEncryptionAlgorithm.html) value (`aesx128Bit`, `aesx256Bit`, or `aesx256BitRevision6`). The following code snippet illustrates how to encrypt the PDF document with the [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Document security
@@ -114,10 +119,12 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 You can protect the PDF document from printing, editing, copying with the [`ownerPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/ownerPassword.html) by using the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -148,12 +155,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Protect an existing document
 
 You can protect an existing PDF document with both [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html) and [`ownerPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/ownerPassword.html) by using the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document =
@@ -174,12 +183,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Changing the password of the PDF document
+## Changing the user password of the PDF document
 
-You can change the [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html) of the existing PDF document by using following code snippet.
+You can change the [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html) of the existing PDF document by using the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document = PdfDocument(
@@ -193,12 +204,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Remove password from the user password PDF document
+## Remove the user password from a PDF document
 
 You can remove the [`userPassword`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSecurity/userPassword.html) from the encrypted PDF document by using the following code snippet.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document = PdfDocument(
@@ -212,12 +225,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Change the permission of the PDF document
 
 You can change the permission of the PDF document using the [`permissions`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPermissions-class.html). The following code snippet illustrates the same.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document
 PdfDocument document = PdfDocument(
@@ -240,12 +255,13 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## How to determine whether the PDF document is protected by user or owner password?
 
-Flutter PDF supports identifying the document whether it is protected by user or owner.
+Flutter PDF supports identifying whether a document is protected by a user or owner password.
 
-The following table shows the various combination for loading the secured document with user or owner password:
+The following table shows the various combinations for loading a secured document with a user or owner password:
 
 <table>
 <thead>

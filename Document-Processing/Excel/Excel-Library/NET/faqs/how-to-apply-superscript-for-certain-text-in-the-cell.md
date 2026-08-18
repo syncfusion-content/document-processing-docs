@@ -1,12 +1,12 @@
 ---    
-title: Apply Superscript to Text in an Excel Cell | Syncfusion
-description: Learn how to apply superscript to specific text in an Excel cell without affecting existing styles using the Syncfusion .NET Excel library (XlsIO).
+title: How to Apply Superscript in .NET Excel Library | Syncfusion
+description: Apply superscript to specific text in an Excel cell using the Syncfusion .NET Excel Library without changing existing styles.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply superscript to certain text in a cell?
+# How to apply superscript text in .NET Excel Library
 
 The following code example illustrates how to apply superscript to certain text in a cell without affecting the existing style in C# (cross-platform and Windows-specific) and VB.NET.
 {% tabs %}  
@@ -87,4 +87,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}  
 
-A complete working example to apply superscript to certain text in a cell using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Superscript/.NET/Superscript%20for%20certain%20texts">this GitHub page</a>.
+A complete working example to apply superscript to certain text in a cell using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Superscript/.NET/Superscript%20for%20certain%20texts" aria-label="GitHub demo link">this GitHub page</a>.

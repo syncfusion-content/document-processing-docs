@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Link in Vue Document editor component | Syncfusion
-description: Learn here all about Link in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in Vue DOCX Editor | Syncfusion
+description: The hyperlink feature in Vue DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 control: Link 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in Vue Document editor component
+# Hyperlinks in Vue DOCX Editor
 
-Document Editor supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports hyperlink field. You can link a part of the document content to Internet or file location, mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
@@ -193,6 +193,10 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 | Key Combination | Description                                                       |
 | --------------- | ----------------------------------------------------------------- |
 | Ctrl + K        | Open hyperlink dialog that allows you to create or edit hyperlink |
+
+## Online Demo
+
+Explore how to insert and manage hyperlinks in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 

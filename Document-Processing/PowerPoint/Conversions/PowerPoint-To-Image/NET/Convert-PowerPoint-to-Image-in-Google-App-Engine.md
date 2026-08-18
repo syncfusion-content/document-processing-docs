@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to Image in Google App Engine
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Google App Engine**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Google App Engine**.
 
 ## Set up App Engine
 
@@ -44,7 +44,7 @@ Step 2: Configure your new project according to your requirements.
 Step 3: Click the **Create** button.
 ![Create ASP.NET Core Web application in Visual Studio](GCP_Images/Additional-Information-PowerPoint-Presentation-to-PDF.png)
 
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
@@ -92,19 +92,16 @@ Step 8: Add a new action method **ConvertPPTXToImage** in HomeController.cs and 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using (FileStream inputStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PPTX document.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Opens the existing PPTX document.
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream..
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
         stream = (MemoryStream)pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
         stream.Position = 0;
         //Download image file in the browser.
         return File(stream, "image/jpeg", "PPTXToimage_Page1.jpeg");
-    }
 }
 
 {% endhighlight %}
@@ -144,7 +141,7 @@ cd Convert-PPTX-to-image
 
 ![Navigate which sample you want run](GCP_Images/Navigate-PowerPoint-Presentation-to-Image.png)
 
-Step 5: To ensure that the sample is working correctly, please run the application using the following command.
+Step 5: To ensure that the sample is working correctly, run the application using the following command.
 
 {% tabs %}
 {% highlight c# tabtitle="CLI" %}
@@ -190,7 +187,7 @@ cd bin/Release/net8.0/publish/
 
 ![Navigate to the publish folder](GCP_Images/Navigate-Publish-Folder-PowerPoint-Presentation-to-Image.png)
 
-## Configure app.yaml and docker file
+## Configure app.yaml and Dockerfile
 
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
@@ -253,6 +250,6 @@ By executing the program, you will get the **image** as follows. The output will
 
 ![PowerPoint to Image in Google App Engine](GCP_Images/Output-PowerPoint-Presentation-to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core.

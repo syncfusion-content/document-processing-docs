@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exporting pages as images in UWP PDF Viewer control | Syncfusion
+title: Exporting pages as images in UWP PDF Viewer | Syncfusion
 description: Learn here all about Exporting pages as images support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Exporting pages as images in UWP PDF Viewer (SfPdfViewer)
+# Exporting pages as images in UWP PDF Viewer
 
 The SfPdfViewer allow user to export page of the PDF document as an Image. Here 'buffer' is the byte array read from the PDF file either using FileOpenPicker or from Assets folder, as illustrated in the [Viewing PDF](https://help.syncfusion.com/uwp/pdf-viewer/concepts-and-features/viewing-pdf) section. 
 
@@ -144,3 +144,8 @@ pdfViewer.LoadDocument(loadedDocument)
 Dim listOfImageStream As List(Of Stream) = pdfViewer.ExportAsImage(0, 5, 200)
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)

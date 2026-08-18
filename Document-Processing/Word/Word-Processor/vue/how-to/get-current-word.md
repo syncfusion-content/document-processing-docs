@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Get current word in Vue Document editor component | Syncfusion
-description: Learn here all about Get current word in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Current Word in Vue DOCX Editor | Syncfusion
+description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® Vue DOCX Editor for content processing and analysis.
 control: Get current word 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get current word in Vue Document editor component
+# How to Get Current Word in Vue DOCX Editor
 
-You can get the current word or paragraph content from the Vue Document Editor component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 

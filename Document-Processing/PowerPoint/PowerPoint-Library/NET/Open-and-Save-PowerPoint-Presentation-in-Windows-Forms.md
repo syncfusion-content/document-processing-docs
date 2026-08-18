@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save Presentation in Windows Forms
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Windows Forms**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Windows Forms**.
 
 ## Steps to open and save PowerPoint Presentation programmatically
 
@@ -16,11 +16,11 @@ Step 1: Create a new C# Windows Forms application project.
 
 ![Create Windows Forms project](Workingwith-Windows/Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.WinForms](https://www.nuget.org/packages/Syncfusion.Presentation.WinForms/) NuGet package as a reference to your Windows Forms application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.WinForms Nuget Package](Workingwith-Windows/Nuget-Package-Open-and-Save.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
 
@@ -88,30 +88,32 @@ IPresentation pptxDoc = Presentation.Open("../../Data/Template.pptx");
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 6: The following code snippet demonstrates accessing a shape from a slide and changing the text within it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Gets the first slide from the PowerPoint presentation
+//Gets the first slide from the PowerPoint presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide
+//Gets the first shape of the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape
-if (shape.TextBody.Text == "Company History")
+//Changes the text of the shape.
+if (shape != null && shape.TextBody != null && shape.TextBody.Text == "Company History")
+{
     shape.TextBody.Text = "Company Profile";
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add below code example to **save the PowerPoint Presentation in Windows Forms**.
+Step 7: Add the following code example to **save the PowerPoint Presentation in Windows Forms**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Saves the Presentation to the file system.
+//Saves the PowerPoint presentation to the file system.
 pptxDoc.Save("Result.pptx");
-//Close the PowerPoint presentation
+//Closes the PowerPoint presentation.
 pptxDoc.Close();
 
 {% endhighlight %}
@@ -123,4 +125,4 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Windows Forms output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.

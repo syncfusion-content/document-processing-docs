@@ -1,14 +1,14 @@
 ---
-title: Dialogs in WPF RichTextBox control | Syncfusion
-description: Learn here all about Dialogs support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Dialogs in WPF DOCX Editor | Syncfusion
+description: The dialogs in WPF DOCX Editor offer built-in dialog support similar to Microsoft Word, enabling font, paragraph, list, and table operations.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: dialogs
 ---
-# Dialogs in WPF RichTextBox (SfRichTextBoxAdv)
+# Dialogs in WPF DOCX Editor
 
-The SfRichTextBoxAdv provides support for the following built-in dialogs similar to Microsoft Word application.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support for the following built-in dialogs similar to Microsoft Word application.
 
 * Font Dialog
 
@@ -279,4 +279,4 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools. 
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools. 

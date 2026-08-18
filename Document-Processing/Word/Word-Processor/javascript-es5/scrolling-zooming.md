@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Scrolling zooming in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Scrolling and Zooming in JavaScript DOCX Editor | Syncfusion
+description: The scrolling and zooming in JavaScript DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling zooming 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling zooming in JavaScript (ES5) Document editor control
+# Scrolling and Zooming in JavaScript DOCX Editor
 
-The Document Editor renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
+The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using 'scrollToPage()' method of Document Editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

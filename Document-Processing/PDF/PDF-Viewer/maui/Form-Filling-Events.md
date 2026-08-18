@@ -1,0 +1,84 @@
+---
+layout: post
+title: Form Field Events in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to handle form field interaction events in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+platform: document-processing
+control: SfPdfViewer
+documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+---
+
+# Form Field Events in .NET MAUI PDF Viewer
+
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) exposes events that allow you to track and respond to user interactions with form fields. The following table summarizes the available events:
+
+| Event | Description |
+|---|---|
+| [FormFieldValueChanged](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldValueChanged) | Raised when the value of a form field changes. |
+| [FormFieldFocusChanged](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldFocusChanged) | Raised when a text or signature field gains or loses focus. |
+
+## Detect value changes
+
+The [FormFieldValueChanged](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldValueChanged) event is raised whenever the value of a form field changes. You can use the [OldValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldValueChangedEventArgs.html#Syncfusion_Maui_PdfViewer_FormFieldValueChangedEventArgs_OldValue) and [NewValue](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldValueChangedEventArgs.html#Syncfusion_Maui_PdfViewer_FormFieldValueChangedEventArgs_NewValue) properties of [FormFieldValueChangedEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldValueChangedEventArgs.html) to read the before and after values.
+
+Subscribe to the event in XAML:
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        FormFieldValueChanged="PdfViewer_FormFieldValueChanged"/>
+{% endhighlight %}
+{% endtabs %}
+
+Handle the event in code:
+
+{% tabs %}
+{% highlight c# %}
+private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChangedEventArgs e)
+{
+    if (e.FormField is TextFormField textFormField)
+    {
+        // Read the previous and current values.
+        string oldText = e.OldValue?.ToString();
+        string newText = e.NewValue?.ToString();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The `OldValue` and `NewValue` types vary by field type. For a checkbox, cast them to `bool` to read the checked state. For a combo box or radio button, cast them to `string`.
+
+## Detect focus changes
+
+The [FormFieldFocusChanged](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldFocusChanged) event is raised when a text or signature field gains or loses focus. This event is raised only for text and signature form fields. Use the [HasFocus](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldFocusChangedEventArgs.html#Syncfusion_Maui_PdfViewer_FormFieldFocusChangedEventArgs_HasFocus) property of the [FormFieldFocusChangedEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FormFieldFocusChangedEventArgs.html) to determine whether the field is being focused or unfocused.
+
+Subscribe to the event in XAML:
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer"
+                        FormFieldFocusChanged="PdfViewer_FormFieldFocusChanged"/>
+{% endhighlight %}
+{% endtabs %}
+
+Handle the event in code:
+
+{% tabs %}
+{% highlight c# %}
+private void PdfViewer_FormFieldFocusChanged(object sender, FormFieldFocusChangedEventArgs e)
+{
+    FormField field = e.FormField;
+    bool hasFocus = e.HasFocus;
+}
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+
+- [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
+- [Edit Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-edit)
+- [Form Filling Validation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-validation)
+- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
+- [Show and Hide Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-show-hide)
+- [Customize Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-customization)
+- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)

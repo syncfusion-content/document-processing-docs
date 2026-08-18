@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Notes in Document Editor Component
-description: Learn here all about notes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in ASP.NET Core DOCX Editor | Syncfusion
+description: The footnote and endnote support in ASP.NET Core DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
 
-# Insert footnote endnote
+# Footnotes and Endnotes in ASP.NET Core DOCX Editor
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
@@ -18,7 +18,7 @@ The footnotes and endnotes are both ways of adding extra bits of information to 
 
 ## Insert footnotes
 
-Document editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
+The Document Editor exposes an API to insert footnotes at the cursor position programmatically or at the end of the selected text.
 
 
 {% tabs %}
@@ -33,7 +33,7 @@ Document editor exposes an API to insert footnotes at cursor position programmat
 
 ## Insert endnotes
 
-Document editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
+The Document Editor exposes an API to insert endnotes at the cursor position programmatically or at the end of the selected text.
 
 
 {% tabs %}
@@ -48,6 +48,10 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 
 ## Update or edit footnotes and endnotes
 
-You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it. The footnote endnote dialog box popup and you can customize the number format and start at.
+You can update or edit the footnotes and endnotes using the built-in context menu displayed by right-clicking them. The Footnote/Endnote dialog box appears, where you can customize the number format and start-at value.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
+
+## Online Demo
+
+Explore how to add and manage notes in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/notes#/tailwind3).

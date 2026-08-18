@@ -1,17 +1,17 @@
 ---
 layout: post
-title: View in Angular Document editor component | Syncfusion
-description: Learn here all about View in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: View in Angular DOCX Editor | Syncfusion
+description: View in Angular DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 control: View 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in Angular Document Editor Component
+# View in Angular DOCX Editor
 
-## Web Layout
+## Web layout
 
-DocumentEditorContainer component allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#layouttype/) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) container component allows you to change the view to a web layout or print layout using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).
 
 ```typescript
 /**
@@ -37,13 +37,17 @@ export class AppComponent {
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype/) in DocumentEditorContainer component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#layouttype) in the Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).
+
+### Online Demo
+
+Explore how to view Word documents in web layout using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/web-layout).
 
 ## Ruler
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the Document Editor.
 
-The following example illustrates how to enable ruler in Document Editor
+The following example illustrates how to enable the ruler in the Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -57,11 +61,15 @@ The following example illustrates how to enable ruler in Document Editor
   
 {% previewsample "/document-processing/samples/document-editor/angular/ruler-cs1" %}
 
-## Heading Navigation Pane 
+### Online Demo
 
-Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
+Explore how to use the ruler in the Angular Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/ruler).
 
-The following example demonstrates how to enable the heading navigation pane in a document editor.
+## Heading Navigation Pane
+
+The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
+
+The following example demonstrates how to enable the heading navigation pane in a Document Editor.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -80,3 +88,7 @@ export class AppComponent implements OnInit {
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online demo
+
+Explore how to navigate through headings in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/heading-navigation).

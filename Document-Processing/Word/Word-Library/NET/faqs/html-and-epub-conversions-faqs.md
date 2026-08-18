@@ -1,11 +1,11 @@
 ---
-title: FAQ about HTML and EPUB Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about HTML and EPUB conversions in the .NET Word (DocIO) library.
+title: FAQ about HTML and EPUB Conversions in .NET Word | Syncfusion
+description: Describe common questions and answers related to HTML and EPUB conversions using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about HTML and EPUB conversions 
+# FAQ about HTML and EPUB Conversions in .NET Word
 
 The frequently asked questions about HTML and EPUB conversions using DocIO are listed below.
 
@@ -36,12 +36,6 @@ document.Close();
 'Loads the existing Word document by using DocIO instance
 Dim document As New WordDocument("Template.docx", FormatType.Docx)
 'Sets title for Word document, which will be applied as title for the output EPUB file.
-document.BuiltinDocumentProperties.Title = "This is a title in EPub document"
-'Saves and closes the document.
-document.Save("Sample.epub", FormatType.EPub)
-document.Close()'Loads the existing Word document by using DocIO instance
-Dim document As New WordDocument("Template.docx", FormatType.Docx)
-'Sets title for Word document
 document.BuiltinDocumentProperties.Title = "This is a title in EPub document"
 'Saves and closes the document.
 document.Save("Sample.epub", FormatType.EPub)
@@ -95,7 +89,7 @@ When importing an HTML file into a Word document using DocIO, it is essential to
 {% tabs %}
 
 {% highlight html tabtitle="HTML" %}
-<p style="line-height: 1.5;”> Hello world</p>
+<p style="line-height: 1.5;"> Hello world</p>
 {% endhighlight %}
 
 {% endtabs %}

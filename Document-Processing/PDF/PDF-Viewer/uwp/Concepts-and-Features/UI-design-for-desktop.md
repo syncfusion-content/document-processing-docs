@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Desktop in UWP Pdf Viewer control | Syncfusion
+title: Desktop in UWP Pdf Viewer | Syncfusion
 description: Learn here all about Desktop support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Desktop in UWP Pdf Viewer (SfPdfViewer)
+# Desktop in UWP Pdf Viewer
 
 ![customtoolbarimage](CustomToolbarImages/CustomToolbarImage22.png)
 
@@ -750,3 +750,7 @@ Sample:
 
 Note that this sample is common to both mobile design and desktop design. 
 
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization)

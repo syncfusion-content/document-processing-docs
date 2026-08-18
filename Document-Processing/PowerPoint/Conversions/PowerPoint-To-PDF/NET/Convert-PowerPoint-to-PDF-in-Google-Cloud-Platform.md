@@ -2,19 +2,19 @@
 title: Convert PPTX to PDF in Google Cloud Platform (GCP) | Syncfusion
 description: Learn how to convert a PPTX to PDF in Google Cloud Platform (GCP) using .NET PowerPoint library (Presentation) in C#. 
 platform: document-processing
-control: PowerPoint 
-documentation: UG 
---- 
+control: PowerPoint
+documentation: UG
+---
 
 # Convert PowerPoint Presentation to PDF in Google Cloud Platform (GCP)
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Google Cloud Platform (GCP)** within a few lines of code.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Google Cloud Platform (GCP)** within a few lines of code.
 
 N> If this is your first time working with Google Cloud Platform (GCP), please refer to the dedicated GCP resources. This section explains how to convert a PowerPoint Presentation to PDF in C# using the PowerPoint library (Presentation) in GCP. 
 
 ## Prerequisites 
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with access to the App Engine service.
 
 ## Google Cloud Platform (GCP)
 

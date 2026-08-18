@@ -1,11 +1,11 @@
 ---
-title: FAQ about Sections | DocIO | Syncfusion
-description: Learn about the frequently asked questions about sections in Word document in the .NET Word (DocIO) library.
+title: FAQ about Sections in .NET Word | Syncfusion
+description: Describe frequently asked questions about working with sections in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about sections in Word document
+# FAQ about Sections in .NET Word
 
 The frequently asked questions about working with sections in Word documents using DocIO are listed below.
 
@@ -13,7 +13,36 @@ The frequently asked questions about working with sections in Word documents usi
 
 The following code illustrates how to remove the header contents from the document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);
+//Iterates through the sections
+foreach (WSection section in document.Sections)
+{
+    HeaderFooter header;
+    //Gets even header of current section
+    header = section.HeadersFooters[HeaderFooterType.EvenHeader];
+    //Removes even header
+    header.ChildEntities.Clear();
+    //Gets odd header of current section
+    header = section.HeadersFooters[HeaderFooterType.OddHeader];
+    //Removes odd header
+    header.ChildEntities.Clear();
+    //Gets first page header
+    header = section.HeadersFooters[HeaderFooterType.FirstPageHeader];
+    //Removes first page header
+    header.ChildEntities.Clear();
+}
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
@@ -22,17 +51,17 @@ WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 foreach (WSection section in document.Sections)
 {
     HeaderFooter header;
-    //Gets even footer of current section
+    //Gets even header of current section
     header = section.HeadersFooters[HeaderFooterType.EvenHeader];
-    //Removes even footer
+    //Removes even header
     header.ChildEntities.Clear();
-    //Gets odd footer of current section
+    //Gets odd header of current section
     header = section.HeadersFooters[HeaderFooterType.OddHeader];
-    //Removes odd footer
+    //Removes odd header
     header.ChildEntities.Clear();
-    //Gets first page footer
+    //Gets first page header
     header = section.HeadersFooters[HeaderFooterType.FirstPageHeader];
-    //Removes first page footer
+    //Removes first page header
     header.ChildEntities.Clear();
 }
 //Saves and closes the document
@@ -46,17 +75,17 @@ Dim document As New WordDocument("Template.docx", FormatType.Docx)
 'Iterates through the sections
 For Each section As WSection In document.Sections
     Dim header As HeaderFooter
-    'Gets even footer of current section
+    'Gets even header of current section
     header = section.HeadersFooters(HeaderFooterType.EvenHeader)
-    'Removes even footer
+    'Removes even header
     header.ChildEntities.Clear()
-    'Gets odd footer of current section
+    'Gets odd header of current section
     header = section.HeadersFooters(HeaderFooterType.OddHeader)
-    'Removes odd footer
+    'Removes odd header
     header.ChildEntities.Clear()
-    'Gets first page footer
+    'Gets first page header
     header = section.HeadersFooters(HeaderFooterType.FirstPageHeader)
-    'Removes first page footer
+    'Removes first page header
     header.ChildEntities.Clear()
 Next
 'Saves and closes the document
@@ -72,9 +101,36 @@ The following code illustrates how to remove the footer contents from the docume
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Loads the template document
+FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+WordDocument document = new WordDocument(docStream, FormatType.Docx);            
+//Iterates through the sections
+foreach (WSection section in document.Sections)
+{
+    HeaderFooter footer;
+    //Gets even footer of current section
+    footer = section.HeadersFooters[HeaderFooterType.EvenFooter];
+    //Removes even footer
+    footer.ChildEntities.Clear();
+    //Gets odd footer of current section
+    footer = section.HeadersFooters[HeaderFooterType.OddFooter];
+    //Removes odd footer
+    footer.ChildEntities.Clear();
+    //Gets first page footer
+    footer = section.HeadersFooters[HeaderFooterType.FirstPageFooter];
+    //Removes first page footer
+    footer.ChildEntities.Clear();
+}
+//Saves and closes the document
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+document.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");            
+WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Iterates through the sections
 foreach (WSection section in document.Sections)
 {

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Rows and columns in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Rows and columns in Angular Spreadsheet | Syncfusion
+description: Rows and columns in Angular Spreadsheet enable users to insert, delete, resize, and manage worksheet structure efficiently.
 platform: document-processing
-control: Rows and columns 
+control: Rows and columns
 documentation: ug
 ---
 
-# Rows and columns in Angular Spreadsheet component
+# Rows and columns in Angular Spreadsheet 
 
-Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
+[Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
 
 * Insert
 * Delete
@@ -95,7 +95,7 @@ The following features have some limitations in Insert/Delete:
 
 ## Hide and show
 
-You can show or hide the rows and columns in the spreadsheet through property binding, method, and context menu.
+You can show or hide rows and columns in the spreadsheet through property binding, method, and context menu.
 
 ## Row
 
@@ -107,7 +107,7 @@ The rows can be hidden or shown through the following ways,
 
 ## Column
 
-The columns can be hidden or shown through following ways,
+The columns can be hidden or shown through the following ways,
 
 * Using `hidden` property in columns, you can hide/show the columns at initial load.
 * Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
@@ -147,7 +147,7 @@ The following code example shows how to change the text in the column headers.
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

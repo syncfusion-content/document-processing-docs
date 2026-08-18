@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Selection in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Selection in TypeScript Spreadsheet | Syncfusion
+description: Selection in TypeScript Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
-control: Selection 
+control: Selection
 documentation: ug
 ---
 
-# Selection in EJ2 TypeScript Spreadsheet control
+# Selection in TypeScript Spreadsheet 
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
-> * The default value for `mode` in  `selectionSettings` is `Multiple`.
+> The default value for `mode` in  `selectionSettings` is `Multiple`.
 
 You have the following options in Selection,
 
@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single cell or a range of cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 
@@ -33,7 +33,7 @@ You can quickly locate and select specific cells or ranges by entering their nam
 
 ## Row selection
 
-Row selection is used to select a single or multiple rows.
+Row selection is used to select a single row or multiple rows.
 
 **User Interface**:
 
@@ -85,7 +85,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://ej2.syncfusion.com/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -102,7 +102,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 ## Remove Selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
+The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet#selectionsettings) to disable's the UI selection.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

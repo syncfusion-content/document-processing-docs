@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Insert text in current position in Vue Document editor component | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Insert Content at Cursor in Vue DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® Vue DOCX Editor control, its elements and more.
 control: Insert text in current position 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text in current position in Vue Document editor component
+# How to Insert Content at Cursor in Vue DOCX Editor
 
-You can insert the text, paragraph and rich-text content in Vue Document Editor component.
+You can insert the text, paragraph and rich-text content in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component.
 
 ## Insert text in current cursor position
 

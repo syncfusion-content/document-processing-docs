@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET Core**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -49,7 +49,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -69,22 +69,18 @@ Step 6: Add a new action method **ConvertPPTXtoImage** in HomeController.cs and 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream.
-using (FileStream fileStream = new FileStream(Data/Input.pptx", FileMode.Open, FileAccess.Read))
+//Open an existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Open the existing PowerPoint presentation.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
-        //Reset the stream position.
-        stream.Position = 0;
-        //Download image in the browser.
-        return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
-    }
-}    
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
+    //Reset the stream position.
+    stream.Position = 0;
+    //Download image in the browser.
+    return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +144,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -168,22 +164,18 @@ Step 6: Add a new action method **ConvertPPTXtoImage** in HomeController.cs and 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream.
-using (FileStream fileStream = new FileStream(Data/Input.pptx", FileMode.Open, FileAccess.Read))
+//Open an existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Open the existing PowerPoint presentation.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
-        //Reset the stream position.
-        stream.Position = 0;
-        //Download image in the browser.
-        return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
-    }
-}    
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
+    //Reset the stream position.
+    stream.Position = 0;
+    //Download image in the browser.
+    return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -263,7 +255,7 @@ Step 4: A default action method named Index will be present in **HomeController.
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -283,22 +275,18 @@ Step 6: Add a new action method **ConvertPPTXtoImage** in HomeController.cs and 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream.
-using (FileStream fileStream = new FileStream(Data/Input.pptx", FileMode.Open, FileAccess.Read))
+//Open an existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Open the existing PowerPoint presentation.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
-        //Reset the stream position.
-        stream.Position = 0;
-        //Download image in the browser.
-        return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
-    }
-}    
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg);
+    //Reset the stream position.
+    stream.Position = 0;
+    //Download image in the browser.
+    return File(stream, "application/jpeg", "PPTXtoImage.Jpeg");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -321,6 +309,6 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

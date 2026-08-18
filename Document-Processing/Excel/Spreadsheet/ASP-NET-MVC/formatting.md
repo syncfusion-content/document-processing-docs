@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Formatting in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about Formatting in Syncfusion EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Formatting in ASP.NET MVC Spreadsheet | Syncfusion
+description: Apply cell, row, and column formatting in the Syncfusion ASP.NET MVC Spreadsheet to enhance data presentation.
 platform: document-processing
 control: Formatting
 documentation: ug
 ---
 
 
-# Formatting in ASP.NET MVC Spreadsheet Control
+# Formatting in ASP.NET MVC Spreadsheet
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
@@ -35,7 +37,7 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 
 Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-* Using the `numberFormat` method, you can set the number format to a cell or range of cells.
+* Use the `numberFormat` method to apply a number format to a cell or range of cells.
 * Selecting the number format option from ribbon toolbar.
 
 ### Custom Number Formatting
@@ -83,9 +85,9 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` | 44 |
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
-Custom Number formatting can be applied in following ways,
-* Using the `numberFormat` method, you can set your own custom number format to a cell or range of cells.
-* Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
+Custom number formatting can be applied in the following ways:
+* Use the `numberFormat` method to apply a custom number format to a cell or range of cells.
+* Select the required cells, open the number format options from the Ribbon, and choose **Custom Number Format**. Select an available format or enter a custom format code, and then click **Apply**.
 
 The following code example shows the number formatting in cell data.
 
@@ -98,6 +100,8 @@ The following code example shows the number formatting in cell data.
 {% endhighlight %}
 {% endtabs %}
 
+After running the sample, verify that the selected cells display values using the configured number format.
+
 ## Configure culture-based custom format
 
 Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
@@ -107,6 +111,8 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
 > The format code should use the default decimal separator (.) and group separator (,).
+
+Obtain the Spreadsheet instance after the component is rendered, and pass it with the collection of localized format codes to the `configureLocalizedFormat` method. The `spreadsheet` parameter represents the rendered Spreadsheet instance, and the `deLocaleFormats` parameter contains the format IDs and their corresponding culture-specific format codes.
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German` culture.
 
@@ -142,6 +148,14 @@ ViewBag.deLocaleFormats = deLocaleFormats;
 </script>
 ```
 
+To configure culture-based custom formats:
+
+1. Create a collection containing the default number format IDs and their corresponding culture-specific format codes.
+2. Pass the collection from the controller to the razor view.
+3. Obtain the rendered Spreadsheet instance.
+4. Pass the Spreadsheet instance and the format collection to the `configureLocalizedFormat` method.
+5. Open the custom number format dialog and verify that the culture-specific formats are displayed.
+
 The following code example demonstrates how to configure culture-based formats for different cultures in the spreadsheet.
 
 {% tabs %}
@@ -152,6 +166,8 @@ The following code example demonstrates how to configure culture-based formats f
 {% include code-snippet/spreadsheet/asp-net-mvc/globalization-cs1/cultureController.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+After running the sample, open the custom number format dialog and verify that the configured culture-specific number formats are displayed.
 
 ## Text and cell formatting
 
@@ -256,11 +272,11 @@ N>* 'GreaterThan', 'LessThan', 'Between', 'EqualTo', 'ContainsText', 'DateOccur'
 
 The following preset colors can be used for formatting styles,
 
-N>* `"RedFT"` - Light Red Fill with Dark Red Text,
-<br/>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
-<br/>* `"GreenFT"` - Green Fill with Dark Green Tex/t,
-<br/>* `"RedF"` - Red Fill,
-<br/>* `"RedT"` - Red Text.
+>* `"RedFT"` - Light Red Fill with Dark Red Text,
+>* `"YellowFT"` - Yellow Fill with Dark Yellow Text,
+>* `"GreenFT"` - Green Fill with Dark Green Text,
+>* `"RedF"` - Red Fill,
+>* `"RedT"` - Red Text.
 
 ### Top bottom rules
 
@@ -328,6 +344,77 @@ The following features have some limitations in Conditional Formatting:
 * Conditional formatting with formula support.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
+
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **Syncfusion ASP.NET MVC Spreadsheet**, rich text formatting is supported through the `richText` property of the cell model. This property allows you to define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the `CellStyleModel`
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in following ways:
+
+* Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+* Using the `richText` property, you can define rich text formatting while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```csharp
+cells = new List<object>()
+{
+    new {
+        value = "H2O",
+        richText = new List<object>()
+        {
+            new { text = "H" },
+            new { text = "2", style = new { verticalAlign = "sub" } },
+            new { text = "O" }
+        }
+    }
+};
+```
+
+You can also apply subscript and superscript dynamically using the `updateCell` method.
+
+```js
+spreadsheet.updateCell({
+    value: 'X2',
+    richText: [
+        { text: 'X' },
+        { text: '2', style: { verticalAlign: 'super' } }
+    ]
+}, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-mvc/richtext-format/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="RichTextController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-mvc/richtext-format/richTextFormat.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## See Also
 

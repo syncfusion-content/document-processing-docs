@@ -1,14 +1,14 @@
 ---
-title: What are the deprecated APIs in XlsIO | Syncfusion
-description: This page lists the deprecated APIs of Syncfusion .NET Excel library (XlsIO) and their respective new APIs.
+title: Deprecated APIs in .NET Excel Library | Syncfusion
+description: Deprecated API details describes old .NET Excel Library APIs and their corresponding new API replacements.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What are the deprecated APIs in XlsIO?
+# Deprecated APIs in .NET Excel Library
 
-[FillBackgroundRGB](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillBackgroundRGB), [FillBackground](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillBackground), [FillForegroundRGB](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillForegroundRGB), and [FillForeground](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillForeground) APIs that were available under [CellStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyle) are now deprecated, and Syncfusion&reg; XlsIO have now come up with new APIS called [Color](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Color), [ColorIndex](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex), [PatternColor](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColor), and [PatternColorIndex](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex). Please find the list below.
+[FillBackgroundRGB](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillBackgroundRGB), [FillBackground](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillBackground), [FillForegroundRGB](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillForegroundRGB), and [FillForeground](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_FillForeground) APIs that were available under [CellStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_CellStyle) are now deprecated, and Syncfusion&reg; XlsIO have now come up with new APIS called [Color](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_Color), [ColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_ColorIndex), [PatternColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColor), and [PatternColorIndex](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IExtendedFormat.html#Syncfusion_XlsIO_IExtendedFormat_PatternColorIndex). Please find the list below.
 
 <table>
 <tr>

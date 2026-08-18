@@ -1,7 +1,7 @@
 
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 var container = new ej.documenteditor.DocumentEditorContainer({
-    enableToolbar: true, height:"400"
+    enableToolbar: true, height:"590px"
 });
 ej.popups.createSpinner({
   // Specify the target for the spinner to show

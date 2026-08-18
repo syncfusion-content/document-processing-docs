@@ -1,23 +1,27 @@
 ---
 layout: post
-title: View in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about View in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: View in JavaScript DOCX Editor | Syncfusion
+description: View in JavaScript DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in JavaScript (ES5) Document editor control
+# View in JavaScript DOCX Editor
 
 ## Web layout
 
-DocumentEditor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/layoutType/).
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/layoutType/).
 
 ```ts
 let docEdit: DocumentEditor = new DocumentEditor({ layoutType: 'Continuous'});
 ```
 
 >Note: Default value of [`layoutType`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#layouttype) in DocumentEditor component is [`Pages`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/layoutType/).
+
+### Online Demo
+
+Explore how to view Word documents in web layout using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/web-layout.html).
 
 ## Ruler
 
@@ -35,6 +39,10 @@ The following example illustrates how to enable ruler in Document Editor
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/ruler-cs1" %}
+
+### Online Demo
+
+Explore how to use the ruler in the JavaScript (ES5) Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/ruler.html).
 
 ## Navigation Pane
 
@@ -54,3 +62,7 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/heading-navigation.html).

@@ -1,12 +1,12 @@
 ---
-title: How to apply TimePeriod conditional formatting in Excel | Syncfusion 
-description: Code example to apply TimePeriod-based conditional formatting in an Excel document using Syncfusion .NET Excel library (XlsIO). 
+title: How to Use TimePeriod Rules in .NET Excel Library | Syncfusion
+description: Apply TimePeriod conditional formatting to Excel documents using the Syncfusion .NET Excel Library to highlight date-based values.
 platform: document-processing 
 control: XlsIO 
 documentation: UG
 ---
 
-# How to apply TimePeriod conditional formatting in Excel using C#?
+# How to apply TimePeriod formatting in .NET Excel Library
 
 You can apply TimePeriod-based conditional formatting in an Excel worksheet using the IConditionalFormats interface. 
 

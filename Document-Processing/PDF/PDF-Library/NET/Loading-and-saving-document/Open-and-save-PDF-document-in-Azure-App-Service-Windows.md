@@ -1,14 +1,14 @@
 ---
-title: Open and save PDF document in Azure App Service on Windows | Syncfusion
-description: Open and save PDF document in Azure App Service on Windows using .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Open and Save PDF File in Azure App Service on Windows | Syncfusion
+description: Learn how to open and save PDF documents in Azure App Service on Windows using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Open and save PDF document in Azure App Service on Windows
+# Open and Save PDF Document in Azure App Service on Windows
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **Open and save PDF document in Azure App Service on Windows**.
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Azure App Service on Windows**.
 
 ## Steps to open and save PDF document in Azure App Service on Windows
 
@@ -29,8 +29,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
-
+{% highlight CSHTML %}
 @{
     Html.BeginForm("OpenAndSavePDFDocument", "Home", FormMethod.Get);
     {
@@ -58,16 +57,20 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **OpenAndSaveDocument** in HomeController.cs and include the below code snippet to **open an existing PDF document**.
+Step 7: Add a new action method **OpenAndSavePDFDocument** in HomeController.cs and include the below code snippet to **open an existing PDF document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Load PDF document as stream.
+//Load the PDF document as a stream.
 string docPath = Path.Combine(_hostingEnvironment.WebRootPath + "/Data/Input.pdf");
 FileStream docStream = new FileStream(docPath, FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,10 +107,10 @@ Step 9: Add below code example to **save the PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Saving the PDF to the MemoryStream.
+//Save the PDF to the memory stream.
 MemoryStream stream = new MemoryStream();
 document.Save(stream);
-//Set the position as '0'.
+//Set the position to '0'.
 stream.Position = 0;
 //Download the PDF document in the browser.
 FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
@@ -150,7 +153,7 @@ Step 10: Now, the published webpage will open in the browser.
 ![Browser will open after publish](Azure_Images/Azure-app-service-windows/WebView.png)
 
 Step 11: Click **Open and Save Document** button.You will get the output **PDF document** as follows.
-![Output PDF screenshot](Azure_Images/Azure-app-service-windows/Output_screenshot.png)
+![Output PDF](Azure_Images/Azure-app-service-windows/Output.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/Azure/Azure_App_Service).
 

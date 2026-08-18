@@ -8,7 +8,7 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in WPF
 
-You can create or edit a PowerPoint file in WPF with Syncfusion<sup>&reg;</sup> PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in WPF with [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
 
 ## Create a PowerPoint file in WPF
 
@@ -25,7 +25,7 @@ Step 1: Create a new C# WPF application project.
 
 ![Create WPF project](Workingwith-WPF/Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.Wpf](https://www.nuget.org/packages/Syncfusion.Presentation.Wpf/) NuGet package as a reference to your WPF application from [NuGet.org](https://www.nuget.org/).
 
 ![Install Presentation WPF Nuget](Workingwith-WPF/Nuget-Package-Open-and-Save.png)
 
@@ -37,15 +37,13 @@ Step 3: After installing the **Syncfusion.Presentation.Wpf** nuget package, the 
 <li>Syncfusion.Licensing</li>
 <li>Syncfusion.OfficeChart.Base</li>
 <li>Syncfusion.Presentation.Base</li>
-<li>Syncfusion.Pdf.Base</li>
-<li>Syncfusion.PresentationToPdfConverter.Base</li>
 </ul>
 
 Step 4: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="CreatePowerPointWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -88,7 +86,7 @@ IPresentation pptxDoc = Presentation.Create();
 
 {% endtabs %}
 
-**Add a new slide**
+**Add a new slide:**
 
 {% tabs %}
 
@@ -99,7 +97,7 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
 
 {% endtabs %}
 
-**Apply Background**
+**Apply Background:**
 
 {% tabs %}
 
@@ -163,9 +161,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -221,7 +218,7 @@ The output of the above code example will generate the below PowerPoint slide.
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET Framework Developer Pack.
+* Install **.NET Framework Developer Pack** for the desired target framework version.
 
 Step 1. Open JetBrains Rider and create a new WPF application project.
 * Launch JetBrains Rider.
@@ -265,7 +262,7 @@ Step 4: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="CreatePowerPointWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -308,7 +305,7 @@ IPresentation pptxDoc = Presentation.Create();
 
 {% endtabs %}
 
-**Add a new slide**
+**Add a new slide:**
 
 {% tabs %}
 
@@ -319,7 +316,7 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
 
 {% endtabs %}
 
-**Apply Background**
+**Apply Background:**
 
 {% tabs %}
 
@@ -383,9 +380,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -440,7 +436,7 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ## Read and edit a PowerPoint file in WPF
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
 
 {% tabs %}
 
@@ -464,6 +460,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/WPF/Read-and-edit-PowerPoint-presentation).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 

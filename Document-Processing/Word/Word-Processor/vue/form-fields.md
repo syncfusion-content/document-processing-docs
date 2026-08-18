@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form fields in Vue Document editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Form Fields in Vue DOCX Editor | Syncfusion
+description: Form fields in Vue DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 control: Form fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in Vue Document editor component
+# Form Fields in Vue DOCX Editor
 
-Document Editor Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -192,3 +192,7 @@ export default {
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly`. In stop protection method, parameter denotes the password.
+
+## Online Demo
+
+Explore how to insert and manage form fields in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/form-fields.html).

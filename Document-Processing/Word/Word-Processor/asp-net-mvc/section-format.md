@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Section Format in ASP.NET MVC Document Editor Control | Syncfusion
-description: Learn here all about section format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Section Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The section format feature in ASP.NET MVC DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
 control: Section Format
 documentation: ug
 ---
 
 
-# Working with Section Formatting
+# Section Format in ASP.NET MVC DOCX Editor
 
-Document editor supports various section formatting such as page size, page margins, and more.
+The Document Editor supports various section formatting options, such as page size and page margins.
 
 ## Page size
 
-You can get or set the size of a section at cursor position by using the following sample code.
+You can get or set the size of a section at the cursor position by using the following sample code.
 
 ```typescript
 documenteditor.selection.sectionFormat.pageWidth = 500;
 documenteditor.selection.sectionFormat.pageHeight = 600;
 ```
 
-You can change the orientation of the page by swapping the values of page width and height respectively.
+You can change the page orientation by swapping the page width and height values.
 
 ## Page margins
 
-Left and right page margin defines the gap between the document content from left and right side of the page respectively. Top and bottom page margins defines the gap between the document content from header and footer of the page respectively.
+The left and right page margins define the gap between the document content and the left and right sides of the page, respectively. The top and bottom page margins define the gap between the document content and the header and footer of the page, respectively.
 
 ```typescript
 documenteditor.selection.sectionFormat.leftMargin = 10;
@@ -34,11 +34,11 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
->Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+N> The maximum value of the margin is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 for this property. If you set a value greater than 1584, Syncfusion Document Editor automatically resets it to 1584.
 
 ## Header distance
 
-You can define the distance of header content from the top of the page by using the following sample code.
+You can define the distance of the header content from the top of the page by using the following sample code.
 
 ```typescript
 documenteditor.selection.sectionFormat.headerDistance = 72;
@@ -46,12 +46,16 @@ documenteditor.selection.sectionFormat.headerDistance = 72;
 
 ## Footer distance
 
-You can define the distance of footer content from the bottom of the page by using the following sample code.
+You can define the distance of the footer content from the bottom of the page by using the following sample code.
 
 ```typescript
 documenteditor.selection.sectionFormat.footerDistance = 72;
 ```
 
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/sectionformatting#/tailwind3).
+
 ## See Also
 
-* [Pagesetup dialog](./dialog#page-setup-dialog)
+* [Page Setup Dialog](./dialog#page-setup-dialog)

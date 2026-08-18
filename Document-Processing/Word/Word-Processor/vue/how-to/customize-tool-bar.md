@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize tool bar in Vue Document editor component | Syncfusion
-description: Learn here all about Customize tool bar in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Toolbar in Vue DOCX Editor | Syncfusion
+description: Customize the toolbar in Syncfusion® Vue DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 control: Customize tool bar 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize tool bar in Vue Document editor component
+# How to Customize Toolbar in Vue DOCX Editor
 
 ## How to customize existing toolbar in DocumentEditorContainer
 
-Document Editor Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
 * Add - New items can defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
 * Show, Hide - Existing items can be shown or hidden using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Pre-defined toolbar items are available with [`ToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/toolbarItem/).
@@ -169,3 +169,7 @@ export default {
 {% endtabs %}
 
 >Note: Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields','ContentControl']`.
+
+## Online Demo
+
+Explore how to customize the toolbar in the Vue Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/toolbar-customization.html).

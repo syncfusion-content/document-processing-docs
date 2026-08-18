@@ -1,16 +1,18 @@
 ---
-title: Move or Copy Options | Syncfusion
-description: In this section, you can learn how to use the copy and move operation in an Excel using Syncfusion Essential XlsIO.
+title: Move and Copy Options in .NET Excel Library | Syncfusion
+description: Use copy and move operations in Excel worksheets using the Syncfusion .NET Excel Library for workbook content handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Move and Copy in Excel Document
+# Move and Copy Operations in .NET Excel Library
+
+This article explains how to **copy** and **move** components of an Excel workbook — including entire workbooks, worksheets, rows, columns, and cell ranges — using Syncfusion<sup>&reg;</sup> XlsIO.
 
 ## Copy
 
-The **copy** operation in the Syncfusion Essential&reg; XlsIO library allows users to duplicate various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks.
+The **copy** operation in Syncfusion<sup>&reg;</sup> XlsIO lets you duplicate various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks.
 
 ### Copy Workbook
 
@@ -458,7 +460,7 @@ End Using
 
 ## Move
 
-The **move** operation in the Syncfusion Essential&reg; XlsIO library allows users to transfer various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks, from one location to another within the workbook or across different workbooks.
+The **move** operation in Syncfusion<sup>&reg;</sup> XlsIO lets you transfer various components of an Excel workbook, including entire worksheets, specific cell ranges, rows, columns, and even entire workbooks, from one location to another within the same workbook or across different workbooks.
 
 ### Move Worksheet
 
@@ -744,3 +746,7 @@ End Using
 {% endtabs %}
 
 A complete working example for moving a cell range from one worksheet to another in C# is present on [this GitHub page.](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Worksheet%20Features/Move%20Cell%20Range/.NET/Move%20Cell%20Range)
+
+## See also
+
+- Explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features at [Syncfusion Excel Library for .NET Core](https://www.syncfusion.com/document-sdk/net-excel-library).

@@ -7,6 +7,7 @@ positionCheckBoxObj.appendTo('#position-context-menu');
 
 var editor = new ej.documenteditor.DocumentEditor({
     isReadOnly: false,
+    height: '370px',
     serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
 });
 editor.enableAllModules();

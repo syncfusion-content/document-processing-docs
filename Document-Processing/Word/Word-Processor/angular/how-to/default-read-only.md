@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Default read only in Angular Document editor component | Syncfusion
-description: Learn here all about Default read only in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Open Angular DOCX Editor in Read-Only Mode | Syncfusion
+description: Open Syncfusion® Angular DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
-control: Default read only 
+control: Default read-only
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Default read only in Angular Document editor component
+# How to Open Angular DOCX Editor in Read-Only Mode
 
-In this article, we are going to see how to open a document in read only mode by default in Document Editor & Document Editor Container.
+In this article, we are going to see how to open a document in read-only mode by default in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) & Document Editor Container.
 
-## Opening a document in read only mode by default in DocumentEditor
+## Opening a document in read-only mode by default in DocumentEditor
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -26,7 +26,7 @@ In this article, we are going to see how to open a document in read only mode by
   
 {% previewsample "/document-processing/samples/document-editor/angular/getting-started-cs2" %}
 
-## Opening a document in ready only mode by default in DocumentEditorContainer
+## Opening a document in read-only mode by default in DocumentEditorContainer
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -40,4 +40,4 @@ In this article, we are going to see how to open a document in read only mode by
   
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs3" %}
 
-Note: You can use the `restrictEditing` in `DocumentEditorContainer` and `isReadOnly` in `DocumentEditor` based on your requirement to change component to read only mode.
+N> You can use the `restrictEditing` in `DocumentEditorContainer` and `isReadOnly` in `DocumentEditor` based on your requirement to change the component to read-only mode.

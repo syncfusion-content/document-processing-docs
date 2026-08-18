@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Security Advisories in Document Editor Control | Syncfusion
-description: Learn here all about Security Advisories in  Document Editor component of Syncfusion Essential JS 2 and more.
-control: Security advisories 
+title: Security Advisories in ASP.NET Core DOCX Editor | Syncfusion
+description: Security advisories in ASP.NET Core DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
+control: Security Advisories
 platform: document-processing
 documentation: ug
 ---
 
-# Security Advisories in Syncfusion EJ2 Controls
+# Security Advisories in ASP.NET Core DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured about the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the [SOOS](https://soos.io/) security tool.
+Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured about the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the [SOOS] security tool.
 
 This document provides a description of the security updates available for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS2 controls for volume release.
 
-## Security Updates
+## Security updates
 
-The following security updates are available for Syncfusion<sup style="font-size:70%">&reg;</sup> DocumentEditor control and are listed based on the release version. 
+The following security updates are available for the [ASP.NET Core Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) control, listed by release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
-This release resolves critical and moderate security vulnerabilities affecting the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor Docker Image.
+This release resolves critical and moderate security vulnerabilities affecting the ASP.NET Core Document Editor Docker Image.
 
 **Threat:**
 
@@ -35,12 +35,12 @@ This release resolves critical and moderate security vulnerabilities affecting t
 
 * The Npgsql package and Dynamic LINQ have been removed, as they are no longer required, to enhance security and mitigate the risk of SQL injection attacks.
 
-## Common Security Updates
+## Common security updates
 
 
 For details on common security updates related to Syncfusion<sup style="font-size:70%">&reg;</sup> products, please refer to [this link](https://ej2.syncfusion.com/aspnetcore/documentation/common/content-security-policy). This resource provides information on the latest advisories and best practices to help ensure the security and integrity of your applications.
 
 
-## Security Issue
+## Security issue
 
-If users discover any security issues or need assistance in resolving them with Syncfusion<sup style="font-size:70%">&reg;</sup> controls, please contact us by creating a support ticket on [our support site](https://syncfusion.com/support) or by posting your query on Stack Overflow with the tag `syncfusion`<sup style="font-size:70%">&reg;</sup>`-ej2`.
+If users discover any security issues or need assistance in resolving them with Syncfusion<sup style="font-size:70%">&reg;</sup> controls, please contact us by creating a support ticket on [our support site](https://syncfusion.com/support) or by posting your query on Stack Overflow with the tag `syncfusion-ej2`.

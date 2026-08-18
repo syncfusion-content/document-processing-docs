@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Retrieve the bookmark content as text in Vue Document editor component | Syncfusion
-description: Learn here all about Retrieve the bookmark content as text in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Retrieve Bookmark Content in Vue DOCX Editor | Syncfusion
+description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® Vue DOCX Editor.
 control: Retrieve the bookmark content as text 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the bookmark content as text in Vue Document editor component
+# How to Retrieve Bookmark Content as Text in Vue DOCX Editor
 
-You can get the bookmark or whole document content from the Vue Document Editor component as plain text and SFDT (rich text).
+You can get the bookmark or whole document content from the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 

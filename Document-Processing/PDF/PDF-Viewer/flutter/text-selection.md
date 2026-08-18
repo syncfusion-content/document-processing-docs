@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Text selection in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about text selection feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Text selection in Flutter PDF Viewer | Syncfusion
+description: The text selection feature in SfPdfViewer allows users to select and copy text from PDF documents for easy access and reuse.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Text Selection in Flutter PDF Viewer (SfPdfViewer)
+# Text Selection in Flutter PDF Viewer
 
 On a touch device, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to select text in the PDF page by long pressing on it, which in turn displays the selection handles or bubbles at the top-left and bottom-right corners of its bounds. You can then use the left handle to select text at the left and top, and the right handle to select text at the right and bottom directions.
 
 On a desktop web browser, text selection can also be performed using mouse dragging with the [`selection`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode.html) interaction mode enabled.
 
-N> Images in the document will not be selected, and multiple-page text selection is not supported for now. 
+N> Images in the document will not be selected, and multiple-page text selection is not supported currently.
 
 ## Enable or Disable Text Selection
 
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the visibility of the text selection context menu
+## Customize the Visibility of the Text Selection Context Menu
 
 The `canShowTextSelectionMenu` property allows the user to customize the visibility of the built-in text selection context menu. You can assign `false` to this property to disable the text selection context menu. The following code example explains how to disable the built-in text selection context menu in the PDF viewer.
 
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Container(
       child: SfPdfViewer.network(
-        'https://cdn.syncfusion.com/content/PDFViewer/encrypted.pdf',
+        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
         canShowTextSelectionMenu: false,
       ),
     ),

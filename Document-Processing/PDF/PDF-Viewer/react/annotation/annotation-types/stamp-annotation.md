@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Stamp Annotation in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Stamp annotations (Dynamic, Sign Here, Standard Business, Custom) in the Syncfusion React PDF Viewer.
+description: Enable, apply, customize, and manage Stamp annotations in the React PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp Annotations in React PDF Viewer
+# Stamp Annotation in React PDF Viewer
 Stamp annotations allow you to place predefined or custom stamps (such as **Dynamic**, **Sign Here**, **Standard Business**, or **Custom**) on a PDF to communicate review states, approvals, or instructions. You can add stamps from the toolbar, switch to specific stamp modes programmatically, customize defaults (e.g., opacity/author), edit or lock them, and export them with the document.
 
 ![Stamp annotations](../../../javascript-es6/images/stamp_annot.png)
@@ -201,7 +201,7 @@ function editStampProgrammatically() {
 ### Delete Stamp
 Delete stamps via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 You can pass per‑annotation values (e.g., **type**, **position**, **size**, **author**, **isLock**, or **customStamps**) when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -226,7 +226,7 @@ function addMultipleStamps() {
 ## Handle Stamp Events
 
 The PDF viewer provides annotation life‑cycle events that notify when Stamp annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations, allowing you to save stamps and reload them later. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).

@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in ASP.NET Core Web API
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in ASP.NET Core Web API**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in ASP.NET Core Web API**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -18,7 +18,7 @@ Step 1: Create a new C# ASP.NET Core Web API project.
 
 Step 2: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as a reference to your project from  [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.Presentation.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Nuget-Package-NET-Core-Web-API.png)
+![Install Syncfusion.PresentationRenderer.Net.Core NuGet Package](ASP-NET-Core-WEB-API-images/Nuget-Package-NET-Core-Web-API.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -39,7 +39,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add a new action method ConvertPPTXToPdf in **ValuesController.cs** and include the below code snippet to convert an PowerPoint Presentation to PDF and download it.
+Step 5: Add a new action method ConvertPPTXToPdf in **ValuesController.cs** and include the below code snippet to convert a PowerPoint Presentation to PDF and download it.
 
 {% tabs %}
 
@@ -79,8 +79,8 @@ public static MemoryStream ConvertPresentationToPdf()
     {
         //Convert the PowerPoint presentation to PDF document.
         using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {  
-            //Create the MemoryStream to save the converted PDF.      
+        {
+            //Create the MemoryStream to save the converted PDF.
             MemoryStream pdfStream = new MemoryStream();
             //Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
@@ -164,6 +164,6 @@ Upon executing the program, the **PDF** will be generated as follows.
 
 ![ASP .NET Core WEB API output PDF](ASP-NET-Core-WEB-API-images/ASP-NET-Core-Web-API-Output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

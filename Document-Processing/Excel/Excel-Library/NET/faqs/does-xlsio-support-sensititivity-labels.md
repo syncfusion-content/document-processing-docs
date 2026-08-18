@@ -1,11 +1,11 @@
 ---
-title: Support for sensitivity labels in XlsIO | Syncfusion
-description: Learn whether the Syncfusion .NET Excel library (XlsIO) supports Microsoft sensitivity labels or not.
+title: Sensitivity Labels in .NET Excel Library | Syncfusion
+description: Microsoft sensitivity labels explains whether the Syncfusion .NET Excel Library supports sensitivity labels in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support sensitivity labels?
+# Sensitivity Labels in .NET Excel Library
 
 No. Sensitivity labels are organization-level settings and are not stored within the Excel document itself. Therefore, XlsIO does not support applying or preserving sensitivity labels.

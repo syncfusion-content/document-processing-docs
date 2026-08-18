@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image on macOS
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET Core application on macOS**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET Core application on macOS**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -27,9 +27,9 @@ Step 1: Create a new C# .NET Core console application.
 Step 2: Select the project version.
 ![Select project version](Workingwith-Mac/selectprojectverion.png)
 
-Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as a reference in your application from [NuGet.org](https://www.nuget.org/).
 
-![Install Nuget from Manage Nuget Package](Workingwith-Mac/Install_Nuget1.png)
+![Install NuGet from Manage NuGet Package](Workingwith-Mac/Install_Nuget1.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -49,25 +49,21 @@ Step 5: Add the following code snippet in **Program.cs** file to **convert a Pow
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- //Open the file as Stream.
- using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ //Open the existing PowerPoint presentation.
+ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
  {
-     //Open the existing PowerPoint presentation with loaded stream.
-     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     //Initialize the PresentationRenderer to perform image conversion.
+     pptxDoc.PresentationRenderer = new PresentationRenderer();
+     //Convert PowerPoint slide to image as stream.
+     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
      {
-         //Initialize the PresentationRenderer to perform image conversion.
-         pptxDoc.PresentationRenderer = new PresentationRenderer();
-         //Convert PowerPoint slide to image as stream.
-         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         //Reset the stream position.
+         stream.Position = 0;
+         //Create FileStream to save the image file.
+         using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
          {
-             //Reset the stream position.
-             stream.Position = 0;
-             //Create FileStream to save the image file.
-             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-             {
-                 //Save the image file.
-                 stream.CopyTo(outputStream);
-             }
+             //Save the image file.
+             stream.CopyTo(outputStream);
          }
      }
  }
@@ -111,9 +107,9 @@ Step 1: Create a new .NET Core console application project.
 Step 2: To **convert a PowerPoint document to image in console app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.PresentationRenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` to install the NuGet package.
 
-![Add Syncfusion.PresentationRenderer.NET.Core NuGet package](Workingwith-Mac/Command-to-add-NuGet-package-console.png) 
+![Add Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Mac/Command-to-add-NuGet-package-console.png) 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -133,25 +129,21 @@ Step 4: Add the following code snippet in **Program.cs** file to **convert a Pow
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- //Open the file as Stream.
- using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ //Open the existing PowerPoint presentation.
+ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
  {
-     //Open the existing PowerPoint presentation with loaded stream.
-     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     //Initialize the PresentationRenderer to perform image conversion.
+     pptxDoc.PresentationRenderer = new PresentationRenderer();
+     //Convert PowerPoint slide to image as stream.
+     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
      {
-         //Initialize the PresentationRenderer to perform image conversion.
-         pptxDoc.PresentationRenderer = new PresentationRenderer();
-         //Convert PowerPoint slide to image as stream.
-         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         //Reset the stream position.
+         stream.Position = 0;
+         //Create FileStream to save the image file.
+         using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
          {
-             //Reset the stream position.
-             stream.Position = 0;
-             //Create FileStream to save the image file.
-             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-             {
-                 //Save the image file.
-                 stream.CopyTo(outputStream);
-             }
+             //Save the image file.
+             stream.CopyTo(outputStream);
          }
      }
  }
@@ -199,7 +191,7 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 * In the New Solution dialog, select **Project Type** as **Console**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET MAUI App in JetBrains Rider](Workingwith-Mac/Create-Console-NET-Core-sample-in-Mac.png)
 
@@ -233,25 +225,21 @@ Step 4: Add the following code snippet in **Program.cs** file to **convert a Pow
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- //Open the file as Stream.
- using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ //Open the existing PowerPoint presentation.
+ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
  {
-     //Open the existing PowerPoint presentation with loaded stream.
-     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     //Initialize the PresentationRenderer to perform image conversion.
+     pptxDoc.PresentationRenderer = new PresentationRenderer();
+     //Convert PowerPoint slide to image as stream.
+     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
      {
-         //Initialize the PresentationRenderer to perform image conversion.
-         pptxDoc.PresentationRenderer = new PresentationRenderer();
-         //Convert PowerPoint slide to image as stream.
-         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         //Reset the stream position.
+         stream.Position = 0;
+         //Create FileStream to save the image file.
+         using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
          {
-             //Reset the stream position.
-             stream.Position = 0;
-             //Create FileStream to save the image file.
-             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-             {
-                 //Save the image file.
-                 stream.CopyTo(outputStream);
-             }
+             //Save the image file.
+             stream.CopyTo(outputStream);
          }
      }
  }
@@ -277,6 +265,6 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

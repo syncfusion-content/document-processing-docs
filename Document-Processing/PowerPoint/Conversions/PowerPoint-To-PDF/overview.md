@@ -1,14 +1,15 @@
 ---
-title: .NET PowerPoint Framework - Convert PowerPoint to PDF | Syncfusion
-description: This section illustrates how to convert PowerPoint Presentation documents to PDFs in .NET PowerPoint Framework.
+title: About Syncfusion .NET PowerPoint to PDF Library | Syncfusion
+description: Learn about the Syncfusion® .NET PowerPoint to PDF conversion feature and convert PowerPoint presentations to PDF documents.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint to PDF using Syncfusion® PowerPoint library
+# About Syncfusion .NET PowerPoint to PDF Conversion Library
 
-Syncfusion<sup>&reg;</sup> PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to PDF within a few lines of code in .NET applications and also it does not require Adobe and Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to PDF.
+The [Syncfusion .NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) allows you to convert a PowerPoint presentation to PDF within a few lines of code in .NET applications. It does not require Adobe Acrobat or Microsoft PowerPoint to be installed on the machine. You can create an input PowerPoint presentation from scratch, or load an existing PowerPoint presentation and then convert it to PDF.
+
 
 The Syncfusion<sup>&reg;</sup> PowerPoint to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-linux), and [macOS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/convert-powerpoint-to-pdf-in-mac). 
 
@@ -25,12 +26,12 @@ The Syncfusion<sup>&reg;</sup> PowerPoint to PDF converter offers high versatili
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies required based on platforms to convert the PowerPoint document to PDF.
+Refer to the following links for the assemblies required for each platform to convert a PowerPoint document to PDF.
 
 * [PowerPoint to PDF conversion assemblies](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/assembly-required-for-pptxtopdf-conversion)
 * [PowerPoint to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/nuget-packages-required-for-pptxtopdf-conversion)
 
-To quickly start converting a PowerPoint Presentation to a PDF using .NET PowerPoint library, please check out this video:
+To quickly start converting a PowerPoint Presentation to a PDF using the .NET PowerPoint library, check out this video:
 {% youtube "https://www.youtube.com/watch?v=nytscOICpWk" %}
 
 ## Convert PowerPoint to PDF
@@ -66,23 +67,15 @@ The following code example illustrates how to convert a PowerPoint document into
 {% tabs %}
 
 {% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET/Convert-PowerPoint-presentation-to-PDF/Program.cs" %}
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
-{
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Convert PowerPoint into PDF document. 
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream("PPTXToPDF.pdf", FileMode.Create, FileAccess.ReadWrite))
-            {
-                pdfDocument.Save(outputStream);
-            }
-        }
-    }
-}
+//Open the existing PowerPoint presentation with loaded stream.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Convert PowerPoint into PDF document.
+PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
+pdfDocument.Save("Sample.pdf");
+//Closes the PDF document
+pdfDocument.Close(true);
+//Closes the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight C# tabtitle="C# [Windows-specific]" %}
@@ -119,8 +112,8 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET).
 
-N> 1. Creating an instance of [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Presentation to PDF. Otherwise, the charts are not exported to the converted PDF
-N> 2. The assembly "Syncfusion.SfChart.WPF" is non compliance with FIPS (Federal Information Processing Standard) algorithm policy.
+N> 1. Creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts in the presentation. Otherwise, the charts are not exported to the converted PDF.
+N> 2. The assembly "Syncfusion.SfChart.WPF" is non-compliant with the FIPS (Federal Information Processing Standard) algorithm policy.
 
 ## PowerPoint Presentation to PDF conversion in Linux OS
 
@@ -128,7 +121,7 @@ In Linux OS, you can perform the PowerPoint presentation to PDF conversion using
 
 ## Font substitution
 
-When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to PDF, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted PDF document.  To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/font-substitution-in-pptxtopdf-conversion).
+When a font used in a PowerPoint presentation is unavailable in the environment where the document is converted to PDF, the library substitutes **Microsoft Sans Serif** as the default font for text rendering. This leads to differences in the text layouts between the PowerPoint presentation and the converted PDF document. To avoid this, the Syncfusion<sup>&reg;</sup> Presentation library allows you to set an alternate font for any missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/font-substitution-in-pptxtopdf-conversion).
 
 ## Fallback fonts
 
@@ -136,41 +129,33 @@ During PowerPoint to PDF conversions, if a glyph of the input text is unavailabl
 
 ## Show Warning for unsupported elements
 
-The Presentation library shows warning message about the unsupported elements such as Metafile images and charts (supported from .NET Standard 2.0) present in the input PowerPoint presentation, during PowerPoint to PDF conversion. It also allows you to cancel or continue the PowerPoint to PDF conversion, when any unsupported elements is present in the input PowerPoint presentation.
+The Presentation library shows a warning message about unsupported elements such as Metafile images and charts (supported from .NET Standard 2.0) that are present in the input PowerPoint presentation during the PowerPoint to PDF conversion. It also allows you to cancel or continue the PowerPoint to PDF conversion when an unsupported element is present.
 
-The following code example demonstrates how to cancel or continue the PowerPoint presentation to PDF conversion, when an unsupported elements (Metafile and Chart) are present in the input PowerPoint presentation.
+The following code example demonstrates how to cancel or continue the PowerPoint presentation to PDF conversion when an unsupported element (Metafile or Chart) is present in the input PowerPoint presentation.
 
 {% tabs %}
 
 {% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Show-warning-for-unsupported-elements/.NET/Show-warning-for-unsupported-elements/Program.cs" %}
-// Open the file as Stream
-using (FileStream pptStream = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(pptStream))
+    //Instantiate PresentationToPdfConverterSettings.
+    PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+    //Subscribe to the warnings collection.
+    settings.Warning = new DocumentWarning();
+    //Convert the PowerPoint presentation to a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, settings))
     {
-        //Instantiation of PresentationToPdfConverterSettings
-        PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
-        //Gets all the warnings into the collection
-        settings.Warning = new DocumentWarning();
-        //Converts the PowerPoint Presentation into PDF document
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, settings))
+        //If the PowerPoint to PDF conversion has been stopped, IsCanceled is true; otherwise it is false.
+        if (!PresentationToPdfConverter.IsCanceled)
         {
-            //If the PowerPoint to Pdf conversion has been stopped, IsCanceled value will be True, otherwise false
-            if (!PresentationToPdfConverter.IsCanceled)
-            {
-                //Saves the PDF file
-                using (FileStream outputStream = new FileStream("Output.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
-                {
-                    pdfDocument.Save(outputStream);
-                    outputStream.Position = 0;
-                }
-            }
-            else
-            {
-                Console.WriteLine("PowerPoint to PDF conversion is stopped , please press any key to exit the application");
-                Console.ReadKey();
-            }
+            //Save the PDF file.
+            pdfDocument.Save("Output.pdf");
+        }
+        else
+        {
+            Console.WriteLine("PowerPoint to PDF conversion is stopped. Press any key to exit the application.");
+            Console.ReadKey();
         }
     }
 }
@@ -183,8 +168,8 @@ public class DocumentWarning : IWarning
     /// <summary>
     /// Gets the Boolen value whether to continue conversion or not
     /// </summary>
-    /// <param name="warningInfo">Collection of warnings</param>
-    /// <returns></returns>
+    /// <param name="warningInfo">Collection of warnings.</param>
+    /// <returns>True to continue the conversion; false to cancel it.</returns>
     public bool ShowWarnings(List<WarningInfo> warningInfo)
     {
         //By default to perform the PowerPoint to PDF conversion by setting the isContinueConversion as true.
@@ -193,16 +178,16 @@ public class DocumentWarning : IWarning
         {
             //Since there are warnings in the PowerPoint presentation the value of isContinueConversion will be set as false.
             isContinueConversion = false;
-            //Print the description of the Warining
+            //Print the description of the warning.
             Console.WriteLine(warning.Description);
             if (warning.Description.Contains("Metafile") || warning.Description.Contains("Chart"))
             {
-                Console.WriteLine("Type [Y] if you want Do you want to continue Presentation to Pdf conversion or Type [N] to cancel the conversion");
-                String confrimation = Console.ReadLine();
+                Console.WriteLine("Type [Y] to continue the Presentation to PDF conversion, or [N] to cancel the conversion.");
+                String confirmation = Console.ReadLine();
                 //Based on warning.WarningType enumeration, you can do your manipulation.
                 //Skips the PowerPoint to Pdf conversion by setting isContinueConversion value as false.
                 //Continue the PowerPoint to PDF conversion by setting the isContinueConversion as true.
-                if (confrimation.ToLower().Equals("y"))
+                if (confirmation.ToLower().Equals("y"))
                     isContinueConversion = true;
                 else
                     isContinueConversion = false;
@@ -468,26 +453,18 @@ The following code sample shows how to preserve structured document tags in the 
 {% tabs %}
 
 {% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Convert-PowerPoint-into-accessible-PDF/.NET/Convert-PowerPoint-into-accessible-PDF/Program.cs" %}
-//Load the PowerPoint presentation into a stream.
-using (FileStream fileStreamInput = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Open the existing PowerPoint presentation with the loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Instantiate the PresentationToPdfConverterSettings.
+    PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
+    //Enable a flag to preserve structured document tags in the converted PDF document.
+    pdfConverterSettings.AutoTag = true;
+    //Convert the PowerPoint presentation to a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
     {
-        //Instantiation of the PresentationToPdfConverterSettings.
-        PresentationToPdfConverterSettings pdfConverterSettings = new PresentationToPdfConverterSettings();
-        //Enable a flag to preserve structured document tags in the converted PDF document.               
-        pdfConverterSettings.AutoTag = true;
-        //Convert the PowerPoint document to a PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
-        {
-            //Save the converted PDF document to the fileStream.
-            using (FileStream fileStreamOutput = File.Create("Sample.pdf"))
-            {
-                pdfDocument.Save(fileStreamOutput);
-                fileStreamOutput.Position = 0;
-            }
-        }
+        //Save the PDF document.
+        pdfDocument.Save("Sample.pdf");
     }
 }
 {% endhighlight %}
@@ -541,25 +518,18 @@ The following code sample shows how to preserve PowerPoint form fields as PDF fo
 {% tabs %}
 
 {% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Create-fillable-PDF-from-PPTX/.NET/Create-fillable-PDF-from-PPTX/Program.cs" %}
-//Open the PowerPoint file stream. 
-using (FileStream fileStream = new FileStream(Path.GetFullPath(@"Data/Template.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Data/Template.pptx"))
 {
-    //Load an existing PowerPoint Presentation. 
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Create a new instance of PresentationToPdfConverterSettings.
+    PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
+    //Enable a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
+    settings.PreserveFormFields = true;
+    //Convert the PowerPoint presentation into a PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Create new instance for PresentationToPdfConverterSettings
-        PresentationToPdfConverterSettings settings = new PresentationToPdfConverterSettings();
-        //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
-        settings.PreserveFormFields = true;
-        //Convert PowerPoint into PDF document. 
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Save the PDF file to file system. 
-            using (FileStream outputStream = new FileStream(Path.GetFullPath(@"Output/PPTXToPDF.pdf"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                pdfDocument.Save(outputStream);
-            }
-        }
+        //Save the PDF document.
+        pdfDocument.Save("Output/PPTXToPDF.pdf");
     }
 }
 {% endhighlight %}
@@ -573,7 +543,7 @@ using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
     //Enables a flag to preserve form fields by converting shapes with names starting with 'FormField_' into editable text form fields in the PDF.
     settings.PreserveFormFields = true;
     //Convert the PowerPoint Presentation into a PDF document.
-    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, pdfConverterSettings))
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc, settings))
     {
         //Save a PDF document.
         pdfDocument.Save("Result.pdf");
@@ -750,9 +720,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to convert a PowerPoint presentation to PDF using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind).
-* See how to convert a PowerPoint presentation to PDF/UA using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfua#/tailwind).
-* See how to convert a PowerPoint presentation to PDF/A using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfa#/tailwind).
+* Explore how to convert a PowerPoint presentation to PDF using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/UA using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfua#/tailwind).
+* See how to convert a PowerPoint presentation to PDF/A using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtopdfa#/tailwind).
 
 ## See Also
 

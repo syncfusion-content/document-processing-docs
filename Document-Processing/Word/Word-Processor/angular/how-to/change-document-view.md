@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Change document view in Angular Document editor component | Syncfusion
-description: Learn here all about Change document view in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Document View in Angular DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® Angular DOCX Editor using layout type settings.
 platform: document-processing
 control: Change document view 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in Angular Document editor component
+# How to Change Document View in Angular DOCX Editor
 
-## How to change the document view in DocumentEditor component
+## How to change the document view in the DocumentEditor component
 
-DocumentEditor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+Angular Document Editor allows you to change the view to web layout or print layout using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).
 
 ```typescript
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
@@ -27,12 +27,12 @@ import {
 
 @Component({
       selector: 'app-root',
-      template: `<ejs-documenteditor id="container" #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true
-      [enablePrint]=true [enableSfdtExport]=true [enableWordExport]=true [enableOptionsPane]=true [enableContextMenu]=true
-      [enableHyperlinkDialog]=true [enableBookmarkDialog]=true [enableTableOfContentsDialog]=true [enableSearch]=true
-      [enableParagraphDialog]=true [enableListDialog]=true [enableTablePropertiesDialog]=true [enableBordersAndShadingDialog]=true
-      [enablePageSetupDialog]=true [enableStyleDialog]=true [enableFontDialog]=true [enableTableOptionsDialog]=true
-      [enableTableDialog]=true [enableImageResizer]=true [enableEditor]=true [enableEditorHistory]=true (created)="onCreate()">
+      template: `<ejs-documenteditor id="container" #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="330px" style="display:block" [isReadOnly]="false" [enableSelection]="true"
+      [enablePrint]="true" [enableSfdtExport]="true" [enableWordExport]="true" [enableOptionsPane]="true" [enableContextMenu]="true"
+      [enableHyperlinkDialog]="true" [enableBookmarkDialog]="true" [enableTableOfContentsDialog]="true" [enableSearch]="true"
+      [enableParagraphDialog]="true" [enableListDialog]="true" [enableTablePropertiesDialog]="true" [enableBordersAndShadingDialog]="true"
+      [enablePageSetupDialog]="true" [enableStyleDialog]="true" [enableFontDialog]="true" [enableTableOptionsDialog]="true"
+      [enableTableDialog]="true" [enableImageResizer]="true" [enableEditor]="true" [enableEditorHistory]="true" (created)="onCreate()">
       </ejs-documenteditor>`,
       encapsulation: ViewEncapsulation.None,
       providers: [PrintService, SfdtExportService, WordExportService, TextExportService, SelectionService, SearchService, EditorService,
@@ -52,13 +52,13 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype) in DocumentEditor component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+N> Default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#layouttype) in the DocumentEditor component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).
 
-## How to change the document view in DocumentEditorContainer component
+## How to change the document view in the DocumentEditorContainer component
 
-DocumentEditorContainer component allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+The DocumentEditorContainer component allows you to change the view to web layout or print layout using the [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).
 
 ```typescript
 /**
@@ -66,7 +66,7 @@ DocumentEditorContainer component allows you to change the view to web layout an
  */
 @Component({
       selector: 'app-root',
-      templateUrl: '<ejs-documenteditorcontainer #documenteditor_default [enableToolbar]=true (created)="onCreate()" height="600px" style="display:block;"></ejs-documenteditorcontainer>',
+      template: '<ejs-documenteditorcontainer #documenteditor_default [enableToolbar]=true (created)="onCreate()" height="600px" style="display:block;"></ejs-documenteditorcontainer>',
       encapsulation: ViewEncapsulation.None,
       providers: [ToolbarService]
 })
@@ -82,6 +82,6 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#layouttype) in DocumentEditorContainer component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType/).
+N> Default value of [`layoutType`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#layouttype) in the DocumentEditorContainer component is [`Pages`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/layoutType).

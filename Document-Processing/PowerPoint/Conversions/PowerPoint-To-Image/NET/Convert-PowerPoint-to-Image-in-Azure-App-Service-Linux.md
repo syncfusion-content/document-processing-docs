@@ -8,12 +8,12 @@ documentation: UG
 
 # Convert PowerPoint Presentation to Image in Azure App Service on Linux
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure App Service on Linux**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure App Service on Linux**.
 
 ## Steps to convert PowerPoint Presentation to Image in Azure App Service on Linux
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create an ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
 ![Configure your new project](Azure-Images/App-Service-Linux/Configure-PowerPoint-Presentation-to-Image.png)
@@ -21,17 +21,17 @@ Step 2: Create a project name and select the location.
 Step 3: Click **Create** button.
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
-Step 4: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
-![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
+![Install Syncfusion.PresentationRenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-![Install SkiaSharp.NativeAssets.Linux v3.119.1 Nuget Package](Azure-Images/App-Service-Linux/SkiaSharp_PowerPoint_Presentation_to_PDF.png)
+![Install SkiaSharp.NativeAssets.Linux v3.119.1 NuGet Package](Azure-Images/App-Service-Linux/SkiaSharp_PowerPoint_Presentation_to_PDF.png)
 
-![Install HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 Nuget Package](Azure-Images/App-Service-Linux/HarfBuzz_PowerPoint_Presentation_to_PDF.png)
+![Install HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 NuGet Package](Azure-Images/App-Service-Linux/HarfBuzz_PowerPoint_Presentation_to_PDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -80,13 +80,16 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 9: Include the below code snippet in **HomeController.cs** for **convert a PowerPoint Presentation to image**. 
+Step 7: Include the below code snippet in **HomeController.cs** to **convert a PowerPoint Presentation to an image**.
 
 {% tabs %}
 
@@ -197,6 +200,6 @@ Step 12: Select the **PowerPoint Presentation** and Click **Convert to Image** t
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core.

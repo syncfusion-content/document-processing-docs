@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form filling in Vue PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion Vue PDF Viewer, including disabling interaction and handling signatures.
+title: Form Filling in Vue PDF Viewer | Syncfusion
+description: View, fill, import, and export PDF form fields in the Vue PDF Viewer, with options to disable interaction and handle digital signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF Forms in Vue PDF Viewer
+# Fill PDF Form Fields in Vue PDF Viewer
 
-The Syncfusion PDF Viewer supports three form-filling approaches:
+The PDF Viewer supports three form-filling approaches:
 
 1.	[Filling Form Fields Programmatically](#fill-pdf-forms-programmatically)
 
@@ -22,9 +22,9 @@ The Syncfusion PDF Viewer supports three form-filling approaches:
 
 3.	[Importing Form Field Data](#fill-pdf-forms-through-import-data)
 
-    The PDF Viewer can import form field data into an existing PDF document to prefill fields from external data sources.
+    The PDF Viewer can import form field data into an existing PDF document to pre-fill fields from external data sources.
 
-## Fill PDF forms programmatically 
+## Fill PDF forms programmatically
 
 Form field values can be updated programmatically using the [updateFormFieldsValue](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfieldsvalue) API. This method allows applications to set or modify form field values dynamically without end-user interaction.
 
@@ -92,11 +92,11 @@ The PDF Viewer enables end users to complete form fields directly in the interfa
 
 The PDF Viewer supports common form fields such as text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Entered values remain editable during the viewing session.
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/vue/prefilledforms-cs1" %}
 
-## Fill PDF forms through Import Data 
+## Fill PDF forms through Import Data
 
-The PDF Viewer can import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#importformfields) API. This enables prefilling fields from external data sources without manual entry.
+The PDF Viewer can import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#importformfields) API. This enables pre-filling fields from external data sources without manual entry.
 
 Imported data is mapped to PDF form fields by field name. The imported values appear in the viewer and remain editable if the document permits modification. Refer to Import Form Data for details about expected data formats and mapping rules.
 

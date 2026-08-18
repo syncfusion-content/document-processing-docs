@@ -1,12 +1,12 @@
 ---
-title: How to resolve LibSkiaSharp not found exception | Syncfusion
-description: This page explains how to resolve LibSkiaSharp not found exception using Syncfusion .NET Excel library (XlsIO).
+title: How to Resolve LibSkiaSharp Errors in .NET Excel Library | Syncfusion
+description: Resolve the LibSkiaSharp not found exception while using the Syncfusion .NET Excel Library for Excel conversion.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to resolve LibSkiaSharp not found exception?
+# How to resolve LibSkiaSharp exceptions in .NET Excel Library
 
 * In Docker container, ensure whether the libfontconfig package properly installed by adding the following line in your Docker file.
 

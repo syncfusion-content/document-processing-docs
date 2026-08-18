@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in UWP
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp/powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in UWP**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [UWP PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in UWP**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -25,7 +25,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button in the MainPage.xaml as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="Convert_PowerPoint_Presentation_to_PDF.MainPage"
@@ -50,6 +50,8 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
@@ -133,7 +135,7 @@ By executing the program, you will get the **PDF** as follows.
 
 ![Converted PDF from PowerPoint in UWP](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core.
 

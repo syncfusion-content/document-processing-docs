@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto save document in Vue Document editor component | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Auto Save Document in Vue DOCX Editor | Syncfusion
+description: Automatically save edited documents to the server at regular intervals in Syncfusion® Vue DOCX Editor to prevent data loss.
 control: Auto save document in document editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in document editor in Vue Document editor component
+# How to Auto Save Document in Vue DOCX Editor
 
 In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
@@ -167,6 +167,10 @@ export default {
           return "Sucess";
       }
       ```
+
+## Online Demo
+
+Explore how to automatically save Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/material3/document-editor/auto-save.html).
 
 ## See Also
 * [Autosave document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

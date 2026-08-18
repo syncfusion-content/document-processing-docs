@@ -1,16 +1,17 @@
 ---
-title: Execl to PDF Assemblies Required | Syncfusion
-description: Briefs the assemblies required to convert excel document to PDF for various platforms and frameworks.
+title: Assemblies Required for .NET Excel to PDF Conversion | Syncfusion
+description: The assemblies required for converting Excel workbooks to PDF across .NET platforms and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Assemblies Required for Excel to PDF conversion
+# Assemblies Required for .NET Excel to PDF Conversion
 
 For converting an Excel document to PDF, the following assemblies need to be referenced in your application.
 
 <table>
+<thead>
 <tr>
 <th>
 Platform(s)
@@ -19,6 +20,7 @@ Platform(s)
 Assembly
 </th>
 </tr>
+</thead>
 <tbody>
 <tr>
 <td>
@@ -29,17 +31,6 @@ Syncfusion.XlsIO.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.Pdf.Base<br/>
 Syncfusion.ExcelToPDFConverter.Base
-</td>
-</tr>
-<tr>
-<td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-wpf)' | markdownify}}    
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base<br/>
-Syncfusion.Pdf.ClientProfile<br/>
-Syncfusion.ExcelToPDFConverter.ClientProfile
 </td>
 </tr>
 <tr>
@@ -86,6 +77,7 @@ Assembly
 </th>
 </tr>
 </thead>
+<tbody>
 <tr>
 <td>
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net)' | markdownify}}<br/>
@@ -94,14 +86,13 @@ Assembly
 Syncfusion.XlsIO.Base<br/>
 Syncfusion.Compression.Base<br/>
 Syncfusion.Pdf.Base<br/>
-Syncfusion.ExcelToPdfConverter.Base
+Syncfusion.ExcelToPDFConverter.Base
 </td>
 </tr>
+</tbody>
 </table>
 N> 1. Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 
 N> 3. Syncfusion<sup>&reg;</sup> components are available in nuget.org
-
-

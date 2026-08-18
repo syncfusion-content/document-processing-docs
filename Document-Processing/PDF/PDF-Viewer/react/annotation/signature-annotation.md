@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Handwritten signature in React PDF Viewer control | Syncfusion
-description: Learn about handwritten signatures in the Syncfusion React PDF Viewer (Essential JS 2): add, enable/disable, and edit properties.
+title: Signature Annotation in React PDF Viewer | Syncfusion
+description: Add, edit, and manage handwritten signatures in the React PDF Viewer, including enabling or disabling the signature tool for users.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Handwritten signature in React PDF Viewer component
+# Handwritten Signature in React PDF Viewer
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. Handwritten signatures reduce paperwork and enable digital verification.
 
@@ -42,7 +42,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   function handWrittenSignature() {
@@ -163,7 +163,7 @@ function App() {
     });
   }
   return (<div>
-    <button onClick={addAnnotation}>Add Handwritten Signature programatically</button>
+    <button onClick={addAnnotation}>Add Handwritten Signature programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -233,7 +233,7 @@ function App() {
     });
   }
     return (<div>
-    <button onClick={addAnnotation}>Add Handwritten Signature programatically</button>
+    <button onClick={addAnnotation}>Add Handwritten Signature programmatically</button>
     <div className='control-section'>
       <PdfViewerComponent
         ref={(scope) => { pdfviewer = scope; }}
@@ -255,7 +255,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/blob/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
+[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Add%20Handwritten%20Signature%20Programmatically)
 
 ## Edit signature annotation
 
@@ -281,7 +281,7 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change signature opacity](../images/change_opacity.png)
 
-### Edit Signature Annotation Programmatically
+### Edit signature annotation programmatically
 
 With the PDF Viewer library, you can programmatically edit a handwritten signature in the PDF Viewer control using the `editSignature()` method.
 

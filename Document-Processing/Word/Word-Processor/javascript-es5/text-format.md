@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Text format in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Text format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Text Format in JavaScript DOCX Editor | Syncfusion
+description: Text format properties in JavaScript DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in JavaScript (ES5) Document editor control
+# Text Format in JavaScript DOCX Editor
 
-Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
@@ -190,6 +190,18 @@ documenteditor.selection.characterFormat.highlightColor = 'Pink';
 
 N> 1. Character scaling and spacing present in the input Word document will be preserved in the exported Word document. N> 2. Scaling is implemented using the letterSpacing property, which may present compatibility problems. For more information, please refer to this [link](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing#browser_compatibility)
 
+## Bidirectional
+
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+
+```js
+// Get Bidi value of selected text
+var bidi = documenteditor.selection.characterFormat.bidi;
+ 
+// Set Bidi for selected text
+documenteditor.selection.characterFormat.bidi= true;
+```
+
 ## Toolbar with options for text formatting
 
 Refer to the following example.
@@ -204,6 +216,10 @@ Refer to the following example.
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/text-format-cs1" %}
+
+## Online Demo
+
+Explore how to apply text formatting in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/character-formatting.html).
 
 ## See Also
 

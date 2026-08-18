@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Notes in ASP.NET MVC Document Editor Component
-description: Learn here all about notes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in ASP.NET MVC DOCX Editor | Syncfusion
+description: The footnote and endnote support in ASP.NET MVC DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
 
-# Insert footnote endnote
+# Footnotes and Endnotes in ASP.NET MVC DOCX Editor
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar.
+The DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. The DocumentEditor also exposes APIs to insert footnotes and endnotes programmatically.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
-The footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to place other publications like books, articles, or websites.
+Footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to cite other publications such as books, articles, or websites.
 
 ## Insert footnotes
 
-Document editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
+The Document Editor exposes an API to insert footnotes at the cursor position programmatically, or at the end of the currently selected text.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -33,7 +33,7 @@ Document editor exposes an API to insert footnotes at cursor position programmat
 
 ## Insert endnotes
 
-Document editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
+The Document Editor exposes an API to insert endnotes at the cursor position programmatically, or at the end of the currently selected text.
 
 
 {% tabs %}
@@ -49,6 +49,10 @@ Document editor exposes an API to insert endnotes at cursor position programmati
 
 ## Update or edit footnotes and endnotes
 
-You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it. The footnote endnote dialog box popup and you can customize the number format and start at.
+You can update or edit footnotes and endnotes using the built-in context menu that appears when you right-click them. The Footnote/Endnote dialog box pops up, where you can customize the number format and the "Start at" value.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
+
+## Online Demo
+
+Explore how to add and manage notes in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/notes#/tailwind3).

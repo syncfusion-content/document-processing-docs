@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Styles in Vue Document editor component | Syncfusion
-description: Learn here all about Styles in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Styles in VueDOCX Editor | Syncfusion
+description: The styles feature in VueDOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 control: Styles 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Styles in Vue Document editor component
+# Styles in Vue DOCX Editor
 
 Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
@@ -205,3 +205,7 @@ this.$refs.documenteditor.ej2Instances.documentEditor.editor.createStyle(styleNa
 > If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
 > If no style exists with same name, it creates a new style.
 Footer
+
+## Online Demo
+
+Explore how to apply and modify styles in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).

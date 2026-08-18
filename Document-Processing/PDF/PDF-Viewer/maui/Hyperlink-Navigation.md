@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Hyperlink navigation in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about how to perform hyperlink navigation in the PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+title: Hyperlink Navigation in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to navigate hyperlinks in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Hyperlink navigation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Hyperlink Navigation in .NET MAUI PDF Viewer
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) lets you open URLs or website links in the default browser. When a user taps or clicks a hyperlink on a PDF page, the SfPdfViewer recognizes the link and prompts a hyperlink dialog asking the user if they want to open the link.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) lets you open URLs or website links in the default browser. When a user taps or clicks a hyperlink on a PDF page, the SfPdfViewer recognizes the link and prompts a hyperlink dialog asking the user if they want to open the link.
 
 ## Handling hyperlink navigation
 
-The [HyperlinkClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HyperlinkClicked) event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your own way. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html#Syncfusion_Maui_PdfViewer_HyperlinkClickedEventArgs_Handled) property of the [HyperlinkClickedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html) to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system's default browser without confirmation prompts.
+The [HyperlinkClicked](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HyperlinkClicked) event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your own way. Set the [Handled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html#Syncfusion_Maui_PdfViewer_HyperlinkClickedEventArgs_Handled) property of the [HyperlinkClickedEventArgs](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html) to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system's default browser without confirmation prompts.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -42,7 +43,7 @@ private async void PdfHyperlinkClicked(object sender, HyperlinkClickedEventArgs 
 
 ## Enable or disable hyperlink navigation
 
-Enable or disable the recognition of hyperlinks in PDF documents using the [EnableHyperlinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableHyperlinkNavigation) property. The following code explains the same.
+Enable or disable the recognition of hyperlinks in PDF documents using the [EnableHyperlinkNavigation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableHyperlinkNavigation) property. The following code explains the same.
 
 {% tabs %}
 {% highlight XAML %}
@@ -58,3 +59,7 @@ PdfViewer.EnableHyperlinkNavigation = false;
 	
 {% endhighlight %}
 {% endtabs %}
+## See Also
+- [Document Link Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-link-annotations)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Document Outline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-outline)

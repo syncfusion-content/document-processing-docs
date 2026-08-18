@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Find and replace in Vue Document editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Vue DOCX Editor | Syncfusion
+description: The find and replace feature in Vue DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 control: Find and replace 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in Vue Document editor component
+# Find and Replace in Vue DOCX Editor
 
-The Document Editor component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
+The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
 ## Options pane
 

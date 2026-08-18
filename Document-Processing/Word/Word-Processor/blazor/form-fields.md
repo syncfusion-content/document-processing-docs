@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Form fields in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Form fields in Syncfusion Blazor DocumentEditor component and more.
+title: Form Fields in Blazor DOCX Editor | Syncfusion
+description: Form fields in Blazor DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Form Fields in Blazor DocumentEditor Component
+# Form Fields in Blazor DOCX Editor
 
-The [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (Document Editor) component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -28,7 +28,7 @@ await container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDow
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`GetFormFieldNamesAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldNamesAsync).
+All the form field names from the current document can be retrieved using [`GetFormFieldNamesAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldNamesAsync).
 
 ```csharp
 Task<List<string>> formFieldsNames = await container.DocumentEditor.GetFormFieldNamesAsync();
@@ -36,7 +36,7 @@ Task<List<string>> formFieldsNames = await container.DocumentEditor.GetFormField
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).
+Data of all the form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).
 
 ```csharp
 Task<List<FormFieldData>> formFieldDatas = await container.DocumentEditor.ExportFormDataAsync();
@@ -67,7 +67,7 @@ await container.DocumentEditor.ImportFormDataAsync(formData);
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
+Reset all the form fields in the current document to their default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
 
 ```csharp
 await container.DocumentEditor.ResetFormFieldsAsync();
@@ -75,11 +75,11 @@ await container.DocumentEditor.ResetFormFieldsAsync();
 
 ## Protect the document in form filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
+Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
+The Document Editor provides an option to protect and unprotect a document using the [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -99,4 +99,8 @@ The following example code illustrates how to enforce and stop protection in Doc
 }
 ```
 
-N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In the `EnforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly`. In the `StopProtection` method, the parameter denotes the password.
+
+## Online Demo
+
+Explore how to insert and manage form fields in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/form-fields?theme=fluent2).

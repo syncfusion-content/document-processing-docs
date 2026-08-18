@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert PowerPoint to PDF in ASP.NET Core | Syncfusion
 description: Convert PowerPoint to PDF in ASP.NET Core using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in ASP.NET Core**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -44,12 +44,12 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in **HomeController.cs**. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in **HomeController.cs**. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoPDF", "Home", FormMethod.Get);
@@ -69,23 +69,19 @@ Step 6: Add a new action method **ConvertPPTXtoPDF** in HomeController.cs and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream
-using (FileStream fileStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            //Save the converted PDF document to MemoryStream.
-            pdfDocument.Save(pdfStream);
-            pdfStream.Position = 0;
-            //Download PDF document in the browser.
-            return File(pdfStream, "application/pdf", "Sample.pdf");
-        }
+        //Create the MemoryStream to save the converted PDF.
+        MemoryStream pdfStream = new MemoryStream();
+        //Save the converted PDF document to MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
+        //Download PDF document in the browser.
+        return File(pdfStream, "application/pdf", "Sample.pdf");
     }
 }
 
@@ -118,7 +114,7 @@ By executing the program, you will get the **PDF document** as follows.
 
 Step 1: Create a new ASP.NET Core Web application project.
 * Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
-* Choose the **ASP.NET Core Web App( Model-View-Controller) MVC** template.
+* Choose the **ASP.NET Core Web App (Model-View-Controller) MVC** template.
 
 ![Choose ASP.NET Core Web app from template](Workingwith-Core/AspNetCore-app-template.png)
 
@@ -147,12 +143,12 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in **HomeController.cs**. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in **HomeController.cs**. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoPDF", "Home", FormMethod.Get);
@@ -172,23 +168,19 @@ Step 6: Add a new action method **ConvertPPTXtoPDF** in HomeController.cs and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream
-using (FileStream fileStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            //Save the converted PDF document to MemoryStream.
-            pdfDocument.Save(pdfStream);
-            pdfStream.Position = 0;
-            //Download PDF document in the browser.
-            return File(pdfStream, "application/pdf", "Sample.pdf");
-        }
+        //Create the MemoryStream to save the converted PDF.
+        MemoryStream pdfStream = new MemoryStream();
+        //Save the converted PDF document to MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
+        //Download PDF document in the browser.
+        return File(pdfStream, "application/pdf", "Sample.pdf");
     }
 }
 
@@ -266,12 +258,12 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 4: A default action method named Index will be present in **HomeController.cs**. Right click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 4: A default action method named Index will be present in **HomeController.cs**. Right-click on Index method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
 Step 5: Add a new button in the **Index.cshtml** as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoPDF", "Home", FormMethod.Get);
@@ -291,23 +283,19 @@ Step 6: Add a new action method **ConvertPPTXtoPDF** in HomeController.cs and in
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream
-using (FileStream fileStream = new FileStream(Path.GetFullPath("Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("Data/Input.pptx")))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            //Save the converted PDF document to MemoryStream.
-            pdfDocument.Save(pdfStream);
-            pdfStream.Position = 0;
-            //Download PDF document in the browser.
-            return File(pdfStream, "application/pdf", "Sample.pdf");
-        }
+        //Create the MemoryStream to save the converted PDF.
+        MemoryStream pdfStream = new MemoryStream();
+        //Save the converted PDF document to MemoryStream.
+        pdfDocument.Save(pdfStream);
+        pdfStream.Position = 0;
+        //Download PDF document in the browser.
+        return File(pdfStream, "application/pdf", "Sample.pdf");
     }
 }
 
@@ -332,6 +320,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

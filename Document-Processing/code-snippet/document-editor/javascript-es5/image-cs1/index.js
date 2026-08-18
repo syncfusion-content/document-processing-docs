@@ -3,7 +3,8 @@ var documenteditor = new ej.documenteditor.DocumentEditor({
     enableEditor: true,
     enableSection: true,
     enableImageResizer: true,
-    enableEditorHistory: true
+    enableEditorHistory: true,
+    height: '370px'
 });
 documenteditor.appendTo('#DocumentEditor');
 //Insert Image From URL with alternate text

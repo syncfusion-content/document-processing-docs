@@ -1,4 +1,4 @@
-var documenteditor = new ej.documenteditor.DocumentEditor({ enableSelection: true, isReadOnly: false, enableEditor: true });
+var documenteditor = new ej.documenteditor.DocumentEditor({ enableSelection: true, isReadOnly: false, enableEditor: true, height: '370px' });
 
 documenteditor.appendTo('#DocumentEditor');
 

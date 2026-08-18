@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Document management in Vue Document editor component | Syncfusion
-description: Learn here all about Document management in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Document Management in Vue DOCX Editor | Syncfusion
+description: Document management in Vue DOCX Editor provides editing restrictions and user permissions to secure document content.
 control: Document management 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in Vue Document editor component
+# Document Management in Vue DOCX Editor
 
-Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
 ## Set current user
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Stamp Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Stamp Annotations in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Stamp Annotations in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to add and manage stamp annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view.
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Stamp Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Stamp Annotations in .NET MAUI PDF Viewer
 
-The stamp annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
+The stamp annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify stamps or custom images in the PDF document. This section will go through the various types and functions available in PDF Viewer for working with stamp annotations.
 
 ## Types of stamps
 
@@ -45,9 +45,9 @@ The following example explains how to create a custom stamp using the built-in d
 
 ### Add standard stamps without using the toolbar
 
-There are 18 standard stamp types available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
+There are 18 standard stamp types available in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
 
-The following example explains how to create an [Approved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html#Syncfusion_Maui_PdfViewer_StampType_Approved) standard stamp and add it to the first page of a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+The following example explains how to create an [Approved](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.StampType.html#Syncfusion_Maui_PdfViewer_StampType_Approved) standard stamp and add it to the first page of a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -81,7 +81,7 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ### Add custom stamps without using toolbar
 
-You can create a custom stamp from any image and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+You can create a custom stamp from any image and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -114,7 +114,7 @@ void AddCustomStampAnnotation()
 
 ### Add a view as custom stamps programmatically
 
-You can create a custom stamp from any view, such as Button, Entry, Label, Image, or any other view, and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+You can create a custom stamp from any view, such as Button, Entry, Label, Image, or any other view, and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -154,7 +154,7 @@ N> * Interactions within the view such as button clicks or text entry will not f
 
 ## Edit the selected stamp
 
-You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
+You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
 
 The following example shows how to edit some of the properties of the selected stamp annotation. Similarly, you can modify the other properties if required.
 
@@ -176,7 +176,56 @@ void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
-N> Changing the color of a stamp annotation after it has been added to a PDF is not supported due to the predefined nature of standard stamps. These stamps use fixed colors to ensure consistency and convey distinct meanings. As a work around, you can create a [Custom stamp](https://help.syncfusion.com/maui/pdf-viewer/stamps#add-custom-stamps-using-the-toolbar) which allows users to design stamps with user-defined colors and text.
+N> Changing the color of a stamp annotation after it has been added to a PDF is not supported due to the predefined nature of standard stamps. These stamps use fixed colors to ensure consistency and convey distinct meanings. As a work around, you can create a [Custom stamp](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps#add-custom-stamps-using-the-toolbar) which allows users to design stamps with user-defined colors and text.
+
+## Access Custom Stamp Annotation Views
+
+The view associated with a custom stamp annotation can be accessed and modified using the `CustomStampView` API available on the `StampAnnotation` class. This allows developers to retrieve and update the MAUI `View` that was originally used to create the custom stamp.
+
+N> * `CustomStampView` is supported only for custom stamp annotations created from a MAUI `View`.
+N> * Standard (built-in) stamp annotations or stamps created from images/text do not expose a view and return `null` for `CustomStampView`.
+
+### Retrieve the custom stamp annotation view
+
+You can retrieve the view used to create a custom stamp annotation by accessing the `CustomStampView` property. This is useful for previewing the stamp, inspecting its contents, or applying programmatic visual changes. The following example demonstrates accessing the custom stamp view using the `AnnotationSelected` event:
+
+{% tabs %}
+{% highlight c# %}
+pdfViewer.AnnotationSelected += PdfViewer_AnnotationSelected;
+
+private void PdfViewer_AnnotationSelected(object? sender, AnnotationEventArgs e)
+{
+    if (e.Annotation != null && e.Annotation is StampAnnotation stamp)
+    {
+       // Retrieve the MAUI view that was used to create this custom stamp annotation.
+        View? stampView = stamp.CustomStampView;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the custom stamp annotation view
+
+Once you obtain the custom stamp's view you can modify its content or styling. In the example below, the custom stamp was originally created from a `Button`, and its `Text` is updated when the annotation is selected.
+
+{% tabs %}
+{% highlight c# %}
+pdfViewer.AnnotationSelected += PdfViewer_AnnotationSelected;
+
+private void PdfViewer_AnnotationSelected_Customize(object? sender, AnnotationEventArgs e)
+{
+    if (e.Annotation != null && e.Annotation is StampAnnotation stamp)
+    {
+        if (stamp.CustomStampView is Button button)
+        {
+            // Modify the original view used for the custom stamp.
+            // In this example, update the button text dynamically.
+            button.Text = "Button Clicked";
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Access Custom Stamp Annotation Views
 
@@ -229,7 +278,7 @@ private void PdfViewer_AnnotationSelected_Customize(object? sender, AnnotationEv
 
 ## Custom stamp modal view
 
-The custom stamp modal view appears when the user wants to create a custom stamp from a typed text. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
+The custom stamp modal view appears when the user wants to create a custom stamp from a typed text. The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
 **Mobile:**
 
@@ -271,7 +320,7 @@ private void PdfViewer_CustomStampModalViewDisappearing(object? sender, EventArg
 
 ### Suppressing the custom stamp modal view and implementing your own UI
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the custom stamp modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `CustomStampModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the custom stamp modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `CustomStampModalViewAppearing` event handler. 
 
 The below code snippet illustrates suppressing the custom stamp modal view and using a UI implemented in the app in its place. In this illustration, when the user types a text in your own dialog and clicks the ok button, the text is converted into an image stream and a StampAnnotation instance is created. When the PDF viewer is tapped, the stamp annotation is added in the tapped position. 
 
@@ -308,3 +357,8 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 {% endhighlight %} 
 {% endtabs %}
+
+## See Also
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
+- [Add, Remove, and Modify Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/undo-redo)

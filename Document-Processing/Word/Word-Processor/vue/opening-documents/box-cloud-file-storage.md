@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open Box cloud files in Vue Document editor | Syncfusion
-description: Learn here to open a document from Box cloud file storage in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
+title: Open Documents from Box Cloud in Vue DOCX Editor | Syncfusion
+description: Open documents from Box cloud file storage in Vue DOCX Editor, enabling secure cloud storage integration and document access.
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 --- 
 
-# Open document from Box cloud file storage in Vue Document editor
+# Open Documents from Box Cloud File Storage in Vue DOCX Editor
 
-To load a document from Box cloud file storage in a document Editor, you can follow the steps below
+To load a document from Box cloud file storage in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1** Set up a Box developer account and create a Box application
 

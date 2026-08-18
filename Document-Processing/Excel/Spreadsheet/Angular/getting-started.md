@@ -1,187 +1,215 @@
 ---
 layout: post
-title: Getting started with Angular Spreadsheet component | Syncfusion
-description: Checkout and learn here all about getting started with Syncfusion Essential Angular Spreadsheet component, it's elements, and more details.
+title: Getting Started with Angular Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Angular Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
-control: Getting started 
+control: Getting started
 documentation: ug
 ---
 
-# Getting started with Angular Spreadsheet component
+# Getting Started with Angular Spreadsheet
 
-This section explains the steps to create a simple Spreadsheet component with basic features in an Angular environment.
+This section explains how to create a simple Angular application and add the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
 
-To get start quickly with Angular Spreadsheet using CLI, you can check on this video:
+{% tabcontents %}
 
-{% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+{% tabcontent Syncfusion CLI %}
 
 ## Prerequisites
 
-Ensure your development environment meets the [`System Requirements for Syncfusion® Angular Spreadsheet component`](https://help.syncfusion.com/document-processing/system-requirements).
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
 
-## Dependencies
+## Install the Syncfusion CLI 
 
-The following list of dependencies are required to use the Spreadsheet component in your application.
+Install the Syncfusion CLI globally using the following command:
 
-```js
-  |-- @syncfusion/ej2-angular-spreadsheet
-      |-- @syncfusion/ej2-angular-base
-      |-- @syncfusion/ej2-spreadsheet
-          |-- @syncfusion/ej2-base
-          |-- @syncfusion/ej2-dropdowns
-          |-- @syncfusion/ej2-navigations
-          |-- @syncfusion/ej2-grids
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm install -g @syncfusion/syncfusion-cli
+{% endhighlight %}
+{% endtabs %}
+
+## Create a new Angular application using Syncfusion CLI
+
+You can create a Angular application using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf new syncfusion-angular-app --framework angular --template spreadsheet-editor --theme tailwind3
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates a Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a Angular application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... syncfusion-angular-app
+√ Choose Framework: » Angular
+√ Choose Template: » Spreadsheet Editor
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate a Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+cd syncfusion-angular-app
+npm install
+ng serve
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Spreadsheet Editor Component](images/syncfusion-cli.png)
+
+{% endtabcontent %}
+
+{% tabcontent Angular CLI %}
+
+## Prerequisites
+
+[System requirements for Syncfusion® Angular components](https://ej2.syncfusion.com/angular/documentation/system-requirement)
+
+## Create an Angular application
+
+Use [Angular CLI](https://angular.dev/installation) to create a new Angular application, as it provides a standardized project structure, built-in testing tools, and simplified deployment.
+
+Install Angular CLI globally, using the following command:
+
 ```
-
-## Setup Angular Environment
-
-You can use [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications. To install Angular CLI use the following command.
-
-```bash
 npm install -g @angular/cli
 ```
 
-## Create an Angular Application
-
-Start a new Angular application using below Angular CLI command.
-
-```bash
-ng new my-app
-```
-
-This command prompts you to configure settings such as whether to include Angular routing and which stylesheet format to use.
-
-```bash
-
-? Which stylesheet format would you like to use? (Use arrow keys)
-> CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
-  Sass (SCSS)     [ https://sass-lang.com/documentation/syntax#scss                ]
-  Sass (Indented) [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
-  Less            [ http://lesscss.org                                             ]
+Create a new Angular application using the following commands:
 
 ```
-
-By default, it will create a CSS-based application.
-
-During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
-
-![Spreadsheet showing a comment](./images/gettingstarted_SSR.png)
-
-Select the required AI tool or ‘none’ if you do not need any AI tool.
-
-![Spreadsheet showing a comment](./images/gettingstarted_AI.png)
-
-Navigate to the created application folder:
-
-```bash
-cd my-app
+ng new spreadsheet-app
+cd spreadsheet-app
 ```
 
-## Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet package
+> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> packages are distributed in npm as `@syncfusion` scoped packages. You can get all the Angular Syncfusion<sup style="font-size:70%">&reg;</sup> package from npm [link](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-angular-).
+## Install the Syncfusion® Angular Spreadsheet package
 
-Currently, Syncfusion<sup style="font-size:70%">&reg;</sup> provides two types of package structures for Angular components,
-1. Ivy library distribution package [format](https://v17.angular.io/guide/angular-package-format#angular-package-format)
-2. Angular compatibility compiler(Angular’s legacy compilation and rendering pipeline) package.
+The [Angular Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the Ivy-based Angular library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
-### Ivy library distribution package
-
-Syncfusion<sup style="font-size:70%">&reg;</sup> Angular packages(`>=20.2.36`) has been moved to the Ivy distribution to support the Angular [Ivy](https://docs.angular.lat/guide/ivy) rendering engine and the package are compatible with Angular version 12 and above. To download the package use the below command.
-
-Add [`@syncfusion/ej2-angular-spreadsheet`](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet/v/20.2.38) package to the application.
-
-```bash
-npm install @syncfusion/ej2-angular-spreadsheet --save
+```
+npm install @syncfusion/ej2-angular-spreadsheet
 ```
 
-### Angular compatibility compiled package(ngcc)
+For `Angular versions below 12`, use the legacy `ngcc` package instead:
 
-For Angular version below 12, you can use the legacy (ngcc) package of the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components. To download the `ngcc` package use the below.
-
-Add [`@syncfusion/ej2-angular-spreadsheet@ngcc`](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet/v/20.2.38-ngcc) package to the application.
-
-```bash
-npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
+```
+npm install @syncfusion/ej2-angular-spreadsheet@ngcc
 ```
 
-To mention the ngcc package in the `package.json` file, add the suffix `-ngcc` with the package version as below.
+## Register a Syncfusion License Key
 
-```bash
-@syncfusion/ej2-angular-spreadsheet:"20.2.38-ngcc"
-```
+Before initializing the Syncfusion Angular Spreadsheet component, generate a Syncfusion license key and register it in the application.
 
-The above command does the following configuration to your Angular app,
- 
- * Adds `@syncfusion/ej2-angular-spreadsheet` package and its peer dependencies to your `package.json` file.
- * Imports the `SpreadsheetAllModule` in your application module `app.module.ts`.
- * Registers the Syncfusion<sup style="font-size:70%">&reg;</sup> UI default theme (material) in the `angular.json` file.
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in an Angular Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#angular)
 
->Note: If the ngcc tag is not specified while installing the package, the Ivy Library Package will be installed and this package will throw a warning.
+## Add CSS references
 
-## Adding CSS reference
-
-The following CSS files are available in `../node_modules/@syncfusion` package folder.
-This can be referenced in `[src/styles.css]` using following code.
+Add the following Spreadsheet and dependent component styles to `src/styles.css` file. Replace the existing content with the theme import code below.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-angular-spreadsheet/styles/tailwind3.css';
 ```
 
-## Add Spreadsheet component
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview) for information about the available themes and the different ways to include theme styles in an Angular application.
 
-Modify the template in [src/app/app.ts] file to render the spreadsheet component. Add the Angular Spreadsheet by using `<ejs-spreadsheet>` selector in template section of the `app.ts` file.
+## Add the Syncfusion® Angular Spreadsheet component
 
-```typescript
-import { Component } from '@angular/core';
+Import and render the `Spreadsheet` in `src/app/app.ts`. Replace the existing content with the following code.
+
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 import { SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet'
+import { Component } from '@angular/core';
 
 @Component({
-  imports: [
-        SpreadsheetAllModule
-    ],
+  imports: [SpreadsheetAllModule],
+  standalone: true,
   selector: 'app-root',
-  // specifies the template string for the Spreadsheet component
-  template: `<ejs-spreadsheet> </ejs-spreadsheet>`
+  template: '<ejs-spreadsheet openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open" saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"></ejs-spreadsheet>'
 })
-export class AppComponent { }
+export class App { }
+{% endhighlight %}
+{% endtabs %}
 
-```
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Host Spreadsheet Open and Save Services`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
 ## Run the application
 
-Use the following command to run the application in the web browser
+Run the following command to start the development server:
 
 ```
 ng serve
 ```
 
-The following example shows a basic Spreadsheet component
+After the application starts, open the localhost URL shown in the terminal to view the Angular Spreadsheet Editor in the browser. The output will appear as follows:
+![Angular Spreadsheet Editor](./images/spreadsheet.png)
 
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/app.ts %}
-{% endhighlight %}
+{% endtabcontent %}
 
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/spreadsheet/angular/spreadsheet-cs1/src/main.ts %}
-{% endhighlight %}
-{% endtabs %}
-  
+{% endtabcontents %}
+
+You can also explore the Spreadsheet interactively using the live sample below.
+ 
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
 
-> You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-angular-spreadsheet-component).
 
-## See Also
+## Video tutorial
 
-* [Data Binding](./data-binding)
+To get started quickly with Angular Spreadsheet, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
+
+
+## See also
+
 * [Open and Save](./open-save)
+* [Data Binding](./data-binding)

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Section format in Vue Document editor component | Syncfusion
-description: Learn here all about Section format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Section Format in Vue DOCX Editor | Syncfusion
+description: The section format feature in Vue DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 control: Section format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in Vue Document editor component
+# Section Format in Vue DOCX Editor
 
-Document Editor supports various section formatting such as page size, page margins, and more.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
@@ -67,6 +67,10 @@ this.$refs.documenteditor.ej2Instances.selection.sectionFormat.columns = [column
 this.$refs.documenteditor.ej2Instances.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
+### Online Demo
+
+Explore how to format Word documents with multiple columns using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/multiple-columns.html).
+
 ## Breaks
 
 You can insert Column break. The following code indicate that the text following the column break will begin in the next column.
@@ -90,6 +94,10 @@ The following code example illustrates how to insert a continuous section break
 ```javascript
 this.$refs.documentEditor.ej2Instances.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
+
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/section-formatting.html).
 
 ## See Also
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Content Security Policy with Vue PDF Viewer component | Syncfusion
-description: Learn here all about Content Security Policy with Vue PDF Viewer component of Syncfusion Essential JS 2 and more details.
-control: CSP
+title: Content Security Policy in Vue PDF Viewer | Syncfusion
+description: Configure Content Security Policy headers for the Vue PDF Viewer so the viewer loads correctly while keeping the host page secure.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Security Policy in Vue PDF Viewer
+# Content Security Policy with Vue PDF Viewer
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps protect against attacks such as cross-site scripting (XSS) and data injection. It restricts the sources from which content can be loaded on a web page.
 
-When enabling strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default for enhanced security. To use the Syncfusion PDF Viewer control in strict CSP mode, specific directives must be configured in the CSP meta tag to allow the control's necessary resources.
+When enabling strict [Content Security Policy (CSP)](https://csp.withgoogle.com/docs/strict-csp.html), certain browser features are disabled by default for enhanced security. To use the PDF Viewer control in strict CSP mode, specific directives must be configured in the CSP meta tag to allow the control's necessary resources.
 
 ## CSP Directives Reference
 
@@ -39,7 +39,7 @@ The PDF Viewer is rendered with calculated inline styles and base64-encoded font
 Include the following directives to permit inline styles and external fonts:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     style-src 'self' https://fonts.googleapis.com/ blob:;
@@ -51,7 +51,7 @@ Include the following directives to permit inline styles and external fonts:
 The meta tag should be placed within the `<head>` section of the HTML document to resolve CSP violations when using material or tailwind themes:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 
 <head>
     ...
@@ -68,7 +68,7 @@ The meta tag should be placed within the `<head>` section of the HTML document t
 When images are added as blob or base64 data to the PDF Viewer, they are blocked in strict CSP mode. To permit these resources, include the [`img-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive in the CSP meta tag:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 <head>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     script-src 'self' 'wasm-unsafe-eval' blob:;
@@ -84,7 +84,7 @@ When images are added as blob or base64 data to the PDF Viewer, they are blocked
 The PDF Viewer uses WebAssembly and web workers for processing and rendering. Both are blocked in strict CSP mode. To enable these features, include the [`script-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src), [`worker-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src), and [`connect-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src) directives:
 
 {% tabs %}
-{% highlight razor tabtitle="HTML" %}
+{% highlight html tabtitle="HTML" %}
 <head>
  <meta http-equiv="Content-Security-Policy" content="default-src 'self';
     script-src 'self' 'wasm-unsafe-eval' blob:;
@@ -97,13 +97,13 @@ The PDF Viewer uses WebAssembly and web workers for processing and rendering. Bo
 {% endhighlight %}
 {% endtabs %}
 
-N> In accordance with the latest security practices, the Syncfusion PDF Viewer control recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enable secure WebAssembly compilation. This directive allows WebAssembly to be compiled from JavaScript functions while maintaining a secure execution environment. Update your CSP meta tags to reflect this change for optimal security compliance.
+N> In accordance with the latest security practices, the PDF Viewer control recommends using `wasm-unsafe-eval` in the Content Security Policy (CSP) settings to enable secure WebAssembly compilation. This directive allows WebAssembly to be compiled from JavaScript functions while maintaining a secure execution environment. Update your CSP meta tags to reflect this change for optimal security compliance.
 
 ## Security Best Practices
 
 - Test CSP configurations thoroughly in development to identify blocked resources before deployment.
 - Monitor browser console for CSP violations that may indicate missing directives.
 - Use the most restrictive CSP possible while maintaining required functionality.
-- Regularly review CSP settings when upgrading the Syncfusion PDF Viewer to the latest version.
+- Regularly review CSP settings when upgrading the PDF Viewer to the latest version.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master)

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Global local in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Global local in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in JavaScript DOCX Editor | Syncfusion
+description: Global localization in JavaScript DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global local 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in JavaScript (ES5) Document editor control
+# Globalization and Localization in JavaScript DOCX Editor
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/javascript/documentation/api/base/l10n/) library allows you to localize default text content of the DocumentEditor. The Document Editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/word-editor/javascript/index.html#/tailwind3/document-editor/right-to-left.html)
+The [`Localization`] (https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize default text content of the Document Editor. The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/right-to-left.html)
 
-Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale/tree/master/src).
+N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## Document Editor
 
@@ -262,7 +262,7 @@ Direction | Direction
 Table direction | Table direction
 Indent from right | Indent from right
 Contextual Spacing | Don't add space between the paragraphs of the same styles
-Password Mismatch | The password don't match
+Password Mismatch | The passwords don't match
 Restrict Editing | Restrict Editing
 Formatting restrictions | Formatting restrictions
 Allow formatting | Allow formatting
@@ -346,7 +346,7 @@ Fill-in enabled | Fill-in enabled
 Default number | Default number
 Default date | Default date
 Date format | Date format
-Merge Track | This action wont be marked as change. Do you want to continue?
+Merge Track | This action wont be marked as a change. Do you want to continue?
 UnTrack | Cannot be tracked
 Accept | Accept
 Reject | Reject
@@ -518,7 +518,7 @@ Show properties pane | Show properties pane
 
 ## Color Picker
 
-The following list of properties and its values are used in the color picker.
+The following list of properties and its values are used in the Color Picker.
 
 Locale keywords |Text
 -----|-----

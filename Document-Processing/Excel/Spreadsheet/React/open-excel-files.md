@@ -1,19 +1,59 @@
 ---
 layout: post
-title: Open Excel in React Spreadsheet component | Syncfusion
-description: Learn here all about Open Excel in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Open Excel Files in React Spreadsheet | Syncfusion
+description: Learn about opening Excel files in the Syncfusion React Spreadsheet component, including importing and viewing workbook data.
 platform: document-processing
-control: Open 
+control: Open
 documentation: ug
 ---
 
-# Open Excel Files in Syncfusion React Spreadsheet
+# Open Excel Files in React Spreadsheet
 
-The React Spreadsheet component uses a server‑assisted workflow to import Excel files accurately and efficiently. When a user uploads an Excel file, the component sends the file to the server for parsing, ensuring smooth performance because the heavy processing workload is handled on the server side.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
-On the server, the [`Syncfusion.EJ2.Spreadsheet library`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), reads the Excel file and extracts all relevant details, including data, styles, formulas, formatting, and sheet structure. The server then converts this information into a Spreadsheet‑compatible JSON workbook.
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the React Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
 
-Once processing is complete, the JSON workbook is returned to the client, where the React Spreadsheet component renders it in the browser. This workflow preserves the original Excel layout and ensures the imported content appears with full fidelity.
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion’s own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
+
+**Hosted Syncfusion Service URLs**
+```
+openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+```
+
+For your own development and production, you must set up your own web service for open/save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization’s security requirements.
+
+**Server Configuration**
+
+Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the uploaded Excel file, processes it with the Syncfusion Spreadsheet library, and returns the workbook JSON to the client:
+
+```csharp
+// Open action
+[HttpPost]
+[Route("Open")]
+public IActionResult Open([FromForm] IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files && openRequest.Files.Count > 0) {
+        open.File = openRequest.Files[0];
+        return Content(Workbook.Open(open));
+    }
+    return BadRequest("No file uploaded.");
+}
+```
+
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+
+**Install Required Dependencies**
+
+For spreadsheet open and save operations, install the following NuGet packages based on your server platform:
+
+| Platform      | Assembly                                 | NuGet Package |
+|---------------|------------------------------------------|---------------|
+| ASP.NET Core  | Syncfusion.EJ2.Spreadsheet.AspNet.Core <br> Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.Spreadsheet.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) <br>[Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
+| ASP.NET MVC5  | Syncfusion.XlsIO.AspNet.Mvc5<br/>Syncfusion.ExcelToPdfConverter.AspNet.Mvc5<br/>Syncfusion.Pdf.AspNet.Mvc5<br/>Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5<br/>Syncfusion.EJ2.MVC5 | [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5)<br/>[Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet.Mvc5)<br/>[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)<br/>[Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5)<br/>[Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) |
+
+For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
 To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
 
@@ -22,9 +62,9 @@ For a quick walkthrough on how the open functionality works, refer to the follow
 
 ## UI options to open Excel files
 
-In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
+In the user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
-The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which gets triggered before opening an Excel file.
+The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -39,7 +79,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 
 Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
 
-## BeforeOpenEventArgs – Properties
+**BeforeOpenEventArgs – Properties**
 
 | **Property**          | **Type**                          | **Description** |
 |-------------------|-------------------------------|-------------|
@@ -141,9 +181,9 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
-### Open Excel files from Blob data
+### Open Excel files from Blob Data
 
 By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#open) method in the Spreadsheet component to load that `File` object.
 
@@ -159,6 +199,27 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-blobdata-cs1" %}
+
+### Load Workbook as JSON
+
+The Spreadsheet component allows you to load an entire workbook using a JSON object. This JSON is typically generated by the Spreadsheet server by converting an Excel file into a Spreadsheet‑compatible workbook JSON, but it can also be created manually. When loaded, the component reads the JSON and restores all workbook details, including sheets, cells, styles, formulas, formatting, and other associated metadata.
+
+You can optionally pass deserialization options to the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method to ignore specific features when loading the JSON. For example, you can exclude styles, formulas, number formats, images, or conditional formatting. These options are optional—if you do not specify them, the method restores the full workbook details by default.
+
+Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/how-to/create-a-object-structure.
+
+The following example demonstrates how to load a workbook JSON into the Spreadsheet component.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/open-from-json-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/open-from-json-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-json-cs1" %}
 
 ### Load server-side Excel files into Spreadsheet
 
@@ -304,7 +365,7 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
+In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
 
 The following code example shows how to open the spreadsheet data as base64 string.
 
@@ -336,9 +397,9 @@ You can open Excel file into a read-only mode by using the [`openComplete`](http
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs4" %}
 
 
-## Advanced Open options
+## Advanced Open Options
 
-### Configure JSON deserialization
+### Configure JSON Deserialization
 
 Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
 
@@ -348,21 +409,21 @@ Now, you have the option to selectively ignore some features during the opening 
 spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 ```
 
-| Options | Description |
-| ----- | ----- |
-| onlyValues |  If **true**, only the cell values will be loaded. |
-| ignoreStyle | If **true**, styles will be excluded when loading the JSON data. |
-| ignoreFormula | If **true**, formulas will be excluded when loading the JSON data. |
-| ignoreFormat | If **true**, number formats will be excluded when loading the JSON data. |
-| ignoreConditionalFormat | If **true**, conditional formatting will be excluded when loading the JSON data. |
-| ignoreValidation | If **true**, data validation rules will be excluded when loading the JSON data. |
-| ignoreFreezePane | If **true**, freeze panes will be excluded when loading the JSON data. |
-| ignoreWrap | If **true**, text wrapping settings will be excluded when loading the JSON data. |
-| ignoreChart | If **true**, charts will be excluded when loading the JSON data. |
-| ignoreImage | If **true**, images will be excluded when loading the JSON data. |
-| ignoreNote | If **true**, notes will be excluded when loading the JSON data. |
+| Option | Description |
+| ------ | ----------- |
+| onlyValues | If **true**, only cell values are loaded. |
+| ignoreStyle | If **true**, styles are excluded when loading the JSON data. |
+| ignoreFormula | If **true**, formulas are excluded when loading the JSON data. |
+| ignoreFormat | If **true**, number formats are excluded when loading the JSON data. |
+| ignoreConditionalFormat | If **true**, conditional formatting is excluded when loading the JSON data. |
+| ignoreValidation | If **true**, data validation rules are excluded when loading the JSON data. |
+| ignoreFreezePane | If **true**, freeze panes are excluded when loading the JSON data. |
+| ignoreWrap | If **true**, text wrapping settings are excluded when loading the JSON data. |
+| ignoreChart | If **true**, charts are excluded when loading the JSON data. |
+| ignoreImage | If **true**, images are excluded when loading the JSON data. |
+| ignoreNote | If **true**, notes are excluded when loading the JSON data. |
 
-The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the openFromJson method:
+The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the `openFromJson` method:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -375,7 +436,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-json" %}
 
-### Optimize Open performance with parsing options
+### Optimize Open Performance with Parsing Options
 
 Opening large Excel files into the React Spreadsheet can sometimes lead to slower performance and increased memory usage. This is often caused by the processing of additional elements such as styles and number formats—even when the actual data content is minimal. For example, an Excel file with only a small amount of data but a large number of styled or formatted empty cells can significantly impact load time and memory consumption.
 
@@ -407,7 +468,7 @@ public IActionResult Open(IFormCollection openRequest)
 } 
 ```
 
-### Open large Excel files with chunk response processing
+### Open Large Excel Files with Chunk Response Processing
 
 When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
 
@@ -424,26 +485,26 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
 
-  const spreadsheetRef = React.useRef(null);
-  const openSettings = {
-    // Specifies the size (in bytes) of each chunk for the server response when opening a document.
-    chunkSize: 1000000,
-    // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
-    // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
-    retryCount: 3,
-    // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
-    // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
-    retryAfterDelay: 500
-  }
+    const spreadsheetRef = React.useRef(null);
+    const openSettings = {
+        // Specifies the size (in bytes) of each chunk for the server response when opening a document.
+        chunkSize: 1000000,
+        // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
+        // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
+        retryCount: 3,
+        // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
+        // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
+        retryAfterDelay: 500
+    }
 
-  const openUrl = 'https://localhost:{{port_number}}/Home/Open';
+    const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 
-  return (
-    <div className='control-section spreadsheet-control'>
-      <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
-      </SpreadsheetComponent>
-    </div>
-  );
+    return (
+        <div className='control-section spreadsheet-control'>
+            <SpreadsheetComponent openUrl={openUrl} openSettings={openSettings} ref={spreadsheetRef}>
+            </SpreadsheetComponent>
+        </div>
+    );
 }
 
 export default App;
@@ -495,7 +556,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs3" %}
 
-### Handle external workbook reference confirmation
+### Handle External workbook reference confirmation
 
 When you open an Excel file that contains external workbook references, you will see a confirmation dialog. This dialog allows you to either continue with the file opening or cancel the operation. This confirmation dialog will appear only if you set the `AllowExternalWorkbook` property value to **false** during the open request, as shown below. This prevents the spreadsheet from displaying inconsistent data.
 
@@ -513,43 +574,3 @@ public IActionResult Open(IFormCollection openRequest)
 > This feature is only applicable when importing an Excel file and not when loading JSON data or binding cell data.
 
 ![External workbook confirmation dialog](./images/external-reference-dialog-alert.png)
-
-## Server configuration
-
-In the Spreadsheet component, Excel import processing is handled on the `server‑side`. Therefore, to enable Excel importing in your application, you need to configure a server using any of the following web service technologies:
-
-* WebAPI
-* WCF Service
-* ASP.NET MVC Controller Action
-
-The following code example demonstrates how to configure the server using a `WebAPI` service.
-
-```csharp
-
-    [Route("api/[controller]")]
-    public class SpreadsheetController : Controller
-    {
-        //To open Excel file
-        [AcceptVerbs("Post")]
-        [HttpPost]
-        [EnableCors("AllowAllOrigins")]
-        [Route("Open")]
-        public IActionResult Open(IFormCollection openRequest)
-        {
-            OpenRequest open = new OpenRequest();
-            open.File = openRequest.Files[0];
-            return Content(Workbook.Open(open));
-        }
-    }
-```
-
-## Server dependencies
-
-Open helper functions are shipped in the Syncfusion.EJ2.Spreadsheet package, which is available in Essential Studio<sup style="font-size:70%">&reg;</sup> and [`nuget.org`](https://www.nuget.org/). Following list of dependencies required for Spreadsheet open and save operations.
-
-* Syncfusion.EJ2
-* Syncfusion.EJ2.Spreadsheet
-* Syncfusion.Compression.Base
-* Syncfusion.XlsIO.Base
-
-And also refer [this](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/open-save#server-dependencies) for more information.

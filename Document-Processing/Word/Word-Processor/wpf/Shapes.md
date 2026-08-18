@@ -1,13 +1,13 @@
 ---
-title: Shapes in WPF RichTextBox control | Syncfusion
-description: Learn here all about Shapes support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Shapes in WPF DOCX Editor | Syncfusion
+description: The shapes in WPF DOCX Editor offer preservation support for text box and rectangle, enabling existing shapes to be preserved during document import.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: shapes, text-box
 ---
-# Shapes in WPF RichTextBox (SfRichTextBoxAdv)
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, RichTextBox does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+# Shapes in WPF DOCX Editor
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 N> Starting from v18.3.0.x, the shape preservation is supported.
 
@@ -33,7 +33,8 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 Starting from v19.1.0.x, RichTextBox preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
 
 N> At present, the shape with text wrapping style `In-Line with Text` can only be dragged and dropped anywhere in the document.
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.
+
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
 
 
 

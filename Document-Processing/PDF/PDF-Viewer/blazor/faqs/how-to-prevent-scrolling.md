@@ -1,26 +1,39 @@
 ---
 layout: post
-title: Prevent the PDF from scrolling | Syncfusion
-description: Learn how to prevent scrolling and remove the vertical scrollbar in the Syncfusion Blazor SfPdfViewer.
+title: How to Prevent the PDF from scrolling | Syncfusion
+description: Learn here all about how to prevent scrolling and remove the vertical scrollbar in the PDF Viewer Component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Prevent the PDF from scrolling and remove the vertical scrollbar
+# How to Prevent the PDF from scrolling
 
-To prevent a PDF from scrolling and remove the vertical scrollbar in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer component, set the container's CSS `overflow` property to `hidden`.
+To prevent a PDF from scrolling and remove the vertical scrollbar in the Blazor SfPdfViewer component, set the container's CSS `overflow` property to `hidden`.
 
 Setting `overflow: hidden` removes scrollbars and disables user scrolling. To target only vertical scrolling, consider `overflow-y: hidden`.
 
 ```html
-
 <style>
     .e-pv-viewer-container {
         overflow: hidden !important;
     }
 </style>
-
 ```
 
-[View the prevent scrolling sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Prevent%20the%20PDF%20from%20scrolling)
+To target only vertical scrolling, use `overflow-y` instead:
+
+```html
+<style>
+    .e-pv-viewer-container {
+        overflow-y: hidden !important;
+    }
+</style>
+```
+
+[View the sample on GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Prevent%20the%20PDF%20from%20scrolling)
+
+## See also
+
+* [SfPdfViewer overview](../overview)
+* [Toolbar customization](../toolbar/overview)

@@ -1,14 +1,14 @@
 ---
-title: Word to PDF Performance benchmark results | Syncfusion
-description: Explore the performance benchmark results of Word to PDF conversion using the .NET Word Library with different page counts
+title: Word to PDF performance benchmark in .NET Word | Syncfusion
+description: Describe the NuGet packages required for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word to PDF performance benchmarks using .NET Word Library
+# Word to PDF performance benchmark in .NET Word
 
-The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including conversion to PDF. This performance benchmark report highlights the speed and efficiency of Word to PDF conversion, demonstrating how our library performs across varying document sizes in real-world scenarios.
+The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including conversion to PDF. This performance benchmark report highlights the speed and efficiency of Word to PDF conversion, demonstrating how our library performs across different conversion operations on representative workloads.
 
 ## Environment
 
@@ -18,36 +18,94 @@ The following system configurations were used for benchmarking:
 * **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
 * **RAM:** 16GB  
 * **.NET Version:** .NET 8.0  
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.DocIORenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/34.1.29)
 
-## Word to PDF conversion
+## Test methodology
 
+* All measurements were taken on an idle system with no other significant background processes running.
+* Each operation was executed for **3 iterations** after a warm-up run, and the reported time is the **average** of the measured iterations.
+* Conversions were run **single-threaded** with default garbage collection settings.
+* Time values are reported in **seconds (sec)** and rounded to two decimal places for consistency.
+
+## Benchmark Results
+
+The table below shows the performance results of various Word to PDF conversion operations, evaluated using predefined input conditions in the previously described environment. Each row lists the operation, the number of pages in the sample document, the average conversion time, and a link to the corresponding GitHub example.
+
+> **Note:** The "Word to PDF" baseline row uses a 100-page sample to reflect a realistic large-document workload, while the other rows use small (1–2 page) sample documents to isolate the overhead of each individual option. Times are therefore **not directly comparable across rows**; they are intended to illustrate the relative cost of enabling each option on a similar small document.
 <table>
 <tr>
-    <td><strong>Pages</strong></td>
-    <td><strong>Input Word File</strong></td>
-    <td><strong>Syncfusion<sup>&reg;</sup> Time (sec)</strong></td>
+    <th>Operation</th>
+    <th>Input Details</th>
+    <th>Syncfusion<sup>&reg;</sup> Time (sec)</th>
+    <th>GitHub Example</th>
 </tr>
 <tr>
-    <td>2</td>
-    <td>{{'[Word-2.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-2.docx)'| markdownify }}</td>
-    <td>0.3</td>
+    <td>{{'[Word to PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf)'| markdownify }}</td>
+    <td>100 pages</td>
+    <td>5</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF/)'| markdownify }}</td>    
 </tr>
 <tr>
-    <td>50</td>
-    <td>{{'[Word-50.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-50.docx)'| markdownify }}</td>
-    <td>4.2</td>
+    <td>{{'[Accessible PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#accessible-pdf-document)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.97</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Accessible-PDF/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>100</td>
-    <td>{{'[Word-100.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-100.docx)'| markdownify }}</td>
-    <td>5.2</td>
+    <td>{{'[Comments](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#comments-in-word-to-pdf-conversion)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.89</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Comments/)'| markdownify }}</td>
 </tr>
 <tr>
-    <td>500</td>
-    <td>{{'[Word-500.docx](https://github.com/SyncfusionExamples/DocIO-Examples/blob/main/Performance-metrices/Word-to-PDF/.NET/Word-to-PDF/Word-to-PDF/Data/Document-500.docx)'| markdownify }}</td>
-    <td>15.8</td>
+    <td>{{'[Embed fonts in PDF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf#embedding-fonts)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.96</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Embed-fonts-in-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Export bookmarks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.92</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Export-Bookmarks/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Fallback font](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf)'| markdownify }}</td>
+    <td>1 page</td>
+    <td>0.84</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Fallback-Font-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Font-Substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.93</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Font-substitution-PDF/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[PDF Conformance Level](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#pdf-conformance-level)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>0.97</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/PDF-Conformance-Level/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Preserve Form Fields](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-form-field-to-pdf-form-field)'| markdownify }}</td>
+    <td>1 page</td>
+    <td>0.85</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Preserve-Form-Fields/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Track changes](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#track-changes-in-word-to-pdf-conversion)'| markdownify }}</td>
+    <td>1 page</td>
+    <td>0.93</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Track%20changes/)'| markdownify }}</td>
+</tr>
+<tr>
+    <td>{{'[Use embedded word fonts](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx)'| markdownify }}</td>
+    <td>2 pages</td>
+    <td>1.13</td>
+    <td>{{'[GitHub-Example](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Use-embeded-word-font-PDF/)'| markdownify }}</td>
 </tr>
 </table>
 
-You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Performance-metrices/Word-to-PDF).
+N> Execution times are based on the sample documents and may vary with different content or environments.
+

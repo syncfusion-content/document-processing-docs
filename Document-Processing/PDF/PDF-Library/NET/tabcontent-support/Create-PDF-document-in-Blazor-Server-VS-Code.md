@@ -4,12 +4,12 @@
 * Install Visual Studio Code:  Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download).
 * Install C# Extension for VS Code: Open Visual Studio Code, go to the Extensions view (Ctrl+Shift+X), and search for 'C#'. Install the official [C# extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Web App (Server) application.
 
 ```
 dotnet new blazorserver -n CreatePdfBlazorServerApp
 ```
-Step 2: Replace ****CreatePdfBlazorServerApp** with your desired project name.
+Step 2: Replace `CreatePdfBlazorServerApp` with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
@@ -21,7 +21,30 @@ Step 4: Use the following command in the terminal to add the [Syncfusion.Pdf.Net
 ```
 dotnet add package Syncfusion.Pdf.Net.Core
 ```
-Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
+
+Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Licensing;
+
+var builder = WebApplication.CreateBuilder(args);
+// Register the Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+var app = builder.Build();
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+
+Step 6: Create a new cs file named **ExportService.cs** under the **Data** folder and include the following namespaces and class declaration in the file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -34,9 +57,9 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources. 
+Step 7: The [PdfDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
 
-Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``. 
+Add the following code sample in the ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -76,7 +99,7 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
         pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
 
         //Assign data source.
-        pdfGrid.DataSource = forecasts
+        pdfGrid.DataSource = forecasts;
         pdfGrid.Style.Font = contentFont;
         //Draw PDF grid into the PDF page.
         pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
@@ -95,28 +118,32 @@ public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
 {% endhighlight %}
 {% endtabs %}
 
-Register your service in the ``ConfigureServices`` method available in the ``Startup.cs`` class as follows.
+Step 8: Register your service in the ``Program.cs`` class as follows.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddSingleton<ExportService>();
-}
+using CreatePdfBlazorServerApp.Data;
+
+// ...
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<ExportService>();
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Inject ``ExportService`` in-to ``FetchData.razor`` using the following code.
+Step 9: Inject ``ExportService`` into ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
 
-@inject ExportToFileService exportService
+@inject ExportService ExportService
 @inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
+@using  System.IO
 
 {% endhighlight %}
 {% endtabs %}
@@ -125,11 +152,11 @@ Create a button in the ``FetchData.razor`` using the following code.
 
 {% tabs %}
 {% highlight CSHTML %}
-<button class="btn btn-primary" @onclick="@ExportToPdf">Export to PDF</button>
+<button class="btn btn-primary" @onclick="@ExportToPdf">Export PDF</button>
 {% endhighlight %}
 {% endtabs %}
 
-Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export service.
+Add the ``ExportToPdf`` method in the ``FetchData.razor`` page to call the export service.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -137,19 +164,18 @@ Add the ``ExportToPdf`` method in ``FetchData.razor`` page to call the export se
 {
     protected async Task ExportToPdf()
     {
-        using (MemoryStream excelStream = ExportService.CreatePdf(forecasts))
+        using (MemoryStream pdfStream = ExportService.CreatePdf(forecasts))
         {
-            await JS.SaveAs("Sample.pdf", excelStream.ToArray());
+            await JS.SaveAs("Sample.pdf", pdfStream.ToArray());
         }
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Create a class file with  ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
+Step 10: Create a class file named ``FileUtil.cs`` and add the following code to invoke the JavaScript action to download the file in the browser.
 
 {% tabs %}
-
 {% highlight c# tabtitle="C#" %}
 
 public static class FileUtil
@@ -162,28 +188,29 @@ public static class FileUtil
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available under the ``Pages`` folder.
+Step 11: Add the following JavaScript function in the ``App.razor`` file available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
-<script type="text/javascript">
+<script type = "text/javascript" >
     function saveAsFile(filename, bytesBase64) {
-            if (navigator.msSaveBlob) {
-                //Download document in Edge browser
-                var data = window.atob(bytesBase64);
-                var bytes = new Uint8Array(data.length);
-                for (var i = 0; i < data.length; i++) {
-                    bytes[i] = data.charCodeAt(i);
-                }
-                var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
-                navigator.msSaveBlob(blob, filename);
-            }
-            else {
+    if (navigator.msSaveBlob)
+    {
+        //Download document in Edge browser
+        var data = window.atob(bytesBase64);
+        var bytes = new Uint8Array(data.length);
+        for (var i = 0; i < data.length; i++)
+        {
+            bytes[i] = data.charCodeAt(i);
+        }
+        var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
+        navigator.msSaveBlob(blob, filename);
+    }
+    else
+    {
         var link = document.createElement('a');
         link.download = filename;
         link.href = "data:application/octet-stream;base64," + bytesBase64;
@@ -191,14 +218,13 @@ Step 9: Add the following JavaScript function in the  ``_Host.cshtml`` available
         link.click();
         document.body.removeChild(link);
     }
-        }
+}
 </script>
 
 {% endhighlight %}
-
 {% endtabs %}
 
-Step 10: Build the project.
+Step 12: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -206,9 +232,9 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 11: Run the project.
+Step 13: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to run the project.
 
 ```
 dotnet run

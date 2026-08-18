@@ -1,21 +1,22 @@
 ---
 layout: post
-title: Flow layout in Flutter PDF library | Syncfusion
-description: Learn here all about drawing images, paragraph text, header text and tables using Flow layout feature of Syncfusion Flutter non-UI PDF library and more.
+title: Flow Layout in Flutter PDF Library | Syncfusion
+description: Learn how to draw images, paragraphs, headers, and tables using flow layout in Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
 ---
 
-# Flow layout in Flutter PDF
+# Flow Layout in Flutter PDF
 
-The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
+The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating a PDF document with flow model by maintaining the position of the previously drawn elements.
 
 ## Flow model using PdfLayoutResult
 
 The following code snippet explains how to create a PDF document with image, paragraph text, header text, and a table using flow model with the help of [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -41,7 +42,7 @@ PdfLayoutResult layoutResult = textElement.draw(
         page.getClientSize().height))!;
 
 //Assign header text to PdfTextElement
-textElement.text = 'Top 5 sales stores';
+textElement.text = 'Top 3 sales stores';
 
 //Assign standard font to PdfTextElement
 textElement.font = PdfStandardFont(PdfFontFamily.helvetica, 14,
@@ -69,7 +70,7 @@ row2.cells[0].value = 'E02';
 row2.cells[1].value = 'Thomas';
 row2.cells[2].value = '\$10,500';
 PdfGridRow row3 = grid.rows.add();
-row3.cells[0].value = 'E02';
+row3.cells[0].value = 'E03';
 row3.cells[1].value = 'Simon';
 row3.cells[2].value = '\$12,000';
 
@@ -85,3 +86,4 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Open a Document From URL in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about opening a PDF document from the URL in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Open a Document from URL in .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to open a PDF document from a URL in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Open a Document from URL in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a Document from URL in .NET MAUI PDF Viewer
 
-A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given URL by converting it to a byte[] and assigning the obtained byte[] to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property. 
+A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given URL by converting it to a byte[] and assigning the obtained byte[] to the [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property. 
 
 N>If you experience issues loading a document into the PDF viewer from a URL, it may not be an issue with the PDF viewer itself. If you face issues, please ensure the PDF file is accessible by checking the URL validity, network connectivity, and authentication, and try opening the URL in a web browser.
 
@@ -78,3 +79,8 @@ namespace PdfViewerExample
 {% endtabs %}
 
 The example project to open a PDF document from a given URL can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+
+## See Also
+- [Open a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document)
+- [Open from Base64](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-base64string)
+- [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)

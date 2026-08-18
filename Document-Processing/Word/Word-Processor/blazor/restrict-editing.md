@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Restrict editing in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Restrict editing in Syncfusion Blazor DocumentEditor component and more.
+title: Restrict Editing in Blazor DOCX Editor | Syncfusion
+description: Restrict editing feature in Blazor DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Restrict editing in Blazor DocumentEditor Component
+# Restrict Editing in Blazor DOCX Editor
 
-This [Blazor Word Processor control](https://www.syncfusion.com/blazor-components/blazor-word-processor) (DocumentEditor) provides 2 types of restriction for editing:
+This [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides 2 types of restriction for editing:
 * Read-only: Allows all the users to view the document contents but not make changes to it.
 * Allows changes to certain portion of the document: Allows the users to edit to certain portion of the document.
 
 ## Read only
 
-The following code example shows how to restrict or protect editing for the entire content (show as read-only).
+The following code example shows how to restrict or protect editing for the entire content, making it read-only.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="ReadOnly">Read Only</button>
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true"></SfDocumentEditorContainer>
 
 @code {
     SfDocumentEditorContainer container;
@@ -33,12 +33,51 @@ The following code example shows how to restrict or protect editing for the enti
 }
 ```
 
-## Allows changes to certain portion of the document
+## Protect document with editable region
 
-Also, at some situations, you might need to allow changes for a certain portion of the document alone. Microsoft Word allows you to [make changes to parts of a Word document](https://support.microsoft.com/en-us/office/allow-changes-to-parts-of-a-protected-document-187ed01c-8795-43e1-9fd0-c9fca419dadf?ui=en-us&rs=en-us&ad=us). Likewise, the document editor control allows the users to make changes to certain parts of a document using similar user interface.
+Users can select a specific section and mark it as an editable region, allowing modification only in that part. The rest of the document remains protected from any changes.
 
-![Disabling Restrict Editing in Blazor DocumentEditor](./images/blazor-document-editor-disable-edit-restriction.png)
+### Insert editable region
 
-![Enabling Restrict Editing in Blazor DocumentEditor](./images/blazor-document-editor-enable-edit-restriction.png)
+Use the [`InsertEditingRegionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertEditingRegionAsync) method to mark specific paragraphs as editable. This allows you to control editing by granting access to all users.
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+The following example shows how to insert an editable region.
+
+```cshtml
+
+container.DocumentEditor.Editor.InsertEditingRegionAsync();
+ 
+```
+ 
+### Highlight color for editable region
+ 
+The [`UserColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_UserColor) property can be used to highlight the editable region of the current user.
+ 
+The following code example demonstrates how to set the `UserColor`.
+ 
+```cshtml
+ 
+<SfDocumentEditorContainer UserColor="#FFFF00"></SfDocumentEditorContainer>
+ 
+```
+ 
+### Enable or disable editable region highlighting
+ 
+The [`HighlightEditableRanges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_HighlightEditableRanges) property can be used to toggle the highlighting of editable regions.
+ 
+The following code example demonstrates how to enable or disable editable region highlighting.
+ 
+```cshtml
+
+<SfDocumentEditorContainer DocumentEditorSettings="@settings"></SfDocumentEditorContainer>
+
+@code {
+
+  DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { HighlightEditableRanges = false };  
+} 
+ 
+```
+
+## Online Demo
+
+Explore how to restrict editing and protect Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/document-protection?theme=fluent2).

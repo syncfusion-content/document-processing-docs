@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Form Fields in Document Editor Control | Syncfusion
-description: Learn here all about Form Fields in Syncfusion Document Editor control of Syncfusion Essential JS 2 and more.
+title: Form fields in ASP.NET Core DOCX Editor | Syncfusion
+description: Form fields in ASP.NET Core DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
 control: Form Fields
 documentation: ug
 ---
 
 
-# Form Fields in ASP.NET Core in Document Editor Control
+# Form Fields in ASP.NET Core DOCX Editor
 
-DocumentEditorContainer control provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) control provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
 ## Insert form field
 
-Form fields can be inserted using `insertFormField` method in editor module.
+Form fields can be inserted using `insertFormField` method in the editor module.
 
 ```typescript
 //Insert Text form field
@@ -29,7 +29,7 @@ documentEditor.editor.insertFormField('Dropdown');
 
 ## Get form field names
 
-All the form fields names from current document can be retrieved using `getFormFieldNames()`.
+All the form field names from the current document can be retrieved using `getFormFieldNames()`.
 
 ```typescript
 var formFieldsNames = documentEditor.getFormFieldNames();
@@ -65,18 +65,18 @@ var checkboxfieldInfo = documentEditor.getFormFieldInfo('Check1');
 checkboxfieldInfo.defaultValue = true;
 documentEditor.setFormFieldInfo('Check1',checkboxfieldInfo);
 
-// Set checkbox form field properties
+// Set dropdown form field properties
 var dropdownfieldInfo = documentEditor.getFormFieldInfo('Drop1');
-dropdownfieldInfo.dropDownItems = ['One','Two', 'Three']
+dropdownfieldInfo.dropDownItems = ['One','Two', 'Three'];
 documentEditor.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
 
 ## Export form field data
 
-Data of the all Form fields in the document can be exported using `exportFormData`.
+Data of all the form fields in the document can be exported using `exportFormData`.
 
 ```typescript
-var formFieldDate = documentEditor.exportFormData();
+var formFieldData = documentEditor.exportFormData();
 ```
 
 ## Import form field data
@@ -93,7 +93,7 @@ documentEditor.importFormData([textformField,checkformField,dropdownformField]);
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using `resetFormFields`.
+Reset all the form fields in the current document to their default values using `resetFormFields`.
 
 ```typescript
 documentEditor.resetFormFields();
@@ -101,9 +101,9 @@ documentEditor.resetFormFields();
 
 ## Protect the document in form filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
+Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
+Document Editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
 
 
 {% tabs %}
@@ -117,3 +117,7 @@ Document editor provides an option to protect and unprotect document using `enfo
 
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+
+## Online Demo
+
+Explore how to insert and manage form fields in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/formfields#/tailwind3).

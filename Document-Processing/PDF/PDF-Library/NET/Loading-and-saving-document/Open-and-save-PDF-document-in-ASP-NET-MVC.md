@@ -1,17 +1,17 @@
 ---
-title: Open and save PDF document in ASP.NET MVC | Syncfusion
-description: Open and save PDF document in ASP.NET MVC application using Syncfusion .NET PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in ASP.NET MVC | Syncfusion
+description: Learn how to open and save PDF documents in ASP.NET MVC applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in ASP.NET MVC 
+# Open and Save PDF Document in ASP.NET MVC
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET MVC**. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET MVC**.
 
-## Steps to open and save PDF document programatically:
+## Steps to open and save PDF document programmatically:
 
 Step 1: Create a new ASP.NET MVC application project.
 ![Create ASP.NET MVC application in Visual Studio](Images/Create_MVC_application.png)
@@ -38,11 +38,11 @@ using Syncfusion.Pdf.Parsing;
 
 Step 4: A default action method named **Index** will be present in the HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
 
-Step 5: Add a new button in the Index.cshtml as shown in the follwoing.
+Step 5: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("OpenAndSaveDocument", "Home", FormMethod.Get);
     {
@@ -78,6 +78,11 @@ Step 8: Add the below code example to add a table in the PDF document.
 
 {% highlight c# tabtitle="C#" %}
 
+//Get the first page from the document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
+
 //Create a PdfGrid.
 PdfGrid pdfGrid = new PdfGrid();
 //Add values to the list.
@@ -95,8 +100,8 @@ IEnumerable<object> dataTable = data;
 pdfGrid.DataSource = dataTable;
 //Apply built-in table style.
 pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent3);
-//Draw the grid to the page of PDF document.
-pdfGrid.Draw(graphics, new RectangleF(40, 400, page.Size.Width - 80, 0));
+//Draw the grid to the page of the PDF document.
+pdfGrid.Draw(graphics, new RectangleF(40, 400, loadedPage.Size.Width - 80, 0));
 
 {% endhighlight %}
 

@@ -1,5 +1,5 @@
 ---
-title: Performance benchmark results | Syncfusion
+title: Performance benchmarks for PPTX to Image Conversion | Syncfusion
 description: Explore the performance benchmark results of PowerPoint to image conversion using the .NET PowerPoint Library with different slide counts
 platform: document-processing
 control: Presentation
@@ -8,19 +8,19 @@ documentation: UG
 
 # PowerPoint to image performance metrics in .NET PowerPoint Library
 
-The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to image conversion, demonstrating how our library performs in real-world scenarios.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to image conversion, demonstrating how our library performs in real-world scenarios.
 
-## Environment 
+## Environment
 
 The following system configurations were used for benchmarking: 
 
 * **Operating System:** Windows 11
-* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
-* **RAM:** 24GB
+* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics
+* **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/34.1.29)
 
-## PowerPoint to image conversion 
+## PowerPoint to image conversion
 
 <table>
 <tr>
@@ -46,8 +46,10 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/.NET/Convert-PowerPoint-slide-to-Image/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>23.5</td>
+    <td>23.3</td>
 </tr>
 </table>
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-Image/).
+
+N> Execution times are based on the sample documents and may vary with different content or environments.

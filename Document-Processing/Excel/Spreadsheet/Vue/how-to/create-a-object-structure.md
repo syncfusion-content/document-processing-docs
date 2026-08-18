@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Create a object structure in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Create an Object Structure in Vue Spreadsheet | Syncfusion
+description: Create an object structure in Vue Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 control: Create a object structure 
 platform: document-processing
 documentation: ug
 ---
 
-# Create a object structure in Vue Spreadsheet component
+# How to Create an Object Structure in Vue Spreadsheet
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 ```js
 { Workbook: {} }
 ```
 
-The following properties are the root level properties of the `Workbook` object.
+The following properties are the root-level properties of the `Workbook` object.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| activeSheetIndex | number | Specifies active sheet index in the workbook. |
+| activeSheetIndex | number | Specifies the active sheet index in the workbook. |
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 
@@ -77,14 +77,14 @@ The following table defines each property of the `CellStyle`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| fontFamily | `FontFamily` | Specifies font family of the cell. |
-| verticalAlign | `VerticalAlign` | Specifies vertical align of the cell. |
-| textAlign | `TextAlign` | Specifies text align style of the cell. |
-| textIndent | string | Specifies text indent style of the cell. |
-| color | string | Specifies font color of the cell. |
+| fontFamily | `FontFamily` | Specifies the font family of the cell. |
+| verticalAlign | `VerticalAlign` | Specifies the vertical alignment of the cell. |
+| textAlign | `TextAlign` | Specifies the text alignment of the cell. |
+| textIndent | string | Specifies the text indent of the cell. |
+| color | string | Specifies the font color of the cell. |
 | backgroundColor | string | Specifies the background color of the cell. |
-| fontWeight | `FontWeight` | Specifies font weight of the cell. |
-| fontStyle | `FontStyle` | Specifies font style of the cell. |
+| fontWeight | `FontWeight` | Specifies the font weight of the cell. |
+| fontStyle | `FontStyle` | Specifies the font style of the cell. |
 | fontSize | string | Specifies font size of the cell. |
 | textDecoration | `TextDecoration` | Specifies text decoration of the cell. |
 | border | string | Specifies border of the cell. |
@@ -142,9 +142,9 @@ The following table defines each property of the `DefinedName`.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| name | string | Specifies a name for the defined name, which can be used in the formula. |
-| scope | string | Specifies scope for the defined name. |
-| comment | string | Specifies comment for the defined name. |
+| name | string | Specifies the defined name, which can be used in formulas. |
+| scope | string | Specifies the scope of the defined name. |
+| comment | string | Specifies comment describing the defined name. |
 | refersTo | string | Specifies reference for the defined name. |
 
 In the following code, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the `created` event.
@@ -216,4 +216,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Sample link : [`create-a-object-structure`](https://codesandbox.io/s/vue-template-forked-rzkpc)
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-data-binding-cs1" %}

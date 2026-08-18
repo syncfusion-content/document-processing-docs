@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shapes in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Shapes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Shapes in JavaScript DOCX Editor | Syncfusion
+description: The shapes feature in JavaScript DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in JavaScript (ES5) Document editor control
+# Shapes in JavaScript DOCX Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, DocumentEditor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 
@@ -39,3 +39,7 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 ## Positioning the shape
 
 DocumentEditor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+
+## Online Demo
+
+Explore how to preserve auto shapes and grouped shapes in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/autoshapes.html).

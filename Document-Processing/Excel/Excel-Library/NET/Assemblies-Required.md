@@ -1,12 +1,14 @@
 ---
-title: XlsIO Assemblies Required | Syncfusion
-description: Briefs the assemblies required to convert excel document to PDF, excel worksheet to image & excel chart to image for various platforms and frameworks.
+title: Assemblies Required for .NET Excel Library | Syncfusion
+description: The assemblies required for .NET Excel library that allows to create Excel files and manipulate data from existing files programatically.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Assemblies Required for XlsIO
+# Assemblies Required for .NET Excel Library
+
+## Excel Library
 
 The following assemblies need to be referenced in your application based on the platform.
 <table>
@@ -25,15 +27,6 @@ Assembly
 </td>
 <td>
 Syncfusion.XlsIO.Base<br/>
-Syncfusion.Compression.Base
-</td>
-</tr>
-<tr>
-<td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-windows-forms-c-sharp)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-wpf-c-sharp)' | markdownify}}
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
 Syncfusion.Compression.Base
 </td>
 </tr>
@@ -73,7 +66,7 @@ Syncfusion.XlsIO.Net.Core
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -199,17 +192,6 @@ Syncfusion.ExcelToPDFConverter.Base
 </tr>
 <tr>
 <td>
-{{'[Windows Forms](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-windows-forms)' | markdownify}} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-wpf)' | markdownify}}    
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base<br/>
-Syncfusion.Pdf.ClientProfile<br/>
-Syncfusion.ExcelToPDFConverter.ClientProfile
-</td>
-</tr>
-<tr>
-<td>
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-asp-net-core)' | markdownify}}, {{'[Xamarin](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-xamarin)' | markdownify}} and {{'[Blazor](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/convert-excel-to-pdf-in-blazor)' | markdownify}}
 </td>
 <td>
@@ -237,7 +219,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -267,6 +249,8 @@ Syncfusion.ExcelToPdfConverter.Base
 
 N> Excel to PDF conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
 
+N> Starting with v16.2.0.x, in addition to the assemblies listed above, you must also reference the `Syncfusion.Licensing` assembly and include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
+
 ## Converting Excel Worksheet to Image
 
 For converting an Excel worksheet to image, the following assemblies need to be referenced in your application.
@@ -288,15 +272,6 @@ Windows Forms, WPF and ASP.NET MVC
 <td>
 Syncfusion.Compression.Base<br/>
 Syncfusion.XlsIO.Base
-</td>
-</tr>
-<tr>
-<td>
-Windows Forms and WPF (Client Profile) 
-</td>
-<td>
-Syncfusion.XlsIO.ClientProfile<br/>
-Syncfusion.Compression.Base
 </td>
 </tr>
 <tr>
@@ -324,7 +299,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -351,6 +326,8 @@ Syncfusion.Compression.Base<br/>
 </table>
 
 N> Worksheet to image conversion is supported from .NET Framework 2.0 and .NET Standard 1.4 onwards.
+
+N> Starting with v16.2.0.x, in addition to the assemblies listed above, you must also reference the `Syncfusion.Licensing` assembly and include a license key in your project. Refer to the [licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) for details.
 
 ## Converting Excel Chart to Image
 
@@ -401,7 +378,7 @@ Syncfusion.XlsIORenderer.NET<br/>
 </tbody>
 </table>
 
-**Retired Platforms**
+### Retired Platforms
 
 The following assemblies need to be referenced in your application based on the platform.
 
@@ -431,4 +408,11 @@ Syncfusion.SfChart.WPF
 
 N>  1. Chart to image conversion is supported from .NET Framework 4.0 and .NET Standard 2.0 onwards.
 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/document-processing/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+
+## See Also
+
+* [Overview of Excel Library (XlsIO)](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+* [Create Excel File in C# and VB.NET](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-excel-file-csharp-vbnet)
+* [NuGet Packages](https://help.syncfusion.com/document-processing/nuget-packages)
+* [Licensing Overview](https://help.syncfusion.com/document-processing/licensing/overview)

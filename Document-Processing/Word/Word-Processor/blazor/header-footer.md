@@ -1,34 +1,34 @@
 ---
 layout: post
-title: Headers and Footers in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Headers and Footers in Syncfusion Blazor DocumentEditor component and more.
+title: Headers and Footers in Blazor DOCX Editor | Syncfusion
+description: Headers and footers in Blazor DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Headers and Footers in Blazor DocumentEditor Component
+# Headers and Footers in Blazor DOCX Editor
 
 Headers and footers are the areas in the top and bottom margins of each page in a document. They are typically used to display content that repeats across multiple pages, such as document titles, company logos, page numbers, and dates.
 
-The [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
 *   **First Page**: A unique header and footer that appears only on the first page of the section.
-*   **Even Pages**: A header and footer that appears on all even-numbered pages in the section.
-*   **Default**: A header and footer that appears on all pages of the section, where first or even pages are not applicable or not specified.
+*   **Even Pages**: A header and footer that appear on all even-numbered pages in the section.
+*   **Default**: A header and footer that appear on all pages of the section, where first or even pages are not applicable or not specified.
 
 This can be defined by setting the format properties of the corresponding section.
 
 ```csharp
-//Defines whether different header footer is required for first page of the section
+//Defines whether different header and footer is required for first page of the section
 await container.DocumentEditor.Selection.SectionFormat.SetDifferentFirstPageAsync(true);
-//Defines whether different header footer is required for odd and even pages in the section
+//Defines whether different header and footer is required for odd and even pages in the section
 await container.DocumentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPagesAsync(true);
 ```
 
-## Go to header footer region
+## Go to header and footer region
 
-Double click in header or footer region to move the selection into it. This can also be done using the following code.
+Double-click in the header or footer region to move the selection there. This can also be done using the following code.
 
 ```csharp
 await container.DocumentEditor.Selection.GoToHeaderAsync();
@@ -38,24 +38,26 @@ await container.DocumentEditor.Selection.GoToFooterAsync();
 
 ## Header and footer distance
 
-The distance of the header region content from the top of the page can be defined. Refer to the following sample code.
+Define the distance of the header region content from the top of the page. Refer to the following sample code.
 
 ```csharp
 await container.DocumentEditor.Selection.SectionFormat.SetHeaderDistanceAsync(36);
 ```
 
-Same way, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
+Similarly, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
 
 ```csharp
 await container.DocumentEditor.Selection.SectionFormat.SetFooterDistanceAsync(36);
 ```
 
-## Close header footer region
+## Close header and footer region
 
-Move the selection to the document body from header or footer region by double clicking or tapping the document area. You can also perform this by using the following sample code.
+Move the selection to the document body from the header or footer region by double-clicking the document area. You can also perform this using the following code.
 
 ```csharp
 await container.DocumentEditor.Selection.CloseHeaderFooterAsync();
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+## Online demo
+
+Explore how to add and customize headers and footers in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/headers-and-footers?theme=fluent2).

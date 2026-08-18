@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Context menu in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Context menu in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu in Angular Spreadsheet | Syncfusion
+description: The context menu in Angular Spreadsheet provides quick access to commonly used commands for efficient cell and worksheet operations.
 platform: document-processing
-control: Context menu 
+control: Context menu
 documentation: ug
 ---
 
-# Context menu in Angular Spreadsheet component
+# Context Menu in Angular Spreadsheet 
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#enablecontextmenu) property to enable/disable context menu.
 
-> The default value for the `enableContextMenu` property is `true`.
+> The default value of the `enableContextMenu` property is `true`.
 
 ## Context Menu Items in Row Cell
 
@@ -52,11 +52,11 @@ Please find the table below for default context menu items and their actions.
 | `Delete` | Delete the selected worksheet from the spreadsheet. |
 | `Rename` | Rename the selected worksheet. |
 | [`Protect Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#protectsheet) | Prevent unwanted changes from others by limiting their ability to edit. |
-| [`Hide`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#hide) |Hide the selected worksheet. |
+| [`Hide`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#hide) | Hide the selected worksheet. |
 
 ## Context Menu Customization
 
-You can perform the following context menu customization options in the spreadsheet
+You can perform the following context menu customization options in the spreadsheet:
 
 * Add Context Menu Items
 * Remove Context Menu Items
@@ -118,7 +118,7 @@ In this demo, Rename item is disabled in the pager context menu.
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

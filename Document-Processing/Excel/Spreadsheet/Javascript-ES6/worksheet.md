@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Worksheet in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Worksheet in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Worksheet in TypeScript Spreadsheet | Syncfusion
+description: Worksheets in TypeScript Spreadsheet enable users to organize, manage, and work with multiple sheets within a single workbook.
 platform: document-processing
-control: Worksheet 
+control: Worksheet
 documentation: ug
 ---
 
-# Worksheet in EJ2 TypeScript Spreadsheet control
+# Worksheet in TypeScript Spreadsheet 
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 
 ## Add sheet
 
-You can dynamically add or insert a sheet by one of the following ways,
+You can dynamically add or insert a sheet in the following ways:
 
-* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
-* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at your desired index.
+* Click the `Add Sheet` button in the sheet tab. This adds a new empty sheet next to the current active sheet.
+* Right-click on the sheet tab, and then select `Insert` from the context menu to insert a new empty sheet before the current active sheet.
+* Using [`insertSheet`](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method to insert one or more sheets at the desired index.
 
-The following code example shows the insert sheet operation in spreadsheet.
+The following code example shows the insert sheet operation in the Spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -34,7 +34,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 
 ### Insert a sheet programmatically and make it active sheet
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/documentation/api/spreadsheet/#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/documentation/api/spreadsheet/#goto) method.
+A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using [insertSheet](https://ej2.syncfusion.com/documentation/api/spreadsheet#insertsheet) method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the [goTo](https://ej2.syncfusion.com/documentation/api/spreadsheet#goto) method.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -54,24 +54,24 @@ The following code example shows how to insert a sheet programmatically and make
 The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
 
 * Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using [`delete`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#delete ) method to delete the sheets.
+* Using [`delete`](https://ej2.syncfusion.com/documentation/api/spreadsheet#delete ) method to delete the sheets.
 
 ## Rename sheet
 
-You can dynamically rename an existing worksheet in the following way,
+You can dynamically rename an existing worksheet in the following ways:
 
 * Right-click on the sheet tab, and then select `Rename` option from the context menu.
 
 ## Headers
 
-By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers by using one of the following ways,
+By default, the row and column headers are visible in worksheets. You can dynamically show or hide worksheet headers in the following ways:
 
 * Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
 * Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
 ## Gridlines
 
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
+Gridlines provide a border-like appearance for cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines in the following ways:
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
 * Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
@@ -93,7 +93,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
 
-There are three visibility state as like Microsoft Excel,
+There are three visibility states, as in Microsoft Excel:
 
 | State | Description |
 |-------|---------|

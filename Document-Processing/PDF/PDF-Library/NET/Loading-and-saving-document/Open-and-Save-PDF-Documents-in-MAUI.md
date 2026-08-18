@@ -1,18 +1,18 @@
 ---
-title: Open and Save PDF Documents in .NET MAUI | Syncfusion
-description: Open and save PDF documents in .NET MAUI application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Open and Save PDF Document in .NET MAUI | Syncfusion
+description: Learn how to open and save PDF documents in .NET MAUI applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF documents in .NET MAUI
+# Open and Save PDF Document in .NET MAUI
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI PDF library](https://www.syncfusion.com/document-processing/pdf-framework/maui/pdf-library) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
+The [.NET MAUI PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in .NET MAUI**.
 
 **Prerequisites:**
-To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 6. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+To create .NET Multi-platform App UI (.NET MAUI) apps, you need the latest versions of Visual Studio 2022 and .NET 8. For more details, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
 
 ## Steps to open and save PDF documents programmatically in .NET MAUI
 
@@ -34,21 +34,20 @@ Step 4: Add a new button to the **MainPage.xaml** as shown in the following.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Load_and_Save_PDF_MAUI.MainPage">
-
-    <ScrollView>
-        <Button
-                x:Name="Btn"
-                Text="Create PDF"
-                FontAttributes="Bold"
-                Grid.Row="3"
-                Clicked="ButtonClick"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-    </ScrollView>
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Load_and_Save_PDF_MAUI.MainPage">
+  <ScrollView>
+      <Button
+              x:Name="Btn"
+              Text="Create PDF"
+              FontAttributes="Bold"
+              Grid.Row="3"
+              Clicked="ButtonClick"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"/>
+  </ScrollView>
 
 </ContentPage>
 {% endhighlight %}
@@ -79,6 +78,10 @@ Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
 string basePath = "Load_and_Save_PDF_MAUI.Resources.Data.";
 Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
 PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+//Get the first page from the document.
+PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = page.Graphics;
 {% endhighlight %}
 
 {% endtabs %}
@@ -121,20 +124,20 @@ Step 8: Add the following code example to **save the PDF document in .NET MAUI**
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Saves the PDF to the memory stream.
+//Save the PDF to the memory stream.
 using MemoryStream ms = new();
 document.Save(ms);
-//Close the PDF document
+//Close the PDF document.
 document.Close(true);
 ms.Position = 0;
-//Saves the memory stream as file.
+//Save the memory stream as a file.
 SaveService saveService = new();
 saveService.SaveAndView("Result.pdf", "application/pdf", ms);
 {% endhighlight %}
 
 {% endtabs %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/.NET%20MAUI/Load_and_Save_PDF_MAUI).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/.NET%20MAUI/Load_and_Save_PDF_MAUI).
 
 By executing the program, you will get the **PDF document** as follows.
 ![.NET MAUI output PDF document](Images/Open_and_save_output.png)
@@ -216,6 +219,4 @@ Download the helper files from this [link](https://www.syncfusion.com/downloads/
   </tr>
 </table>
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
-
-
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

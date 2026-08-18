@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Add save button in Vue Document editor toolbar | Syncfusion
-description: Learn here to add save button in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Add Save Button in Toolbar in Vue DOCX Editor | Syncfusion
+description: Add a custom save button to the toolbar in Syncfusion® Vue DOCX Editor, customize toolbar items, and perform document save operations.
 control: Add save button tool bar 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add save button in Vue Document editor toolbar
+# How to Add Save Button in Toolbar in Vue DOCX Editor
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
-DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customToolbarItemModel/) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/clickEventArgs/).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

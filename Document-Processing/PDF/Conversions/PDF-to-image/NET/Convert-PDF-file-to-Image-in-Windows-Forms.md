@@ -1,15 +1,15 @@
 ---
-title: Convert a PDF document to Image in Windows-Forms | Syncfusion®
-description: Learn how to convert a PDF document to Image file in Windows-Forms with easy steps using System Drawing library.
+title: Getting Started with Windows Forms PDF to Image Library | Syncfusion
+description: Learn how to get started with the Syncfusion Windows Forms PDF to Image Library. Explore setup, features, examples, and conversion options.
 platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert PDF file to Image in Windows Forms
+# Getting Started with Windows Forms PDF to Image Library
 
-The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF document to image in WPF application.
+The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF document to image in Windows Forms application.
 
 ## Steps to convert PDF document to Image in Windows Forms
 
@@ -23,16 +23,19 @@ Step 2: Install the [Syncfusion.PdfToImageConverter.WinForms](https://www.nuget.
 
 Step 3: Add the following namespaces into Form1.Designer.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using System;
 using System.Windows.Forms;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 4: Add a new button in Form1.Designer.cs to convert PDF document to Image as follows.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 private Button btnCreate;
 private Label label;
@@ -61,30 +64,40 @@ private void InitializeComponent()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Include the following namespaces in the Form1.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 using System.Drawing;
+using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Create the btnCreate_Click event and add the following code in btnCreate_Click to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
-//Initialize PDF to Image converter.
-PdfToImageConverter imageConverter = new PdfToImageConverter();
-//Load the PDF document as a stream
-FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.ReadWrite);
-imageConverter.Load(inputStream);
-//Convert PDF to Image.
-Stream outputStream = imageConverter.Convert(0, false, false);
-Bitmap image = new Bitmap(outputStream);
-image.Save("sample.png");
+private void btnCreate_Click(object sender, EventArgs e)
+{
+    //Initialize PDF to Image converter.
+    PdfToImageConverter imageConverter = new PdfToImageConverter();
+    //Load the PDF document as a stream
+    FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+    imageConverter.Load(inputStream);
+    //Convert PDF to Image.
+    Stream outputStream = imageConverter.Convert(0, false, false);
+    Bitmap image = new Bitmap(outputStream);
+    image.Save("sample.png");
+}
+
 {% endhighlight %}
+{% endtabs %}
 
-By executing the program, you will get the PDF document as follows.
+By executing the program, you will get the Image as follows.
 ![Convert PDFToImage Windows Forms output](GettingStarted_images/pdftoimageoutput.png)

@@ -1,11 +1,11 @@
 ---
 title: Working with SmartArt in PowerPoint Presentation | Syncfusion
-description: Learn how to create, edit, and format PowerPoint smartArt in C# using Syncfusion<sup>&reg;</sup> PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to create, edit, and format SmartArt diagrams in PowerPoint presentations using the Syncfusion .NET PowerPoint library without Microsoft PowerPoint.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Working with PowerPoint SmartArt
+# Working with SmartArt in PowerPoint Presentation
 
 A [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram is a visual representation of your information, to effectively communicate your ideas in presentations. You can add and modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams in PowerPoint presentations using Essential<sup>&reg;</sup> Presentation library.
 
@@ -14,7 +14,7 @@ To quickly start creating a SmartArt in a PowerPoint Presentation using .NET Pow
 
 ## Adding SmartArt to a Slide
 
-You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams to PowerPoint Presentation. The following code example demonstrates adding a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) to a Slide.
+You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams to PowerPoint Presentation. The following code example demonstrates adding a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) to a slide.
 
 {% tabs %}
 
@@ -23,11 +23,10 @@ You can add any of the predefined [SmartArt](https://help.syncfusion.com/cr/docu
 IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Add a BasicBlockList SmartArt to the slide at the specified size and position.
-ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.BasicBlockList, 0, 0, 640, 426); 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Add a BasicBlockList SmartArt to the slide at the specified size and position (x, y, width, height in points).
+ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.BasicBlockList, 0, 0, 640, 426);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -38,7 +37,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to the Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a BasicBlockList SmartArt to the slide at the specified size and position.
-ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.BasicBlockList, 0, 0, 640, 426); 
+ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.BasicBlockList, 0, 0, 640, 426);
 //Save the Presentation
 pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation
@@ -66,6 +65,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can add a new node to the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagram. The following code example demonstrates the same.
 
+For information about identifying whether a node is an assistant node, see [Assistant nodes in SmartArt](#assistant-nodes-in-smartart).
+
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Add-SmartArt-node/.NET/Add-SmartArt-node/Program.cs" %}
@@ -75,13 +76,12 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a SmartArt to the slide at the specified size and position
 ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 0, 0, 640, 426);
-// Add a new node to the SmartArt.
+//Add a new node to the SmartArt.
 ISmartArtNode newNode = smartArt.Nodes.Add();
-// Set the text to the newly added node.
+//Set the text of the newly added node.
 newNode.TextBody.AddParagraph("New main node added.");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -93,9 +93,9 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a SmartArt to the slide at the specified size and position
 ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 0, 0, 640, 426);
-// Add a new node to the SmartArt.
+//Add a new node to the SmartArt.
 ISmartArtNode newNode = smartArt.Nodes.Add();
-// Set the text to the newly added node.
+//Set the text of the newly added node.
 newNode.TextBody.AddParagraph("New main node added.");
 //Save the Presentation.
 pptxDoc.Save("SmartArt.pptx");
@@ -112,7 +112,7 @@ Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 Dim smartArt As ISmartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 0, 0, 640, 426)
 'Add a new node to the SmartArt.
 Dim newNode As ISmartArtNode = smartArt.Nodes.Add()
-'Set the text to the newly added node.
+'Set the text of the newly added node.
 newNode.TextBody.AddParagraph("New main node added.")
 'Save the Presentation.
 pptxDoc.Save("SmartArt.pptx")
@@ -125,7 +125,7 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/SmartArts/Add-SmartArt-node).
 
-In [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams, you can also add nodes to several nested levels. The maximum limit of nested levels may vary based on SmartArt types. The following code example demonstrates adding nested level nodes in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html).
+In [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) diagrams, you can also add nodes to several nested levels. The maximum number of nested levels varies by SmartArt type. The following code example demonstrates adding nested level nodes in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html).
 
 {% tabs %}
 
@@ -136,15 +136,14 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a SmartArt to the slide at the specified size and position.
 ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 0, 0, 640, 426);
-// Add a new node to the SmartArt.
+//Add a new node to the SmartArt.
 ISmartArtNode newNode = smartArt.Nodes.Add();
-// Add a child node to the SmartArt node
+//Add a child node to the SmartArt node
 ISmartArtNode childNode = newNode.ChildNodes.Add();
-// Set a text to newly added child node.
+//Set the text of the newly added child node.
 childNode.TextBody.AddParagraph("Child node of the existing node.");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -156,11 +155,11 @@ IPresentation pptxDoc = Presentation.Create();
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a SmartArt to the slide at the specified size and position.
 ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHexagons, 0, 0, 640, 426);
-// Add a new node to the SmartArt.
+//Add a new node to the SmartArt.
 ISmartArtNode newNode = smartArt.Nodes.Add();
-// Add a child node to the SmartArt node
+//Add a child node to the SmartArt node
 ISmartArtNode childNode = newNode.ChildNodes.Add();
-// Set a text to newly added child node.
+//Set the text of the newly added child node.
 childNode.TextBody.AddParagraph("Child node of the existing node.");
 //Save the Presentation.
 pptxDoc.Save("SmartArt.pptx");
@@ -179,7 +178,7 @@ Dim smartArt As ISmartArt = slide.Shapes.AddSmartArt(SmartArtType.AlternatingHex
 Dim newNode As ISmartArtNode = smartArt.Nodes.Add()
 'Add a child node to the SmartArt node
 Dim childNode As ISmartArtNode = newNode.ChildNodes.Add()
-'Set a text to newly added child node.
+'Set the text of the newly added child node.
 childNode.TextBody.AddParagraph("Child node of the existing node.")
 'Save the Presentation.
 pptxDoc.Save("SmartArt.pptx")
@@ -193,49 +192,47 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Modifying SmartArt appearance 
 
-You can modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) appearance by modifying the fill type, color, transparency etc. The below code example demonstrates modifying the appearance of [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) nodes.
+You can modify the [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) appearance by modifying the fill type, color, transparency, and so on. The following code example demonstrates modifying the appearance of [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) nodes.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Modify-SmartArt-appearance/.NET/Modify-SmartArt-appearance/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the Slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from Slide.
 ISmartArt smartArt = slide.Shapes[0] as ISmartArt;
 //Get the first node
 ISmartArtNode firstNode = smartArt.Nodes[0];
-// Set the text content of node.
+//Set the text content of the node.
 firstNode.TextBody.AddParagraph("First Node");
-//Set the fill type of node.
+//Set the fill type of the node.
 firstNode.Shapes[0].Fill.FillType = FillType.Solid;
-// Set the fill color of node.
+//Set the fill color of the node.
 firstNode.Shapes[0].Fill.SolidFill.Color = ColorObject.GreenYellow;
 //Set  transparency value of fill
 firstNode.Shapes[0].Fill.SolidFill.Transparency = 30;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open a PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("SampleDocument.pptx");
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the Slide from Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from Slide.
 ISmartArt smartArt = slide.Shapes[0] as ISmartArt;
 //Get the first node
 ISmartArtNode firstNode = smartArt.Nodes[0];
-// Set the text content of node.
+//Set the text content of the node.
 firstNode.TextBody.AddParagraph("First Node");
-//Set the fill type of node.
+//Set the fill type of the node.
 firstNode.Shapes[0].Fill.FillType = FillType.Solid;
-// Set the fill color of node.
+//Set the fill color of the node.
 firstNode.Shapes[0].Fill.SolidFill.Color = ColorObject.GreenYellow;
 //Set  transparency value of fill
 firstNode.Shapes[0].Fill.SolidFill.Transparency = 30;
@@ -247,18 +244,18 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open a PowerPoint Presentation
-Dim pptxDoc As IPresentation = Presentation.Open("SampleDocument.pptx")
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Get the Slide from Presentation
 Dim slide As ISlide = pptxDoc.Slides(0)
 'Get the SmartArt from Slide.
 Dim smartArt As ISmartArt = TryCast(slide.Shapes(0), ISmartArt)
 'Get the first node
 Dim firstNode As ISmartArtNode = smartArt.Nodes(0)
-' Set the text content of node.
+'Set the text content of the node.
 firstNode.TextBody.AddParagraph("First Node")
-'Set the fill type of node.
+'Set the fill type of the node.
 firstNode.Shapes(0).Fill.FillType = FillType.Solid
-' Set the fill color of node.
+'Set the fill color of the node.
 firstNode.Shapes(0).Fill.SolidFill.Color = ColorObject.GreenYellow
 'Set  transparency value of fill
 firstNode.Shapes(0).Fill.SolidFill.Transparency = 30
@@ -274,15 +271,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Iterating through child nodes of an existing SmartArt
 
-You can iterate through the child nodes and access the properties of each node in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html). The following code example demonstrates accessing and modifying the text content of node.
+You can iterate through the child nodes and access the properties of each node in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html). The following code example demonstrates accessing and modifying the text content of a node.
+
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Iterate-child-nodes-of-existing-SmartArt/.NET/Iterate-child-nodes-of-existing-SmartArt/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Traverse through shape in the first slide.
+//Open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Traverse through shapes in the first slide.
 foreach (IShape shape in pptxDoc.Slides[0].Shapes)
 {
     if (shape is ISmartArt)
@@ -291,22 +288,23 @@ foreach (IShape shape in pptxDoc.Slides[0].Shapes)
         foreach (ISmartArtNode mainNode in (shape as ISmartArt).Nodes)
         {
             if (mainNode.TextBody.Text == "Old Content")
-            //Change the node content
-            mainNode.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            {
+                //Change the node content
+                mainNode.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            }
         }
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open a PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("SampleDocument.pptx");
-//Traverse through shape in the first slide.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Traverse through shapes in the first slide.
 foreach (IShape shape in pptxDoc.Slides[0].Shapes)
 {
     if (shape is ISmartArt)
@@ -315,8 +313,10 @@ foreach (IShape shape in pptxDoc.Slides[0].Shapes)
         foreach (ISmartArtNode mainNode in (shape as ISmartArt).Nodes)
         {
             if (mainNode.TextBody.Text == "Old Content")
-            //Change the node content
-            mainNode.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            {
+                //Change the node content
+                mainNode.TextBody.Paragraphs[0].TextParts[0].Text = "New Content";
+            }
         }
     }
 }
@@ -328,8 +328,8 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open a PowerPoint Presentation
-Dim pptxDoc As IPresentation = Presentation.Open("SampleDocument.pptx")
-'Traverse through shape in the first slide.
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
+'Traverse through shapes in the first slide.
 For Each shape As IShape In pptxDoc.Slides(0).Shapes
     If TypeOf shape Is ISmartArt Then
         'Traverse through all nodes inside SmartArt
@@ -358,30 +358,28 @@ You can remove a node from the [SmartArt](https://help.syncfusion.com/cr/documen
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/SmartArts/Remove-child-node-from-existing-SmartArt/.NET/Remove-child-node-from-existing-SmartArt/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open a PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from slide.
 ISmartArt smartArt = slide.Shapes[0] as ISmartArt;
 //Remove a node at the specified index.
 smartArt.Nodes.RemoveAt(4);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Open a PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open("SampleDocument.pptx");
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Get the SmartArt from slide.
 ISmartArt smartArt = slide.Shapes[0] as ISmartArt;
-//Remove a node at the specified index.
+//Remove a node at the specified (zero-based) index.
 smartArt.Nodes.RemoveAt(4);
 //Save the Presentation.
 pptxDoc.Save("SmartArt.pptx");
@@ -391,7 +389,7 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Open a PowerPoint Presentation
-Dim pptxDoc As IPresentation = Presentation.Open("SampleDocument.pptx")
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Get the first slide from the Presentation.
 Dim slide As ISlide = pptxDoc.Slides(0)
 'Get the SmartArt from slide.
@@ -410,7 +408,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Assistant nodes in SmartArt
 
-You can check whether a node is an assistant or not. Also you can change a node as assistant node or revert an assistant node to normal node.  The following code example demonstrates making an assistant node as normal node.
+You can check whether a node is an assistant or not, change a node to an assistant node, or revert an assistant node to a normal node. The following code example demonstrates changing an assistant node to a normal node.
 
 {% tabs %}
 
@@ -424,14 +422,15 @@ ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.OrganizationChart, 0,
 //Traverse through all nodes of the SmartArt.
 foreach (ISmartArtNode node in smartArt.Nodes)
 {
-    //Check if the node is assistant or not.
+    //Check if the node is an assistant or not.
     if (node.IsAssistant)
-        //Set the assistant node to false.
+    {
+        //Set the IsAssistant property to false.
         node.IsAssistant = false;
+    }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("SmartArt.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -439,7 +438,6 @@ pptxDoc.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 // Create an instance of PowerPoint Presentation
 IPresentation pptxDoc = Presentation.Create();
-
 //Add a blank slide to the Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add a SmartArt to the slide at the specified size and position
@@ -447,13 +445,15 @@ ISmartArt smartArt = slide.Shapes.AddSmartArt(SmartArtType.OrganizationChart, 0,
 //Traverse through all nodes of the SmartArt.
 foreach (ISmartArtNode node in smartArt.Nodes)
 {
-    //Check if the node is assistant or not.
+    //Check if the node is an assistant or not.
     if (node.IsAssistant)
-    //Set the assistant node to false.
-    node.IsAssistant = false;
+    {
+        //Set the IsAssistant property to false.
+        node.IsAssistant = false;
+    }
 }
 //Save the Presentation.
-pptxDoc.Save("Sample.pptx");
+pptxDoc.Save("SmartArt.pptx");
 //Close the Presentation.
 pptxDoc.Close();
 {% endhighlight %}
@@ -467,14 +467,14 @@ Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 Dim smartArt As ISmartArt = slide.Shapes.AddSmartArt(SmartArtType.OrganizationChart, 0, 0, 640, 426.96)
 'Traverse through all nodes of the SmartArt.
 For Each node As ISmartArtNode In smartArt.Nodes
-    'Check if the node is assistant or not.
+    'Check if the node is an assistant or not.
     If node.IsAssistant Then
-        'Set the assistant node to false.
+        'Set the IsAssistant property to False.
         node.IsAssistant = False
     End If
 Next
 'Save the Presentation.
-pptxDoc.Save("Sample.pptx")
+pptxDoc.Save("SmartArt.pptx")
 'Close the Presentation.
 pptxDoc.Close()
 {% endhighlight %}
@@ -483,9 +483,11 @@ pptxDoc.Close()
 
 ## Limitations
 
-The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) (like add/remove nodes, modify position and size of nodes etc., which involve [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) layout changes) done by Essential<sup>&reg;</sup> Presentation will not reflected in Image and PDF conversion. Whereas layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
+> Modifications in a [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) (such as adding/removing nodes, modifying the position and size of nodes, and other changes that involve [SmartArt](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ISmartArt.html) layout changes) made by Essential<sup>&reg;</sup> Presentation will not be reflected in image and PDF conversion. The layout changes will be reflected properly in the generated PPTX file when opened using Microsoft PowerPoint.
 
 ## Supported SmartArt layout types
+
+For the complete list of supported layout types, see the [SmartArtType](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.SmartArtType.html) API reference. The following are some commonly used types:
 
 1. Basic Block List
 2. Alternating Hexagons
@@ -624,4 +626,4 @@ The modifications in a [SmartArt](https://help.syncfusion.com/cr/document-proces
 
 ## Online Demo
 
-* Explore how to create a SmartArt diagram in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/smartart#/tailwind).
+* Explore how to create a SmartArt diagram in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/smartart#/tailwind).

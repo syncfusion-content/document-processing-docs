@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Customize context menu in JavaScript (ES5) DocumentEditor | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in JavaScript DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® JavaScript DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
 control: Customize context menu 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in JavaScript (ES5) Document editor
+# How to Customize Context Menu in JavaScript DOCX Editor
 
 ## How to customize context menu in Document Editor
 
-Document Editor allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contextMenu#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customContentMenuEventArgs)
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contextMenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customContentMenuEventArgs) event.
 
-### Add Custom Option
+### Add custom option
 
 The following code shows how to add custom option in context menu.
 
@@ -52,11 +52,11 @@ documentEditor.customContextMenuSelect = function (args) {
 
 ### Customize custom option in context menu
 
-Document Editor allows you to customize the added custom option and also to hide/show default context menu.
+The Document Editor allows you to customize an added custom option and also to hide or show default context menu items.
 
 #### Hide default context menu items
 
-The following code shows how to hide default context menu and add custom option in context menu.
+The following code shows how to replace the default context menu and add a custom option in the context menu.
 
 ```js
 var documentEditor = new ej.documenteditor.DocumentEditor({
@@ -79,7 +79,7 @@ documentEditor.contextMenu.addCustomMenu(menuItems, true);
 
 #### Customize added context menu items
 
-The following code shows how to hide/show added custom option in context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs).
+The following code shows how to show or hide an added custom option in the context menu using the [`customContextMenuBeforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/beforeOpenCloseCustomContentMenuEventArgs) event.
 
 ```js
 var documentEditor = new ej.documenteditor.DocumentEditor({
@@ -121,7 +121,7 @@ documentEditor.customContextMenuSelect = function (args) {
 };
 ```
 
-The following is the output of custom context menu with customization.
+The following is the output of the custom context menu with customization.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -134,11 +134,11 @@ The following is the output of custom context menu with customization.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/customize-context-menu-cs1" %}
 
-#### Customize Context Menu with sub-menu items
+#### Customize context menu with sub-menu items
 
-Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contextMenu#addcustommenu) method.
+The Document Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
-The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
+The following code shows how to add sub-items inside a custom context menu option in the Document Editor container.
  
 ```js
 
@@ -183,3 +183,7 @@ container.created = function () {
 //Render Document Editor Container component.
 container.appendTo('#DocumentEditor');
 ```
+
+## Online demo
+
+Explore how to customize the context menu in the JavaScript (ES5) Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/custom-context-menu.html).

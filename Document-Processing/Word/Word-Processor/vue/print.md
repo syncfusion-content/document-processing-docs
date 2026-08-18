@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Print in Vue Document editor component | Syncfusion
-description: Learn here all about Print in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Print in Vue DOCX Editor | Syncfusion
+description: Print feature in Vue DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 control: Print 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in Vue Document editor component
+# Print in Vue DOCX Editor
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#print) method from Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#print) method from [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) instance.
 
 Refer to the following example for showing a document and print it.
 
@@ -192,3 +192,7 @@ The following example shows how to customize layout options only for printing.
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/print-cs3" %}
+
+## Online Demo
+
+Explore how to print Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/print.html).

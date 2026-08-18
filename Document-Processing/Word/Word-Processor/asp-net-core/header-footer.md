@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Header Footer in Document Editor Component | Syncfusion
-description: Learn here all about Header Footer in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Headers and Footers in ASP.NET Core DOCX Editor | Syncfusion
+description: Headers and footers in ASP.NET Core DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: Header Footer
 documentation: ug
 ---
 
 
-# Headers and Footers in Document Editor Component
+# Headers and Footers in ASP.NET Core DOCX Editor
 
-Document editor supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
 * First page: Used only on the first page of the section.
 * Even pages: Used on all even numbered pages in the section.
@@ -57,11 +57,11 @@ In case the document has different header and footer types, such as different fi
 container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
 container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
 //Even page
-container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
-container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
+container.documentEditor.selection.sectionFormat.evenPageHeader.linkToPrevious = false;
+container.documentEditor.selection.sectionFormat.evenPageFooter.linkToPrevious = false;
 ```
 
-N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled state in UI and set to return false for the first section.
+N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is in a disabled state in the UI and set to return false for the first section.
 
 ## Header and footer distance
 
@@ -74,7 +74,7 @@ documenteditor.selection.sectionFormat.headerDistance= 36;
 Same way, you can define the distance of footer region content from the bottom of the page.
 
 ```typescript
-documenteditor.selection.sectionFormat.footerDistace=36;
+documenteditor.selection.sectionFormat.footerDistance=36;
 ```
 
 ## Close header footer region
@@ -84,6 +84,11 @@ Move the selection to the document body from header or footer region by double c
 ```typescript
 documenteditor.selection.closeHeaderFooter()
 ```
+
+## Online Demo
+
+Explore how to add and customize headers and footers in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headersandfooters#/tailwind3).
+
 
 ## See Also
 

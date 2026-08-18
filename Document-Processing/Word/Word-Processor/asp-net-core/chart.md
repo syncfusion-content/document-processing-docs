@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Chart in Document Editor Component | Syncfusion
-description: Learn here all about chart in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Charts in ASP.NET Core DOCX Editor | Syncfusion
+description: Chart support in ASP.NET Core DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart
 documentation: ug
 ---
 
+# Charts in ASP.NET Core DOCX Editor
 
-# Chart in Document Editor Component
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can view charts from your Word document.
 
-Document Editor provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
-
+The following example shows chart preservation in the Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -22,10 +22,9 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Supported Chart Types
 
-The following chart types are supported in document editor
+The following chart types are supported in the Document Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -45,3 +44,7 @@ The following chart types are supported in document editor
 * Line_Markers_Stacked_100
 * Line_Stacked
 * Line_Stacked_100
+
+## Online Demo
+
+Explore how to preserve charts in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/chart#/tailwind3).

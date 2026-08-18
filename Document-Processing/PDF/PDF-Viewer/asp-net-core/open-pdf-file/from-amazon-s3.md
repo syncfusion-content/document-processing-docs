@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from AWS S3 in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to load PDFs from AWS S3 in the Syncfusion ASP.NET Core PDF Viewer component using standalone and server-backed approaches.
+title: From Amazon S3 in ASP.NET Core PDF Viewer | Syncfusion
+description: Load and display PDF files stored in AWS S3 in the ASP.NET Core PDF Viewer using both standalone and server-backed integration approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from AWS S3
+# Open PDF from AWS S3 in ASP.NET Core PDF Viewer
 
 The ASP.NET Core PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. Both approaches are demonstrated below.
 
@@ -52,7 +52,7 @@ AWS.config.update({
 });
 ```
 
-2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer then load Base64 string generated into the viewer.load method.
+2. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then uses the `getObject` method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the `viewer.load` method.
 
 N> Replace **Your Bucket Name** with the actual bucket name of your AWS S3 account and **Your Key** with the actual file key of your AWS S3 account.
 
@@ -130,7 +130,7 @@ public IndexModel(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnviro
 }
 ```
 
-3. Modify the `OnPostLoad()` method to load the PDF files from  AWS S3
+3. Modify the `OnPostLoadAsync()` method to load the PDF files from AWS S3
 
 ```csharp
 

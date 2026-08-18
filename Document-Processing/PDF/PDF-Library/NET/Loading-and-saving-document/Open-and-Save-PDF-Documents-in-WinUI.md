@@ -1,15 +1,15 @@
 ---
-title: Open and Save PDF document in WinUI | Syncfusion
-description: Open and save PDF documents in WinUI application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Open and Save PDF Document in WinUI | Syncfusion
+description: Learn how to open and save PDF documents in WinUI applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: winui os save pdf, winui os load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF document in WinUI
+# Open and Save PDF Document in WinUI
 
-The Syncfusion<sup>&reg;</sup> [WinUI PDF Library](https://www.syncfusion.com/document-processing/pdf-framework/winui/pdf-library) is used to create, read, and edit Word documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in WinUI**.
+The [WinUI PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in WinUI**.
 
 **Prerequisites:**
 To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=cs-vs-community%2Ccpp-vs-community%2Cvs-2022-17-1-a%2Cvs-2022-17-1-b).
@@ -37,7 +37,7 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 <Window
     x:Class="Load_and_Save_PDF_WinUI_Desktop.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -46,7 +46,6 @@ Step 5: Add a new button to the **MainWindow.xaml** as shown below.
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="button" Click="myButton_Click">Create PDF</Button>
     </StackPanel>
@@ -65,7 +64,6 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Grid;
 using Syncfusion.Drawing;
 using System.Reflection;
-using System.Xml.Linq;
 {% endhighlight %}
 
 {% endtabs %}
@@ -82,6 +80,10 @@ private void OnButtonClicked(object sender, RoutedEventArgs e)
     string basePath = "Load_and_Save_PDF_WinUI_Desktop.Assets.";
     Stream inputStream = assembly.GetManifestResourceStream(basePath + "Input.pdf");
     PdfLoadedDocument document = new PdfLoadedDocument(inputStream);
+    //Get the first page from the document.
+    PdfLoadedPage page = document.Pages[0] as PdfLoadedPage;
+    //Create PDF graphics for the page.
+    PdfGraphics graphics = page.Graphics;
 }
 {% endhighlight %}
 
@@ -130,16 +132,16 @@ filePath = "D://Result.pdf";
 //Create a FileStream to save the PDF document.
 using (FileStream outputStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
 {
-//Save the PDF file.
-document.Save(outputStream);
+    //Save the PDF file.
+    document.Save(outputStream);
 }
 {% endhighlight %}
 
 {% endtabs %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/WinUI/Load_and_Save_PDF_WinUI_Desktop).
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/WinUI/Load_and_Save_PDF_WinUI_Desktop).
 
 By executing the program, you will get the **PDF document** as follows.
 ![WinUI output PDF document](Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

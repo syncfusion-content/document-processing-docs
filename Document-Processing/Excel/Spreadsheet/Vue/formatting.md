@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Formatting in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Vue Spreadsheet | Syncfusion
+description: Apply cell, text, number, and conditional formatting in the Syncfusion Vue Spreadsheet to improve data presentation.
 control: Formatting 
 platform: document-processing
 documentation: ug
 ---
 
-# Formatting in Vue Spreadsheet component
+# Formatting in Vue Spreadsheet
 
-Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
+Formatting options make your data easier to view and understand. The Spreadsheet supports the following types of formatting:
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The default value of `allowNumberFormatting` is `true`. The types of number formatting supported in the Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -32,10 +34,10 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 | Scientific |`0.00E+00`  | 11 |
 | Text | `@` | 49 |
 
-Number formatting can be applied in following ways,
+Number formatting can be applied in the following ways:
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
-* Using the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#numberformat) method, you can set the number format to a cell or range of cells.
-* Selecting the number format option from ribbon toolbar.
+* Using the [`numberFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#numberformat) method to set the number format on a cell or range of cells.
+* Select the number format option from the ribbon toolbar.
 
 The following code example shows the number formatting in cell data.
 
@@ -62,7 +64,7 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
-> The format code should use the default decimal separator (.) and group separator (,).
+> The format code should use the default decimal separator (`.`) and group separator (`,`).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
 
@@ -110,9 +112,9 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Text and cell formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
+Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
 * Using the `style` property, you can set formats to each cell at initial load.
-* Using the [`cellFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#cellformat) method, you can set formats to a cell or range of cells.
+* Using the [`cellFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#cellformat) method, you can set formats to a cell or range of cells.
 * You can also apply by clicking the desired format option from the ribbon toolbar.
 
 ### Fonts
@@ -121,19 +123,19 @@ Various font formats supported in the spreadsheet are font-family, font-size, bo
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
 
 ### Indents
 
-To enhance the appearance of text in a cell, you can change the indentation of a cell content using `textIndent` property.
+To enhance the appearance of text in a cell, change the indentation of a cell's content using the `textIndent` property.
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, apply a background color using the `backgroundColor` property.
 
 ### Borders
 
-You can add borders around a cell or range of cells to define a section of worksheet or a table. The different types of border options available in the spreadsheet are,
+You can add borders around a cell or range of cells to define a section of a worksheet or a table. The border options available in the Spreadsheet are:
 
 | Types | Actions |
 |-------|---------|
@@ -142,13 +144,13 @@ You can add borders around a cell or range of cells to define a section of works
 | Right Border | Specifies the right border of a cell or range of cells.|
 | Bottom Border | Specifies the bottom border of a cell or range of cells.|
 | No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
+| All Border | Specifies all borders of a cell or range of cells.|
 | Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
 | Vertical Border | Specifies the left and right border of a cell or range of cells.|
 | Outside Border | Specifies the outside border of a range of cells.|
 | Inside Border | Specifies the inside border of a range of cells.|
 
-You can also change the color, size, and style of the border. The size and style supported in the spreadsheet are,
+You can also change the color, size, and style of the border. The size and style supported in the Spreadsheet are:
 
 | Types | Actions |
 |-------|---------|
@@ -187,16 +189,16 @@ The following features are not supported in Formatting:
 
 ## Conditional Formatting
 
-Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowconditionalformat) property.
+Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowconditionalformat) property.
 
-> * The default value for the `allowConditionalFormat` property is `true`.
+> The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting by using one of the following ways:
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
-* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#conditionalformat) method to define the condition.
+* Using the [`conditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#conditionalformat) method to define the condition.
 * Using the `conditionalFormats` in sheets model.
 
 Conditional formatting has the following types in the spreadsheet,
@@ -243,7 +245,7 @@ The following options can be given for the color scales as type,
 
 ### Icon Sets
 
-Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows(colored) icon, the green arrow icon represents the values greater than 67%, the yellow arrow icon represents the values between 33% to 67%, and the red arrow icon represents the values less than 33%.
+Icon sets will help you to visually represent your data with icons. Every icon represents a range of values. In the Three Arrows(colored) icon, the green arrow icon represents values greater than 67%, the yellow arrow icon represents values from 33% to 67%, and the red arrow icon represents values less than 33%.
 
 The following options can be given for the icon sets as type,
 
@@ -259,10 +261,10 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 ### Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear the defined rules by using one of the following ways:
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
-* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#clearconditionalformat) method to clear the defined rules.
+* Using the **Clear Rules** option in the **Conditional Formatting** button of the **Home** tab in the ribbon to clear the rule from the selected cells.
+* Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -284,9 +286,78 @@ The following features have some limitations in Conditional Formatting:
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **Syncfusion Vue Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the [`CellStyleModel`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext)
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+- Set `verticalAlign: 'super'` for superscript  
+- Set `verticalAlign: 'sub'` for subscript  
+
+### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in the following ways:
+
+1. Select the desired portion of text within a cell, then click the **Subscript** or **Superscript** option in the **Home** tab of the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```js
+cells: [
+    {
+        value: 'H2O',
+        richText: [
+            { text: 'H' },
+            { text: '2', style: { verticalAlign: 'sub' } },
+            { text: 'O' }
+        ]
+    }
+]
+```
+
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#updatecell) method.
+
+```javascript
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/richtext-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/richtext-format-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/richtext-format-cs1" %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
+
 ## Note
 
-You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

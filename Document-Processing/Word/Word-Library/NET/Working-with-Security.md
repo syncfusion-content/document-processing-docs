@@ -1,20 +1,20 @@
 ---
-title: Working with Word document Protection | DocIO | Syncfusion
-description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Word Document Protection in .NET Word | Syncfusion
+description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Security
+# Word Document Protection in .NET Word
 
-You can encrypt a Word document with password to restrict unauthorized access. You can also control the types of changes you make to this document.
+You can encrypt a Word document with a password to restrict unauthorized access. You can also control the types of changes that can be made to the document.
 
-To quickly encrypt and decrypt a Word document with the .NET Word (DOCIO) Library, please check out this video:
+To quickly encrypt and decrypt a Word document with the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=7EMtR2zrW80" %}
 
-## Encrypting with password
+## Encrypting with a password
 
-The following code example shows how to encrypt the Word document with password.
+The following code example shows how to encrypt the Word document with a password.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
@@ -48,7 +48,7 @@ document.Close();
 Dim document As New WordDocument("Template.docx")
 'Encrypts the Word document with a password
 document.EncryptDocument("syncfusion")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -86,61 +86,9 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens an encrypted Word document
 Dim document As New WordDocument("Template.docx", "password")
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project.
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-using (WordDocument document = new WordDocument())
-{
-    //Loads or opens an existing Word document from stream
-    Stream inputStream = assembly.GetManifestResourceStream("CreateWordSample.Assets.Test.doc");
-    //Loads or opens an existing Word document through Open method of WordDocument class
-    document.Open(inputStream, FormatType.Automatic, "password");
-    MemoryStream stream = new MemoryStream();
-    //Saves the Word file to MemoryStream
-    await document.SaveAsync(stream, FormatType.Doc);
-    //Saves the stream as Word file in local machine
-    Save(stream, "Result.doc");
-    document.Close();
-}
-//Saves the Word document
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".doc";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Word Documents", new List<string>() {".doc"});
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-    using (IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-    {
-        //Write compressed data from memory to file
-        using (Stream outstream = zipStream.AsStreamForWrite())
-        {
-            byte[] buffer = streams.ToArray();
-            outstream.Write(buffer, 0, buffer.Length);
-            outstream.Flush();
-        }
-    }
-}
-//Launch the saved Word file
-await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
 {% endhighlight %}
 
 {% endtabs %}
@@ -149,7 +97,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Remove encryption
 
-You can open the encrypted Word document and remove the encryption from the document. The following code example shows how to remove the encryption from encrypted Word document.
+You can open the encrypted Word document and remove the encryption from it. The following code example shows how to remove the encryption from an encrypted Word document.
 
 {% tabs %}
 
@@ -182,44 +130,20 @@ document.Close();
 Dim document As New WordDocument("Template.docx", FormatType.Docx, "syncfusion")
 'Removes encryption in Word document
 document.RemoveEncryption()
-‘Saves and closes the Word document instance
+'Saves and closes the Word document instance
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Create new Word document instance
-using (WordDocument document = new WordDocument())
-{
-    //Loads or opens an existing Word document from stream
-    Stream inputStream = assembly.GetManifestResourceStream("Sample.Assets.Template.docx");
-    //Loads or opens an existing Word document using the Open method of WordDocument class
-    document.Open(inputStream, FormatType.Docx, "password");
-    //Removes encryption in Word document
-    document.RemoveEncryption();
-    MemoryStream stream = new MemoryStream();
-    //Saves the Word file to MemoryStream
-    document.Save(stream, FormatType.Docx);
-    //Closes the Word document instance
-    document.Close();
-    //Saves the stream as Word file in local machine
-    Save(stream, "Sample.Docx");
-}
-//Refer to the following link to save Word document in UWP platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Remove-encryption-from-Word-document).
 
-## Protecting Word document from editing
+## Protecting a Word document from editing
 
-You can restrict a Word document from editing either by providing a password or without password. 
+You can restrict a Word document from editing either by providing a password or without a password. 
 
-To quickly restrict editing in a Word document using the .NET Word (DOCIO) Library, please check out this video:
+To quickly restrict editing in a Word document using the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=gRoW8EwjkoE" %}
 
 The following are the types of protection:
@@ -228,11 +152,11 @@ The following are the types of protection:
 
 2. [AllowOnlyFormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): You can modify the form field values in the Word document.
 
-3. [AllowOnlyRevisions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Allow only revisions to be made to existing content. After enabling this flag, accept and reject changes options in Microsoft Word application are disabled.
+3. [AllowOnlyRevisions](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): Allow only revisions to be made to existing content. After enabling this flag, the accept and reject changes options in the Microsoft Word application are disabled.
 
 4. [AllowOnlyReading](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): You can only view the content in the Word document.
 
-5. [NoProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): You can access/edit the Word document contents as normally.
+5. [NoProtection](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ProtectionType.html): You can access/edit the Word document contents as normal.
 
 The following code example shows how to restrict editing to modify only form fields in a Word document.
 
@@ -240,13 +164,13 @@ The following code example shows how to restrict editing to modify only form fie
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Security/Allow-editing-form-fields-only/.NET/Allow-editing-form-fields-only/Program.cs" %}
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Opens an existing document from file system through constructor of WordDocument class
+//Opens an existing document from stream through constructor of WordDocument class
 using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx))
 {
     //Sets the protection with password and it allows only to modify the form fields type
     document.Protect(ProtectionType.AllowOnlyFormFields, "password"); 
     MemoryStream stream = new MemoryStream();
-    document.Save(stream, FormatType.docx);
+    document.Save(stream, FormatType.Docx);
     //Closes the Word document
     document.Close();
 }
@@ -278,7 +202,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Editable ranges
 
-An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
+An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
 
 ### Add an editable range
 
@@ -365,14 +289,14 @@ End Using
 
 {% endtabs %}
 
-By running the above code, you will generate a **Editable range** as shown below.
+By running the above code, you will generate an **editable range** as shown below.
 ![Editable range](Security_images/EditableRangeInParagraph.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Add-editable-range).
 
-### Retrieve Id of an editable range
+### Retrieve ID of an editable range
 
-You can retrieve the ID of an editable range using the **Id** property of the **EditableRange** class. 
+You can retrieve the ID of an editable range using the **Id** property of the **EditableRangeStart** class. 
 
 The following code example illustrates how to retrieve the ID of an editable range from a Word document.
 
@@ -465,7 +389,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Find an editable range
 
-You can find an editable range of specific id in the collection of editable ranges through **FindById** method of **EditableRangeCollection** class. 
+You can find an editable range with a specific ID in the collection of editable ranges through the **FindById** method of the **EditableRangeCollection** class. 
 
 The following code example illustrates how to find the editable range in a Word document.
 
@@ -578,7 +502,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 An editable range at a specific index can also be removed from the **EditableRangeCollection** using the **RemoveAt** method.
 
-The following code example demonstrates how to remove an editable range at particular index from a Word document.
+The following code example demonstrates how to remove an editable range at a particular index from a Word document.
 
 {% tabs %}
 
@@ -627,11 +551,12 @@ End Using
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Remove-editable-range-at-an-index).
 
 ### Editing permission
+
 You can restrict editable ranges to specific groups or individuals.
 
-#### Group permission
+#### Group Permission
 
-You can make an editable range editable by a group using the **EditorGroup** property of the **EditableRange** class.
+You can make an editable range editable by a group using the **EditorGroup** property of the **EditableRangeStart** class.
 
 The following code example illustrates how to make an editable range available to a group in a Word document.
 
@@ -725,9 +650,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Group-permission-for-editable-range).
 
-#### Single user permission
+#### Single User Permission
 
-Use the **SingleUser** property of the **EditableRange** class to make an editable range available to a single user for editing.
+Use the **SingleUser** property of the **EditableRangeStart** class to make an editable range available to a single user for editing.
 
 The following code example illustrates how to make an editable range available to a single user in a Word document.
 
@@ -821,9 +746,9 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Single-user-permission-for-editable-range).
 
-### Add editable range in a table
+### Add an editable range in a table
 
-Using the **FirstColumn** and **LastColumn** properties of the **EditableRange** class, you can specify the starting and ending columns of an editable range within a table.
+Using the **FirstColumn** and **LastColumn** properties of the **EditableRangeStart** class, you can specify the starting and ending columns of an editable range within a table.
 
 The following code example illustrates how to add an editable range inside a table in a Word document.
 
@@ -915,15 +840,14 @@ End Using
 
 {% endtabs %}
 
-By running the above code, you will generate a **Editable range** as shown below.
+By running the above code, you will generate an **editable range** as shown below.
 ![Editable range](Security_images/EditableRangeInTable.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Security/Add-editable-range-in-a-table).
 
-N> 1. Editable ranges are supported only in DOCX format.
-N> 2. The **SingleUser** and **EditorGroup** properties cannot be set simultaneously for the same editable range. Setting one will clear the other.
+N> The **SingleUser** and **EditorGroup** properties cannot be set simultaneously for the same editable range. Setting one will clear the other.
 
 ## Online Demo
 
-* Explore how to encrypt and decrypt the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/encryptanddecrypt#/tailwind).  
-* See how to protect the Word document from editing using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/documentprotection#/tailwind).
+* Explore how to encrypt and decrypt the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/encryptanddecrypt#/tailwind).  
+* See how to protect the Word document from editing using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/documentprotection#/tailwind).

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Global local in Angular Document editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in Angular DOCX Editor | Syncfusion
+description: Global localization in Angular DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
-control: Global local 
+control: Global local
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Angular Document editor component
+# Globalization and Localization in Angular DOCX Editor
 
 ## Localization
 
-The Localization library allows you to localize default text content of the DocumentEditor. The document editor component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/right-to-left)
+The Localization library allows you to localize default text content of the Document Editor. The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer to the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/right-to-left)
 
-Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale).
+N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## Document Editor
 
@@ -262,7 +262,7 @@ Direction | Direction
 Table direction | Table direction
 Indent from right | Indent from right
 Contextual Spacing | Don't add space between the paragraphs of the same styles
-Password Mismatch | The password don't match
+Password Mismatch | The passwords don't match
 Restrict Editing | Restrict Editing
 Formatting restrictions | Formatting restrictions
 Allow formatting | Allow formatting
@@ -365,7 +365,7 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and its values are used in the Document Editor Container.
+The following list of properties and its values are used in the Document Editor container.
 
 Locale keywords |Text
 -----|-----

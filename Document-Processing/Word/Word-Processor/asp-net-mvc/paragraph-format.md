@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph Format in ASP.NET MVC Document Editor Control | Syncfusion
-description: Learn here all about paragraph format in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in ASP.NET MVC DOCX Editor | Syncfusion
+description: The paragraph format feature in ASP.NET MVC DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: Paragraph Format
 documentation: ug
 ---
 
 
-# Working with Paragraph Formatting
+# Paragraph Format in ASP.NET MVC DOCX Editor
 
 Document editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
@@ -17,16 +17,16 @@ Document editor supports various paragraph formatting options such as text align
 You can modify the left or right indentation of selected paragraphs using the following sample code.
 
 ```typescript
-documenteditor.selection.paragraphFormat.leftIndent= 24;
-documenteditor.selection.paragraphFormat.rightIndent= 24;
+documenteditor.selection.paragraphFormat.leftIndent = 24;
+documenteditor.selection.paragraphFormat.rightIndent = 24;
 ```
 
 ## Special indentation
 
-You can define special indent for the first line of the paragraph using the following sample code.
+You can define special indentation for the first line of the paragraph using the following sample code.
 
 ```typescript
-documenteditor.selection.paragraphFormat.firstLineIndent= 24;
+documenteditor.selection.paragraphFormat.firstLineIndent = 24;
 ```
 
 ## Increase indent
@@ -50,7 +50,7 @@ documenteditor.editor.decreaseIndent()
 You can get or set the text alignment of selected paragraphs using the following sample code.
 
 ```typescript
-documenteditor.selection.paragraphFormat.textAlignment= 'Center' | 'Left' | 'Right' | 'Justify';
+documenteditor.selection.paragraphFormat.textAlignment = 'Center' | 'Left' | 'Right' | 'Justify';
 ```
 
 You can toggle the text alignment of selected paragraphs by specifying a value using the following sample code.
@@ -65,10 +65,10 @@ You can define the line spacing and its type for selected paragraphs using the f
 
 ```typescript
 // Set line spacing type
-documenteditor.selection.paragraphFormat.lineSpacingType='AtLeast';
+documenteditor.selection.paragraphFormat.lineSpacingType = 'AtLeast';
 // Set line spacing value (supports both integer and float)
-documenteditor.selection.paragraphFormat.lineSpacing= 6; // Integer value
-documenteditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
+documenteditor.selection.paragraphFormat.lineSpacing = 6; // Integer value
+documenteditor.selection.paragraphFormat.lineSpacing = 6.5; // Float value
 ```
 
 ## Paragraph spacing
@@ -76,8 +76,8 @@ documenteditor.selection.paragraphFormat.lineSpacing= 6.5; // Float value
 You can define the spacing before or after the paragraph by using the following sample code.
 
 ```typescript
-documenteditor.selection.paragraphFormat.beforeSpacing= 24;
-documenteditor.selection.paragraphFormat.afterSpacing= 24;
+documenteditor.selection.paragraphFormat.beforeSpacing = 24;
+documenteditor.selection.paragraphFormat.afterSpacing = 24;
 ```
 
 You can also set automatic spacing before and after the paragraph by using the following sample code.
@@ -87,7 +87,7 @@ documenteditor.selection.paragraphFormat.spaceBeforeAuto = true;
 documenteditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
-N> If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N> If auto spacing property is enabled, then the value defined in the `beforeSpacing` and `afterSpacing` properties will not be considered.
 
 ## Pagination properties
 
@@ -103,11 +103,11 @@ documenteditor.selection.paragraphFormat.keepWithNext = true;
 documenteditor.selection.paragraphFormat.keepLinesTogether = true;
 ```
 
-## Paragraph Border
+## Paragraph border
 
-You can apply borders to the paragraphs in a Word document. Using borders, decorate the paragraphs to set them apart from other paragraphs in the document.
+You can apply borders to the paragraphs in a Word document. Using borders, you can decorate the paragraphs to set them apart from other paragraphs in the document.
 
-The following example code illustrates how to apply box border for the selected paragraphs.
+The following example code illustrates how to apply a box border to the selected paragraphs.
 
 ```typescript
 // left
@@ -132,11 +132,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 
 ```
 
-N> At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the Document editor component displays all the border styles as a single line. But you can apply any border style and get the proper display in the Microsoft Word app when opening the exported Word document.
 
-## Show or Hide Paragraph marks
+## Show or hide paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -156,7 +156,9 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 {% endhighlight %}
 {% endtabs %}
 
+## Online Demo
 
+Explore how to apply paragraph formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/paragraphformatting#/tailwind3).
 
 ## See Also
 

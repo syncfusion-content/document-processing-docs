@@ -1,32 +1,26 @@
 ---
 layout: post
-title: React Document Editor getting started with Next.js | Syncfusion
-description: Integrate the Syncfusion React Document Editor into a Next.js application with step‑by‑step setup and usage.
+title: Getting started with React DOCX Editor in Next.js | Syncfusion
+description: Learn how to get started with Next.js application using Syncfusion React DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Next.js
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Document Editor in Next.js
+# Getting started with React DOCX Editor in Next.js
 
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor component.
-
-## What is Next.js?
-
-[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
 ## Prerequisites
 
-Before getting started with the Next.js application, ensure the following prerequisites are met:
-
-* [Node.js 16.8](https://nodejs.org/en) or later.
-
-* The application is compatible with macOS, Windows, and Linux operating systems.
+* [Node.js 18.17.0](https://nodejs.org/en) or later (LTS recommended).
+* [System requirements](https://ej2.syncfusion.com/react/documentation/system-requirement)
+* [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
 
 ## Create a Next.js application
 
-To create a new `Next.js` application, use one of the commands that are specific to either NPM or Yarn.
+**Step 1:** To create a new `Next.js` application, use one of the commands specific to NPM or Yarn.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -43,9 +37,7 @@ yarn create next-app
 
 Using one of the above commands will prompt you to configure additional settings for the project:
 
-### Define the project name
-
-Specify the name of the project directly. In this example, the project is named `ej2-next js-documenteditor`:
+**Step 2:** Specify the name of the project directly.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -55,28 +47,20 @@ Specify the name of the project directly. In this example, the project is named 
 {% endhighlight %}
 {% endtabs %}
 
-### Select the required packages
-
-Choose the following configuration options:
+**Step 3:** Choose the following configuration options below.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
-√ What is your project named? ... ej2-nextjs-documenteditor
-√ Would you like to use TypeScript? ... No / `Yes`
-√ Would you like to use ESLint? ... No / `Yes`
-√ Would you like to use Tailwind CSS? ... `No` / Yes
-√ Would you like to use `src/` directory? ... No / `Yes`
-√ Would you like to use App Router? (recommended) ... No / `Yes`
-√ Would you like to customize the default import alias? ... `No` / Yes
-Creating a new Next.js app in D:\ej2-nextjs-documenteditor.
+? Would you like to use the recommended Next.js defaults?
+>   Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router
+    No, reuse previous settings
+    No, customize settings
 
 {% endhighlight %}
 {% endtabs %}
 
-### Navigate to the project directory
-
-Once the above steps are complete, navigate to the project directory using the following command:
+**Step 4:** Once the above steps are complete, navigate to the project directory using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -88,11 +72,11 @@ cd ej2-nextjs-documenteditor
 
 The application is ready to run with default settings. The next steps will add the Syncfusion Document Editor component to the project.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
+## Install Document Editor packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-react). To use Syncfusion<sup style="font-size:70%">&reg;</sup> React components in the project, install the corresponding npm package.
+The Document Editor package is available at [npmjs.com](https://www.npmjs.com/package/@syncfusion/ej2-react-documenteditor).
 
-Here, the [React Document Editor component](https://www.syncfusion.com/react-components/react-word-processor) is used in the project. To install the React Document Editor component, use the following command:
+To install the Document Editor component, use the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -107,50 +91,39 @@ yarn add @syncfusion/ej2-react-documenteditor
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Register a Syncfusion License Key
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Before initializing the React Document Editor control in Next.js, generate a Syncfusion license key and register it in your application.
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key](https://ej2.syncfusion.com/react/documentation/licensing/license-key-registration)
+
+## Import the required CSS styles
+
+Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `app/globals.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-react-documenteditor/styles/tailwind3.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React Document Editor component
 
-Follow these steps to add the React Document Editor component to the Next.js project:
+## Initialize the Document Editor
 
-### Import the Document Editor component
-
-Before adding the Document Editor component to your markup, import the Document Editor component in the `src/app/page.tsx` file:
-
-{% tabs %}
-{% highlight ts tabtitle="page.tsx" %}
-
-'use client'
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
-
-{% endhighlight %}
-{% endtabs %}
-
-### Define the Document Editor component
-
-Define the Document Editor component in the `src/app/page.tsx` file, as shown below:
+Add the Document Editor component to your application. In the `app/page.tsx` file, add the following code to initialize the component:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -162,26 +135,24 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 
 export default function Home() {
   return (
-    <>
-      <h2>Syncfusion React Document Editor Component</h2>
       <DocumentEditorContainerComponent 
         id="container" 
-        height={'590px'} 
+        height="590px"
+        // Use the following service URL only for demo purposes
         serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
         enableToolbar={true}>
       </DocumentEditorContainerComponent>
-    </>
   )
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, host your own web service with the required server configurations. Refer to the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or use the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service.
+N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 ## Run the application
 
-To run the application, use the following command:
+Run the application using the following command:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -195,6 +166,27 @@ yarn run dev
 
 {% endhighlight %}
 {% endtabs %}
-To learn more about the functionality of the Document Editor component, refer to the [documentation](./feature-module.md).
 
-> [View the NEXT.js Document Editor sample in the GitHub repository](https://github.com/SyncfusionExamples/ej2-nextjs-documenteditor).
+After the application starts, open the `localhost` URL shown in the terminal. The Document Editor is rendered in the browser with a toolbar and an editable document area, as shown below.
+
+![Output of React Document Editor in Next.js](./images/react_getting_started.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
+
+## Server-side dependencies
+
+The Document Editor component requires server-side interactions for the following operations:
+
+* Opening file formats other than SFDT
+* Pasting with formatting
+* Restrict editing
+* Spell checking
+* Saving as file formats other than SFDT and DOCX
+
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
+
+For detailed information about server-side dependencies, refer to the [Web Services Overview](./web-services-overview) page.
+
+## See Also
+
+- [Troubleshooting](https://help.syncfusion.com/document-processing/word/word-processor/react/troubleshooting)

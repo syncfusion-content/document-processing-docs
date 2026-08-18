@@ -1,22 +1,22 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
+title: FAQ about Word to PDF and image Conversions in .NET Word | Syncfusion
+description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Frequently asked questions about Word to PDF and image conversions
+# FAQ about Word to PDF and image Conversions in .NET Word
 
 The frequently asked questions about Word to PDF and image conversions using DocIO are listed below.
 
 ## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
 
-Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework and it is available in .NET 4.0 Framework.
+Yes, the OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework, and it is available in .NET 4.0 Framework.
 
 ## Is it possible to convert 3D charts to PDF or image?
 
-Current version of the DocIO library does not provide support for converting 3D charts to PDF or image format.
+The current version of the DocIO library does not provide support for converting 3D charts to PDF or image format.
 
 ## Is it possible to specify PDF conformance level in Word to PDF conversion?
 
@@ -31,9 +31,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Why are some fonts missing when converting a Word document to PDF in the Syncfusion<sup>®</sup> demo application?
 
-The Syncfusion<sup>®</sup> [online demo](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5) has a limited set of default fonts. If certain fonts are missing during the Word-to-PDF conversion, it may cause preservation problems.
+The Syncfusion<sup>®</sup> [online demo](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) has a limited set of default fonts. If certain fonts are missing during the Word-to-PDF conversion, it may cause preservation problems.
 
-To ensure the fonts appear exactly as they do in the Word document during PDF conversion in our [online demo](https://ej2.syncfusion.com/aspnetcore/word/wordtopdf#/bootstrap5), we recommend embedding the missing fonts directly into the Word document before performing the conversion. For detailed guidance on embedding fonts in a Word document using Microsoft Word, refer [here](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx).
+To ensure the fonts appear exactly as they do in the Word document during PDF conversion in our [online demo](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind), we recommend embedding the missing fonts directly into the Word document before performing the conversion. For detailed guidance on embedding fonts in a Word document using Microsoft Word, refer [here](https://support.syncfusion.com/kb/article/13969/how-to-resolve-font-problems-during-word-to-pdf-or-image-conversion#suggestion-3:-embed-fonts-in-docx).
 
 ## How to edit a Word document in Microsoft Word and convert it to PDF/image simultaneously using the DocIO library?
 
@@ -69,7 +69,7 @@ For details on resolving font preservation issues during Word-to-PDF or image co
 
 ## Why is the chart not preserved during Word-to-PDF or image conversion in .NET Framework?
 
-During Word-to-PDF conversion in .NET Framework, need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
+During Word-to-PDF conversion in .NET Framework, you need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
 
 The following code example illustrates how to initialize [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html).
 
@@ -77,6 +77,11 @@ The following code example illustrates how to initialize [ChartToImageConverter]
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
 wordDocument.ChartToImageConverter = new ChartToImageConverter();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Initializes the ChartToImageConverter for converting charts during Word to pdf conversion
+wordDocument.ChartToImageConverter = New ChartToImageConverter()
 {% endhighlight %}
 {% endtabs %}
 

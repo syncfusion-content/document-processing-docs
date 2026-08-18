@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Shapes in Vue Document editor component | Syncfusion
-description: Learn here all about Shapes in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Shapes in Vue DOCX Editor | Syncfusion
+description: The shapes feature in Vue DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 control: Shapes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in Vue Document editor component
+# Shapes in Vue DOCX Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. 
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry.
 
->Note: At present, Document Editor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+>Note: At present, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 
@@ -41,3 +41,7 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 ## Positioning the shape
 
 Document Editor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+
+## Online Demo
+
+Explore how to preserve auto shapes and grouped shapes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/autoshapes.html).

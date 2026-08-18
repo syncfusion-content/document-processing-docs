@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Linux
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET Core application on Linux**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET Core application on Linux**.
 
 ## Steps to convert PowerPoint to Image in .NET Core application on Linux
 
@@ -24,7 +24,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 Step 1: Execute the following command in **Linux terminal** to create a new .NET Core Console application.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new console
 
@@ -33,16 +33,16 @@ dotnet new console
 
 ![Create .NET Core console application on Linux](Workingwith-Linux/CreateCore.png)
 
-Step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 * [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
 * [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
-dotnet add package Syncfusion.PresentationRenderer.Net.Core -v 22.1.38 -s https://www.nuget.org/
+dotnet add package Syncfusion.PresentationRenderer.Net.Core -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.2 -s https://www.nuget.org/
 
@@ -68,25 +68,21 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- //Open the file as Stream.
- using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ //Open the existing PowerPoint presentation.
+ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
  {
-     //Open the existing PowerPoint presentation with loaded stream.
-     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     //Initialize the PresentationRenderer to perform image conversion.
+     pptxDoc.PresentationRenderer = new PresentationRenderer();
+     //Convert PowerPoint slide to image as stream.
+     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
      {
-         //Initialize the PresentationRenderer to perform image conversion.
-         pptxDoc.PresentationRenderer = new PresentationRenderer();
-         //Convert PowerPoint slide to image as stream.
-         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         //Reset the stream position.
+         stream.Position = 0;
+         //Create FileStream to save the image file.
+         using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
          {
-             //Reset the stream position.
-             stream.Position = 0;
-             //Create FileStream to save the image file.
-             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-             {
-                 //Save the image file.
-                 stream.CopyTo(outputStream);
-             }
+             //Save the image file.
+             stream.CopyTo(outputStream);
          }
      }
  }
@@ -97,7 +93,7 @@ Step 4: Add the following code snippet in **Program.cs** file.
 Step 5: Execute the following command to **restore** the NuGet packages.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet restore
 
@@ -109,14 +105,14 @@ dotnet restore
 Step 6: Execute the following command in **terminal** to **run the application**.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet run
 
 {% endhighlight %}
 {% endtabs %}
 
-![Run the Applcation](Workingwith-Linux/Run.png)
+![Run the application](Workingwith-Linux/Run.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Linux/Convert-PowerPoint-Presentation-to-Image).
 
@@ -142,7 +138,7 @@ Step 1: Open JetBrains Rider and create a new .NET Core console application proj
 * In the New Solution dialog, select **Project Type** as **Console**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Linux/Create-Console-NET-core-sample.png)
 
@@ -177,25 +173,21 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
- //Open the file as Stream.
- using (FileStream fileStreamInput = new FileStream("Data/Input.pptx", FileMode.Open, FileAccess.Read))
+ //Open the existing PowerPoint presentation.
+ using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
  {
-     //Open the existing PowerPoint presentation with loaded stream.
-     using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+     //Initialize the PresentationRenderer to perform image conversion.
+     pptxDoc.PresentationRenderer = new PresentationRenderer();
+     //Convert PowerPoint slide to image as stream.
+     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
      {
-         //Initialize the PresentationRenderer to perform image conversion.
-         pptxDoc.PresentationRenderer = new PresentationRenderer();
-         //Convert PowerPoint slide to image as stream.
-         using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+         //Reset the stream position.
+         stream.Position = 0;
+         //Create FileStream to save the image file.
+         using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
          {
-             //Reset the stream position.
-             stream.Position = 0;
-             //Create FileStream to save the image file.
-             using (FileStream outputStream = new FileStream("PPTXtoImage.Jpeg", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-             {
-                 //Save the image file.
-                 stream.CopyTo(outputStream);
-             }
+             //Save the image file.
+             stream.CopyTo(outputStream);
          }
      }
  }
@@ -221,6 +213,6 @@ By executing the program, you will get the **image** as follows. The output will
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

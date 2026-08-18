@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Formatting in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Formatting in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Formatting in JavaScript Spreadsheet | Syncfusion
+description: Formatting in JavaScript Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
-control: Formatting 
+control: Formatting
 documentation: ug
 ---
 
-# Formatting in EJ2 JavaScript Spreadsheet control
+# Formatting in JavaScript Spreadsheet 
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are,
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -29,19 +31,19 @@ Number formatting provides a type for your data in the Spreadsheet. Use the [`al
 | Time | `h:mm:ss AM/PM` | NA |
 | Percentage | `0.00%` | 10 |
 | Fraction | `# ?/?` | 12 |
-| Scientific |`0.00E+00`  | 11 |
+| Scientific | `0.00E+00` | 11 |
 | Text | `@` | 49 |
 
-Number formatting can be applied in following ways,
+Number formatting can be applied in the following ways:
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
 
 * Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method, you can set the number format to a cell or range of cells.
 
-* Selecting the number format option from ribbon toolbar.
+* Selecting the number format option from the ribbon toolbar.
 
 ### Custom Number Formatting
 
-Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
+Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using the custom number formats dialog or the `numberFormat` method.
 
 The different types of custom number format populated in the custom number format dialog are,
 
@@ -62,8 +64,8 @@ The different types of custom number format populated in the custom number forma
 | Currency | `$#,##0.00_);[Red]($#,##0.00)` | 8 |
 | Percentage | `0%` | 9 |
 | Percentage | `0.00%` | 10 |
-| Scientific |`0.00E+00`  | 11 |
-| Scientific |`##0.0E+0`  | 48 |
+| Scientific | `0.00E+00` | 11 |
+| Scientific | `##0.0E+0` | 48 |
 | Fraction | `# ?/?` | 12 |
 | Fraction | `# ??/??` | 13 |
 | ShortDate | `m/d/yyyy` | 14 |
@@ -84,11 +86,11 @@ The different types of custom number format populated in the custom number forma
 | Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` | 44 |
 | Accounting | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)` | 43 |
 
-Custom Number formatting can be applied in following ways,
+Custom Number formatting can be applied in the following ways:
 
 * Using the [`numberFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#numberformat) method, you can set your own custom number format to a cell or range of cells.
 
-* Selecting the custom number format option from custom number formats dialog or type your own format in dialog input and then click apply button. It will apply the custom format for selected cells.
+* Selecting the custom number format option from the custom number formats dialog, or type your own format in the dialog input and then click the apply button. It will apply the custom format for the selected cells.
 
 The following code example shows the number formatting in cell data.
 
@@ -103,7 +105,7 @@ The following code example shows the number formatting in cell data.
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/number-cs1" %}
 
-## Configure culture-based custom format
+## Configure culture-based Custom Format
 
 Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
 
@@ -155,28 +157,29 @@ The following code example demonstrates how to configure culture-based formats f
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/format/globalization-cs1" %}
 
-## Text and cell formatting
+## Text and Cell Formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
+Text and cell formatting enhances the look and feel of your cells. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border, etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowcellformatting) property to enable or disable the text and cell formatting option in the Spreadsheet. You can set the formats in the following ways:
+
 * Using the `style` property, you can set formats to each cell at initial load.
 * Using the [`cellFormat`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cellformat) method, you can set formats to a cell or range of cells.
 * You can also apply by clicking the desired format option from the ribbon toolbar.
 
 ### Fonts
 
-Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline and font color.
+Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline, and font color.
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
 
 ### Indents
 
-To enhance the appearance of text in a cell, you can change the indentation of a cell content using `textIndent` property.
+To enhance the appearance of text in a cell, you can change the indentation of a cell's content using the `textIndent` property.
 
-### Fill color
+### Fill Color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, you can apply a background color for a cell using the `backgroundColor` property.
 
 ### Borders
 
@@ -189,9 +192,9 @@ You can add borders around a cell or range of cells to define a section of works
 | Right Border | Specifies the right border of a cell or range of cells.|
 | Bottom Border | Specifies the bottom border of a cell or range of cells.|
 | No Border | Used to clear the border from a cell or range of cells.|
-| All Border | Specifies all border of a cell or range of cells.|
-| Horizontal Border | Specifies the top and bottom border of a cell or range of cells.|
-| Vertical Border | Specifies the left and right border of a cell or range of cells.|
+| All Border | Specifies all borders of a cell or range of cells.|
+| Horizontal Border | Specifies the top and bottom borders of a cell or range of cells.|
+| Vertical Border | Specifies the left and right borders of a cell or range of cells.|
 | Outside Border | Specifies the outside border of a range of cells.|
 | Inside Border | Specifies the inside border of a range of cells.|
 
@@ -202,15 +205,16 @@ You can also change the color, size, and style of the border. The size and style
 | Thin | Specifies the `1px` border size (default).|
 | Medium | Specifies the `2px` border size.|
 | Thick | Specifies the `3px` border size.|
-| Solid | Used to create the `solid` border (default).|
-| Dashed | Used to create the `dashed` border.|
-| Dotted | Used to create the `dotted` border.|
-| Double | Used to create the `double` border.|
+| Solid | Specifies the `solid` border (default).|
+| Dashed | Specifies the `dashed` border.|
+| Dotted | Specifies the `dotted` border.|
+| Double | Specifies the `double` border.|
 
-Borders can be applied in the following ways,
-* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the `setBorder` method, you can set various border options to a cell or range of cells.
-* Selecting the border options from ribbon toolbar.
+Borders can be applied in the following ways:
+
+* Using the `border`, `borderTop`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
+* Using the [`setBorder`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#setborder) method, you can set various border options to a cell or range of cells.
+* Selecting the border options from the ribbon toolbar.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
@@ -240,15 +244,15 @@ Conditional formatting helps you to format a cell or range of cells based on the
 
 ### Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting in the following ways:
 
 * Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
 
 * Using the [`conditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#conditionalFormat) method to define the condition.
 
-* Using the `conditionalFormats` in sheets model.
+* Using the `conditionalFormats` in the sheets model.
 
-Conditional formatting has the following types in the spreadsheet,
+Conditional formatting has the following types in the spreadsheet:
 
 ### Highlight cells rules
 
@@ -302,15 +306,15 @@ The following options can be given for the icon sets as type,
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
 
-In the MAY and JUN columns, we have applied conditional formatting custom format.
+In the MAY and JUN columns of the following code sample, conditional formatting custom format is applied.
 
-> In the Conditional format, custom format supported for Highlight cell rules and Top bottom rules.
+> In the Conditional format, custom format is supported for Highlight cell rules and Top bottom rules.
 
 ### Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear the defined rules in the following ways:
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the "Clear Rules" option in the Conditional Formatting button of the HOME Tab in the ribbon to clear the rule from selected cells.
 
 * Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#clearConditionalFormat) method to clear the defined rules.
 
@@ -326,7 +330,7 @@ You can clear the defined rules by using one of the following ways,
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/conditional-formatting-cs1" %}
 
-### Limitations of Conditional formatting
+### Limitations of Conditional Formatting
 
 The following features have some limitations in Conditional Formatting:
 
@@ -335,10 +339,77 @@ The following features have some limitations in Conditional Formatting:
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+
+In the **Syncfusion EJ2 JavaScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cells) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the cell style properties
+
+## Subscript and Superscript
+
+Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+
+To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+
+Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+
+### How to Apply Subscript and Superscript
+
+You can apply subscript and superscript formatting in the following ways:
+
+1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
+
+![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```js
+cells: [
+    {
+        value: 'H2O',
+        richText: [
+            { text: 'H' },
+            { text: '2', style: { verticalAlign: 'sub' } },
+            { text: 'O' }
+        ]
+    }
+]
+```
+
+3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method.
+
+```js
+    spreadsheet.updateCell({ value: 'X2', richText: [
+                    { text: 'X' },
+                    { text: '2', style: { verticalAlign: 'super' } }
+                ] }, 'A5');
+```
+
+The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/richtext-format-cs1" %}
+
+## Limitations
+* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
+
 ## See Also
 
 * [Rows and columns](./rows-and-columns)
 * [Hyperlink](./link)
 * [Sorting](./sort)
 * [Filtering](./filter)
-* [`Ribbon customization`](./ribbon#ribbon-customization)
+* [Ribbon customization](./ribbon#ribbon-customization)

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Open Document By Address in Document Editor Component
-description: Learn here all about open document by address in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Open a Document by URL in ASP.NET Core DOCX Editor | Syncfusion
+description: Open a document from a URL in Syncfusion® ASP.NET Core DOCX Editor to load and display remote files for viewing and editing.
 platform: document-processing
 control: Open Document By Address
 documentation: ug
 ---
 
 
-# Open a document from URL
+# How to Open a Document by URL in ASP.NET Core DOCX Editor
 
-## How to open a document from URL in DocumentEditor
+## Open a document from a URL in the Document Editor
 
-This article explains how to open a document from URL in DocumentEditor.
+This article explains how to open a document from a URL in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
 
 {% tabs %}
@@ -20,7 +20,8 @@ This article explains how to open a document from URL in DocumentEditor.
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/open-by-url/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Open-by-url.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -28,15 +29,15 @@ This article explains how to open a document from URL in DocumentEditor.
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import {
-  DocumentEditorContainerComponent,Toolbar } from '@syncfusion/ej2-react-documenteditor';
+  DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 export class App extends React.Component<{}, {}> {
   container: DocumentEditorContainerComponent;
-  public contentChanged:boolean=false;
-  onClick():void {
+  public contentChanged: boolean = false;
+  onClick(): void {
     let http: XMLHttpRequest = new XMLHttpRequest();
-    //add your url in which you want to open document inside the ""
+    // Add your URL in which you want to open the document inside the "".
     let content = { fileUrl: "" };
     let baseurl: string = "/api/documenteditor/ImportFileURL";
     http.open("POST", baseurl, true);
@@ -44,8 +45,8 @@ export class App extends React.Component<{}, {}> {
     http.onreadystatechange = () => {
         if (http.readyState === 4) {
             if (http.status === 200 || http.status === 304) {
-                //open the SFDT text in Document Editor
-                container.documentEditor.open(http.responseText);
+                // Open the SFDT text in the Document Editor.
+                this.container.documentEditor.open(http.responseText);
             }
         }
     };
@@ -65,16 +66,15 @@ export class App extends React.Component<{}, {}> {
   }
 }
 ReactDOM.render(<App />, document.getElementById('root'));
-
 ```
 
 
 ```csharp
 [AcceptVerbs("Post")]
-public string ImportFileURL([FromBody]FileUrlInfo param)
+public string ImportFileURL([FromBody] FileUrlInfo param)
 {
     try {
-        using(WebClient client = new WebClient())
+        using (WebClient client = new WebClient())
         {
             MemoryStream stream = new MemoryStream(client.DownloadData(param.fileUrl));
             WordDocument document = WordDocument.Load(stream, FormatType.Docx);

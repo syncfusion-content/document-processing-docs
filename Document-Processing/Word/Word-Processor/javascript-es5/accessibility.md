@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Accessibility in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Accessibility in Syncfusion JavaScript (ES5) Document editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in JavaScript DOCX Editor | Syncfusion
+description: The accessibility support in JavaScript DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 control: Accessibility 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in JavaScript (ES5) Document editor component
+# Accessibility in JavaScript DOCX Editor
 
-The accessibility compliance for the Document editor component is outlined below.
+The accessibility compliance for the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -36,18 +36,20 @@ The accessibility compliance for the Document editor component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## Keyboard interaction
+## Keyboard Accessibility
 
-Document editor supports [keyboard shortcuts](./keyboard-shortcut).
+For keyboard accessibility, the Document Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
-## Ensuring accessibility
+The following accessibility compliance summary applies to the Syncfusion JavaScript (ES5) Document Editor component.
 
-The Document editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+## Ensuring Accessibility
 
-The accessibility compliance of the Document editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document editor component with accessibility tools.
+The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/accessibility-cs1" %}
 
-## See also
+## See Also
 
-- [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components](https://ej2.syncfusion.com/javascript/documentation/common/accessibility)
+- [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript components](https://ej2.syncfusion.com/javascript/documentation/common/accessibility)

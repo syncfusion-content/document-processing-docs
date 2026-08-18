@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Add Save button to toolbar in Syncfusion JavaScript PDF Viewer
-description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the JavaScript PDF Viewer component.
+title: How to Add a Save Button to the Toolbar in JavaScript | Syncfusion
+description: Add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the JavaScript (ES5) PDF Viewer using toolbar settings.
 platform: document-processing
 control: Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Save button in built-in toolbar in JavaScript PDF Viewer
+# How to Add a Save Button to the Toolbar in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
-- Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem/) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs/).
+- Save button: The Save button can be defined using [CustomToolbarItemModel](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/customToolbarItem) and included alongside existing items via [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings). Handle the click action using [`toolbarclick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickEventArgs).
 
-- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings/). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem/).
+- Show or hide: The Save button can be shown or hidden using [ToolbarSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarSettings). Predefined items are listed under [`ToolbarItem`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbarItem).
 
 - Enable or disable: The Save button can be enabled or disabled using `enableToolbarItem` (see the API reference linked for the toolbar).
 
@@ -80,7 +80,7 @@ function OnCreateSearch() {
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align property
+## Align property
 
 Specifies the alignment of the Save button within the toolbar.
 
@@ -103,7 +103,7 @@ Sets the CSS class or icon to add as a prefix to the Save button content.
 
 The id property within a CustomToolbarItemModel is required and uniquely identifies each toolbar item for configuration and interaction.
 
-When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of Syncfusion PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
+When defining or customizing toolbar items, assign a specific, descriptive id to each item. These properties are commonly used when defining custom toolbar items with `CustomToolbarItemModel` in the context of PDF Viewer. When configuring the toolbar using the `ToolbarSettings` property, include these properties to customize appearance and behavior.
 
 N> When customizing the Save button, icons or text can be used based on design preference.
 

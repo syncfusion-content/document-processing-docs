@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Extraction Engines in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Text Extraction Engines supported in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Text Extraction Engines in WPF Pdf Viewer control | Syncfusion
+description: Configure text extraction engines in Syncfusion WPF PDF Viewer. Choose between PDFium and SfPdf for optimal text processing performance.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,21 +9,21 @@ documentation: ug
 
 # Text Extraction Engines in WPF Pdf Viewer
 
-Syncfusion&reg; WPF PDF Viewer extracts text information from PDF files through two different engines for performing text search, text selection, creating text markups and more.
+[WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) extracts text information from PDF files through two different engines for text search, text selection, and text markup creation.
 
-* PDFium (Google Chrome’s text extraction engine)
-* SfPdf (Syncfusion’s own text extraction engine)
+* PDFium (Google Chrome's text extraction engine)
+* SfPdf (Syncfusion's own text extraction engine)
 
-N> Before version 19.4.0.48, we used our own text extraction engine (SfPdf) to perform text-based operations in the PDF pages. We have updated our default text extraction engine to PDFium from version 19.4.0.48. 
+N> Before Essential Studio version 19.4.0.48, the SfPdf engine was used as the default for text-based operations in the PDF pages. From version 19.4.0.48 onwards, the default text extraction engine has been changed to PDFium.
 
-The PDFium text extraction engine is recommended for improved performance. However, you may still use our old text extraction engine by setting the [TextExtractionEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_TextExtractionEngine) property to `SfPdf`. Refer to the following code snippet to apply the same.
+The PDFium text extraction engine is recommended for improved performance. However, you may still use the SfPdf text extraction engine by setting the [TextExtractionEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_TextExtractionEngine) property to `SfPdf`. Set this property before loading the PDF document. Refer to the following code snippet to apply the same.
 
 {% tabs %}
 {% highlight c# %}
+using Syncfusion.Windows.PdfViewer;
 
 pdfViewer.TextExtractionEngine = PdfTextExtractionEngine.SfPdf;
-
 {% endhighlight %}
 {% endtabs %}
 
-For additional information about the usage of the text extraction engine, please refer to the [text extraction](https://help.syncfusion.com/wpf/pdf-viewer/extract-text-from-pdf) functionalities.
+For additional information about the usage of the text extraction engine, please refer to the [text extraction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/extract-text-from-pdf) functionalities.

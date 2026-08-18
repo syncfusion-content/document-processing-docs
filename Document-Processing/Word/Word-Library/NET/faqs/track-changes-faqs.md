@@ -1,11 +1,11 @@
 ---
-title: FAQ about Track Changes | DocIO | Syncfusion
-description: Learn about the frequently asked questions about track changes in Word document in the .NET Word (DocIO) library.
+title: FAQ about Track Changes in .NET Word | Syncfusion
+description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about track changes in Word document
+# FAQ about Track Changes in .NET Word
 
 The frequently asked questions about working with track changes in Word documents using DocIO are listed below.
 
@@ -69,7 +69,7 @@ You can **accept or reject track changes by revision type** in the tracked chang
 
 For example, if you like to accept or reject changes of specific revision type (insertions, deletions, formatting, move to, or move from), you can iterate into the revisions in Word document and then accept or reject the particular revision type using Essential DocIO.
 
-The following code example shows how to accept or reject track changes of specific type in the Word document .
+The following code example shows how to accept or reject track changes of specific type in the Word document.
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ For i As Integer = document.Revisions.Count - 1 To 0 Step -1
     End If
     'Resets to last item when accept the moving related revisions.
     If i > document.Revisions.Count - 1 Then
-    i = document.Revisions.Count
+        i = document.Revisions.Count
     End If
 Next
 'Saves and closes the document

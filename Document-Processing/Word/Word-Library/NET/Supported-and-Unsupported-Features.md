@@ -1,13 +1,15 @@
 ---
-title: Supported and Unsupported Features | DocIO | Syncfusion
-description: Learn about the supported and unsupported features in C# using the .NET Word (DocIO) library for document processing.
+title: Supported and Unsupported Features in .NET Word | Syncfusion
+description: Learn about the supported and unsupported features in C# using the .NET Word library for document processing.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Supported and Unsupported Features in Word library
+# Supported and Unsupported Features in .NET Word
 
-This section describes the support and unsupported elements in the DocIO. 
+This section describes the supported and unsupported elements in the DocIO library. 
+
+> **Note:** Support for Silverlight and WinRT platforms is deprecated. The limitations noted for these platforms apply only to legacy applications.
 
 ## Word document features
 
@@ -62,8 +64,8 @@ Yes<br/><br/></td></tr>
 Encryption and Decryption<br/><br/></td><td>
 No<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes—limited [except Word 2013]<br/><br/></td><td>
-Yes—limited [except Word 2013]<br/><br/></td><td>
+Yes – limited [except Word 2013]<br/><br/></td><td>
+Yes – limited [except Word 2013]<br/><br/></td><td>
 N/A<br/><br/></td><td>
 N/A<br/><br/></td></tr>
 <tr>
@@ -151,7 +153,7 @@ No<br/><br/></td></tr>
 </table>
 
 
-### Section features
+### Section Features
 
 <table>
 <thead>  
@@ -257,7 +259,7 @@ Yes<br/><br/></td></tr>
 </table>
 
 
-### Paragraph elements features
+### Paragraph Elements Features
 
 <table>
 <thead>  
@@ -316,7 +318,7 @@ No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
-Pictures (*.bmp, *.jpg, *.png, *.emf, *.tif and *.gif)<br/><br/></td><td>
+<a id="pictures"></a>Pictures (*.bmp, *.jpg, *.png, *.emf, *.tif, and *.gif)<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
@@ -400,8 +402,8 @@ No<br/><br/></td></tr>
 WordArt<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td><td>
-Yes<br/>VML - No<br/></td><td>
-Yes<br/>VML - No<br/></td><td>
+Yes– DrawingML<br/>No– VML<br/></td><td>
+Yes– DrawingML<br/>No– VML<br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
@@ -449,11 +451,20 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
+<tr>
+<td>
+Ink elements<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
+DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)'| markdownify }}<br/><br/></td><td>
+DOCX format only. Additional behavior explained {{'[here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/unsupported-elements-word-to-pdf#ink)'| markdownify }}<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 </tbody>
 </table>
 
 
-### Paragraph features
+### Paragraph Features
 
 <table>
 <thead>  
@@ -595,7 +606,7 @@ Yes<br/><br/></td></tr>
 </table>
 
 
-### Style features
+### Style Features
 
 <table>
 <thead>  
@@ -692,7 +703,7 @@ No<br/><br/></td></tr>
 </table>
 
 
-### Table features
+### Table Features
 
 <table>
 <thead>  
@@ -932,7 +943,7 @@ Yes<br/><br/></td></tr>
 </tbody>
 </table>
 
-### Text features
+### Text Features
 
 <table>
 <tr>
@@ -1130,7 +1141,7 @@ Yes<br/><br/></td></tr>
     <tr><td>AutoTextList field</td><td>No</td></tr>
     <tr><td>Comments field</td><td>Yes</td></tr>
     <tr><td>Compare field</td><td>Yes</td></tr>
-    <tr><td>CreateDate field</td><td>No</td></tr>
+    <tr><td>CreateDate field</td><td>Yes</td></tr>
     <tr><td>Date field</td><td>Yes</td></tr>
     <tr><td>DocProperty field</td><td>Yes</td></tr>
     <tr><td>DocVariable field</td><td>Yes</td></tr>
@@ -1160,7 +1171,7 @@ Yes<br/><br/></td></tr>
     <td>
         Yes <br>
         <strong>Known Limitation:</strong><br>
-        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Not supported on deprecated Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
         Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
     </td>
     </tr>
@@ -1170,7 +1181,7 @@ Yes<br/><br/></td></tr>
     <td>
         Yes <br>
         <strong>Known Limitation:</strong><br>
-        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Not supported on deprecated Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
         Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
     </td>
     </tr>
@@ -1178,7 +1189,7 @@ Yes<br/><br/></td></tr>
     <td>
         Yes <br>
         <strong>Known Limitation:</strong><br>
-        Not supported on Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
+        Not supported on deprecated Silverlight/WinRT platforms. PDF layout limitations may cause incorrect page counts. 
         Requires <code>UpdateDocumentFields()</code> and PDF assemblies in .NET Core/MAUI.
     </td>
     </tr>
@@ -1212,7 +1223,7 @@ Yes<br/><br/></td></tr>
 <table>
 <tr>
 <th>Feature<br/><br/></th>
-<th>Server  and hosted application<br/><br/></th>
+<th>Server and Hosted application<br/><br/></th>
 <th>WASM app<br/><br/></th>
 </tr>
 <tbody>

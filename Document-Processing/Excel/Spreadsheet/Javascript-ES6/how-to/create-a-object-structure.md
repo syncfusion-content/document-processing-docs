@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create a object structure in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Create Objects in TypeScript Spreadsheet | Syncfusion
+description: Create an object structure in TypeScript Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
-control: Create a object structure 
+control: Create an object structure
 documentation: ug
 ---
 
-# Create a object structure in EJ2 TypeScript Spreadsheet control
+# How to Create an Object Structure in TypeScript Spreadsheet
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://helpej2.syncfusion.com/documentation/api/spreadsheet/#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 
 ```js
 { Workbook: {} }
@@ -19,7 +19,7 @@ The following properties are the root level properties of the `Workbook` object.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| activeSheetIndex | number | Specifies active sheet index in the workbook. |
+| activeSheetIndex | number | Specifies the active sheet index in the workbook. |
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 

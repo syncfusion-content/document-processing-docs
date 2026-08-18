@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Working with Interaction Modes in WinForms PDFViewer | Syncfusion&reg;
-description: Learn about Working with Interaction Modes support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Interaction Modes in WinForms PDFViewer | Syncfusion
+description: Interaction modes allow users to perform actions such as text selection, panning, and document navigation within the PDF Viewer control.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Working with Interaction Modes in Windows Forms PDF Viewer
+# Interaction Modes in WinForms PDF Viewer
 
-The [WinForms PDF Viewer](https://www.syncfusion.com/winforms-ui-controls/pdf-viewer) supports following cursor modes for easy interaction with the PDF documents: 
+The [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) supports the following cursor modes for easy interaction with the PDF documents:
 
 * Selection mode 
 * Panning mode

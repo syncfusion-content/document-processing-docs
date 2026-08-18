@@ -1,13 +1,13 @@
 ---
-title: Create, read, and edit Excel files in Blazor Web App | Syncfusion
-description: Learn here how to create, read, and edit Excel files in Blazor web applications using Syncfusion Excel library.
+title: Create, Read, and Edit Excel in Blazor Web App | Syncfusion
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Blazor Web App applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in Blazor Web App
+# Create Excel Files in Blazor Web App with Excel Library
 
-[Syncfusion Excel library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
+[.NET Excel Library for Blazor platform](https://www.syncfusion.com/document-processing/excel-framework/blazor/excel-library) can be used to create, read, edit Excel files. This also convert Excel files to PDF.
 
 ## Create a simple Excel report in Blazor Server-Side Web application
 
@@ -52,8 +52,8 @@ Step 6: Add the following code to create a new button.
 {% capture codesnippet2 %}
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<h2>.NET Excel Library (Essential XlsIO)</h2>
+<p>.NET Excel Library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@CreateDocument">Create Document</button>
 {% endhighlight %}
 {% endtabs %}

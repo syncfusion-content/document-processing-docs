@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Thumbnail Navigation in Angular PDF Viewer | Syncfusion
-description: Discover how to navigate PDF pages using thumbnails in the Syncfusion Angular PDF Viewer control for a visual and intuitive experience.
+title: Page Thumbnail in Angular PDF Viewer | Syncfusion
+description: Use page thumbnail navigation in the Angular PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page thumbnail navigation in Angular PDF Viewer
+# Page Thumbnail Navigation in Angular PDF Viewer
 
 Thumbnails are miniature representations of PDF pages that let users navigate visually. This feature displays page thumbnails and supports quick navigation between pages.
 
@@ -18,7 +18,7 @@ Enable or disable thumbnail navigation using the examples below.
 {% highlight ts tabtitle="Standalone" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
+import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
          ThumbnailViewService, ToolbarService, NavigationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService
@@ -50,7 +50,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% highlight ts tabtitle="Server-Backed" %}
 
 import { Component, OnInit } from '@angular/core';
-import { LinkAnnotationService, BookmarkViewService, MagnificationService,
+import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService, MagnificationService,
          ThumbnailViewService, ToolbarService, NavigationService,
          TextSearchService, AnnotationService, TextSelectionService,
          PrintService

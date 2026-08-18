@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add, Remove, and Edit Annotations in Flutter PDF Viewer | Syncfusion
-description: Learn here all about adding, removing, and editing annotations in a PDF document using the Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: The annotation feature in SfPdfViewer allows users to add, edit, and remove annotations for interactive PDF document review.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add, Remove, Edit Annotations in Flutter PDF Viewer (SfPdfViewer)
+# Add, Remove, Edit Annotations in Flutter PDF Viewer
 
 This section will go through the various functions available in the `SfPdfViewer` for adding, removing, and editing annotations in a PDF document.
 
@@ -17,7 +17,7 @@ This section will go through how to add annotations to a PDF document programmat
 
 ### Add Annotations Programmatically
 
-You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method of the `PdfViewerController` class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotation.
+You can programmatically add a new annotation to the PDF document by creating an annotation instance and providing it as a parameter to the [addAnnotation](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/addAnnotation.html) method of the `PdfViewerController` class. The following example shows how to create an instance of a highlight annotation and add it to the PDF document. Similarly, you can create and add other types of annotations.
 
 {% tabs %}
 {% highlight dart hl_lines="11" %}
@@ -90,7 +90,7 @@ void removeFirstAnnotation() {
 
 ### Remove All Annotations
 
-You can programmatically remove all the annotations from a document by calling the [removeAllAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAllAnnotations.html) method. The optional `pageNumber` parameter can be used to clear the form field data on a specific page. By default, the pageNumber parameter is 0. Refer to the following code example. 
+You can programmatically remove all the annotations from a document by calling the [removeAllAnnotations](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/removeAllAnnotations.html) method. The optional `pageNumber` parameter can be used to clear the annotations on a specific page. By default, the `pageNumber` parameter is 0, which removes annotations from all pages of the PDF document. Refer to the following code example.
 
 {% tabs %}
 {% highlight dart hl_lines="3 8" %}
@@ -138,7 +138,7 @@ This section will go through different methods of editing annotations in a PDF d
 
 ### Edit a Specific Annotation
 
-You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the Annotation collection. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can modify the other properties also.
+You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the Annotation collection. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can also modify the other properties.
 
 {% tabs %}
 {% highlight dart hl_lines="9 10" %}

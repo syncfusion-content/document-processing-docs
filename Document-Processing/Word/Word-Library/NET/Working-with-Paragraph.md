@@ -1,13 +1,13 @@
 ---
-title: Working with Paragraphs in .NET Word library | Syncfusion
-description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word (DocIO) library.
+title: Paragraphs in .NET Word | Syncfusion
+description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Paragraph in Word Library
+# Paragraphs in .NET Word
 
-Paragraph is the basic element in a Word document that contains a textual and graphical contents. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements such as [WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html), [WPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html), and [Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html) and more. The [ParagraphItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ParagraphItem.html) is the base class for the child elements of paragraph. The following elements can be the child elements of a paragraph:
+Paragraph is the basic element in a Word document that contains textual and graphical content. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements such as [WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html), [WPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html), [Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html), and more. The [ParagraphItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ParagraphItem.html) is the base class for the child elements of paragraph. The following elements can be the child elements of a paragraph:
 
 * Text: Represented by an instance of [WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html).
 * Image: Represented by an instance of [WPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html). 
@@ -85,34 +85,37 @@ The following code example illustrates how to modify an existing paragraph.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Paragraphs/Modify-an-existing-paragraph/.NET/Modify-an-existing-paragraph/Program.cs" %}
-FileStream fileStream = new FileStream(@"Test.docx", FileMode.Open, FileAccess.ReadWrite);
-//Loads the template document
-WordDocument document = new WordDocument(fileStream, FormatType.Docx);
-//Gets the text body of first section
-WTextBody textBody = document.Sections[0].Body;
-//Gets the paragraph at index 1
-WParagraph paragraph = textBody.Paragraphs[1];
-//Iterates through the child elements of paragraph
-foreach (ParagraphItem item in paragraph.ChildEntities)
+//Opens the file as Stream
+using (FileStream fileStream = new FileStream(@"Test.docx", FileMode.Open, FileAccess.ReadWrite))
 {
-    if (item is WTextRange)
+    //Loads the template document
+    WordDocument document = new WordDocument(fileStream, FormatType.Docx);
+    //Gets the text body of first section
+    WTextBody textBody = document.Sections[0].Body;
+    //Gets the paragraph at index 1
+    WParagraph paragraph = textBody.Paragraphs[1];
+    //Iterates through the child elements of paragraph
+    foreach (ParagraphItem item in paragraph.ChildEntities)
     {
-        WTextRange text = item as WTextRange;
-        //Modifies the character format of the text
-        text.CharacterFormat.Bold = true;
-        break;
+        if (item is WTextRange)
+        {
+            WTextRange text = item as WTextRange;
+            //Modifies the character format of the text
+            text.CharacterFormat.Bold = true;
+            break;
+        }
     }
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Docx);
+    //Closes the Word document
+    document.Close();
 }
-///Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Closes the Word document
-document.Close();
 {% endhighlight %} 
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument("Test.docx");
 //Gets the text body of first section
 WTextBody textBody = document.Sections[0].Body;
 //Gets the paragraph at index 1
@@ -136,7 +139,7 @@ document.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the template document
-Dim document As New WordDocument("Template.docx")
+Dim document As New WordDocument("Test.docx")
 'Gets the text body of first section
 Dim textBody As WTextBody = document.Sections(0).Body
 'Gets the paragraph at index 1
@@ -423,6 +426,8 @@ A tab stop is a horizontal position that is set for aligning text of the paragra
 
 Each paragraph has its own tab stop collection where the new tab stop can be added and existing tab stop can be removed.
 
+N> The tab position value is specified in points (1 inch = 72 points).
+
 The following code example explains how to add tab stops to the paragraph.
 
 {% tabs %}
@@ -495,6 +500,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### RTL paragraph
 
 You can set RTL (Right-to-left) direction to the paragraph in a Word document. The following code example shows how to set RTL (Right-to-left) for a paragraph in Word document.
+
+N> Setting RTL (Right-to-left) direction also affects the alignment of the paragraph. Set the `HorizontalAlignment` to `Right` for proper RTL alignment.
 
 {% tabs %}
 
@@ -761,6 +768,8 @@ You can remove the styles present in the existing document using the [Remove](ht
 
 The following code example explains how to remove the style from the word document.
 
+N> Removing a style that is applied to paragraphs will revert those paragraphs to the default formatting. Built-in styles cannot be removed using this method.
+
 {% tabs %} 
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Word-document/Remove-particular-style-from-document/.NET/Remove-particular-style-from-document/Program.cs" %}
@@ -802,7 +811,7 @@ Dim styleCollection As IStyleCollection = document.Styles
 'Finds the style with the name "Style1."
 Dim style As WParagraphStyle = CType(styleCollection.FindByName("Style1"), WParagraphStyle)
 'Remove the "Style1" style from the Word document.
-style.Remove
+style.Remove()
 'Saves and closes the document instance.
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
@@ -831,7 +840,7 @@ IWParagraph firstParagraph = section.AddParagraph();
 IWTextRange firstText = firstParagraph.AppendText("A new text is added to the paragraph.");
 firstText.CharacterFormat.FontSize = 14;
 firstText.CharacterFormat.Bold = true;
-firstText.CharacterFormat.TextColor = Color.Green;
+firstText.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Green;
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -977,11 +986,11 @@ firstText.CharacterFormat.Shadow = true;
 firstText.CharacterFormat.SmallCaps = true;
 IWTextRange secondText = firstParagraph.AppendText("This the second text range");
 //Apply formatting for second text range
-secondText.CharacterFormat.HighlightColor = Color.GreenYellow;
+secondText.CharacterFormat.HighlightColor = Syncfusion.Drawing.Color.GreenYellow;
 secondText.CharacterFormat.UnderlineStyle = UnderlineStyle.DotDash;
 secondText.CharacterFormat.Italic = true;
 secondText.CharacterFormat.FontName = "Times New Roman";
-secondText.CharacterFormat.TextColor = Color.Green;
+secondText.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Green;
 //Add new paragraph to the section
 IWParagraph secondParagraph = section.AddParagraph();
 //Add new text to the paragraph
@@ -1103,58 +1112,6 @@ document.Save("Sample.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//Create a new Word document 
-WordDocument document = new WordDocument();
-//Add new section to the document
-IWSection section = document.AddSection();
-//Add new paragraph to the section
-IWParagraph firstParagraph = section.AddParagraph();
-//Add new text to the paragraph
-IWTextRange firstText = firstParagraph.AppendText("This is the first text range. ");
-//Apply formatting for first text range
-firstText.CharacterFormat.Bold = true;
-firstText.CharacterFormat.FontSize = 14;
-firstText.CharacterFormat.Shadow = true;
-firstText.CharacterFormat.SmallCaps = true;
-IWTextRange secondText = firstParagraph.AppendText("This the second text range");
-//Apply formatting for second text range
-secondText.CharacterFormat.HighlightColor = Syncfusion.Drawing.Color.GreenYellow;
-secondText.CharacterFormat.UnderlineStyle = Syncfusion.Drawing.UnderlineStyle.DotDash;
-secondText.CharacterFormat.Italic = true;
-secondText.CharacterFormat.FontName = "Times New Roman";
-secondText.CharacterFormat.TextColor = Syncfusion.Drawing.Color.Green;
-//Add new paragraph to the section
-IWParagraph secondParagraph = section.AddParagraph();
-//Add new text to the paragraph
-IWTextRange thirdText = secondParagraph.AppendText("שלום עולם");
-thirdText.CharacterFormat.Bidi = true;
-//Set language Identifier for right to left characters.
-thirdText.CharacterFormat.LocaleIdBidi = (short)LocaleIDs.he_IL;
-//Add third paragraph to the section.
-IWParagraph thirdParagraph = section.AddParagraph();
-//Add text to the third paragraph
-IWTextRange fourthText = thirdParagraph.AppendText("X");
-IWTextRange fifthText = thirdParagraph.AppendText("2");
-//Apply super script formatting for fifth text range.
-fifthText.CharacterFormat.SubSuperScript = SubSuperScript.SuperScript;
-IWParagraph fourthParagraph = section.AddParagraph();
-//Add text to the fourth paragraph
-IWTextRange sixthText = fourthParagraph.AppendText("m");
-IWTextRange seventhText = fourthParagraph.AppendText("3");
-//Apply sub script formatting for seventh text range
-seventhText.CharacterFormat.SubSuperScript = SubSuperScript.SubScript;
-//Save and close the Word document instance
-MemoryStream stream = new MemoryStream();
-//Save the Word file to MemoryStream
-document.Save(stream, FormatType.Docx);
-document.Close();
-//Save the stream as a file in the device and invoke it for viewing
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Result.docx", "application/msword", stream);
-//Download the helper files from the following link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Paragraphs/Apply-formatting-to-text).
@@ -1190,7 +1147,7 @@ For further information, click [here](https://help.syncfusion.com/document-proce
 
 ## Working with symbols
 
-Symbols are used to add contents such as currencies, numbers, punctuations, etc. DocIO represents symbols with [WSymbol](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSymbol.html) instance. Each symbol can be identified with their character codes.
+Symbols are used to add contents such as currencies, numbers, punctuation, etc. DocIO represents symbols with [WSymbol](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WSymbol.html) instance. Each symbol can be identified with their character codes.
 
 The following code example explains how to add new symbol to the document.
 
@@ -1284,7 +1241,7 @@ document.Close();
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the template document
-WordDocument document = new WordDocument("Sample.docx", FormatType.Docx);
+WordDocument document = new WordDocument("Sample1.docx", FormatType.Docx);
 //Gets the textbody content
 WTextBody textbody = document.Sections[0].Body;
 //Iterates through the paragraphs
@@ -1345,7 +1302,7 @@ Breaks allow the document contents to split into multiple parts to customize the
 * Page break: Starts the content on the next page.
 * Line break: Starts the content in a new line.
 * Column break: Starts the content in the next column.
-* Text wrapping break: Starts the content below to the picture, table, or other items.
+* Text wrapping break: Starts the content below the picture, table, or other items.
 
 The following code example explains how various types of breaks can be appended to the paragraphs.
 
@@ -1449,7 +1406,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Text wrapping break
 
-When including images or other objects in a Word document, the text is wrapped around the objects as per wrapping behavior. If you wish to move the text below to the picture (as like caption), instead of adding an extra line break or empty paragraphs, you can add the text wrapping break to achieve it.
+When including images or other objects in a Word document, the text is wrapped around the objects as per wrapping behavior. If you wish to move the text below the picture (as a caption), instead of adding an extra line break or empty paragraphs, you can add the text wrapping break to achieve it.
 
 The following code example illustrates how to insert a text wrapping break to move the text below to the picture.
 
@@ -1527,7 +1484,7 @@ For further information, click [here](https://help.syncfusion.com/document-proce
 
 ## Working with Text Box
 
-Text box contains a group of textual and graphical contents. DocIO supports to create and manipulate the text box and its formatting by using the [WTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBox.html) instance.
+Text box contains a group of textual and graphical contents. DocIO supports creating and manipulating the text box and its formatting by using the [WTextBox](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextBox.html) instance.
 
 The following code example explains how to add new text box to the paragraph.
 
@@ -1547,10 +1504,12 @@ IWParagraph textboxParagraph = textbox.TextBoxBody.AddParagraph();
 textboxParagraph.AppendText("Text inside text box");
 textboxParagraph = textbox.TextBoxBody.AddParagraph();
 //Adds new picture to textbox body
-FileStream imagestream = new FileStream(@"Mountain-200.jpg", FileMode.Open, FileAccess.ReadWrite);
-IWPicture picture = textboxParagraph.AppendPicture(imagestream);
-picture.Height = 75;
-picture.Width = 50;
+using (FileStream imagestream = new FileStream(@"Mountain-200.jpg", FileMode.Open, FileAccess.ReadWrite))
+{
+    IWPicture picture = textboxParagraph.AppendPicture(imagestream);
+    picture.Height = 75;
+    picture.Width = 50;
+}
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
@@ -1611,6 +1570,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Text box has its own formatting such as outline color, fill effects, text direction, wrap formats, and more. You can also rotate the text box and apply flipping (horizontal and vertical) to it.
 
 The following code example explains how to apply formatting and rotation for text box.
+
+N> The valid value for `Rotation` ranges from 0 to 359 degrees.
 
 {% tabs %}
 
@@ -1733,9 +1694,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to apply built-in and custom styles to the contents of the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/styles#/tailwind).
-* See how to create a Word document with right-to-left language text using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtl#/tailwind).
-* See how to insert breaks to the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/insertbreak#/tailwind).
+* Explore how to apply built-in and custom styles to the contents of the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/styles#/tailwind).
+* See how to create a Word document with right-to-left language text using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/rtl#/tailwind).
+* See how to insert breaks to the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/insertbreak#/tailwind).
 
 ## See Also
 
@@ -1778,6 +1739,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to apply highlight color to fields in a Word document?](https://support.syncfusion.com/kb/article/20092/how-to-apply-highlight-color-to-fields-in-a-word-document)
 * [How to Replace DISPLAYBARCODE Field with Image in DocIO .NET Core?](https://support.syncfusion.com/kb/article/19842/how-to-replace-displaybarcode-field-with-image-in-docio-net-core)
 * [How to resize images to fit owner element in NET Core Word document?](https://support.syncfusion.com/kb/article/21490/how-to-resize-images-to-fit-owner-element-in-net-core-word-document)
+* [How to find and remove highlight color in a .NET Core Word Document](https://support.syncfusion.com/kb/article/22151/how-to-find-and-remove-highlight-color-in-a-net-core-word-document)
+* [How to Retrieve specific Headings with List Numbers in a .NET Core Word Document?](https://support.syncfusion.com/kb/article/17713/how-to-retrieve-specific-headings-with-list-numbers-in-a-net-core-word-document)
+* [How to set the proofing language to text in the Word document in .NET?](https://support.syncfusion.com/kb/article/22694/how-to-set-the-proofing-language-to-text-in-the-word-document-in-net)
+* [How to Apply Style for a Text Range in a Paragraph in .NET?](https://support.syncfusion.com/kb/article/22370/how-to-apply-style-for-a-text-range-in-a-paragraph-in-net)
+* [How to set proofing language for the contents in the Word document in .NET?](https://support.syncfusion.com/kb/article/22783/how-to-set-proofing-language-for-the-contents-in-the-word-document-in-net)
 
 ## Frequently Asked Questions
 

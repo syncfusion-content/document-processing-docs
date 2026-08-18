@@ -1,12 +1,12 @@
 ---
-title: Find item in Word document in .NET Word library | Syncfusion
-description: Find an item in the Word document in C# using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies
+title: Find item in Word document in .NET Word | Syncfusion
+description: Find an item in the Word document in C# using Syncfusion® .NET Word library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Find item in Word document
+# Find item in Word document in .NET Word
 
 Just like you can search for a text in a Word document, you can also search for an item (like image, content control, textbox, and so on). The .NET Word (DocIO) library supports to find an item in Word document based on its properties. With this functionality, you can:
 
@@ -188,9 +188,9 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
     //Load the file stream into a Word document.
     using (WordDocument document = new WordDocument(docStream, FormatType.Docx))
     {
-        //Find all footnote and endnote by EntityType in Word document.
+        //Find all footnotes by EntityType in Word document.
         List<Entity> footNotes = document.FindAllItemsByProperty(EntityType.Footnote, null, null);
-        //Remove the footnotes and endnotes.
+        //Remove the footnotes.
         for (int i = 0; i < footNotes.Count; i++)
         {
             WFootnote footnote = footNotes[i] as WFootnote;
@@ -220,9 +220,9 @@ using (FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAc
 //Load an existing Word document.
 using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {
-    //Find all footnote and endnote by EntityType in Word document.
+    //Find all footnotes by EntityType in Word document.
     List<Entity> footNotes = document.FindAllItemsByProperty(EntityType.Footnote, null, null);
-    //Remove the footnotes and endnotes.
+    //Remove the footnotes.
     for (int i = 0; i < footNotes.Count; i++)
     {
         WFootnote footnote = footNotes[i] as WFootnote;
@@ -247,9 +247,9 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Load an existing Word document.
 Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
-    'Find all footnote and endnote by EntityType in Word document.
+    'Find all footnotes by EntityType in Word document.
     Dim footNotes As List(Of Entity) = document.FindAllItemsByProperty(EntityType.Footnote, Nothing, Nothing)
-    'Remove the footnotes and endnotes.
+    'Remove the footnotes.
     For i = 0 To footNotes.Count - 1
         Dim footnote As WFootnote = TryCast(footNotes(i), WFootnote)
         footnote.OwnerParagraph.ChildEntities.Remove(footnote)
@@ -261,7 +261,7 @@ Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
         'Creates hyperlink instance from field to manipulate the hyperlink.
         Dim hyperlink As Hyperlink = New Hyperlink(TryCast(fields(i), WField))
         'Modifies the Uri of the hyperlink.
-        If hyperlink.Type Is HyperlinkType.WebLink AndAlso hyperlink.TextToDisplay Is "HTML" Then hyperlink.Uri = "http://www.w3schools.com/"
+        If hyperlink.Type = HyperlinkType.WebLink AndAlso hyperlink.TextToDisplay = "HTML" Then hyperlink.Uri = "http://www.w3schools.com/"
     Next
     'Save a Word document.
     document.Save("Sample.docx", FormatType.Docx)
@@ -436,5 +436,7 @@ T> Passing null for both the property names and property values in the above API
 
 * [How to find and replace text in heading paragraphs in a Word document](https://support.syncfusion.com/kb/article/17658/how-to-find-and-replace-text-in-heading-paragraphs-in-a-word-document)
 * [How to replace a logo with text and another image with different text in a Word document](https://support.syncfusion.com/kb/article/17805/how-to-replace-a-logo-with-text-and-another-image-with-different-text-in-a-word-document)
-* [How to Find and Remove a Table by Title in .Net Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
+* [How to Find and Remove a Table by Title in .NET Core Word document?](https://support.syncfusion.com/kb/article/19677/how-to-find-and-remove-a-table-by-title-in-a-word-document)
 * [How to Find and Remove Corrupted Images in .NET Core Word Document?](https://support.syncfusion.com/kb/article/19605/how-to-find-and-remove-corrupted-images-in-net-core-word-document)
+* [How to Delete Bracketed Content from Previous Paragraphs Up to a Specific Word in .NET Core Word Document?](https://support.syncfusion.com/kb/article/21772/how-to-delete-bracketed-content-from-previous-paragraphs-up-to-a-specific-word-in-net-core-word-document)
+* [How to Retrieve and Replace Superscript & Subscript in .NET Core Word?](https://support.syncfusion.com/kb/article/22160/how-to-retrieve-and-replace-superscript--subscript-in-net-core-word)

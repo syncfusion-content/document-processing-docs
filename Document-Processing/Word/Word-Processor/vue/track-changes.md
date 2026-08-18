@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Track changes in Vue Document editor component | Syncfusion
-description: Learn here all about Track changes in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in VueDOCX Editor | Syncfusion
+description: Track changes in Vue DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 control: Track changes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in Vue Document editor component
+# Track Changes in Vue DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 ## Enable track changes in Document Editor
 
@@ -350,3 +350,7 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Online Demo
+
+Explore how to track and review changes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/track-changes.html).

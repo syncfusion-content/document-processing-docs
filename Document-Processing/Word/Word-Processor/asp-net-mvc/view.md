@@ -1,17 +1,17 @@
 ---
 layout: post
-title: View in ASP.NET MVC Document Editor Control | Syncfusion
-description: Learn here all about View in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: View in ASP.NET MVC DOCX Editor | Syncfusion
+description: View in ASP.NET MVC DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View
 documentation: ug
 ---
 
-# View in DocumentEditor
+# View in ASP.NET MVC DOCX Editor
 
-## Web Layout
+## Web layout
 
-DocumentEditor allows to change the view to web layout and print using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html)
+The Document Editor allows you to change the view to web layout using the [`layoutType`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html).
 
 
 {% tabs %}
@@ -19,13 +19,18 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 {% include code-snippet/document-editor/asp-net-mvc/web-layout/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Web-layout.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
+
+### Online demo
+
+Explore how to view Word documents in web layout using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/weblayout#/tailwind3).
 
 ## Ruler
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+The ruler displays the document margins, tab stops, and indentation guides, allowing consistent formatting in the Document Editor.
 
-The following example illustrates how to enable ruler in Document Editor
+The following example illustrates how to enable the ruler in the Document Editor.
 
 
 {% tabs %}
@@ -37,11 +42,15 @@ The following example illustrates how to enable ruler in Document Editor
 {% endhighlight %}
 {% endtabs %}
 
-## Navigation Pane
+### Online demo
 
-Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
+Explore how to use the ruler in the ASP.NET MVC Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/ruler#/tailwind3).
 
-The following example illustrates how to enable heading navigation pane in Document Editor
+## Navigation pane
+
+The heading navigation pane allows users to navigate documents by heading quickly, enhancing their ability to move through the document efficiently.
+
+The following example illustrates how to enable the heading navigation pane in the Document Editor.
 
 
 {% tabs %}
@@ -52,3 +61,7 @@ The following example illustrates how to enable heading navigation pane in Docum
 {% include code-snippet/document-editor/asp-net-mvc/heading-navigation/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+### Online demo
+
+Explore how to navigate through headings in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headingnavigation#/tailwind3).

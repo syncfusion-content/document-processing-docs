@@ -1,14 +1,14 @@
 ---
-title: Convert Word to Image in Windows Forms | Syncfusion 
-description: Convert Word to image in Windows Forms using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in Windows Forms  | Syncfusion
+description: Convert Word to image in Windows Forms using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in Windows Forms
+# Convert Word to Image in Windows Forms 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Windows Forms**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Windows Forms**.
 
 ## Steps to convert Word document to Image in Windows Forms
 
@@ -37,6 +37,8 @@ Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -44,7 +46,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows.
+Step 4: Add a new button in **Form1.Designer.cs** to convert the Word document to image as follows.
 
 {% tabs %}
 
@@ -130,7 +132,7 @@ By executing the program, you will get the **image** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new Windows Forms Application project.
+Step 1: Open JetBrains Rider and create a new Windows Forms Application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -164,6 +166,8 @@ Step 3: Include the following namespaces in the **Form1.Designer.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Drawing;
+using System.Drawing.Imaging;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 
@@ -171,7 +175,7 @@ using Syncfusion.DocIO.DLS;
 
 {% endtabs %}
 
-Step 4: Add a new button in **Form1.Designer.cs** to create Word file as follows.
+Step 4: Add a new button in **Form1.Designer.cs** to convert the Word document to image as follows.
 
 {% tabs %}
 
@@ -252,6 +256,6 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 

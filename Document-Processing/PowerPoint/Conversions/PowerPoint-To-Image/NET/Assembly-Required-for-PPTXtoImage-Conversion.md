@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for PowerPoint Presentation | Syncfusion
-description: This section explains about how to assemblies required to convert powerpoint presentation to PDF for various platforms and frameworks.
+title: Assemblies Required for PPTX to Image Conversion | Syncfusion
+description: This section explains about how to assemblies required to convert powerpoint presentation to Image for various platforms and frameworks.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required for PowerPoint Presentation
+# Assemblies Required for PowerPoint to Image Conversion
 
 ## Converting PowerPoint Presentation to Image
 
@@ -65,7 +65,7 @@ Syncfusion.SfChart.UWP<br/>
 </tr>
 </table>
 
-T> 1. If you encounter issues while using the .NET PowerPoint library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
+T> 1. If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 T> 2. Switch to NuGet packages for a seamless experience:
 T>    * Get frequent bug fixes every week.
 T>    * Upgrade quickly with no manual effort.
@@ -100,7 +100,7 @@ N> 2. Starting with the v27.1.x, if you reference "Syncfusion.PresentationRender
 
 ## Converting Charts
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the PowerPoint Presentation into image.
+The following assemblies are required in addition to the above-mentioned assemblies to convert the chart present in the PowerPoint Presentation to an image.
 <table>
 <tr>
 <thead>

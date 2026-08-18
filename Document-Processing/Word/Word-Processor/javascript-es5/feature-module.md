@@ -1,27 +1,29 @@
 ---
 layout: post
-title: Feature module in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Feature module in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Feature Modules in JavaScript DOCX Editor | Syncfusion
+description: Modules in JavaScript DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 platform: document-processing
 control: Feature module 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature module in JavaScript (ES5) Document editor control
+# Feature Modules in JavaScript DOCX Editor
 
-Document Editor features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of Document Editor that can be included as required:
+
 * **Print** - Prints the document.
 * **SfdtExport** - Exports the document as Syncfusion Document Text (.SFDT) file.
-* **Selection** - Selects a portion of the document and copy it to the clipboard.
-* **Search** - Searches specific text and navigate between the results.
+* **Selection** - Selects a portion of the document and copies it to the clipboard.
+* **Search** - Searches specific text and navigates between the results.
 * **WordExport** - Exports the document as Word Document (.DOCX) file.
 * **TextExport** - Exports the document as Text Document (.TXT) file.
-* **Editor** - Performs all kind of editing operations.
+* **Editor** - Performs all kinds of editing operations.
 * **EditorHistory** - Maintains the history of editing operations so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
 
 >In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a Document Editor instance.
+
 Refer to the following table.
 
 | Module | Dependent modules to be injected for extending the functionality of Document Editor in your application | Property to enable the functionality for a Document Editor instance |
@@ -47,9 +49,11 @@ Refer to the following table.
 |TableOfContentsDialog|`DocumentEditor.Inject(Selection, Editor, TableOfContentsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTableOfContentsDialog: true });`|
 |ListDialog|`DocumentEditor.Inject(Selection, Editor, ListDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableListDialog: true });`|
 |TablePropertiesDialog|`DocumentEditor.Inject(Selection, Editor, TablePropertiesDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTablePropertiesDialog: true });`|
-|CellOptionsDialog|`DocumentEditor.Inject(Selection, Editor, CellOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTablePropertiesDialog: true });`|
+|CellOptionsDialog|`DocumentEditor.Inject(Selection, Editor, CellOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableCellOptionsDialog: true });`|
 |BordersAndShadingDialog|`DocumentEditor.Inject(Selection, Editor, BordersAndShadingDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableBordersAndShadingDialog: true });`|
 |TableOptionsDialog|`DocumentEditor.Inject(Selection, Editor, TableOptionsDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableTableOptionsDialog: true });`|
 |StylesDialog|`DocumentEditor.Inject(Selection, Editor, StylesDialog,StyleDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true ,enableStylesDialog: true });`|
 |StyleDialog|`DocumentEditor.Inject(Selection, Editor, StyleDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true });`|
-|BulletsAndNumberingDialog|`DocumentEditor.Inject(Selection, Editor, BulletsAndNumberingDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableStyleDialog: true });`|
+|BulletsAndNumberingDialog|`DocumentEditor.Inject(Selection, Editor, BulletsAndNumberingDialog)`|`let documenteditor: DocumentEditor = new DocumentEditor({ isReadOnly: false, enableEditor: true, enableBulletsAndNumberingDialog: true });`|
+
+These modules should be injected into the documenteditor using the `Inject` directive.

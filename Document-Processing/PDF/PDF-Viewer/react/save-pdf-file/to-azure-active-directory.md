@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Save PDF files to Azure Active Directory (AAD) in React PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion React PDF Viewer component and a server-backed web service.
+title: To Azure Active Directory in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to Azure Active Directory (AAD) using a server-backed web service for authentication and storage.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Azure Active Directory (AAD) in React
+# Save PDF Files to Azure Active Directory in React PDF Viewer
 
-### Overview
+## Overview
 
 The React PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
@@ -93,7 +93,7 @@ The React PDF Viewer component supports loading and saving PDF files using Azure
 ### Step 6: Client-side configuration
 
 1. Run the React sample:
-   - Start the React sample that includes the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer.
+   - Start the React sample that includes the PDF Viewer.
 
 2. Load a PDF from AAD:
    - When the user clicks the **Load from AAD** button, the React client will make an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.
@@ -115,7 +115,7 @@ The React PDF Viewer component supports loading and saving PDF files using Azure
 ### Server-side code snippets
 ```cs
 string tenantId = "Provide the tenant id here";
-string clientId = "Provide the clientid here";
+string clientId = "Provide the client ID here";
 string clientSecret = "Provide the client secret here";
 string blobServiceEndpoint = "https://your-storage-account.blob.core.windows.net";
 string containerName = "Provide the container name here";

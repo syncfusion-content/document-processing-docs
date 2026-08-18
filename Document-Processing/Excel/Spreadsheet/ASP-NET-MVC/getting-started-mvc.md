@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Getting Started with EJ2 ASP.NET MVC Spreadsheet Control |Syncfusion
-description: Checkout and learn about getting started with EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET MVC Spreadsheet. Explore setup, features, examples, and customization options.
 platform: document-processing
-control: Getting Started Mvc
+control: Getting Started MVC
 documentation: ug
 ---
 
 
-# Getting Started with ASP.NET MVC Spreadsheet Control
+# Getting Started with ASP.NET MVC Spreadsheet
 
-This section briefly explains about how to include [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) control in your ASP.NET MVC application using Visual Studio.
+This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) control in your ASP.NET MVC application using Visual Studio.
 
 ## Prerequisites
 
-[System requirements for ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
+[System requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls](https://ej2.syncfusion.com/aspnetmvc/documentation/system-requirements)
 
-## Create ASP.NET MVC application with HTML helper
+## Create ASP.NET MVC Application with HTML Helper
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/overview/getting-started/introduction/getting-started#create-your-first-app)
+* [Create an ASP.NET Web Application (.NET Framework) using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started#create-your-first-app)
 
-* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC package in the application
 
-## Install ASP.NET MVC package in the application
+Open the NuGet package manager UI in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it or run the following command to achieve the same.
 
-To add `ASP.NET MVC` controls in the application, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) and then install it.
+> Make sure that the `Microsoft.AspNet.Mvc` package and its dependency packages are updated to the latest version.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -34,63 +34,67 @@ Install-Package Syncfusion.EJ2.MVC5 -Version {{ site.ej2version }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are available in [nuget.org.](https://www.nuget.org/packages?q=syncfusion.EJ2) Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetmvc/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments. The Syncfusion.EJ2.MVC5 NuGet package has dependencies, [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for validating Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.EJ2). Refer to [NuGet packages topic](https://ej2.syncfusion.com/aspnetmvc/documentation/nuget-packages) to learn more about installing NuGet packages in various OS environments.
 
 ## Add namespace
 
-Add **Syncfusion.EJ2** namespace reference in `Web.config` under `Views` folder.
+Add **Syncfusion.EJ2** namespace reference to the **\<namespaces\>** section in the `~/Views/Web.config` file.
 
 ```
-<namespaces>
-    <add namespace="Syncfusion.EJ2"/>
-</namespaces>
+<add namespace="Syncfusion.EJ2"/>
 ```
+
+## Register a Syncfusion License Key
+
+Before initializing the Syncfusion ASP.NET MVC Spreadsheet control, generate a Syncfusion license key and register it in the application.
+
+- [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+- [Register a Syncfusion License Key in an ASP.NET MVC Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#aspnet-mvc)
 
 ## Add stylesheet and script resources
 
-Here, the theme and script is referred using CDN inside the `<head>` of `~/Views/Shared/_Layout.cshtml` file as follows,
+Add the stylesheet and script references at the end of the **\<head\>** section in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<head>
-    ...
-    <!-- Syncfusion ASP.NET MVC controls styles -->
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
-    <!-- Syncfusion ASP.NET MVC controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
-</head>
+<!-- Syncfusion ASP.NET MVC controls styles -->
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
+
+<!-- Syncfusion ASP.NET MVC controls scripts -->
+<script src="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/dist/ej2.min.js"></script>
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Checkout the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn different ways (CDN, NPM package, and [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) to refer styles in ASP.NET MVC application, and to have the expected appearance for Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls. Checkout the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your ASP.NET MVC application.
+To use a different theme, replace `fluent.css` with the theme of your choice (for example, `tailwind3.css`, `bootstrap5.css`, etc.) in the above code.
+
+N> To learn other ways to load themes or scripts (such as NPM packages or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)), see the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) and [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> script manager
 
-Also, register the script manager `EJS().ScriptManager()` at the end of `<body>` in the `~/Views/Shared/_Layout.cshtml` file as follows.
+Register the script manager `EJS().ScriptManager()` at the end of the **\<body\>** section in the `~/Views/Shared/_Layout.cshtml` file, as shown in the following example.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-<body>
-...
-    <!-- Syncfusion ASP.NET MVC Script Manager -->
-    @Html.EJS().ScriptManager()
-</body>
+<!-- Syncfusion ASP.NET MVC Script Manager -->
+@Html.EJS().ScriptManager()
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add ASP.NET MVC Spreadsheet control
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control in `~/Views/Home/Index.cshtml` page.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control in `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/spreadsheet/asp-net-mvc/getting-started-mvc/razor %}
 {% endhighlight %}
 {% endtabs %}
+
+> **Note:** The [`openUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#open) and [`saveUrl`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save#save) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Open and Save`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/open-save) section.
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet control will be rendered in the default web browser.
 
@@ -100,7 +104,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-Get
 
 ## See also
 
-* [Data Binding](./data-binding)
+* [Create a Project using Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Extension](https://ej2.syncfusion.com/aspnetmvc/documentation/getting-started/project-template)
 * [Open and Save](./open-save)
-
-N> You can refer to our [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) feature tour page for its groundbreaking feature representations. You can also explore our [ASP.NET MVC Spreadsheet example](https://ej2.syncfusion.com/aspnetmvc/Spreadsheet/DefaultFunctionalities#/material) that shows you how present and manipulate data, including editing, formulas, formatting, importing, and exporting.
+* [Data Binding](./data-binding)

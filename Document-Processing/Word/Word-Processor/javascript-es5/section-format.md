@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Section format in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Section format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Section Format in JavaScript DOCX Editor | Syncfusion
+description: The section format feature in JavaScript DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
 control: Section format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in JavaScript (ES5) Document editor control
+# Section Format in JavaScript DOCX Editor
 
-Document Editor supports various section formatting such as page size, page margins, and more.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
@@ -67,6 +67,10 @@ documenteditor.selection.sectionFormat.columns = [column, column];
 documenteditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
+### Online Demo
+
+Explore how to format Word documents with multiple columns using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/multiple-columns.html).
+
 ## Breaks
 
 You can insert column break. The following code example illustrates how to insert a column break.
@@ -90,6 +94,10 @@ The following code example illustrates how to insert a continuous section break.
 ```js
 container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
+
+## Online Demo
+
+Explore how to apply section formatting in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/section-formatting.html).
 
 ## See Also
 

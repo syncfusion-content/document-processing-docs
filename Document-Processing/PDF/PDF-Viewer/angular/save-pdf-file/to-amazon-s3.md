@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about how to save PDF files to AWS S3 in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: To Amazon S3 in Angular PDF Viewer | Syncfusion
+description: Save PDF files from the Angular PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: Save PDF files to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to AWS S3 in Angular
+# Save PDF Files to AWS S3 in Angular PDF Viewer
 
 The Angular PDF Viewer component supports saving PDF files to AWS S3 using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include notes on prerequisites and security considerations for production use.
 
@@ -18,7 +18,7 @@ Follow the steps below to save a PDF file to AWS S3 from a browser-based Angular
 
 **Step 1:** Create a PDF Viewer sample in Angular
 
-Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in TypeScript. This will set up the basic structure of your PDF Viewer application.
+Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample in Angular. This will set up the basic structure of your PDF Viewer application.
 
 **Step 2:** Modify the `src/app/app.ts` File in the Angular Project
 
@@ -34,7 +34,7 @@ N> Replace the placeholder values with the AWS region and credentials. For produ
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this with your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -89,7 +89,7 @@ N> Replace **Your Bucket Name** and **Your Key** with the target S3 bucket and o
 ```typescript
 private s3 = new AWS.S3();
 
-saveDocument() {
+SavePdfToBlob() {
     var viewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
     viewer.saveAsBlob().then((value: Blob) => {
       const reader = new FileReader();
@@ -141,7 +141,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;

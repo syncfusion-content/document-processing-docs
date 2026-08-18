@@ -23,28 +23,23 @@ The following code example demonstrates how to initialize a default fallback fon
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Initialize-default-fallback-fonts/.NET/Initialize-default-fallback-fonts/Program.cs" %}
-
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Use a set of default FallbackFont collections for IPresentation.
+    pptxDoc.FontSettings.FallbackFonts.InitializeDefault();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Use a sets of default FallbackFont collection to IPresentation.
-        pptxDoc.FontSettings.FallbackFonts.InitializeDefault();
-        //Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        //Reset the stream position.
+        stream.Position = 0;
+        //Create the output image file stream.
+        using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Reset the stream position.
-            stream.Position = 0;
-            //Create the output image file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.jpg"))
-            {
-                //Copy the converted image stream into created output stream.
-                stream.CopyTo(fileStreamOutput);
-            }
+            //Copy the converted image stream into created output stream.
+            stream.CopyTo(fileStreamOutput);
         }
     }
 }
@@ -61,39 +56,35 @@ The following code example demonstrates how a user can add fallback fonts based 
 {% tabs %}
 
 {% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Fallback-fonts-based-on-scripttype/.NET/Fallback-fonts-based-on-scripttype/Program.cs" %}
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Adds fallback font for "Arabic" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Arabic, "Arial, Times New Roman");
+    //Adds fallback font for "Hebrew" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Hebrew, "Arial, Courier New");
+    //Adds fallback font for "Hindi" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Hindi, "Mangal, Nirmala UI");
+    //Adds fallback font for "Chinese" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Chinese, "DengXian, MingLiU");
+    //Adds fallback font for "Japanese" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Japanese, "Yu Mincho, MS Mincho");
+    //Adds fallback font for "Thai" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
+    //Adds fallback font for "Korean" script type.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Adds fallback font for "Arabic" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Arabic, "Arial, Times New Roman");
-        //Adds fallback font for "Hebrew" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Hebrew, "Arial, Courier New");
-        //Adds fallback font for "Hindi" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Hindi, "Mangal, Nirmala UI");
-        //Adds fallback font for "Chinese" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Chinese, "DengXian, MingLiU");
-        //Adds fallback font for "Japanese" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Japanese, "Yu Mincho, MS Mincho");
-        //Adds fallback font for "Thai" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Thai, "Tahoma, Microsoft Sans Serif");
-        //Adds fallback font for "Korean" script type.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Korean, "Malgun Gothic, Batang");
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        //Reset the stream position.
+        stream.Position = 0;
+        //Create the output image file stream.
+        using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Reset the stream position.
-            stream.Position = 0;
-            //Create the output image file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.jpg"))
-            {
-                //Copy the converted image stream into created output stream.
-                stream.CopyTo(fileStreamOutput);
-            }
+            //Copy the converted image stream into created output stream.
+            stream.CopyTo(fileStreamOutput);
         }
     }
 }
@@ -109,32 +100,28 @@ The following code example demonstrates how a user can add fallback fonts for Sy
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]" %}
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream("Template.pptx", FileMode.Open, FileAccess.Read))
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Fallback-symbols-based-on-scripttype/.NET/Fallback-symbols-based-on-scripttype/Program.cs" %}
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Adds fallback font for basic symbols like bullet characters.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
+    //Adds fallback font for mathematics symbols.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
+    //Adds fallback font for emojis.
+    pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Adds fallback font for basic symbols like bullet characters.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Symbols, "Segoe UI Symbol, Arial Unicode MS, Wingdings");
-        //Adds fallback font for mathematics symbols.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Mathematics, "Cambria Math, Noto Sans Math, Segoe UI Symbol, Arial Unicode MS");
-        //Adds fallback font for emojis.
-        pptxDoc.FontSettings.FallbackFonts.Add(ScriptType.Emoji, "Segoe UI Emoji, Noto Color Emoji, Arial Unicode MS");  
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        //Reset the stream position.
+        stream.Position = 0;
+        //Create the output image file stream.
+        using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Reset the stream position.
-            stream.Position = 0;
-            //Create the output image file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.jpg"))
-            {
-                //Copy the converted image stream into created output stream.
-                stream.CopyTo(fileStreamOutput);
-            }
+            //Copy the converted image stream into created output stream.
+            stream.CopyTo(fileStreamOutput);
         }
     }
 }
@@ -153,38 +140,34 @@ The following code example demonstrates how users can add fallback fonts by usin
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Fallback-fonts-for-Unicode-range/.NET/Fallback-fonts-for-Unicode-range/Program.cs" %}
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream(@"Template.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Adds fallback font for specific unicode range.
+    // Arabic.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0600, 0x06ff, "Arial"));
+    // Hebrew.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0590, 0x05ff, "Arial"));
+    // Hindi.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0900, 0x097F, "Mangal"));
+    // Chinese.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x4E00, 0x9FFF, "DengXian"));
+    // Japanese.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x3040, 0x309F, "MS Mincho"));
+    // Korean.
+    pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0xAC00, 0xD7A3, "Malgun Gothic"));
+    //Initialize the PresentationRenderer to perform image conversion.
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Convert PowerPoint slide to image as stream.
+    using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
-        //Adds fallback font for specific unicode range.
-        // Arabic.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0600, 0x06ff, "Arial"));
-        // Hebrew.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0590, 0x05ff, "Arial"));
-        // Hindi.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x0900, 0x097F, "Mangal"));
-        // Chinese.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x4E00, 0x9FFF, "DengXian"));
-        // Japanese.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0x3040, 0x309F, "MS Mincho"));
-        // Korean.
-        pptxDoc.FontSettings.FallbackFonts.Add(new FallbackFont(0xAC00, 0xD7A3, "Malgun Gothic"));
-        //Initialize the PresentationRenderer to perform image conversion.
-        pptxDoc.PresentationRenderer = new PresentationRenderer();
-        //Convert PowerPoint slide to image as stream.
-        using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
+        //Reset the stream position.
+        stream.Position = 0;
+        //Create the output image file stream.
+        using (FileStream fileStreamOutput = File.Create("Output.jpg"))
         {
-            //Reset the stream position.
-            stream.Position = 0;
-            //Create the output image file stream.
-            using (FileStream fileStreamOutput = File.Create("Output.jpg"))
-            {
-                //Copy the converted image stream into created output stream.
-                stream.CopyTo(fileStreamOutput);
-            }
+            //Copy the converted image stream into created output stream.
+            stream.CopyTo(fileStreamOutput);
         }
     }
 }
@@ -202,13 +185,10 @@ The following code example demonstrates how user can modify or customize the exi
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-Image-conversion/Modify-the-exiting-fallback-fonts/.NET/Modify-the-exiting-fallback-fonts/Program.cs" %}
 
-//Load the PowerPoint presentation into stream.
-using (FileStream fileStreamInput = new FileStream(@"Template.pptx", FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Template.pptx"))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
-    {
-        //Initialize the PresentationRenderer to perform image conversion.
+    //Initialize the PresentationRenderer to perform image conversion.
         pptxDoc.PresentationRenderer = new PresentationRenderer();
         //Use a sets of default FallbackFont collection to IPresentation.
         pptxDoc.FontSettings.FallbackFonts.InitializeDefault();
@@ -233,7 +213,6 @@ using (FileStream fileStreamInput = new FileStream(@"Template.pptx", FileMode.Op
             }
         }
     }
-}
 {% endhighlight %}
 
 {% endtabs %}
@@ -242,7 +221,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Supported script types
 
-The following table illustrates the supported script types by the .NET PowerPoint library (Presentation) in Presentation to Image conversion.
+The following table illustrates the supported script types by the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in Presentation to Image conversion.
 
 <table>
 <thead> 
@@ -559,4 +538,4 @@ Malgun Gothic, Batang
 </tr>
 </table>
 
-N> The .NET PowerPoint Library (Presentation) uses System.Drawing functionalities for PowerPoint to image conversion conversion in .NET Framework applications. And System.Drawing itself uses a fallback font to preserve the Unicode text while drawing the text in the image. So, these Fallback fonts APIs are **not supported in .NET Framework**.
+N> The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) uses System.Drawing functionalities for PowerPoint to image conversion conversion in .NET Framework applications. And System.Drawing itself uses a fallback font to preserve the Unicode text while drawing the text in the image. So, these Fallback fonts APIs are **not supported in .NET Framework**.

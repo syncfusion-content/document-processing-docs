@@ -1,11 +1,11 @@
 ---
-title: What is the supported length of data validation in Excel | Syncfusion
-description: Learn about the maximum supported text length for data validation in Excel using Syncfusion .NET Excel library (XlsIO).
+title: Data Validation Limits in .NET Excel Library | Syncfusion
+description: Data validation text limit describes the maximum supported text length for data validation in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the maximum supported text length for data validation in Excel?
+# Maximum Data Validation Text Length in .NET Excel Library
 
 The maximum supported text length for data validation in Excel is **256 characters**.

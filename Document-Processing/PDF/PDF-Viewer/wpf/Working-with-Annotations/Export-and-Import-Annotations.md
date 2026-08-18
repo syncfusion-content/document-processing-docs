@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export and Import Annotations in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Export and Import information about annotations in the FDF and XFDF formats using WPF Pdf Viewer.
+title: Export and Import Annotations in WPF Pdf Viewer | Syncfusion
+description: The export and import annotations feature in WPF PDF Viewer enables sharing annotation data in FDF and XFDF formats for seamless collaboration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -18,12 +18,12 @@ The required data format can be chosen from the [AnnotationDataFormat](https://h
 
 ## Exporting annotations
 
-The ExportAnnotations method exports the annotations added in the document to a file or stream in specified file format. The annotation data format should be given as an arguments.
+The ExportAnnotations method exports the annotations added in the document to a file or stream in specified file format. The annotation data format should be given as an argument.
 
 {% tabs %}
 {% highlight C# %}
-//Export annotations to "fdf" data format to file 
-pdfViewer.ExportAnnotations("Annotation.fdf ", AnnotationDataFormat.fdf);
+//Export annotations to "fdf" data format to file
+pdfViewer.ExportAnnotations("Annotation.fdf", AnnotationDataFormat.fdf);
 
 //Export annotations to "fdf" data format to stream
 Stream stream = new MemoryStream();
@@ -34,7 +34,7 @@ pdfViewer.ExportAnnotations(stream, AnnotationDataFormat.fdf);
 
 ## Importing annotations
 
-The ImportAnnotations method imports the annotations from the file or file stream of a specified type and fills the annotations into the loaded PDF document. The full path of file or file stream contains the annotation information. The annotation data format should be given as the arguments.
+The ImportAnnotations method imports the annotations from the file or file stream of a specified type and fills the annotations into the loaded PDF document. The full path of the file or file stream that contains the annotation information should be provided. The annotation data format should be given as the argument.
 
 {% tabs %}
 {% highlight C# %}

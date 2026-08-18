@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mvc in Vue Document editor component | Syncfusion
-description: Learn here all about Mvc in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: ASP.NET MVC Web Service in Vue DOCX Editor | Syncfusion
+description: Configure ASP.NET MVC web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Mvc 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Mvc in Vue Document editor component
+# ASP.NET MVC Web Service in Vue DOCX Editor
 
 DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
 
@@ -96,11 +96,11 @@ The following example code illustrates how to write a Web API for restrict editi
     [HttpPost]
     [EnableCors("*", "*", "*")]
     [Route("RestrictEditing")]
-    public string[] RestrictEditing([FromBody]CustomRestrictParameter param)
+    public string[] RestrictEditing([FromBody] CustomRestrictParameter param)
     {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return Syncfusion.EJ2.DocumentEditor.WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return Syncfusion.EJ2.DocumentEditor.WordDocument.ComputeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
 
     public class CustomRestrictParameter
@@ -108,6 +108,7 @@ The following example code illustrates how to write a Web API for restrict editi
         public string passwordBase64 { get; set; }
         public string saltBase64 { get; set; }
         public int spinCount { get; set; }
+        public string algorithmSid { get; set; }
     }
 ```
 

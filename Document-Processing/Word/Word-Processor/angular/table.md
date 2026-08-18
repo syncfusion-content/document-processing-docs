@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Table in Angular Document editor component | Syncfusion
-description: Learn here all about Table in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Tables in Angular DOCX Editor | Syncfusion
+description: Tables in Angular DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in Angular Document editor component
+# Tables in Angular DOCX Editor
 
-Tables are an efficient way to present information. Document Editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
-You can create and insert a table at cursor position by specifying the required number of rows and columns.
+You can create and insert a table at the cursor position by specifying the required number of rows and columns.
 
 Refer to the following sample code.
 
@@ -24,7 +24,7 @@ Refer to the following sample code.
 
 ## Set the maximum number of Rows when inserting a table
 
-You can use the [maximumRows](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#maximumrows/) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+You can use the [maximumRows](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
 
 ```ts
 @Component({
@@ -37,15 +37,15 @@ export class AppComponent {
 }
 ```
 
-When the maximum row limit is reached, an alert will appear, as follow 
+When the maximum row limit is reached, an alert will appear, as follows
 
-![Row Limit Alert](images/Row_Limit_Alert.PNG) 
+![Row Limit Alert](images/Row_Limit_Alert.PNG)
 
->Note: The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
+N> The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
 
 ## Set the maximum number of Columns when inserting a table
 
-You can use the [maximumColumns](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#maximumcolumns/) property to set the maximum number of Columns allowed while inserting a table in the Document Editor component.
+You can use the [maximumColumns](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#maximumcolumns) property to set the maximum number of Columns allowed while inserting a table in the Document Editor component.
 
 Refer to the following sample code.
 
@@ -60,15 +60,15 @@ export class AppComponent {
 }
 ```
 
-When the maximum column limit is reached, an alert will appear, as follow 
+When the maximum column limit is reached, an alert will appear, as follows
 
-![Column Limit Alert](images/Column_Limit_Alert.PNG) 
+![Column Limit Alert](images/Column_Limit_Alert.PNG)
 
->Note: The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
+N> The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertrow/) method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertrow) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -81,14 +81,14 @@ Refer to the following sample code.
 //Inserts a row below the row at cursor position
 this.documentEditor.editor.insertRow();
 //Inserts a row above the row at cursor position
-this.documentEditor.editor.insertRow(false);
+this.documentEditor.editor.insertRow(true);
 //Inserts three rows below the row at cursor position
-this.documentEditor.editor.insertRow(true, 3);
+this.documentEditor.editor.insertRow(false, 3);
 ```
 
 ## Insert columns
 
-You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertcolumn/) method. This method accepts the following parameters:
+You can add a column (or several columns) to the left or right of the column at cursor position by using the [`insertColumn`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertcolumn) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -101,9 +101,9 @@ Refer to the following sample code.
 //Insert a column to the right of the column at cursor position.
 this.documentEditor.editor.insertColumn();
 //Insert a column to the left of the column at cursor position.
-this.documentEditor.editor.insertColumn(false);
+this.documentEditor.editor.insertColumn(true);
 //Insert two columns to the left of the column at cursor position.
-this.documentEditor.editor.insertColumn(false, 2);
+this.documentEditor.editor.insertColumn(true, 2);
 ```
 
 ### Select an entire table
@@ -122,7 +122,7 @@ You can select the entire row at cursor position by using the following sample c
 this.documentEditor.selection.selectRow();
 ```
 
-If current selection spans across cells of different rows, all these rows will be selected.
+If the current selection spans across cells of different rows, all these rows will be selected.
 
 ### Select column
 
@@ -132,7 +132,7 @@ You can select the entire column at cursor position by using the following sampl
 this.documentEditor.selection.selectColumn();
 ```
 
-If current selection spans across cells of different columns, all these columns will be selected.
+If the current selection spans across cells of different columns, all these columns will be selected.
 
 ### Select cell
 
@@ -144,7 +144,7 @@ this.documentEditor.selection.selectCell();
 
 ## Delete table
 
-Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#deletetable/) method of editor instance, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.editor.deleteTable();
@@ -152,7 +152,7 @@ this.documentEditor.editor.deleteTable();
 
 ## Delete row
 
-Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#deleterow/) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.editor.deleteRow();
@@ -160,7 +160,7 @@ this.documentEditor.editor.deleteRow();
 
 ## Delete column
 
-Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#deletecolumn/) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.editor.deleteColumn();
@@ -168,11 +168,11 @@ this.documentEditor.editor.deleteColumn();
 
 ## Merge cells
 
-You can merge cells vertically, horizontally, or combination of both to a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
+You can merge cells vertically, horizontally, or a combination of both, into a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
 Refer to the following sample code.
 
 ```typescript
-this.documentEditor.editor.mergeCells()
+this.documentEditor.editor.mergeCells();
 ```
 
 ## Positioning the table
@@ -195,7 +195,7 @@ The following sample demonstrates how to delete the table row or columns, merge 
   
 {% previewsample "/document-processing/samples/document-editor/angular/tables-cs1" %}
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)

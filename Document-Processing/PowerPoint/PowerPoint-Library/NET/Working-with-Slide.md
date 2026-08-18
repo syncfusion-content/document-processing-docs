@@ -7,14 +7,14 @@ documentation: UG
 ---
 # Working with Slides in PowerPoint  
 
-To quickly start add, remove, resize, and customize PowerPoint slides, please check out this video:
+To quickly learn how to add, remove, resize, and customize PowerPoint slides, check out this video:
 {% youtube "https://www.youtube.com/watch?v=NQNIY5cTb0w" %}
 
-## Adding slide to the PowerPoint presentation
+## Adding a slide to a PowerPoint presentation
 
-In PowerPoint presentation, a slide is a container for the elements like shapes, images, charts, text box etc. The slides may inherit the formatting and layout properties from its 'Master' and 'Layout' slides.
+In a PowerPoint presentation, a slide is a container for elements such as shapes, images, charts, and text boxes. The slides may inherit the formatting and layout properties from their 'Master' and 'Layout' slides.
 
-The following code example demonstrates how to add a blank slide to the Presentation.
+The following code example demonstrates how to add a blank slide to the Presentation. By default, the `Slides.Add()` overload adds a slide using the default layout of the master.
 
 {% tabs %}
 
@@ -23,11 +23,8 @@ The following code example demonstrates how to add a blank slide to the Presenta
 IPresentation pptxDoc = Presentation.Create();
 //Adds a slide to the PowerPoint presentation
 ISlide slide = pptxDoc.Slides.Add();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Saves the Presentation to the file system.
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -60,7 +57,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create a slide with predefined LayoutSlide
 
-The Syncfusion<sup>&reg;</sup> PowerPoint library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
 
 <ul>
 <li>Blank</li>
@@ -84,12 +81,9 @@ The following example demonstrates how to access a slide from the predefined bla
 //Create a new instance of PowerPoint Presentation file
 IPresentation pptxDoc = Presentation.Create();
 //Add a slide of blank layout type
-ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);
+//Save the PowerPoint file
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -148,12 +142,9 @@ ISlide slide9 = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly);
 //Add a slide of TwoContent type
 ISlide slide10 = pptxDoc.Slides.Add(SlideLayoutType.TwoContent);
 //Add a slide of VerticalTitleAndText type
-ISlide slide11 = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText);    
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+ISlide slide11 = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText);
+//Save the PowerPoint file
+pptxDoc.Save("Sample.pptx");
 //Close the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -195,25 +186,25 @@ Dim pptxDoc As IPresentation = Presentation.Create()
 'Add a slide of blank layout type
 Dim slide1 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
 'Add a slide of comparison type
-Dim ISlide As slide2 = pptxDoc.Slides.Add(SlideLayoutType.Comparison)
+Dim slide2 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Comparison)
 'Add a slide of ContentWithCaption type
-Dim ISlide As slide3 = pptxDoc.Slides.Add(SlideLayoutType.ContentWithCaption)
+Dim slide3 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.ContentWithCaption)
 'Add a slide of PictureWithCaption type
-Dim ISlide As slide4 = pptxDoc.Slides.Add(SlideLayoutType.PictureWithCaption)
+Dim slide4 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.PictureWithCaption)
 'Add a slide of SectionHeader type
-Dim ISlide As slide5 = pptxDoc.Slides.Add(SlideLayoutType.SectionHeader)
+Dim slide5 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.SectionHeader)
 'Add a slide of Title type
-ISlide As slide6 = pptxDoc.Slides.Add(SlideLayoutType.Title)
+Dim slide6 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Title)
 'Add a slide of TitleAndContent type
-Dim ISlide As slide7 = pptxDoc.Slides.Add(SlideLayoutType.TitleAndContent)
+Dim slide7 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.TitleAndContent)
 'Add a slide of TitleAndVerticalText type
-Dim ISlide As slide8 = pptxDoc.Slides.Add(SlideLayoutType.TitleAndVerticalText)
+Dim slide8 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.TitleAndVerticalText)
 'Add a slide of TitleOnly type
-Dim ISlide As slide9 = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly)
+Dim slide9 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.TitleOnly)
 'Add a slide of TwoContent type
-Dim ISlide As slide10 = pptxDoc.Slides.Add(SlideLayoutType.TwoContent)
+Dim slide10 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.TwoContent)
 'Add a slide of VerticalTitleAndText type
-Dim ISlide As slide11 = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText)
+Dim slide11 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.VerticalTitleAndText)
 'Save the PowerPoint file
 pptxDoc.Save("Sample.pptx")
 'Close the PowerPoint instance
@@ -224,33 +215,31 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Add-all-predefined-slide-layout-types).
 
-## Adding Custom layout slide
+## Adding a Custom Layout Slide
 
-The slide layout are template design for the PowerPoint slides. Slide layout can contains formatting, positioning, and placeholders for a slide. There are 9 predefined layouts and custom slide layouts can also be designed.
+Slide layouts are template designs for PowerPoint slides. A slide layout can contain formatting, positioning, and placeholders for a slide. There are 9 predefined layouts; custom slide layouts can also be designed.
 
-The following code example demonstrates how to create and use a customized slide layout in PowerPoint presentation.
+The following code example demonstrates how to create and use a customized slide layout in a PowerPoint presentation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Create-and-use-custom-layout-slide/.NET/Create-and-use-custom-layout-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open the template presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Add a new custom layout slide to the master collection with a specific layout type and name
 ILayoutSlide layoutSlide = pptxDoc.Masters[0].LayoutSlides.Add(SlideLayoutType.Blank, "CustomLayout");
 //Set background of the layout slide
 layoutSlide.Background.Fill.SolidFill.Color = ColorObject.FromArgb(78, 89, 90);
 //Get the stream of an image
-FileStream pictureStream = new FileStream(inputImagePath, FileMode.Open);
-//Add the picture into layout slide
-layoutSlide.Shapes.AddPicture(pictureStream, 100, 100, 100, 100);
+using (FileStream pictureStream = new FileStream("Image.png", FileMode.Open))
+{
+    //Add the picture into layout slide
+    layoutSlide.Shapes.AddPicture(pictureStream, 100, 100, 100, 100);
+}
 //Add a slide of new designed custom layout to the presentation
 ISlide slide = pptxDoc.Slides.Add(layoutSlide);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -302,9 +291,8 @@ The following code example demonstrates how to add a slide with an existing slid
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Add-slide-with-existing-slide-layout/.NET/Add-slide-with-existing-slide-layout/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open the template presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Get the layout slide collection of the master
 ILayoutSlides layoutSlides = pptxDoc.Masters[0].LayoutSlides;
 ILayoutSlide slideLayout = null;
@@ -320,11 +308,8 @@ foreach (ILayoutSlide layout in layoutSlides)
 }
 //Add slide with the desired layout.
 ISlide slide = pptxDoc.Slides.Add(slideLayout);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -386,11 +371,10 @@ The following code example shows how to iterate through all slide elements in a 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Iterate-slide-elements/.NET/Iterate-slide-elements/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open the template presentation
+IPresentation pptxDoc = Presentation.Open("Template.pptx");
 // Iterate through each slide in the presentation
-foreach (ISlide slide in presentation.Slides)
+foreach (ISlide slide in pptxDoc.Slides)
 {
     // Iterate through each shape in the master slide shapes.
     foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
@@ -411,11 +395,8 @@ foreach (ISlide slide in presentation.Slides)
         ModifySlideElements(shape);
     }
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the presentation
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -424,7 +405,7 @@ pptxDoc.Close();
 //Opens an existing Presentation.
 IPresentation pptxDoc = Presentation.Open("Template.pptx");
 // Iterate through each slide in the presentation
-foreach (ISlide slide in presentation.Slides)
+foreach (ISlide slide in pptxDoc.Slides)
 {
     // Iterate through each shape in the master slide shapes.
     foreach (IShape shape in slide.LayoutSlide.MasterSlide.Shapes)
@@ -455,7 +436,7 @@ pptxDoc.Close();
 'Opens an existing Presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Template.pptx")
 ' Iterate through each slide in the presentation
-For Each slide As ISlide In presentation.Slides
+For Each slide As ISlide In pptxDoc.Slides
     ' Iterate through each shape in the master slide shapes.
     For Each shape As IShape In slide.LayoutSlide.MasterSlide.Shapes
         ' Modify the shape properties (text, size, hyperlinks, etc.)
@@ -479,6 +460,8 @@ pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+### Helper methods used by the above example
 
 The following code example provides supporting methods for the above code.
 
@@ -805,16 +788,15 @@ End Sub
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Iterate-slide-elements).
 
-## Cloning slide
+## Cloning a slide
 
 You can create a deep copy of a slide by cloning the slide. The cloned slide is an independent copy of its source slide. This means the changes made in the cloned slide do not affect the source slide.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Clone-PowerPoint-slide/.NET/Clone-PowerPoint-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Open the template presentation
+IPresentation pptxDoc = Presentation.Open("Presentation.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Creates a cloned copy of slide.
@@ -825,11 +807,8 @@ IShape textboxShape = slideClone.AddTextBox(0, 0, 250, 250);
 textboxShape.TextBody.AddParagraph("Hello Presentation");
 //Adds the slide to the Presentation.
 pptxDoc.Slides.Add(slideClone);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the presentation
+pptxDoc.Save("Output.pptx");
 //Close the presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -876,31 +855,28 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Clone-PowerPoint-slide).
 
-## Merging slide
+## Merging slides
 
-The Essential<sup>&reg;</sup> Presentation provides ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations to one Presentation. You can choose the theme for the cloned slide by using the enum [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html).
+The Essential<sup>&reg;</sup> Presentation provides the ability to clone slides from one Presentation to another Presentation. With this ability, you can split a large Presentation into small ones and also merge multiple presentations into one Presentation. Merging differs from cloning in that the resulting slide is added to a *different* (destination) presentation, and you can choose the theme applied to the merged slide by using the enum [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html).
 
 ### Destination formatting
 This [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html) preserves the merged slide with formatting from the destination file during merging. 
 
-The following code sample explains how to merge slide with the destination formatting.
+The following code sample explains how to merge a slide with the destination formatting.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide/.NET/Merge-PowerPoint-slide/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
+IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
+IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Destination Theme
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.UseDestinationTheme);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Saves the destination Presentation
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -926,15 +902,15 @@ destinationPresentation.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the source Presentation
-Dim sourcePresentation_1 As IPresentation = Presentation.Open("SourcePresentation.pptx")
+Dim sourcePresentation As IPresentation = Presentation.Open("SourcePresentation.pptx")
 'Opens the destination Presentation
-Dim destinationPresentation_1 As IPresentation = Presentation.Open("DestinationPresentation.pptx")
+Dim destinationPresentation As IPresentation = Presentation.Open("DestinationPresentation.pptx")
 'Clones the first slide of the source Presentation
-Dim clonedSlide As ISlide = sourcePresentation_1.Slides(0).Clone()
+Dim clonedSlide As ISlide = sourcePresentation.Slides(0).Clone()
 'Merges the cloned slide to the destination Presentation with paste option - Destination Theme
-destinationPresentation_1.Slides.Add(clonedSlide, PasteOptions.UseDestinationTheme)
+destinationPresentation.Slides.Add(clonedSlide, PasteOptions.UseDestinationTheme)
 'Saves the destination Presentation
-destinationPresentation_1.Save("Output.pptx")
+destinationPresentation.Save("Output.pptx")
 'Closes the source presentation
 sourcePresentation.Close()
 'Closes the destination Presentation
@@ -948,24 +924,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### Source formatting
 This [PasteOption](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.PasteOptions.html) preserves the merged slide with formatting from the source file during merging. 
 
-The following code sample explains how to merge slide with the source formatting.
+The following code sample explains how to merge a slide with the source formatting.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Merge-PowerPoint-slide-with-Source-formatting/.NET/Merge-PowerPoint-slide-with-Source-formatting/Program.cs" %}
 //Opens the source Presentation
-IPresentation sourcePresentation = Presentation.Open(SourcePresentationStream);
+IPresentation sourcePresentation = Presentation.Open("SourcePresentation.pptx");
 //Opens the destination Presentation
-IPresentation destinationPresentation = Presentation.Open(destinationPresentationStream);
+IPresentation destinationPresentation = Presentation.Open("DestinationPresentation.pptx");
 //Clones the first slide of the source Presentation
 ISlide clonedSlide = sourcePresentation.Slides[0].Clone();
 //Merges the cloned slide to the destination Presentation with paste option - Source formatting
 destinationPresentation.Slides.Add(clonedSlide, PasteOptions.SourceFormatting);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-destinationPresentation.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Saves the destination Presentation
+destinationPresentation.Save("Output.pptx");
 //Closes the source presentation
 sourcePresentation.Close();
 //Closes the destination Presentation
@@ -991,15 +964,15 @@ destinationPresentation.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens the source Presentation
-Dim sourcePresentation_1 As IPresentation = Presentation.Open("SourcePresentation.pptx")
+Dim sourcePresentation As IPresentation = Presentation.Open("SourcePresentation.pptx")
 'Opens the destination Presentation
-Dim destinationPresentation_1 As IPresentation = Presentation.Open("DestinationPresentation.pptx")
+Dim destinationPresentation As IPresentation = Presentation.Open("DestinationPresentation.pptx")
 'Clones the first slide of the source Presentation
-Dim clonedSlide As ISlide = sourcePresentation_1.Slides(0).Clone()
+Dim clonedSlide As ISlide = sourcePresentation.Slides(0).Clone()
 'Merges the cloned slide to the destination Presentation with paste option - Source formatting
-destinationPresentation_1.Slides.Add(clonedSlide, PasteOptions.SourceFormatting)
+destinationPresentation.Slides.Add(clonedSlide, PasteOptions.SourceFormatting)
 'Saves the destination Presentation
-destinationPresentation_1.Save("Output.pptx")
+destinationPresentation.Save("Output.pptx")
 'Closes the source presentation
 sourcePresentation.Close()
 'Closes the destination Presentation
@@ -1010,27 +983,25 @@ destinationPresentation.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Merge-PowerPoint-slide-with-Source-formatting/.NET).
 
-## Removing slide
+## Removing a slide
 
-The Essential<sup>&reg;</sup> Presentation provides the ability to delete a slide by its instance or by its index position in slide collection. The following code demonstrates how to delete a slide from a presentation. 
+The Essential<sup>&reg;</sup> Presentation provides the ability to delete a slide by its instance or by its index position in the slide collection. The following code demonstrates how to delete a slide from a presentation.
+
+N> Calling `Slides.Remove(slide)` shifts the indices of subsequent slides; therefore the index used in `Slides.RemoveAt(1)` refers to the new position after the previous removal.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Remove-PowerPoint-slide/.NET/Remove-PowerPoint-slide/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens an existing Presentation.
+IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Removes the specified slide from the Presentation.
 pptxDoc.Slides.Remove(slide);
 // Removes the slide from the specified index.
 pptxDoc.Slides.RemoveAt(1);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Saves the Presentation to the file system
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation instance
 pptxDoc.Close();
 {% endhighlight %}
@@ -1069,16 +1040,36 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Slides/Remove-PowerPoint-slide).
 
-## Converting to image
+## Converting to an image
 
-You can convert a presentation slide to image with Essential<sup>&reg;</sup> Presentation. The following code example converts the first slide of a PowerPoint presentation into image and saves the image to a file.
+You can convert a presentation slide to an image with Essential<sup>&reg;</sup> Presentation. The following code example converts the first slide of a PowerPoint presentation into an image and saves the image to a file.
+
+The cross-platform sample uses the modern `PresentationRenderer` and `ConvertToImage` overload that returns a `Stream`. The Windows-specific sample uses the legacy `ChartToImageConverter` API and the `ConvertToImage` overload that returns an `Image` (for migration guidance, see the [Conversion](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image) topic).
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]"  %}
+//Open the existing PowerPoint presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Initialize the PresentationRenderer to perform image conversion.
+pptxDoc.PresentationRenderer = new PresentationRenderer();
+//Convert the PowerPoint slide to an image as stream.
+using (Stream stream = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Presentation.ExportImageFormat.Png))
+{
+    //Save the image stream to a file.
+    using (FileStream fileStreamOutput = File.Create("slide1.png"))
+    {
+        stream.CopyTo(fileStreamOutput);
+    }
+}
+//Closes the Presentation instance
+pptxDoc.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a PowerPoint presentation file
-IPresentation pptxDoc = Presentation.Open(fileName); 
-//Creates an instance of ChartToImageConverter and assigns it to ChartToImageConverter 
+IPresentation pptxDoc = Presentation.Open("Sample.pptx"); 
+//Creates an instance of ChartToImageConverter and assigns it to the Presentation
 pptxDoc.ChartToImageConverter = new ChartToImageConverter(); 
 //Converts the first slide into image
 Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile); 
@@ -1090,24 +1081,20 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens a PowerPoint presentation file
-Dim pptxDoc As IPresentation = Presentation.Open(fileName)
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Creates an instance of ChartToImageConverter and assigns it to ChartToImageConverter 
 pptxDoc.ChartToImageConverter = New ChartToImageConverter()
 'Converts the first slide into image
-Dim image As Image = pptxDoc.Slides(0).ConvertToImage(Syncfusion.Drawing.ImageType. Metafile)
+Dim image As Image = pptxDoc.Slides(0).ConvertToImage(Syncfusion.Drawing.ImageType.Metafile)
 'Saves the image as file
 image.Save("slide1.png")
 'Closes the Presentation instance
 pptxDoc.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="Xamarin" %}
-//PowerPoint Presentation to image conversion is not supported for Xamarin platforms.
-{% endhighlight %}
-
 {% endtabs %}
 
-For more details on assemblies required for converting a slide to image,  see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image#assemblies-required)
+For more details on assemblies required for converting a slide to an image, see [Conversion](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image#assemblies-required)
 
 N> You can print the PowerPoint presentations by using its ability to convert the slides as images. For more details, refer to [Printing a PowerPoint presentation](/document-processing/powerpoint/powerpoint-library/net/working-with-powerpoint-presentation#printing-a-powerpoint-presentation)
 
@@ -1118,9 +1105,8 @@ The following code example demonstrates setting the background for a slide.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Slides/Change-PowerPoint-slide-background/.NET/Change-PowerPoint-slide-background/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens an existing Presentation.
+IPresentation pptxDoc = Presentation.Open("Presentation1.pptx");
 //Retrieves the slide instance.
 ISlide slide = pptxDoc.Slides[0];
 //Retrieves the background instance.
@@ -1133,11 +1119,8 @@ IGradientFill gradient = background.Fill.GradientFill;
 gradient.GradientStops.Add(ColorObject.Green, 20);
 //Adds the second gradient stop of the gradient fill.
 gradient.GradientStops.Add(ColorObject.Yellow, 50);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Release all resources of the stream
-outputStream.Dispose();
+//Save the PowerPoint file
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -1190,9 +1173,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slide#/tailwind).
+Try the related live demo to see these APIs in action:
+
+* Explore how to create slides with simple text, table, and image in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/slide#/tailwind).
 
 ## See Also
+
+You may also find the following support articles useful:
 
 * [How to set slide size for Presentation after cloning and merging a PowerPoint slide?](https://support.syncfusion.com/kb/article/17045/how-to-set-slide-size-for-powerpoint-after-cloning-and-merging-a-powerpoint-slide-in-c)
 * [How to edit the text of an existing slide and the alt text of an image in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/17890/how-to-edit-the-text-of-an-existing-slide-and-the-alt-text-of-an-image-in-powerpoint-presentation)

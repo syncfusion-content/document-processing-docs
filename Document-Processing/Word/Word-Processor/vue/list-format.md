@@ -1,16 +1,16 @@
 ---
 layout: post
-title: List format in Vue Document editor component | Syncfusion
-description: Learn here all about List format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: List Format in Vue DOCX Editor | Syncfusion
+description: The list format feature in Vue DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 control: List format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# List format in Vue Document editor component
+# List Format in Vue DOCX Editor
 
-Document Editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
 
 ## Create bullet list
 
@@ -171,6 +171,10 @@ export default {
 Document Editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected. Refer to the following screenshot.
 
 ![Image](images/list.png)
+
+## Online Demo
+
+Explore how to apply bullets and numbering in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/bullets-and-numbering.html).
 
 ## See Also
 

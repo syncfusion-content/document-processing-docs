@@ -1,52 +1,52 @@
 ---
 layout: post
-title: Resize document editor in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Resize document editor in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Resize in TypeScript DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® TypeScript DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
-control: Resize document editor 
+control: Resize the Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize document editor in JavaScript (ES6) Document editor control
+# How to Resize in TypeScript DOCX Editor 
 
-In this article, we are going to see how to change height and width of Document Editor.
+In this article, we are going to see how to change the height and width of the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-## Change height of Document Editor
+## Change the height of the Document Editor
 
-DocumentEditorContainer initially render with default height. You can change height of documenteditor using [`height`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#height) property, the value which is in pixel.
+The DocumentEditorContainer initially renders with a default height. You can change the height of the DocumentEditorContainer using the [`height`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#height) property, whose value is in pixels.
 
-The following example code illustrates how to change height of Document Editor.
+The following example code illustrates how to change the height of the Document Editor.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({
-    enableToolbar: true, height: "590px"
+    enableToolbar: true, height: '590px'
 });
 container.appendTo('#DocumentEditor');
 ```
 
-Similarly, you can use [`height`](https://ej2.syncfusion.com/documentation/api/document-editor#height) property for DocumentEditor also.
+Similarly, you can use the [`height`](https://ej2.syncfusion.com/documentation/api/document-editor#height) property for the DocumentEditor as well.
 
-## Change width of Document Editor
+## Change the width of the Document Editor
 
-DocumentEditorContainer initially render with default width. You can change width of documenteditor using [`width`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#width) property, the value which is in percent.
+The DocumentEditorContainer initially renders with a default width. You can change the width of the DocumentEditorContainer using the [`width`](https://ej2.syncfusion.com/documentation/api/document-editor-container/documentEditorContainerModel#width) property, whose value is in percent.
 
-The following example code illustrates how to change width of Document Editor.
+The following example code illustrates how to change the width of the Document Editor.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({
-    enableToolbar: true, width: "100%"
+    enableToolbar: true, width: '100%'
 });
 container.appendTo('#DocumentEditor');
 ```
 
-Similarly, you can use [`width`](https://ej2.syncfusion.com/documentation/api/document-editor#width) property for DocumentEditor also.
+Similarly, you can use the [`width`](https://ej2.syncfusion.com/documentation/api/document-editor#width) property for the DocumentEditor as well.
 
-## Resize Document Editor
+## Resize the Document Editor
 
-Using [`resize`](https://ej2.syncfusion.com/documentation/api/document-editor-container#resize) method, you change height and width of Document editor.
+Using the [`resize`](https://ej2.syncfusion.com/documentation/api/document-editor-container#resize) method, you can change the height and width of the Document Editor.
 
-The following example code illustrates how to fit Document Editor to browser window size.
+The following example code illustrates how to fit the Document Editor to the browser window size.
 
 ```ts
 import {
@@ -69,15 +69,15 @@ container.created = (): void => {
 container.appendTo('#container');
 
 function onWindowResize() {
-    //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+    //Resizes the document editor component to fit the full browser window automatically whenever the browser is resized.
     updateDocumentEditorSize();
 }
 function updateDocumentEditorSize() {
-    //Resizes the document editor component to fit full browser window.
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
+    //Resizes the document editor component to fit the full browser window.
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
     container.resize(windowWidth, windowHeight);
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

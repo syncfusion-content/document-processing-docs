@@ -1,107 +1,66 @@
 ---
-layout: post
-title: Getting started Standalone Angular PDF Viewer component | Syncfusion
-description: Checkout and learn about Getting started with Standalone Angular PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Angular PDF Viewer | Syncfusion
+description: Set up and run the standalone Angular PDF Viewer using Syncfusion Essential JS 2 to render and interact with PDF documents in the browser.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with Angular Standalone PDF Viewer component
+# Getting Started with Angular PDF Viewer
 
-This section explains the steps required to create a simple Standalone Angular PDF Viewer and demonstrates the basic usage of the PDF Viewer control in an Angular 21.
-
-> Note: This guide supports **Angular 21** and other recent Angular versions. For detailed compatibility with other Angular versions, please refer to the [Angular version support matrix](https://ej2.syncfusion.com/angular/documentation/system-requirement#angular-version-compatibility). Starting from Angular 19, standalone components are the default, and this guide reflects that architecture.
-
-N> For older versions of Angular, see the following links:
-
-* [Create a Standalone PDF Viewer in Angular 17 and above with-no-standalone-flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
-* [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
-* [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
+This section explains how to create a simple Angular application and add the standalone [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
 
 ## Prerequisites
 
-Ensure your development environment meets the [System Requirements for Syncfusion<sup style="font-size:70%">&reg;</sup> Angular UI Components](https://ej2.syncfusion.com/angular/documentation/system-requirement).
+[System requirements for Syncfusion® Angular components](https://ej2.syncfusion.com/angular/documentation/system-requirement)
 
-## Setup Angular Environment
+## Create an Angular application
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
-To install the latest Angular CLI globally use the following command.
+Use [Angular CLI](https://angular.dev/installation) to create a new Angular application, as it provides a standardized project structure, built-in testing tools, and simplified deployment. Use an Angular CLI version that matches the target Angular version (e.g., Angular CLI 17 for Angular 17 projects).
 
-```bash
+Install Angular CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install -g @angular/cli
-```
 
-> **Angular 21 Standalone Architecture:** Standalone components are the default in Angular 21. This guide uses the modern standalone architecture. If you need more information about the standalone architecture, refer to the [Standalone Guide](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-standalone).
+{% endhighlight %}
+{% endtabs %}
 
-### Installing a specific version
+Create a new Angular application using the following commands:
 
-To install a particular version of Angular CLI, use:
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
 
-```bash
-npm install -g @angular/cli@21.0.0
-```
+ng new pdfviewer-app
+cd pdfviewer-app
 
-## Create an Angular Application
+{% endhighlight %}
+{% endtabs %}
 
-Start a new Angular application using the Angular CLI command as follows.
+> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools. The available prompts may vary by Angular CLI version; accept the default values for any prompts not listed here.
 
-```bash
-ng new my-app
-```
+## Install the Syncfusion® Angular PDF Viewer package
 
-* This command will prompt you to configure settings like enabling Angular routing and choosing a stylesheet format.
+Install the Syncfusion [Angular PDF Viewer](https://www.npmjs.com/package/@syncfusion/ej2-angular-pdfviewer) package from npm:
 
-![Initial_setup](images/getting-started-styles.png)
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
 
-* By default, a CSS-based application is created. Use SCSS if required:
-
-```bash
-ng new my-app --style=scss
-```
-
-* During project setup, when prompted for the Server-side rendering (SSR) option, choose the appropriate configuration.
-
-![Initial_setup](images/getting-started-ssr.png)
-
-* Select the required AI tool or 'none' if you do not need any AI tool.
-
-![Initial_setup](images/getting-started-ai.png)
-
-* Navigate to your newly created application directory:
-
-```bash
-cd my-app
-```
-
-> Note: In Angular 19 and below, it uses `app.component.ts`, `app.component.html`, `app.component.css` etc. In Angular 20+, the CLI generates a simpler structure with `src/app/app.ts`, `app.html`, and `app.css` (no `.component.` suffixes).
-
-## Installing Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer package
-
-All the available Essential<sup style="font-size:70%">&reg;</sup> JS 2 packages are published in `npmjs.com` registry.
-
-* To install PDF Viewer component, use the following command.
-
-```bash
 npm install @syncfusion/ej2-angular-pdfviewer --save
-```
 
-* Copy the contents of the ej2-pdfviewer-lib folder from ./node_modules/@syncfusion/ej2-pdfviewer/dist to the src/assets directory using the command:
+{% endhighlight %}
+{% endtabs %}
 
-```bash
-cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/assets/ej2-pdfviewer-lib
-```
+## Add CSS references
 
-* Confirm that there is an 'ej2-pdfviewer-lib' directory within your `src/assets` directory, housing the assets of the PDF Viewer library.
+Add the following PDF Viewer and dependent component style references to the `src/styles.css` file.
 
-* Validate that your server has been configured to utilize the Content-Type: application/wasm MIME type. Additional information can be found in the [Troubleshooting](./troubleshooting/troubleshooting) section.
+{% tabs %}
+{% highlight css tabtitle="styles.css" %}
 
-## Adding CSS reference
-
-Add the Angular PDF Viewer component's styles as given below in `src/styles.css` file.
-
-```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -109,154 +68,100 @@ Add the Angular PDF Viewer component's styles as given below in `src/styles.css`
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-```
-
-## Add the PDF Viewer component
-
-Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.ts` file to render the PDF Viewer component.
-
-```typescript
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-                <ejs-pdfviewer id="pdfViewer"
-                    [documentPath]='document'
-                    [resourceUrl]='resource'
-                    style="height:640px;display:block">
-                </ejs-pdfviewer>
-             </div>`,
-  imports: [ PdfViewerModule ],
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class App implements OnInit {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-  public resource: string = "https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
-  ngOnInit(): void {
-  }
-}
-```
-
-### Load PDF Viewer with local resources
-
-To configure the PDF Viewer to use local files for `documentPath` and `resourceUrl` instead of files hosted on a CDN, follow these steps:
-
-**Step 1:** Ensure that your application includes the `ej2-pdfviewer-lib` folder. This folder must contain the `pdfium.js`, `pdfium.wasm` files, and the PDF file that you intend to display. These should be located in the `assets` directory within your project's `src` folder.
-
-**Step 2:** Register the assets folder inside `angular.json`
-```json
-"assets": [
-  "src/assets"
-]
-```
-
-**Step 3:** Assign local file paths to the `documentPath` and `resourceUrl` properties within the PDF Viewer setup. The `documentPath` should refer to your PDF file, while the `resourceUrl` should point to the directory containing the supporting resources.
-
-By following these steps, you will configure your PDF Viewer to load the required resources locally. See the code snippet below for reference.
-
-```typescript
-  template: `<ejs-pdfviewer id="pdfViewer"
-                    [documentPath]='document'
-                    [resourceUrl]='resource'
-                    style="height:640px;display:block">
-              </ejs-pdfviewer>`,
-export class AppComponent implements OnInit {
-  public document: string = window.location.origin + "/assets/pdfsuccinctly.pdf";
-  public resource: string = window.location.origin + "/assets/ej2-pdfviewer-lib";
-  }
-```
-
-View the sample in GitHub to [load PDF Viewer with local resources](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)
-
-## Run the application
-
-Use the following command to run the application in browser.
-
-```javascript
-ng serve --open
-```
-
-The output will appear as follows.
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-import { Component, OnInit } from '@angular/core';
-import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
-         MagnificationService, ThumbnailViewService, ToolbarService,
-         NavigationService, TextSearchService, TextSelectionService,
-         PrintService, FormDesignerService, FormFieldsService,
-         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
-
-@Component({
-  selector: 'app-root',
-  // specifies the template string for the PDF Viewer component
-  template: `<div class="content-wrapper">
-  <ejs-pdfviewer
-    id="pdfViewer"
-    [documentPath]='document'
-    [resourceUrl]='resource'
-    style="height:640px;display:block">
-  </ejs-pdfviewer>
-</div>`,
-  imports: [ PdfViewerModule ],
-  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
-               ThumbnailViewService, ToolbarService, NavigationService,
-               TextSearchService, TextSelectionService, PrintService,
-               AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService]
-})
-export class AppComponent implements OnInit {
-    public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public resource: string = "https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib";
-    ngOnInit(): void {
-    }
-}
-{% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %}
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { App } from './app/app';
-
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 
 {% endhighlight %}
 {% endtabs %}
 
+> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
+
+## Add the Syncfusion® Angular PDF Viewer component to the application
+
+Add the PDF Viewer component to your Angular application to render and interact with PDF documents. The component requires the **PdfViewerModule** and its associated services (for full functionality).
+
+Update `src/app/app.ts` as shown below:
+
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
+import { Component } from '@angular/core';
+import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
+         MagnificationService, ThumbnailViewService, ToolbarService,
+         NavigationService, TextSearchService, TextSelectionService,
+         PrintService, FormDesignerService, FormFieldsService,
+         AnnotationService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [ LinkAnnotationService, BookmarkViewService, MagnificationService,
+               ThumbnailViewService, ToolbarService, NavigationService,
+               TextSearchService, TextSelectionService, PrintService,
+               FormDesignerService, FormFieldsService, AnnotationService, PageOrganizerService],
+  template: `
+    <ejs-pdfviewer
+      id="pdfViewer"
+      [documentPath]="documentPath"
+      [resourceUrl]="resourcesUrl"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  `
+})
+export class App {
+  public documentPath: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resourcesUrl: string =
+    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The `documentPath` property sets the PDF file path to be loaded. You can provide a remote URL, Base64 string, or local file path (e.g., `'assets/sample.pdf'`) and the `resourceUrl` property specifies the PDFium library resources path required for PDF rendering. This example uses CDN-hosted resources. For local resources, refer to [Load PDF Viewer with Local Resources](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/how-to/load-pdf-viewer-with-local-resources).
+
+## Run the application
+
+Run the following command to start the Angular application:
+
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
+ng serve --open
+
+{% endhighlight %}
+{% endtabs %}
+
+After the application starts, open `http://localhost` (the default dev server URL) in the browser to view the Angular PDF Viewer component. The output will appear as follows:
+
+![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
+
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
-## Module injection
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone)
 
-To enable additional features, inject the required modules. The following modules extend the PDF Viewer's functionality:
+## Video tutorial
 
-* `LinkAnnotationService`: Enables hyperlink navigation.
-* `BookmarkViewService`: Displays and navigates document bookmarks.
-* `MagnificationService`: Provides zoom in/out operations.
-* `NavigationService`: Enables page navigation.
-* `TextSelectionService`: Enables text selection.
-* `ThumbnailViewService`: Displays page thumbnails for navigation.
-* `ToolbarService`: Enables the built-in toolbar UI.
-* `PrintService`: Enables printing.
-* `AnnotationService`: Enables annotation features.
-* `TextSearchService`: Enables text search.
-* `FormFieldsService`: Enables form field support.
-* `FormDesignerService`: Enables designing and editing of form fields.
-* `PageOrganizerService`: Enables page organization features.
+If you prefer a video walkthrough, watch the following tutorial to get started quickly with the Angular PDF Viewer.
 
-Inject modules using the `providers` array in the component or module.
+{% youtube "https://www.youtube.com/watch?v=riZ1zACc5co" %}
 
-N> Refer to the [Angular PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) for an overview of capabilities. Explore the [Angular PDF Viewer example](https://document.syncfusion.com/demos/pdf-viewer/angular/#/tailwind3/pdfviewer/default) to see core features in action.
+## Angular version compatibility
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone).
+For detailed compatibility information, refer to the [Angular version support matrix](https://ej2.syncfusion.com/angular/documentation/system-requirement#angular-version-compatibility).
+
+## Older versions
+
+For older Angular versions, refer to the following guides:
+* [Create a Standalone PDF Viewer in Angular 17 and above with the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
+* [Create a Standalone PDF Viewer in Angular 17 and above without the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
+* [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
+
+> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
+
+## See also
+
+- [Getting started with Server-Backed Angular PDF Viewer](./getting-started-with-server-backed)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Document management in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Document management in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Document Management in TypeScript DOCX Editor | Syncfusion
+description: Document management in TypeScript DOCX Editor provides editing restrictions and user permissions to secure document content.
 platform: document-processing
-control: Document management 
+control: Document Management
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document management in JavaScript (ES6) Document editor control
+# Document Management in TypeScript DOCX Editor
 
-Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, a unique user or user group is authorized to edit a separate text area.
 
 ## Set current user
 
 You can use the `currentUser` property to authorize the current document user by name, email, or user group name.
 
-The following code shows how to set currentUser
+The following code shows how to set currentUser.
 
 ```ts
 documentEditor.currentUser = 'engineer@mycompany.com';
@@ -34,9 +34,9 @@ documentEditor.userColor = '#fff000';
 
 ## Highlighting the editable text area
 
-You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
+You can toggle the highlighting of the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```typescript
 documentEditor.documentEditorSettings.highlightEditableRanges = true; 
@@ -44,15 +44,15 @@ documentEditor.documentEditorSettings.highlightEditableRanges = true;
 
 ## Restrict Editing Pane
 
-Restrict Editing Pane provides the following options to manage the document:
+The Restrict Editing Pane provides the following options to manage the document:
 * To apply formatting restrictions to the current document, select the allow formatting check box.
 * To apply editing restrictions to the current document, select the read only check box.
-* To add users to the current document, select more users option and add user from the popup dialog.
-* To include range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check box.
-* To apply the chosen editing restrictions, click the **YES,START ENFORCING PROTECTION** button. A dialog box displays asking for a   password to protect.
-* To stop protection, select **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
+* To add users to the current document, select the more users option and add a user from the popup dialog.
+* To add range permission to the current document, select parts of the document and choose users who are allowed to freely edit them from the listed check boxes.
+* To apply the chosen editing restrictions, click the **YES, START ENFORCING PROTECTION** button. A dialog box displays asking for a password to protect.
+* To stop protection, select the **STOP PROTECTION** button. A dialog box displays asking for a password to stop protection.
 
-The following code shows Restrict Editing Pane. To unprotect the document, use password '123'.
+The following code shows the Restrict Editing Pane. To unprotect the document, use the password '123'.
 
  
 

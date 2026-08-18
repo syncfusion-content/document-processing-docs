@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Resize document editor in JavaScript (ES5) DOCX editor | Syncfusion
-description: Learn here all about Resize document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Resize in JavaScript DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® JavaScript DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Resize document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize document editor in JavaScript (ES5) Document editor control
+# How to Resize in JavaScript DOCX Editor 
 
-In this article, we are going to see how to change height and width of Document Editor.
+In this article, we are going to see how to change height and width of [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 ## Change height of Document Editor
 

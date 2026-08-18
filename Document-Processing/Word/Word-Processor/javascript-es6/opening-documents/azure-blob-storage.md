@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Open Azure Blob Files in JavaScript (ES6) Document Editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob in TypeScript DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in TypeScript DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in JavaScript (ES6) Document editor
+# Open Documents from Azure Blob Storage in TypeScript DOCX Editor
 
-To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
+To load a document from Azure Blob Storage, follow the steps below.
 
- 
+**Step 1:** Create a Simple [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in JavaScript (ES6).
 
-**Step 1:** Create a Simple Document Editor Sample in TypeScript
-
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the Document Editor component. 
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript (ES6). This will give you a basic setup of the Document Editor component.
 
 
 
@@ -37,7 +35,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 
 ```csharp
@@ -53,7 +51,7 @@ public DocumentEditorController(IConfiguration configuration, ILogger<DocumentEd
 }
 ```
 
-* Modify the `LoadFromAzure()` method to load the document from  Azure Blob Storage
+* Modify the `LoadFromAzure()` method to load the document from Azure Blob Storage.
 
 ```csharp
 
@@ -83,7 +81,7 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -99,11 +97,11 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
+N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:** Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
 
  
 

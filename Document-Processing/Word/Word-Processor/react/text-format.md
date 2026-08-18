@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Text format in React Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in React DOCX Editor | Syncfusion
+description: Text format properties in React DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 control: Text format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in React Document editor component
+# Text Format in React DOCX Editor
 
-Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
-The bold formatting for selected text can be get or set by using the following sample code.
+The bold formatting for selected text can be retrieved or set by using the following sample code.
 
 
   ```ts
@@ -25,7 +25,7 @@ The bold formatting for selected text can be get or set by using the following s
   ```
 
 
-You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the bold formatting based on the existing value at the selection. Refer to the following sample code.
 
    ```ts
    documenteditor.editor.toggleBold();
@@ -33,24 +33,24 @@ You can toggle the bold formatting based on existing value at selection. Refer t
 
 ## Italic
 
-The Italic formatting for selected text can be get or set by using the following sample code.
+The italic formatting for selected text can be retrieved or set by using the following sample code.
 
-    ```ts
+ ```ts
     //Gets the value for italic formatting of selected text.
     let italic : boolean = documenteditor.selection.characterFormat.italic;
    //Sets italic formatting for selected text.
-    documenteditor.selection.characterFormat.italic= true|false;
-   ```
+   documenteditor.selection.characterFormat.italic= true|false;
+ ```
 
-You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the italic formatting based on the existing value at the selection. Refer to the following sample code.
 
-  ```ts
+```ts
    documenteditor.editor.toggleItalic();
-  ```
+```
 
 ## Underline property
 
-The underline style for selected text can be get or set by using the following sample code.
+The underline style for selected text can be retrieved or set by using the following sample code.
 
    ```ts
    //Gets the value for underline formatting of selected text.
@@ -59,7 +59,7 @@ The underline style for selected text can be get or set by using the following s
    documenteditor.selection.characterFormat.underline='Single' | 'None';
    ```
 
-You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the underline style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
    ```ts
     documenteditor.editor.toggleUnderline('Single');
@@ -67,7 +67,7 @@ You can toggle the underline style of selected text based on existing value at s
 
 ## Strikethrough property
 
-The strikethrough style for selected text can be get or set by using the following sample code.
+The strikethrough style for selected text can be retrieved or set by using the following sample code.
 
    ```ts
     //Gets the value for strikethrough formatting of selected text.
@@ -76,45 +76,45 @@ The strikethrough style for selected text can be get or set by using the followi
     documenteditor.selection.characterFormat.strikethrough='Single' | 'Normal';
    ```
 
-You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the strikethrough style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
-    ```ts
-     documenteditor.editor.toggleStrikethrough();
-    ```
+  ```ts
+    documenteditor.editor.toggleStrikethrough();
+  ```
 
 ## Superscript property
 
 The selected text can be made superscript by using the following sample code.
 
-    ```ts
+```ts
     //Gets the value for baselineAlignment formatting of selected text.
      let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
     //Sets baselineAlignment formatting for selected text.
-     documenteditor.selection.characterFormat.baselineAlignment='Superscript';
-   ```
+     documenteditor.selection.characterFormat.baselineAlignment = 'Superscript';
+```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
-    ```ts
+ ```ts
       documenteditor.editor.toggleSuperscript();
-    ```
+```
 
 ## Subscript property
 
 The selected text can be made subscript by using the following sample code.
 
-    ```ts
+```ts
      //Gets the value for baselineAlignment formatting of selected text.
      let baselineAlignment : BaselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
     //Sets baselineAlignment formatting for selected text.
-     documenteditor.selection.characterFormat.baselineAlignment='Subscript'; 
-   ```
+     documenteditor.selection.characterFormat.baselineAlignment = 'Subscript';
+```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
-   ```ts
+```ts
     documenteditor.editor.toggleSubscript();
-  ```
+```
 
 You can make a subscript or superscript text as normal using the following code.
 
@@ -132,7 +132,7 @@ documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleC
 
 ## Size
 
-The size of selected text can be get or set using the following code.
+The size of selected text can be retrieved or set using the following code.
 
    ```ts
    //Gets the value for fontSize formatting of selected text.
@@ -150,13 +150,13 @@ In the Document Editor, the Text Properties pane features two icons for managing
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
 
-This Font Color option appear as follows.
+This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
 ### Change Font Color by Code
 
-The color of selected text can be get or set using the following code.
+The color of selected text can be retrieved or set using the following code.
 
 ```ts
 //Gets the value for fontColor formatting of selected text.
@@ -168,24 +168,36 @@ documenteditor.selection.characterFormat.fontColor= '#FFC0CB';
 
 ## Font
 
-The font style of selected text can be get or set using the following sample code.
+The font style of selected text can be retrieved or set using the following sample code.
 
 ```ts
 //Gets the value for fontFamily formatting of selected text.
 let baselineAlignment : string = documenteditor.selection.characterFormat.fontFamily;
 //Sets fontFamily formatting for selected text.
-documenteditor.selection.characterFormat.fontFamily= 'Arial';
+documenteditor.selection.characterFormat.fontFamily = 'Arial';
 ```
 
 ## Highlight color
 
-The highlight color of the selected text can be get or set using the following sample code.
+The highlight color of the selected text can be retrieved or set using the following sample code.
 
 ```ts
 //Gets the value for highlightColor formatting of selected text.
 let highlightColor : HighlightColor = documenteditor.selection.characterFormat.highlightColor;
 //Sets highlightColor formatting for selected text.
 documenteditor.selection.characterFormat.highlightColor= 'Pink';
+```
+
+## Bidirectional
+
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+
+```ts
+// Get Bidi value of selected text
+let bidi: boolean = documenteditor.selection.characterFormat.bidi;
+
+// Set Bidi for selected text
+documenteditor.selection.characterFormat.bidi= true;
 ```
 
 ## Toolbar with options for text formatting
@@ -332,6 +344,10 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
+
+## Online Demo
+
+Explore how to apply text formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/character-formatting).
 
 ## See Also
 

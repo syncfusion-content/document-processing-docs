@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Free text annotation in UWP PDF Viewer control | Syncfusion
+title: Free text annotation in UWP PDF Viewer | Syncfusion
 description: Learn about free text annotation support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 ---
 
-# Working with free text annotations in UWP PDF Viewer (SfPdfViewer)
+# Free text annotation in UWP PDF Viewer
 
 The PDF Viewer allows you to include free text annotations in a PDF document and provides options to modify or remove the existing free text annotations.
 
@@ -146,3 +146,8 @@ private void PdfViewer_FreeTextAnnotationEdited (object sender, FreeTextAnnotati
 }
 
 {% endhighlight %}
+
+## See Also
+- [Text Selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)

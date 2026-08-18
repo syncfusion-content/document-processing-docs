@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in Linux
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET Core application on Linux**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint presentation** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET Core application on Linux**.
 
 ## Steps to convert PowerPoint to PDF in .NET Core application on Linux
 
@@ -24,7 +24,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https:
 Step 1: Execute the following command in **Linux terminal** to create a new .NET Core Console application.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new console
 
@@ -40,7 +40,7 @@ Step 2: Install the following **Nuget packages** in your application from [Nuget
 * [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet add package Syncfusion.PresentationRenderer.Net.Core -v 22.1.38 -s https://www.nuget.org/
 dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
@@ -70,26 +70,14 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream
-using (FileStream fileStreamInput = new FileStream(Path.GetFullPath(@"../../../Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath(@"../../../Data/Input.pptx")))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Save the converted PDF document to MemoryStream.
-            MemoryStream pdfStream = new MemoryStream();
-            pdfDocument.Save(pdfStream);
-            pdfStream.Position = 0;
-            //Create FileStream to save the PDF file.
-            using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                //Saves the PDF file.
-                pdfDocument.Save(outputStream);
-            }
-        }
+        //Save the PDF document to the file system.
+        pdfDocument.Save("Sample.pdf");
     }
 }
 
@@ -99,7 +87,7 @@ using (FileStream fileStreamInput = new FileStream(Path.GetFullPath(@"../../../D
 Step 5: Execute the following command to **restore** the NuGet packages.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet restore
 
@@ -111,7 +99,7 @@ dotnet restore
 Step 6: Execute the following command in **terminal** to **run the application**.
 
 {% tabs %}
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet run
 
@@ -161,7 +149,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 ![Install the Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Linux/Install-Syncfusion.PresentationRenderer.Net.Core-NuGet.png)
 
 N> 1. For other Linux environments, refer to the [documentation](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/nuget-packages-required-for-pptxtopdf-conversion#additional-nuget-packages-required-for-linux) for detailed information on the additional NuGet packages required. 
-N> 2. Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add the following Namespaces in **Program.cs** file.
 
@@ -180,26 +168,14 @@ Step 4: Add the following code snippet in **Program.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Open the file as Stream
-using (FileStream fileStreamInput = new FileStream(Path.GetFullPath(@"../../../Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath(@"../../../Data/Input.pptx")))
 {
-    //Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        //Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
-        {
-            //Save the converted PDF document to MemoryStream.
-            MemoryStream pdfStream = new MemoryStream();
-            pdfDocument.Save(pdfStream);
-            pdfStream.Position = 0;
-            //Create FileStream to save the PDF file.
-            using (FileStream outputStream = new FileStream("Sample.pdf", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
-            {
-                //Saves the PDF file.
-                pdfDocument.Save(outputStream);
-            }
-        }
+        //Save the PDF document to the file system.
+        pdfDocument.Save("Sample.pdf");
     }
 }
 
@@ -224,6 +200,6 @@ By executing the program, you will get the **PDF** as follows. The output will b
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Link in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Link in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Hyperlink in Angular Spreadsheet | Syncfusion
+description: Hyperlink in Angular Spreadsheet allow users to insert and manage hyperlinks, enabling quick navigation to web pages, files, and worksheets.
 platform: document-processing
 control: Link 
 documentation: ug
 ---
 
-# Link in Angular Spreadsheet component
+# Hyperlink in Angular Spreadsheet 
 
 Hyperlink is used to navigate to web links or cell reference within the sheet or to other sheets in Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowhyperlink) property to enable or disable hyperlink functionality.
 
-> * The default value for `allowHyperlink` property is `true`.
+> The default value for `allowHyperlink` property is `true`.
 
 ## Insert Link
 
@@ -39,7 +39,7 @@ In the Edit Link dialog box, make the changes that you want, and click UPDATE.
 
 ## Remove Hyperlink
 
-Performing this operation remove a single hyperlink without losing the display text.
+Removing a hyperlink clears the link from a cell without losing the display text.
 
 **User Interface**:
 
@@ -69,7 +69,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

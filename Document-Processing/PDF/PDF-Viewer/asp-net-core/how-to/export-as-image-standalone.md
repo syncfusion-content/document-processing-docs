@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export PDF pages as images in Syncfusion ASP.NET Core PDF Viewer
-description: Learn how to export PDF pages as Base64-encoded images by using the Syncfusion ASP.NET Core PDF Viewer component.
+title: How to Export Pages as Images in the Standalone PDF | Syncfusion
+description: Export pages as Base64-encoded images from the standalone ASP.NET Core PDF Viewer using the exportAsImage and exportAsImages methods.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF pages as images in ASP.NET Core PDF Viewer
+# How to Export Pages as Images in the Standalone PDF Viewer in ASP.NET
 
 The PDF Viewer allows you to export individual pages or specific page ranges as Base64-encoded image strings directly from the client side.
 
@@ -80,8 +80,9 @@ To export multiple pages within a range, use the **exportAsImages()** method. Th
 
 <script>
  function exportAsImages() {
-    let startPageIndex: number = 1;
-    let endPageIndex: number = 5;
+    let startPageIndex = 1;
+    let endPageIndex = 5;
+    let imageDetails;
      var viewer = document.getElementById('pdfviewer').ej2_instances[0];
     viewer.exportAsImages(startPageIndex, endPageIndex).then(function (value) {
         imageDetails = value;
@@ -98,18 +99,19 @@ Use this code snippet to export a range of pages as Base64-encoded image strings
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-<button type="button" onclick="exportAsImageWithSize()">ExportAsImageWithSize</button>
+<button type="button" onclick="exportAsImagesWithSize()">ExportAsImagesWithSize</button>
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>
- function exportAsImageWithSize() {
-        let startPageIndex: number = 1;
-        let endPageIndex: number = 5;
-        let size: Size = new Size(200,500);
+ function exportAsImagesWithSize() {
+        let startPageIndex = 1;
+        let endPageIndex = 5;
+        let size = { width: 200, height: 500 };
+        let imageDetails;
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.exportAsImages(startPageIndex, endPageIndex, size).then(function (value) {
+        pdfViewer.exportAsImages(startPageIndex, endPageIndex, size).then(function (value) {
             imageDetails = value;
             console.log(imageDetails);
         });

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: React getting started with Next.js | Syncfusion
-description: Check out and learn here all about how to use the Syncfusion React PDF Viewer in the Next.js project.
+title: Getting Started with Next.js and React PDF Viewer | Syncfusion
+description: Create a Next.js application that uses the Syncfusion React PDF Viewer to render and interact with PDF documents in the browser.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Creating a Next.js application using Syncfusion React PDF Viewer
+# Getting Started with Next.js and React PDF Viewer
 
-This guide shows how to set up a Next.js application and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer component.
+This guide shows how to set up a Next.js application and integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component.
 
 ## What is Next.js?
 
@@ -43,7 +43,7 @@ yarn create next-app
 {% endhighlight %}
 {% endtabs %}
 
-Using one of the above commands will prompt for project configuration options.
+One of the above commands will prompt you to configure the new project. Provide the values shown below.
 
 - Define the project name. For example: `ej2-next-js-pdfviewer`.
 {% tabs %}
@@ -54,7 +54,7 @@ Using one of the above commands will prompt for project configuration options.
 {% endhighlight %}
 {% endtabs %}
 
-- Select the required packages.
+- Select the required project options.
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
 
@@ -79,13 +79,13 @@ cd ej2-next-js-pdfviewer
 {% endhighlight %}
 {% endtabs %}
 
-The application is ready to run with default settings. Next, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
+The application is ready to run with the default settings. After that, add Syncfusion<sup style="font-size:70%">&reg;</sup> components to the project.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> React packages
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> React packages are available on npm. Install the package for the component required by the project.
 
-This guide uses the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) component as an example. Install it with:
+This guide uses the [React PDF Viewer component](https://www.syncfusion.com/pdf-viewer-sdk) as an example. Install it with:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -102,7 +102,7 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 ## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
+React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
 
 Where to add the imports:
 
@@ -146,8 +146,8 @@ return (<div>
         <PdfViewerComponent
             id="container"
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-            resourceUrl="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib"
-            style={{ 'height': '640px' }}>
+            resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
                {/* Inject the required services */}
                <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
                                    Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
@@ -178,9 +178,26 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-To learn more about the PDF Viewer component, see the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started#module-injection).
+## Adding Next.js Configuration
+
+When deploying the PDF Viewer component in a Next.js application, you may need to add the following configuration to ensure smooth deployment:
+
+Create a next.config.js file in the root of your project, and add the following code to the file:
+
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,  // Disable React Strict Mode for compatibility
+  swcMinify: false,        // Disable SWC minification for better compatibility
+};
+
+module.exports = nextConfig;
+```
+
+To learn more about the PDF Viewer component, see the [getting started documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started).
 
 N> [View the Next.js PDF Viewer sample in the GitHub repository](https://github.com/SyncfusionExamples/syncfusion-react-pdfviewer-component-in-nextjs)
+
 
 **See also**
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Export in Angular Document editor component | Syncfusion
-description: Learn here all about Export in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Export in Angular DOCX Editor | Syncfusion
+description: The export feature in Angular DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
-control: Export 
+control: Export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in Angular Document editor component
+# Export in Angular DOCX Editor
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
-We are providing two types of save APIs  as mentioned below.
+Two types of save APIs are provided as mentioned below.
 
 |API name|Purpose|
 |--------|---------|
@@ -21,7 +21,7 @@ We are providing two types of save APIs  as mentioned below.
 
 ## SFDT export
 
-The following example shows how to export documents in document editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
+The following example shows how to export documents in the Document Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -37,9 +37,9 @@ The following example shows how to export documents in document editor as Syncfu
 
 ## Word export
 
-The following example shows how to export the document as Word document (.docx).
+The following example shows how to export the document as a Word document (.docx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -55,9 +55,9 @@ The following example shows how to export the document as Word document (.docx).
 
 ## Template export
 
-The following example shows how to export the document as Word Template (.dotx).
+The following example shows how to export the document as a Word Template (.dotx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word] (./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -73,7 +73,7 @@ The following example shows how to export the document as Word Template (.dotx).
 
 ## Text export
 
-The following example shows how to export document as text document (.txt).
+The following example shows how to export the document as a text document (.txt).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -89,7 +89,7 @@ The following example shows how to export document as text document (.txt).
 
 ## Export as blob
 
-Document Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
+Document Editor also supports an API to store the document into a blob. Refer to the following sample to export the document into a blob on the client side.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -119,7 +119,7 @@ export class AppComponent {
 }
 ```
 
-For instance, to export the document as Rich Text Format file, implement an ASP.NET MVC web API controller using DocIO library by passing the DOCX blob. Refer to the following code example.
+For instance, to export the document as a Rich Text Format file, implement an ASP.NET MVC web API controller using the DocIO library by passing the DOCX blob. Refer to the following code example.
 
 ```csharp
   //API controller for the conversion.
@@ -138,7 +138,7 @@ For instance, to export the document as Rich Text Format file, implement an ASP.
   }
 ```
 
-In client-side, you can consume this web service and save the document as Rich Text Format (.rtf) file. Refer to the following example.
+On the client side, you can consume this web service and save the document as a Rich Text Format (.rtf) file. Refer to the following example.
 
 ```typescript
 public saveAsBlob() :void {
@@ -196,6 +196,10 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 }
 ```
 
-## See Also
+## Online demo
+
+Explore how to export Word documents in various formats using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/advanced-exporting).
+
+## See also
 
 * [Feature modules](./feature-module)

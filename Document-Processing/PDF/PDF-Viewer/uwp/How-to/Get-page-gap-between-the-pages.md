@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get page gap between the pages in UWP PDF viewer | Syncfusion
-description: Learn here about Get page gap between the pages support in UWP PDF viewer control with access the gap between two pages, and more.
+title: How to Get page gap between the pages in UWP PDF Viewer | Syncfusion
+description: Learn how to get page gap between the pages in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Get page gap between the pages in UWP PDF Viewer
+# How to Get page gap between the pages in UWP PDF Viewer
 The SfPdfViewer control provides the property to access the gap between two pages being displayed in the PDF Viewer. This value can be accessed using the following code. Here 'buffer' is the byte array read from the PDF file either using FileOpenPicker or from Assets folder, as illustrated in the [Viewing PDF](https://help.syncfusion.com/uwp/sfpdfviewer/concepts-and-features/viewing-pdf) section.
 {% tabs %}
 {% highlight c# %}
@@ -23,3 +23,8 @@ pdfViewer.LoadDocument(loadedDocument)
 Dim pageGap As Integer = pdfViewer.PageGap
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [View PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/select-and-copy-text)

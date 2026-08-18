@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open default document in Vue Document editor component | Syncfusion
-description: Learn here all about Open default document in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Open a Default Document in Vue DOCX Editor | Syncfusion
+description: Open a default document in Syncfusion® Vue DOCX Editor during initialization to provide predefined content and streamline document editing workflows.
 control: Open default document 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open default document in Vue Document editor component
+# How to Open a Default Document in Vue DOCX Editor
 
 In this article, we are going to see how to open a default document when Document Editor & Document Editor Container is initialized.
 
 ## Opening a default document in DocumentEditor
 
-By default, Document Editor will open blank document. You can use [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) API in Document Editor to open the sfdt content.
+By default, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) will open blank document. You can use [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) API in Document Editor to open the sfdt content.
 
 Document editor have [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) event which gets triggered once Document editor control created. So, if you want to open the document by default, you can use [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) API.
 

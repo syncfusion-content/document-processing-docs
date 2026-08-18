@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Chart Area | Syncfusion
-description: Learn how to modify the appearance of chart area in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Chart Area in .NET Word | Syncfusion
+description: Describe common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customizing Chart Area
+# Modify the Appearance of Chart Area in .NET Word
 
 Chart area refers to the space that contains the chart or graph you've inserted into a document. It includes the entire chart and all its elements, such as data points, labels, axes, and the plot area. Using DocIO, you can **customize the chart area in the chart**.
 
@@ -51,7 +51,7 @@ chartArea.Border.LineWeight = OfficeChartLineWeight.Hairline
 
 ## Customization of Color
 
-The following code snippet illustrates how to fill the color in chart area.
+The following code snippet illustrates how to fill the chart area with color.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -192,7 +192,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add Image in Chart Area
 
-The following code snippet illustrates how to fill the image in chart area.
+The following code snippet illustrates how to fill the chart area with an image.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -219,7 +219,7 @@ chartArea.Fill.UserPicture("Image.png")
 
 ## Set the Transparency level
 
-The following code snippet illustrates how to make transparency in chart area.
+The following code snippet illustrates how to set the transparency of the chart area.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}

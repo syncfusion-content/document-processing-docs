@@ -1,24 +1,28 @@
 ---
 layout: post
-title: View in Vue Document editor component | Syncfusion
-description: Learn here all about View in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: View in Vue DOCX Editor | Syncfusion
+description: View in Vue DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 control: View 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# View in Vue Document Editor Component
+# View in Vue DOCX Editor
 
 ## Web Layout
 
-Document Editor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType/).
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType/).
 
 ```
 <ejs-documenteditor :layoutType='Continuous' id='container'></ejs-documenteditor>
 ```
 
 >Note: Default value of [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) in Document Editor component is [`Pages`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType/).
+
+### Online Demo
+
+Explore how to view Word documents in web layout using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/web-layout.html).
 
 ## Ruler
 
@@ -35,6 +39,10 @@ The following example illustrates how to enable ruler in Document Editor
 {% previewsample "/document-processing/code-snippet/document-editor/vue/ruler-cs1" %}
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to use the ruler in the Vue Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ruler.html).
 
 ## Heading Navigation Pane 
 
@@ -68,3 +76,7 @@ The following example demonstrates how to enable the heading navigation pane in 
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online Demo
+
+Explore how to navigate through headings in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation.html).

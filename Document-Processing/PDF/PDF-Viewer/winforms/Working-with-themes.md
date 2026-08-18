@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with themes in Windows Forms PDF Viewer | Syncfusion&reg;
-description: Learn about Working with themes support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Themes in Windows Forms PDF Viewer | Syncfusion
+description: The themes feature in PdfViewerControl enables users to customize the appearance of the PDF Viewer with consistent and visually appealing styles.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-# Working with themes in Windows Forms PDF Viewer (PdfViewerControl)
+# Themes in Windows Forms PDF Viewer
 
 PDF Viewer provides support for various built-in themes, using which the default appearance of elements that are present in the control can be customized. This can be achieved using the [ThemeName](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Core.BaseControl.html#Syncfusion_Windows_Forms_Core_BaseControl_ThemeName) property of [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 
@@ -85,10 +85,12 @@ N> You can follow a similar step for all the other Office 2016 themes.
 
 ## Office 2019 theme
 
-It provides support for applying Office 2019 theme to `PdfViewerControl` and its associated elements. Before applying this theme to the control, the `Office2016Theme` assembly should be loaded in the main entry point of the application. Refer to the following code to load the assembly using [SkinManager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.SkinManager.html).
+It provides support for applying Office 2019 theme to `PdfViewerControl` and its associated elements. Before applying this theme to the control, the `Office2019Theme` assembly should be loaded in the main entry point of the application. Refer to the following code to load the assembly using [SkinManager](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.SkinManager.html).
 
 {% tabs %}
 {% highlight c# %}
+
+using Syncfusion.Windows.Forms;
 
 static class Program 
 { 
@@ -109,6 +111,8 @@ static class Program
 
 {% highlight vb %}
 
+Imports Syncfusion.Windows.Forms
+
 Module Program
     ''' <summary> 
     ''' The main entry point for the application. 
@@ -120,7 +124,7 @@ Module Program
         Application.SetCompatibleTextRenderingDefault(False) 
         Application.Run(New Form1()) 
     End Sub 
-End Class
+End Module
 
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +135,7 @@ After loading the theme assembly, set the `ThemeName` to `Office2019Colorful` as
 {% highlight c# %}
 
 this.pdfViewerControl1.ThemeName = "Office2019Colorful";
-	
+    
 {% endhighlight %}
 
 {% highlight vb %}
@@ -152,6 +156,8 @@ It provides support for applying high contrast theme to `PdfViewerControl` and i
 {% tabs %}
 {% highlight c# %}
 
+using Syncfusion.Windows.Forms;
+
 static class Program 
 { 
     /// <summary> 
@@ -171,6 +177,8 @@ static class Program
 
 {% highlight vb %}
 
+Imports Syncfusion.Windows.Forms
+
 Module Program
     ''' <summary> 
     ''' The main entry point for the application. 
@@ -182,7 +190,7 @@ Module Program
         Application.SetCompatibleTextRenderingDefault(False) 
         Application.Run(New Form1()) 
     End Sub 
-End Class
+End Module
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,6 +1,6 @@
 ---
 title: Convert PowerPoint to PDF in .NET MAUI | Syncfusion
-description: Convert PowerPoint to PDF in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Convert PowerPoint to PDF in .NET MAUI using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in .NET MAUI
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in .NET MAUI**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -39,7 +39,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -67,9 +67,11 @@ Step 5: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
-using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +84,7 @@ Step 6: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
@@ -184,7 +186,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>
@@ -211,10 +213,10 @@ Step 1: Create a new C# .NET MAUI app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a PowerPoint document to PDF in .NET MAUI app**, install [Syncfusion.PresentationRenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET.Core) to the MAUI project.
+Step 2: To **convert a PowerPoint document to PDF in .NET MAUI app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) to the MAUI project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.PresentationRenderer.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` to install the NuGet package.
 
 ![Add Syncfusion.PresentationRenderer.NET.Core NuGet package](Workingwith-MAUI/Command-to-add-NuGet-package-MAUI.png)
 
@@ -223,7 +225,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -251,6 +253,9 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using Syncfusion.Pdf;
@@ -266,7 +271,7 @@ Step 5: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
@@ -368,7 +373,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>
@@ -414,7 +419,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -442,9 +447,11 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
+using Syncfusion.Pdf;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
-using Syncfusion.Pdf;
 
 {% endhighlight %}
 {% endtabs %}
@@ -457,7 +464,7 @@ Step 5: Add a new action method **ConvertPPTXtoPDF** in MainPage.xaml.cs and inc
 //Loading an existing PowerPoint presentation.
 Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
-using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.docx")))
+using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_PowerPoint_Presentation_to_PDF.Assets.Input.pptx")))
 {
     //Convert the PowerPoint document to PDF document.
     using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
@@ -562,7 +569,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/PreviewControllerDS.cs)'| markdownify }}<br/>{{'[QLPreviewItemFileSystem.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/.NET-MAUI/Convert-PowerPoint-Presentation-to-PDF/Platforms/iOS/QLPreviewItemFileSystem.cs)'| markdownify }}
   </td>
   <td>
-    Helper classes for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper classes for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
 </table>
@@ -571,6 +578,6 @@ Refer the below helper files and add them into the mentioned project. These help
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core.  

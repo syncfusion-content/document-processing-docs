@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Shape annotation in Angular PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion Angular PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotation in Angular PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Shape annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape Annotation in Angular PDF Viewer component
+# Shape Annotation in Angular PDF Viewer
 
-The PDF Viewer provides options to add, edit, and delete shape annotations. Supported shape annotation types include:
+The PDF Viewer provides options to add, edit, and delete shape annotations. For details on deleting shape annotations, see [Delete annotation](delete-annotation.md). Supported shape annotation types include:
 
 * Line
 * Arrow
@@ -287,9 +287,9 @@ export class AppComponent implements OnInit {
 
 ## Edit an existing shape annotation programmatically
 
-To modify an existing shape annotation programmatically, use the editAnnotation() method.
+To modify an existing shape annotation programmatically, use the [editAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#editannotation) method.
 
-Here is an example of using editAnnotation()::
+Here is an example of using editAnnotation():
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

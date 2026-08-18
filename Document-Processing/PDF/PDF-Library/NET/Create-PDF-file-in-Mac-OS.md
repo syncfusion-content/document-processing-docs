@@ -1,33 +1,44 @@
 ---
-title: Create PDF document on Mac OS | Syncfusion
-description: Create PDF document in ASP.NET Core application on Mac OS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Getting Started with .NET PDF Library on macOS | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library on macOS and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
+keywords: macos save pdf, macos load pdf, c# save pdf, c# load pdf
 ---
 
-# Create PDF document on Mac OS
+# Getting Started with .NET PDF Library on macOS
 
-The [Syncfusion .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **Create PDF document on Mac OS**. 
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document on macOS.
 
-## Steps to Create PDF document programmatically in .NET Core application on MacOS
+## Steps to create PDF document programmatically in .NET application on macOS
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Mac-OS-Visual-Studio.md %}
 {% endtabcontent %}
- 
+
 {% tabcontent Visual Studio Code %}
 {% include_relative tabcontent-support/Create-PDF-document-in-Mac-OS-VS-Code.md %}
 {% endtabcontent %}
 {% endtabcontents %}
 
-A complete working sample can be downloaded from [Github](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
+N> Visual Studio for Mac was retired by Microsoft in August 2022. For the best experience on macOS, we recommend using Visual Studio Code with the C# extension as shown in the Visual Studio Code tab above.
 
-By executing the program, you will get the **PDF document** as follows.
-![Mac OS output PDF document](GettingStarted_images/Open_and_save_output.png)
+A complete working sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/Mac).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+By executing the program, you will get the PDF document as follows.
+![macOS output PDF document](GettingStarted_images/Open_and_save_output.png)
 
-An online sample link to [create PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HelloWorld#/material3) in ASP.NET Core. 
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+
+An online sample to [create a PDF document](https://document.syncfusion.com/demos/pdf/default#/tailwind) is also available.
+
+## Next steps
+
+* [Create a PDF on Linux](Create-PDF-file-in-Linux.md)
+* [Create a PDF in a Console application (cross-platform)](Create-PDF-file-in-Console.md)
+* [Create a PDF in ASP.NET Core](Create-PDF-file-in-ASP-NET-Core.md)
+* [Create a PDF in WPF](Create-PDF-file-in-WPF.md)
+* [Open and read an existing PDF document](Open-PDF-file.md)
+* [Save the generated PDF to a file or stream](Save-PDF-file.md)

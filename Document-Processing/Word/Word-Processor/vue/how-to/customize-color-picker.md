@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize color picker in Vue Document editor | Syncfusion
-description: Learn here all about Customize color picker in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Color Picker in Vue DOCX Editor | Syncfusion
+description: Customize the color picker appearance in Syncfusion® Vue DOCX Editor using color picker settings to match your application's design.
 control: Customize color picker
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize color picker in Vue Document editor component
+# How to Customize Color Picker in Vue DOCX Editor
 
-Document editor provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings)in the document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings)in the document editor settings. The color picker offers customization options for default appearance, by allowing selection between Picker or Palette mode, for font and border colors."
 
 Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#documenteditorsettings) property for DocumentEditor also.
 
@@ -53,3 +53,7 @@ The following example code illustrates how to Customize the color picker in Docu
 
 
 >**Note**: According to the Word document specifications, it is not possible to modify the **`Predefined Highlight colors`**. This limitation means that the range of highlight colors provided by default cannot be customized or expanded upon by the user to suit individual preferences. Consequently, users must work within the confines of the existing color palette, as no functionality currently exists to modify or personalize these predefined highlighting options.
+
+## Online Demo
+
+Explore how to customize the color picker in the Vue Document Editor for Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/color-picker-customization.html).

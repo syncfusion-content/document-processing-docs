@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Table format in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Table format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Table Format in JavaScript DOCX Editor | Syncfusion
+description: The table format feature in JavaScript DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in JavaScript (ES5) Document editor control
+# Table format in JavaScript DOCX Editor
 
-Document Editor customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
 
 ## Cell margins
 
@@ -202,6 +202,10 @@ Document Editor expose API to get or set the table description of the selected i
 ```js
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
+
+## Online Demo
+
+Explore how to format tables in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/table-formatting.html).
 
 ## See Also
 

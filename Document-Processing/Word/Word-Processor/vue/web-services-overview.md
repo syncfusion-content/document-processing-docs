@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Web services in Vue Document editor component | Syncfusion
-description: Learn here all about Web services in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Web Services in Syncfusion Vue DOCX Editor Control| Syncfusion
+description: Learn about the overview of web services in Syncfusion Essential Studio Vue DOCX Editor control and more details.
 control: Web services 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web services in Vue Document editor component
+# Web Services in Syncfusion Vue DOCX Editor Control
 
-You can deploy web APIs for server-side dependencies of Document Editor component in the following platforms.
+You can deploy web APIs for server-side dependencies of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component in the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)
@@ -20,16 +20,16 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 
 |Operations|When client-server communication will be triggered?|What type of data will be transferred between client and server?|
 |------------|--------------------------------------|------------------------|
-|[Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)|When opening the document other than SFDT (Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor's native file format), the server-side web API is invoked from client-side script.|**Client**: Sends the input file.<br>**Server**: Receives the input file and sends the converted SFDT back to the client.<br><br>The server-side web API internally extracts the content from the document (DOCX, DOC, WordML, RTF, HTML) using Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO) and converts it into SFDT for opening the document in Document Editor.|
+|[Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)|When opening the document other than SFDT (Vue Document Editor's native file format), the server-side web API is invoked from client-side script.|**Client**: Sends the input file.<br>**Server**: Receives the input file and sends the converted SFDT back to the client.<br><br>The server-side web API internally extracts the content from the document (DOCX, DOC, WordML, RTF, HTML) using Word library (DocIO) and converts it into SFDT for opening the document in Document Editor.|
 |[Paste with formatting](./clipboard#paste-with-formatting)|When pasting the formatted content (HTML/RTF) received from system clipboard. For converting HTML/RTF to SFDT format.<br><br> **Note**: Whereas plain text received from system clipboard will be pasted directly in the client-side.|**Client**: Sends the input Html or Rtf string. <br>**Server**: Receives the input Html or Rtf string and sends the converted SFDT back to the client.|
-|[Restrict editing](./document-management)|When protecting the document, for generating hash.|**Client**: Sends the input data for hashing algorithm.<br> **Server**: Receives the input data for hashing algorithm and sends the result hash information back to the client.|
+|[Restrict editing](./restrict-editing)|When protecting the document, for generating hash.|**Client**: Sends the input data for hashing algorithm.<br> **Server**: Receives the input data for hashing algorithm and sends the result hash information back to the client.|
 |[Spellcheck](./spell-check)(default)|When the spellchecker is enabled on client-side Document Editor, and it performs the spell check validation for words in the document.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
 |[SpellCheckByPage](./spell-check)|Document editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](./spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
-|[Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export) (optional API)|You can configure this API, if you want to save the document in file format other than DOCX and SFDT.<br><br> For saving the files as WordML, DOC, RTF, HTML, ODT, Text using Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO) and PDF using  Syncfusion<sup style="font-size:70%">&reg;</sup> Word (DocIO) and PDF libraries.|You can transfer document from client to server either as SFDT or DOCX format.<br><br>First option (SFDT):<br>**Client**: Sends the SFDT.<br>**Server**: Receives the SFDT and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.<br><br>Second option (DOCX):<br>**Client**: Sends the DOCX file.<br>**Server**: Receives the DOCX file and saves the converted document as any file format supported by [Syncfusion<sup style="font-size:70%">&reg;</sup> Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.|
+|[Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export) (optional API)|You can configure this API, if you want to save the document in file format other than DOCX and SFDT.<br><br> For saving the files as WordML, DOC, RTF, HTML, ODT, Text using Word library (DocIO) and PDF using Word (DocIO) and PDF libraries.|You can transfer document from client to server either as SFDT or DOCX format.<br><br>First option (SFDT):<br>**Client**: Sends the SFDT.<br>**Server**: Receives the SFDT and saves the converted document as any file format supported by [Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.<br><br>Second option (DOCX):<br>**Client**: Sends the DOCX file.<br>**Server**: Receives the DOCX file and saves the converted document as any file format supported by [Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.|
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#serviceurl).
+Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/).
 
 If your running web service Url is `http://localhost:62869/`, set the serviceUrl like below:
 
@@ -179,7 +179,7 @@ export default {
 
 Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
 
-You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/xmlHttpRequestEventArgs/) properties.
+You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/xmlHttpRequestEventArgs) properties.
 
 The following example code illustrates how to modify the XMLHttpRequest using beforeXmlHttpRequestSend.
 

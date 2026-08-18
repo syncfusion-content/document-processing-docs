@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open PDF from OneDrive in React PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion React PDF Viewer component using a server-backed approach.
+title: From One Drive in React PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the React PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Open PDF from OneDrive
+# Open PDF from OneDrive in React PDF Viewer
 
-These steps describe how to load a PDF stored in OneDrive into the Syncfusion React PDF Viewer using a server-backed web service.
+These steps describe how to load a PDF stored in OneDrive into the React PDF Viewer using a server-backed web service.
 
 **Step 1:** Register a Microsoft Graph application
 
@@ -17,7 +17,7 @@ Create a Microsoft Graph API application and obtain the application ID and tenan
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Start by following the Syncfusion React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that requests document data from the server-backed service.
+Start by following the React PDF Viewer 'Getting started' guide to create a basic PDF viewer sample. This establishes the client-side component that requests document data from the server-backed service.
 
 **Step 3:** Modify the PdfViewerController.cs file in the web service project
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the `Load()` method to load the PDF from One Drive.
+5. Modify the `Load()` method to load the PDF from OneDrive.
 
 ```csharp
 
@@ -143,7 +143,7 @@ N> Replace the placeholders with your actual values: Tenant ID, Application ID, 
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
 
 {% raw %}
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Save PDF files to OneDrive in JavaScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to OneDrive using the Syncfusion JavaScript PDF Viewer component with a server-backed web service.
+title: To One Drive in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES5) PDF Viewer to OneDrive using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to OneDrive
+# Save PDF Files to OneDrive in JavaScript (ES5) PDF Viewer
 
-This article describes how to save a PDF file to OneDrive from the Syncfusion JavaScript PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to OneDrive from the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) using a server-side web service. Follow the steps below.
 
 **Step 1:** Create a Microsoft Graph API application
 
@@ -18,7 +18,7 @@ Create a Microsoft Graph API application, and obtain the application (client) ID
 
 **Step 2:** Create a PDF Viewer sample in JavaScript
 
-Create a simple PDF Viewer sample in JavaScript by following the Syncfusion PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide. This establishes the application structure required for the integration.
+Create a simple PDF Viewer sample in JavaScript by following the PDF Viewer for JavaScript [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide. This establishes the application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
@@ -113,7 +113,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 

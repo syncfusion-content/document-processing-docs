@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize FontFamily DropDown in Document Editor | Syncfusion
-description: Learn here all about how to customize font family drop down in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Font Family in ASP.NET Core DOCX Editor | Syncfusion
+description: Customize the font family drop down list in Syncfusion® ASP.NET Core DOCX Editor by configuring available font families and controlling font selection options.
 platform: document-processing
-control: Customize Font Family Drop Down
+control: Document Editor
 documentation: ug
 ---
 
 
-# How to customize the font family dropdown in Document Editor
+# How to Customize Font Family in ASP.NET Core DOCX Editor
 
-Document editor provides options to customize the font family drop down list values using `fontFamilies` in Document editor settings. Fonts which are added in `fontFamilies` of `documentEditorSettings` will be displayed on font drop down list of text properties pane and font dialog.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the font family dropdown list using `fontFamilies` in `DocumentEditorSettings`. Fonts that are added in `fontFamilies` of `documentEditorSettings` will be displayed on the font dropdown list of the Text Properties pane and the Font dialog.
 
-Similarly, you can use `documentEditorSettings` property for DocumentEditor also.
+Similarly, you can use the `documentEditorSettings` property for the Document Editor as well.
 
 
 {% tabs %}
@@ -25,4 +25,4 @@ Similarly, you can use `documentEditorSettings` property for DocumentEditor also
 {% endtabs %}
 
 
-![Font](../images/font-family.png)
+![Font family dropdown customization](../images/font-family.png)

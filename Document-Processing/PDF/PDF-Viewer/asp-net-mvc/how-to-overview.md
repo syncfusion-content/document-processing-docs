@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQ Section in ASP.NET MVC PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of ASP.NET MVC PDF Viewer control.
+title: How to Overview of the ASP.NET MVC PDF Viewer | Syncfusion
+description: How-to overview of the ASP.NET MVC PDF Viewer in Syncfusion ASP.NET MVC PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section in PDF Viewer Component
+# How to Overview of the ASP.NET MVC PDF Viewer
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
@@ -75,3 +75,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to Show notification dialog in PDF Viewer?](./how-to/show-notification-dialog)
 * [How to set date to the signature in PDF Viewer?](./how-to/signature-date)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [How to configure PDF Viewer with local resources?](./how-to/local-resources)

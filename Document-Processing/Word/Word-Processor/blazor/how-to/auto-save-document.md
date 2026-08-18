@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Auto-Save a Document in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion Blazor DocumentEditor component and much more.
+title: How to Auto Save Document in Blazor DOCX Editor | Syncfusion
+description: Automatically save edited documents to the server at regular intervals in Syncfusion® Blazor DOCX Editor to prevent data loss.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
-# Auto save document in Blazor Document editor component
+# How to Auto Save Document in Blazor DOCX Editor
 
-In this article, we are going to see how to auto save the document to server. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+In this article, you will learn how to automatically save the document to the server. You can save the edited content at regular intervals. This helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
-The following example illustrates how to auto save the document in server.
+The following example illustrates how to auto-save the document to the server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) method.
+* On the client side, use the content change event to save the edited content at regular intervals. Based on the `contentChanged` boolean, the document is sent as DOCX format to the server side using the [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -53,19 +53,19 @@ The following example illustrates how to auto save the document in server.
         SfDocumentEditor editor = container.DocumentEditor;
         string base64Data = await editor.SaveAsBlobAsync(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
-        // To observe the memory go down, null out the reference of base64Data variable.
+        // To allow the garbage collector to reclaim memory, set the reference to null.
         base64Data = null;
         // Word document file stream
         Stream stream = new MemoryStream(data);
-        // To observe the memory go down, null out the reference of data variable.
+        // To allow the garbage collector to reclaim memory, set the reference to null.
         data = null;
         using (var fileStream = new FileStream(@"wwwroot/data/GettingStarted.docx", FileMode.Create, FileAccess.Write))
         {
-            // Saving the new file in root path of application
+            // Saving the new file in the root path of the application
             await stream.CopyToAsync(fileStream);
         }
         stream.Close();
-        // To observe the memory go down, null out the reference of stream variable.
+        // To allow the garbage collector to reclaim memory, set the reference to null.
         stream = null;
     }
 
@@ -75,3 +75,7 @@ The following example illustrates how to auto save the document in server.
     }
 }
 ```
+
+## Online demo
+
+Explore how to automatically save Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).

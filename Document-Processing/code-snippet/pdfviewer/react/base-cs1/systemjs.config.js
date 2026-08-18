@@ -14,7 +14,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/25.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.2.3/"
     },
     map: {
         app: "app",
@@ -49,6 +49,9 @@ System.config({
         "@syncfusion/ej2-pdf": "syncfusion:ej2-pdf/dist/ej2-pdf.umd.min.js",
         "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
+        "@syncfusion/ej2-pdf-data-extract": "syncfusion:ej2-pdf-data-extract/dist/ej2-pdf-data-extract.umd.min.js",
+        "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
+        "@syncfusion/ej2-interactive-chat":"syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js"
     },
     packages: {
         'app': { main: 'index', defaultExtension: 'tsx' },

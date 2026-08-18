@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Bookmarks in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to add, navigate, and manage bookmarks in the Syncfusion Blazor Document Editor component both through the UI and programmatically.
+title: Bookmarks in Blazor DOCX Editor | Syncfusion
+description: The bookmark feature in Blazor DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Bookmarks in Blazor DocumentEditor Component
+# Bookmarks in Blazor DOCX Editor
 
-A bookmark is a powerful tool that marks a specific place in a document so you can easily find it again. You can insert multiple bookmarks in a document and give each one a unique name for easy identification.
+A bookmark marks a specific place in a document so you can easily find it again. You can insert multiple bookmarks in a document and give each one a unique name for easy identification.
 
-The [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) (Document Editor) provides two ways to manage bookmarks: through a built-in dialog or programmatically using API methods. Once a bookmark is added, you can jump to its location or create hyperlinks to it.
+The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides two ways to manage bookmarks: through a built-in dialog or programmatically using API methods. Once a bookmark is added, you can jump to its location or create hyperlinks to it.
 
-N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
+N> Bookmark names need to begin with a letter. They can include letters and numbers, but not spaces. To separate words in a name, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for the table of contents.
 
-The bookmark dialog can be opened using the Bookmark option in the toolbar. For more details on bookmark functionality, refer to the [`Blazor Word Processor - Bookmark`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks) example.
-
+Open the bookmark dialog using the Bookmark option in the toolbar. For more details on bookmark functionality, refer to the [`Blazor Word Processor - Bookmark`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks) example.
 
 ## Add a bookmark
 
@@ -34,7 +33,7 @@ Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion
 await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
 ```
 
-## Delete a Bookmark
+## Delete a bookmark
 
 Use the [`DeleteBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteBookmarkAsync_System_String_) method to delete a bookmark by its name.
 
@@ -52,3 +51,7 @@ await container.DocumentEditor.Selection.GetBookmarksAsync(true);
 ```
 
 N> The boolean parameter of `GetBookmarksAsync` specifies whether to include hidden bookmarks in the result. If `false`, hidden bookmarks are excluded.
+
+## Online demo
+
+Explore how to insert and manage bookmarks in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).

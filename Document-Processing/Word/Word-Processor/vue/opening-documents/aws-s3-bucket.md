@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open document from AWS S3 in Vue Document editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from AWS S3 in Vue DOCX Editor | Syncfusion
+description: Open documents from AWS S3 in Vue DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 in Vue Document editor
+# Open Documents from AWS S3 in Vue DOCX Editor
 
-To load a document from AWS S3 in a Document Editor, you can follow the steps below
+To load a document from AWS S3 in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1:** Create a Simple Document Editor Sample in Vue
 

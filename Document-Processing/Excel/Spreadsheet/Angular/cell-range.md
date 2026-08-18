@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Range in Angular Spreadsheet Component | Syncfusion
-description: Learn here all about cell range in Syncfusion Essential Angular Spreadsheet component, it's elements and more.
+title: Cell Range in Angular Spreadsheet | Syncfusion
+description: Cell range in Angular Spreadsheet enables selecting, accessing, and managing groups of cells efficiently for data entry and manipulation.
 platform: document-processing
-control: Cell range 
+control: Cell range
 documentation: ug
 ---
 
-# Cell Range in Angular Spreadsheet Component
+# Cell Range in Angular Spreadsheet 
 
 A group of cells in a sheet is known as cell range.
 
@@ -21,7 +21,7 @@ Wrap text can be applied or removed to a cell or range of cells in the following
 * Select or deselect wrap button from ribbon toolbar to apply or remove the wrap text to the selected range.
 * Using the [`wrap`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#wrap) method, you can apply or remove the wrap text once the component is loaded.
 
-The following code example shows the wrap text functionality in spreadsheet.
+The following code example shows the wrap text functionality in the Spreadsheet.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -55,10 +55,10 @@ You can merge the range of cells in the following ways,
 The available merge options in spreadsheet are,
 
 | Type | Action |
-|-------|---------|
-| Merge All | Combines all the cells in a range in to a single cell (default). |
-| Merge Horizontally | Combines cells in a range as row-wise. |
-| Merge Vertically | Combines cells in a range as column-wise. |
+|------|--------|
+| Merge All | Combines all the cells in a range into a single cell (default). |
+| Merge Horizontally | Combines cells in a range row-wise (across columns). |
+| Merge Vertically | Combines cells in a range column-wise (across rows). |
 | UnMerge | Splits the merged cells into multiple cells. |
 
 The following code example shows the merge cells operation in spreadsheet.
@@ -86,7 +86,7 @@ The following features have some limitations in Merge:
 
 Data Validation is used to restrict the user from entering the invalid data. You can use the [`allowDataValidation`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowdatavalidation) property to enable or disable data validation.
 
-> * The default value for `allowDataValidation` property is `true`.
+> The default value for `allowDataValidation` property is `true`.
 
 ### Apply Validation
 
@@ -169,7 +169,7 @@ The following code example demonstrates how to add custom data validation with a
 
 The following features have some limitations in Data Validation:
 
-* Entire row data validation.
+* Applying data validation to an entire row.
 * Insert row between the data validation.
 * Copy/paste with data validation.
 * Delete cells between data validation applied range.
@@ -183,7 +183,7 @@ You can do this by one of the following ways,
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
 * Use the autoFill() method programmatically.
 
-The available parameters in `autoFill()` method are,
+The available parameters in `autoFill()` method are:
 
 | Parameter | Type | Description |
 |-----|------|----|
@@ -294,7 +294,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

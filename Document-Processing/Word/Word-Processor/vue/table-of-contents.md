@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Table of contents in Vue Document editor component | Syncfusion
-description: Learn here all about Table of contents in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Table of Contents in VueDOCX Editor | Syncfusion
+description: The Table of Contents feature in Vue DOCX Editor enables users to generate and update a structured index for quick document navigation.
 control: Table of contents 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in Vue Document editor component
+# Table of Contents in Vue DOCX Editor
 
 The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
 
 ## Inserting table of contents
 
-Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -66,6 +66,10 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 ```
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+
+## Online Demo
+
+Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
 
 ## See Also
 

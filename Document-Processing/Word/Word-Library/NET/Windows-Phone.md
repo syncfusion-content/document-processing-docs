@@ -1,12 +1,12 @@
 ---
-title: Working with Windows phone using Syncfusion<sup>&reg;</sup> Word library
-description: Create a Windows phone application, load the word document and save the word document with Syncfusion<sup>&reg;</sup> Word library
+title: Windows phone in .NET Word | Syncfusion
+description: Create a Windows phone application, load the word document and save the word document with the .NET Word Library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Working with Windows Phone 
+# Windows phone in .NET Word
 
 In your Windows Phone application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/document-processing/word/word-library/net/assemblies-required).
 

@@ -1,0 +1,47 @@
+@Html.EJS().Spreadsheet("spreadsheet").Created("created").AllowOpen(true).AllowSave(true).OpenUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open").SaveUrl("https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save").Sheets(sheet =>
+{
+	 sheet.Name("Project Budget").Ranges(ranges =>
+	 {
+		 ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData).StartCell("A1").Add();
+	 }).Columns(column =>
+	 {
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+		 column.Add();
+	 }).Add();
+   }).Render()
+
+<script>
+
+	function created() {
+		this.suspendRefresh();
+		this.insertRow(0, 0);
+		this.updateCell({ value: 'Project Budget Tracker - Q2 2026' }, 'A1');
+		this.merge('A1:K1');
+		this.updateCell({ value: 'Reference' }, 'K2');
+		this.updateCell({ value: 'Total Budget' }, 'A13');
+		this.updateCell({ formula: '=SUM(F3:F12)' }, 'F13');
+		this.updateCell({ formula: '=SUM(G3:G12)' }, 'G13');
+		this.updateCell({ formula: '=SUM(H3:H12)' }, 'H13');
+		this.addHyperlink('https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/overview', 'K3:K12', 'Open Guide');
+		this.cellFormat({ fontWeight: 'bold', fontSize: '14pt', textAlign: 'center', verticalAlign: 'middle', backgroundColor: '#4472C4', color: '#FFFFFF' }, 'A1:K1');
+		this.cellFormat({ fontWeight: 'bold', textAlign: 'center', backgroundColor: '#EAEAEA' }, 'A2:K2');
+		this.numberFormat('$#,##0.00', 'F3:H13');
+		this.addDataValidation({ type: 'WholeNumber', operator: 'Between', value1: '1', value2: '5', isHighlighted: true }, 'J3:J12');
+		this.wrap('A3:A12', true);
+		this.setBorder({ border: '1px solid #C8C8C8' }, 'A2:K13', 'Outer');
+		this.setRowHeight(50, 0);
+		this.setRowsHeight(30, ['1:13']);
+		this.setColWidth(220, 0);
+		this.setColumnsWidth(90, ['B:K']);
+		this.resumeRefresh();
+	}
+
+</script>

@@ -1,15 +1,15 @@
 ---
-title: Open and save PDF document in AWS Lambda | Syncfusion
-description: Open and save PDF document in AWS Lambda using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in AWS Lambda | Syncfusion
+description: Learn how to open and save PDF documents in AWS Lambda using Syncfusion .NET PDF library without requiring Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: aws lambda save pdf, aws load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in AWS Lambda
+# Open and Save PDF Document in AWS Lambda
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, **open and save PDF document in AWS Lambda**. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda.
 
 ## Steps to open and save PDF document in AWS Lambda
 
@@ -22,7 +22,7 @@ Step 2: Select the Blueprint as Empty Function and click **Finish**.
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet package](AWS_Images/NuGetPackage.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: Create a folder and copy the required data files, and include the files in the project.
 ![Create a folder](AWS_Images/Data-Folder.png)
@@ -44,13 +44,13 @@ using Syncfusion.Drawing;
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code sample in **Function.cs** to **open a PDF document in AWS Lambda**.
+Step 7: Add the following code sample in **Function.cs** to **open a PDF document in AWS Lambda**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 //Open an existing PDF document.
-FileStream document = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
+FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 PdfLoadedDocument document = new PdfLoadedDocument(stream);
 
 {% endhighlight %}
@@ -124,7 +124,7 @@ Step 14: Edit the Memory size and Timeout as maximum in Basic settings of the AW
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Console-APP.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
@@ -164,8 +164,8 @@ InvokeResponse response = await client.InvokeAsync(invoke);
 //Read the response stream
 var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
-var serilizer = new JsonSerializer();
-var responseText = serilizer.Deserialize(reader);
+var serializer = new JsonSerializer();
+var responseText = serializer.Deserialize(reader);
 //Convert Base64String into PDF document
 byte[] bytes = Convert.FromBase64String(responseText.ToString());
 FileStream fileStream = new FileStream("Sample.pdf", FileMode.Create);
@@ -177,7 +177,7 @@ System.Diagnostics.Process.Start("Sample.pdf");
 {% endhighlight %}
 {% endtabs %}
 
-By executing the program, you will get the a **PDF document** as follows.
+By executing the program, you will get the PDF document as follows.
 
 ![Open and save a PDF document in AWS Lambda](AWS_Images/Output.png)
 

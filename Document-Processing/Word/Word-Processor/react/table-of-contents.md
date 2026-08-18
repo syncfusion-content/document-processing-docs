@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Table of contents in React Document editor component | Syncfusion
-description: Learn here all about Table of contents in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: Table of Contents in React DOCX Editor | Syncfusion
+description: The Table of Contents feature in React DOCX Editor enables users to generate and update a structured index for quick document navigation.
 control: Table of contents 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in React Document editor component
+# Table of Contents in React DOCX Editor
 
-The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
+The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where that heading starts, with various options to customize the appearance.
 
 ## Inserting table of contents
 
-Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
+[`TableOfContentsSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
@@ -25,7 +25,7 @@ Document Editor exposes an API to insert table of contents at cursor position pr
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert table of content in document editor.
+The following code illustrates how to insert a table of contents in the Document Editor.
 
 ```ts
 let tocSettings: TableOfContentsSettings =
@@ -106,7 +106,7 @@ function App() {
             includePageNumber: true,
             rightAlign: true,
         };
-        //Insert table of content with specified settings.
+        //Insert table of contents with specified settings.
         documenteditor.editor.insertTableOfContents(tocSettings);
     }
     return (
@@ -127,7 +127,11 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
->Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> The same method is used for inserting, updating, and editing table of contents. This will work based on the current element at the cursor position and the optional settings parameter. If the table of contents is present at the cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+
+## Online Demo
+
+Explore how to insert and update table of contents in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/table-of-contents).
 
 ## See Also
 

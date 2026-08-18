@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Annotations mobileView in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to use annotations in mobile view with the Syncfusion JavaScript PDF Viewer (Essential JS 2).
+title: Annotations in Mobile View in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Create, edit, and manage annotations in the JavaScript (ES5) PDF Viewer when running on mobile devices with the touch-optimized annotation UI.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in JavaScript PDF Viewer control
+# Annotations in Mobile View in JavaScript (ES5) PDF Viewer
 
-This article describes how to use annotation tools in the Syncfusion JavaScript (Essential JS 2) PDF Viewer on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
+This article describes how to use annotation tools in the JavaScript (Essential JS 2) PDF Viewer on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
 
 ## Open the annotation toolbar
 

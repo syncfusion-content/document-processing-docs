@@ -1,14 +1,14 @@
 ---
-title: Convert Word to Image in UWP | Syncfusion
-description: Convert Word to image in UWP using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in UWP  | Syncfusion
+description: Describe how to convert Word documents to images in UWP applications using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in UWP
+# Convert Word to Image in UWP 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in UWP**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in UWP**.
 
 ## Steps to convert Word document to Image in UWP
 
@@ -52,6 +52,11 @@ Step 4: Include the following namespaces in the **MainPage.xaml.cs** file.
 
 {% highlight c# tabtitle="C#" %}
 
+using System.Collections.Generic;
+using System.IO;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.UI.Popups;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIORenderer;
@@ -146,6 +151,6 @@ By executing the program, you will get the **image** as follows.
 
 N> As per [MSDN announcement](https://devblogs.microsoft.com/dotnet/announcing-uwp-support-for-net-standard-2-0/), the minimum version of UWP project must be Fall Creators Update (FCU).
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 

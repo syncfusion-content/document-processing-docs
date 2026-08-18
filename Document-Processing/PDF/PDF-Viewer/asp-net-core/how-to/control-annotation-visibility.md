@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Control annotation visibility in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to control the visibility of PDF annotations in the ASP.NET Core PDF Viewer, ensuring annotations appear only in the viewer as needed.
+title: How to Control Annotation Visibility in ASP.NET Core PDF | Syncfusion
+description: Control the visibility of PDF annotations in the ASP.NET Core PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Control annotation visibility in ASP.NET Core PDF Viewer
+# How to Control Annotation Visibility in ASP.NET Core PDF Viewer
 
 Manage how annotations appear at different stages of the document workflow. This guide demonstrates how to keep annotations visible within the PDF Viewer while programmatically hiding them in the final downloaded PDF file.
 
 ## Control annotation visibility on download
 
-**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample.
+**Step 1:** Follow the [Syncfusion ASP.NET Core PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to set up a basic PDF Viewer sample. The example below uses the PDF Library APIs exposed through the `ej2-pdfviewer-lib` resource, so no additional script references are required.
 
 **Step 2:** Add a download button and configure the viewer markup. The following example includes logic to update annotation flags before the file is saved:
 

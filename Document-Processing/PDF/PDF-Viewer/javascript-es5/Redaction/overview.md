@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Redaction annotation in Javascript PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion JavaScript(ES5) PDF Viewer.
+title: About Syncfusion JavaScript (ES5) PDF Viewer Redaction | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Redaction section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction in JavaScript (ES5) PdfViewer
+# About Syncfusion JavaScript (ES5) PDF Viewer Redaction
 
-Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion JavaScript PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction them with a single action.
+Redaction annotations are used to hide confidential or sensitive information in a PDF. The JavaScript PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
 
 ## Enable the redaction toolbar
 

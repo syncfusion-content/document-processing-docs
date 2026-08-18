@@ -1,13 +1,15 @@
 ---
-title: Working with SmartArt in .NET Word (DocIO) library | Syncfusion
-description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: SmartArt in .NET Word library | Syncfusion
+description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with SmartArt
+# SmartArt in .NET Word library
 
-A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the Syncfusion<sup>&reg;</sup> Word library (DocIO).
+A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
+
+N> To use the SmartArt APIs, install the `Syncfusion.DocIO.Net` (cross-platform) or `Syncfusion.DocIO.WinForms` (Windows-specific) NuGet package and add the following namespaces: `Syncfusion.DocIO` and `Syncfusion.DocIO.DLS`. For setup details, see the [NuGet Packages](../../NuGet-Packages.md) page. SmartArt support is available starting from DocIO version 27.2.2.
 
 ## Create SmartArt 
 
@@ -26,7 +28,9 @@ N> DocIO supports SmartArt only in DOCX format document.
 
 ### List
 
-The following code example illustrating how to create a **List SmartArt** in a Word document.
+The following code example illustrates how to create a **List SmartArt** in a Word document.
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -187,11 +191,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Process
 
-The following code example illustrating how to create a **Process SmartArt** in a Word document.
+The following code example illustrates how to create a **Process SmartArt** in a Word document.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-List/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/SmartArts/Create-SmartArt-Process/.NET/Create-SmartArt-Process/Program.cs" %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -351,7 +355,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Cycle
 
-The following code example illustrating how to create a **Cycle SmartArt** in a Word document.
+The following code example illustrates how to create a **Cycle SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -486,7 +490,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Hierarchy
 
-The following code example illustrating how to create a **Hierarchy SmartArt** in a Word document.
+The following code example illustrates how to create a **Hierarchy SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -603,7 +607,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Relationship
 
-The following code example illustrating how to create a **Relationship SmartArt** in a Word document.
+The following code example illustrates how to create a **Relationship SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -761,7 +765,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Matrix
 
-The following code example illustrating how to create a **Matrix SmartArt** in a Word document.
+The following code example illustrates how to create a **Matrix SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -959,7 +963,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Pyramid
 
-The following code example illustrating how to create a **Pyramid SmartArt** in a Word document.
+The following code example illustrates how to create a **Pyramid SmartArt** in a Word document.
 
 {% tabs %}
 
@@ -1068,7 +1072,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Picture
 
-The following code example illustrating how to create a **Picture SmartArt** in a Word document.
+The following code example illustrates how to create a **Picture SmartArt** in a Word document.
+
+N> This example requires PNG image files (`Nancy Davolio.png`, `Andrew Fuller.png`, `Janet Leverling.png`) placed in an `Images` folder under the project output directory. You can obtain sample images from the [GitHub sample](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/SmartArts/Create-SmartArt-Picture/.NET/Create-SmartArt-Picture/Images).
 
 {% tabs %}
 
@@ -1801,9 +1807,9 @@ foreach (IOfficeSmartArtNode node in smartArt.Nodes)
 }
 //Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
+wordDocument.Save(stream, FormatType.Docx);
 //Closes the document
-document.Close();
+wordDocument.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1825,8 +1831,8 @@ foreach (IOfficeSmartArtNode node in smartArt.Nodes)
     }
 }
 //Saves and closes the document instance
-document.Save("Result.docx", FormatType.Docx);
-document.Close();
+wordDocument.Save("Result.docx", FormatType.Docx);
+wordDocument.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
@@ -1865,7 +1871,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Limitations
 
-The .NET Word Library (DocIO) has the following limitations when creating SmartArt programmatically or processing SmartArt from an existing Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) has the following limitations when creating SmartArt programmatically or processing SmartArt from an existing Word document.
 
 **Document Processing Functionalities**
 
@@ -2027,5 +2033,5 @@ SmartArt typically contains graphic properties, including bounds information for
 
 ## Online Demo
 
-* Explore how to create a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createsmartart#/tailwind).
-* Explore how to edit a Word document with SmartArt using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editsmartart#/tailwind).
+* Explore how to create a Word document with SmartArt using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createsmartart#/tailwind).
+* Explore how to edit a Word document with SmartArt using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editsmartart#/tailwind).

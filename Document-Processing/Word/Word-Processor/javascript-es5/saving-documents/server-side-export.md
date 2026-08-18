@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Server side export in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Server side export in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Export in JavaScript DOCX Editor | Syncfusion
+description: The export feature in JavaScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Server side export 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server side export in JavaScript (ES5) Document editor control
+# Server-side Export in JavaScript DOCX Editor
 
 ## SFDT to DOCX export
 
-Document Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper **Syncfusion.EJ2.DocumentEditor** available in ASP.NET Core & ASP.NET MVC platform in the below NuGet's.
+Document Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper **[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor)** (Document Editor) available in ASP.NET Core & ASP.NET MVC platform in the below NuGet's.
 
 * [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)

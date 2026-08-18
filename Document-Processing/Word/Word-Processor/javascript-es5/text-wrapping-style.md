@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Text wrapping style in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Text wrapping style in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in JavaScript DOCX Editor | Syncfusion
+description: Text wrapping styles in JavaScript DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Text wrapping style 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text wrapping style in JavaScript (ES5) Document editor control
+# Text Wrapping Style in JavaScript DOCX Editor
 
-Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, DocumentEditor has only preservation support for image and textbox shape with below wrapping styles.
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 

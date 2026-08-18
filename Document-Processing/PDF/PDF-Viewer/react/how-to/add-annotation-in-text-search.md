@@ -1,132 +1,179 @@
 ---
 layout: post
-title: Add Rectangle Annotation via Text Search in Syncfusion React PDF Viewer
-description: Discover how to add rectangle annotations via text search in the Syncfusion React PDF Viewer for a seamless mobile experience.
+title: How to Add Annotations From Text Search in React PDF | Syncfusion
+description: Add annotations from text search results in the React PDF Viewer by responding to text search events for a smooth mobile experience.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Add Rectangle Annotations via Text Search in PDF Viewer
+# How to Add Annotations From Text Search in React PDF Viewer
 
-A concise guide that demonstrates how to add rectangle annotations at highlighted text search results in the React PDF Viewer. The guide explains where to wire the callback, required services, and quick troubleshooting steps.
+A concise guide that demonstrates how to add rectangle and highlight annotations to text matched by a search in the Syncfusion React PDF Viewer. The guide explains where to wire the callback and the required services.
 
-## Steps to add rectangle annotations on search result highlight
+## Prerequisites
+
+A React PDF Viewer setup with [`Annotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation) module injected.
+
+## Steps to add rectangle or highlight annotations on search result highlight
 
 **Step 1:** Follow the steps provided in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Getting Started Guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to set up a basic PDF Viewer sample.
 
-**Step 2:** Set up the PDF Viewer component to add rectangle annotations based on the bounds of highlighted search text in the PDF Viewer.
+**Step 2a:** Add a rectangle annotation based on the bounds of each highlighted search match.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import { RefObject, useRef } from 'react';
 import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  Annotation,
-  TextSelection,
-  TextSearch,
-  FormFields,
-  FormDesigner,
-  PageOrganizer,
-  Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, TextSelection,
+    TextSearch, FormFields, FormDesigner, PageOrganizer, Print, Inject, RectangleSettings,
+    TextSearchHighlightEventArgs, RectangleBoundsModel
 } from '@syncfusion/ej2-react-pdfviewer';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // Create a ref for the PdfViewerComponent to access its methods and properties
-    this.viewerRef = React.createRef();
-  }
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent> = useRef(null);
 
-  componentDidMount() {
-    // Obtain the current instance of the PdfViewerComponent
-    const viewer = this.viewerRef.current;
+    // Method to handle the text search highlight event
+    const handleTextSearchHighlight = (args: TextSearchHighlightEventArgs) => {
+        console.log(args); // Logs Highlighted text search details
 
-    if (viewer) {
-      // Attach an event handler for text search highlight
-      viewer.textSearchHighlight = this.handleTextSearchHighlight;
-    }
-  }
+        const pageNumber: number = args.pageNumber;
+        const bounds: RectangleBoundsModel = args.bounds;
 
-  // Method to handle the text search highlight event
-  handleTextSearchHighlight = (args) => {
-    console.log(args); // Logs Highlighted text search details
+        // Add a rectangle annotation on the highlighted text
+        viewerRef.current.annotationModule.addAnnotation('Rectangle', {
+            pageNumber: pageNumber,
+            offset: { x: bounds.left, y: bounds.top },
+            width: bounds.width,
+            height: bounds.height,
+        } as RectangleSettings);
+    };
 
-    const pageNumber = args.pageNumber;
-    const bounds = args.bounds;
+    // Method to initiate a text search for the term 'PDF'
+    const handleSearch = () => {
+        viewerRef.current.textSearchModule.searchText('PDF', false);
+    };
 
-     // Add a rectangle annotation on the highlighted text
-    this.viewerRef.current.annotationModule.addAnnotation('Rectangle', {
-      pageNumber: pageNumber,
-      offset: { x: bounds.left, y: bounds.top },
-      width: bounds.width,
-      height: bounds.height,
-    });
-  };
+    // Method to go to the next instance of the search term
+    const handleSearchNext = () => {
+        viewerRef.current.textSearchModule.searchNext();
+    };
 
-  // Method to initiate a text search for the term 'PDF'
-  handleSearch = () => {
-    this.viewerRef.current.textSearchModule.searchText('PDF', false);
-  };
+    // Method to cancel the current text search operation
+    const handleCancelSearch = () => {
+        viewerRef.current.textSearchModule.cancelTextSearch();
+    };
 
-  // Method to go to the next instance of the search term
-  handleSearchNext = () => {
-    this.viewerRef.current.textSearchModule.searchNext();
-  };
-
-  // Method to cancel the current text search operation
-  handleCancelSearch = () => {
-    this.viewerRef.current.textSearchModule.cancelTextSearch();
-  };
-
-  render() {
     return (
-      <div>
-      <div style={{ marginTop: '50px' }}>
-      <button onClick={this.handleSearch}>Search PDF</button>
-      <button onClick={this.handleSearchNext}>Search Next</button>
-      <button onClick={this.handleCancelSearch}>Cancel Search</button>
-      </div>
-      <div className='control-section' style={{ marginTop: '5px' }}>
-        <PdfViewerComponent
-            ref={this.viewerRef}
-            id="PdfViewer"
-          documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-          resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-          style={{ height: '640px' }}
-        >
-            <Inject services={[
-              Toolbar,
-              Magnification,
-              Navigation,
-              Annotation,
-              TextSelection,
-              TextSearch,
-              FormFields,
-              FormDesigner,
-              PageOrganizer
-            ]} />
-        </PdfViewerComponent>
-      </div>
-      </div>
-  );
+        <div>
+            <div style={{ marginTop: '50px' }}>
+                <button onClick={handleSearch}>Search PDF</button>
+                <button onClick={handleSearchNext}>Search Next</button>
+                <button onClick={handleCancelSearch}>Cancel Search</button>
+            </div>
+            <div className='control-section' style={{ marginTop: '5px' }}>
+                <PdfViewerComponent
+                    ref={viewerRef}
+                    id="PdfViewer"
+                    textSearchHighlight={handleTextSearchHighlight}
+                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                    style={{ height: '640px' }}
+                >
+                    <Inject services={[
+                        Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch,
+                        FormFields, FormDesigner, PageOrganizer, Print 
+                    ]} />
+                </PdfViewerComponent>
+            </div>
+        </div>
+    );
 }
-}
-
-const root = ReactDOM.createRoot(document.getElementById('sample'));
-root.render(<App />);
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-Following this guide enables the PDF Viewer to add rectangle annotations at text search result locations, improving visibility for users navigating search matches.
+**Expected result:** Rectangle annotations are added at text search result locations, improving visibility for users navigating search matches.
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
+**Step 2b:** Add a highlight annotation based on the bounds of each highlighted search match.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+import { RefObject, useRef } from 'react';
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, TextSelection,
+    TextSearch, FormFields, FormDesigner, PageOrganizer, Print, Inject, TextSearchHighlightEventArgs,
+    HighlightSettings, IAnnotationPoint
+} from '@syncfusion/ej2-react-pdfviewer';
+
+export default function App() {
+    const viewerRef: RefObject<PdfViewerComponent> = useRef(null);
+
+    // Method to handle the text search highlight event
+    const handleTextSearchHighlight = (args: TextSearchHighlightEventArgs) => {
+        console.log(args); // Logs Highlighted text search details
+
+        const pageNumber: number = args.pageNumber;
+        const bounds: IAnnotationPoint[] = [{
+            x: args.bounds.x ?? args.bounds.left,
+            y: args.bounds.y ?? args.bounds.top,
+            height: args.bounds.height,
+            width: args.bounds.width
+        }];
+
+        // Add a highlight annotation on the highlighted text
+        viewerRef.current.annotation.addAnnotation('Highlight', {
+            pageNumber: pageNumber,
+            bounds: bounds
+        } as HighlightSettings);
+    };
+
+    // Method to initiate a text search for the term 'PDF'
+    const handleSearch = () => {
+        viewerRef.current.textSearchModule.searchText('PDF', false);
+    };
+
+    // Method to go to the next instance of the search term
+    const handleSearchNext = () => {
+        viewerRef.current.textSearchModule.searchNext();
+    };
+
+    // Method to cancel the current text search operation
+    const handleCancelSearch = () => {
+        viewerRef.current.textSearchModule.cancelTextSearch();
+    };
+
+    return (
+        <div>
+            <div style={{ marginTop: '50px' }}>
+                <button onClick={handleSearch}>Search PDF</button>
+                <button onClick={handleSearchNext}>Search Next</button>
+                <button onClick={handleCancelSearch}>Cancel Search</button>
+            </div>
+            <div className='control-section' style={{ marginTop: '5px' }}>
+                <PdfViewerComponent
+                    ref={viewerRef}
+                    id="PdfViewer"
+                    textSearchHighlight={handleTextSearchHighlight}
+                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                    resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+                    style={{ height: '640px' }}
+                >
+                    <Inject services={[
+                        Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch,
+                        FormFields, FormDesigner, PageOrganizer, Print 
+                    ]} />
+                </PdfViewerComponent>
+            </div>
+        </div>
+    );
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Expected result:** Highlight annotation is added at text search result locations, improving visibility for users navigating search matches.
+
+[View sample the complete working sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in WPF
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to PDF in WPF**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in WPF**.
 
 ## Steps to convert PowerPoint to PDF programmatically
 
@@ -34,7 +34,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="Create_PowerPoint_Presentation_to_PDF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -89,8 +89,8 @@ using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath(@"../../Data/I
     {
         //Saves the PDF document.
         pdfDocument.Save(Path.GetFullPath(@"../../Sample.pdf"));
-    }                   
-} 
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -144,12 +144,12 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.PresentationToPdfConverter.Wpf NuGet package](Workingwith-WPF/Install-Syncfusion.PresentationToPdfConverter.Wpf-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Add a new button in the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window x:Class="Create_PowerPoint_Presentation_to_PDF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -191,7 +191,7 @@ using Syncfusion.Pdf;
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: Add the following code in **btnConvert_Click** to **convert PowerPoint to PDF in WPF**.
+Step 5: Add the following code in **btnConvert_Click** to **convert PowerPoint to PDF in WPF**. Ensure the **Data/Input.pptx** file exists in the project location; you can use any sample PowerPoint file as the input.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -204,8 +204,8 @@ using (IPresentation pptxDoc = Presentation.Open(Path.GetFullPath(@"../../Data/I
     {
         //Saves the PDF document.
         pdfDocument.Save(Path.GetFullPath(@"../../Sample.pdf"));
-    }                   
-} 
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -228,6 +228,6 @@ By executing the program, you will get the **PDF** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

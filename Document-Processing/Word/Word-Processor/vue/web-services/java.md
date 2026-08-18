@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Java in Vue Document editor component | Syncfusion
-description: Learn here all about Java in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Java Web Service in Vue DOCX Editor | Syncfusion
+description: Configure Java web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Java 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Java in Vue Document editor component
+# Java Web Service in Vue DOCX Editor
 
 This page illustrates how to create web service in Java for the server-side dependent functionalities of Word Processor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
 
@@ -130,7 +130,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `getMetafileStream()` property and you can get the `getIsMetafile()` boolean value to determine whether the image  is meta file images(WMF,EMF) or Tiff format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using TwelveMonkeys ImageIO TIFF library.
+>Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `getMetafileStream()` property and you can get the `getIsMetafile()` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using TwelveMonkeys ImageIO TIFF library.
 
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 
@@ -291,15 +291,16 @@ The following example code illustrates how to write a Web API for restrict editi
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/api/wordeditor/RestrictEditing")
     public String[] restrictEditing(@RequestBody CustomRestrictParameter param) throws Exception {
-        if (param.passwordBase64 == "" && param.passwordBase64 == null)
+        if (param.passwordBase64 == "" || param.passwordBase64 == null)
             return null;
-        return WordProcessorHelper.computeHash(param.passwordBase64, param.saltBase64, param.spinCount);
+        return WordProcessorHelper.computeHash(param.passwordBase64, param.saltBase64, param.spinCount, param.algorithmSid);
     }
 
     public class CustomRestrictParameter {
         public String passwordBase64;
         public String saltBase64;
         public int spinCount;
+        public String algorithmSid;
         public String getPasswordBase64() {
             return passwordBase64;
         }
@@ -309,6 +310,9 @@ The following example code illustrates how to write a Web API for restrict editi
         public int getSpinCount() {
             return spinCount;
         }
+        public String getAlgorithmSid() {
+            return algorithmSid;
+        }
         public void setPasswordBase64(String value) {
             passwordBase64= value;
         }
@@ -317,6 +321,9 @@ The following example code illustrates how to write a Web API for restrict editi
         }
         public void setSpinCount(int value) {
             spinCount= value;
+        }
+        public void setAlgorithmSid(String value) {
+            algorithmSid= value;
         }
     }
 ```

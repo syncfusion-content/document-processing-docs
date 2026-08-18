@@ -1,12 +1,12 @@
 ---
-title: What is the maximum range of Rows and Columns | Syncfusion
-description: This page tells about the maximum range of rows and columns supported in Syncfusion .NET Excel library (XlsIO).
+title: Maximum Rows and Columns in .NET Excel Library | Syncfusion
+description: Row and column limits describes the maximum supported range of rows and columns in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the maximum range of Rows and Columns?
+# Maximum Rows and Columns in .NET Excel Library
 
 XlsIO has support below worksheet size for Excel 97 to 2003, Excel 2007 and later versions.
 
@@ -17,7 +17,7 @@ The above specification is the worksheet size of Excel. For more information, se
 
 ## See Also
 
-* [How to unfreeze the rows and columns in XlsIO?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-unfreeze-the-rows-and-columns-in-xlsio)
-* [How to hide the summary rows and columns using XlsIO?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-hide-the-summary-rows-and-columns-using-xlsio)
-* [How to sort two or more columns in a pivot table?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-sort-two-or-more-columns-in-a-pivot-table)
-* [How to manipulate worksheet rows and columns?](https://help.syncfusion.com/file-formats/xlsio/worksheet-rows-and-columns-manipulation)
+* [How to unfreeze the rows and columns in XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-unfreeze-the-rows-and-columns-in-xlsio)
+* [How to hide the summary rows and columns using XlsIO?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-hide-the-summary-rows-and-columns-using-xlsio)
+* [How to sort two or more columns in a pivot table?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-sort-two-or-more-columns-in-a-pivot-table)
+* [How to manipulate worksheet rows and columns?](https://help.syncfusion.com/document-processing/excel/excel-library/net/worksheet-rows-and-columns-manipulation)

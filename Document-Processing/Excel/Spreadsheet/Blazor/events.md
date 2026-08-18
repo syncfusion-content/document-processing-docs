@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn about the events in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
+title: Events in Blazor Spreadsheet | Syncfusion
+description: Learn about the available events in the Syncfusion Blazor Spreadsheet and handle user interactions programmatically.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Events in Blazor Spreadsheet Component
+# Events in Blazor Spreadsheet
 
-The Blazor Spreadsheet component provides various events that allow you to interact with the component and customize its behavior.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides various events that allow you to interact with the component and customize its behavior.
 
 | Event Name | Description |
 |---|---|

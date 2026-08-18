@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hyperlinks in Flutter PDF library | Syncfusion
-description: Learn here all about Hyperlinks or Web navigation feature of Syncfusion Flutter PDF non-UI library and more.
+title: Hyperlinks in Flutter PDF Library | Syncfusion
+description: Learn how to add hyperlinks and web navigation features in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlinks in Flutter PDF
 
-In PDF, hyperlinks can be added to allow the users to navigate to another part of a PDF file and web page.
+In PDF, hyperlinks can be added to allow the users to navigate to another part of a PDF file or a web page.
 
 ## Working with Web navigation
 
@@ -17,14 +17,15 @@ You can navigate to a specified URL from a PDF document by using the [`PdfTextWe
 
 Refer to the following code snippet for navigating to the webpage.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
 
 //Create and draw the web link in the PDF page
 PdfTextWebLink(
-        url: 'www.google.co.in',
+        url: 'https://www.google.co.in',
         text: 'google',
         font: PdfStandardFont(PdfFontFamily.timesRoman, 14),
         brush: PdfSolidBrush(PdfColor(0, 0, 0)),
@@ -41,14 +42,16 @@ File('Hyperlink.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Working with internal document navigation
 
-To allow the users navigate to any other part of the same document, the [`PdfDocumentLinkAnnotation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocumentLinkAnnotation-class.html) class can be used. 
+To allow users to navigate to any other part of the same document, the [`PdfDocumentLinkAnnotation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocumentLinkAnnotation-class.html) class can be used. 
 
 The following code explains how to add the hyperlink for internal document navigation.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
@@ -74,3 +77,4 @@ File('Hyperlink.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

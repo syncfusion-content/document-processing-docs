@@ -8,7 +8,7 @@ documentation: UG
 
 # Open and save PowerPoint in Azure App Service on Windows
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint in Azure App Service on Windows**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a PowerPoint in Azure App Service on Windows**.
 
 ## Steps to Open and save PowerPoint in Azure App Service on Windows
 
@@ -21,7 +21,7 @@ Step 2: Create a project name and select the location.
 Step 3: Click **Create** button.
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
-Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package targets .NET 8.0 and later (.NET 8.0 recommended).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure-Images/App-Service-Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
 
@@ -50,58 +50,56 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **OpenAndSavePresentation** in HomeController.cs and include the below code snippet to **open an existing Presentation in Azure App Service on Windows**.
+Step 7: Add a new action method `OpenAndSavePowerPoint` in **HomeController.cs** and include the following code snippet to **open an existing PowerPoint presentation, edit it, and save the result in Azure App Service on Windows**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-string pptxPath = Path.Combine(_hostingEnvironment.WebRootPath, "Data/Template.pptx");
-using FileStream fileStreamPath = new FileStream(pptxPath, FileMode.Open, FileAccess.Read);
-//Open an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(fileStreamPath);
+private readonly IWebHostEnvironment _hostingEnvironment;
+public HomeController(IWebHostEnvironment hostingEnvironment)
+{
+    _hostingEnvironment = hostingEnvironment;
+}
+
+public ActionResult OpenAndSavePowerPoint()
+{
+    //Open an existing PowerPoint presentation using the file path.
+    string pptxPath = Path.Combine(_hostingEnvironment.WebRootPath, "Data/Template.pptx");
+    using IPresentation pptxDoc = Presentation.Open(pptxPath);
+
+    //Get the first slide from the PowerPoint presentation.
+    ISlide slide = pptxDoc.Slides[0];
+    //Get the first shape of the slide.
+    IShape shape = slide.Shapes[0] as IShape;
+    //Change the text of the shape.
+    if (shape.TextBody.Text == "Company History")
+        shape.TextBody.Text = "Company Profile";
+
+    //Save the PowerPoint Presentation as stream.
+    MemoryStream pptxStream = new();
+    pptxDoc.Save(pptxStream);
+    pptxStream.Position = 0;
+
+    //Download PowerPoint document in the browser.
+    return File(pptxStream, "application/vnd.openxmlformats-officedocument.presentationml.presentation", "Result.pptx");
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+## Steps to publish to Azure App Service on Windows
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
+The following steps publish the ASP.NET Core Web App created above to Azure App Service on Windows.
 
-//Get the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Get the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 9: Add below code example to **save the PowerPoint Presentation in Azure App Service on Windows**.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-//Save the PowerPoint Presentation as stream.
-MemoryStream pptxStream = new();
-pptxDoc.Save(pptxStream);
-pptxStream.Position = 0;
-//Download Powerpoint document in the browser.
-return File(pptxStream, "application/powerpoint", "Result.pptx");
-
-{% endhighlight %}
-{% endtabs %}
-
-## Steps to publish as Azure App Service on Windows
-
-Step 1: Right-click the project and select **Publish** option.
+Step 1: Right-click the project and select the **Publish** option.
 ![Right-click the project and select the Publish option](Azure-Images/App-Service-Windows/Publish-Create-PowerPoint-Presentation.png)
 
 Step 2: Click the **Add a Publish Profile** button.
@@ -113,7 +111,7 @@ Step 3: Select the publish target as **Azure**.
 Step 4: Select the Specific target as **Azure App Service (Windows)**.
 ![Select the publish target](Azure-Images/App-Service-Windows/Specific_Target_PowerPoint_Presentation_to_PDF.png)
 
-Step 5: To create a new app service, click **Create new** option.
+Step 5: To create a new app service, click the **Create new** option.
 ![Click create new option](Azure-Images/App-Service-Windows/App-Service-Create-PowerPoint-Presentation.png)
 
 Step 6: Click the **Create** button to proceed with **App Service** creation.
@@ -122,23 +120,23 @@ Step 6: Click the **Create** button to proceed with **App Service** creation.
 Step 7: Click the **Finish** button to finalize the **App Service** creation.
 ![Click the Finish button](Azure-Images/App-Service-Windows/App-Service-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 8: Click **Close** button.
-![Create a ASP.NET Core Project](Azure-Images/App-Service-Windows/Finish-Open-and-Save-PowerPoint-Presentation.png)
+Step 8: Click the **Close** button.
+![Click the Close button](Azure-Images/App-Service-Windows/Finish-Open-and-Save-PowerPoint-Presentation.png)
 
 Step 9: Click the **Publish** button.
 ![Click the Publish button](Azure-Images/App-Service-Windows/Before-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 10: Now, Publish has been succeeded.
+Step 10: Publishing has succeeded.
 ![Publish has been succeeded](Azure-Images/App-Service-Windows/After-Publish-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 11: Now, the published webpage will open in the browser. 
+Step 11: The published webpage will open in the browser.
 ![Browser will open after publish](Azure-Images/App-Service-Windows/Browser-Open-and-Save-PowerPoint-Presentation.png)
 
-Step 12: Click **Open and Save PowerPoint** button.You will get the output **PowerPoint document** as follows.
+Step 12: Click **Open and Save PowerPoint** to download the edited PowerPoint document as follows.
 
 ![Open and save PowerPoint in Azure App Service on Windows](Workingwith-Core/Open-and-Save-output-image.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 

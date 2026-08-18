@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Searching in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Angular Spreadsheet | Syncfusion
+description: Find and Replace in Angular Spreadsheet helps users quickly locate specific data within worksheets, improving navigation and data analysis.
 platform: document-processing
 control: Searching 
 documentation: ug
 ---
 
-# Searching in Angular Spreadsheet component
+# Find and Replace in Angular Spreadsheet 
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfindandreplace) property to enable or disable the Find and Replace functionality.
 
@@ -80,4 +80,4 @@ In the following sample, searching can be done by following ways:
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.

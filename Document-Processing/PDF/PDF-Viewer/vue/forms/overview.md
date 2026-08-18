@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of Forms in Vue PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion Vue PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion Vue PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion Vue PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in Vue PDF Viewer
+# About Syncfusion Vue PDF Viewer Forms
 
-The Syncfusion PDF Viewer provides a full-featured PDF forms experience for Vue applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
+The PDF Viewer provides a full-featured PDF forms experience for Vue applications. Users can read, fill, add, edit, and remove form fields in PDF documents using the viewer's UI or programmatic APIs.
 
 Flexible import and export of form data simplifies integration in automated workflows or user-driven scenarios. APIs offer developers control over form behavior while the viewer presents a concise, accessible interface for end users.
 
@@ -19,7 +19,7 @@ Use the viewer UI or APIs to fill PDF forms, import/export form data, or integra
 
 See the [Filling PDF Forms](./form-filling) page for full details.
 
-Use the following code-snippet to enable form-filling by injecting the `FormFields` module.
+Use the following code snippet to enable form-filling by injecting the `FormFields` module.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -81,9 +81,9 @@ export default {
 
 ![FormFilling](../../javascript-es6/images/FormFields.gif)
 
-1. [Programmatically Form fill](./form-filling#fill-pdf-forms-programmatically)
-2. [Form Fill Using UI](./form-filling#fill-pdf-forms-through-the-user-interface)
-3. [Import the Form data](./form-filling#fill-pdf-forms-through-import-data)
+1. [Programmatically fill forms](./form-filling#fill-pdf-forms-programmatically)
+2. [Fill forms through the user interface](./form-filling#fill-pdf-forms-through-the-user-interface)
+3. [Import form data](./form-filling#fill-pdf-forms-through-import-data)
 
 ## Form Designer
 
@@ -91,7 +91,7 @@ A built-in Form Designer enables creating, positioning, and editing form fields 
 
 See the [Form Designer](./form-designer) page for full details.
 
-Use the following Code-snippet to enable Form Designer by injecting `FormDesigner` Module.
+Use the following code snippet to enable Form Designer by injecting the `FormDesigner` module.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

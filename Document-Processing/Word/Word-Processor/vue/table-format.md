@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Table format in Vue Document editor component | Syncfusion
-description: Learn here all about Table format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in VueDOCX Editor | Syncfusion
+description: The table format feature in Vue DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 control: Table format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in Vue Document editor component
+# Table format in Vue DOCX Editor
 
-Document editor customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
 
 ## Cell margins
 
@@ -158,6 +158,10 @@ Document Editor expose API to get or set the table description of the selected i
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
+
+## Online Demo
+
+Explore how to format tables in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-formatting.html).
 
 ## See Also
 

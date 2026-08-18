@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/25.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/32.2.3/"
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
@@ -40,7 +40,10 @@ System.config({
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",                        
         "@syncfusion/ej2-vue-pdfviewer": "syncfusion:ej2-vue-pdfviewer/dist/ej2-vue-pdfviewer.umd.min.js",
         "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
-        "@syncfusion/ej2-pdf": "syncfusion:ej2-pdf/dist/ej2-pdf.umd.min.js"
+        "@syncfusion/ej2-pdf": "syncfusion:ej2-pdf/dist/ej2-pdf.umd.min.js",
+        "@syncfusion/ej2-pdf-data-extract": "syncfusion:ej2-pdf-data-extract/dist/ej2-pdf-data-extract.umd.min.js",
+        "@syncfusion/ej2-markdown-converter":"syncfusion:ej2-markdown-converter/dist/ej2-markdown-converter.umd.min.js",
+        "@syncfusion/ej2-interactive-chat":"syncfusion:ej2-interactive-chat/dist/ej2-interactive-chat.umd.min.js"
     }
 });
 

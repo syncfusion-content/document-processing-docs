@@ -1,12 +1,12 @@
 ---
-title: Chart Appearance | Excel library | Syncfusion
-description: In this section, you can learn about the appearance of charts in an Excel document using Syncfusion .NET Excel library.
+title: Chart Appearance in .NET Excel Library | Syncfusion
+description: Chart appearance describes how the Syncfusion .NET Excel Library customizes the visual style of charts in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Appearance in Excel document
+# Chart Appearance in .NET Excel Library
 
 Chart appearance refers to the customization of visual elements within charts in Excel documents. Using XlsIO, you can **customize the chart appearance**.
 
@@ -16,7 +16,7 @@ Chart appearance refers to the customization of visual elements within charts in
 
 The following code example illustrates how to apply a solid color to the chart area, plot area, and data series of the chart.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Solid%20Fill/.NET/Solid%20Fill/Solid%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -47,7 +47,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 	ChartFillImpl chartFillImpl2 = serie2.SerieFormat.Fill as ChartFillImpl;
 	chartFillImpl2.FillType = ExcelFillType.SolidColor;
-	chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220); ;
+	chartFillImpl2.ForeColor = Color.FromArgb(143, 170, 220);
 
 	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
@@ -127,7 +127,7 @@ Using excelEngine As New ExcelEngine()
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example to apply a solid fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Solid%20Fill/.NET/Solid%20Fill).
 
@@ -135,7 +135,7 @@ A complete working example to apply a solid fill in C# is present on [this GitHu
 
 The following code example illustrates how to apply a pattern fill to the chart area, plot area, and data series of the chart.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Pattern%20Fill/.NET/Pattern%20Fill/Pattern%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -269,7 +269,7 @@ Using excelEngine As New ExcelEngine()
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example to apply a pattern fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Pattern%20Fill/.NET/Pattern%20Fill).
 
@@ -277,7 +277,7 @@ A complete working example to apply a pattern fill in C# is present on [this Git
 
 The following code example illustrates how to apply a gradient fill to the chart area, plot area, and data series of the chart.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/Gradient%20Fill/.NET/Gradient%20Fill/Gradient%20Fill/Program.cs,180" %}
 using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -287,13 +287,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IWorksheet worksheet = workbook.Worksheets[0];
 	IChart chart = worksheet.Charts[0];
 
-	//Get data serie
+	//Get data series
 	IChartSerie serie1 = chart.Series[0];
 	IChartSerie serie2 = chart.Series[1];
 
 	//Set gradient fill to chart area
 	IChartFrameFormat chartArea = chart.ChartArea;
-	chartArea.Fill.FillType = ExcelFillType.Gradient;                
+	chartArea.Fill.FillType = ExcelFillType.Gradient;
 	chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
 	chartArea.Fill.ForeColor = Color.White;
 
@@ -324,7 +324,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	chartFillImpl2.GradientStops.Add(gradientStopImpl3);
 	chartFillImpl2.GradientStops.Add(gradientStopImpl4);
 
-	//Saving the workbook 
+	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
@@ -344,7 +344,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Set gradient fill to chart area
   IChartFrameFormat chartArea = chart.ChartArea;
-  chartArea.Fill.FillType = ExcelFillType.Gradient;                
+  chartArea.Fill.FillType = ExcelFillType.Gradient;
   chartArea.Fill.BackColor = Color.FromArgb(205, 217, 234);
   chartArea.Fill.ForeColor = Color.White;
 
@@ -429,11 +429,12 @@ Using excelEngine As New ExcelEngine()
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 A complete working example to apply a gradient fill in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Gradient%20Fill/.NET/Gradient%20Fill).
 
 ### Picture Fill
+
 The following code example illustrates how to apply a picture fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}
@@ -557,7 +558,7 @@ A complete working example to apply a picture fill in C# is present on [this Git
 
 ### No Fill
 
-The following code example illustrates how to apply a no fill to the chart area, plot area, and data series of the chart.
+The following code example illustrates how to apply no fill to the chart area, plot area, and data series of the chart.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/No%20Fill/.NET/No%20Fill/No%20Fill/Program.cs,180" %}
@@ -584,7 +585,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	//Set no fill to series
 	serie1.SerieFormat.Fill.Visible = false;
 
-	//Saving the workbook 
+	//Saving the workbook
 	workbook.SaveAs(Path.GetFullPath("Output/Output.xlsx"));
 }
 {% endhighlight %}
@@ -655,7 +656,7 @@ A complete working example to apply a no fill in C# is present on [this GitHub p
 
 The following code snippet illustrates how to set the layout for chart elements such as the plot area and legend.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Manually positioning chart plot area using Layout
 chart.PlotArea.Layout.LayoutTarget = LayoutTargets.inner;
@@ -715,13 +716,13 @@ chart.Legend.Layout.TopMode = LayoutModes.edge
 chart.Legend.Layout.ManualLayout.LeftMode = LayoutModes.edge
 chart.Legend.Layout.ManualLayout.TopMode = LayoutModes.edge
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ### Resizing
 
 The following code snippet illustrates how to resize chart elements such as the plot area, legend, title area, axis area, and data labels.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 //Manually resizing chart plot area using Layout
 chart.PlotArea.Layout.Left = 70;
@@ -889,13 +890,13 @@ chart.Series(0).DataPoints(0).DataLabels.Layout.Top = 0.01
 chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Left = 0.09
 chart.Series(0).DataPoints(0).DataLabels.Layout.ManualLayout.Top = 0.01
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ## Applying 3D Formats
 
 The following code example illustrates how to apply 3D settings such as rotation, side wall, back wall, and floor settings.
 
-{% tabs %}  
+{% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Create%20and%20Edit%20Charts/3D%20Chart/.NET/3D%20Chart/3D%20Chart/Program.cs,180" %}
  using (ExcelEngine excelEngine = new ExcelEngine())
 {
@@ -1002,7 +1003,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
   //Set floor fill option
   chart.Floor.Fill.FillType = ExcelFillType.Pattern;
-  chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_10_Percent.Pat_30_Percent;
+  chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_30_Percent;
   //Set floor fore and Back color
   chart.Floor.Fill.ForeColor = Color.Blue;
   chart.Floor.Fill.BackColor = Color.White;
@@ -1020,7 +1021,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim workbook As IWorkbook = application.Workbooks.Create(2)
   Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Insert data in sheet-1
+  'Insert the data in sheet-1
   sheet.Range("B1").Text = "Product-A"
   sheet.Range("C1").Text = "Product-B"
   sheet.Range("D1").Text = "Product-C"
@@ -1058,7 +1059,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
 
   'Set floor fill option
   chart.Floor.Fill.FillType = ExcelFillType.Pattern
-  chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_10_Percent.Pat_30_Percent
+  chart.Floor.Fill.Pattern = ExcelGradientPattern.Pat_30_Percent
   'Set floor fore and Back color
   chart.Floor.Fill.ForeColor = Color.Blue
   chart.Floor.Fill.BackColor = Color.White
@@ -1068,15 +1069,15 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   workbook.SaveAs("Chart.xlsx")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
 A complete working example to apply 3D chart formats in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/3D%20Chart/.NET/3D%20Chart).
 
 ## Explode a Pie Chart
 
-Essential&reg; XlsIO allows you to explode either all data points at a single explosion value or each data point at different explosion using [Percent](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartSerieDataFormat.html#Syncfusion_XlsIO_IChartSerieDataFormat_Percent) of [IChartSerieDataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChartSerieDataFormat.html) interface.
+Essential&reg; XlsIO allows you to explode either all data points at a single explosion value or each data point at different explosion using [Percent](https://help.syncfusion.com/cr/windowsforms/Syncfusion.XlsIO.IChartSerieDataFormat.html#Syncfusion_XlsIO_IChartSerieDataFormat_Percent) of [IChartSerieDataFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChartSerieDataFormat.html) interface.
 
-You can either create a pie chart and then explode it or directly create an exploded pie chart using XlsIO. Selecting `Pie_Exploded` as [ChartType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_ChartType) inserts a pie chart with a default explosion of **25%**. Learn how to [Create an Exploded Pie Chart](https://www.syncfusion.com/kb/8539/how-to-create-excel-exploded-pie-chart-in-c-vb-net).
+You can either create a pie chart and then explode it or directly create an exploded pie chart using XlsIO. Selecting `Pie_Exploded` as [ChartType](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_ChartType) inserts a pie chart with a default explosion of **25%**. Learn how to [Create an Exploded Pie Chart](https://www.syncfusion.com/kb/8539/how-to-create-excel-exploded-pie-chart-in-c-vb-net).
 
 Refer the following complete code snippets.
 
@@ -1170,7 +1171,7 @@ A complete working example to explode a pie chart in C# is present on [this GitH
 
 ## Add Picture to Chart and assign Hyperlink
 
-Essential&reg; XlsIO supports assigning hyperlink to the picture added in a chart in the Excel workbook. To achieve this, create a [chart in workbook](https://help.syncfusion.com/file-formats/xlsio/working-with-charts#creating-a-chart-sheet) and add picture to the chart using [AddPicture](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.Ipictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_String_) of [IPictures](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IPictures.html) interface. You can assign hyperlink to the picture using [Add](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IHyperLinks.html#Syncfusion_XlsIO_IHyperLinks_Add_Syncfusion_XlsIO_IShape_Syncfusion_XlsIO_ExcelHyperLinkType_System_String_System_String_) property of [IHyperLinks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IHyperLinks.html) interface.
+Essential&reg; XlsIO supports assigning hyperlink to the picture added in a chart in the Excel workbook. To achieve this, create a [chart in workbook](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-charts#creating-a-chart-sheet) and add picture to the chart using [AddPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.Ipictures.html#Syncfusion_XlsIO_IPictures_AddPicture_System_String_) of [IPictures](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IPictures.html) interface. You can assign hyperlink to the picture using [Add](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html#Syncfusion_XlsIO_IHyperLinks_Add_Syncfusion_XlsIO_IShape_Syncfusion_XlsIO_ExcelHyperLinkType_System_String_System_String_) property of [IHyperLinks](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IHyperLinks.html) interface.
 
 Refer to the following complete code snippets.
 
@@ -1219,7 +1220,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx");
-  IWorksheet worksheet = workbook.Worksheets[0];				
+  IWorksheet worksheet = workbook.Worksheets[0];
 
   //Adding chart in the workbook
   IChart chart = workbook.Charts.Add();
@@ -1231,7 +1232,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   chart.Pictures.AddPicture("Image.png");
 
   //Adding hyperlink to the picture on chart
-  worksheet.HyperLinks.Add((workbook.Charts[0].Pictures[0] as IShape), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here");
+  worksheet.HyperLinks.Add((workbook.Charts[0].Pictures[0] as IShape), ExcelHyperLinkType.Url, "https://www.Syncfusion.com", "click here");
 
   workbook.SaveAs("Output.xlsx");
 }
@@ -1254,14 +1255,14 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   chart.Pictures.AddPicture("Image.png")
 
   'Adding hyperlink to the picture on chart
-  worksheet.HyperLinks.Add(workbook.Charts(0).Pictures(0), ExcelHyperLinkType.Url, "http://www.Syncfusion.com", "click here")
+  worksheet.HyperLinks.Add(workbook.Charts(0).Pictures(0), ExcelHyperLinkType.Url, "https://www.Syncfusion.com", "click here")
 
   workbook.SaveAs("Output.xlsx")
 End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example for picture hyperlink in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart/.NET/Picture%20Hyperlink%20in%20Chart).  
+A complete working example for picture hyperlink in chart in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Create%20and%20Edit%20Charts/Picture%20Hyperlink%20in%20Chart/.NET/Picture%20Hyperlink%20in%20Chart).
 
 N> XlsIO supports adding picture only to a chart in the workbook,but does not support adding picture to a chart in the worksheet.
 
@@ -1269,7 +1270,7 @@ N> XlsIO supports adding picture only to a chart in the workbook,but does not su
 
 Data table beneath the chart clearly represents the chart content in table format. While creating a chart, the data table is hidden, and the option should be manually enabled to view it.
 
-Essential&reg; XlsIO supports adding data table using [HasDataTable](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_HasDataTable) of [IChart](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IChart.html) interface. Enabling this property adds the data table beneath the chart.
+Essential&reg; XlsIO supports adding data table using [HasDataTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html#Syncfusion_XlsIO_IChart_HasDataTable) of [IChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IChart.html) interface. Enabling this property adds the data table beneath the chart.
 
 Refer the following complete code snippets.
 

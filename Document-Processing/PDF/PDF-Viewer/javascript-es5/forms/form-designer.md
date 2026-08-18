@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in JavaScript | Syncfusion
-description: Learn here all about form designer and toolbar in the Syncfusion JavaScript PDF Viewer component and more.
+title: Form Designer in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use the Form Designer in the JavaScript (ES5) PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form designer in JavaScript PDF Viewer
+# Form Designer in JavaScript (ES5) PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -73,11 +73,11 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Form designer UI
 
-When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) is enabled in the Syncfusion [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When [Form Designer mode](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/formdesigner) is enabled in the [JavaScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/prefilledforms-cs1" %}
 
 For more information about creating and editing form fields in the PDF Viewer, refer to the [Form Creation](./manage-form-fields/create-form-fields) in JavaScript PDF Viewer documentation.
 
@@ -128,7 +128,7 @@ For more information about creating and editing form fields in the PDF Viewer, r
 
 ## Show or Hide the Built-in Form Designer Toolbar
 
-You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) method. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
+You can control the visibility of the Form Designer toolbar using the [isFormDesignerToolbarVisible](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#isformdesignertoolbarvisible) property. This allows you to display or hide the Form Designer tools in the PDF Viewer based on your application requirements.
 
 **Use this method to:**
 - Show the Form Designer toolbar when form design is required
@@ -186,7 +186,7 @@ Move, resize, and edit an existing form field directly in the PDF Viewer using t
 ![Moving and resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows modification of form field and widget annotation properties. Changes are reflected immediately in the viewer and saved when the properties popover is closed.
-For more information, see Editing Form Fields
+For more information, see [Editing Form Fields](./manage-form-fields/modify-form-fields).
 
 ## Deleting form fields
 

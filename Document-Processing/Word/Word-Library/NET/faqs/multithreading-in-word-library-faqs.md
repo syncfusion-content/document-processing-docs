@@ -1,17 +1,17 @@
 ---
-title: FAQ about multithreading in Word document | DocIO | Syncfusion
-description: Learn about the FAQs on multithreading support for opening, editing, and saving Word documents using the .NET Word (DocIO) library.
+title: FAQ about multithreading in Word document in .NET Word | Syncfusion
+description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about multithreading in Word document
+# FAQ about multithreading in Word document in .NET Word
 
 The frequently asked questions regarding multithreading and thread-safety support in opening, editing, and saving Word documents are listed below.
 
 ## Does the Word library support multithreading and thread-safety?
 
-Yes, the Syncfusion<sup>&reg;</sup> Word library is thread-safe, allowing you to create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files and save them using multithreading in C#.
+Yes, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) is thread-safe, allowing you to create multiple instances of the [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class to load the same file as multiple copies or different Word files and save them using multithreading in C#.
 
 ### Multithreading Word document reading using tasks
 
@@ -22,7 +22,7 @@ The following code example illustrates how to use multithreading to open, edit, 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -60,7 +60,7 @@ class MultiThreading
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 class MultiThreading
 {
-    //Indicates the number of threads to be create.
+    //Indicates the number of threads to be created.
     private const int TaskCount = 1000;
     public static async Task Main()
     {
@@ -97,7 +97,7 @@ class MultiThreading
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Module MultiThreading
-    'Indicates the number of threads to be create.
+    'Indicates the number of threads to be created.
     Private Const TaskCount As Integer = 1000
     Public Sub Main()
         'Create an array of tasks based on the TaskCount.
@@ -141,7 +141,7 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 5;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>
@@ -178,7 +178,7 @@ class MultiThreading
 {
     static void Main(string[] args)
     {
-        //Indicates the number of threads to be create.
+        //Indicates the number of threads to be created.
         int limit = 5;
         Console.WriteLine("Parallel For Loop");
         Parallel.For(0, limit, count =>

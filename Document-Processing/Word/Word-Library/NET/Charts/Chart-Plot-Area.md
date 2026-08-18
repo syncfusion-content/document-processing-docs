@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Plot Area | Syncfusion
-description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Plot Area in .NET Word | Syncfusion
+description: Learn how to modify the appearance of data labels in a chart in a Word document using Syncfusion® Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Plot Area
+# Modify the Appearance of Plot Area in .NET Word
 
 The plot area refers to the region that represents the plotted data in a chart. Using DocIO, you can **customize the plot area in the chart**.
 
@@ -194,7 +194,7 @@ The following code snippet illustrates how to fill the image in plot area.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Appeend image in plot area.
+//Append image in plot area.
 FileStream imageStream = new FileStream("Data/Image.png", FileMode.Open, FileAccess.Read);
 Image image = Image.FromStream(imageStream);
 chartPlotArea.Fill.UserPicture(image, "image");
@@ -202,7 +202,7 @@ chartPlotArea.Fill.UserPicture(image, "image");
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Appeend image in plot area.
+//Append image in plot area.
 chartPlotArea.Fill.UserPicture("Image.png");
 
 {% endhighlight %}

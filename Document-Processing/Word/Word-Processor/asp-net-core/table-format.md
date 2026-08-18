@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Table Format in Document Editor Component
-description: Learn here all about table format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Table Format in ASP.NET Core DOCX Editor | Syncfusion
+description: The table format feature in ASP.NET Core DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table Format
 documentation: ug
 ---
 
 
-# Working with Table Formatting
+# Table format in ASP.NET Core DOCX Editor
 
-Document editor customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) customizes the formatting of a table or its cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -27,7 +27,7 @@ documenteditor.selection.cellFormat.topMargin=5.4;
 documenteditor.selection.cellFormat.bottomMargin=5.4;
 ```
 
-You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table.
+You can also define the default cell margins for a table. If a cell margin is not set explicitly on the cell, the value is taken from the table's default cell margins.
 
 ```typescript
 //To change the left margin
@@ -80,7 +80,7 @@ documenteditor.selection.tableFormat.tableAlignment='Center';
 
 ## Cell width
 
-Set the desired width of table cells that will be considered when the table is layouted.
+Sets the preferred width of the selected table cells.
 
 
 {% tabs %}
@@ -109,7 +109,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 ## Apply borders
 
-Document editor exposes API to customize the borders for table cells by specifying the settings.
+Document editor exposes APIs to customize the borders for table cells by specifying the settings.
 
 
 {% tabs %}
@@ -135,12 +135,13 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`.
 {% include code-snippet/document-editor/asp-net-core/row-height/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Row-height.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ### Header row
 
-The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
+The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at the first row of the table, you can define whether it is a header row or not, using the following sample code.
 
 ```typescript
 documenteditor.selection.rowFormat.isHeader=true;
@@ -148,7 +149,7 @@ documenteditor.selection.rowFormat.isHeader=true;
 
 ### Allow row break across pages
 
-This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
+This property is valid if a table row does not fit in the current page during table layout. It specifies whether the row can break across pages. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
 
 ```typescript
 documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
@@ -156,7 +157,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+Document Editor exposes APIs to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```typescript
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -164,12 +165,16 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+Document Editor exposes APIs to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```typescript
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
 
-## See Also
+## Online demo
+
+Explore how to format tables in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/tableformat#/tailwind3).
+
+## See also
 
 * [Table properties dialog](../asp-net-core/dialog#table-properties-dialog)
