@@ -1,12 +1,12 @@
 ---
-title: Open and Save Word Document in Azure App Service | Syncfusion
-description: Open and save Word document in Azure App Service on Windows using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and Save Word Document in Azure App Service Windows | Syncfusion
+description: Open and save Word document in Azure App Service on Windows using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and save Word document in Azure App Service on Windows
+# Open and Save Word Document in Azure App Service Windows
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Azure App Service on Windows**.
 

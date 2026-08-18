@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion TypeScript PDF Viewer, including download events and base64 handling.
+title: Download in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the JavaScript (ES6) PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in TypeScript PDF Viewer
+# Download in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports downloading the currently loaded PDF document. Use the `enableDownload` option to enable or disable download functionality. The examples below demonstrate standalone and server-backed configurations.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Underline Text in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Underline annotations in the Blazor SfPdfViewer.
+description: Learn how to enable, apply, customize, and manage Underline annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Underline Annotation in Blazor SfPdfViewer Component
+# Underline Annotation in Blazor PDF Viewer 
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **Blazor SfPdfViewer** component.
 

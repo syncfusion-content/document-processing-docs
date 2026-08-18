@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion ASP.NET Core PDF Viewer using programmatic APIs.
+title: Annotation Permission in ASP.NET Core PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the ASP.NET Core PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions in ASP.NET Core
+# Annotation Permissions in ASP.NET Core PDF Viewer
 
 Use [annotationSettings](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AnnotationSettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 

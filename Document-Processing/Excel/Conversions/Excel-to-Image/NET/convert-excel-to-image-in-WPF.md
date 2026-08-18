@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to Image in WPF | Syncfusion
-description: Convert an Excel document to Image in WPF using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in WPF | Syncfusion
+description: WPF Excel to Image section explains how to convert Excel documents to images in WPF using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to Image in WPF
+# Excel to Image Conversion in WPF using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
@@ -20,7 +20,7 @@ Step 2: Name the project, choose the framework, and click **Create**.
 
 ![Name the project and choose the framework version](Wpf_images/Wpf_images_img9.png)
 
-Step 3: Install the <a href="https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf">Syncfusion.XlsIO.Wpf</a> NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Base` assembly.
+Step 3: Install the <a href="https://www.nuget.org/packages/Syncfusion.XlsIO.Wpf" aria-label="XlsIO NuGet link">Syncfusion.XlsIO.Wpf</a> NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Base` assembly.
 
 ![Install Syncfusion.XlsIO.Wpf NuGet Package](Wpf_images/Wpf_images_img10.png)
 

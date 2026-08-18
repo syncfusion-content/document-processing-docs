@@ -1,12 +1,12 @@
 ---
-title: What is the maximum range of Rows and Columns | Syncfusion
-description: This page tells about the maximum range of rows and columns supported in .NET Excel library.
+title: Maximum Rows and Columns in .NET Excel Library | Syncfusion
+description: Row and column limits describes the maximum supported range of rows and columns in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the maximum range of Rows and Columns?
+# Maximum Rows and Columns in .NET Excel Library
 
 XlsIO has support below worksheet size for Excel 97 to 2003, Excel 2007 and later versions.
 

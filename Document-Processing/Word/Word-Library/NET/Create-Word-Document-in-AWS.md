@@ -1,12 +1,12 @@
 ---
 title: Create Word document in AWS | Syncfusion
-description: Learn how to create a Word document in Amazon Web Services (AWS) using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library in C#.
+description: Describe how to convert Word documents to images in WPF applications using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Amazon Web Services (AWS)
+# Create Word document in AWS
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. This page is an overview that links to service-specific guides for creating a Word document in Amazon Web Services (AWS) using the .NET Core Word (DocIO) library in C#.
 

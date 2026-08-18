@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for HTML to PDF | Syncfusion
-description: This section details the Syncfusion assemblies required to implement HTML-to-PDF conversion functionality using the .NET PDF library.
+title: Assemblies Required for HTML to PDF Converter | Syncfusion
+description: This section details the Syncfusion assemblies required to implement HTML-to-PDF conversion functionality using the .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required for HTML to PDF Conversion 
+# Assemblies Required for HTML to PDF Converter
 
 Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
 

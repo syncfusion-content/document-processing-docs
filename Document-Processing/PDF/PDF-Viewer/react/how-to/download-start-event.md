@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Control file downloads in React PDF Viewer | Syncfusion
-description: Learn how to intercept and control file downloads in the React PDF Viewer using the downloadStart event.
+title: How to Control File Downloads in React PDF Viewer | Syncfusion
+description: Intercept and control file downloads in the React PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control file downloads in React PDF Viewer
+# How to Control File Downloads in React PDF Viewer
 
 The PDF Viewer exposes a `downloadStart` event that enables interception of a document download before it begins. Use this event to apply custom logic and, if needed, cancel the download by setting `args.cancel = true` in the event handler.
 
@@ -93,7 +93,7 @@ root.render(<App />);
 
 By default, the `cancel` argument is `false`, so the download proceeds unless the handler explicitly sets `args.cancel = true`.
 
-### Event arguments
+## Event arguments
 
 The event handler receives a [DownloadStartEventArgs](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/downloadStartEventArgs) object with the following properties:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion PDF web installer - Syncfusion
-description: Learn here about how to download Syncfusion PDF web installer from our Syncfusion website with license.
+title: ow to Download Syncfusion PDF Web Installer | Syncfusion
+description: Learn how to download the Syncfusion PDF web installer with a valid license and start the installation process.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> PDF web Installer
+# How to Download Syncfusion PDF Web Installer
 
 [PDF](https://www.syncfusion.com/pdf-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> PDF installer. You can either download the licensed installer or try our trial installer depending on your license. 
 

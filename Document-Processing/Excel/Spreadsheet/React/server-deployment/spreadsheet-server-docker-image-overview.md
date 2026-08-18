@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Docker image deployment in React Spreadsheet component | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Docker image deployment in React Spreadsheet | Syncfusion
+description: Learn about Docker image deployment for the Syncfusion React Spreadsheet component and Spreadsheet Server services.
 platform: document-processing
 control: Docker deployment 
 documentation: ug
 ---
 
-# Docker Image Overview in React Spreadsheet
+# Docker Image Deployment in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 

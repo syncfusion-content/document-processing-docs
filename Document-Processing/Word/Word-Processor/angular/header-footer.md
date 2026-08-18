@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header Footer in Angular DOCX Editor Component | Syncfusion
-description: Learn here all about header and footer in Syncfusion Essential Angular Document Editor component, its elements and more.
+title: Headers and Footers in Angular DOCX Editor | Syncfusion
+description: Headers and footers in Angular DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control:  Header and Footer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header and Footer in Angular Document Editor component
+# Headers and Footers in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 

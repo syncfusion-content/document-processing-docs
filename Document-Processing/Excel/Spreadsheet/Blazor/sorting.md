@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor Spreadsheet Component | Syncfusion
-description: Learn how to perform data sorting in the Blazor Spreadsheet component, including single-column sorting, filter-dialog sort options, and programmatic sort APIs.
+title: Sorting in Blazor Spreadsheet | Syncfusion
+description: Sort spreadsheet data efficiently using built-in sorting options and APIs in the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Sorting in Blazor Spreadsheet Component
+# Sorting in Blazor Spreadsheet
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides built-in sorting functionality that enables users to organize worksheet data in either ascending or descending order. This feature helps improve readability and simplifies data analysis by arranging content according to selected columns. The sorting behavior is controlled by the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property, which is set to **true** by default. When [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) is set to **false**, all sorting options are removed from the interface, including the Ribbon and Context Menu, and related API methods become inactive. Additionally, sorting is disabled if the worksheet is protected. For more information on worksheet protection, refer to the [worksheet protection documentation](./protection#protect-sheet).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global local in React Spreadsheet component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Globalization in React Spreadsheet | Syncfusion
+description: Learn about globalization in the Syncfusion React Spreadsheet component, including localization, culture settings, and regional formats.
 control: Global local 
 platform: document-processing
 documentation: ug
 ---
 
-# Global local in React Spreadsheet component
+# Globalization in React Spreadsheet
 
 ## Localization
 

@@ -1,12 +1,12 @@
 ---
-title: How to change data point label color of Waterfall chart | Syncfusion
-description: Code example to change data point label color of a Waterfall chart using .NET Excel Library.
+title: How to Change Waterfall Labels in .NET Excel Library | Syncfusion
+description: Change Waterfall chart data point label colors in Excel documents using the Syncfusion .NET Excel Library with chart options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to change data point label color of a Waterfall chart?
+# How to change Waterfall chart label colors in .NET Excel Library
 
 The following code snippet shows how to change data point label color of a Waterfall chart.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shapes in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn about shape support, text boxes, shape resizing, positioning, and text wrapping in the Syncfusion ASP.NET Core Document Editor.
+title: Shapes in ASP.NET Core DOCX Editor | Syncfusion
+description: The shapes feature in ASP.NET Core DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes
 documentation: ug
 ---
 
 
-# Shapes in ASP.NET Core Document Editor
+# Shapes in ASP.NET Core DOCX Editor
 
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, the Document Editor does not support inserting shapes. However, if the document contains a shape while importing, it will be preserved properly.
 

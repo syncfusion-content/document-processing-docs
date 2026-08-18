@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about History in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: History in TypeScript DOCX Editor | Syncfusion
+description: History in TypeScript DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
 control: History
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in JavaScript (ES6) Document Editor control
+# History in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) tracks the history of all editing actions performed in the document, enabling undo and redo functionality.
 

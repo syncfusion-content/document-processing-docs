@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with the TypeScript PDF Viewer | Syncfusion
-description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in standalone mode using Essential JS 2.
+title: Getting Started with JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript (ES6) PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the TypeScript PDF Viewer
+# Getting Started with JavaScript (ES6) PDF Viewer
 
 This section explains how to create and run a **TypeScript PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Why Syncfusion React PDF Viewer Requires Manual File Copy
-description: Learn why ej2-pdfviewer-lib assets must be copied from node_modules without a bundler and how to reference them in Syncfusion React PDF Viewer.
+title: Troubleshooting in React PDF Viewer | Syncfusion
+description: Understand why ej2-pdfviewer-lib assets must be copied from node_modules in the React PDF Viewer, and how to reference them in your project.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Why Does Syncfusion React PDF Viewer Require Manual File Copying?
+# Why Manual File Copying Is Required in React PDF Viewer
 
 The PDF Viewer supports multiple build systems and can work without a bundler by referencing assets directly using HTML tags. To keep load times efficient, the library is split into smaller modules and uses lazy loading for certain assets.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor UI Builder Skill with PDF Viewer | Syncfusion
-description: Install Syncfusion Blazor UI Builder to generate production-ready Blazor components with PDF Viewer from natural-language prompts.
+title: UI Builder Skill in Blazor PDF Viewer | Syncfusion
+description: Install Syncfusion Blazor UI Builder to generate production-ready Blazor s with PDF Viewer from natural-language prompts.
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI Builder Skill with PDF Viewer for AI Assistants
+# UI Builder Skill in Blazor PDF Viewer
 
 **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor PDF Viewer application development by transforming natural-language UI requirements into production-ready components using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI libraries. 
 

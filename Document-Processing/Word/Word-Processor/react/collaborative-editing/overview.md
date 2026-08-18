@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Collaborative Editing in React DOCX Editor control | Syncfusion
-description: Learn about collaborative editing in the Syncfusion React Document Editor control and how to implement real-time document collaboration.
+title: Collaborative Editing in React DOCX Editor Control| Syncfusion
+description: Learn about the overview of collaborative editing in Syncfusion Essential Studio React DOCX Editor control and more details.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React Document Editor
+# Collaborative Editing in Syncfusion React DOCX Editor Control
 
 Allows multiple users to work on the same document simultaneously. This can be in real time so that collaborators can see them as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About UWP Pdf Viewer control | Syncfusion
-description: Learn here all about introduction of Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control, its elements and more.
+title: About Syncfusion UWP PDF Viewer Control | Syncfusion
+description: Learn about the introduction and overview of the Syncfusion<sup>®</sup> UWP PDF Viewer control, its key features, capabilities, and usage.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# UWP PDF Viewer (SfPdfViewer) Overview
+# About Syncfusion UWP PDF Viewer Control
 
 The [PDF viewer](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) for Universal Windows Platform is a native control for viewing and printing PDF documents. The control uses the Windows rendering engine (`Windows.Data.Pdf`) to render the pages of the PDF document.
 

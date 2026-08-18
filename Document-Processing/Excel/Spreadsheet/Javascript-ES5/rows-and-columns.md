@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Rows and Columns in JavaScript Spreadsheet | Syncfusion
+description: Rows and columns in JavaScript Spreadsheet enable users to insert, delete, resize, and manage worksheet structure efficiently.
 platform: document-processing
 control: Rows and columns
 documentation: ug
 ---
 
-# Rows and columns in EJ2 JavaScript Spreadsheet control
+# Rows and Columns in JavaScript Spreadsheet 
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection of a row and a column is called a cell. The following operations can be performed on rows and columns:
 

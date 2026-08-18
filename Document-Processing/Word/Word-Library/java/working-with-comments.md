@@ -1,11 +1,11 @@
 ---
-title: Working with Comments | Syncfusion
-description: This section illustrates about working with comments in the Word document without MS Word or Office interop
+title: Comments in Java Word | Syncfusion
+description: This section illustrates how to add, edit, and manage comments in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Comments
+# Comments in Java Word
 
 A comment is a note or annotation that an author or reviewer can add to a document. DocIO represents comment with `WComment` instance.
 

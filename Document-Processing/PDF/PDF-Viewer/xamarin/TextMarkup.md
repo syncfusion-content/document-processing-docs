@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Text markup annotations in Xamarin Pdf Viewer (SfPdfViewer)
+# Text markup annotations in Xamarin Pdf Viewer
 
 The [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) supports to add, edit, and delete text markup annotations (highlight, underline, and strikethrough) in the PDF document.
 

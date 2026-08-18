@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show or hide the pdfviewer dynamically in Blazor | Syncfusion
+title: How to Show or hide the pdfviewer dynamically in Blazor | Syncfusion
 description: Learn here all about how to show or hide the pdfviewer dynamically in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Show or hide the PDF Viewer dynamically in Blazor PDF Viewer Component
+# How to Show or hide the pdfviewer dynamically in Blazor 
 
 In the below code, the PDF Viewer is hidden at page load. Then, on clicking a button, the PDFViewer container will be loaded. When the user clicks on a PDF file (here it is demonstrated with buttons), the PDF Viewer already present on the same page will be updated to show the selected document. 
 

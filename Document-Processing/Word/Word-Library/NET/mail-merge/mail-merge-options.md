@@ -1,12 +1,12 @@
 ---
-title: Mail merge options in .NET Word (DocIO) library | Syncfusion
+title: Mail merge options in .NET Word library in .NET | Syncfusion
 description: Learn how to use mail merge options to map the merge fields, remove unmerged fields, unmerged region, empty paragraphs and more in Word document.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Mail merge options in Word Library
+# Mail merge options in .NET Word library in .NET
 
 The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class allows you to customize the mail merge process with the following options.
 
@@ -544,7 +544,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Restart numbering in lists
 
-You can restart the list numbering for each record while performing mail merge for a group in Word document (https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.ImportOptions.html).
+You can restart the list numbering for each record while performing mail merge for a group in Word document.
 
 The following code example shows how to restart the list numbering in a Word document while performing mail merge.
 

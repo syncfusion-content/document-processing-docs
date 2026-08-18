@@ -1,14 +1,14 @@
 ---
 layout: post
-title: PDF Viewer in Angular 17+ without no-standalone | Syncfusion
-description: Checkout and learn about Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag of Syncfusion Essential JS 2 and more details.
+title: How to Create a Standalone PDF Viewer in Angular 17 | Syncfusion
+description: Create a standalone Angular PDF Viewer in Angular 17 and above without the standalone flag using the Syncfusion Essential JS 2 PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create PDF Viewer in Angular 17+ without --no-standalone flag
+# How to Create a Standalone PDF Viewer in Angular 17 (no Flag) in
 
 This section explains the steps required to create a simple Standalone Angular PDF Viewer in Angular 17 and above without --no-standalone flag.
 

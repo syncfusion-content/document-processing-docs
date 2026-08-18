@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group form fields in the React PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion React PDF Viewer by assigning the same name to multiple widgets.
+title: Group Form Fields in React PDF Viewer | Syncfusion
+description: Group PDF form fields in the React PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Group form fields in React PDF Viewer
+# Group Form Fields in React PDF Viewer
 
 The **React PDF Viewer** allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 - [How form field grouping works](#how-grouping-works)

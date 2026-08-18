@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set a New Language in Angular PDF Viewer | Syncfusion
-description: Learn how to localize the Syncfusion Angular PDF Viewer with culture codes using L10n.load and the locale property.
+title: New Language in Angular PDF Viewer | Syncfusion
+description: Localize the Angular PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language in the Angular PDF Viewer
+# Set a New Language in Angular PDF Viewer
 
 Use the Angular PDF Viewer's [locale](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#locale) property together with `L10n.load` to display UI text, tooltips, and messages in your users' language. Provide only the keys you need to override; missing keys fall back to the default `en-US` values.
 

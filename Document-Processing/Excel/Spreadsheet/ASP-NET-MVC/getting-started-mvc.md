@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Checkout and learn about getting started with ASP.NET MVC Spreadsheet control of Syncfusion Spreadsheet Editor SDK and more details.
+title: Getting Started with ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET MVC Spreadsheet. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting Started MVC
 documentation: ug
 ---
 
 
-# Getting Started with ASP.NET MVC Spreadsheet Control
+# Getting Started with ASP.NET MVC Spreadsheet
 
 This section briefly explains how to include [Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) control in your ASP.NET MVC application using Visual Studio.
 

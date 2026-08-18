@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Section format in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Section format in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Section Format in JavaScript DOCX Editor | Syncfusion
+description: The section format feature in JavaScript DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
 control: Section format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in JavaScript (ES5) Document editor control
+# Section Format in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various section-format options such as page size, page margins, and more.
 
