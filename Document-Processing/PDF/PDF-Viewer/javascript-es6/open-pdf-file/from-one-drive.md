@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from OneDrive in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion TypeScript PDF Viewer component using a server-backed approach.
+title: From One Drive in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the JavaScript (ES6) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load PDF Files from OneDrive
+# Open PDF from OneDrive in JavaScript (ES6) PDF Viewer
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 
@@ -166,6 +166,6 @@ N> Install the following NuGet packages in the server project to use the previou
 * **Microsoft.Extensions.Configuration.FileExtensions**
 * **Microsoft.Extensions.Configuration.Json**
 
-You can install these packages using the NuGet Package Manager in Visual Studio or via the `dot net` CLI.
+You can install these packages using the NuGet Package Manager in Visual Studio or via the `dotnet` CLI.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-one-drive)

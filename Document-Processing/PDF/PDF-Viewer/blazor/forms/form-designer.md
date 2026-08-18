@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about form designer and toolbar in Blazor SfPdfViewer component and more.
+title: Customize Form Designer and Toolbar in Blazor PDF Viewer | Syncfusion
+description: Learn here all about form designer and toolbar features of the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in Blazor SfPdfViewer
+# Form Designer in Blazor PDF Viewer
 
 When **Form Designer mode** is enabled in the Blazor [SfPdfViewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/overview), a default Form Designer user interface is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
 

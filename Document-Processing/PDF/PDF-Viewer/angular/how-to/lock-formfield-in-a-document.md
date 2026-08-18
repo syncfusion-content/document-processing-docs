@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Lock Form Fields in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Lock Form Fields in a document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Lock Form Fields in Angular PDF Viewer | Syncfusion
+description: Lock form fields in the Angular PDF Viewer so users cannot edit or move them after they are placed on the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Locking form fields in a PDF document
+# How to Lock Form Fields in Angular PDF Viewer
 
 The PDF Viewer supports making form fields read-only to prevent users from modifying, moving, or removing them. Locking can be applied through default form-field settings or programmatically during document events.
 

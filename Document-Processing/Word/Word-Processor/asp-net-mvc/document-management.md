@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Document Management in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Document Management in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Document Management in ASP.NET MVC DOCX Editor | Syncfusion
+description: Document management in ASP.NET MVC DOCX Editor provides editing restrictions and user permissions to secure document content.
 platform: document-processing
 control: Document Management
 documentation: ug
 ---
 
 
-# Document management in ASP.NET MVC Document Editor component
+# Document Management in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permissions, only a unique user or user group is authorized to edit a separate text area.
 

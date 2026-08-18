@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Ribbon in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to customize the ribbon in Syncfusion ASP.NET MVC DOCX Editor - file menu, backstage, tabs, groups, and items.
+title: How to Customize Ribbon in ASP.NET MVC DOCX Editor | Syncfusion
+description: Customize ribbon tabs, groups, and commands in Syncfusion® ASP.NET MVC DOCX Editor to tailor the toolbar experience and improve user productivity.
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Ribbon in ASP.NET MVC DOCX Editor
+# How to Customize Ribbon in ASP.NET MVC DOCX Editor
 
 The Syncfusion DOCX Editor provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 

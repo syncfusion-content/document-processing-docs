@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Optimize sfdt in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Optimize sfdt in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Optimize SFDT Files in JavaScript DOCX Editor | Syncfusion
+description: Optimize SFDT files in Syncfusion® JavaScript DOCX Editor to reduce file size, improve performance, and enhance document loading and processing efficiency.
 platform: document-processing
 control: Optimize SFDT
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Optimize sfdt in JavaScript (ES5) Document editor control
+# How to Optimize SFDT Files in JavaScript DOCX Editor
 
 Starting from version v21.1.x, the SFDT file generated in the Document Editor component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 * File transfer between the client and server through the internet is faster.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Core in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Core in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: ASP.NET Core Web Service in JavaScript DOCX Editor | Syncfusion
+description: Configure ASP.NET Core web services in the JavaScript DOCX Editor to handle server-side operations such as Word document import, export, and more.
 platform: document-processing
 control: Core 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in JavaScript (ES5) Document editor control
+# ASP.NET Core Web Service in JavaScript DOCX Editor
 
 DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Global local in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Global local in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Globalization in Angular Spreadsheet | Syncfusion
+description: Globalization in Angular Spreadsheet enables adapting the user interface, formats, and locale-specific settings for global audiences.
 platform: document-processing
 control: Global local 
 documentation: ug
 ---
 
-# Global local in Angular Spreadsheet component
+# Globalization in Angular Spreadsheet 
 
 ## Localization
 

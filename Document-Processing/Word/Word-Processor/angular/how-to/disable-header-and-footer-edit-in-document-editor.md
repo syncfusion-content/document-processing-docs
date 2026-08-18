@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable header and footer in Angular DOCX Editor | Syncfusion
-description: Learn here all about Disable header and footer edit in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Disable Header and Footer Editing in Angular DOCX Editor | Syncfusion
+description: Disable header and footer editing in Syncfusion® Angular DOCX Editor based on selection context to restrict modifications within document sections.
 platform: document-processing
 control: Disable header and footer edit in Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable header and footer editing in Angular Document Editor
+# How to Disable Header and Footer Editing in Angular DOCX Editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 

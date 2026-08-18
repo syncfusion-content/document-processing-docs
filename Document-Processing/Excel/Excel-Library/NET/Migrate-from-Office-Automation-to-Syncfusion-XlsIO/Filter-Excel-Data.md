@@ -1,12 +1,12 @@
 ---
-title: Filter Excel Data | Syncfusion
-description: Explains with an example on how to programmatically filter Excel data with specific conditions to show or hide certain rows using Interop and XlsIO.
+title: Data Filtering in .NET Excel Library | Syncfusion
+description: Filtering Excel data programmatically explains how to show or hide rows using specific conditions with Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Filter the Data in Excel
+# Data Filtering in .NET Excel Library
 
 Auto-filtering data allows you to view specific rows in a worksheet while hiding other rows. When an AutoFilter is added to the header row, a drop-down menu appears in each cell of the header row, which provides filter options that can be used to specify the rows to be displayed. This can be achieved programmatically by specifying the conditions.
 
@@ -301,6 +301,6 @@ End Sub
 
 ## See also
 
-- [AutoFilter in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-autofilter)
+- [AutoFilter in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/cells-manipulation/filtering)
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
 - [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

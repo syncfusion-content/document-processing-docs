@@ -1,13 +1,13 @@
 ---
-title: How to use SfRichTextBoxAdv as a standard RichTextBox. | Syncfusion
-description: Learn how to use UWP SfRichTextBoxAdv as a standard RichTextBox along with its core key features and usage.
+title: How to Use UWP DOCX Editor as a Standard Editor | Syncfusion
+description: Use Syncfusion® UWP DOCX Editor as a standard editor with rich text formatting features and document editing capabilities.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox
 ---
 
-# Use SfRichTextBoxAdv as a standard RichTextBox
+# How to Use UWP DOCX Editor as a Standard Editor
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 

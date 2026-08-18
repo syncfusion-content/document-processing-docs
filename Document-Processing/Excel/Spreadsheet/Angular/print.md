@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in Angular Spreadsheet component | Syncfusion
-description: Learn here all about print feature in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Print in Angular Spreadsheet| Syncfusion
+description: Print in Angular Spreadsheet enables users to print worksheet content and preview documents directly from the application.
 platform: document-processing
 control: Print 
 documentation: ug
 ---
 
-# Print in Angular Spreadsheet component
+# Print in Angular Spreadsheet 
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 

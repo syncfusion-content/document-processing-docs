@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Print Rotation in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable print rotation for landscape documents in the Blazor PDF Viewer component.
+description: Learn how to enable print rotation for landscape documents in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

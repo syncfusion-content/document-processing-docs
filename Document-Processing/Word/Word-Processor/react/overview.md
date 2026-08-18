@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of React DOCX Editor | Syncfusion
-description: Learn about the React Document Editor control, which enables you to create, edit, view, and print Word documents.
+title: About Syncfusion React DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio React DOCX Editor control and more details.
 control: Index 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the React Document Editor
+# About Syncfusion React DOCX Editor Control
 
 The [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 

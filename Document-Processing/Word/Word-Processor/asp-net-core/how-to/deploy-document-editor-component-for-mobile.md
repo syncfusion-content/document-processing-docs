@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: Deploy the DOCX Editor component for mobile | Syncfusion
-description: Learn here all about deploying the Document Editor component for mobile in the Syncfusion Document Editor component and more.
+title: How to Deploy ASP.NET Core DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® ASP.NET Core DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 platform: document-processing
 control: Deploy the Document Editor component for mobile
 documentation: ug
 ---
 
-# Deploy the Document Editor component for mobile
+# How to Deploy ASP.NET Core DOCX Editor for Mobile
 
 ## Document Editor component for mobile
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Modes in Blazor PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF Documents in the Blazor PDF Viewer component and more.
+description: Learn how to configure print modes for PDF Documents in the Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

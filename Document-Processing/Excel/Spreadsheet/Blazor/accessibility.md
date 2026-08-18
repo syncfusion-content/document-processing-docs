@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Spreadsheet Component | Syncfusion
-description: Learn about accessibility support in the Syncfusion Blazor Spreadsheet component, including WCAG 2.2, Section 508, keyboard shortcuts, and WAI-ARIA attributes.
+title: Accessibility in Blazor Spreadsheet | Syncfusion
+description: Learn about accessibility support in the Syncfusion Blazor Spreadsheet, including WCAG compliance, keyboard navigation, and WAI-ARIA attributes.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

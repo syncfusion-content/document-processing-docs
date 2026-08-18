@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Performance best practices in TypeScript Spreadsheet | Syncfusion
-description: Learn here all about how to optimize the performance EJ2 TypeScript Spreadsheet control, its elements and more.
+description: Performance best practices in TypeScript Spreadsheet help optimize rendering, data processing, and user interactions for large datasets.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in EJ2 TypeScript Spreadsheet Control
+# Performance Best Practices in TypeScript Spreadsheet 
 
 Performance optimization is crucial when working with large datasets in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 

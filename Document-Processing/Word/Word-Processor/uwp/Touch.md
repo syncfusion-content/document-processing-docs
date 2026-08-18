@@ -1,12 +1,12 @@
 ---
-title: Touch in UWP RichTextBox control | Syncfusion
-description: Learn here all about Touch support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Touch in UWP DOCX Editor | Syncfusion
+description: The touch in UWP DOCX Editor supports touch manipulations like pan, scroll, and zoom, enabled through the ManipulationMode property configuration.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: Touch
 ---
-# Touch in UWP RichTextBox (SfRichTextBoxAdv)
+# Touch in UWP DOCX Editor
 
 In UWP application, you should specify the **ManipulationMode** property for the controls in order to enable touch manipulations such as pan/scroll and zoom. Similarly, you should specify the **ManipulationMode** property for the SfRichTextBoxAdv control.
 The following code example demonstrates how to configure all the touch manipulations in SfRichTextBoxAdv control.

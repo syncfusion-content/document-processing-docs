@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create a custom toolbar in React PDF Viewer Component | Syncfusion
-description: Learn how to create and customize a toolbar in the Syncfusion React PDF Viewer, including adding commands and modifying built-in tools.
+title: Custom Toolbar in React PDF Viewer | Syncfusion
+description: Create a custom toolbar in the React PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a custom toolbar in React PDF Viewer
+# Custom Toolbar in React PDF Viewer
 
 The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Typescript Pdfviewer control | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Typescript Pdfviewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Built-In Toolbar in TypeScript PDF Viewer
+# Customize the Organize Pages Toolbar in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer includes a built-in toolbar for common actions such as page navigation, text search, view mode, download, print, bookmarks, and thumbnails.
 
@@ -181,11 +181,11 @@ Add the below [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewe
 
 {% previewsample "/document-Processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-method-cs1" %}
 
-## Show/Hide the default toolbaritem
+## Show/Hide the default toolbar item
 
 The PDF Viewer has an option to show or hide these grouped items in the default toolbar.
 
-* **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
+* **Show/Hide toolbar item using toolbarSettings as in the following code snippet.**
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -244,7 +244,7 @@ Add the below `serviceUrl` in the `index.ts` file
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/toolbar/toolbar-items-cs1" %}
 
-* **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
+* **Show/Hide toolbar item using showToolbaritem as in the following code snippet**
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -558,7 +558,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
 **Step 5:** Add EJ2 Toolbar for perform primary actions like Open, Previous page, Next page, Go to page,Print and Download using the following code snippet,
 
 ```ts
-   Tool toolbarObj = new Tool({
+   let toolbarObj = new Tool({
         items: [
             { prefixIcon: 'e-pv-open-document', tooltipText: 'Open', id: 'openButton', click: openDocument.bind(this) },
             { prefixIcon: 'e-pv-bookmark-icon', tooltipText: 'Bookmark', id: 'bookmarkButton', click: bookmarkClicked },

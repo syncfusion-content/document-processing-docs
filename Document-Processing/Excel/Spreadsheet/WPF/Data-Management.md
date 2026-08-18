@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Data Management in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Data Management support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Import worksheet data from DataTable sources and export spreadsheet content to DataTable in WPF Spreadsheet.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Data Management in WPF Spreadsheet (SfSpreadsheet)
+# Data Management in WPF Spreadsheet 
 SfSpreadsheet supports importing and exporting worksheet data to and from a `DataTable`.
 
 ## Import from DataTable

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Merge cells in the Blazor Spreadsheet component | Syncfusion
-description: Check out and learn all about the comprehensive merge functionality in Syncfusion Blazor Spreadsheet component and much more.
+title: Merge Cells in Blazor Spreadsheet | Syncfusion
+description: Learn how to merge and unmerge cells in the Syncfusion Blazor Spreadsheet to improve worksheet layouts.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Merge cells in the Blazor Spreadsheet component
+# Merge Cells in Blazor Spreadsheet
 
 Merging cells in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component allows you to combine adjacent cells into a single larger cell, improving the layout and readability. This feature is commonly used to create headers, section labels, or grouped content for a structured view. To control this functionality, use the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property, which enables or disables merge cell support in the Spreadsheet. The default value of the [AllowMerge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowMerge) property is true.
 

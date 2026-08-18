@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Server-Backed JavaScript PDF Viewer | Syncfusion
-description: Learn how to set up and use the Syncfusion JavaScript PDF Viewer in server-backed mode using CDN resources and web service configuration.
+title: Getting Started with Server-Backed JS PDF Viewer | Syncfusion
+description: Set up and use the Syncfusion JavaScript (ES5) PDF Viewer in server-backed mode using CDN resources and a web service configuration for document processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript PDF Viewer (server-backed)
+# Getting Started with Server-Backed JS PDF Viewer
 
 This section explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in **server-backed mode**.
 

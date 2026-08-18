@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add custom fonts in TypeScript PDF Viewer | Syncfusion
-description: Learn how to add and load custom TTF fonts for documents displayed in the TypeScript PDF Viewer using the customFonts property.
+title: How to Add Custom Fonts in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Add and load custom TTF fonts for documents displayed in the JavaScript (ES6) PDF Viewer using the customFonts property and the assets folder.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Custom Fonts to PDF Forms in TypeScript PDF Viewer
+# How to Add Custom Fonts in JavaScript (ES6) PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the `customFonts` property. This ensures consistent text rendering when required fonts are not installed on the user’s system.
 

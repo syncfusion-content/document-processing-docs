@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create form fields in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion TypeScript PDF Viewer.
+title: Create Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Add each PDF form field using the JavaScript (ES6) PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF form fields in TypeScript
+# Create Form Fields in JavaScript (ES6) PDF Viewer
 
 Form fields can be created visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) or dynamically using APIs.
 
