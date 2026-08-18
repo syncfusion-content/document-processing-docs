@@ -1,6 +1,6 @@
 ---
 title: Convert PDF to JSON in .NET Smart Data Extractor | Syncfusion
-description: Extract structured data from PDF documents as JSON using Smart Data Extractor. Convert PDF content into machine-readable JSON format seamlessly in .NET applications.
+description: Extract structured data from PDF documents as JSON using Smart Data Extractor.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
