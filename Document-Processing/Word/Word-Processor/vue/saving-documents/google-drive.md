@@ -20,7 +20,7 @@ You must set up a project in the Google Developers Console and enable the Google
 
 * Download the OAuth 2.0 Client IDs credentials JSON file from the Google Cloud Console and save it locally. Save the path to this file for use in the `appsettings.json` configuration.
 
-**Step 2:** Create a simple [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) sample in Vue
+**Step 2:** Create a Simple Document Editor sample in Vue
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
