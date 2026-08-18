@@ -1,14 +1,14 @@
 ---
 layout: post
-title: pageRenderInitiate and pageRenderComplete in Vue | Syncfusion
-description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion Vue PDF Viewer during page rendering.
+title: How to Handle Page Render Events in Vue PDF Viewer | Syncfusion
+description: Use the pageRenderInitiate and pageRenderComplete events in the Vue PDF Viewer to track page rendering and coordinate custom UI updates.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page render initiate and complete events in Vue PDF Viewer
+# How to Handle Page Render Events in Vue PDF Viewer
 
 In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering life cycle:
 

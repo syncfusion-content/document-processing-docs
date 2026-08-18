@@ -1,12 +1,12 @@
 ---
-title: How to Check Formula Error Values in a Cell | Syncfusion
-description: This page describes how to check if a formula returns an error and how to access the corresponding error value using XlsIO.
+title: How to Check Formula Errors in .NET Excel Library | Syncfusion
+description: Check whether an Excel formula returns an error and access the related error value using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to check if a formula in a cell contains an error value?
+# How to check formula errors in .NET Excel Library
 
 Formulas are calculated during execution. Once calculated, you can check if the result has an error and retrieve the corresponding error value, such as #DIV/0! or #N/A, using built-in error-checking support.
 
@@ -97,4 +97,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1014444-FormulaError/FAQ/FormulaError%20Value/.NET/FormulaError%20Value">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1014444-FormulaError/FAQ/FormulaError%20Value/.NET/FormulaError%20Value" aria-label="GitHub demo link">this GitHub page</a>.

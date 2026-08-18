@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with Shape Annotations
+#  Add & modify shapes using PDF viewer Xamarin.iOS
 
 Shape Annotations are used to add annotations in the form of shapes such as rectangle, ellipse, horizontal line, and vertical line at the specific area of interest. PDF viewer allows you to include shape annotations in a PDF document and provides options to modify or remove the existing shape annotations. The supported shape annotations are: 
 

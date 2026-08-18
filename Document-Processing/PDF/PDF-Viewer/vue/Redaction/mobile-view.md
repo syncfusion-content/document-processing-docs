@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction in mobile view in Vue PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the Syncfusion Vue PDF Viewer with a complete toolbar setup and redaction workflow.
+title: Mobile View in Vue PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the Vue PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in Vue PdfViewer Component
+# Organize Pages in Mobile View in Vue PDF Viewer
 
 The Redaction Tool enables permanent marking and removal of sensitive content from PDF documents in mobile view using the Vue PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 

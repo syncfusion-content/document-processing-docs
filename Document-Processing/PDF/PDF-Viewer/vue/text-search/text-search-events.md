@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text search Events in Vue PDF Viewer component | Syncfusion
-description: Learn how to handle text search events, and run programmatic searches in the Syncfusion Vue PDF Viewer.
+title: Text Search Events in Vue PDF Viewer | Syncfusion
+description: Handle text search events in the Vue PDF Viewer and run programmatic searches to integrate text search into your Vue application.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

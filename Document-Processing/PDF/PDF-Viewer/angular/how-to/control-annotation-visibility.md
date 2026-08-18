@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Control annotation visibility in Angular PDF Viewer | Syncfusion
-description: Learn how to control the visibility of PDF annotations in the Angular PDF Viewer, ensuring annotations appear only in the viewer as needed.
+title: How to Control Annotation Visibility in Angular PDF | Syncfusion
+description: Control the visibility of PDF annotations in the Angular PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control annotation visibility in Angular PDF Viewer
+# How to Control Annotation Visibility in Angular PDF Viewer
 
 ## Overview
 

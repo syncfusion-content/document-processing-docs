@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate a PDF File in ASP.NET MVC | Syncfusion
-description: Learn how to create a PDF file in an ASP.NET MVC application with easy steps using the JavaScript PDF Library without requiring Adobe Acrobat.
+title: Getting Started with JavaScript PDF in ASP.NET MVC app | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript PDF in ASP.NET MVC application. Easy steps to create PDF without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ keywords: mvc, asp.net mvc, javascript, pdf
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc
 ---
 
-# Create or Generate a PDF File in ASP.NET MVC
+# Getting Started with JavaScript PDF in ASP.NET MVC app
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill forms, and secure PDF files.
 

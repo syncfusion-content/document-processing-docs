@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search and extraction in React PDF Viewer | Syncfusion
-description: Overview of text search capabilities, UI features, programmatic APIs, events, and text extraction in the Syncfusion React PDF Viewer.
+title: About Syncfusion React PDF Viewer Text Search | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Text Search section and the key capabilities it provides.
 platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search and extraction in React PDF Viewer
+# About Syncfusion React PDF Viewer Text Search
 
 The React PDF Viewer provides an integrated text search experience that supports both interactive UI search and programmatic searches. Enable the feature by importing [`TextSearch`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch) and injecting it into the viewer services and by setting [`enableTextSearch`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enabletextsearch) as needed. To give more low-level information about text, [`findText`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#findtext) and [`findTextAsync`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/textsearch#findtextasync) methods can be used.
 

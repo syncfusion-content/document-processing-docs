@@ -1,12 +1,12 @@
 ---
-title: Auto Fill Feature in Excel | Syncfusion
-description: In this section, you can learn how to use the Auto Fill feature in Excel using C# with the Syncfusion XlsIO library.
+title: Auto Fill in .NET Excel Library | Syncfusion
+description: Use the Auto Fill feature in Excel using the Syncfusion .NET Excel Library to autofill data in worksheets.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Auto Fill
+# Auto Fill in .NET Excel Library
 
 The **Auto Fill** feature lets you programmatically populate a range of Excel cells based on defined patterns, sequences, or trends. It reduces manual data entry by automatically generating values using built-in logic.
 

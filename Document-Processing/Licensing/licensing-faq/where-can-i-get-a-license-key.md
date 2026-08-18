@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Licensing FAQ – Get the license key | Syncfusion
-description: Learn here some information about recommended places to register the Syncfusion license key in your application.
+title: Where can I get a license key for Document Solutions | Syncfusion
+description: Learn here about the recommended places to get and register the license key for Syncfusion Document Solutions in your application.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Where can I get a license key?
+# Where can I get a license key for Document Solutions
 
 License keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion<sup>&reg;</sup> website. 
 

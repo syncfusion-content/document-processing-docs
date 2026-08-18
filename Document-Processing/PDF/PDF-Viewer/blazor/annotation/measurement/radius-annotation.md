@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Radius Annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius annotations in the Blazor SfPdfViewer component.
+title: Add Radius Annotations in Blazor PDF Viewer  | Syncfusion
+description: Learn how to enable, draw, customize, and manage Radius annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Radius Annotations in Blazor SfPdfViewer Component
+# Add Radius Annotations in Blazor PDF Viewer 
 Radius measurement annotations allow users to draw circular regions and calculate the radius visually.
 
 ![Radius overview](../../images/blazor-pdfviewer-radius-annotation.png)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toggle annotation visibility in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion ASP.NET MVC PDF Viewer by exporting and restoring annotations with custom buttons.
+title: How to Show or Hide Annotations in ASP.NET MVC PDF Viewer | Syncfusion
+description: Show or hide annotations in the ASP.NET MVC PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Toggle annotation visibility
+# How to Show or Hide Annotations in ASP.NET MVC PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer lets developers temporarily hide annotations by exporting them, clearing them from the UI, and then importing them back on demand. This workflow is helpful when presenters need to focus on document content or compare marked-up and clean versions of the same file.
 

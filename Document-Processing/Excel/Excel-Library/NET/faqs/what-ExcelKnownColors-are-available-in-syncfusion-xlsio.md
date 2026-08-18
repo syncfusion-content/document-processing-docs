@@ -1,12 +1,12 @@
 ---
-title: Excel Known Colors Reference in XlsIO | Syncfusion 
-description: This section lists ExcelKnownColors with name and color images for quick reference.
+title: Known Colors in .NET Excel Library | Syncfusion
+description: ExcelKnownColors reference describes the available known colors with names and color images for quick lookup.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What ExcelKnownColors are available in Syncfusion XlsIO?
+# ExcelKnownColors in .NET Excel Library
 
 This FAQ lists all ExcelKnownColors available in Syncfusion XlsIO, including names and color reference images.
 

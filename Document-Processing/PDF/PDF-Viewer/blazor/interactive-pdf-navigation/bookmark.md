@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bookmark navigation in Blazor SfPdfViewer | Syncfusion
-description: Learn how to use the bookmark panel in the Blazor PDF Viewer to navigate to labeled destinations, including visibility options and behavior.
+title: Bookmark navigation in Blazor PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Server-side application PDF Viewer component. Explore view, comment on PDFs and also fill fields.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Bookmark navigation in Blazor SfPdfViewer Component
+# Getting Started with Blazor Server App PDF Viewer
 
 This section explains how to enable, view, and use the bookmark panel to navigate to labeled destinations in a PDF.
 

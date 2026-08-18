@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn about globalization in the Syncfusion ASP.NET MVC PDF Viewer component, including localization strings and culture settings.
+description: Learn about the globalization in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

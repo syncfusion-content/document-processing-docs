@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Notes in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about the notes feature in EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Notes in TypeScript Spreadsheet | Syncfusion
+description: Notes in TypeScript Spreadsheet allow users to add contextual information to cells, making data easier to understand and collaborate on.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
-# Notes in EJ2 TypeScript Spreadsheet control
+# Notes in TypeScript Spreadsheet 
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, and leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 

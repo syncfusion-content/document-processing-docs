@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Table Format in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn here all about table format in the Syncfusion ASP.NET Core Document Editor component and more.
+description: The table format feature in ASP.NET Core DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table Format
 documentation: ug
 ---
 
 
-# Table Formatting in ASP.NET Core Document Editor
+# Table format in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) customizes the formatting of a table or its cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 

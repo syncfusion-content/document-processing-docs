@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Customize form fields in .NET MAUI PDF Viewer (SfPdfViewer)
+# Customize Form Fields in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to customize the visual appearance of form fields by modifying properties on their [Widget](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Widget.html) objects. A form field can have one or more `Widget` instances (the visual representations of the field on the page). You can change the background color, foreground (text) color, border color, and border width.
 

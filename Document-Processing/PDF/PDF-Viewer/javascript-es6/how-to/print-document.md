@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print a document in JavaScript ES6 PDF Viewer | Syncfusion
-description: Learn how to programmatically print a PDF document using the print method in the Syncfusion TypeScript PDF Viewer.
+title: How to Print the PDF in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Print the loaded PDF in the JavaScript (ES6) PDF Viewer from custom UI controls using the print method with optional mode and quality settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Print a document in JavaScript ES6 PDF Viewer
+# How to Print the PDF in JavaScript (ES6) PDF Viewer
 
 Print a PDF document programmatically using the [print] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#print) method in the Print module.
 
