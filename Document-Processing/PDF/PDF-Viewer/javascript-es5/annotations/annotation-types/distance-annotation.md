@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Distance annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Distance measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Distance Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Distance annotations in the JavaScript (ES5) PDF Viewer to measure straight-line distances on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Distance annotation in JavaScript PDF Viewer
+# Distance Annotation in JavaScript (ES5) PDF Viewer
 
 Distance is a measurement annotation used to measure the length between two points in the PDF.
 

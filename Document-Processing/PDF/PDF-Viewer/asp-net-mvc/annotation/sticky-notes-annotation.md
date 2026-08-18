@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sticky notes in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about sticky note annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Sticky Notes Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the sticky notes annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes in ASP.NET MVC PDF Viewer control
+# Sticky Notes Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 

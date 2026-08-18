@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable the context menu in Vue PDF Viewer | Syncfusion
-description: Learn how to disable the context menu in the Vue PDF Viewer component using the contextMenuOption API property.
+title: How to Disable the Context Menu in Vue PDF Viewer | Syncfusion
+description: Disable the right-click context menu in the Vue PDF Viewer to prevent users from accessing context menu actions on PDF content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable the context menu in the Vue PDF Viewer
+# How to Disable the Context Menu in Vue PDF Viewer
 
 Set [contextMenuOption](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#contextmenuoption) to `None` to hide all context menu options. The default value is `RightClick`.
 

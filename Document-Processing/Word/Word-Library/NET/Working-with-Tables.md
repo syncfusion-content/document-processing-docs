@@ -1,11 +1,11 @@
 ---
-title: Working with Tables in .NET Word (DocIO) library | Syncfusion
-description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word (DocIO) library.
+title: Tables in .NET Word library in .NET | Syncfusion
+description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Tables in a Word document
+# Tables in .NET Word library in .NET
 
 A table in Word document is used to arrange document content in rows and columns. [WTable](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTable.html) instance represents a table in Word document. A table must contain at least one row.
 
@@ -1704,7 +1704,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Tables/Apply-vertical-merge-to-cells).
 
-To merge cells manually, set the [HorizontalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_HorizontalMerge) or [VerticalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalMerge) property of [CellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html) to [CellMerge.Start](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html) for the first cell of the merge range and to [CellMerge.Continue](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html) for the cells being merged into it.
+To merge cells manually, set the [HorizontalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_HorizontalMerge) or [VerticalMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html#Syncfusion_DocIO_DLS_CellFormat_VerticalMerge) property of [CellFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellFormat.html) to [CellMerge.Start](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html#Syncfusion_DocIO_DLS_CellMerge_Start) for the first cell of the merge range and to [CellMerge.Continue](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CellMerge.html#Syncfusion_DocIO_DLS_CellMerge_Continue) for the cells being merged into it.
 
 The following code example illustrates how to create a table that contains horizontal merged cells.
 

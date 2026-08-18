@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Check the document editing status in PDF Viewer | Syncfusion
+title: How to Check the document editing status in PDF Viewer | Syncfusion
 description: Learn here all about how to check the editing status of the document in Syncfusion Blazor PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Check the document's editing status in Blazor PDF Viewer Component
+# How to Check the document editing status in PDF Viewer
 
 You can check whether the loaded PDF document is edited or not by using the [IsDocumentEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_IsDocumentEdited) property of the PDFViewer.
 

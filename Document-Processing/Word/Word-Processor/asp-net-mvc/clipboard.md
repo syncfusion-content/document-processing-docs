@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Clipboard in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about clipboard in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+description: The clipboard support in ASP.NET MVC DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
 control: Clipboard
 documentation: ug
 ---
 
 
-# Clipboard in ASP.NET MVC Document Editor Component
+# Clipboard in ASP.NET MVC DOCX Editor Component
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports the clipboard.
 

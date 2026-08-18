@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in Vue Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion Vue Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comments in Vue Spreadsheet | Syncfusion
+description: Learn how to add, edit, and manage comments in the Syncfusion Vue Spreadsheet for collaboration and annotations.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in Vue Spreadsheet control
+# Comments in Vue Spreadsheet
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Worksheet in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Worksheet in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about worksheets in the Syncfusion ASP.NET Core Spreadsheet control, including creating, managing, and organizing sheets.
 platform: document-processing
 control: Worksheet
 documentation: ug
 ---
 
 
-# Worksheet in ASP.NET Core Spreadsheet control
+# Worksheet in ASP.NET Core Spreadsheet
 
 A worksheet is a collection of cells organized into rows and columns that allows you to store, format, and manipulate data.
 

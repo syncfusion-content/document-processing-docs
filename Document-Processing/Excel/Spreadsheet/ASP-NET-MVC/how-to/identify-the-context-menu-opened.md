@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Identify Opened Context Menu in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Identify Context Menu in ASP.NET MVC Spreadsheet | Syncfusion
+description: Identify the context menu opened in ASP.NET MVC Spreadsheet to perform custom actions based on the selected menu and target area.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Identify the opened context menu in ASP.NET MVC Spreadsheet control
+# How to Identify Context Menu Opened in ASP.NET MVC Spreadsheet
 
 The Spreadsheet provides different context menus depending on the user action. For example, right-clicking a cell displays a context menu with options related to the selected cell.
 

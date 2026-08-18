@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Load desired PDF for initial loading in Blazor PDF Viewer Component
+# Load desired PDF for initial loading in Blazor PDF Viewer
 
 You can load your own PDF document for initial loading as well as change document at run-time in PDF Viewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values as ServiceUrl in client project.
 

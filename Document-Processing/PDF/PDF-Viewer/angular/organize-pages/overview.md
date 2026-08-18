@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize pages in Angular PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion Angular PDF Viewer component.
+title: About Syncfusion Angular PDF Viewer Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in Angular PDF Viewer
+# About Syncfusion Angular PDF Viewer Organize Pages
 
 The Angular PDF Viewer includes an Organize Pages panel for preparing documents before sharing. Use this panel to reorder pages, correct orientation, insert or remove pages, and duplicate content without leaving the viewer.
 

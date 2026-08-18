@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Open a Document From base64 in Flutter PDF Viewer | Syncfusion
-description: Learn here about opening a PDF document from memory in Syncfusion® Flutter PDF Viewer widget (SfPdfViewer).
+description: The PDF loading from Base64 feature in SfPdfViewer enables users to decode and display PDF documents directly from Base64-encoded data.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open a Document From Base64 in Flutter PDF Viewer (SfPdfViewer)
+# Open a Document From Base64 in Flutter PDF Viewer
 
 ## Using SfPdfViewer.memory
 

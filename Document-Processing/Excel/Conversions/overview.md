@@ -1,13 +1,13 @@
 ---
-title: Excel Document Conversion Library | Syncfusion
-description:  Syncfusion Excel Conversion Library converts Excel to several file formats like PDF, image, HTML, ODS, JSON, CSV without Microsoft Office dependencies.
+title: About Syncfusion Excel Document Conversion Library | Syncfusion
+description: Learn about overview of Syncfusion Excel Conversion Library and supported Excel file conversions with more details.
 platform: document-processing
 control: general
 documentation: UG
 keywords: Excel, SDK, Automation, API, convert
 ---
 
-# Welcome to Syncfusion<sup>®</sup> Excel Document Conversion Library
+# About Syncfusion Excel Document Conversion Library
 
 {% doccards %}
 

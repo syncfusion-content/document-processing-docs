@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to Export annotations in Syncfusion Angular PDF Viewer using UI options and programmatic APIs.
+title: Export Annotation in Angular PDF Viewer | Syncfusion
+description: Export annotations from the Angular PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export annotations in Angular PDF Viewer
+# Export Annotations in Angular PDF Viewer
 
 PDF Viewer supports exporting annotations. You can export annotations from the PDF Viewer in two ways:
 

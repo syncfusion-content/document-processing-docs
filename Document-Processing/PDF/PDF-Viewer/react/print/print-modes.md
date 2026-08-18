@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Modes in React PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF documents in the Syncfusion React PDF Viewer to control printing behavior and optimize output quality.
+description: Configure print modes in the React PDF Viewer to control how PDF documents are printed and to optimize the output for different scenarios.
 platform: document-processing
 control: Print
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Google Drive in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Drive in the Syncfusion JavaScript (ES5) DOCX Editor of Syncfusion Essential JS 2 and more details.
+title: Save to Google Drive in JavaScript DOCX Editor | Syncfusion
+description: Save documents to Google Drive from JavaScript DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive using JavaScript (ES5) DOCX Editor
+# Save Documents to Google Drive in JavaScript DOCX Editor
 
 To save a document to Google Drive, you can follow the steps below.
 

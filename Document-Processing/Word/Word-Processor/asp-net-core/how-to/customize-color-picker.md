@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Color Picker in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn here all about how to customize the color picker in Syncfusion ASP.NET Core Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Color Picker in ASP.NET Core DOCX Editor | Syncfusion
+description: Customize the color picker appearance in Syncfusion® ASP.NET Core DOCX Editor using color picker settings to match your application's design.
 platform: document-processing
 control: Customize Color Picker
 documentation: ug
 ---
 
 
-# How to Customize the Color Picker in ASP.NET Core Document Editor
+# How to Customize Color Picker in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the color picker using `colorPickerSettings` in `DocumentEditorSettings`. The color picker offers customization options for the default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
 

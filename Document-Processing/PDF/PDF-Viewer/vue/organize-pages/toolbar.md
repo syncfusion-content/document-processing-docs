@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in Vue PDF Viewer | Syncfusion
-description: Learn here all about Organize Page Toolbar Customization in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the Vue PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Page Toolbar Customization in Vue PDF Viewer component
+# Customize the Organize Pages Toolbar in Vue PDF Viewer
 
 The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `pageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
 

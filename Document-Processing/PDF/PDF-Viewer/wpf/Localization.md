@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Localization support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Localization in WPF Pdf Viewer control | Syncfusion
+description: Localize WPF PDF Viewer control to multiple languages using resource files. Explore culture-specific UI customization and translation options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

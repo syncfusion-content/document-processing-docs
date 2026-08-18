@@ -1,11 +1,11 @@
 ---
-title: Working with Fields in .NET Word (DocIO) library | Syncfusion
-description: Learn how to add dynamic information such as title, time, page number, etc. to a Word document as a field using the .NET Word (DocIO) library.
+title: Fields in .NET Word library in .NET | Syncfusion
+description: Learn how to add dynamic information such as title, time, page number, etc. to a Word document as a field using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with document Fields in a Word document
+# Fields in .NET Word library in .NET
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the [WField](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WField.html) and [WFieldMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WFieldMark.html) instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 

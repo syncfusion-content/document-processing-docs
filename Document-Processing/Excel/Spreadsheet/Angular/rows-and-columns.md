@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Rows and columns in Angular Spreadsheet | Syncfusion
+description: Rows and columns in Angular Spreadsheet enable users to insert, delete, resize, and manage worksheet structure efficiently.
 platform: document-processing
 control: Rows and columns
 documentation: ug
 ---
 
-# Rows and columns in Angular Spreadsheet component
+# Rows and columns in Angular Spreadsheet 
 
 [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is a tabular format consisting of rows and columns. The intersection point of rows and columns are called as cells. The list of operations that you can perform in rows and columns are,
 

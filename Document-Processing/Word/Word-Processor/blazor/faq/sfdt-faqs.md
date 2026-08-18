@@ -1,14 +1,14 @@
 ---
 layout: post
 title: FAQs about SFDT in Blazor DOCX Editor | Syncfusion
-description: Learn all about FAQs on SFDT in the Syncfusion Blazor Document Editor component, including its structure and usage.
+description: Find frequently asked questions about SFDT format in the Blazor DOCX Editor control, including its structure and usage.
 control: SFDT format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# FAQs about SFDT in Blazor Document Editor
+# FAQs about SFDT in Blazor DOCX Editor
 
 The frequently asked questions about SFDT in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) are listed below:
 

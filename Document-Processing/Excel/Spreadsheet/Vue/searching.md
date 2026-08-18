@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Searching in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Vue Spreadsheet | Syncfusion
+description: Search and replace worksheet data efficiently using built-in find and replace functionality in the Syncfusion Vue Spreadsheet.
 control: Searching 
 platform: document-processing
 documentation: ug
 ---
 
-# Searching in Vue Spreadsheet component
+# Find and Replace in Vue Spreadsheet
 
 Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable the Find and Replace functionality.
 

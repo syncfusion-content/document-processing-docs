@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import pages in Organize Pages in Angular PDF Viewer | Syncfusion
-description: How to import pages from another PDF into the current document using the Organize Pages UI in the Syncfusion Angular PDF Viewer.
+title: Import Pages in Angular PDF Viewer | Syncfusion
+description: Import pages from another PDF into the current document in the Angular PDF Viewer using the Organize Pages panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import pages using Organize Pages tool in Angular
+# Import Pages in Angular PDF Viewer
 
 ## Overview
 

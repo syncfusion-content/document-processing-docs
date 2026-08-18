@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable tile rendering in JavaScript PDF Viewer | Syncfusion
-description: Learn how to disable tile rendering in the JavaScript PDF Viewer using enableTileRendering to adjust performance behavior for different document sizes.
+title: How to Disable Tile Rendering in JavaScript (ES5) PDF | Syncfusion
+description: Disable tile rendering in the JavaScript (ES5) PDF Viewer to use the classic full-page rendering mode for simpler PDF display scenarios.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable tile rendering in JavaScript PDF Viewer
+# How to Disable Tile Rendering in JavaScript (ES5) PDF Viewer
 
 Use the `enableTileRendering` property to enable or disable tile rendering. Tile rendering is enabled by default and typically improves performance for large documents. Set `enableTileRendering` to `false` to disable tile rendering when it is not required.
 

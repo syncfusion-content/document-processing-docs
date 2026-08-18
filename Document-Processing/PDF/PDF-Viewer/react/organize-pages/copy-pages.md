@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Copy pages in Organize Pages in React PDF Viewer | Syncfusion
-description: Learn how to duplicate pages using the Organize Pages UI in the React PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Copy Pages in React PDF Viewer | Syncfusion
+description: Duplicate pages in the React PDF Viewer using the Organize Pages panel to copy one or more pages into the same document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

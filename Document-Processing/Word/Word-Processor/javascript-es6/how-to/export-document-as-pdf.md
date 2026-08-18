@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export Document as PDF in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about exporting the document as PDF in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: How to Export Document as PDF in TypeScript DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® TypeScript DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Export Document as PDF
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export Document as PDF in JavaScript (ES6) Document Editor control
+# How to Export Document as PDF in TypeScript DOCX Editor
 
 In this article, we are going to see how to export the document in PDF format. You can export the document as PDF in the following ways:
 
