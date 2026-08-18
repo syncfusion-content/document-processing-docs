@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migrate Server-backed to Standalone MVC PDF Viewer | Syncfusion
-description: Learn how to migrate your ASP.NET MVC PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
+title: Server to Standalone in ASP.NET MVC PDF Viewer | Syncfusion
+description: Migrate an existing ASP.NET MVC PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Migrate from Server-backed to Standalone ASP.NET MVC PDF Viewer
+# Migrate from Server-Backed to Standalone ASP.NET MVC PDF Viewer
 
 Migrating from server-backed to standalone mode transforms your PDF Viewer architecture by moving PDF rendering from the server to the client browser. This migration eliminates server dependencies, reduces infrastructure costs, and improves performance through instant client-side rendering.
 
@@ -47,7 +47,7 @@ When you migrate to standalone mode, the processing location for various feature
 | **Thumbnail View** | Thumbnail images are generated on the server and transmitted to the client. | Thumbnails are rendered directly in the browser without server involvement. |
 | **Bookmark View** | Bookmark data is processed on the server and sent to the client for rendering. | Bookmark navigation is managed locally using the Syncfusion EJ2 PDF Viewer. |
 | **Text Search** | Text search operations are performed on the server, and results are returned to the client. | Text search is executed entirely within the browser. |
-| **Print** | The server handles print preparation and formatting, then sends the processed output back to the client for printing. | The server handles print preparation and formatting, then sends the processed output back to the client for printing. |
+| **Print** | The server handles print preparation and formatting, then sends the processed output back to the client for printing. | Print operations are executed entirely in the browser without server communication. |
 | **Toolbar** | Toolbar actions such as zoom, navigation, and export are processed on the server, and results are returned to the client. | Toolbar operations are executed instantly on the client without requiring server communication. |
 
 **Key Insight:** In standalone mode, all PDF processing occurs in the browser, eliminating the need for server coordination. Your server only serves the PDF file as a static resource or through a simple API endpoint.

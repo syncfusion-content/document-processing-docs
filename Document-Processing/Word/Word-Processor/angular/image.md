@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Image in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Image in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Images in Angular DOCX Editor | Syncfusion
+description: Images in Angular DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Image in Angular Document Editor component
+# Images in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports common raster image formats such as PNG, BMP, JPEG, SVG, and GIF. You can insert an image file or an online image in the document using the [`insertImage()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertimage) method. Refer to the following sample code.
 
@@ -26,7 +26,7 @@ domainurl: ##DomainURL##
 
 Image files are internally converted to base64 strings, whereas online images are preserved as URLs.
 
-N>: EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N> EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
 
 ## Image resizing
 
@@ -43,7 +43,7 @@ this.documentEditor.selection.imageFormat.width = 800;
 this.documentEditor.selection.imageFormat.height = 800;
 ```
 
-N>: Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
+N> Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
 
 ## Text wrapping style
 

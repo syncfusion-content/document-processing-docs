@@ -1,12 +1,13 @@
 ---
-title: Text Wrapping Style in UWP RichTextBox control | Syncfusion
-description: Learn here all about Text Wrapping style support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Text Wrapping Style in UWP DOCX Editor | Syncfusion
+description: Text wrapping style in UWP DOCX Editor offers preservation support for image and textbox wrapping styles, enabling text flow around images and shapes.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: text-wrapping,text-wrapping-style,inline,behind,in-front-of-text,top-and-bottom,square,image-wrap,shape-wrap
 ---
-# Text Wrapping Style in UWP RichTextBox (SfRichTextBoxAdv)
+# Text Wrapping Style in UWP DOCX Editor
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, RichTextBox has only preservation support for image and textbox shape with below wrapping styles.
 
 Text wrapping refers to how images and shapes are positioned relative to the surrounding text in a document. Currently, [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) only has preservation support for image and text-box shapes with the following wrapping styles.
 

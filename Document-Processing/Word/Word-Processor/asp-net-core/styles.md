@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Styles in Document Editor Component | Syncfusion
-description: Learn here all about styles in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Styles in ASP.NET Core DOCX Editor | Syncfusion
+description: The styles feature in ASP.NET Core DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 platform: document-processing
 control: Styles
 documentation: ug
 ---
 
 
-# Styles in Document Editor Control
+# Styles in ASP.NET Core DOCX Editor
 
-Styles are useful for applying a set of formatting consistently throughout the document. In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) , styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
-A Style in document editor should have the following properties:
+A style in the Document Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,13 +28,13 @@ N> The style type should match the inherited style type. For example, it is not 
 
 ## Default style
 
-The default style for span and paragraph properties is normal. It internally inherits the default style of the document loaded or document editor component.
+The default style for span and paragraph properties is `Normal`. It internally inherits the default style of the document loaded or the Document Editor component.
 
 ## Style hierarchy
 
 Each style initially checks its local value for the property that is being evaluated and turns to the style it is based on. If no local value is found, it turns to its default style.
 
-Style inheritance of different styles are listed as follows:
+Style inheritance of different styles is listed as follows:
 
 ### Character style
 
@@ -54,12 +54,12 @@ When a paragraph style is based on a linked style, the inheritance of the proper
 
 ### Linked style
 
-Linked styles are composite styles and their components are paragraph and character styles with link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from linked character style. Linked styles are based on other linked styles or on paragraph styles.
+Linked styles are composite styles and their components are paragraph and character styles with a link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from the linked character style. Linked styles are based on other linked styles or on paragraph styles.
 
 When a linked style is based on a paragraph style, the hierarchy of the properties is as follows:
 
-* Paragraph properties are inherited from the ‘basedOn’ paragraph style.
-* Character properties are inherited from the ‘basedOn’ paragraph style.
+* Paragraph properties are inherited from the `basedOn` paragraph style.
+* Character properties are inherited from the `basedOn` paragraph style.
 
 When a linked style is based on another linked style, the hierarchy of the properties is as follows:
 
@@ -68,7 +68,7 @@ When a linked style is based on another linked style, the hierarchy of the prope
 
 ## Defining new styles
 
-New Styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to the parts of a document.
+New styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to the parts of a document.
 
 ### Defining a character style
 
@@ -109,11 +109,11 @@ New Styles are defined and added to the style collection of the document. In thi
 
 ### Applying a style
 
-The styles are applied using the **applyStyle** method of **editorModule**, the parameter should be passed in the **Name** of the Style.
+The styles are applied using the **applyStyle** method of **editorModule**, where the parameter is the **Name** of the Style.
 
-The styles of the **Character** type is applied to the currently selected part of the document. If there is no selection, the values will be applied to the word at caret position. The styles of **Paragraph** type follows the same logic and are applied to all paragraphs in the selection or the current paragraph.
+The styles of the **Character** type are applied to the currently selected part of the document. If there is no selection, the values are applied to the word at the caret position. The styles of **Paragraph** type follow the same logic and are applied to all paragraphs in the selection or the current paragraph.
 
-When there is no selection, styles of **Linked** type will change the values of the paragraph, and apply both the Paragraph and Character properties. When there is selection, Linked Style changes only the character properties of the selected text.
+When there is no selection, styles of **Linked** type will change the values of the paragraph, and apply both the Paragraph and Character properties. When there is a selection, Linked Style changes only the character properties of the selected text.
 
 For example, the following line will apply the "New Linked" to the current paragraph.
 
@@ -125,7 +125,7 @@ documenteditor.editor.applyStyle('New Linked', true);
 
 ## Get Styles
 
-You can get the styles in the document using the below code snippet.
+You can get the styles in the document using the following code snippet.
 
 ```typescript
 //Get paragraph styles
@@ -136,4 +136,4 @@ var characterStyles = documentEditor.getStyles('Character');
 
 ## Online Demo
 
-Explore how to apply and modify styles in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/styles#/tailwind3).
+Explore how to apply and modify styles in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/styles#/tailwind3).

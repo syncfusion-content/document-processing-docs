@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Move to selection position in Blazor DocumentEditor | Syncfusion
-description: Learn how to Move to selection position in Syncfusion Blazor DocumentEditor component and much more.
+title: How to Move Selection to a Position in Blazor DOCX Editor | Syncfusion
+description: Move the document selection to a specific position in Syncfusion® Blazor DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Move selection to specific position in Blazor Document editor
+# How to Move Selection to a Position in Blazor DOCX Editor
 
 The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectAsync_System_String_System_String_) API in the selection module can be used to set the cursor position anywhere in the document.
 
-## Selects content based on start and end hierarchical index
+## Select content based on start and end hierarchical index
 
-Hierarchical index will be in below format.
+The hierarchical index will be in the following format.
 
 `sectionIndex;blockIndex;offset`
 
-The following code snippet illustrate how to select using hierarchical index.
+The following code snippet illustrates how to select using the hierarchical index.
 
 ```csharp
 <button @onclick="SelectText">Select Text</button>
@@ -26,32 +26,31 @@ The following code snippet illustrate how to select using hierarchical index.
 @code {
     SfDocumentEditorContainer container;
 
-    // It will select the specified Position
+    // It will select the specified position
     public async void SelectText()
     {
-        // Selection will occur between provided start and end offset
+        // Selection will occur between the provided start and end offset
         await container.DocumentEditor.Editor.InsertTextAsync("Welcome");
-        // The below code will select the letters “We” from inserted text “Welcome”
+        // The following code will select the letters "We" from the inserted text "Welcome"
         await container.DocumentEditor.Selection.SelectAsync("0;0;0", "0;0;2");
     }
 }
 ```
 
-The following table illustrates about Hierarchical index in detail.
+The following table illustrates the hierarchical index in detail.
 
-| Element |Hierarchical Format | Explanation |
+| Element | Hierarchical Format | Explanation |
 |-----------------|-------------|----|
-|Move selection to Paragraph |sectionIndex;blockIndex;offset <br>**Ex:** 0;0;0|It moves the cursor to the start of paragraph.|
-|Move selection to Table|sectionIndex;tableIndex;rowIndex;cellIndex;blockIndex;offset <br>**Ex:** 0;0;0;0;1;0|It moves the cursor to the second paragraph which is inside first row and cell of table.|
-|Move selection to header|pageIndex;H;sectionIndex;blockIndex;offset<br>**Ex:** 1;H;0;0;0|It moves cursor to the header in second page.|
-|Move selection to Footer|pageIndex;F;sectionIndex;blockIndex;offset<br>**Ex:** 1;F;0;0;0|It moves cursor to the footer in second page.|
+| Move selection to paragraph | sectionIndex;blockIndex;offset <br>**Ex:** 0;0;0 | It moves the cursor to the start of the paragraph. |
+| Move selection to table | sectionIndex;tableIndex;rowIndex;cellIndex;blockIndex;offset <br>**Ex:** 0;0;0;0;1;0 | It moves the cursor to the second paragraph which is inside the first row and cell of the table. |
+| Move selection to header | pageIndex;H;sectionIndex;blockIndex;offset<br>**Ex:** 1;H;0;0;0 | It moves the cursor to the header on the second page. |
+| Move selection to footer | pageIndex;F;sectionIndex;blockIndex;offset<br>**Ex:** 1;F;0;0;0 | It moves the cursor to the footer on the second page. |
 
 ## Get the selection start and end hierarchical index
 
-Using [`GetStartOffsetAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetStartOffsetAsync), you can get start hierarchical index which denotes the start index of current selection. Similarly, using [`GetEndOffsetAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetEndOffsetAsync), you can get end hierarchical index which denotes the end index of current selection.
+Using [`GetStartOffsetAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetStartOffsetAsync), you can get the start hierarchical index which denotes the start index of the current selection. Similarly, using [`GetEndOffsetAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetEndOffsetAsync), you can get the end hierarchical index which denotes the end index of the current selection.
 
-The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
-
+The following code snippet illustrates how to get the selection start and end offset on selection changes in the document.
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" SelectionChanged="selectionChange">
@@ -61,12 +60,12 @@ The following code snippet illustrate how to get the selection start and end off
     private string startOffset;
     private string endOffset;
 
-    // Event gets triggered on selection change in document
+    // Event gets triggered on selection change in the document
     public async void selectionChange()
     {
-        //Get the start index of current selection
+        // Get the start index of the current selection
         startOffset = await container.DocumentEditor.Selection.GetStartOffsetAsync();
-        //Get the end index of current selection
+        // Get the end index of the current selection
         endOffset = await container.DocumentEditor.Selection.GetEndOffsetAsync();
     }
 }

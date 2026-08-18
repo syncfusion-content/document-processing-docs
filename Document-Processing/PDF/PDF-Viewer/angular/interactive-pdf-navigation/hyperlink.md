@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyperlink navigation in Angular PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for Angular.
+title: Hyperlink in Angular PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the Angular PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in PDF Viewer
+# Hyperlink Navigation in Angular PDF Viewer
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 

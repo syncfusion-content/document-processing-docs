@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load PDF Viewer with Local Resources in TypeScript | Syncfusion
-description: Learn how to configure the Syncfusion TypeScript PDF Viewer to load PDF documents and PDFium resources locally instead of from CDN.
+title: How to Load the PDF Viewer with Local Resources | Syncfusion
+description: Configure the JavaScript (ES6) PDF Viewer to load PDF documents and library files from local resources instead of a CDN for offline or restricted networks.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load PDF Viewer with Local Resources in TypeScript
+# How to Load the PDF Viewer with Local Resources in JavaScript (ES6)
 
 This guide shows how to configure the **Syncfusion TypeScript (JavaScript/ES6) PDF Viewer** to load PDF documents and required PDFium resources from your local application instead of using a CDN.
 
@@ -58,7 +58,7 @@ Configure the PDF Viewer to use local paths.
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-pdfviewer';
 
-  PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
 
 const pdfviewer: PdfViewer = new PdfViewer({
   // Path to your locally hosted PDF document

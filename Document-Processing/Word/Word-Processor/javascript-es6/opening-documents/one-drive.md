@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Open OneDrive Files in JavaScript (ES6) Document editor | Syncfusion
-description: Learn about how to Open document from One Drive in JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in TypeScript DOCX Editor | Syncfusion
+description: Open documents from OneDrive in TypeScript DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive in JavaScript (ES6) Document editor
+# Open Documents from OneDrive in TypeScript DOCX Editor
 
 To load a document from One Drive in a [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
 
-**Step 1:** Create the Microsoft graph API.
+**Step 1:** Create the Microsoft Graph API.
 
-Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
+You must create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
  
 
 **Step 2:** Create a Simple Document Editor Sample in TypeScript
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Typescript. This will give you a basic setup of the Document Editor component. 
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in TypeScript. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -39,7 +39,7 @@ using Microsoft.Identity.Client;
 using Helpers;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -58,7 +58,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `LoadFromOneDrive()` method to load the document from One Drive.
+* Create the `LoadFromOneDrive()` method to load the document from OneDrive.
 
 ```csharp
 [AcceptVerbs("Post")]
@@ -115,7 +115,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -133,11 +133,11 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 ```
 
-N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
+N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:** Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
 
  
 
@@ -150,7 +150,7 @@ In the client-side, the document is returned from the web service is opening usi
 {% endhighlight %}
 {% endtabs %}
 
-N> The following NuGet packages are required to use the previous code example
+N> The following NuGet packages are required to use the previous code example:
 * **Microsoft.Identity.Client**
 * **Microsoft.Graph**
 * **Microsoft.Extensions.Configuration**

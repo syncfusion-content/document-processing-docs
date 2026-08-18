@@ -1,18 +1,18 @@
 ---
 layout: post
-title: PDF Viewer in Angular 17+ without no-standalone | Syncfusion
-description: Checkout and learn about Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag of Syncfusion Essential JS 2 and more details.
+title: How to Create a Standalone PDF Viewer in Angular 17 | Syncfusion
+description: Create a standalone Angular PDF Viewer in Angular 17 and above without the standalone flag using the Syncfusion Essential JS 2 PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create PDF Viewer in Angular 17+ without --no-standalone flag
+# How to Create a Standalone PDF Viewer in Angular 17 (no Flag) in
 
 This section explains the steps required to create a simple Standalone Angular PDF Viewer in Angular 17 and above without --no-standalone flag.
 
-## Setup Angular Environment
+## Set up Angular Environment
 
 Use the Angular CLI to create and manage Angular applications.
 To install the latest Angular CLI globally use the following command.
@@ -50,7 +50,7 @@ On Windows, use an equivalent command or add an npm script to copy assets cross-
 
 ## Registering PDF Viewer Module and Adding PDF Viewer component
 
-Import PDF Viewer module into Angular application from the package `@syncfusion/ej2-angular-pdfviewer` and Add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
+Import PDF Viewer module into Angular application from the package `@syncfusion/ej2-angular-pdfviewer` and add the Angular PDF Viewer by using `<ejs-pdfviewer>` selector in `template` section of the `src/app/app.component.ts` file to render the PDF Viewer component.
 
 ```typescript
 
@@ -109,9 +109,9 @@ Add the Angular PDF Viewer component’s styles as given below in `src/styles.cs
 ```
 ## Run the application
 
-Use the following command to run the application in browser.
+Use the following command to run the application in the browser.
 
-```javascript
+```bash
 ng serve --open
 ```
 

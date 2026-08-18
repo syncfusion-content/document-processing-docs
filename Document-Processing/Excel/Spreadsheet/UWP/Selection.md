@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Selection in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Selection support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Select cells, rows, columns, and ranges in the  UWP Spreadsheet control to efficiently edit, manage, and work with worksheet data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Selection in UWP Spreadsheet (SfSpreadsheet)
+# Selection in UWP Spreadsheet
 
 This section explains the Selection behavior in SfSpreadsheet.
 

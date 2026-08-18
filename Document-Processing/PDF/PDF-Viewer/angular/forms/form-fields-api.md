@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Fields API in Angular PDF Viewer | Syncfusion
-description: Learn how to use Form Fields API to enable, update, retrieve, and clear form fields in the Syncfusion Angular PDF Viewer.
+title: Form Fields Api in Angular PDF Viewer | Syncfusion
+description: Use the form fields API in the Angular PDF Viewer to enable, update, retrieve, and clear form fields programmatically from TypeScript or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

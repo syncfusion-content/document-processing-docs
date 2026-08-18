@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Section Formatting in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about working with section formatting in Syncfusion Blazor DocumentEditor component and more.
+title: Section Format in Blazor DOCX Editor | Syncfusion
+description: The section format feature in Blazor DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Working with Section Formatting in Blazor DocumentEditor Component
+# Section Format in Blazor DOCX Editor
 
 [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
-You can get or set the size of a section at cursor position by using the following sample code.
+You can get or set the size of a section at the cursor position by using the following sample code.
 
 ```csharp
 await documentEditor.Selection.SectionFormat.SetPageWidthAsync(500);
@@ -24,7 +24,8 @@ You can change the orientation of the page by swapping the values of page width 
 
 ## Page margins
 
-Left and right page margin defines the gap between the document content from left and right side of the page respectively. Top and bottom page margins defines the gap between the document content from header and footer of the page respectively.
+The left and right page margins define the gap between the document content and the left and right sides of the page. The top and bottom page margins define the gap between the document content and the header and footer of the page.
+
 Refer to the following sample code.
 
 ```csharp
@@ -34,7 +35,7 @@ await documentEditor.Selection.SectionFormat.SetTopMarginAsync(10);
 await documentEditor.Selection.SectionFormat.SetBottomMarginAsync(10);
 ```
 
->Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+N> The maximum value of `Margin` is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -52,6 +53,6 @@ You can define the distance of footer content from the bottom of the page by usi
 await documentEditor.Selection.SectionFormat.SetFooterDistanceAsync(72);
 ```
 
-## Online Demo
+## Online demo
 
-Explore how to apply section formatting in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/section-format?theme=fluent2).
+Explore how to apply section formatting in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/section-format?theme=fluent2).

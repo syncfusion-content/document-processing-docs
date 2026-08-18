@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redaction UI interactions in Angular PDF Viewer | Syncfusion
-description: Learn about UI interactions in Redaction annotations of the Syncfusion Angular PDF Viewer component.
+title: Ui Interaction in Angular PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction UI interactions in Angular PDF Viewer
+# Ui Interaction in Angular PDF Viewer
 
 ## Add redaction annotations from the toolbar
 
@@ -16,7 +16,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 
 ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
-#### Redaction annotations are interactive
+### Redaction annotations are interactive
 
 * **Movable** – Drag and reposition the annotation within the same page.  
 ![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)
@@ -24,7 +24,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 * **Resizable** – Resize the annotation to cover the required area.  
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar).
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../Redaction/toolbar).
 
 ## Add redaction annotations using the context menu
 
@@ -132,5 +132,5 @@ N> Redaction is permanent. Once applied, the original content cannot be restored
 * [Overview of Redaction](./overview)
 * [Programmatic Support in Redaction](./programmatic-support)
 * [Redaction in Mobile View](./mobile-view)
-* [Redaction Toolbar](./toolbar)
+* [Redaction Toolbar](../Redaction/toolbar)
 * [Search Text and Redact](./search-redact)

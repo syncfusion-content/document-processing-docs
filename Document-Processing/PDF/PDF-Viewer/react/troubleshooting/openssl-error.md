@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fix ERR_OSSL_EVP_UNSUPPORTED Error in Syncfusion React PDF Viewer
-description: Resolve the ERR_OSSL_EVP_UNSUPPORTED error when running React PDF Viewer by setting the Node.js OpenSSL legacy provider option.
+title: Openssl Error in React PDF Viewer | Syncfusion
+description: Resolve the ERR_OSSL_EVP_UNSUPPORTED error in the React PDF Viewer by enabling the Node.js OpenSSL legacy provider option during development.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Troubleshoot ERR_OSSL_EVP_UNSUPPORTED Error
+# Resolve ERR_OSSL_EVP_UNSUPPORTED Error in React PDF Viewer
 
 When running your React application with the PDF Viewer, you may encounter the **ERR_OSSL_EVP_UNSUPPORTED** error. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
 

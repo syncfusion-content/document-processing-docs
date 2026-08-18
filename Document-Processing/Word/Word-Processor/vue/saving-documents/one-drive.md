@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to One Drive in Vue Document editor control | Syncfusion
-description:  Learn about how to Save document to One Drive in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save Documents to OneDrive in Vue DOCX Editor | Syncfusion
+description: Save documents to OneDrive from Vue DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to One Drive
+# Save Documents to OneDrive in Vue DOCX Editor
 
 To save a document to One Drive, you can follow the steps below
 

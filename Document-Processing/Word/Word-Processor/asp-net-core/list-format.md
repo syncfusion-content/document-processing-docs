@@ -1,14 +1,14 @@
 ---
 layout: post
-title: List Format in DOCX Editor Component | Syncfusion
-description: Learn here all about List Format in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in ASP.NET Core DOCX Editor | Syncfusion
+description: The list format feature in ASP.NET Core DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List Format
 documentation: ug
 ---
 
 
-# Working with Lists in ASP.NET Core Document Editor
+# List Format in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to a paragraph using the supported APIs.
 

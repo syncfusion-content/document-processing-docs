@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to Image | Syncfusion
-description: Learn the NuGet packages required to Convert Word document to image using the .NET Word (DocIO) library.
+description: Describe the NuGet packages required for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

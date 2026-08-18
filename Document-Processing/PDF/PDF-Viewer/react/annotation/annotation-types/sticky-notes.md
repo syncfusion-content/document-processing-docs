@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Sticky Notes Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the Syncfusion React PDF Viewer.
+title: Sticky Notes in React PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Sticky Notes annotations in the React PDF Viewer for short notes placed anywhere on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Sticky Notes Annotations in React PDF Viewer
+# Sticky Note Annotation in React PDF Viewer
 Sticky Notes allow users to place comment markers on the PDF. When clicked, the note opens a popup containing comments, replies, and discussions. Use them to capture review feedback without altering the original content. 
 
 ![Sticky Notes overview](../../images/stickynotes_annotation.png)

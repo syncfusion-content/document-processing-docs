@@ -1,13 +1,13 @@
 ---
-title: Open and Save PDF document on Linux | Syncfusion
-description: Open and save PDF documents in .NET Core application on Linux using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Open and Save PDF Document in Linux | Syncfusion
+description: Learn how to open and save PDF documents in .NET Core applications on Linux using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and Save the PDF document on Linux
+# Open and Save PDF Document in Linux
 
 The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF documents on Linux OS**.
 

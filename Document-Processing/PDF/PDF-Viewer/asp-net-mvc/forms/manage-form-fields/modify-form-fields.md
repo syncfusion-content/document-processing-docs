@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Modify form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Syncfusion MVC PDF Viewer.
+title: Modify Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Edit PDF form fields in the ASP.NET MVC PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Modify PDF Form Field Properties in MVC PDF Viewer
+# Modify Form Fields in ASP.NET MVC PDF Viewer
 You can modify form fields using the **UI** or **API**.
 
 ## Modify PDF Form Field Properties using the UI
@@ -187,9 +188,9 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) to set selected value and border appearance.
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) to set selected value and border appearance.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -220,9 +221,9 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for items, selection, borders.
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for items, selection, borders.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -264,9 +265,9 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for items, value, borders.
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for items, value, borders.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -308,9 +309,9 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for tooltip, required, colors, borders.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -347,9 +348,9 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for tooltip, required, colors, borders.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -392,8 +393,8 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
-- [Style form fields](./customize-form-fields)
+- [Remove form fields](./remove-form-fields)
+- [Customize form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)

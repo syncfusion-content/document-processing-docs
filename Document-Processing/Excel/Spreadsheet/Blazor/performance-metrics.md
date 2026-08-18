@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance Metrics in Blazor Spreadsheet Component | Syncfusion
-description: Learn about performance metrics in the Blazor Spreadsheet component, including rendering, styling, and file import/export.
+title: Performance Metrics in Blazor Spreadsheet | Syncfusion
+description: Learn about rendering, styling, and file processing performance metrics in the Syncfusion Blazor Spreadsheet
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Performance Metrics in Blazor Spreadsheet Component
+# Performance Metrics in Blazor Spreadsheet
 
 Performance metrics show how efficiently the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) handles large datasets and core operations such as rendering, styling, number formats, and file import/export. This documentation provides the measured results for these operations to give a clear view of how the component performs under different workloads.
 

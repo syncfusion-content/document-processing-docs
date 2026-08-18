@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Right to left in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Right to Left in Angular DOCX Editor | Syncfusion
+description: Right-to-left support in Angular DOCX Editor enables RTL user interfaces, including menus, dialogs, and text direction for RTL languages.
 platform: document-processing
 control: Right to left 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in Angular Document Editor component
+# Right to Left in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 

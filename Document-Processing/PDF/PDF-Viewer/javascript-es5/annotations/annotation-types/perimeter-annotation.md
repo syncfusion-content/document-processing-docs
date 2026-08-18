@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perimeter annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Perimeter measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Perimeter Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Perimeter measurement annotations in the JavaScript (ES5) PDF Viewer to calculate the perimeter of a region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perimeter annotation in JavaScript PDF Viewer
+# Perimeter Annotation in JavaScript (ES5) PDF Viewer
 
 Perimeter is a measurement annotation used to measure the length around a closed polyline in the PDF.
 
@@ -18,10 +18,11 @@ Perimeter is a measurement annotation used to measure the length around a closed
 
 ### Add perimeter annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Measurement Annotation** dropdown.
-- Choose **Perimeter**, then draw the polyline on the page.
+Use the annotation toolbar to add a perimeter annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Measurement Annotation** dropdown.
+3. Choose **Perimeter**, then draw the polyline on the page.
 
 N> When in pan mode, selecting measurement annotations switches the viewer to text select mode.
 
@@ -363,17 +364,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `PerimeterSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Perimeter settings.
+Refer to the following code snippet to set the properties while adding a Perimeter annotation.
 
 ```html
 <button id="Perimeter">Add Perimeter</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -404,8 +405,8 @@ document.getElementById('Perimeter')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
-=ej.pdfviewer.PdfViewer.Inject(
+{% highlight js tabtitle="Server-Backed" %}
+ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
     ej.pdfviewer.Navigation,
@@ -443,7 +444,7 @@ The scale ratio and unit of measurement can be modified using the scale ratio op
 
 ![Scale ratio](../../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+Supported units for measurement annotations are
 
 - Inch
 - Millimeter

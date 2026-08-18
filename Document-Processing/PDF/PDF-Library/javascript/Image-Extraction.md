@@ -1,13 +1,13 @@
 ---
-title: Image Extraction in JavaScript PDF Library | Syncfusion
+title: Image Extraction in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn to extract PDF images and retrieve format, page location, bounds, masking flags, resource names, and dimensions with JavaScript PDF Library.
+description: Extract images from PDF documents and retrieve their properties using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Image Extraction in JavaScript PDF Library
+# Image Extraction in JavaScript PDF
 
 The JavaScript PDF Library enables you to extract embedded images from PDF documents and retrieve properties such as image format, page index, occurrence index, bounds, resource name, interpolation settings, masking flags, and physical dimensions.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bookmark Navigation in Windows Forms PDF Viewer | Syncfusion&reg;
-description: Learn about Bookmark Navigation support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Bookmark Navigation in WinForms PDF Viewer | Syncfusion
+description: Bookmark navigation in PdfViewerControl enables users to quickly jump to specific sections of a PDF document using its bookmark hierarchy.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-# Bookmark Navigation in Windows Forms PDF Viewer (PdfViewerControl)
+# Bookmark Navigation in WinForms PDF Viewer
 
 [WinForms PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) control allows users to navigate to the bookmarks present in the loaded PDF document at the UI level. 
 

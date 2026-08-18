@@ -1,5 +1,5 @@
 ---
-title: Convert HTML to PDF Using a Console Application | Syncfusion
+title: HTML to PDF Conversion in Console App .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using a simple console application with clear, structured, and easy-to-follow step-by-step guidance.
 platform: document-processing
 control: PDF
@@ -7,7 +7,7 @@ documentation: UG
 keywords: create pdf in console app, generate pdf using console application, syncfusion html to pdf, html to pdf console example
 ---
 
-# Convert HTML to PDF using a Console Application
+# HTML to PDF conversion in Console App .NET PDF Library
 
 The [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF documents using C#. Using this library, HTML can be converted to PDF through a console application.
 

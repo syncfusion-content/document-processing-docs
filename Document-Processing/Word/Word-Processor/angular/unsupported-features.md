@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Unsupported features in Angular DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the Angular Document Editor to understand its limitations.
+title: Unsupported Features in Angular DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in Angular DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in Angular Document Editor
+# Unsupported Features in Angular DOCX Editor
 
-This section describes the unsupported elements in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
+This section describes the unsupported elements in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
 
 ## Document formatting
 

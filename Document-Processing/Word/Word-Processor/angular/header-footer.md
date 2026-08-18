@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header footer in Angular Document editor component | Syncfusion
-description: Learn here all about Header footer in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Headers and Footers in Angular DOCX Editor | Syncfusion
+description: Headers and footers in Angular DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
-control: Header footer 
+control:  Header and Footer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header footer in Angular Document editor component
+# Headers and Footers in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
@@ -25,9 +25,9 @@ this.documentEditor.selection.sectionFormat.differentFirstPage = true;
 this.documentEditor.selection.sectionFormat.differentOddAndEvenPages = true;
 ```
 
-## Go to header footer region
+## Go to header and footer region
 
-Double click in header or footer region to move the selection into it. You can also do this by using the following code.
+Double click in the header or footer region to move the selection into it. You can also do this by using the following code.
 
 ```typescript
 this.documentEditor.selection.goToHeader();
@@ -39,29 +39,29 @@ this.documentEditor.selection.goToFooter();
 
 ## Link to previous
 
-Link to previous is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
+The Link to Previous option is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
 
 Before setting or getting the link to previous value, use the ['goToHeader'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotoheader) or ['goToFooter'](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotofooter) API to move the current selection to the header or footer region.
 
-You can get or set the default header footer link to previous value of a section at cursor position by using the following sample code.
+You can get or set the default header and footer link to previous value of a section at cursor position by using the following sample code.
 
 ```typescript
 this.container.documentEditor.selection.sectionFormat.oddPageHeader.linkToPrevious = false;
 this.container.documentEditor.selection.sectionFormat.oddPageFooter.linkToPrevious = false;
 ```
 
-In case the document has different header and footer types, such as different first page, odd, and even pages.
+In case the document has different header and footer types, such as different first page, odd, and even pages:
 
 ```typescript
 // Different first page
 this.container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
 this.container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
-//Even page
-this.container.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
-this.container.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
+// Even page
+this.container.documentEditor.selection.sectionFormat.evenPageHeader.linkToPrevious = false;
+this.container.documentEditor.selection.sectionFormat.evenPageFooter.linkToPrevious = false;
 ```
 
->Note: When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled state in UI and set to return false for the first section.
+N> When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is in disabled state in UI and set to return false for the first section.
 
 ## Header and footer distance
 
@@ -71,13 +71,13 @@ You can define the distance of header region content from the top of the page. R
 this.documentEditor.selection.sectionFormat.headerDistance = 36;
 ```
 
-Same way, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
+In the same way, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
 
 ```typescript
-this.documentEditor.selection.sectionFormat.footerDistace = 36;
+this.documentEditor.selection.sectionFormat.footerDistance = 36;
 ```
 
-## Close header footer region
+## Close header and footer region
 
 Move the selection to the document body from header or footer region by double clicking or tapping the document area. You can also perform this by using the following sample code.
 
@@ -85,10 +85,10 @@ Move the selection to the document body from header or footer region by double c
 this.documentEditor.selection.closeHeaderFooter();
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to add and customize headers and footers in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/headers-footers).
 
-## See Also
+## See also
 
 * [Working with Section Formatting](./section-format)

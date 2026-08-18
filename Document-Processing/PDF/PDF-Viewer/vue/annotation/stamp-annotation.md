@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Stamp annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about stamp annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): dynamic, sign here, standard business, and custom stamps.
-control: Stamp annotation
+title: Stamp Annotation in Vue PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Stamp annotations in the Vue PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Stamp annotation in Vue PDF Viewer control
+# Stamp Annotation in Vue PDF Viewer
 
 The PDF Viewer control provides options to add, edit, delete, and rotate the following stamp annotations in PDF documents:
 
@@ -206,11 +206,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding a Stamp annotation to the PDF document Programmatically
+## Adding a Stamp annotation to the PDF document programmatically
 
 With the PDF Viewer library, you can add a Stamp annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation#addannotation) method.
 
-Here's a example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
+Here's an example of how you can utilize the **addAnnotation()** method to include a Stamp annotation programmatically:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (Standalone)" %}
@@ -537,7 +537,7 @@ Here is an example of using editAnnotation():
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -578,7 +578,7 @@ const editAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -628,7 +628,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -661,8 +661,6 @@ const editAnnotation = function () {
     }
   }
 }
-  }
-}
 </script>
 
 {% endhighlight %}
@@ -670,7 +668,7 @@ const editAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+    <button v-on:click="editAnnotation">Edit Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>

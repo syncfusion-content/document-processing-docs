@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotation Collection in .NET MAUI PDF Viewer control | Syncfusion
+title: Annotation Collection in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to access and manage the annotation collection in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: document-processing
 control: SfPdfViewer
@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Annotation Collection in .NET MAUI PDF Viewer (SfPdfViewer)
+# Annotation Collection in .NET MAUI PDF Viewer
 
 The existing annotations in a PDF document can be accessed using the [Annotations](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) property of the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). This read-only property will have the annotation collection information as soon as the document is loaded into the PDF Viewer.
 The following example explains how to use the property to obtain information about the first annotation in a specific document.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to Export annotations in Syncfusion TypeScript PDF Viewer using UI options and programmatic APIs.
+title: Export Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Export annotations from the JavaScript (ES6) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export annotations in TypeScript PDF Viewer
+# Export Annotations in JavaScript (ES6) PDF Viewer
 
 PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
 
@@ -34,7 +34,7 @@ This generates and downloads the selected format containing all annotations in t
 
 ## Export programmatically
 
-You can export annotations from code using [exportAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotation) ,[exportAnnotationsAsObject](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasobject) and [exportAnnotationsAsBase64String](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) APIs.
+You can export annotations from code using [exportAnnotation](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotation), [exportAnnotationsAsObject](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasobject), and [exportAnnotationsAsBase64String](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) APIs. Use `exportAnnotation` to download as a file, `exportAnnotationsAsObject` to retrieve the annotation data as a JavaScript object, and `exportAnnotationsAsBase64String` to get a Base64-encoded string for embedding in JSON payloads or database storage.
 
 Use the following example to initialize the viewer and export annotations as JSON, XFDF, or as an object.
 
@@ -98,7 +98,7 @@ btnObject?.addEventListener('click', () => {
   });
 });
 
-//Export Annotation as Base 64
+//Export Annotation as Base64
 var exportObject1;
 document.getElementById('ExportAsBase64')?.addEventListener('click', function () {
 viewer.exportAnnotationsAsBase64String(AnnotationDataFormat.Json).then(function (value: any) {

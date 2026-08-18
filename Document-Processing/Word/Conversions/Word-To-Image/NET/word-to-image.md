@@ -1,12 +1,12 @@
 ---
-title: Convert Word to Image in .NET Word Library | DocIO | Syncfusion
-description: Learn how to convert a Word document to an image using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in .NET Word | Syncfusion
+description: Learn how to convert a Word document to an image using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to Image in Syncfusion® .NET Word Library
+# Convert Word to Image in .NET Word
 
 The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) allows you to convert a Word document to an image within a few lines of code in .NET applications, and it does not require Microsoft Word or Adobe Acrobat to be installed on the machine. Using this, you can create an input Word document from scratch or load an existing Word document and then easily convert it to an image.  
 

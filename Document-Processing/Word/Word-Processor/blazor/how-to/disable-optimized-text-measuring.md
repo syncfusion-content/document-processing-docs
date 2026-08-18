@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Disable Optimized Text Measuring in Blazor DocumentEditor | Syncfusion
-description: Learn how to disable optimized text measuring in Syncfusion Blazor DocumentEditor component and much more.
+title: Disable Optimized Text Measuring in Blazor DOCX Editor | Syncfusion
+description: Disable optimized text measuring in Syncfusion® Blazor DOCX Editor to retain document pagination behavior and maintain layout consistency.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Disable Optimized Text Measuring in Blazor DocumentEditor component
+# How to Disable Optimized Text Measuring in Blazor DOCX Editor
 
-Starting from v19.3.0.x, the accuracy of text size measurements in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`EnableOptimizedTextMeasuring`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_EnableOptimizedTextMeasuring) in Document editor settings.  
+Starting from v19.3.0.x, the accuracy of text size measurements in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is improved to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`EnableOptimizedTextMeasuring`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_EnableOptimizedTextMeasuring) in Document Editor settings.  
 
-If you want the [`Blazor DOCX Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component (Document Editor) component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions. Then you can disable this optimized text measuring improvement, by setting `false` to [`EnableOptimizedTextMeasuring`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_EnableOptimizedTextMeasuring) property of  Blazor Document Editor component.
+Blazor Document Editor component to retain the document pagination (display page-by-page) behavior like v19.2.0.x and older versions, you can disable the optimized text measuring feature by setting `false` to the [`EnableOptimizedTextMeasuring`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_EnableOptimizedTextMeasuring) property of the Blazor Document Editor component.
 
-## Disable Optimized Text Measuring in DocumentEditorContainer instance
+## Disable optimized text measuring in Document Editor Container instance
 
-The following example code illustrates how to disable optimized text measuring improvement in [`DocumentEditorContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html) instance.
+The following example code illustrates how to disable the optimized text measuring feature in the [`Document Editor Container`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html) instance.
 
 ```csharp
 
@@ -26,14 +26,14 @@ The following example code illustrates how to disable optimized text measuring i
 
 @code {
     SfDocumentEditorContainer container;
-    // Disable optimized text measuring improvement
-    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { EnableOptimizedTextMeasuring = true };
+    // Disable optimized text measuring feature
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { EnableOptimizedTextMeasuring = false };
 }
 ```
 
-## Disable optimized text measuring in DocumentEditor instance
+## Disable optimized text measuring in Document Editor instance
 
-The following example code illustrates how to disable optimized text measuring improvement in [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html) instance.
+The following example code illustrates how to disable the optimized text measuring feature in the [`Document Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html) instance.
 
 ```csharp
 
@@ -43,7 +43,7 @@ The following example code illustrates how to disable optimized text measuring i
 </SfDocumentEditor>
 
 @code {
-    // Disable optimized text measuring improvement
-    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { EnableOptimizedTextMeasuring = true };
+    // Disable optimized text measuring feature
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { EnableOptimizedTextMeasuring = false };
 }
 ```
