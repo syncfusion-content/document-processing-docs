@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Use extractText in Vue PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Syncfusion Vue PDF Viewer to extract text and bounds from one or more pages.
+title: How to Use the ExtractText Method in Vue PDF Viewer | Syncfusion
+description: Use the extractText method in the Vue PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 control: Extract Text
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text method in the Vue PDF Viewer
+# How to Use the ExtractText Method in Vue PDF Viewer
 
 The `extractText` method retrieves text content and, optionally, positional data for elements on one or more pages. It returns a Promise that resolves to an object containing extracted `textData` (detailed items with bounds) and `pageText` (concatenated plain text).
 
 **Parameters overview:**
 - `startIndex` — Starting page index (0-based).
 - `endIndex` or options — Either the ending page index for a range extraction, or an options object specifying extraction criteria for a single page.
-- `options` (optional) — Extraction options such as `TextOnly` or `TextAndBounds` to control whether bounds are included.
+- `options` (optional) — An options string such as `TextOnly` or `TextAndBounds` that controls whether bounds are included.
 
 **Returned object shape (example):**
 
 - `textData` — Array of objects describing extracted text items, including bounds and page-level text.
 - `pageText` — Concatenated plain text for the specified page(s).
 
-### Usage of extractText in Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
+## Usage of extractText in Vue Syncfusion<sup style="font-size:70%">&reg;</sup> PdfViewer Control
 
 Here is an example that demonstrates how to use the extractText method:
 
@@ -106,7 +106,7 @@ export default {
 </script>
 ```
 
-#### Explanation
+### Explanation
 - Single page: Extracts text from page 1 (`startIndex = 1`) using `TextOnly`.
 - Multiple pages: Extracts text from pages 0–2 (`startIndex = 0, endIndex = 2`) using `TextOnly`.
 

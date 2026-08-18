@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Blazor SfPdfViewer.
+title: About Annotation in Blazor PDF Viewer Component | Syncfusion
+description: Learn about Syncfusion Blazor PDF Viewer Annotations and how to add, edit, delete, and configure Annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotations overview in Blazor SfPdfViewer
+# About Syncfusion Annotation in Blazor PDF Viewer Component
 
 Annotations in the SfPdfViewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. They add context and feedback to PDFs, simplifying collaboration during document reviews.
 

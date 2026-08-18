@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Form Field Events in Vue PDF Viewer | Syncfusion
-description: Learn here all about form field events in the Syncfusion Vue PDF Viewer component and how to handle them.
+description: Subscribe to form field events in the Vue PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field Events in Vue
+# Form Field Events in Vue PDF Viewer
 
 The Syncfusion **Vue PDF Viewer** provides a comprehensive set of **form field events** that allow developers to track user interactions, respond to form changes, and implement custom business logic. These events can be used for scenarios such as [validation](./form-validation), **UI updates**, **logging**, and **workflow automation**.
 
@@ -22,7 +22,7 @@ The following table lists all supported form field events and their descriptions
 |---|---|
 | [formFieldAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldAddArgs) | Triggered when a new form field is added, either through the Form Designer UI or programmatically. |
 | [formFieldClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldClickArgs) | Fired when a form field is clicked in the viewer. |
-| [formFieldDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double clicked. |
+| [formFieldDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldDoubleClickArgs) | Fired when a form field is double-clicked. |
 | [formFieldFocusOut](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldFocusOutEventArgs) | Triggered when a form field loses focus after editing. |
 | [formFieldMouseLeave](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldMouseLeaveArgs) | Fired when the mouse pointer leaves a form field. |
 | [formFieldMouseOver](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formFieldMouseoverArgs) | Fired when the mouse pointer moves over a form field. |
@@ -125,7 +125,7 @@ export default {
 **Event Behavior Notes**
 
 - Events triggered through the UI and programmatic APIs use the same event handlers.
-- Property related events are raised immediately when changes occur.
+- Property-related events are raised immediately when changes occur.
 - Validation events are triggered only during print or download operations.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)

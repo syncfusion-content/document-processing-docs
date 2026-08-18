@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with JavaScript PDF Viewer control | Syncfusion
-description:  Checkout and learn about Getting started with JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more details.
+title: Getting Started with JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript (ES5) PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Standalone JavaScript PDF Viewer
+# Getting Started with JavaScript (ES5) PDF Viewer
 
 This section explains how to create and run a **JavaScript (ES5) PDF Viewer** application using Syncfusion Essential JS 2 in **standalone mode**.
 

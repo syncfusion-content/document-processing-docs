@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically | Syncfusion
-description: Learn how to open the thumbnail pane programmatically in the Syncfusion Vue PDF Viewer using openThumbnailPane.
-control: Open thumbnail
+title: How to Open the Thumbnail Pane Programmatically in Vue | Syncfusion
+description: Open the thumbnail pane programmatically in the Vue PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open the thumbnail pane in Vue PDF Viewer control
+# How to Open the Thumbnail Pane Programmatically in Vue PDF Viewer
 
 The PDF Viewer exposes a `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 
@@ -48,7 +48,6 @@ const onSplitterResize = function () {
   const viewer = pdfviewer.value.ej2Instances;
   viewer.updateViewerContainer();
   viewer.thumbnailViewModule.openThumbnailPane();
-  debugger;
 }
 </script>
 
@@ -90,7 +89,6 @@ export default {
       const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.updateViewerContainer();
       viewer.thumbnailViewModule.openThumbnailPane();
-      debugger;
     },
   }
 }
@@ -127,7 +125,6 @@ const onSplitterResize = function () {
   const viewer = pdfviewer.value.ej2Instances;
   viewer.updateViewerContainer();
   viewer.thumbnailViewModule.openThumbnailPane();
-  debugger;
 }
 </script>
 
@@ -170,7 +167,6 @@ export default {
       const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.updateViewerContainer();
       viewer.thumbnailViewModule.openThumbnailPane();
-      debugger;
     },
   }
 }
@@ -179,4 +175,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Find the Sample [how to open thumbnail](https://codesandbox.io/s/vue-examples-forked-1h1hg?file=/App.vue:1724-1944)
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to)

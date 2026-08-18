@@ -1,14 +1,14 @@
 ---
 layout: post
-title: List format in Angular DOCX Editor component | Syncfusion
-description: Learn here all about List format in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: List Format in Angular DOCX Editor | Syncfusion
+description: The list format feature in Angular DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# List format in Angular Document Editor component
+# List Format in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
 

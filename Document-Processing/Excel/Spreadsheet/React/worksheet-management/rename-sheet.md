@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rename a Worksheet in React Spreadsheet component | Syncfusion
-description: Learn here all about how to rename a worksheet in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about how to rename worksheets in an Excel document using the Syncfusion React Spreadsheet component.
 control: Worksheet 
 platform: document-processing
 documentation: ug

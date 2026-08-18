@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing PDF in WinForms PDF Viewer | Syncfusion&reg;
-description: Learn about Printing PDF Files support in Syncfusion&reg; Windows Forms PDF Viewer (PdfViewerControl) control and more details.
+title: Printing PDF in WinForms PDF Viewer | Syncfusion
+description: The PDF printing feature in PdfViewerControl enables users to print PDF documents with configurable settings and reliable output quality.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Printing PDF Files in Windows Forms PDF Viewer (PdfViewerControl)
+# Printing PDF in WinForms PDF Viewer
 
 [WinForms Pdf Viewer](https://www.syncfusion.com/pdf-viewer-sdk/winforms-pdf-viewer) Control allows printing loaded PDFs using the Print button in the toolbar. The following Print dialog opens when you click the Print button.
 

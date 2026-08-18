@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calculation Mode in React Spreadsheet component | Syncfusion
-description: Learn about the calculation mode in the React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Calculation Mode in React Spreadsheet | Syncfusion
+description: Learn about calculation modes in the Syncfusion React Spreadsheet component and control formula recalculation behavior.
 control: Formulas
 platform: document-processing
 documentation: ug

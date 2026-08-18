@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rendering events in Angular PDF Viewer component | Syncfusion
-description: Learn here all about pageRenderInitiate and pageRenderComplete event in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Handle Page Render Events in Angular PDF Viewer | Syncfusion
+description: Use the pageRenderInitiate and pageRenderComplete events in the Angular PDF Viewer to track page rendering and coordinate custom UI updates.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page render initiate and complete events
+# How to Handle Page Render Events in Angular PDF Viewer
 
 In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering life cycle:
 
@@ -34,8 +34,8 @@ public pageRenderInitiate(args: any): void {
 
 public pageRenderComplete(args: any): void {
   // This method is called when the page rendering completes
- console.log('Rendering of pages completed');
- console.log(args)
+  console.log('Rendering of pages completed');
+  console.log(args)
 }
 ```
 

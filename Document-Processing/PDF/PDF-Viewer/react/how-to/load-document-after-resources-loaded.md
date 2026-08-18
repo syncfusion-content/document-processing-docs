@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load a Document After PDFium Resources Are Ready | Syncfusion
-description: Learn how to load a PDF only after assets are ready in the Syncfusion React PDF Viewer (Standalone) using the resourcesLoaded event.
+title: How to Load a Document After Resources Are Ready | Syncfusion
+description: Load a PDF only after PDFium resources are ready in the standalone React PDF Viewer by using the resourcesLoaded event handler.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ensure PDFium resources are ready before loading PDFs
+# How to Load a Document After Resources Are Ready in React PDF Viewer
 
 When using the Standalone PDF Viewer, the component downloads the PDFium runtime assets (scripts/wasm) from the path specified in `resourceUrl`. Calling `load()` before those assets are ready can fail with a "PDFium not initialized" error or silently leave the viewer blank. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
 

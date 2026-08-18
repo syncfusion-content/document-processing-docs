@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Blazor Spreadsheet MCP Server Setup – Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for Syncfusion Blazor Spreadsheet.
+title: MCP Server Setup in Blazor Spreadsheet | Syncfusion
+description: Install and configure the Syncfusion Blazor Spreadsheet MCP Server to access documentation, API assistance, and code examples
 platform: document-processing
 control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion Blazor Spreadsheet MCP Server
+# MCP Server Setup in Blazor Spreadsheet
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet MCP Server accelerates Blazor spreadsheet application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Angular UI Builder Skill with PDF Viewer | Syncfusion®
-description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with PDF Viewer from natural-language prompts.
+title: Ui Builder Skill in Angular PDF Viewer | Syncfusion
+description: Install the Syncfusion Angular UI Builder skill to generate production-ready Angular components that include the PDF Viewer from natural-language prompts.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 ---
 
-# Syncfusion® Angular UI Builder Skill with PDF Viewer for AI Assistants
+# Angular UI Builder Skill with PDF Viewer
 
 **Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular PDF Viewer development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
@@ -146,10 +146,10 @@ To start using the skill:
 **Example Prompts:**
 
 {% promptcards %}
-{% promptcard Invoice Viewer with Details Panel %}
+{% promptcard Resume Review Interface %}
 Design a resume review interface using the PDF viewer for candidate CVs. Add a right panel with candidate details, ratings, tags, and action buttons (shortlist, reject, schedule interview). Include quick notes functionality. Focus on fast scanning and decision-making UX.
 {% endpromptcard %}
-{% promptcard Course Material Viewer %}
+{% promptcard Invoice Viewer with Details Panel %}
 Design an invoice viewing screen where the PDF viewer is displayed on the left and a structured details panel on the right. The panel should include invoice summary, payment status, client info, and action buttons (mark as paid, download, send reminder). Use card-based sections and soft colors for financial clarity.
 {% endpromptcard %}
 {% endpromptcards %}

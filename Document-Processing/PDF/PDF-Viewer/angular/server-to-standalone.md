@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  Migrate Server-backed to Standalone Angular PDF Viewer | Syncfusion
-description: Learn how to migrate your Angular PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
+title: Server to Standalone in Angular PDF Viewer | Syncfusion
+description: Migrate an existing Angular PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Migrate from Server-backed to Standalone Angular PDF Viewer
+# Migrate from Server-Backed to Standalone Angular PDF Viewer
 
 Migrating from server-backed to standalone mode transforms your PDF Viewer architecture by moving PDF rendering from the server to the client browser. This migration eliminates server dependencies, reduces infrastructure costs, and improves performance through instant client-side rendering.
 
@@ -57,7 +57,7 @@ When you migrate to standalone mode, the processing location for various feature
 Migrating to standalone mode provides several architectural and operational benefits:
 
 **API Compatibility:**
-- **No API Breaks:** There are no breaking API changes when migrating from the server-backed PDF Viewer to the standalone PDF Viewer. However, APIs that are specific to server interaction, such as [serviceUrl](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serviceurl), [serverActionSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serveractionsettings), [ajaxRequestSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#ajaxrequestssettings), [retryCount](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrycount), [retryTimeout](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrytimeout), and [retryStatusCodes](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrystatuscodes), are not applicable in standalone mode. Apart from these server-dependent APIs, all other APIs remain consistent and are supported in the standalone PDF Viewer.
+- **No API Breaks:** There are no breaking API changes when migrating from the server-backed PDF Viewer to the standalone PDF Viewer. However, APIs that are specific to server interaction, such as [serviceUrl](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serviceurl), [serverActionSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#serveractionsettings), [ajaxRequestSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#ajaxrequestsettings), [retryCount](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrycount), [retryTimeout](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrytimeout), and [retryStatusCodes](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#retrystatuscodes), are not applicable in standalone mode. Apart from these server-dependent APIs, all other APIs remain consistent and are supported in the standalone PDF Viewer.
 
 **Performance and User Experience:**
 - **Instant Rendering:** PDF operations execute immediately in the browser without server round-trips

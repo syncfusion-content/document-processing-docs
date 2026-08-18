@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Filter in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Filtering in Angular Spreadsheet | Syncfusion
+description: Filtering in Angular Spreadsheet enables users to display specific data based on criteria, making large datasets easier to analyze and manage.
 platform: document-processing
 control: Filter 
 documentation: ug
 ---
 
-# Filter in Angular Spreadsheet Component
+# Filtering in Angular Spreadsheet 
 
 Filtering helps you to view specific rows in the Spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowfiltering) property to enable or disable filtering functionality.
 

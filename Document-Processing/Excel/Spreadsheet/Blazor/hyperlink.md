@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlinks in the Blazor Spreadsheet component | Syncfusion
-description: Learn how to insert, edit, remove, and manage hyperlinks in the Syncfusion Blazor Spreadsheet component, including programmatic methods and events.
+title: Hyperlink in Blazor Spreadsheet | Syncfusion
+description: Learn how to create, edit, and manage hyperlinks in Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Hyperlinks in the Blazor Spreadsheet component
+# Hyperlink in Blazor Spreadsheet
 
 Hyperlinks in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enable interactive navigation both within and outside of spreadsheets. This feature creates clickable links that connect to external web URLs, specific cells within the current worksheet, or cells in other worksheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property, which enables or disables hyperlink support in the Spreadsheet. The default value of the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperlink) property is **true**.
 

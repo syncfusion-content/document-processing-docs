@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Print Modes in Vue PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF Documents in the Syncfusion Vue PDF Viewer component and more.
+description: Configure print modes in the Vue PDF Viewer to control how PDF documents are printed and to optimize the output for different scenarios.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Modes in the Vue PDF Viewer
+# Print Modes in Vue PDF Viewer
 
 This guide shows how to set the PDF Viewer [`printMode`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#printmode) so PDFs print from the current window or from a new window/tab.
 
@@ -99,7 +99,7 @@ export default {
 
 **Step 3:** Print mode can also be changed at runtime after the viewer is created:
 
-```html
+```js
 // switch to NewWindow at runtime
 pdfviewer.ej2Instances.printMode = 'NewWindow';
 ```

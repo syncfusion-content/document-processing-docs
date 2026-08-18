@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Document SDK offline installer - Syncfusion
-description: Learn here about how to download the Syncfusion Document SDK offline installer from our Syncfusion website with a license.
+title: How to download Document Solutions Offline installer | Syncfusion
+description: Learn here about how to download the Syncfusion Document Processing offline installer from our Syncfusion website with a license.
 platform: document-SDK
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> Document SDK offline installer
+# How to download Document Solutions Offline installer
 
 Syncfusion® Document Solutions has [Docx Editor SDK](https://www.syncfusion.com/docx-editor-sdk), [PDF Viewer SDK](https://www.syncfusion.com/pdf-viewer-sdk), [Document SDK](https://www.syncfusion.com/document-sdk), and [Spreadsheet Editor SDK](https://www.syncfusion.com/spreadsheet-editor-sdk) installer. The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

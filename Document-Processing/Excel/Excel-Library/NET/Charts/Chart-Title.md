@@ -1,12 +1,12 @@
 ---
-title: Chart Title | Excel library | Syncfusion
-description: In this section, you can learn about the chart title in an Excel document using the .NET Excel Library with clear explanations and practical examples.
+title: Chart Title in .NET Excel Library | Syncfusion
+description: Chart title settings describes how the Syncfusion .NET Excel Library adds and formats titles in Excel charts with options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Title in an Excel document
+# Chart Title in .NET Excel Library
 
 Chart title is a brief description at the top of a chart, offering context and clarity for the data displayed. Using XlsIO, you can **customize the chart title**.
 

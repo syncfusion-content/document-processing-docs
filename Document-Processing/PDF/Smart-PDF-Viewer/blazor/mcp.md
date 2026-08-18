@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Blazor Smart PDF Viewer MCP Server Setup | Syncfusion
+title: MCP Server Setup in Blazor Smart PDF Viewer | Syncfusion
 description: Discover the MCP server's advantages, installation requirements, and integration guidance for Blazor Smart PDF Viewer.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Syncfusion Blazor Smart PDF Viewer MCP Server
+# MCP Server Setup in Blazor Smart PDF Viewer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart PDF Viewer MCP Server accelerates Blazor Smart PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

@@ -1,11 +1,11 @@
 ---
-title: Open PDF document from Azure Blob Storage | Syncfusion
-description: This page describes how to Open PDF file from file azure blob storage in C#  using Syncfusion .NET PDF library.
+title: Open PDF from Azure Blob Storage | Syncfusion
+description: Learn how to open PDF files programmatically from Azure Blob Storage in C# using Syncfusion .NET PDF library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF document from Azure Blob Storage
+# Open PDF from Azure Blob Storage
 
 To load a PDF file from Azure Blob Storage, follow these steps:
 

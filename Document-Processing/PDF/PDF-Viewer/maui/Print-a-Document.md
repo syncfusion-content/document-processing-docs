@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Print a Document in .NET MAUI PDF Viewer (SfPdfViewer)
+# Print a Document in .NET MAUI PDF Viewer
 
 Print PDFs directly from your app using the viewer's built-in print integration. This page shows how to trigger printing, provide optional print settings, and handle platform print dialogs so your users see familiar system UI.
 

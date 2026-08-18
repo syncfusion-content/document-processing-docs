@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add Distance Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor SfPdfViewer Component.
+description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Distance Annotations in Blazor SfPdfViewer Component
+# Add Distance Annotations in Blazor PDF Viewer 
 
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 

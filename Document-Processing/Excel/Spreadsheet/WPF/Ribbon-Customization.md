@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Ribbon Customization in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Ribbon Customization support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Personalize the WPF Spreadsheet control by customizing ribbon tabs, groups, and commands to match application requirements.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Ribbon Customization in WPF Spreadsheet (SfSpreadsheet)
+# Ribbon Customization in WPF Spreadsheet
 
 Ribbon Customization can be done in two ways,
 

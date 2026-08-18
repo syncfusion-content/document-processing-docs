@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Circle annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Circle annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Circle Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Circle annotations in the JavaScript (ES5) PDF Viewer for marking, highlighting, or measuring areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Circle annotation in JavaScript PDF Viewer
+# Circle Annotation in JavaScript (ES5) PDF Viewer
 
 Circle is a shape annotation used to highlight circular regions or draw emphasis bubbles.
 
@@ -18,10 +18,11 @@ Circle is a shape annotation used to highlight circular regions or draw emphasis
 
 ### Add circle annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation** dropdown.
-- Choose **Circle**, then draw on the page.
+Use the annotation toolbar to add a circle annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Shape Annotation** dropdown.
+3. Choose **Circle**, then draw on the page.
 
 N> When in pan mode, selecting a shape annotation switches the viewer to text select mode.
 
@@ -216,7 +217,9 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ### Edit an existing circle annotation programmatically
 
-Use editAnnotation on items from annotationCollection.
+To modify an existing circle annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editCircleAnnotation">Edit Circle annotation programmatically</button>
@@ -350,17 +353,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `CircleSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Circle settings.
+Refer to the following code snippet to set the properties while adding a Circle annotation.
 
 ```html
 <button id="Circle">Add Circle</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -389,12 +392,12 @@ document.getElementById('Circle')?.addEventListener('click', function () {
         height: 75,
         opacity: 0.5,
         strokeColor: '#FF0000',
-        fillColor: '#000fff#',
+        fillColor: '#000fff',
         author: 'User1'
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -423,7 +426,7 @@ document.getElementById('Circle')?.addEventListener('click', function () {
         height: 75,
         opacity: 0.5,
         strokeColor: '#FF0000',
-        fillColor: '#000fff#',
+        fillColor: '#000fff',
         author: 'User1'
     });
 });

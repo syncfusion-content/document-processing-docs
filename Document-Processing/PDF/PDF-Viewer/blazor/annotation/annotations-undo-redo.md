@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to undo and redo annotation changes in the Blazor SfPdfViewer with UI and programmatic examples.
+title: Undo and Redo Annotation in Blazor PDF Viewer | Syncfusion
+description: Learn how to undo and redo annotation changes in the Blazor PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Undo and Redo Annotations in Blazor SfPdfViewer Component
+# Undo and Redo Annotations in Blazor PDF Viewer 
 
 The Blazor SfPdfViewer component supports undo and redo for annotations. Each annotation change is added to an internal history stack, and you can step backward and forward through that history using the keyboard, the built-in toolbar, or the component API. This feature is applies to all built-in annotations and form fields.
 

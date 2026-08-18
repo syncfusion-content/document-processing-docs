@@ -1,11 +1,11 @@
 ---
-title: Converting HTML to PDF with IE | Syncfusion
+title: HTML to PDF Conversion in IE .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using IE rendering engine with various features like HTML string to PDF, PDF A1B etc.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Conversion using IE Rendering
+# HTML to PDF conversion in IE .NET PDF Library 
 
 Essential<sup>&reg;</sup> PDF makes use of the Microsoft MSHTML library to convert HTML pages to PDF. The output would like how it is viewed in the Internet Explorer browser.
 
@@ -356,7 +356,7 @@ The above issues may occur in the machines with IE9 or later versions installed.
 
 To overcome this issue, the key FEATURE_IVIEWOBJECTDRAW_DMLT9_WITH_GDI should be updated in the registry as explained in the link below.
 <br/><br/>
-<a href="http://msdn.microsoft.com/en-us/library/ee330732(v=vs.85).aspx#iviewobject_draw">http://msdn.microsoft.com/en-us/library/ee330732(v=vs.85).aspx#iviewobject_draw</a>
+<a href="http://msdn.microsoft.com/en-us/library/ee330732(v=vs.85).aspx#iviewobject_draw" aria-label="MSDN Documentation link">http://msdn.microsoft.com/en-us/library/ee330732(v=vs.85).aspx#iviewobject_draw</a>
 <br/><br/>
 <ul>
 <li>Run the legacy drawing utility placed in <span style="color:gray;font-size:14px">($SystemDrive: \Program Files\Syncfusion\Essential Studio\$Version # \Utilities\PDF\Legacy Drawing)</span> to perform the above changes automatically.</li>

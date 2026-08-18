@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Track Changes in Document Editor Control | Syncfusion
-description: Learn here all about track changes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in ASP.NET Core DOCX Editor | Syncfusion
+description: Track changes in ASP.NET Core DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track Changes
 documentation: ug
 ---
 
-# Track Changes in Document Editor Component
+# Track Changes in ASP.NET Core DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 
 ## Enable track changes in Document Editor
 
@@ -26,7 +26,7 @@ The following example demonstrates how to enable track changes.
 {% endtabs %}
 
 
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges = true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if `enableTrackChanges = true` is set in the initial rendering. To enable track changes for all documents, we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for all documents while opening.
 
 
 {% tabs %}
@@ -39,11 +39,11 @@ The following example demonstrates how to enable track changes.
 {% endtabs %}
 
 
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
- 
-The following example code illustrates how to show/hide the revisions pane.
+## Show or hide revisions pane
+
+This feature lets users toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+
+The following example code illustrates how to show or hide the revisions pane.
 
 
 {% tabs %}
@@ -58,7 +58,7 @@ The following example code illustrates how to show/hide the revisions pane.
 
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+The following example demonstrates how to get all tracked revisions from the current document.
 
 ```typescript
 /**
@@ -90,7 +90,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the Document Editor.
 
 ```typescript
 /**
@@ -109,7 +109,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate tracked revisions programmatically.
 
 ```typescript
 /**
@@ -148,17 +148,15 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When you export the document as SFDT, the `customData` value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. For other formats such as DOCX, the `customData` is not preserved, as it is specific to the Document Editor component.
 
 ## Protect the document in track changes only mode
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
+The Document Editor provides an option to protect and unprotect the document using the `enforceProtection` and `stopProtection` APIs.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
 
 {% tabs %}
@@ -175,8 +173,8 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
-N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In the `EnforceProtection` method, the first parameter is the password and the second parameter is the protection type. Possible values of protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `StopProtection` method, the parameter is the password.
 
-## Online Demo
+## Online demo
 
-Explore how to track and review changes in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/trackchanges#/tailwind3).
+Explore how to track and review changes in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/trackchanges#/tailwind3).

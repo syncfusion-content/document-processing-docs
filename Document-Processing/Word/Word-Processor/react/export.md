@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in React DOCX Editor Component | Syncfusion
-description: Learn here all about export in Syncfusion Essential React Document Editor component, its elements and more.
+title: Export in React DOCX Editor | Syncfusion
+description: The export feature in React DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 control: Export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in React Document Editor Component
+# Export in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 

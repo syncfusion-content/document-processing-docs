@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with free text annotations
+#  Freetext annotations in Xamarin.iOS PDF Viewer
 
 PDF viewer allows you to include free text annotations in a PDF document and provides options to modify or remove the existing ones.
 

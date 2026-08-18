@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported file in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Unsupported file in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Supported File Formats in Angular DOCX Editor | Syncfusion
+description: Learn about the supported file formats in Angular DOCX Editor for importing, and exporting documents.
 control: Unsupported file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Why does my Angular show unsupported message for document?
+# Supported File Formats in Angular DOCX Editor
 
 If you receive a "The file format you have selected isn't supported. Please choose a valid format." message when opening a document in the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) , it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDFs from Google Drive in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Open PDF files from Google Drive in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: From Google Drive in Angular PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Drive in the Angular PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: Open PDF files from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Drive in Angular
+# Open PDF from Google Drive in Angular PDF Viewer
 
 Follow these steps to load a PDF from Google Drive using the server-backed PDF Viewer.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shape annotations in Xamarin Pdf Viewer control | Syncfusion
+title: Shape annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Shape annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Shape annotations in Xamarin Pdf Viewer (SfPdfViewer)
+# Shape annotations in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) allows you to include shape annotations in a PDF document and provides options to modify or remove the existing shape annotations. The supported shape annotations are:
 

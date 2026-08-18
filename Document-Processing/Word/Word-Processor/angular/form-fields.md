@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form fields in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Form Fields in Angular DOCX Editor | Syncfusion
+description: Form fields in Angular DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
 control: Form fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in Angular Document Editor component
+# Form Fields in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
