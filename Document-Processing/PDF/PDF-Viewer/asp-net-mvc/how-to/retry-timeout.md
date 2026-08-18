@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure retryTimeout in PDF Viewer | Syncfusion
-description: Learn how to Configure retryTimeout and retryCount in Syncfusion PDF Viewer to improve reliability when network requests fail.
+title: How to Configure Retry Timeout in ASP.NET MVC PDF Viewer | Syncfusion
+description: Configure retry timeout settings in the ASP.NET MVC PDF Viewer so failed requests are retried automatically with a delay you control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Configure retry timeout and retry count
+# How to Configure Retry Timeout in ASP.NET MVC PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer can automatically retry failed AJAX requests by using the [`retryTimeout`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryTimeout) and [`retryCount`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RetryCount) properties. Configure these settings to handle transient network errors or brief service outages without interrupting the document viewing experience.
 

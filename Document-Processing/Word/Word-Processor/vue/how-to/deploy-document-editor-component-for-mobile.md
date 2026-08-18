@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Deploy Vue DOCX Editor for Mobile | Syncfusion
-description: Learn here all about Deploy document editor component for mobile in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+description: Deploy the Syncfusion® Vue DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 control: Deploy document editor component for mobile 
 platform: document-processing
 documentation: ug

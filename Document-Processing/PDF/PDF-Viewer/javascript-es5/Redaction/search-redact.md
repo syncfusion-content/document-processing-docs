@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search text and redact in Javascript PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion Javascript PDF Viewer.
+title: Search Redact in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the search redact in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in JavaScript (ES5) PDF Viewer
+# Search Redact in JavaScript (ES5) PDF Viewer
 
 You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and places redaction annotations for every result.
 

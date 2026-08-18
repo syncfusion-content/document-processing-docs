@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Magnification in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable and use magnification in the Syncfusion JavaScript PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
+title: Magnification in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable and use magnification in the JavaScript (ES5) PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in JavaScript PDF Viewer
+# Magnification in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer includes magnification tools in the default toolbar: Zoom In, Zoom Out, Zoom (to a specific value), Fit to Page, and Fit to Width. The toolbar can be configured to show or hide these tools.
 

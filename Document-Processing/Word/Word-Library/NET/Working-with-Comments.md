@@ -1,11 +1,11 @@
 ---
-title: Working with Comments | DocIO | Syncfusion
-description: Learn how to add, modify, and remove comments in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Comments in .NET Word | Syncfusion
+description: Learn how to add, modify, and remove comments in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Comments
+# Comments in .NET Word
 
 A comment is a note or annotation that an author or reviewer can add to a document. DocIO represents a comment with a [WComment](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WComment.html) instance.
 

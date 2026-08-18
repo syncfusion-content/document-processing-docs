@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Vue PDF Viewer | Syncfusion
-description: Learn how to enable, disable, and programmatically trigger download in the Syncfusion Vue PDF Viewer, including download events and base64 handling.
+title: Download PDF option in Vue PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the Vue PDF Viewer, including download events and Base64 handling.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Vue PDF viewer control
+# Download PDF option in Vue PDF Viewer
 
 The Vue PDF Viewer lets users download the currently loaded PDF. Enable the download toolbar button with `enableDownload` for both standalone and server-backed viewers. The examples below demonstrate typical configurations and how to trigger a programmatic download.
 

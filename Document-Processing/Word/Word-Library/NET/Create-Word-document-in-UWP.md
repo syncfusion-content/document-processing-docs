@@ -1,6 +1,6 @@
 ---
 title: Create Word document in UWP | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in UWP application using Syncfusion<sup>&reg;</sup> UWP Word (DocIO) library.
+description: Describe common questions and answers related to HTML and EPUB conversions using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

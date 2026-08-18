@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text search in ASP.NET MVC PDF Viewer component | Syncfusion
-description: Learn all about text search in the Syncfusion ASP.NET MVC PDF Viewer component, including features, programmatic search options, and events.
+title: Text Search in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the text search in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Text search in ASP.NET MVC PDF Viewer
+# Text Search in ASP.NET MVC PDF Viewer
 
 The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
 

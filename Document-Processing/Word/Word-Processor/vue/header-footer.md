@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Header footer in Vue Document editor component | Syncfusion
-description: Learn here all about Header footer in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Headers and Footers in Vue DOCX Editor | Syncfusion
+description: Headers and footers in Vue DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 control: Header footer 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Header footer in Vue Document editor component
+# Headers and Footers in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Windows Forms PDF Viewer MCP Server Setup – Syncfusion
+title: MCP Server Setup in Windows Forms PDF Viewer | Syncfusion
 description: Discover the MCP server's advantages, installation requirements, and integration guidance for Syncfusion Windows Forms PDF Viewer.
 platform: document-processing
 control: AI coding assistant
 documentation: ug
 ---
 
-# Syncfusion Windows Forms PDF Viewer MCP Server
+# MCP Server Setup in Windows Forms PDF Viewer
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms MCP Server accelerates Windows Forms PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

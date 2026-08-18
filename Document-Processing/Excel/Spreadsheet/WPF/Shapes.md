@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Shapes in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Shapes support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control, its elements and more.
+description: Import charts, sparklines, pictures, and text boxes into the WPF Spreadsheet control to enrich worksheets with visual content.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Shapes in WPF Spreadsheet (SfSpreadsheet)
+# Shapes in WPF Spreadsheet 
 
 This section explains how to import charts, sparklines, pictures, and text boxes in SfSpreadsheet.
 

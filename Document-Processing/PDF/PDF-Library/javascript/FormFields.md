@@ -1,13 +1,13 @@
 ---
-title: Form Fields in JavaScript PDF Library | Syncfusion
+title: PDF Form Fields in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn how to create, fill, modify, order, auto-name, flatten, import, and export form fields in a PDF document using the Syncfusion JavaScript PDF Library.
+description: Create, fill, edit, flatten, import, and export PDF form fields using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Form Fields in JavaScript PDF Library
+# PDF Form Fields in JavaScript PDF
 
 An interactive form, sometimes referred to as an AcroForm, is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all of which make a single, globally interactive form spanning the entire document.
 

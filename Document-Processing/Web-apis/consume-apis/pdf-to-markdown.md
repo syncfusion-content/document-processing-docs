@@ -1,5 +1,5 @@
 ---
-title: Convert PDF Documents to Markdown Using Syncfusion Web API 
+title: Convert PDF Documents to Markdown Using Web API | Syncfusion
 description: Convert PDF documents to Markdown using Syncfusion Web API. Extract text, tables, headings, and structured content for documentation and AI-powered workflows.
 platform: document-processing
 control: general

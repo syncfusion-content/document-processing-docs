@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Move to Specific Position in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to move the selection to a specific position in Syncfusion JavaScript (ES6) DOCX Editor using the select API for precise cursor control.
+title:  Move Selection to a Position in TypeScript DOCX Editor | Syncfusion
+description: Move the document selection to a specific position in Syncfusion® TypeScript DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: Move Selection to a Specific Position
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move to Specific Position in JavaScript (ES6) Document Editor
+# How to Move Selection to a Position in TypeScript DOCX Editor
 
 Using the [`select`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#select) API in the selection module, you can set the cursor position anywhere in the document.
 

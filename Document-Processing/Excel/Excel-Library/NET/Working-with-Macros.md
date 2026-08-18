@@ -1,11 +1,11 @@
 ---
-title: Macros | Excel library | Syncfusion
-description: In this section, you can learn how to create, edit and remove macros and perform different macro operations in Excel using XlsIO
+title: Macros in .NET Excel Library | Syncfusion
+description: Macro operations section describes how to create, edit, remove, and perform macro operations in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Macros in Syncfusion<sup>&reg;</sup> Excel library
+# Macros in .NET Excel Library
 
 A macro is a set of processes that can be run repeatedly in an Excel document.
 

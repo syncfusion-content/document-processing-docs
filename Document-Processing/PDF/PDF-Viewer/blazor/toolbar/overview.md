@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar in Blazor PDF Viewer component | Syncfusion
-description: Check out and learn about the primary, annotation, form designer, and redaction toolbars in the Blazor SfPdfViewer component.
+title: About Syncfusion  Toolbar in Blazor PDF Viewer Component | Syncfusion
+description: Learn about Syncfusion Blazor PDF Viewer primary, annotation, form designer, and redaction toolbars in the Blazor PDF Viewer component.
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar in Blazor PDF Viewer component
+# About Syncfusion  Toolbar in Blazor PDF Viewer Component
 
 This page provides a concise reference describing the toolbars available in the Blazor PDF Viewer component. It also explains what each toolbar is for and when it appears.
 

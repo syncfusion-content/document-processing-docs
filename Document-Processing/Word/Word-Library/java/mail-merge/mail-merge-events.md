@@ -1,12 +1,12 @@
 ---
-title: Mail merge events | Syncfusion
-description: This section illustrates how to format or customize the merged text and image, clear or retain unmerged fields during mail merge using events.
+title: Mail merge events in Java Word | Syncfusion
+description: Describe common questions about using the Syncfusion .NET Word library in Linux environments
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Event support for Mail merge
+# Mail merge events in Java Word
 
 The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO during Mail merge process:
 

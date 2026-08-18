@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Azure Blob Files in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about how to open a document from Azure Blob Storage in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Open Documents from Azure Blob in TypeScript DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in TypeScript DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in JavaScript (ES6)
+# Open Documents from Azure Blob Storage in TypeScript DOCX Editor
 
 To load a document from Azure Blob Storage, follow the steps below.
 

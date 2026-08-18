@@ -1,12 +1,12 @@
 ---
-title: Available Syncfusion Java packages | Syncfusion
-description: This section demonstrates the Java packages (Jar files) available in Syncfusion (Syncfusion Jars for Java)
+title: Available Syncfusion Java packages in Java Word | Syncfusion
+description: This section illustrates how to configure Gradle and download the required Syncfusion Java Word library packages
 platform: document-processing
 control: general
 documentation: UG
 ---
 
-# Available Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages
+# Available Syncfusion Java packages in Java Word
 
 Below are the Java packages available in syncfusion<sup style="font-size:70%">&reg;</sup>.
 

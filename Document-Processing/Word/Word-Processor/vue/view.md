@@ -1,14 +1,14 @@
 ---
 layout: post
-title: View in Vue Document editor component | Syncfusion
-description: Learn here all about View in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: View in Vue DOCX Editor | Syncfusion
+description: View in Vue DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 control: View 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# View in Vue Document Editor Component
+# View in Vue DOCX Editor
 
 ## Web Layout
 

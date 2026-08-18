@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Page Toolbar in Angular PDF Viewer control | Syncfusion
-description: Learn here all about Organize Page Toolbar Customization in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in Angular PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the Angular PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Page Toolbar Customization in Angular PDF Viewer control
+# Customize the Organize Pages Toolbar in Angular PDF Viewer
 
 The PDF Viewer lets applications customize the Organize Pages toolbar to enable or disable tools according to project requirements. Use the `pageOrganizerSettings` API to control each tool's interactivity and behavior.
 

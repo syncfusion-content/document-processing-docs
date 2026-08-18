@@ -1,11 +1,11 @@
 ---
-title: Working with Footnotes and Endnotes | DocIO | Syncfusion
-description: Learn how to add, modify, and remove footnotes and endnotes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Footnotes and Endnotes in .NET Word | Syncfusion
+description: Learn how to add, modify, and remove footnotes and endnotes in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Footnotes and endnotes
+# Footnotes and Endnotes in .NET Word
 
 Footnotes and endnotes are separate text body contents used in documents to show the source of supplementary information that does not interrupt the normal body text of the Word document. Footnotes are typically located at the bottom of a page or beneath the text being referenced, and endnotes are typically placed at the end of a document or at the end of a section. When a document has been divided into one or more sections, each section of the document can contain endnotes.
 

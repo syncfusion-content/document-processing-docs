@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in Vue Document editor component | Syncfusion
-description: Learn here all about History in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: History in Vue DOCX Editor | Syncfusion
+description: History in Vue DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 control: History 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in Vue Document editor component
+# History in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) tracks the history of all editing actions performed in the document, which allows undo and redo functionality.
 

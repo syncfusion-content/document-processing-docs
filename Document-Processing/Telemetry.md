@@ -1,12 +1,12 @@
 ---
-title: Telemetry in .NET | Syncfusion
-description: Syncfusion® Telemetry collects anonymous usage data in .NET to improve product quality, track feature adoption, and guide product planning.
+title: About Syncfusion .NET Telemetry | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio .NET Telemetry and more details.
 platform: document-processing
 control: general
 documentation: UG
 ---
 
-# Syncfusion<sup>&reg;</sup> Telemetry  
+# About Syncfusion .NET Telemetry
 
 Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
 

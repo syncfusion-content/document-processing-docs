@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Form Designer Toolbar in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about form designer toolbar customization in Syncfusion ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Customize the Form Designer toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default form design actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Form Designer Toolbar in ASP.NET Core PDF Viewer
+# Customize the Form Designer Toolbar in ASP.NET Core PDF Viewer
 
 The form designer toolbar can be customized by showing or hiding default items and by controlling their order.
 

@@ -1,12 +1,12 @@
 ---
-title: Performance benchmark results | Syncfusion
-description: Know about the performance benchmark results of the .NET PowerPoint library with different slide counts
+title: Performance Metrics in .NET PowerPoint Library | Syncfusion
+description: Explore performance benchmark results and metrics of the Syncfusion® .NET PowerPoint library across different slide counts.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 
-# .NET PowerPoint library performance benchmarks
+# Performance Metrics in .NET PowerPoint Library
 
 The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) enables seamless integration for working with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report demonstrates the speed and efficiency of key functionalities, emphasizing how our library excels in real-world scenarios. 
 

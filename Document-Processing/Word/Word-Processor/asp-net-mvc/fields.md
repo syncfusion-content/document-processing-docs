@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Fields in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about Fields in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
+title: Fields in ASP.NET MVC DOCX Editor | Syncfusion
+description: Fields in ASP.NET MVC DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: Fields
 documentation: ug
 ---
 
-# Fields in ASP.NET MVC Document Editor
+# Fields in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) has preservation support for all types of fields in an existing Word document without any data loss.
 

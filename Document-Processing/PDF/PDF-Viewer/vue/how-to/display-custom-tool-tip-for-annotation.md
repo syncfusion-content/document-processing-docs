@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display a custom tooltip for annotations in Vue | Syncfusion
-description: Learn how to display a custom tooltip for annotations in the Vue PDF Viewer using the annotationMouseOver and annotationMouseLeave events.
+title: How to Display Custom Tooltips for Annotations in Vue | Syncfusion
+description: Display custom tooltips for annotations in the Vue PDF Viewer so users can see helpful information when they hover over each annotation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display a custom tooltip for annotations in the Vue PDF Viewer
+# How to Display Custom Tooltips for Annotations in Vue PDF Viewer
 
 Display custom tooltips for annotations by handling the [annotationMouseOver](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationmouseover) and annotationMouseLeave events.
 

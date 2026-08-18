@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export pages as images in Vue PDF Viewer | Syncfusion
-description: Learn how to export pages as Base64-encoded images in the Vue PDF Viewer using exportAsImage and exportAsImages.
+title: How to Export Pages as Images in Vue PDF Viewer | Syncfusion
+description: Export pages as Base64-encoded images from the Vue PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export as image in Vue PDF Viewer
+# How to Export Pages as Images in Vue PDF Viewer
 
 The PDF Viewer component can export pages as Base64-encoded image strings using the `exportAsImage()` method (single page) and `exportAsImages()` method (page range). The examples below demonstrate single-page export, range export, and how to specify a custom image size.
 
@@ -105,7 +105,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-### Export a single page with a custom size
+## Export a single page with a custom size
 
 Use the same API and pass a `Size` object to request a custom image size.
 
