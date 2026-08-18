@@ -1,6 +1,6 @@
 ---
-title: Extract Data in WPF Application | Syncfusion
-description: Learn how to extract data in a WPF application with step‑by‑step guidance using the .NET Smart Data Extractor Library.
+title: Getting Started with WPF Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion WPF Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -8,7 +8,7 @@ keywords: Assemblies
 
 ---
 
-# Extract Data from PDF in WPF
+# Getting Started with WPF Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in WPF applications.
 

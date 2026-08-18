@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about localization feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Localization in Flutter PDF Viewer | Syncfusion
+description: The localization feature in SfPdfViewer enables users to display built-in UI elements and messages in different languages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Localization in Flutter PDF Viewer (SfPdfViewer)
+# Localization in Flutter PDF Viewer
 
 By default, the `SfPdfViewer` widget supports US English localization. You can change to other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and `syncfusion_localizations` packages to your application. 
 

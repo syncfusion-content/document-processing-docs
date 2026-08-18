@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the redaction toolbar in MVC PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion ASP.NET MVC PDF Viewer by showing or hiding default items.
+title: Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the ASP.NET MVC PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction toolbar customization in ASP.NET MVC
+# Customize the Organize Pages Toolbar in ASP.NET MVC PDF Viewer
 
 The redaction toolbar in the Syncfusion ASP.NET MVC PDF Viewer can be customized by rearranging existing items, hiding default items, or adding new ones. You can also place custom items at specific index positions among the existing toolbar items.
 

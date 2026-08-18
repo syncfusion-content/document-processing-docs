@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Find and replace in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Find and replace in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Find and Replace in JavaScript DOCX Editor | Syncfusion
+description: The find and replace feature in JavaScript DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: Find and replace 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in JavaScript (ES5) Document editor
+# Find and Replace in JavaScript DOCX Editor
 
-The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
+The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
 ## Options pane
 
-This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
+This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences can be replaced with another text by switching to the `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -31,54 +31,54 @@ You can close the options pane by pressing `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search) module of Document Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
-|[`findAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/#findall/)| Method |Searches for specified text in the whole document and highlights it with yellow.|
-|[`searchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/#searchresults/) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/).|
-|[`find()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/#find/) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
+|[`findAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
+|[`searchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults).|
+|[`find()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
 
 ### Find the immediate occurrence in the document
 
-Using [`find()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/#find/) method, you can find the immediate occurrence of specified text from current cursor position in the document.
+Using [`find()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
-The following example code illustrates how to use find in Document editor.
+The following example code illustrates how to use find in Document Editor.
 
 ```ts
 documenteditor.search.find('Some text', 'None');
 ```
 
->Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
 
 ### Find all the occurrences in the document
 
-Using [`findAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search/#findall/) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
+Using [`findAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/search#findall) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
 
-The following example code illustrates how to find All the text in the document.
+The following example code illustrates how to find all the text in the document.
 
 ```ts
 documenteditor.search.findAll('Some text', 'None');
 ```
 
->Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
+N> Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#searchresultschange/) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/index-default#searchresultschange) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
-|[`length`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/#length/)|Property|Returns the total number of results found on the search.|
-|[`index`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/#index/)|Property|Returns the index of selected search result. You can change the value for this property to move the selection.|
-|[`replaceAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/#replaceall/)|Method|Replaces all the occurrences with specified text.|
-|[`clear()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/#clear/)|Method|Clears the search result.|
+|[`length`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults#length)|Property|Returns the total number of results found on the search.|
+|[`index`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults#index)|Property|Returns the index of selected search result. You can change the value for this property to move the selection.|
+|[`replaceAll()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults#replaceall)|Method|Replaces all the occurrences with specified text.|
+|[`clear()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults#clear)|Method|Clears the search result.|
 
 ### Replace all the occurrences
 
-Using [`replaceAll`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchResults/#replaceall/), you can replace all the occurrences with specified text.
+Using [`replaceAll`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/searchresults#replaceall), you can replace all the occurrences with specified text.
 
-The following example code illustrates how to use replace All in Document editor.
+The following example code illustrates how to use replace all in Document Editor.
 
 ```ts
 documentEditor.search.findAll('Some text');
@@ -88,9 +88,9 @@ documentEditor.search.searchResults.replaceAll("Mike");
 
 ### Replace
 
-Using [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserttext/), you can replace the current searched text with specified text and it replace single occurrence.
+Using [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserttext), you can replace the current searched text with specified text and it replaces a single occurrence.
 
->Note: This [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor/#inserttext/) API accepts following control characters
+N> This [`insertText`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserttext) API accepts following control characters
 >* New line characters ("\r", "\r\n", "\n") - Inserts a new paragraph and appends the remaining text to the new paragraph.
 >* Line break character ("\v") - Moves the remaining text to start in new line.
 >* Tab character ("\t") - Allocates a tab space and continue the next character.
@@ -114,7 +114,7 @@ container.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-[`DocumentEditor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#searchresultschange/) event that will be triggered whenever search results are changed. Consider the following scenarios:
+[`DocumentEditor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/index-default#searchresultschange) event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.
@@ -142,3 +142,8 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/replace-cs1" %}
+
+## See Also
+
+* [Options pane](./dialog#options-pane)
+* [Feature modules](./feature-module)

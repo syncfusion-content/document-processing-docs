@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Disable the context menu in TypeScript PDF Viewer | Syncfusion
-description: Learn how to disable the context menu in the TypeScript PDF Viewer using the ContextMenuOption property.
+title: How to Disable the Context Menu in JavaScript (ES6) PDF | Syncfusion
+description: Disable the right-click context menu in the JavaScript (ES6) PDF Viewer to prevent users from accessing context menu actions on PDF content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable the context menu in PDF Viewer
+# How to Disable the Context Menu in JavaScript (ES6) PDF Viewer
 
-Set [ContextMenuOption](https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) to `None` to hide all context menu options. The default value is `RightClick`.
+Set [ContextMenuOption] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#contextmenuoption) to `None` to hide all context menu options. The default value is `RightClick`.
 
-Example: Disable context menu
+## Example: Disable context menu
 
-```
+```html
 
 <button id='disable'>Disable ContextMenuOption</button>
 

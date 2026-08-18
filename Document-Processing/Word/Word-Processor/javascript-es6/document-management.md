@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Document Management in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about Document Management in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Document Management in TypeScript DOCX Editor | Syncfusion
+description: Document management in TypeScript DOCX Editor provides editing restrictions and user permissions to secure document content.
 platform: document-processing
 control: Document Management
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document Management in JavaScript (ES6) Document Editor control
+# Document Management in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support to restrict editing. When the protected document includes range permission, a unique user or user group is authorized to edit a separate text area.
 

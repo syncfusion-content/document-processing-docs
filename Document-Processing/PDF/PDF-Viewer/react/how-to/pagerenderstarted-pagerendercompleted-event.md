@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Handle PDF Page Rendering Events | Syncfusion
-description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion React PDF Viewer during page rendering.
+title: How to Handle Page Render Events in React PDF Viewer | Syncfusion
+description: Use the pageRenderInitiate and pageRenderComplete events in the React PDF Viewer to track page rendering and coordinate custom UI updates.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Track Page Rendering Using PDF Viewer Events
+# How to Handle Page Render Events in React PDF Viewer
 
 In the PDF Viewer, the `pageRenderInitiate` and `pageRenderComplete` events fire during the page rendering life cycle:
 

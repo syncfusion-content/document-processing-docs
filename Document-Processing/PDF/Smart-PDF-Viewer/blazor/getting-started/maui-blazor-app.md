@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use Smart PDF Viewer in Blazor MAUI in Windows | Syncfusion
-description: Learn how to add and run the Syncfusion Blazor Smart PDF Viewer in a .NET MAUI Blazor app on Windows and Android, including package installation.
+title: Getting Started with Blazor MAUI Smart PDF Viewer | Syncfusion
+description: Learn how to get started with  the Syncfusion Blazor .NET MAUI App on Windows and Android Smart PDF Viewer component including package installation.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Smart PDF Viewer in Blazor MAUI App
+# Getting Started with Blazor MAUI App Smart PDF Viewer
 
 This section explains how to add the Syncfusion&reg; Blazor Smart PDF Viewer component to a .NET MAUI Blazor app and run it on Windows and Android.
 

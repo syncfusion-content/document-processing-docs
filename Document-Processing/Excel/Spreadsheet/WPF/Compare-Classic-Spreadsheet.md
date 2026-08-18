@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Compare Syncfusion Spreadsheet and Spreadsheet (Classic) control
-description: Learn about the differences and feature enhancements of SfSpreadsheet over the classic Spreadsheet control in Syncfusion® WPF.
+title: Spreadsheet Comparison in WPF Spreadsheet Control | Syncfusion®
+description: Compare the WPF Spreadsheet control with the classic Spreadsheet control and explore feature enhancements, improvements, and differences.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
-# Spreadsheet Comparison in WPF
+# Spreadsheet Comparison in WPF Spreadsheet
 
 **SfSpreadsheet** is the recommended choice for new development and for migrating from the legacy Spreadsheet (Classic) control. It delivers improved scrolling performance, broader formula support, workbook-level undo/redo, and richer formatting and validation features.
 

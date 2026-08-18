@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page thumbnail navigation in Blazor SfPdfViewer | Syncfusion
-description: Learn how to use the thumbnail panel in the Blazor PDF Viewer to preview pages, navigate quickly, enable the feature, and control its initial visibility.
+title: Page thumbnail navigation in Blazor PDF Viewer | Syncfusion
+description: Learn how to use the thumbnail panel in the Blazor PDF Viewer to preview pages, navigate quickly, enable the feature, and  its initial visibility.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Page thumbnail navigation in Blazor SfPdfViewer Component
+# Page thumbnail navigation in Blazor PDF Viewer 
 
 Use the thumbnail panel to preview pages and quickly navigate a PDF. Each thumbnail previews a page; selecting a thumbnail navigates the viewer to that page by default.
 

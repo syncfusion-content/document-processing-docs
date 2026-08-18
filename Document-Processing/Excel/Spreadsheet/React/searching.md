@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching in React Spreadsheet component | Syncfusion
-description: Learn here all about Searching in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in React Spreadsheet | Syncfusion
+description: Learn about find and replace in the Syncfusion React Spreadsheet component, including searching and updating cell content.
 control: Searching
 platform: document-processing
 documentation: ug
 ---
 
-# Searching in React Spreadsheet component
+# Find and Replace in React Spreadsheet
 
 Find and Replace helps you to search for target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable Find and Replace functionality.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Data in Annotation Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to use custom data in annotations in the Blazor SfPdfViewer to attach metadata to annotations.
+title: Custom Data in Annotation Blazor PDF Viewer | Syncfusion
+description: Learn how to use custom data in annotations in the Blazor PDF Viewer to attach metadata to annotations.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Custom data in annotations in Blazor SfPdfViewer Component
+# Custom data in annotations in Blazor PDF Viewer 
 
 Annotations can include custom key-value data via the [`CustomData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerAnnotationSettings_CustomData) property. This is supported at two levels:
 

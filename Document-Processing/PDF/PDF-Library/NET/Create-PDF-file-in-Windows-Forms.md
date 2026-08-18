@@ -1,12 +1,12 @@
 ---
-title: Create or Generate a PDF file in Windows Forms | Syncfusion
-description: Learn how to create or generate a PDF file in Windows Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in Windows Forms | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Windows Forms and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Create or Generate a PDF file in Windows Forms
+# Getting Started with .NET PDF Library in Windows Forms
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 

@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Configure annotation selector settings in Angular PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the Angular PDF Viewer using annotationSelectorSettings and related options.
+title: How to Configure Annotation Selectors in Angular PDF | Syncfusion
+description: Configure annotation selector settings in the Angular PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure Annotation Selector Settings
+# How to Configure Annotation Selectors in Angular PDF Viewer
 
-### Annotation Selector Settings
+## Annotation Selector Settings
 
-Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettings/) property to customize the appearance and interaction behavior of the annotation selector in the Angular PDF Viewer UI.
+Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationselectorsettings) property to customize the appearance and interaction behavior of the annotation selector in the Angular PDF Viewer UI.
 
 ### AnnotationSelectorSettingsModel
 
-The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationSelectorSettingsModel/) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
+The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines selector appearance and behavior settings—such as border colors, resizer appearance, and selector line style—providing fine-grained control over how annotations are displayed and manipulated.
 
-Steps to configure annotation selector settings
+Steps to configure annotation selector settings:
 
 - Step 1: Create a PDF Viewer instance and initialize it.
 - Step 2: Set the annotationSelectorSettings property to customize selector behavior.
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit {
 {% endhighlight %}
 {% endtabs %}
 
-#### Key properties
+### Key properties
 
 - selectionBorderColor: Sets the color for the border around selected annotations.
 - resizerBorderColor: Sets the color for the border of the resizer handles.
@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
 - selectionBorderThickness: Specifies the thickness of the selection border.
 - resizerShape: Sets the shape of the resizer handles (for example, Circle or Square).
 - selectorLineDashArray: Specifies the dash pattern for the selector line.
-- resizerLocation: Determines where the resizers appear relative to the annotation (for example, Corners or Edges).
+- resizerLocation: Determines where the resizer handles appear relative to the annotation (for example, Corners or Edges).
 - resizerCursorType: Sets the cursor style when hovering over a resizer.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/How%20to)

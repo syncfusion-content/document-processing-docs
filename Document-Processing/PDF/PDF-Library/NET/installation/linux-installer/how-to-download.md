@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion PDF linux installer - Syncfusion
-description: Learn here about how to download the Syncfusion PDF linux installer from our Syncfusion website with license.
+title: How to Download Syncfusion PDF Linux Installer | Syncfusion
+description: Learn how to download the Syncfusion PDF Linux installer using a valid license and prepare it for installation.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Syncfusion<sup>&reg;</sup> PDF Linux Installer
+# How to Download Syncfusion PDF Linux Installer
 
 The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

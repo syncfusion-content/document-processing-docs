@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Up React PDF Viewer Using Syncfusion CLI | Syncfusion
-description: Learn how to set up a React PDF Viewer project quickly using the Syncfusion CLI. This guide covers both non-interactive and interactive setup modes.
+title: Setup with Syncfusion Cli in React PDF Viewer | Syncfusion
+description: Use the Syncfusion CLI to scaffold a new React project that includes the PDF Viewer, with both non-interactive and interactive setup modes.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

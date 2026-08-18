@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph format in Vue DOCX Editor component | Syncfusion
-description: Learn about paragraph formatting in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
-control: Paragraph format
+title: Paragraph Format in Vue DOCX Editor | Syncfusion
+description: The paragraph format feature in Vue DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
+control: Paragraph format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in Vue Document Editor component
+# Paragraph Format in Vue DOCX Editor
 
 [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

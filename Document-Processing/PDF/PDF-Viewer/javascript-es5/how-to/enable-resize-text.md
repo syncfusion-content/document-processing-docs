@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable resize for text markup in JavaScript PDF Viewer | Syncfusion
-description: Learn how to enable the text markup resizer in the JavaScript PDF Viewer using the enableTextMarkupResizer property.
+title: How to Enable Resize Text in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable or disable text resize inside form fields in the JavaScript (ES5) PDF Viewer using the enableResizeText property for accessibility.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable resize for text markup annotations
+# How to Enable Resize Text in JavaScript (ES5) PDF Viewer
 
 Enable the resizer for text markup annotations by setting the viewer's `enableTextMarkupResizer` property. This enables drag handles for text markup annotations (highlight, underline, and strikeout) so users can resize them after creation. The default value is `false`.
 

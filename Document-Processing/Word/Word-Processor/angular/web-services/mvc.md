@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mvc in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Mvc in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: ASP.NET MVC Web Service in Angular DOCX Editor | Syncfusion
+description: Configure ASP.NET MVC web services in the Angular DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 platform: document-processing
 control: Mvc 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MVC in Angular Document Editor component
+# ASP.NET MVC Web Service in  Angular DOCX Editor
 
 DocumentEditor depends on server-side interactions for the operations listed below, which can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing PDF Documents in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable and customize printing in the Core PDF Viewer, including print quality, rotation settings, and print modes for better output.
+title: Print in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the print in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Printing PDF Documents in ASP.NET Core PDF Viewer
+# Print in ASP.NET Core PDF Viewer
 
 The ASP.NET Core PDF Viewer provides comprehensive printing capabilities, allowing users to print loaded PDF documents directly from the viewer. The printing feature integrates seamlessly with browser print dialogs, enabling users to customize print settings, paper selection, and output format. Developers can programmatically control printing behavior, adjust print quality, and manage page rotation to ensure optimal printing results.
 

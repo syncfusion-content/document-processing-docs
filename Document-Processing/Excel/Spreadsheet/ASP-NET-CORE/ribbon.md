@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Ribbon in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Ribbon in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about the ribbon in the Syncfusion ASP.NET Core Spreadsheet control, including tabs, items, and customization options.
 platform: document-processing
 control: Ribbon
 documentation: ug
 ---
 
 
-# Ribbon in ASP.NET Core Spreadsheet control
+# Ribbon in ASP.NET Core Spreadsheet
 
 The **Ribbon** organizes spreadsheet features into a series of tabs. Click the expand or collapse icon to dynamically expand or collapse the ribbon.
 

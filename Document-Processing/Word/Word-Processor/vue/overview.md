@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of Vue DOCX Editor | Syncfusion
-description: Learn about the Vue DOCX Editor control, which enables you to create, edit, view, and print Word documents.
+title: About Syncfusion Vue DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio Vue DOCX Editor control and more details.
 control: Index 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the Vue DOCX Editor
+# About Syncfusion Vue DOCX Editor Control
 
 The [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 

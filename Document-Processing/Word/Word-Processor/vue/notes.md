@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Notes in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
-control: Notes
+title: Footnotes and Endnotes in Vue DOCX Editor | Syncfusion
+description: The footnote and endnote support in Vue DOCX Editor enables users to insert, edit, and manage references for additional document information.
+control: Notes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in Vue Document Editor component
+# Footnotes and Endnotes in Vue DOCX Editor
 
 [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context menu in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Context menu in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu in Vue Spreadsheet | Syncfusion
+description: Customize and use context menus in the Syncfusion Vue Spreadsheet to quickly access spreadsheet actions and commands
 control: Context menu 
 platform: document-processing
 documentation: ug
 ---
 
-# Context menu in Vue Spreadsheet component
+# Context Menu in Vue Spreadsheet
 
 Context Menu is used to improve user interaction with Spreadsheet using the popup menu. This will open when right-clicking on Cell/Column Header/Row Header/ Pager in the Spreadsheet. You can use [`enableContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#enablecontextmenu) property to enable/disable context menu.
 
