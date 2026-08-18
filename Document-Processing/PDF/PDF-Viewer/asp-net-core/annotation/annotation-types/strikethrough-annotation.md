@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strikethrough Text in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Strikethrough Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Strikethrough annotations in the ASP.NET Core PDF Viewer to mark text with a horizontal line through it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strikethrough Annotation (Text Markup) in ASP.NET Core PDF Viewer
+# Strikethrough Annotation in ASP.NET Core PDF Viewer
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **ASP.NET Core PDF Viewer**. You can apply strikethrough using the toolbar or context menu, programmatically invoke strikethrough mode, customize default settings, handle events, and export the PDF with annotations.
 
 ## Enable Strikethrough in the Viewer

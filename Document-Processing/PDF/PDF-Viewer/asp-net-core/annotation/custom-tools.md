@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom annotation tools in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to build a custom toolbar for Syncfusion ASP.NET Core PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
+title: Custom Tools in ASP.NET Core PDF Viewer | Syncfusion
+description: Build a custom annotation toolbar for the ASP.NET Core PDF Viewer and switch between annotation tools programmatically using setAnnotationMode.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom annotation tools in ASP.NET Core PDF Viewer
+# Custom Annotation Tools in ASP.NET Core PDF Viewer
 
 The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius)  
 

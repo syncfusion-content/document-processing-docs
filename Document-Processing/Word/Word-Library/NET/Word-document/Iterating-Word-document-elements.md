@@ -1,11 +1,11 @@
 ---
-title: Iterating Word document elements in C# | DocIO | Syncfusion
-description: Learn how to modify an existing Word document and iterate through the elements without Microsoft Word using .NET Word (DocIO) library.
+title: Iterating Word document elements in .NET Word | Syncfusion
+description: Learn how to modify an existing Word document and iterate through the elements without Microsoft Word using .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Iterating Word document elements
+# Iterating Word document elements in .NET Word
 
 The following are the important points to be remembered while iterating the document elements.
 

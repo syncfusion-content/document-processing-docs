@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Focus on form field after document load in PDF Viewer | Syncfusion
-description: Learn how to set focus on form fields after loading a document in the JavaScript PDF Viewer control by calling the focusFormField API.
+title: How to Focus a Form Field After Loading in JavaScript | Syncfusion
+description: Focus on a specific PDF form field in the JavaScript (ES5) PDF Viewer right after the document loads so users can start filling it in immediately.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Focus on a form field after loading in JavaScript PDF Viewer
+# How to Focus a Form Field After Loading in JavaScript (ES5) PDF Viewer
 
 The JavaScript PDF Viewer library enables setting focus on a specific form field by using the [`focusFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#focusformfield) API.
 

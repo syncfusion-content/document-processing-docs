@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Toolbar Customization in Angular PDF Viewer | Syncfusion
-description: Learn here about various toolbars in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Angular PDF Viewer Toolbar Customization | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Toolbar Customization section and the key capabilities it provides.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Toolbar overview in Angular PDF Viewer
+# About Syncfusion Angular PDF Viewer Toolbar Customization
 
 ## Overview
 

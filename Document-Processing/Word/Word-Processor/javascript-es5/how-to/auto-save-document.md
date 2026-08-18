@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto save document in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to Auto save document in Document Editor in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: How to Auto Save Document in JavaScript DOCX Editor | Syncfusion
+description: Automatically save edited documents to the server at regular intervals in Syncfusion® JavaScript DOCX Editor to prevent data loss.
 platform: document-processing
 control: Auto save document in Document Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in JavaScript (ES5) Document Editor control
+# How to Auto Save Document in JavaScript DOCX Editor
 
 In this article, we are going to see how to auto save the document to the server. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 

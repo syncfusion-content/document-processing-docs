@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyperlink navigation in React PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink behavior in the Syncfusion React PDF Viewer, including navigation settings and link interaction options.
+title: Hyperlink in React PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the React PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in React PDF Viewer
+# Hyperlink Navigation in React PDF Viewer
 
 ## Overview
 

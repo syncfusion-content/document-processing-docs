@@ -1,12 +1,12 @@
 ---
-title: Font stream dispose before saving PDF document | Syncfusion
-description: This page explains how to manage font streams and prevent disposal errors when saving PDF documents using Syncfusion .NET PDF library.
+title: Font Stream Disposal in .NET PDF Library | Syncfusion
+description: Learn how to manage font streams and prevent disposal errors when saving PDF documents using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Font Stream Disposed Before Saving PDF Document
+# Font Stream Disposal in .NET PDF Library
 
 ## Overview
 

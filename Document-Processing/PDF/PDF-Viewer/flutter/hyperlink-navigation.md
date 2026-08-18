@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink navigation in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about the hyperlink navigation feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Hyperlink navigation in Flutter PDF Viewer | Syncfusion
+description: Hyperlink navigation in SfPdfViewer allows users to access linked websites and destinations directly from PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Hyperlink Navigation in Flutter PDF Viewer (SfPdfViewer)
+# Hyperlink Navigation in Flutter PDF Viewer
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to open URLs or website links in the default browser. You can hide the built-in hyperlink navigation dialog or add a customized one using the available callbacks with supported functionalities.
 

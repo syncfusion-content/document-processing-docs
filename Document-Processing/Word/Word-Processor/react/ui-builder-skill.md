@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React UI Builder Skill with DOCX Editor | Syncfusion®
-description: Install Syncfusion® React UI Builder to generate production-ready React components with Document Editor from natural-language prompts.
+title: UI Builder Skill with React DOCX Editor | Syncfusion
+description: Install Syncfusion React UI Builder to generate production-ready React components with DOCX Editor from natural-language prompts.
 control: Document Editor
 platform: document-processing
 documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
-# React UI Builder Skill with Document Editor for AI Assistants
+# UI Builder Skill with React DOCX Editor
 
 **Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Document Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
 

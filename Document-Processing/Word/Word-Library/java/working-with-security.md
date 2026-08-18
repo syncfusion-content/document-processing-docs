@@ -1,11 +1,11 @@
 ---
-title: Working with Security | Word library | Syncfusion
-description: This section illustrates how to encrypt, decrypt and protect the Word document using Syncfusion Word library (Essential DocIO)
+title: Security in Java Word | Syncfusion
+description: This section illustrates how to encrypt, decrypt and protect the Word document using Syncfusion Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Security
+# Document Security in Java Word
 
 You can encrypt a Word document with password to restrict unauthorized access. You can also control the types of changes you make to this document.
 

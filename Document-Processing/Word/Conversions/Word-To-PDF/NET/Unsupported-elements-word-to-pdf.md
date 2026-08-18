@@ -1,12 +1,12 @@
 ---
-title: Limitations in Word to PDF Conversion | DocIO | Syncfusion
-description: Learn about the limitations in Word to PDF conversion in C# using the .NET Word (DocIO) library for effective application.
+title: Limitations in Word to PDF Conversion in .NET Word | Syncfusion
+description: Describe frequently asked questions and solutions related to Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Limitations in Word to PDF Conversion
+# Limitations in Word to PDF Conversion in .NET Word
 
 The following table shows the limitations of Word to PDF conversion.
 

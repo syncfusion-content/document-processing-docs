@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Supported input interactions in UWP PDF Viewer control | Syncfusion
+title: Supported input interactions in UWP PDF Viewer | Syncfusion
 description: Learn here all about supported input interactions in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Supported input interactions in UWP PDF Viewer (SfPdfViewer)
+# Supported input interactions in UWP PDF Viewer
 
 The SfPdfViewerControl supports the following input interactions in the PDF document:
 

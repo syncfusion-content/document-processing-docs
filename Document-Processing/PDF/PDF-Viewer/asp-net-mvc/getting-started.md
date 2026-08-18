@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC standalone PDF Viewer | Syncfusion
-description: Get Started with the standalone Syncfusion ASP.NET MVC PDF Viewer. Add scripts/styles, configure the view, and load a PDF using documentPath and resourceUrl.
+title: Getting Started with ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET MVC PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting Started with ASP.NET MVC Standalone PDF Viewer Control
+# Getting Started with ASP.NET MVC PDF Viewer
 
 This section explains how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio.
 

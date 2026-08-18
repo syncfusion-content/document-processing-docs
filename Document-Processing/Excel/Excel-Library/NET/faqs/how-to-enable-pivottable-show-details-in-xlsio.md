@@ -1,12 +1,12 @@
 ---
-title: How to enable PivotTable Show Details in XlsIO? | Syncfusion
-description: This page explains how to enable the pivot table show details option using .NET Excel Library.
+title: How to Enable PivotTable Details in .NET Excel Library | Syncfusion
+description: Enable the PivotTable show details option in Excel worksheets using the Syncfusion .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to enable PivotTable Show Details in XlsIO?
+# How to enable PivotTable details in .NET Excel Library
 
 The PivotTable "Show Details" (drilldown) behavior can be enabled by setting the `EnableDrilldown` implementation property to `true` using syncfusion XlsIO.
 
@@ -75,4 +75,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010815-Pivot-ShowDetails/FAQ/Pivot%20Enable%20Drill/.NET/Pivot%20Enable%20Drill">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010815-Pivot-ShowDetails/FAQ/Pivot%20Enable%20Drill/.NET/Pivot%20Enable%20Drill" aria-label="GitHub demo link">this GitHub page</a>.

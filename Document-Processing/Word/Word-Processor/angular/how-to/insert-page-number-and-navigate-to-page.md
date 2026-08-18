@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert page number and navigate in Angular DOCX Editor | Syncfusion
-description: Learn here all about Insert page number and navigate to page in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title:  How to Insert Page Numbers in Angular DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® Angular DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
 control: Insert page number and navigate to page
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Page Number and Navigate in Angular Document Editor
+# How to Insert Page Numbers and Navigate in Angular DOCX Editor
 
 You can insert page number and navigate to specific page in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component using the following ways.
 

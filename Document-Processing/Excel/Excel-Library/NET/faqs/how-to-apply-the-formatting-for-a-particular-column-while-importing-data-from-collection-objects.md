@@ -1,12 +1,12 @@
 ---
-title: Apply formatting to a specific column when importing data | Syncfusion
-description: Code example showing how to apply formatting to a specific column when importing data from collection objects using the .NET Excel Library. 
+title: How to Format Imported Columns in .NET Excel Library | Syncfusion
+description: Apply formatting to a specific Excel column while importing collection object data using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply formatting to a specific column while importing data?
+# How to format columns during import in .NET Excel Library
 
 To apply formatting to a specific column while importing data from collection objects, use the **DisplayFormatAttribute** in the class definition, as shown in the example below.
 

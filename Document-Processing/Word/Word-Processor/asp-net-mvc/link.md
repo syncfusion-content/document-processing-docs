@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Link in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in ASP.NET MVC DOCX Editor | Syncfusion
+description: The hyperlink feature in ASP.NET MVC DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link
 documentation: ug
 ---
 
 
-# Hyperlink in ASP.NET MVC Document Editor Component
+# Hyperhyperlinks in ASP.NET MVC DOCX Editor
 
 Document editor supports hyperlink fields. You can link a part of the document content to an internet location, a file location, a mail address, or any text within the document.
 

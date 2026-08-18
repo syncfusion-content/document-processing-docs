@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of PDF Viewer for Xamarin.Android | Syncfusion
-description: Overview and key features of Xamarin.Android PDF viewer
+title: About Syncfusion Xamarin.Android PDF Viewer Control | Syncfusion
+description: Learn about the introduction and overview of the Syncfusion Xamarin.Android PDF Viewer control, its key features, capabilities, and usage.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# PDF Viewer
+# About Syncfusion Xamarin.Android PDF Viewer Control
 
 PDF Viewer for Xamarin.Android allows the user to view PDF documents within your Xamarin.Android application. 
 

@@ -1,12 +1,12 @@
 ---
-title: Using ​AutoDetectComplexScript converter property | XlsIO | Syncfusion
-description: This page explains the situation in which the AutoDetectComplexScript converter property in XlsIO can be used.
+title: AutoDetectComplexScript Property in .NET Excel Library | Syncfusion
+description: AutoDetectComplexScript property describes when Excel Library can use complex script detection during Excel conversion.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# In which situation we use AutoDetectComplexScript converter property?
+# AutoDetectComplexScript Property in .NET Excel Library
 
 Complex script languages are some languages (eg., Arabic) which stores text differently from how it is displayed. Many such languages use bidirectional script which means, words and sentences are written from right to left, while some text such as numbers and Roman-based words are written from left to right. 
 
