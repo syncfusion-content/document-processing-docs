@@ -1,12 +1,12 @@
 ---
-title: Working with Images | Syncfusion
-description: Add or replace raster and vector images in PDF documents with Syncfusion .NET PDF, enabling flexible image handling and customization.
+title: Images in .NET PDF Library | Syncfusion
+description: Learn how to add or replace raster and vector images in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Images and Graphics
+# Images in .NET PDF Library
 
 Syncfusion<sup>&reg;</sup> PDF supports both raster and vector images.
 

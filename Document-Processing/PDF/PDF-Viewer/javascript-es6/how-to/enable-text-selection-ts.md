@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Enable or disable text selection in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable or disable text selection in the TypeScript PDF Viewer using the enableTextSelection property.
+title: How to Enable or Disable Text Selection in JavaScript | Syncfusion
+description: Enable or disable text selection in the JavaScript (ES6) PDF Viewer using the enableTextSelection property to control how users interact with PDF text.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable text selection in PDF Viewer
+# How to Enable or Disable Text Selection in JavaScript (ES6) PDF Viewer
 
-Use the `enableTextSelection` property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#enabletextselection) property to control whether users can select text in the displayed PDF. This setting can be configured at initialization and toggled at runtime.
 
 ## Configure on initialization
 

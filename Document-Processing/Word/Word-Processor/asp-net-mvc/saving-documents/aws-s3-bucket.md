@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Save document to AWS S3 in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to AWS S3 in ASP.NET MVC Document editor of Syncfusion Essential JS 2 and more details.
+title: Save Documents to AWS S3 in ASP.NET MVC DOCX Editor | Syncfusion
+description: Save documents to AWS S3 from ASP.NET MVC DOCX Editor, enabling cloud storage integration and secure document management.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3 in ASP.NET MVC
+# Save Documents to AWS S3 in ASP.NET MVC DOCX Editor
 
-To save a document to AWS S3, you can follow the steps below
+To save a document to AWS S3, you can follow the steps below.
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a simple Document Editor sample in ASP.NET MVC
 
 Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
 
 
-**Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -31,7 +31,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields:
 
 ```csharp
 private IConfiguration _configuration;
@@ -50,7 +50,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToS3()` method to save the document to AWS S3 bucket
+* Create the `SaveToS3()` method to save the document to the AWS S3 bucket:
 
 ```csharp
 
@@ -97,7 +97,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration:
 
 ```json
 {
@@ -114,11 +114,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
+N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
 **Step 3:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in AWS S3 Bucket.
+On the client side, export the document as a blob using `saveAsBlob` and send it to the server side for saving in the AWS S3 bucket.
 
 
 {% tabs %}

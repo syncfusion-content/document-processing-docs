@@ -1,11 +1,11 @@
 ---
-title: Working with Data Validation | Syncfusion
-description: Learn how to create and remove data validation rules in an Excel worksheet using Syncfusion XlsIO.
+title: Data Validation in .NET Excel Library | Syncfusion
+description: Data validation section describes how Syncfusion .NET Excel Library creates and removes validation rules in Excel worksheet cells.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Working with Data Validation
+# Data Validation in .NET Excel Library
 
 Data validation restricts the values that can be entered in a cell based on rules that you define. Rules are applied in XlsIO through the [IDataValidation](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IDataValidation.html) interface, which exposes the following key members:
 
@@ -164,7 +164,7 @@ validation.FirstFormula = "=Sheet1!$B$1:$B$3"
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of list validation for a user-defined range in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation">this GitHub page</a>.
+A complete working example of list validation for a user-defined range in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/UserDefinedValidation/.NET/UserDefinedValidation" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Number Validation
 
@@ -631,4 +631,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
  
-A complete working example to remove validations from a worksheet in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation">this GitHub page</a>. 
+A complete working example to remove validations from a worksheet in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation" aria-label="GitHub demo link">this GitHub page</a>. 

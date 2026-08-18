@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Supported File Formats in JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn more about the supported file formats in Syncfusion® JavaScript (ES5) DOCX Editor (Document Editor) for opening and exporting documents.
+title: Supported File Formats in JavaScript DOCX Editor | Syncfusion
+description: Supported file formats in JavaScript DOCX Editor allow importing and exporting documents across multiple file formats.
 control: Supported File Formats
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported File Formats in JavaScript (ES5) DOCX Editor
+# Supported File Formats in JavaScript DOCX Editor
 
 JavaScript (ES5) DOCX Editor (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting, with both client-side and server-side capabilities.
 

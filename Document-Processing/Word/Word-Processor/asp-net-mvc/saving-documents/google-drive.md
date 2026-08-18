@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save to Google Drive in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Save document to Google Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Save to Google Drive in ASP.NET MVC DOCX Editor | Syncfusion
+description: Save documents to Google Drive from React DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive in ASP.NET MVC
+# Save Documents to Google Drive in ASP.NET MVC DOCX Editor
 
-To save a document to Google Drive, you can follow the steps below
+To save a document to Google Drive, follow these steps:
 
 **Step 1:** Set up Google Drive API
 
-You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+Set up a project in the Google Developers Console and enable the Google Drive API. Then obtain the necessary credentials to access the API. For more information, see the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -34,7 +34,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,14 +54,14 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive bucket
+* Create the `SaveToGoogleDrive()` method to save the uploaded document to a Google Drive folder.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToGoogleDrive")]
-//Post action for downloading the document
+// Post action for uploading the document to Google Drive
 
 public void SaveToGoogleDrive(IFormCollection data)
 {
@@ -103,7 +103,7 @@ public void SaveToGoogleDrive(IFormCollection data)
   file.CopyTo(stream);
 
   FilesResource.CreateMediaUpload request;
-  request = service.Files.Create(fileMetadata, stream, "application/pdf");
+  request = service.Files.Create(fileMetadata, stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
   request.Fields = "id";
   object value = await request.UploadAsync();
 }
@@ -122,7 +122,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project, and add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -139,15 +139,15 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application Name**, and **Your Path to the OAuth 2.0 Client IDs JSON File** with your actual Google Drive folder ID, your application name, and the path to the JSON file, respectively.
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-N> You must use a unique `Client_ID` from json file to interface your application with the Google Drive API in order to save document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
+N> You must use a unique `Client_ID` from the JSON file to interface your application with the Google Drive API in order to save a document directly to Google Drive. This `Client_ID` serves as the authentication key, allowing you to save files securely.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:** Modify the Index.cshtml File in the Document Editor Sample
 
-In the client-side, to export the document into blob the document using `saveAsBlob` and sent to server-side for saving in Google Drive.
+On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in Google Drive.
 
 
 {% tabs %}

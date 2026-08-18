@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize Pdf in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the organize pdf in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in ASP.NET MVC PDF Viewer control
+# Organize Pdf in ASP.NET MVC PDF Viewer
 
 The PDF Viewer allows you to manage your PDF documents efficiently by organizing pages seamlessly. Whether you need to add new pages, remove unnecessary ones, rotate pages, move pages within the document, and copy or duplicate pages, the PDF Viewer facilitates these tasks effortlessly.
 
@@ -44,7 +44,7 @@ Effortlessly add new pages to your document with the following options:
 
 ### Deleting PDF pages
 
-Removing unwanted pages from your document is straight forward:
+Removing unwanted pages from your document is straightforward:
 
 * `Select pages to delete`: Click on the page thumbnails you wish to remove. You can select multiple pages at once.
 * `Delete selected pages`: Use the delete option in the organize pages pane to remove the selected pages from the document.
@@ -91,7 +91,7 @@ Witness instant changes in page organization reflected within the PDF Viewer. Si
 
 Safeguard your edits by utilizing the **Save As** feature. This enables you to download the modified version of the PDF document for future reference, ensuring that your changes are securely stored.
 
-## API's supported
+## APIs supported
 
 **enablePageOrganizer:** This API enables or disables the page organizer feature in the PDF Viewer. By default, it is set to `true`, indicating that the page organizer is enabled.
 
@@ -306,9 +306,9 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Y** : Redo the action that was undone
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 
-![Alt text](../images/undo-redo.png)
+![Alt text](./images/undo-redo.png)
 
-#### Conclusion
+### Conclusion
 
 With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
 

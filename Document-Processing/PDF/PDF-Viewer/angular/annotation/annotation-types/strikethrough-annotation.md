@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strikethrough Text in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Syncfusion Angular PDF Viewer.
+title: Strikethrough Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Strikethrough annotations in the Angular PDF Viewer to mark text with a horizontal line through it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strikethrough Annotation (Text Markup) in Angular PDF Viewer
+# Strikethrough Annotation in Angular PDF Viewer
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Strikethrough* text markup annotations in the Syncfusion **Angular PDF Viewer**. You can apply strikethrough using the toolbar or context menu, programmatically invoke strikethrough mode, customize default settings, handle events, and export the PDF with annotations.
 
 ## Enable Strikethrough in the Viewer

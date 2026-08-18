@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile responsiveness in EJ2 JavaScript Spreadsheet | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion EJ2 JavaScript Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Mobile responsiveness in JavaScript Spreadsheet | Syncfusion
+description: Mobile responsiveness in JavaScript Spreadsheet adapts layouts and interactions for touch devices, ensuring a seamless user experience across screens.
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
 ---
 
-# Mobile responsiveness in EJ2 JavaScript Spreadsheet Control
+# Mobile responsiveness in JavaScript Spreadsheet
 
 The spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 

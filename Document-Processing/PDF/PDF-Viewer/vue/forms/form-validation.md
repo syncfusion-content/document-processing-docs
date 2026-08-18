@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Form validation in the Vue PDF Viewer component | Syncfusion
-description: Learn how to enable built-in form field validation and validate missing required fields in the Syncfusion Vue PDF Viewer.
+title: Form Validation in Vue PDF Viewer | Syncfusion
+description: Enable built-in PDF form field validation in the Vue PDF Viewer and detect missing required fields while users complete a form.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Validate PDF Form Fields in Vue PDF Viewer
+# Form Validation in Vue PDF Viewer
 
 The Syncfusion **Vue PDF Viewer** provides built-in support for **validating form fields** before end users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are completed before allowing these actions to proceed.
 
 ## How PDF Form Validation Works
 
 Form field validation follows this flow:
- - Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
- - Handle the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
- - When validation is enabled and an end user attempts to print, download, or submit the document:
- - The [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
- - Unfilled required fields are listed in `args.nonFillableFields`.
- - The application can cancel the action, display an error message, or move focus to an invalid field.
+- Enable validation using the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property.
+- Handle the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event to determine which required fields are not filled.
+- When validation is enabled and an end user attempts to print, download, or submit the document, the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) event is triggered.
+- Unfilled required fields are listed in `args.nonFillableFields`.
+- The application can cancel the action, display an error message, or move focus to an invalid field.
 
 ## Enable PDF Form Field Validation
 
@@ -82,7 +81,7 @@ export default {
     onDocumentLoad() {
       const pdfviewer = this.$refs.pdfviewer.ej2Instances;
 
-      // 1) Default for new Textbox fields
+      // 1) Default for new textbox fields
       pdfviewer.textFieldSettings = { isRequired: true };
 
       // 2) Validation wiring

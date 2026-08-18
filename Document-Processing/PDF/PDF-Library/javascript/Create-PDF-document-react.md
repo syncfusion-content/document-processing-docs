@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate a PDF File in React | Syncfusion
-description: Learn how to create a PDF file in a React application with easy steps using the JavaScript PDF Library without depending on Adobe.
+title: Getting Started with JavaScript PDF in React app | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript PDF in React application. Easy steps to create PDF without depending on Adobe.
 control: PDF
 platform: document-processing
 documentation: ug
@@ -9,7 +9,7 @@ keywords: javascript, pdf, react
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react
 ---
 
-# Create or Generate a PDF File in React
+# Getting Started with JavaScript PDF in React app
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill PDF forms, and secure PDF files.
 

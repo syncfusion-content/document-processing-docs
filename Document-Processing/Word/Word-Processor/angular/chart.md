@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Chart in Angular Document editor component | Syncfusion
-description: Learn here all about Chart in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Charts in Angular DOCX Editor | Syncfusion
+description: Chart support in Angular DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in Angular Document editor component
+# Charts in Angular DOCX Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
 
-The following example shows chart preservation in Document Editor.
+The following example shows chart preservation in the Document Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -28,7 +28,7 @@ The following example shows chart preservation in Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in document editor
+The following chart types are supported in the Document Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -51,4 +51,4 @@ The following chart types are supported in document editor
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/chart).
+Explore how to preserve charts in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/chart).

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Groq AI service with Smart PDF Viewer in a Blazor app | Syncfusion
+title: Groq AI service in Blazor app  Smart PDF Viewer | Syncfusion
 description: Learn how to integrate a custom AI service using the Groq API with Syncfusion Smart PDF Viewer in a Blazor app.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Smart PDF Viewer using Groq AI Service
+# Groq AI service in Blazor app  Smart PDF Viewer
 
 This article provides step-by-step instructions for integrating and using Syncfusion Smart PDF Viewer with the Groq AI service in a Blazor app.
 

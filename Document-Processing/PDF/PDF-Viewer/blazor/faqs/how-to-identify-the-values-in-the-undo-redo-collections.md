@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Determine undo and redo availability in PDF Viewer | Syncfusion
-description: Learn how to determine whether undo and redo actions are available in the Blazor SfPdfViewer by binding CanUndo and CanRedo, with a working example.
+title: How to Determine undo and redo availability in PDF Viewer | Syncfusion
+description: Learn how to determine whether undo and redo actions are available in the Blazor PDF Viewer by binding CanUndo and CanRedo, with a working example.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Determine if SfPdfViewer has values in the undo and redo collections
+# How to Determine undo and redo availability in PDF Viewer
 
 The Blazor SfPdfViewer exposes the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) properties to indicate whether undo and redo history is available. In `SfPdfViewer`, bind these properties to boolean fields to reflect availability in the UI.
 

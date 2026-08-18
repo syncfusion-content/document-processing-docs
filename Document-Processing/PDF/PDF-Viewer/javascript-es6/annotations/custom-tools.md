@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom annotation tools in TypeScript PDF Viewer | Syncfusion
-description: Learn how to build a custom toolbar for Syncfusion TypeScript PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
+title: Custom Tools in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Build a custom annotation toolbar for the JavaScript (ES6) PDF Viewer and switch between annotation tools programmatically using setAnnotationMode.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom annotation tools in TypeScript PDF Viewer
+# Custom Annotation Tools in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius)  
 
@@ -156,15 +156,15 @@ Note
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](./create-modify-annotation)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)

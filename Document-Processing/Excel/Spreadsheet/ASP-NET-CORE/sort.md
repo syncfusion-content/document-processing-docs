@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sort in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Sort in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sorting in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about sorting in the Syncfusion ASP.NET Core Spreadsheet control, including ascending, descending, and custom sorting options.
 platform: document-processing
 control: Sort
 documentation: ug
 ---
 
 
-# Sorting in ASP.NET Core Spreadsheet control
+# Sorting in ASP.NET Core Spreadsheet
 
 Sorting helps arrange data in a specific order within a selected range of cells. Use the [`allowSorting`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AllowSorting) property to enable or disable sorting functionality.
 
@@ -32,8 +32,8 @@ N> * Ascending is the default sorting order.
 
 When the `sort()` method is called without arguments, it sorts the selected range in ascending order using the active cell's column as the sort column.
 
-N> * The `beforeSort` event will be triggered before sorting the specified range.
-<br/> * The `sortComplete` event will be triggered after the sort action is completed successfully.
+>* The `beforeSort` event will be triggered before sorting the specified range.
+>* The `sortComplete` event will be triggered after the sort action is completed successfully.
 
 The following code example shows `sort` functionality in the Spreadsheet control.
 
@@ -108,8 +108,8 @@ The multi-column sorting can also be performed manually by passing sort options 
 * `containsHeader` – Boolean argument that specifies whether the range has headers in it.
 * `caseSensitive` – Boolean argument that specifies whether the range needs to consider case.
 
-N> * All the arguments are optional.
-<br/> * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
+>* All the arguments are optional.
+>* When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

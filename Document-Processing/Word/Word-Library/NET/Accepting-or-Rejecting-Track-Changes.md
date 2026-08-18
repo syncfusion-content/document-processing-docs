@@ -1,11 +1,11 @@
 ---
-title: Accept or reject track changes | DocIO | Syncfusion
-description: Learn how to accept or reject the track changes in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Track changes in .NET Word | Syncfusion
+description: This section illustrates how to create Word documents in Google Cloud Platform using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Accepting or Rejecting Track Changes
+# Track changes in .NET Word
 
 Track changes is used to keep track of the changes made to a Word document. It helps to maintain the record of the author, date, and time for every insertion, deletion, or modification in a document. This can be enabled by using the [TrackChanges](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_TrackChanges) property of the Word document.
 
@@ -20,7 +20,7 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Enable-track-changes-of-Word/.NET/Enable-track-changes-of-Word/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Enable-track-changes-of-Word/.NET/Enable-track-changes-of-Word/Program.cs" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -43,7 +43,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Creates a new Word document 
 WordDocument document = new WordDocument();
 //Adds new section to the document
@@ -64,7 +64,7 @@ document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Creates a new Word document 
 Dim document As New WordDocument()
 'Adds new section to the document
@@ -97,7 +97,7 @@ The following code example shows how to accept all the tracked changes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes/.NET/Accept-all-changes/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes/.NET/Accept-all-changes/Program.cs" %}
 //Opens an existing Word document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -109,9 +109,9 @@ MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
 document.Close();
-{% endhighlight %} 
+{% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Opens an existing Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Accepts all the tracked changes revisions
@@ -122,7 +122,7 @@ document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %} 
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Word document
 Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Accepts all the tracked changes revisions
@@ -151,7 +151,7 @@ The following code example shows how to reject all the tracked changes.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes/.NET/Reject-all-changes/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes/.NET/Reject-all-changes/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -165,7 +165,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Opens an existing Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Rejects all the tracked changes revisions
@@ -176,7 +176,7 @@ document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %} 
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Word document
 Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Rejects all the tracked changes revisions
@@ -204,7 +204,7 @@ The following code example shows how to accept the tracked changes made by a spe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes-made-by-author/.NET/Accept-all-changes-made-by-author/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Accept-all-changes-made-by-author/.NET/Accept-all-changes-made-by-author/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -225,7 +225,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Opens an existing Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Iterates into all the revisions in Word document
@@ -243,7 +243,7 @@ document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %} 
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Word document
 Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Iterates into all the revisions in Word document
@@ -274,7 +274,7 @@ The following code example shows how to reject the tracked changes made by a spe
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes-made-by-author/.NET/Reject-all-changes-made-by-author/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Reject-all-changes-made-by-author/.NET/Reject-all-changes-made-by-author/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -295,7 +295,7 @@ document.Save(stream, FormatType.Docx);
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Opens an existing Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Iterates into all the revisions in Word document
@@ -313,7 +313,7 @@ document.Save("Sample.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %} 
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Word document
 Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Iterates into all the revisions in Word document
@@ -346,7 +346,7 @@ The following code example shows how to get the details about the revision infor
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Get-revision-information/.NET/Get-revision-information/Program.cs" %}
+{% highlight csharp tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Track-Changes/Get-revision-information/.NET/Get-revision-information/Program.cs" %}
 //Opens an existing word document 
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);           
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
@@ -362,7 +362,7 @@ RevisionType revisionType = revision.RevisionType;
 document.Close();
 {% endhighlight %}
 
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight csharp tabtitle="C# [Windows-specific]" %}
 //Opens an existing Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Accesses the first revision in the word document
@@ -377,7 +377,7 @@ RevisionType revisionType = revision.RevisionType;
 document.Close();
 {% endhighlight %} 
 
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+{% highlight vbnet tabtitle="VB.NET [Windows-specific]" %}
 'Opens an existing Word document
 Dim document As WordDocument = New WordDocument("Template.docx", FormatType.Docx)
 'Accesses the first revision in the word document

@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Section format in Angular Document editor component | Syncfusion
-description: Learn here all about Section format in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Section Format in Angular DOCX Editor | Syncfusion
+description: The section format feature in Angular DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
-control: Section format 
+control: Section format
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Section format in Angular Document editor component
+# Section Format in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
-You can get or set the size of a section at cursor position by using the following sample code.
+You can get or set the size of a section at the cursor position by using the following sample code.
 
 ```typescript
 this.documentEditor.selection.sectionFormat.pageWidth = 500;
@@ -25,7 +25,8 @@ You can change the orientation of the page by swapping the values of page width 
 
 ## Page margins
 
-Left and right page margin defines the gap between the document content from left and right side of the page respectively. Top and bottom page margins defines the gap between the document content from header and footer of the page respectively.
+Left and right page margins define the gap between the document content from the left and right sides of the page respectively. Top and bottom page margins define the gap between the document content from the header and footer of the page respectively.
+
 Refer to the following sample code.
 
 ```typescript
@@ -35,7 +36,7 @@ this.documentEditor.selection.sectionFormat.bottomMargin = 10;
 this.documentEditor.selection.sectionFormat.topMargin = 10;
 ```
 
->Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+N> The maximum value of margin is 1584, as per Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -57,7 +58,7 @@ this.documentEditor.selection.sectionFormat.footerDistance = 72;
 
 You can define the number of columns, column width, and space between columns for the pages in a section.
 
-The following code example illustrates how to define the two columns layout for the pages in a section.
+The following code example illustrates how to define the two column layout for the pages in a section.
 
 ```typescript
 let column: SelectionColumnFormat = new SelectionColumnFormat(this.container.documentEditor.selection);
@@ -73,25 +74,25 @@ Explore how to format Word documents with multiple columns using the Angular Doc
 
 ## Breaks
 
-You can insert Column break
+You can insert a column break.
 
-The following code indicate that the text following the column break will begin in the next column
+The following code indicates that the text following the column break will begin in the next column.
 
 ```typescript
 this.container.documentEditor.editor.insertColumnBreak();
 ```
 
-You can insert next page section break to start the new section on the next page
+You can insert a next-page section break to start the new section on the next page.
 
-The following code example illustrates how to insert a next page section break
+The following code example illustrates how to insert a next-page section break.
 
 ```typescript
 this.container.documentEditor.editor.insertSectionBreak(SectionBreakType.NewPage);
 ```
 
-You can insert continuous section break to start the new section on the same page
+You can insert a continuous section break to start the new section on the same page.
 
-The following code example illustrates how to insert a continuous section break
+The following code example illustrates how to insert a continuous section break.
 
 ```typescript
 this.container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
@@ -103,4 +104,4 @@ Explore how to apply section formatting in Word documents using the Angular Docu
 
 ## See Also
 
-*[Page setup dialog](./dialog#page-setup-dialog)
+* [Page setup dialog](./dialog#page-setup-dialog)

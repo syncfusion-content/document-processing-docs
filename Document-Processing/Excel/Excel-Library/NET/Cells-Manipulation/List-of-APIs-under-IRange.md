@@ -1,12 +1,12 @@
 ---
-title: List of APIs under IRange | Excel Library | Syncfusion
-description: In this section, you can learn about the properties and methods of the IRange interface for an Excel worksheet using the .NET Excel Library.
+title: IRange APIs in .NET Excel Library | Syncfusion
+description: IRange interface details describes the properties and methods used to work with worksheet ranges in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# List of APIs under IRange
+# IRange APIs in .NET Excel Library
 
 ## Cell Address
 

@@ -1,12 +1,12 @@
 ---
 title: Convert Word to Image in Linux | Syncfusion
-description: Convert Word to image in Linux using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+description: This section illustrates how to convert Word documents to images on Linux using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in Linux
+# Convert Word to Image in Linux
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET Core application on Linux**.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change font family in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the ASP.NET Core PDF Viewer using typeSignatureFonts and typeInitialFonts.
+title: How to Change the Font for Type Signatures in ASP.NET | Syncfusion
+description: Change the font family for type signatures and initials in the ASP.NET Core PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Change font family for type signatures in ASP.NET Core
+# How to Change the Font for Type Signatures in ASP.NET Core PDF Viewer
 
 Customize the font options available for Type Signature and Initial fields. By adding custom stylesheets and configuring the PDF Viewer settings, you can provide users with various professional or decorative font choices for their digital signatures.
 

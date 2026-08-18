@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Page Numbers and Navigation in Blazor DocumentEditor | Syncfusion
-description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Blazor Document Editor component and much more.
+title: How to Insert Page Numbers in Blazor DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® Blazor DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Insert page number and navigate to page in Blazor Document Editor
+# How to Insert Page Numbers and Navigate in Blazor DOCX Editor
 
-You can insert page number and navigate to specific page in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component by following ways.
+You can insert a page number and navigate to a specific page in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component in the following ways.
 
 ## Insert page number
 
-The [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in Editor module is used to insert the Page number in current position. By default, Page number will insert in Arabic number style.
+The [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in the Editor module is used to insert the page number at the current position. By default, the page number will be inserted in Arabic number style.
 
-N> Currently, Document Editor have options to insert page number at current cursor position.
+N> Currently, the Document Editor has an option to insert a page number at the current cursor position.
 
-The following example code illustrates how to insert page number in header.
+The following example code illustrates how to insert a page number in the header.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -31,11 +31,11 @@ The following example code illustrates how to insert page number in header.
 
     public async void OnCreated(object args)
     {
-        // To insert text in cursor position
-        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
-        // To move the selection to header
+        // To insert text at the cursor position
+        await container.DocumentEditor.Editor.InsertTextAsync("Document Editor");
+        // To move the selection to the header
         await container.DocumentEditor.Selection.GoToHeaderAsync();
-        // Insert page number in the current cursor position
+        // Insert page number at the current cursor position
         await container.DocumentEditor.Editor.InsertFieldAsync("PAGE \\* MERGEFORMAT", "1");
     }
 }
@@ -43,9 +43,9 @@ The following example code illustrates how to insert page number in header.
 
 ## Get page count
 
-The [`GetPageCountAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetPageCountAsync) API is used to get the total number of pages in Document.
+The [`GetPageCountAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetPageCountAsync) API is used to get the total number of pages in the document.
 
-The following example code illustrates how to get the number of pages in Document.
+The following example code illustrates how to get the number of pages in the document.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -59,19 +59,19 @@ The following example code illustrates how to get the number of pages in Documen
 
     public async void OnCreated(object args)
     {
-        // To insert text in cursor position
-        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        // To insert text at the cursor position
+        await container.DocumentEditor.Editor.InsertTextAsync("Document Editor");
         // To get the total number of pages
-        Task<int> pageCount = container.DocumentEditor.GetPageCountAsync();
+        int pageCount = await container.DocumentEditor.GetPageCountAsync();
     }
 }
 ```
 
-## Navigate to specific page
+## Navigate to a specific page
 
 Use the [`GoToPageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToPageAsync_System_Double_) API in the Selection module to move the selection to the start of the specified page number.
 
-The following example code illustrates how to move selection to specific page.
+The following example code illustrates how to move the selection to a specific page.
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
@@ -85,7 +85,7 @@ The following example code illustrates how to move selection to specific page.
 
     public async void OnCreated(object args)
     {
-        // To move selection to page number 2
+        // To move the selection to page number 2
         await container.DocumentEditor.Selection.GoToPageAsync(2);
     }
 }

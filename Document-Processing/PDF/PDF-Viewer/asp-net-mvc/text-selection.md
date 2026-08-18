@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Text_selection in ASP.NET MVC PDF Viewer Component
-description: Learn here all about Text_selection in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Text Selection in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the text selection in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
-control: Text_selection
-publishingplatform: ASP.NET MVC
+control: PDF Viewer
 documentation: ug
 ---
 
-# Text selection in ASP.NET MVC PDF Viewer control
+# Text Selection in ASP.NET MVC PDF Viewer
 
 The TextSelection module enables users to select and copy text from the loaded PDF document. Text selection is enabled by default and can be configured, controlled programmatically, and monitored through events.
 

@@ -1,13 +1,13 @@
 ---
-title: Text Wrapping Style in WPF RichTextBox control | Syncfusion
-description: Learn here all about Text Wrapping style support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Text Wrapping Style in WPF DOCX Editor | Syncfusion
+description: The text wrapping style in WPF DOCX Editor offers preservation support for image and textbox wrapping styles, enabling text flow around images and shapes.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: text-wrapping,text-wrapping-style,inline,square,top-and-bottom,behind
 ---
-# Text Wrapping Style in WPF RichTextBox (SfRichTextBoxAdv)
-Text wrapping refers to how images and shapes fit with surrounding text in a document. Currently, [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) has preservation support only for image and textbox shapes with the wrapping styles listed below.
+# Text Wrapping Style in WPF DOCX Editor
+Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) has only preservation support for image and textbox shape with below wrapping styles.
 
 ## In-Line with Text
 In this option, the image or shape is placed on the same line as the surrounding text, like any other word or letter. The image or shape moves automatically with the text as you edit, whereas the other options denote that the image or shape stays in a fixed position while the text shifts and wraps around it.

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Import and Export Form Data in .NET MAUI PDF Viewer (SfPdfViewer)
+# Import and Export Form Data in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to import form data into a PDF document and export filled form data from it. This is useful for pre-populating forms, backing up responses, or transferring data between systems.
 

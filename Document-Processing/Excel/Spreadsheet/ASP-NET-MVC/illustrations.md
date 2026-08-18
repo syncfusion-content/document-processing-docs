@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Illustrations in EJ2 ASP.NET MVC Syncfusion Spreadsheet Component
-description: Learn here all about Illustrations in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Illustrations in ASP.NET MVC Spreadsheet | Syncfusion
+description: Add and manage illustrations such as images and visual elements in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Illustrations
 documentation: ug
 ---
 
 
-# Illustrations in ASP.NET MVC Spreadsheet control
+# Illustrations in ASP.NET MVC Spreadsheet
 
 Illustrations helps you to insert a image, shapes and graphic objects in the Essential JS 2 spreadsheet.
 
@@ -100,12 +100,12 @@ N> * The default value for the [`allowChart`](https://help.syncfusion.com/cr/asp
 
 The following types of charts are available in the Spreadsheet.
 
-N>* Column Chart
-<br/>* Bar Chart
-<br/>* Area Chart
-<br/>* Line Chart
-<br/>* Pie Chart
-<br/>* Scatter Chart
+>* Column Chart
+>* Bar Chart
+>* Area Chart
+>* Line Chart
+>* Pie Chart
+>* Scatter Chart
 
 ### Insert Chart
 

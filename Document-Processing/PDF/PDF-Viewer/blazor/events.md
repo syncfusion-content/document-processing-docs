@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor SfPdfViewer Component | Syncfusion
-description: Explore all events available in the Blazor SfPdfViewer component, including lifecycle, navigation, annotation, search, and printing events.
+title: Events in Blazor PDF Viewer | Syncfusion
+description: Explore all events available in the Blazor PDF Viewer , including lifecycle, navigation, annotation, search, and printing events.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Events in Blazor SfPdfViewer Component
+# Events in Blazor PDF Viewer 
 
 The following events are available in the SfPdfViewer component.
 

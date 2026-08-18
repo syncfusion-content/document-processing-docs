@@ -1,12 +1,12 @@
 ---
-title: Undo Redo in WPF RichTextBox control | Syncfusion
-description: Learn here all about Undo Redo support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Undo Redo in WPF DOCX Editor | Syncfusion
+description: The undo redo feature in WPF DOCX Editor offers history preservation support, enabling editing actions to be preserved in undo and redo stacks.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabled
 ---
-# Undo Redo in WPF RichTextBox (SfRichTextBoxAdv)
+# Undo Redo in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides history preservation support, which means each editing operation performed on its document content will be preserved in history. The undo and redo behavior is configured through the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. You can easily undo any editing action. The undone actions will also be preserved in a separate stack enabling you to redo the action.
 

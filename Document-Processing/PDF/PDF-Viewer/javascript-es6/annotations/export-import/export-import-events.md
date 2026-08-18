@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+title: Export Import Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Handle import and export events in the JavaScript (ES6) PDF Viewer to run custom logic when annotations are loaded or saved from the control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import/Export events in TypeScript
+# Annotation Import and Export Events in JavaScript (ES6) PDF Viewer
 
 Import/export events let developers monitor and control annotation data as it flows into and out of the PDF Viewer. These events enable validation, progress reporting, audit logging, and conditional blocking of import/export operations.
 
@@ -27,7 +27,7 @@ Each event exposes typed event-args: `ImportStartEventArgs`, `ImportSuccessEvent
 ## Handle import events
 Example: handle import events by assigning callback handlers.
 
-```js
+```ts
 viewer.importStart = (args: any) => {
   console.log('Import started', args);
 };
@@ -45,7 +45,7 @@ viewer.importFailed = (args: any) => {
 - [`exportFailed`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#exportfailed): Triggers when exporting annotations fails.
 
 ## Handle export events
-```js
+```ts
 viewer.exportStart = (args: any) => {
   console.log('Export started', args);
 };

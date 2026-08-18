@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in TypeScript Spreadsheet control | Syncfusion
-description: Learn how to set up and configure AI Assist in the Syncfusion TypeScript Spreadsheet control for AI-powered features.
+title: AI Assist Integration in TypeScript Spreadsheet | Syncfusion
+description: AI Assist integration in TypeScript Spreadsheet explains AI-powered features through configuration and seamless service integration.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in TypeScript Spreadsheet control
+# AI Assist Integration in TypeScript Spreadsheet 
 
 ## Integration
 

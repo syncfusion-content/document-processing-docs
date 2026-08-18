@@ -1,12 +1,12 @@
 ---
-title: Create and open Excel Template files by using XlsIO | Syncfusion
-description: This page shows how to create and open Excel Template files using .NET Excel Library.
+title: How to Create Excel Templates in .NET Excel Library | Syncfusion
+description: Create and open Excel template files using the Syncfusion .NET Excel Library for reusable workbook generation in applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to create and open Excel Template files by using XlsIO?
+# How to create Excel templates in .NET Excel Library
 
 **Creating** **Excel** **Template** **Files**
 

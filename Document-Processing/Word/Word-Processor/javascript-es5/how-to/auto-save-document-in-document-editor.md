@@ -1,42 +1,38 @@
 ---
 layout: post
-title: Auto save document in document editor in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Auto save document in document editor in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Auto Save to AWS S3 in JavaScript DOCX Editor | Syncfusion
+description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® JavaScript DOCX Editor for reliable cloud-based storage.
 platform: document-processing
-control: Auto save document in document editor 
+control: Auto save document in Document Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in document editor in JavaScript (ES5) Document editor control
+# How to Auto Save Document in JavaScript DOCX Editor
 
-In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
+In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
 The following example illustrates how to auto save the document in AWS S3.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as DOCX format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveasblob) method.
+* In the client-side, using the content change event, we can automatically save the edited content at regular intervals of time. Based on the `contentChanged` boolean, the document is sent as DOCX format to the server-side using the [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveasblob) method.
 
-```ts
-import {
-    DocumentEditorContainer,
-    Toolbar,
-} from '@syncfusion/ej2-documenteditor';
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px' });
-let contentChanged: boolean = false;
-DocumentEditorContainer.Inject(Toolbar);
-container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+```javascript
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+var hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+var container = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px' });
+var contentChanged = false;
+container.serviceUrl = hostUrl;
 container.created = function () {
-    setInterval(() => {
+    setInterval(function () {
         if (contentChanged) {
             //You can save the document as below
-            container.documentEditor.saveAsBlob('Docx').then((blob: Blob) => {
-                console.log('Saved sucessfully');
-                let exportedDocument: Blob = blob;
+            container.documentEditor.saveAsBlob('Docx').then(function (blob) {
+                console.log('Saved successfully');
+                var exportedDocument = blob;
                 //Now, save the document where ever you want.
-                let formData: FormData = new FormData();
+                var formData = new FormData();
                 formData.append('fileName', 'sample.docx');
                 formData.append('data', exportedDocument);
-                /* tslint:disable */
                 var req = new XMLHttpRequest();
                 // Replace your running Url here
                 req.open(
@@ -44,10 +40,10 @@ container.created = function () {
                     'http://localhost:62869/api/documenteditor/SaveToS3',
                     true
                 );
-                req.onreadystatechange = () => {
+                req.onreadystatechange = function () {
                     if (req.readyState === 4) {
                         if (req.status === 200 || req.status === 304) {
-                            console.log('Saved sucessfully');
+                            console.log('Saved successfully');
                         }
                     }
                 };
@@ -59,16 +55,16 @@ container.created = function () {
 };
 container.appendTo('#container');
 
-container.contentChange = (): void => {
+container.contentChange = function () {
     contentChanged = true;
 };
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-* In server-side, configure the access key and secret key in `web.config` file and register profile in `startup.cs`.
+* In server-side, configure the access key and secret key in the `web.config` file and register the profile in `startup.cs`.
 
-In `web.config`, add key like below format:
+In `web.config`, add a key in the following format:
 
 ```c#
  <appSettings>
@@ -78,13 +74,13 @@ In `web.config`, add key like below format:
   </appSettings>
 ```
 
-In `startup.cs`, register profile in below format:
+In `startup.cs`, register the profile in the following format:
 
 ```c#
 Amazon.Util.ProfileManager.RegisterProfile("sync_development","", "");
 ```
 
-* In server-side, Receives the stream content from client-side and process it to save the document in aws s3. Add Web API in controller file like below to save the document in aws s3.
+* In server-side, receive the stream content from the client-side and process it to save the document in AWS S3. Add a Web API in the controller file like below to save the document in AWS S3.
 
 ```c#
 [AcceptVerbs("Post")]
@@ -98,7 +94,7 @@ public string SaveToS3()
     file.CopyTo(stream);
     UploadFileStreamToS3(stream, "documenteditor", "", "GettingStarted.docx");
     stream.Close();
-    return "Sucess";
+    return "Success";
 }
 
 public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketName, string subDirectoryInBucket, string fileNameInS3)
@@ -118,7 +114,7 @@ public bool UploadFileStreamToS3(System.IO.Stream localFilePath, string bucketNa
     }
     request.Key = fileNameInS3; //file name up in S3  
     request.InputStream = localFilePath;
-    utility.Upload(request); //commensing the transfer  
+    utility.Upload(request); //commencing the transfer
 
     return true; //indicate that the file was sent  
 }

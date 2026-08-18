@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Control annotation visibility in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to control the visibility of PDF annotations in the ASP.NET MVC PDF Viewer, ensuring annotations appear only in the viewer as needed.
+title: How to Control Annotation Visibility in ASP.NET MVC PDF | Syncfusion
+description: Control the visibility of PDF annotations in the ASP.NET MVC PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Control annotation visibility in the ASP.NET MVC PDF Viewer
+# How to Control Annotation Visibility in ASP.NET MVC PDF Viewer
 
 A concise guide to controlling annotation visibility so that annotations remain visible in the Syncfusion PDF Viewer while being hidden in the downloaded PDF.
 
@@ -91,7 +90,7 @@ Define the viewer markup and include a button that triggers the download workflo
 
 **Step 3:** Add annotations to the PDF document.
 
-The `documentLoaded` function in the script above programmatically inserts highlight, underline, and strikethrough annotations. Extend this logic to include any additional annotations you require.
+The `documentLoad` function in the script above programmatically inserts highlight, underline, and strikethrough annotations. Extend this logic to include any additional annotations you require.
 
 **Step 4:** Add event listeners for button clicks.
 

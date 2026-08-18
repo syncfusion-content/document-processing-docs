@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Create form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion MVC PDF Viewer.
+title: Create Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Add each PDF form field using the ASP.NET MVC PDF Viewer UI, and learn how to create the same fields programmatically from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Create PDF Form Fields in MVC PDF Viewer
+# Create Form Fields in ASP.NET MVC PDF Viewer
 
 You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) or dynamically using APIs.
 
@@ -393,7 +394,7 @@ You can edit form fields using the UI or API.
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Customize form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

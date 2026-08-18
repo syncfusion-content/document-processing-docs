@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Keyboard accessibility in React PDF Viewer component | Syncfusion
-description: Learn here all about Keyboard accessibility in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Keyboard Accessibility in React PDF Viewer | Syncfusion
+description: Use keyboard shortcuts in the React PDF Viewer to navigate, zoom, search, and manage annotations without a mouse.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Keyboard accessibility in React PDF Viewer component
+# Keyboard Accessibility in React PDF Viewer
 
 The React PDF Viewer supports the keyboard interactions listed below.
 
