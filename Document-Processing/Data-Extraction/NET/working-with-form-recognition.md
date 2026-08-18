@@ -1,6 +1,6 @@
 ---
 title: Form Recognition in .NET Smart Data Extractor | Syncfusion
-description: Recognize form elements from PDF and scanned images using Smart Form Recognizer. Configure FormRecognizer to extract structured form data accurately in .NET.
+description: Recognize form elements from PDF and scanned images using Smart Form Recognizer.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG

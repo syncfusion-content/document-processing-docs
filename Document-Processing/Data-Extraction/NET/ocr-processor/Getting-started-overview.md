@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 ---
-# About Syncfusion .NET OCR Processor
+# About Syncfusion .NET OCR Processor Library
 
 To quickly get started with extracting text from scanned PDF documents in .NET using the .NET OCR processor library, refer to this video tutorial:
 {% youtube "https://www.youtube.com/watch?v=VhN7ETn0vyA" %}
