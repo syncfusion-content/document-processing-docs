@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Insert page number and navigate to page in DOCX Editor | Syncfusion
-description: Learn how to Insert Page number and Navigate to specific page from the Syncfusion Document Editor Component
+title:  How to Insert Page Numbers in ASP.NET Core DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® ASP.NET Core DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
 control: Insert Page number And Navigate To Specific Page
 documentation: ug
 ---
 
-# Insert page number and navigate to page in Document Editor component
+# How to Insert Page Numbers and Navigate in ASP.NET Core DOCX Editor
 
 You can insert a page number and navigate to a specific page in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component in the following ways.
 

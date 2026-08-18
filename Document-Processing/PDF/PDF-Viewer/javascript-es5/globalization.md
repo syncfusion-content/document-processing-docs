@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Globalization in JavaScript PDF Viewer control | Syncfusion
-description: Learn here all about Globalization in Syncfusion JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Globalization in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the globalization in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Globalization in JavaScript PDF Viewer control
+# Globalization in JavaScript (ES5) PDF Viewer
 
 The text contents provided in the PDF Viewer can be localized using the collection of localized strings for different cultures. By default, the PDF Viewer is localized in “__en-US__”.
 

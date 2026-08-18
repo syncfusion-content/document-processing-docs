@@ -1,12 +1,12 @@
 ---
-title: Assemblies required for .NET Word (DocIO) library | Syncfusion
-description: Learn the assemblies required to use .NET Word (DocIO) library in various platforms and frameworks without Microsoft Word or interop dependencies.
+title: Assemblies required for .NET Word in .NET | Syncfusion
+description: Describe the supported LaTeX equations and mathematical expressions available in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Assemblies Required for DocIO
+# Assemblies required for .NET Word in .NET
 
 The following assemblies need to be referenced in your application based on the platform.
 

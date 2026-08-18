@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Document Link Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Document Link Navigation in .NET MAUI PDF Viewer
 
 The PDF Viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF Viewer scrolls to the destination page or location defined by that annotation. This type of annotation is most commonly used to make a PDF's table of contents interactive — each entry links directly to the corresponding page in the document.
 

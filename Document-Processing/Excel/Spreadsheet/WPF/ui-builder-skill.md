@@ -1,14 +1,14 @@
 ---
 layout: post
-title: WPF UI Builder Skill with Spreadsheet for AI Assistants | Syncfusion®
-description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with Spreadsheet from natural-language prompts.
+title: UI Builder Skill in WPF Spreadsheet Control | Syncfusion®
+description: Generate production-ready Spreadsheet controls from natural language prompts using the Syncfusion UI Builder Skill for AI assistants.
 control: SfSpreadsheet
 platform: document-processing
 documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder Skill with Spreadsheet for AI Assistants
+# UI Builder Skill in WPF Spreadsheet 
 
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 

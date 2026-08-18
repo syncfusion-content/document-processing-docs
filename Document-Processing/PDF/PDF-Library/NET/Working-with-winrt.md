@@ -1,12 +1,12 @@
 ---
-title: Working with WinRT
-description: This section explains how to load and save PDF document in WinRT
+title: WinRT in .NET PDF Library | Syncfusion
+description: Learn how to load and save PDF documents in WinRT applications using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with WinRT
+# WinRT in .NET PDF Library
 
 In your WinRT application, please add the required assemblies in order to use Essential<sup>&reg;</sup> PDF. [Refer here for assemblies required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Editing in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Editing support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Edit worksheet data in the UWP Spreadsheet control with interactive cell editing, value updates, and Excel-like editing capabilities.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Editing in UWP Spreadsheet (SfSpreadsheet)
+# Editing in UWP Spreadsheet
 
 This section explains the Editing behavior, Data Validation, and Hyperlinks in SfSpreadsheet.
 

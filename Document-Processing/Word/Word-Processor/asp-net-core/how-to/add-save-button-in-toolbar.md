@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add save button in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here to add save button in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Add Save Button in Toolbar in ASP.NET Core DOCX Editor | Syncfusion
+description: Add a custom save button to the toolbar in Syncfusion® ASP.NET Core DOCX Editor, customize toolbar items, and perform document save operations.
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
 ---
 
 
-# Add save button in ASP.NET Core Document Editor toolbar
+# How to Add Save Button in Toolbar in ASP.NET Core DOCX Editor
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 

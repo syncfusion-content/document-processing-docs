@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy Syncfusion Word Processor in Azure App Service
-description: Learn here all about deploying word processor server docker container in Azure App Service in the Syncfusion Angular Document Editor.
+title: Deploy Angular DOCX Editor Docker image on Azure App | Syncfusion
+description: Deploy the Syncfusion® Angular DOCX Editor Docker image to Azure App Service for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in Azure App Service
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Deploy Syncfusion Angular Document Editor in Azure App Service
+# How to Deploy Angular DOCX Editor Docker image on Azure App
 
 ## Prerequisites
 

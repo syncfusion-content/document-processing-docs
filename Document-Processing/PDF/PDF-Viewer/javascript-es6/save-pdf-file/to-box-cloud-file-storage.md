@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDFs to Box Storage in Syncfusion TypeScript PDF Viewer
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
+title: Save PDFs to Box Storage in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF Files to Box Storage in Syncfusion PDF Viewer
+# Save PDF Files to Box Cloud Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 

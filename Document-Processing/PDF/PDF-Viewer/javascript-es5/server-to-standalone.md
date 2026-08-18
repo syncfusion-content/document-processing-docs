@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migrate Server-backed to Standalone JS PDF Viewer | Syncfusion
-description: Learn how to migrate your JavaScript PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
+title: Server to Standalone in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Migrate an existing JavaScript (ES5) PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Migrate from Server-backed to Standalone JavaScript PDF Viewer
+# Migrate from Server-Backed to Standalone JavaScript (ES5) PDF Viewer
 
 Migrating from server-backed to standalone mode transforms your PDF Viewer architecture by moving PDF rendering from the server to the client browser. This migration eliminates server dependencies, reduces infrastructure costs, and improves performance through instant client-side rendering.
 

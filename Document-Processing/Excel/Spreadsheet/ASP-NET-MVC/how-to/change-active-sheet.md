@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change Active Sheet in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn here all about changing active sheet index when import a file in Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Change Active Sheet in ASP.NET MVC Spreadsheet | Syncfusion
+description: Change the active sheet index when importing a workbook in Syncfusion ASP.NET MVC Spreadsheet to display the required worksheet by default.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Changing the active sheet in ASP.NET MVC Spreadsheet control
+# How to Change Active Sheet in ASP.NET MVC Spreadsheet
 
 You can change the active sheet of the imported file by updating the [`activeSheetIndex`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ActiveSheetIndex) property in the [`openComplete`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_OpenComplete) event.
 

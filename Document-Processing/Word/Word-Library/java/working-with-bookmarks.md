@@ -1,11 +1,11 @@
 ---
-title: Working with Bookmarks | Word library | Syncfusion
-description: This section illustrates how to work with Bookmarks in a Word document using Syncfusion Word library.
+title: Bookmarks in Java Word | Syncfusion
+description: This section illustrates how to create, access, and modify bookmarks in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Bookmarks
+# Bookmarks in Java Word
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 

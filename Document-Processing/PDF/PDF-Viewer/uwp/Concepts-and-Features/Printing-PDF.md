@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing PDF in UWP PDF Viewer control | Syncfusion
+title: Printing PDF in UWP PDF Viewer | Syncfusion
 description: Learn here all about Printing PDF support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Printing PDF in UWP PDF Viewer (SfPdfViewer)
+# Printing PDF in UWP PDF Viewer
 
 Printing can be done using the `Print` method or by using the `PrintCommand`. This section covers synchronous printing, asynchronous printing with cancellation, exception handling, quality factor configuration, and print preview customization.
 

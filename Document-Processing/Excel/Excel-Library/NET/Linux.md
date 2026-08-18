@@ -1,12 +1,12 @@
 ---
-title: FAQ about using XlsIO on Linux | Syncfusion
-description: Find answers to common Syncfusion XlsIO Linux issues, including Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
+title: Linux FAQ in .NET Excel Library | Syncfusion
+description: The Linux troubleshooting section describes Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Frequently asked questions about using XlsIO on Linux
+# Linux FAQ in .NET Excel Library
 
 This page covers common questions and fixes for using Syncfusion XlsIO in Linux environments, including Docker containers, font installation, locale setup, and SkiaSharp native dependencies. The font-related sections are only relevant for Excel-to-PDF or Excel-to-image conversion; reading and writing XLSX does not require fonts.
 
@@ -38,7 +38,7 @@ COPY ["ProjectName/Fonts/*.*", "/usr/local/share/fonts/"]
 
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers">GitHub</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Linux/Copy%20fonts%20to%20linux%20containers/.NET/Copy_fonts_to_linux_containers" aria-label="GitHub demo link">GitHub</a>.
 
 ## How to install Microsoft compatible fonts on Linux?
 

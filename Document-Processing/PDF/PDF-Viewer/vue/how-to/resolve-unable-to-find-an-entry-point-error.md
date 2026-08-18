@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resolve FPDFText_GetCharAngle error in Vue | Syncfusion
-description: Learn how to resolve the “unable to find an entry point” error after upgrading the Pdfium package in the Syncfusion Vue PDF Viewer.
+title: How to Resolve the Unable to Find an Entry Point Error | Syncfusion
+description: Resolve the Unable to find an entry point error after upgrading the Pdfium package in the Vue PDF Viewer with a clear set of steps.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resolve FPDFText_GetCharAngle entry point error in Vue
+# How to Resolve the Unable to Find an Entry Point Error in Vue PDF
 
 Starting with **21.1.0.35 (2023 Volume 1)**, the Pdfium package was upgraded to improve text search, selection, rendering, and performance. After upgrading, the PDF Viewer may display a **“Web-Service is not listening”** error. In most cases, the Network tab reveals that an outdated Pdfium assembly is referenced in the local web service project. Ensure the correct native assembly is deployed for the target OS:
 

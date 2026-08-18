@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shape annotation in Vue PDF Viewer component | Syncfusion
-description: Learn how to add, edit, and customize shape annotations like line, arrow, rectangle, circle, and polygon in the Vue PDF Viewer.
+title: Shape Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in Vue PDF Viewer control
+# Shape Annotation in Vue PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete shape annotations. Supported shape annotation types include:
 

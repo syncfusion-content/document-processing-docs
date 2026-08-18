@@ -1,13 +1,13 @@
 ---
-title: Getting Started with WPF RichTextBox control | Syncfusion
-description: Learn here all about getting started with Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Getting Started with WPF DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion WPF DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: getting started, docx editor
 ---
 
-# Getting Started with Syncfusion<sup>&reg;</sup> WPF RichTextBox
+# Getting Started with WPF DOCX Editor
 
 [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
 

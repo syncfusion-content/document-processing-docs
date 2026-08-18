@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Saving PDF files in React Pdfviewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save Pdf Files in React PDF Viewer | Syncfusion
+description: Save edited PDFs from the React PDF Viewer to a local download or to a server-backed endpoint, with options to control the output name and format.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF Files in the React PDF Viewer
+# Save PDF Files in React PDF Viewer
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 

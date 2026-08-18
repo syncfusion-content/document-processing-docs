@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Form filling in WPF PDF Viewer Control | Syncfusion
-description: Learn how to view, fill, export, and import PDF form fields using the Syncfusion WPF PDF Viewer to simplify form handling and enhance your PDF workflows.
+description: Fill PDF forms in Syncfusion WPF PDF Viewer through UI, programmatic APIs, and data import/export. Learn form field population techniques.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Filling PDF Forms in WPF PDF Viewer
+# Filling PDF Forms in WPF Pdf Viewer
 Filling PDF Forms in WPF PDF Viewer enables efficient entry and updating of form data in existing PDF documents. This functionality is supported through three distinct approaches:
 
 1. [Form Filling Through User Interface](#fill-pdf-forms-through-the-user-interface)

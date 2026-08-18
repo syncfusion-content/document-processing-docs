@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Monitor Page Rendering Lifecycle in Syncfusion PDF Viewer
-description: Learn how to use the pageRenderInitiate and pageRenderComplete events in the Syncfusion TypeScript PDF Viewer during page rendering.
+title: How to Handle Page Render Events in JavaScript (ES6) PDF | Syncfusion
+description: Use the pageRenderInitiate and pageRenderComplete events in the JavaScript (ES6) PDF Viewer to track page rendering and coordinate custom UI updates.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Handle pageRenderInitiate and pageRenderComplete events
+# How to Handle Page Render Events in JavaScript (ES6) PDF Viewer
 
 In the Syncfusion PDF Viewer, the [pageRenderInitiate] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerenderinitiate) and [pageRenderComplete] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#pagerendercomplete) events occur during page rendering.
 

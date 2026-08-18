@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change document view in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Change document view in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Document View in Angular DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® Angular DOCX Editor using layout type settings.
 platform: document-processing
 control: Change document view 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in Angular Document Editor component
+# How to Change Document View in Angular DOCX Editor
 
 ## How to change the document view in the DocumentEditor component
 

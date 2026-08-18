@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get Page Info in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Get Page Info in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Get Page Info in Angular PDF Viewer | Syncfusion
+description: Retrieve page height, width, and rotation in the Angular PDF Viewer using the getPageInfo method for custom layout and rendering logic.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Page Info in Angular PDF Viewer component
+# How to Get Page Info in Angular PDF Viewer
 
 The `getPageInfo()` method returns metadata for a specified page in the viewer, such as `height`, `width`, and `rotation`. `pageIndex` is zero-based. Call `getPageInfo()` after the viewer is ready to ensure page data is available (for example, in `ngAfterViewInit` or after the document has been loaded).
 

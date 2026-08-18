@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Web-service is not listening to error | Syncfusion
-description: Learn how to clear Web-service is not listening to errors in Syncfusion Angular PDF Viewer component and more.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the Angular PDF Viewer with a clear troubleshooting checklist and configuration tips.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to resolve the "Web-service is not listening" error in PDF Viewer
+# How to Resolve the Web-Service Is Not Listening Error in Angular PDF
 
 ![Alt text](../images/webservice.png)
 

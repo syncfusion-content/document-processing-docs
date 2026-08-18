@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change Document View Type in Blazor DOCX Editor | Syncfusion
-description: Learn how to change the document view between Print Layout (Pages) and Web Layout (Continuous) in the Syncfusion Blazor Document Editor component.
+title: How to Change Document View in Blazor DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® Blazor DOCX Editor using layout type settings.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Change Document View in Blazor Document Editor
+# How to Change Document View in Blazor DOCX Editor
 
 The [Blazor Word Processor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) provides two different layout options for viewing a document, controlled by the `LayoutType` property. This allows users to switch between a print-optimized view and a continuous web-based view.
 
