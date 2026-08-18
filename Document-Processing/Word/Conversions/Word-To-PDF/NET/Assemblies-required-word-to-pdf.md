@@ -1,11 +1,11 @@
 ---
-title: Assemblies required to convert Word to PDF | Syncfusion
-description: Learn about the assemblies required to convert Word document to PDF using the .NET Word (DocIO) library.
+title: Assemblies required to convert Word to PDF in .NET Word | Syncfusion
+description: Describe the assemblies required to convert Word documents to PDF using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Assemblies required to convert Word document to PDF
+# Assemblies required to convert Word to PDF in .NET Word
 
 This page lists the Syncfusion assemblies that must be referenced in your project to convert a Word document to PDF. The required assemblies differ based on the target platform (WPF, Windows Forms, ASP.NET Core, Blazor, WinUI, .NET MAUI, etc.). Use the tables below to identify the assemblies for your platform, and refer to the linked per-platform guides for step-by-step setup.
 

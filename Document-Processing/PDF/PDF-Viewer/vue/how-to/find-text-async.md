@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Use findTextAsync in Vue PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion Vue PDF Viewer and retrieve match bounds.
-control: Find Text Async
+title: How to Use FindTextAsync in Vue PDF Viewer | Syncfusion
+description: Search text asynchronously in the Vue PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find text using findTextAsync method in Vue PDF Viewer
+# How to Use FindTextAsync in Vue PDF Viewer
 
 The `findTextAsync` method searches for a string or array of strings asynchronously and returns bounding rectangles for each match. Use it to locate text positions across the document or on a specific page.
 
@@ -68,11 +68,11 @@ export default {
 </script>
 ```
 
-### Description:
+## Description
 
 The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 
-### Parameters:
+### Parameters
 
 **text (string | string[]):** The text or array of texts to search for in the document.
 
@@ -80,7 +80,7 @@ The `findTextAsync` method performs an asynchronous text search within a PDF doc
 
 **pageIndex (optional, number):** Zero-based page index to search. If not provided, the search will be performed across all pages in the document. For example, passing `0` searches only the first page of the document. If the search finds no matches, the returned array will be empty; the Promise still resolves (it does not reject) in this case.
 
-### Example Workflow:
+### Example Workflow
 
 **findTextAsync('pdf', false):**
 This will search for the term "pdf" in a case-insensitive manner across all pages of the document.

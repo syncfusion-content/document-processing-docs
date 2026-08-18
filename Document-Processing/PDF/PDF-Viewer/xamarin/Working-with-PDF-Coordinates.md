@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF coordinates in Xamarin Pdf Viewer control | Syncfusion
+title: PDF coordinates in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about working with PDF coordinates and their conversions support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with PDF coordinates in Xamarin Pdf Viewer(SfPdfViewer)
+# PDF coordinates in Xamarin Pdf Viewer
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer's client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
  

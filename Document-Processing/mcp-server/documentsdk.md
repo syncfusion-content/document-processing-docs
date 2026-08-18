@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion DocumentSDK MCP Server Setup | Syncfusion
+title: Syncfusion Document SDK MCP Server | Syncfusion
 description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
@@ -28,7 +28,6 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **document processing application** (existing or new); see [Syncfusion Document Processing documentation](https://help.syncfusion.com/document-processing/introduction)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -143,7 +142,7 @@ Create a configuration file in your project folder to install the server for you
 
 You can install the Syncfusion Document SDK MCP server as a local tool without a global installation. For guidance on installing and managing local .NET tools, refer to the [documentation](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use).
 
-1. Install the Syncfusion Document SDK MCP tool locally:
+1.Install the Syncfusion Document SDK MCP tool locally:
 
     ````bash
     dotnet tool install Syncfusion.DocumentSdk.MCP
@@ -151,7 +150,7 @@ You can install the Syncfusion Document SDK MCP server as a local tool without a
 
 N> If the project does not already have a tool manifest, create one first by running `dotnet new tool-manifest` in the project root. This generates a shared `.config/dotnet-tools.json` file that tracks local tools, then re-run the install command above.
 
-2. In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
+2.In your MCP client config (for example, `.vscode/mcp.json`), replace the server entry with:
 
     ````json
     {
@@ -184,9 +183,6 @@ Use `search_docs` to get contextual guidance, code snippets, and configuration e
 {% promptcard PDF Creation %}
 #search_docs Create a PDF document with text, images, and tables using Syncfusion PDF library.
 {% endpromptcard %}
-{% endpromptcards %}
-
-{% promptcards %}
 {% promptcard Word Document Processing %}
 #search_docs How do I create and manipulate Word documents with Syncfusion Word library?
 {% endpromptcard %}
@@ -200,9 +196,6 @@ Get step-by-step help for adding specific features to document processing librar
 {% promptcard PDF Conversion %}
 #search_docs How can I convert Word documents to PDF using Syncfusion libraries?
 {% endpromptcard %}
-{% endpromptcards %}
-
-{% promptcards %}
 {% promptcard Excel Data Processing %}
 #search_docs How do I read, write, and format Excel files with Syncfusion XlsIO library?
 {% endpromptcard %}
@@ -211,13 +204,11 @@ Get step-by-step help for adding specific features to document processing librar
 **Troubleshooting**
 
 Describe the problem in plain language, and let `search_docs` help resolve it.
+
 {% promptcards %}
 {% promptcard PDF Issues %}
 #search_docs Why isn't my PDF rendering correctly or displaying images properly?
 {% endpromptcard %}
-{% endpromptcards %}
-
-{% promptcards %}
 {% promptcard Word Document Issues %}
 #search_docs Why is my Word document not converting or formatting correctly?
 {% endpromptcard %}

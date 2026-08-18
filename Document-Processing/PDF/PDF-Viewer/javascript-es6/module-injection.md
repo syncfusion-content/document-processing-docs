@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Module Injection for TypeScript PDF Viewer | Syncfusion
-description: Syncfusion Typescript PDF Viewer to enable optional features like toolbar, navigation, annotations, search.
+title: Module Injection in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the module injection in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Module Injection in TypeScript PDF Viewer
+# Module Injection in JavaScript (ES6) PDF Viewer
 
 To customize the **TypeScript PDF Viewer** with specific features, you must import and inject the required modules. The PDF Viewer provides the following modules to enable its functionalities.
 

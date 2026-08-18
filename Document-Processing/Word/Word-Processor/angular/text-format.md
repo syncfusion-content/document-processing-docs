@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Text format in Angular Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in Angular DOCX Editor | Syncfusion
+description: Text format properties in Angular DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in Angular Document editor component
+# Text Format in Angular DOCX Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
-The bold formatting for selected text can be get or set by using the following sample code.
+The bold formatting for selected text can be retrieved or set by using the following sample code.
 
 ```typescript
 
@@ -25,7 +25,7 @@ documenteditor.selection.characterFormat.bold = true;
 
 ```
 
-You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the bold formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```typescript
 documenteditor.editor.toggleBold();
@@ -33,7 +33,7 @@ documenteditor.editor.toggleBold();
 
 ## Italic
 
-The Italic formatting for selected text can be get or set by using the following sample code.
+The italic formatting for selected text can be retrieved or set by using the following sample code.
 
 ```typescript
 //Gets the value for italic formatting of selected text.
@@ -42,7 +42,7 @@ let italic : boolean = documenteditor.selection.characterFormat.italic;
 documenteditor.selection.characterFormat.italic= true|false;
 ```
 
-You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the italic formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```typescript
 documenteditor.editor.toggleItalic();
@@ -50,7 +50,7 @@ documenteditor.editor.toggleItalic();
 
 ## Underline property
 
-The underline style for selected text can be get or set by using the following sample code.
+The underline style for selected text can be retrieved or set by using the following sample code.
 
 ```typescript
 //Gets the value for underline formatting of selected text.
@@ -59,7 +59,7 @@ let underline : Underline = documenteditor.selection.characterFormat.underline;
 documenteditor.selection.characterFormat.underline='Single' | 'None';
 ```
 
-You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the underline style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```typescript
 documenteditor.editor.toggleUnderline('Single');
@@ -67,7 +67,7 @@ documenteditor.editor.toggleUnderline('Single');
 
 ## Strikethrough property
 
-The strikethrough style for selected text can be get or set by using the following sample code.
+The strikethrough style for selected text can be retrieved or set by using the following sample code.
 
 ```typescript
 //Gets the value for strikethrough formatting of selected text.
@@ -76,7 +76,7 @@ let strikethrough : Strikethrough = documenteditor.selection.characterFormat.str
 documenteditor.selection.characterFormat.strikethrough='Single' | 'Normal';
 ```
 
-You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the strikethrough style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```typescript
 documenteditor.editor.toggleStrikethrough();
@@ -132,7 +132,7 @@ documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleC
 
 ## Size
 
-The size of selected text can be get or set using the following code.
+The size of selected text can be retrieved or set using the following code.
 
 ```typescript
 //Gets the value for fontSize formatting of selected text.
@@ -143,20 +143,20 @@ documenteditor.selection.characterFormat.fontSize= 32;
 
 ## Color
 
-### Change Font Color by UI Option
+### Change font color by UI option
 
 In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
 
-This Font Color option appear as follows.
+This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
-### Change Font Color by Code
+### Change font color by code
 
-The color of selected text can be get or set using the following code.
+The color of selected text can be retrieved or set using the following code.
 
 ```typescript
 //Gets the value for fontColor formatting of selected text.
@@ -168,18 +168,18 @@ documenteditor.selection.characterFormat.fontColor= '#FFC0CB';
 
 ## Font
 
-The font style of selected text can be get or set using the following sample code.
+The font style of selected text can be retrieved or set using the following sample code.
 
 ```typescript
 //Gets the value for fontFamily formatting of selected text.
 let baselineAlignment : string = documenteditor.selection.characterFormat.fontFamily;
 //Sets fontFamily formatting for selected text.
-documenteditor.selection.characterFormat.fontFamily= 'Arial';
+documenteditor.selection.characterFormat.fontFamily = 'Arial';
 ```
 
 ## Highlight color
 
-The highlight color of the selected text can be get or set using the following sample code.
+The highlight color of the selected text can be retrieved or set using the following sample code.
 
 ```typescript
 //Gets the value for highlightColor formatting of selected text.
@@ -399,11 +399,11 @@ export class AppComponent {
   }
 }
 ```
-## Online Demo
+## Online demo
 
 Explore how to apply text formatting in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/character-formatting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Font dialog](./dialog#font-dialog)

@@ -1,12 +1,12 @@
 ---
-title: Styles and Templates in UWP RichTextBox control | Syncfusion
-description: Learn here all about Styles and Templates support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Styles and Templates in UWP DOCX Editor | Syncfusion
+description: The styles and templates in UWP DOCX Editor define the structure and visual appearance, enabling custom appearance through Control template modification.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles-and-templates,custom-style,styling
 ---
-# Styles and Templates in UWP RichTextBox (SfRichTextBoxAdv)
+# Styles and Templates in UWP DOCX Editor
 
 This section describes the styles and templates for the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control. The control template defines the structure of the SfRichTextBoxAdv control and the style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
 

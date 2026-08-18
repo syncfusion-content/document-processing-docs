@@ -1,12 +1,12 @@
 ---
-title: Undo Redo in UWP RichTextBox control | Syncfusion
-description: Learn here all about Undo Redo support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Undo Redo in UWP DOCX Editor | Syncfusion
+description: The undo redo feature in UWP DOCX Editor offers history preservation support, enabling editing actions to be preserved in undo and redo stacks.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: undo,redo,undo-redo,history,undocommand,redocommand,isundoenabled,canundostyle,editorsettings
 ---
-# Undo Redo in UWP RichTextBox (SfRichTextBoxAdv)
+# Undo Redo in UWP DOCX Editor
 
 SfRichTextBoxAdv preserves the history of every editing operation performed on its document, so any action can be undone with ease. Undone actions are kept in a separate stack, enabling you to redo them.
 

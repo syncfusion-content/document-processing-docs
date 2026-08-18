@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported File Formats in Blazor DOCX Editor | Syncfusion
-description: Learn more about the supported file formats in Syncfusion® Blazor DOCX Editor (Document Editor) for opening and exporting documents.
+description: Supported file formats in Blazor DOCX Editor allow importing and exporting documents across multiple file formats.
 control: Supported File Formats
 platform: document-processing
 documentation: ug
@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats for opening and exporting.
 
-## Supported File Formats 
+## Supported file formats
 
-The following table describes supported formats and their conversion capabilities in the Document Editor.
+The following table describes the supported formats and their conversion capabilities in the Document Editor.
 
 | File Format | Open | Export |
 |-------------|------|--------|

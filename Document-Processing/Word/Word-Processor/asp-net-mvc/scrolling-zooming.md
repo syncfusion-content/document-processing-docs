@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Scrolling Zooming in ASP.NET MVC Document Editor Component
-description: Learn here all about scrolling zooming in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Scrolling and Zooming in ASP.NET MVC DOCX Editor | Syncfusion
+description: The scrolling and zooming in ASP.NET MVC DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug
 ---
 
 
-# Scrolling
+# Scrolling and Zooming in ASP.NET MVC DOCX Editor
 
-The Document editor renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of document editor instance.
+The Document Editor renders the document page by page. You can scroll through the pages by using the mouse wheel or touch interactions. You can also scroll to a specific page by using the `scrollToPage()` method of the Document Editor instance.
 
 
 {% tabs %}
@@ -24,9 +24,9 @@ The Document editor renders the document page by page. You can scroll through th
 
 
 
-N> Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
+N> Calling this method brings the specified page into view but does not move the selection. Hence, this method works by default; that is, it works even if the selection is not enabled.
 
-In case, if you wish to move the selection to any page in document editor and bring it into view, you can use ‘goToPage()’ method of selection instance.
+To move the selection to a page and bring it into view, use the `goToPage()` method of the selection instance.
 
 
 {% tabs %}
@@ -42,7 +42,7 @@ In case, if you wish to move the selection to any page in document editor and br
 
 ## Zooming
 
-You can scale the contents in document editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use ‘zoomFactor’ property of document editor instance. The value can be specified in a range from 0.1 to 5.
+You can scale the contents in the Document Editor, ranging from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the Document Editor instance. The value can be specified in a range from 0.1 to 5.
 
 
 {% tabs %}
@@ -50,13 +50,14 @@ You can scale the contents in document editor ranging from 10% to 500% of the ac
 {% include code-snippet/document-editor/asp-net-mvc/scrolling-zooming/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-zooming.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as value, the Document editor provides option to specify page fit options such as fit to full page or fit to page width. You can set this option using ‘fitPage’ method of document editor instance.
+Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage()` method of the Document Editor instance.
 
 
 {% tabs %}
@@ -64,7 +65,8 @@ Apart from specifying the zoom factor as value, the Document editor provides opt
 {% include code-snippet/document-editor/asp-net-mvc/scrolling-page-fit/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Scrolling-page-fit.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 

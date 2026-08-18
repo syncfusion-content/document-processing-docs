@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Create form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Vue PDF Viewer.
+title: Create Form Fields in Vue PDF Viewer | Syncfusion
+description: Add each PDF form field using the Vue PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF Form Fields in Vue
+# Create Form Fields in Vue PDF Viewer
 
 You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/form-designer.html) or dynamically using APIs.
 
 ## Create Form Fields Using the Form Designer UI 
 Use this approach when you want to design forms manually without writing code.
+
+Before you begin, ensure the `FormDesigner` module is included in the `provide` block of the PDF Viewer component.
 
 **Steps:**
 
@@ -299,13 +301,13 @@ export default {
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Male',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 100, Y: 270, Width: 16, Height: 16 }
       });
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Female',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 160, Y: 270, Width: 16, Height: 16 }
       });
     },
@@ -626,8 +628,8 @@ export default {
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Style form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
-- [Form Fields API](../form-fields-api)
+- [Form fields API](../form-fields-api)

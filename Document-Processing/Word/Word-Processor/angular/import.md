@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Import in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in Angular DOCX Editor | Syncfusion
+description: The Import feature in Angular DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in Angular Document Editor component
+# Import in Angular DOCX Editor
 
 In [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), the documents are stored in Document Editor's own format called **Syncfusion Document Text (SFDT)**.
 
@@ -46,7 +46,7 @@ The following example shows how to import a document from the local machine.
 
 You can convert Word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to convert Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
-N>: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word).
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word).
 
 Please refer to the following example for converting Word documents into SFDT.
 
@@ -178,9 +178,9 @@ The following table illustrates the reasons for pagination (page-by-page display
 |Any mistake (wrong behavior handled) in laying out the supported elements and formatting   |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through bug report link.  Syncfusion<sup style="font-size:70%">&reg;</sup> fixes the bugs in the next possible weekly patch release and service pack or main releases. |
 |Font missing in deployment environment|Customer can either report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and get a suggestion or solve it on their own by installing the missing fonts in their deployment environment.|
 |Any unsupported elements or formatting present in your document |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.   Syncfusion<sup style="font-size:70%">&reg;</sup> implements unsupported features incrementally in future releases based on feature importance, customer interest, efforts involved, and technological feasibility. Also, suggests an alternate approach for possible cases.|
-|Technical limitation related to framework   For example, there is a known case with a slight fractional difference in text size measured using HTML and Microsoft Word's display.|Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.  Syncfusion<sup style="font-size:70%">&reg;</sup> does research about alternate approaches to overcome the technical limitation/behaviors and process it same as a feature. N>: Here the challenge is, time schedule for implementation varies based on the alternate solution and its reliability.|
+|Technical limitation related to framework   For example, there is a known case with a slight fractional difference in text size measured using HTML and Microsoft Word's display.|Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.  Syncfusion<sup style="font-size:70%">&reg;</sup> does research about alternate approaches to overcome the technical limitation/behaviors and process it same as a feature. N> Here the challenge is, time schedule for implementation varies based on the alternate solution and its reliability.|
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)

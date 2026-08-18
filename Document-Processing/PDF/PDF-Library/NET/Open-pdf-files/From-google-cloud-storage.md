@@ -1,12 +1,12 @@
 ---
-title: Load PDF file from Google cloud storage | Syncfusion
-description: This page describes how to load a PDF file from Google Cloud Storage in C# using the Syncfusion .NET PDF library.
+title: Open PDF from Google Cloud Storage | Syncfusion
+description: Learn how to load PDF files programmatically from Google Cloud Storage in C# using Syncfusion .NET PDF library.
 keywords: google cloud storage, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Open PDF file from Google Cloud Storage
+# Open PDF from Google Cloud Storage
 
 To open a PDF file from Google Cloud Storage, follow these steps:
 

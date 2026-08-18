@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the ASP.NET MVC PDF Viewer | Syncfusion
-description: Get Started with the server‑backed Syncfusion ASP.NET MVC PDF Viewer. Install NuGet packages, add scripts/styles, configure the controller, and load a PDF.
+title: Getting Started with Server-Backed ASP.NET MVC Viewer | Syncfusion
+description: Get started with the server-backed Syncfusion ASP.NET MVC PDF Viewer. Install NuGet packages, add scripts and styles, configure the controller, and load a PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting Started with the ASP.NET MVC PDF Viewer control
+# Getting Started with Server-Backed ASP.NET MVC Viewer
 
 This section explains how to integrate the [ASP.NET MVC PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) into an ASP.NET MVC application using Visual Studio.
 
@@ -119,12 +119,12 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ## Deployment notes
 
--Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted from any deployment bundle:
+- Unlike the standalone PDF Viewer which performs client-side rendering, the server-backed PDF Viewer processes and renders PDFs entirely on the server. As a result, the following files are **not required** and should be omitted from any deployment bundle:
 
   - `pdfium.js`
   - `pdfium.wasm`
 
-- For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+- For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1).
 
 - For AWS environments, use the following packages:
 

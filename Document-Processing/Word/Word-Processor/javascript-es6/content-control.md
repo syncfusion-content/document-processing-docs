@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Content control in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Content control in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Content Controls in TypeScript DOCX Editor | Syncfusion
+description: The content control feature in TypeScript DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
-control: Content control 
+control: Content Control
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in JavaScript (ES6) Document editor control
+# Content Controls in TypeScript DOCX Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support for inserting, editing content controls
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support for inserting and editing content controls.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
 InlineContentControl: Among inline content inside, as a child of a paragraph.
 BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter.
@@ -22,13 +22,13 @@ BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFo
 * Rich Text
 * Plain Text
 * Check Box
-* Date picker
+* Date Picker
 * Drop-Down List and Combo Box
 * Picture
 
 ## Insert content control
 
-Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertContentControl) method in editor module.
+A content control can be inserted using the [`insertContentControl`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#insertContentControl) method in the editor module.
 
 {% highlight ts %}
 //Insert Rich Text Content Control
@@ -44,7 +44,7 @@ container.documentEditor.editor.insertContentControl('Text', 'Hello World');
 
 //Insert CheckBox Content Control
 container.documentEditor.editor.insertContentControl('CheckBox');
-//Insert CheckBox Content Control with mention checked state
+//Insert CheckBox Content Control with the checked state
 container.documentEditor.editor.insertContentControl('CheckBox', true);
 
 //Insert ComboBox Content Control
@@ -54,7 +54,7 @@ container.documentEditor.editor.insertContentControl('ComboBox', 'One', ['One', 
 
 //Insert Date Content Control
 container.documentEditor.editor.insertContentControl('Date');
-//Insert Date Content Control
+//Insert Date Content Control with a date value
 container.documentEditor.editor.insertContentControl('Date', '01/01/2024');
 
 //Insert DropDownList Content Control
@@ -70,7 +70,7 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) and import it using [`importContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData)
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) and imported using [`importContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData).
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
@@ -81,15 +81,15 @@ container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportContentControlData)
+Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportContentControlData).
 
 {% highlight ts %}
 let contentControlInfos: ContentControlInfo[] = container.documentEditor.exportContentControlData();
 {% endhighlight %}
 
-## Reset content control
+## Reset content control properties
 
-Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata).
 
  
 {% highlight ts %}
@@ -99,4 +99,4 @@ data.push(contentControlData);
 container.documentEditor.resetContentControlData(data);
 {% endhighlight %}
 
->Note: Content control with custom XML mapping of file type WordML is converted as normal Rich Text Content Control to provide lossless round-tripping upon saving.
+N> A content control with custom XML mapping of file type WordML is converted as a normal Rich Text Content Control to provide lossless round-tripping upon saving.

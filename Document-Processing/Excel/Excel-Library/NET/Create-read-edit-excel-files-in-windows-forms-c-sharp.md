@@ -1,11 +1,11 @@
 ---
-title: Create, read, and edit Excel files in Windows Forms | Syncfusion
-description: Explains how to create, read, and edit Excel files in Windows Forms applications using Syncfusion XlsIO.
+title: Create, Read, and Edit Excel in Windows Forms | Syncfusion
+description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in Windows Forms applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Create, read, and edit Excel files in Windows Forms
+# Create Excel Files in Windows Forms with Excel Library
 
 [.NET Excel Library for Windows Forms platform](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) can be used to create, read, edit Excel files. These can also convert Excel files to PDF.
 

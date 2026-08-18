@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React Server-Backed PDF Viewer Getting Started | Syncfusion
-description: Learn about Getting Started with the React Server-Backed PDF Viewer Component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Server-Backed React PDF Viewer | Syncfusion
+description: Get started with the Syncfusion React PDF Viewer in server-backed mode to process documents through a backend web service.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with React Server-Backed PDF Viewer Component
+# Getting Started with Server-Backed React PDF Viewer
 
 This section explains how to create a simple React application and add the server-backed [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component with the minimum required setup.
 

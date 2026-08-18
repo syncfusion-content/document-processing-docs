@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show or hide the Blazor SfPdfViewer dynamically in Blazor | Syncfusion
-description: Learn how to dynamically show or hide the Blazor SfPdfViewer, toggle visibility with a button, and load PDFs from a local file.
+title: How to Show or hide dynamically in Blazor PDF Viewer  | Syncfusion
+description: Learn how to dynamically show or hide the Blazor PDF Viewer, toggle visibility with a button, and load PDFs from a local file.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Show or hide the SfPdfViewer component dynamically in Blazor
+# How to Show or hide dynamically in Blazor PDF Viewer
 
 The following example initializes the PDF Viewer hidden and toggles its visibility with a button. When shown, clicking one of the two buttons loads a PDF either from a physical path or a remote URL into the same viewer instance using a Base64 data URI. The wrapper div sets a fixed height so that `Height="100%"` and `Width="100%"` render correctly. The `.e-spinner-pane` rule suppresses the loading overlay during the toggle.
 

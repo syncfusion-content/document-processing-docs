@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Angular PDF Viewer control | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Angular PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar in Angular PDF Viewer | Syncfusion
+description: Customize the mobile toolbar in the Angular PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Customize mobile toolbar in Angular PDF Viewer
+# Customize the Mobile Toolbar in Angular PDF Viewer
 
 ## Overview
 

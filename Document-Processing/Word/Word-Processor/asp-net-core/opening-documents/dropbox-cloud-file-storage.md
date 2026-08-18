@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open Dropbox Files in ASP.NET Core Document Editor | Syncfusion
-description: Learn about how to Open document from Dropbox cloud file storage in ASP.NET Core Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Dropbox in ASP.NET Core DOCX Editor | Syncfusion
+description: Open documents from Dropbox cloud storage in ASP.NET Core DOCX Editor, enabling cloud-based file access and document management.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Dropbox cloud file storage in Document Editor
+# Open Documents from Dropbox in ASP.NET Core DOCX Editor
 
-To load a document from Dropbox cloud file storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below
+To load a document from Dropbox cloud file storage in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create a Dropbox API
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox app, follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app enables programmatic access to Dropbox files and data.
 
 
 **Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
@@ -23,6 +23,8 @@ Start by following the steps provided in this [link](../../document-editor/getti
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+
+N> The **Dropbox.Api** NuGet package must be installed in your application to use the following code example.
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -34,7 +36,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -58,19 +60,20 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
-[Route("LoadFromBoxCloud")]
+[Route("LoadFromDropBox")]
 //Post action for Loading the documents
 
 public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> jsonObject)
 {
     if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
     {
-      return null
+      return null;
     }
     MemoryStream stream = new MemoryStream();
-        
+
     using (var dropBox = new DropboxClient(_accessToken))
     {
+        var fileName = jsonObject["documentName"];
         using (var response = await dropBox.Files.DownloadAsync(_folderName + "/" + fileName))
         {
           var byteArray = await response.GetContentAsByteArrayAsync();
@@ -101,11 +104,11 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 }
 ```
 
-N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
+N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token, and **Your_Folder_Name** with your folder name.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+On the client side, the document returned from the web service is opened using the `open` method.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -115,5 +118,3 @@ In the client-side, the document is returned from the web service is opening usi
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/open-dropbox-cloud-file-storage/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-N> The **Dropbox.Api** NuGet package must be installed in your application to use the previous code example.

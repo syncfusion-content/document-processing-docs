@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion license registration - Syncfusion
+title: How to register license key for Document Solutions | Syncfusion
 description: Learn here about how to register Syncfusion Document Processing license key for Document Processing application for license validation.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Register Syncfusion<sup>&reg;</sup> License key in Document Processing application
+# How to register license key for Document Solutions
 
 The generated license key is just a string that needs to be registered before any Syncfusion<sup>&reg;</sup> control is initiated. The following code is used to register the license.
 
@@ -260,13 +260,13 @@ ej.base.registerLicense('License key');
 
 ## JavaScript (Essential<sup>&reg;</sup> JS 2)
 
-Syncfusion<sup>&reg;</sup> license key should be registered, if your project using Syncfusion<sup>&reg;</sup> EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1). 
+Syncfusion<sup>&reg;</sup> license key should be registered, if your project using Syncfusion<sup>&reg;</sup> EJ2-JavaScript packages reference. The generated license key is a string that needs to be registered after any [Syncfusion JavaScript script reference](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start#configure-syncfusion-javascript-es5-control-in-the-application-1). 
 
 The following code is used to register the license.
 
 ### JavaScript es5
 
-Register the license key by using **registerLicense** method after the [Syncfusion JavaScript script](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start/#configure-syncfusion-javascript-es5-control-in-the-application-1) file reference as below.
+Register the license key by using **registerLicense** method after the [Syncfusion JavaScript script](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start#configure-syncfusion-javascript-es5-control-in-the-application-1) file reference as below.
 
 {% tabs %}
 {% highlight JS %}

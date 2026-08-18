@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resize the SfPdfViewer to fit its container in Blazor | Syncfusion
-description: Learn how to make the Blazor SfPdfViewer resize with its parent container at runtime using the Splitter Resizing event and UpdateViewerContainerAsync.
+title: How to Resize PDF Viewer to fit its container in Blazor | Syncfusion
+description: Learn how to make the Blazor PDF Viewer resize with its parent container at runtime using the Splitter Resizing event and UpdateViewerContainerAsync.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Resize the SfPdfViewer to fit its container in Blazor
+# How to Resize PDF Viewer to fit its container in Blazor
 
 Use the Splitter’s Resizing event to resize the PDF viewer with its container at runtime. In this example, the `SfPdfViewer` is placed inside a Splitter pane, and UpdateViewerContainerAsync is called during resizing to recalculate the layout. Ensure the container has an explicit height and width (for example, 100%) so the viewer can stretch to fill the available space.
 

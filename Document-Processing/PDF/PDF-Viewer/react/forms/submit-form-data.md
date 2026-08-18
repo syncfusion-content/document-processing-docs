@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Submit PDF Form Data to a Server using React PDF Viewer | Syncfusion
-description: Submit filled PDF form data from the EJ2 React PDF Viewer to a backend server, with a complete frontend example.
+title: Submit Form Data in React PDF Viewer | Syncfusion
+description: Submit filled PDF form data from the React PDF Viewer to a backend server, with a complete frontend example to get you started.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Submit PDF Form Data to a Server in React
+# Submit Form Data to a Server in React PDF Viewer
 
 ## Overview
 

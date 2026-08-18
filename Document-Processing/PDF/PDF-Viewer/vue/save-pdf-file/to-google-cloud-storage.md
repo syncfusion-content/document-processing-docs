@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion Vue PDF Viewer component with a server-backed web service.
+title: To Google Cloud Storage in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Google Cloud Storage
+# Save PDF Files to Google Cloud Storage in Vue PDF Viewer
 
 To save a PDF file to Google Cloud Storage, follow the steps below.
 
@@ -33,7 +33,7 @@ using Google.Apis.Auth.OAuth2;
 4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the configuration values to the corresponding fields.
 
 ```csharp
-// Private readonly object _storageClient
+// Storage client for Google Cloud Storage
 private readonly StorageClient _storageClient;
 
 private IConfiguration _configuration;

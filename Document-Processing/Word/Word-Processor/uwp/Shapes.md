@@ -1,12 +1,13 @@
 ---
-title: Shapes in UWP RichTextBox control | Syncfusion
-description: Learn here all about Shapes support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Shapes in UWP DOCX Editor | Syncfusion
+description: The shapes in UWP DOCX Editor offer preservation support for text box and rectangle, enabling existing shapes to be preserved during document import.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: shapes,text-box,rectangle,text-wrapping,shape-resizer
 ---
-# Shapes in UWP RichTextBox (SfRichTextBoxAdv)
+# Shapes in UWP DOCX Editor
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, RichTextBox does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
 
 Shapes are drawing objects such as text boxes, rectangles, lines, curves, and circles. Shapes follow a preset or custom geometry. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) does not support inserting shapes. However, if the document contains a shape during import, the shape is preserved.
 

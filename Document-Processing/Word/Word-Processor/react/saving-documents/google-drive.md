@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Save to Google Drive in React DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Drive in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
+description: Save documents to Google Drive from React DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Google Drive using React DOCX Editor
+# Save Documents to Google Drive in React DOCX Editor
 
 To save a document to Google Drive, you can follow the steps below.
 

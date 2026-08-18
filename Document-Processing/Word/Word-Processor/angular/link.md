@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Link in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in Angular DOCX Editor | Syncfusion
+description: The link feature in Angular DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in Angular Document Editor component
+# Hyperlinks in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 
@@ -152,11 +152,11 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 |-----------------|-------------|
 |Ctrl + K | Open hyperlink dialog that allows you to create or edit a hyperlink|
 
-## Online Demo
+## Online demo
 
 Explore how to insert and manage hyperlinks in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/links-bookmarks).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Hyperlink dialog](./dialog#hyperlink-dialog)

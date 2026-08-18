@@ -1,12 +1,12 @@
 ---
-title: Syncfusion Excel (XlsIO) Supported Features by Platforms
-description: Learn about the supported and unsupported features of Syncfusion XlsIO across .NET Framework, .NET (Core/Standard/5+), and Blazor platforms.
+title: Supported Platforms in .NET Excel Library | Syncfusion
+description: Platform compatibility page describes supported and unsupported Syncfusion .NET Excel Library features across .NET and Blazor platforms.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by Platforms
+# Supported Platforms in .NET Excel Library
 
 The following tables list the supported and unsupported Excel features of *Essential<sup>&reg;</sup> XlsIO* across the supported platforms. Use these tables to confirm whether a feature is available in your target environment before designing your solution.
 
@@ -22,10 +22,12 @@ If a feature is marked **No** and is critical to your scenario, see the related 
 ## See also
 
 - [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
-- [System requirements](https://help.syncfusion.com/document-processing/excel/excel-library/net/system-requirements)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
 - [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
-- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/getting-started)
-- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/blazor-server-side/getting-started)
+'- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-core-c-sharp)
+
+- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp)
+
 
 ## Supported Features by .NET Framework and .NET Standard
 

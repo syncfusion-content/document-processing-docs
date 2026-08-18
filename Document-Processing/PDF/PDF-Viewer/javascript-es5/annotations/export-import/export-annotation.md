@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Export annotations in JavaScript PDF Viewer | Syncfusion
-description: Learn how to Export annotations in Syncfusion JavaScript PDF Viewer using UI options and programmatic APIs.
+title: Export Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Export annotations from the JavaScript (ES5) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export annotations in JavaScript PDF Viewer
+# Export Annotations in JavaScript (ES5) PDF Viewer
 
-PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
+PDF Viewer provides support for exporting annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
-- Programmatically (JSON, XFDF, or as an object for custom handling)
+- Programmatically (export to JSON, XFDF, or as an object for custom handling)
 
 ## Export using the UI (Comments panel)
 
@@ -28,7 +28,7 @@ Follow the steps to export annotations:
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose Export annotation to JSON file or Export annotation to XFDF file.
 
-This generates and downloads the selected format containing all annotations in the current document.
+This generates and downloads a file in the selected format containing all annotations in the current document.
 
 ![Export Annotation](../annotation-images/export-annot.png)
 

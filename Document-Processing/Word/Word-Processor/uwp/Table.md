@@ -1,12 +1,12 @@
 ---
-title: Table in UWP RichTextBox control | Syncfusion
-description: Learn here all about Table support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Tables in UWP DOCX Editor | Syncfusion
+description: UWP DOCX Editor allows adding tables to the rich text document, enabling insert and delete of rows and columns, and cell merging.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: table,tablecommands,mergecells,tableformat,rowformat,cellformat
 ---
-# Table in UWP RichTextBox (SfRichTextBoxAdv)
+# Tables in UWP DOCX Editor
 
 [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) allows you to add tables to the rich-text document. You can insert rows or columns into an existing table and delete existing rows and columns. SfRichTextBoxAdv also lets you merge the selected cells into one (both vertically and horizontally).
 

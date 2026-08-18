@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable header and footer in React DOCX Editor using Syncfusion
-description: Learn here all about Disable header and footer edit in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Disable Header and Footer Editing in React DOCX Editor | Syncfusion
+description: Disable header and footer editing in Syncfusion® React DOCX Editor based on selection context to restrict modifications within document sections.
 control: Disable header and footer edit in Document Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable header and footer editing in React Document Editor
+# How to Disable Header and Footer Editing in React DOCX Editor
 
 ## Disable header and footer edit in DocumentEditorContainer instance
 

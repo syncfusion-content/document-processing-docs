@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Interactive Features in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Interactive Features support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Use interactive options in UWP Spreadsheet control such as clipboard operations, undo or redo, context menus, and cell comments.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Interactive Features in UWP Spreadsheet (SfSpreadsheet)
+# Interactive Features in UWP Spreadsheet 
 
  This section explains about the interactive operations with SfSpreadsheet
  
