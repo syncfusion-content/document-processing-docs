@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and columns in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Rows and columns in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Rows and Columns in TypeScript Spreadsheet | Syncfusion
+description: Rows and columns in TypeScript Spreadsheet enable users to insert, delete, resize, and manage worksheet structure efficiently.
 platform: document-processing
 control: Rows and columns
 documentation: ug
 ---
 
-# Rows and columns in EJ2 TypeScript Spreadsheet control
+# Rows and columns in TypeScript Spreadsheet 
 
 Spreadsheet is a tabular format consisting of rows and columns. The intersection point of rows and columns are called cells. The list of operations that you can perform in rows and columns are,
 

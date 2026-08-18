@@ -1,11 +1,11 @@
 ---
-title: Working with Table of Contents (TOC) | DocIO | Syncfusion
-description: Learn how to add, modify, and update the table of contents (TOC) in a Word document using the .NET Word (DocIO) library without Microsoft Word.
+title: Table of Contents (TOC) in .NET Word | Syncfusion
+description: Learn how to add, modify, and update the table of contents (TOC) in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Table Of Contents
+# Table of Contents (TOC) in .NET Word
 
 [Table of contents](https://support.microsoft.com/en-gb/office/insert-a-table-of-contents-882e8564-0edb-435e-84b5-1d8552ccf0c0) (TOC) is used to provide an outline of the Word document. By default, the table of contents is created automatically from heading styles. 
 

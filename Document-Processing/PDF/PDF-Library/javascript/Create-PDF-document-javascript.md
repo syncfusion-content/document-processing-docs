@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create or Generate a PDF File in JavaScript | Syncfusion
+title: Getting Started with JavaScript PDF in JavaScript app | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn how to create a PDF file in plain JavaScript with easy steps using the JavaScript PDF Library without requiring Adobe Acrobat.
+description: Learn how to get started with the Syncfusion JavaScript PDF in JavaScript application. Easy steps to create PDF without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: ug
 keywords: javascript, pdf, cdn
 ---
 
-# Create or Generate a PDF File in JavaScript
+# Getting Started with JavaScript PDF in JavaScript app
 
 Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.pdf` namespace, which contains the PDF document, page, graphics, font, and brush classes.
 

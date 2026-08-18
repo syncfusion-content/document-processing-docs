@@ -1,11 +1,11 @@
 ---
-title: FAQ about Track Changes | DocIO | Syncfusion
-description: Learn about the frequently asked questions about track changes in Word document in the .NET Word (DocIO) library.
+title: FAQ about Track Changes in .NET Word | Syncfusion
+description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about track changes in Word document
+# FAQ about Track Changes in .NET Word
 
 The frequently asked questions about working with track changes in Word documents using DocIO are listed below.
 

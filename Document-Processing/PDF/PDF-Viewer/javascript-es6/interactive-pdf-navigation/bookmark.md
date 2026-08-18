@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark Navigation in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use bookmarks for quick navigation in the Syncfusion TypeScript PDF Viewer control, enhancing user experience and accessibility.
+title: Bookmark in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Navigate PDF bookmarks in the JavaScript (ES6) PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark Navigation in the Syncfusion TypeScript PDF Viewer
+# Bookmark Navigation in JavaScript (ES6) PDF Viewer
 
 Bookmarks embedded in PDF files are loaded and exposed for quick navigation. Use the following code snippet to enable or disable bookmark navigation.
 

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: UG
 ---
 
-# Rendering PDF pages using pdfium in PDF Viewer Xamarin.Android
+# PDFium rendering in PDF Viewer Xamarin.Android
 
 The PdfViewer allows using Pdfium to render the pages of a PDF document, which is a third-party open-source PDF rendering engine. By default, the PdfViewer uses native Android PDF rendering. However, using the Pdfium rendering engine will overcome the defects in the native Android PDF rendering.
 

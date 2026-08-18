@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in Angular DOCX Editor | Syncfusion
+description: The dialogs in Angular DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
 control: Dialog
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in Angular Document Editor component
+# Dialogs in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Syncfusion WPF DOCX Editor MCP Server Setup – Syncfusion
-description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion WPF DOCX Editor.
+title: MCP Server for WPF DOCX Editor | Syncfusion
+description: The Syncfusion®WPF MCP Server provides setup guidance, integration support, and resources to accelerate WPF DOCX Editor development workflows.
 platform: document-processing
 control: RichTextBox
 documentation: ug
 ---
-# Syncfusion WPF DOCX Editor MCP Server
+# MCP Server for WPF DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF RichTextBox application development by providing deep knowledge directly in your AI-powered IDE.[Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

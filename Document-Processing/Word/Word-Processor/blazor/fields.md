@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Fields in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to preserve, update, and manage fields like merge fields and page numbers in the Syncfusion Blazor Document Editor component.
+title: Fields in Blazor DOCX Editor | Syncfusion
+description: Fields in Blazor DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Working with Fields in Blazor Document Editor Component
+# Fields in Blazor DOCX Editor
 
 Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
 

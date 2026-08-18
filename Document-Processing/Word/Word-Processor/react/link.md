@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Link in React DOCX Editor component | Syncfusion
-description: Learn here all about Link in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Hyperlinks in React DOCX Editor | Syncfusion
+description: The hyperlink feature in React DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 control: Link 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Link in React Document Editor component
+# Hyperlinks in React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports the hyperlink field. You can link a part of the document content to the Internet, a file location, a mail address, or any text within the document.
 

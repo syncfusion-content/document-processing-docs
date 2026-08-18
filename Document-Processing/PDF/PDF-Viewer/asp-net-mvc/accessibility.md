@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Accessibility with EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about accessibility in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Accessibility in ASP.NET MVC PDF Viewer | Syncfusion
+description: Accessibility features in the ASP.NET MVC PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# Accessibility in Syncfusion PDF Viewer component
+# Accessibility in ASP.NET MVC PDF Viewer
 
 The PDF Viewer component adheres to accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). It also integrates [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used for accessibility evaluation.
 

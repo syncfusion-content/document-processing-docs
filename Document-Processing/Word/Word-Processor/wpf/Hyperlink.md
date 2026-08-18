@@ -1,12 +1,12 @@
 ---
-title: Hyperlink in WPF RichTextBox control | Syncfusion
-description: Learn here all about Hyperlink support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Hyperlinks in WPF DOCX Editor | Syncfusion
+description: The hyperlink feature in WPF DOCX Editor offers hyperlink field support, enabling linking to internet, file location, or mail address.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: hyperlink
 ---
-# Hyperlink in WPF RichTextBox (SfRichTextBoxAdv)
+# Hyperlinks in WPF DOCX Editor
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports hyperlink field similar to the Microsoft Word. You can link part of the document content to Internet or file location, mail address or any text.
 The following code example illustrates how to insert a hyperlink field.

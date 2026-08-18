@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in React DOCX Editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in React DOCX Editor | Syncfusion
+description: The dialogs in React DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 control: Dialog 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in React Document Editor component
+# Dialogs in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 

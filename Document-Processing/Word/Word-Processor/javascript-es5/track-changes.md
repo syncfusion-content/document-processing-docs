@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Track changes in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Track changes in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Track Changes in JavaScript DOCX Editor | Syncfusion
+description: Track changes in JavaScript DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track changes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in JavaScript (ES5) Document editor control
+# Track Changes in JavaScript DOCX Editor
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 

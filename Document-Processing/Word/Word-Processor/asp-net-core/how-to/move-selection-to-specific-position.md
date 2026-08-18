@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Move selection to a specific position in DOCX Editor | Syncfusion
-description: Learn how to move the selection to a specific position in a document using the Syncfusion Document Editor component.
+title:  Move Selection to a Position in ASP.NET Core DOCX Editor | Syncfusion
+description: Move the document selection to a specific position in Syncfusion® ASP.NET Core DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: Move The Selection To Specific Position
 documentation: ug
 ---
 
-# Move selection to specific position in ASP.NET Core Document Editor
+# How to Move Selection to a Position in ASP.NET Core DOCX Editor
 
 Using the [`select`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#select) API in the selection module, you can set the cursor position anywhere in the document.
 

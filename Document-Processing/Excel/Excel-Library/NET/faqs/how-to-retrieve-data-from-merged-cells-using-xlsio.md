@@ -1,12 +1,12 @@
 ---
-title: Retrieve data from merged cells using XlsIO? | Syncfusion
-description: Explains how to retrieve values from merged cells using Syncfusion XlsIO by checking `IRange.IsMerged` and reading from the `MergeArea` top-left cell.
+title: How to Retrieve Merged Cell Data in .NET Excel Library | Syncfusion
+description: Learn how to retrieve values from merged cells programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to retrieve data from merged cells using XlsIO?
+# How to retrieve data from merged cells in .NET Excel Library
 
 When a cell belongs to a merged region the visible value is stored in the top-left cell of the merged area. Use `IRange.IsMerged` to detect merged cells and `IRange.MergeArea` to obtain the full merged region, then read the value from its top-left cell.
 
@@ -80,4 +80,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/999887-Merge-Cell/FAQ/Merge%20Cell%20Data/.NET/Merge%20Area%20Data" aria-label="GitHub demo link">this GitHub page</a>.

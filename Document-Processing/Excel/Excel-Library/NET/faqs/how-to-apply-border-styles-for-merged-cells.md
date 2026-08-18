@@ -1,12 +1,12 @@
 ---
-title: Apply border styles to merged cells in Excel | Syncfusion
-description: Learn how to apply border styles to merged cells in Excel using the Syncfusion .NET Excel (XlsIO) library.
+title: How to Apply Borders in .NET Excel Library | Syncfusion
+description: Apply border styles to merged cells in Excel using the Syncfusion .NET Excel Library while maintaining the merged cell layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply border styles for merged cells?
+# How to apply borders to merged cells in .NET Excel Library
 
 As per the Microsoft Excel UI Behavior, while applying the styles to the single cell in the merged region, then it will apply only to that single cell. So please use the **MergeArea** property to apply the styles to the entire merged region.
 
@@ -98,4 +98,4 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells">this GitHub page</a>.  
+A complete working example to apply border styles for merged cells using C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/Border%20styles%20for%20merged%20cells/.NET/Borderstylesformergedcells" aria-label="GitHub demo link">this GitHub page</a>.  

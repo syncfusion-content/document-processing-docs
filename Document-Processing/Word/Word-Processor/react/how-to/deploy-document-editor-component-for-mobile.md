@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Deploy mobile DOCX Editor in React | Syncfusion
-description: Learn here all about deploying in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Deploy React DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® React DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 control: Deploy Document Editor component for mobile
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy React Document Editor component for Mobile
+# How to Deploy React DOCX Editor for Mobile
 
 ## Document Editor component for mobile
 
