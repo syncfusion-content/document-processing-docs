@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 You can get the bookmark or whole document content from the [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
-## Get the Bookmark Content as Plain Text
+## Get the bookmark content as plain text
 
 You can use the [`selectBookmark`](../bookmark#select-bookmark) API to navigate to the bookmark and use the [`text`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the bookmark content as plain text from the Document Editor.
 
@@ -46,7 +46,7 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 To get the bookmark content as SFDT (rich text), please refer to this [`link`](../how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text).
 
-## Get the Whole Document Content as Text
+## Get the whole document content as text
 
 You can use the [`text`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the whole document content as plain text from the Document Editor.
 
@@ -73,7 +73,7 @@ container.documentEditor.selection.selectAll();
 
 N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-## Get the Whole Document Content as SFDT (Rich Text)
+## Get the whole document content as SFDT (rich text)
 
 You can use the [`serialize`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#serialize) API to get the whole document content as an SFDT string from the Document Editor.
 
@@ -97,7 +97,7 @@ container.documentEditor.editor.insertText('Document editor');
 ```
 
 
-## Get the Header Content as Text
+## Get the header content as text
 
 You can use the [`goToHeader`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#gotoheader) API to navigate the selection to the header and then use the [`text`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the content as plain text.
 

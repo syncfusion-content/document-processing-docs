@@ -55,7 +55,7 @@ documenteditor.appendTo('#DocumentEditor');
 documenteditor.zoomFactor = 3;
 ```
 
-## Page Fit Type
+## Page fit type
 
 Apart from specifying the zoom factor as a value, the Document Editor provides the option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the Document Editor instance. Refer to the following code example.
 
