@@ -1,12 +1,12 @@
 ---
-title: Set hex color in an Excel cell using XlsIO | Syncfusion 
-description: Learn how to apply a hex color to an Excel cell with the .NET Excel Library. Convert a hex string to RGB and assign it to CellStyle.Color. 
+title: How to Set Hex Colors in .NET Excel Library | Syncfusion
+description: Apply a hex color to an Excel cell by converting a hex string to RGB and assigning it to CellStyle.Color property using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set a hex color value for a cell?
+# How to set hex color values in .NET Excel Library
 
 XlsIO does not provide a direct API to assign a hex color string to a cell style. Convert the hex value to an RGB Color and then assign it to CellStyle.Color. The following example demonstrates this approach.
 

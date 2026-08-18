@@ -1,11 +1,11 @@
 ---
-title: Migration from Office Automation to DocIO | DocIO | Syncfusion
-description: This section illustrates how to migrate from Word Interop to the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: Migration from Office Automation to DocIO in .NET Word | Syncfusion
+description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Migration from Office Automation to DocIO
+# Migration from Office Automation to DocIO in .NET Word
 
 ## Mail merge
 

@@ -1,6 +1,6 @@
 ---
-title: Create Word document in Windows Forms | Syncfusion 
-description: Create Word document without Microsoft Word or interop dependencies in Windows Forms application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library.
+title: Create Word document in Windows Forms | Syncfusion
+description: This section illustrates common questions about using the Syncfusion .NET Word library in Linux environments.
 platform: document-processing
 control: DocIO
 documentation: UG

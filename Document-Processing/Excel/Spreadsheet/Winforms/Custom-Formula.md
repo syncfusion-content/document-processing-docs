@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Formula in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Custom Formula support in Syncfusion® Windows Forms Spreadsheet control and more details.
+description: Create custom formulas in Windows Forms Spreadsheet to calculate worksheet values with user-defined logic and reusable functions.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

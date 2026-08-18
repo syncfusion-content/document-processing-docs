@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in ASP.NET Core | Syncfusion
-description: Convert an Excel document to PDF in ASP.NET Core using Sycfusion .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in ASP.NET Core | Syncfusion
+description: ASP.NET Core Excel to PDF section explains how to convert Excel documents to PDF in ASP.NET Core without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in ASP.NET Core
+# Excel to PDF Conversion in ASP.NET Core using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

@@ -1,12 +1,12 @@
 ---
-title: Create PDF document in AKS Environment | Syncfusion
-description: Create PDF document in AKS Environment using .NET PDF library without the dependency of Adobe Acrobat.
+title: Getting Started with .NET PDF Library in AKS | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in an AKS environment. Create PDF documents without Adobe Acrobat dependencies.
 platform: file-formats
 control: PDF
 documentation: UG
 ---
 
-# Create PDF document in AKS Environment
+# Getting Started with .NET PDF Library in AKS
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in AKS Environment**.
 

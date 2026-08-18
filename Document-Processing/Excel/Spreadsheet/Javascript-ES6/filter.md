@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filter in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Filter in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Filtering in TypeScript Spreadsheet | Syncfusion
+description: Filtering in TypeScript Spreadsheet enables users to display specific data based on criteria, making datasets easier to analyze and manage.
 platform: document-processing
 control: Filter
 documentation: ug
 ---
 
-# Filter in EJ2 TypeScript Spreadsheet control
+# Filtering in TypeScript Spreadsheet 
 
 Filtering helps you to view specific rows in the spreadsheet by hiding the other rows. You can use the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowfiltering) property to enable or disable filtering functionality.
 

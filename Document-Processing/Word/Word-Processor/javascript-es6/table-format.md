@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table format in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Table format in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Table Format in TypeScript DOCX Editor | Syncfusion
+description: The table format feature in TypeScript DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table format in JavaScript (ES6) Document Editor control
+# Table format in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 

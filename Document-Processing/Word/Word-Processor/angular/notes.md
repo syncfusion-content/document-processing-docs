@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Notes in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in Angular DOCX Editor | Syncfusion
+description: The footnote and endnote support in Angular DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in Angular Document Editor component
+# Footnotes and Endnotes in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 

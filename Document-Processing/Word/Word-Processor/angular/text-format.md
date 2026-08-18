@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in Angular DOCX Editor | Syncfusion
+description: Text format properties in Angular DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in Angular Document Editor component
+# Text Format in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Manage session storage in React PDF Viewer | Syncfusion
-description: Learn how to control session-specific data storage in the React PDF Viewer using the enableLocalStorage property.
+title: How to Enable Local Storage in React PDF Viewer | Syncfusion
+description: Control session-specific data storage in the React PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manage session storage in PDF Viewer
+# How to Enable Local Storage in React PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer exposes the `enableLocalStorage` property to control how session-specific viewer data is stored. Set this property to choose between in-memory storage and the browser's `sessionStorage`.
 
-### Using the `enableLocalStorage` property
+## Using the `enableLocalStorage` property
 
 Set `enableLocalStorage` to control whether the viewer preserves session data in an in-memory collection or uses the browser's `sessionStorage`. When `enableLocalStorage` is `true`, the viewer keeps session data in memory for the current application session; when `false` (the default), `sessionStorage` is used. Review memory implications before enabling in-memory storage for large documents or heavy interactive content.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sticky notes in Angular PDF Viewer control | Syncfusion
-description: Learn about sticky note annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Sticky Notes Annotation in Angular PDF Viewer | Syncfusion
+description: Learn about the sticky notes annotation in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: Sticky notes annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky Notes Annotation in Angular PDF Viewer Component
+# Sticky Notes Annotation in Angular PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete sticky note annotations in the PDF document.
 

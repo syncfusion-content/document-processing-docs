@@ -1,13 +1,13 @@
 ---
 layout: post
 title: React Spreadsheet getting started with Create React App | Syncfusion
-description: Check out and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Create React App project.
+description: Learn how to get started with the Syncfusion React Spreadsheet component in a Create React App project. Explore setup and examples.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the React Spreadsheet Editor in Create React App
+# Getting Started with React Spreadsheet in Create React App
 
 This article provides a step-by-step guide for setting up a React application using Create React App(CRA) and integrating React Spreadsheet Editor.
 

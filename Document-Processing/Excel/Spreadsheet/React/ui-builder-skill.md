@@ -1,14 +1,14 @@
 ---
 layout: post
-title: React UI Builder Skill with Spreadsheet | Syncfusion®
-description: Install Syncfusion® React UI Builder to generate production-ready React components with Spreadsheet from natural-language prompts.
+title: React UI Builder Skill with Spreadsheet | Syncfusion
+description: Install Syncfusion React UI Builder to generate production-ready React components with Spreadsheet from natural-language prompts.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® React UI Builder Skill with Spreadsheet for AI Assistants
+# React UI Builder Skill with Spreadsheet for AI Assistants
 
 **Syncfusion® React UI Builder Skill** is an AI-powered agent skill that accelerates React Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® React components.
 

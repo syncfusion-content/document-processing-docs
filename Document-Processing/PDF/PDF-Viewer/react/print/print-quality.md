@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Print Quality in React PDF Viewer | Syncfusion
-description: Learn how to customize print quality for PDF Documents in the Syncfusion React PDF Viewer component.
+title: Print Quality in React PDF Viewer | Syncfusion
+description: Customize the print quality of PDF documents in the React PDF Viewer to balance output fidelity with print performance and size.
 platform: document-processing
 control: Print
 documentation: ug

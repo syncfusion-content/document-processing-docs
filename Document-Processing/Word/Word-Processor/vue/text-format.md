@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in Vue Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in Vue DOCX Editor | Syncfusion
+description: Text format properties in Vue DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 control: Text format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in Vue Document editor component
+# Text Format in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

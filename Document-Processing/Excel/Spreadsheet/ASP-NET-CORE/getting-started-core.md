@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with ASP.NET Core Spreadsheet Control | syncfusion
-description: Checkout and learn about getting started with ASP.NET Core Spreadsheet control of Syncfusion Spreadsheet Editor SDK and more details.
+title: Getting Started with ASP.NET Core Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET Core Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: ASP.NET Core Spreadsheet
 documentation: ug
 ---
 
 
-# Getting Started with ASP.NET Core Spreadsheet Control
+# Getting Started with ASP.NET Core Spreadsheet
 
 This section briefly explains how to include [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) control in your ASP.NET Core application using Visual Studio.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in React DOCX Editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Format in React DOCX Editor | Syncfusion
+description: Text format properties in React DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 control: Text format 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in React Document Editor component
+# Text Format in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

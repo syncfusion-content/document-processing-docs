@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with TypeScript Spreadsheet control | Syncfusion
-description:  Check out and learn about getting started with the Syncfusion TypeScript Spreadsheet control in the Spreadsheet Editor SDK and more details.
+title: Getting Started with TypeScript Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion TypeScript Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
 ---
 
-# Getting Started with the TypeScript Spreadsheet Editor
+# Getting Started with the TypeScript Spreadsheet 
 
 This section explains how to create a TypeScript application and add the [TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) with the minimum required configuration.
 

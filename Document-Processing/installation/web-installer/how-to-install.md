@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion Document SDK web installer - Syncfusion
-description: Learn here about how to install the Syncfusion Document SDK web installer after downloading it from our Syncfusion website.
+title: How to install Document Solutions Web installer | Syncfusion
+description: Learn here about how to install the Syncfusion Document Processing web installer after downloading it from our Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> Document SDK Web Installer
+# How to install Document Solutions Web installer
 
 
 ## Overview

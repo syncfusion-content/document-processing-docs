@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Vue 2 Spreadsheet component | Syncfusion
-description: Check out and learn about getting started with the Syncfusion Vue Spreadsheet component in the Spreadsheet Editor SDK and more details.
+title: Getting Started with Vue Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Spreadsheet component in a Vue 2 application. Explore setup, features, and examples
 control: Getting started
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the Vue Spreadsheet Component in Vue 2
+# Getting Started with Vue Spreadsheet
 
 This article provides a step-by-step guide for setting up a Vue 2 project and integrating the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor).
 

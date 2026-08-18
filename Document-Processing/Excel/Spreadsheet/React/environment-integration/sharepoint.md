@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion React Spreadsheet in SharePoint
-description: Check out and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a SharePoint web part.
+title: Getting Started with React Spreadsheet in SharePoint | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in SharePoint Framework applications. Explore setup and examples.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet in SharePoint Framework (SPFx)
+# Getting Started with React Spreadsheet in SharePoint
 
 This article provides a step-by-step guide for setting up a SharePoint project and integrating the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component.
 

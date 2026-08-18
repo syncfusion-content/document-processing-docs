@@ -1,12 +1,12 @@
 ---
-title: Word document to PDF Conversion in Linux Docker | DocIO | Syncfusion
-description: This section illustrates how to convert Word document to PDF using the .NET Word library (Essential DocIO) in Linux Docker
+title: Word document to PDF Conversion in .NET Word | Syncfusion
+description: Learn about the limitations in Word to PDF conversion in C# using the .NET Word library for effective application.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Essential<sup>&reg;</sup> DocIO in Docker
+# Word document to PDF Conversion in .NET Word
 
 Docker is an open platform for developing, shipping and running applications. You can use Essential<sup>&reg;</sup> DocIO in a Docker container to create, read, write, and convert Microsoft Word documents into various formats. From this page, you can learn how to convert a Word document to PDF in a Linux Docker container using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (Essential<sup>&reg;</sup> DocIO). 
 

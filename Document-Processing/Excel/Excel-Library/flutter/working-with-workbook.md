@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Workbook of Syncfusion Flutter XlsIO
-description: Learn how to save the created workbook using different ways and close the workbook using Syncfusion Flutter XlsIO.
+title: Workbook in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users save Excel workbooks in supported formats and close them after processing.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Workbook
+# Workbook in Flutter Excel Library
 
 ## Saving a Excel workbook to file system
 

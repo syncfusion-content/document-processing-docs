@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in Syncfusion DOCX Editor Component
-description: Learn here all about notes in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in ASP.NET Core DOCX Editor | Syncfusion
+description: The footnote and endnote support in ASP.NET Core DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
 
-# Insert footnotes and endnotes
+# Footnotes and Endnotes in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the in-built toolbar.
 

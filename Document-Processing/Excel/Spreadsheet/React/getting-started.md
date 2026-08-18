@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with React Spreadsheet component | Syncfusion
-description:  Check out and learn about getting started with the React Spreadsheet component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with React Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet Component
+# Getting Started with React Spreadsheet
 
 This section explains how to create a simple React application and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup.
 

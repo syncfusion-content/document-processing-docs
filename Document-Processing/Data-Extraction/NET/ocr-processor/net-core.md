@@ -1,13 +1,13 @@
 ---
-title: Perform OCR on PDF and image files in ASP.NET Core | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images with different tesseract versions in ASP.NET Core using Syncfusion .NET OCR library.
+title: Getting Started with ASP.NET Core OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion ASP .NET Core OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
 
-# Perform OCR in ASP.NET Core
+# Getting Started with ASP.NET Core OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in ASP.NET Core applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 
