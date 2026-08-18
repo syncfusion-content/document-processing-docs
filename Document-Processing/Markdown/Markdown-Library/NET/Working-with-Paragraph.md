@@ -606,7 +606,7 @@ markdownDocument.Dispose()
 
 {% endtabs %}
 
-A complete working sample is available on [GitHub](http://help.syncfusion.com/document-processing/markdown/markdown-library/net/working-with-paragraph#link-with-screen-tip).
+A complete working sample is available on [GitHub](https://github.com/SyncfusionExamples/Markdown-Examples/tree/master/Paragraphs/Add-hyperlink-screentip).
 
 ### Applying formatting for the display text
 

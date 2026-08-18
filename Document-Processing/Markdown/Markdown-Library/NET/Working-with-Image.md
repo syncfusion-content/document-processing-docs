@@ -131,7 +131,7 @@ The following code example demonstrates how to add an image from a byte array.
  // Adds a new paragraph to the document
  MdParagraph paragraph = markdownDocument.AddParagraph();
  // Loads image bytes from file
- byte[] imageBytes = File.ReadAllBytes(Path.GetFullPath(@"../../Data/Adventure Cycle.png"));
+ byte[] imageBytes = File.ReadAllBytes(Path.GetFullPath(@"Data/Adventure Cycle.png"));
  // Creates a new picture instance
  MdPicture image = new MdPicture();
  // Adds the image to the paragraph
@@ -152,7 +152,7 @@ Dim markdownDocument As New MarkdownDocument()
 ' Adds a new paragraph to the document
 Dim paragraph As MdParagraph = markdownDocument.AddParagraph()
 ' Loads image bytes from file
-Dim imageBytes() As Byte = File.ReadAllBytes(Path.GetFullPath("../../Data/Adventure Cycle.png"))
+Dim imageBytes() As Byte = File.ReadAllBytes(Path.GetFullPath(@"Data/Adventure Cycle.png"))
 ' Creates a new picture instance
 Dim image As New MdPicture()
 ' Adds the image to the paragraph

@@ -1,6 +1,6 @@
 ---
-title: Create Markdown Documents in Blazor | Syncfusion
-description: Learn how to create Markdown documents programmatically in Blazor applications using Syncfusion<sup>&reg;</sup> .NET Markdown library.
+title: Create Markdown document in Blazor | Syncfusion
+description: Create Markdown documents without external dependencies in Blazor applications using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in Blazor**.
 
 ## Blazor Web App (Server)
 
@@ -113,7 +113,7 @@ using System.IO;
 
 Step 7: Implement the `CreateMarkdown` method in `MarkdownService.cs`.
 
-Create a new `MemoryStream` method named `CreateMarkdown` in the `MarkdownService` class, and include the following code snippet to **create a simple Markdown document in Blazor** Web App Server:
+Create a new method named `CreateMarkdown` in the `MarkdownService` class that returns a `MemoryStream`, and include the following code snippet to **create a simple Markdown document in Blazor** Web App Server:
 
 {% tabs %}
 
@@ -350,7 +350,7 @@ Add the following code to create a new button that triggers document creation:
 
 Step 5: Implement `CreateMarkdown` method in `Markdown.razor`.
 
-Create a new `async` method named `CreateMarkdown` and include the following code snippet to **create a Markdown document in the Blazor** WASM Standalone app.
+Create a new `async` method named `CreateMarkdown` and include the following code snippet to **create a Markdown document in a Blazor** WASM Standalone app.
 
 {% tabs %}
 
@@ -518,3 +518,4 @@ By executing the program, you will get the **Markdown document** as follows.
 
 N> While the Markdown library functions in WASM Standalone, server-side deployment is recommended. Running the Markdown library client-side in WASM Standalone increases the application payload size because the library assemblies are downloaded to the browser.
 
+Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown Library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.

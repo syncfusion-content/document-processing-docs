@@ -110,7 +110,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Set Author and Date 
 
-Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default author is "Author" and the default date/time is the current time. The following sample uses an overload of the [`Compare`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) method that accepts an author and date.
+Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default author is "Author" and the default date/time is the current time. The following sample uses an overload of the [`Compare`](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Compare_Syncfusion_DocIO_DLS_WordDocument_System_String_System_DateTime_Syncfusion_DocIO_DLS_ComparisonOptions_) method that accepts an author and date.
 
 The following code example shows how to set the author and date for revision while comparing two Word documents.
 

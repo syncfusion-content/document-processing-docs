@@ -8,7 +8,7 @@ documentation: UG
 
 # Create Markdown documents in ASP.NET Core
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a `.NET Core Markdown library` used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET Core**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> Markdown is a [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) used to create, read, and edit **Markdown** documents programmatically without external dependencies. Using this library, you can **create a Markdown document in ASP.NET Core**.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ Step 3: Include the following namespaces in the HomeController.cs file.
 
 {% highlight c# tabtitle="C#" %}
 
-using Syncfusion.Markdown;
+using Syncfusion.Office.Markdown;
 using System.IO;
 
 {% endhighlight %}
@@ -156,3 +156,5 @@ N> The code sample references an image file (`photo.jpg`). Download this asset f
 By executing the program, you will get the **Markdown document** as follows.
 
 ![ASP.Net Core output Markdown document](GettingStarted_images/GettingStarted_Output1.png)
+
+N> Looking for the full .NET Markdown Library overview, features, pricing, and documentation? Visit the [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) page.
