@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open Dropbox Files in JavaScript (ES5) Document Editor | Syncfusion
+title: Open Documents from Dropbox in JavaScript DOCX Editor | Syncfusion
 description: Learn about how to Open document from Dropbox cloud file storage in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Dropbox cloud file storage in JavaScript (ES5) Document editor
+# Open Documents from Dropbox in JavaScript DOCX Editor
 
-To load a document from Dropbox cloud file storage in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below
+To load a document from Dropbox cloud file storage in a [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Create a Dropbox API
+**Step 1:** Create a Dropbox API app
 
-To create a Dropbox API App, you should follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
+To create a Dropbox API App, you can follow the official Dropbox documentation [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-**Step 2:** Create a Simple Document Editor Sample in JavaScript
+**Step 2:** Create a simple Document Editor sample in JavaScript
 
 Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
 
-**Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
 
@@ -34,7 +34,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -63,9 +63,9 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 
 public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> jsonObject)
 {
-    if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+    if (jsonObject == null || !jsonObject.ContainsKey("documentName"))
     {
-      return null
+      return null;
     }
     MemoryStream stream = new MemoryStream();
         
@@ -85,7 +85,7 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 } 
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -103,9 +103,9 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:** Modify the index file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#open) method.
+On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#open) method.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
