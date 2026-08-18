@@ -26,7 +26,7 @@ N> The **Minimum** and **EN16931** conformance levels are only supported in **Zu
 N> The **XRechnung** conformance level is only supported in **Factur-X**. 
 N> A **PDF/A-3** file contains embedded XML data, making the invoice both **human-readable (PDF)** and **machine-readable (XML)** within the same document.  
 
-The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html#fields) Enum. 
+The ZUGFeRD invoice document can be created by specifying the conformance level as ``Pdf_A3B`` through [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) Enum when creating the new PDF document and set the [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *Basic* in [ZugferdConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum. 
 
 {% tabs %} 
 
@@ -62,7 +62,7 @@ document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
 
 {% endtabs %}  
 
-Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html#fields) Enum. By default, ZugferdVersion1.0 used. 
+Using PDF/A-3b conformance, you can create a ZUGFeRD invoice PDF by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as *ZugferdVersion2_0* of [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum. By default, ZugferdVersion1.0 used. 
 
 {% tabs %} 
 
@@ -155,7 +155,7 @@ N> 2. **ZUGFeRD 2.0**: The file name should be "zugferd-invoice.xml".
 N> 3. **ZUGFeRD 2.1 and later / Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
 N> ZUGFeRD 2.1 and later and Factur-X are technically identical and interchangeable standards. "ZUGFeRD" is the term more commonly used in German-speaking regions, whereas "Factur-X" is preferred in France and internationally.
 
-Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdConformanceLevel) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html#fields) Enum.
+Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum.
 
 {% tabs %} 
 
