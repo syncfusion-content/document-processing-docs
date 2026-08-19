@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export in JavaScript DOCX Editor | Syncfusion
+title: Server-side Export in JavaScript DOCX Editor | Syncfusion
 description: The export feature in JavaScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Server side export 
