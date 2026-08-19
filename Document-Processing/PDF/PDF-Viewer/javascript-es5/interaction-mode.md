@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Interaction mode in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Interaction Mode in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Switch between selection mode and panning mode in the JavaScript (ES5) PDF Viewer to control how users interact with PDF pages and content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Interaction mode in JavaScript PDF Viewer control
+# Interaction Mode in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides interaction modes to control how users interact with the loaded PDF document. Two primary interaction modes are available: selection mode and panning mode.
 
@@ -76,13 +76,13 @@ In this mode, the panning and scrolling of the pages by touch can be performed i
 
 ![Alt text](./images/pan.png)
 
-You can switch the interaction mode of PDF Viewer by using the following code snippet.,
+You can switch the interaction mode of PDF Viewer by using the following code snippet.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    interactionMode: 'Pan'
+                    interactionMode: 'Pan',
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.LinkAnnotation,ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation, ej.pdfviewer.Print);
@@ -92,7 +92,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% highlight js tabtitle="Server-Backed" %}
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-                    interactionMode: 'Pan'
+                    interactionMode: 'Pan',
                     documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
                     serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
                 });

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Retrieve filtered row data in React Spreadsheet component | Syncfusion
-description: Learn here all about getting filtered row data in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Retrieve Filtered Row Data in React Spreadsheet | Syncfusion
+description: Learn how to retrieve filtered row data from the Syncfusion React Spreadsheet component after applying filters.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Get filtered row data in React Spreadsheet
+# How to Retrieve Filtered Row Data in React Spreadsheet
 
 Filtering in the Spreadsheet allows you to display only the rows that match your criteria, hiding all others. You can enable filtering by setting the [allowFiltering](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowfiltering) property, and apply filters either through the UI or programmatically using the [applyFilter](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#applyfilter) method. To identify which rows are filtered, iterate through the sheet's row collection and check the `isFiltered` property of each row object. This flag indicates whether a row is currently hidden due to filtering.
 

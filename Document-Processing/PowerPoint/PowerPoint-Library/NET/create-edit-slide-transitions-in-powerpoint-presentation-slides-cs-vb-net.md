@@ -1,13 +1,13 @@
 ---
-title: Add and edit transitions in PowerPoint slides | Syncfusion |
-description: Code examples to create and edit PowerPoint slide transitions in .NET, C#, web, ASP.NET, UWP, MVC, Xamarin and .NET Core
+title: Slide Transitions in .NET PowerPoint Presentation | Syncfusion
+description: Add and customize slide transition effects in PowerPoint presentations using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, format-table, pptx, transitions
 ---
 
-# Add and edit transitions in PowerPoint slides
+# Slide Transitions in .NET PowerPoint Presentation
 
 Slide transitions are the motion effects that occur when you move from one slide to the next during a slide show presentation. A transition can be as simple as a Push transition that moves to the next slide, or as eye-catching as an Airplane transition that animates the next slide in. You can control the speed, add sound, and customize the properties of transition effects. Transition effects can be grouped into three categories.
 

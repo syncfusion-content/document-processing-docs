@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable optimized text measuring in Vue Document editor component | Syncfusion
-description: Learn here all about Disable optimized text measuring in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Disable Optimized Text Measuring in Vue DOCX Editor | Syncfusion
+description: Disable optimized text measuring in Syncfusion® Vue DOCX Editor to retain document pagination behavior and maintain layout consistency.
 control: Disable optimized text measuring 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Disable optimized text measuring in Vue Document editor component
+# How to Disable Optimized Text Measuring in Vue DOCX Editor
 
 Starting from v19.3.0.x, the accuracy of text size measurements in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API [`enableOptimizedTextMeasuring`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#enableoptimizedtextmeasuring) in Document editor settings.  
 

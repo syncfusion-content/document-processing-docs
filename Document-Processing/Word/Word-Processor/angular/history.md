@@ -1,14 +1,14 @@
 ---
 layout: post
-title: History in Angular DOCX Editor component | Syncfusion
-description: Learn here all about History in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: History in Angular DOCX Editor | Syncfusion
+description: History in Angular DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
 control: History 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# History in Angular Document Editor component
+# History in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
@@ -56,7 +56,7 @@ To redo the last undone action, refer to the following code example.
 this.documentEditor.editorHistory.redo();
 ```
 
-## Stack Size
+## Stack size
 
 History of editing actions is maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 

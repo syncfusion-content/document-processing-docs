@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fields in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Fields in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Fields in TypeScript DOCX Editor | Syncfusion
+description: Fields in TypeScript DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: Fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in JavaScript (ES6) Document Editor control
+# Fields in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) has preservation support for all types of fields in an existing Word document without any data loss.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with React DOCX Editor component | Syncfusion
-description: Learn how to create a DOCX Editor in a React application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+title: Getting started with React DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion React DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Getting started 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React DOCX Editor
+# Getting Started with React DOCX Editor
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a React application.
 
@@ -110,39 +110,28 @@ The output will appear as follows:
 
 ## Prerequisites
 
-{% tabcontents %}
-{% tabcontent TypeScript %}
 * [System requirements for React components](https://ej2.syncfusion.com/react/documentation/system-requirement)
 * [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
-{% endtabcontent %}
-
-{% tabcontent JavaScript %}
-* [System requirements for DOCX Editor](https://ej2.syncfusion.com/react/documentation/system-requirement)
-* [Browser Compatibility](https://ej2.syncfusion.com/react/documentation/browser)
-{% endtabcontent %}
-{% endtabcontents %}
 
 ## Create a new React application
 
-{% tabcontents %}
-{% tabcontent TypeScript %}
-To set up a React application in a TypeScript environment, run the following commands:
+To set up a React application, run the following commands:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="TypeScript" %}
+
 npm create vite@latest documenteditor-app -- --template react-ts
 cd documenteditor-app
-```
-{% endtabcontent %}
 
-{% tabcontent JavaScript %}
-To set up a React application in a JavaScript environment, run the following commands:
+{% endhighlight %}
 
-```bash
+{% highlight bash tabtitle="JavaScript" %}
+
 npm create vite@latest documenteditor-app -- --template react
 cd documenteditor-app
-```
-{% endtabcontent %}
-{% endtabcontents %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Install the React DOCX Editor npm package
 
@@ -186,12 +175,10 @@ N> This example uses the `Tailwind 3` theme. To use a different built-in theme, 
 
 ## Initialize the DOCX Editor
 
-{% tabcontents %}
-{% tabcontent TypeScript %}
-Add the DOCX Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
+Add the DOCX Editor component to your application. Add the following code to initialize the component:
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight ts tabtitle="TypeScript (App.tsx)" %}
 
 import * as React from 'react';
 import {
@@ -216,14 +203,8 @@ function App() {
 export default App;
 
 {% endhighlight %}
-{% endtabs %}
-{% endtabcontent %}
 
-{% tabcontent JavaScript %}
-Add the DOCX Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight js tabtitle="JavaScript (App.jsx)" %}
 
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
 
@@ -245,8 +226,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-{% endtabcontent %}
-{% endtabcontents %}
 
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
@@ -262,15 +241,15 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of React DOCX Editor](./images/react_getting_started.png)
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can also explore the DOCX Editor interactively using the live sample below.
         
 {% previewsample "/document-processing/code-snippet/document-editor/react/base-cs3" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started).
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 ## Online Demo
 

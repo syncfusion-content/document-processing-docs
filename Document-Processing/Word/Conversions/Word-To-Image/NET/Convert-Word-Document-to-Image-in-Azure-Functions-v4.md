@@ -1,12 +1,12 @@
 ---
-title: Convert Word to Image in Azure Functions v4 | Syncfusion
-description: Convert Word to image in Azure Functions v4 using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in Azure Functions v4  | Syncfusion
+description: Convert Word to image in Azure Functions v4 using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in Azure Functions v4
+# Convert Word to Image in Azure Functions v4 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to an image in Azure Functions v4**.
 

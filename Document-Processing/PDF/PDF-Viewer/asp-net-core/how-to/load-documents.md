@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load documents dynamically in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion ASP.NET Core PDF Viewer using the load method.
+title: How to Load Documents Dynamically in ASP.NET Core PDF | Syncfusion
+description: Load or switch PDF documents dynamically in the ASP.NET Core PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load documents dynamically in the ASP.NET Core PDF Viewer
+# How to Load Documents Dynamically in ASP.NET Core PDF Viewer
 
 Switch between PDF documents or replace the currently displayed document after the PDF Viewer is rendered. The **load()** method enables dynamic document loading using either a Base64 string or a file path.
 

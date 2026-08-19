@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Organize UI Interactions in ASP.NET Core Viewer | Syncfusion
-description: Discover UI interactions for organizing PDF pages in ASP.NET Core Viewer—rotate, reorder, insert, delete, and copy pages easily.
+title: Ui Interactions in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the ui interactions in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# UI Interactions for Organizing Pages in ASP.NET Core PDF Viewer
+# Ui Interactions in ASP.NET Core PDF Viewer
 
 The PDF Viewer provides an intuitive interface for organizing pages with the following UI interactions.
 

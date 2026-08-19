@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to AWS S3 in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about how to save a document to AWS S3 in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Save Documents to AWS S3 in TypeScript DOCX Editor | Syncfusion
+description: Save documents to AWS S3 from TypeScript DOCX Editor, enabling cloud storage integration and secure document management.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to AWS S3 in JavaScript (ES6) DOCX Editor
+# Save Documents to AWS S3 in TypeScript DOCX Editor
 
 To save a document to AWS S3, follow the steps below.
 

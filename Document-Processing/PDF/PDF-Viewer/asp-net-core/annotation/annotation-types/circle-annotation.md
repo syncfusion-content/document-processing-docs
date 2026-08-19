@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Circle Annotation (Shape) in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Circle annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Circle Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Circle annotations in the ASP.NET Core PDF Viewer for marking, highlighting, or measuring areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Circle Annotation (Shape) in ASP.NET Core PDF Viewer
+# Circle Annotation in ASP.NET Core PDF Viewer
 Circle annotations let users highlight circular regions or draw emphasis bubbles on PDFs for reviews and markups. You can add circles from the toolbar, switch to circle mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Circle overview](../../../javascript-es6/annotations/annotation-images/circle-annot.png)

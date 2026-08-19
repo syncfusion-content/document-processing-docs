@@ -1,11 +1,11 @@
 ---
-title: Working with Macros in Word document | DocIO | Syncfusion
-description: Learn how to load and save a macro-enabled Word document and remove macros from a Word document using the .NET Word (DocIO) library.
+title: Macros in Word document in .NET Word | Syncfusion
+description: Learn how to load and save a macro-enabled Word document and remove macros from a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Macros in Word document
+# Macros in Word document in .NET Word
 
 A macro is a way to automate the tasks that you perform repeatedly. It is a saved sequence of commands or keyboard strokes that can be recalled with a single command or keyboard stroke. 
 

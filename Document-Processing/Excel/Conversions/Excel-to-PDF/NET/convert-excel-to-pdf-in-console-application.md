@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to PDF in Console Application | Syncfusion
-description: Convert Excel to PDF in a Console application using Syncfusion .NET Core Excel library (XlsIO) without Microsoft Excel.
+title: Excel to PDF conversion in Console Apps | Syncfusion
+description: Console Application Excel to PDF section explains how to convert Excel files to PDF in console applications without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel to PDF in Console application
+# Excel to PDF Conversion in Console Applications using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 
@@ -132,7 +132,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel document to PDF using .NET Core is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/ConvertExcelToPDF">this GitHub page</a>.
+A complete working example of how to convert an Excel document to PDF using .NET Core is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET/ConvertExcelToPDF" aria-label="GitHub demo link">this GitHub page</a>.
 
 By executing the program, you will get the **PDF document** as shown below.
 
@@ -197,7 +197,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabcontents %}
 
-A complete working example of how to convert an Excel document to PDF using .NET Framework is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/ConvertExcelToPDF">this GitHub page</a>.
+A complete working example of how to convert an Excel document to PDF using .NET Framework is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Console/.NET%20Framework/ConvertExcelToPDF" aria-label="GitHub demo link">this GitHub page</a>.
 
 By executing the program, you will get the **PDF document** as shown below.
 

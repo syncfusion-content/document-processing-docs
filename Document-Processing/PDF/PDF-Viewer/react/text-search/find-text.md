@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Find Text in React PDF Viewer component | Syncfusion
-description: Learn how to configure text search using find text and run programmatic searches in the Syncfusion React PDF Viewer.
+title: Find Text in React PDF Viewer | Syncfusion
+description: Configure text search in the React PDF Viewer and run programmatic searches to find and highlight matching text inside a PDF document.
 platform: document-processing
 control: Text search
 documentation: ug

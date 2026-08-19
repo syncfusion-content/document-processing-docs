@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Delete in React Spreadsheet component | Syncfusion
-description: Learn here all about how to delete in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Delete in React Spreadsheet | Syncfusion
+description: Learn about deleting rows, columns, cells, and worksheet content in the Syncfusion React Spreadsheet component.
 control: Rows and Columns 
 platform: document-processing
 documentation: ug

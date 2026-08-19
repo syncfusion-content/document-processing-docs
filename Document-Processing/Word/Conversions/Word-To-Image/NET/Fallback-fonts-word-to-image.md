@@ -1,12 +1,12 @@
 ---
-title: Fallback fonts in Word to Image conversion in C# | DocIO | Syncfusion
-description: Learn about how to specify fallback fonts during Word to image conversion using the .NET Word (DocIO) library.
+title: Fallback fonts in Word to Image conversion in .NET Word | Syncfusion
+description: Describe how to configure fallback fonts during Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Fallback fonts in Word to Image conversion
+# Fallback fonts in Word to Image conversion in .NET Word
 
 During Word to image conversions, if a glyph of the input text is unavailable in the specified font, the text may not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 

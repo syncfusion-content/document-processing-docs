@@ -149,7 +149,7 @@ IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the first shape of the slide
-IShape shape = slide.Shapes[0];
+IShape shape = slide.Shapes[0] as IShape;
 //Sets the shape name
 shape.ShapeName = "Shape1";
 //Retrieves the line format of the shape
@@ -178,7 +178,7 @@ IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide of the Presentation
 ISlide slide = pptxDoc.Slides[0];
 //Gets the first shape of the slide
-IShape shape = slide.Shapes[0];
+IShape shape = slide.Shapes[0] as IShape;
 //Sets the shape name
 shape.ShapeName = "Shape1";
 //Retrieves the line format of the shape

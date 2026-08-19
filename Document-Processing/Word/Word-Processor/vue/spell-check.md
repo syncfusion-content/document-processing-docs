@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell check in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in Vue DOCX Editor | Syncfusion
+description: The spell check feature in VueDOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 control: Spell check 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in Vue Document Editor component
+# Spell Check in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 

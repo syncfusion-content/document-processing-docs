@@ -1,13 +1,13 @@
 ---
-title: Create or Generate PDF document in ASP.NET Core Web API | Syncfusion
-description: Learn how to create a PDF document in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF library without depending on Adobe
+title: Getting Started with .NET PDF in ASP.NET Core Web API | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in ASP.NET Core Web API. Create PDF documents without Adobe dependencies
 platform: document-processing
 control: PDF
 documentation: ug
 keywords: pdf, aspnet core, web api, csharp
 ---
 
-# Create or Generate PDF document in ASP.NET Core Web API
+# Getting Started with .NET PDF Library in ASP.NET Core Web API
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF documents.
 

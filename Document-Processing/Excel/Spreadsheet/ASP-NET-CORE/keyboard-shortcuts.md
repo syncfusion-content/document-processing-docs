@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Keyboard Shortcuts in ASP.NET Core Spreadsheet | Syncfusion
-description: Learn about Keyboard Shortcuts in ASP.NET Core Spreadsheet Control of Syncfusion Essential JS 2 and more.
+description: Learn about keyboard shortcuts in the Syncfusion ASP.NET Core Spreadsheet control for efficient navigation and editing.
 platform: document-processing
 control: Keyboard Shortcuts
 documentation: ug
 ---
 
 
-# Keyboard Shortcuts and Navigation in ASP.NET Core Spreadsheet Control
+# Keyboard Shortcuts and Navigation in ASP.NET Core Spreadsheet
 
 The following keyboard shortcuts are supported in the Spreadsheet:
 

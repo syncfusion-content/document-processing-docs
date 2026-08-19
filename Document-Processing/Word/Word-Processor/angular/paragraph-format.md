@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Paragraph format in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Paragraph format in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Paragraph Format in Angular DOCX Editor | Syncfusion
+description: The paragraph format feature in Angular DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: Paragraph format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paragraph format in Angular Document Editor component
+# Paragraph Format in Angular DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
@@ -87,7 +87,7 @@ this.documentEditor.selection.paragraphFormat.spaceBeforeAuto = true;
 this.documentEditor.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
-N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N> If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
 ## Paragraph border
 

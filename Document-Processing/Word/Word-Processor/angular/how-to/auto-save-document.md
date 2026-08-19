@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto Save to Server in Angular DOCX Editor | Syncfusion
-description: Learn how to auto save documents in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Auto Save Document in Angular DOCX Editor | Syncfusion
+description: Automatically save edited documents to the server at regular intervals in Syncfusion® Angular DOCX Editor to prevent data loss.
 platform: document-processing
 control: Auto save document in document editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save document in Angular Document editor component
+# How to Auto Save Document in Angular DOCX Editor
 
 In this article, we are going to see how to auto save the document to the server. You can automatically save the edited content at regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 
@@ -107,9 +107,9 @@ public string AutoSave()
 }
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to automatically save Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/auto-save).
 
-## See Also
+## See also
 * [Auto Save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

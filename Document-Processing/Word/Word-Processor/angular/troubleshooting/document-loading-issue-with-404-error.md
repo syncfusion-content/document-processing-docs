@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Document loading issue in Angular DOCX Editor | Syncfusion
-description: Document loading may fail with a 404 error if the Angular Document Editor cannot reach a valid service URL.
+title: Document Loading Issue in Angular DOCX Editor | Syncfusion
+description: Troubleshoot the 404 error in Angular DOCX Editor by verifying the service URL configuration and ensuring the document service is accessible.
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Document loading issue with 404 error in Angular DOCX Editor
+# Document Loading Issue in Angular DOCX Editor
 
 If document loading fails and you see a 404 error in the browser console, the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) is unable to reach a valid Web Service endpoint.
 

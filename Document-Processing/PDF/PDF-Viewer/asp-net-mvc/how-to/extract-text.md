@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Use extractText in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Syncfusion ASP.NET MVC PDF Viewer to extract text and bounds from one or more pages.
+title: How to Use the ExtractText Method in ASP.NET MVC PDF | Syncfusion
+description: Use the extractText method in the ASP.NET MVC PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Extract text using extractText in the ASP.NET MVC PDF Viewer
+# How to Use the ExtractText Method in ASP.NET MVC PDF Viewer
 
 The `ExtractText` APIs let you retrieve text from one or more pages, returning either plain text or text with bounds for each element. Use them on the server or in the standalone viewer depending on your scenario.
 
-N>From Volume 2 2019 release Syncfusion.Pdf.Net.Core and Syncfusion.Compression.Net.Core packages are added as dependency for PDF Viewer control. Ensure the dependency packages are referred in your application properly.
+N> From the Volume 2 2019 release, the Syncfusion.Pdf.Net.Core and Syncfusion.Compression.Net.Core packages are added as dependencies for the PDF Viewer control. Ensure the dependency packages are referenced in your application properly.
 
 ## Extract text on the server (optional)
 

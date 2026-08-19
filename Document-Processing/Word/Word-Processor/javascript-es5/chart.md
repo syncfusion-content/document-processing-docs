@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chart in JavaScript (ES5) DOCX Editor Component | Syncfusion
-description: Learn here all about Chart in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Charts in JavaScript DOCX Editor | Syncfusion
+description: Chart support in JavaScript DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chart in JavaScript (ES5) Document Editor Component
+# Charts in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
 

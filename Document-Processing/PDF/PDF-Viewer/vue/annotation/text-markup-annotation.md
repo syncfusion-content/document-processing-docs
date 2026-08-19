@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text markup annotation in Vue PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion Vue PDF Viewer.
+title: Text Markup Annotation in Vue PDF Viewer | Syncfusion
+description: Use text markup annotations in the Vue PDF Viewer, including highlight, underline, strikethrough, and squiggly, to mark up important content.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Vue PDF Viewer
+# Text Markup Annotations in Vue PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
@@ -404,7 +404,7 @@ Example:
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -439,7 +439,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -484,7 +484,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -520,7 +520,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -582,7 +582,7 @@ There are two ways to underline text:
 
   ![Underline button in the annotation toolbar](../images/underline_button.png)
 
-In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
+In pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
 Refer to the following code snippet to switch to underline mode.
 
@@ -708,7 +708,7 @@ const documentLoad = () => {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -873,7 +873,7 @@ const pdfviewer = ref(null);
 const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
-provide('PdfViewer'[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
 
 const documentLoad = () => {
@@ -951,7 +951,7 @@ Example:
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -987,7 +987,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1032,7 +1032,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1068,7 +1068,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1500,7 +1500,7 @@ Here's an example of how you can use the **addAnnotation()** method to apply Str
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1537,7 +1537,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1583,7 +1583,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1619,7 +1619,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -2051,7 +2051,7 @@ Here's an example of how you can use the **addAnnotation()** method to apply Squ
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -2088,7 +2088,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -2134,7 +2134,7 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -2170,7 +2170,7 @@ const addAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+    <button v-on:click="addAnnotation">Add Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>

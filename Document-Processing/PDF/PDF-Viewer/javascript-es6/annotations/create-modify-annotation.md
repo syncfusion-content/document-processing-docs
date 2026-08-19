@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations
+# Create and Modify Annotations in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 
@@ -28,7 +28,7 @@ Shape annotations:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 Measurement annotations:
@@ -36,8 +36,8 @@ Measurement annotations:
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
 - Area: [Area annotation](./annotation-types/area-annotation)
-- Radius: [Radius annotation](./annotation-types/ra)
-- Volume: [Volume annotation](./annotation-types/vo)
+- Radius: [Radius annotation](./annotation-types/radius-annotation)
+- Volume: [Volume annotation](./annotation-types/volume-annotation)
 
 Other annotations:
 
@@ -137,14 +137,14 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)

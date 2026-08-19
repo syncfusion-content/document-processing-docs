@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction in mobile view in MVC PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the Syncfusion ASP.NET MVC PDF Viewer with a complete toolbar setup and redaction workflow.
+title: Mobile View in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the ASP.NET MVC PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in ASP.NET MVC PdfViewer Component
+# Organize Pages in Mobile View in ASP.NET MVC PDF Viewer
 
 The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the ASP.NET MVC PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 

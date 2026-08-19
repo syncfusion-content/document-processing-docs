@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported features in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about the unsupported features in Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: Unsupported Features in Blazor DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in Blazor DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in Blazor Document Editor Component
+# Unsupported Features in Blazor DOCX Editor
 
 This section describes the unsupported elements in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 

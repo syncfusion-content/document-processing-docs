@@ -1,14 +1,14 @@
 ---
-title: "how to enable ruler in document edior  | Syncfusion"
+title: How to Enable Ruler in Vue DOCX Editor | Syncfusion
 component: "DocumentEditor"
-description: "Learn how to enable ruler in Vue Document Editor component."
+description: Enable the ruler in Syncfusion® Vue DOCX Editor to set margins, tab stops, and paragraph indentations for precise document formatting.
 platform: document-processing
 control: Enable ruler
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable ruler in Vue Document Editor component
+# How to Enable Ruler in Vue DOCX Editor
 
 Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 

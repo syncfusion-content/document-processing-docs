@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Customize the context menu in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to add and customize custom context menu options in the Syncfusion ASP.NET MVC PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+title: How to Customize the Context Menu in ASP.NET MVC PDF | Syncfusion
+description: Add and customize context menu options in the ASP.NET MVC PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Customize the context menu in the ASP.NET MVC PDF Viewer
+# How to Customize the Context Menu in ASP.NET MVC PDF Viewer
 
 PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method. Define actions for custom items with the `customContextMenuSelect()` method.
 
@@ -170,7 +169,7 @@ Use the `customContextMenuBeforeOpen()` method to hide or show custom options dy
         }
     };
 
- function customContextMenuBeforeOpen(args) {
+    function customContextMenuBeforeOpen(args) {
         for (var i = 0; i < args.ids.length; i++) {
             var search = document.getElementById(args.ids[i]);
             var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];

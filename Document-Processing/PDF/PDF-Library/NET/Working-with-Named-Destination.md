@@ -1,11 +1,11 @@
 ---
-title: Working with Named Destinations | Syncfusion
-description: This section explains how to add, remove, and modify named destinations in PDF documents using the Syncfusion .NET PDF library.
+title: Named Destinations in .NET PDF Library | Syncfusion
+description: Learn how to add, remove, and modify named destinations in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Named Destinations
+# Named Destinations in .NET PDF Library
 
 Syncfusion<sup>&reg;</sup> PDF provides support to add, remove, and modify named destinations in a PDF document. When you open a PDF file in a web browser, the first page of the PDF file is shown by default. By adding a named destination, you can open the PDF at a specific location and magnification.
 

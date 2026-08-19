@@ -1,13 +1,13 @@
 ---
-title: Pages in JavaScript PDF Library | Syncfusion
+title: PDF Pages in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to add, rearrange, remove pages, and detect empty pages in a PDF file by using the JavaScript PDF Library
+description: Add, rearrange, remove, and manage pages in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Pages in JavaScript/TypeScript PDF Library
+# PDF Pages in JavaScript PDF
 
 The JavaScript PDF Library provides comprehensive support to add, remove, and rearrange pages in PDF documents, enabling complete control over page management for creating dynamic and customized PDFs.
 

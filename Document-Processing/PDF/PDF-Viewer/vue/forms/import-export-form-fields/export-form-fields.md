@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export form data in the Vue PDF Viewer | Syncfusion
-description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the Syncfusion Vue PDF Viewer.
+title: Export Form Fields in Vue PDF Viewer | Syncfusion
+description: Export PDF form field data from the Vue PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF Form Data from Vue PDF Viewer
+# Export Form Data in Vue PDF Viewer
 
 The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
 
@@ -65,7 +65,7 @@ export default {
   methods: {
     exportFdf() {
       const pdfviewer = this.$refs.pdfviewer.ej2Instances;
-      // Destination is optional; if omitted the browser will prompt.
+      // Destination is optional; if omitted, the browser prompts the user to save the file.
       pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Fdf);
     }
   }
@@ -220,7 +220,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+## Common use cases
 
 - Save user-entered data to your server without altering the original PDF.
 - Export as JSON for REST API integration.

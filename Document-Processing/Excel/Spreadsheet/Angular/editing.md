@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Editing in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Editing in Angular Spreadsheet | Syncfusion
+description: Editing in Angular Spreadsheet allows users to update cell values, formulas, and content efficiently for accurate data management.
 platform: document-processing
 control: Editing
 documentation: ug
 ---
 
-# Editing in Angular Spreadsheet component
+# Editing in Angular Spreadsheet 
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowediting) property to enable or disable the editing feature.
 
