@@ -33,19 +33,19 @@ Azure Services<br/></th><th>
 NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
-{{'[App Service (Windows)](https://help.syncfusion.com/document-processing/Markdown/Markdown-library/net/create-Markdown-document-in-azure-app-service-windows)' | markdownify}}<br/></td><td>
+{{'[App Service (Windows)](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-azure-app-service-windows)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/></td></tr>
 <tr>
 <td>
-{{'[App Service (Linux)](https://help.syncfusion.com/document-processing/Markdown/Markdown-library/net/create-Markdown-document-in-azure-app-service-linux)' | markdownify}}<br/></td><td>
+{{'[App Service (Linux)](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-azure-app-service-linux)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/></td></tr>
 <tr>
 <td>
-{{'[Azure Functions v1 (deprecated)](https://help.syncfusion.com/document-processing/Markdown/Markdown-library/net/create-Markdown-document-in-azure-functions-v1)' | markdownify}}<br/></td><td>
+{{'[Azure Functions v1 (deprecated)](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-azure-functions-v1)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/></td></tr>
 <tr>
 <td>
-{{'[Azure Functions v4](https://help.syncfusion.com/document-processing/Markdown/Markdown-library/net/create-Markdown-document-in-azure-functions-v4)' | markdownify}}<br/></td><td>
+{{'[Azure Functions v4](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-azure-functions-v4)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/></td></tr>
 <tr>
 <td>
