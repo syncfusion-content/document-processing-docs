@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Events in Angular PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Events in Angular PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the Angular PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -93,8 +93,8 @@ export class AppComponent implements OnInit {
   }
 
   onPageOrganizerSaveAs(args: PageOrganizerSaveAsEventArgs): void {
-    console.log('File Name is' + args.fileName);
-    console.log('Document data' + args.downloadDocument);
+    console.log('File Name is ' + args.fileName);
+    console.log('Document data ' + args.downloadDocument);
   }
 }
 
@@ -182,8 +182,8 @@ export class AppComponent implements OnInit {
   }
 
   onPageOrganizerZoomChanged(args: PageOrganizerZoomChangedEventArgs): void {
-    console.log('Previous Zoom Value is' + args.previousZoom);
-    console.log('Current Zoom Value is' + args.currentZoom);
+    console.log('Previous Zoom Value is ' + args.previousZoom);
+    console.log('Current Zoom Value is ' + args.currentZoom);
   }
 }
 
@@ -192,6 +192,6 @@ export class AppComponent implements OnInit {
 
 ## Related event documentation
 
-- Overall Viewer events: [Event](../event)
+- Overall Viewer events: [Event](../events)
 - Annotation events: [Annotation events](../annotation/annotation-event)
-- Form designer events: [Form field events](../form-designer/form-field-events)
+- Form designer events: [Form field events](../forms/form-field-events)

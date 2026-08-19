@@ -1,12 +1,12 @@
 ---
-title: Create or Generate a PDF file in WPF | Syncfusion
-description: Learn how to create or generate a PDF file in WPF with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in WPF | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in WPF and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Create or Generate a PDF file in WPF
+# Getting Started with .NET PDF Library in WPF
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files. 
 
@@ -24,7 +24,7 @@ N> The [Syncfusion.Pdf.Wpf](https://www.nuget.org/packages/Syncfusion.Pdf.Wpf/) 
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Register the Syncfusion<sup>&reg;</sup> license key in the *App.xaml.cs* file before any Syncfusion component is used, to remove the evaluation watermark. Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion account.
+Step 3: Register the Syncfusion<sup>&reg;</sup> license key in the *App.xaml.cs* file before any Syncfusion component is used, to remove the evaluation watermark. Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -49,7 +49,7 @@ namespace CreatePdfWpf
 {% endhighlight %}
 {% endtabs %}
 
-N> The license must be registered once during application startup, before instantiating any Syncfusion component (for example, before creating a `PdfDocument`).
+N> The license must be registered once during application startup, before instantiating any Syncfusion<sup>&reg;</sup> component (for example, before creating a `PdfDocument`).
 
 Step 4: Include the following namespaces in the *MainWindow.xaml.cs* file.
 

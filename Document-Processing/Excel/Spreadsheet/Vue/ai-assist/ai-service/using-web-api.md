@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Web API Server Setup in Vue Spreadsheet | Syncfusion
-description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion Vue Spreadsheet component.
+description: AI Assist Web API server setup in Vue Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug
@@ -17,7 +17,7 @@ Ensure the following are available before you begin.
 
 ### Azure OpenAI credentials
 
-You must have an Azure OpenAI resource. Collect the following values from the [Azure Portal](https://portal.azure.com):
+Create or have access to an Azure OpenAI resource. Collect the following values from the [Azure Portal](https://portal.azure.com):
 
 | Credential | Description |
 |---|---|
@@ -42,7 +42,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ## Install dependencies
 
-Run the following commands in your Web API project to install the required NuGet packages:
+After creating the Web API project, run the following commands to install the required NuGet packages:
 
 ```bash
 dotnet add package Azure.AI.OpenAI

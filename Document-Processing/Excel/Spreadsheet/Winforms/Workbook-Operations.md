@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workbook Operations in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn how to create, open, and save Excel workbooks, as well as how to display charts and sparklines in Syncfusion® Windows Forms Spreadsheet.
+description: Create new Excel workbooks, open existing files from different sources, and save changes efficiently in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -109,5 +109,3 @@ public Form1()
 ....
 {% endhighlight %}
 {% endtabs %}
-
-N> Looking for the full WinForms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.

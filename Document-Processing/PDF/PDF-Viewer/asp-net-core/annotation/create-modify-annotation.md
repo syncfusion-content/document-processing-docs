@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion ASP.NET Core PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the ASP.NET Core PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations in ASP.NET Core
+# Create and Modify Annotations in ASP.NET Core PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 
@@ -28,7 +28,7 @@ Shape annotations:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 Measurement annotations:
@@ -61,7 +61,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 Note:
 - When pan mode is active and a shape or stamp tool is selected, the viewer switches to text select mode automatically.
-- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing
+- Property pickers in the annotation toolbar let users choose color, stroke color, thickness, and opacity while drawing.
 
 ### Create programmatically
 

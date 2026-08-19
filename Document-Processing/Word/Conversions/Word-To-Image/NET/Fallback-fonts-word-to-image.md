@@ -1,12 +1,12 @@
 ---
-title: Fallback fonts in Word to Image conversion in C# | DocIO | Syncfusion
-description: Learn about how to specify fallback fonts during Word to image conversion using the .NET Word (DocIO) library.
+title: Fallback fonts in Word to Image conversion in .NET Word | Syncfusion
+description: Describe how to configure fallback fonts during Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Fallback fonts in Word to Image conversion
+# Fallback fonts in Word to Image conversion in .NET Word
 
 During Word to image conversions, if a glyph of the input text is unavailable in the specified font, the text may not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image.
 
@@ -584,7 +584,7 @@ Malgun Gothic, Batang
 </table>
 
 N> 1. In Azure Web Service and Azure APP Service, .NET GDI+ (System.Drawing) does not support the Metafile image (vector image). So, the image will be generated as Bitmap (raster image).
-N> 2. Creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word document to Image. Otherwise, the charts are not preserved in the generated image.
+N> 2. Creating an instance of the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) class is mandatory to convert the charts present in the Word document to Image. Otherwise, the charts are not preserved in the generated image.
 N> 3. Total number of images may vary based on unsupported elements in the input Word document.
 N> 4. Word to Image conversion has the same limitations and unsupported elements of Word to PDF conversion.
 N> 5. Different styles of borders are known limitations in Word to Image conversion in ASP.NET Core, Xamarin, Blazor, WinUI, and .NET MAUI platforms.

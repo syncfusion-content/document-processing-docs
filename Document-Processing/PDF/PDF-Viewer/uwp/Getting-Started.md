@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with UWP Pdf Viewer control | Syncfusion
-description: Learn here about getting started with Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control, its elements and more.
+description: Learn how to get started with the Syncfusion<sup>®</sup> UWP PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Getting Started with UWP PDF Viewer (SfPdfViewer)
+# Getting Started with UWP PDF Viewer
 This section briefly explains how to include the [Syncfusion® UWP PDF Viewer](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) component in UWP App using Visual Studio.
 
 ## Prerequisites
@@ -215,14 +215,16 @@ After adding the `SfPdfViewerControl`, you can load a PDF document using data bi
 
 
 
-3.  Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+3.Open the `MainPage.xaml` file again and add the namespace `PdfViewerExample` as local.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
         xmlns:local="using:PdfViewerExample"
     {% endhighlight %} 
     {% endtabs %}
 
-4.  Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+4.Set an instance of the `PdfReport` class as the `DataContext`. Bind the PDF viewer's [ItemSource] to the `DocumentStream` property of the `PdfReport` class.
+    
     {% tabs %}
     {% highlight xaml tabtitle="MainPage.xaml" %}
     <Page.DataContext>
@@ -249,4 +251,3 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 - [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-magnification)
 - [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
 - [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
-

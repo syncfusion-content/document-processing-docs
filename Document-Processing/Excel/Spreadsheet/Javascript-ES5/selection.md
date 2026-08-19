@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Selection in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Selection in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Selection in JavaScript Spreadsheet | Syncfusion
+description: Selection in JavaScript Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
-control: Selection 
+control: Selection
 documentation: ug
 ---
 
-# Selection in EJ2 Javascript Spreadsheet control
+# Selection in  JavaScript Spreadsheet 
 
-Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through Mouse, Touch, or Keyboard interaction. To enable selection, set `mode` as `Single` | `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
+Selection provides interactive support to highlight the cell, row, or column that you select. Selection can be done through mouse, touch, or keyboard interaction. To enable selection, set `mode` as `Single` or `Multiple` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectionsettings). If you set `mode` to `None`, it disables the UI selection.
 
-> * The default value for `mode` in  `selectionSettings` is `Multiple`.
+> * The default value for `mode` in `selectionSettings` is `Multiple`.
 
 You have the following options in Selection,
 
@@ -21,7 +21,7 @@ You have the following options in Selection,
 
 ## Cell selection
 
-Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#selectrange) method.
+Cell selection is used to select a single or multiple cells. It can be performed using the [`selectRange`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectrange) method.
 
 **User Interface**:
 
@@ -29,7 +29,7 @@ Cell selection is used to select a single or multiple cells. It can be performed
 * To select a range, select a cell, then use the left mouse button to select and drag over to other cells (or) use the `Shift + arrow` keys to select the range.
 * To select non-adjacent cells and cell ranges, hold `Ctrl` and select the cells.
 
-You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar, and also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
+You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar. You can also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
 
 ## Row selection
 
@@ -44,7 +44,7 @@ You can perform row selection in any of the following ways,
 * To select non-adjacent rows, hold `Ctrl` and select the row header.
 * You can also use the `selectRange` method for row selection.
 
-The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
+The following sample shows row selection in the spreadsheet. Here, the 5th row is selected using the `selectRange` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -70,7 +70,7 @@ You can perform column selection in any of the following ways,
 * To select non-adjacent columns, hold `Ctrl` and select the column header.
 * You can also use the `selectRange` method for row selection.
 
-The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
+The following sample shows column selection in the spreadsheet. Here, the 3rd column is selected using the `selectRange` method.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -85,7 +85,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 
 ## Get selected cell values
 
-You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#getdata) method.
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#getdata) method.
 
 Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
 
@@ -102,7 +102,7 @@ Below is a code example demonstrating how to retrieve the selected cell values a
 
 ## Remove Selection
 
-The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
+The following sample shows how to remove selection in the spreadsheet. Here, changing `mode` to `None` in [`selectionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#selectionsettings) disables the UI selection.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

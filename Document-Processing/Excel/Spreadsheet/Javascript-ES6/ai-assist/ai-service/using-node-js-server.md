@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Node.js Server Setup in TypeScript Spreadsheet | Syncfusion
-description: Learn how to set up and connect a Node.js + Express server for the AI Assist feature in the Syncfusion TypeScript Spreadsheet control.
+description: AI Assist Node.js server setup in TypeScript Spreadsheet explains how to configure and connect a Node.js and Express server for AI-powered features.
 platform: document-processing
 control: AI Assist Node.js Server Setup
 documentation: ug
@@ -171,7 +171,7 @@ http://localhost:3000/api/AIAssist/Chat
 
 ## Connect to the TypeScript Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}

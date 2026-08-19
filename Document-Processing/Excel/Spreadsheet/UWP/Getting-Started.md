@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with UWP Spreadsheet control | Syncfusion®
-description: Learn here about getting started with Syncfusion® UWP Spreadsheet (SfSpreadsheet) control, its elements and more.
+title: Getting Started with UWP Spreadsheet Control | Syncfusion®
+description: Learn how to get started with the Syncfusion UWP Spreadsheet control. Explore setup, workbook management, features, and customization options.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Getting Started with UWP Spreadsheet (SfSpreadsheet)
+# Getting Started with UWP Spreadsheet 
 
 This section briefly explains how to include the [UWP Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
 
@@ -149,7 +149,7 @@ N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="
 
    ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 
-3. Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
+3.Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
 
    **For Spreadsheet:**
 
@@ -177,7 +177,7 @@ N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="
 
    N> Assign a name (for example, `spreadsheet`) so you can reference the control from code-behind.
 
-4. Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
+4.Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
 
    **For Ribbon:**
 

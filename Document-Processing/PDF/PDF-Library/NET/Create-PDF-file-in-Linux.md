@@ -1,13 +1,13 @@
 ---
-title: Create PDF document on Linux | Syncfusion
-description: Create PDF document in .NET Core application on Linux using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat.
+title: Getting Started with .NET PDF Library on Linux | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library on Linux and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
 ---
 
-# Create PDF document on Linux
+# Getting Started with .NET PDF Library on Linux
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can create a PDF document in a .NET Core application on Linux.
 
@@ -62,8 +62,6 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% endhighlight %}
 {% endtabs %}
-
-Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as **Azure Key Vault**, **AWS Secrets Manager**, or a `appsettings.json` file that is excluded from source control. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 5: Include the following namespaces in the *Program.cs* file.
 

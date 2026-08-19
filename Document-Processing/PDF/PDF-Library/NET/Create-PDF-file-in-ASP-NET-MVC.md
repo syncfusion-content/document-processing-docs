@@ -1,12 +1,12 @@
 ---
-title: Create or Generate PDF file in ASP.NET MVC | Syncfusion
-description: Learn how to create or generate a PDF file in ASP.NET MVC with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in ASP.NET MVC | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in ASP.NET MVC. Create and customize PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: mvc create pdf, mvc generate pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, mvc generate pdf
 ---
-# Create or Generate PDF file in ASP.NET MVC
+# Getting Started with .NET PDF Library in ASP.NET MVC
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
@@ -14,9 +14,8 @@ To include the .NET PDF library into your ASP.NET MVC application, refer to the 
 
 ## Prerequisites
 
-* Visual Studio 2017 or later with the **ASP.NET and web development** workload.
-* .NET Framework 4.6.2 or later installed on the development machine and target server.
-* Basic familiarity with ASP.NET MVC 5.
+* Visual Studio 2017 or later.
+* .NET Framework 4.6.2 or later.
 
 ## Steps to create PDF document in ASP.NET MVC
 
@@ -36,7 +35,7 @@ Step 4: Install the [Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/
 
 ![Install PDF MVC NuGet package](MVC_images/NuGet-package.png)
 
-Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in the **Global.asax.cs** file before creating any Syncfusion component:
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in the **Global.asax.cs** file before creating any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -52,7 +51,7 @@ protected void Application_Start()
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For security, store the key in `Web.config` `<appSettings>` or in User Secrets rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 6: A default controller named `HomeController.cs` is added on creation of the ASP.NET MVC project. Include the following namespaces in that `HomeController.cs` file.
 

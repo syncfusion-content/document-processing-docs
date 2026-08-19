@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion Angular PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in Angular PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the Angular PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations in Angular PDF Viewer
+# Create and Modify Annotations in Angular PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 
@@ -26,15 +26,15 @@ Jump directly to a specific annotation type for detailed usage and examples:
 - Line: [Line annotation](./annotation-types/line-annotation)
 - Arrow: [Arrow annotation](./annotation-types/arrow-annotation)
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
-- Circle : [Circle annotation](./annotation-types/circle-annotation)
+- Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
 
 **Measurement annotations:**
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
 - Area: [Area annotation](./annotation-types/area-annotation)
-- Radius: [Radius annotation](./annotation-types/ra)
-- Volume: [Volume annotation](./annotation-types/vo)
+- Radius: [Radius annotation](./annotation-types/radius-annotation)
+- Volume: [Volume annotation](./annotation-types/volume-annotation)
 
 **Other annotations:**
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
@@ -62,7 +62,7 @@ N> Each annotation type page includes both UI steps and programmatic examples sp
 
 Creation patterns vary by type. Refer to the individual annotation pages for tailored code.
 
-Example: creating a Rectangle annotation using [`addAnnotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation).
+Example: creating a Redaction annotation using [`addAnnotation`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -74,7 +74,7 @@ import { PdfViewerModule, ToolbarService, AnnotationService } from '@syncfusion/
   imports: [PdfViewerModule],
   providers: [ToolbarService, AnnotationService],
   template: `
-    <button (click)="addRectangleAnnotation()">Add Redaction Annotation</button>
+    <button (click)="addRedactionAnnotation()">Add Redaction Annotation</button>
     <ejs-pdfviewer
       id="pdfViewer"
       [documentPath]="document"

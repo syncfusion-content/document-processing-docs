@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Import annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion Angular PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in Angular PDF Viewer | Syncfusion
+description: Import annotations into the Angular PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Import annotations in Angular PDF Viewer
+# Import Annotations in Angular PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically.
 The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
@@ -19,7 +20,7 @@ The Comments panel provides import options in its overflow menu:
 - Import annotations from JSON file
 - Import annotations from XFDF file
 
-Steps:
+Follow the steps to import annotations:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose the appropriate import option and select the file.

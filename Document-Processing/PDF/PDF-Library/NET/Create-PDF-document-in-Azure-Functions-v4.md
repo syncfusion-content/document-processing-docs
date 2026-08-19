@@ -1,12 +1,12 @@
 ---
-title: Create PDF document in Azure Functions v4 | Syncfusion
-description: Create PDF document in Azure Functions v4 using .NET PDF library without the dependency of Adobe Acrobat. 
+title: Getting Started with .NET PDF in Azure Functions v4 | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Azure Functions v4 and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create PDF document in Azure Functions v4
+# Getting Started with .NET PDF in Azure Functions v4
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure Functions v4**.
 
@@ -31,7 +31,7 @@ Step 3: Select function worker as **.NET 8.0(Long-term support)**.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_Images/Azure-Functions-V4/NuGet_package_reference.png)
 
-Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Function1.cs** before initializing any Syncfusion component:
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Function1.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -50,7 +50,7 @@ public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post"
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. For security, store the key in `local.settings.json` (local development) or in the Function App's **Configuration > Application settings** (Azure portal) rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 N> Add the sample image *AdventureCycle.jpg* as an embedded resource in the project so it can be loaded using `Assembly.GetManifestResourceStream` in the code sample.
 

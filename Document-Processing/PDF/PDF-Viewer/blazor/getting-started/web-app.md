@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor PDF Viewer Component | Syncfusion
-description: Learn how to get started with the SfPdfViewer control in a Blazor Web App to view, comment on, and fill PDF forms.
+title: Getting Started with Blazor Web App PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Web App PDF Viewer component. Explore view, comment on, and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the Blazor PDF Viewer in Web App
+# Getting Started with Blazor Web App PDF Viewer
 
 This section explains how to include the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -328,6 +328,12 @@ You can also experiment directly using the interactive playground below for a qu
 {% playground "https://blazorplayground.syncfusion.com/embed/hXhHtILIfHjHlTTE?appbar=true&editor=true&result=true&errorlist=true&theme=fluent2" %}
 
 N> For a hands-on reference with working code examples, explore the sample projects available on [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer2/NET10/PDFViewer2_WebAppServerMode). Looking for the full Blazor PDF Viewer component overview, features, pricing, and documentation? Visit the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) page.
+
+## Video tutorial
+
+To get started quickly with the Blazor PDF Viewer, you can watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=RNzFAXlGEHA" %}
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File Link Annotation in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn about File Link Annotation support in Syncfusion&reg; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: File Link Annotation in WPF Pdf Viewer | Syncfusion
+description: The file link annotation feature in WPF PDF Viewer lets users open external files directly from PDF documents by clicking embedded file link annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

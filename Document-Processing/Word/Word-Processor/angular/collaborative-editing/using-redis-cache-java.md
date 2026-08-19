@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Collaborative Editing in Angular with Redis in Java | Syncfusion
-description: Learn about collaborative editing in Syncfusion Angular Document editor control With Redis in Java of Syncfusion Essential JS 2 and more
+title: Collaborative Editing in Angular DOCX Editor using Java | Syncfusion
+description: The collaborative editing feature in Angular DOCX Editor supports real-time multi-user document editing using Redis with Java.
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in Angular with Redis in Java
+# Collaborative Editing in Angular DOCX Editor with Redis in Java
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+This feature allows multiple users to work on the same document simultaneously in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor)
+The following are needed to enable collaborative editing in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor)
 
 - `SockJS`
 - `Redis`
@@ -81,7 +81,7 @@ onConnected() {
         this.joinGroup(this.fileName);
     }
 }
-//Receive the remote action and apply to currenty document.
+//Receive the remote action and apply to current document.
 onMessageReceived = (data: any) => {
     var content = JSON.parse(data.body);
     if (content.payload.operations != null) {
@@ -126,7 +126,7 @@ joinGroup(documentName: any) {
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
 
 ```typescript
 onContentChange = (args: ContainerContentChangeEventArgs) => {
@@ -307,9 +307,9 @@ public String getActionsFromServer(@RequestBody ActionInfo param) throws ClassNo
 ## How to perform Scaling in Collaborative Editing.
 
 ### Role of Scaling in Collaborative editing
-As the number of users increases, collaborative application face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
+As the number of users increases, collaborative applications face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
 
-During scaling the users may connected to different servers, so collaborative editing application introduces a specific challenge like, updating the edit operations to all the users connected in different serves. To overcome this issue you need to use ``` Redis Cache pub/sub ``` for message relay(syncing the editing operations to the users connected to different server instance)
+During scaling, users may be connected to different servers, so collaborative editing applications introduce specific challenges, such as updating edit operations to all users connected to different server instances. To overcome this issue, you need to use ``` Redis Cache pub/sub ``` for message relay (syncing the editing operations to the users connected to different server instances).
 
 ### Use of Redis Pub/Sub in scaling environment
 Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple AWS services without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views. 

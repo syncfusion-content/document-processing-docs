@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Document Handling in Angular Pdfviewer component | Syncfusion
-description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in Syncfusion Angular Pdfviewer component.
+title: Load Large Pdf in Angular PDF Viewer | Syncfusion
+description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage sources, and load large PDF files efficiently in the Angular PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -21,7 +21,7 @@ The **Syncfusion PDF Viewer is fully optimized for these heavy workloads**, and 
 ### Viewer Capability Highlights
 - **Smooth performance for PDFs up to 1 GB**
 - **Supports viewing files up to ~2 GB**
-- **1 GB PDFs typically load within 5–6 seconds** 
+- **1 GB PDFs typically load within 5–6 seconds** (varies by system)
 - **Optimized incremental page loading** for faster interaction
 
 Performance may vary if the user’s system is heavily loaded or low on available RAM. In such cases, enabling the recommended optimizations below ensures maximum performance.
@@ -114,7 +114,7 @@ If thumbnails or page reordering are not essential:
 <Inject services={[Toolbar, Magnification, Navigation, Print]} />
 ```
 
-### 4. Enable Local Storage for Large PDFs With Many Form Fields or Annotations
+### 4. Enable Local Storage for Large PDFs with Many Form Fields or Annotations
 
 PDFs with a high number of:
 
@@ -130,7 +130,7 @@ require more storage for:
 
 Enabling local storage in the PDF Viewer can improve performance and smoothness when working with large files. This allows the viewer to cache document data locally, reducing repeated network requests and memory spikes.
 
-Use the [`enableLocalStorage`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in memory for the current session; when `false` (default), browser session storage is used.
+Use the [`enableLocalStorage`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, viewer data is persisted in the browser `localStorage`; when `false` (default), browser `sessionStorage` is used.
 
 **How the viewer stores this data by default**
 

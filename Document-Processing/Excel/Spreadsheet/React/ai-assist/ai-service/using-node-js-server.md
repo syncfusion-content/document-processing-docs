@@ -1,13 +1,13 @@
 ---
 layout: post
 title: AI Assist Node.js Server Setup in React Spreadsheet | Syncfusion
-description: Learn how to set up and connect a Node.js + Express server for the AI Assist feature in the Syncfusion React Spreadsheet component.
+description: AI Assist Node.js server setup in React Spreadsheet explains how to configure and connect a Node.js and Express server for AI-powered features.
 platform: document-processing
 control: AI Assist Node.js Server Setup
 documentation: ug
 ---
 
-# AI Assist — Node.js Server Setup
+# AI Assist — Node.js Server Setup in React Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 
@@ -42,7 +42,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ## Install dependencies
 
-Run the following command in your server project:
+Run the following command in the server project directory:
 
 ```bash
 npm install express cors dotenv openai date-fns
@@ -163,7 +163,7 @@ Run the following command to start the server:
 npm start
 ```
 
-The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
+The server runs on `http://localhost:3000`. Update the AI Assist endpoint as shown below:
 
 ```
 http://localhost:3000/api/AIAssist/Chat
@@ -171,7 +171,7 @@ http://localhost:3000/api/AIAssist/Chat
 
 ## Connect to the React Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% raw %}
 

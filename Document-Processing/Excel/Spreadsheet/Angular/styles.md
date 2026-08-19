@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Styles in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Styles in Angular Spreadsheet| Syncfusion
+description: Styles in Angular Spreadsheet enable users to customize cell appearance with fonts, colors, borders, and formatting options.
 platform: document-processing
-control: Styles 
+control: Styles
 documentation: ug
 ---
 
-# Styles in Angular Spreadsheet component
+# Styles in Angular Spreadsheet 
 
 To modify the spreadsheet appearance, you need to override the default CSS of the spreadsheet. Please find the CSS structure that can be used to modify the Spreadsheet appearance. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
@@ -149,7 +149,7 @@ Using this CSS, you can customize the Spreadsheet cell element.
 
 ### Customizing the Spreadsheet sorting icon
 
-Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons/#material) based on your theme.
+Use the below CSS to customize the Spreadsheet sorting icon in the Spreadsheet ribbon. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> [icons](https://ej2.syncfusion.com/documentation/appearance/icons#material) based on your theme.
 
 ```css
 

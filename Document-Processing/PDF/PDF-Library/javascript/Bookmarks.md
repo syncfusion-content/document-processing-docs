@@ -1,13 +1,13 @@
 ---
-title: Bookmarks in JavaScript PDF Library | Syncfusion
+title: PDF Bookmarks in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to add, modify and remove bookmarks in the PDF document by using JavaScript PDF Library
+description: Add, edit, and remove bookmarks in PDF documents using the Syncfusion JavaScript PDF Library for easy navigation.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Bookmarks in JavaScript PDF Library
+# PDF Bookmarks in JavaScript PDF
 
 [JavaScript PDF](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to insert, remove, and modify the bookmarks in the PDF Document.
 

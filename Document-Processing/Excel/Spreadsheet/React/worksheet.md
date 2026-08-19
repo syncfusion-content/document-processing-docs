@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet in React Spreadsheet component | Syncfusion
-description: Learn here all about Worksheet in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet in React Spreadsheet | Syncfusion
+description: Learn about worksheets in the Syncfusion React Spreadsheet component, including creating, managing, and organizing sheets.
 control: Worksheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Worksheet in React Spreadsheet component
+# Worksheet in React Spreadsheet
 
 A **Worksheet** is a collection of cells organized in rows and columns. It allows you to store, format, and manipulate data efficiently within the Spreadsheet. Each worksheet provides a structured grid where you can enter values, apply formulas, and customize formatting to manage your data.  
 
@@ -33,7 +33,7 @@ The React Spreadsheet component offers several worksheet management features to 
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

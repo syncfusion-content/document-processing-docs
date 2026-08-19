@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Area Annotation in Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Area Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the ASP.NET Core PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area measurement annotation in ASP.NET Core PDF Viewer control
+# Area Annotation in ASP.NET Core PDF Viewer
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
@@ -116,9 +116,9 @@ window.onload = function () {
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
-### Edit Perimeter
+### Edit Area Appearance
 
-#### Edit Perimeter (UI)
+#### Edit Area Appearance (UI)
 
 - Edit the **fill color** using the Edit Color tool.  
   ![Fill color](../../images/calibrate_fillcolor.png)
@@ -155,9 +155,9 @@ function editAreaProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Area Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_AreaSettings) property.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line Annotation (Shape) in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion Angular PDF Viewer.
+title: Line Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Line annotations in the Angular PDF Viewer for marking straight paths on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line Annotation (Shape) in Angular PDF Viewer
+# Line Annotation in Angular PDF Viewer
 
 Line annotations allow users to draw straight connectors or callouts on PDFs for markup, review, diagrams, or measurement guides. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
 
@@ -174,7 +174,7 @@ N> Fill color is available only when an arrowhead style is applied at the Start 
 
 ## Manage Line (Edit, Move, Resize, Delete)
 
-### Edit Line 
+### Edit Line
 
 #### Edit Line Appearance (UI)
 - Select a line to view resize handles.
@@ -184,7 +184,7 @@ N> Fill color is available only when an arrowhead style is applied at the Start 
 ![Shape tools](../../images/shape_toolbar.png)
 
 Use the annotation toolbar:
-- **Edit Color** tool  
+- **Edit Color** tool
 ![Edit color](../../../javascript-es6/images/edit_color.png)
 
 - **Edit Opacity** slider
@@ -314,7 +314,6 @@ export class AppComponent {
 
 The PDF viewer provides annotation life-cycle events that notify when Line annotations are added, modified, selected, or removed.
 For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
-
 
 ## Export and Import
 The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).

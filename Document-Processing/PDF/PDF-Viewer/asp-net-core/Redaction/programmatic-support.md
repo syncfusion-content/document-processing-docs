@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction Programmatic support in Core PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion ASP.NET Core PDF Viewer.
+title: Programmatic Support in ASP.NET Core PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the ASP.NET Core PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Programmatic support for redaction in ASP.NET Core PdfViewer
+# Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer
 
 The Syncfusion ASP.NET Core PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. The viewer also supports page redaction, configuration of default properties, and interaction with the redaction property panel.
 
@@ -104,7 +104,7 @@ You can add redaction annotations to a PDF document using the `addAnnotation` me
 
 ## Delete redaction annotations programmatically
 
-Redaction annotations can be removed using the `deleteAnnotationById` event or by selecting and deleting them through code.
+Redaction annotations can be removed using the `deleteAnnotationById` method or by selecting and deleting them through code.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -317,7 +317,7 @@ You can configure default properties for redaction annotations (such as fill col
 
 The redaction property panel allows users to update annotation properties through the UI. Programmatically, you can invoke the property panel by selecting an annotation and calling the relevant APIs. Properties such as overlay text, font style, and fill color can be updated directly in the panel.
 
-![Redaction Property Panel](../redaction/redaction-annotations-images/redaction-property-panel-icon.png)
+![Redaction Property Panel](./redaction-annotations-images/redaction-property-panel-icon.png)
 
 ## See also
 

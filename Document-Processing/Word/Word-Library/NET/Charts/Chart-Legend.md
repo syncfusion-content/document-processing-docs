@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Legend | DocIO | Syncfusion
-description: Learn how to modify the appearance of legend in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Legend in .NET Word | Syncfusion
+description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Legend
+# Modify the Appearance of Legend in .NET Word
 
 Legends are visual pictorial hints that provide a viewer information that helps them understand a chart. Using DocIO, you can **customize the legend in the chart**.
 

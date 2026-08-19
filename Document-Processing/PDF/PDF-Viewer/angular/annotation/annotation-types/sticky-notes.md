@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Sticky Notes Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the Syncfusion Angular PDF Viewer.
+title: Sticky Notes in Angular PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Sticky Notes annotations in the Angular PDF Viewer for short notes placed anywhere on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Sticky Notes Annotations in Angular PDF Viewer
+# Sticky Note Annotation in Angular PDF Viewer
 Sticky Notes allow users to place comment markers on the PDF. When clicked, the note opens a popup containing comments, replies, and discussions. Use them to capture review feedback without altering the original content. 
 
 ![Sticky Notes overview](../../images/stickynotes_annotation.png)
@@ -145,7 +145,7 @@ Update properties and call `editAnnotation()`.
 editStickyProgrammatically(): void {
   const pdfViewer = (document.getElementById('pdfViewer') as any).ej2_instances[0];
   for (const ann of pdfViewer.annotationCollection) {
-    if (ann.subject === 'Volume calculation') {
+    if (ann.subject === 'Sticky Note') {
       ann.strokeColor = '#0000FF';
       ann.thickness = 2;
       ann.opacity = 0.8;
@@ -157,12 +157,12 @@ editStickyProgrammatically(): void {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Volume Annotation
+### Delete Sticky Note
 
-Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
-Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stickyNotesSettings).
+Configure sticky note defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#stickyNotesSettings).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

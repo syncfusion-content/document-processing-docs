@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remove Charts in React Spreadsheet component | Syncfusion
-description: Learn here how to remove charts in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Remove Charts in React Spreadsheet | Syncfusion
+description: Learn about removing charts in the Syncfusion React Spreadsheet component and managing chart in worksheets.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -15,8 +15,8 @@ You can remove a chart from your worksheet either through the user interface or 
 
 To delete a chart:
 
-1. **Select the chart** by clicking on it
-2. **Press Delete** or **Backspace** to remove it immediately
+1. **Select the chart** by clicking on it. Selection handles appear around the chart's border.
+2. **Press `Delete` or `Backspace`** to remove the chart immediately.
 
 **Alternative method:**
 - **Select the chart** and choose **Clear All** from the ribbon (this clears the selected chart)

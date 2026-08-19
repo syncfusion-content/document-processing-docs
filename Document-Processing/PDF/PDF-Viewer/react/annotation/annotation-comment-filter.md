@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Annotation Comment Filter in React PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion React PDF Viewer using the comment filter panel and programmatic APIs.
+description: Filter comments and annotations in the React PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in React
+# Annotation Comment Filter in React PDF Viewer
 
 ## Overview
 
@@ -63,7 +63,7 @@ Follow these steps to filter annotations by their type and status:
 
 1. Click the **filter icon** in the comments panel toolbar
 2. In the **Annotation Type** dropdown, select the annotation types you want to view (e.g., Highlight, Underline)
-3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected, Pending)
+3. In the **Status** dropdown, select the status you want to filter by (e.g., Accepted, Rejected, None)
 4. Click **APPLY** to see only annotations matching your criteria
 5. Use the **CLEAR** button to reset all filters
 
@@ -310,11 +310,11 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotation/annotation-types/area-annotation)
-- [Annotation Permissions](../annotation/annotation-permission)
+- [Annotation Overview](overview)
+- [Annotation Types](annotation-types/area-annotation)
+- [Annotation Permissions](annotation-permission)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotation/create-modify-annotation)
-- [Annotation Events](../annotation/annotation-event)
-- [Export and Import Annotation](../annotation/export-import/export-annotation)
-- [Annotation API](../annotation/annotations-api)
+- [Create and Modify Annotation](create-modify-annotation)
+- [Annotation Events](annotation-event)
+- [Export and Import Annotation](export-import/export-annotation)
+- [Annotation API](annotations-api)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Server-Backed JavaScript PDF Viewer | Syncfusion
-description: Learn how to set up and use the Syncfusion JavaScript PDF Viewer in server-backed mode using CDN resources and web service configuration.
+title: Getting Started with Server-Backed JS PDF Viewer | Syncfusion
+description: Set up and use the Syncfusion JavaScript (ES5) PDF Viewer in server-backed mode using CDN resources and a web service configuration for document processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript PDF Viewer (server-backed)
+# Getting Started with Server-Backed JS PDF Viewer
 
 This section explains how to create the PDF Viewer component and configure its features in JavaScript (global script) using CDN-hosted resources in **server-backed mode**.
 
@@ -113,7 +113,7 @@ After the application starts, open the localhost URL displayed in the terminal i
 - The PDF Viewer supports dynamically changing the [serviceURL](https://ej2.syncfusion.com/documentation/api/pdfviewer#serviceurl). After changing `serviceUrl` at runtime, call `pdfViewer.dataBind()` to apply the new value. This behavior applies to versions after 23.1.36.
 
 {% tabs %}
-{% highlight bash tabtitle="javascript" %}
+{% highlight js tabtitle="javascript" %}
 
 document.getElementById('load').addEventListener('click', function () {
    pdfViewer.serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
@@ -170,7 +170,7 @@ dotnet run
 6. The PDF Viewer server instance runs at `https://localhost:7255`. Navigate to `https://localhost:7255/pdfviewer`, which returns the default GET response method. Bind this link to the `serviceUrl` property of the PDF Viewer as shown below.
 
 {% tabs %}
-{% highlight bash tabtitle="CLI" %}
+{% highlight js tabtitle="javascript" %}
 
    var pdfViewer = new ej.pdfviewer.PdfViewer({
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
@@ -180,7 +180,6 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) page.
 
 ## See also
 

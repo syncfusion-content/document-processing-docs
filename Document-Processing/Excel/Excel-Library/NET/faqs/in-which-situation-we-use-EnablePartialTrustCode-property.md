@@ -1,12 +1,12 @@
 ---
-title: When to use EnablePartialTrustCode in XlsIO | Syncfusion
-description: Learn when to enable the EnablePartialTrustCode property in Syncfusion XlsIO—primarily on Azure—to avoid EMF/WMF GDI+ errors during Excel-to-PDF conversion.
+title: EnablePartialTrustCode in .NET Excel Library | Syncfusion
+description: EnablePartialTrustCode property describes when to enable partial trust code in Azure to avoid EMF or WMF GDI+ errors.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# When should use EnablePartialTrustCode property?
+# EnablePartialTrustCode Property in .NET Excel Library
 
 Enable the EnablePartialTrustCode property only in restricted, hosted environments such as Azure App Service. Because, there will be a GDI+ exception thrown while handling meta file images such as emf and wmf formats. When this property is enabled, the images will not be rendered instead of throwing exception.
 

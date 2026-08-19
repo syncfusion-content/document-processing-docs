@@ -1,18 +1,20 @@
 ---
-title: Excel to ODS Conversion in .NET Excel Library | Syncfusion
-description: In this section, you can learn how to convert Excel docuemnts to ODS docuemnts using .NET Excel Library
+title: About Syncfusion .NET Excel to ODS Conversion | Syncfusion
+description: Learn about introduction of converting Excel workbooks to ODS documents using the Syncfusion .NET Excel Library and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to ODS Conversion
+# About Syncfusion .NET Excel to ODS Conversion
 
-The Open Document Format for Office Applications (ODF) is also known as OpenDocument. It is an XML-based file format for spreadsheets, charts, presentations, and word processing documents. It was developed with the aim of providing an open and XML-based file format specification for office applications. OpenOffice uses ODF format as its default document format. The OpenDocument Spreadsheet (ODS) is the file format for Excel documents. XlsIO supports conversion of XLS/XLSX documents to ODS.
+The OpenDocument Format (ODF) is an XML-based file format for spreadsheets, charts, presentations, and word-processing documents. The OpenDocument Spreadsheet format is the spreadsheet counterpart used by OpenOffice. XlsIO converts XLS and XLSX workbooks to ODS.
 
-## Saving ODS in different platforms
+N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
 
-The following code snippet illustrates the creation of an Excel file and exporting it to ODS format.
+## Export to ODS
+
+The following code snippet creates an Excel file and exports it to ODS format.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS/Excel%20to%20ODS/Program.cs,180" %}
@@ -35,7 +37,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	worksheet.Range["B3"].Number = 71550;
 	worksheet.Range["B5"].Formula = "SUM(B2:B4)";
 
-	//Comments
+	// Comments
 	IComment comment = worksheet.Range["B5"].AddComment();
 	comment.RichText.Text = "This cell has formula.";
 
@@ -49,7 +51,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	redFont.Color = ExcelKnownColors.Red;
 	richText.SetFont(14, 20, redFont);
 
-	//Formatting
+	// Formatting
 	IStyle style = workbook.Styles.Add("Style1");
 	style.Color = Syncfusion.Drawing.Color.DarkBlue;
 	style.Font.Color = ExcelKnownColors.WhiteCustom;
@@ -57,10 +59,8 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	worksheet.Range["A1:B1"].CellStyleName = "Style1";
 	worksheet.Range["A5:B5"].CellStyleName = "Style1";
 
-	#region Save
-	//Saving the workbook
+	// Save the workbook as ODS
 	workbook.SaveAs("Output.ods");
-	#endregion
 }
 {% endhighlight %}
 
@@ -84,7 +84,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["B3"].Number = 71550;
   worksheet.Range["B5"].Formula = "SUM(B2:B4)";
 
-  //Comments
+  // Comments
   IComment comment = worksheet.Range["B5"].AddComment();
   comment.RichText.Text = "This cell has formula.";
 
@@ -98,7 +98,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   redFont.Color = ExcelKnownColors.Red;
   richText.SetFont(14, 20, redFont);
 
-  //Formatting
+  // Formatting
   IStyle style = workbook.Styles.Add("Style1");
   style.Color = Color.DarkBlue;
   style.Font.Color = ExcelKnownColors.WhiteCustom;
@@ -106,13 +106,13 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   worksheet.Range["A1:B1"].CellStyleName = "Style1";
   worksheet.Range["A5:B5"].CellStyleName = "Style1";
 
-  //Save in ODS format
+  // Save the workbook as ODS
   workbook.SaveAs("Output.ods");
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Excel2013
   Dim workbook As IWorkbook = application.Workbooks.Create(1)
@@ -130,7 +130,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("B3").Number = 71550
   worksheet.Range("B5").Formula = "SUM(B2:B4)"
 
-  'Comments
+  ' Comments
   Dim comment As IComment = worksheet.Range("B5").AddComment()
   comment.RichText.Text = "This cell has formula."
 
@@ -144,7 +144,7 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   redFont.Color = ExcelKnownColors.Red
   richText.SetFont(14, 20, redFont)
 
-  'Formatting
+  ' Formatting
   Dim style As IStyle = workbook.Styles.Add("Style1")
   style.Color = Color.DarkBlue
   style.Font.Color = ExcelKnownColors.WhiteCustom
@@ -152,396 +152,60 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   worksheet.Range("A1:B1").CellStyleName = "Style1"
   worksheet.Range("A5:B5").CellStyleName = "Style1"
 
-  'Save in ODS format
+  ' Save the workbook as ODS
   workbook.SaveAs("Output.ods")
 End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example to convert Excel to ODS in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS). 
+A complete working example to convert Excel to OpenDocument Spreadsheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20ODS/Excel%20to%20ODS/.NET/Excel%20to%20ODS).
 
 ## Supported and unsupported elements in ODS conversion
 
-<table>
-<tr>
-<td>
-{{'**Category**'| markdownify }}
-</td>
-<td>
-{{'**Subcategory**'| markdownify }}
-</td>
-<td>
-{{'**Supported**'| markdownify }}
-</td>
-</tr>
-<tr rowspan="10">
-<td>
-Formatting
-</td>
-<td>
-Font settings<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
+The table below summarizes the workbook features XlsIO preserves when writing an `OpenDocument Spreadsheet` file.
 
-</td>
-<td>
-Alignments
-</td>
-<td>
-Yes (Except indent)
-</td>
-</tr>
-<tr>
-<td>
+| Category | Subcategory | Supported |
+| -------- | ----------- | --------- |
+| Formatting | Font settings | Yes |
+| Formatting | Alignments | Yes (except indent) |
+| Formatting | Number formatting | Yes (partial) |
+| Formatting | Border settings | Yes |
+| Formatting | Fill settings | Yes |
+| Formatting | RGB colors | Yes |
+| Formatting | Cell gradient | No |
+| Formatting | Cell styles | Yes |
+| Formatting | Themes | No |
+| Formatting | Conditional formatting | Planned |
+| Hyperlinks | – | Yes |
+| Cell Comments | – | Yes |
+| Print | Page setup | Yes |
+| Print | Margin, Page size | Yes |
+| Print | Page breaks | No |
+| Print | Background image | No |
+| Print | Print settings (Print area, Print titles, Page order) | No |
+| Print | Header/Footer | Planned |
+| Calculations | Formulas | Yes (partial) |
+| Calculations | Table formulas | No |
+| Calculations | Names | Yes (partial) |
+| Group & Outline | – | Yes |
+| Settings | Window settings | No |
+| Settings | Sheet/Book settings | No |
+| Protection | Sheet protection | No |
+| Protection | Encryption | N/A |
+| Hide/Unhide rows/cols | – | Yes |
+| Copy/Move worksheet | – | Yes |
+| Image | – | No |
+| Data Validation | – | No |
+| Tables | – | Planned |
+| PivotTable | – | No |
+| Charts | – | Planned |
+| Drawing | – | Planned |
+| OLE Objects | – | No |
 
-</td>
-<td>
-Number formatting
-</td>
-<td>
-Yes (Partial)
-</td>
-</tr>
-<tr>
-<td>
+## See also
 
-</td>
-<td>
-Border settings<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Fill settings<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-RGB colors 
-</td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Cell gradient<br/><br/></td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Cell styles<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Themes
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Conditional formatting<br/><br/></td>
-<td>
-Planned
-</td>
-</tr>
-<tr>
-<td>
-Hyperlinks
-</td>
-<td>
--
-</td>
-<td>
- Yes
-</td>
-</tr>
-<tr>
-<td>
-Cell Comments
-</td>
-<td>
--
-</td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-Print
-</td>
-<td>
-Page setup<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-[Margin, Page size]<br/><br/></td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Page breaks<br/><br/></td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Background image<br/><br/></td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Print settings [Print area, Print titles, Page order]<br/><br/></td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Header/Footer<br/><br/></td>
-<td>
-Planned
-</td>
-</tr>
-<tr>
-<td>
-Calculations
-</td>
-<td>
-Formulas
-</td>
-<td>
-Yes (Partial)
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Table Formulas
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Names
-</td>
-<td>
-Yes (Partial)
-</td>
-</tr>
-<tr>
-<td>
-Group & Outline
-</td>
-<td>
--
-</td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-Settings
-</td>
-<td>
-Window Settings
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Sheet/Book settings
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-Protection
-</td>
-<td>
-Sheet Protection
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-
-</td>
-<td>
-Encryption
-</td>
-<td>
-N/A
-</td>
-</tr>
-<tr>
-<td>
-Hide/Unhide rows/cols<br/><br/></td>
-<td>
--
-</td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-Copy/Move worksheet<br/><br/></td>
-<td>
--
-</td>
-<td>
-Yes
-</td>
-</tr>
-<tr>
-<td>
-Image<br/><br/></td>
-<td>
--
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-Data Validation
-</td>
-<td>
--
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-Tables
-</td>
-<td>
--
-</td>
-<td>
-Planned
-</td>
-</tr>
-<tr>
-<td>
-PivotTable
-</td>
-<td>
--
-</td>
-<td>
-No
-</td>
-</tr>
-<tr>
-<td>
-Charts
-</td>
-<td>
--
-</td>
-<td>
-Planned
-</td>
-</tr>
-<tr>
-<td>
-Drawing
-</td>
-<td>
--
-</td>
-<td>
-Planned
-</td>
-</tr>
-<tr>
-<td>
-OLE Objects
-</td>
-<td>
--
-</td>
-<td>
-No
-</td>
-</tr>
-</table>
+* [Convert Excel to PDF](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/overview)
+* [Convert Excel to image](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/overview)
+* [Convert Excel to HTML](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-html/overview)
+* [Convert Excel to CSV (or TSV)](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-csv/overview)
+* [Syncfusion .NET Excel (XlsIO) — Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview)

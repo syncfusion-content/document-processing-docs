@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print Events in Angular PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Syncfusion Angular PDF Viewer component.
+title: Events in Angular PDF Viewer | Syncfusion
+description: Subscribe to print events in the Angular PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in Angular PDF Viewer
+# Print Events in Angular PDF Viewer
 
 This page lists each event emitted by the Angular PDF Viewer's [`Print`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print) feature, the argument schema, and the minimal behavior notes needed for implementation.
 
@@ -21,14 +21,14 @@ This page lists each event emitted by the Angular PDF Viewer's [`Print`](https:/
 
 ### `printStart`
 
-This event is emitted when printing is initiated by toolbar or through programmatic API. Use to validate prerequisites, record analytics, or cancel printing.
+This event is emitted when printing is initiated by the toolbar or through the programmatic API. Use it to validate prerequisites, record analytics, or cancel printing.
 
 **Arguments** - ([`PrintStartEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printstarteventargs)):
 
 - `fileName` - The document file name being printed.
 - `cancel` - Default: `false`. Set to `true` to cancel the print operation.
 
-Setting `args.cancel = true` prevents the client-side print flow; for server-backed printing it prevents the service request that produces print output. Find the code example [here](../security/restricting-download-and-print#3-block-print-with-the-printstart-event)
+Setting `args.cancel = true` prevents the client-side print flow; for server-backed printing it prevents the service request that produces print output. See the code example [here](../../react/security/restricting-download-and-print#3-block-print-with-the-printstart-event).
 
 **Minimal usage example:**
 
@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
 
 This event is emitted after the printing completes. Use to finalize analytics, clear temporary state, or notify users.
 
-Arguments - ([`PrintEndEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printendeventargs)):
+Arguments: ([`PrintEndEventArgs`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/printendeventargs)):
 
 - `fileName` - The printed document name.
 

@@ -1,18 +1,18 @@
 ---
-title: Convert Excel to Markdown in C# | XlsIO | Syncfusion
-description: Convert Excel to Markdown in C# using Syncfusion<sup>&reg;</sup> .NET Excel (XlsIO) library without Microsoft Excel or interop dependencies
+title: Excel to Markdown Conversion using .NET Excel Library | Syncfusion
+description: Excel to Markdown conversion describes how Syncfusion .NET Excel Library converts workbooks or worksheets into Markdown files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to Markdown Conversion
+# Excel to Markdown Conversion in .NET Excel Library
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Excel to Markdown document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert an Excel document to Markdown using the .NET Excel Library (XlsIO).
+For the assemblies and NuGet packages required to convert Excel to Markdown, see the per-platform lists below.
 
 * [Excel to Markdown conversion assemblies](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
 * [Excel to Markdown conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
@@ -67,7 +67,7 @@ End Using
 
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown/.NET/Excel-to-Markdown" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Customize image saving
 
@@ -164,14 +164,14 @@ Private Sub MdExportSettings_ImageNodeVisited(sender As Object, args As SaveImag
     Using fileStreamOutput As FileStream = File.Create(imagePath)
         args.ImageStream.CopyTo(fileStreamOutput)
     End Using
-    ' Set the image URI to be used in the output markdown
+    ' Set the image URI to be used in the output Markdown.
     args.Uri = imagePath
 End Sub
 {% endhighlight %}
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Customize-image-path/.NET/Customize-image-path" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Markdown Export Options
 

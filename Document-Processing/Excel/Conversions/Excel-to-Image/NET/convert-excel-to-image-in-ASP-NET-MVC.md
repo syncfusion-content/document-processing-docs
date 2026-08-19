@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to Image in ASP.NET MVC | Syncfusion
-description: Convert an Excel document to Image in ASP.NET MVC using .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in ASP.NET MVC | Syncfusion
+description: ASP.NET MVC Excel to Image section explains how to convert Excel documents to images in ASP.NET MVC without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to Image in ASP.NET MVC
+# Excel to Image Conversion in ASP.NET MVC using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in ASP.NET MVC**.
 
@@ -84,7 +84,7 @@ protected void ExportAsImage(Image image, string fileName, ImageFormat imageForm
 {% endhighlight %}
 {% endtabs %}   
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Convert%20Excel%20to%20Image">GitHub</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/ASP.NET%20MVC/Convert%20Excel%20to%20Image" aria-label="GitHub demo link">GitHub</a>.
 
 By executing the program, you will get the **image** as follows.
 
@@ -92,4 +92,4 @@ By executing the program, you will get the **image** as follows.
 
 Click [here](https://www.syncfusion.com/document-processing/excel-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Excel library (XlsIO) features.
 
-An online sample link to [convert an Excel document to Image](https://ej2.syncfusion.com/aspnetcore/Excel/WorksheetToImage#/material3) in ASP.NET Core.
+An online sample link to [convert an Excel document to Image](https://document.syncfusion.com/demos/excel/worksheettoimage#/tailwind) in ASP.NET Core.

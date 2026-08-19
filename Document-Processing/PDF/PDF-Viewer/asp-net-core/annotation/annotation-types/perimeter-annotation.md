@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Perimeter Annotation in Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Perimeter Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Perimeter measurement annotations in the ASP.NET Core PDF Viewer to calculate the perimeter of a region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Perimeter Measurement Annotations in ASP.NET Core PDF Viewer
+# Perimeter Annotation in ASP.NET Core PDF Viewer
 Perimeter is a measurement annotation used to calculate the length around a closed polyline on a PDF page—useful for technical markups and reviews. 
 
 ![Perimeter overview](../../../javascript-es6/annotations/annotation-images/perimeter-annot.png)
@@ -152,9 +152,9 @@ function editPerimeterProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Perimeter Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Perimeter Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
 
 ## Set Default Properties During Initialization
 Apply defaults for Perimeter using the [`perimeterSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_PerimeterSettings) property.

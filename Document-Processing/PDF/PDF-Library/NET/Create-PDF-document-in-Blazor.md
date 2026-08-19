@@ -1,12 +1,12 @@
 ---
-title: Create or Generate PDF document in Blazor | Syncfusion
-description: Learn how to create or generate a PDF document in Blazor applications with easy steps using Syncfusion .NET Core PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in Blazor | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Blazor. Create and customize PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create or Generate PDF document in Blazor
+# Getting Started with .NET PDF Library in Blazor
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF documents.
 
@@ -14,13 +14,6 @@ To include the Syncfusion<sup>&reg;</sup> .NET PDF library into your Blazor appl
 
 To quickly get started with creating a PDF document in Blazor, check this video:
 {% youtube "https://www.youtube.com/watch?v=B5BOBwus0Jc&t=2s" %}
-
-## Prerequisites
-
-- .NET 8.0 SDK or later for Blazor Server, Blazor WebAssembly, and Blazor WebAssembly PWA projects
-- .NET 8.0 SDK or later for .NET MAUI Blazor projects
-- Visual Studio 2022 with the ASP.NET and web development workload installed (or Visual Studio Code / JetBrains Rider)
-- A valid Syncfusion license key (required for production use; a free Community License is available)
 
 ## Steps to create a PDF document in Blazor Server application
 

@@ -1,12 +1,12 @@
 ---
-title: Create PDF document in Azure App Service on Linux | Syncfusion
-description: Create PDF document in Azure App Service on Linux using .NET PDF library without the dependency of Adobe Acrobat.
+title: Getting Started with .NET PDF in Azure App Service Linux | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Azure App Service on Linux and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create PDF document in Azure App Service on Linux
+# Getting Started with .NET PDF Library in Azure App Service Linux
 
 The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure App Service on Linux**.
 
@@ -31,7 +31,7 @@ Step 3: Click **Create** button.
 Step 4: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 ![Install Syncfusion.Pdf.Net.Core NuGet package](Azure_images/Azure-app-service-Linux/NuGet_package.png)
 
-Step 5: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+Step 5: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -50,7 +50,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. For security, store the key in `appsettings.json` (local development) or in the App Service's **Configuration > Application settings** (Azure portal) rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 6: A default action method named Index will be present in *HomeController.cs*. Right click on Index method and select Go To View where you will be directed to its associated view page *Index.cshtml*. Add a new button in the *Index.cshtml* as shown below.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redaction in WPF Pdf Viewer control | Syncfusion
-description: Learn about Redaction support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+description: Remove sensitive information from PDF documents using redaction in Syncfusion WPF PDF Viewer. Learn to redact text, images, and graphics.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

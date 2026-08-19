@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | AI Agent Tools | Syncfusion
+title: Getting Started with Document SDK AI Agent Tools | Syncfusion
 description: Learn how to integrate the Syncfusion Document SDK Agent Tool library with AI agent frameworks such as Microsoft Agents and Microsoft.Extensions.AI.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Document SDK AI Agent Tool Library
+# Getting Started with Syncfusion Document SDK AI Agent Tools
 
 The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library exposes Word, Excel, PDF, PowerPoint, and Smart Data Extractor operations as AI-callable tools. It integrates with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp) and works with any [IChatClient](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.ichatclient?view=net-9.0-pp) [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp), such as OpenAI, Claude, or Gemini.
 
@@ -105,7 +105,7 @@ repoCollection.AddManager(DocumentType.PDF,        pdfManager);
 repoCollection.AddManager(DocumentType.PowerPoint, presentationManager);
 ```
 
-N> Tools that operate on a single document type are initialized directly with their own manager. Only cross-format tools like [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html) require the [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html).
+N> Cross-format tools like [OfficeToPdfAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.OfficeToPDF.OfficeToPdfAgentTools.html) require the [DocumentManagerCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Core.DocumentManagerCollection.html); single-format tools take their manager directly. See [Tools Reference](./tools#available-document-managers) for details.
 
 N> Each manager is thread-safe. When the application shuts down, dispose the `DocumentManagerCollection` (or call `Dispose` on each manager) to release the in-memory objects immediately rather than waiting for the eviction timer.
 

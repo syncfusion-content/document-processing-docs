@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in JavaScript Spreadsheet control | Syncfusion
-description: Learn how to set up and configure AI Assist in the Syncfusion JavaScript Spreadsheet control for AI-powered features.
+title: AI Assist Integration in JavaScript Spreadsheet  | Syncfusion
+description: AI Assist integration in JavaScript Spreadsheet explains AI-powered features through configuration and seamless service integration.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in JavaScript Spreadsheet control
+# AI Assist Integration in JavaScript Spreadsheet 
 
 ## Integration
 
@@ -62,11 +62,11 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#element');
 ```
 
-This enables the AI Assist into the spreadsheet.
+This enables AI Assist in the Spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the Spreadsheet to the backend server and customize the AI Assist.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
@@ -100,7 +100,7 @@ All actions performed by AI Assist are recorded in the spreadsheet's undo/redo h
 
 ### How to Customize the Request Before Sending
 
-Use the [`promptRequest`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data — such as a user ID or session token — to the request before it reaches your server.
+Use the [`promptRequest`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptrequest) event to add custom data, such as a user ID or session token, to the request before it reaches your server.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
@@ -122,7 +122,7 @@ You can also prevent the request entirely by setting `args.cancel = true`.
 
 ### How to Handle AI Responses
 
-Use the [`promptResponse`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task — for example, logging results or showing a notification.
+Use the [`promptResponse`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#promptresponse) event to run custom logic after the AI completes its task, for example logging results or showing a notification.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);

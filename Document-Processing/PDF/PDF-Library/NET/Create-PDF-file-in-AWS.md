@@ -1,13 +1,13 @@
 ---
-title: Create or Generate PDF document in AWS | Syncfusion
-description: Learn how to create or generate a PDF file in AWS using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Getting Started with .NET PDF Library in AWS | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in AWS and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: aws create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create PDF document in Amazon Web Services (AWS)
+# Getting Started with .NET PDF Library in AWS
 
 The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in Amazon Web Services (AWS). 
 
@@ -19,7 +19,7 @@ N> If this is your first time working with Amazon Web Services (AWS), please ref
 * Download and install the **AWS Toolkit** for Visual Studio from this [link](https://aws.amazon.com/visualstudio/). You can install the toolkit from the **Extensions > Manage Extensions** option in Visual Studio.
 * Visual Studio 2022 with the **AWS development** workload.
 * .NET 8.0 SDK or later.
-* An active Syncfusion license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
+* An active Syncfusion<sup>&reg;</sup> license. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense).
 
 
 

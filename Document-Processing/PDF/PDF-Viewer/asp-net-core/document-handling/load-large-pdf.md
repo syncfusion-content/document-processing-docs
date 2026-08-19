@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Document Handling in ASP.NET Core Pdfviewer component | Syncfusion
-description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in Syncfusion ASP.NET Core Pdfviewer component.
+title: Load Large Pdf in ASP.NET Core PDF Viewer | Syncfusion
+description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage sources, and load large PDF files efficiently in the ASP.NET Core PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -121,7 +121,7 @@ If thumbnails or page reordering are not essential:
 				   style="height:600px"
 				   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
 				   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-				   enableLocalStoarage="true">
+				   enableLocalStorage="true">
 	</ejs-pdfviewer>
 </div>
 {% endhighlight %}

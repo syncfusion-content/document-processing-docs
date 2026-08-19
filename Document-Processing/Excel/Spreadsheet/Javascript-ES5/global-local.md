@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Global local in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Global local in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Globalization in JavaScript Spreadsheet | Syncfusion
+description: Globalization in JavaScript Spreadsheet enables adapting the user interface, formats, and locale-specific settings for global audiences.
 platform: document-processing
 control: Global local 
 documentation: ug
 ---
 
-# Global local in EJ2 Javascript Spreadsheet control
+# Globalization in JavaScript Spreadsheet
 
 ## Localization
 
 The [`Localization`](https://ej2.syncfusion.com/javascript/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
-[`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#locale) value and translation object.
+[`locale`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
 
@@ -137,7 +137,7 @@ RADIANS | Converts degrees into radians.
 MATCH | Returns the relative position of a specified value in the given range.
 DefineNameExists | This name already exists try a different name.
 CircularReference | When a formula refers to one or more circular references this may result in an incorrect calculation.
-ShowRowsWhere | Show rows where |
+ShowRowsWhere | Show rows where
 CustomFilterDatePlaceHolder | Choose a date
 CustomFilterPlaceHolder | Enter the value
 CustomFilter | Custom Filter
@@ -197,12 +197,12 @@ ProtectAllowUser | Allow all users of this worksheet to |
 EditAlert | The cell you're trying to change is protected. To make a change, unprotect the sheet.
 FindReplaceTooltip | Find & Replace
 InsertingEmptyValue | Reference value is not valid.
-ByRow |  By Row
+ByRow | By Row
 ByColumn | By Column
 MatchExactCellElements | Match Exact Cell Contents
 EntercellAddress | Enter Cell Address
 FindAndReplace | Find and Replace
-ReplaceAllEnd |  matches replaced with.
+ReplaceAllEnd | matches replaced with.
 FindNextBtn | Find Next
 FindPreviousBtn | Find Previous
 ReplaceBtn | Replace
@@ -213,7 +213,7 @@ SearchWithin | Search within
 SearchBy | Search by
 Reference | Reference
 Workbook | Workbook
-NoElements | We couldn’t find what you were looking for.
+NoElements | We couldn't find what you were looking for.
 FindWhat | Find what
 ReplaceWith | Replace with
 EnterValue | Enter Value
@@ -411,7 +411,7 @@ The following example demonstrates the Spreadsheet in French [`fr-CH`] culture. 
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experience and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enablertl) to true.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

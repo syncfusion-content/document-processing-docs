@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export form data in the Angular PDF Viewer component | Syncfusion
-description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the Syncfusion Angular PDF Viewer component.
+title: Export Form Fields in Angular PDF Viewer | Syncfusion
+description: Export PDF form field data from the Angular PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF Form Data from Angular PDF Viewer
+# Export Form Data in Angular PDF Viewer
 
 This guide shows concise, actionable steps to export PDF form field data for storage or integration. It covers:
 
@@ -52,7 +52,6 @@ Use [`FormFieldDataFormat.Xfdf`](https://ej2.syncfusion.com/angular/documentatio
 {% highlight ts %}
 this.pdfviewer.exportFormFields('FormData', FormFieldDataFormat.Xfdf);
 {% endhighlight %}
-
 
 ### 5. Export as JSON
 

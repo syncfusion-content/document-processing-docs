@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Select and Deselect Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Select and Deselect Annotations in .NET MAUI PDF Viewer
 
 This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for selecting and deselecting annotations in a PDF document.
 

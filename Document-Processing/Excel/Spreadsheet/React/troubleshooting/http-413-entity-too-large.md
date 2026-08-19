@@ -1,13 +1,13 @@
 ---
 layout: post
-title: HTTP 413 error in React Spreadsheet component | Syncfusion
-description: Resolve the HTTP 413 'Entity too large' error when exporting large Excel files from React Spreadsheet by increasing server request limits.
+title: HTTP 413 error in React Spreadsheet | Syncfusion
+description: Learn how to resolve HTTP 413 (Entity Too Large) errors when exporting large Excel files from React Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Troubleshoot HTTP 413 "Entity too large" error
+# HTTP 413 Error in React Spreadsheet
 
 Sometimes, when exporting the Spreadsheet with a large dataset, an `Entity too large` issue may occur. This is related to an HTTP request attempting to receive a large amount of data. To resolve this, configure your server to handle larger data transfers.
 
@@ -50,6 +50,6 @@ Additionally, we recommend setting the `isFullPost` property to `false` in the `
 ## See Also
 
 * [Performance Best Practices](../performance-best-practices)
-* [Open excel files](../open-excel-files.md)
-* [Save Excel files](../save-excel-files.md)
-* [Web Service](../web-services/webservice-overview.md)
+* [Open Excel Files](../open-excel-files.md)
+* [Save Excel Files](../save-excel-files.md)
+* [Web Services](../web-services/webservice-overview.md)

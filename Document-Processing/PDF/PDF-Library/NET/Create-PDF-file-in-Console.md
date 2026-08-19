@@ -1,12 +1,12 @@
 ---
-title: Create PDF file in Console Application | Syncfusion
-description: Discover how to generate a PDF in a Console Application by using the Syncfusion PDF library efficiently.
+title: Getting Started with .NET PDF Library in Console App | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in a Console Application and generate PDF documents efficiently.
 platform: document-processing
 control: PDF
 documentation: UG
 --- 
 
-# Create or Generate a PDF file in a Console application
+# Getting Started with .NET PDF Library in Console Application
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
@@ -73,7 +73,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as `App.config` `<appSettings>`, Azure Key Vault, or Windows Credential Manager. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn more about license registration.
+RReplace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Include the following namespaces in the *Program.cs* file.
 

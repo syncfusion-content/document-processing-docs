@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Area Measurement Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion Angular PDF Viewer.
+title: Area Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the Angular PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Area Measurement Annotations in Angular PDF Viewer
+# Area Annotation in Angular PDF Viewer
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
 ![Area overview](../../../javascript-es6/annotations/annotation-images/area-annot.png)
@@ -156,7 +156,6 @@ export class AppComponent {
     opacity: 0.6
   };
 }
-``
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,9 +201,9 @@ editAreaProgrammatically(): void {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Area Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#areasettings) property.
@@ -285,7 +284,7 @@ addStyledArea(): void {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#measurementsettings).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

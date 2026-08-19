@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Import pages in Organize Pages in Vue PDF Viewer | Syncfusion
-description: How to import pages from another PDF into the current document using the Organize Pages UI in the Syncfusion Vue PDF Viewer.
+title: Import Pages in Vue PDF Viewer | Syncfusion
+description: Import pages from another PDF into the current document in the Vue PDF Viewer using the Organize Pages panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import pages using the Organize Pages tool in Vue
+# Import Pages in Vue PDF Viewer
 
 ## Overview
 
 This guide explains how to import another PDF document into the current document using the **Organize Pages** UI in the EJ2 Vue PDF Viewer. 
 
-**Outcome**: Imported document appear as thumbnails and are merged into the original document when saved or exported.
+**Outcome**: Imported pages appear as thumbnails and are merged into the original document when saved or exported.
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flatten Annotations in the Syncfusion ASP.NET Core PDF Viewer
-description: Learn how all about how to flatten annotations and formfields before saving a PDF in the Syncfusion ASP.NET Core PDF Viewer.
+title: Flatten Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Flatten annotations and form fields in the ASP.NET Core PDF Viewer before saving a PDF so they become permanent parts of the document content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -33,7 +33,7 @@ Use the example below to flatten at export time (on download).
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:680px">
   <div style="margin-bottom: 8px;">
-    <button onclick="flattenPdf()">Flatten and download PDF</button>
+    <button onclick="flattenPdf()">Download PDF (flatten)</button>
   </div>
   <ejs-pdfviewer id="container" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"></ejs-pdfviewer>
 </div>

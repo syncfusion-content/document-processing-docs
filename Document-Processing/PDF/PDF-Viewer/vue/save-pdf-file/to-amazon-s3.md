@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to AWS S3 using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
+title: To Amazon S3 in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to AWS S3 in Vue
+# Save PDF Files to AWS S3 in Vue PDF Viewer
 
 The Vue PDF Viewer component supports saving PDF files to AWS S3 using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include notes on prerequisites and security considerations for production use.
 
@@ -34,9 +34,9 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
+N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognition, STS) or perform uploads via a trusted server.
 
-N> Replace the placeholder values with the AWS region and credentials. For production, avoid embedding long-lived AWS credentials in client-side code; use temporary credentials (Cognito, STS) or perform uploads via a trusted server.
+2. Configure the AWS credentials after the import:
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ N> Replace the placeholder values with the AWS region and credentials. For produ
 {% endhighlight %}
 {% endtabs %}
 
-3. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+3. Configure a custom toolbar item for the download function to save a PDF file to AWS S3.
 
 {% tabs %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -185,7 +185,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -243,7 +243,7 @@ N> Replace the placeholders with the appropriate AWS credentials and bucket name
 
 **Step 3:** Set the PDF Viewer properties in the Vue PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

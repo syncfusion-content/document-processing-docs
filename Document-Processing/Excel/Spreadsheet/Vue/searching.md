@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Searching in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Searching in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Vue Spreadsheet | Syncfusion
+description: Search and replace worksheet data efficiently using built-in find and replace functionality in the Syncfusion Vue Spreadsheet.
 control: Searching 
 platform: document-processing
 documentation: ug
 ---
 
-# Searching in Vue Spreadsheet component
+# Find and Replace in Vue Spreadsheet
 
-Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allowfindandreplace) property to enable or disable the Find and Replace functionality.
+Find and Replace helps you to search for the target text and replace the found text with alternative text within the sheet or workbook. You can use the [`allowFindAndReplace`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowfindandreplace) property to enable or disable the Find and Replace functionality.
 
 > * The default value for `allowFindAndReplace` property is `true`.
 
@@ -30,7 +30,7 @@ Find can be done by any of the following ways:
    > * `Match case`: To find the matched value with case sensitive.
    > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
-* Using [`find()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#find) method to perform find operation.
+* Using [`find()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#find) method to perform find operation.
 
 ## Replace
 
@@ -43,8 +43,8 @@ Replace can be done by any of the following ways:
 * Use `Ctrl + H` key to open the Find and Replace dialog.
 * Use Replace button to change the found value in sheet or workbook.
 * Using Replace All button, all the matched criteria can be replaced with find value based on sheet or workbook.
-* Using [`replace()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
-* Using [`replace()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
+* Using [`replace()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#replace) method to perform replace operation by passing the argument `args.replaceby` as `replace`.
+* Using [`replace()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#replace) method to perform replace all operation by passing the argument `args.replaceby` as `replaceall`.
 
 ## Go to
 
@@ -53,13 +53,13 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 **User Interface**:
 
 * Use `Ctrl + G` key to open the Go To dialog.
-* Use [`goTo()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#goto) method to perform Go To operation.
+* Use [`goTo()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#goto) method to perform Go To operation.
 
     In the following sample, searching can be done by following ways:
 
 * Select the Home tab in the Ribbon toolbar, and then select the Search icon.
 * Enter any value in the search textbox.
-* Select the next (or) previous button to find the entered value in the spreadsheet.
+* Select the Next or Previous button to find the entered value in the spreadsheet.
 * You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
@@ -79,4 +79,4 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 
 ## Note
 
-You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/vue/#/tailwind3/spreadsheet/default.html) to knows how to present and manipulate data.
+You can refer to our [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) feature tour page for its groundbreaking feature representations.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Read and Extract PDF Form Field Values in Angular | Syncfusion
-description: Learn how to read and extract values from PDF form fields in the EJ2 Angular PDF Viewer, including text, checkboxes, radio buttons, dropdowns, and signatures.
+title: Read Form Field Values in Angular PDF Viewer | Syncfusion
+description: Read and extract values from PDF form fields in the Angular PDF Viewer, including text, checkboxes, radio buttons, dropdowns, and signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read and Extract PDF Form Field Values in Angular PDF Viewer
+# Read and Extract Form Field Values in Angular PDF Viewer
 
 The Angular PDF Viewer allows you to read the values of interactive PDF form fields including textboxes, checkboxes, radio buttons, dropdowns, signatures, and more. Use the APIs below to retrieve form data programmatically for validation, submission, or syncing with your app state.
 
@@ -41,9 +41,9 @@ const radioButtons = formFields.filter(field => field.type === 'RadioButton' && 
 const checkedField = (radioButtons.find(field => field.isChecked)).name;
 ```
 
-## Read Dropdown values
+## Read Dropdown Values
 
-Read the dropdown's selected option by accessing `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
+Read the dropdown's selected option by accessing the `value` property. For more information, see [`formFieldCollections`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#formfieldcollections).
 
 ```ts
 const formFields = this.pdfViewer.formFieldCollections;
@@ -68,8 +68,7 @@ const formFields = this.pdfViewer.formFieldCollections;
 formFields.forEach(field => {
     if (field.type === 'RadioButton' || field.type === 'Checkbox') {
         console.log(`${field.name}: ${field.isChecked}`);
-    }
-    else {
+    } else {
         console.log(`${field.name}: ${field.value}`);
     }
 });

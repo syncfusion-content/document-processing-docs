@@ -2,7 +2,7 @@
 layout: post
 title: Working With Spreadsheet in WinForms Spreadsheet | Syncfusion®
 canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor"
-description: Learn about Working With Spreadsheet support in Syncfusion® Windows Forms Spreadsheet control and more details.
+description: Access worksheets, grids, cells, ranges, values, and formulas while working with spreadsheet content programmatically.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
@@ -352,5 +352,3 @@ void Spreadsheet_PropertyChanged(object sender, System.ComponentModel.PropertyCh
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Looking for the full WinForms Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.

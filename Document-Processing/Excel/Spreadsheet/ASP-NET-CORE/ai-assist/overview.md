@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist in ASP.NET Core Spreadsheet control | Syncfusion
-description: Learn about the AI Assist feature in the Syncfusion ASP.NET Core Spreadsheet control and how to configure it.
+title: AI Assist in ASP.NET Core Spreadsheet Control | Syncfusion
+description: Learn about the AI Assist feature in Syncfusion ASP.NET Core Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in ASP.NET Core Spreadsheet control
+# AI Assist Integration in ASP.NET Core Spreadsheet
 
 **AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 
@@ -15,11 +15,11 @@ documentation: ug
 
 ## Integration
 
-AI Assist integrates seamlessly into your ASP.NET Core Spreadsheet application with minimal configuration. This includes injecting the module, enabling the feature, configuring the backend server connection, handling events, and exploring the full range of supported prompts.
+To configure AI Assist, inject the required module, enable the feature, and connect the Spreadsheet to a server-side AI service. For setup instructions, event customization, API references, troubleshooting, and example prompts, see [AI Assist Integration](./integration).
 
-For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
+After completing the integration, open the AI Assist panel, submit a prompt, and verify that the requested operation is applied to the active worksheet.
 
-## How AI Assist Works in spreadsheet
+## How AI Assist Works in the spreadsheet
 
 Understanding how AI Assist processes your request helps you write better prompts and get more reliable results.
 
@@ -36,7 +36,7 @@ Once the intent is known, the spreadsheet's current data and the identified acti
 - **Execution**
 The generated instructions are applied directly to the spreadsheet. The result appears instantly in the grid, and a confirmation message is shown in the AI panel. Every change is also added to the undo history, so nothing is permanent.
 
-## Supported Features
+## Supported features
 
 AI Assist supports a wide range of spreadsheet operations through natural language prompts:
 
@@ -48,7 +48,7 @@ AI Assist supports a wide range of spreadsheet operations through natural langua
 | **Formatting** | Apply styles such as bold, italic, font color, background color, number formats, and wrap text. |
 | **Structure Management** | Insert/delete rows and columns, merge cells, and freeze panes. |
 | **Clipboard Actions** | Perform cut, copy, and paste operations through AI commands. |
-| **Navigation** | Perform sorting, filtering, and find & replace operations. |
+| **Navigation** | Perform sorting, filtering, and find and replace operations. |
 | **Visualization** | Insert charts with multiple types, themes, titles, and sizing options. |
 
 ### Writing Effective Prompts

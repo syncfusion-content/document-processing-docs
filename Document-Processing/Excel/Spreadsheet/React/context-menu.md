@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Context menu in React Spreadsheet component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu in React Spreadsheet | Syncfusion
+description: Learn about the context menu in the Syncfusion React Spreadsheet component, including customization and available menu actions.
 control: Context menu 
 platform: document-processing
 documentation: ug
 ---
 
-# Context menu in React Spreadsheet component
+# Context Menu in React Spreadsheet
 
 The Context menu is used to improve user interaction with the Spreadsheet through a popup menu. It opens when right-clicking on a cell, column header, row header, or pager in the Spreadsheet. You can use the [`enableContextMenu`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enablecontextmenu) property to enable or disable the context menu.
 
 > The default value for the `enableContextMenu` property is `true`.
 
-## Context menu Items in Row Cell
+## Context Menu Items in Row Cell
 
-Please find the table below for default context menu items and their actions.
+The following table lists the default context menu items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
-| [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cut) | Cut the selected cells data to the clipboard, you can select a cell where you want to move the data. |
-| [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#copy) | Copy the selected cells data to the clipboard, so that you can paste it to somewhere else. |
-| [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | Paste the data from clipboard to spreadsheet. |
+| [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cut) | Cuts the data from the selected cells to the clipboard. Select a target cell to move the data. |
+| [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#copy) | Copies the data from the selected cells to the clipboard so it can be pasted elsewhere. |
+| [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | Pastes the clipboard contents into the spreadsheet. |
 | [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | `Values` - Paste the data values from clipboard to spreadsheet.  `Formats` - Paste the data formats from  <br/> clipboard to spreadsheet. |
-| [`Filter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#filter) | Perform filtering to the selected cells based on an active cell’s value. |
-| [`Sort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) | Perform sorting to the selected range of cells by ascending or descending. |
+| [`Filter`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#filter) | Filters the selected cells based on the value of the active cell. |
+| [`Sort`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#sort) | Sorts the selected range of cells in ascending or descending order. |
 | [`Hyperlink`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hyperlink) | Create a link in the spreadsheet to navigate to web links or cell reference within the sheet or other sheets  <br/> in the Spreadsheet. |
 
 ## Context Menu Items in Row Header / Column Header
@@ -34,19 +34,19 @@ Refer to the table below for the default context menu items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
-| [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cut) | Cut the selected row/column header data to the clipboard, you can select a cell where you want to move the data. |
-| [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#copy) | Copy the selected row/column header data to the clipboard, so that you can paste it to somewhere else. |
-| [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | Paste the data from clipboard to spreadsheet. |
+| [`Cut`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#cut) | Cuts the data from the selected row/column header to the clipboard. Select a target cell to move the data. |
+| [`Copy`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#copy) | Copies the data from the selected row/column header to the clipboard so it can be pasted elsewhere. |
+| [`Paste`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | Pastes the clipboard contents into the spreadsheet. |
 | [`Paste Special`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#paste) | `Values` - Paste the data values from clipboard to spreadsheet. `Formats` - Paste the data formats from  <br/> clipboard to spreadsheet. |
-| [`Insert Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertrow) / [`Insert Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertcolumn) | Insert new rows or columns into the worksheet. |
-| [`Delete Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) / [`Delete Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) | Delete existing rows or columns from the worksheet. |
-| [`Hide Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hiderow) / [`Hide Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidecolumn) | Hide the rows or columns. |
-| [`UnHide Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hiderow) / [`UnHide Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidecolumn) | Show the hidden rows or columns. |
+| [`Insert Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertrow) / [`Insert Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#insertcolumn) | Inserts new rows or columns into the worksheet. |
+| [`Delete Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) / [`Delete Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#delete) | Deletes the selected rows or columns from the worksheet. |
+| [`Hide Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hiderow) / [`Hide Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidecolumn) | Hides the selected rows or columns. |
+| [`UnHide Rows`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hiderow) / [`UnHide Columns`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#hidecolumn) | Shows the hidden rows or columns. |
 
 ## Context Menu Items in Pager
 
-The context menu in the pager provides quick access to actions for managing worksheet navigation and related options.
-Refer to the table below for the default context menu items and their actions.
+The context menu in the pager provides quick access to actions for managing worksheet navigation and related options. 
+The following table lists the default items and their actions.
 
 | Context Menu items | Action |
 |-------|---------|
@@ -58,7 +58,7 @@ Refer to the table below for the default context menu items and their actions.
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

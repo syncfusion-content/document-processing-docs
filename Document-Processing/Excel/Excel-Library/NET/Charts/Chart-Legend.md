@@ -1,14 +1,14 @@
 ---
-title: Chart Legend | Excel library | Syncfusion
-description: In this section, you can learn about the chart legend in an Excel document using the .NET Excel Library with clear guidance and practical examples.
+title: Chart Legend in .NET Excel Library | Syncfusion
+description: Chart legend settings describes how the Syncfusion .NET Excel Library displays and formats legends in Excel charts.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Legend in Excel document
+# Chart Legend in .NET Excel Library
 
-Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using XlsIO, you can **customize the legend in the chart**.
+Legends are visual pictorial hints that provide a viewer with information that helps them understand a chart. Using XlsIO, you can **customize the legend**.
 
 ## Add
 
@@ -102,7 +102,7 @@ chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Set the background color
-chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow;
+chart.Legend.FrameFormat.Fill.ForeColorIndex = ExcelKnownColors.Yellow
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,21 +201,21 @@ chart.Legend.IncludeInLayout = true
 
 ## Remove
 
-The following code snippet illustrates how to remove the legend.
+The following code snippet illustrates how to remove a single legend entry from the chart. Repeat the call for each entry you want to remove. To hide the entire legend instead, set `chart.HasLegend = false;`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-//Remove the legend
+//Remove the first legend entry
 chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Remove the legend
+//Remove the first legend entry
 chart.Legend.LegendEntries[0].Delete();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Remove the legend
+'Remove the first legend entry
 chart.Legend.LegendEntries(0).Delete()
 {% endhighlight %}
 {% endtabs %}

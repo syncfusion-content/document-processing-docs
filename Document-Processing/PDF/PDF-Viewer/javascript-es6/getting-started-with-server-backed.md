@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Server-Backed TypeScript PDF Viewer | Syncfusion
-description: Learn how to set up and run the Syncfusion TypeScript PDF Viewer in server-backed mode using a PDF Viewer web service.
+title: Getting Started with Server-Backed JS PDF Viewer | Syncfusion
+description: Set up and run the Syncfusion JavaScript (ES6) PDF Viewer in server-backed mode using a PDF Viewer web service for document processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Server-Backed TypeScript PDF Viewer
+# Getting Started with Server-Backed JS PDF Viewer
 
 Create and run the **TypeScript PDF Viewer in server-backed mode**. In this mode, PDF rendering and processing are performed on a server-side web service, while the TypeScript application acts as the client.
 
@@ -192,7 +192,6 @@ N> For hosting the web service on Linux, include [SkiaSharp.NativeAssets.Linux](
 | AWS Lambda|[SkiaSharp.NativeAssets.Linux](https://nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)|
 | AWS Elastic Beanstalk |[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)|
 
-N> Looking for the full JavaScript PDF Viewer component overview, features, pricing, and documentation? Visit the [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) page.
 
 ## See also
 

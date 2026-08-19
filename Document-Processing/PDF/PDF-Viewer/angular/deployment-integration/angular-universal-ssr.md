@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion Angular PDF Viewer in Angular Universal SSR | Syncfusion
-description: A quick guide to integrate Syncfusion Angular PDF Viewer with Angular Universal Server-Side Rendering.
+title: Angular Universal Ssr in Angular PDF Viewer | Syncfusion
+description: Learn about the angular universal ssr in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Angular PDF Viewer in Angular Universal (SSR)
+# Angular Universal Ssr in Angular PDF Viewer
 
 This guide shows how to create an Angular Universal SSR application and integrate the Angular PDF Viewer component.
 
@@ -31,7 +31,7 @@ cd angular-ssr-pdfviewer
 
 ### Step 2: Run the Application
 
-To Start the application use the following commands:
+To start the application, use the following commands:
 
 ```bash
 npm run build

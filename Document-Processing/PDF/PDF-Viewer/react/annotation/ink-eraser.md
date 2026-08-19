@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Eraser in React PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion React PDF Viewer with UI and programmatic control.
+title: Ink Eraser in React PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the React PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -29,9 +29,9 @@ The Ink Eraser is most useful in these scenarios:
 - **Digital note-taking**: Erase unwanted strokes when taking notes or annotating PDFs
 - **Collaborative editing**: Clean up ink marks before sharing documents with others
 
-## Enable Ink Eraser
+## Set up the PDF Viewer
 
-To enable the Ink Eraser feature, inject the following modules into the React PDF Viewer:
+Inject the following modules into the React PDF Viewer to enable annotation and toolbar support, which are required for using the Ink Eraser:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -316,7 +316,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 - **Partial erasing**: You can erase any portion of an ink stroke without affecting other strokes.
 - **Real-time erasing**: Erased content is immediately removed as the eraser moves across the stroke.
 - **Undo/Redo support**: Eraser actions can be undone and redone using the toolbar buttons or keyboard shortcuts (Ctrl+Z, Ctrl+Y).
-- **Size adjust-ability**: The eraser size can be changed at any time without exiting eraser mode.
+- **Adjustable size**: The eraser size can be changed at any time without exiting eraser mode.
 - **Mouse and touch input**: The eraser works with mouse, stylus, and touch input on supported devices.
 
 ### Programmatic control behavior

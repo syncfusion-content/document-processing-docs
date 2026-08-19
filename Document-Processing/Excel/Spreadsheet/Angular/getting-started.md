@@ -1,15 +1,101 @@
 ---
 layout: post
-title: Getting started with Angular Spreadsheet component | Syncfusion
-description: Check out and learn about getting started with the Syncfusion Angular Spreadsheet component in the Spreadsheet Editor SDK and more details.
+title: Getting Started with Angular Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Angular Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started
 documentation: ug
 ---
 
-# Getting Started with Angular Spreadsheet Component
+# Getting Started with Angular Spreadsheet
 
 This section explains how to create a simple Angular application and add the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component with the minimum required setup.
+
+{% tabcontents %}
+
+{% tabcontent Syncfusion CLI %}
+
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
+## Install the Syncfusion CLI 
+
+Install the Syncfusion CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm install -g @syncfusion/syncfusion-cli
+{% endhighlight %}
+{% endtabs %}
+
+## Create a new Angular application using Syncfusion CLI
+
+You can create a Angular application using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf new syncfusion-angular-app --framework angular --template spreadsheet-editor --theme tailwind3
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates a Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create a Angular application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... syncfusion-angular-app
+√ Choose Framework: » Angular
+√ Choose Template: » Spreadsheet Editor
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate a Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+cd syncfusion-angular-app
+npm install
+ng serve
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Spreadsheet Editor Component](images/syncfusion-cli.png)
+
+{% endtabcontent %}
+
+{% tabcontent Angular CLI %}
 
 ## Prerequisites
 
@@ -106,6 +192,10 @@ ng serve
 After the application starts, open the localhost URL shown in the terminal to view the Angular Spreadsheet Editor in the browser. The output will appear as follows:
 ![Angular Spreadsheet Editor](./images/spreadsheet.png)
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can also explore the Spreadsheet interactively using the live sample below.
  
 {% previewsample "/document-processing/samples/spreadsheet/angular/spreadsheet-cs1" %}
@@ -118,7 +208,6 @@ To get started quickly with Angular Spreadsheet, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=2Ozwe37X-7Q" %}
 
-N> Looking for the full Angular Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) page.
 
 ## See also
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Freehand Draw (Ink) Annotation in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Syncfusion Angular PDF Viewer.
+title: Ink Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the Angular PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Freehand Drawing (Ink) Annotations in Angular PDF Viewer
+# Ink Annotation in Angular PDF Viewer
 Ink annotations allow users to draw freehand strokes using mouse, pen, or touch input to mark content naturally.
 
 ![Ink overview](../../images/ink_annotation.png)
@@ -80,7 +80,7 @@ enableInkMode(): void {
 {% endhighlight %}
 {% endtabs %}
 
-#### Exit Ink Mode
+### Exit Ink Mode
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
@@ -167,7 +167,7 @@ export class AppComponent {
 - **Delete**: Via toolbar or context menu.
 - **Customize context menu**: See [Customize Context Menu](../../context-menu/custom-context-menu).
 
-### Edit ink annotation in UI
+### Edit Ink Annotation in UI
 
 Stroke color, thickness, and opacity can be edited using the Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 

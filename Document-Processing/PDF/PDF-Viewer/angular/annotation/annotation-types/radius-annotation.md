@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Radius Measurement Annotations in Angular PDF Viewer \ Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion Angular PDF Viewer.
+title: Radius Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Radius measurement annotations in the Angular PDF Viewer to measure the radius of circular regions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Radius Measurement Annotations in Angular PDF Viewer
+# Radius Annotation in Angular PDF Viewer
 Radius measurement annotations allow users to draw circular regions and calculate the radius visually.
 
 ![Radius overview](../../../javascript-es6/annotations/annotation-images/radius-annot.png)
@@ -151,7 +151,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Manage Radius (Move, Reshape, Edit, Delete)
-- **Move**: Drag inside the polygon to reposition it.
+- **Move**: Drag inside the circle to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
 ### Edit Radius Annotation
@@ -240,7 +240,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#radiussettings) property.
+Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#radiussettings) property.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

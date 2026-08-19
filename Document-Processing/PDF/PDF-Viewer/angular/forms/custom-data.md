@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Add custom data to form fields in Angular Pdf Viewer | Syncfusion
-description: Learn how to attach, update, and read custom Data on PDF form fields using the Form Designer UI and APIs in the Syncfusion Angular PDF Viewer.
+title: Custom Data in Angular PDF Viewer | Syncfusion
+description: Attach, update, and read custom data on PDF form fields in the Angular PDF Viewer using the Form Designer UI and the form fields API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Add Custom Data to PDF Form Fields in Angular PDF Viewer
+# Custom Data on Form Fields in Angular PDF Viewer
 
 The **Angular PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
@@ -21,7 +22,7 @@ This page explains how to:
 - [Apply best practices when using custom data](#best-practices)
 
 **Key Points**
-- customData is a **free form object**; you control its structure.
+- customData is a **free-form object**; you control its structure.
 - Use only **serializable values** such as objects, arrays, strings, numbers, and booleans.
 - Custom data does not affect the field appearance or behavior unless consumed by your application logic.
 
@@ -152,7 +153,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // ...viewer initialization as above...
-    // Example for texbox defaults
+    // Example for textbox defaults
     this.pdfviewer.textFieldSettings = {
       name: 'Textbox',
       customData: { group: 'contact', createdBy: 'designer', requiredRole: 'user' }

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print PDF in Angular PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion Angular PDF Viewer component.
+title: About Syncfusion Angular PDF Viewer Print | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Print section and the key capabilities it provides.
 platform: document-processing
 control: Print
 documentation: ug
@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 
-# Print PDF in Angular PDF Viewer
+# About Syncfusion Angular PDF Viewer Print
 
 The Angular PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit {
 
 ## Print programmatically in Angular PDF Viewer
 
-To start printing from code, call the [`pdfviewer.print.print()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print#print-1) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
+To start printing from code, call the [`pdfviewer.print.print()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print#print-1) method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically. Calling print before the document finishes loading can result in no output or an empty print dialog.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -155,7 +155,7 @@ export class AppComponent {
 - Enable or disable printing with the [`enablePrint`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enableprint) property
 - Start printing from UI (toolbar Print) or programmatically using [`print.print()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print#print-1).
 - Control output quality with the [`printScaleFactor`](./print-quality) property (0.5–5)
-- Auto‑rotate pages during print using [`enablePrintRotation`](./enable-print-rotation)
+- Auto-rotate pages during print using [`enablePrintRotation`](./enable-print-rotation)
 - Choose where printing happens with [`printMode`](./print-modes) (Default or NewWindow)
 - Track the life cycle with [`printStart` and `printEnd` events](./events)
 

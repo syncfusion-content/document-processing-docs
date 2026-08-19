@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline Text in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Underline annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Underline Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Underline annotations in the ASP.NET Core PDF Viewer to highlight text with a horizontal line below it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline Annotation (Text Markup) in ASP.NET Core PDF Viewer
+# Underline Annotation in ASP.NET Core PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **ASP.NET Core PDF Viewer**. You can underline text using the toolbar or context menu, programmatically invoke underline mode, customize default settings, handle events, and export the PDF with annotations.
 
@@ -160,9 +160,10 @@ Use the [**Comments panel**](../comments) to add, view, and reply to threaded di
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Underline', …)` call.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
+<script>
 function addMultipleUnderlines() {
-  const viewer = document.getElementById('container').ej2_instances[0];
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
   // Underline 1
   viewer.annotation.addAnnotation('Underline', {
     bounds: [{ x: 100, y: 150, width: 320, height: 14 }],
@@ -180,6 +181,7 @@ function addMultipleUnderlines() {
     opacity: 0.9
   });
 }
+</script>
 {% endhighlight %}
 {% endtabs %}
 

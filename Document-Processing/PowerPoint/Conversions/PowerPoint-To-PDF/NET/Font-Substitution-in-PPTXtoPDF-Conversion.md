@@ -1,11 +1,12 @@
----
+﻿---
 title: Font substitution in PowerPoint to PDF conversion| Syncfusion
 description: Learn about how to substitute font during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# Font substitution for unavailable fonts
+
+# Font substitution for unavailable fonts in PPTX to PDF conversion
 
 When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to PDF, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted PDF document.  To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation.
 
@@ -17,24 +18,18 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
-//Load the PowerPoint presentation as stream
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-name/.NET/Apply-substitution-font-name/Program.cs" %}
+//Load the PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Load the PowerPoint presentation from stream
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Initialize the SubstituteFont event to set the replacement font.
+    pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Initializes the 'SubstituteFont' event to set the replacement font
-        pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
-        //Convert the PowerPoint presentation to PDF file
-        PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the generated PDF to the file system.
+        pdfDocument.Save("Output.pdf");
+        //Release all resources.
         pdfDocument.Close(true);
     }
 }
@@ -123,24 +118,18 @@ The following code example demonstrates how to upload a font stream for missing 
 
 {% tabs %}
 
-{% highlight C# tabtitle="C# [Cross-platform]"
-playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
-//Load the PowerPoint presentation as stream
-using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
+{% highlight C# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PPTX-to-PDF-conversion/Apply-substitution-font-stream/.NET/Apply-substitution-font-stream/Program.cs" %}
+//Load the PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    //Load the PowerPoint presentation from stream
-    using (IPresentation pptxDoc = Presentation.Open(fileStream))
+    //Initialize the SubstituteFont event to set the replacement font.
+    pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
+    //Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Initializes the 'SubstituteFont' event to set the replacement font
-        pptxDoc.FontSettings.SubstituteFont += SubstituteFont;
-        //Convert the PowerPoint presentation to PDF file
-        PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-        //Create new instance of file stream
-        FileStream pdfStream = new FileStream("Output.pdf", FileMode.Create);
-        //Save the generated PDF to file stream
-        pdfDocument.Save(pdfStream);
-        //Release all resources
-        pdfStream.Dispose();
+        //Save the generated PDF to the file system.
+        pdfDocument.Save("Output.pdf");
+        //Release all resources.
         pdfDocument.Close(true);
     }
 }
@@ -149,7 +138,7 @@ using (FileStream fileStream = new FileStream("Sample.pptx", FileMode.Create))
 /// </summary>
 /// <param name="sender">FontSettings type of the Presentation in which the specified font stream is used but unavailable in production environment. </param>
 /// <param name="args">Retrieves the unavailable font name and receives the substitute font stream for conversion. </param>
-private static void FontSettings_SubstituteFont(object sender, SubstituteFontEventArgs args)
+private static void SubstituteFont(object sender, SubstituteFontEventArgs args)
 {
     if (args.OriginalFontName == "Arial" && args.FontStyle == FontStyle.Bold)
         args.AlternateFontStream = new FileStream("cambriab.ttf", FileMode.Open);

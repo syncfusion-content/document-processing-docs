@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Text Selection in .NET MAUI PDF Viewer (SfPdfViewer)
+# Text Selection in .NET MAUI PDF Viewer
 
 Using [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can select text from a PDF document and copy it to the clipboard. This process allows you to easily extract text from the PDF and paste it into other applications.
 

@@ -1,14 +1,14 @@
 ---
-title: Merge Cells in Excel | Syncfusion
-description: Explains with an example on how to merge a range of cells in Excel into a single cell programattically, using Interop and XlsIO.
+title: Cell Merging in .NET Excel Library | Syncfusion
+description: Programmatically merge a range of Excel cells into a single cell using Interop and Syncfusion .NET Excel Library cell range handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Merge Cells in Excel
+# Merging Cells in .NET Excel Library
 
-You can merge a continuous range of cells into one large cell. Merged cell keeps the value in the upper-left cell and deletes all other values. Merging cells can be useful if you want to make clear that a label applies to multiple columns.
+You can merge a continuous range of cells into one large cell. A merged cell keeps the value in the upper-left cell and discards the values in the other cells. Merging cells can be useful if you want to make it clear that a label applies to multiple columns.
 
 The following code shows how to merge cells in Excel with Interop and XlsIO for .NET.
 
@@ -142,7 +142,7 @@ Private Sub MergeCells()
     'Merge cells from A1 to C1
     worksheet.Range("A1:C1").Merge()
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_MergedCells.xlsx")
   End Using
 End Sub

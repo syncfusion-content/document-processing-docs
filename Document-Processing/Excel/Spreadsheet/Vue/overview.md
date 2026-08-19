@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of the Vue Spreadsheet Component | Syncfusion
-description: Learn here all about overview of the Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Vue Spreadsheet Control | Syncfusion
+description: Learn about the introduction of the Syncfusion Essential Studio Vue Spreadsheet control and more details.
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
-# Overview of the Vue Spreadsheet Component
+# About Syncfusion Vue Spreadsheet Control
 
-The [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
+The [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) is a user interactive component to organize and analyze data in a tabular format with configuration options for customization. It loads data by importing an Excel/CSV file, or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported to Excel (XLSX, XLS), CSV, and PDF formats.
 
 ![Vue Spreadsheet Component](./images/overview-banner.png)
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form fields in Angular Document editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Form Fields in Angular DOCX Editor | Syncfusion
+description: Form fields in Angular DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
-control: Form fields 
+control: Form fields
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in Angular Document editor component
+# Form Fields in Angular DOCX Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -29,7 +29,7 @@ this.documentEditor.editor.insertFormField('DropDown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getformfieldnames).
+All the form fields names from current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#getformfieldnames).
 
 ```typescript
 let formFieldsNames: string[] = this.documentEditor.getFormFieldNames();
@@ -67,14 +67,14 @@ checkboxfieldInfo.defaultValue = true;
 checkboxfieldInfo.name = "Check2";
 this.documentEditor.setFormFieldInfo('Check1',checkboxfieldInfo);
 
-// Set checkbox form field properties
+// Set dropdown form field properties
 let dropdownfieldInfo: DropDownFormFieldInfo = this.documentEditor.getFormFieldInfo('Drop1') as DropDownFormFieldInfo;
 dropdownfieldInfo.dropdownItems = ['One','Two', 'Three'];
 dropdownfieldInfo.name = "Drop2";
 this.documentEditor.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
 
->Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
+N> If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
 ## Form Field Shading
 
@@ -94,7 +94,7 @@ N> This customization only affects the application UI and will not be preserved 
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportformdata).
+Data of all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportformdata).
 
 ```typescript
 let formFieldDate: FormFieldData[] = this.documentEditor.exportFormData();
@@ -124,9 +124,9 @@ this.documentEditor.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -172,9 +172,9 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In the enforceProtection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
 
 ## Online Demo
 

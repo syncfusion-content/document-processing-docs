@@ -1,16 +1,16 @@
 ---
-title: Set Background for Excel Worksheet | Syncfusion
-description: Explains with an example on how to set background for Excel Worksheet with a single image to be tiled to fill the whole screen using Interop and XlsIO.
+title: Worksheet Backgrounds in .NET Excel Library | Syncfusion
+description: Set image background for an Excel worksheet programmatically using Syncfusion .NET Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Set Background for Excel Worksheet
+# Worksheet Backgrounds in .NET Excel Library
 
-Adding a picture to the background either as a watermark of company's logo or a relevant image will improve the appearance of the document. When you set background picture to a worksheet, the picture is tiled so that it fills the whole screen over and again.
+Adding a picture to the background, either as a watermark of a company's logo or as a relevant image, improves the appearance of the document. When you set a background picture on a worksheet, the picture is tiled to fill the worksheet area.
 
-The following code shows how to set Excel worksheet background image with Interop and XlsIO for .NET. The process will assume that you already have the picture on your computer to use as a background image.
+The following code shows how to set an Excel worksheet background image with Interop and XlsIO for .NET. Ensure the picture you want to use as the background is available on your computer before running this code.
 
 ## Interop
 
@@ -102,7 +102,10 @@ private void SetWorksheetBackground()
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Set a background picture for the sheet
-    worksheet.PageSetup.BackgoundImage = new Bitmap("Syncfusion.png");
+    using (Bitmap image = new Bitmap("Syncfusion.png"))
+    {
+      worksheet.PageSetup.BackgroundImage = image;
+    }
 
     //Save the workbook
     workbook.SaveAs("XlsIOOutput_BackgroundPicture.xlsx");
@@ -125,7 +128,10 @@ private void SetWorksheetBackground()
     IWorksheet worksheet = workbook.Worksheets[0];
 
     //Set a background picture for the sheet
-    worksheet.PageSetup.BackgoundImage = new Bitmap("Syncfusion.png");
+    using (Bitmap image = new Bitmap("Syncfusion.png"))
+    {
+      worksheet.PageSetup.BackgroundImage = image;
+    }
 
     //Save the workbook
     workbook.SaveAs("XlsIOOutput_BackgroundPicture.xlsx");
@@ -146,7 +152,9 @@ Private Sub SetWorksheetBackground()
     Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
     'Set a background picture for the sheet
-    worksheet.PageSetup.BackgoundImage = New Bitmap("Syncfusion.png")
+    Using image As Bitmap = New Bitmap("Syncfusion.png")
+      worksheet.PageSetup.BackgroundImage = image
+    End Using
 
     'Save as Excel file
     workbook.SaveAs("XlsIOOutput_BackgroundPicture.xlsx")
@@ -154,3 +162,9 @@ Private Sub SetWorksheetBackground()
 End Sub
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Background image in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/migrate-from-office-automation-to-syncfusion-xlsio/set-background-for-excel-worksheet)
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

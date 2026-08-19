@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor Spreadsheet Component | Syncfusion
-description: Learn about selection features in the Syncfusion Blazor Spreadsheet component, including programmatic and UI-based selection options.
+title: Selection in Blazor Spreadsheet | Syncfusion
+description: Learn about explore cell, row, column, and range selection options in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Selection in Blazor Spreadsheet Component
+# Selection in Blazor Spreadsheet
 
 The selection feature in the  [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The component supports both mouse and keyboard interactions.
 
@@ -121,7 +121,5 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 {% endtabs %}
 
 The following image illustrates the comprehensive selection capabilities available in the Blazor Spreadsheet component, including cell, row, and column selection using both mouse and keyboard interactions.
-
-N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
 
 ![An animated GIF demonstrating cell, row, and column selection in the Syncfusion Blazor Spreadsheet.](./images/selection-types.gif)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redaction annotation in Angular PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion Angular PDF Viewer.
+title: About Syncfusion Angular PDF Viewer Redaction | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Redaction section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction in Angular PdfViewer
+# About Syncfusion Angular PDF Viewer Redaction
 
 Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion Angular PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
 
@@ -137,7 +137,7 @@ After adding redaction annotations, permanently apply them to the document using
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible action.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible action.
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 
@@ -145,7 +145,7 @@ N> Applying redaction is irreversible. Once applied, the original content cannot
 
 ## Comment Support
 
-Redaction annotations can include comments using the built‑in comment panel. This helps you add notes, track reviews, or record the reason for redaction.  
+Redaction annotations can include comments using the built‑in comment panel. This helps you add notes, track reviews, or record the reason for redaction.
 
 Comments can be added through the UI or API. For more details, see the [Comments documentation](../annotations/comments).
 

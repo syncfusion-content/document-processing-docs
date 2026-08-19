@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load Password Protected PDFs in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to open password-protected PDF files in the Syncfusion ASP.NET Core PDF Viewer by providing the password in the documentPath object.
+title: Load Password Pdf in ASP.NET Core PDF Viewer | Syncfusion
+description: Open password-protected PDF files in the ASP.NET Core PDF Viewer by providing the password through the documentPath configuration object.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a Password-Protected PDF in ASP.NET CORE
+# Load Password-Protected PDF in ASP.NET Core PDF Viewer
 
 This article explains how to open password-protected PDF files in the Syncfusion ASP.NET Core PDF Viewer. The viewer supports both user‑interactive loading (Open File dialog) and programmatic loading using APIs.
 

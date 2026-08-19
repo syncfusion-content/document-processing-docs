@@ -1,0 +1,239 @@
+---
+layout: post
+title: MCP Server Configuration in Angular Spreadsheet | Syncfusion
+description: MCP Server configuration in Angular Spreadsheet enables access to documentation, API references, code examples, and troubleshooting resources.
+control: Spreadsheet
+platform: document-processing
+documentation: ug
+keywords: Angular Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+---
+
+# MCP Server Configuration in Angular Spreadsheet
+
+The Syncfusion® Angular MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion Angular documentation.
+
+Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for Angular Spreadsheet applications.
+
+> The previously available Agentic UI Builder (`#sf_angular_ui_builder`) has been upgraded to an Agent skill-based experience and is no longer part of the MCP Server. To learn more about the new Agentic UI Builder, see the [documentation](https://ej2.syncfusion.com/angular/documentation/mcp). The AI Coding Assistant (`#sf_angular_assistant`) has been renamed to `search_docs` (`#search_docs`) to ensure that the tool name follows MCP naming conventions.
+
+## Key benefits
+
+- **Spreadsheet-specific guidance**: Access relevant documentation for data binding, formulas, open and save operations, charts, conditional formatting, sorting, filtering, hyperlinks, scrolling, and other Spreadsheet features.
+- **API assistance**: Find Angular Spreadsheet properties, methods, and events with contextual usage guidance.
+- **Troubleshooting support**: Search for guidance related to rendering, data loading, import and export, and performance issues.
+- **IDE integration**: Use Syncfusion documentation from compatible MCP clients such as Visual Studio Code, Syncfusion Code Studio, Cursor, and JetBrains.
+- **Privacy-focused operation**: The MCP Server processes requests based on the submitted query without storing prompts or application content.
+
+## Prerequisites
+
+Before configuring the Angular MCP Server, ensure that you have:
+
+- **Node.js** version 18 or later.
+- A **compatible MCP client**, such as Visual Studio Code, Syncfusion Code Studio, Cursor, or JetBrains.
+- An active [Syncfusion API key](https://www.syncfusion.com/account/api-key).
+- An **Angular application** (existing or new); see [Quick Start](https://ej2.syncfusion.com/angular/documentation/getting-started/angular-cli)
+- An active Syncfusion<sup style="font-size:70%">&reg;</sup> license, such as one of the following:
+  - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
+  - [Free Community License](https://www.syncfusion.com/products/communitylicense)
+  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+
+## Obtain a Syncfusion API key
+
+Generate the Syncfusion® API key from the [API Key page](https://www.syncfusion.com/account/api-key) and store it in a .txt or .key file. The saved file will be referenced in the MCP configuration:
+
+```json
+"env": {
+  "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+}
+```
+
+Alternatively, provide the API key directly:
+
+```json
+"env": {
+  "Syncfusion_API_Key": "YOUR_SYNCFUSION_API_KEY"
+}
+```
+
+> Using `Syncfusion_API_Key_Path` is recommended because it helps keep the API key out of source control. Do not commit an API key or key file to a repository.
+
+## Configure the Angular MCP Server
+
+Create the MCP configuration file in the root folder of the Angular Spreadsheet application. Use the configuration that corresponds to your MCP client.
+
+{% tabs %}
+{% highlight bash tabtitle="VS Code" %}
+
+// Create a `.vscode/mcp.json` file in your workspace:
+
+{
+  "servers": {
+    "sf-angular-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+{% endhighlight  %}
+{% highlight bash tabtitle="Code Studio" %}
+
+// Create a `.codestudio/mcp.json` file in your workspace:
+
+{
+  "servers": {
+    "sf-angular-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+// After creating the file, click Start in the inline action to install the server.
+
+{% endhighlight  %}
+{% highlight bash tabtitle="Cursor" %}
+
+// Create a `.cursor/mcp.json` file in your workspace:
+
+{
+  "mcpServers": {
+    "sf-angular-mcp": {
+      "command": "npx",
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+{% endhighlight  %}
+{% highlight bash tabtitle="JetBrains" %}
+
+// Open AI Assistant chat, type /, and select Add Command.
+// Click ➕ Add on the MCP settings page.
+// Choose STDIO and select JSON configuration:
+
+{
+  "mcpServers": {
+    "sf-angular-mcp": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@syncfusion/angular-mcp@latest"
+      ],
+      "env": {
+        "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
+        // or
+        // "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+
+// Click OK, then click Apply. The server starts and shows Connected status.
+
+{% endhighlight  %}
+{% endtabs %}
+
+**Verifying Installation** Check your editor's MCP Server list for `sf-angular-mcp` with a **Connected** status to confirm a successful installation.
+
+## Common use cases
+
+The examples below demonstrate common Angular Spreadsheet scenarios and how the MCP tools can provide relevant guidance, code examples, API references, and troubleshooting assistance. Tools can be invoked directly for specific tasks, or an AI assistant can automatically choose the most appropriate tool based on the request.
+
+**Get Started**
+
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for Angular Spreadsheet applications.
+
+{% promptcards %}
+{% promptcard Spreadsheet Setup %}
+#search_docs How do I configure the Angular Spreadsheet component?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard JSON Data Binding %}
+#search_docs How can I bind JSON data to an Angular Spreadsheet?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Implement Features**
+
+Get step-by-step help for adding specific features to Spreadsheet applications that are already in the project.
+
+{% promptcards %}
+{% promptcard Open and Save Excel Files %}
+#search_docs How do I open and save Excel files programmatically in an Angular Spreadsheet?
+{% endpromptcard %}
+{% endpromptcards %}
+
+{% promptcards %}
+{% promptcard Spreadsheet Charts %}
+#search_docs How do I create a chart from Spreadsheet data in Angular?
+{% endpromptcard %}
+{% endpromptcards %}
+
+**Troubleshooting**
+
+Describe the problem in plain language, and let `search_docs` help resolve it.
+
+{% promptcards %}
+{% promptcard Performance Issues %}
+#search_docs Why is my Angular Spreadsheet slow when opening large datasets?
+{% endpromptcard %}
+{% endpromptcards %}
+
+## Best practices
+
+To get the most out of the Syncfusion<sup>®</sup> Spreadsheet MCP Server:
+
+- **Be Specific** - Include the platform and Spreadsheet feature in your queries (for example, _"Can you show me how to render a Spreadsheet with default data in an Angular application?"_).
+- **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
+- **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
+- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your project.
+- **Start Fresh for New Topics** - Begin a new chat when switching to a different task to maintain clean context.
+- **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
+
+> Always review AI-generated code before using it in production.
+
+## Troubleshooting
+
+The table below lists frequently encountered issues and suggested resolutions to help diagnose and address common setup or usage challenges.
+
+| Issue | Solution |
+| --- | --- |
+| Clear npm cache | Run `npx clear-npx-cache` and restart your IDE to resolve package caching issues. |
+| Server failed to start | Update to Node.js 18+, verify JSON syntax in the config file, and restart your IDE. |
+| Invalid API key | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
+| Incorrect API key config | Verify the file location and content for a file path. For an inline key, check that the key is correctly updated. |
+| Wrong config file location | VS Code: `.vscode/mcp.json`<br/>Code Studio: `.codestudio/mcp.json`<br/>Cursor: `.cursor/mcp.json` in the workspace root. |
+| Check IDE logs | VS Code / Code Studio: Output panel → "MCP"<br/>Cursor: Developer Console for MCP errors. |
+
+## Privacy and security
+
+The Syncfusion MCP Server acts as a knowledge bridge between the selected AI model and Syncfusion documentation.
+
+- The tools process requests according to the user's query without storing any content or prompts.
+- User prompts are not stored or used for other purposes.
+- Prompts are not used to train Syncfusion models.
+- The assistant provides context; the final output is produced by the selected AI model.
+
+The MCP Server acts purely as a knowledge bridge, connecting your AI model with Syncfusion-specific expertise while respecting your privacy and maintaining security.

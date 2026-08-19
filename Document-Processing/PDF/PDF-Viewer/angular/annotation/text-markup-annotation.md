@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text markup annotation in Angular PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion Angular PDF Viewer.
+title: Text Markup Annotation in Angular PDF Viewer | Syncfusion
+description: Use text markup annotations in the Angular PDF Viewer, including highlight, underline, strikethrough, and squiggly, to mark up important content.
 platform: document-processing
 control: Text Markup Annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Angular PDF Viewer
+# Text Markup Annotations in Angular PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 
@@ -205,7 +205,7 @@ export class AppComponent implements OnInit {
 
 ## Highlight text programmatically
 
-Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add highlights using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -483,7 +483,7 @@ export class AppComponent implements OnInit {
 
 ## Underline text programmatically
 
-Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add underlines using the [addAnnotation()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 
@@ -523,7 +523,7 @@ export class AppComponent implements OnInit {
       pdfviewer.annotation.addAnnotation("Underline", {
         bounds: [{ x: 250, y: 148, width: 345, height: 14 }],
         pageNumber: 2
-    } as HighlightSettings);
+    } as UnderlineSettings);
   }
 }
 {% endhighlight %}
@@ -563,7 +563,7 @@ export class AppComponent implements OnInit {
       pdfviewer.annotation.addAnnotation("Underline", {
         bounds: [{ x: 250, y: 148, width: 345, height: 14 }],
         pageNumber: 2
-    } as HighlightSettings);
+    } as UnderlineSettings);
   }
 }
 
@@ -761,7 +761,7 @@ export class AppComponent implements OnInit {
 
 ## Strikethrough text programmatically
 
-Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotationn) method.
+Programmatically add strikethrough using the [addAnnotation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/annotation#addannotation) method.
 
 Example:
 

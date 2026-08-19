@@ -1,12 +1,12 @@
 ---
-title: Zip all files in subfolders using Syncfusion's Compression |Syncfusion
-description: This page illustrates with an example to zip all the files in subfolders using the Syncfusion.Compression.Zip namespace.
+title: How to Zip Subfolders in .NET Excel Library | Syncfusion
+description: Zip all files in subfolders using the Syncfusion.Compression.Zip namespace for folder compression in zip files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to zip all the files in subfolders using Syncfusion&reg;'s Compression?
+# How to zip files in subfolders with Syncfusion Compression
 
 You can compress and decompress the files with our Compression library. The following code example illustrates this. Additionally, it shows how to delete the source files from the given path after compression.
 

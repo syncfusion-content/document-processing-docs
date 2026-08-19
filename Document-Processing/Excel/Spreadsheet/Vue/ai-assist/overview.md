@@ -1,15 +1,15 @@
 ---
 layout: post
-title: AI Assist in Vue Spreadsheet control | Syncfusion
-description: Learn about the AI Assist feature in the Syncfusion Vue Spreadsheet control and how to configure it.
+title: About Syncfusion Vue Spreadsheet AI Assist | Syncfusion
+description: Learn about the AI Assist feature in Syncfusion Vue Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in Vue Spreadsheet control
+# About Syncfusion Vue Spreadsheet AI Assist
 
-**AI Assist** brings AI-powered capabilities directly into the spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
+**AI Assist** brings AI-powered capabilities directly into the Spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and AI Assist performs the action for you.
 
 ![Spreadsheet AI Assist panel](../images/spreadsheet_ai_assist.gif)
 
@@ -19,7 +19,7 @@ AI Assist integrates seamlessly into your Vue Spreadsheet application with minim
 
 For complete setup instructions, how-to guides, API references, and prompt examples, see [AI Assist Integration](./integration).
 
-## How AI Assist Works in spreadsheet
+## How AI Assist Works in the Spreadsheet
 
 Understanding how AI Assist processes your request helps you write better prompts and get more reliable results.
 

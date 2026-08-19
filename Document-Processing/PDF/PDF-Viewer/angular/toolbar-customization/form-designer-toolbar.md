@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Designer Toolbar in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about form designer toolbar customization in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form Designer Toolbar in Angular PDF Viewer | Syncfusion
+description: Customize the Form Designer toolbar in the Angular PDF Viewer to show, hide, or replace the default form design actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -57,7 +57,7 @@ export class AppComponent {
 
 ### 2. Show or hide form designer toolbar at runtime
 
-Use the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) API on the viewer's instance on a custom method to toggle form designer visibility at runtime.
+Use the [`enableFormDesigner`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformdesigner) API on the viewer instance in a custom method to toggle form designer visibility at runtime.
 
 {% highlight ts %}
 this.pdfViewerObj.enableFormDesigner = true;
@@ -74,8 +74,6 @@ Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/angular/documentatio
 </ejs-pdfviewer>
 {% endhighlight %}
 {% endtabs %}
-
-**Complete example:**
 
 ## Complete example with runtime toggle
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Collaborative-editing EJ2 Javascript Spreadsheet | Syncfusion
-description: Learn here all about Collaborative editing in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Collaborative editing JavaScript Spreadsheet | Syncfusion
+description: Collaborative editing in JavaScript Spreadsheet enables multiple users to work on the same workbook simultaneously with synchronized updates.
 platform: document-processing
 control: Collaborative editing 
 documentation: ug
 ---
 
-# Collaborative editing in EJ2 Javascript Spreadsheet control
+# Collaborative editing in JavaScript Spreadsheet 
 
 The collaborative editing support allows you to work at a spreadsheet collaboratively with other users. Multiple users can access to the the same spreadsheet simultaneously.
 
-> * To use Collaborative editing, inject the `CollaborativeEditing` module in the spreadsheet.
+> To use Collaborative editing, inject the `CollaborativeEditing` module in the spreadsheet.
 
 ## Dependencies
 
@@ -98,7 +98,7 @@ namespace WebApplication.Hubs
 }
 ```
 
-To configure the SignalR middleware by registering the following service in the `ConfigureServices` method of the `Startup` class.
+To configure the SignalR, register the following service in the `ConfigureServices` method of the `Startup` class.
 
 ```javascript
     services.AddSignalR();
@@ -166,7 +166,7 @@ connection.start().then(() => {
 
 ## Perform import action for collaborative clients
 
-Using the `action` argument from the [`actionComplete`](../api/spreadsheet/#actioncomplete) event, you can identity whether the import action is performed or not. If the action is `import`, then you need to send the `response data` to the server and also update the same to the collaborative clients.
+Using the `action` argument from the [`actionComplete`](../api/spreadsheet#actioncomplete) event, you can identity whether the import action is performed or not. If the action is `import`, then you need to send the `response data` to the server and also update the same to the collaborative clients.
 
 The following code example shows how to perform the import functionality for collaborative clients.
 

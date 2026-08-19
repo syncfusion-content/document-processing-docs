@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Area annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Area measurement annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Area Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the JavaScript (ES6) PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area annotation in TypeScript PDF Viewer
+# Area Annotation in JavaScript (ES6) PDF Viewer
 
 Area is a measurement annotation used to measure the surface of a closed region in the PDF.
 
@@ -277,7 +277,7 @@ Refer to the following code snippet to set the default Area settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, AreaSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -298,7 +298,7 @@ document.getElementById('Area')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, AreaSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -324,7 +324,7 @@ The scale ratio and unit of measurement can be modified using the scale ratio op
 
   ![CalibrateScaleRatio](../../images/calibrate_scaleratio.png)
 
-Supported units of measurements support for the measurement annotations in the PDF Viewer are
+Supported units of measurement for the measurement annotations in the PDF Viewer are
 
 * Inch
 * Millimeter

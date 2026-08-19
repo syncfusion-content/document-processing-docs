@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Volume Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Volume Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Volume measurement annotations in the ASP.NET Core PDF Viewer to calculate the volume of a 3D region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Volume Measurement Annotations in ASP.NET Core PDF Viewer
+# Volume Annotation in ASP.NET Core PDF Viewer
 Volume measurement annotations allow users to draw circular regions and calculate the volume visually.
 
 ![Volume overview](../../../javascript-es6/annotations/annotation-images/volume-annot.png)
@@ -68,7 +68,7 @@ function exitVolumeMode() {
 {% endtabs %}
 
 ### Add Volume Programmatically
-Configure default properties using the [`volumeSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_VolumeSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#addannotation) API to add a Volume measurement at a specific location.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

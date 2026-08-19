@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: About Syncfusion ASP.NET Core PDF Viewer Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion ASP.NET Core PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in ASP.NET Core PDF Viewer control
+# About Syncfusion ASP.NET Core PDF Viewer Organize Pages
 
 The PDF Viewer enables efficient document management by organizing pages seamlessly. The Organize Pages feature supports rotation, rearrangement, insertion, deletion, copying, and duplication of pages.
 
@@ -16,7 +16,7 @@ The Organize Pages feature provides the following options:
 
 * **Rotate Pages:** Adjust page orientation in 90-degree increments.
 * **Rearrange Pages:** Change page sequence with drag-and-drop.
-* **Insert New:ages** — Add blank pages at desired positions.
+* **Insert New Pages:** Add blank pages at desired positions.
 * **Delete Pages:** Remove unnecessary pages.
 * **Copy Pages:** Duplicate pages to reuse content.
 * **Import PDF Document:** Merge pages from another PDF.

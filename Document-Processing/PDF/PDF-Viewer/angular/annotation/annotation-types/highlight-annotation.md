@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight Text in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion Angular PDF Viewer.
+title: Highlight Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Highlight annotations in the Angular PDF Viewer to emphasize important text in a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Annotation (Text Markup) in Angular PDF Viewer
+# Highlight Annotation in Angular PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **Angular PDF Viewer**.
 You can highlight text using the toolbar or context menu, programmatically invoke highlight mode, customize default settings, handle events, and export the PDF with annotations.
@@ -71,7 +71,7 @@ export class AppComponent {
 
 ![Highlight tool](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
 
-### Apply highlight using Context Menu
+### Add Highlight Using the Context Menu
 
 Right-click a selected text region → select **Highlight**.
 
@@ -221,7 +221,7 @@ For detailed behavior, supported deletion workflows, and API reference, see [Del
 
 ### Comments
 
-Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
+Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to highlight annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation

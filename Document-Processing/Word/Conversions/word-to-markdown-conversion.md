@@ -1,12 +1,12 @@
 ---
-title: Convert Word to Markdown in C# | DocIO | Syncfusion
-description: Learn how to convert a Word document to Markdown using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Markdown in .NET Word | Syncfusion
+description: Learn how to convert a Word document to Markdown using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word to Markdown Conversion
+# Convert Word to Markdown in .NET Word
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports the conversion of a Word document to a Markdown file, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -484,6 +484,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown-with-Encoding).
+
 N> Set the encoding value before saving the document as per the above code example.
 
 ## Get Markdown document
@@ -533,6 +535,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Get_Markdown_document).
 
 ## Supported Word document elements
 

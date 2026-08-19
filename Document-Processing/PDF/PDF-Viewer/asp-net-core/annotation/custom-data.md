@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom Data in annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about how to use add custom Data in annotation in Syncfusion ASP.NET Core PDF Viewer Component.
+title: Custom Data in ASP.NET Core PDF Viewer | Syncfusion
+description: Attach custom metadata to annotations in the ASP.NET Core PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations in ASP.NET Core
+# Custom Data in Annotations in ASP.NET Core PDF Viewer
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 
@@ -48,7 +48,7 @@ window.onload = function() {
 {% endhighlight %}
 {% endtabs %}
 
-## Custom data for Individual Annotation
+## Custom data for individual annotation
 
 Provide customData inside individual annotation-type settings when you want specific payloads for different tools.
 
@@ -132,12 +132,12 @@ window.onload = function() {
 - [Annotation Overview](../overview)
 - [Annotation Types](../annotations/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Handwritten Signature](../annotation/signature-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation Permission](../annotation/annotation-permission)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)

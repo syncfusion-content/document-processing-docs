@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Primary Toolbar in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about primary toolbar customization in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Primary Toolbar in Angular PDF Viewer | Syncfusion
+description: Customize the primary toolbar in the Angular PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Primary Toolbar in Angular PDF Viewer
+# Customize the Primary Toolbar in Angular PDF Viewer
 
 ## Overview
 
@@ -111,7 +111,7 @@ import { ToolbarClickEventArgs } from '@syncfusion/ej2-navigations';
     PageOrganizerService
   ],
   template: `<div>
-    <button (click)="hideToolbar()">{{ showTool ? 'Hide' : 'Show' }} toolbar</button>
+    <button (click)="hideToolbar()">{{ showTool ? 'Hide' : 'Show' }} Toolbar</button>
     <ejs-pdfviewer #pdfviewer
       id="PdfViewer"
       style="height:500px;width:100%;"
@@ -157,7 +157,7 @@ export class AppComponent {
 ## Expected result
 
 - The primary toolbar shows only the items you list in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbarsettings#toolbaritems).
-- Clicking the `Hide toolbar` / `Show toolbar` button calls [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showtoolbar) and hides or shows the toolbar at runtime.
+- Clicking the `Hide Toolbar` / `Show Toolbar` button calls [`showToolbar()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/toolbar#showtoolbar) and hides or shows the toolbar at runtime.
 - Clicking the custom `Fit to Width` button calls `fitToWidth()` method.
 
 ## Troubleshooting

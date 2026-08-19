@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Identify the context menu opened in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Identify Context Menu in TypeScript Spreadsheet | Syncfusion
+description: Identify the context menu opened in TypeScript Spreadsheet to perform custom actions based on the selected menu and target area.
 platform: document-processing
-control: Spreadsheet 
+control: Spreadsheet
 documentation: ug
 ---
 
-# Identify the context menu opened in EJ2 TypeScript Spreadsheet control
+# How to Identify Context Menu Opened in TypeScript Spreadsheet
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 
-The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet/#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
+The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#contextmenubeforeopen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
 
 | Class name | Context menu name |
 |-------|---------|

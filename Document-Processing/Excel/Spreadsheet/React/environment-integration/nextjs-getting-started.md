@@ -1,13 +1,13 @@
 ---
 layout: post
-title: React Spreadsheet getting started with Next.js | Syncfusion
-description: Check out and learn about how to use React Spreadsheet component of Syncfusion Essential JS 2 in the Next.js project.
+title: Getting Started with React Spreadsheet in Next.js | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in a Next.js project. Explore setup and integration steps.
 control: Next.js
 platform: document-processing
 documentation: ug
 ---
 
-# Creating a Spreadsheet Application in Next.js
+# Getting Started with React Spreadsheet in Next.js
 This section provides a step-by-step guide for setting up a Next.js application and integrating the React Spreadsheet component.
 
 ## What is Next.js?
@@ -460,5 +460,3 @@ Common setup and runtime issues are listed below with their cause and a resoluti
 | **License warning or toolbar shows a license banner at runtime.** | Syncfusion license key not registered, or registered after the component renders. | Register the license key in the application entry point **before** rendering any Syncfusion component. See [Register the Syncfusion License Key](../../register-the-syncfusion-license-key) and [Licensing FAQ](../../../../Licensing/licensing-faq). |
 | **Open/Save actions fail with network or CORS errors.** | The `openUrl` / `saveUrl` endpoints are unreachable from the browser, or in production the Syncfusion demo services are rate-limited / blocked. | Host your own Spreadsheet open/save web service and ensure CORS is enabled. Refer to the [Web Services](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/web-services/webservice-overview) section. |
 
-
-N> Looking for the full React Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) page.

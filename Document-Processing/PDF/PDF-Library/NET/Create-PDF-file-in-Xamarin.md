@@ -1,11 +1,11 @@
 ---
-title: Create or Generate PDF file in Xamarin | Syncfusion
-description: Learn how to create or generate a PDF file in Xamarin with easy steps using Syncfusion Xamarin PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in Xamarin | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Xamarin and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Create or Generate PDF file in Xamarin
+# Getting Started with .NET PDF Library in Xamarin
 
 > **Note:** Xamarin reached end-of-life in May 2024 and is no longer supported by Microsoft. For new projects, use the [.NET MAUI](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui) equivalent of this guide.
 
@@ -52,8 +52,6 @@ public App()
 
 {% endhighlight %}
 {% endtabs %}
-
-Replace `"YOUR LICENSE KEY"` with the actual key from your Syncfusion<sup>&reg;</sup> account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For local development, store the key in an environment variable and read it with `Environment.GetEnvironmentVariable("SyncfusionLicenseKey")` rather than hardcoding it. For production environments, prefer reading the key from a secure store such as **Azure Key Vault**, the platform **Secure Storage** plugin, or a configuration provider. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 Step 5: Add a new Forms XAML page in the portable project if no XAML page is defined in the App class. Otherwise, proceed to the next step.
 

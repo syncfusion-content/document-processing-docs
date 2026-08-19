@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Security Advisories in Angular Document Editor component | Syncfusion
-description: Learn here all about Security Advisories in Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Security Advisories in Angular DOCX Editor | Syncfusion
+description: Security advisories in Angular DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 platform: document-processing
-control: Security advisories 
+control: Security advisories
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Security Advisories in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 Controls
+# Security Advisories in Angular DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured about the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the [SOOS](https://soos.io/) security tool.
+Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured about the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the SOOS security tool.
 
 This document provides a description of the security updates available for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> JS2 controls for volume release.
 
 ## Security Updates
 
-The following security updates are available for [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) control and are listed based on the release version. 
+The following security updates are available for Angular Document Editor control and are listed based on the release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn how to enable collaborative editing using Redis in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Collaborative Editing in TypeScript using ASP.NET Core | Syncfusion
+description: The collaborative editing feature in TypeScript DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in javascript-es6 with Redis in ASP.NET Core
+# Collaborative Editing in TypeScript DOCX Editor using ASP.NET Core
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+Collaborative editing allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
 
 ## Prerequisites
 
@@ -21,15 +21,15 @@ The following are needed to enable collaborative editing in [TypeScript DOCX Edi
 
 ## SignalR
 
-In collaborative editing, real-time communication is Essential<sup style="font-size:70%">&reg;</sup> for users to see each other's changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
+In collaborative editing, real-time communication is essential for users to see each other's changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
 
 To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either Azure SignalR Service or a Redis backplane.
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers). 
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
-Below is a code snippet to configure Azure SignalR in an ASP.NET Core application using the ```AddAzureSignalR``` method
+Below is a code snippet to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method.
 
 ```csharp
 builder.Services.AddSignalR() .AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => { 
@@ -43,9 +43,9 @@ builder.Services.AddSignalR() .AddAzureSignalR("<your-azure-signalr-service-conn
 Using a Redis backplane, you can achieve horizontal scaling of your SignalR application. The SignalR leverages Redis to efficiently broadcast messages across multiple servers. This allows your application to handle large user bases with minimal latency.
 
 In the SignalR app, install the following NuGet package:
-* ` Microsoft.AspNetCore.SignalR.StackExchangeRedis`
+* `Microsoft.AspNetCore.SignalR.StackExchangeRedis`
 
-Below is a code snippet to configure Redis backplane in an ASP.NET Core application using the ```AddStackExchangeRedis ``` method
+Below is a code snippet to configure Redis backplane in an ASP.NET Core application using the `AddStackExchangeRedis` method.
 
 ```csharp
 builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
@@ -65,18 +65,18 @@ builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(
 
 In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm. 
 
-All editing operations in collaborative editing are stored in the Redis cache. To prevent memory buildup, we can configure  a `SaveThreshold` limit at the application level. If the `SaveThreshold` is 100, editing operations up to twice the save threshold limit are kept in Redis per document. Once exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source input document.
+All editing operations in collaborative editing are stored in the Redis cache. To prevent memory buildup, we can configure a `SaveThreshold` limit at the application level. If the `SaveThreshold` is 100, editing operations up to twice the save threshold limit are kept in Redis per document. Once exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source input document.
 
 The configuration and store size of the Redis cache can be adjusted based on the following considerations.
 
-- *Storage Requirements*: A minimum of 400KB of cache memory is needed for editing a single document, with the capacity to store up to 100 editing operations. Storage needs may increase based on following factor.
+- *Storage Requirements*: A minimum of 400KB of cache memory is needed for editing a single document, with the capacity to store up to 100 editing operations. Storage needs may increase based on the following factors.
     - *Images*: Increases with the number of images added to the document.
     - *Pasted content*: Depends on the size of the SFDT content.
 - *Connection Limits*: Redis has a limit on concurrent connections. Choose the Redis configuration based on your user base to ensure optimal performance.
 
-> For better performance, we recommend to have minimum `SaveThreshold` limit of 100.
+N> For better performance, we recommend having a minimum `SaveThreshold` limit of 100.
 
-## How to enable collaborative editing in client side
+## How to enable collaborative editing on the client side
 
 ### Step 1: Enable collaborative editing in Document Editor
 
@@ -91,7 +91,7 @@ To enable collaborative editing, inject `CollaborativeEditingHandler` and set th
 
 ### Step 2: Configure SignalR to send and receive changes
 
-To broadcast the changes made and receive changes from remote users, configure SignalR like below.
+To broadcast the changes made and receive changes from remote users, configure SignalR as shown below.
 
  
 {% tabs %}
@@ -113,7 +113,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+Changes made on the client side need to be sent to the server side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
 
  
 {% tabs %}

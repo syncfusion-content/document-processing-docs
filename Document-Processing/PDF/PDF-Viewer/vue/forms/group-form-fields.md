@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Group form fields in the Vue PDF Viewer component | Syncfusion
-description: Learn how to group PDF form fields in the Syncfusion Vue PDF Viewer by assigning the same name to multiple widgets.
+title: Group Form Fields in Vue PDF Viewer | Syncfusion
+description: Group PDF form fields in the Vue PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Group form fields in Vue PDF Viewer
+# Group Form Fields in Vue PDF Viewer
 
-The Syncfusion **Vue PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same Name** to them. Grouped form fields share their values and states automatically based on the field type. Group form fields using the **Form Designer UI** or programmatically via APIs to keep related fields synchronized across a PDF document.
+The Syncfusion **Vue PDF Viewer** allows you to **group multiple form fields into a single logical field** by assigning the **same name** to them. Grouped form fields share their values and states automatically based on the field type. Group form fields using the **Form Designer UI** or programmatically via APIs to keep related fields synchronized across a PDF document.
 
 This page covers:
 - [How form field grouping works](#how-grouping-works)
@@ -51,9 +51,9 @@ N> Form field grouping is controlled by the **Name** property. The position of e
 You can also group form fields during creation by assigning the same **Name** through code.
 
 ### Example Scenarios
-- Two textboxes named **EmployeeId** share the same value.
-- A radio button group named **Gender** allows single selection.
-- Two checkboxes named **Subscribe** share the checked state.
+- Two textboxes named **EmployeeId** share the same value across both widgets.
+- A radio button group named **Gender** allows a single selection across the group.
+- Two checkboxes named **Subscribe** share the same checked state.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,13 +91,11 @@ export default {
   },
   data() {
     return {
-      // ❗ Remove the leading space
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
-    // ✅ Keep the key name exactly as 'PdfViewer'
     PdfViewer: [
       Toolbar,
       Magnification,

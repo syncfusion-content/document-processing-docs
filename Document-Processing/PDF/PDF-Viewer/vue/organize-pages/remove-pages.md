@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove pages using Organize Pages in Vue PDF Viewer | Syncfusion
-description: How to remove one or more pages from a PDF using the Organize Pages view in the Syncfusion Vue PDF Viewer.
+title: Remove Pages in Vue PDF Viewer | Syncfusion
+description: Remove one or more pages from a PDF in the Vue PDF Viewer using the Organize Pages panel, either through the UI or programmatically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool in Vue
+# Remove Pages in Vue PDF Viewer
 
 ## Overview
 
@@ -37,7 +37,7 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 
    - Delete a single page directly from its thumbnail: hover over the page thumbnail to reveal the per-page delete icon, then click that icon to remove only that page.
 
-   ![Delete selected pages using the Organize Pages delete control](../../react/images/organize-delete.png)
+   ![Delete selected pages using the Organize Pages delete control](../images/organize-delete.png)
 
 4. Multi-page deletion
 
@@ -48,7 +48,7 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
     - Use **Undo** (Ctrl+Z) to revert the last deletion.
     - Use **Redo** (Ctrl+Y) to revert the last undone deletion.
 
-    ![Undo and redo Organize Pages toolbar](../../react/images/undo-redo.png)
+    ![Undo and redo Organize Pages toolbar](../images/undo-redo.png)
 
 6. Save the PDF after deletion
 
@@ -65,7 +65,7 @@ To enable or disable the **Remove Pages** button in the Organize Pages toolbar, 
 
 ## Code snippet
 
-To enable the remove pages feature, use the following code snippet:
+To configure the remove pages feature, use the following code snippet (the example enables it by setting `canDelete: true`):
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}

@@ -1,13 +1,13 @@
 ---
-title: Create or Generate PDF document in ASP.NET Core Web API | Syncfusion
-description: Learn how to create a PDF document in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF library without depending on Adobe
+title: Getting Started with .NET PDF in ASP.NET Core Web API | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in ASP.NET Core Web API. Create PDF documents without Adobe dependencies
 platform: document-processing
 control: PDF
 documentation: ug
 keywords: pdf, aspnet core, web api, csharp
 ---
 
-# Create or Generate PDF document in ASP.NET Core Web API
+# Getting Started with .NET PDF Library in ASP.NET Core Web API
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF documents.
 
@@ -30,7 +30,7 @@ Step 2: In the project configuration window, name your project and click **Creat
 Step 3: Install the [Syncfusion.Pdf.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core) NuGet package as a reference to your ASP.NET Core Web API application from [NuGet.org](https://www.nuget.org/).
 ![Install PDF NuGet package](MVC_images/Web-API-3.png)
 
-Step 4: Register the Syncfusion license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion component:
+Step 4: Register the Syncfusion<sup>&reg;</sup> license key. A trial watermark is added to every page of the generated PDF until a valid key is registered. Include the license key in **Program.cs** before initializing any Syncfusion<sup>&reg;</sup> component:
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -52,7 +52,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-Replace `"YOUR LICENSE KEY"` with the key from your Syncfusion account. If you do not have one, request a free 30-day trial at [https://www.syncfusion.com/sales/communitylicense](https://www.syncfusion.com/sales/communitylicense). For production, store the key in `appsettings.json` or User Secrets rather than hardcoding it. Refer to the [Syncfusion License documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion license key in your application.
+Replace `"YOUR LICENSE KEY"` with the license key associated with your Syncfusion<sup>&reg;</sup> account. If you do not have a license key, you can request a free 30-day trial or apply for a Community License from the Syncfusion<sup>&reg;</sup> website. For more information about registering a license key in your application, refer to the [Syncfusion<sup>&reg;</sup> Licensing Documentation](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 Step 5: Ensure that Swagger and controller routing are enabled in `Program.cs`.
 

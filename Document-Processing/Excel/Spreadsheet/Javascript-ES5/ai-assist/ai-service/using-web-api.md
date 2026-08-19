@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Web API Server Setup in JavaScript Spreadsheet | Syncfusion
-description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion JavaScript Spreadsheet control.
+description: AI Assist Web API server setup in JavaScript Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug
@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
@@ -201,7 +201,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the JavaScript Spreadsheet
 
-Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint.
 
 ```js
 ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.AIAssist);
