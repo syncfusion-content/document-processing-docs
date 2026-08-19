@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Deploy TypeScript DOCX Editor Docker image on AKS | Syncfusion
-description: Deploy the Syncfusion® TypeScript DOCX Editor Docker image to Azure Kubernetes Service (AKS) for scalable and reliable document processing.
+description: Deploy the SyncfusionÂ® TypeScript DOCX Editor Docker image to Azure Kubernetes Service (AKS) for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
 documentation: ug
