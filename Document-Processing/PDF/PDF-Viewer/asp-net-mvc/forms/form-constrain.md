@@ -1,13 +1,14 @@
 ---
 layout: post
-title: PDF form field flags in MVC PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion MVC PDF Viewer.
+title: Form Constrain in ASP.NET MVC PDF Viewer | Syncfusion
+description: Configure form field constraints in the ASP.NET MVC PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# PDF form field flags in MVC PDF Viewer
+# PDF Form Field Constraints in ASP.NET MVC PDF Viewer
 
 The Syncfusion **MVC PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
@@ -156,7 +157,7 @@ N> Printing can be triggered programmatically using **pdfviewer.print()**. Form 
 **Steps**
 1. Enable **Form Designer** mode in the PDF Viewer.  
 2. Select an existing form field on the PDF page.  
-3. The **Right click To open context menu - > Properties** popover is displayed.
+3. The **Right-click to open the context menu → Properties** popover is displayed.
 4. Configure the required constraint options.  
 5. Click “Ok” and Close the properties popover to apply the changes.  
 
@@ -285,5 +286,6 @@ You can configure default flag values so that form fields added using the [Form 
 - [Modify form fields](./manage-form-fields/modify-form-fields)  
 - [Group form fields](./group-form-fields)  
 - [Add custom data to PDF form fields](./custom-data)  
-- [Form Validation](./form-validation)  
+- [Form validation](./form-validation)  
+- [Form field events](./form-field-events)
 - [Form fields API](./form-fields-api)

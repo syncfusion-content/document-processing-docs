@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Clipboard in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Clipboard in TypeScript DOCX Editor | Syncfusion
+description: The clipboard support in TypeScript DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
 control: Clipboard
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in JavaScript (ES6) Document Editor control
+# Clipboard in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into it in HTML format, so that it can be pasted in any application that supports the clipboard.
 

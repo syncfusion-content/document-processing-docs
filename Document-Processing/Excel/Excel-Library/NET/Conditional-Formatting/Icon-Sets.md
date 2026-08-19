@@ -1,12 +1,12 @@
 ---
-title: Icon Sets | Excel library | Syncfusion
-description: Learn how to apply icon-set conditional formatting rules in an Excel document using Syncfusion XlsIO.
+title: Icon Sets in .NET Excel Library | Syncfusion
+description: Icon-set conditional formatting describes how Syncfusion .NET Excel Library applies icon-based rules to visually highlight Excel data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Icon Sets in Conditional Formatting
+# Icon Sets in .NET Excel Library
 
 Icon sets annotate each cell with an icon chosen from three to five categories that are distinguished by threshold values. Each icon represents a range of values, and each cell is annotated with the icon whose range contains the cell value.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Save in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Open Save in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Open and Save in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about open and save operations in the Syncfusion ASP.NET Core Spreadsheet control, including importing and exporting workbook files.
 platform: document-processing
 control: Open Save
 documentation: ug
 ---
 
 
-# Open and Save in ASP.NET Core Spreadsheet control
+# Open and Save in ASP.NET Core Spreadsheet
 
 To import an Excel file, the file is read and converted into a client-side Spreadsheet model. The converted model is returned as JSON and used to render the Spreadsheet. Similarly, when saving, the client-side Spreadsheet model is sent to the server as JSON for processing and export. These operations require server-side configuration.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink Navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Configure hyperlink and table-of-contents navigation in ASP.NET Core PDF Viewer. Learn how to enable/disable links and handle hyperlink events.
+title: Hyperlink in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the ASP.NET Core PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Hyperlink navigation in ASP.NET Core PDF Viewer
+# Hyperlink Navigation in ASP.NET Core PDF Viewer
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 

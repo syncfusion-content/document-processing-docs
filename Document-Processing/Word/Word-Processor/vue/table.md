@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in Vue DOCX Editor | Syncfusion
-description: Learn here all about Table in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
-control: Document Editor
+title: Tables in Vue DOCX Editor | Syncfusion
+description: Tables in Vue DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
+control: Table 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in Vue Document Editor
+# Tables in Vue DOCX Editor
 
 Tables are an efficient way to present information. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. The Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Unsupported features in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about the list of unsupported features in the JavaScript (ES6) Document Editor to understand its limitations.
+title: Unsupported Features in TypeScript DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in TypeScript DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in JavaScript (ES6) DOCX Editor
+# Unsupported Features in TypeScript DOCX Editor
 
-This section describes the unsupported elements in [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) 
+This section describes the unsupported elements in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
 ## Document formatting
 
@@ -19,16 +19,16 @@ This section describes the unsupported elements in [TypeScript DOCX Editor](http
 | Paragraph Properties | Shading | No |
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
-|  | Don’t hyphenate | No |
+|  | Don't hyphenate | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
-| Text Properties | Shading  | No |
-|  |  Position | No |
-|  |  Font kerning | No |
-|  |  Ligatures | No |
-|  |  Number spacing | No |
-|  |  Number forms | No |
-|  |  Stylistic sets | No |
-|  |  Contextual alternates| No |
+| Text Properties | Shading | No |
+|  | Position | No |
+|  | Font kerning | No |
+|  | Ligatures | No |
+|  | Number spacing | No |
+|  | Number forms | No |
+|  | Stylistic sets | No |
+|  | Contextual alternates | No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Section Formatting | Mirror margins | No |
@@ -49,8 +49,8 @@ This section describes the unsupported elements in [TypeScript DOCX Editor](http
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
-| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/chart) |
-| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
+| Models, SmartArt, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/chart) |
+| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/shapes#supported-shapes) (Shape Properties: Fill types, borders, rotation, and effects are not supported) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |

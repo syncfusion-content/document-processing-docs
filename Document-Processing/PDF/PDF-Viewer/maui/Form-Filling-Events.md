@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Form Field Events in .NET MAUI PDF Viewer (SfPdfViewer)
+# Form Field Events in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) exposes events that allow you to track and respond to user interactions with form fields. The following table summarizes the available events:
 

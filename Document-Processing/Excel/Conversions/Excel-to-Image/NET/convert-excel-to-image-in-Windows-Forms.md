@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to Image in Windows Forms | Syncfusion 
-description: Convert an Excel document to Image in Windows Forms using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in Windows Forms | Syncfusion
+description: Windows Forms Excel to Image section explains how to convert Excel documents to images in Windows Forms using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to Image in Windows Forms
+# Excel to Image Conversion in Windows Forms using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Windows Forms**.
 
@@ -125,7 +125,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Windows%20Forms/Convert%20Excel%20to%20Image">GitHub</a>.    
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Windows%20Forms/Convert%20Excel%20to%20Image" aria-label="GitHub demo link">GitHub</a>.    
 
 By executing the program, you will get the **image** as follows.
 

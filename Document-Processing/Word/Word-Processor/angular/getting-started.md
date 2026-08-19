@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Angular DOCX Editor component | Syncfusion
-description: Learn how to create a Document Editor in an Angular application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+title: Getting Started with Angular DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion Angular DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -236,15 +236,15 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Angular DOCX Editor](./images/angular_getting_started.png)
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 You can also explore the Document Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/getting-started).
-
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 ## Server-side dependencies
 

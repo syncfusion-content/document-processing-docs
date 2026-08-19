@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Localization support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Localize the  UWP Spreadsheet control by customizing ribbon, dialog, and UI text using resource files and culture-specific settings.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Localization in UWP Spreadsheet (SfSpreadsheet)
+# Localization in UWP Spreadsheet 
 
 Localization is the process of adapting the application UI to a specific language or culture. SfSpreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding a resource file and setting the specific culture in the application.
 

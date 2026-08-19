@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Fields in Vue Document editor component | Syncfusion
-description: Learn here all about Fields in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Fields in Vue DOCX Editor | Syncfusion
+description: Fields in Vue DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 control: Fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Fields in Vue Document editor component
+# Fields in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 

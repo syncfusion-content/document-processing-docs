@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable or disable text selection in Angular PDF Viewer | Syncfusion
-description: Learn how to enable or disable text selection in the Angular PDF Viewer using the enableTextSelection property.
+title: How to Enable or Disable Text Selection in Angular PDF | Syncfusion
+description: Enable or disable text selection in the Angular PDF Viewer using the enableTextSelection property to control how users interact with PDF text.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable or disable text selection in Angular PDF Viewer
+# How to Enable or Disable Text Selection in Angular PDF Viewer
 
 This guide explains how to enable or disable text selection in the Syncfusion Angular PDF Viewer using both initialization-time settings and runtime toggling.
 
@@ -83,7 +83,7 @@ export class AppComponent {
 
 **Set `enableTextSelection` to false**
 
-Use the [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property during initialization to disable or enable text selection. The following example disables the text selection during initialization.
+Use the [`enableTextSelection`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextselection) property during initialization to disable or enable text selection. The following example disables text selection during initialization.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -248,5 +248,5 @@ If text selection remains active, ensure that the [`TextSelectionService`](https
 
 ## See also
 
-- [Text Selection API reference](../text-selection/reference)
+- [Text Selection API Events](../text-selection/text-selection-api-events)
 - [Angular PDF Viewer events](../events)

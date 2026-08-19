@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open OneDrive  Files in Angular Docx Editor | Syncfusion
-description: Learn about how to Open document from OneDrive in the Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in Angular DOCX Editor | Syncfusion
+description: Open documents from OneDrive in Angular DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from OneDrive in Angular Document Editor
+# Open Documents from OneDrive in Angular DOCX Editor
 
 To load a document from OneDrive in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below
 

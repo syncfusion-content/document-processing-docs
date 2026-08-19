@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Open PDF from Google Cloud Storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Cloud Storage in the Syncfusion TypeScript PDF Viewer component using a server-backed approach.
+title: From Google Cloud Storage in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Cloud Storage in the JavaScript (ES6) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Google Cloud Storage in TypeScript
+# Open PDF from Google Cloud Storage in JavaScript (ES6) PDF Viewer
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 
-**Step 1:** Create a Simple PDF Viewer Sample in TypeScript
+**Step 1:** Create a simple PDF Viewer sample in TypeScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
@@ -58,7 +58,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Cloud Storage.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Google Cloud Storage.
 
 ```csharp
 [HttpPost("Load")]
@@ -113,7 +113,7 @@ N> Replace `path/to/service-account-key.json` with the actual file path to your 
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Google Cloud Storage. Ensure the document name exists in your bucket.
 
 ```typescript
 

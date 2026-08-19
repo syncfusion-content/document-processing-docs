@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Fields API in ASP.NET Core PDF Viewer | Syncfusion
-description:  Learn how to use Form Fields API to enable, update, retrieve and clear in the Syncfusion ASP.NET Core PDF Viewer.
+title: Form Fields Api in ASP.NET Core PDF Viewer | Syncfusion
+description: Use the form fields API in the ASP.NET Core PDF Viewer to enable, update, retrieve, and clear form fields programmatically from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

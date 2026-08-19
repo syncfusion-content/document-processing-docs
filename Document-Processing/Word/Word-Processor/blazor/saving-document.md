@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Saving a Document in Blazor DOCX Editor Component | Syncfusion
-description:  Learn here all about saving a document in the Syncfusion Blazor Document Editor component, with examples for server, database, and local storage.
+title: Saving a Document in Blazor DOCX Editor | Syncfusion
+description: Save documents from Blazor DOCX Editor to a server, database, or local file system, and download document copies in supported formats
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Saving a Document in Blazor Document Editor Component
+# Saving a Document in Blazor DOCX Editor
 
 After composing or editing, a document must be saved to the server, a database, or the local file system.
 

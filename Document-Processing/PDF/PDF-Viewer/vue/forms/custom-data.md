@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add custom data to form fields in Vue PDF Viewer | Syncfusion
-description: Learn how to attach, update, and read custom data on PDF form fields using the Form Designer UI and APIs in the Syncfusion Vue PDF Viewer.
+title: Custom Data in Vue PDF Viewer | Syncfusion
+description: Attach, update, and read custom data on PDF form fields in the Vue PDF Viewer using the Form Designer UI and the form fields API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add Custom Data to PDF Form Fields in Vue PDF Viewer
+# Custom Data on Form Fields in Vue PDF Viewer
 
 The **Syncfusion Vue PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the `customData` property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
@@ -27,7 +27,7 @@ This page explains how to:
 
 ## Add Custom Data While Creating PDF Form Fields
 
-You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of `addFormField()`.
+You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of [addFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addformfields).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -193,7 +193,7 @@ export default {
 {% endtabs %}
 
 **Tip:**
-Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
+Merge new values with the existing customData object before calling [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to avoid overwriting previously stored data.
 
 ## Read Custom Data from PDF Form Fields
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for JavaScript.
+title: Hyperlink in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the JavaScript (ES5) PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in JavaScript PDF Viewer
+# Hyperlink Navigation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports hyperlink navigation for inline links and table-of-contents (TOC) entries that target destinations inside a document. These elements let users jump directly to relevant sections.
 
@@ -76,6 +76,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endtabs %}
 
 N> Disabling hyperlinks affects only the viewer's behavior and does not modify the original PDF document.
+
 ### Controlling Link Behavior
 
 The `hyperlinkOpenState` property determines how external URLs open when a hyperlink is clicked.
@@ -99,8 +100,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
-
-pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+pdfviewer.resourceUrl='https://cdn.syncfusion.com/ej2/34.1.32/dist/ej2-pdfviewer-lib';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -115,6 +115,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
   hyperlinkOpenState: 'NewTab' // Opens links in a new browser tab
 });
 
+pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -207,6 +208,6 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/bookmark-navigation)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-navigation)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/interactive-pdf-navigation/page-thumbnail-navigation)
+- [Bookmark navigation](./bookmark)
+- [Page navigation](./page)
+- [Page thumbnail navigation](./page-thumbnail)

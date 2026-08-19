@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom data in annotations in React PDF Viewer | Syncfusion
-description: Learn how to add custom data to PDF annotations in the Syncfusion React PDF Viewer and retrieve it for tailored workflows.
+title: Custom Data in React PDF Viewer | Syncfusion
+description: Attach custom metadata to annotations in the React PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom data in annotations in React
+# Custom Data in Annotations in React PDF Viewer
 
 Annotations can include custom key–value data via the `customData` property. This is supported at two levels:
 

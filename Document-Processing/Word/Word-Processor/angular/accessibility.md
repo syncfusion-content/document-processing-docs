@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Angular DOCX Editor | Syncfusion
+description: The accessibility support in Angular DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 control: Accessibility 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Angular Document Editor component
+# Accessibility in Angular DOCX Editor
 
 The accessibility compliance for the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is outlined below.
 

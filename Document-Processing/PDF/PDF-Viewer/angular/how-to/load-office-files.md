@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load office files in PDF Viewer
-description: Learn about how to load office files in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Load Office Files in Angular PDF Viewer | Syncfusion
+description: Load Microsoft Office files (Word, Excel, PowerPoint) into the Angular PDF Viewer so users can preview them as PDFs in the browser.
 platform: document-processing
-control: How to load the Office products
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load Microsoft Office files
+# How to Load Office Files in Angular PDF Viewer
 
 The PDF Viewer can display Microsoft Office documents (Word, Excel, PowerPoint) and common image formats by converting them to PDF on a server and returning the resulting PDF as a Base64 string or a hosted PDF URL. This approach lets the viewer render Office files without requiring client-side Office runtimes.
 

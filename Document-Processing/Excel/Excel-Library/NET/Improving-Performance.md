@@ -1,11 +1,11 @@
 ---
-title: Improving Performance | Syncfusion
-description: Discover Syncfusion XlsIO performance best practices with code examples for reading, writing, styling, autofit, data import, and validation.
+title: Performance Optimization in .NET Excel Library | Syncfusion
+description: The performance section describes best practices for reading, writing, styling, autofit, data import, and validation.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Improving Performance
+# Performance Optimization in .NET Excel Library
 
 This section describes patterns that improve XlsIO performance when you read, write, format, or validate large workbooks. Measure a baseline first, then apply the patterns that target your bottleneck.
 

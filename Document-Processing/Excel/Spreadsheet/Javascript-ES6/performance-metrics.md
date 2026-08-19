@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance Metrics for JavaScript Spreadsheet Control | Syncfusion
-description: Learn about performance metrics for JavaScript Spreadsheet control, measured results, and environment details.
+title: Performance Metrics in TypeScript Spreadsheet | Syncfusion
+description: Performance metrics in TypeScript Spreadsheet provide benchmark results, measurements, and environment details to evaluate control performance.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Metrics for JavaScript Spreadsheet Control
+# Performance Metrics in TypeScript Spreadsheet 
 
 The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) provides a powerful, Excel‑like experience for web applications, allowing users to create, edit, view, and manage spreadsheets with ease. It supports large datasets, formulas, and interactive features such as styling, validation, sorting, filtering, and file import/export while maintaining a smooth and responsive user experience.
 

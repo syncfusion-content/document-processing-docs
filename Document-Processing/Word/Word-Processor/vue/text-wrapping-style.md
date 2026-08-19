@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text wrapping style in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Text wrapping style in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in Vue DOCX Editor | Syncfusion
+description: Text wrapping styles in Vue DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 control: Text wrapping style 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text wrapping style in Vue Document Editor component
+# Text Wrapping Style in Vue DOCX Editor
 
 Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 

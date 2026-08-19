@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import and export annotations in Vue PDF Viewer | Syncfusion
-description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion Vue PDF Viewer.
-control: Import export annotation object
+title: How to Import and Export Annotations in Vue PDF Viewer | Syncfusion
+description: Import and export annotations in the Vue PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import export annotation in Vue PDF Viewer control
+# How to Import and Export Annotations in Vue PDF Viewer
 
 The PDF Viewer control supports exporting and importing annotations in multiple formats: JSON, XFDF, or as native annotation objects. Use `exportAnnotation('Json')` or `exportAnnotation('Xfdf')` for serialized formats, and `exportAnnotationsAsObject()` to obtain the in-memory annotation objects that can be re-imported with `importAnnotation()`.
 

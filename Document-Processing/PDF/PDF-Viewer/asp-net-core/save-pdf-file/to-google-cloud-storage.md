@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Google Cloud Storage in Core PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Cloud Storage using the Syncfusion ASP.NET Core PDF Viewer component with a server-backed web service.
+title: To Google Cloud Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Save PDF files from the ASP.NET Core PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save Documents to Google Cloud Storage
+# Save PDF Files to Google Cloud Storage in ASP.NET Core PDF Viewer
 
 Follow the steps below to save a PDF file to Google Cloud Storage using the ASP.NET Core PDF Viewer with a server-backed web service.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Extract Pages in Vue PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Extract pages from a PDF in the Vue PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in Vue PDF Viewer
+# Extract Pages in Vue PDF Viewer
 
 The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 
@@ -187,7 +187,7 @@ export default {
       const array = viewer.extractPages('1,2');
       //Load extracted Pages
       viewer.load(array,'');
-      //Print Base64 to ensure pages are extracted
+      //Log the extracted pages (Uint8Array) to verify
       console.log(array);
     }
   },

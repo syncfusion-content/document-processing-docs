@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue 3 DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a Vue 3 application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion Vue 3 DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Getting started vue 3
 platform: document-processing
 documentation: ug
@@ -63,7 +63,7 @@ sf
 {% endhighlight %}
 {% endtabs %}
 
-When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, select the following options:
+When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component, select the following options:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -283,11 +283,11 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Vue 3 DOCX Editor](./images/vue_3_getting_started.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
-
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
 
 ## Server-side dependencies
 
