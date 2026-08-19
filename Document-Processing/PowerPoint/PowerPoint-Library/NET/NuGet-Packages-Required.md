@@ -7,6 +7,7 @@ documentation: UG
 ---
 # Required NuGet Packages in .NET PowerPoint Presentation
 
+## Working with PowerPoint Presentations
 To work with PowerPoint Presentations, install the following NuGet packages in your application:
 
 <table>

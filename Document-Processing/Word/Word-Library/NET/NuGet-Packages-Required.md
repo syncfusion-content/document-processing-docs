@@ -1,12 +1,12 @@
 ---
-title: NuGet Packages for .NET Word | Syncfusion
-description: Learn the NuGet packages required to use .NET Word library in various platforms and frameworks without Microsoft Word or interop dependencies.
+title: NuGet Packages for .NET Word (DocIO) library | Syncfusion
+description: Learn the NuGet packages required to use .NET Word (DocIO) library in various platforms and frameworks without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# NuGet Packages for .NET Word
+# NuGet Packages Required for Word Library
 
 ## Installing the Syncfusion<sup>&reg;</sup> DocIO Library through NuGet Packages
 
@@ -115,7 +115,7 @@ Install-Package Syncfusion.DocIO.NET
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -264,7 +264,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -451,7 +451,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -600,7 +600,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
