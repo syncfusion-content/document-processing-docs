@@ -1,11 +1,12 @@
 ---
-title: NuGet Packages Required to Convert Word to PDF| Syncfusion
-description: Find answers to common questions about converting Word documents to PDF using using .NET Word library without Microsoft Word or interop dependencies.
+title: NuGet Packages Required to Convert Word to PDF | Syncfusion
+description: Learn the NuGet packages required to Convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
+# NuGet Packages Required to Convert Word to PDF
 
 ## Converting a Word Document to PDF
 
@@ -31,6 +32,7 @@ Package manager console command
 {{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)'| Â markdownify }}, Console Application (Targeting .NET Framework)
 </td>
 <td>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.WinForms" aria-label="Syncfusion DocToPdfConverter WinForms">Syncfusion.DocToPdfConverter.WinForms</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.WinForms
