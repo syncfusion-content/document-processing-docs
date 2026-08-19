@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling and Zooming in Vue DOCX Editor
 
-The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
+The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -23,9 +23,9 @@ The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/scrolling-zooming-cs1" %}
 
-> Calling this method brings the specified page into view but doesn’t move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
+N> Calling this method brings the specified page into view but doesn't move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
-In case, if you wish to move the selection to any page in Document Editor and bring it into view, you can use ‘goToPage()’ method of selection instance. Refer to the following code example.
+If you wish to move the selection to any page in the document editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +40,7 @@ In case, if you wish to move the selection to any page in Document Editor and br
 
 ## Zooming
 
-You can scale the contents in Document Editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use ‘zoomFactor’ property of Document Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
+You can scale the contents in the Document Editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the `zoomFactor` property of the document editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -96,9 +96,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Page Fit Type
+## Page fit type
 
-Apart from specifying the zoom factor as value, the Document Editor provides option to specify page fit options such as fit to full page or fit to page width. You can set this option using ‘fitPage’ method of Document Editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -157,7 +157,7 @@ export default {
 
 ## Zoom option using UI
 
-The following code example shows how to provide zoom options in Document Editor.
+The following code example shows how to provide zoom options in the Document Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
