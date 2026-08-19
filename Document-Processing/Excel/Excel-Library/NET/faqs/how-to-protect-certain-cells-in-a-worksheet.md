@@ -1,12 +1,12 @@
 ---
-title: How to protect certain cells in a worksheet | XlsIO | Syncfusion
-description: This page demonstrates with an example to protect certain cells in a worksheet using .NET Excel Library.
+title: How to Protect Cells in .NET Excel Library | Syncfusion
+description: Protect certain cells in an Excel worksheet using the Syncfusion .NET Excel Library with worksheet protection settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to protect certain cells in a worksheet?
+# How to protect cells in .NET Excel Library
 
 All the cells in an Excel worksheet have a **Locked** property, which determines if the cell will be editable. When a worksheet is protected, all the cells in the worksheet get locked, by default.
 

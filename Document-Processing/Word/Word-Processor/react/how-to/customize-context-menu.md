@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize context menu in React DOCX Editor component | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in React DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® React DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 control: Customize Context Menu
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Context Menu in React Document Editor component
+# How to Customize Context Menu in React DOCX Editor
 
 ## How to Customize Context Menu in the Document Editor
 

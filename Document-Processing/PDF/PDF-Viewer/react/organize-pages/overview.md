@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize pages in React PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion React PDF Viewer component.
+title: About Syncfusion React PDF Viewer Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in React PDF Viewer
+# About Syncfusion React PDF Viewer Organize Pages
 
 The React PDF Viewer includes an Organize Pages panel for preparing documents before sharing. Use this panel to reorder pages, correct orientation, insert or remove pages, and duplicate content without leaving the viewer.
 

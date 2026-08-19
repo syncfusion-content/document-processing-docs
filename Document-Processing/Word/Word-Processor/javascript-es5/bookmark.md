@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark in JavaScript (ES5) DOCX Editor control | Syncfusion
-description: Learn here all about Bookmark in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Bookmarks in JavaScript DOCX Editor | Syncfusion
+description: The bookmark feature in JavaScript DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
 control: Bookmark 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark in JavaScript (ES5) Document Editor control
+# Bookmarks in JavaScript DOCX Editor
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 

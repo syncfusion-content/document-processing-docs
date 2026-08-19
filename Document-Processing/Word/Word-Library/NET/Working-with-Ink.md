@@ -1,11 +1,11 @@
 ---
-title: Working with Ink elements in .NET Word (DocIO) library | Syncfusion
-description: Learn how to create and edit Ink elements in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Ink elements in .NET Word library | Syncfusion
+description: Learn how to create and edit Ink elements in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Ink Elements
+# Ink elements in .NET Word library
 
 An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 

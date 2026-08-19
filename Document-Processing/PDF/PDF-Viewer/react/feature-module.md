@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature module in React PDF Viewer component | Syncfusion
-description: Learn here all about Feature module in Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Feature Module in React PDF Viewer | Syncfusion
+description: The feature module in the React PDF Viewer lets you load only the capabilities you need, keeping the bundle size small and the app fast.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature modules in React PDF Viewer component
+# Feature Module in React PDF Viewer
 
 The PDF Viewer features are organized into discrete modules so applications can include only the functionality they require. Inject the required modules to extend the viewer. The following modules are available:
 

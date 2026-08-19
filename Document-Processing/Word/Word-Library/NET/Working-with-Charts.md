@@ -1,11 +1,11 @@
 ---
-title: Working with Charts in Word document | DocIO | Syncfusion
-description: Learn how to add, edit, and remove charts in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Charts in Word document in .NET Word | Syncfusion
+description: Learn how to add, edit, and remove charts in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Charts in Word document
+# Charts in Word document in .NET Word
 
 A Chart is a graphical representation of data where the data is represented as symbols such as bars, lines, etc. Charts can represent numerical data, functions, or some kinds of qualitative structures. DocIO supports the following chart types:
 

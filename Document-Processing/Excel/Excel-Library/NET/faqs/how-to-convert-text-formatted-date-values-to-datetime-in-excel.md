@@ -1,12 +1,12 @@
 ---
-title: Convert text formatted date values to DateTime in Excel | Syncfusion
-description: Code example to convert text formatted date values to DateTime in Excel workbook using .NET Excel Library.
+title: How to Convert Dates in .NET Excel Library | Syncfusion
+description: Convert text-formatted date values to DateTime values in Excel workbooks using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to convert text formatted date values to DateTime in an Excel?
+# How to convert dates in .NET Excel Library
 
 The following code examples demonstrate converting text formatted date values to DateTime in Excel workbook using C# (Cross-platform and Windows-specific) and VB.NET.
 
@@ -146,4 +146,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}       
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/DateTime/.NET/TextToDateTimeConverter">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/FAQ/DateTime/.NET/TextToDateTimeConverter" aria-label="GitHub demo link">this GitHub page</a>.

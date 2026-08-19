@@ -1,12 +1,12 @@
 ---
-title: PivotTable column width changes on refresh | Syncfusion
-description: This page explains whether Syncfusion XlsIO changes the PivotTable column widths on data refresh using .NET Excel Library.
+title: Pivot Table Column Width in .NET Excel Library | Syncfusion
+description: PivotTable refresh behavior describes whether Syncfusion .NET Excel Library changes column widths when pivot table data is refreshed.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO change PivotTable column widths on data refresh?
+# Pivot Table Refresh in .NET Excel Library
 
 Yes. As per Microsoft Excel behavior, the column widths in PivotTables are automatically modified when the data source is refreshed.
 

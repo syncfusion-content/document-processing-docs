@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save Documents to Azure Blob Storage in Vue DOCX Editor | Syncfusion
-description:  Learn about how to Save document to Azure Blob Storage in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+description: Save documents to Azure Blob Storage from Vue DOCX Editor, enabling scalable cloud storage and streamlined document management.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug

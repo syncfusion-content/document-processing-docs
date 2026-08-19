@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Changing the current toolbar design to the old design | Syncfusion®
-description: This section explains how to change the current toolbar to the old toolbar and contains the sample link for this.
+title: How to Changing the toolbar design in WPF Pdf Viewer | Syncfusion
+description: Change from new to old toolbar design in Syncfusion WPF PDF Viewer using custom styles. Learn toolbar customization and styling techniques.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Change the current toolbar design to the old toolbar design
+# How to Changing the toolbar design in WPF Pdf Viewer
 
 From 21.1.0.X onwards, PDFViewer toolbar design was changed for a better user interface and visual appearance. The current toolbar design is shown as follows.
  

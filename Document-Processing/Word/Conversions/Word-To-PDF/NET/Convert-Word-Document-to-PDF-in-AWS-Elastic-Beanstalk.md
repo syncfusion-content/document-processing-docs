@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF in AWS Elastic Beanstalk | Syncfusion
-description: Convert Word to PDF without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
+title: Convert Word to PDF in AWS Elastic Beanstalk  | Syncfusion
+description: Convert Word to PDF without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to PDF in AWS Elastic Beanstalk
+# Convert Word to PDF in AWS Elastic Beanstalk 
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can convert a Word document to PDF in AWS Elastic Beanstalk.
 

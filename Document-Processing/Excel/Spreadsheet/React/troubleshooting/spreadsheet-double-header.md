@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Double header issue in React Spreadsheet component | Syncfusion
-description: Resolve duplicate or misplaced header caused by multiple refresh/resize actions in React Spreadsheet component.
+title: Double header issue in React Spreadsheet | Syncfusion
+description: Learn about how to resolve double header rendering issues using  the Syncfusion React Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Double Header Rendering Issue in React Spreadsheet Component
+# Double Header Issue in React Spreadsheet
 
 In some scenarios, the Spreadsheet header appears twice or is rendered below the data instead of at the top. This typically occurs when multiple refresh or resize actions are triggered simultaneously or in rapid succession.
 

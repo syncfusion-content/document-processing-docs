@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor Spreadsheet Component | Syncfusion
-description: Check out and learn all about the comprehensive filter functionality in Syncfusion Blazor Spreadsheet component and much more.
+title: Filtering in Blazor Spreadsheet | Syncfusion
+description: Filter and analyze spreadsheet data efficiently using the built-in filtering capabilities of the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Filtering in Blazor Spreadsheet Component
+# Filtering in Blazor Spreadsheet
 
 Filtering in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component enables focused data analysis by displaying only the rows that meet specific criteria. It creates interactive views by hiding rows that do not match the filtering conditions. Filtering behavior is controlled using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property, which is set to **true** by default.
 

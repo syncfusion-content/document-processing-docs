@@ -1,12 +1,12 @@
 ---
-title: Create PDF document in Azure Functions v4 | Syncfusion
-description: Create PDF document in Azure Functions v4 using .NET PDF library without the dependency of Adobe Acrobat. 
+title: Getting Started with .NET PDF in Azure Functions v4 | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in Azure Functions v4 and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create PDF document in Azure Functions v4
+# Getting Started with .NET PDF in Azure Functions v4
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **create PDF document in Azure Functions v4**.
 

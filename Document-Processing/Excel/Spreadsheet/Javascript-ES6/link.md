@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Link in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Link in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Hyperlink in TypeScript Spreadsheet  | Syncfusion
+description: Hyperlinks in TypeScript Spreadsheet allow users to insert and manage hyperlinks, enabling quick navigation to web pages, files, and worksheets.
 platform: document-processing
 control: Link
 documentation: ug
 ---
 
-# Link in EJ2 TypeScript Spreadsheet control
+# Hyperlink in TypeScript Spreadsheet 
 
 Hyperlink is used to navigate to web links, cell references within the sheet, or to other sheets in the Spreadsheet. You can use the [`allowHyperlink`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowhyperlink) property to enable or disable hyperlink functionality.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Freehand Drawing (Ink) Annotation in React PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Ink (freehand) annotations in the Syncfusion React PDF Viewer.
+title: Ink Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the React PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Freehand Drawing (Ink) Annotations in React PDF Viewer
+# Ink Annotation in React PDF Viewer
 Ink annotations allow users to draw freehand strokes using mouse, pen, or touch input to mark content naturally.
 
 ![Ink overview](../../images/ink_annotation.png)

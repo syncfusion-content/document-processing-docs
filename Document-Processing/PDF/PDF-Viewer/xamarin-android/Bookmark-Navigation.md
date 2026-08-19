@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with Bookmark Navigation
+#  Bookmark Navigation in Xamarin.Android PDF viewer
 
 PDF viewer allows users to view the bookmarks present in the loaded PDF document and navigate to the destination saved in the bookmarks. 
 

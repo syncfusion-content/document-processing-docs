@@ -1,12 +1,12 @@
 ---
-title: Markdown to PowerPoint in C# | PowerPoint | Syncfusion
-description: Convert Markdown to PowerPoint document in C# using Syncfusion<sup>&reg;</sup> .NET PowerPoint library without Microsoft PowerPoint or interop dependencies
+title: Markdown to PowerPoint Conversion in .NET PowerPoint | Syncfusion
+description: Convert Markdown content to PowerPoint presentations using the Syncfusion® .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Markdown to PowerPoint Conversion
+# Markdown to PowerPoint Conversion in .NET PowerPoint
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) supports the conversion of Markdown to PowerPoint Presentation document  (.PPTX, .PPTM, .POTX, .POTM) and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -55,6 +55,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Convert-Markdown-to-PPTX).
 
 T> You can also save the markdown file as [PDF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/overview), [Image](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/overview), and [Word](https://help.syncfusion.com/document-processing/word/conversions/markdown-to-word-conversion)
 
@@ -192,6 +194,8 @@ End Sub
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Customize-Image-Data).
+
 N> Hook the event handler before opening a PowerPoint Presentation as per the above code example.
  
 ### Encoding
@@ -254,6 +258,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Load-Options-Encoding).
+
 N> Provide the encoding values before opening a PowerPoint Presentation as per the above code example.
 
 ### Use Thematic Break As ContentBreak
@@ -315,6 +321,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Markdown-to-PPTX-Conversion/Use-Thematic-Break-As-ContentBreak).
 
 ## Supported Markdown Syntax
 

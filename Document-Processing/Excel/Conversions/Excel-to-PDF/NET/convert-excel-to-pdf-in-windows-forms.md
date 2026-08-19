@@ -1,12 +1,12 @@
 ---
-title: Convert an Excel document to PDF in Windows Forms | Syncfusion
-description: Convert an Excel document to PDF in Windows Forms using Sycfusion .NET Excel Library without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in Windows Forms | Syncfusion
+description: Windows Forms Excel to PDF section explains how to convert Excel documents to PDF in Windows Forms using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert an Excel document to PDF in Windows Forms
+# Excel to PDF Conversion in Windows Forms using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Excel Library](https://www.syncfusion.com/document-processing/excel-framework/net/excel-library) used to create, read, edit, and convert Excel documents programmatically, without Microsoft Excel or interop dependencies.
 

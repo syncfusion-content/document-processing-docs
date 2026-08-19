@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save to Box Cloud File Storage in Vue DOCX Editor | Syncfusion
-description:  Learn about how to Save document to Box cloud file storage in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+description: Save documents to Box cloud file storage from Vue DOCX Editor, enabling secure cloud storage and efficient document management.
 platform: document-processing
 control: Save document to Box cloud file storage
 documentation: ug

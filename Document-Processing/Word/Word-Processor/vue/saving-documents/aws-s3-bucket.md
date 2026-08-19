@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save document to AWS S3 in Vue Document editor control | Syncfusion
-description:  Learn about how to Save document to AWS S3 in Vue Document editor of Syncfusion Essential JS 2 and more details.
+title: Save Documents to AWS S3 in Vue DOCX Editor | Syncfusion
+description: Save documents to AWS S3 from Vue DOCX Editor, enabling cloud storage integration and secure document management.
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug

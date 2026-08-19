@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Bar Chart of Syncfusion Flutter XlsIO.
-description: Learn how to create, add and manipulate the bar chart in Excel worksheet using Syncfusion Flutter XlsIO. 
+title: Bar Chart in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library allows users create, add, and customize bar charts in Excel worksheets with chart options.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Adding Bar Chart to Excel worksheet
+# Bar Chart in Syncfusion Excel Library
 
 A bar chart is a chart type that presents categorical data with rectangular bars with heights or lengths proportional to the data values in Excel worksheet.
 

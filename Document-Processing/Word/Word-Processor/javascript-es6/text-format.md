@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Text format in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Text Format in TypeScript DOCX Editor | Syncfusion
+description: Text format properties in TypeScript DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in JavaScript (ES6) Document Editor control
+# Text Format in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
