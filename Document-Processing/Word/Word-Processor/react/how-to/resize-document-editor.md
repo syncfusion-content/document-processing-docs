@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize Document Editor in React DOCX Editor | Syncfusion
-description: Learn here all about Resize in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Resize in React DOCX Editor | Syncfusion
+description: Adjust the height and width of the Syncfusion® React DOCX Editor to create responsive layouts and customize the document editing experience.
 control: Resize Document Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in React Document Editor component
+# How to Resize in React DOCX Editor 
 
 In this article, we are going to see how to change the height and width of the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to lock an annotation in WPF pdf viewer | Syncfusion<sup>&reg;</sup>;
-description: Learn about how to enable or disable lock option for an annotation programmatically or UI using WPF Pdf Viewer.
+title: How to lock an annotation in WPF Pdf viewer | Syncfusion
+description: The locking annotations feature in WPF PDF Viewer protects annotations from being moved, resized, or removed, ensuring review integrity.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Locking annotations in WPF PDF Viewer
+# Locking annotations in WPF Pdf Viewer
 
 The WPF PDF Viewer provides a support to enable or disable lock option for the annotation in a pdf document. When an annotation is locked, it cannot be moved, resized, and removed.
 

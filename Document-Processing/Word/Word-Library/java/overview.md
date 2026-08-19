@@ -1,11 +1,11 @@
 ---
-title: Overview of Word library (DocIO) | Syncfusion
-description: Java Word library to create, read, edit, and convert the Microsoft Word documents in the Java application without Microsoft Word or interop dependencies.
+title: About Syncfusion Java Word Document Processing Library| Syncfusion
+description: Learn about the overview of the Syncfusion Java Word Document Processing Library, its key features, and more details in this section.
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Overview of Word library (DocIO)
+# About Syncfusion Java Word Document Processing Library
 
 Essential<sup style="font-size:70%">&reg;</sup> DocIO is a native Java Word library that is used by developers to create, read, write, and convert the Microsoft Word documents in the Java application without Microsoft Word or interop dependencies.
 

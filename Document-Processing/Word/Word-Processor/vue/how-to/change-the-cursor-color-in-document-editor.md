@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change the cursor color in document editor in Vue Document editor component | Syncfusion
-description: Learn here all about Change the cursor color in document editor in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Cursor Color in Vue DOCX Editor | Syncfusion
+description: Change the default cursor color in Syncfusion® Vue DOCX Editor by overriding CSS properties and customizing the editor appearance.
 control: Change the cursor color in document editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the cursor color in document editor in Vue Document editor component
+# How to Change Cursor Color in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) default cursor color is black. The user can change the color by overriding the css property using class name. The Document editor cursor css have a class named `e-de-blink-cursor`.
 

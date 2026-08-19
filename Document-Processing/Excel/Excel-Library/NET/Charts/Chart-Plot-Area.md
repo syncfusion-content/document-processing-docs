@@ -1,12 +1,12 @@
 ---
-title: Chart Plot Area | Excel library | Syncfusion
-description: In this section, you can learn about the chart plot area in an Excel document using the .NET Excel Library with detailed explanations and practical examples.
+title: Chart Plot Area in .NET Excel Library | Syncfusion
+description: Chart plot area settings describes how the Syncfusion .NET Excel Library formats the plot area in Excel charts with options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Plot Area in an Excel document
+# Chart Plot Area in .NET Excel Library
 
 The plot area refers to the region that represents the plotted data in a chart. Using XlsIO, you can **customize the plot area**.
 

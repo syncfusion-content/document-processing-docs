@@ -1,5 +1,5 @@
 ---
-title: Convert Word to PDF Using Syncfusion Web API 
+title: Convert Word to PDF Using Web API | Syncfusion
 description: Convert Word documents to highquality PDFs using Syncfusion Web API. Preserve formatting, images, and structure with fast, reliable serverside conversion.
 platform: document-processing
 control: general

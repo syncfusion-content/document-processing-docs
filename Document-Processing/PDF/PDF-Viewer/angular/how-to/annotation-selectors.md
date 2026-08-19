@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize Annotation Selectors | Syncfusion Angular PDF Viewer
-description: Learn how to customize annotation selectors in the Angular PDF Viewer component using annotationSelectorSettings with examples.
+title: How to Customize Annotation Selectors in Angular PDF | Syncfusion
+description: Customize annotation selectors in the Angular PDF Viewer using annotationSelectorSettings to control how users select and resize annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize Annotation Selectors in Angular PDF Viewer
+# How to Customize Annotation Selectors in Angular PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#annotationselectorsettings) property to configure the appearance and behavior of annotation selectors. This includes the selection handles and the resizer (for example, the shape and size of the resizer handles), which determine how users interact with annotations during editing.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Load the document in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to load a PDF document in the Syncfusion ASP.NET MVC PDF Viewer and understand the JSON payload (jsonObjects) used by controller actions.
+title: How to Load a Document in ASP.NET MVC PDF Viewer | Syncfusion
+description: Load or switch PDF documents in the ASP.NET MVC PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load the PDF document
+# How to Load a Document in ASP.NET MVC PDF Viewer
 
 The Syncfusion ASP.NET MVC PDF Viewer loads documents through server-side controller actions that receive a JSON payload. The payload is deserialized into a data transfer object (DTO) named `jsonObjects`, which supplies properties used across actions such as loading, rendering, and annotation processing.
 
 Follow these steps to load a PDF document.
 
-**Step 1:** Create a basic ASP.NET MVC PDF Viewer sample by following the getting started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/).
+**Step 1:** Create a basic ASP.NET MVC PDF Viewer sample by following the getting started guide: [Getting started with ASP.NET MVC PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started).
 
 **Step 2:** Add the following `jsonObjects` class to the `PdfViewerController.cs` file (or a Models folder). The `document`, `isFileName`, and `password` properties are commonly used when loading a document.
 

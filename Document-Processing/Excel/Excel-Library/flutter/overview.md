@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Flutter XlsIO Library | Syncfusion
-description: Learn how to create or generate a Excel file in Windows Forms with easy steps using Syncfusion .NET XlsIO library.
+title: About Syncfusion Flutter Excel Library | Syncfusion
+description: Learn about overview of the Syncfusion Flutter Excel Library for creating Excel documents programmatically.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Overview of Flutter XlsIO - Syncfusion file-format library
+# About Syncfusion Flutter Excel Library
 
 The Syncfusion Flutter XlsIO is a library written natively in Dart for creating the Excel documents from scratch. The library can be used in Flutter Mobile and web platforms without the dependency of Microsoft Office COM libraries & Microsoft Office.
 

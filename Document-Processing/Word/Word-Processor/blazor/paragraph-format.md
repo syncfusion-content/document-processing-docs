@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paragraph Formatting in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about working with paragraph formatting in Syncfusion Blazor Document Editor component and more.
+title: Paragraph Format in Blazor DOCX Editor | Syncfusion
+description: The paragraph format feature in Blazor DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Working with Paragraph Formatting in Blazor Document Editor Component
+# Paragraph Format in Blazor DOCX Editor
 
 [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

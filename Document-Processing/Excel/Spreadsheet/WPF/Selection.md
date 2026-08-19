@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Selection in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Selection support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Select cells, rows, columns, and ranges in the WPF Spreadsheet control to efficiently edit, manage, and work with worksheet data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Selection in WPF Spreadsheet (SfSpreadsheet)
+# Selection in WPF Spreadsheet
 
 This section explains the Selection behavior in the [WPF Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor).
 

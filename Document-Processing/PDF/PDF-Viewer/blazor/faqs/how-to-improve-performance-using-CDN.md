@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Improve performance using a CDN | Syncfusion
-description: Learn how to improve performance in the Blazor SfPdfViewer by using versioned CDN script references.
+title: How to Improve performance using a CDN | Syncfusion
+description: Learn about how to improve the performance of  the Blazor PDF Viewer component by using versioned CDN script references.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Improve performance using a CDN in the Blazor SfPdfViewer
+# How to Improve performance using a CDN
 
 Referencing scripts from the application's hosted or NuGet location can add network overhead and slow initial rendering. To reduce latency, reference the scripts from a content delivery network (`CDN`). The browser will download the assets once and then reuse them from cache on subsequent loads (unless the version changes).
 

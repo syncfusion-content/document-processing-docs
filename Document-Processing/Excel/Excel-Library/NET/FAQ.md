@@ -1,12 +1,12 @@
 ---
-title: FAQ Section| XlsIO | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of Excel document using XlsIO.
+title: FAQ Section in .NET Excel Library | Syncfusion
+description: The FAQ section provides answers to common questions about creating, editing, and manipulating Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Frequently Asked Questions Section In Excel  
+# FAQ Section in .NET Excel Library
 
 The frequently asked questions in Essential<sup>&reg;</sup> XlsIO are listed below.
 

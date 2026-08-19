@@ -1,12 +1,12 @@
 ---
-title: Chart Area | Excel library | Syncfusion
-description: In this section, you can learn about the chart area in an Excel document using the .NET Excel Library with clear explanations and examples.
+title: Chart Area in .NET Excel Library | Syncfusion
+description: Chart area settings describes how the Syncfusion .NET Excel Library defines and formats the chart area in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Area in an Excel document
+# Chart Area in .NET Excel Library
 
 Chart area refers to the space that contains the entire chart or graph within a document. It includes all elements of the chart, such as data points, labels, axes, and the plot area. Using XlsIO, you **can customize various aspects of the chart area**.
 

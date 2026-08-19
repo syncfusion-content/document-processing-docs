@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Vue PDF Viewer.
+title: Create Form Fields in Vue PDF Viewer | Syncfusion
+description: Add each PDF form field using the Vue PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF Form Fields in Vue
+# Create Form Fields in Vue PDF Viewer
 
 You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/form-designer.html) or dynamically using APIs.
 

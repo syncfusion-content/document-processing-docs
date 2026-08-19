@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with WinForms PDF Viewer with PdfDocumentView| Syncfusion&reg;
-description: Learn here about working with Syncfusion<sup>&reg;</sup> Windows Forms PDFDocumentView control, its elements and more details.
+title: PdfDocumentView in WinForms PDF Viewer | Syncfusion
+description: The PDFDocumentView control enables users to load, view, navigate, and interact with PDF documents in Windows Forms applications.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
 ---
 
-# Adding PdfDocumentView to an Application 
+# PdfDocumentView in WinForms PDF Viewer
 
 The [PdfDocumentView](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfDocumentView.html) control allows you to view PDF files without a toolbar. Other features are similar to the [PdfViewerControl](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.PdfViewer.PdfViewerControl.html).
 

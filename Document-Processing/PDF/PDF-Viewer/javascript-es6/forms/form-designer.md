@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in TypeScript | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion TypeScript PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Form Designer in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use the Form Designer in the JavaScript (ES6) PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form designer in TypeScript PDF Viewer
+# Form Designer in JavaScript (ES6) PDF Viewer
 
 When **Form Designer mode** is enabled in the Syncfusion [TypeScript PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/javascript/#/tailwind3/pdfviewer/formdesigner.html) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop-down lists, list boxes, and signature and initial fields.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Dropbox cloud storage in React DOCX Editor | Syncfusion
-description: Learn how to save a document to Dropbox cloud file storage in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more details.
+title: Save to Dropbox Cloud Storage in React DOCX Editor | Syncfusion
+description: Save documents to Dropbox cloud storage from React DOCX Editor, enabling cloud-based file storage and document management.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage using React DOCX Editor
+# Save Documents to Dropbox Cloud Storage in React DOCX Editor
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 

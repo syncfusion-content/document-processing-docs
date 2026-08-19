@@ -1,13 +1,13 @@
 ---
-title: Extract PDF to Markdown in C# | Smart Data Extractor | Syncfusion
-description: Extract PDF documents as Markdown (MD) in C# using Syncfusion<sup>&reg;</sup> Smart Data Extractor library without Microsoft Office or Adobe dependencies
+title: Convert PDF to Markdown in .NET Smart Data Extractor | Syncfusion
+description: Extract PDF documents as Markdown using Smart Data Extractor. Convert PDF content into clean, structured Markdown content in .NET.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 ---
 
-# PDF to Markdown Extraction
+# Convert PDF to Markdown in .NET Smart Data Extractor
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as Markdown (MD). It analyzes text blocks, tables, headers, and form fields to preserve layout and formatting.
 

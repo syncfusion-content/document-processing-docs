@@ -1,12 +1,12 @@
 ---
-title: Data Bars | Excel library | Syncfusion
-description: Learn how to apply data-bar conditional formatting rules in an Excel document using Syncfusion XlsIO.
+title: Data Bars in .NET Excel Library | Syncfusion
+description: Data-bar conditional formatting describes how Syncfusion .NET Excel Library applies data-bar rules in Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Data Bars in Conditional Formatting
+# Data Bars in .NET Excel Library
 
 Data bars draw a horizontal bar in each cell whose length represents the value of that cell relative to the other cells in the selected range. This provides a clear visual cue that makes it easier to compare larger and smaller values at a glance.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Open a PDF from Local Storage in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a PDF From Local Storage in .NET MAUI PDF Viewer
 
 A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from the local storage by reading the file as a `Stream` and assigning the obtained `Stream` to the [DocumentSource](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 

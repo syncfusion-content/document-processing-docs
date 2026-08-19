@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Configure annotation selector settings in PDF Viewer | Syncfusion
-description: Learn how to configure annotation selector settings in the JavaScript PDF Viewer using annotationSelectorSettings and related options.
+title: How to Configure Annotation Selectors in JavaScript | Syncfusion
+description: Configure annotation selector settings in the JavaScript (ES5) PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configure annotation selector settings in JavaScript
+# How to Configure Annotation Selectors in JavaScript (ES5) PDF Viewer
 
 Use the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSelectorSettings) property to customize the appearance and behavior of the annotation selector in the UI.
 
-### AnnotationSelectorSettingsModel
+## AnnotationSelectorSettingsModel
 
 The [AnnotationSelectorSettingsModel](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationselectorsettingsmodel) defines settings such as border colors, sizes, and shapes, enabling fine-grained control over how annotations are displayed and interacted with.
 
@@ -39,7 +39,7 @@ Steps to configure annotation selector settings
 
 - Step 3: Append the viewer to the target HTML element using appendTo.
 
-#### Key properties
+### Key properties
 
 - `selectionBorderColor`: Sets the color for the border around selected annotations. Provide a color value (for example, `#4070FF`) to make the selection visible.
 - `resizerBorderColor`: Sets the color for the border of the resize handles.

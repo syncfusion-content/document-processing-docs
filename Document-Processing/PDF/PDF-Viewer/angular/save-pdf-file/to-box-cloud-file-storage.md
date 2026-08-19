@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion Angular PDF Viewer component with a server-backed web service.
+title: To Box Cloud File Storage in Angular PDF Viewer | Syncfusion
+description: Save PDF files from the Angular PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: Save PDF files to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Box cloud storage in Angular
+# Save PDF Files to Box Cloud Storage in Angular PDF Viewer
 
 The Angular PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 

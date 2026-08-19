@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Area Annotation in Core PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Area Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the ASP.NET Core PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Area measurement annotation in ASP.NET Core PDF Viewer control
+# Area Annotation in ASP.NET Core PDF Viewer
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 

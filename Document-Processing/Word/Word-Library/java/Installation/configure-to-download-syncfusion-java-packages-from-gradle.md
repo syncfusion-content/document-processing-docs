@@ -1,11 +1,11 @@
 ---
-title: Download Syncfusion Java packages from Gradle | Syncfusion
-description: This section demonstrates how to configure and download required Jars from Gradle (Jar configuration)
+title: Download Syncfusion Java packages from Gradle in Java | Syncfusion
+description: This section illustrates how to configure Gradle and download the required Syncfusion Java Word library packages
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Configure Gradle to download Syncfusion<sup>&reg;</sup> Java packages
+# Download Syncfusion Java packages from Gradle in Java
 
 You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
  

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Digital Signature to PDF in Angular PDF Viewer | Syncfusion
-description: Learn how to add signature fields and apply PKI-based digital signatures using Syncfusion Angular PDF Viewer and JavaScript PDF Library.
+title: Add Digital Signature in Angular PDF Viewer | Syncfusion
+description: Learn about the add digital signature in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Add Digital Signature to PDF in Angular
+# Add Digital Signature in Angular PDF Viewer
 
 This section explains how to **add signature fields** using the Syncfusion **Angular PDF Viewer** and how to apply **digital (PKI) signatures** using the **JavaScript PDF Library**.
 

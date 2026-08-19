@@ -1,12 +1,12 @@
 ---
-title: Events in ASP.NET Core PDF Viewer Control | Syncfusion
-description: Learn about all the events in ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Event in ASP.NET Core PDF Viewer | Syncfusion
+description: A complete list of events in the ASP.NET Core PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Events in ASP.NET Core PDF Viewer Control
+# Events in ASP.NET Core PDF Viewer
 
 The PDF Viewer component provides a comprehensive event system for integrating custom logic into application workflows. Events are triggered throughout the document life cycle, user interactions, and feature operations.
 
