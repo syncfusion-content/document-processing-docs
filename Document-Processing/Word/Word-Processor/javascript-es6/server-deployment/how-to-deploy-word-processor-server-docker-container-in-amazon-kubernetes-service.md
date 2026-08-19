@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy TypeScript DOCX Editor Docker on Amazon K8s| Syncfusion
-description: Deploy the Syncfusion® TypeScript DOCX Editor Docker image to Amazon Kubernetes Service for scalable and reliable document processing.
+description: Deploy the SyncfusionÂ® TypeScript DOCX Editor Docker image to Amazon Kubernetes Service for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in amazon kubernetes service 
 documentation: ug
