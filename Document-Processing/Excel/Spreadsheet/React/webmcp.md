@@ -1,39 +1,45 @@
 ---
 layout: post
-title: WebMCP Integration in React Spreadsheet | Syncfusion
-description: Integrate WebMCP with React Spreadsheet to enable AI agents and external tools to automate spreadsheet operations programmatically.
+title: WebMCP Tools in React Spreadsheet | Syncfusion
+description: Learn how to get started with WebMCP tools in the React Spreadsheet Editor SDK to expose spreadsheet operations to AI agents and external applications.
 platform: document-processing
 control: WebMCP
 documentation: ug
 ---
 
-# WebMCP Integration in React Spreadsheet
+# WebMCP Tools in React Spreadsheet
 
-## Overview
+The React Spreadsheet component exposes a curated set of **WebMCP (Model Context Protocol)** tools that let AI agents, LLMs, and external applications read data, edit cells, apply formatting, sort and filter, insert charts, and save the workbook — all through a standardized, schema-validated interface. WebMCP is a proposed web standard for exposing structured browser tools to AI agents through explicit JSON Schemas instead of DOM scraping. In the React Spreadsheet component, this gives agents a reliable way to discover and invoke workbook operations such as `getCellData`, `formatCells`, `sortRange`, and `insertChart`, etc.
 
-**WebMCP (Model Context Protocol)** is a powerful integration framework that exposes your Syncfusion Spreadsheet as a set of standardized tools accessible to AI agents, LLMs, and external applications. Instead of building custom APIs for each tool integration, WebMCP provides a universal interface that enables seamless interoperability between your spreadsheet and any MCP-compatible client.
+> **Note:** WebMCP is an experimental browser standard. It is currently available behind a feature flag in some Chromium-based browsers. The API and behavior may change as the standard evolves. The Syncfusion React Spreadsheet WebMCP integration is a preview feature.
 
-## Why WebMCP?
+This integration is delivered through the injectable `WebMcpAdapter` module. When WebMCP is enabled, the adapter:
+
+- Owns the tool catalog and registers each tool on `document.modelContext`.
+- Binds an `execute` callback for every tool and routes calls to the right handler internally.
+- Shows a built-in confirmation dialog for write operations by default.
+- Integrates with the Spreadsheet's native undo/redo history through the internal `CommandExecutor`.
+- Cleans up automatically via an `AbortController` when the Spreadsheet is destroyed.
 
 ### Key Benefits
 
-| Benefit | Description |
-|---------|-------------|
-| **Universal Tool Access** | Expose spreadsheet operations as standardized MCP tools that any AI agent or LLM can discover and invoke. |
-| **Zero Custom Code** | No need to build proprietary APIs or middleware — WebMCP handles the integration automatically. |
-| **Secure & Controlled** | Selectively register only the tools your application needs, ensuring a focused and secure interface. |
-| **Multi-Instance Support** | Run multiple spreadsheets on the same page, each with independently scoped tools to prevent naming conflicts. |
-| **Undo/Redo Compatible** | All tool operations integrate with the spreadsheet's native undo/redo history for seamless user control. |
-| **Real-Time Feedback** | Tools provide immediate, actionable feedback and confirmation messages via the MCP protocol. |
+- **Universal Tool Access** — Expose spreadsheet operations as standardized MCP tools that any AI agent, LLM, or MCP-compatible client can discover and invoke.
+- **Zero Custom Integration Code** — Inject `WebMcpAdapter`, call `registerWebMcpTools()`, and the adapter handles prefixing, schema binding, execution, and lifecycle cleanup.
+- **Schema-Validated Input/Output** — Every tool ships with a JSON Schema for both inputs and outputs, giving AI clients reliable contracts to work against.
+- **Controlled Execution** — Write operations trigger a built-in user confirmation dialog, and the `beforeWebMcpToolExecute` event lets applications audit, restrict, or cancel any call.
+- **Multi-Instance Friendly** — Unique prefixes per Spreadsheet instance prevent tool-name collisions when multiple spreadsheets share a page.
+- **Native Spreadsheet Integration** — Write tools participate in the Spreadsheet's undo/redo pipeline and clean up automatically when the component is destroyed.
+- **Real-Time Feedback** — Tools return immediate, structured responses so the AI agent can confirm or chain the next action.
 
-### Use Cases
+### How It Works
 
-- **AI-Powered Assistants**: Enable LLMs and chatbots to perform spreadsheet tasks autonomously
-- **Enterprise Automation**: Integrate with enterprise AI systems and workflow orchestration platforms
-- **External Tool Integration**: Connect third-party applications and services to your spreadsheet
-- **Multi-Agent Workflows**: Build distributed workflows where multiple AI agents collaborate on spreadsheet data
-- **Custom Data Processing**: Allow external systems to read data, analyze it, and apply transformations
-
+1. **Tool Discovery** — `spreadsheet.getWebMcpTools(toolNames?)` returns schema-validated definitions of available tools, optionally filtered by an allowlist.
+2. **Tool Registration** — `spreadsheet.registerWebMcpTools(prefix, tools, exposedTo)` dispatches an event that the adapter handles. The adapter prefixes each `tool.name` with `${prefix}_`, attaches an `execute` callback, and calls `modelContext.registerTool()` for each tool.
+3. **Tool Invocation** — When an AI agent calls a tool on `document.modelContext`, the bound `execute` callback invokes `WebMcpAdapter.executeHandler(prefixedName, args)`.
+4. **Adapter Routing** — The handler strips the prefix, fires `beforeWebMcpToolExecute`, and dispatches to a read handler (e.g., `handleGetCellData`) or, for write tools, the confirmation flow plus `CommandExecutor.executeHandler`.
+5. **Confirmation Flow** — Write handlers show a modal dialog by default. The user clicks "Ok" to apply the change or closes the dialog to cancel. The `beforeWebMcpToolExecute` event can override the dialog per call.
+6. **Command Execution** — Write handlers delegate to `CommandExecutor` for batching and undo/redo integration.
+7. **Response Formatting** — Results are wrapped via `message()` (success/cancellation) or `error()` (failure) into a `WebMcpToolResponse` with `content: [{ type: 'text', text: JSON.stringify(payload) }]`.
 
 ## Getting Started
 
@@ -97,8 +103,6 @@ const spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 ```
-
-> **Note:** When the Spreadsheet component is destroyed, all tools registered via `registerWebMcpTools()` are **automatically unregistered** from `document.modelContext`. This cleanup is managed internally using an `AbortController`, preventing memory leaks and orphaned tool registrations without requiring any manual cleanup code.
 
 ## WebMCP Customization
 
@@ -170,80 +174,98 @@ const spreadsheet = new Spreadsheet({
 
 ## Spreadsheet WebMCP Tools
 
-WebMCP exposes **28 tools** that any MCP client can discover and invoke. Read-only tools execute immediately without a confirmation dialog; write tools require user confirmation by default.
+WebMCP exposes a comprehensive set of tools that any MCP client can discover and invoke. Read-only tools execute immediately without a confirmation dialog; write tools require user confirmation by default. The `beforeWebMcpToolExecute` event lets you customize or skip confirmation per call.
 
 ### Read-Only Tools (No Confirmation Required)
 
-| Tool | Description |
-|------|-------------|
-| **getCellData** | Retrieve the value, formula, display text, and format of a single cell (e.g., `"A1"`, `"Sheet2!B3"`). |
-| **getRangeData** | Retrieve values, formulas, and formatting from a cell range (e.g., `"A1:C10"`). Returns up to 200 rows; check the `truncated` flag and paginate for larger ranges. |
-| **getSheetInfo** | Get sheet metadata including name, dimensions, used range, and row/column counts. |
-| **evaluateFormula** | Evaluate a formula string and return the computed result without writing to any cell. |
-| **find** | Find all cell addresses matching a search value within a sheet or specified range. |
-| **sheetList** | Retrieve the names of all sheets in the workbook. Use to discover available sheet names before calling getSheetInfo, getRangeData, or getCellData. |
-| **undo** | Revert the last action in the undo history. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **getCellData** | Retrieve the value, formula, display text, and optional format of a single cell. | `{ address: string, sheetName?: string, includeFormat?: boolean }` | `{ sheetName, address, value, displayText, formula?, format?, style? }` |
+| **getRangeData** | Retrieve values, formulas, and formatting from a cell range. Returns up to 200 rows; check the `truncated` flag and paginate for larger ranges. | `{ range: string, sheetName?: string, includeFormat?: boolean }` | `{ sheetName, range, rowCount, colCount, truncated, cells: [][] }` |
+| **getSheetInfo** | Get sheet metadata including name, dimensions, used range, and row/column counts. | `{ sheetName?: string }` | `{ sheetName, sheetIndex, ...sheetProperties }` |
+| **sheetList** | Retrieve the names of all sheets in the workbook. Use to discover available sheet names before calling `getSheetInfo`, `getRangeData`, or `getCellData`. | `{}` | `{ sheets: string[] }` |
+| **evaluateFormula** | Evaluate a formula string and return the computed result without writing to any cell. | `{ formula: string }` | `{ formula, value }` |
+| **find** | Find all cell addresses matching a search value within a sheet or specified range. | `{ findValue: string, sheetName?: string, range?: string, caseSensitive?: boolean, exactMatch?: boolean }` | `{ action: 'find', message: string, addresses: string[] }` |
 
 ### Cell Editing Tools
 
-| Tool | Description |
-|------|-------------|
-| **editCell** | Set the value or formula of a single cell. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **editCell** | Set the value or formula of a single cell. Prefix with `=` for formulas (e.g., `value: '=SUM(A1:A5)'`). | `{ address: string, value: string \| number \| boolean }` | `{ action: 'edit', cancelled: boolean, message: string }` |
 
 ### Formatting Tools
 
-| Tool | Description |
-|------|-------------|
-| **formatCells** | Apply visual formatting (bold, italic, color, alignment, etc.) to a range. |
-| **setNumberFormat** | Apply a named number format (General, Number, Currency, Percentage, Date, etc.) to a range. |
-| **addConditionalFormat** | Add a rule-based conditional formatting rule (e.g., GreaterThan, LessThan) to a range. |
-| **mergeCells** | Merge cells in a range (All, Vertically, or Horizontally). |
-| **toggleWrap** | Enable or disable text wrapping for a range. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **formatCells** | Apply visual formatting (bold, italic, color, alignment, etc.) to a range. | `{ range: string, formatting: { bold?, italic?, underline?, strikethrough?, fontSize?, fontFamily?, color?, backgroundColor? } }` | `{ action: 'cellFormat', cancelled: boolean, message: string }` |
+| **setNumberFormat** | Apply a named number format (General, Number, Currency, Percentage, Date, etc.) to a range. | `{ range: string, format: 'General' \| 'Number' \| 'Currency' \| 'Accounting' \| 'ShortDate' \| 'LongDate' \| 'Time' \| 'Percentage' \| 'Fraction' \| 'Scientific' \| 'Text' }` | `{ action: 'numberFormat', cancelled: boolean, message: string }` |
+| **addConditionalFormat** | Add a rule-based conditional formatting rule (e.g., `GreaterThan`, `LessThan`) to a range. | `{ range: string, type: 'GreaterThan' \| 'LessThan' \| 'Between' \| 'EqualTo' \| 'ContainsText' \| 'DateOccur' \| 'Duplicate' \| 'Unique' \| 'Top10Items' \| 'Bottom10Items' \| 'Top10Percentage' \| 'Bottom10Percentage' \| 'AboveAverage' \| 'BelowAverage', value?: string, cFColor?: 'RedFT' \| 'YellowFT' \| 'GreenFT' }` | `{ action: 'conditionalFormat', cancelled: boolean, message: string }` |
+| **mergeCells** | Merge cells in a range (All, Vertically, or Horizontally). | `{ range: string, direction: 'All' \| 'Vertically' \| 'Horizontally' }` | `{ action: 'merge', cancelled: boolean, message: string }` |
+| **toggleWrap** | Enable or disable text wrapping for a range. | `{ range: string, wrap: boolean }` | `{ action: 'wrap', cancelled: boolean, message: string }` |
 
 ### Clipboard Tools
 
-| Tool | Description |
-|------|-------------|
-| **cut** | Cut a range to the clipboard. |
-| **copy** | Copy a range to the clipboard. |
-| **paste** | Paste clipboard contents into a target range. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **cut** | Cut a range to the clipboard. | `{ range: string }` | `{ action: 'cut', cancelled: boolean, message: string }` |
+| **copy** | Copy a range to the clipboard. | `{ range: string }` | `{ action: 'copy', cancelled: boolean, message: string }` |
+| **paste** | Paste clipboard contents into a target range. | `{ range: string }` | `{ action: 'paste', cancelled: boolean, message: string }` |
 
 ### Data Transformation Tools
 
-| Tool | Description |
-|------|-------------|
-| **sortRange** | Sort a range by a specified column (Ascending or Descending). |
-| **filterRange** | Apply or clear AutoFilter on a range. |
-| **autofill** | Autofill a target range from a source pattern or series. |
-| **findReplace** | Find and replace all occurrences of a value in the spreadsheet. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **sortRange** | Sort a range by a specified column (Ascending or Descending). | `{ range: string, sortColumn: string, sortOrder: 'Ascending' \| 'Descending', sortContainsHeader?: boolean }` | `{ action: 'sort', cancelled: boolean, message: string }` |
+| **filterRange** | Apply or clear AutoFilter on a range. | `{ range: string, filterColumn?: string, filterOperator?: 'equal' \| 'notequal' \| 'greaterthan' \| 'lessthan' \| 'greaterthanorequal' \| 'lessthanorequal' \| 'contains' \| 'startswith' \| 'endswith' \| 'isempty' \| 'isnotempty', filterValue?: string, clearFilter?: boolean }` | `{ action: 'filter', cancelled: boolean, message: string }` |
+| **autofill** | Autofill a target range from a source pattern or series. | `{ dataRange: string, fillRange: string, direction?: 'Down' \| 'Up' \| 'Left' \| 'Right', fillType?: 'FillSeries' \| 'CopyCells' \| 'FillFormattingOnly' \| 'FillWithoutFormatting' }` | `{ action: 'autofill', cancelled: boolean, message: string }` |
+| **findReplace** | Find and replace all occurrences of a value in the spreadsheet. | `{ findValue: string, replaceValue: string, caseSensitive?: boolean, exactMatch?: boolean }` | `{ action: 'findAndReplace', cancelled: boolean, message: string }` |
 
 ### Structure Tools
 
-| Tool | Description |
-|------|-------------|
-| **insertRowsColumns** | Insert rows or columns at a specified 1-based position. |
-| **deleteRowsColumns** | Delete rows or columns starting at a specified 1-based position. |
-| **insertSheet** | Insert one or more new blank sheets into the workbook at a specified 0-based position. Optionally provide a name when inserting a single sheet. |
-| **freezePanes** | Freeze or unfreeze rows, columns, or panes. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **insertRowsColumns** | Insert rows or columns at a specified 1-based position. | `{ modelType: 'Row' \| 'Column', startIndex: number, count?: number }` | `{ action: 'insert', cancelled: boolean, message: string }` |
+| **deleteRowsColumns** | Delete rows or columns starting at a specified 1-based position. | `{ modelType: 'Row' \| 'Column', startIndex: number, count?: number }` | `{ action: 'delete', cancelled: boolean, message: string }` |
+| **insertSheet** | Insert one or more new blank sheets into the workbook at a specified 0-based position. Optionally provide a name when inserting a single sheet. | `{ startIndex?: number, count?: number, sheetName?: string }` | `{ action: 'insertSheet', cancelled: boolean, message: string }` |
+| **freezePanes** | Freeze or unfreeze rows, columns, or panes. | `{ freezeType: 'Rows' \| 'Columns' \| 'Panes' \| 'Unfreeze', row?: number, column?: number }` | `{ action: 'freezePanes', cancelled: boolean, message: string }` |
 
 ### Visualization & Analytics Tools
 
-| Tool | Description |
-|------|-------------|
-| **insertChart** | Insert a chart (Column, Bar, Line, Pie, etc.) for a data range. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **insertChart** | Insert a chart (Column, Bar, Line, Pie, etc.) for a data range. `range` may be a single contiguous range (e.g. `"A1:H11"`) or space-separated discontinuous ranges (e.g. `"A1:A11 E1:E11"`). | `{ range: string, chartType: 'Column' \| 'Bar' \| 'Line' \| 'Area' \| 'Pie' \| 'Doughnut' \| 'Scatter' \| 'StackingColumn' \| 'StackingColumn100' \| 'StackingBar' \| 'StackingBar100' \| 'StackingLine' \| 'StackingLine100' \| 'StackingArea' \| 'StackingArea100', title?: string, theme?: 'Material' \| 'Bootstrap' \| 'Fabric' \| 'Office365' \| 'Tailwind', isSeriesInRows?: boolean, height?: number, width?: number }` | `{ action: 'chart', cancelled: boolean, message: string }` |
 
 ### Validation & Linking Tools
 
-| Tool | Description |
-|------|-------------|
-| **addDataValidation** | Add a data validation rule (WholeNumber, Decimal, Date, List, etc.) to a range. |
-| **insertHyperlink** | Insert a hyperlink (URL or sheet reference) into a cell. |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **addDataValidation** | Add a data validation rule (WholeNumber, Decimal, Date, List, etc.) to a range. | `{ range: string, dvType: 'WholeNumber' \| 'Decimal' \| 'Date' \| 'Time' \| 'TextLength' \| 'List' \| 'Custom', dvOperator?: 'Between' \| 'NotBetween' \| 'EqualTo' \| 'NotEqualTo' \| 'GreaterThan' \| 'LessThan' \| 'GreaterThanOrEqualTo' \| 'LessThanOrEqualTo', dvValue1?: string, dvValue2?: string, dvIgnoreBlank?: boolean, dvInCellDropDown?: boolean }` | `{ action: 'dataValidation', cancelled: boolean, message: string }` |
+| **insertHyperlink** | Insert a hyperlink (URL or sheet reference) into a cell. | `{ address: string, displayText?: string, range?: string }` | `{ action: 'hyperlink', cancelled: boolean, message: string }` |
 
 ### Utility Tools
 
-| Tool | Description |
-|------|-------------|
-| **save** | Open the save/export dialog to save the spreadsheet (xlsx, xls, csv, or pdf). |
+| Tool | Description | Input Schema | Output Schema |
+|------|-------------|--------------|---------------|
+| **save** | Open the save/export dialog to save the spreadsheet (xlsx, xls, csv, or pdf). | `{ saveType?: 'xlsx' \| 'xls' \| 'csv' \| 'pdf' }` | `{ action: 'save', cancelled: boolean, message: string }` |
+| **undo** | Revert the last action in the undo history. Does not show the confirmation dialog. | `{}` | `{ action: 'undo', message: string }` |
+
+### Response Format
+
+All tools return a `WebMcpToolResponse` object with this canonical shape:
+
+```ts
+interface WebMcpToolResponse {
+    content: { type: 'text'; text: string }[];   // Single text entry containing JSON.stringify(payload)
+    isError?: boolean;                            // True when the tool errored out
+}
+```
+
+Parse `content[0].text` as JSON to read the payload. Common payload shapes include:
+
+- **Success** (most tools): `{ action: string, cancelled: false, message: string, ...result }`
+- **Cancellation** (event cancel or user denial): `{ action: string, cancelled: true, message: string }`
+- **Read tool** (e.g., `getCellData`): `{ sheetName, address, value, displayText, formula?, format?, style? }`
+- **Error**: response carries `isError: true`; `content[0].text` contains the error message.
 
 
 ## Best Practices
@@ -566,3 +588,4 @@ AI responds: "Added a new sheet 'Q4 Summary' at the end of the workbook"
 * [AI Assist in React Spreadsheet](../ai-assist/overview)
 * [Open Excel Files](../open-excel-files)
 * [Save Excel Files](../save-excel-files)
+* [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
