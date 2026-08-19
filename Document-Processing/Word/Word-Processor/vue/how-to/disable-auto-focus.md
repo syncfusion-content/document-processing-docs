@@ -10,19 +10,22 @@ domainurl: ##DomainURL##
 
 # How to Disable Auto Focus in Vue DOCX Editor
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the Document editor not to be focused automatically it can be customized.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) gets focused automatically when the page loads. If you do not want the Document Editor to be focused automatically, you can customize this behavior.
 
-The following example illustrates to disable the auto focus in DocumentEditorContainer.
+The following example illustrates how to disable the auto focus in DocumentEditorContainer.
 
 ```typescript
 <ejs-documenteditorcontainer ref="doceditcontainer" :enableAutoFocus='false' height='600px'></ejs-documenteditorcontainer>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#enableautofocus) property is `true`.
-The following example illustrates to disable the auto focus in DocumentEditor.
+N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#enableautofocus) property is `true`.
+
+## Disable auto focus in DocumentEditor
+
+The following example illustrates how to disable the auto focus in DocumentEditor.
 
 ```typescript
 <ejs-documenteditor ref="doceditcontainer" :enableAutoFocus='false' height='600px'></ejs-documenteditor>
 ```
 
->Note: Default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enableautofocus) property is `true`.
+N> The default value of [`enableAutoFocus`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enableautofocus) property is `true`.
