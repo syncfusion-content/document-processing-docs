@@ -10,15 +10,17 @@ domainurl: ##DomainURL##
 
 # Save Documents to Box Cloud File Storage in Vue DOCX Editor
 
-To save a document to Box cloud file storage, you can follow the steps below
+To save a document to Box cloud file storage, you can follow the steps below.
 
-**Step 1** Set up a Box developer account and create a Box application
+**Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials — Client ID and Client Secret — to authenticate and access Box APIs.
+
+N> Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose. After creating the Box application, grant it access to the specific folder where documents will be saved. In the Box Developer Console, navigate to your application's configuration and add the target folder under the authorized folders. This folder authorization is required for App Tokens/JWT authentication to access files.
 
 **Step 2:** Create a Simple Document Editor sample in Vue
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -35,7 +37,7 @@ using Box.V2.Config;
 using Box.V2.Models;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -63,9 +65,9 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToBoxCloud")]
-//Post action for downloading the document
+//Post action for uploading the document to Box
 
-public void SaveToBoxCloud(IFormCollection data)
+public async Task SaveToBoxCloud(IFormCollection data)
 {
   if (data.Files.Count == 0)
     return;
@@ -89,7 +91,7 @@ public void SaveToBoxCloud(IFormCollection data)
   file.CopyTo(stream);
 
   var boxFile = await client.FilesManager.UploadAsync(fileRequest, stream);
-} 
+}
  
 private string GetValue(IFormCollection data, string key)
 {
@@ -105,7 +107,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -127,7 +129,7 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Box cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Box cloud file storage.
 
 ```typescript
 <template>
