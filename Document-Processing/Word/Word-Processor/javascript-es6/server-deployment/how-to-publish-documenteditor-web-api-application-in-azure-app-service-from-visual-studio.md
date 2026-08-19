@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to publish documenteditor web api application in azure app service from visual studio in ##javascript-es6## Document editor control
+# How to Publish TypeScript DOCX Editor Web API to Azure App
 
 ## Prerequisites
 
