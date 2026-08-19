@@ -1,12 +1,12 @@
 ---
-title: Can pivot table cell values be edited? | Syncfusion
-description: This page explains in detail whether the cell values of a pivot table can be edited using Syncfusion XlsIO.
+title: Pivot Table Cell Editing in .NET Excel Library | Syncfusion
+description: PivotTable cell editing describes whether Syncfusion .NET Excel Library allows editing cell values inside pivot tables.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Can pivot table cell values be edited?
+# Pivot Table Cell Editing in .NET Excel Library
 
 Pivot table cells in Microsoft Excel are inherently read-only. Any changes to the values displayed in a pivot table must be made by updating its underlying source data, such as the original range or data table, followed by refreshing the pivot table to reflect the modifications.
 

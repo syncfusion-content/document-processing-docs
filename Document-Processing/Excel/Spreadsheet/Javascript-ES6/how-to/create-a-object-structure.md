@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create object structure in EJ2 TypeScript Spreadsheet | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Create Objects in TypeScript Spreadsheet | Syncfusion
+description: Create an object structure in TypeScript Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create an object structure
 documentation: ug
 ---
 
-# Create a object structure in EJ2 TypeScript Spreadsheet control
+# How to Create an Object Structure in TypeScript Spreadsheet
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/documentation/api/spreadsheet#properties) of the spreadsheet as value.
 

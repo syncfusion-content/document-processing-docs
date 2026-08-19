@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show and Hide Spinner in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to display and hide a loading spinner while opening documents in the Syncfusion Blazor Document Editor.
+title: How to Show and Hide Spinner in Blazor DOCX Editor | Syncfusion
+description: Show or hide loading indicators in Syncfusion® Blazor DOCX Editor when opening documents and processing content.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# How to Show and Hide a Spinner in Blazor Document Editor Component
+# How to Show and Hide Spinner in Blazor DOCX Editor
 
 The [`Spinner`](https://blazor.syncfusion.com/documentation/spinner/getting-started) component can be used to show or hide a spinner while opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component.
 

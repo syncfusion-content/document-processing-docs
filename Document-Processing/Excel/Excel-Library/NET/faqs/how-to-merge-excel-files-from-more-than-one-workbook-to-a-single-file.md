@@ -1,12 +1,12 @@
 ---
-title: Merge Excel files from multiple workbooks into single file |Syncfusion
-description: Code example to merge several Excel files from more than one workbook to a single file using Suncfusion's XlsIO.
+title: How to Merge Workbooks in .NET Excel Library | Syncfusion
+description: Merge several Excel files from more than one workbook into a single file using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to merge Excel files from more than one workbook to a single file?
+# How to merge multiple workbooks in .NET Excel Library
 
 You can merge several Excel files from more than one workbook to a single file. The following code snippet illustrates this.
 

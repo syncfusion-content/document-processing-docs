@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toggle the display of the page number in UWP PDF viewer | Syncfusion
-description: Learn here about Toggle the display of the page number support in UWP PDF viewer control and disable the display of the page number, and more.
+title: How to Toggle Page Number Display in UWP PDF Viewer | Syncfusion
+description: Learn how to toggle the display of the page number in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Toggle the display of the page number in UWP PDF Viewer
+# How to Toggle the display of the page number in UWP PDF Viewer
 The following code example can be used to disable the display of the page number on the top left corner of each page. 
 {% tabs %}
 {% highlight c# %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction Programmatic support in Vue PDF Viewer | Syncfusion
-description: Learn how to add, delete, update, and apply redaction annotations programmatically in the Syncfusion Vue PDF Viewer.
+title: Programmatic Support in Vue PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the Vue PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Programmatic support for redaction in Vue PdfViewer
+# Programmatic Support for Organize Pages in Vue PDF Viewer
 
 The Syncfusion Vue `PdfViewer` control provides APIs to add, update, delete, and apply redaction annotations programmatically. You can also redact entire pages, configure default properties, and work with the redaction property panel.
 

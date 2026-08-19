@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Azure Blob Storage in JS (ES5) DOCX Editor | Syncfusion
-description: Learn how to save a document to Azure Blob Storage in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more details.
+title: Save to Azure Blob Storage in JavaScript DOCX Editor | Syncfusion
+description: Save documents to Azure Blob Storage from JavaScript DOCX Editor, enabling scalable cloud storage and streamlined document management.
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Azure Blob Storage using JavaScript (ES5) DOCX Editor
+# Save Documents to Azure Blob Storage in JavaScript DOCX Editor
 
 To save a document to Azure Blob Storage, you can follow the steps below.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print PDF in Vue PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion Vue PDF Viewer component.
+title: About Syncfusion Vue PDF Viewer Print | Syncfusion
+description: Learn about introduction of the Syncfusion Vue PDF Viewer Print section and the key capabilities it provides.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print PDF in Vue PDF Viewer
+# About Syncfusion Vue PDF Viewer Print
 
 The Vue PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 

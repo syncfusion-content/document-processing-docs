@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Saving PDF files in Angular PDF Viewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save Pdf Files in Angular PDF Viewer | Syncfusion
+description: Save edited or annotated PDFs from the Angular PDF Viewer to a server, database, or local file system using the server-backed web service.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF file in Angular PDF Viewer component
+# Save PDF Files in Angular PDF Viewer
 
 After annotating a PDF with the viewer's annotation tools, save the updated file to a server, database, or local file system so changes persist.
 

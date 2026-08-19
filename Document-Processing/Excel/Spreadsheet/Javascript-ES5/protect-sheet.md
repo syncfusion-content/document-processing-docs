@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Protect sheet in EJ2 JavaScript Spreadsheet control | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion EJ2 JavaScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Protect Sheet in JavaScript Spreadsheet | Syncfusion
+description: Protect sheet in JavaScript Spreadsheet restricts editing and controls user access to worksheet content, helping maintain data integrity.
 platform: document-processing
 control: Protect sheet
 documentation: ug
 ---
 
-# Protect Sheet in EJ2 JavaScript Spreadsheet control
+# Protect Sheet in JavaScript Spreadsheet
 
 Sheet protection helps prevent users from modifying the data in the spreadsheet.
 

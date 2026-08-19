@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create an object structure in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn here all about how to create an object structure in ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: How to Create Object Structure in ASP.NET MVC Spreadsheet | Syncfusion
+description: Create an object structure in ASP.NET MVC Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create an object structure
 documentation: ug
 ---
 
-# Create an object structure in ASP.NET MVC Spreadsheet Control
+# How to Create an Object Structure in ASP.NET MVC Spreadsheet
 
 This topic describes how to construct a JSON object that can be passed to the `openFromJson()` method to render the Spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#properties) of the spreadsheet as value.
 
@@ -95,7 +95,7 @@ The following table defines each property of the `CellStyle`.
 | borderLeft | string | Specifies left border of the cell. |
 | borderRight | string | Specifies right border of the cell. |
 
-### Cell style type definitions
+## Cell style type definitions
 
 ```js
 type FontFamily = 'Arial' | 'Arial Black' | 'Axettac Demo' | 'Batang' | 'Book Antiqua' | 'Calibri' | 'Courier' | 'Courier New' | 'Din Condensed' | 'Georgia' | 'Helvetica' | 'Helvetica New' | 'Roboto' | 'Tahoma' | 'Times New Roman' | 'Verdana';

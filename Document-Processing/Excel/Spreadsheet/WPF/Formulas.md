@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Formulas in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Formulas support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+description: Create and calculate formulas in the WPF Spreadsheet control using built-in functions for accurate and efficient data analysis.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Formulas in WPF Spreadsheet (SfSpreadsheet)
+# Formulas in WPF Spreadsheet
 
 SfSpreadsheet calculation engine offers automated calculation over a formula, expression, or cross sheet references. SfSpreadsheet calculation engine is preloaded with 409 formulas covering a broad range of business functions.
 

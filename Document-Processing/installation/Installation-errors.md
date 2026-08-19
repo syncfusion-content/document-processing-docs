@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation Errors in Document Processing - Syncfusion
+title: Installation Errors in Document Processing | Syncfusion
 description: Learn here about the common installation errors and solutions to those errors in Syncfusion Document Processing Components installation.
 platform: document-processing
 control: Installation and Deployment

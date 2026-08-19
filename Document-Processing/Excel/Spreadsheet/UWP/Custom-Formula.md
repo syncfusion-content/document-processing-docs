@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Custom Formula in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Custom Formula support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Create and use custom formulas in the UWP Spreadsheet control to perform calculations with user-defined functions and business logic.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Custom Formula in UWP Spreadsheet (SfSpreadsheet)
+# Custom Formula in UWP Spreadsheet 
 
 SfSpreadsheet allows you to add custom formulas to its built-in function library. You can register a custom formula with the SfSpreadsheet by using the `AddFunction` method of `FormulaEngine`.
 

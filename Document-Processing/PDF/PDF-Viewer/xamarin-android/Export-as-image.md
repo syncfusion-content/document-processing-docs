@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Exporting the pages of PDF document as images
+# Exporting as images using PDF Viewer Xamarin.Android
 
 The PdfViewerControl allows users to export the pages of a PDF document as image streams using the `ExportAsImage` method. The resultant image streams can be saved as image files in the local storage.
 

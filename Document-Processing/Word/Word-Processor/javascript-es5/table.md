@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Table in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Tables in JavaScript DOCX Editor | Syncfusion
+description: Tables in JavaScript DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table in JavaScript (ES5) Document editor control
+# Tables in JavaScript DOCX Editor
 
 Tables are an efficient way to present information. [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Blazor UI Builder Skill with Spreadsheet | Syncfusion®
-description: Install Blazor UI Builder to generate production-ready Blazor components with Spreadsheet from natural-language prompts.
+title: UI Builder Skill with in Blazor Spreadsheet | Syncfusion
+description: Generate production-ready Blazor Spreadsheet using the Syncfusion UI Builder and natural language prompts.
 control: SfSpreadsheet
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® Blazor UI Builder Skill with Spreadsheet for AI Assistants
+# UI Builder Skill in Blazor Spreadsheet
 
 **Syncfusion® Blazor UI Builder Skill** is an AI-powered skill and companion agent that accelerates Blazor Spreadsheet application development by transforming natural-language UI requirements into production-ready components using Syncfusion® Blazor UI libraries. 
 

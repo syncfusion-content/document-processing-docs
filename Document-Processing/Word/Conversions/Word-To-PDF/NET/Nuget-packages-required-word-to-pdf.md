@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# NuGet Packages Required to Convert Word to PDF
+# NuGet Packages Required to Convert Word to PDF| Syncfusion
 
 ## Converting a Word Document to PDF
 

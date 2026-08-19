@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text Wrapping Style in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn about text wrapping styles for images and shapes in the Syncfusion ASP.NET Core Document Editor, including inline, square, and behind text options.
+title: Text Wrapping Style in ASP.NET Core DOCX Editor | Syncfusion
+description: Text wrapping styles in ASP.NET Core DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Text Wrapping Style
 documentation: ug
 ---
 
 
-# Text wrapping style in Document Editor
+# Text Wrapping Style in ASP.NET Core DOCX Editor
 
 Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) has only preservation support for images and textbox shapes with the following wrapping styles.
 

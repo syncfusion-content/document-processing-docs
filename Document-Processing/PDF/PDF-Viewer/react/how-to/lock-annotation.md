@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Lock annotation in React PDF Viewer component | Syncfusion
-description: Learn how to lock square or rectangle annotations in the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Lock Annotations in React PDF Viewer | Syncfusion
+description: Lock square or rectangle annotations in the React PDF Viewer so users cannot move or resize them after they are placed on the page.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Lock annotation in React PDF Viewer component
+# How to Lock Annotations in React PDF Viewer
 
 The PDF Viewer supports locking annotations to prevent users from moving, resizing, or removing them. Locking can be applied via annotation settings or by handling viewer events and updating annotation metadata.
 

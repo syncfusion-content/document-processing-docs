@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open the thumbnail pane in Vue PDF Viewer | Syncfusion
-description: Learn how to open the thumbnail pane programmatically in the Syncfusion Vue PDF Viewer using openThumbnailPane.
+title: How to Open the Thumbnail Pane Programmatically in Vue | Syncfusion
+description: Open the thumbnail pane programmatically in the Vue PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open the thumbnail pane in Vue PDF Viewer control
+# How to Open the Thumbnail Pane Programmatically in Vue PDF Viewer
 
 The PDF Viewer exposes a `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Angular UI Builder Skill with DOCX Editor | Syncfusion®
-description: Install Syncfusion® Angular UI Builder to generate production-ready Angular components with Document Editor from natural-language prompts.
+title: UI Builder Skill with Angular DOCX Editor | Syncfusion
+description: Install Syncfusion Angular UI Builder to generate production-ready Angular components with DOCX Editor from natural-language prompts.
 control: Document Editor
 platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, Document Editor, Agent Skills
 ---
 
-# Angular UI Builder Skill with Document Editor for AI Assistants
+# UI Builder Skill with Angular DOCX Editor
 
 **Syncfusion® Angular UI Builder Skill** is an AI-powered agent skill that accelerates Angular Document Editor development by transforming natural-language UI requirements into production-ready code using Syncfusion® Angular components.
 
