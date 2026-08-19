@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Save Documents to Google Drive in Vue DOCX Editor
 
-To save a document to Google Drive, you can follow the steps below
+To save a document to Google Drive, you can follow the steps below.
 
-**Step 1** Set up Google Drive API
+**Step 1:** Set up Google Drive API
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
 **Step 2:** Create a Simple Document Editor sample in Vue
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -34,7 +34,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -54,18 +54,18 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive bucket
+* Create the `SaveToGoogleDrive()` method to save the downloaded document to Google Drive.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToGoogleDrive")]
-//Post action for downloading the document
+//Post action for uploading the document to Google Drive
 
 public void SaveToGoogleDrive(IFormCollection data)
 {
-   if (data.Files.Count == 0)
+  if (data.Files.Count == 0)
     return;
 
   IFormFile file = data.Files[0];
@@ -122,7 +122,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -139,15 +139,15 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
 
-N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 N> You must use a unique `Client_ID` from json file to interface your application with the Google Drive API in order to save document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
 
 **Step 4:**  Modify the index File in the Document Editor sample
 
-In the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Google Drive.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Drive.
 
 ```typescript
 <template>
@@ -189,7 +189,7 @@ In the client-side, to export the document into blob the document using [`saveAs
               req.onreadystatechange = () => {
                   if (req.readyState === 4) {
                       if (req.status === 200 || req.status === 304) {
-                          console.log('Saved sucessfully');
+                          console.log('Saved successfully');
                       }
                   }
               };
