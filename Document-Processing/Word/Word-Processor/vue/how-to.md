@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # How to guides in Vue DOCX Editor Control
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) triggers the [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs/) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) triggers the [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs) event every time when any key is entered and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 
 ## Preventing default keyboard shortcut
 
-The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in Document Editor.
+The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in the Document Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
