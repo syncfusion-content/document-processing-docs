@@ -107,7 +107,7 @@ This exception typically occurs due to version mismatches between SkiaSharp and 
 
 ## Why does System.TypeInitializationException occur during Word to PDF or image conversion in Linux using Syncfusion DocIO?
 
-This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 3.119.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with an error such as `GLIBC_2.29 not found`.
+This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 4.150.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with an error such as `GLIBC_2.29 not found`.
 
 **Resolution:** Ensure the operating system includes the required GLIBC version for the SkiaSharp version being used, or upgrade to a newer Linux distribution. For the list of supported Linux distributions, refer to the [Convert Word document to PDF in Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux) documentation.
 

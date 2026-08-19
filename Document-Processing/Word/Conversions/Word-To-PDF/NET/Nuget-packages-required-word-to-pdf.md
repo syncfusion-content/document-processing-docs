@@ -148,7 +148,7 @@ Install-Package Syncfusion.Xamarin.DocIORenderer
 N>  1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
-N> 4. From v32.1.19, the dependent package SkiaSharp is upgraded from 3.116.1 to 3.119.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.119.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 packages for converting Word documents into PDF in Linux environment.
+N> 4. From v32.1.19, the dependent package SkiaSharp is upgraded from 3.116.1 to 4.150.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v4.150.1 and HarfBuzzSharp.NativeAssets.Linux v14.2.1.1 packages for converting Word documents into PDF in Linux environment.
 N> 5. "DocIO supports Word to PDF conversion in a UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
 N> 6. Syncfusion has **deprecated the Syncfusion.DocToPdfConverter.AspNet package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
 
@@ -160,13 +160,13 @@ Run one of the following commands in the Package Manager Console (or use `dotnet
 
 ```powershell
 // Common Linux distributions, Azure App Service, Google App Engine
-Install-Package SkiaSharp.NativeAssets.Linux -Version 3.119.1
-Install-Package HarfBuzzSharp.NativeAssets.Linux -Version 8.3.1.2
+Install-Package SkiaSharp.NativeAssets.Linux -Version 4.150.1
+Install-Package HarfBuzzSharp.NativeAssets.Linux -Version 14.2.1.1
 ```
 
 ```powershell
 // AWS Lambda, AWS Elastic Beanstalk (use the NoDependencies variant)
-Install-Package SkiaSharp.NativeAssets.Linux.NoDependencies -Version 3.119.1
+Install-Package SkiaSharp.NativeAssets.Linux.NoDependencies -Version 4.150.1
 ```
 
 The following table illustrates the native assets NuGet packages and their applicable Linux environments:
@@ -181,8 +181,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -194,7 +194,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
