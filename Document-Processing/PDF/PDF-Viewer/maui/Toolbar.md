@@ -741,7 +741,6 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 </table>
 
-
 ## See Also
 - [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization)
 - [UI Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ui-customization)
