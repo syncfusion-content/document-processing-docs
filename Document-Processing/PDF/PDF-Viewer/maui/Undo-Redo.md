@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Undo and Redo in .NET MAUI PDF Viewer (SfPdfViewer)
+# Undo and Redo actions in .NET MAUI PDF Viewer
 
 If you performed any undesired actions when adding, removing, moving, resizing, or editing annotations, you can undo and redo the action to restore the previous state. This section explains how to undo and redo changes made to annotations.
 

@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Azure Active Directory in ASP.NET MVC
+# Open PDF from Azure Active Directory in ASP.NET MVC PDF Viewer
 
 ## Overview
 

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with handwritten signatures
+#  Handwritten signature in Xamarin.iOS PDF Viewer
 
 PDF viewer allows you to include handwritten signatures in PDF documents and provides options to modify or remove the existing ones.
 

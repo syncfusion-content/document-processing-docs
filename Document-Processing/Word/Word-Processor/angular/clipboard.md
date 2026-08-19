@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clipboard in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Clipboard in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Clipboard in Angular DOCX Editor | Syncfusion
+description: The clipboard support in Angular DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
 control: Clipboard 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clipboard in Angular Document Editor component
+# Clipboard in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) takes advantage of the system clipboard and allows you to copy or move a portion of the document into the clipboard in HTML format, so that it can be pasted in any application that supports clipboard.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate a PDF File in a Node.js | Syncfusion
-description: Learn how to create a PDF file in a Node.js server with easy steps using the JavaScript PDF Library without depending on Adobe.
+title: Getting Started with JavaScript PDF in Node.js app | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript PDF in Node.js application. Easy steps to create PDF without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ keywords: pdf, script, express, node
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-node-js
 ---
 
-# Create or Generate a PDF File in a Node.js Server Environment
+# Getting Started with JavaScript PDF in Node.js app
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill PDF forms, and secure PDF files.
 

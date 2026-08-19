@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of the ASP.NET MVC Spreadsheet Control | Syncfusion
-description: Learn here all about Overview of the Syncfusion EJ2 ASP.NET MVC Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: About Syncfusion ASP.NET MVC Spreadsheet Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio ASP.NET MVC Spreadsheet control and more details
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
-# Overview of the ASP.NET MVC Spreadsheet Control
+# About Syncfusion ASP.NET MVC Spreadsheet Control
 
 The [ASP.NET MVC Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-mvc-spreadsheet-editor) is a user-interactive component for organizing and analyzing data in a tabular format. It provides various configuration options for customization. The Spreadsheet can load data by importing Excel and CSV files or by binding local and remote data sources, such as JSON, RESTful services, and OData services. The populated data can be exported in XLSX, XLS, CSV, and PDF formats.
 

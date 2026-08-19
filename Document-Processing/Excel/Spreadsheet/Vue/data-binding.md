@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data binding in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Data Binding in Vue Spreadsheet | Syncfusion
+description: Bind local and remote data sources to the Syncfusion Vue Spreadsheet for efficient spreadsheet data management
 control: Data binding 
 platform: document-processing
 documentation: ug
 ---
 
-# Data binding in Vue Spreadsheet component
+# Data Binding in Vue Spreadsheet
 
 The Spreadsheet uses [`DataManager`], which supports both RESTful JSON data services and local JavaScript object array binding to a range. The `dataSource` property can be assigned either with the instance of [`DataManager`] or JavaScript object array collection.
 

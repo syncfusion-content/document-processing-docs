@@ -1,12 +1,12 @@
 ---
-title: Group Mail merge in C# | DocIO | Syncfusion
+title: Group Mail merge in .NET Word Library | Syncfusion
 description: Learn how to Mail merge for a group - replace merge fields in a region of document with data, by repeating the region for each record without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Mail Merge for a group in Word Library
+# Group Mail merge in .NET Word Library
 
 You can perform Mail Merge and append multiple records from data source within a specified region to a template document. The region is bounded by start and end group merge fields. The region gets repeated for every record from the data source.
 

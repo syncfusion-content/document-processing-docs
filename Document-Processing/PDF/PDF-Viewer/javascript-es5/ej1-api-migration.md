@@ -1,14 +1,14 @@
 ---
 layout: post
-title: EJ1 API migration in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about EJ1 API migration in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Ej1 Api Migration in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the ej1 api migration in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# EJ1 API migration in Javascript PDF Viewer control
+# Ej1 Api Migration in JavaScript (ES5) PDF Viewer
 
 This article describes API migration process of PDF Viewer component from Essential JS 1 to Essential JS 2.
 

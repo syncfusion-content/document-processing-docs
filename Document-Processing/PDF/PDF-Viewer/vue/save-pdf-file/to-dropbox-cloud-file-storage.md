@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Dropbox in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Dropbox using the Syncfusion Vue PDF Viewer component in standalone and server-backed configurations.
+title: To Dropbox Cloud File Storage in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Dropbox cloud storage in Vue
+# Save PDF Files to Dropbox in Vue PDF Viewer
 
 PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 

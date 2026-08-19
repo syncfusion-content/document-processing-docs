@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from Google Cloud Storage in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Google Cloud Storage in the Syncfusion Vue PDF Viewer component using a server-backed approach.
+title: From Google Cloud Storage in Vue PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Google Cloud Storage in the Vue PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Google Cloud Storage in Vue
+# Open PDF from Google Cloud Storage in Vue PDF Viewer
 
 Follow these steps to load a PDF from Google Cloud Storage using the server-backed PDF Viewer.
 

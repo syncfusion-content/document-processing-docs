@@ -1,23 +1,41 @@
 ---
 layout: post
-title: Collaborative Editing in Vue DOCX Editor | Syncfusion
-description: Learn how to enable collaborative editing in Vue DOCX Editor to allow multiple users to work on a document simultaneously.
+title: Collaborative Editing in Vue using ASP.NET Core | Syncfusion
+description: The collaborative editing feature in Vue DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative editing in Vue DOCX Editor
+# Collaborative Editing in Vue DOCX Editor with Redis in ASP.NET Core
 
-Vue DOCX Editor (Document Editor) supports collaborative editing which Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 
- [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
+The following are needed to enable collaborative editing in Document Editor.
 
 - SignalR
 - Redis
+
+Configure CORS in the ASP.NET Core web service to allow the Vue application's origin (e.g., `http://localhost:8080` or your deployed domain) to call the API endpoints. Add CORS services and middle ware in `Program.cs`:
+
+```csharp
+// In Program.cs
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        builder.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+    });
+});
+
+// ...later in the pipeline configuration
+app.UseCors();
+```
 
 ## SignalR
 
@@ -25,7 +43,7 @@ SignalR enables real-time communication by instantly sending and receiving docum
 
 ### Scale-out SignalR using Azure SignalR service
 
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers).
+Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
 
 The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
 
@@ -77,7 +95,7 @@ builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(
 
 In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
 
-All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
+All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to 200 editing operations (twice the SaveThreshold) are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the SaveThreshold) are removed from the cache and automatically saved to the source document, while the remaining operations stay in the cache for subsequent edits.
 
 The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
 
@@ -153,7 +171,7 @@ export default {
   data() {
     return {
       serviceUrl: 'http://localhost:5212/api/documenteditor/',
-      collborativeEditingServiceUrl: "http://localhost:5212/",
+      collaborativeEditingServiceUrl: "http://localhost:5212/",
       collaborativeEditingHandler: null,
       connection: null,
     };
@@ -188,20 +206,20 @@ import { HubConnectionBuilder, HttpTransportType, HubConnectionState } from '@mi
 methods: {
     initializeSignalR() {
         // SignalR connection
-        this.connection = new HubConnectionBuilder().withUrl(this.collborativeEditingServiceUrl + 'documenteditorhub', {
+        this.connection = new HubConnectionBuilder().withUrl(this.collaborativeEditingServiceUrl + 'documenteditorhub', {
             skipNegotiation: true,
             transport: HttpTransportType.WebSockets
         }).withAutomaticReconnect().build();
         // Event handler for signalR connection
-        this.connection.on('dataReceived', this.onDataRecived.bind(this));
+        this.connection.on('dataReceived', this.onDataReceived.bind(this));
 
         this.connection.onclose(async () => {
             if (this.connection && this.connection.state === HubConnectionState.Disconnected) {
-                alert('Connection lost. Please relod the browser to continue.');
+                alert('Connection lost. Please reload the browser to continue.');
             }
         });
     },
-    onDataRecived(action, data) {
+    onDataReceived(action, data) {
         if (this.collaborativeEditingHandler) {
             if (action == 'connectionId') {
             // Update the current connection id to track other users
@@ -251,7 +269,7 @@ methods: {
         window.history.replaceState({}, "", `?id=` + roomId);
       }
       var httpRequest = new XMLHttpRequest();
-      httpRequest.open('Post', this.collborativeEditingServiceUrl + 'api/CollaborativeEditing/ImportFile', true);
+      httpRequest.open('Post', this.collaborativeEditingServiceUrl + 'api/CollaborativeEditing/ImportFile', true);
       httpRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === 4) {
@@ -274,7 +292,7 @@ methods: {
         if (this.$refs.doceditcontainer) {
             this.collaborativeEditingHandler = this.$refs.doceditcontainer.ej2Instances.documentEditor.collaborativeEditingHandlerModule;
             // Update the room and version information to collaborative editing handler.
-            this.collaborativeEditingHandler.updateRoomInfo(roomName, data.version, this.collborativeEditingServiceUrl + 'api/CollaborativeEditing/');
+            this.collaborativeEditingHandler.updateRoomInfo(roomName, data.version, this.collaborativeEditingServiceUrl + 'api/CollaborativeEditing/');
 
             // Open the document
             this.$refs.doceditcontainer.ej2Instances.documentEditor.open(data.sfdt);
@@ -302,13 +320,14 @@ methods: {
     onContentChange(args) {
         if (this.collaborativeEditingHandler) {
             // Send the editing action to server
-            this.collaborativeEditingHandler.sendActionToServer(args.operations)
-        },
+            this.collaborativeEditingHandler.sendActionToServer(args.operations);
+        }
+    },
 }
 ```
 ## Integrate collaborative editing in server side
 
-### Step 1: Create the Document Editor web service project 
+### Step 1: Create the Document Editor web service project
 
 Create an ASP.NET Core web service to handle server-side operations.
 
@@ -384,37 +403,37 @@ Add the following code to the file to manage SignalR groups using room names.
         // Join group based on the room name and store the user details in Redis cache.
         public async Task JoinGroup(ActionInfo info)
         {
-            // Set the connection ID to info
+            // Set the connection ID on the info object
             info.ConnectionId = Context.ConnectionId;
             // Add the connection ID to the group
             await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
  
-            //To ensure whether the room exixts in the Redis cache
+            //To ensure whether the room exists in the Redis cache
             bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
             if (roomExists)
             {
                 // Fetch all connected users from Redis
                 var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
                 var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
- 
-                //Send the exisiting user details to the newly joined user. 
+
+                //Send the existing user details to the newly joined user.
                 await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
             }
- 
-            // Add user to Redis           
+
+            // Add user to Redis
             await _db.HashSetAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId, JsonConvert.SerializeObject(info));
- 
+
             // Store the room name with the connection ID
             await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
- 
-            // Notify all the exsisiting users in the group about the new user
+
+            // Notify all the existing users in the group about the new user
             await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
         }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### 3. Handle user disconnection 
+#### 3. Handle user disconnection
 
 The following code snippet demonstrates how to disconnect a connection using SignalR.
 
@@ -442,7 +461,7 @@ The following code snippet demonstrates how to disconnect a connection using Sig
                 if (pendingOps.Length > 0)
                 {
                     List<ActionInfo> actions = new List<ActionInfo>();
-                    // Prepare the message fir adding it in background service queue.
+                    // Prepare the message for adding it in background service queue.
                     foreach (var element in pendingOps)
                     {
                         actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
@@ -532,7 +551,7 @@ The following code snippet demonstrates how the operations are cached and update
             try
             {
                 ActionInfo modifiedAction = await AddOperationsToCache(param);
-                //After transformation broadcast changes to all users in the gropu
+                //After transformation broadcast changes to all users in the group
                 await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
                 return modifiedAction;
             }
@@ -642,6 +661,21 @@ For more details about code snippet, please refer this [link](https://github.com
 ### Step 8: Implement background task queue
 
 This step implements a thread-safe, bounded queue to handle document save requests asynchronously without blocking the main application flow. It uses a channel-based approach with a fixed capacity to efficiently manage concurrent operations. The background service processes each save request by loading the document, applying changes, saving the updated file, and clearing the cache to maintain consistency.
+
+Create the following service classes (place them in a `Services` folder):
+
+- **`ISaveTaskQueue` / `SaveTaskQueue`**: A bounded `Channel<SaveInfo>`-based queue that exposes `QueueBackgroundWorkItemAsync(SaveInfo)` for the hub and controller to enqueue save requests.
+- **`SaveTaskService` (`IHostedService` / `BackgroundService`)**: A long-running background worker that dequeues `SaveInfo` items, applies the actions to the source document, writes the file back, and clears the Redis cache for the room.
+
+Register the connection multiplexer and queue in `Program.cs`:
+
+```csharp
+// In Program.cs
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("RedisConnectionString")));
+builder.Services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
+builder.Services.AddHostedService<QueuedHostedService>();
+```
 
 For more details about this code logic, please refer this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Server%20side%20with%20distributed%20cache/ASP.NET%20Core/Using%20Redis/Services)
 

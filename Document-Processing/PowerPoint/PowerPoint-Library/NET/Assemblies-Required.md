@@ -1,12 +1,12 @@
 ---
-title: Assemblies Required for PowerPoint Presentation | Syncfusion
-description: This section explains the assemblies required to work with PowerPoint presentations and to convert them to PDF and image for various platforms and frameworks.
+title: Assemblies Required for .NET PowerPoint Presentation | Syncfusion
+description: This section explains the required assemblies for creating PowerPoint presentations and converting to PDF or images using Syncfusion® .NET PowerPoint library.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required for PowerPoint Presentation
+# Assemblies Required for .NET PowerPoint Presentation
 
 The following assemblies need to be referenced in your application
 <table>

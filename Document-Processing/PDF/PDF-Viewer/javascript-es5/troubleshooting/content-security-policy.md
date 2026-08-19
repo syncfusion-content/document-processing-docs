@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Security Policy in JavaScript PDF Viewer control | Syncfusion
-description: Learn how to configure Content Security Policy directives for the Syncfusion JavaScript PDF Viewer control to allow required resources.
+title: Content Security Policy in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Configure Content Security Policy headers for the JavaScript (ES5) PDF Viewer so the viewer loads correctly while keeping the host page secure.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Content Security Policy in JavaScript PDF Viewer
+# Content Security Policy with JavaScript (ES5) PDF Viewer
 
 Content Security Policy (CSP) is a browser security feature that helps mitigate attacks such as cross-site scripting (XSS) and data injection by restricting the sources from which content can load.
 

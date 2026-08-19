@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion Document SDK web installer - Syncfusion
-description: Learn here about how to download the Syncfusion Document SDK web installer from our Syncfusion website with a license.
+title: How to download Document Solutions Web installer | Syncfusion
+description: Learn here about how to download the Syncfusion Document Processing web installer from our Syncfusion website with a license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> Document SDK Web Installer
+# How to download Document Solutions Web installer
 
 Syncfusion® Document Solutions has [Docx Editor SDK](https://www.syncfusion.com/docx-editor-sdk), [PDF Viewer SDK](https://www.syncfusion.com/pdf-viewer-sdk), [Document SDK](https://www.syncfusion.com/document-sdk), and [Spreadsheet Editor SDK](https://www.syncfusion.com/spreadsheet-editor-sdk) installer. The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

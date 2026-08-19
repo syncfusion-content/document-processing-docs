@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to open the thumbnail pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the openThumbnailPane method after the document loads.
+title: How to Open the Thumbnail Pane Programmatically | Syncfusion
+description: Open the thumbnail pane programmatically in the ASP.NET Core PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open the thumbnail pane programmatically in ASP.NET Core PDF Viewer
+# How to Open the Thumbnail Pane Programmatically in ASP.NET Core PDF
 
-Display page thumbnails by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailView/#openthumbnailpane) method. This enables quick navigation between pages and can be triggered automatically when the document loads or in response to user interactions.
+Display page thumbnails by calling the [**openThumbnailPane()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/thumbnailview#openthumbnailpane) method. This enables quick navigation between pages and can be triggered automatically when the document loads or in response to user interactions.
 
 Follow these steps to open the thumbnail pane:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Management in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Data Management support in Syncfusion® Windows Forms Spreadsheet control and more details.
+description: Import worksheet data from DataTable sources and export spreadsheet content to DataTable in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

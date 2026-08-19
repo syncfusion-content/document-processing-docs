@@ -1,12 +1,12 @@
 ---
-title: How to detect if a column is hidden using XlsIO | Syncfusion
-description: Shows how to detect whether a column is hidden in an Excel and also shows how to check IsHidden property in a worksheet using Syncfusion XlsIO.
+title: How to Detect Hidden Columns in .NET Excel Library | Syncfusion
+description: Detect hidden Excel columns using the Syncfusion .NET Excel Library by checking the IsHidden property in worksheet columns.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to detect whether a column is hidden in an Excel file using XlsIO?
+# How to detect hidden columns in .NET Excel Library
 
 You can determine whether a column is hidden by inspecting the worksheet's column information. The example below uses `WorksheetImpl` to access the `ColumnInformation` collection and checks the `IsHidden` property for the requested column index.
 
@@ -80,7 +80,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1003194-Hidden-Column/FAQ/Hidden%20Column/.NET/Hidden%20Column">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1003194-Hidden-Column/FAQ/Hidden%20Column/.NET/Hidden%20Column" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## See Also
 

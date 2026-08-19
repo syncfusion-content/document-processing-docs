@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Illustrations in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Illustrations in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Illustrations in Vue Spreadsheet | Syncfusion
+description: Learn about how to add and manage images and visual elements in the Syncfusion Vue Spreadsheet component
 control: Illustrations
 platform: document-processing
 documentation: ug
 ---
 
-# Illustrations in Vue Spreadsheet component
+# Illustrations in Vue Spreadsheet
 
 Illustrations help you to insert an image, shapes, and graphic objects in the Essential<sup style="font-size:70%">&reg;</sup> JS 2 spreadsheet.
 

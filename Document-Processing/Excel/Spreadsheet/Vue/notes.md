@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in Vue Spreadsheet component | Syncfusion
-description: Learn here all about the notes feature in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Notes in Vue Spreadsheet | Syncfusion
+description: Add and manage notes in the Syncfusion Vue Spreadsheet to provide contextual information within worksheets.
 control: Notes
 platform: document-processing
 documentation: ug
 ---
 
 
-# Notes in Vue Spreadsheet component
+# Notes in Vue Spreadsheet
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 

@@ -1,12 +1,12 @@
 ---
-title: Excel to PDF Assemblies Required | Syncfusion
-description: Lists the assemblies required to convert an Excel workbook to PDF for various .NET platforms and frameworks.
+title: Assemblies Required for .NET Excel to PDF Conversion | Syncfusion
+description: The assemblies required for converting Excel workbooks to PDF across .NET platforms and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Assemblies Required for Excel to PDF Conversion
+# Assemblies Required for .NET Excel to PDF Conversion
 
 For converting an Excel document to PDF, the following assemblies need to be referenced in your application.
 

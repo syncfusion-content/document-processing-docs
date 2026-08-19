@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save to Google Cloud Storage in Vue DOCX Editor | Syncfusion
-description:  Learn about how to Save document to Google Cloud Storage in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+description: Save documents to Google Cloud Storage from Vue DOCX Editor, enabling reliable cloud storage integration and document management.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug

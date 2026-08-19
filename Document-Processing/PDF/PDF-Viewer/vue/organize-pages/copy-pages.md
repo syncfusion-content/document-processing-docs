@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Copy pages in Organize Pages in Vue PDF Viewer | Syncfusion
-description: Learn how to duplicate pages using the Organize Pages UI in the Vue PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Copy Pages in Vue PDF Viewer | Syncfusion
+description: Duplicate pages in the Vue PDF Viewer using the Organize Pages panel to copy one or more pages into the same document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

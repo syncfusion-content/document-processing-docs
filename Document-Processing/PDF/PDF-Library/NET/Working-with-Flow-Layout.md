@@ -1,11 +1,11 @@
 ---
-title: Working with Flow Layout | Syncfusion
-description: Learn how to create PDF documents using the flow layout model with the Syncfusion .NET PDF library, including text, images, tables, and PdfLayoutResult.
+title: Flow Layout in .NET PDF Library | Syncfusion
+description: Learn how to create PDF documents using the flow layout model with text, images, tables, and PdfLayoutResult in Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with flow layout
+# Flow Layout in .NET PDF Library
 
 PDF documents can be created using a flow layout (also referred to as the flow model) instead of positioning elements at absolute coordinates. The flow layout automatically wraps text across pages and lines, manages line spacing, and flows content from one element to the next based on the available page area. This is the recommended approach for documents that contain primarily text, such as reports, articles, and letters. To create a PDF document using the flow layout, add references to the following set of assemblies.
 <table>

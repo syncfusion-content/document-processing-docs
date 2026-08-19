@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF in Linux | Syncfusion
-description: Convert Word to PDF in Linux using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to PDF in Linux  | Syncfusion
+description: Convert Word to PDF in Linux using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert a Word document to PDF in a .NET Core application on Linux
+# Convert Word to PDF in Linux 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in a .NET Core application on Linux**.
 

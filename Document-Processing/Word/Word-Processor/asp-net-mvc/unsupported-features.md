@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported features in ASP.NET MVC DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the ASP.NET MVC DOCX Editor to understand its limitations
+title: Unsupported Features in ASP.NET MVC DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in ASP.NET MVC DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in ASP.NET MVC Document Editor
+# Unsupported Features in ASP.NET MVC DOCX Editor
 
 This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX Editor (Document Editor).
 

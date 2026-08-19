@@ -1,11 +1,11 @@
 ---
-title: Print Word documents in C# | DocIO | Syncfusion
-description: Learn how to print Word documents using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Print Word documents in .NET Word Library | Syncfusion
+description: Learn how to print the Word documents into one using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Print Word documents
+# Print Word documents in .NET Word Library
 
 You can print a Word document by utilizing DocIO’s capability to convert the document into images and .NET framework’s [PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0&viewFallbackFrom=net-5.0) class
 
@@ -37,10 +37,11 @@ document.Close()
 
 ## Configuring print settings
 
-You can specify the printer settings and page settings through the [PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=net-11.0-pp) class. The [PrintDocument.PrintPage](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument.printpage?view=net-11.0-pp) event should be handled to layout the document for printing. The following code example demonstrates how to print the Word document pages that have been rendered as an image, using the `images` array produced in the previous snippet.
-
+You can specify the printer settings and page settings through the [PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?view=net-11.0-pp) class. The [PrintDocument.PrintPage](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument.printpage?view=net-11.0-pp) event should be handled to layout the document for printing.
 
 N> `startPageIndex` must be declared as a class-level integer field (initialize it to `0`). The snippet updates it based on the page range chosen in the print dialog.
+
+The following code example demonstrates how to print the Word document pages that have been rendered as an image, using the `images` array produced in the previous snippet.
 
 {% tabs %}
 

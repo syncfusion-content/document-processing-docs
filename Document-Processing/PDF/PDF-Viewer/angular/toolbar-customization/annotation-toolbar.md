@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the Annotation Toolbar in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Show or hide and customize the annotation toolbar in the Angular PDF Viewer with runnable examples.
+title: Annotation Toolbar in Angular PDF Viewer | Syncfusion
+description: Customize the annotation toolbar in the Angular PDF Viewer to show, hide, or replace the default annotation actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
