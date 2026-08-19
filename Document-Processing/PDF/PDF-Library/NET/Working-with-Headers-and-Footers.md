@@ -1,11 +1,11 @@
 ---
-title: Working with Headers and Footers | Syncfusion
-description: This section explains how to create headers and footers in a PDF document using the Syncfusion .NET PDF library.
+title: Headers and Footers in .NET PDF Library | Syncfusion
+description: Learn how to create headers and footers in a PDF document programmatically using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Headers and Footers
+# Headers and Footers in .NET PDF Library
 
 Syncfusion<sup>&reg;</sup> PDF supports drawing headers and footers in a PDF document using the [PdfPageTemplateElement](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageTemplateElement.html) class. A header and footer can contain any type of element, including images, text, shapes, and dynamic fields such as page numbers, page counts, dates, and times.
 

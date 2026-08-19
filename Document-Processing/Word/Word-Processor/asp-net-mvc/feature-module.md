@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature Module in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about Feature Module in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Feature Modules in ASP.NET MVC DOCX Editor | Syncfusion
+description: Modules in ASP.NET MVC DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 platform: document-processing
 control: Feature Module
 documentation: ug
 ---
 
 
-# Feature modules in ASP.NET MVC Document Editor
+# Feature Modules in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) features are segregated into individual feature-wise modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the Document Editor that can be included as required:
 * **Print** - Prints the document.

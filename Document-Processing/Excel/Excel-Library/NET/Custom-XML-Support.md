@@ -1,11 +1,11 @@
 ---
 title: Custom XML Support in .NET Excel Library | Syncfusion
-description: In this section, you can learn how to create or edit Custom XML in Excel document using .NET Excel Library
+description: Syncfusion .NET Excel Library lets users to create and edit XML parts in Excel documents programmatically. 
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Custom XML Support in Syncfusion<sup>&reg;</sup> Excel Library
+# Custom XML Support in .NET Excel Library
 
 A custom XML part is arbitrary XML data embedded in the workbook.
 

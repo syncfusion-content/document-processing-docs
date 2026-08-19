@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Show or hide annotations in TypeScript PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion TypeScript PDF Viewer by exporting and importing annotations.
+title: How to Show or Hide Annotations in JavaScript (ES6) PDF | Syncfusion
+description: Show or hide annotations in the JavaScript (ES6) PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Show or hide annotations in PDF Viewer
+# How to Show or Hide Annotations in JavaScript (ES6) PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to temporarily hide annotations and restore them later in the TypeScript PDF Viewer. This is useful for presenting a clean view of the document while preserving annotation data for later use.
 

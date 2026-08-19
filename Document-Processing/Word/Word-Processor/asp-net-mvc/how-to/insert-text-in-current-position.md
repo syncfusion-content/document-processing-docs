@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Insert text, paragraph and rich-text content in ASP.NET MVC Document Editor Component
-description: Learn how to insert text, paragraph and rich-text content in ASP.NET MVC Document Editor Component
+title: Insert Content at Cursor in ASP.NET MVC DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® ASP.NET MVC DOCX Editor control, its elements and more.
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
 ---
 
-# How to insert text, paragraph and rich-text content in Document Editor component
+# How to Insert Content at Cursor in ASP.NET MVC DOCX Editor
 
-You can insert the text, paragraph and rich-text content in Document Editor component.
+You can insert text, paragraph, and rich-text content in the Document Editor component.
 
 ## Insert text in current cursor position
 
-You can use [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor/#inserttext) API in editor module to insert the text in current cursor position.
+You can use the [`insertText`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#inserttext) API in the editor module to insert the text at the current cursor position.
 
-The following example code illustrates how to add the text in current selection.
+The following example code illustrates how to add the text in the current selection.
 
 ```typescript
-// It will insert the provided text in current selection
+// It will insert the provided text in the current selection
 this.container.documentEditor.editor.insertText('Syncfusion');
 ```
 
@@ -28,28 +28,29 @@ this.container.documentEditor.editor.insertText('Syncfusion');
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Insert paragraph in current cursor position
 
-To insert new paragraph at current selection, you can can use [`insertText`] API with parameter as `\r\n` or `\n`.
+To insert a new paragraph at the current selection, you can use the [`insertText`] API with the parameter as `\r\n` or `\n`.
 
-The following example code illustrates how to add the new paragraph in current selection.
+The following example code illustrates how to add a new paragraph in the current selection.
 
 ```typescript
-// It will add the new paragraph in current selection
+// It will add a new paragraph in the current selection
 this.container.documentEditor.editor.insertText('\n');
 ```
 
 ## Insert the rich-text content
 
-To insert the HTML content, you have to convert the HTML content to SFDT Format using [`web service`]. Then use [`paste`] API to insert the sfdt at current cursor position.
+To insert the HTML content, you have to convert the HTML content to SFDT format using a [`web service`]. Then, use the [`paste`] API to insert the SFDT at the current cursor position.
 
-N> Html string should be well formatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> The HTML string should be well-formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) supports only well-formatted XHTML.
 
-The following example illustrates how to insert the HTML content at current cursor position.
+The following example illustrates how to insert the HTML content at the current cursor position.
 
-* Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
+* Send the HTML content to the server side for SFDT conversion. Refer to the following example to send the HTML content to the server side and insert it in the current cursor position.
 
 
 {% tabs %}
@@ -57,10 +58,11 @@ The following example illustrates how to insert the HTML content at current curs
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/insert-rich-text/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Insert-rich-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-* Refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
+* Refer to the following code example for the server-side web implementation for HTML conversion using the DocumentEditor.
 
 ```c#
 //API controller for the conversion.

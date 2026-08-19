@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with JavaScript (ES5) DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in a JavaScript application using the Syncfusion® DOCX Editor to create, edit, and view Word documents.
+title: Getting Started with JavaScript DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with JavaScript (ES5) DOCX Editor
+# Getting Started with JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a JavaScript (ES5) application.
 
@@ -38,13 +38,15 @@ To use local scripts and styles for the DOCX Editor, follow these steps:
 
 1. Download and install the [DOCX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-2. Create a `resources` folder in your application (for example, `docx-editor-app/resources`).
+2. Create a `resources` folder in your application (for example, `documenteditor-app/resources`).
 
 3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 
 ```text
 <Install path>/Syncfusion/Essential Studio/DOCX Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
 ```
+
+N> Replace `{VERSION}` in the path above with the installed DOCX Editor SDK version (for example, `34.1.29`). Use the same version segment in the CDN URLs in the next tab to keep the local and CDN resources in sync.
 
 4. After copying the files, add the DOCX Editor and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
@@ -172,7 +174,7 @@ Add a container element for the Document Editor in the `index.html` file and the
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
 
 // Initialize Document Editor Container component
-var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
     height: '590px'
 });

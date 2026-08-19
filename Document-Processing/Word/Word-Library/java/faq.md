@@ -1,11 +1,11 @@
 ---
-title: FAQ Section | Word library | Syncfusion
-description: This section illustrates about Frequently Asked Questions in Essential Syncfusion Word library (Essential DocIO)
+title: FAQ Section in Java Word | Syncfusion
+description: Describe common questions and answers about using the Syncfusion Java Word library and its document processing features
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Frequently Asked Questions
+# FAQ Section in Java Word
 
 The frequently asked questions in Essential<sup style="font-size:70%">&reg;</sup> DocIO are listed below.
 

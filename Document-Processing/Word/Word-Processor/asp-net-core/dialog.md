@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about dialog in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in ASP.NET Core DOCX Editor | Syncfusion
+description: The dialogs in ASP.NET Core DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
 control: Dialog
 documentation: ug
 ---
 
 
-# Dialog in ASP.NET Core Document Editor Component
+# Dialogs in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides dialog support to major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Freeze Pane in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Freeze Pane in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Freeze Panes in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about freeze panes in the Syncfusion ASP.NET Core Spreadsheet control, including freezing rows and columns for easier data navigation.
 platform: document-processing
 control: Freeze Pane
 documentation: ug
 ---
 
 
-# Freeze Panes in ASP.NET Core Spreadsheet control
+# Freeze Panes in ASP.NET Core Spreadsheet
 
 The **Freeze Panes** feature helps keep specific rows or columns visible while scrolling through the worksheet. Use the `frozenRows` and `frozenColumns` properties within the [`Sheet`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_Sheets) model to specify the number of rows and columns to freeze.
 

@@ -1,13 +1,13 @@
 ---
-title: Document Styles in WPF RichTextBox control | Syncfusion
-description: Learn here all about Document Styles support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Document Styles in WPF DOCX Editor | Syncfusion
+description: The document styles in WPF DOCX Editor provide predefined formatting sets for tables, numbering, paragraphs, and characters, enabling style application.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles
 ---
 
-# Document Styles in WPF RichTextBox (SfRichTextBoxAdv)
+# Document Styles in WPF DOCX Editor
 
 A style is a predefined set of table, numbering, paragraph, and character formatting properties that can be applied to regions within a document.
 In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor), styles are created and added to a document programmatically or using the built-in Styles dialog.

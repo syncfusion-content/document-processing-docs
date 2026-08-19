@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Migrate from Server-backed to Standalone Vue PDF Viewer | Syncfusion
-description: Learn how to migrate your Vue PDF Viewer from server-backed to standalone mode. This guide shows step-by-step instructions and code examples.
+title: Server to Standalone in Vue PDF Viewer | Syncfusion
+description: Migrate an existing Vue PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Migrate from Server-backed to Standalone Vue PDF Viewer
+# Migrate from Server-Backed to Standalone Vue PDF Viewer
 
 Migrating from server-backed to standalone mode transforms your PDF Viewer architecture by moving PDF rendering from the server to the client browser. This migration eliminates server dependencies, reduces infrastructure costs, and improves performance through instant client-side rendering.
 
@@ -47,7 +47,7 @@ When you migrate to standalone mode, the processing location for various feature
 | **Thumbnail View** | Thumbnail images are generated on the server and transmitted to the client. | Thumbnails are rendered directly in the browser without server involvement. |
 | **Bookmark View** | Bookmark data is processed on the server and sent to the client for rendering. | Bookmark navigation is managed locally using the Syncfusion EJ2 PDF Viewer. |
 | **Text Search** | Text search operations are performed on the server, and results are returned to the client. | Text search is executed entirely within the browser. |
-| **Print** | The server handles print preparation and formatting, then sends the processed output back to the client for printing. | The server handles print preparation and formatting, then sends the processed output back to the client for printing. |
+| **Print** | The server handles print preparation and formatting, then sends the processed output back to the client for printing. | Print is handled locally in the browser using the Syncfusion EJ2 PDF Viewer, without requiring server communication. |
 | **Toolbar** | Toolbar actions such as zoom, navigation, and export are processed on the server, and results are returned to the client. | Toolbar operations are executed instantly on the client without requiring server communication. |
 
 **Key Insight:** In standalone mode, all PDF processing occurs in the browser, eliminating the need for server coordination. Your server only serves the PDF file as a static resource or through a simple API endpoint.
@@ -125,7 +125,7 @@ export default {
 
 ### Step 3: Add the `resourceUrl` Property
 
-Add the [resourceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#resouceurl) property to point to the PDFium resource files. You can choose between two approaches: CDN hosting (recommended for quick migration) or local hosting.
+Add the [resourceUrl](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#resourceurl) property to point to the PDFium resource files. You can choose between two approaches: CDN hosting (recommended for quick migration) or local hosting.
 
 #### Option A: Using CDN (Recommended for Quick Migration)
 

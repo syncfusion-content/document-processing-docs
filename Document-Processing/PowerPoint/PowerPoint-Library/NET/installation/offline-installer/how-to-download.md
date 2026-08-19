@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download Syncfusion® PowerPoint Offline Installer
-description: Learn here about how to download the Syncfusion<sup>&reg;</sup> PowerPoint offline installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to Download Syncfusion PowerPoint Offline Installer | Syncfusion
+description: Learn here about how to download the Syncfusion® PowerPoint offline installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> PowerPoint offline installer
+# How to Download Syncfusion PowerPoint Offline Installer
 
 The [Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) controls are included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer depending on your license.
 

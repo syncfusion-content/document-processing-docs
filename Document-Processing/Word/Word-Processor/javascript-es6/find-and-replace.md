@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Find and Replace in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Find and Replace in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Find and Replace in TypeScript DOCX Editor | Syncfusion
+description: The find and replace feature in TypeScript DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: Find and Replace
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and Replace in JavaScript (ES6) Document Editor control
+# Find and Replace in TypeScript DOCX Editor
 
 The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with the selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bold, and more.
 

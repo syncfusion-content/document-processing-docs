@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure Redis for Load Balancing in Syncfusion MVC PDF Viewer
-description: Learn how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer, ensuring efficient document processing in a distributed environment.
+title: How to Run the PDF Viewer in a Load-Balanced Environment | Syncfusion
+description: Configure the ASP.NET MVC PDF Viewer to work in a load-balanced environment by setting up shared storage and consistent service URLs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer
+# How to Run the PDF Viewer in a Load-Balanced Environment in ASP.NET
 
 This document explains how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer. This setup ensures efficient document processing and caching across multiple server instances.
 

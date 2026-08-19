@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Wrapping Style in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about Text Wrapping Style in Syncfusion Blazor Document Editor component of Syncfusion Essential JS 2 and more.
+title: Text Wrapping Style in Blazor DOCX Editor | Syncfusion
+description: Text wrapping styles in Blazor DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Text Wrapping Style in Blazor Document Editor Component
+# Text Wrapping Style in Blazor DOCX Editor
 
 Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) has only preservation support for image and text box shapes with the following wrapping styles.
 

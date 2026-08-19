@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Circle annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Circle annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Circle Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Circle annotations in the JavaScript (ES6) PDF Viewer for marking, highlighting, or measuring areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Circle annotation in TypeScript PDF Viewer
+# Circle Annotation in JavaScript (ES6) PDF Viewer
 
 Circle is a shape annotation used to highlight circular regions or draw emphasis bubbles.
 

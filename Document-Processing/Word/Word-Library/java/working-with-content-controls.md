@@ -1,12 +1,12 @@
 ---
-title: Working with Content Controls | Word library | Syncfusion
-description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Content Controls in Java Word | Syncfusion
+description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Working with Content Controls
+# Content Controls in Java Word
 
 ## What is Content Control?
 

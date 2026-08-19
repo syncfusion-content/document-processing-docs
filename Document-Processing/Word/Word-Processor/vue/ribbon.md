@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ribbon in Vue Document editor control | Syncfusion
-description: Learn here all about the Ribbon UI in Syncfusion Vue Document editor control, how to switch between Ribbon and Toolbar modes.
+title: Ribbon in Vue DOCX Editor | Syncfusion
+description: Ribbon in Vue DOCX Editor provides a tabbed command interface to access editing tools and manage document content efficiently.
 platform: document-processing
 control: Ribbon
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon in Vue Document Editor Control
+# Ribbon in Vue DOCX Editor
 
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides a modern Ribbon interface similar to Microsoft Word's interface. This Ribbon UI provides an efficient and intuitive way to access editing features, organizing commands within well-structured tabs and groups to enhance your document editing experience. Additionally, the Ribbon interface supports contextual tabs. Contextual tabs appear only when certain elements, such as tables, images, or headers/footers, are selected in the document.
 

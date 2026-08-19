@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Restrict editing in Vue DOCX Editor | Syncfusion
-description: Learn how to enable Restrict Editing in the Vue DOCX Editor to securely manage document access and control user modifications.
+title: Restrict Editing in Vue DOCX Editor | Syncfusion
+description: Restrict editing feature in Vue DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 control: Restrict editing 
 platform: document-processing
 documentation: ug

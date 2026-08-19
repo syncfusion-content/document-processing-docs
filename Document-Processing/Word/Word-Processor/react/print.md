@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Print in React DOCX Editor | Syncfusion
-description: Learn here all about Print in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
+description: Print feature in React DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 control: Print 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in React Document Editor component
+# Print in React DOCX Editor
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from the Document Editor instance.
 

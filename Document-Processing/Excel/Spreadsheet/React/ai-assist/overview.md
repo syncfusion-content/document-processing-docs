@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist in React Spreadsheet control | Syncfusion
-description: Learn about the AI Assist feature in the Syncfusion React Spreadsheet control, how it works, and what it can do.
+title: About Syncfusion React Spreadsheet AI Assist | Syncfusion
+description: Learn about the AI Assist feature in Syncfusion React Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in React Spreadsheet control
+# About Syncfusion React Spreadsheet AI Assist
 
 **AI Assist** brings AI-powered capabilities directly into the React Spreadsheet. Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 

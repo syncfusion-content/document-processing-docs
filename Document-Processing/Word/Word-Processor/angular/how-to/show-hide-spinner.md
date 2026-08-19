@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show hide spinner in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Show hide spinner in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Show and Hide Spinner in Angular DOCX Editor | Syncfusion
+description: Show or hide loading indicators in Syncfusion® Angular DOCX Editor when opening documents and processing content.
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide spinner in Angular Document Editor component
+# How to Show and Hide Spinner in Angular DOCX Editor
 
 Using the [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show or hide a spinner while opening a document in the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor).
 

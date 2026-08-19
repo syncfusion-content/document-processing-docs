@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content Control in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn here all about Content Control in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Content Controls in ASP.NET Core DOCX Editor | Syncfusion
+description: The content control feature in ASP.NET Core DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control
 documentation: ug
 ---
 
 
-# Content Control in ASP.NET Core Document Editor
+# Content Controls in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 

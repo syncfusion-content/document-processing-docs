@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Data Validation Syncfusion Flutter XlsIO
-description: In this section, learn how to use different types of data validations on Excel data using Syncfusion Flutter XlsIO.
+title: Excel Data Validation in Flutter Excel Library | Syncfusion
+description: The Flutter Excel Library lets users control worksheet input by applying data validation rules to cells or ranges.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Working with Excel Data Validation
+# Excel Data Validation in Flutter Excel Library
 
 Data Validation is a list of rules for the data that can be entered into a cell. XlsIO supports the following data validation types.
 

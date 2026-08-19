@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to OneDrive in ASP.NET Core DOCX Editor | Syncfusion
-description:  Learn about how to save a document to OneDrive in ASP.NET Core Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Save Documents to OneDrive in ASP.NET Core DOCX Editor | Syncfusion
+description: Save documents to OneDrive from ASP.NET Core DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save Document to OneDrive in ASP.NET Core
+# Save Documents to OneDrive in ASP.NET Core DOCX Editor
 
 To save a document to OneDrive, follow these steps:
 

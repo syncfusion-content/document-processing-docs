@@ -1,12 +1,12 @@
 ---
-title: Watermarks in JavaScript PDF Library | Syncfusion
+title: PDF Watermarks in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to add text and image watermarks to both new and existing PDF documents using the JavaScript PDF Library
+description: Add text and image watermarks to PDF documents programmatically using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Watermarks in JavaScript PDF Library
+# PDF Watermarks in JavaScript PDF
 
 JavaScript PDF Library supports adding text and image watermarks (stamps) to PDF documents. You can apply watermarks to new or existing PDFs, and add, customize, or remove watermark annotations programmatically.
 

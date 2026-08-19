@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert blank pages in Organize Pages Angular PDF Viewer | Syncfusion
-description: How to insert blank pages into a PDF using the Organize Pages UI in the Syncfusion Angular PDF Viewer.
+title: Insert Blank Pages in Angular PDF Viewer | Syncfusion
+description: Insert blank pages into a PDF in the Angular PDF Viewer using the Organize Pages panel to add new empty pages at any position.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert blank pages using the Organize Pages tool in Angular
+# Insert Blank Pages in Angular PDF Viewer
 
 ## Overview
 

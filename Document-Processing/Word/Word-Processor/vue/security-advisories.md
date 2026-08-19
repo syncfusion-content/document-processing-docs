@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Security Advisories in Vue DOCX Editor | Syncfusion
-description: Learn here all about Security Advisories in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+description: Security advisories in Vue DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 control: Security advisories 
 platform: document-processing
 documentation: ug
