@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported File Formats in Vue Document Editor
+# Supported File Formats in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
 
