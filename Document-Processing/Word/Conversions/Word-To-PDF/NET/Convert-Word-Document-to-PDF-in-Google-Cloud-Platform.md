@@ -1,6 +1,6 @@
 --- 
-title: Convert Word to PDF in Google Cloud Platform (GCP) | Syncfusion
-description: Learn how to convert a Word document to PDF in Google Cloud Platform (GCP) using .NET Core Word library in C#.
+title: Convert Word to PDF in Google Cloud Platform (GCP) | Syncfusion 
+description: Learn how to convert a Word document to PDF in Google Cloud Platform (GCP) using .NET Core Word (DocIO) library in C#. 
 platform: document-processing
 control: DocIO 
 documentation: UG 
@@ -17,7 +17,7 @@ N> If this is your first time using Google Cloud Platform (GCP), refer to the [G
 Before you begin, make sure you have the following:
 
 * A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled.
-* The [Google Cloud CLI (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed locally.
+* The [Google Cloud CLI](https://cloud.google.com/sdk/docs/install) installed locally.
 * **.NET SDK 8.0** (or later) installed (the samples target `net8.0`).
 * A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application.
 
