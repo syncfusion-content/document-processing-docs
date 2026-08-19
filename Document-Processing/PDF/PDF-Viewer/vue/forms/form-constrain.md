@@ -5,6 +5,7 @@ description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # PDF form field flags in Vue PDF Viewer
@@ -37,7 +38,7 @@ The following flags are supported in the PDF Viewer:
 Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed by the user.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -101,7 +102,7 @@ Use the **isRequired** property to mark form fields as mandatory. To enforce thi
 If required fields are empty, validation can prevent further actions.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -163,7 +164,7 @@ export default {
 Use the **isPrint** property to control whether a form field appears in the printed output of the PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -240,7 +241,7 @@ You can apply or modify form field flags in the following ways.
 ### Apply flags When Creating Fields
 Pass the flags properties in the settings object when creating form fields using **addFormField()**.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -303,7 +304,7 @@ export default {
 Use the [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) method to modify constraint values on existing form fields.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -363,7 +364,7 @@ export default {
 You can configure default flag values so that form fields added using the [Form Designer toolbar](../toolbar-customization/form-designer-toolbar) automatically inherit them. This helps ensure consistent behavior for all newly created fields.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />

@@ -5,6 +5,7 @@ description: Learn how to customize PDF form fields using the UI and programmati
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Customize the appearance of PDF Form Fields in Vue PDF Viewer
@@ -22,7 +23,7 @@ Use the **Properties** panel to adjust:
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to apply styles.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="updateTextboxStyle">Update Textbox Style</button>
@@ -85,7 +86,7 @@ export default {
 Define defaults so fields added from the toolbar inherit styles.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />

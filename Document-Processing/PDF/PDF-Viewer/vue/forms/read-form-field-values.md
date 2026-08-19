@@ -80,7 +80,7 @@ formFields.forEach(field => {
 Place your form-reading logic inside `documentLoad` event handler, so values are read after the PDF is loaded in the viewer. For more information, see [`formFieldCollections`](./form-fields-api#formfieldcollections) and `documentLoad`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer

@@ -5,6 +5,7 @@ description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Import PDF Form Data into Vue PDF Viewer
@@ -25,7 +26,7 @@ N> If a **server-backed viewer** is used, set `serviceUrl` before importing.
 The following Vue example imports FDF data into the currently loaded PDF.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importFdf">Import FDF</button>
@@ -74,7 +75,7 @@ export default {
 The following example imports XFDF data.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importXfdf">Import XFDF</button>
@@ -123,7 +124,7 @@ export default {
 The following example imports JSON form data.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importJson">Import JSON</button>

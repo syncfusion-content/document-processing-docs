@@ -5,6 +5,7 @@ description: Learn how to modify PDF form fields using the UI and programmatical
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Modify PDF Form Field Properties in Vue
@@ -20,7 +21,7 @@ You can modify form fields using the **UI** or **API**.
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size).
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyTextbox">Apply Textbox Changes</button>
@@ -88,7 +89,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyTextbox">Apply Textbox Changes</button>
@@ -152,7 +153,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyPasswordBox">Edit PasswordBox</button>
@@ -217,7 +218,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyCheckbox">Modify CheckBox</button>
@@ -274,7 +275,7 @@ export default {
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editRadio">Modify RadioButton</button>
@@ -326,7 +327,7 @@ export default {
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editListBox">Edit ListBox</button>
@@ -389,7 +390,7 @@ export default {
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
 - API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editDropDown">Edit DropDown</button>

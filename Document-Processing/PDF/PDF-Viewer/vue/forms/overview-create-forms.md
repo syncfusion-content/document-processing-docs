@@ -5,6 +5,7 @@ description: Learn how to create and edit each form field using the PDF Viewer U
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Create, Edit, Style, and Remove Form Fields in Vue PDF Viewer

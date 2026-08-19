@@ -141,4 +141,4 @@ export default {
 
 - [`downloadStart` event reference](./form-field-events#downloadstart)
 - [`pageOrganizerSaveAs` event reference](./form-field-events#pageorganizersaveas)
-- [Form Designer in React PDF Viewer](./form-designer)
+- [Form Designer in Vue PDF Viewer](./form-designer)

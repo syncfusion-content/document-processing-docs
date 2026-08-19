@@ -35,7 +35,7 @@ The Vue PDF Viewer provides APIs to create, edit, validate, navigate, and manage
 Updates the value of one or more form fields programmatically.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="updateFormFields">updateFormFields</button>
@@ -93,7 +93,7 @@ export default {
 Updates form field properties such as bounds, color, font, isReadOnly, required, and more.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="updateFormFields">updateFormFields</button>
@@ -157,7 +157,7 @@ export default {
 Retrieves all form fields and their properties or filters by type/name.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="retrieveFormFields">retrieveFormFields</button>
@@ -208,7 +208,7 @@ export default {
 Resets specified form fields or all fields to their default values.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="resetFormFields">resetFormFields</button>
@@ -258,7 +258,7 @@ export default {
 Imports form field data from an object or file into the current document.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="importFormFields">importFormFields</button>
@@ -309,7 +309,7 @@ export default {
 Moves focus to a form field by name or ID.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="focusFormField">focusFormField</button>
@@ -359,7 +359,7 @@ export default {
 Exports current form field values and states as a JSON object.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="exportFormFieldsAsObject">exportFormFieldsAsObject</button>
@@ -412,7 +412,7 @@ export default {
 Exports form field data to a file for download.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="exportFormFields">exportFormFields</button>
@@ -463,7 +463,7 @@ export default {
 Clears values of specified or all fields without removing the fields themselves.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="clearFormFields">clearFormFields</button>
@@ -514,7 +514,7 @@ export default {
 Returns true if the loaded document contains one or more form fields.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="checkFormFieldDocument">checkFormFieldDocument</button>
@@ -564,7 +564,7 @@ export default {
 Gets whether the Form Designer toolbar is currently visible.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" @documentLoad="onDocumentLoad" />
@@ -615,7 +615,7 @@ Gets the current collection of form fields with their properties from the viewer
 <button id="formfieldcollection">formfieldcollection</button>
 ```
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button id="formfieldcollection">formfieldcollection</button>
@@ -665,7 +665,7 @@ export default {
 Enables or disables built-in validation for required and constrained fields.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -711,7 +711,7 @@ export default {
 Enables or disables user interaction with form fields globally.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" @documentLoad="onDocumentLoad" />
@@ -757,7 +757,7 @@ export default {
 Shows or hides the Form Designer toolbar at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" @documentLoad="onDocumentLoad" />

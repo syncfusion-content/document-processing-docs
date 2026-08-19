@@ -5,6 +5,7 @@ description: Learn how to group PDF form fields in the Syncfusion Vue PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Group form fields in Vue PDF Viewer
@@ -56,7 +57,7 @@ You can also group form fields during creation by assigning the same **Name** th
 - Two checkboxes named **Subscribe** share the same checked state.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div id="app">
     <ejs-pdfviewer
