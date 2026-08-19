@@ -1,12 +1,12 @@
 ---
-title: How to merge cells preserving cell value and formatting | Syncfusion
-description: Shows how to merge a range so only the top-left cell's value is kept and its formatting applied to the merged region using Syncfusion XlsIO.
+title: How to Merge Cells in .NET Excel Library | Syncfusion
+description: Merge a range using the Syncfusion .NET Excel Library while keeping the top-left cell value and applying its formatting.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to merge cells preserving top left cell value and formatting?
+# How to merge cells with formatting in .NET Excel Library
 
 To merge cells in Excel while preserving only the top-left cell’s value and extending its formatting across the entire merged range, you can use the Range.Merge(true) method. This approach ensures that all other cells within the selected region are cleared, while the content and style of the top-left cell are retained and applied uniformly to the merged area.
 
@@ -58,4 +58,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/1010768-Merge-Cells/FAQ/Merge%20Cells%20Formatting/.NET/Merge%20Cells%20Formatting" aria-label="GitHub demo link">this GitHub page</a>.

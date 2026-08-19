@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Overview of page navigation in Syncfusion ASP.NET Core PDF Viewer. Learn about  toolbar controls and programmatic navigation.
+title: Page in ASP.NET Core PDF Viewer | Syncfusion
+description: Use page navigation in the ASP.NET Core PDF Viewer to move between pages and programmatically control the current page from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Page navigation in ASP.NET Core PDF Viewer
+# Page Navigation in ASP.NET Core PDF Viewer
 
 The ASP.NET Core PDF Viewer supports internal page navigation via toolbar controls, thumbnails, bookmarks, and programmatic APIs.
 

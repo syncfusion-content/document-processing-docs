@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in DOCX Editor Control | Syncfusion
-description: Learn how to print documents in the Syncfusion ASP.NET Core Document Editor, including print quality, page setup, and window-based printing.
+title: Print in ASP.NET Core DOCX Editor | Syncfusion
+description: Print feature in ASP.NET Core DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Print
 documentation: ug
 ---
 
 
-# Print in ASP.NET Core Document Editor
+# Print in ASP.NET Core DOCX Editor
 
 To print the document, use the `print` method from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) instance.
 

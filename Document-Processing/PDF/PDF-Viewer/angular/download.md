@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Download in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Download in Angular PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the Angular PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in Angular PDF Viewer component
+# Download in Angular PDF Viewer
 
 The Angular PDF Viewer lets users download the currently loaded PDF. Enable the download toolbar button with `enableDownload` for both standalone and server-backed viewers. The examples below demonstrate typical configurations and how to trigger a programmatic download.
 

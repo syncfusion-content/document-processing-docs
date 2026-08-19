@@ -1,11 +1,11 @@
 ---
-title: FAQ about multithreading in Word document | DocIO | Syncfusion
-description: Learn about the FAQs on multithreading support for opening, editing, and saving Word documents using the .NET Word (DocIO) library.
+title: FAQ about multithreading in Word document in .NET Word | Syncfusion
+description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about multithreading in Word document
+# FAQ about multithreading in Word document in .NET Word
 
 The frequently asked questions regarding multithreading and thread-safety support in opening, editing, and saving Word documents are listed below.
 

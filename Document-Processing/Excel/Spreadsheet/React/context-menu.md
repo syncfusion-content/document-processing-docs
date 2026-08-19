@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context menu in React Spreadsheet component | Syncfusion
-description: Learn here all about Context menu in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Context Menu in React Spreadsheet | Syncfusion
+description: Learn about the context menu in the Syncfusion React Spreadsheet component, including customization and available menu actions.
 control: Context menu 
 platform: document-processing
 documentation: ug
 ---
 
-# Context menu in React Spreadsheet component
+# Context Menu in React Spreadsheet
 
 The Context menu is used to improve user interaction with the Spreadsheet through a popup menu. It opens when right-clicking on a cell, column header, row header, or pager in the Spreadsheet. You can use the [`enableContextMenu`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#enablecontextmenu) property to enable or disable the context menu.
 

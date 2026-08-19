@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Numbers and Navigation in Blazor DOCX Editor | Syncfusion
-description: Learn how to insert page numbers and navigate to a specific page from the Syncfusion Blazor Document Editor component and much more.
+title: How to Insert Page Numbers in Blazor DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® Blazor DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Insert page number and navigate to page in Blazor Document Editor
+# How to Insert Page Numbers and Navigate in Blazor DOCX Editor
 
 You can insert a page number and navigate to a specific page in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component in the following ways.
 

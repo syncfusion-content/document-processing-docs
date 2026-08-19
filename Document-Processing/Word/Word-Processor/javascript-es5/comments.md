@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in JavaScript (ES5) DOCX Editor Component | Syncfusion
-description: Learn here all about Comments in Syncfusion JavaScript (ES5) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Comments in JavaScript DOCX Editor | Syncfusion
+description: The comments feature in JavaScript DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents.
 platform: document-processing
 control: Comments 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in JavaScript (ES5) Document Editor Component
+# Comments in JavaScript DOCX Editor
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 

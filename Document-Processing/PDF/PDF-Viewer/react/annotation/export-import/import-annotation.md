@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import annotations in React PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion React PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in React PDF Viewer | Syncfusion
+description: Import annotations into the React PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import annotations in React PDF Viewer
+# Import Annotations in React PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 

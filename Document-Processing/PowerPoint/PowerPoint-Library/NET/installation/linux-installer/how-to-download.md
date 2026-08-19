@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download Syncfusion® PowerPoint Linux Installer
-description: Learn here about how to download the Syncfusion<sup>&reg;</sup> PowerPoint linux installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to Download Syncfusion PowerPoint Linux Installer | Syncfusion
+description: Learn here about how to download the Syncfusion® PowerPoint Linux installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Syncfusion<sup>&reg;</sup> PowerPoint Linux Installer
+# How to Download Syncfusion PowerPoint Linux Installer
 
 The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

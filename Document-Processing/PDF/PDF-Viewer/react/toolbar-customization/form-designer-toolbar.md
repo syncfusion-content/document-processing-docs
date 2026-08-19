@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the Form Designer Toolbar in React PDF Viewer | Syncfusion
-description: Learn how to show or hide and customize the Form Designer toolbar in the Syncfusion EJ2 React PDF Viewer.
+title: Form Designer Toolbar in React PDF Viewer | Syncfusion
+description: Customize the Form Designer toolbar in the React PDF Viewer to show, hide, or replace the default form design actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

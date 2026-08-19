@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events in the ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion ASP.NET Core PDF Viewer component.
+title: Import Export Events in ASP.NET Core PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the ASP.NET Core PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Import and Export Events in ASP.NET Core
+# Form Field Import and Export Events in ASP.NET Core PDF Viewer
 
 Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
 Use these events to:

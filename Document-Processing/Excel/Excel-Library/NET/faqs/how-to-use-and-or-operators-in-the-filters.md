@@ -1,12 +1,12 @@
 ---
-title: How to use AND and OR operators in the filter | Syncfusion
-description: Code example to use AND and OR operators in the filter using .NET Excel library.
+title: How to Use AND OR Filters in .NET Excel Library | Syncfusion
+description: Use AND and OR operators in Excel filters using the Syncfusion .NET Excel Library for worksheet data filtering.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to use AND and OR operators in the filter?
+# How to use AND and OR filters in .NET Excel Library
 
 You can use AND and OR operators in the filter by using XlsIO. The following code snippet illustrates this.
 

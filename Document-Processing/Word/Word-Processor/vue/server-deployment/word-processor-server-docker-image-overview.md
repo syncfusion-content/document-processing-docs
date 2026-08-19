@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker image of Syncfusion Vue DOCX Editor Control| Syncfusion
-description: Learn here all about Word processor server docker image overview in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+description: Learn about the overview of the Docker image for Syncfusion Essential Studio Vue DOCX Editor control and more details.
 control: Word processor server docker image overview 
 platform: document-processing
 documentation: ug

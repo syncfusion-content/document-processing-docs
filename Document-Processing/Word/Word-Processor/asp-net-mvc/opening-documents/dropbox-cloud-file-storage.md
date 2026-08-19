@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Dropbox Files in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn about how to open a document from Dropbox cloud file storage in ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Dropbox in ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from Dropbox cloud storage in ASP.NET MVC DOCX Editor, enabling cloud-based file access and document management.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Dropbox cloud file storage in ASP.NET MVC
+# Open Documents from Dropbox in ASP.NET MVC DOCX Editor
 
 To load a document from Dropbox cloud file storage in a Document Editor, you can follow the steps below.
 

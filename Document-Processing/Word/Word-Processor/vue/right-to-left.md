@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Right to left in Vue Document editor component | Syncfusion
-description: Learn here all about Right to left in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Right to Left in Vue DOCX Editor | Syncfusion
+description: Right-to-left support in Vue DOCX Editor enables RTL user interfaces, including menus, dialogs, and text direction for RTL languages.
 control: Right to left 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Right to left in Vue Document editor component
+# Right to Left in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 

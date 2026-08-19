@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about comments in Syncfusion ASP.NET MVC Document Editor control of Syncfusion Essential JS 2 and more.
+title: Comments in ASP.NET MVC DOCX Editor | Syncfusion
+description: The comments feature in ASP.NET MVC DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents
 platform: document-processing
 control: Comments
 documentation: ug
 ---
 
 
-# Comments in ASP.NET MVC Document Editor Component
+# Comments in ASP.NET MVC DOCX Editor
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) lets you  you to add comments to documents. You can add, navigate, and remove comments in code and from the UI.
 

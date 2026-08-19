@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search text and redact in MVC PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion ASP.NET MVC PDF Viewer.
+title: Search Redact in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the search redact in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in ASP.NET MVC PdfViewer
+# Search Redact in ASP.NET MVC PDF Viewer
 
 You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below calls `findTextAsync` to perform the search, iterates through the returned bounds, and places a redaction annotation for every result.
 

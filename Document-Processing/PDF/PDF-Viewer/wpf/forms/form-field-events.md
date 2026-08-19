@@ -7,7 +7,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer Form Field Events
+# Form Field Events in WPF Pdf Viewer
 
 The Syncfusion [WPF PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/overview) supports form field click events, allowing applications to detect when a user clicks on a form field. These events can be used to trigger application‑specific actions or handle basic interactions when a form field is selected.
 

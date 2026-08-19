@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds in JavaScript PDF Viewer | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the JavaScript PDF Viewer.
+title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
+description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the JavaScript (ES5) PDF Viewer so coordinates map correctly.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# How to Convert PDF Library Bounds to PDF Viewer Bounds in JavaScript
 
 When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
 
-### Steps to convert bounds values
+## Steps to convert bounds values
 
 **Step 1:** Initialize the PDF Viewer instance
 

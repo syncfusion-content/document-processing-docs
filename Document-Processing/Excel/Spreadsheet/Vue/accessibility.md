@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Spreadsheet | Syncfusion
+description: Learn about accessibility support in the Syncfusion Vue Spreadsheet, including keyboard navigation, WAI-ARIA attributes, and compliance features.
 control: Accessibility 
 platform: document-processing
 documentation: ug
 ---
 
-# Accessibility in Vue Spreadsheet component
+# Accessibility in Vue Spreadsheet
 
 The Spreadsheet component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

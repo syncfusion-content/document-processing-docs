@@ -1,40 +1,39 @@
 ---
 layout: post
-title: Table of contents in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Table of contents in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Table of Contents in JavaScript DOCX Editor | Syncfusion
+description: The Table of Contents feature in JavaScript DOCX Editor enables users to generate and update a structured index for quick document navigation.
 platform: document-processing
 control: Table of contents 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in JavaScript (ES5) Document editor control
+# Table of Contents in JavaScript DOCX Editor
 
-The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
+The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where that heading starts, with various options to customize the appearance.
 
-## Inserting table of contents
+## Inserting a table of contents
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for the table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
-* **startLevel**: Specifies the start level for constructing table of contents.
-* **endLevel**: Specifies the end level for constructing table of contents.
+The [`TableOfContentsSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/tableOfContentsSettings) class contains the following properties:
+* **startLevel**: Specifies the start level for constructing the table of contents.
+* **endLevel**: Specifies the end level for constructing the table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
-* **includePageNumber**: Specified whether the page number of the headings is included.
-* **rightAlign**: Specifies whether the page number is right aligned.
+* **includePageNumber**: Specifies whether the page number of the headings is included.
+* **rightAlign**: Specifies whether the page number is right-aligned.
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert table of content in Document Editor.
+The following code illustrates how to insert a table of contents in Document Editor.
 
 ```js
 var tocSettings = 
 {
       startLevel: 1, endLevel: 3, includeHyperlink: true, includePageNumber: true, rightAlign: true
 };
-//Insert table of contents in Document Editor.
+// Insert a table of contents in Document Editor.
 editor.editorModule.insertTableOfContents(tocSettings);
-
 ```
 
 {% tabs %}
@@ -48,16 +47,16 @@ editor.editorModule.insertTableOfContents(tocSettings);
           
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/table-of-contents-cs1" %}
 
-## Update or edit table of contents
+## Update or edit the table of contents
 
-You can update or edit the table of contents using the built-in context menu shown up by right-clicking it. Refer to the following screenshot.
+You can update or edit the table of contents using the built-in context menu that appears when you right-click it. Refer to the following screenshot.
 
 ![Table of Contents](images/table-of-contents.png)
 
-* **Update Field**: Updates the headings in table of contents with same settings by searching the entire document.
+* **Update Field**: Updates the headings in the table of contents with the same settings by searching the entire document.
 * **Edit Field**: Opens the built-in table of contents dialog and allows you to modify its settings.
 
-You can also do it programmatically by using the exposed API. Refer to the following sample code.
+You can also update or edit it programmatically by using the exposed API. Refer to the following sample code.
 
 ```js
 
@@ -65,16 +64,16 @@ var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true, 
 documentEditor.appendTo('#DocumentEditor');
 /*Open any existing document*/
 documentEditor.open('');
-//Table of contents settings.
+// Table of contents settings.
 var tocSettings = {
       startLevel: 1, endLevel: 3, includeHyperlink: true, includePageNumber: true, rightAlign: true
 };
-//Insert table of contents in Document Editor.
+// Insert a table of contents in Document Editor.
 documentEditor.editorModule.insertTableOfContents(tocSettings);
 
 ```
 
->Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> The same method is used for inserting, updating, and editing the table of contents. This works based on the current element at the cursor position and the optional settings parameter. If a table of contents is present at the cursor position, the update operation is performed based on the optional settings parameter. Otherwise, the insert operation is performed.
 
 ## Online Demo
 

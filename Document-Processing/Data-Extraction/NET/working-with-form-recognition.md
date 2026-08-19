@@ -1,12 +1,12 @@
 ---
-title: Working with Form Recognition | Syncfusion&reg;
-description: Learn how to recognize forms and configure FormRecognizeOptions in Syncfusion® SmartFormRecognizer to detect and process form elements easily.
+title: Form Recognition in .NET Smart Data Extractor | Syncfusion
+description: Recognize form elements from PDF and scanned images using Smart Form Recognizer. Configure FormRecognizer to extract structured form data accurately in .NET.
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
 ---
 
-# Working with Form Recognition
+# Form Recognition in .NET Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Form Recognizer is a C# library for .NET that reliably extracts form data from PDFs and scanned images. It detects text fields, checkboxes, radio buttons, and signature regions.
 To quickly get started with recognizing form data from PDF and image files using the Smart Form Recognizer library, refer to this video tutorial:

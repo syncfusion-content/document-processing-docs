@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar Customization in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use and customize the toolbar in the Syncfusion ASP.NET Core PDF Viewer, including tools for navigation, zooming, annotation, and document actions.
+title: Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: Toolbar
 documentation: ug
 ---
 
-# Built-in toolbar in ASP.NET Core PDF Viewer
+# Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer
 
 The PDF Viewer includes a comprehensive built-in toolbar with tools for essential document interactions. The toolbar provides quick access to page navigation, text search, view magnification, document download, printing, and annotation controls—all configurable and customizable to meet your application needs.
 

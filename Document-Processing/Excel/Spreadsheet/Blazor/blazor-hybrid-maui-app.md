@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Blazor Hybrid App | Syncfusion
-description: Learn how to get started with .NET MAUI Blazor Hybrid App using the Syncfusion Spreadsheet component.
+title: Getting Started with .NET MAUI Blazor Hybrid Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Spreadsheet component in a .NET MAUI Blazor Hybrid application.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Blazor Hybrid App
+# Getting Started with .NET MAUI Blazor Hybrid Spreadsheet
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component.
 

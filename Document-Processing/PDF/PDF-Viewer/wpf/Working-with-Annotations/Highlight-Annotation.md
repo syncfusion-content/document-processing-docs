@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Highlight text in PDF files using WPF PDF Viewer | Syncfusion<sup>&reg;</sup>;
-description: Learn about highlight annotation support in Syncfusion<sup>&reg;</sup>; WPF PDF Viewer control, and the manipulations.
+title: Highlight text in WPF PDF Viewer | Syncfusion
+description: The highlight annotation feature in WPF PDF Viewer allows users to mark important text in PDFs for easier review and reference.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Highlight text in PDF files using WPF PDF Viewer
+# Highlight text in PDF files using WPF Pdf Viewer
 
 The WPF PDF Viewer allows the user to highlight text in PDF files and provides options to edit or remove the existing highlights. The highlight inclusion mode can be enabled via the toolbar UI or the API. Once the highlight inclusion mode is activated, you can highlight the required text by selecting it. To select the text, hold down the left mouse button and drag the mouse pointer over the text.
 

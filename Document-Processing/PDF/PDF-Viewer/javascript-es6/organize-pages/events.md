@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages Events in JavaScript (ES6) PDF Viewer | Syncfusion
-description: Learn how to organize pages events in the JavaScript (ES6) PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages.
+title: Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the JavaScript (ES6) PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages Events in TypeScript PDF Viewer
+# Organize Pages Events in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer exposes events for tracking and responding to actions within the page organizer, enabling customization of page manipulation workflows.
 

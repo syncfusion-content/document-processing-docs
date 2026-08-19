@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict Zoom Percentage in Angular PDF Viewer component | Syncfusion
-description: Learn here how to restrict the zoom percentage in the Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Restrict Zoom on Mobile Devices in Angular PDF | Syncfusion
+description: Restrict the zoom percentage on mobile devices in the Angular PDF Viewer using minZoom and maxZoom to keep the UI usable on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict zoom percentage on mobile devices in Angular
+# How to Restrict Zoom on Mobile Devices in Angular PDF Viewer
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 

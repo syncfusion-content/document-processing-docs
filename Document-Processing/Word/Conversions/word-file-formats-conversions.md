@@ -1,12 +1,12 @@
 ---
-title: Word file format conversions in C# | DocIO | Syncfusion
+title: Word file format conversions in .NET Word | Syncfusion
 description: Learn about the supported Word file format conversions such as Word Open XML formats, WordprocessingML, and Word binary in the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word File Formats in Essential<sup>&reg;</sup> DocIO
+# Word file format conversions in .NET Word
 
 [Microsoft Word](https://learn.microsoft.com/en-us/office/compatibility/office-file-format-reference#file-formats-that-are-supported-in-word) supports multiple file formats that differ in structure, capabilities, and intended usage. Essential<sup>&reg;</sup> DocIO provides read and write support for modern XML-based formats (DOCX, DOTX, DOCM, DOTM), Word Processing XML formats (WordML), and binary Word documents (DOC, DOT), as well as [HTML](https://help.syncfusion.com/document-processing/word/word-library/net/html), [RTF](https://help.syncfusion.com/document-processing/word/word-library/net/rtf), and [Markdown](https://help.syncfusion.com/document-processing/word/word-library/net/convert-word-document-to-markdown-in-csharp) formats.
 
