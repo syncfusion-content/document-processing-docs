@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy TypeScript DOCX Editor Docker image on Azure App | Syncfusion
-description: Deploy the Syncfusion® TypeScript DOCX Editor Docker image to Azure App Service for scalable and reliable document processing.
+description: Deploy the SyncfusionÂ® TypeScript DOCX Editor Docker image to Azure App Service for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in azure app service 
 documentation: ug

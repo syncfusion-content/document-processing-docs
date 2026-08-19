@@ -126,7 +126,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -148,7 +148,7 @@ N> 2. The **FolderId** is the unique identifier for the folder. For example, if 
 N> 3. The `CredentialPath` value in `appsettings.json` must point to the full OAuth 2.0 Client IDs credentials JSON file downloaded from the Google Cloud Console. This JSON file contains the unique `Client_ID` and `Client_Secret` used to authenticate with the Google Drive API and securely save files.
 N> 4. The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index file in the Document Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Drive.
 
