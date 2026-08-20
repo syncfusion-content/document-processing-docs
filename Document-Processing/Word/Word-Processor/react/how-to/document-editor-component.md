@@ -146,7 +146,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% tabcontent JavaScript %}
 
-Add the DOCX Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
+Add the DocumentEditor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
