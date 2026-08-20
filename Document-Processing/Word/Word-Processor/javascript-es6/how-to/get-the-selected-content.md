@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Get the selected content in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Get the selected content in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Get Selected Content in TypeScript DOCX Editor | Syncfusion
+description: Get selected content as plain text and SFDT rich text in Syncfusion® TypeScript DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
-control: Get the selected content 
+control: Get the Selected Content
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get the selected content in JavaScript (ES6) Document editor control
+# How to Get Selected Content in TypeScript DOCX Editor
 
 You can get the selected content from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the selected content as plain text
 
-You can use [`text`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the selected content as plain text from JavaScript Document Editor component.
+You can use the [`text`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#text-code-classlanguage-textstringcode) API to get the selected content as plain text from the JavaScript Document Editor component.
 
-The following example code illustrates how to add search in google option in context menu for the selected text.
+The following example code illustrates how to get the content of the selected text as plain text.
 
 ```ts
 import { DocumentEditorContainer, Toolbar, CustomContentMenuEventArgs } from '@syncfusion/ej2-documenteditor';
@@ -48,26 +48,26 @@ container.documentEditor.customContextMenuSelect = (args: CustomContentMenuEvent
             // To get the selected content as plain text
             let searchContent: string = container.documentEditor.selection.text;
             if (!container.documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
-                window.open('http://google.com/search?q=' + searchContent);
+                window.open('https://google.com/search?q=' + searchContent);
             }
             break;
     }
 };
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-You can add the following custom options using this API,
+You can add the following custom options using this API:
 
-* Save or export the selected text as text file.
+* Save or export the selected text as a text file.
 * Search the selected text in Google or other search engines.
-* Show synonyms for the selected word in context menu and replace with selected synonym using the setter method of same API.
+* Show synonyms for the selected word in the context menu and replace with the selected synonym using the setter method of the same API.
 
 ## Get the selected content as SFDT (rich text)
 
  
 
-You can use [`sfdt`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#sfdt-code-classlanguage-textstringcode) API to get the selected content as rich text from TypeScript Document Editor component.
+You can use the [`sfdt`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#sfdt-code-classlanguage-textstringcode) API to get the selected content as rich text from the TypeScript Document Editor component.
 
 
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
@@ -83,24 +83,24 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 
 container.appendTo('#container');
 
-// To insert text in cursor position
+// To insert text at the cursor position
 container.documentEditor.editor.insertText('Document editor');
-// To select all the content in document
+// To select all the content in the document
 container.documentEditor.selection.selectAll();
 // Insert bookmark to selected content
 container.documentEditor.editor.insertBookmark('Bookmark1');
 //Select the bookmark
 container.documentEditor.selection.selectBookmark('Bookmark1');
-// To get the selected content as sfdt
+// To get the selected content as SFDT
 let selectedContent: string = container.documentEditor.selection.sfdt;
-// Insert the sfdt content in cursor position using paste API
+// Insert the SFDT content at the cursor position using paste API
 container.documentEditor.editor.paste(selectedContent);
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-You can add the following custom options using this API,
+You can add the following custom options using this API:
 
-* Save or export the selected content as SFDT file.
-* Get the content of a bookmark in Word document as SFDT by selecting a bookmark using [`selectbookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) API.
-* Create template content that can be inserted to multiple documents in cursor position using [`paste`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#paste) API.
+* Save or export the selected content as an SFDT file.
+* Get the content of a bookmark in a Word document as SFDT by selecting a bookmark using the [`selectBookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) API.
+* Create template content that can be inserted into multiple documents at the cursor position using the [`paste`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#paste) API.

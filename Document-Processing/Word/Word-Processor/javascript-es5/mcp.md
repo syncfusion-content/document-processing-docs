@@ -1,20 +1,18 @@
 ---
 layout: post
-title: Syncfusion JavaScript DOCX Editor MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for JavaScript DOCX Editor.
+title: MCP Server for JavaScript DOCX Editor | Syncfusion
+description: The Syncfusion®JavaScript MCP Server provides setup guidance, integration support, and resources to accelerate JavaScript DOCX Editor development workflows.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion JavaScript DOCX Editor MCP Server
+# MCP Server for JavaScript DOCX Editor
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript DOCX Editor MCP Server accelerates JavaScript DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 These tools speed up development and reinforce best practices for the JavaScript DOCX Editor (Document Editor) component integration.
-
-> The previously available **Agentic UI Builder** (`#sf_javascript_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://ej2.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (`#sf_javascript_assistant`) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
 
 ## Key Benefits
 

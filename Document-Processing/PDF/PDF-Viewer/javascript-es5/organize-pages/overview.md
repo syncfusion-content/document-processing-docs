@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Organize pages in JavaScript PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion JavaScript PDF Viewer component.
+title: About Syncfusion JavaScript (ES5) Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in JavaScript PDF Viewer
+# About Syncfusion JavaScript (ES5) PDF Viewer Organize Pages
 
 The JavaScript PDF Viewer component includes an Organize pages panel for preparing documents before sharing. Use it to tidy scanned files, reorder pages, and duplicate content without leaving the viewer.
 
-To open the Organize pages panel, load an editable document, ensure that the Organize Pages toolbar item is enabled, and select **Organize Pages** from the left vertical toolbar. The document must allow page-level edits (for example, it must not be password-protected or restricted); otherwise, the toolbar item is hidden.
+To open the Organize pages panel, load an editable document, ensure that the Organize Pages toolbar item is enabled, and select **Organize Pages** from the left vertical toolbar. The document must allow page-level edits (for example, it must not be password-protected or restricted); otherwise, the toolbar item is hidden. To enable the toolbar item, configure it through the [toolbar settings](./organize-pages/toolbar) or [programmatic support](./organize-pages/programmatic-support).
 
 The Organize pages panel supports the following actions:
 
@@ -29,8 +29,8 @@ Select **Save** to overwrite the current document, or **Save As** to download a 
 
 ## See also
 
-- [UI interactions for Organize Pages](./organize-page/ui-interactions)
-- [Toolbar items for Organize Pages](./organize-page/toolbar)
+- [UI interactions for Organize Pages](./organize-pages/ui-interactions)
+- [Toolbar items for Organize Pages](./organize-pages/toolbar)
 - [Programmatic support for Organize Pages](./programmatic-support)
 - [Organize Pages events](./events)
 - [Organize Pages in mobile view](./mobile-view)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF Files in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about how to load PDF files from various locations in Syncfusion Angular PDF Viewer component, it's elements, and more.
+title: Open Pdf Files in Angular PDF Viewer | Syncfusion
+description: Load PDF files in the Angular PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
 platform: document-processing
-control: Open PDF files
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF Files in Angular PDF Viewer Component
+# Open PDF Files in Angular PDF Viewer
 
 This article explains how to open and display PDF files in the Syncfusion Angular PDF Viewer from various sources. In this section, you can find the information about how to open PDF files from URL, database, local file system, and as base64 string.
 
@@ -76,7 +76,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 **Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Modify the `documentPath` with the correct PDF document URL to load.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -111,7 +111,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 
 ## Opening a PDF from base64 data
 
-The following steps explains how the PDF file can be loaded in PDF Viewer as base64 string.
+The following steps explain how the PDF file can be loaded in the PDF Viewer as a base64 string.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 

@@ -1,13 +1,13 @@
 ---
-title: Convert PDF to Image| Syncfusion&reg;
-description: Learn how to convert a PDF to Image with easy steps using Syncfusion&reg; Essential Studio&reg; PDFToImageConverter library.
+title: About PDF-to-Image Conversion Library | Syncfusion
+description: Learn about the Syncfusion PDF-to-Image Conversion Library and convert PDF documents to high-quality images with ease.
 platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert PDF to Image
+# About Syncfusion PDF-to-Image Conversion Library
 
 This PDF to image converter library allows converting PDF documents to images without opening the document in the PDF Viewer control. It allows you to selectively export pages as a stream by utilizing the 'Convert' method, facilitating the transformation of PDF files into images.
 

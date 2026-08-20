@@ -1,6 +1,6 @@
 ---
 title: Create Word document in WinUI | Syncfusion
-description: Create Word document without Microsoft Word or interop dependencies in WinUI application using Syncfusion<sup>&reg;</sup> WinUI Word (DocIO) library.
+description: Describe common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

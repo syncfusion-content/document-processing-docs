@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Document by Address in Vue Document Editor Component | Syncfusion
-description: Learn here all about open document by address in Syncfusion Essential Vue Document Editor component, it's elements and more.
+title: How to Open a Document by URL in Vue DOCX Editor | Syncfusion
+description: Open a document from a URL in Syncfusion® Vue DOCX Editor to load and display remote files for viewing and editing.
 control: Open document by address 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open Document by Address in Vue Document Editor Component
+# How to Open a Document by URL in Vue DOCX Editor
 
 ## How to open a document from URL in DocumentEditor
 

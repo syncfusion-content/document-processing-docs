@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Dialog in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Dialog in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Dialogs in TypeScript DOCX Editor | Syncfusion
+description: The dialogs in TypeScript DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
-control: Dialog 
+control: Dialog
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in JavaScript (ES6) Document editor control
+# Dialogs in TypeScript DOCX Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list, and table properties.
 
 ## Font Dialog
 
-Font dialog allows you to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
+Font dialog allows you to modify all text properties for the selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
 Refer to the following example.
 
@@ -33,7 +33,7 @@ Refer to the following example.
 
 ## Paragraph dialog
 
-This dialog allows modifying the paragraph formatting for selection at once such as text alignment, indentation, and spacing.
+This dialog allows modifying the paragraph formatting for the selection at once such as text alignment, indentation, and spacing.
 
 To open this dialog, refer to the following example.
 
@@ -52,7 +52,7 @@ To open this dialog, refer to the following example.
 
 ## Table dialog
 
-This dialog allows creating and inserting a table at cursor position by specifying the required number of rows and columns.
+This dialog allows creating and inserting a table at the cursor position by specifying the required number of rows and columns.
 
 To open this dialog, refer to the following example.
 
@@ -75,8 +75,9 @@ This dialog allows you to perform the following operations:
 
 * View all bookmarks.
 * Navigate to a bookmark.
-* Create a bookmark at current selection.
+* Create a bookmark at the current selection.
 * Delete an existing bookmark.
+
 To open this dialog, refer to the following example.
 
  
@@ -94,7 +95,7 @@ To open this dialog, refer to the following example.
 
 ## Hyperlink dialog
 
-This dialog allows editing or inserting a hyperlink at cursor position.
+This dialog allows editing or inserting a hyperlink at the cursor position.
 
 To open this dialog, refer to the following example.
 
@@ -113,7 +114,7 @@ To open this dialog, refer to the following example.
 
 ## Table of contents dialog
 
-This dialog allows creating and inserting table of contents at cursor position. If the table of contents already exists at cursor position, you can customize its properties.
+This dialog allows creating and inserting a table of contents at the cursor position. If the table of contents already exists at the cursor position, you can customize its properties.
 
 To open this dialog, refer to the following example.
 

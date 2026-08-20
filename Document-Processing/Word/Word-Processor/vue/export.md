@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Export in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Export in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in Vue DOCX Editor | Syncfusion
+description: The export feature in Vue DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 control: Export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in Vue Document Editor component
+# Export in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 

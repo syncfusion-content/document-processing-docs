@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overlapped annotation in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Overlapped annotation in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: How to Handle Overlapped Annotations in ASP.NET Core PDF | Syncfusion
+description: Handle overlapping annotations in the ASP.NET Core PDF Viewer so users can select, move, and edit the right annotation when several are stacked on a page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Retrieve overlapped annotations in ASP.NET Core PDF Viewer
+# How to Handle Overlapped Annotations in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to identify all annotations that occupy the same spatial coordinates when a user clicks or taps the document. This is particularly useful for managing stacked or closely grouped highlights, notes, or shapes.
 

@@ -1,12 +1,12 @@
 ---
-title: Working with PDF conformance in .NET PDF Library | Syncfusion
-description: Learn how to create, convert, and validate PDF documents that conform to PDF/A, PDF/X, and PDF/UA standards using the Syncfusion .NET PDF Library.
+title: PDF Conformance in .NET PDF Library | Syncfusion
+description: Learn how to create, convert, and validate PDF documents that conform to PDF/A, PDF/X, and PDF/UA standards using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Conformance in File Formats PDF
+# PDF Conformance in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF enables working with PDF Conformance standards such as [PDF/A](https://en.wikipedia.org/wiki/PDF/A), [PDF/X](https://en.wikipedia.org/wiki/PDF/X), and [PDF/UA](https://en.wikipedia.org/wiki/PDF/UA) to ensure compliance with archival and accessibility requirements. This topic covers the supported standards, the conformance levels you can produce, and the APIs to create, convert, and validate conformance documents.
 

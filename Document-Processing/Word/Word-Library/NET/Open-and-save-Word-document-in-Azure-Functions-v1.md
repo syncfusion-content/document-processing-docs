@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in Azure Functions v1 | Syncfusion
-description: Open and save Word document in Azure Functions v1 using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Azure Functions v1  | Syncfusion
+description: Open and save Word document in Azure Functions v1 using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and save Word document in Azure Functions v1
+# Open and save Word document in Azure Functions v1 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Azure Functions v1**.
 

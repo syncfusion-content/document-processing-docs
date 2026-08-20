@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Update New Language in JavaScript ES5 PDF Viewer | Syncfusion
-description: Learn how to set and configure new language culture and localization in Syncfusion JavaScript ES5 PDF Viewer component.
+title: New Language in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Localize the JavaScript (ES5) PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language in the JavaScript PDF Viewer
+# Set a New Language in JavaScript (ES5) PDF Viewer
 
 Localize the PDF Viewer UI by:
 - Registering culture-specific strings with `L10n.load` at the application level
@@ -21,25 +21,25 @@ Localize the PDF Viewer UI by:
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
-      ej.pdfviewer.TextSelection,
-      ej.pdfviewer.TextSearch,
-      ej.pdfviewer.Print,
-      ej.pdfviewer.Navigation,
-      ej.pdfviewer.Toolbar,
-      ej.pdfviewer.Magnification,
-      ej.pdfviewer.Annotation,
-      ej.pdfviewer.FormDesigner,
-      ej.pdfviewer.FormFields,
-      ej.pdfviewer.PageOrganizer
-    );
+  ej.pdfviewer.TextSelection,
+  ej.pdfviewer.TextSearch,
+  ej.pdfviewer.Print,
+  ej.pdfviewer.Navigation,
+  ej.pdfviewer.Toolbar,
+  ej.pdfviewer.Magnification,
+  ej.pdfviewer.Annotation,
+  ej.pdfviewer.FormDesigner,
+  ej.pdfviewer.FormFields,
+  ej.pdfviewer.PageOrganizer
+);
 
-    var pdfviewer = new ej.pdfviewer.PdfViewer({
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
-      locale: 'de', //Using German locale updates culture
-    });
+var pdfviewer = new ej.pdfviewer.PdfViewer({
+  documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+  resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+  locale: 'de', //Using German locale updates culture
+});
 
-    ej.base.L10n.load({
+ej.base.L10n.load({
                 'de': {
                     'PdfViewer': {
                     'PdfViewer': 'PDF-Viewer',
@@ -300,11 +300,11 @@ ej.pdfviewer.PdfViewer.Inject(
                     'Example: 1,3,5-12': 'Example: 1,3,5-12',
                     'No matches': 'Der Viewer hat die Suche im Dokument abgeschlossen. ',
                     'No Text Found': 'Kein Text gefunden'
-                    }
                 }
-    });
+            }
+});
 
-    pdfviewer.appendTo('#pdfViewer');
+pdfviewer.appendTo('#pdfViewer');
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Keyboard Shortcut in ASP.NET MVC Document Editor Component | Syncfusion
-description: Learn here all about keyboard shortcut in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in ASP.NET MVC DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in ASP.NET MVC DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
 ---
 
 
-# Keyboard Shortcuts in Document Editor Component
+# Keyboard Shortcuts in ASP.NET MVC DOCX Editor
 
 ## Text formatting
 
-The following table lists the default keyboard shortcuts in document editor for formatting text:
+The following table lists the default keyboard shortcuts in the Document Editor for formatting text:
 
 | Key combination | Description |
 |-----------------|-------------|
@@ -26,7 +26,7 @@ The following table lists the default keyboard shortcuts in document editor for 
 
 ## Paragraph formatting
 
-The following table lists the default keyboard shortcuts for formatting the paragraph:
+The following table lists the default keyboard shortcuts for formatting a paragraph:
 
 | Key combination | Description |
 |-----------------|-------------|
@@ -40,7 +40,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + 0 | No spacing is applied before the selected paragraphs.|
 |Ctrl + M | Increases the left indent of selected paragraphs by a factor of 36 points.|
 |Ctrl + Shift + M | Decreases the left indent of selected paragraphs by a factor of 36 points.|
-|Ctrl + * | Show/Hide the hidden characters like spaces, tab, paragraph marks, and breaks.|
+|Ctrl + * | Shows or hides the hidden characters like spaces, tab, paragraph marks, and breaks.|
 
 ## Clipboard
 
@@ -50,7 +50,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + V | Pastes plain text content from the clipboard.|
 |Ctrl + X | Moves selected content to the clipboard.|
 
-## Keyboard shortcut to navigate around the document
+## Keyboard shortcuts to navigate around the document
 
 |Key Combination| Description |
 |---------------|-------------|
@@ -71,7 +71,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + Home| Moves the cursor position to the start of a document.|
 |Ctrl + End| Moves the cursor position to the end of a document.|
 
-## Keyboard shortcut to extend selection
+## Keyboard shortcuts to extend selection
 
 |Key Combination| Description|
 |---------------|------------|
@@ -80,7 +80,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Shift + Down arrow| Extends selection one line downward.|
 |Shift + Up arrow| Extends selection one line upward.|
 |Shift + Home| Extends selection to the start of a line.|
-|Shift + End| Extends Selection to the end of a line.|
+|Shift + End| Extends selection to the end of a line.|
 |Ctrl + A| Extends selection to the entire document.|
 |Ctrl + Shift + Left arrow| Extends selection one word to the left.|
 |Ctrl + Shift + Right arrow| Extends selection one word to the right.|
@@ -93,40 +93,40 @@ The following table lists the default keyboard shortcuts for formatting the para
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + F| Opens options pane.|
-|Ctrl + H| Opens replace tab in options pane.|
+|Ctrl + F| Opens the options pane.|
+|Ctrl + H| Opens the replace tab in the options pane.|
 
-## Create, Save and Print document
+## Create, save, and print a document
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + N| Opens empty document.|
+|Ctrl + N| Opens an empty document.|
 |Ctrl + S| Saves the document in SFDT format.|
 |Ctrl + P| Prints the document.|
 
-## Edit Operation
+## Edit operations
 
 |Key Combination|Description|
 |---------------|-----------|
 |Backspace | Deletes one character to the left.|
 |Delete | Deletes one character to the right.|
-|Ctrl + Z | Undo last performed action.|
-|Ctrl + Y | Redo last undo action.|
+|Ctrl + Z | Undoes the last performed action.|
+|Ctrl + Y | Redoes the last undo action.|
 
 ## Insert special characters
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + Enter | Inserts page break.|
-|Shift + Enter | Inserts line break.|
+|Ctrl + Enter | Inserts a page break.|
+|Shift + Enter | Inserts a line break.|
 
 ## Dialog
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + F| Opens options pane.|
-|Ctrl + D| Opens font dialog.|
-|Ctrl + K| Opens hyperlink dialog.|
+|Ctrl + F| Opens the options pane.|
+|Ctrl + D| Opens the font dialog.|
+|Ctrl + K| Opens the hyperlink dialog.|
 
 ## See Also
 

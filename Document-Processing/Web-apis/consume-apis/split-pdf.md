@@ -1,5 +1,5 @@
 ---
-title: Split PDF Files Using Syncfusion Web API
+title: Split PDF Files Using Web API | Syncfusion
 description: Extract or split PDF pages by ranges quickly using Syncfusion page-level split Web API for automated workflows and batch processing.
 platform: document-processing
 control: general

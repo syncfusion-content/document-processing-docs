@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print Events in Angular PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Syncfusion Angular PDF Viewer component.
+title: Events in Angular PDF Viewer | Syncfusion
+description: Subscribe to print events in the Angular PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in Angular PDF Viewer
+# Print Events in Angular PDF Viewer
 
 This page lists each event emitted by the Angular PDF Viewer's [`Print`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/print) feature, the argument schema, and the minimal behavior notes needed for implementation.
 

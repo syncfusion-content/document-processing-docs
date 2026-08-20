@@ -1,14 +1,14 @@
 ---
-title: "How to enable ruler in Angular DOCX Editor | Syncfusion"
+title: How to Enable Ruler in Angular DOCX Editor | Syncfusion
 component: "DocumentEditor"
-description: "Learn here all about enabling the ruler in the Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more."
+description: Enable the ruler in Syncfusion® Angular DOCX Editor to set margins, tab stops, and paragraph indentations for precise document formatting.
 platform: document-processing
 control: Enable Ruler
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to enable ruler in Angular Document Editor component
+# How to Enable Ruler in Angular DOCX Editor
 
 The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 

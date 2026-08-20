@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change document view in Vue Document editor component | Syncfusion
-description: Learn here all about Change document view in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Document View in Vue DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® Vue DOCX Editor using layout type settings.
 control: Change document view 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change document view in Vue Document editor component
+# How to Change Document View in Vue DOCX Editor
 
 ## How to change the document view in DocumentEditor component
 

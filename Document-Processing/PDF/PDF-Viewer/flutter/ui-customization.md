@@ -1,13 +1,13 @@
 ---
 layout: post
 title: UI Customization in Flutter PDF Viewer | Syncfusion
-description: Learn here all about the UI customization options in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+description: The UI customization feature in SfPdfViewer allows users to customize viewer elements and behaviors to suit application needs.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# UI Customization in Flutter PDF Viewer (SfPdfViewer)
+# UI Customization in Flutter PDF Viewer
 
 This section walks you through the UI customization options supported in the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget.
 

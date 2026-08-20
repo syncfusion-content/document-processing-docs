@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Reorder pages in Organize Pages in Angular PDF Viewer | Syncfusion
-description: How to rearrange pages using drag-and-drop and grouping in the Organize Pages UI of the Syncfusion Angular PDF Viewer.
+title: Reorder Pages in Angular PDF Viewer | Syncfusion
+description: Reorder pages in the Angular PDF Viewer using drag-and-drop and grouping inside the Organize Pages panel, or through programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view in Angular
+# Reorder Pages in Angular PDF Viewer
 
 ## Overview
 

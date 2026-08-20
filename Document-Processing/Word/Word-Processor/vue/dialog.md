@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dialog in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in Vue DOCX Editor | Syncfusion
+description: The dialogs in Vue DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 control: Dialog 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in Vue Document Editor component
+# Dialogs in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Text Search in .NET MAUI PDF Viewer (SfPdfViewer)
+# Text Search in .NET MAUI PDF Viewer
 
 Quickly locate any word or phrase in a PDF document and jump between every occurrence — forward, backward, or directly to a specific match. The PDF Viewer's built-in text search highlights all results in real time as it scans the document, and exposes a result object so you can display match counts or build a custom search UI.
 

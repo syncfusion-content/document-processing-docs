@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conditional Formatting in Windows Forms Spreadsheet | Syncfusion®
-description: Learn about Conditional Formatting support in Syncfusion® Windows Forms Spreadsheet control and more details.
+description: Highlight spreadsheet data using conditional formatting rules, cell-value conditions, and predefined styles in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

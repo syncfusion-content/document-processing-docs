@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change author name using annotation settings in Vue PDF Viewer | Syncfusion
-description: Learn how to change the author name and related annotation settings using the annotationSettings API in the Vue PDF Viewer.
+title: How to Change the Annotation Author Name in Vue PDF | Syncfusion
+description: Change the author name and related annotation settings in the Vue PDF Viewer using the annotationSettings API and configuration options.
 platform: document-processing
 control: PDF Viewer
 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in Vue PDF Viewer
+# How to Change the Annotation Author Name in Vue PDF Viewer
 
 The `annotationSettings` API provides a central way to configure properties that apply to all annotations in the viewer.
 
@@ -26,7 +26,7 @@ API name: annotationSettings
 | isPrint | Boolean (true) | Specifies whether the annotation is included in print actions. |
 | isDownload | Boolean (true) | Specifies whether the annotation is included in download actions. |
 | Free Text Settings |
-| allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
+| allowTextOnly | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
 Change the author name and other properties using the annotationSettings API as shown below.
 

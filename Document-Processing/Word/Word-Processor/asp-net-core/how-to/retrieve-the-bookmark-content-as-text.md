@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Retrieve the whole document and bookmark content as text in Document Editor Component
-description: Learn how to retrieve the whole document and bookmark content as text from the Syncfusion Document Editor Component
+title: Retrieve Bookmark Content in ASP.NET Core DOCX Editor | Syncfusion
+description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® ASP.NET Core DOCX Editor.
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text
 documentation: ug
 ---
 
-# How to retrieve the whole document and bookmark content as text in  Document Editor component
+# How to Retrieve Bookmark Content as Text in ASP.NET Core DOCX Editor
 
 You can get the bookmark or whole document content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 
-You can [`selectBookmark`] API to navigate to the bookmark and use [`text`] API to get the bookmark content as plain text from Document Editor component.
+You can use the [`selectBookmark`] API to navigate to the bookmark and use the [`text`] API to get the bookmark content as plain text from the Document Editor component.
 
 The following example code illustrates how to get the bookmark content as plain text.
 
@@ -23,14 +23,15 @@ The following example code illustrates how to get the bookmark content as plain 
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-To get the bookmark content as SFDT (rich text), check this [`link`](../../asp-net-core/how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text)
+To get the bookmark content as SFDT (rich text), check this [`link`](../../asp-net-core/how-to/get-the-selected-content#get-the-selected-content-as-sfdt-rich-text).
 
 ## Get the whole document content as text
 
-You can use [`text`] API to get the whole document content as plain text from Document Editor component.
+You can use the [`text`] API to get the whole document content as plain text from the Document Editor component.
 
 The following example code illustrates how to get the whole document content as plain text.
 
@@ -40,12 +41,13 @@ The following example code illustrates how to get the whole document content as 
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-## Get the whole document content as SFDT(rich text)
+## Get the whole document content as SFDT (rich text)
 
-You can use [`serialize`] API to get the whole document content as SFDT string from Document Editor component.
+You can use the [`serialize`] API to get the whole document content as an SFDT string from the Document Editor component.
 
 The following example code illustrates how to get the whole document content as SFDT.
 
@@ -55,12 +57,13 @@ The following example code illustrates how to get the whole document content as 
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Get the header content as text
 
-You can use [`goToHeader`] API to navigate the selection to the header and then use [`text`] API to get the content as plain text.
+You can use the [`goToHeader`] API to navigate the selection to the header and then use the [`text`] API to get the content as plain text.
 
 The following example code illustrates how to get the header content as plain text.
 
@@ -70,7 +73,8 @@ The following example code illustrates how to get the header content as plain te
 {% include code-snippet/document-editor/asp-net-core/document-editor-container/get-text/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Get-text.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
-Similarly, you can use [`goToFooter`] API to navigate the selection to the footer and then use [`text`] API to get the content as plain text.
+Similarly, you can use the [`goToFooter`] API to navigate the selection to the footer and then use the [`text`] API to get the content as plain text.

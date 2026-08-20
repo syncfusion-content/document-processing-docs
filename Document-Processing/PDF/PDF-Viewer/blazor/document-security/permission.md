@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load permission-restricted PDFs in Blazor SfPdfViewer | Syncfusion
-description: Learn how Blazor SfPdfViewer enforces owner permissions in permission-restricted PDFs, controlling print, copy, and edit
+title: Load permission-restricted PDFs in Blazor PDF Viewer | Syncfusion
+description: Learn how Blazor PDF Viewer enforces owner permissions in permission-restricted PDFs, ling print, copy, and edit
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Permission-restricted documents (Owner password and permissions)
+# Load permission-restricted PDFs in Blazor PDF Viewer
 
 PDFs can be secured with an owner password and a set of permissions that restrict operations after the file is opened. Common restrictions include:
 

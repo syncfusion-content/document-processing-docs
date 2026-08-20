@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Insert Page Number in Angular Document Editor | Syncfusion
-description: Learn here all about Insert page number and navigate to page in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title:  How to Insert Page Numbers in Angular DOCX Editor | Syncfusion
+description: Insert page numbers and navigate to specific pages in Syncfusion® Angular DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
-control: Insert page number and navigate to page 
+control: Insert page number and navigate to page
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Page Number and Navigate in Angular Document Editor component
+# How to Insert Page Numbers and Navigate in Angular DOCX Editor
 
-You can insert page number and navigate to specific page in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component by following ways.
+You can insert page number and navigate to specific page in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component using the following ways.
 
 ## Insert page number
 
-You can use [`insertPageNumber`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertpagenumber) API in editor module to insert the page number in current cursor position. By default, Page number will insert in Arabic number style. You can change it, by providing the number style in parameter.
+You can use [`insertPageNumber`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertpagenumber) API in editor module to insert the page number in current cursor position. By default, the page number will be inserted in Arabic number style. You can change it by providing the number style in parameter.
 
->Note: Currently, Document Editor have options to insert page number at current cursor position.
+N> Currently, Document Editor has options to insert page number at the current cursor position.
 
 The following example code illustrates how to insert page number in header.
 
@@ -47,9 +47,9 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Also, you use [`insertField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertfield) API in Editor module to insert the Page number in current position
+You can also use [`insertField`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertfield) API in Editor module to insert the page number in the current position.
 
 ```typescript
 //Current page number
@@ -59,9 +59,9 @@ this.container.documentEditor.editor.insertField('PAGE \* MERGEFORMAT', '1');
 
 ## Get page count
 
-You can use [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#pagecount) API to gets the total number of pages in Document.
+You can use [`pageCount`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#pagecount) API to get the total number of pages in the Document.
 
-The following example code illustrates how to get the number of pages in Document.
+The following example code illustrates how to get the number of pages in the Document.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -88,11 +88,11 @@ export class AppComponent implements OnInit {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Navigate to specific page
 
-You can use [`goToPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection/#gotopage) API in Selection module to move selection to the start of the specified page number.
+You can use [`goToPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#gotopage) API in Selection module to move selection to the start of the specified page number.
 
 The following example code illustrates how to move selection to specific page.
 
@@ -145,4 +145,4 @@ export class AppComponent implements OnInit {
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

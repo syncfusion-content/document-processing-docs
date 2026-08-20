@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Keyboard Shortcuts in WPF PDF Viewer
+# Keyboard Shortcuts in WPF Pdf Viewer
 
 The below keyboard shortcuts are used to navigate through the form fields present in the PDF document.
 

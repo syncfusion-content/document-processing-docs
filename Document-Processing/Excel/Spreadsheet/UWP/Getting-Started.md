@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with UWP Spreadsheet control | Syncfusion®
-description: Learn here about getting started with Syncfusion® UWP Spreadsheet (SfSpreadsheet) control, its elements and more.
+title: Getting Started with UWP Spreadsheet Control | Syncfusion®
+description: Learn how to get started with the Syncfusion UWP Spreadsheet control. Explore setup, workbook management, features, and customization options.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Getting Started with UWP Spreadsheet (SfSpreadsheet)
+# Getting Started with UWP Spreadsheet 
 
 This section briefly explains how to include the [UWP Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
 
