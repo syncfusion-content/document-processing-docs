@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Web services in Vue Document editor component | Syncfusion
-description: Learn here all about Web services in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Web Services in Syncfusion Vue DOCX Editor Control| Syncfusion
+description: Learn about the overview of web services in Syncfusion Essential Studio Vue DOCX Editor control and more details.
 control: Web services 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Web services in Vue Document editor component
+# Web Services in Syncfusion Vue DOCX Editor Control
 
 You can deploy web APIs for server-side dependencies of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component in the following platforms.
 

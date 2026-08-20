@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in JavaScript PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion JavaScript PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion JavaScript (ES5) PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in JavaScript PDF Viewer
+# About Syncfusion JavaScript (ES5) PDF Viewer Forms
 
 The PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents via the intuitive user interface or programmatic APIs.
 

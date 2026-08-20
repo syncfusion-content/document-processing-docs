@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter PDF library | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter PDF non-UI library, its elements, and more.
+title: Getting Started with Flutter PDF Library | Syncfusion
+description: Learn how to get started with the Syncfusion Flutter PDF library. Explore setup, document creation, features, and customization options.
 platform: document-processing
 control: PDF
 documentation: ug
 ---
 
-# Getting started with Flutter PDF
+# Getting Started with Flutter PDF Library
 
 This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/document-processing/pdf-framework/flutter/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 

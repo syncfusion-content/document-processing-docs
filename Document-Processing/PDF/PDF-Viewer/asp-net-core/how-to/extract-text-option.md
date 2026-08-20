@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure extractTextOption in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the Syncfusion ASP.NET Core PDF Viewer to control text extraction and memory usage.
+title: How to Configure ExtractTextOption in ASP.NET Core PDF | Syncfusion
+description: Use the extractTextOption property in the ASP.NET Core PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Configure extractTextOption in ASP.NET Core PDF Viewer
+# How to Configure ExtractTextOption in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the [`extractTextOption`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextOption) property to control how the component extracts text data. Adjusting this property allows you to optimize memory consumption and determine the specific metadata returned in the [`extractTextCompleted`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event.
 

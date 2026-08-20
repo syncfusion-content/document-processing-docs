@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Security Advisories in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about Security Advisories in ASP.NET MVC Document Editor component of Syncfusion Essential JS2 and more.
+title: Security Advisories in ASP.NET MVC DOCX Editor | Syncfusion
+description: Security advisories in ASP.NET MVC DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 control: Security Advisories
 platform: document-processing
 documentation: ug
 ---
 
-# Security Advisories in ASP.NET MVC Document Editor
+# Security Advisories in ASP.NET MVC DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> prioritizes the security of its controls. You can rely on the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> uses the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages are scanned using the SOOS security tool.
 

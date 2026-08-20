@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>&reg;</sup> Word web installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to download Syncfusion<sup>&reg;</sup> Word web installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to download Syncfusion® Word web installer | Syncfusion
+description: Learn here about how to download Syncfusion® Word web installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> Word web Installer
+# How to download Syncfusion® Word web installer
 
 [DocIO](https://www.syncfusion.com/word-framework/net) controls will be included in the Syncfusion<sup>&reg;</sup> Word installer. You can either download the licensed installer or try our trial installer depending on your license. 
 

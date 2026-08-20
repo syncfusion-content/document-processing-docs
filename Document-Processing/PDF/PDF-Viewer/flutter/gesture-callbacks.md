@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gesture callbacks in Flutter PDF Viewer widget | Syncfusion
-description: Learn here about the gesture callbacks provided in Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget.
+title: Gesture callbacks in Flutter PDF Viewer | Syncfusion
+description: The gesture callbacks in SfPdfViewer provide event notifications for user interactions such as taps during PDF viewing.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Gesture Callbacks in Flutter PDF Viewer (SfPdfViewer)
+# Gesture Callbacks in Flutter PDF Viewer
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the [PdfGestureTapCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfGestureTapCallback.html) to notify the touch or mouse interaction with the widget.
 

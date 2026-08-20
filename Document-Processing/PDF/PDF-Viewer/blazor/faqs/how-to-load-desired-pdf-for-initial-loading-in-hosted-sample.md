@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load a PDF on initial load in Blazor SfPdfViewer | Syncfusion
-description: Learn how to display a specific PDF on initial load and switch documents at runtime using the DocumentPath property and base64 data URIs in Blazor SfPdfViewer.
+title: How to Load a PDF on initial load in Blazor PDF Viewer | Syncfusion
+description: Learn how to display a specific PDF on initial load and switch documents at runtime using the DocumentPath property and base64 data URIs in Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Load a specific PDF on initial load in Blazor SfPdfViewer
+# How to Load a PDF on initial load in Blazor PDF Viewer
 
 Load a specific PDF on initial display and change the document at runtime in the Blazor SfPdfViewer component. To set the initial document, assign the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_SfPdfViewer_SfPdfViewer2_DocumentPath) property to a file path/URL or a data URI (base64). Updating the DocumentPath property reloads the viewer with the new document.
 

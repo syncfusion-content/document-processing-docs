@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export a Document as a PDF in Blazor DOCX Editor | Syncfusion
-description: Learn how to export the document as PDF in Syncfusion Blazor Document Editor component and much more.
+title: How to Export Document as PDF in Blazor DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® Blazor DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# How to export the document as PDF in Blazor Document Editor
+# How to Export Document as PDF in Blazor DOCX Editor
 
 In this article, we are going to see how to export the document as a PDF format.
 

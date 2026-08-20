@@ -1,11 +1,11 @@
 ---
-title: Known Exceptions in Syncfusion XlsIO | Syncfusion
-description: Lists the known exceptions thrown by Syncfusion XlsIO, with the .NET exception type, XlsIO class, message, and the underlying reason.
+title: Known Exceptions in .NET Excel Library | Syncfusion
+description: The known exceptions section lists exception types, classes, messages, and reasons for Excel processing issues.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# Known Exceptions in Syncfusion XlsIO
+# Known Exceptions in .NET Excel Library
 
 The following tables list the known exceptions that Essential<sup>&reg;</sup> XlsIO can throw during read, write, formatting, and validation operations. Use these tables to identify the cause of an exception and to choose the correct `try`/`catch` block to handle it in your code.
 

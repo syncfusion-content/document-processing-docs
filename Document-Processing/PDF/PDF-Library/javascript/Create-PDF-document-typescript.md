@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create or Generate a PDF File in TypeScript | Syncfusion
-description: Learn how to create a PDF file in a TypeScript application with easy steps using the JavaScript PDF Library without depending on Adobe.
+title: Getting Started with JavaScript PDF in TypeScript app | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript PDF in TypeScript application. Easy steps to create PDF without depending on Adobe.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ keywords: pdf, typescript, javascript pdf library
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-typescript
 ---
 
-# Create or Generate a PDF File in TypeScript
+# Getting Started with JavaScript PDF in TypeScript app
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is used to create, read, and edit PDF documents. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) also offers functionality to merge, split, stamp, fill PDF forms, and secure PDF files.
 

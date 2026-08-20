@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Docker image deployment in ASP.NET CORE Spreadsheet | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Docker Image Deployment in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn here all about Docker image deployment in Syncfusion ASP.NET Core Spreadsheet control of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Docker deployment 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Docker Image Overview in EJ2 ASP.NET CORE Spreadsheet control
+# Docker Image Overview in ASP.NET Core Spreadsheet
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 

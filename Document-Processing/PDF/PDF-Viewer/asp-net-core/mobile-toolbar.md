@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile toolbar interface in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about the mobile toolbar interface in the Syncfusion ASP.NET Core PDF Viewer, including main options, more menu actions, and enabling desktop mode on mobile.
+title: Mobile Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+description: The mobile toolbar in the ASP.NET Core PDF Viewer adapts the touch interface so users can access core features on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Mobile Toolbar Interface in ASP.NET Core PDF Viewer
+# Mobile Toolbar in ASP.NET Core PDF Viewer
 
 The mobile PDF Viewer provides various features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes essential tools such as search, download, bookmarking, annotation, and page organization. Users can enable desktop toolbar features in mobile mode to access a more extensive set of actions.
 

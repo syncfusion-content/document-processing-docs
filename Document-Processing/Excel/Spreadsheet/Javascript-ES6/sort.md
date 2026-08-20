@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sort in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Sort in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Sorting in TypeScript Spreadsheet | Syncfusion
+description: Sorting in TypeScript Spreadsheet enables users to arrange data in ascending or descending order for easier analysis and organization.
 platform: document-processing
 control: Sort
 documentation: ug
 ---
 
-# Sort in EJ2 TypeScript Spreadsheet control
+# Sorting in TypeScript Spreadsheet 
 
 Sorting helps arrange the data in a specific order within a selected range of cells. You can use the [`allowSorting`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 

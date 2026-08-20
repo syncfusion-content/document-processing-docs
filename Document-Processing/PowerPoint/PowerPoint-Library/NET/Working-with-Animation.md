@@ -31,7 +31,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add bounce effect to the shape
@@ -47,7 +47,7 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add bounce effect to the shape
@@ -63,7 +63,7 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add bounce effect to the shape
@@ -89,9 +89,9 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
-//Add a shape to act as button
-IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300);
+//Add a shape to act as button.
+IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50);
 //Create the interactive sequence to make the animation effects interactive by triggering with button click
 ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
 //Add Fly effect with top subtype to animate the shape as fly from top
@@ -107,9 +107,9 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
-    //Add a shape to act as button
-    IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100,100,50,50);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300);
+    //Add a shape to act as button.
+    IShape buttonShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50);
     //Create the interactive sequence to make the animation effects interactive by triggering with button click
     ISequence interactiveSequence = slide.Timeline.InteractiveSequences.Add(buttonShape);
     //Add Fly effect with top subtype to animate the shape as fly from top
@@ -125,9 +125,9 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 200, 100, 300, 300)
     'Add a shape to act as button
-    Dim buttonShape As IShape = slide.Shapes.AddShape(AutoShapeType.Oval, 100, 100, 50, 50)
+    Dim buttonShape As IShape = slide.Shapes.AddShape(AutoShapeType.Oval, 130, 75, 50, 50)
     'Create the interactive sequence to make the animation effects interactive by triggering with button click
     Dim interactiveSequence As ISequence = slide.Timeline.InteractiveSequences.Add(buttonShape)
     'Add Fly effect with top subtype to animate the shape as fly from top
@@ -212,7 +212,7 @@ IPresentation pptxDoc = Presentation.Create();
 //Add a blank slide to Presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 //Add normal shape to slide
-IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
 //Access the animation sequence to create effects
 ISequence sequence = slide.Timeline.MainSequence;
 //Add random bars effect to the shape
@@ -230,7 +230,7 @@ using (IPresentation pptxDoc = Presentation.Create())
     //Add a blank slide to Presentation
     ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
     //Add normal shape to slide
-    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300);
+    IShape cubeShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300);
     //Access the animation sequence to create effects
     ISequence sequence = slide.Timeline.MainSequence;
     //Add random bars effect to the shape
@@ -248,7 +248,7 @@ Using pptxDoc As IPresentation = Presentation.Create()
     'Add a blank slide to Presentation
     Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
     'Add normal shape to slide
-    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 50, 200, 300, 300)
+    Dim cubeShape As IShape = slide.Shapes.AddShape(AutoShapeType.Cube, 100, 100, 300, 300)
     'Access the animation sequence to create effects
     Dim sequence As ISequence = slide.Timeline.MainSequence
     'Add random bars effect to the shape

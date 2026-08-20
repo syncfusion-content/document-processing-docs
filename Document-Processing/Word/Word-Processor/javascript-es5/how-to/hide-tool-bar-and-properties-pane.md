@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Hide tool bar and properties pane in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Hide tool bar and properties pane in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: Hide Toolbar and Pane in JavaScript DOCX Editor | Syncfusion
+description: Hide the toolbar and properties pane in Syncfusion® JavaScript DOCX Editor to create a custom user interface and streamline the document editing experience.
 platform: document-processing
-control: Hide tool bar and properties pane 
+control: Hide Toolbar and Properties Pane
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide tool bar and properties pane in JavaScript (ES5) Document editor control
+# How to Hide Toolbar and Properties Pane in JavaScript DOCX Editor
 
-**Document editor container** provides the main document view area along with the built-in toolbar and properties pane.
+**Document Editor Container** provides the main document view area along with the built-in toolbar and properties pane.
 
-**[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor)** (Document Editor) provides just the main document view area. Here, the user can compose, view, and edit the Word documents. You may prefer to use this component when you want to design your own UI options for your application.
+**[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor)** (Document Editor) provides just the main document view area. Here, the user can compose, view, and edit Word documents. You may prefer this component when you want to design custom UI options.
 
-## Hide the properties pane
+## Hide the Properties Pane
 
-By default, Document editor container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`showPropertiesPane`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel) to hide the properties pane.
+By default, the Document Editor Container has a built-in properties pane which contains options for formatting text, tables, images, headers, and footers. You can use the [`showPropertiesPane`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#showpropertiespane) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel) to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 
@@ -25,20 +25,20 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 
 DocumentEditorContainer.Inject(Toolbar);
 
-let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px', showPropertiesPane:false });
+let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, height: '590px', showPropertiesPane: false });
 
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 container.appendTo('#container');
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
+N> Positioning and customizing the properties pane in the Document Editor Container is not possible. Instead, you can hide the existing properties pane and create your own pane using public APIs.
 
-## Hide the toolbar
+## Hide the Toolbar
 
-You can use [`enableToolbar`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel/) to hide the existing toolbar.
+You can use the [`enableToolbar`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel#enabletoolbar) API in [`DocumentEditorContainer`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/documentEditorContainerModel) to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 
@@ -52,7 +52,7 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## See Also
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQ Section in Blazor SfPdfViewer Component | Syncfusion
-description: Explore frequently asked questions and answers about the Blazor SfPdfViewer component to quickly find solutions and best practices.
+title: FAQ Section in Blazor PDF Viewer | Syncfusion
+description: Explore frequently asked questions and answers about the Blazor PDF Viewer  to quickly find solutions and best practices.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Frequently Asked Questions in Blazor SfPdfViewer Component
+# Frequently Asked Questions in Blazor PDF Viewer 
 
 Common questions and answers for using the Blazor SfPdfViewer component.
 

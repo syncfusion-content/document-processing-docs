@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert text in current position in Angular DOCX Editor | Syncfusion
-description: Learn here all about Insert text in current position in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Insert Content at Cursor in Angular DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® Angular DOCX Editor control, its elements and more.
 platform: document-processing
 control: Insert text in current position
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert Text in Current Position in Angular Document Editor component
+# How to Insert Content at Cursor in Angular DOCX Editor
 
 You can insert text, paragraphs, and rich-text content in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component.
 

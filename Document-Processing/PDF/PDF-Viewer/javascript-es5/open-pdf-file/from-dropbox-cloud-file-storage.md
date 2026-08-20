@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from Dropbox cloud storage in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion JavaScript PDF Viewer component using standalone and server-backed approaches.
+title: From Dropbox Cloud File Storage in JavaScript (ES5) PDF | Syncfusion
+description: Load and display PDF files stored in Dropbox cloud storage in the JavaScript (ES5) PDF Viewer using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Dropbox cloud storage
+# Open PDF from Dropbox Cloud Storage in JavaScript (ES5) PDF Viewer
 
 The JavaScript PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -106,7 +106,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Dropbox cloud file storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to load the PDF files from Dropbox cloud file storage.
 
 ```csharp
 
@@ -170,7 +170,7 @@ N> Replace the placeholders with your actual Dropbox values: access token and fo
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
 
 ```javascript
 

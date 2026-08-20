@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Find and replace in Vue Document editor component | Syncfusion
-description: Learn here all about Find and replace in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Find and Replace in Vue DOCX Editor | Syncfusion
+description: The find and replace feature in Vue DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 control: Find and replace 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Find and replace in Vue Document editor component
+# Find and Replace in Vue DOCX Editor
 
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
 ## Options pane
 
-This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
+This provides the options to search for a portion of text in the document. After a search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,7 +22,7 @@ This provides the options to search for a portion of text in the document. After
 <template>
   <div id="app" height="350px">
     <div>
-      <button v-on:click='showOptionsPane'>Save</button>
+      <button v-on:click='showOptionsPane'>Find/Replace</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableEditor='true' :enableSearch='true' :enableOptionsPane='true'
       :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
@@ -73,7 +73,7 @@ onMounted(function () {
 <template>
   <div id="app" height="350px">
     <div>
-      <button v-on:click='showOptionsPane'>Save</button>
+      <button v-on:click='showOptionsPane'>Find/Replace</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableEditor='true' :enableSearch='true' :enableOptionsPane='true'
       :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
@@ -135,22 +135,22 @@ You can close the options pane by pressing `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search) module of Document Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
 |[`findAll()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
-|[`searchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/).|
+|[`searchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults).|
 |[`find()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
 
 ### Find the immediate occurrence in the document
 
 Using [`find()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
-The following example code illustrates how to use find in Document editor.
+The following example code illustrates how to use find in Document Editor.
 
 ```ts
-this.$refs.documenteditor.ej2instances.search.find('Some text', 'None');
+this.$refs.documenteditor.ej2Instances.search.find('Some text', 'None');
 ```
 
 >Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
@@ -159,17 +159,17 @@ this.$refs.documenteditor.ej2instances.search.find('Some text', 'None');
 
 Using [`findAll()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search#findall) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
 
-The following example code illustrates how to find All the text in the document.
+The following example code illustrates how to find all the text in the document.
 
 ```ts
-this.$refs.documenteditor.ej2instances.search.findAll('Some text', 'None');
+this.$refs.documenteditor.ej2Instances.search.findAll('Some text', 'None');
 ```
 
 >Note: Second parameter is optional parameter and it denotes find Options. Possible values of find options are `'None' |'WholeWord' |'CaseSensitive'| 'CaseSensitiveWholeWord'`.
 
 ## Search results
 
-The [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
+The [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults) class provides information about the search results after a search operation is completed that can be identified using the [`searchResultsChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#searchresultschange) event. This will expose the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -182,12 +182,12 @@ The [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-
 
 Using [`replaceAll`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults#replaceall), you can replace all the occurrences with specified text.
 
-The following example code illustrates how to use replace All in Document editor.
+The following example code illustrates how to use replace All in Document Editor.
 
 ```ts
-this.$refs.documentEditor.ej2Instances.search.findAll ('Some text');
+this.$refs.documenteditor.ej2Instances.search.findAll ('Some text');
 // Replace all the searched text with word 'Mike'
-this.$refs.documentEditor.ej2Instances.search.searchResults.replaceAll("Mike");  
+this.$refs.documenteditor.ej2Instances.search.searchResults.replaceAll("Mike");  
 ```
 
 ### Replace
@@ -202,15 +202,15 @@ Using [`insertText`](https://ej2.syncfusion.com/vue/documentation/api/document-e
 The following example code illustrates how to find a text in the document and replace each occurrence of the text one by one programmatically.
 
 ```ts
-this.$refs.container.ej2instances.documentEditor.search.findAll('works');
+this.$refs.container.ej2Instances.documentEditor.search.findAll('works');
 
-let searchLength: number = container.documentEditor.search.searchResults.length;
+let search_length: number = container.documentEditor.search.searchResults.length;
 
-for (let i = searchLength - 1; i >= 0; i--) {
+for (let i = search_length - 1; i >= 0; i--) {
   // It will move selection to specific searched index,move to each occurrence one by one
-  this.$refs.container.ej2instances.documentEditor.search.searchResults.index = i;
+  this.$refs.container.ej2Instances.documentEditor.search.searchResults.index = i;
   // Replace it with some text
-  this.$refs.container.ej2instances.documentEditor.editor.insertText('Hello');
+  this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello');
 }
 
 this.$refs.container.ej2Instances.documentEditor.search.searchResults.clear();
@@ -218,7 +218,7 @@ this.$refs.container.ej2Instances.documentEditor.search.searchResults.clear();
 
 ## SearchResultsChange event
 
-[`DocumentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#searchresultschange)event that will be triggered whenever search results are changed. Consider the following scenarios:
+[`DocumentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor) exposes the [`searchResultsChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#searchresultschange)event that will be triggered whenever search results are changed. Consider the following scenarios:
 
 * A search operation is completed with some results.
 * The results are replaced with some other text, since it will be cleared automatically.
@@ -234,7 +234,7 @@ documenteditor.searchResultsChange = function() {
 
 ## Customize find and replace
 
-Using the exposed APIs, you can customize the find and replace functionality in your application. Refer to the following sample code.
+Using the exposed APIs, you can customize the find and replace functionality in your application. The following sample demonstrates how to combine `findAll` and `replaceAll` to search for a specific term and replace every occurrence in one operation. Refer to the following sample code.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
