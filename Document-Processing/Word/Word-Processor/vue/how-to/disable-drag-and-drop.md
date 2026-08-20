@@ -9,8 +9,6 @@ domainurl: ##DomainURL##
 ---
 # How to Disable Drag and Drop in Vue DOCX Editor
 
-# How to Disable Drag and Drop in Vue DOCX Editor
-
 The following example illustrates how to customize the drag and drop option.
 
 {% tabs %}
