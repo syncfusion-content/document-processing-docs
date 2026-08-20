@@ -28,7 +28,7 @@ In this article, we explain the differences between [**DocumentEditorContainer**
 
 {% tabcontent TypeScript %}
 
-Add the DocumentEditor component to your application. In the `src/App.tsx` file, add the following code to initialize the component with the required services
+Add the DocumentEditor component to your application to initialize the component with the required services:
 
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
@@ -146,7 +146,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% tabcontent JavaScript %}
 
-Add the DocumentEditor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
+Add the DocumentEditor component to your application to initialize the component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
