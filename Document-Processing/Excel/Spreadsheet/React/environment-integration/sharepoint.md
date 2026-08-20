@@ -56,22 +56,19 @@ npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
 ## Add CSS reference
-Add the following Spreadsheet and dependent component styles to `~/src/webparts/app/components/App.tsx` file.
+To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
 
-```ts
-require('@syncfusion/ej2-base/styles/tailwind3.css');
-require('@syncfusion/ej2-inputs/styles/tailwind3.css');
-require('@syncfusion/ej2-buttons/styles/tailwind3.css');
-require('@syncfusion/ej2-splitbuttons/styles/tailwind3.css');
-require('@syncfusion/ej2-lists/styles/tailwind3.css');
-require('@syncfusion/ej2-navigations/styles/tailwind3.css');
-require('@syncfusion/ej2-popups/styles/tailwind3.css');
-require('@syncfusion/ej2-dropdowns/styles/tailwind3.css');
-require('@syncfusion/ej2-grids/styles/tailwind3.css');
-require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
+The installed theme package includes an `index.css` file that automatically imports all the required dependency styles. Import the following stylesheet into `~/src/webparts/app/components/App.tsx` file.
+
+```ts
+require('@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css');
+```
+
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `ej2-tailwind3-theme` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages) for information about the available themes and the different ways to include theme styles in a React application.
 
 ## Add Spreadsheet Component
 
@@ -82,16 +79,7 @@ import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-require('@syncfusion/ej2-base/styles/tailwind3.css');
-require('@syncfusion/ej2-inputs/styles/tailwind3.css');
-require('@syncfusion/ej2-buttons/styles/tailwind3.css');
-require('@syncfusion/ej2-splitbuttons/styles/tailwind3.css');
-require('@syncfusion/ej2-lists/styles/tailwind3.css');
-require('@syncfusion/ej2-navigations/styles/tailwind3.css');
-require('@syncfusion/ej2-popups/styles/tailwind3.css');
-require('@syncfusion/ej2-dropdowns/styles/tailwind3.css');
-require('@syncfusion/ej2-grids/styles/tailwind3.css');
-require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
+require('@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   

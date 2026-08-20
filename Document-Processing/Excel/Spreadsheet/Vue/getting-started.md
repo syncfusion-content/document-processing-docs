@@ -51,25 +51,23 @@ Before initializing the Syncfusion Vue Spreadsheet control, generate a Syncfusio
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references in the **\<style\>** section. Replace the existing content with the theme import code below.
+To apply the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme, install the corresponding theme package by using the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+The installed theme package includes an `index.css` file that automatically imports all the required dependency styles. Import the following stylesheet references in the **\<style\>** section. Replace the existing content with the theme import code below.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/App.vue" %}
 
-@import "@syncfusion/ej2-base/styles/tailwind3.css";
-@import "@syncfusion/ej2-buttons/styles/tailwind3.css";
-@import "@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-@import "@syncfusion/ej2-inputs/styles/tailwind3.css";
-@import "@syncfusion/ej2-navigations/styles/tailwind3.css";
-@import "@syncfusion/ej2-popups/styles/tailwind3.css";
-@import "@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-@import "@syncfusion/ej2-grids/styles/tailwind3.css";
-@import "@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css";
 
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a Vue application.
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `ej2-tailwind3-theme` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages) for information about the available themes and the different ways to include theme styles in a Vue application.
 
 ## Add the Vue Spreadsheet component to the application
 
