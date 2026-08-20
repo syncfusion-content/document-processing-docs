@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 ## Prerequisites
 
-* Have [`Azure account`](https://azure.microsoft.com/en-gb/) and [`Azure CLI`](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) setup in your environment.
+* Ensure you have an [`Azure account`](https://azure.microsoft.com/en-gb/) and the [`Azure CLI`](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) installed in your environment.
 
-* Run the following command to open the Azure login page. Sign into your [`Microsoft Azure account`](https://azure.microsoft.com/en-gb/).
+* Run the following command to open the Azure login page. Sign in to your [`Microsoft Azure account`](https://azure.microsoft.com/en-gb/).
 
 ```
 az login
@@ -23,7 +23,7 @@ az login
 
 Create a resource group using the [`az group create`](https://docs.microsoft.com/en-us/cli/azure/group#az-group-create) command.
 
-The following example creates a resource group named documenteditorresourcegroup in the eastus location.
+The following example creates a resource group named `documenteditorresourcegroup` in the **East US** location.
 
 ```
 az group create --name documenteditorresourcegroup --location "East US"
@@ -41,16 +41,16 @@ az appservice plan create --name documenteditorappservice --resource-group docum
 
 **Step 3:** Create a Docker Compose app.
 
-Create a multi-container [`web app`](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro) in the documenteditorappservice App Service plan with the [`az webapp create`](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) command. The following command creates the web app using the provided Docker compose file. Please look into the section for getting started with Docker compose to create the Docker compose file for the Document Editor server and use the created Docker compose file here.
+Create a multi-container [`web app`](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro) in the `documenteditorappservice` App Service plan with the [`az webapp create`](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) command. The following command creates the web app using the provided Docker Compose file. **Step 4:** Create the `documenteditor-server-compose.yml` file before running this command. **Step 5:** Use the created Docker Compose file in this command.
 
 ```
 az webapp create --resource-group documenteditorresourcegroup --plan documenteditorappservice --name documenteditor-server --multicontainer-config-type compose --multicontainer-config-file documenteditor-server-compose.yml
 ```
 
-**Step 4:** Browse to the app.
+**Step 6:** Browse to the app.
 
-Browse to the deployed app at `http://<app_name>.azurewebsites.net`, i.e. `http://documenteditor-server.azurewebsites.net`. Browse this link and navigate to the Document Editor Web API control `http://documenteditor-server.azurewebsites.net/api/documenteditor`. It returns the default get method response.
+Browse to the deployed app at `http://<app_name>.azurewebsites.net` (for example, `http://documenteditor-server.azurewebsites.net`). Navigating to this link opens the Document Editor Web API at `http://documenteditor-server.azurewebsites.net/api/documenteditor/`, which returns the default GET-method response.
 
-Append the app service running the URL `http://documenteditor-server.azurewebsites.net/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
+Append the running App Service URL `http://documenteditor-server.azurewebsites.net/api/documenteditor/` to the `serviceUrl` in the client-side Document Editor control. For more information about the Document Editor control, refer to the [`Getting Started` page](../getting-started).
 
-For more information about the app container service, please look deeper into the [`Microsoft Azure Container Service`](https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-multi-container) for a production-ready setup.
+For more information about the app container service, see the [`Microsoft Azure Container Service`](https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-multi-container) for a production-ready setup.
