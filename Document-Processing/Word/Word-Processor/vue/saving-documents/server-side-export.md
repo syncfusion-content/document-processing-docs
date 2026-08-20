@@ -123,4 +123,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)
+> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode)
