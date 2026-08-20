@@ -1,22 +1,21 @@
 ---
 layout: post
-title: DocumentEditor component in React DOCX Editor | Syncfusion
-description: Learn the differences between DocumentEditorContainer and DocumentEditor in the Syncfusion React DOCX Editor and learn when to use each component.
+title: How to Choose the Right Editor in React DOCX Editor | Syncfusion
+description: Learn the differences between the standard editor and the customizable editor in the React DOCX Editor and when to use each.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# DocumentEditorContainer and DocumentEditor in React DOCX Editor
+# How to Choose the Right Editor in React DOCX Editor
 
-In this article, we explain the differences between **DocumentEditorContainer** and **DocumentEditor**, and also describe how to use the **DocumentEditor** component in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor).
+In this article, we explain the differences between [**DocumentEditorContainer**](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default) and [**DocumentEditor**](https://ej2.syncfusion.com/react/documentation/api/document-editor/index-default), and also describe how to use the **DocumentEditor** component in the React DOCX Editor.
 
 ## Difference between DocumentEditorContainer and DocumentEditor
 
-- **DocumentEditorContainer**: A ready-to-use document editing solution that includes a built-in toolbar, properties pane, and predefined UI elements. It is ideal for applications that require a complete document editing experience with minimal setup and configuration.
-
-- **DocumentEditor**: A customizable document editing component that provides the core document viewing and editing capabilities without a built-in toolbar or properties pane. It is ideal for applications that require custom toolbars, tailored workflows, or unique user interface designs.
+- **DocumentEditorContainer**: A complete solution with a predefined toolbar and properties pane that provides a comprehensive document editing experience. It allows users to create, view, and edit Word documents with minimal configuration.
+- **DocumentEditor**: A customizable component that provides a flexible foundation for creating, viewing, and editing Word documents. Unlike **DocumentEditorContainer**, this component allows you to customize the UI options and build a user interface based on your specific requirements.
 
 ### When to use DocumentEditorContainer and DocumentEditor
 
@@ -265,7 +264,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% endtabcontents %}
 
-## See Also
+## See also
 
 * [How to customize toolbar](./customize-tool-bar)
-* [How to use DocumentEditorContainer Component](../getting-started.md)
+* [How to use DocumentEditorContainer component](../getting-started.md)
