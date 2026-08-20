@@ -28,9 +28,11 @@ In this article, we explain the differences between [**DocumentEditorContainer**
 
 {% tabcontent TypeScript %}
 
-Add the Document Editor component to your application. In the `src/App.tsx` file, add the following code to initialize the component:
+Add the DocumentEditor component to your application. In the `src/App.tsx` file, add the following code to initialize the component with the required services
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="page.tsx" %}
+
 import * as React from 'react';
 import { 
     DocumentEditorComponent, 
@@ -126,7 +128,10 @@ function App() {
 }
 
 export default App;
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 {% tabs %}
@@ -141,10 +146,11 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% tabcontent JavaScript %}
 
-Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
+Add the DocumentEditor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
 
-```js
 import React from 'react';
 import {
   DocumentEditorComponent,
@@ -241,11 +247,13 @@ function App() {
 
 export default App;
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 N> The hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service using the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or the [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server).
 
 {% tabs %}
-{% highlight ts tabtitle="app.jsx" %}
+{% highlight js tabtitle="app.jsx" %}
 {% include code-snippet/document-editor/react/base-cs2/app/index.jsx %}
 {% endhighlight %}
 {% endtabs %}
