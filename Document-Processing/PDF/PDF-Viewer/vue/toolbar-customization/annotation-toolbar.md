@@ -1,37 +1,39 @@
 ---
 layout: post
-title: Annotation Toolbar in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the annotation toolbar in the Syncfusion Vue PDF Viewer. Show or hide it and choose which tools to display and in what order.
+title: Customize the Annotation Toolbar in Vue PDF Viewer | Syncfusion
+description: Show or hide and customize the annotation toolbar in the EJ2 Vue PDF Viewer with runnable examples.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization in Vue
+# Customize the Annotation Toolbar in Vue PDF Viewer
 
-The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
+## Overview
 
-For details about the built-in toolbar and common toolbar options, see the Toolbar article: ../toolbar.md
+This guide shows how to show or hide the annotation toolbar and how to choose which tools appear and their order.
 
-## Show or hide the annotation toolbar
+**Outcome:** A working Vue example that toggles the annotation toolbar and uses [`annotationToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) to customize the toolbar.
 
-Show or hide the annotation toolbar programmatically during initialization or at runtime.
+## Prerequisites
 
-Use the enableAnnotationToolbar property or the showAnnotationToolbar method to toggle visibility.
+- EJ2 Vue PDF Viewer installed and added in your project. See [getting started guide](../getting-started)
+- A valid [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) or [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) for viewer assets when running locally
 
-- enableAnnotationToolbar API: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#enableannotationtoolbar
-- showAnnotationToolbar method: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#showannotationtoolbar
+## Steps
 
-The following example shows how to show or hide the annotation toolbar using the `showAnnotationToolbar` method.
+### 1. Show or hide the annotation toolbar
+
+Use the [`showAnnotationToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#showannotationtoolbar) method on the viewer toolbar to control visibility.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <button v-on:click="toggleAnnoToolbar">Toggle Annotation Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    <button @click="hideAnnotationToolbar">Hide Annotation Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="viewer" :documentPath="documentPath" :resourceUrl="resourceUrl" height="600px" width="100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -39,24 +41,22 @@ The following example shows how to show or hide the annotation toolbar using the
 <script setup>
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
+  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 import { provide, ref } from 'vue';
 
-const pdfviewer = ref(null);
+const viewer = ref(null);
+const show = ref(true);
 const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
 
-const toggleAnnoToolbar = () => {
-  const toolbar = pdfviewer.value?.ej2Instances?.toolbar;
-  if (toolbar) {
-    // Pass false to hide, true to show
-    toolbar.showAnnotationToolbar(false);
-  }
-}
+const hideAnnotationToolbar = () => {
+  viewer.value.ej2Instances.toolbar.showAnnotationToolbar(show.value);
+  show.value = !show.value;
+};
 </script>
 
 {% endhighlight %}
@@ -64,8 +64,8 @@ const toggleAnnoToolbar = () => {
 
 <template>
   <div id="app">
-    <button v-on:click="toggleAnnoToolbar">Toggle Annotation Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    <button @click="hideAnnotationToolbar">Hide Annotation Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="viewer" :documentPath="documentPath" :resourceUrl="resourceUrl" height="600px" width="100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -73,25 +73,29 @@ const toggleAnnoToolbar = () => {
 <script>
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
+  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+      show: true,
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+      BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
   },
   methods: {
-    toggleAnnoToolbar() {
-      this.$refs.pdfviewer.ej2Instances.toolbar.showAnnotationToolbar(false);
+    hideAnnotationToolbar() {
+      this.$refs.viewer.ej2Instances.toolbar.showAnnotationToolbar(this.show);
+      this.show = !this.show;
     }
   }
 }
@@ -100,100 +104,21 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following serviceUrl in your component and bind it to the PDF Viewer using :serviceUrl="serviceUrl".
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+### 2. Show or hide annotation toolbar items
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
+Use [`annotationToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings#annotationtoolbaritems) with a list of [`AnnotationToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationtoolbaritem) values. The toolbar shows only items in this list.
 
-<template>
-  <div id="app">
-    <button v-on:click="toggleAnnoToolbar">Toggle Annotation Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
-    </ejs-pdfviewer>
-  </div>
-</template>
+**Complete example**
 
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide, ref } from 'vue';
-
-const pdfviewer = ref(null);
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
-
-const toggleAnnoToolbar = () => {
-  pdfviewer.value.ej2Instances.toolbar.showAnnotationToolbar(false);
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <button v-on:click="toggleAnnoToolbar">Toggle Annotation Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
-  },
-  methods: {
-    toggleAnnoToolbar() {
-      this.$refs.pdfviewer.ej2Instances.toolbar.showAnnotationToolbar(false);
-    }
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## How to customize the annotation toolbar
-
-Choose which tools appear and control their order in the annotation toolbar.
-
-Use ToolbarSettings with the annotationToolbarItems property to choose which tools are displayed in the annotation toolbar. The property accepts a list of AnnotationToolbarItem values. Only the items included in this list are shown; any item not listed is hidden. The rendered order follows the sequence of items in the list.
-
-- ToolbarSettings: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/
-- annotationToolbarItems: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/#annotationtoolbaritems
-- AnnotationToolbarItem: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationToolbarItem/
-
-The annotation toolbar is presented when entering annotation mode in the PDF Viewer and adapts responsively based on the available width. Include the Close tool to allow users to exit the annotation toolbar when needed.
-
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools using AnnotationToolbarItem.
+The following is a complete, runnable example. It wires a toggle button and a viewer with a custom annotation toolbar list.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings">
+    <button @click="hideAnnotationToolbar">Hide Annotation Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="viewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings" height="600px" width="100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -201,39 +126,27 @@ The following example demonstrates how to customize the annotation toolbar by sp
 <script setup>
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
+  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
-const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const viewer = ref(null);
+const show = ref(true);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const toolbarSettings = {
   annotationToolbarItems: [
-    'HighlightTool',
-    'UnderlineTool',
-    'StrikethroughTool',
-    'ColorEditTool',
-    'OpacityEditTool',
-    'AnnotationDeleteTool',
-    'StampAnnotationTool',
-    'HandWrittenSignatureTool',
-    'InkAnnotationTool',
-    'ShapeTool',
-    'CalibrateTool',
-    'StrokeColorEditTool',
-    'ThicknessEditTool',
-    'FreeTextAnnotationTool',
-    'FontFamilyAnnotationTool',
-    'FontSizeAnnotationTool',
-    'FontStylesAnnotationTool',
-    'FontAlignAnnotationTool',
-    'FontColorAnnotationTool',
-    'CommentPanelTool'
+    'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'CommentPanelTool'
   ]
 };
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
+
+const hideAnnotationToolbar = () => {
+  viewer.value.ej2Instances.toolbar.showAnnotationToolbar(show.value);
+  show.value = !show.value;
+};
 </script>
 
 {% endhighlight %}
@@ -241,7 +154,8 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnota
 
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings">
+    <button @click="hideAnnotationToolbar">Hide Annotation Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="viewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings" height="600px" width="100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -249,45 +163,35 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnota
 <script>
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
+  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+      show: true,
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       toolbarSettings: {
         annotationToolbarItems: [
-          'HighlightTool',
-          'UnderlineTool',
-          'StrikethroughTool',
-          'ColorEditTool',
-          'OpacityEditTool',
-          'AnnotationDeleteTool',
-          'StampAnnotationTool',
-          'HandWrittenSignatureTool',
-          'InkAnnotationTool',
-          'ShapeTool',
-          'CalibrateTool',
-          'StrokeColorEditTool',
-          'ThicknessEditTool',
-          'FreeTextAnnotationTool',
-          'FontFamilyAnnotationTool',
-          'FontSizeAnnotationTool',
-          'FontStylesAnnotationTool',
-          'FontAlignAnnotationTool',
-          'FontColorAnnotationTool',
-          'CommentPanelTool'
+          'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'CommentPanelTool'
         ]
       }
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+      BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
+    hideAnnotationToolbar() {
+      this.$refs.viewer.ej2Instances.toolbar.showAnnotationToolbar(this.show);
+      this.show = !this.show;
+    }
   }
 }
 </script>
@@ -295,92 +199,22 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following serviceUrl in the component and bind it using :serviceUrl="serviceUrl".
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+## Troubleshooting
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
+- Annotation toolbar tools do not appear.
+    - **Cause**: The items are not valid [`AnnotationToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationtoolbaritem) strings or the viewer is not provided with [`Annotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation) / [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar) services.
+    - **Solution**: Confirm services in `provide` includes [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar) and [`Annotation`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation) and use valid item names.
 
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
+## Related topics
 
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-const toolbarSettings = {
-  annotationToolbarItems: [
-    'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool',
-    'AnnotationDeleteTool', 'StampAnnotationTool', 'HandWrittenSignatureTool', 'InkAnnotationTool',
-    'ShapeTool', 'CalibrateTool', 'StrokeColorEditTool', 'ThicknessEditTool', 'FreeTextAnnotationTool',
-    'FontFamilyAnnotationTool', 'FontSizeAnnotationTool', 'FontStylesAnnotationTool', 'FontAlignAnnotationTool',
-    'FontColorAnnotationTool', 'CommentPanelTool'
-  ]
-};
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-      toolbarSettings: {
-        annotationToolbarItems: [
-          'HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool',
-          'AnnotationDeleteTool', 'StampAnnotationTool', 'HandWrittenSignatureTool', 'InkAnnotationTool',
-          'ShapeTool', 'CalibrateTool', 'StrokeColorEditTool', 'ThicknessEditTool', 'FreeTextAnnotationTool',
-          'FontFamilyAnnotationTool', 'FontSizeAnnotationTool', 'FontStylesAnnotationTool', 'FontAlignAnnotationTool',
-          'FontColorAnnotationTool', 'CommentPanelTool'
-        ]
-      }
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize primary toolbar](./primary-toolbar)
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
+* [Primary toolbar customization](./primary-toolbar)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
 * [Feature Modules](./feature-module)

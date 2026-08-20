@@ -1,34 +1,38 @@
 ---
 layout: post
-title: Form Designer Toolbar in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the form designer toolbar in the Syncfusion Vue PDF Viewer. Show/hide the toolbar and choose which tools to display and in what order.
+title: Customize the Form Designer Toolbar in Vue PDF Viewer | Syncfusion
+description: Learn how to show or hide and customize the Form Designer toolbar in the Syncfusion EJ2 Vue PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer Toolbar Customization in Vue
+# Customize the Form Designer Toolbar in Vue PDF Viewer
 
-Customize the form designer toolbar by showing or hiding default items and controlling the order in which items appear.
+## Overview
 
-For details about the built-in toolbar and common toolbar options, see the Toolbar article: ../toolbar.md
+This guide shows how to show or hide the form designer toolbar, and how to configure which tools appear and their order.
 
-## Show or hide the form designer toolbar
+**Outcome**: a working Vue example customizing the form designer toolbar.
 
-The form designer toolbar can be shown or hidden programmatically during initialization or at runtime.
+## Prerequisites
 
-Use the [enableFormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfviewermodel#enableformdesigner) property to set initial visibility or call the [showFormDesignerToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method at runtime to toggle visibility.
+- EJ2 Vue PDF Viewer installed and added in project. See [getting started guide](../getting-started)
+- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) for server mode.
 
-The following code snippet explains how to show or hide the toolbar using the `showFormDesignerToolbar` method.
+## Steps
+
+### 1. Show or hide Form Designer toolbar at initialization
+
+Set the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#isformdesignertoolbarvisible) property to `true` or `false` to control initial visibility.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <button v-on:click="toggleFDToolbar">Toggle Form Designer Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="true" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -38,22 +42,13 @@ import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
   ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide, ref } from 'vue';
+import { provide } from 'vue';
 
-const pdfviewer = ref(null);
-const documentPath = "https://cdn.syncfusion.com/content/pdf/formdesigner.pdf";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
 const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
-
-const toggleFDToolbar = () => {
-  const toolbar = pdfviewer.value?.ej2Instances?.toolbar;
-  if (toolbar) {
-    // Pass false to hide, true to show
-    toolbar.showFormDesignerToolbar(false);
-  }
-}
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
 </script>
 
 {% endhighlight %}
@@ -61,8 +56,7 @@ const toggleFDToolbar = () => {
 
 <template>
   <div id="app">
-    <button v-on:click="toggleFDToolbar">Toggle Form Designer Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="true" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -74,22 +68,19 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+      documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
-  },
-  methods: {
-    toggleFDToolbar() {
-      this.$refs.pdfviewer.ej2Instances.toolbar.showFormDesignerToolbar(false);
-    }
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+      BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
   }
 }
 </script>
@@ -97,46 +88,48 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following serviceUrl in your component and bind it to the PDF Viewer using :serviceUrl="serviceUrl".
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+### 2. Show or hide form designer toolbar at runtime
+
+Use the [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#isformdesignertoolbarvisible) property on the viewer's instance to toggle form designer visibility at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
+{% highlight ts tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <button v-on:click="toggleFDToolbar">Toggle Form Designer Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    <button @click="hideFormDesignerToolbar">Hide Form Designer Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="show" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script setup>
+import { ref, provide } from 'vue';
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
   ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide, ref } from 'vue';
 
 const pdfviewer = ref(null);
-const documentPath = "https://cdn.syncfusion.com/content/pdf/formdesigner.pdf";
-const serviceUrl = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer";
+const show = ref(true);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
 
-const toggleFDToolbar = () => {
-  pdfviewer.value.ej2Instances.toolbar.showFormDesignerToolbar(false);
-}
+const hideFormDesignerToolbar = () => {
+  show.value = !show.value;
+};
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <button v-on:click="toggleFDToolbar">Toggle Form Designer Toolbar</button>
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    <button @click="hideFormDesignerToolbar">Hide Form Designer Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="show" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -148,21 +141,24 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+      show: true,
+      documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+      BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
   },
   methods: {
-    toggleFDToolbar() {
-      this.$refs.pdfviewer.ej2Instances.toolbar.showFormDesignerToolbar(false);
+    hideFormDesignerToolbar() {
+      this.show = !this.show;
     }
   }
 }
@@ -171,60 +167,56 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## How to customize the form designer toolbar
+### 3. Show or hide form designer toolbar items
 
-Select which tools appear and control their order in the form designer toolbar.
+Use [`formDesignerToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) and supply an ordered array of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesignertoolbaritem) names.
 
-Configure [`PdfViewerToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings) and set the [`FormDesignerToolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarsettings#formdesignertoolbaritems) property to specify available form-design tools. This property accepts a list of [`FormDesignerToolbarItem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesignertoolbaritem) values; included items are displayed in the listed order and omitted items are hidden. This produces a consistent, streamlined form-design experience across devices.
-
-- ToolbarSettings: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/
-- formDesignerToolbarItems: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbarSettings/#formdesignertoolbaritems
-- FormDesignerToolbarItem: https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formDesignerToolbarItem/
-
-The following example demonstrates how to customize the form designer toolbar by configuring specific tools using FormDesignerToolbarItem.
+**Complete example:**
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings">
+  <div>
+    <button @click="hideFormDesignerToolbar">Hide Form Designer Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="show" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script setup>
+import { ref, provide } from 'vue';
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
   ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
 
-const documentPath = 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf';
-const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const pdfviewer = ref(null);
+const show = ref(true);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/form-designer.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
 const toolbarSettings = {
   formDesignerToolbarItems: [
-    'TextboxTool',
-    'PasswordTool',
-    'CheckBoxTool',
-    'RadioButtonTool',
-    'DropdownTool',
-    'ListboxTool',
-    'DrawSignatureTool',
-    'DeleteTool'
+    'TextboxTool', 'RadioButtonTool', 'CheckBoxTool',
+    'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool'
   ]
 };
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+  BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
+
+const hideFormDesignerToolbar = () => {
+  show.value = !show.value;
+};
 </script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings">
+  <div>
+    <button @click="hideFormDesignerToolbar">Hide Form Designer Toolbar</button>
+    <ejs-pdfviewer id="PdfViewer" ref="pdfviewer" :isFormDesignerToolbarVisible="show" :documentPath="documentPath" :resourceUrl="resourceUrl" :toolbarSettings="toolbarSettings" style="height: 500px; width: 100%">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -236,29 +228,31 @@ import {
 } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib',
+      show: true,
+      documentPath: "https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
       toolbarSettings: {
         formDesignerToolbarItems: [
-          'TextboxTool',
-          'PasswordTool',
-          'CheckBoxTool',
-          'RadioButtonTool',
-          'DropdownTool',
-          'ListboxTool',
-          'DrawSignatureTool',
-          'DeleteTool'
+          'TextboxTool', 'RadioButtonTool', 'CheckBoxTool',
+          'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool'
         ]
       }
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView,
+      BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+  methods: {
+    hideFormDesignerToolbar() {
+      this.show = !this.show;
+    }
   }
 }
 </script>
@@ -266,86 +260,18 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the server-backed PDF Viewer, add the following serviceUrl in the component and bind it using :serviceUrl="serviceUrl".
-serviceUrl: "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
+## Expected result
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
+- The form designer toolbar appears (or is hidden) according to [`isFormDesignerToolbarVisible`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#isformdesignertoolbarvisible).
+- Only the listed tools appear.
 
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
+## Troubleshooting
 
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+- Toolbar or form designer tools do not appear.
+    - **Cause**: [`FormDesigner`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) or [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar) service not provided.
+    - **Solution**: ensure [`FormDesigner`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) and [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar) services are provided to PDF Viewer.
 
-const documentPath = 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf';
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-const toolbarSettings = {
-  formDesignerToolbarItems: [
-    'TextboxTool', 'PasswordTool', 'CheckBoxTool', 'RadioButtonTool', 'DropdownTool',
-    'ListboxTool', 'DrawSignatureTool', 'DeleteTool'
-  ]
-};
+## Related topics
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarSettings="toolbarSettings">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/formdesigner.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
-      toolbarSettings: {
-        formDesignerToolbarItems: [
-          'TextboxTool', 'PasswordTool', 'CheckBoxTool', 'RadioButtonTool', 'DropdownTool',
-          'ListboxTool', 'DrawSignatureTool', 'DeleteTool'
-        ]
-      }
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-      ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## See also
-
-* [Primary toolbar customization](./primary-toolbar)
-* [Custom toolbar](./custom-toolbar)
-* [Annotation toolbar customization](./annotation-toolbar)
-* [Form designer toolbar customization](./form-designer-toolbar)
-* [Mobile toolbar](./mobile-toolbar)
-* [Toolbar customization](../toolbar)
-* [Feature Modules](../feature-module)
+- [Primary toolbar customization](./primary-toolbar)
+- [Annotation toolbar customization](./annotation-toolbar)
