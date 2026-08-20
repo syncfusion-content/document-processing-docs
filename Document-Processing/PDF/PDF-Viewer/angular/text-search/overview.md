@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text search and Extraction in Angular PDF Viewer | Syncfusion
-description: Overview of text search capabilities, UI features, programmatic APIs, events and text extraction in the Syncfusion Angular PDF Viewer.
+title: About Syncfusion Angular PDF Viewer Text Search | Syncfusion
+description: Learn about introduction of the Syncfusion Angular PDF Viewer Text Search section and the key capabilities it provides.
 platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search and extraction in Angular PDF Viewer
+# About Syncfusion Angular PDF Viewer Text Search
 
 The Angular PDF Viewer provides an integrated text search experience that supports both interactive UI search and programmatic searches. Enable the feature by importing [`TextSearch`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textsearch) and injecting it into the viewer services and by setting [`enableTextSearch`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#enabletextsearch) as needed. To retrieve the bounding rectangles for each match occurrence, use the [`findText`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textsearch#findtext) and [`findTextAsync`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/textsearch#findtextasync) methods.
 

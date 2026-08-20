@@ -1,12 +1,12 @@
 ---
-title: Perform OCR on PDF and image files in Docker | Syncfusion
-description: Learn how to perform OCR on scanned PDF documents and images in Docker with different tesseract versions using Syncfusion .NET OCR library.
+title: Getting Started with Docker OCR Processor| Syncfusion
+description: Learn how to get started with the Syncfusion Docker OCR Processor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Perform OCR in Docker
+# Getting Started with Docker OCR Processor
 
 The [.NET OCR library](https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-process) is used to extract text from scanned PDFs and images in Docker applications with the help of Google's [Tesseract](https://github.com/tesseract-ocr/tesseract) Optical Character Recognition engine.
 

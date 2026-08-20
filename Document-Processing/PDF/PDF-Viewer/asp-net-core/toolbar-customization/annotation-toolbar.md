@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation Toolbar in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about annotation toolbar customization in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Annotation Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+description: Customize the annotation toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default annotation actions for your users.
 platform: document-processing
 control: Annotation Toolbar Customization
 documentation: ug
 ---
 
-# Annotation Toolbar Customization in ASP.NET Core
+# Customize the Annotation Toolbar in ASP.NET Core PDF Viewer
 
 Customize the annotation toolbar by showing or hiding default items and controlling their order.
 

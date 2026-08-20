@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo redo in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Undo redo in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Undo and Redo in Vue Spreadsheet | Syncfusion
+description: Learn how to revert and restore spreadsheet actions using undo and redo functionality in the Syncfusion Vue Spreadsheet.
 control: Undo redo
 platform: document-processing
 documentation: ug
 ---
 
-# Undo redo in Vue Spreadsheet component
+# Undo and Redo in Vue Spreadsheet
 
 `Undo` option helps you to undone the last action performed and `Redo` option helps you to do the same action which is reverted in the Spreadsheet. You can use the [`allowUndoRedo`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowundoredo) property to enable or disable undo redo functionality in spreadsheet.
 

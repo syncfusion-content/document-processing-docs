@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open Google Drive Files in ASP.NET MVC Document Editor | Syncfusion
-description: Learn about how to Open document from Google Drive in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Google Drive ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from Google Drive in ASP.NET MVC DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Google Drive in ASP.NET MVC Document editor
+# Open Documents from Google Drive in ASP.NET MVC DOCX Editor
 
-To load a document from Google Drive in a Document editor, you can follow the steps below
+To load a document from Google Drive in a Document Editor, you can follow the steps below.
 
 **Step 1:** Set up Google Drive API
 
@@ -34,7 +34,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Util.Store;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -130,13 +130,13 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google drive folder ID , Your name for your application and the path for the JSON file.
+N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
 **Step 4:**  Modify the Index.cshtml File in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
+In the client-side, the document returned from the web service is opened using the `open` method.
 
 
 {% tabs %}

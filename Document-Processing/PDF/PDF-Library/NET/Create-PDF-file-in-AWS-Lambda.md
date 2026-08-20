@@ -1,13 +1,13 @@
 ---
-title: Create or Generate PDF document in AWS Lambda | Syncfusion
-description: Learn how to create or generate a PDF file in AWS Lambda using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Getting Started with .NET PDF Library in AWS Lambda | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in AWS Lambda and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: aws lambda create pdf, aws edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 ---
 
-# Create PDF document in AWS Lambda
+# Getting Started with .NET PDF Library in AWS Lambda
 
 The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can open and save PDF documents in AWS Lambda.
 

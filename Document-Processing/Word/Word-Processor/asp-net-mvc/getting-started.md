@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to create a DOCX Editor in an ASP.NET MVC application using the Syncfusion® DOCX Editor component to create, edit, and view Word documents.
+description: Learn how to get started with the Syncfusion ASP.NET MVC DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting Started
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an ASP.NET MVC application. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an ASP.NET MVC application.
 
 ## Prerequisites
 
@@ -25,8 +25,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> [ASP.NET MVC DOCX Editor](https
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC NuGet packages
 
 To add the DOCX Editor component in the application, follow the steps below.
-- Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), 
-- Search and install the following package
+- Open NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+- Search and install the following package.
     - [Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5)
 
 
@@ -63,7 +63,7 @@ Before initializing the ASP.NET MVC DOCX Editor control, generate a Syncfusion l
 
 ## Add the stylesheet and script resources
 
-To render Syncfusion ASP.NET MVC controls with the expected appearance, reference the theme stylesheet and the control scripts via CDN inside the `<head>` of the `~/Views/Shared/_Layout.cshtml` file as follows,
+To render Syncfusion ASP.NET MVC controls with the expected appearance, reference the theme stylesheet and the control scripts via CDN inside the `<head>` of the `~/Views/Shared/_Layout.cshtml` file as follows.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Layout.cshtml" %}
@@ -76,7 +76,7 @@ To render Syncfusion ASP.NET MVC controls with the expected appearance, referenc
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET MVC application.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme) to learn the different ways to include Syncfusion styles (using [CDN](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#cdn-reference), [NPM package](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references#node-package-manager-npm), or [CRG](https://ej2.syncfusion.com/aspnetmvc/documentation/common/custom-resource-generator)) and ensure the expected appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC controls, and check the [Adding Script Reference](https://ej2.syncfusion.com/aspnetmvc/documentation/common/adding-script-references) documentation to understand the various approaches for adding required script references in your ASP.NET MVC application.
 
 ## Register script manager
 
@@ -93,7 +93,7 @@ Register the Script Manager at the end of the `<body>` tag in the `~/Views/Share
 
 ## Add the DOCX Editor Component
 
-Add the DOCX Editor component in `~/Views/Home/Index.cshtml` page.
+Add the DOCX Editor component to the `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
@@ -103,7 +103,7 @@ Add the DOCX Editor component in `~/Views/Home/Index.cshtml` page.
 
 ## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app. The DOCX Editor component will then be rendered in the default web browser as shown below.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app. The DOCX Editor component will render in the default web browser as shown below.
 
 ![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
 

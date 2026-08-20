@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in Blazor Spreadsheet Component | Syncfusion
-description: Check out and learn all about formulas and calculation features in the Syncfusion Blazor Spreadsheet component.
+title: Formulas in Blazor Spreadsheet | Syncfusion
+description: Use built-in formulas and calculation features in the Syncfusion Blazor Spreadsheet to perform data analysis.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Formulas in Blazor Spreadsheet Component
+# Formulas in Blazor Spreadsheet
 
 **Formulas** enable calculations within a worksheet by referencing cells from either the same worksheet or other worksheets in the workbook.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard shortcuts in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in Vue Spreadsheet | Syncfusion
+description: Learn keyboard shortcuts and navigation options in the Syncfusion Vue Spreadsheet to improve productivity.
 control: Keyboard shortcuts 
 platform: document-processing
 documentation: ug
 ---
 
-# Keyboard shortcuts in Vue Spreadsheet component
+# Keyboard Shortcuts in Vue Spreadsheet
 
 The keyboard shortcuts supported in the Spreadsheet are,
 

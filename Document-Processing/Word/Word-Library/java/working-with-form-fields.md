@@ -1,11 +1,11 @@
 ---
-title: Working with Form Fields | Word library | Syncfusion
-description: This section illustrated how to work with FormFields in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Form Fields in Java Word | Syncfusion
+description: This section illustrated how to work with FormFields in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with Form Fields
+# Form Fields in Java Word
 
 You can create template document with form fields such as Text, Checkbox and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
 

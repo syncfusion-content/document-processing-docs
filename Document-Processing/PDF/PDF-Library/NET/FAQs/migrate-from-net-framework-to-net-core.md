@@ -1,11 +1,11 @@
 ---
-title: Migrate from .NET Framework to .NET Core | Syncfusion 
-description: This section describes the changes to consider when migrating the Syncfusion .NET PDF library from .NET Framework to .NET Core.
+title: Migration from .NET Framework to .NET Core | Syncfusion
+description: Learn the key changes when migrating the Syncfusion PDF library codes from .NET Framework to .NET Core.
 control: PDF
 documentation: UG
 ---
 
-# Migrate PDF Library from .NET Framework to .NET Core
+# Migration from .NET Framework to .NET Core
 
 This section describes the changes to consider when migrating the Syncfusion<sup>&reg;</sup> .NET PDF library from .NET Framework to .NET Core. .NET Core is the recommended target for all new and existing applications, offering cross-platform support, improved performance, and long-term support from Microsoft.
 

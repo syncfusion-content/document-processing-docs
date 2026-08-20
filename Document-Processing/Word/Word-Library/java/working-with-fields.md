@@ -1,11 +1,11 @@
 ---
-title: Working with Fields | Syncfusion
+title: Fields in Java Word | Syncfusion
 description: This section illustrates how to add dynamic information like title, time, page number, etc., in the Word document that updates automatically
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
-# Working with document Fields
+# Document Fields in Java Word
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the `WField` and `WFieldMark` instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 

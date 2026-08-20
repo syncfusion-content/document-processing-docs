@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Page Navigation in JavaScript PDF Viewer control | Syncfusion
-description: Explore how to navigate pages in the Syncfusion JavaScript PDF Viewer control using built-in options for seamless document viewing.
+title: Page in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use page navigation in the JavaScript (ES5) PDF Viewer to move between pages and programmatically control the current page from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
-documentation: ##DomainURL##
+documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Page navigation in JavaScript PDF Viewer
+# Page Navigation in JavaScript (ES5) PDF Viewer
 
 The JavaScript PDF Viewer supports internal and external navigation.
 
@@ -15,11 +16,11 @@ The JavaScript PDF Viewer supports internal and external navigation.
 
 The default PDF Viewer toolbar provides the following navigation options:
 
-- [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopage) — Navigate to a specific page.
-- [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotonextpage) — Navigate to the next page.
-- [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotopreviouspage) — Navigate to the previous page.
-- [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotofirstpage) — Navigate to the first page.
-- [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation/#gotolastpage) — Navigate to the last page.
+- [**Go to page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopage) — Navigate to a specific page.
+- [**Show next page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotonextpage) — Navigate to the next page.
+- [**Show previous page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotopreviouspage) — Navigate to the previous page.
+- [**Show first page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotofirstpage) — Navigate to the first page.
+- [**Show last page**](https://ej2.syncfusion.com/documentation/api/pdfviewer/navigation#gotolastpage) — Navigate to the last page.
 
 ```html
 <html>
@@ -56,14 +57,14 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 
+ej.pdfviewer.PdfViewer.Inject(
+  ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection, ej.pdfviewer.Annotation
+);
+
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   enableNavigation: true,
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
 });
-
-ej.pdfviewer.PdfViewer.Inject(
-  ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.ThumbnailView, ej.pdfviewer.BookmarkView, ej.pdfviewer.TextSelection
-);
 
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 pdfviewer.appendTo('#PdfViewer');
@@ -84,7 +85,7 @@ Also, you can programmatically perform page navigation options as follows.
   <body>
     <div class="container">
       <button id="goToFirstPage">Go To First Page</button>
-      <button id="goToLastPage">Go To last Page</button>
+      <button id="goToLastPage">Go To Last Page</button>
       <button id="goToNextPage">Go To Next Page</button>
       <button id="goToPage">Go To Page 4</button>
       <button id="goToPreviousPage">Go To Previous Page</button>
@@ -97,16 +98,16 @@ Also, you can programmatically perform page navigation options as follows.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 
-var viewer = new ej.pdfviewer.PdfViewer ({
-  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-  resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-});
-
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
   ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print,
   ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields,
   ej.pdfviewer.FormDesigner,ej.pdfviewer.PageOrganizer
 );
+
+var viewer = new ej.pdfviewer.PdfViewer ({
+  documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+  resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+});
 
 viewer.appendTo('#pdfViewer');
 
@@ -134,18 +135,18 @@ document.getElementById('goToPreviousPage').addEventListener('click', () => {
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
 
-var viewer = new ej.pdfviewer.PdfViewer ({
-    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    resourceUrl:'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-});
-
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.Toolbar, ej.pdfviewer.Magnification, ej.pdfviewer.BookmarkView,
   ej.pdfviewer.ThumbnailView, ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print,
   ej.pdfviewer.Navigation, ej.pdfviewer.LinkAnnotation, ej.pdfviewer.Annotation,  ej.pdfviewer.FormFields,
   ej.pdfviewer.FormDesigner, ej.pdfviewer.PageOrganizer
 );
 
-viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+var viewer = new ej.pdfviewer.PdfViewer ({
+    documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+});
+
+viewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 viewer.appendTo('#pdfViewer');
 
 // Go To First Page

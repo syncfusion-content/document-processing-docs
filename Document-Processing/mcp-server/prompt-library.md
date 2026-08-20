@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Prompt Library - AI Coding Assistant
+# Syncfusion AI Coding Assistant Prompt Library
 
 Speed up your projects using these ready-made prompts for Syncfusion® components. Each prompt is short, easy to understand, and focused on real tasks—like quick setups, tweaks, and fixes.
 

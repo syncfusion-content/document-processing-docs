@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Vue 3 Spreadsheet component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Spreadsheet component of Syncfusion Spreadsheet Editor SDK and more details.
+title: Getting Started with Vue 3 Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Spreadsheet component in a Vue 3 application. Explore setup and usage examples.
 control: Vue 3 getting started
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the Vue Spreadsheet Component in Vue 3
+# Getting Started with Vue 3 Spreadsheet
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -39,7 +39,7 @@ Non-interactive mode allows you to create a project directly using a single comm
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
-sf new my-project --framework vue --template spreadsheet-editor
+sf new my-project --framework vue --template spreadsheet-editor --theme tailwind3
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,7 +64,7 @@ When you run the `sf` command, the CLI prompts you to select the required projec
 √ Choose Framework: » Vue
 √ Choose Language: » TypeScript
 √ Choose Template: » Spreadsheet Editor
-√ Choose Theme: » Material3
+√ Choose Theme: » Tailwind3
 √ Choose Style Format: » CSS
 √ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
 √ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      

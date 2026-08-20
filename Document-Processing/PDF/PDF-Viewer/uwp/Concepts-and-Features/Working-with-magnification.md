@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-# Working with magnification in UWP PDF Viewer (SfPdfViewer)
+# Working with magnification in UWP PDF Viewer
 
 Magnification of the PDF document can be done in multiple ways and the different ways are explained below. By default the viewer control supports ctrl+ mouse scroll to manipulate the magnification of the document. 
 

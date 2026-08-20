@@ -1,12 +1,12 @@
 ---
-title: Worksheet Rows and Columns Manipulation | Syncfusion
-description: Briefs about Row & Column manipulations in XlsIO. It provides manipulation options equivalent to Excel such as insertion, deletion, hiding and more.
+title: Rows and Columns Manipulation in .NET Excel Library | Syncfusion
+description: Row and column manipulation in Excel Library describes how to insert, delete, hide, and manage rows and columns in Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Worksheet Rows and Columns Manipulation
+# Worksheet Rows and Columns in .NET Excel Library
 
 The Essential<sup>&reg;</sup> XlsIO provides rows and columns manipulation options equivalent to Excel such as insertion, deletion, hiding, adjusting dimensions, grouping, sub-totaling and more through [IWorksheet](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorksheet.html) interface.
 
@@ -950,7 +950,7 @@ End Using
 
 A complete working example to expand or collapse groups in an Excel worksheet in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Format%20rows%20and%20columns/Expand%20or%20Collapse%20Groups/.NET/Expand%20or%20Collapse%20Groups).
 
-N> The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight">RowHeight</a> or <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ColumnWidth">ColumnWidth</a> of collapsed rows or columns will be 0.
+N> The <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_RowHeight" aria-label="Class reference documentation link">RowHeight</a> or <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_ColumnWidth" aria-label="Class reference documentation link">ColumnWidth</a> of collapsed rows or columns will be 0.
 
 ### Subtotal
 

@@ -1,6 +1,6 @@
 ---
-title: PDF Document Processing Framework | Syncfusion
-description: Syncfusion PDF Framework offers a library for PDF processing, PDF converters, and PDF Viewer component that works without Adobe dependencies.
+title: About Syncfusion PDF Document Processing Solutions | Syncfusion
+description: Learn about the overview of Syncfusion PDF Document Processing Library, converters, and viewer component for processing PDF files and more details.
 platform: document-processing
 control: general
 documentation: UG
@@ -9,7 +9,7 @@ keywords: PDF, SDK, Automation, API, create, view, edit, convert, read
 
 > With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .Net 8.0 or higher.
 
-# Welcome to Syncfusion<sup>&reg;</sup> PDF Document Processing Framework
+# About Syncfusion PDF Document Processing Solutions
 
 Syncfusion<sup>&reg;</sup> PDF Document Processing Framework is a collection of PDF document processing library, PDF converters and PDF Viewer component that works without Adobe dependencies. It eases the developers, as they can just integrate and achieve the required PDF processing functionalities and concentrate on core logics of their application.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF files in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDF files in the Syncfusion JavaScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
+title: Open Pdf Files in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Load PDF files in the JavaScript (ES5) PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files in JavaScript PDF Viewer
+# Open PDF Files in JavaScript (ES5) PDF Viewer
 
 Load documents into the PDF Viewer from hosted URLs, base64 strings, or database storage. The following sections outline each scenario and the configuration required for server-backed viewing.
 
@@ -24,7 +24,7 @@ Follow the [JavaScript getting started guide](https://help.syncfusion.com/docume
 
 1. Create a web service project in .NET Core 3.0 or later. Refer to [How to create a PDF Viewer web service in .NET Core](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance.
 2. Open the `PdfViewerController.cs` file.
-3. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to resolve remote URLs when `isFileName` is `true`.
+3. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to resolve remote URLs when `isFileName` is `true`.
 
 ```csharp
 
@@ -35,9 +35,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
 
-  if (jsonObject != null && jsonObject.ContainsKey("document"))
+  if (jsonData != null && jsonData.ContainsKey("document"))
   {
-    if (bool.Parse(jsonObject["isFileName"]))
+    if (bool.Parse(jsonData["isFileName"]))
     {
       string documentPath = GetDocumentPath(jsonData["document"]);
       if (!string.IsNullOrEmpty(documentPath))
@@ -62,11 +62,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
     }
     else
     {
-      byte[] bytes = Convert.FromBase64String(jsonObject["document"]);
+      byte[] bytes = Convert.FromBase64String(jsonData["document"]);
       stream = new MemoryStream(bytes);
     }
   }
-  jsonResult = pdfviewer.Load(stream, jsonObject);
+  jsonResult = pdfviewer.Load(stream, jsonData);
   return Content(JsonConvert.SerializeObject(jsonResult));
 }
 
@@ -74,7 +74,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 **Step 3:** Configure the PDF Viewer in the JavaScript application
 
-Update the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) with the hosted web service endpoint (replace `https://localhost:44396/pdfviewer` with your server URL) and set `documentPath` to the PDF file to load.
+Update the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) with the hosted web service endpoint (replace `https://localhost:44396/pdfviewer` with your server URL) and set `documentPath` to the PDF file to load.
 
 ```javascript
 
@@ -152,7 +152,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
+5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
 
 ```csharp
 
@@ -163,9 +163,9 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
   MemoryStream stream = new MemoryStream();
   object jsonResult = new object();
 
-  if (jsonObject != null && jsonObject.ContainsKey("document"))
+  if (jsonData != null && jsonData.ContainsKey("document"))
   {
-    if (bool.Parse(jsonObject["isFileName"]))
+    if (bool.Parse(jsonData["isFileName"]))
     {
       string documentPath = GetDocumentPath(jsonData["document"]);
       if (!string.IsNullOrEmpty(documentPath))
@@ -173,7 +173,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
         byte[] bytes = System.IO.File.ReadAllBytes(documentPath);
         stream = new MemoryStream(bytes);
       }
-      string documentName = jsonObject["document"];
+      string documentName = jsonData["document"];
 
       string connectionString = _connectionString;
       System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
@@ -194,11 +194,11 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
     }
     else
     {
-      byte[] bytes = Convert.FromBase64String(jsonObject["document"]);
+      byte[] bytes = Convert.FromBase64String(jsonData["document"]);
       stream = new MemoryStream(bytes);
     }
   }
-  jsonResult = pdfviewer.Load(stream, jsonObject);
+  jsonResult = pdfviewer.Load(stream, jsonData);
   return Content(JsonConvert.SerializeObject(jsonResult));
 }
 

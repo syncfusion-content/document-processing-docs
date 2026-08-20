@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom annotation tools in JavaScript PDF Viewer | Syncfusion
-description: Learn how to build a custom toolbar for Syncfusion JavaScript PDF Viewer and switch annotation tools programmatically using setAnnotationMode.
+title: Custom Tools in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Build a custom annotation toolbar for the JavaScript (ES5) PDF Viewer and switch between annotation tools programmatically using setAnnotationMode.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom annotation tools in JavaScript PDF Viewer
+# Custom Annotation Tools in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports adding a custom toolbar and toggling annotation tools programmatically using the `setAnnotationMode` method. The viewer can enable tools such as Highlight, Underline, Rectangle, Circle, Arrow, Free Text, Ink, and measurement annotations (Distance, Perimeter, Area, Radius).
 
@@ -156,11 +156,9 @@ var annoToolbar = new Tool({
 annoToolbar.appendTo('#annotationToolbar');
 ```
 
-Note
-
-- `setAnnotationMode` accepts the annotation type name. Common values include: `Highlight`, `Underline`, `Strikethrough`, `StickyNotes`, `FreeText`, `Ink`, `Rectangle`, `Circle`, `Line`, `Arrow`, `Polygon`, `Polyline`, `Distance`, `Perimeter`, `Area`, `Radius`, and `None` to exit.
-- Default annotation styles can be predefined using the corresponding settings properties (for example, `areaSettings`).
-- To combine with a fully custom viewer toolbar, see Custom Toolbar in JavaScript PDF Viewer.
+N> `setAnnotationMode` accepts the annotation type name. Common values include: `Highlight`, `Underline`, `Strikethrough`, `StickyNotes`, `FreeText`, `Ink`, `Rectangle`, `Circle`, `Line`, `Arrow`, `Polygon`, `Polyline`, `Distance`, `Perimeter`, `Area`, `Radius`, and `None` to exit.
+N> Default annotation styles can be predefined using the corresponding settings properties (for example, `areaSettings`).
+N> To combine with a fully custom viewer toolbar, see Custom Toolbar in JavaScript PDF Viewer.
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master)
 

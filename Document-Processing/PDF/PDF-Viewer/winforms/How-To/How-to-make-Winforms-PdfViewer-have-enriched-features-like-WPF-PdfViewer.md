@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Enhance WinForms PdfViewer with WPF Features | Syncfusion&reg;
-description: Learn how to integrate the WPF PdfViewer in Windows Forms to access advanced features like annotations, form filling, and signatures.
+title: How to use WPF features in WinForms PDF Viewer | Syncfusion
+description: This guide explains how to integrate the WPF PDF Viewer in WinForms to access advanced features such as annotations, form filling, and signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
-# How to Add WPF PdfViewer Features to WinForms PdfViewer
+# How to use WPF features in WinForms PDF Viewer
 
 To leverage the advanced features offered by the WPF PdfViewer, such as adding annotations, form filling, signatures, stamps, sticky notes, and more, you can [integrate the WPF PdfViewer into the Windows Forms](https://support.syncfusion.com/kb/article/7882/how-to-host-pdf-viewer-in-windows-forms-application) and take advantage of its extensive feature sets.
 

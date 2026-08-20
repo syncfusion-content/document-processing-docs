@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ribbon in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Ribbon in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Ribbon in Vue Spreadsheet | Syncfusion
+description: Customize and use the ribbon interface in the Syncfusion Vue Spreadsheet to access spreadsheet features efficiently.
 control: Ribbon 
 platform: document-processing
 documentation: ug
 ---
 
-# Ribbon in Vue Spreadsheet component
+# Ribbon in Vue Spreadsheet
 
 It helps to organize a spreadsheet's features into a series of tabs. Click the expand or collapse icon to expand or collapse the ribbon toolbar dynamically.
 

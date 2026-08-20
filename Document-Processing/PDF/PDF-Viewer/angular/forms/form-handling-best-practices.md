@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF Form Handling Best Practices in Angular PDF Viewer | Syncfusion
-description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Syncfusion Angular PDF Viewer.
+title: Form Handling Best Practices in Angular PDF Viewer | Syncfusion
+description: Recommended best practices for naming, validating, grouping, importing, and designing form fields in the Angular PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Axes in Chart | DocIO | Syncfusion
-description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Axes in Chart in .NET Word | Syncfusion
+description: Learn how to compare two Word documents using Java Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Chart Axis in Word document
+# Modify the Appearance of Axes in Chart in .NET Word
 
 Charts typically have two axes that are used to measure and categorize data.
 -  Horizontal axis (also known as category axis or x axis).

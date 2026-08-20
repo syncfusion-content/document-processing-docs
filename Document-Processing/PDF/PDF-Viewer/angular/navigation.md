@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Navigation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Navigation in Angular PDF Viewer | Syncfusion
+description: Move between pages in the Angular PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 platform: document-processing
-control: Navigation
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in Angular PDF Viewer component
+# Navigation in Angular PDF Viewer
 
 The Angular PDF Viewer supports several internal and external navigation methods.
 
@@ -17,7 +17,7 @@ The Angular PDF Viewer supports several internal and external navigation methods
 The default toolbar of PDF Viewer contains the following navigation options
 
 * **Go to page**:- Navigates to the specific page of a PDF document.
-* **Show next page**:- Navigates to the next page of PDF a document.
+* **Show next page**:- Navigates to the next page of a PDF document.
 * **Show previous page**:- Navigates to the previous page of a PDF document.
 * **Show first page**:-  Navigates to the first page of a PDF document.
 * **Show last page**:- Navigates to the last page of a PDF document.
@@ -236,7 +236,7 @@ Hyperlink navigation enables opening external URLs embedded in a PDF file.
 
 ## Table of contents navigation
 
-Table of contents navigation allows users to jump to sections listed in the PDF's table of contents. You can enable or disable link navigation using the following code snippet.
+Table of contents navigation allows users to jump to sections listed in the PDF's table of contents. You can enable or disable table of contents navigation using the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -366,7 +366,7 @@ import { LinkAnnotationService, BookmarkViewService, MagnificationService,
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](images/toc.png)
+![PDF Viewer showing table of contents navigation](images/toc.png)
 
 ## Keyboard navigation with Tab and Shift+Tab keys
 
@@ -384,5 +384,5 @@ N> The tab order is defined by the order of form fields in the PDF file.
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

@@ -1,25 +1,24 @@
 ---
 layout: post
-title: Export PDF Document in ASP.NET MVC Document Editor |Syncfusion
-description: Learn here all about export document as PDF in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Export Document as PDF in ASP.NET MVC DOCX Editor | Syncfusion
+description: Export documents as PDF in Syncfusion® ASP.NET MVC DOCX Editor using client-side and server-side export options for flexible document sharing.
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
 ---
 
 
-# How to export the document as PDF in React Document Editor
+# How to Export Document as PDF in ASP.NET MVC DOCX Editor
 
-This article explains how to export the document as PDF format. You can export the document as PDF in following ways:
+This article explains how to export the document as PDF format. You can export the document as PDF in the following ways:
 
 ## Export the document as PDF in client-side
 
 Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using `exportAsImage` API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
 
->Note: 
-* The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
-* Text search is not supported in the exported PDF, as the content is stored as images.
-* You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
+N> 1. The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
+N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
+N> 3. You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 
 
 {% tabs %}
@@ -39,7 +38,7 @@ With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/d
 
 The following way illustrates how to convert the document as PDF:
 
-* Using `serialize` API, convert the document as Sfdt and send it to server-side.
+* Using `serialize` API, convert the document as sfdt and send it to server-side.
 
 
 {% tabs %}

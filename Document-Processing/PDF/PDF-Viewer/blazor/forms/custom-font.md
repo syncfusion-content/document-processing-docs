@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Font Support for Form Fields in SfPdfViewer | Syncfusion
+title: Custom Font Support for Form Fields in Blazor PDF Viewer | Syncfusion
 description: Learn how to integrate the custom font collection for form fields in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Custom Font Support for Form Fields
+# Custom Font Support for Form Fields in Blazor PDF Viewer
 
 The Blazor SfPdfViewer supports loading, using, and saving custom fonts for form fields (TextBox, ListBox, DropDown) via the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and `FontFamilies` properties.
 

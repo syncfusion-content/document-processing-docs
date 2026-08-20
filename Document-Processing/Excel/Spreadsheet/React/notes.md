@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in React Spreadsheet component | Syncfusion
-description: Learn here all about the notes feature in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Notes in React Spreadsheet | Syncfusion
+description: Learn about notes in the Syncfusion React Spreadsheet component, including adding, editing, displaying, and managing cell notes.
 control: Notes
 platform: document-processing
 documentation: ug
 ---
 
 
-# Notes in React Spreadsheet component
+# Notes in React Spreadsheet
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#enablenotes) property, which defaults to **true**.
 

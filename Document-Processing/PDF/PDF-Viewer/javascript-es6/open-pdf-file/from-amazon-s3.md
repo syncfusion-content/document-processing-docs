@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from AWS S3 in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from AWS S3 in the Syncfusion TypeScript PDF Viewer component using standalone and server-backed approaches.
+title: From Amazon S3 in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in AWS S3 in the JavaScript (ES6) PDF Viewer using both standalone and server-backed integration approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from AWS S3
+# Open PDF from AWS S3 in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -115,7 +115,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from AWS S3.
 
 ```csharp
 
@@ -157,7 +157,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -178,7 +178,7 @@ N> Replace the placeholders with your actual AWS credentials and bucket name: Ac
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from AWS S3. Ensure the document name matches an object in your bucket.
 
 ```typescript
 

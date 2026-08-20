@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Events in Angular PDF Viewer | Syncfusion
-description: Learn about the organize pages events in the Angular PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages.
+title: Events in Angular PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the Angular PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
