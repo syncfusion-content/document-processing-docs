@@ -78,7 +78,7 @@ N> If a form field already exists in the document with the new name specified, t
 
 ## Form Field Shading
 
-You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#formFieldSettings) property.
+You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/formfieldsettings) property.
 
 The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
 
@@ -150,4 +150,4 @@ container.documentEditor.editor.stopProtection('123');
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/form-fields.html).
+Explore how to insert and manage form fields in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/form-fields.html).
