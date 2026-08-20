@@ -26,17 +26,20 @@ Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that **HomeController.cs** file.
+Step 4: Include the following namespaces in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Presentation;
+using System.IO;
+using System.Web;
+using System.Web.Mvc;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 5: A default action method named **Index** will be present in HomeController.cs. Right click on this action method and select **Go To View** where you will be directed to its associated view page **Index.cshtml**.
+Step 5: A default action method named **Index** will be present in HomeController.cs. Right-click the **Index** action method and select **Go To View**; this opens the associated **Index.cshtml** view page.
 
 Step 6: Add a new button in the Index.cshtml as shown below.
 
@@ -57,19 +60,18 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **OpenAndSavePresentation** in HomeController.cs and include the below code snippet to **open an existing Presentation in ASP.NET MVC**.
+Step 7: Add a new action method **OpenAndSavePresentation** in HomeController.cs and include the following code snippet to **open an existing Presentation in ASP.NET MVC**. Ensure a sample `Template.pptx` file exists at `~/App_Start/Template.pptx`.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-FileStream fileStreamPath = new FileStream(Server.MapPath("~/App_Start/Template.pptx"), FileMode.Open, FileAccess.Read);
 //Open an existing PowerPoint presentation.
-IPresentation pptxDoc = Presentation.Open(fileStreamPath)
+IPresentation pptxDoc = Presentation.Open(Server.MapPath("~/App_Start/Template.pptx"));
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 8: Add the following code snippet to access a shape on a slide and change its text.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -85,7 +87,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in ASP.NET MVC**.
+Step 9: Add the following code example to **save the PowerPoint Presentation in ASP.NET MVC**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -96,13 +98,15 @@ pptxDoc.Save(pptxStream);
 pptxStream.Position = 0;
 //Download Powerpoint document in the browser.
 return File(pptxStream, "application/powerpoint", "Result.pptx");
+//Dispose the stream
+pptxStream.Dispose();
 
 {% endhighlight %}
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/ASP.NET-MVC)
 
-By executing the program, you will get the **PowerPoint document** as follows.
+When you run the program, the **PowerPoint document** is generated as shown below.
 
 ![ASP.Net MVC output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 

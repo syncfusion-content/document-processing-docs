@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Annotation Comment Filter in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to filter comments and annotations in Syncfusion Angular PDF Viewer using the comment filter panel and programmatic APIs.
+description: Filter comments and annotations in the Angular PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation comment filter in Angular
+# Annotation Comment Filter in Angular PDF Viewer
 
 ## Overview
 
@@ -131,8 +131,6 @@ Use the `applyCommentFilter` method to apply filters with specific criteria:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import {
   PdfViewerModule,
   LinkAnnotationService,
@@ -266,8 +264,6 @@ You can combine multiple filter criteria to create more specific filters:
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import {
   PdfViewerModule,
   LinkAnnotationService,

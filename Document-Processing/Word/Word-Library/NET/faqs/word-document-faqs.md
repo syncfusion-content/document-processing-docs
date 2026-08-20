@@ -1,11 +1,11 @@
 ---
-title: FAQ about Word Document | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word documents and their manipulations in the .NET Word (DocIO) library.
+title: FAQ about Word Document in .NET Word | Syncfusion
+description: Describe common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about Word document 
+# FAQ about Word Document in .NET Word
 
 The frequently asked questions about Word document manipulation using DocIO are listed below.
 
@@ -239,7 +239,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to check the compatibility mode of the Word document?
 
-The [CompatibilityMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CompatibilityMode.html) of a Word document can also be determined. The following code example illustrates how to check the compatibility mode of the Word document.
+The [CompatibilityMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.CompatibilityMode.html) of a Word document can be determined. The following code example illustrates how to check the compatibility mode of the Word document.
 
 {% tabs %}
 
@@ -273,7 +273,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 'Load an existing Word document.
 Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Get the compatibility mode.
-    CompatibilityMode compatibilityMode = document.Settings.CompatibilityMode
+    Dim compatibilityMode As CompatibilityMode = document.Settings.CompatibilityMode
     Console.WriteLine(compatibilityMode)
     'Save a Word document.
     document.Save("Sample.docx", FormatType.Docx)
@@ -308,12 +308,12 @@ float marginInPoints = marginInCentimeter * 28.3465f;
 
 // Assuming you have a margin value in millimeters
 float marginInMillimeter = 20f;
-// Convert cm to points
+// Convert mm to points
 float marginInPoints = marginInMillimeter * 2.83465f;
 
 // Assuming you have a margin value in inches
 float marginInInches = 1f;
-// Convert cm to points
+// Convert inches to points
 float marginInPoints = marginInInches * 72f;
 {% endhighlight %}
 
@@ -325,12 +325,12 @@ float marginInPoints = marginInCentimeter * 28.3465f;
 
 // Assuming you have a margin value in millimeters
 float marginInMillimeter = 20f;
-// Convert cm to points
+// Convert mm to points
 float marginInPoints = marginInMillimeter * 2.83465f;
 
 // Assuming you have a margin value in inches
 float marginInInches = 1f;
-// Convert cm to points
+// Convert inches to points
 float marginInPoints = marginInInches * 72f;
 {% endhighlight %}
 

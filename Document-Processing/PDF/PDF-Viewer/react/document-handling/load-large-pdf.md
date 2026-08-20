@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Document Handling in React Pdfviewer component | Syncfusion
-description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in Syncfusion React Pdfviewer component.
+title: Load Large Pdf in React PDF Viewer | Syncfusion
+description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage sources, and load large PDF files efficiently in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -130,7 +130,7 @@ require more storage for:
 
 Enabling local storage in the PDF Viewer can improve performance and smoothness when working with large files. This allows the viewer to cache document data locally, reducing repeated network requests and memory spikes.
 
-Use the [`enableLocalStorage`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in memory for the current session; when `false` (default), browser session storage is used.
+Use the [`enableLocalStorage`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in the browser's local storage; when `false` (default), browser session storage is used.
 
 **How the viewer stores this data by default**
 

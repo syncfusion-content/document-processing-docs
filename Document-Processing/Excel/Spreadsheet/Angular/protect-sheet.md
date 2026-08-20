@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Protect sheet in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Protect sheet in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Protect sheet in Angular Spreadsheet | Syncfusion
+description: Protect sheet in Angular Spreadsheet restricts editing and controls user access to worksheet content, helping maintain data integrity.
 platform: document-processing
 control: Protect sheet 
 documentation: ug
 ---
 
-# Protect sheet in Angular Spreadsheet component
+# Protect sheet in Angular Spreadsheet 
 
 Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
 
@@ -96,7 +96,7 @@ Now, you can make an entire row, an entire column, or a specific range of cells 
 
 | Parameter | Description |
 |-----|------|
-| `readOnly` | Specifies whether an entire row, an entire column, or a specific range of cells should be set as read-only (**true**) or editable (**false**). |.
+| `readOnly` | Specifies whether an entire row, an entire column, or a specific range of cells should be set as read-only (**true**) or editable (**false**). |
 | `range` | Specifies the particular range of cells to be set as read-only. |
 | `sheetIndex` | Specifies the index of the sheet. |
 

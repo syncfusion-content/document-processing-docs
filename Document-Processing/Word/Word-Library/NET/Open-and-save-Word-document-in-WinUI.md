@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in WinUI | Syncfusion
-description: Open and save Word document in WinUI application using Syncfusion<sup>&reg;</sup> .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in WinUI  | Syncfusion
+description: Open and save Word document in WinUI application using Syncfusion® .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document in WinUI
+# Open and save Word document in WinUI 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [WinUI Word library](https://www.syncfusion.com/document-processing/word-framework/winui/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in WinUI**.
 
@@ -61,6 +61,9 @@ Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}
@@ -72,7 +75,7 @@ Step 7: Add a new action method **OpenAndSaveDocument** in MainWindow.xaml.cs an
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-private async void OnButtonClicked(object sender, RoutedEventArgs e)
+private async void OpenAndSaveDocument(object sender, RoutedEventArgs e)
 {
     //Load an existing Word document.
     Assembly assembly = typeof(App).GetTypeInfo().Assembly;
@@ -126,7 +129,7 @@ Click [here](https://www.syncfusion.com/document-processing/word-framework/winui
 
 ## WinUI UWP app
 
-Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP)from the template and **click** the Next button.
+Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP) from the template and **click** the Next button.
 
 ![Create the WinUI UWP app in Visual Studio](WinUI_Images/Create_UWP_Project.png)
 
@@ -176,10 +179,11 @@ Step 6: Include the following namespaces in the **MainPage.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-
+using System;
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -189,7 +193,7 @@ Step 7: Add a new action method **OpenAndSaveDocument** in MainPage.xaml.cs and 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-private async void OnButtonClicked(object sender, RoutedEventArgs e)
+private async void OpenAndSaveDocument(object sender, RoutedEventArgs e)
 {
     //Load an existing Word document.
     Assembly assembly = typeof(App).GetTypeInfo().Assembly;

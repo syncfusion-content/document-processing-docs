@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Comments in .NET MAUI PDF Viewer (SfPdfViewer)
+# Comments in .NET MAUI PDF Viewer
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 1. Ink annotation
 2. Shape annotation
@@ -19,7 +19,7 @@ The PDF Viewer control provides options to add, edit, and delete comments for th
 7. Signature annotation
 
 ## Showing or hiding the comment panel
-The built-in Comment Panel in the PDF Viewer displays annotation comments. You can show or hide this panel using the [IsCommentsPanelVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsCommentsPanelVisible) property. The default value of this property is false.
+The built-in Comment Panel in the PDF Viewer displays annotation comments. You can show or hide this panel using the [IsCommentsPanelVisible](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_IsCommentsPanelVisible) property. The default value of this property is false.
 {% tabs %}
 {% highlight c# %}
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF files from AWS S3 in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Open PDF files from AWS S3 in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: From Amazon S3 in Angular PDF Viewer | Syncfusion
+description: Load and display PDF files stored in AWS S3 in the Angular PDF Viewer using both standalone and server-backed integration approaches.
 platform: document-processing
 control: Open PDF files from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files from AWS S3
+# Open PDF from AWS S3 in Angular PDF Viewer
 
 The Angular PDF Viewer component supports loading PDF files from AWS S3 using either the standalone or the server-backed PDF Viewer. The following sections demonstrate both approaches and include prerequisites and security guidance.
 
@@ -34,7 +34,7 @@ N> Replace the placeholder values with valid values when testing. Do not embed p
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
+  region: '**Your Region**', // Update this to your region
   accessKeyId: '*Your Access Key*', // Update this with your access key id
   secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
 });
@@ -78,7 +78,7 @@ N> Install the AWS SDK package appropriate for the project. For v2 use `npm inst
 
 ## Using the server-backed PDF Viewer
 
-Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer
+Follow these steps to load a PDF from AWS S3 using the server-backed PDF Viewer.
 
 **Step 1:** Create a Simple PDF Viewer Sample in Angular
 
@@ -99,7 +99,7 @@ using Amazon.S3;
 using Amazon.S3.Model;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields.
 
 ```csharp
 private IConfiguration _configuration;
@@ -166,7 +166,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {

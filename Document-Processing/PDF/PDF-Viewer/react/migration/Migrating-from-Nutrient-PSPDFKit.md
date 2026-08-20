@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Nutrient.io (PSPDFKit) to React PDF Viewer | Syncfusion
-description: Learn here all about how to migrate from Nutrient.io (PSPDFKit) to Syncfusion React PDF Viewer and Component
+title: Migrating From Nutrient PSPDFKit in React PDF Viewer | Syncfusion
+description: Migrate an existing application from Nutrient.io (PSPDFKit) to the Syncfusion React PDF Viewer with a clear, side-by-side mapping guide.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Nutrient Web SDK to React PDF Viewer
+# Migrate from PSPDFKit to React PDF Viewer
 
 This guide helps you migrate applications built using [Nutrient Web SDK](https://www.nutrient.io/sdk/web/getting-started/react-vite/) (formerly PSPDFKit Web SDK) to the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It outlines architectural differences, feature mapping, and required changes in a React-based application.
 
@@ -41,7 +41,7 @@ npm install @nutrient-sdk/viewer
 npm install @syncfusion/ej2-react-pdfviewer
 ```
 
-## Viewer Initialization Comparison
+## Viewer initialization comparison
 
 ### Nutrient Web SDK (CDN example)
 
@@ -138,7 +138,7 @@ root.render(<App />);
 
 ### Nutrient Web SDK
 
-Check [Events Guide](https://www.nutrient.io/guides/web/events/) to know more about event handling in Apryse.
+Check [Events Guide](https://www.nutrient.io/guides/web/events/) to know more about event handling in Nutrient Web SDK.
 
 ```js
 instance.addEventListener('documentLoaded', () => {
@@ -253,7 +253,7 @@ root.render(<App />);
 - [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbarclick).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in a WinForms App | Syncfusion
-description: Learn how to get started with the SfPdfViewer control in a WinForms Blazor Hybrid App to view, comment on, and fill PDF forms.
+title: Getting Started with Blazor Hybrid WinForms PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Hybrid WinForms App PDF Viewer component. Explore view, comment on and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the PDF Viewer in a WinForms Blazor Hybrid App
+# Getting Started with Blazor Hybrid WinForms PDF Viewer
 
 This section explains how to add the Blazor SfPdfViewer to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 
@@ -84,8 +84,9 @@ dotnet restore
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
-N> Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16` so it is compatible with the .NET 8 target framework used by this tutorial.
+N>
+* Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for package details.
+* Ensure the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` is updated to version `8.0.16` so it is compatible with the .NET 8 target framework used by this tutorial.
 
 {% endtabcontent %}
 
@@ -210,8 +211,9 @@ Create a Razor component inside the **Components** folder. In **Solution Explore
 {% endhighlight %}
 {% endtabs %}
 
-N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a document. Users can use the **Open** toolbar option to browse and open a PDF.
-N> `DocumentPath` can point to a remote URL (as shown), a relative URL to a file copied to `wwwroot`, or a stream/byte array supplied programmatically. When loading a local file, ensure the file is configured to copy to the output directory.
+N>
+* If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer renders without loading a document. Users can use the **Open** toolbar option to browse and open a PDF.
+* `DocumentPath` can point to a remote URL (as shown), a relative URL to a file copied to `wwwroot`, or a stream/byte array supplied programmatically. When loading a local file, ensure the file is configured to copy to the output directory.
 
 ## Run the app
 

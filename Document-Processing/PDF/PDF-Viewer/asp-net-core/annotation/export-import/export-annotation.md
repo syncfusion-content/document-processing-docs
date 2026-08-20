@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Export annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to Export annotations in Syncfusion ASP.NET Core PDF Viewer using UI options and programmatic APIs.
+title: Export Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Export annotations from the ASP.NET Core PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export annotations in ASP.NET Core PDF Viewer
+# Export Annotations in ASP.NET Core PDF Viewer
 
-PDF Viewer provides support to export annotations. You can export annotations from the PDF Viewer in two ways:
+PDF Viewer supports exporting annotations. You can export annotations from the PDF Viewer in two ways:
 
 - Using the built-in UI in the Comments panel (JSON or XFDF file)
 - Programmatically (JSON, XFDF, or as an object for custom handling)
@@ -85,7 +85,7 @@ function exportAsBase64() {
 
 - Archive or share annotations as portable JSON/XFDF files
 - Save annotations alongside a document in your storage layer
-- Send annotations to a backend for collaboration or review workflows
+- Send annotations to a back end for collaboration or review workflows
 - Export as object for custom serialization and re-import later
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)

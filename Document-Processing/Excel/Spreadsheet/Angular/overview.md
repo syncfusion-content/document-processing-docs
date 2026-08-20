@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of the Angular Spreadsheet Component| Syncfusion
-description: Learn here all about overview of the Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: About Syncfusion Angular Spreadsheet Component | Syncfusion
+description: Learn about the introduction and overview of Syncfusion Essential Studio Angular Spreadsheet component, its features, capabilities, and more details.
 platform: document-processing
-control: Index 
+control: Index
 documentation: ug
 ---
 
-# Overview of the Angular Spreadsheet Component
+# About Syncfusion Angular Spreadsheet Component
 
-The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is an user interactive component to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
+The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) is a user-interactive component to organize and analyze data in a tabular format, with configuration options for customization. It loads data by importing an Excel/CSV file, or from local and remote data sources such as JSON, RESTful services, and OData services, and more. The populated data can be exported to Excel (XLSX and XLS), CSV, and PDF formats.
 
 ![Angular Spreadsheet component](./images/overview-banner.png)
 

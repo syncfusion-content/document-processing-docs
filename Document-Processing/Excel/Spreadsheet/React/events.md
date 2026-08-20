@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in React Spreadsheet component | Syncfusion
-description: Learn here all about the events in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Events 
+title: Events in React Spreadsheet | Syncfusion
+description: Learn about events in the Syncfusion React Spreadsheet component, including event handling and customization options.
+control: Events
 platform: document-processing
 documentation: ug
 ---
 
-# Events in React Spreadsheet Component
+# Events in React Spreadsheet
 
 The Spreadsheet component triggers events for creation, data binding, selection, editing, clipboard actions, sorting, filtering, formatting, row and column insertion or deletion, context menu and ribbon interactions, and import/export operations—enabling integration of custom logic into application workflows.
 

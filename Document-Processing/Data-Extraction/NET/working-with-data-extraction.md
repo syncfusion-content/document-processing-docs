@@ -1,14 +1,14 @@
 ---
-title: Working with Data Extraction | Syncfusion
-description: Syncfusion® Smart Data Extractor is a .NET library that extracts text, tables, forms, and images from PDF and image files with structured outputs.
+title: Data Extraction in .NET  Smart Data Extractor| Syncfusion
+description: Extract text, tables, forms, and images from PDFs and images using Smart Data Extractor. Generate structured output for efficient data processing in .NET.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 
---- 
+---
 
-# Working with Data Extraction
+# Data Extraction in .NET Smart Data Extractor
 
 ## Extract Data as JSON from PDF or Image
 
@@ -277,7 +277,7 @@ using (FileStream inputStream = new FileStream("Input.pdf", FileMode.Open, FileA
     DataExtractor extractor = new DataExtractor();
     //Extract data and return as a loaded PDF document.
     PdfLoadedDocument document = extractor.ExtractDataAsPdfDocument(inputStream);
-    //Save the extracted output as a new json file.
+    //Save the extracted output as a new PDF file.
     document.Save("Output.pdf");
     //Close the document.
     document.Close(true);
@@ -413,7 +413,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Disable-Form-detection/.NET).
 
-## Disable Table detection
+## Disable Table Detection
 
 To disable table detection while extracting structured data from a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 

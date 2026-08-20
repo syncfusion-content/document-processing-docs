@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Culture-Specific Formula Separators in React Spreadsheet | Syncfusion
-description: Learn here all about culture specific formula separators in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about culture-specific formula separators in the Syncfusion React Spreadsheet component and regional formula support.
 control: Formulas 
 platform: document-processing
 documentation: ug

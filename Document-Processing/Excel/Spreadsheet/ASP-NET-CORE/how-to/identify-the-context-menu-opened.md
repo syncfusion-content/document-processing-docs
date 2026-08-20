@@ -1,17 +1,28 @@
 ---
 layout: post
-title: Identify context menu opened in ASP.NET Core Spreadsheet | Syncfusion
-description: Learn here all about how to identify the context menu opened in Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Identify Context Menu in ASP.NET Core Spreadsheet | Syncfusion
+description: Identify the context menu opened in ASP.NET Core Spreadsheet to perform custom actions based on the selected menu and target area.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Identify the context menu opened in ASP.NET Core Spreadsheet control
+# How to Identify Context Menu Opened in ASP.NET Core Spreadsheet
 
-The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
+The Spreadsheet includes several context menus that open depending on the action performed. For example, when you right-click a cell, a context menu displays options related to that cell.
 
-The class name returned by the [contextMenuBeforeOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ContextMenuBeforeOpen) event can be used to identify the context menu that is opened. The context menus and their class names are tabulated below.
+Use the class name available in the [contextMenuBeforeOpen](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_ContextMenuBeforeOpen) event arguments to identify which context menu is opening.
+
+To identify which context menu is opening:
+
+1. Bind the `contextMenuBeforeOpen` event to the Spreadsheet.
+2. In the event handler, obtain the class name from the event arguments.
+3. Compare the class name with the CSS selectors listed in the following table.
+4. Perform the required operation based on the identified context menu.
+
+## Context menu selectors
+
+The following table lists the CSS selectors associated with each context menu:
 
 | Class name | Context menu name |
 |-------|---------|
@@ -20,7 +31,9 @@ The class name returned by the [contextMenuBeforeOpen](https://help.syncfusion.c
 | .e-rowhdr-table | Row header context menu |
 | .e-colhdr-table | Column header context menu |
 
-The following code example shows how to identify the context menu opened.
+## Example
+
+The following code example demonstrates how to identify which context menu is opening.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}

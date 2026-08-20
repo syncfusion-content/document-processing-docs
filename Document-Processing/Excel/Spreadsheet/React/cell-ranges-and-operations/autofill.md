@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Autofill in React Spreadsheet component | Syncfusion
-description: Learn here how to apply autofill to a range of cells in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Autofill in React Spreadsheet | Syncfusion
+description: Learn about autofill in the Syncfusion React Spreadsheet component and extend data patterns across rows, columns, and cell ranges.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
@@ -32,9 +32,9 @@ In autofill we have following options,
 * Fill Formatting Only
 * Fill Without Formatting
 
->* The default autofill option is “FillSeries” which can be referred from `fillType` property.
+> The default autofill option is `FillSeries`, which can be referred from `fillType` property.
 
-### Copy Cells
+## Copy Cells
 
 To copy the selected cell content to the adjacent cells. You can do this by one of the following ways,
 
@@ -90,4 +90,4 @@ In the following sample, you can enable/disable the fill option on the button cl
 ### Limitations
 
 - The Flash Fill feature is not supported in the autofill workflow.
-- There is limitation for autofill with conditional formatting applied cells.
+- When conditional formatting is applied to a range, autofill may not carry the conditional formatting rules to the filled cells. Review the conditional formatting rules on the target range after autofill.

@@ -8,7 +8,7 @@ documentation: UG
 
 # Create PowerPoint Document in Blazor
 
-Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a **create a PowerPoint document in Blazor**.
+Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, and edit **PowerPoint** documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can create a PowerPoint document in Blazor.
 
 ## Blazor Web App Server Application
 
@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> PowerPoint is a [.NET Core 
 **Prerequisites:**
 
 *   Visual Studio 2022.
-*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+*   Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later (.NET 8, .NET 9, and .NET 10 are supported).
 
 Step 1: Create a new C# Blazor Web app project.
 *   Select "Blazor Web App" from the template and click **Next**.
@@ -36,13 +36,17 @@ Step 1: Create a new C# Blazor Web app project.
 
 Step 2: Install the `Syncfusion.Presentation.Net.Core` NuGet package.
 
-To **create a PowerPoint document in Web App Server**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the Blazor project.
+To **create a PowerPoint document in Web App Server**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the Blazor project.
 
 ![Install .NET Core Nuget Package](Workingwith-Blazor/NuGet.png)		  
 
 N> Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `Presentation.razor` in the `Pages` folder, which is located inside the `Components` folder.
+
+N> The `@rendermode InteractiveServer` directive enables interactive server-side rendering, which is required because the PowerPoint service executes on the server.
+
+N> Replace `Create_PowerPoint_presentation` with your actual project namespace in the `@using` and `@inject` directives.
 
 Include the following namespaces in the file:
 
@@ -110,7 +114,7 @@ using System.IO;
 
 Step 7: Implement the `CreatePowerPoint` method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method name `CreatePowerPoint` and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
+Create a new method named `CreatePowerPoint` that returns a `MemoryStream`, and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
 
 {% tabs %}
 
@@ -206,7 +210,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
     function saveAsFile(filename, bytesBase64) {
         if (navigator.msSaveBlob)
         {
-            // Download document in Edge browser
+            // Download document in legacy Edge/IE browser
             var data = window.atob(bytesBase64);
             var bytes = new Uint8Array(data.length);
             for (var i = 0; i < data.length; i++)
@@ -361,7 +365,7 @@ using System.IO;
 
 Step 7: Implement the `CreatePowerPoint` method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method name `CreatePowerPoint` and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
+Create a new method named `CreatePowerPoint` that returns a `MemoryStream`, and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
 
 {% tabs %}
 
@@ -532,9 +536,9 @@ Upon executing the program, the **PowerPoint document** will be generated as fol
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor Web app project.
+Step 1: Open JetBrains Rider and create a new Blazor Web app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
@@ -544,7 +548,7 @@ Step 1. Open JetBrains Rider and create a new Blazor Web app project.
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-Server-application.png)
+![Creating a new Blazor Web App in JetBrains Rider](Workingwith-Blazor/Create-Blazor-Server-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
@@ -628,7 +632,7 @@ using System.IO;
 
 Step 7: Implement the `CreatePowerPoint` method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method name `CreatePowerPoint` and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
+Create a new method named `CreatePowerPoint` that returns a `MemoryStream`, and include the following code snippet to **create a PowerPoint document in Blazor** Web app Server.
 
 {% tabs %}
 
@@ -1206,9 +1210,9 @@ N> While the PowerPoint library works in WASM Standalone app, server-side deploy
 * JetBrains Rider.
 * Install .NET 8 SDK or later.
 
-Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project.
+Step 1: Open JetBrains Rider and create a new Blazor WASM Standalone app project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click **New Solution** on the welcome screen.
 
 ![Launch JetBrains Rider](Workingwith-Blazor/Launch-JetBrains-Rider.png)
 
@@ -1218,7 +1222,7 @@ Step 1. Open JetBrains Rider and create a new Blazor WASM Standalone app project
 * Enter a project name and specify the location.
 * Click create.
 
-![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Blazor/Create-Blazor-WASM-application.png)
+![Creating a new Blazor WASM Standalone app in JetBrains Rider](Workingwith-Blazor/Create-Blazor-WASM-application.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
@@ -1412,6 +1416,6 @@ N> While the PowerPoint library works in WASM Standalone app, server-side deploy
 
 Kindly explore the [supported and unsupported features of PowerPoint library in Blazor](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/supported-and-unsupported-features).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

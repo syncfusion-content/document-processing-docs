@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in ASP.NET MVC Spreadsheet control | Syncfusion
-description: Learn how to set up and configure AI Assist in the Syncfusion ASP.NET MVC Spreadsheet control for AI-powered features.
+title: AI Assist Integration in ASP.NET MVC Spreadsheet | Syncfusion
+description: AI Assist integration in ASP.NET MVC Spreadsheet explains AI-powered features through configuration and seamless service integration.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in ASP.NET MVC Spreadsheet control
+# AI Assist Integration in ASP.NET MVC Spreadsheet
 
 ## Integration
 
@@ -24,7 +24,7 @@ Ensure the following before integrating AI Assist:
 
 ### Add stylesheet references
 
-Add the following AI Assist dependent stylesheet references to the `<head>` section of `~/Views/Shared/_Layout.cshtml`.
+Add the Spreadsheet theme and the required AI Assist dependency styles to the `<head>` section of `~/Pages/Shared/_Layout.cshtml`.
 
 ```cshtml
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/{{ site.ej2version }}/fluent.css" />
@@ -38,11 +38,11 @@ To enable `AIAssist` in the Spreadsheet control, set the [`EnableAIAssist`](http
 @Html.EJS().Spreadsheet("spreadsheet").EnableAIAssist(true).Render()
 ```
 
-This enables the AI Assist panel in the spreadsheet ribbon.
+This enables AI Assist in the Spreadsheet and displays the **AI Assist** button in the Ribbon.
 
 ### Configure AI Assist Settings
 
-Use the [`AIAssistSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AIAssistSettings) property to connect the spreadsheet to the backend server and customize the AI Assist.
+Use the [`AIAssistSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AIAssistSettings) property to configure the backend request URL, prompt placeholder, and prompt suggestions.
 
 ```cshtml
 @Html.EJS().Spreadsheet("spreadsheet")
@@ -50,12 +50,12 @@ Use the [`AIAssistSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfu
     .AIAssistSettings(ai => ai
         .RequestUrl("https://localhost:{port}/api/AIAssist/Chat")
         .Placeholder("Ask the AI about this sheet...")
-        .PromptSuggestions(new string[] { "Your suggestions" })
+        .PromptSuggestions(new string[] { "Summarize this sheet", "Highlight duplicate values", "Create a chart from the selected data" })
     )
     .Render()
 ```
 
-Your Spreadsheet is now integrated with AI Assist and ready to use.
+After completing this configuration, the Spreadsheet can send AI Assist prompts to the configured backend service.
 
 ## How-To Guides
 
@@ -68,7 +68,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 ### Undo an AI Action
 
-All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press Ctrl+Z to revert any change made by the AI, just like a manual edit.
+All actions performed by AI Assist are recorded in the spreadsheet's undo/redo history. Press `Ctrl + Z` to revert any change made by the AI, just like a manual edit.
 
 ### How to Customize the Request Before Sending
 
@@ -135,7 +135,15 @@ If the AI panel displays an error message:
 
 ## API References
 
+### Spreadsheet properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| [`enableAIAssist`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableAIAssist) | `boolean` | Specifies whether AI Assist is enabled in the Spreadsheet. |
+
 ### AI Assist Settings
+
+The [`aiAssistSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.spreadsheet.spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_AIAssistSettings) property contains the following options:
 
 | Property | Type | Description |
 |---|---|---|
@@ -220,7 +228,7 @@ Type your request in plain English — no formulas or technical knowledge needed
 | *"Add a line chart showing the monthly trend"* | Creates a line chart to visualize changes over time |
 | *"Insert a pie chart with a title called 'Revenue Split'"* | Creates a pie chart with a custom title |
 
-## See also
+## See Also
 
 * [Node.js server setup](./ai-service/using-node-js-server)
 * [Web API (.NET) server setup](./ai-service/using-web-api)

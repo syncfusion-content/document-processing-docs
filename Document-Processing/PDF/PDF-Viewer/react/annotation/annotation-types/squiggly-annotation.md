@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Squiggly Annotation (Text Markup) in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Squiggly annotations in the Syncfusion React PDF Viewer.
+title: Squiggly Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Squiggly annotations in the React PDF Viewer to mark text with a wavy underline.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Squiggly Annotation (Text Markup) in React PDF Viewer
+# Squiggly Annotation in React PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Squiggly* text markup annotations in the Syncfusion **React PDF Viewer**.
 You can add squiggly underlines from the toolbar or context menu, programmatically invoke squiggly mode, customize default settings, handle events, and export the PDF with annotations.
@@ -123,7 +123,7 @@ Configure default squiggly settings such as **color**, **opacity**, and **author
   id="container"
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  height="650px"
+  style={{ height: '650px' }}
   squigglySettings={{
     author: 'Guest User',
     subject: 'Corrections',
@@ -172,13 +172,13 @@ function editSquigglyProgrammatically() {
 
 ### Delete Squiggly
 The PDF Viewer supports deleting existing annotations through both the UI and API.
-For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../remove-annotations)
+For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../remove-annotations).
 
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to squiggly annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Set properties for individual squiggly annotations at the time of creation using the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API.
 
 {% tabs %}
@@ -228,12 +228,12 @@ Disable text markup annotations (including squiggly) using the [`enableTextMarku
 
 ## Handle Squiggly Events
 The PDF viewer provides annotation life‑cycle events that notify when squiggly annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 
 The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer.
-For full details on supported formats and steps to export or import annotations, see [**Export and Import annotations**](../export-import-annotations)
+For full details on supported formats and steps to export or import annotations, see [**Export and Import annotations**](../export-import-annotations).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

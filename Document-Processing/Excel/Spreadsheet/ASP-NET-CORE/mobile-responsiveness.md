@@ -1,19 +1,17 @@
 ---
 layout: post
 title: Mobile Responsiveness in ASP.NET Core Spreadsheet | Syncfusion
-description: Learn about Mobile Responsiveness in ASP.NET Core Spreadsheet Control of Syncfusion Essential JS 2 and more.
+description: Learn about mobile responsiveness in the Syncfusion ASP.NET Core Spreadsheet control, including adaptive layouts and touch interactions.
 platform: document-processing
 control: Mobile Responsiveness
 documentation: ug
 ---
 
 
-# Mobile Responsiveness in ASP.NET Core Syncfusion Spreadsheet Control
+# Mobile Responsiveness in ASP.NET Core Spreadsheet
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
-You can see the overflowed items of ribbon header, ribbon content, and sheet tab using touch and swipe action. The right navigation arrow is added at the end of the ribbon content through which the user can navigate towards overflowed items. Once you reached the rightmost end of the ribbon content, the right navigation arrow will change to left navigation arrow through which you can navigate to the left of the ribbon content.
+You can access overflowed items in the ribbon header, ribbon content, and sheet tabs using touch and swipe gestures. A right navigation arrow appears at the end of the ribbon content to provide access to overflowed items. When you reach the rightmost end of the ribbon content, the right navigation arrow changes to a left navigation arrow, allowing you to navigate back.
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)
-
-N> Looking for the full ASP.NET Core Spreadsheet component overview, features, pricing, and documentation? Visit the [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) page.

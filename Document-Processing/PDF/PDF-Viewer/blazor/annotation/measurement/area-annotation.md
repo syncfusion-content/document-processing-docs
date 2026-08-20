@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add Area Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor SfPdfViewer Component.
+description: Learn how to enable, draw, customize, and manage Area annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Area Annotations in Blazor SfPdfViewer Component
+# Add Area Annotations in Blazor PDF Viewer 
 
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
@@ -163,13 +163,13 @@ Drag any vertex handle to adjust the shape's points.
 
 Select the Area annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-- **Fill Color** — pick a new color with the Edit Color tool.
+- **Fill Color**: pick a new color with the Edit Color tool.
   ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-- **Stroke Color** — change the border color with the Edit Stroke Color tool.
+- **Stroke Color**: change the border color with the Edit Stroke Color tool.
   ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-- **Thickness** — adjust the border width with the Edit Thickness tool.
+- **Thickness**: adjust the border width with the Edit Thickness tool.
   ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-- **Opacity** — change transparency with the Edit Opacity tool.
+- **Opacity**: change transparency with the Edit Opacity tool.
   ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
 
 #### Edit Area Annotation Programmatically

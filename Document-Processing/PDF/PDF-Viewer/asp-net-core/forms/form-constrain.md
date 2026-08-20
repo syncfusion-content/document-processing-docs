@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF form field flags in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion ASP.NET Core PDF Viewer.
+title: Form Constrain in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure form field constraints in the ASP.NET Core PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF Form Field Flags in ASP.NET Core PDF Viewer
+# PDF Form Field Constraints in ASP.NET Core PDF Viewer
 
 The Syncfusion ASP.NET Core PDF Viewer allows controlling how users interact with form fields and how those fields behave during validation and printing by applying form field flags. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
@@ -35,10 +35,14 @@ The following flags are supported in the PDF Viewer:
 
 ### Make Fields Read Only
 
-The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying prefilled or calculated values that should not be changed.
+The **isReadOnly** property prevents users from modifying a form field through the UI. This is useful for displaying filled or calculated values that should not be changed.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -75,6 +79,10 @@ When required fields are empty, validation can prevent further actions.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -110,6 +118,10 @@ The **isPrint** property controls whether a form field appears in the printed ou
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
   var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
@@ -196,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ### Update Flags on Existing Fields Programmatically
 
-The [updateFormField()](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html) method modifies constraint values on existing form fields.
+The [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) method modifies constraint values on existing form fields.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

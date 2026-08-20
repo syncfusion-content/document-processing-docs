@@ -1,13 +1,13 @@
 ---
 layout: post
 title: AI Assist Web API Server Setup in React Spreadsheet | Syncfusion
-description: Learn how to set up and connect an ASP.NET Core Web API server for the AI Assist feature in the Syncfusion React Spreadsheet component.
+description: AI Assist Web API server setup in React Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist — Web API (.NET) Server Setup
+# AI Assist — Web API Server Setup in React Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 
@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
@@ -201,7 +201,7 @@ https://localhost:{port}/api/AIAssist/Chat
 
 ## Connect to the React Spreadsheet
 
-Once the server is listening, Configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
+Once the server is listening, configure the `requestUrl` inside [`aiAssistSettings`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#aiassistsettings) to point to the server endpoint:
 
 {% raw %}
 

@@ -1,28 +1,31 @@
 ---
 layout: post
-title: Unsupported file in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Unsupported file in Syncfusion Blazor DocumentEditor component and more.
+title: Supported File Formats in Blazor DOCX Editor | Syncfusion
+description: Learn about the supported file formats in Blazor DOCX Editor for importing, and exporting documents.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Why Do I Get the Unsupported File Warning When Opening a Document ?
+# Supported File Formats in Blazor DOCX Editor
 
-If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons include:
-1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
-2.	Corrupted Document: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
-To avoid this warning, always use the recommended document formats and features supported by the Document Editor. 
+If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons:
 
-Document Editor supports the following file formats:
-•	Word Document (*.docx)
-•	Syncfusion Document Text (*.sfdt)
-•	Plain Text (*.txt)
-•	Word Template (*.dotx)
-•	HyperText Markup Language (*.html)
-•	Rich Text Format (*.rtf)
-•	Word XML Document(*.xml)
-•	Word 97-2003 Template (*.dot)
-•	Word 97-2003 Document (*.doc)
+1. **Unsupported File Format**: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
+2. **Corrupted Document**: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
+
+To avoid this warning, always use the recommended document formats and features supported by the Document Editor.
+
+The Document Editor supports the following file formats:
+
+* Word Document (*.docx)
+* Syncfusion Document Text (*.sfdt)
+* Plain Text (*.txt)
+* Word Template (*.dotx)
+* HyperText Markup Language (*.html)
+* Rich Text Format (*.rtf)
+* Word XML Document (*.xml)
+* Word 97-2003 Template (*.dot)
+* Word 97-2003 Document (*.doc)
 
 By using these supported formats, you can ensure compatibility and avoid unsupported warning messages when opening documents in the Document Editor.

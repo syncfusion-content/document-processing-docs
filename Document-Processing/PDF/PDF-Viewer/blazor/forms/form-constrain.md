@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form field constraints in Blazor SfPdfViewer | Syncfusion
+title: Form field constraints in Blazor PDF Viewer | Syncfusion
 description: Learn how to configure PDF form field flags such as IsReadOnly and IsRequired in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# PDF form field flags in Blazor SfPdfViewer
+# PDF form field flags in Blazor PDF Viewer
 
 The Blazor `SfPdfViewer` allows you to control how users interact with form fields and how those fields behave during validation by applying form field flags. These flags define whether a form field can be modified and whether it is mandatory.
 
@@ -21,11 +21,9 @@ This topic covers:
 
 The following flags are supported in the PDF Viewer:
 
-- [IsReadOnly](#make-fields-read-only)
-  Prevents users from modifying the form field in the UI while still allowing updates through APIs.
+- [IsReadOnly](#make-fields-read-only): Prevents users from modifying the form field in the UI while still allowing updates through APIs.
 
-- [IsRequired](#mark-fields-as-required)
-  Marks the form field as mandatory and includes it in form field validation.
+- [IsRequired](#mark-fields-as-required): Marks the form field as mandatory and includes it in form field validation.
 
 ## Flag behaviors
 

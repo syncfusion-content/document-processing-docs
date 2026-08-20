@@ -1,14 +1,14 @@
 ---
-title: Convert Word document to ODT in C# | DocIO | Syncfusion
-description: Learn how to convert Word document to ODT file using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word document to ODT in .NET Word | Syncfusion
+description: Learn how to convert Word document to ODT file using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Converting Word to ODT format
+# Convert Word document to ODT in .NET Word
 
-The [OpenDocument format (ODF)](http://en.wikipedia.org/wiki/OpenDocument#) is an open file format for office documents originally developed for Open Office suite by Sun Microsystems. OpenDocument Text (ODT) is the file format for Word processing documents and currently for an OASIS and ISO standard.
+The [OpenDocument format (ODF)](http://en.wikipedia.org/wiki/OpenDocument) is an open file format for office documents originally developed for the OpenOffice suite by Sun Microsystems. OpenDocument Text (ODT) is the file format for word-processing documents and is currently an OASIS and ISO standard.
 
 ## Assemblies and NuGet packages required
 
@@ -19,7 +19,7 @@ Refer to the following links for assemblies and NuGet packages required based on
 
 The Essential<sup>&reg;</sup> DocIO supports converting the Word document into ODT file. The following code example shows how to convert the Word document into ODT file.
 
-N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+N> Refer to the appropriate tabs in the code snippet section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
@@ -37,20 +37,20 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Loads the existing Word document
+//Load the existing Word document
 WordDocument document = new WordDocument("Template.docx");
-//Saves the document as ODT file
+//Save the document as an ODT file
 document.Save("WordToODT.odt", FormatType.Odt);
-//Closes the document
+//Close the document
 document.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Loads the existing Word document 
+'Load the existing Word document
 Dim document As New WordDocument("Template.docx")
-'Saves the document as ODT file
+'Save the document as an ODT file
 document.Save("WordToODT.odt", FormatType.Odt)
-'Closes the document
+'Close the document
 document.Close()
 {% endhighlight %}
 

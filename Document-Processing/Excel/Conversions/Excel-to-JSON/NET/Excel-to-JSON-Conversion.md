@@ -1,14 +1,14 @@
 ---
-title: Syncfusion Excel to JSON File Conversion
-description: In this section, you can learn how to Export Excel workbook, worksheet, and custom range Data as JSON
+title: Excel to JSON Conversion using .NET Excel Library | Syncfusion
+description: Excel to JSON conversion describes how Syncfusion .NET Excel Library converts workbooks, worksheets, or ranges into JSON data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Excel to JSON Conversion
+# Excel to JSON Conversion in .NET Excel Library
 
-Essential<sup>&reg;</sup> XlsIO supports to convert Excel data as JSON files by simply saving the workbook using the [SaveAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_) method. This support includes the features:
+XlsIO can convert an Excel workbook, worksheet, or range to JSON by calling [`IWorkbook.SaveAsJson`](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_SaveAsJson_System_String_). The output can be written to a file or a `Stream`, with or without a JSON schema.
 
 * Save as a simple JSON file or a JSON file as schema
 * Save a workbook to JSON
@@ -121,7 +121,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
@@ -184,13 +184,11 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-using(ExcelEngine excelEngine = new ExcelEngine())
+using (ExcelEngine excelEngine = new ExcelEngine())
 {
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
-
-  //Active worksheet
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Saves the worksheet to a JSON file, as schema by default
@@ -210,12 +208,10 @@ using(ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
-
-  'Active worksheet
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
   'Saves the worksheet to a JSON file, as schema by default
@@ -339,8 +335,6 @@ using(ExcelEngine excelEngine = new ExcelEngine())
   IApplication application = excelEngine.Excel;
   application.DefaultVersion = ExcelVersion.Xlsx;
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
-
-  //Active worksheet
   IWorksheet worksheet = workbook.Worksheets[0];
 
   //Custom range
@@ -363,12 +357,10 @@ using(ExcelEngine excelEngine = new ExcelEngine())
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-Using excelEngine As ExcelEngine = New ExcelEngine()
+Using excelEngine As New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
-
-  'Active worksheet
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
 
   'Custom range

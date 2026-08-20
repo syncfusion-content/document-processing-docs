@@ -1,22 +1,22 @@
 ---
-title: FAQ about Word to PDF and image Conversions | DocIO | Syncfusion
-description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word (DocIO) library.
+title: FAQ about Word to PDF and image Conversions in .NET Word | Syncfusion
+description: Learn about the frequently asked questions about Word to PDF and image conversions in the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Frequently asked questions about Word to PDF and image conversions
+# FAQ about Word to PDF and image Conversions in .NET Word
 
 The frequently asked questions about Word to PDF and image conversions using DocIO are listed below.
 
 ## Could not find Syncfusion.OfficeChartToImageConverter assembly in .NET 3.5 Framework, does it mean there is no support for chart conversion in this Framework? 
 
-Yes, OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework and it is available in .NET 4.0 Framework.
+Yes, the OfficeChartToImageConverter assembly is not supported in .NET 3.5 Framework, and it is available in .NET 4.0 Framework.
 
 ## Is it possible to convert 3D charts to PDF or image?
 
-Current version of the DocIO library does not provide support for converting 3D charts to PDF or image format.
+The current version of the DocIO library does not provide support for converting 3D charts to PDF or image format.
 
 ## Is it possible to specify PDF conformance level in Word to PDF conversion?
 
@@ -69,7 +69,7 @@ For details on resolving font preservation issues during Word-to-PDF or image co
 
 ## Why is the chart not preserved during Word-to-PDF or image conversion in .NET Framework?
 
-During Word-to-PDF conversion in .NET Framework, need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
+During Word-to-PDF conversion in .NET Framework, you need to initialize the [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html) to ensure that the chart is preserved in the PDF document. 
 
 The following code example illustrates how to initialize [ChartToImageConverter]( https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChartToImageConverter.ChartToImageConverter.html).
 

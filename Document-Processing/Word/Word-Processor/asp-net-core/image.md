@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Image in Document Editor Component
-description: Learn here all about image in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Image in ASP.NET Core DOCX Editor | Syncfusion
+description: Images in ASP.NET Core DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image
 documentation: ug
 ---
 
 
-# Images
+# Images in ASP.NET Core DOCX Editor
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the `insertImage()` method.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the `insertImage()` method. Refer to the following sample code.
 
 
 {% tabs %}
@@ -18,36 +18,37 @@ documentation: ug
 {% include code-snippet/document-editor/asp-net-core/image/tagHelper %}
 {% endhighlight %}
 {% highlight c# tabtitle="Image.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
 
 ## Image resizing
 
-Document editor provides built-in image resizer that can be injected into your application based on the requirements. This allows to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.JPG)
 
 ## Changing size
 
-Document editor exposes API to get or set the size of the selected image.
+Document Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
 
 ```typescript
 documenteditor.selection.imageFormat.width = 800;
 documenteditor.selection.imageFormat.height = 800;
 ```
 
-N> Images are stored and processed (read/write) as base64 string in DocumentEditor. The online image URL is preserved as a URL in DocumentEditor upon saving.
+N> Images are stored and processed (read/write) as a base64 string in Document Editor. The online image URL is preserved as a URL in Document Editor upon saving.
 
 ## Text wrapping style
 
-Text wrapping refers to how images fit with surrounding text in a document. [Refer to this page](../asp-net-core/text-wrapping-style) for more information about text wrapping styles available in Word documents.
+Text wrapping refers to how images fit with surrounding text in a document. Please [refer to this page](./text-wrapping-style) for more information about text wrapping styles available in Word documents.
 
 ## Positioning the image
 
-DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+Document Editor preserves the position properties of the image and displays the image based on those position properties. It does not support modifying the position properties. Whereas, the image will be automatically moved along with the text being edited if it is positioned relative to the line or paragraph.
 
 ## See Also
 
-* [Feature modules](../asp-net-core/feature-module)
+* [Feature modules](./feature-module)

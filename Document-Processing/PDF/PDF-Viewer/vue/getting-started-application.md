@@ -1,23 +1,22 @@
 ---
 layout: post
-title: Getting Started with Vue PDF Viewer | Syncfusion
-description: Learn how to scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer using the Composition or Options API.
+title: Getting Started with Vue 3 PDF Viewer | Syncfusion
+description: Scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer using the Composition or Options API to render and interact with PDF documents.
 control: Getting Started application
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion PDF Viewer in Vue 3
+# Getting Started with Vue 3 PDF Viewer
 
 This section explains how to create a Vue 3 application with Vite and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## API Approaches
 
-**Composition API** – A modern approach to organizing component logic by composing smaller, reusable functions. This method offers better code organization and reusable for complex components.
+**Composition API** – A modern approach to organizing component logic by composing smaller, reusable functions. This method offers better code organization and is more reusable for complex components.
 
 **Options API** – The traditional Vue approach that organizes component logic into a series of options (data, methods, computed properties, watchers, life cycle hooks, etc.).
-
 
 ## Prerequisites
 
@@ -133,7 +132,7 @@ Import the PDF Viewer component and required modules in the `<script>` section o
 {% highlight html tabtitle="Composition API (App.vue)" %}
 
 import { provide } from 'vue';
-import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
 const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
@@ -141,7 +140,7 @@ const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
 const pdfViewer = null;
 
 provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                       Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
+                       Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]);
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (App.vue)" %}
@@ -201,11 +200,18 @@ yarn run dev
 {% endhighlight %}
 {% endtabs %}
 
-The application renders the PDF Viewer as shown below:
+After the application starts, open the URL shown in the terminal (typically `http://localhost:5173`) to view the Vue PDF Viewer in the browser. The output will appear as shown below, with the PDF Viewer toolbar and the sample `pdf-succinctly.pdf` document loaded:
 
 ![Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
+
+## See also
+
+- [Getting Started with Standalone Vue 2 PDF Viewer](./getting-started)
+- [Getting Started with Server-Backed Vue PDF Viewer](./getting-started-with-server-backed)
+- [Open PDF Files](./open-pdf-files)
+- [Save PDF Files](./save-pdf-files)
 
 N> Looking for the full Vue PDF Viewer component overview, features, pricing, and documentation? Visit the [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) page.
 

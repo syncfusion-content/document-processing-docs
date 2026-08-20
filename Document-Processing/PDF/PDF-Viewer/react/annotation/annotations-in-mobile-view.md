@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations mobileView in React PDF Viewer | Syncfusion
-description: Learn here all about how to use annotations in mobile view with the Syncfusion React PDF Viewer Component.
+title: Annotations in Mobile View in React PDF Viewer | Syncfusion
+description: Create, edit, and manage annotations in the React PDF Viewer when running on mobile devices with the touch-optimized annotation UI.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in React PDF Viewer
+# Annotations in Mobile View in React PDF Viewer
 
 This article describes how to use annotation tools in the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) on touch-enabled devices. It covers enabling the annotation toolbar; adding sticky notes, text markups, shapes, measurements, stamps, signatures, and ink; adjusting annotation properties before and after placement; using comments; and removing annotations.
 
@@ -125,14 +125,14 @@ This article describes how to use annotation tools in the [React PDF Viewer](htt
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](overview)
+- [Annotation Types](annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](create-modify-annotation)
+- [Customize Annotation](customize-annotation)
+- [Remove Annotation](delete-annotation)
+- [Handwritten Signature](signature-annotation)
+- [Export and Import Annotation](export-import/export-annotation)
+- [Annotation Permission](annotation-permission)
+- [Annotation Events](annotation-event)
+- [Annotation API](annotations-api)

@@ -1,13 +1,13 @@
 ---
-title: Convert HTML to PDF in Azure | Syncfusion
-description: Learn how to convert HTML to PDF in Azure with easy steps using Syncfusion .NET HTML converter library.
+title: HTML to PDF Conversion in Azure .NET PDF Library | Syncfusion
+description: Learn how to convert HTML to PDF in Azure with easy steps using Syncfusion .NET HTML converter Library.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert HTML to PDF file in Azure using C#
+# HTML to PDF conversion in Azure .NET PDF Library
 
 The Syncfusion<sup>&reg;</sup> [HTML to PDF converter](https://www.syncfusion.com/document-processing/pdf-framework/net/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. It is reliable and accurate. The result preserves all graphics, images, text, fonts, and the layout of the original HTML document or webpage. Using this library, you can convert an HTML to PDF using C# with the Blink rendering engine in Azure App Service on Linux, Azure app service using the Linux [docker](https://www.docker.com/why-docker) container and Azure Function Application Linux.
 
@@ -432,4 +432,4 @@ A complete working sample can be downloaded from [Github](https://github.com/Syn
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core/html-to-pdf) to explore the rich set of Syncfusion<sup>&reg;</sup> HTML to PDF converter library features. 
 
-An online sample link to [convert HTML to PDF document](https://ej2.syncfusion.com/aspnetcore/PDF/HtmltoPDF#/material3) in ASP.NET Core. 
+An online sample link to [convert HTML to PDF document](https://document.syncfusion.com/demos/pdf/htmltopdf#/tailwind3) in ASP.NET Core. 

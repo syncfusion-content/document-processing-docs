@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Events in Vue PDF Viewer | Syncfusion
-description: Comprehensive list of events in the Syncfusion Vue PDF Viewer with descriptions, event arguments, and usage examples to integrate custom logic.
+title: Event in Vue PDF Viewer | Syncfusion
+description: A complete list of events in the Vue PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
 platform: document-processing
-control: PDF Viewer 
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # Events in Vue PDF Viewer
 
-The PDF Viewer component triggers events throughout its lifecycle, enabling you to respond to user interactions and document state changes. These events are organized into categories: **Component Lifecycle** (created, resourcesLoaded), **Navigation** (pageChange, pageClick), **Document Operations** (documentLoad, documentLoadFailed, downloadStart, downloadEnd, printStart, printEnd), **User Interactions** (toolbarClick, bookmarkClick, thumbnailClick), **Text Operations** (textSelectionStart, textSelectionEnd, textSearchStart, textSearchComplete), **Annotations** (commentAdd, commentEdit, commentDelete), **Forms** (buttonFieldClick, validateFormFields), and **Customization** (customContextMenuBeforeOpen, customContextMenuSelect). Subscribe to events using the `@eventName` syntax to execute custom code when specific actions occur.
+The PDF Viewer component triggers events throughout its life cycle, enabling you to respond to user interactions and document state changes. These events are organized into categories: **Component Life cycle** (created, resourcesLoaded), **Navigation** (pageChange, pageClick), **Document Operations** (documentLoad, documentLoadFailed, downloadStart, downloadEnd, printStart, printEnd), **User Interactions** (toolbarClick, bookmarkClick, thumbnailClick), **Text Operations** (textSelectionStart, textSelectionEnd, textSearchStart, textSearchComplete), **Annotations** (commentAdd, commentEdit, commentDelete), **Forms** (buttonFieldClick, validateFormFields), and **Customization** (customContextMenuBeforeOpen, customContextMenuSelect). Subscribe to events using the `@eventName` syntax to execute custom code when specific actions occur.
 
 ## Commonly used events
 
@@ -814,10 +814,11 @@ export default {
     },
     data: function() {
         return {
-			documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'}
+            documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+        };
     },
-	provide: {
+    provide: {
       PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner,PageOrganizer]
     },
     methods: {
@@ -931,6 +932,7 @@ Example:
   <div id="app">
     <ejs-pdfviewer
       id="pdfViewer"
+      ref="pdfViewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :customContextMenuBeforeOpen="customContextMenuBeforeOpen"
@@ -1005,7 +1007,7 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
+      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]
   },
 };
 </script>
@@ -1031,6 +1033,7 @@ Example:
   <div id="app">
     <ejs-pdfviewer
       id="pdfViewer"
+      ref="pdfViewer"
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"
       :customContextMenuSelect="customContextMenuSelect"
@@ -1105,7 +1108,7 @@ export default {
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView,
-      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer],
+      BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer]
   },
 };
 </script>
@@ -3893,6 +3896,6 @@ export default {
 
 ## See also
 
-- [Annotation events](./annotations/annotation-event)
-- [Form field events](./form-designer/form-field-events)
-- [Organize PDF events](./organize-pdf/organize-pdf-events)
+- [Annotation events](./annotation/annotation-event)
+- [Form field events](./forms/form-field-events)
+- [Organize PDF events](./organize-pages/events)

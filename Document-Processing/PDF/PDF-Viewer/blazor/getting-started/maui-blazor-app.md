@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started PDF Viewer .NET MAUI Blazor Hybrid App | Syncfusion
-description: Learn how to get started with the Blazor SfPdfViewer component in a Blazor .NET MAUI application.
+title: Getting Started with Blazor .NET MAUI PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Hybrid .NET MAUI app PDF Viewer component. Explore view, annotate, and manage PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the PDF Viewer in a .NET MAUI Blazor Hybrid App
+# Getting Started with Blazor .NET MAUI PDF Viewer
 
 This section explains how to create and run a .NET MAUI Blazor Hybrid application using the [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component.
 
@@ -127,8 +127,9 @@ Add the Blazor PDF Viewer (Next-Gen) component to `~/Pages/Index.razor`.
 {% endhighlight %}
 {% endtabs %}
 
-N> The sample [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) points to a remote URL. The device running the app must have internet access for the PDF to load. For offline scenarios, bundle the PDF in the project and load it with `LoadAsync` from embedded resources, or use the **Open** toolbar option to pick a local file. For more information, see [Render a PDF document from an embedded source in the .NET MAUI Android app](../faqs/how-to-deploy-maui-using-android-emulator).
-N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer displays an empty viewer without a document. Use the **Open** toolbar option to browse and open a PDF.
+N>
+* The sample [`DocumentPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) points to a remote URL. The device running the app must have internet access for the PDF to load. For offline scenarios, bundle the PDF in the project and load it with `LoadAsync` from embedded resources, or use the **Open** toolbar option to pick a local file. For more information, see [Render a PDF document from an embedded source in the .NET MAUI Android app](../faqs/how-to-deploy-maui-using-android-emulator).
+* If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is not set, the PDF Viewer displays an empty viewer without a document. Use the **Open** toolbar option to browse and open a PDF.
 
 ## Run on Windows
 

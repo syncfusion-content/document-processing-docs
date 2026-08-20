@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Create and Run a Custom PDF Viewer Web Service | Syncfusion
-description: Learn how to set up and run a custom PDF Viewer web service for the Syncfusion React PDF Viewer component.
+title: How to Create a Custom PDF Viewer Web Service in React | Syncfusion
+description: Create and run a custom PDF Viewer web service for the React PDF Viewer, with code samples and configuration tips for common setups.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Create and Run a Custom PDF Viewer Web Service
+# How to Create a Custom PDF Viewer Web Service in React PDF Viewer
 
 This guide explains how to set up and run your own PDF Viewer web service for use with the server-backed React PDF Viewer component.
 
 ## Prerequisites
 
 - .NET SDK 6.0 or 8.0 installed on your machine
-- Basic knowledge of ASP.NET Core
+- Basic knowledge of ASP.NET Core and React
 
 ## Steps to Set Up the Web Service
 
 ### Step 1: Download the Web Service Sample
 
-Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) repository.
+Clone or download the sample from the [Web service sample on GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) repository.
 
 ### Step 2: Navigate to the ASP.NET Core Folder
 
@@ -124,4 +124,4 @@ root.render(<App />);
 - [GitHub Web Service Examples](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 - [Docker Image for PDF Viewer Server](https://hub.docker.com/r/syncfusion/pdfviewer-server)
 
-N> For production deployment, ensure you configure proper security, CORS policies, and hosting settings for your web service.
+N> For production deployment, configure appropriate security, CORS policies, and hosting settings for your web service.

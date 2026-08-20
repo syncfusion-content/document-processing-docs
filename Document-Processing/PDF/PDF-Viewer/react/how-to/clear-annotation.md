@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clear annotations in React PDF Viewer | Syncfusion
-description: Learn how to clear all annotations or delete specific annotations in the React PDF Viewer using deleteAnnotations and deleteAnnotationById.
+title: How to Clear Annotations in React PDF Viewer | Syncfusion
+description: Clear all annotations or delete specific annotations in the React PDF Viewer using deleteAnnotations and the deleteAnnotationById method.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear annotations in React PDF Viewer
+# How to Clear Annotations in React PDF Viewer
 
 Use the [deleteAnnotations](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#deleteannotations) method to clear all annotations in the currently loaded document.
 
@@ -28,14 +28,14 @@ function deleteAnnotations() {
 
 To remove a specific annotation, use the deleteAnnotationById method to target an annotation by its id.
 
-Example: Delete a specific annotation by id
+Example: Delete a specific annotation by ID
 
 ```html
-<button onclick="deleteAnnotationbyId()">Delete Annotation by ID</button>
+<button onclick="deleteAnnotationById()">Delete Annotation by ID</button>
 
 <script>
 // Delete an annotation by id
-function deleteAnnotationbyId() {
+function deleteAnnotationById() {
     var viewer = document.getElementById("container").ej2_instances[0];
     if (viewer.annotationCollection && viewer.annotationCollection.length > 0) {
         viewer.annotationModule.deleteAnnotationById(viewer.annotationCollection[0].annotationId);

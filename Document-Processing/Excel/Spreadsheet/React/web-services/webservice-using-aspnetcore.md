@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Web Services using ASP.NET Core in React Spreadsheet | Syncfusion
-description: Learn here all about web services using ASP.NET Core in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Web Services Using ASP.NET Core in React Spreadsheet | Syncfusion
+description: Learn about configuring ASP.NET Core web services for open and save operations in React Spreadsheet.
 control: Web Services 
 platform: document-processing
 documentation: ug
@@ -17,7 +17,7 @@ This guide explains how to set up and connect local web services for open and sa
 
 Follow the official Microsoft tutorial to create a controller-based Web API project:
 
-[Tutorial: Create a controller-based web API with ASP.NET Core | Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&source=recommendations&tabs=visual-studio#create-a-web-api-project)
+[Tutorial: Create a controller-based web API with ASP.NET Core (Microsoft Learn)](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&source=recommendations&tabs=visual-studio#create-a-web-api-project)
 
 ### Install Required Dependencies
 

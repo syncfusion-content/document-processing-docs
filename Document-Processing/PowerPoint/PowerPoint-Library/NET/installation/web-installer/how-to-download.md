@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>&reg;</sup> PowerPoint web installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to download Syncfusion<sup>&reg;</sup> PowerPoint web installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to Download Syncfusion PowerPoint Web Installer | Syncfusion
+description: Learn here about how to download Syncfusion® PowerPoint web installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> PowerPoint web Installer
+# How to Download Syncfusion PowerPoint Web Installer
 
-[Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) controls will be included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer depending on your license. 
+[Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) controls are included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer, depending on your license. This page describes both download paths and the prerequisites for each.
 
-   -	Trial Installer
-   -	Licensed Installer
+> Before you begin, make sure you have a Syncfusion account. Trial and licensed installers are downloaded from the same account, and the web installer behavior is the same for both — only the entitlement differs.
 
+- Trial Installer
+- Licensed Installer
+
+**Next step:** After downloading, follow the [Web installer installation guide](https://help.syncfusion.com/PowerPoint/installation/web-installer/how-to-install) for step-by-step installation.
 
 ## Download the Trial Version
 
@@ -25,57 +28,67 @@ Our 30-day trial can be downloaded in two ways.
 
 ### Download Free Trial Setup
 
-1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the PowerPoint platform.
-2. After completing the required form or logging in with your registered Syncfusion<sup>&reg;</sup> account, you can download the PowerPoint trial installer from the confirmation page. (as shown in below screenshot.) 
-   
-   ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
-   
-3. With a trial license, only the latest version’s trial installer can be downloaded.
-4. After downloading, the Syncfusion<sup>&reg;</sup> PowerPoint trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup>&reg;</sup> registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
-6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint web installer.
- 
-   ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
+1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and selecting the PowerPoint platform.
+2. After completing the required form or logging in with your registered Syncfusion account, you can download the PowerPoint trial installer from the confirmation page, as shown in the screenshot below.
 
-   
-   
+   ![Trial confirmation page for Syncfusion PowerPoint](images/trial-confirmation.png)
+
+3. With a trial license, only the latest version's trial installer is available for download.
+4. After downloading, the PowerPoint trial installer can be unlocked using either the trial unlock key or your Syncfusion registered login credentials. More information on generating an unlock key can be found in the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
+5. You can re-download the trial installer at any time before the trial expires from your registered account's [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page, as shown in the screenshot below.
+6. Click the **Download** button (element 1 in the screenshot below) to get the PowerPoint web installer.
+
+   ![Trials and downloads page for Syncfusion PowerPoint](images/trial-download.png)
+
 ### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion).
 
-1. You can start your 30-day free trial for PowerPoint from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
-   
-   ![Trial and downloads of Syncfusion Essential Studio](images/start-trial-download.png)
-   
-2. To access this page, you must sign up\log in with your Syncfusion<sup>&reg;</sup> account.
-3. Begin your trial by selecting the PowerPoint product. 
+1. You can start your 30-day free trial for PowerPoint from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page in your account.
 
-   N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
+   ![Start trial page for Syncfusion PowerPoint](images/start-trial-download.png)
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
+2. To access this page, you must sign up/log in with your Syncfusion account.
+3. Select the PowerPoint product to begin your trial.
 
-   ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-installer.png)
+N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
-   
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer, as shown in the screenshot below.
+
+   ![Latest version trial installer for Syncfusion PowerPoint](images/start-trial-download-installer.png)
+
+5. Generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) at any time before the trial period expires.
+6. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
+
 
 ## Download the License Version
 
-1. Syncfusion<sup>&reg;</sup> licensed products will be available in the [License & Downloads](https://www.syncfusion.com/account/downloads) page under your registered Syncfusion<sup>&reg;</sup> account.
-2. You can view all the licenses (both active and expired) associated with your account.
-3. Click the Download (element 1 in the screenshot below) button to download the respective product’s installer.
-4. The most recent version of the installer will be downloaded from this page.
-5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
-6. You can download other platform\add-on installers by going to More Downloads Options (element 3 in the screenshot below).
+> Prerequisite: An active Syncfusion license associated with your account is required to see the PowerPoint installer on the License & Downloads page.
 
-    ![License and downloads of Syncfusion Essential Studio](images/license-download.png)
-	
-7. Before the license expires, you can download the installer at any time from your registered account’s [License & Downloads](https://www.syncfusion.com/account/downloads) page (See the screenshot below.)
-   
-   ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-web-installer.png)
-   
-8. After downloading, the Syncfusion<sup>&reg;</sup> PowerPoint web installer can be unlocked using Syncfusion<sup>&reg;</sup> registered login credential.
+### Latest Version
 
-   N> For Syncfusion<sup>&reg;</sup> trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion<sup>&reg;</sup> trial or licensed products will be installed via web installer.
+1. Sign in to your registered Syncfusion account and open the [License & Downloads](https://www.syncfusion.com/account/downloads) page.
+2. Locate the PowerPoint (Presentation) product in the list. You can view all licenses (both active and expired) associated with your account.
+3. Click the **Download** button (element 1 in the screenshot below) to download the installer. The most recent version of the installer will be downloaded from this page.
 
-You can also refer to the [**Web installer**](https://help.syncfusion.com/PowerPoint/installation/web-installer/how-to-install) links for step-by-step installation guidelines.	
+    ![License and downloads page for Syncfusion PowerPoint](images/license-download.png)
+
+### Older Versions
+
+1. To download an older version installer, go to [Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot above).
+
+### Other Platforms and Add-ons
+
+1. To download installers for other platforms or add-ons, go to **More Downloads Options** (element 3 in the screenshot above).
+
+### Re-download and Activation
+
+1. You can re-download the installer at any time before the license expires from your registered account's [License & Downloads](https://www.syncfusion.com/account/downloads) page, as shown in the screenshot below.
+
+   ![Re-downloading the Syncfusion PowerPoint web installer](images/start-trial-download-web-installer.png)
+
+2. After downloading, the PowerPoint web installer can be unlocked using your Syncfusion registered login credentials.
+
+N> Syncfusion uses a single web installer for both trial and licensed products. Based on your account entitlement, the same installer is unlocked as a trial or licensed product during installation.
+
+For step-by-step installation guidelines, see the [**Web installer installation guide**](https://help.syncfusion.com/PowerPoint/installation/web-installer/how-to-install).	

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Assist Node.js Server Setup in Vue Spreadsheet | Syncfusion
-description: Learn how to set up and connect a Node.js + Express server for the AI Assist feature in the Syncfusion Vue Spreadsheet component.
+description: AI Assist Node.js server setup in Vue Spreadsheet explains how to configure and connect a Node.js and Express server for AI-powered features.
 platform: document-processing
 control: AI Assist Node.js Server Setup
 documentation: ug
@@ -245,7 +245,7 @@ And returns:
 
 ## Sample
 
-A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command
+A Node.js server sample project is available for quick setup. Extract the archive, update the Azure OpenAI credentials in the `.env` file, and start the server using the following command:
 
 ```bash
 npm start

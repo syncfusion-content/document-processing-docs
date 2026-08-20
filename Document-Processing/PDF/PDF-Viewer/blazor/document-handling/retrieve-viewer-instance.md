@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Retrieve PDF Viewer Instance Blazor PDF Viewer | syncfusion
-description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewer using component references and the DocumentLoad event.
+title: Retrieve PDF Viewer Instance in Blazor PDF Viewer | syncfusion
+description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewer using  references and the DocumentLoad event.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retrieve the Blazor PDF Viewer Instance
+# Retrieve PDF Viewer Instance in Blazor PDF Viewer 
 
 This page explains how to access the PDF Viewer instance in the Blazor PDF Viewer using Blazor component references, listen for the [DocumentLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_DocumentLoaded) event, and retrieve document information, page details, and metadata—so you can safely invoke viewer APIs after the PDF document is loaded.
 
@@ -99,10 +99,11 @@ The following example shows:
 }
 ```
 
-N> Use `SfPdfViewer2` component with `@ref` to get direct access to the viewer instance.
-N> `Created` event triggers when the PDF Viewer component is rendered.
-N> `DocumentLoaded` event triggers when the document is successfully loaded. Use this event to access document name, page count, and other document-specific details.
-N> Always null-check the `Viewer` reference before calling any viewer API. Methods such as `Viewer.ZoomAsync()`, `Viewer.GoToPageAsync()`, `Viewer.PrintAsync()`, and `Viewer.DownloadAsync()` are safe to invoke only after the `DocumentLoaded` event has fired or from a user action that occurs after load.
+N>
+* Use `SfPdfViewer2` component with `@ref` to get direct access to the viewer instance.
+* `Created` event triggers when the PDF Viewer component is rendered.
+* `DocumentLoaded` event triggers when the document is successfully loaded. Use this event to access document name, page count, and other document-specific details.
+* Always null-check the `Viewer` reference before calling any viewer API. Methods such as `Viewer.ZoomAsync()`, `Viewer.GoToPageAsync()`, `Viewer.PrintAsync()`, and `Viewer.DownloadAsync()` are safe to invoke only after the `DocumentLoaded` event has fired or from a user action that occurs after load.
 
 ## End-to-End Example: Call Viewer APIs with TextBox Input
 

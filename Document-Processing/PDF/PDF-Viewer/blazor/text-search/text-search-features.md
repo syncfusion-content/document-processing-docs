@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text Search Features in Blazor PDF Viewer Component | Syncfusion
-description: Learn how to configure text search and run programmatic searches in the Blazor PDF Viewer.
+title: Text Search Features in Blazor PDF Viewer  | Syncfusion
+description: Learn how to configure text search and run programmatic searches in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text search in Blazor PDF Viewer Component
+# Text search in Blazor PDF Viewer 
 
 The text search feature in the Blazor PDF Viewer locates and highlights matching content within a document. Enable or disable this capability using the following configuration.
 

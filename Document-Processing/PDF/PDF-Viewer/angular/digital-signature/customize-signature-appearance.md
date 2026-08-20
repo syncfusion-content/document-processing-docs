@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customize Signature Appearance in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to customize visible PKI digital signature appearances using the Syncfusion PDF Library in Angular PDF Viewer.
+description: Customize the appearance of visible PKI digital signatures in PDFs from an Angular app using the Syncfusion PDF Library.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Customize Signature Appearance in Angular
+# Customize Digital Signature Appearance in Angular PDF Viewer
 
 This page explains how to customize the visual appearance of PKI [digital signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature) (visible signature appearance) produced with the Syncfusion PDF Library.
 
@@ -17,7 +17,7 @@ When applying a PKI [digital signature](https://help.syncfusion.com/document-pro
 
 For implementation details and exact API usage, check the Syncfusion PDF Library references:
 
-- .NET PDF Library — [Drawing text/image in the signature appearance]( https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#drawing-textimage-in-the-signature-appearance)
+- .NET PDF Library — [Drawing text/image in the signature appearance](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#drawing-textimage-in-the-signature-appearance)
 - JavaScript PDF Library — [Drawing text/image in the signature appearance](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/digitalsignature#drawing-textimage-in-the-signature-appearance)
 
 ## What you can customize

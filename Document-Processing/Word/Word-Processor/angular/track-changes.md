@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Track changes in Angular Document editor component | Syncfusion
-description: Learn here all about Track changes in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in Angular DOCX Editor | Syncfusion
+description: Track changes in Angular DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
-control: Track changes 
+control: Track changes
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in Angular Document editor component
+# Track Changes in Angular DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
-## Enable track changes in Document Editor
+## Enable Track changes
+
+Track changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the Document Editor.
 
 The following example demonstrates how to enable track changes.
 
-```
- <ejs-documenteditor [enableTrackChanges]=true height="330px" style="display:block"></ejs-documenteditor>
+```typescript
+<ejs-documenteditor [enableTrackChanges]="true" height="330px" style="display:block"></ejs-documenteditor>
 ```
 
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set [enableTrackChanges] = true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if you set `enableTrackChanges: true` in the initial rendering. If you want to enable track changes for all documents, we recommend enabling track changes in the `documentChange` event.
+
+The following example demonstrates how to enable track changes for all the documents while opening.
 
 ```typescript
 <ejs-documenteditorcontainer #documenteditor_default [enableToolbar]=true [locale]="culture" (created)="onCreate()" (documentChange)="onDocumentChange()" height="600px" [serviceUrl]="hostUrl"  style="display:block;"></ejs-documenteditorcontainer>
@@ -34,7 +38,7 @@ onDocumentChange(): void {
 
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+The following example demonstrates how to get all tracked revisions from the current document.
 
 ```typescript
 /**
@@ -43,9 +47,9 @@ The following example demonstrate how to get all tracked revision from current d
 let revisions : RevisionCollection = this.documentEditor.revisions;
 ```
 
-## Accept or Reject all changes programmatically
+## Accept or Reject all changes
 
-The following example demonstrates how to accept/reject all changes.
+The following example demonstrates how to accept or reject all changes.
 
 ```typescript
 /**
@@ -66,7 +70,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the Document Editor.
 
 ```typescript
 /**
@@ -85,7 +89,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate through tracked revisions programmatically.
 
 ```typescript
 /**
@@ -99,17 +103,17 @@ this.documentEditor.selection.navigateNextRevision();
 this.documentEditor.selection.navigatePreviousRevision();
 ```
 
-## Filtering changes based on user
+## Filter Changes by User
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+The built-in review panel in the Document Editor supports filtering changes based on the user.
 
 ![Track changes](images/tracked-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
 
-The following example code illustrates how to enable and update custom metadata for track changes revisions.
+The following example illustrates how to enable and update custom metadata for track changes revisions.
 
 ```ts
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -147,17 +151,15 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the Document Editor component.
 
 ## Protect the document in track changes only mode
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) API.
+The Document Editor provides an option to protect and unprotect the document using the [enforceProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) APIs.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example illustrates how to enforce and stop protection in the Document Editor container.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -188,17 +190,19 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web Service link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` used in the serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own Web Service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own Web Service and use it for the serviceUrl property.
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
 
-## Event
+## Restrict accept or reject by author
 
-You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accept/reject changes.
+Restrict accepting or rejecting changes by author name.
+
+The following example demonstrates how to restrict an author from accepting or rejecting changes.
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

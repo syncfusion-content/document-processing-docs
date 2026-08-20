@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rectangle Annotation (Shape) in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Rectangle annotations in the Syncfusion Angular PDF Viewer.
+title: Rectangle Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Rectangle annotations in the Angular PDF Viewer to outline rectangular regions on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rectangle Annotation (Shape) in Angular PDF Viewer
+# Rectangle Annotation in Angular PDF Viewer
 Rectangle annotations let users highlight regions, group content, or draw callout boxes on PDFs for reviews and markups. You can add rectangles from the toolbar, switch to rectangle mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Rectangle overview](../../../javascript-es6/annotations/annotation-images/rect-annot.png)
@@ -159,7 +159,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Manage Rectangle (Edit, Move, Resize, Delete)
-### Edit Rectangle 
+### Edit Rectangle
 
 #### Edit Rectangle (UI)
 - Select a rectangle to view resize handles.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in React Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion React Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comment in React Spreadsheet | Syncfusion
+description: Learn about comments in the Syncfusion React Spreadsheet component, including adding, editing, displaying, and managing cell comments.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in React Spreadsheet control
+# Comment in React Spreadsheet
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as `resolve` and `reopen` to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells that contain a comment show a small indicator. Hovering over the cell opens a preview of the comment editor. This helps maintain a clear workflow for collaboration while keeping the original data unchanged.
@@ -68,7 +68,7 @@ After posting, replies appear directly under the original comment in the comment
 ## Editing a comment
 You can edit the content of a comment or its replies directly within the comment editor.
 
-* **Edit first comment**: In the comment editor. Click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
+* **Edit first comment**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header, select the **Edit Comment**, modify the text and click **Post**.
 * **Edit a reply comment**: In the comment editor, hover over the specific reply, click the **"⋯" (More actions)**, select the **Edit Comment**, modify the text and click **Post**.
 
 ![Editing a comment reply in Spreadsheet](./images/spreadsheet_edit_comment.png)
@@ -94,7 +94,7 @@ You can also use the `isResolved` property in the comment model when initializin
 // Update a cell with a comment using the updateCell method
     spreadsheet.updateCell({
         comment: {
-            author: 'Chistoper', text: 'Are you completed the report',
+            author: 'Christopher', text: 'Have you completed the report',
             createdTime: 'January 03, 2026 at 5:00 PM',
             // Set to true to mark the thread as resolved; false keeps it active
             isResolved: false,
@@ -123,7 +123,7 @@ In the comment editor, hover over the reply and click the **"⋯" (More actions)
 
 ## Next and Previous Comment
 
-The **Review > Comment > Next Comment** and **Previous Comment** options in the ribbon allow you move quickly between cells that contain comments:
+The **Review > Comment > Next Comment** and **Previous Comment** options in the ribbon allow you to move quickly between cells that contain comments:
 
 * **Next Comment**: Jumps to the next cell with a comment.  
 * **Previous Comment**: Jumps to the previous cell with a comment.
@@ -156,7 +156,7 @@ The "Comments" review pane supports the following actions:
   * **Delete** – Remove a reply or the whole thread.
   * **Resolve/Reopen** – Update the status of a comment.
 
-When the review pane is open, any action done in the review pane or in the cell’s comment editor stays in synchronized.
+When the review pane is open, any action done in the review pane or in the cell’s comment editor stays synchronized.
 
 
 * Selecting a comment in the review pane highlights the matching cell in the worksheet.

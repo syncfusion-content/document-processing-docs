@@ -1,12 +1,12 @@
 ---
-title: Unhide Excel Worksheets | Syncfusion
-description: Explains with an example on how to unhide Excel worksheets which are in hidden state using Interop and XlsIO.
+title: Worksheet Unhiding in .NET Excel Library | Syncfusion
+description: Programmatically unhide hidden Excel worksheets in a workbook using Interop and Syncfusion .NET Excel Library visibility settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Unhide Excel Worksheets
+# Unhiding Worksheets in .NET Excel Library
 
 Hidden sheets can be unhidden. The following code shows how to unhide Excel worksheets with Interop and XlsIO for .NET.
 
@@ -29,7 +29,7 @@ private void UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -52,7 +52,7 @@ private void UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
@@ -74,7 +74,7 @@ Private Sub UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible
 
   'Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx")
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx")
 
   'Quit the application
   excelApp.Quit()

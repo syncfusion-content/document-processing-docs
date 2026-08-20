@@ -1,12 +1,12 @@
 ---
-title: Overview of React PDF Viewer Component | Syncfusion
-description: Learn here all about the Syncfusion React PDF Viewer, features, its capabilities, and supported platforms.
+title: About Syncfusion React PDF Viewer Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio React PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
 ---
 
-# Overview of React PDF Viewer Component
+# About Syncfusion React PDF Viewer Control
 
 The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a lightweight, modular viewer for displaying and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 
@@ -32,8 +32,8 @@ The [`React PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/annotation/signature-annotation)
-* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar-customization/overview) - Built-in toolbar and custom toolbars for common viewer actions.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/localization/default-language) - Localize the UI.
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/toolbar-customization/overview): Built-in toolbar and custom toolbars for common viewer actions.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/localization/default-language): Localize the UI.
 * Open and display [normal and protected PDF files](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started)
 
 ## Supported Web platforms

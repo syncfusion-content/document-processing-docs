@@ -1,12 +1,12 @@
 ---
-title: Overview of ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about the Syncfusion ASP.NET Core PDF Viewer, its capabilities, and supported platforms.
+title: About Syncfusion ASP.NET Core PDF Viewer Control | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio ASP.NET Core PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
-documentation: UG
+documentation: ug
 ---
 
-# Overview of ASP.NET Core PDF Viewer
+# About Syncfusion ASP.NET Core PDF Viewer Control
 
 The [`ASP.NET Core`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a lightweight, modular component for viewing and printing PDF files in web applications. It provides core interactions such as zooming, scrolling, text search, text selection, and copying. Thumbnails, bookmarks, hyperlinks, and table of contents enable easy navigation within and across PDF files.
 
@@ -24,11 +24,11 @@ The [`ASP.NET Core`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a 
     * Text selection and copy
 * [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/print) PDF files.
 * Annotate PDFs with:
-    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
-    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/stamp-annotation)
-    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/free-text-annotation)
-    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/sticky-notes-annotation)
+    * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/highlight-annotation): highlight, underline, and strikethrough
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/rectangle-annotation): rectangle, circle, polygon, line, and arrow
+    * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/stamp-annotation)
+    * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/free-text-annotation)
+    * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/annotation-types/sticky-notes)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/forms/form-designer)
 * [Handwritten signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/annotation/signature-annotation)

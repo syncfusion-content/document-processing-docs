@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Accessibility in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Accessibility in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Accessibility in JavaScript Spreadsheet | Syncfusion
+description: Accessibility in JavaScript Spreadsheet supports keyboard navigation, screen reader compatibility, and ARIA attributes for inclusive experiences.
 platform: document-processing
-control: Accessibility 
+control: Accessibility
 documentation: ug
 ---
 
-# Accessibility in EJ2 Javascript Spreadsheet control
+# Accessibility in JavaScript Spreadsheet
 
-The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 ](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Section 508 ](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -61,7 +61,7 @@ The Spreadsheet control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/
 
 ## Keyboard interaction
 
-The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
+The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet control.
 
 | Press | To do this |
 |----------|-------------|
@@ -100,14 +100,14 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
 | Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
+| Left | Move the focus to the previous item in the ribbon content. |
+| Right | Move the focus to the next item in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
 
 ## Ensuring accessibility
 
-The Spreadsheet control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Spreadsheet control's accessibility levels are verified through the [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the Spreadsheet control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/spreadsheet.html) in a new window to evaluate the accessibility of the Spreadsheet control with accessibility tools.
 

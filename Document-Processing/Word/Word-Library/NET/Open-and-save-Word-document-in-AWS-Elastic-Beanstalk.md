@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in AWS Elastic Beanstalk | Syncfusion
-description: Open and save Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word (DocIO) library.
+title: Open and save Word document in AWS Elastic Beanstalk  | Syncfusion
+description: Open and save Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and save Word document in AWS Elastic Beanstalk
+# Open and save Word document in AWS Elastic Beanstalk 
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in AWS Elastic Beanstalk**.
 
@@ -41,7 +41,7 @@ Step 5: Add a new button in the **Index.cshtml** as shown below.
 {% highlight c# tabtitle="C#" %}
 
 @{
-    Html.BeginForm("CreateWordDocument", "Home", FormMethod.Get);
+    Html.BeginForm("OpenAndSaveDocument", "Home", FormMethod.Get);
     {
         <div>
             <input type="submit" value="Create Word document" style="width:200px;height:27px" />

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Squiggly Annotation (Text Markup) in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Squiggly annotations in the Syncfusion Angular PDF Viewer.
+title: Squiggly Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Squiggly annotations in the Angular PDF Viewer to mark text with a wavy underline.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Squiggly Annotation (Text Markup) in Angular PDF Viewer
+# Squiggly Annotation in Angular PDF Viewer
 
-This guide explains how to **enable**, **apply**, **customize**, and **manage** *Squiggly* text markup annotations in the Syncfusion **React PDF Viewer**.
+This guide explains how to **enable**, **apply**, **customize**, and **manage** *Squiggly* text markup annotations in the Syncfusion **Angular PDF Viewer**.
 You can add squiggly underlines from the toolbar or context menu, programmatically invoke squiggly mode, customize default settings, handle events, and export the PDF with annotations.
 
 ## Enable Squiggly in the Viewer

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from PDF.js to Syncfusion React PDF Viewer | Syncfusion
-description: Learn how to migrate from PDF.js to Syncfusion React PDF Viewer with this comprehensive guide covering architecture, features, and code changes.
+title: Migrating From PDFjs in React PDF Viewer | Syncfusion
+description: Migrate an existing application from PDF.js to the Syncfusion React PDF Viewer, with guidance on architecture, features, and code changes.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from PDF.js to Syncfusion React PDF Viewer
+# Migrate from PDF.js to React PDF Viewer
 
 This guide explains how to migrate an existing [PDF.js](https://mozilla.github.io/pdf.js/) implementation to the [Syncfusion React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started), covering architectural differences, feature mapping, and required code changes.
 
@@ -292,7 +292,7 @@ N> To know more about available Features in Syncfusion React PDF Viewer. Check [
 - [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbarclick).
 

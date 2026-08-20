@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Template in React Spreadsheet component | Syncfusion
-description: Learn here all about Template in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Cell Template in React Spreadsheet | Syncfusion
+description: Learn about cell templates in the Syncfusion React Spreadsheet component, including custom content and cell rendering options.
 control: Template 
 platform: document-processing
 documentation: ug
 ---
 
-# Template in React Spreadsheet component
+# Cell Template in React Spreadsheet
 
 Cell templates allow you to embed HTML elements and Syncfusion<sup style="font-size:70%">&reg;</sup> components directly into spreadsheet cells. This enables rich, interactive data entry experiences beyond standard cell values.
 
 ## Key Features
 
-- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options
-- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry
-- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data
-- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications
+- **HTML Elements** – You can add TextBox, RadioButton, TextArea, and other HTML controls to cells for enhanced user input options.
+- **Syncfusion Components** – You can integrate DropDownList, MultiSelect, DatePicker, and other Syncfusion controls for advanced data entry.
+- **Event Binding** – You can attach event handlers to perform operations on user interaction and update spreadsheet data.
+- **Custom Rendering** – You can use the `beforeCellRender` event for advanced customization and dynamic template modifications.
 
 ## Cell Templates
 
@@ -41,7 +41,7 @@ Sample link: [`Cell template`](https://document.syncfusion.com/demos/spreadsheet
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

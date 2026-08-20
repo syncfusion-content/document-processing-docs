@@ -8,9 +8,9 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Customize form fields in .NET MAUI PDF Viewer (SfPdfViewer)
+# Customize Form Fields in .NET MAUI PDF Viewer
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to customize the visual appearance of form fields by modifying properties on their [Widget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html) objects. A form field can have one or more `Widget` instances (the visual representations of the field on the page). You can change the background color, foreground (text) color, border color, and border width.
+The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to customize the visual appearance of form fields by modifying properties on their [Widget](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Widget.html) objects. A form field can have one or more `Widget` instances (the visual representations of the field on the page). You can change the background color, foreground (text) color, border color, and border width.
 
 N> * Appearance customizations support undo and redo.
 N> * Customizations cannot be applied when a form field is locked. For details, see [Lock and Unlock Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock).
@@ -18,7 +18,7 @@ N> * Customized colors and border width are preserved during import, export, pri
 
 ## Customize the background color
 
-The [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html#Syncfusion_Maui_PdfViewer_Widget_BackgroundColor) property sets the fill color behind the field content. The following example applies a uniform background color to all form fields in the document.
+The [BackgroundColor](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Widget.html#Syncfusion_Maui_PdfViewer_Widget_BackgroundColor) property sets the fill color behind the field content. The following example applies a uniform background color to all form fields in the document.
 
 {% tabs %}
 {% highlight c# %}
@@ -92,7 +92,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 
 ## Detect widget property changes
 
-In addition to setting widget properties, you can also track when a widget property changes at runtime. The `PropertyChanged` event on a [Widget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html) fires whenever a widget property — such as `BorderColor`, `BackgroundColor`, `BorderWidth`, or `ForegroundColor` — changes. Subscribe to this event after the document loads.
+In addition to setting widget properties, you can also track when a widget property changes at runtime. The `PropertyChanged` event on a [Widget](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.Widget.html) fires whenever a widget property — such as `BorderColor`, `BackgroundColor`, `BorderWidth`, or `ForegroundColor` — changes. Subscribe to this event after the document loads.
 
 {% tabs %}
 {% highlight c# %}

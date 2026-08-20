@@ -1,13 +1,13 @@
 ---
-title: Extract PDF to JSON in C# | Smart Data Extractor | Syncfusion
-description: Learn how to extract structured data from PDF documents as JSON in C# using the Syncfusion® Smart Data Extractor library for .NET applications.
+title: Convert PDF to JSON in .NET Smart Data Extractor | Syncfusion
+description: Extract structured data from PDF as JSON using Smart Data Extractor. Convert PDF content into machine-readable JSON format seamlessly in .NET applications.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
 ---
 
-# PDF to JSON Extraction
+# Convert PDF to JSON in .NET Smart Data Extractor
 
 JavaScript Object Notation (JSON) is a lightweight data‑interchange format that is easy for humans to read and write, and simple for machines to parse and generate. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as JSON. It analyzes text blocks, tables, headers, and form fields to preserve structure, enabling developers to integrate PDF to JSON extraction into their applications.
 
@@ -20,7 +20,7 @@ Refer to the following links for the assemblies and NuGet packages required on d
 
 ## Extract Data as JSON from PDF or Image
 
-To extract form fields across a PDF document using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To extract structured data from a PDF document or image using the [ExtractDataAsJson](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html#Syncfusion_SmartDataExtractor_DataExtractor_ExtractDataAsJson_System_IO_Stream_) method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -28,10 +28,9 @@ To extract form fields across a PDF document using the [ExtractDataAsJson](https
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-//Open the input PDF file as a stream.
+//Open the input PDF or image file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
@@ -48,10 +47,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 using System.IO;
 using Syncfusion.SmartDataExtractor;
-using Syncfusion.SmartFormRecognizer;
 using System.Text;
 
-//Open the input PDF file as a stream.
+//Open the input PDF or image file as a stream.
 using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
     //Initialize the Data Extractor.
@@ -95,7 +93,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
-
 
 {% endhighlight %}
 

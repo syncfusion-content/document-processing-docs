@@ -1,48 +1,55 @@
 ---
-title: Worksheet to Image conversion in Excel Library | Syncfusion
-description: Learn here all about worksheet to image conversion feature of Syncfusion Excel (XlsIO) Library and more.
+title: About Syncfusion .NET Excel to Image Conversion | Syncfusion
+description: Learn about overview of converting Excel worksheets into images using the Syncfusion .NET Excel Library and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Worksheet to Image conversion in Excel Library
+# About Syncfusion .NET Excel to Image Conversion
 
-To quickly start converting an Excel document to a Image, please check out this video:
-{% youtube "https://www.youtube.com/watch?v=WgugutAaxBk&t=3s" %}
+To quickly start converting an Excel document to an image, see this short video: [Convert an Excel worksheet to an image with XlsIO](https://www.youtube.com/watch?v=WgugutAaxBk&t=3s).
+
+N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
 
 ## Assemblies Required
 
-Refer to the following links for assemblies/nuget packages required based on platforms to convert the worksheet to image.
+The following links list the assemblies and NuGet packages required to convert a worksheet to an image, per platform:
 
-* [Assemblies Information](https://help.syncfusion.com/file-formats/xlsio/assemblies-required#converting-excel-worksheet-to-image) 
+* [Assemblies Information](https://help.syncfusion.com/file-formats/xlsio/assemblies-required#converting-excel-worksheet-to-image)
 * [NuGet Information](https://help.syncfusion.com/file-formats/xlsio/nuget-packages-required#converting-excel-worksheet-to-image)
 
-N> Worksheet To Image conversion can be performed by referring [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package in UWP platform. 
+N> Worksheet-to-image conversion can be performed by referring to the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package in UWP platform.
 
 ## Convert as bitmap
 
-The following code shows how to convert the specified range of rows and columns in the worksheet to bitmap.
+The following code shows how to convert a specified range of rows and columns in the worksheet to a bitmap image. The four integer parameters are `firstRow`, `firstColumn`, `lastRow`, and `lastColumn` (1-based).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+// The following snippet assumes `application` and `worksheet` are already initialized
+// (see the "Complete code" tab below for the full setup).
 // Initialize XlsIORenderer
 application.XlsIORenderer = new XlsIORenderer();
 
-//Create a new memory stream to save the image
+// Create a new memory stream to save the image
 Stream stream = new MemoryStream();
 
-//Convert worksheet to image and save it to stream.
+// Convert worksheet to image and save it to the stream.
 worksheet.ConvertToImage(1, 1, 10, 20, stream);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+// The following snippet assumes `sheet` is already initialized (see the
+// "Complete code" tab below for the full setup).
 // Convert as bitmap
 Image image = sheet.ConvertToImage(1, 1, 10, 20);
 image.Save("Sample.png", ImageFormat.Png);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'The following snippet assumes `sheet` is already initialized (see the
+'"Complete code" tab below for the full setup).
 'Convert as bitmap
 Dim image As Image = sheet.ConvertToImage(1, 1, 10, 20)
 image.Save("Sample.png", ImageFormat.Png)
@@ -51,28 +58,36 @@ image.Save("Sample.png", ImageFormat.Png)
 
 ## Save as stream
 
-The following code snippet shows how to save a sheet as stream.
+The following code snippet shows how to save a sheet as a stream. On Windows, you can choose the output [ImageType](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.ImageType.html) (such as `Bitmap`, `Metafile`, or `EMF`); on .NET Standard the format is controlled by `ExportImageOptions`.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+// The following snippet assumes `application` and `sheet` are already initialized
+// (see the "Complete code" tab below for the full setup).
 // Initialize XlsIORenderer
 application.XlsIORenderer = new XlsIORenderer();
 
-// Converts and save as stream
-MemoryStream stream = new MemoryStream();
-sheet.ConvertToImage(1, 1, 10, 20, stream);
+// Convert and save as a stream
+using (MemoryStream stream = new MemoryStream())
+{
+    sheet.ConvertToImage(1, 1, 10, 20, stream);
+    // stream.Position = 0; // reset before reading, if needed
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-// Converts and save as stream
-MemoryStream stream = new MemoryStream();
-sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream);
+// Convert and save as a stream with a specific ImageType
+using (MemoryStream stream = new MemoryStream())
+{
+    sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Converts and save as stream
-Dim stream As MemoryStream = New MemoryStream()
-sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream)
+'Convert and save as a stream with a specific ImageType
+Using stream As MemoryStream = New MemoryStream()
+    sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream)
+End Using
 {% endhighlight %}
 {% endtabs %}  
 
@@ -84,22 +99,24 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 {
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
-	FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read);
-	IWorkbook workbook = application.Workbooks.Open(inputStream);
-	IWorksheet sheet = workbook.Worksheets[0];
 
-	//Initialize XlsIORenderer
-	application.XlsIORenderer = new XlsIORenderer();
+	// Open the input workbook.
+	using (FileStream inputStream = new FileStream(Path.GetFullPath(@"Data/InputTemplate.xlsx"), FileMode.Open, FileAccess.Read))
+	{
+		IWorkbook workbook = application.Workbooks.Open(inputStream);
+		IWorksheet sheet = workbook.Worksheets[0];
 
-	#region Save
-	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write);
-	sheet.ConvertToImage(sheet.UsedRange, outputStream);
-	#endregion
+		//Initialize XlsIORenderer
+		application.XlsIORenderer = new XlsIORenderer();
 
-	//Dispose streams
-	outputStream.Dispose();
-	inputStream.Dispose();
+		#region Save
+		// Save the worksheet as a PNG image.
+		using (FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write))
+		{
+			sheet.ConvertToImage(sheet.UsedRange, outputStream);
+		}
+		#endregion
+	}
 }
 {% endhighlight %}
 
@@ -111,20 +128,15 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorkbook workbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic);
   IWorksheet sheet = workbook.Worksheets[0];
 
-  //Convert as bitmap
+  // Convert the worksheet range to a bitmap image and save it as PNG.
   Image image = sheet.ConvertToImage(1, 1, 10, 20);
-
   image.Save("Sample.png", ImageFormat.Png);
 
-  //Converts and save as stream
-  MemoryStream stream = new MemoryStream();
-  sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream);
-
-  //Save the workbook to disk
-  workbook.SaveAs("Sample.xlsx");
-
-  //No exception will be thrown if there are unsaved workbooks
-  excelEngine.ThrowNotSavedOnDestroy = false;
+  // Convert the worksheet range to a Metafile image and save it to a stream.
+  using (MemoryStream stream = new MemoryStream())
+  {
+    sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream);
+  }
 }
 {% endhighlight %}
 
@@ -132,23 +144,17 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
-  Dim workbook As IWorkbook = application.Workbooks.Open("sample.xlsx", ExcelOpenType.Automatic)
-  Dim worksheet As IWorksheet = workbook.Worksheets(0)
+  Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx", ExcelOpenType.Automatic)
+  Dim sheet As IWorksheet = workbook.Worksheets(0)
 
-  'Convert as bitmap
-  Dim image As Image = worksheet.ConvertToImage(1, 1, 10, 20)
-
+  ' Convert the worksheet range to a bitmap image and save it as PNG.
+  Dim image As Image = sheet.ConvertToImage(1, 1, 10, 20)
   image.Save("Sample.png", ImageFormat.Png)
 
-  'Converts and save as stream
-  Dim stream As MemoryStream = New MemoryStream()
-  worksheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream)
-
-  'Save the workbook to disk
-  workbook.SaveAs("Sample.xlsx")
-
-  'No exception will be thrown if there are unsaved workbooks.
-  excelEngine.ThrowNotSavedOnDestroy = False
+  ' Convert the worksheet range to a Metafile image and save it to a stream.
+  Using stream As MemoryStream = New MemoryStream()
+    sheet.ConvertToImage(1, 1, 10, 20, ImageType.Metafile, stream)
+  End Using
 End Using
 {% endhighlight %}
 {% endtabs %} 
@@ -164,3 +170,10 @@ N> 3. Worksheet to image conversion is supported from .NET Framework 2.0 and .NE
 * Subscript/Superscript
 * Shrink to fit
 * Complex conditional formatting
+
+## See also
+
+* [Worksheet to Image conversion in .NET](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/net/worksheet-to-image-conversion) — runnable code samples for each platform.
+* [Assemblies Required for Excel to PDF conversion](../Excel-to-PDF/NET/assemblies-required-for-excel-to-pdf) — manual assembly references.
+* [NuGet Packages Required for Excel to PDF conversion](../Excel-to-PDF/NET/nuget-packages-required-for-excel-to-pdf) — install the right package for your target platform.
+* [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) — register your license key.

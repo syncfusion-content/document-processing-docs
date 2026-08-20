@@ -18,7 +18,7 @@ This guide explains how to rotate individual or multiple pages using the **Organ
 
 ## Prerequisites
 
-- Blazor PDF Viewer (SfPdfViewer2) installed
+- Blazor PDF Viewer (SfPdfViewer) installed
 - PDF Viewer configured with `DocumentPath` property or document loaded via `LoadAsync()` method
 
 ## Steps

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrate from (Classic) PDFViewer to SfPdfViewer in Blazor | Syncfusion
-description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to SfPdfViewer, covering packages, scripts, Program.cs, markup, and WebAssembly.
+title: Migrate from (Classic) PDFViewer to Blazor PDF Viewer | Syncfusion
+description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to PDF Viewer, covering packages, scripts, Program.cs, markup, and WebAssembly.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Migration from PDF Viewer (Classic) to SfPdfViewer
+# Migrate from (Classic) PDFViewer to Blazor PDF Viewer
 
 ## Why Migrate from PDF Viewer (Classic) to SfPdfViewer
 
@@ -223,9 +223,9 @@ For WebAssembly applications, include the following properties in the project **
 </tr>
 </table>
 
-N> For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
-
-N> When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
+N>
+* For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
+* When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
 
 ## See also
 

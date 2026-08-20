@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Load documents dynamically in React PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion React PDF Viewer using the load method.
+title: How to Load Documents Dynamically in React PDF Viewer | Syncfusion
+description: Load or switch PDF documents dynamically in the React PDF Viewer using the load method to swap documents without reloading the page.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Load documents dynamically in React PDF Viewer
+# How to Load Documents Dynamically in React PDF Viewer
 
-The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
+The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#load) method to open a document from a URL or a Base64 string.
 
 The following steps show common approaches for loading documents dynamically.
 
@@ -29,13 +29,13 @@ The following steps show common approaches for loading documents dynamically.
   </script>
 ```
 
-**Step 3:** Use the following code snippet to load a PDF document from a URL (document name).
+**Step 3:** Use the following code snippet to load a PDF document from a URL.
 
 ```
   <button id='load2'>LoadDocument</button>
 
   <script>
-  // Load PDF document using a file name
+  // Load PDF document from a URL
   function load_2(){
     var viewer = document.getElementById('container').ej2_instances[0];
     viewer.load('https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf', null);
@@ -109,3 +109,6 @@ root.render(<App />);
 {% endtabs %}
 
 Find the sample: [Load PDF documents dynamically](https://stackblitz.com/edit/react-nszkto?file=src%2Findex.js)
+
+## See also
+- [Getting started](../getting-started)

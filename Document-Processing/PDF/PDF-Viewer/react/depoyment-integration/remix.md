@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Syncfusion React PDF Viewer with React Router
-description: Short quickstart for integrating the Syncfusion React PDF Viewer into a React application using React Router v7 (standalone/client-only rendering).
+title: Remix in React PDF Viewer | Syncfusion
+description: Integrate the Syncfusion React PDF Viewer into a React Router v7 (formerly Remix) application using client-only rendering.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React Router v7 (Remix) Quickstart
+# Getting Started with React PDF Viewer in React Router
 
 ## Overview
 
@@ -112,7 +112,7 @@ Then import the stylesheet according to your starter:
 
 create-react-router (`app/root.tsx`):
 
-```tsx
+```ts
 // app/root.tsx
 import './app.css';
 ```

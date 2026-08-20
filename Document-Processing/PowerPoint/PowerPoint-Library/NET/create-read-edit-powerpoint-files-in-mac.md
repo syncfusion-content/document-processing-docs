@@ -1,15 +1,15 @@
 ---
-title: Create and edit PowerPoint files on Mac OS | Syncfusion
-description: Create, read and edit PowerPoint files in .NET Core application on Mac OS using Syncfusion .NET Core PowerPoint library without Microsoft Office.
+title: Create and edit PowerPoint files on macOS | Syncfusion
+description: Create, read and edit PowerPoint files in .NET Core application on macOS using Syncfusion .NET Core PowerPoint library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
-# Create, read and edit a PowerPoint file on Mac OS
+# Create, read and edit a PowerPoint file on macOS
 
-You can create or edit a PowerPoint file in .NET Core on Mac OS using [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file in .NET Core on macOS using [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). Follow these steps.
 
-## Create a PowerPoint file in .NET Core Console application project on Mac OS
+## Create a PowerPoint file in .NET Core Console application project on macOS
 
 {% tabcontents %}
 
@@ -17,7 +17,8 @@ You can create or edit a PowerPoint file in .NET Core on Mac OS using [.NET Powe
 
 **Prerequisites:**
 
-* Visual Studio 2022.
+* A Mac running a supported version of macOS.
+* Visual Studio 2022 for Mac.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Create a new C# .NET Core console application.
@@ -28,7 +29,7 @@ Step 2: Select the project version.
 
 ![Select project version](Workingwith-Mac/selectprojectverion.png)
 
-Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package into the project from [NuGet.org](https://www.nuget.org/).
 
 ![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget1.png)
 ![Install Presentation .Net Core Nuget](Workingwith-Mac/Install_Nuget.png)
@@ -45,6 +46,8 @@ using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Add an image named `Image.jpg` to the project root and set **Copy to Output Directory** to **Copy if newer** (the code below loads this file at runtime).
 
 Step 5: Add the following code snippet in Program.cs file.
 
@@ -116,25 +119,26 @@ The output of the above code example will generate the below PowerPoint slide. T
 
 **Prerequisites:**
 
+* A Mac running a supported version of macOS.
 * Visual Studio Code.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
 Step 1: Create a new .NET Core console application project.
-* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> and type **.NET:New Project** and enter.
+* Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, type **.NET: New Project**, and press <kbd>Enter</kbd>.
 * Choose the **Console App** template.
 
 ![Choose Console app from template](Workingwith-Mac/Console-app-template.png)
 
-* Select the project location, type the project name and press enter.
+* Select the project location, type the project name, and press <kbd>Enter</kbd>.
 * Then choose **Create project**.
 
-Step 2: To **create a Word document in console app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) to the project.
+Step 2: To **create a PowerPoint file in console app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) to the project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.Presentation.NET.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
 
-![Add Syncfusion.Presentation.NET.Core NuGet package](Workingwith-Mac/Command-to-add-NuGet-package-console.png)
+![Add Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Mac/Command-to-add-NuGet-package-console.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -148,6 +152,8 @@ using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Add an image named `Image.jpg` to the project root and set **Copy to Output Directory** to **Copy if newer** (the code below loads this file at runtime).
 
 Step 4: Add the following code snippet in Program.cs file.
 
@@ -203,7 +209,7 @@ pptxDoc.Close();
 
 Step 5: Build the project.
 
-Run the following command in terminal to build the project.
+Run the following command in the terminal to build the project.
 
 ```
 dotnet build
@@ -211,7 +217,7 @@ dotnet build
 
 Step 6: Run the project.
 
-Run the following command in terminal to run the project.
+Run the following command in the terminal to run the project.
 
 ```
 dotnet run
@@ -227,10 +233,11 @@ The output of the above code example will generate the below PowerPoint slide. T
 
 **Prerequisites:**
 
+* A Mac running a supported version of macOS.
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new .NET Core console application project.
+Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
 * Click **New solution** on the welcome screen.
 
@@ -239,15 +246,15 @@ Step 1. Open JetBrains Rider and create a new .NET Core console application proj
 * In the New Solution dialog, select **Project Type** as **Console**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
-![Creating a new .NET MAUI App in JetBrains Rider](Workingwith-Mac/Create-Console-NET-Core-sample-in-Mac.png)
+![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Mac/Create-Console-NET-Core-sample-in-Mac.png)
 
 Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) in the search bar.
 * Ensure that nuget.org is selected as the package source.
 * Select the latest Syncfusion.Presentation.Net.Core NuGet package from the list.
-* Click the + (Add) button to add the package.
+* Click the **+ (Add)** button to add the package.
 
 ![Select the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Mac/Select-Syncfusion.Presentation.Net.Core-NuGet.png)
 
@@ -255,7 +262,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Mac/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 3: Include the following Namespaces in the Program.cs file.
 
@@ -267,6 +274,8 @@ using System.IO;
 {% endhighlight %}
 
 {% endtabs %}
+
+N> Add an image named `Image.jpg` to the project root and set **Copy to Output Directory** to **Copy if newer** (the code below loads this file at runtime).
 
 Step 4: Add the following code snippet in Program.cs file.
 
@@ -336,9 +345,24 @@ The output of the above code example will generate the below PowerPoint slide. T
 
 {% endtabcontents %}
 
-## Read and edit a PowerPoint file in .NET Core Console application project on Mac OS
+## Read and edit a PowerPoint file in .NET Core Console application project on macOS
 
-You can edit an existing PowerPoint file on Mac system using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file on a Mac system using this library. The following code snippet demonstrates accessing a shape from a slide and changing the text within it. This snippet applies to all three editors shown above.
+
+**Prerequisites:** Place a PowerPoint file named `Sample.pptx` in the runtime output folder.
+
+Include the following namespaces in the Program.cs file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+using System.IO;
+{% endhighlight %}
+
+{% endtabs %}
+
+Then add the following code snippet in the Program.cs file.
 
 {% tabs %}
 
@@ -355,12 +379,10 @@ if(shape.TextBody.Text == "Company History")
 //Save the PowerPoint presentation as stream
 FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
 pptxDoc.Save(outputStream);
-outputStream.Position = 0;
-outputStream.Flush();
+//Release all resources from stream
 outputStream.Dispose();
 //Close the PowerPoint presentation
 pptxDoc.Close();
-
 {% endhighlight %}
 
 {% endtabs %}

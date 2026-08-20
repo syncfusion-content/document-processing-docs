@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion Angular PDF Viewer using programmatic APIs.
+title: Annotation Permission in Angular PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the Angular PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions in Angular
+# Annotation Permissions in Angular PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 
@@ -134,12 +134,12 @@ export class AppComponent {
 {% endtabs %}
 
 Behavior notes
-- isLock true: The annotation is locked; users cannot move, resize, or edit it through the UI until it is unlocked.
-- skipPrint true: All annotations are omitted from the print output initiated from the viewer.
-- skipDownload true: All annotations are omitted from the exported/downloaded PDF from the viewer.
-- isPrint on an individual annotation: Use this when you only want to exclude a particular annotation from printing while leaving others printable.
+- `isLock` true: The annotation is locked; users cannot move, resize, or edit it through the UI until it is unlocked.
+- `skipPrint` true: All annotations are omitted from the print output initiated from the viewer.
+- `skipDownload` true: All annotations are omitted from the exported/downloaded PDF from the viewer.
+- `isPrint` on an individual annotation: Use this when you only want to exclude a particular annotation from printing while leaving others printable.
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## See also
 

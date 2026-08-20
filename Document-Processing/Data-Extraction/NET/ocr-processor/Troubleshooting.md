@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting PDF OCR failures | Syncfusion
-description: Learn how to overcome OCR Processor failures using Syncfusion .NET OCR library with the help of Google's Tesseract Optical Character Recognition engine.
+title: How to troubleshoot failures in .NET OCR Processor | Syncfusion
+description: Troubleshoot and overcome OCR Processor failures using the Syncfusion .NET OCR library powered by Google's Tesseract OCR engine.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 --- 
 
-# OCR Processor Troubleshooting 
+# How to troubleshoot failures in .NET OCR Processor
 
 ## Tesseract has not been initialized exception
 
@@ -36,12 +36,6 @@ processor.PerformOCR(lDoc, @"TessData/");
 
 {% endhighlight %}
 {% endtabs %}
-</td>
-</tr>
-<tr>
-<th style="font-size:14px" width="100px">Solution2</th>
-<td>
-Ensure that your data file version is 3.02 since the OCR processor is built with the Tesseract version 3.02.
 </td>
 </tr>
 </table>
@@ -90,7 +84,7 @@ Install the VC++ 2015 redistributable files in your machine to overcome an excep
 <img src="OCR-Images/Redistributable-file.png" alt="Visual C++ 2015 Redistributable file">
 <br/><br/>
 Please find the download link Visual C++ 2015 Redistributable file,<br>
-<a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Visual C++ 2015 Redistributable file</a> 
+<a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145" aria-label="Link to Visual C++ 2015 Redistributable file">Visual C++ 2015 Redistributable file</a> 
 </td>
 </tr>
 </table>
@@ -109,7 +103,7 @@ Please find the download link Visual C++ 2015 Redistributable file,<br>
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/en-us/articles/211543683-What-is-the-error-identity-of-the-developer-cannot-be-confirmed-">link</a> for more details.
+To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/en-us/articles/211543683-What-is-the-error-identity-of-the-developer-cannot-be-confirmed-" aria-label="What is the error identity of the developer cannot be confirmed">troubleshooting article</a> for more details.
 
 </td>
 </tr>
@@ -131,7 +125,7 @@ To resolve this issue, refer this <a href="https://support.shippingeasy.com/hc/e
 <td>
 The essential<sup>&reg;</sup> PDF supports all the languages the Tesseract engine supports in the OCR processor.
 The dictionary packs for the languages can be downloaded from the following online location:<br/>
-<a href="https://code.google.com/p/tesseract-ocr/downloads/list">https://code.google.com/p/tesseract-ocr/downloads/list</a>
+<a href="https://github.com/tesseract-ocr/tessdata" aria-label="GitHub link for Tesseract engine language dictionary pack">https://github.com/tesseract-ocr/tessdata</a>
 <br/><br/>
 It is also mandatory to change the corresponding language code in the OCRProcessor.Settings.Language property.  <br/>
 For example, to perform the optical character recognition in German, the property should be set as  <br/>
@@ -182,8 +176,8 @@ b.Copy the appropriate runtimes folder from the extracted package into your proj
 <td>
 By using the best tessdata, we can improve the OCR results. For more information,<br> please refer to the links below.
 <br/>
-<a href="https://github.com/tesseract-ocr/tessdata_best">https://github.com/tesseract-ocr/tessdata_best</a> <br>
-{{'**Note:**'| markdownify }}For better performance, kindly use the fast tessdata which is mentioned in below link,<br/><a href="https://github.com/tesseract-ocr/tessdata_fast">https://github.com/tesseract-ocr/tessdata_fast</a> 
+<a href="https://github.com/tesseract-ocr/tessdata_best" aria-label="GitHub link for best tessdata">https://github.com/tesseract-ocr/tessdata_best</a> <br>
+<b>Note:</b> For better performance, you can use the fast tessdata which is mentioned in the below link,<br/><a href="https://github.com/tesseract-ocr/tessdata_fast" aria-label="GitHub link for fast tessdata">https://github.com/tesseract-ocr/tessdata_fast</a> 
 </td>
 </tr>
 </table>
@@ -228,6 +222,8 @@ If the "brew" is not installed on your machine, you can install it using the fol
 <br>
 2.Once Tesseract 5 is successfully installed, you can configure the path to the latest binaries by copying the location of the Tesseract folder and setting it as the Tesseract binaries path when setting up the OCR processor. Refer to the example code below:
 <br>
+<b>Note:</b> The version segment in the path (<code>5.3.2</code> in the example) must match the Tesseract version installed on your machine. Update it to match your installed Tesseract version.
+<br><br>
 {% tabs %}
 {% highlight C# %}
 
@@ -273,7 +269,7 @@ using (OCRProcessor processor = new OCRProcessor("/opt/homebrew/Cellar/tesseract
 
 <table>
 <th style="font-size:14px" width="100px">Issue</th>
-<th style="font-size:14px">Method PerformOCR() causes problem and ignores the tesseract files under WSL</th>
+<th style="font-size:14px">Method PerformOCR() causes problems and ignores the tesseract files under WSL</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
@@ -294,7 +290,7 @@ sudo apt-get install libleptonica-dev
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img alt="OCR Install leptonica logo" src="OCR-Images/Install-leptonica.png">
+<img alt="Leptonica installed via apt-get" src="OCR-Images/Install-leptonica.png">
 <br><br>
 2.Install the tesseract.
 <br>
@@ -306,7 +302,7 @@ sudo apt-get install tesseract-ocr-eng
 {% endhighlight %}
 {% endtabs %}
 <br><br>
-<img alt="OCR Install tesseract logo" src="OCR-Images/Install-tesseract.png">
+<img alt="Tesseract installed via apt-get" src="OCR-Images/Install-tesseract.png">
 <br><br>
 3. Copy the binaries (liblept.so and libtesseract.so) to the missing files exception folder in the project location.
 <br>
@@ -385,11 +381,11 @@ ln -s /lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 </tr>
 </table>
 
-## OCR not working on Docker net 8.0: Exception has been thrown by target of an invocation.
+## OCR not working on Docker net 8.0: Exception has been thrown by the target of an invocation.
 
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
-<th style="font-size:14px">OCR not working on Docker net 8.0: Exception has been thrown by target of an invocation.</th>
+<th style="font-size:14px">OCR not working on Docker net 8.0: Exception has been thrown by the target of an invocation.</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
@@ -427,9 +423,9 @@ EXPOSE 8081
 
 
 ## Default path reference for Syncfusion<sup>&reg;</sup> OCR packages
-When installing the Syncfusion<sup>&reg;</sup> OCR NuGet packages, the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
+When installing the Syncfusion<sup>&reg;</sup> OCR NuGet packages (for example, <code>Syncfusion.PDF.OCR.Net.Core</code> for .NET Core applications), the tessdata and tesseract path binaries are copied into the runtimes folder. The default binaries path references are added in the package itself, so there is no need to set the manual path.
 
-If you are facing any issues with default reference path in your project. Kindly manually set the Tesseract and Tessdata path using the TessdataPath and TesseractPath in OCRProcessor class. You can find the binaries in the below project in your project location.
+If you are facing any issues with default reference path in your project. Kindly manually set the Tesseract and Tessdata path using the TessDataPath and TesseractPath properties of the OCRProcessor class. You can find the binaries in the below project in your project location.
 
 <table>
 <tr>
@@ -464,7 +460,7 @@ bin\Debug\net6.0.\runtimes\osx\native
 ## System.NullReferenceException in Azure linux VM
 <table>
 <th style="font-size:14px" width="100px">Exception</th>
-<th style="font-size:14px">System.NullReferenceException in Azure linux VM</th>
+<th style="font-size:14px">System.NullReferenceException in Azure Linux VM</th>
 <tr>
 <th style="font-size:14px" width="100px">Reason
 </th>
@@ -476,7 +472,7 @@ bin\Debug\net6.0.\runtimes\osx\native
 <td>
 Installing the following Skiasharp NuGet for the Linux environment will resolve the System.NullReferenceException while extracting the Images in Linux.<br>
 Please find the NuGet link below,<br>
-NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
+NuGet:  <a href="https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6" aria-label="NuGet link for Skiasharp Native Assets">https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.6</a>
 </td>
 </tr>
 </table>
@@ -531,7 +527,9 @@ To resolve this problem, the tessdata folder path must be explicitly set relativ
 <br/><br/>
 Please refer to the screenshot below:
 <br/><br/>
-<img alt="OCR folder image" src="OCR-Images/TessdataRemove.jpeg">
+<img alt="Tessdata folder in the publish output" src="OCR-Images/TessdataRemove.jpeg">
+<br/>
+<i>Screenshot showing the location of the <code>tessdata</code> folder in the Docker publish output (<code>obj\Docker\publish</code>).</i>
 <br/><br/>
 </td>
 </tr>
@@ -594,7 +592,7 @@ securityContext:
 
 {% endtabs %}
 <br/><br/>
-N> Avoid setting `runAsUser: 0` in production, as running containers as root poses a security risk.
+<b>Note:</b> Avoid setting `runAsUser: 0` in production, as running containers as root poses a security risk.
 <br/><br/>
 <b>3.Use Persistent Writable Storage (Azure Files Example):</b>
 <br/><br/>
@@ -637,7 +635,9 @@ Is Microsoft.mshtml required when using the OCRProcessor in the .NET Framework?
 <tr>
 <th style="font-size:14px" width="100px">Solution</th>
 <td>
-Yes, the Microsoft.mshtml component is required when using the OCRProcessor in .NET Framework applications. We internally rely on this package to parse the hOCR results, which are delivered in HTML format. Because of this, Microsoft.mshtml is necessary for .NET Framework projects that use the OCRProcessor.
+Yes, the Microsoft.mshtml component is required when using the OCRProcessor in .NET Framework applications. The OCR processor internally uses this package to parse the hOCR results, which are delivered in HTML format. Because of this, Microsoft.mshtml is necessary for .NET Framework projects that use the OCRProcessor.
+<br/><br/>
+<b>How to add the reference:</b> In Visual Studio, right-click <b>References</b> in your .NET Framework project, choose <b>Add Reference</b>, and then locate <b>Microsoft.mshtml</b> in the reference list and add it to the project.
 </td>
 </tr>
 </table>

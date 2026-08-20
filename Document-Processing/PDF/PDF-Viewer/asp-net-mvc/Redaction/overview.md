@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Redaction annotation in MVC PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion ASP.NET MVC PDF Viewer.
+title: About Syncfusion ASP.NET MVC PDF Viewer Redaction | Syncfusion
+description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Redaction section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction in ASP.NET MVC PdfViewer
+# About Syncfusion ASP.NET MVC PDF Viewer Redaction
 
 Redaction annotations are used to hide confidential or sensitive information in a PDF. The Syncfusion ASP.NET MVC PDF Viewer lets you mark areas or entire pages for redaction, customize their appearance, and permanently apply them with a single action.
 
@@ -77,7 +77,7 @@ Redaction annotations can be removed easily:
 
 ## Redact Entire Pages
 
-The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built‑in dialog, or perform the same action programmatically.
+The viewer allows you to redact whole pages that contain sensitive information. You can choose specific pages, page ranges, or redact all pages using the built-in dialog, or perform the same action programmatically.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 

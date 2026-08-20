@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Bookmark Navigation in Angular PDF Viewer | Syncfusion
-description: Use bookmarks to navigate quickly within PDF documents in the Syncfusion Angular PDF Viewer for Angular.
+title: Bookmark in Angular PDF Viewer | Syncfusion
+description: Navigate PDF bookmarks in the Angular PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Bookmark navigation in Angular PDF Viewer control
+# Bookmark Navigation in Angular PDF Viewer
 
 Bookmarks embedded in PDF files are loaded and made available for quick navigation within the viewer.
 Enable or disable bookmark navigation using the examples below.
@@ -54,8 +54,7 @@ import {
       [documentPath]="document"
       [resourceUrl] = "resource"
       [enableBookmark]='true'
-      >
-      style="height:640px;display:block"
+      style="height:640px;display:block">
     </ejs-pdfviewer>
     `,
   encapsulation: ViewEncapsulation.None,
@@ -133,8 +132,7 @@ import {
       [documentPath]="document"
       [resourceUrl] = "resource"
       [enableBookmark]='true'
-      >
-      style="height:640px;display:block"
+      style="height:640px;display:block">
     </ejs-pdfviewer>
     `,
   encapsulation: ViewEncapsulation.None,
@@ -182,7 +180,7 @@ Use the **goToBookmark** method to navigate to a bookmark programmatically. The 
 The examples below demonstrate using `goToBookmark` and `getBookmarks()`; do not modify code samples unless adapting them for a specific app.
 
 ```
-  <button id="gotobookmark">Specfic Page</button>
+  <button id="gotobookmark">Specific Page</button>
 ```
 
 ```ts
@@ -209,7 +207,7 @@ export class AppComponent implements AfterViewInit {
 }
 ```
 
-x - Specifies the pageIndex for Navigate.
+x - Specifies the pageIndex for navigate.
 
 y - Specifies the Y coordinates value of the Page.
 

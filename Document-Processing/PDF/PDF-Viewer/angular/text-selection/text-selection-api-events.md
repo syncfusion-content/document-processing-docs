@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text selection API and events in Angular PDF Viewer | Syncfusion
-description: Reference documentation for text selection properties, methods, and events in the Syncfusion Angular PDF Viewer.
+title: Text Selection Api Events in Angular PDF Viewer | Syncfusion
+description: Reference documentation for text selection properties, methods, and events in the Angular PDF Viewer, with examples for common scenarios.
 platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text selection API and events in Angular PDF Viewer
+# Text Selection API and Events in Angular PDF Viewer
 
 This document provides the reference details for text selection APIs and events in the Syncfusion Angular PDF Viewer. It includes the available configuration property, programmatic methods, and event callbacks that allow applications to react to selection behavior.
 
@@ -26,7 +26,7 @@ selectTextRegion(pageNumber: number, bounds: IRectangle[]): void
 
 **Parameters:**
 
-- pageNumber: number indicating the target page (1 based indexing)
+- pageNumber: number indicating the target page (1-based indexing)
 - bounds: `IRectangle` array defining the selection region
 
 **Example:**
@@ -199,7 +199,7 @@ export class AppComponent {
 
   onTextSelectionEnd(args: TextSelectionEndEventArgs): void {
     // custom logic
-     console.log(args);
+    console.log(args);
   }
 }
 {% endhighlight %}

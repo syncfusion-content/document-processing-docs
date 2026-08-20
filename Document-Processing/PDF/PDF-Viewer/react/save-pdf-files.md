@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Saving PDF files in React Pdfviewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Save Pdf Files in React PDF Viewer | Syncfusion
+description: Save edited PDFs from the React PDF Viewer to a local download or to a server-backed endpoint, with options to control the output name and format.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF Files in the React PDF Viewer
+# Save PDF Files in React PDF Viewer
 
 After editing a PDF with annotation tools, you can save the updated file to a server, a database, or download it locally. The following sections show common approaches.
 
@@ -84,7 +84,7 @@ function App() {
       {/* Render the PDF Viewer */}
         <PdfViewerComponent
           id="container"
-          // Replace  correct PDF Document URL want to load
+          // Replace with the correct PDF document URL you want to load
           documentPath="https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>
@@ -130,7 +130,7 @@ return (<div>
         <PdfViewerComponent
           id="container"
           // Replace PDF_Succinctly.pdf with the actual document name that you want to load
-          documentPath:"PDF_Succinctly.pdf"
+          documentPath="PDF_Succinctly.pdf"
           // Replace the "localhost:44396" with the actual URL of your server
           serviceUrl="https://localhost:44396/pdfviewer"
           style={{ 'height': '640px' }}>

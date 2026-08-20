@@ -1,18 +1,18 @@
 ---
-title: Convert Markdown to Excel in C# | XlsIO | Syncfusion
-description: Convert Markdown to Excel in C# using Syncfusion<sup>&reg;</sup> .NET Excel (XlsIO) library without Microsoft Excel or interop dependencies
+title: About Syncfusion .NET Markdown to Excel Conversion | Syncfusion
+description: Learn about introduction of Markdown to Excel conversion using the Syncfusion .NET Excel Library and more details.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Markdown to Excel Conversion
+# About Syncfusion .NET Markdown to Excel Conversion
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Excel (XlsIO) library supports the conversion of Markdown to an Excel document and vice versa, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
 ## Assemblies and NuGet packages required
 
-Refer to the following links for assemblies and NuGet packages required based on platforms to convert a Markdown file to an Excel document using the .NET Excel Library (XlsIO).
+For the assemblies and NuGet packages required to convert Markdown to Excel, see the per-platform lists below.
 
 * [Markdown to Excel conversion assemblies](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required)
 * [Markdown to Excel conversion NuGet packages](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required)
@@ -31,7 +31,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Sample.md", ExcelOpenType.Markdown);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.md"), ExcelOpenType.Markdown);
 
     workbook.SaveAs(Path.GetFullPath("Output/MarkdownToExcel.xlsx"));
 }
@@ -43,7 +43,7 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     IApplication application = excelEngine.Excel;
     application.DefaultVersion = ExcelVersion.Xlsx;
 
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Sample.md", ExcelOpenType.Markdown);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample.md"), ExcelOpenType.Markdown);
 
     workbook.SaveAs(Path.GetFullPath("Output/MarkdownToExcel.xlsx"));
 }
@@ -54,7 +54,7 @@ Using excelEngine As New ExcelEngine()
     Dim application As IApplication = excelEngine.Excel
     application.DefaultVersion = ExcelVersion.Xlsx
 
-    Dim workbook As IWorkbook = application.Workbooks.Open("Sample.md", ExcelOpenType.Markdown)
+    Dim workbook As IWorkbook = application.Workbooks.Open(Path.GetFullPath("Sample.md"), ExcelOpenType.Markdown)
 
     workbook.SaveAs("MarkdownToExcel.xlsx")
 End Using
@@ -62,7 +62,7 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Markdown-to-Excel/.NET/Markdown-to-Excel">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Markdown-to-Excel/.NET/Markdown-to-Excel" aria-label="GitHub demo link">this GitHub page</a>.
 
 ## Customize image data
 
@@ -79,10 +79,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     MdImportSettings settings = new MdImportSettings();
-
     settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
 
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Sample1.md", settings);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample1.md"), settings);
 
     workbook.SaveAs(Path.GetFullPath("Output/MarkdownToExcel.xlsx"));
 }
@@ -95,10 +94,9 @@ using (ExcelEngine excelEngine = new ExcelEngine())
     application.DefaultVersion = ExcelVersion.Xlsx;
 
     MdImportSettings settings = new MdImportSettings();
-
     settings.ImageNodeVisited += MdImportSettings_ImageNodeVisited;
 
-    IWorkbook workbook = application.Workbooks.Open(@"Data/Sample1.md", settings);
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Sample1.md"), settings);
 
     workbook.SaveAs(Path.GetFullPath("Output/MarkdownToExcel.xlsx"));
 }
@@ -112,7 +110,7 @@ Using excelEngine As New ExcelEngine()
     Dim settings As New MdImportSettings()
     AddHandler settings.ImageNodeVisited, AddressOf MdImportSettings_ImageNodeVisited
 
-    Dim workbook As IWorkbook = application.Workbooks.Open("Sample1.md", settings)
+    Dim workbook As IWorkbook = application.Workbooks.Open(Path.GetFullPath("Sample1.md"), settings)
 
     workbook.SaveAs("MarkdownToExcel.xlsx")
 End Using
@@ -178,9 +176,9 @@ Private Sub MdImportSettings_ImageNodeVisited(sender As Object, args As MdImageN
 End Sub
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
-You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Customize-Image/.NET/Customize-Image">this GitHub page</a>.
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Markdown%20to%20Excel/Customize-Image/.NET/Customize-Image" aria-label="GitHub demo link">this GitHub page</a>.
 
 N> Hook the event handler before opening the Markdown document as per the above code example.
 

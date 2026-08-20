@@ -1,13 +1,13 @@
 ---
 layout: post
-title: UI Customization in React Spreadsheet component | Syncfusion
+title: UI Customization in React Spreadsheet | Syncfusion
 description: Learn here how to customize and manage the user interface in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# User Interface Customization
+# UI Customization in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides options to customize the user interface and control the behavior of its UI components.
 
@@ -92,7 +92,7 @@ The following code sample shows how to enable or disable a ribbon tab and toolba
 
 ## Note
 
-You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

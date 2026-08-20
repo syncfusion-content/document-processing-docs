@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Perimeter Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Perimeter measurement annotations in the Syncfusion Angular PDF Viewer.
+title: Perimeter Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Perimeter measurement annotations in the Angular PDF Viewer to calculate the perimeter of a region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Perimeter Measurement Annotations in Angular PDF Viewer
+# Perimeter Annotation in Angular PDF Viewer
 Perimeter is a measurement annotation used to calculate the length around a closed polyline on a PDF page—useful for technical markups and reviews. 
 
 ![Perimeter overview](../../../javascript-es6/annotations/annotation-images/perimeter-annot.png)
@@ -84,7 +84,7 @@ enablePerimeterMode(): void {
 {% endhighlight %}
 {% endtabs %}
 
-#### Exit Perimeter Mode
+### Exit Perimeter Mode
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 

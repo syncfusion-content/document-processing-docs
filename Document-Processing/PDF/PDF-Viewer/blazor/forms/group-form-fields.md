@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group form fields in the Blazor SfPdfViewer component | Syncfusion
+title: Group form fields in the Blazor PDF Viewer  | Syncfusion
 description: Learn how to group PDF form fields in the Blazor SfPdfViewer by assigning the same name to multiple widgets.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Group form fields in Blazor SfPdfViewer
+# Group form fields in the Blazor PDF Viewer 
 
 The Blazor `SfPdfViewer` allows grouping multiple form fields into a single logical field by assigning the same `Name` to them. Grouped form fields share their values and states automatically based on the field type. Use the Form Designer UI for manual grouping or the Form Designer APIs for programmatic grouping to keep related fields synchronized across the document.
 
@@ -17,11 +17,11 @@ The Blazor `SfPdfViewer` allows grouping multiple form fields into a single logi
 
 ## Field behavior by type
 
-- **Textbox and Password** — Text entered in one widget appears in all widgets with the same name.  
-- **CheckBox** — Checking one widget sets the checked state for all checkboxes with the same name.  
-- **RadioButton** — Widgets with the same name form a radio group; only one option can be selected.  
-- **ListBox and DropDown** — The selected value is shared across widgets with the same name.  
-- **Signature field** — Applied signature/initial is mirrored across grouped widgets.
+- **Textbox and Password**: Text entered in one widget appears in all widgets with the same name.  
+- **CheckBox**: Checking one widget sets the checked state for all checkboxes with the same name.  
+- **RadioButton**: Widgets with the same name form a radio group; only one option can be selected.  
+- **ListBox and DropDown**: The selected value is shared across widgets with the same name.  
+- **Signature field**: Applied signature/initial is mirrored across grouped widgets.
 
 N> Form field grouping is controlled by the `Name` property. The position of each widget is determined by its `Bounds`; grouping is independent of location.
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Change active sheet in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about changing active sheet index when import a file in Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: How to Change Active Sheet in JavaScript Spreadsheet | Syncfusion
+description: Change the active sheet index when importing a workbook in JavaScript Spreadsheet to display the required worksheet by default.
 platform: document-processing
-control: Spreadsheet 
+control: Spreadsheet
 documentation: ug
 ---
 
-# Changing the active sheet in EJ2 Javascript Spreadsheet control
+# How to Change Active Sheet in JavaScript Spreadsheet
 
-You can change the active sheet of imported file by updating [`activeSheetIndex`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#activesheetindex) property on the [`openComplete`](https://helpej2.syncfusion.com/javascript/documentation/api/spreadsheet/#opencomplete) event.
+You can change the active sheet of imported file by updating [`activeSheetIndex`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#opencomplete) event.
 
 
 The following code example shows how to set the active sheet when importing an Excel file.

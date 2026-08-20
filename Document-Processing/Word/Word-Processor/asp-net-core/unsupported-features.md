@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Unsupported features in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn about the list of unsupported features in the ASP.NET Core Docx Editor to understand its limitations
+title: Unsupported Features in ASP.NET Core DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in ASP.NET Core DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in ASP.NET Core DOCX Editor
 
-This section describes the unsupported elements in [ASP.NET Core Docx Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) 
+This section describes the unsupported elements in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
 ## Document formatting
 
@@ -19,7 +19,7 @@ This section describes the unsupported elements in [ASP.NET Core Docx Editor](ht
 | Paragraph Properties | Shading | No |
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
-|  | Don’t hyphenate | No |
+|  | Don't hyphenate | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Text Properties | Shading  | No |
 |  |  Position | No |
@@ -39,13 +39,13 @@ This section describes the unsupported elements in [ASP.NET Core Docx Editor](ht
 | Watermark  |  Text and Picture watermark| No |
 | Table Format | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 
-## Word Document Elements
+## Word document elements
 
 | Feature | Supported |
 |--------|----------------|
 | ActiveX Controls | No |
 | Embedded Objects | No |
-| Images | Bitmap images only |
+| Images | Bitmap, Metafile (EMF, WMF), and TIFF images |
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
@@ -54,4 +54,4 @@ This section describes the unsupported elements in [ASP.NET Core Docx Editor](ht
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No 
+| Comment reactions | No |

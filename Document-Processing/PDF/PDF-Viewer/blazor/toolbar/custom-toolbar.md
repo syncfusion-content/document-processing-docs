@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a custom toolbar in Blazor PDF Viewer Component | Syncfusion
-description: Learn how to build a custom toolbar in the Blazor PDF Viewer component, including navigation, zoom, annotation, save, print, and download actions.
+title: Create a custom toolbar in Blazor PDF Viewer  | Syncfusion
+description: Learn how to build a custom toolbar in the Blazor PDF Viewer , including navigation, zoom, annotation, save, print, and download actions.
 control: SfPdfViewer
 platform: document-processing
 documentation: ug

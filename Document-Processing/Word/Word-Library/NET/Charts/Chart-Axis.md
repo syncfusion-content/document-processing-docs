@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Axes in Chart | Syncfusion
-description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Axes in Chart in .NET Word | Syncfusion
+description: Learn how to compare two Word documents using Java Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Chart Axis in Word document
+# Modify the Appearance of Axes in Chart in .NET Word
 
 Charts typically have two axes that are used to measure and categorize data.
 -  Horizontal axis (also known as category axis or x axis).
@@ -49,7 +49,7 @@ chart.PrimaryValueAxis.Title = "In Dollars"
 
 ## Customization of Border
 
-The following code snippet illustrates how to customize the border of Horizontal and vertical category axis.
+The following code snippet illustrates how to customize the border of the Horizontal and Vertical axes.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -66,13 +66,11 @@ chart.PrimaryValueAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-
 //Customize the horizontal category axis.
 chart.PrimaryCategoryAxis.Border.LinePattern = OfficeChartLinePattern.CircleDot;
 chart.PrimaryCategoryAxis.Border.LineColor = Color.Blue;
 chart.PrimaryCategoryAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
 
-//Customize the vertical category axis.
 chart.PrimaryValueAxis.Border.LinePattern = OfficeChartLinePattern.CircleDot;
 chart.PrimaryValueAxis.Border.LineColor = Color.Blue;
 chart.PrimaryValueAxis.Border.LineWeight = OfficeChartLineWeight.Hairline;
@@ -95,7 +93,7 @@ chart.PrimaryValueAxis.Border.LineWeight = OfficeChartLineWeight.Hairline
 
 ## Customization of Font
 
-The following code snippet illustrates how to customize the border of Horizontal and vertical category axis.
+The following code snippet illustrates how to customize the font of the Horizontal and Vertical axes.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -106,7 +104,7 @@ chart.PrimaryCategoryAxis.Font.FontName = "Calibri";
 chart.PrimaryCategoryAxis.Font.Bold = true;
 chart.PrimaryCategoryAxis.Font.Size = 20;
 
-//Customize the vertical category axis font.
+//Customize the vertical value axis font.
 chart.PrimaryValueAxis.Font.Color = OfficeKnownColors.Red;
 chart.PrimaryValueAxis.Font.FontName = "Calibri";
 chart.PrimaryValueAxis.Font.Bold = true;
@@ -121,7 +119,7 @@ chart.PrimaryCategoryAxis.Font.FontName = "Calibri";
 chart.PrimaryCategoryAxis.Font.Bold = true;
 chart.PrimaryCategoryAxis.Font.Size = 20;
 
-//Customize the vertical category axis font.
+//Customize the vertical value axis font.
 chart.PrimaryValueAxis.Font.Color = OfficeKnownColors.Red;
 chart.PrimaryValueAxis.Font.FontName = "Calibri";
 chart.PrimaryValueAxis.Font.Bold = true;
@@ -490,10 +488,10 @@ using (WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx)
     //Number format for axis.
     chart.PrimaryValueAxis.NumberFormat = "0.0";
 
-    //Hiding major gridlines.
+    //Showing major gridlines.
     chart.PrimaryValueAxis.HasMajorGridLines = true;
 
-    //Showing minor gridlines.
+    //Hiding minor gridlines.
     chart.PrimaryValueAxis.HasMinorGridLines = false;
 
     using (FileStream outputStream = new FileStream(Path.GetFullPath(@"../../../Sample.docx"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
@@ -563,10 +561,10 @@ using (WordDocument document = new WordDocument("Template.docx"))
     //Number format for axis.
     chart.PrimaryValueAxis.NumberFormat = "0.0";
 
-    //Hiding major gridlines.
+    //Showing major gridlines.
     chart.PrimaryValueAxis.HasMajorGridLines = true;
 
-    //Showing minor gridlines.
+    //Hiding minor gridlines.
     chart.PrimaryValueAxis.HasMinorGridLines = false;
 
     //Save the Word file.
@@ -635,10 +633,10 @@ Using document As New WordDocument("Template.docx")
     ' Number format for axis.
     chart.PrimaryValueAxis.NumberFormat = "0.0"
     
-    ' Hiding major gridlines.
+    ' Showing major gridlines.
     chart.PrimaryValueAxis.HasMajorGridLines = True
     
-    ' Showing minor gridlines.
+    ' Hiding minor gridlines.
     chart.PrimaryValueAxis.HasMinorGridLines = False
     
     ' Save the Word file.

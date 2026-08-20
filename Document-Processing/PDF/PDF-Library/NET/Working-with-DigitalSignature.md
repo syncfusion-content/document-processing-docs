@@ -1,18 +1,18 @@
 ---
-title: Working with Digital Signature | Syncfusion
-description: This section explains how to create a digital signature in the PDF document by using Syncfusion .NET PDF library.
+title: Digital Signature in .NET PDF Library | Syncfusion
+description: Learn how to create a digital signature in a PDF document programmatically using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Digital Signature
+# Digital Signature in .NET PDF Library
 
-To quickly get started with digitally signing a PDF document and validating signatures using the Blazor PDF Library, check this video:
+To quickly get started with digitally signing a PDF document and validating signatures using the .NET PDF Library, check this video:
 {% youtube "https://www.youtube.com/watch?v=NNIFh1Ckdzw&t=672s" %}
 
 ## Adding a digital signature
 
-The Essential<sup>&reg;</sup> PDF allows you to add a [digital signature](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/digital-signature-pdf) to the PDF document. To add a digital signature, you need a certificate with private keys. The Essential<sup>&reg;</sup> PDF provides support for digital signature by using the PFX files, Hardware Security Module (HSM), Online Certificate Status Protocol (OCSP), Certificate Revocation List (CRL), Windows Certificate Store, and supports signatures using the Elliptic Curve Digital Signature Algorithm (ECDSA).
+Essential<sup>&reg;</sup> PDF enables you to add a [digital signature](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/digital-signature-pdf) to a PDF document. To add a digital signature, you need a certificate with a private key. Essential<sup>&reg;</sup> PDF supports digital signatures by using PFX files, Hardware Security Module (HSM), Online Certificate Status Protocol (OCSP), Certificate Revocation List (CRL), the Windows Certificate Store, and the Elliptic Curve Digital Signature Algorithm (ECDSA).
 
 The following code example explains how to add a digital signature to the PDF document by using [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
@@ -131,9 +131,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Add-a-digital-signature-to-the-PDF-document/).
 
-## Adding a digital signature using stream
+## Adding a digital signature using a stream
 
-The following code example illustrates how to add a digital signature in the PDF document as stream using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class as follows.
+The following code example illustrates how to add a digital signature in a PDF document as a stream using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
@@ -351,7 +351,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a digital signature using X509Certificate2
 
-The following code example illustrates how to add digital signature in a PDF document using [X509Certificate2](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate__ctor_System_Security_Cryptography_X509Certificates_X509Certificate2_) as follows.
+The following code example illustrates how to add a digital signature to a PDF document using [X509Certificate2](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate__ctor_System_Security_Cryptography_X509Certificates_X509Certificate2_).
 
 {% tabs %}
 
@@ -476,7 +476,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Signing an existing document
 
-You can load the signature field from the existing PDF document using [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class and add certificate to the document using [PdfCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html) class.
+You can load the signature field from an existing PDF document using the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class and add a certificate to the document using the [PdfCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html) class.
 
 {% tabs %}
 
@@ -557,9 +557,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Signing-an-existing-PDF-document/).
 
-## Sign an existing document using stream
+## Sign an existing document using a stream
 
-You can load the signature field from an existing PDF document using [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class and add certificate to the document as stream using [PdfCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html) as follows.
+You can load the signature field from an existing PDF document using the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class and add a certificate to the document as a stream using the [PdfCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html) class.
 
 {% tabs %}
 
@@ -646,7 +646,7 @@ loadedDocument.Close(True)
 
 The [IsSigned](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_IsSigned) property in the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class allows you to determine whether a signature field in a PDF document has been signed.
 
-The following code example demonstrates how to check if a signature field is signed.
+The following code example demonstrates how to check whether a signature field is signed.
 
 {% tabs %}
 
@@ -755,9 +755,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Check-If-PDF-Is-Signed/.NET).
 
-## Externally sign a PDF document 
+## Externally sign a PDF document
 
-You can sign the PDF document with an external digital signature created from various sources, such as an HSM, USB token, smart card, or other cloud services such as DigitalSign. The following approaches are available for externally signing the PDF documents.
+You can sign a PDF document with an external digital signature created from various sources, such as an HSM, USB token, smart card, or other cloud services such as DigitalSign. The following approaches are available for externally signing PDF documents.
 
 * [ComputeHash](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_ComputeHash) event 
 * [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_ComputeHash) interface
@@ -1099,11 +1099,11 @@ N> When implementing `IPdfExternalSigner`, ensure that the hashing and signing a
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Externally-sign-the-PDF-document-using-IPdfExternalSigner/).
 
-## Adding Timestamps to a PDF document using external signing
+## Adding timestamps to a PDF document using external signing
 
-This section explains how to add a timestamp to a PDF document during the external signing process. We have implemented a solution that generates a timestamp response from a timestamp server URI using the [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. The accepted timestamp token follows the RFC3161 standard.
+This section explains how to add a timestamp to a PDF document during the external signing process. The following solution generates a timestamp response from a timestamp server URI using the [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. The accepted timestamp token follows the RFC3161 standard.
 
-N> In this example, we have used the open-source [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. Ensure you review its licensing before including it in your production environment. Alternatively, you can directly use the timestamp token provided by your service provider.
+N> This example uses the open-source [BouncyCastle](https://www.nuget.org/packages/Portable.BouncyCastle) library. Ensure you review its licensing before including it in your production environment. Alternatively, you can directly use the timestamp token provided by your service provider.
 
 The following example illustrates the process of adding timestamps to a PDF document during the external signing process.
 
@@ -1480,7 +1480,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create Long Term Validation (LTV) when signing PDF documents externally
 
-You can create a Long Term validation (LTV) when signing PDF documents externally using your private/public certificates.The following code example shows how to create an LTV when signing a PDF document from external signature using [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__) method in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
+You can create Long Term Validation (LTV) when signing PDF documents externally using your private/public certificates. The following code example shows how to create LTV when signing a PDF document from an external signature using the [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
@@ -1687,9 +1687,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The PDF LTA signature is the next level of the LTV signature. It follows the standard PAdES B-LTA. According to the standard, the validation-related information of the timestamp is added to the DSS along with other signature information mentioned in the LTV signature.
 
-The document timestamp is also applied to the PDF document, so it provides more viability to the signature. This level is recommended for qualified electronic signatures.
+A document timestamp is also applied to the PDF document, which provides additional validity to the signature. This level is recommended for qualified electronic signatures.
 
-The following code example shows how to sign a PDF document with LTA using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property and [EnableLtv](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableLtv) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
+The following code example shows how to sign a PDF document with LTA using the [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property and the [EnableLtv](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableLtv) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
@@ -1822,9 +1822,9 @@ N> To avoid this, increase the [EstimatedSignatureSize](https://help.syncfusion.
 
 ## Digitally sign a PDF document using the Windows certificate store
 
-A Windows certificate store is a secure way to store the digital ID. If a root certificate is added to the Windows certificate store, you do not need to manually add and trust each of the certificates that are already present in the Windows certificate store.
+A Windows certificate store is a secure way to store a digital ID. If a root certificate is added to the Windows certificate store, you do not need to manually add and trust each of the certificates that are already present in the Windows certificate store.
 
-You can retrieve the digital ID [X509Certificate2](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate__ctor_System_Security_Cryptography_X509Certificates_X509Certificate2_) from the Windows certificate store X509Store and use it to add a digital signature to a PDF document using [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
+You can retrieve the digital ID [X509Certificate2](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate__ctor_System_Security_Cryptography_X509Certificates_X509Certificate2_) from the Windows certificate store `X509Store` and use it to add a digital signature to a PDF document using the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 The following code example shows how to create a PDF digital signature using the Windows certificate store.
 
@@ -1932,9 +1932,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Sign_PDF_Windows_Certificate/).
 
-## Adding a signature validation appearance based on the signature 
+## Adding a signature validation appearance based on the signature
 
-You can add the dynamic signature validation appearance to the signature field by enabling the [EnableValidationAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableValidationAppearance) property available in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class, the appearance will change based on the PDF reader validation. 
+You can add a dynamic signature validation appearance to the signature field by enabling the [EnableValidationAppearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableValidationAppearance) property available in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The appearance will change based on the PDF reader validation.
 
 Refer to the following code sample.
 
@@ -2058,9 +2058,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Adding-a-signature-validation-appearance-in-a-PDF/).
 
-## Adding a timestamp in digital signature
+## Adding a timestamp in a digital signature
 
-Essential<sup>&reg;</sup> PDF allows you to add timestamp in the digital signature of the PDF document using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example explains the same.
+Essential<sup>&reg;</sup> PDF enables you to add a timestamp to the digital signature of a PDF document using the [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -2186,9 +2186,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Adding-a-timestamp-in-digital-signature-of-PDF/).
 
-## Adding a timestamp to PDF document
+## Adding a timestamp to a PDF document
 
-You can add timestamp to the PDF document using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example explains the same.
+You can add a timestamp to a PDF document using the [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -2260,9 +2260,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Adding-a-timestamp-to-PDF-document/).
 
-## Adding a timestamp to existing PDF document
+## Adding a timestamp to an existing PDF document
 
-You can add timestamp to the existing PDF document using [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example explains the same.
+You can add a timestamp to an existing PDF document using the [TimeStampServer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_TimeStampServer) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -2340,7 +2340,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve certificate details from an existing signed PDF document
 
-The Essential<sup>&reg;</sup> PDF provides support to get the certificate details from an existing signed PDF document such as,
+Essential<sup>&reg;</sup> PDF supports retrieving the following certificate details from an existing signed PDF document:
 
 * [Signed date](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_SignedDate)
 * Expiry date
@@ -2349,7 +2349,7 @@ The Essential<sup>&reg;</sup> PDF provides support to get the certificate detail
 * [Issuer name](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_IssuerName)
 * Certificate distinguished names (country, state, street, email, organization, organization unit, locality, and more).
 
-You can get the above certificate details from an existing signed PDF document using [ValidFrom](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidFrom) and [ValidTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidTo) property.The following code example explains the same.
+You can retrieve the certificate details from an existing signed PDF document using the [ValidFrom](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidFrom) and [ValidTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidTo) properties. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -2458,11 +2458,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Enable Long Term Validation (LTV) PDF signature
 
-The Essential<sup>&reg;</sup> PDF supports creating long term signature validation when signing the PDF document. The LTV signature allows you to check the validity of a signature long after the document was signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
+Essential<sup>&reg;</sup> PDF supports creating long-term signature validation when signing a PDF document. The LTV signature allows you to check the validity of a signature long after the document was signed. To achieve long-term validation, all the required elements for signature validation must be embedded in the signed PDF.
 
-N> The resulted PDF document size will be large since all the necessary signature information, Certificate Revocation List (CRL), and Online Certificate Status Protocol (OCSP) are embedded.
+N> The resulting PDF document size will be large since all the necessary signature information, Certificate Revocation List (CRL), and Online Certificate Status Protocol (OCSP) are embedded.
 
-The following code example explains how to create LTV PDF using [EnableLtv](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableLtv) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class when signing the PDF document.
+The following code example explains how to create an LTV PDF using the [EnableLtv](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EnableLtv) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class when signing the PDF document.
 
 {% tabs %}
 
@@ -2614,13 +2614,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding a digital signature with customization
 
-The [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html) allows you to add customized digital signatures to the PDF document.
+The [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html) enables you to add customized digital signatures to the PDF document.
 
 ### Adding a digital signature with CAdES format
 
-As per the PDF specification 2.0, now Syncfusion PDF library supports digital signature based on CAdES (CMS Advanced Electronics Signature). The CAdES based digital signature can remain valid for long periods, even if underlying cryptographic algorithms are broken. Using the API [CryptographicStandard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_CryptographicStandard), you can change the standard between CMS (Cryptographic Message Syntax) and CAdES.
+As per PDF specification 2.0, the Syncfusion PDF library now supports digital signatures based on CAdES (CMS Advanced Electronic Signatures). CAdES-based digital signatures can remain valid for long periods, even if the underlying cryptographic algorithms are broken. Using the [CryptographicStandard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_CryptographicStandard) API, you can change the standard between CMS (Cryptographic Message Syntax) and CAdES.
 
-The following code example explains how to add a digital signature with [cryptographic standard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_CryptographicStandard) as CAdES through [CryptographicStandard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.CryptographicStandard.html) Enum when creating the PDF document.
+The following code example explains how to add a digital signature with the [cryptographic standard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_CryptographicStandard) set to CAdES through the [CryptographicStandard](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.CryptographicStandard.html) enum when creating the PDF document.
 
 {% tabs %}
 
@@ -2749,9 +2749,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Adding-a-digital-signature-with-CAdES-format/).
 
-### Customize digestion algorithm
+### Customizing the digest algorithm
 
-In addition, you can now set the different message digest algorithm to sign PDF document using the [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_DigestAlgorithm) enum available in the class [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html). 
+In addition, you can now set a different message digest algorithm to sign the PDF document using the [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_DigestAlgorithm) enum available in the [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html) class.
 
 The following message digest algorithms are now supported:
 * SHA1
@@ -2760,7 +2760,7 @@ The following message digest algorithms are now supported:
 * SHA512
 * RIPEMD160
 
-The following code example explains how to add a digital signature with various digest algorithms to the PDF document by specifying the [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_DigestAlgorithm) property as **SHA256** through [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.DigestAlgorithm.html) enum in [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html) class.
+The following code example explains how to add a digital signature with various digest algorithms to the PDF document by specifying the [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html#Syncfusion_Pdf_Security_PdfSignatureSettings_DigestAlgorithm) property as **SHA256** through the [DigestAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.DigestAlgorithm.html) enum in the [PdfSignatureSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureSettings.html) class.
 
 {% tabs %}
 
@@ -2891,19 +2891,19 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Digital signature validation
 
-Added the support to validate the digital signatures in an existing PDF document. Digital signature validation covers the following steps to ensure the validity of the signatures:
+Added support to validate the digital signatures in an existing PDF document. Digital signature validation covers the following steps to ensure the validity of the signatures:
 
 * Validate the document modification.
 * Validate the certificate chain.
-* Ensure the signature with timestamp time.
+* Ensure the signature with timestamp.
 * Check the revocation status of the certificate with OCSP and CRL.
 * Ensure the multiple digital signatures.
 
-You can use the [ValidateSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_ValidateSignature) method available in the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class to validate the digital signature. 
+You can use the [ValidateSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_ValidateSignature) method available in the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class to validate the digital signature.
 
 You can get the overall status from the [IsSignatureValid](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html#Syncfusion_Pdf_Security_PdfSignatureValidationResult_IsSignatureValid) property available in the [PdfSignatureValidationResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html) class.
 
-The following code example explains how to validate the digitally signed PDF document signature.
+The following code example explains how to validate a digitally signed PDF document.
 
 {% tabs %}
 
@@ -3305,13 +3305,13 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/).
 
-### Validate all signatures in PDF document
+### Validate all signatures in a PDF document
 
-Added the support to validate all the digital signatures in an existing PDF document. 
+Added support to validate all the digital signatures in an existing PDF document.
 
 You can use the [ValidateSignatures](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedFormFieldCollection_ValidateSignatures_Syncfusion_Pdf_Parsing_PdfSignatureValidationOptions_System_Collections_Generic_List_Syncfusion_Pdf_Security_PdfSignatureValidationResult___) method available in the [PdfLoadedFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html) class to validate all the digital signatures. You can get the list of [PdfSignatureValidationResult](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html) from the [ValidateSignatures](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedFormFieldCollection_ValidateSignatures_Syncfusion_Pdf_Parsing_PdfSignatureValidationOptions_System_Collections_Generic_List_Syncfusion_Pdf_Security_PdfSignatureValidationResult___) method.
 
-The following code example explains how to validate all the signatures in digitally signed PDF document.
+The following code example explains how to validate all the signatures in a digitally signed PDF document.
 
 {% tabs %}
 
@@ -3397,13 +3397,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Validate and classify digital signatures in a PDF document
 
-It checks each signature field in the PDF to determine if it’s a timestamp, LTV (Long-Term Validation), or LTA (Long-Term Archival) signature. It also identifies the cryptographic standard used, such as CAdES, and prints the results to the console.
+It checks each signature field in the PDF to determine if it is a timestamp, LTV (Long-Term Validation), or LTA (Long-Term Archival) signature. It also identifies the cryptographic standard used, such as CAdES, and prints the results to the console.
 
-This example shows how to validate and identify different types of digital signatures in a PDF using C#.
+This example shows how to validate and identify different types of digital signatures in a PDF using C# and VB.NET.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET/Validate-the-digitally-signed-PDF-signature/Program.cs" %}
 
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
@@ -3614,11 +3614,11 @@ Next
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Validate-the-digitally-signed-PDF-signature/.NET).
 
-## Deferred signing in PDF document
+## Deferred signing in a PDF document
 
-The following code sample shows how to be deferred signing in a PDF document from an external signature using [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html) class and [AddExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_AddExternalSigner_Syncfusion_Pdf_Security_IPdfExternalSigner_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Byte___) method in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html).
+The following code sample shows how to perform deferred signing in a PDF document from an external signature using the [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html) class and the [AddExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_AddExternalSigner_Syncfusion_Pdf_Security_IPdfExternalSigner_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Byte___) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 Steps for deferred signing: 
 1.	Create a PDF document with an empty signature.
@@ -3981,7 +3981,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding the estimated size of the signature
 
-The following code sample shows how to add the estimated size of the signature in the PDF document using [EstimatedSignatureSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize) property.
+The following code sample shows how to add the estimated size of the signature in a PDF document using the [EstimatedSignatureSize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize) property.
 
 {% tabs %}
 
@@ -4070,7 +4070,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Deferred signing without PKCS7 encoding
 
-The following code sample shows deferred signing in a PDF document without PKCS7 encoding from an external signature using [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html) class and [AddExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_AddExternalSigner_Syncfusion_Pdf_Security_IPdfExternalSigner_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Byte___) method.
+The following code sample shows deferred signing in a PDF document without PKCS7 encoding from an external signature using the [IPdfExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.IPdfExternalSigner.html) class and the [AddExternalSigner](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_AddExternalSigner_Syncfusion_Pdf_Security_IPdfExternalSigner_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Byte___) method.
 
 Steps for deferred signing: 
 1.	Create a PDF document with an empty signature.
@@ -4364,9 +4364,9 @@ End Class
 
 {% endtabs %}
 
-## Drawing text/image in the Signature Appearance
+## Drawing text/image in the signature appearance
 
-The following code example illustrates how to draw text/images in a digital appearance using [Appearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Appearance) property and [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method as follows.
+The following code example illustrates how to draw text/images in a digital signature appearance using the [Appearance](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Appearance) property and the [DrawImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawImage_Syncfusion_Pdf_Graphics_PdfImage_System_Drawing_PointF_) method.
 
 {% tabs %}
 
@@ -4483,7 +4483,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Long Term Validation (LTV) information
 
-Added support for LTV validation and getting CRL and OCSP embedded details from the digital signature using [LtvVerificationInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html#Syncfusion_Pdf_Security_PdfSignatureValidationResult_LtvVerificationInfo) class.
+Added support for LTV validation and retrieving CRL and OCSP embedded details from the digital signature using the [LtvVerificationInfo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignatureValidationResult.html#Syncfusion_Pdf_Security_PdfSignatureValidationResult_LtvVerificationInfo) class.
 
 {% tabs %}
 
@@ -4598,7 +4598,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Customized revocation validation
 
-Added support to customize revocation validation using [PdfSignatureValidationOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfSignatureValidationOptions.html).
+Added support to customize revocation validation using the [PdfSignatureValidationOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfSignatureValidationOptions.html) class.
 
 {% tabs %}
 
@@ -4711,9 +4711,9 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Customized-revocation-validation/).
 
-## Remove existing digital signatures from a PDF document 
+## Remove existing digital signatures from a PDF document
 
-The following code example illustrates how to remove existing digital signatures from a PDF document using [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_Remove_Syncfusion_Pdf_Interactive_PdfField_) method in [PdfLoadedFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html) class.
+The following code example illustrates how to remove existing digital signatures from a PDF document using the [Remove](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfFieldCollection.html#Syncfusion_Pdf_Interactive_PdfFieldCollection_Remove_Syncfusion_Pdf_Interactive_PdfField_) method in the [PdfLoadedFormFieldCollection](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedFormFieldCollection.html) class.
 
 {% tabs %}
 
@@ -4775,9 +4775,9 @@ pdfLoadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Remove_existing_digital_signature_from_PDF/).
 
-## Certified signature 
+## Certified signature
 
-The following code snippet illustrates how to sign a PDF document without showing the digital signature using [Certificated](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Certificated) property in [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.  
+The following code snippet illustrates how to sign a PDF document without showing the digital signature using the [Certificated](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_Certificated) property in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
@@ -4860,9 +4860,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Sign-PDF-without-showing-digital-signature/).
 
-## Retrieve digital signature information from an existing PDF document 
+## Retrieve digital signature information from an existing PDF document
 
-The following code snippet illustrates how to retrieve digital signature information from an existing PDF document using [IssuerName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_IssuerName), [ValidFrom](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidFrom), and [ValidTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidTo) property. 
+The following code snippet illustrates how to retrieve digital signature information from an existing PDF document using the [IssuerName](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_IssuerName), [ValidFrom](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidFrom), and [ValidTo](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfCertificate.html#Syncfusion_Pdf_Security_PdfCertificate_ValidTo) properties.
 
 {% tabs %}
 
@@ -4944,9 +4944,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding multiple signatures to a PDF document
 
-The following code example illustrates how to add multiple signatures to a PDF document without invalidating the previous signature.  
+The following code example illustrates how to add multiple signatures to a PDF document without invalidating the previous signature.
 
-N> It is recommended to use licensed assemblies or registered license keys in your respective applications to add multiple digital signatures to the PDF documents without invalidating the previous signatures. 
+N> It is recommended to use licensed assemblies or registered license keys in your respective applications to add multiple digital signatures to the PDF documents without invalidating the previous signatures.
 
 {% tabs %}
 
@@ -5100,9 +5100,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Multiple-digital-signature/).
 
-## Retrieve revocation certificate information from digital signature
+## Retrieve revocation certificate information from a digital signature
 
-The following code example illustrates how to retrieve revocation certificate information from digital signature using [PdfSignerCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignerCertificate.html). 
+The following code example illustrates how to retrieve revocation certificate information from a digital signature using [PdfSignerCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignerCertificate.html).
 
 {% tabs %}
 
@@ -5272,9 +5272,9 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Retrieve-revocation-certificate-information).
 
-## Retrieve signed revision information from digital signature
+## Retrieve signed revision information from a digital signature
 
-The following code example illustrates how to retrieve signed revision information from digital signature using [Revision](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_Revision) property of [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html). 
+The following code example illustrates how to retrieve signed revision information from a digital signature using the [Revision](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html#Syncfusion_Pdf_Parsing_PdfLoadedSignatureField_Revision) property of [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html).
 
 {% tabs %}
 
@@ -5348,7 +5348,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Retrieve revocation certificate information from digital signature embed timestamp
 
-The following code example illustrates how to retrieve revocation certificate information from digital signature embed timestamp using  [PdfSignerCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignerCertificate.html). 
+The following code example illustrates how to retrieve revocation certificate information from a digital signature embed timestamp using [PdfSignerCertificate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignerCertificate.html).
 
 {% tabs %}
 
@@ -5415,7 +5415,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Get images from the existing signed signature field
 
-Utilize the **GetImages** method within the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class to obtain images from the appearance of an existing signed signature field. The following code example provides a clear demonstration of this functionality.
+Use the `GetImages` method within the [PdfLoadedSignatureField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedSignatureField.html) class to obtain images from the appearance of an existing signed signature field. The following code example provides a demonstration of this functionality.
 
 {% tabs %}
 
@@ -5483,9 +5483,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> This method retrieves the images when rendered on the signed signature field appearance; otherwise, it will return null.
 
-## Integrating signature and timestamp certificates into the Document Secure Store (DSS).
+## Integrating signature and timestamp certificates into the Document Security Store (DSS)
 
-Effortlessly Integrate **signature and timestamp** certificates into the Document Security Store (DSS) with the Essential<sup>&reg;</sup> PDF Library. This streamlined process enhances certificate management, ensuring robust validation for your PDF documents. Below is a code example demonstrating how to include certificates when creating Long-Term Validity (LTV) from an external signature, utilizing the [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Boolean_) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
+Effortlessly integrate **signature and timestamp** certificates into the Document Security Store (DSS) with the Essential<sup>&reg;</sup> PDF Library. This streamlined process enhances certificate management, ensuring robust validation for your PDF documents. Below is a code example demonstrating how to include certificates when creating Long-Term Validity (LTV) from an external signature, utilizing the [CreateLongTermValidity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_CreateLongTermValidity_System_Collections_Generic_List_System_Security_Cryptography_X509Certificates_X509Certificate2__System_Boolean_) method in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class.
 
 {% tabs %}
 
@@ -5643,7 +5643,7 @@ System.OverflowException: `Arithmetic operation resulted in an overflow`.
 <tr>
 <th style="font-size:14px" width="100px">Solution
 </th>
-<td>Increase the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize">EstimatedSignatureSize</a> property when configuring the PDF digital signature to ensure enough space is reserved for the full timestamp and LTV content.
+<td>Increase the <a href="https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html#Syncfusion_Pdf_Security_PdfSignature_EstimatedSignatureSize" aria-label="Class reference documentation link">EstimatedSignatureSize</a> property when configuring the PDF digital signature to ensure enough space is reserved for the full timestamp and LTV content.
 <br><br/>
 {% tabs %}
 {% highlight C# tabtitle="C#" %}

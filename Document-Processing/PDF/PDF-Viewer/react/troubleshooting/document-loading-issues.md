@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Fix Document Loading Issues in Syncfusion React PDF Viewer
-description: Resolve document rendering failures in Syncfusion React PDF Viewer v23.1+ by using dataBind, validating URLs, and checking CORS and CSP.
+title: Document Loading Issues in React PDF Viewer | Syncfusion
+description: Resolve document loading issues in the React PDF Viewer v23.1 and later by using dataBind, validating URLs, and checking CORS and CSP settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve Document Loading Issues in Syncfusion Version 23.1 or Later
+# Resolve Document Loading Issues in React PDF Viewer
 
-If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer lifecycle.
+If a PDF does not render in the viewer after upgrading to v23.1 or newer, use the checklist below to identify and resolve common causes. The most frequent fix is calling `dataBind()` before `load()` so data binding is initialized correctly in the newer life cycle.
 
 Example:
 
 {% raw %}
-```tsx
+```ts
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
@@ -61,11 +61,11 @@ Troubleshooting checklist (in order)
 5. CORS configuration: for cross-origin `serviceUrl` or document URLs, ensure the server sets `Access-Control-Allow-Origin` and allows the `Authorization` header if used.
 6. Content Security Policy: confirm CSP allows loading resources from the target origins (scripts, fonts, and media).
 7. Version and cache: update to the latest PDF Viewer release and clear caches (browser/Service Worker) to rule out stale assets.
-8. Server behavior: if the viewer uses a backend service, verify the service is running and returns correct responses for PDF requests.
+8. Server behavior: if the viewer uses a backed service, verify the service is running and returns correct responses for PDF requests.
 
 React-specific notes
 
-- Prefer using a React ref to access the `PdfViewerComponent` instance instead of `document.getElementById(...)` where possible: `const viewerRef = useRef(null);` then `<PdfViewerComponent ref={viewerRef} ... />` and call `viewerRef.current.dataBind()` / `viewerRef.current.load(...)` after the ref is initialized.
-- If calling `dataBind()` and `load()` from lifecycle methods or hooks, ensure they run after the component mounts (for example in `useEffect` with the correct dependencies).
+- Prefer using a React ref to access the `PdfViewerComponent` instance instead of `document.getElementById(...)` where possible: `viewerRef = useRef(null);` then `<PdfViewerComponent ref={viewerRef} ... />` and call `viewerRef.current.dataBind()` / `viewerRef.current.load(...)` after the ref is initialized.
+- If calling `dataBind()` and `load()` from life cycle methods or hooks, ensure they run after the component mounts (for example in `useEffect` with the correct dependencies).
 
 Following this checklist typically resolves document loading issues encountered after upgrading to v23.1 or newer.

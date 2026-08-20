@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to enable Ruler in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to show or hide ruler component in Syncfusion Blazor Document Editor component and much more.
+title: How to Enable Ruler in Blazor DOCX Editor | Syncfusion
+description: Enable the ruler in Syncfusion® Blazor DOCX Editor to set margins, tab stops, and paragraph indentations for precise document formatting.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-## How to enable ruler in Blazor Document Editor Container component
+# How to Enable Ruler in Blazor DOCX Editor
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) Container.
+Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) Container.
 
 The following example illustrates how to enable ruler in Document Editor Container.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze pane in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Freeze pane in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Freeze panes in Angular Spreadsheet | Syncfusion
+description: Freeze panes in Angular Spreadsheet keep selected rows and columns visible while scrolling, improving navigation and data analysis.
 platform: document-processing
-control: Freeze pane 
+control: Freeze pane
 documentation: ug
 ---
 
-# Freeze pane in Angular Spreadsheet component
+# Freeze panes in Angular Spreadsheet
 
 Freeze Panes helps you to keep particular rows or columns visible when scrolling the sheet content in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). You can specify the number of frozen rows and columns using the [`frozenRows`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozenrows) and [`frozenColumns`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#frozencolumns) properties inside the [`Sheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#sheets) property.
 

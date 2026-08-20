@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Document Link Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Document Link Navigation in .NET MAUI PDF Viewer
 
 The PDF Viewer allows navigating from one part of the PDF document to another using document link annotations. When a document link annotation is tapped, the PDF Viewer scrolls to the destination page or location defined by that annotation. This type of annotation is most commonly used to make a PDF's table of contents interactive — each entry links directly to the corresponding page in the document.
 
@@ -18,7 +18,7 @@ N> Document link annotations differ from hyperlink annotations. Document links n
 
 ## Enable or disable document link navigation
 
-The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is `true`. The code snippet below illustrates disabling the document link navigation.
+The document link navigation can be turned on or off using the [EnableDocumentLinkNavigation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableDocumentLinkNavigation) property. The default value of this property is `true`. The code snippet below illustrates disabling the document link navigation.
 
 {% tabs %}
 {% highlight c# %}

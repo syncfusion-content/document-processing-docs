@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion Angular PDF Viewer.
+title: Volume Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Volume measurement annotations in the Angular PDF Viewer to calculate the volume of a 3D region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Volume Measurement Annotations in Angular PDF Viewer
+# Volume Annotation in Angular PDF Viewer
 Volume measurement annotations allow users to draw circular regions and calculate the volume visually.
 
 ![Volume overview](../../../javascript-es6/annotations/annotation-images/volume-annot.png)
@@ -159,7 +159,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Manage Volume (Move, Resize, Delete)
-- **Move**: Drag inside the polygon to reposition it.
+- **Move**: Drag inside the circle to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
 ### Edit Volume Annotation
@@ -251,7 +251,7 @@ export class AppComponent {
 {% endtabs %}
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`volumeSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#volumesettings) property.
+Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#volumesettings) property.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -279,7 +279,7 @@ addStyledVolume(): void {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#measurementsettings).
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

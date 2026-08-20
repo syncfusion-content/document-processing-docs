@@ -1,14 +1,14 @@
 ---
-title: Modify the Appearance of Legend | Syncfusion
-description: Learn how to modify the appearance of legend in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Legend in .NET Word | Syncfusion
+description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Legend
+# Modify the Appearance of Legend in .NET Word
 
-Legends are visual pictorial hints that provide a viewer information that helps them understand an chart. Using DocIO, you can **customize the legend in the chart**.
+Legends are visual pictorial hints that provide a viewer information that helps them understand a chart. Using DocIO, you can **customize the legend in the chart**.
 
 ## Set the Position of Legend
 
@@ -50,14 +50,14 @@ The following code snippet illustrates how to prevent the overlapping the legend
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Set the position of legend.
-chart.Legend.Position = OfficeLegendPosition.Bottom;
+//Legend without overlapping the chart.
+chart.Legend.IncludeInLayout = true;
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-' Set the position of legend.
-chart.Legend.Position = OfficeLegendPosition.Bottom
+' Legend without overlapping the chart.
+chart.Legend.IncludeInLayout = True
 
 {% endhighlight %}
 {% endtabs %}

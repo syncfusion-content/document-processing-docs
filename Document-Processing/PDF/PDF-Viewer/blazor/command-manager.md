@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Command Manager in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Blazor PDF Viewer.
+title: Command Manager in Blazor PDF Viewer | Syncfusion
+description: Learn how to configure the Command Manager to add custom keyboard shortcuts and handle command execution in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Command Manager in Blazor SfPdfViewer Component
+# Command Manager in Blazor PDF Viewer
 
 The PDF Viewer supports mapping keyboard gestures to named commands so that pressing a defined key combination triggers a viewer action.
 
@@ -31,8 +31,8 @@ Register commands with `PdfViewerCommandManager` and handle `CommandExecuted` to
 
 The following example registers two custom keyboard commands (`FitToWidth` and `FitToPage`) and handles them in `CommandExecuted`. The example uses `SfPdfViewer2`; use the component that matches the project version.
 
-```cshtml
-
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 Height="100%"
@@ -80,9 +80,10 @@ The following example registers two custom keyboard commands (`FitToWidth` and `
             await pdfViewer.FitToPageAsync();
         }
     }
-} 
+}
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Keyboard%20accessibility/Command%20Manager)
 

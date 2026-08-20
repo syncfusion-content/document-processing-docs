@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component | Syncfusion
-description: Check out the documentation for getting started with Syncfusion Blazor Spreadsheet Component in Blazor Web App.
+title: Getting Started with Blazor Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Spreadsheet in a Blazor Web Applications and more details.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with the Blazor Spreadsheet in Blazor Web App
+# Getting Started with Blazor Spreadsheet
 
 This section briefly explains how to include the [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in a Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -205,7 +205,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 {% endhighlight %}
 {% endtabs %}
 
-N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://help.syncfusion.com/document-processing/licensing/how-to-generate).
 
 ## Add stylesheet resource
 
@@ -266,9 +266,8 @@ You can also experiment directly using the interactive playground below for a qu
 
 To learn how to open workbooks, bind data, or save files in the Spreadsheet component, see [Open and Save](open-and-save).
 
-N> [View Sample In GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
+N> [View Sample In GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spreadsheet).
 
-N> Looking for the full Blazor Spreadsheet Editor component overview, features, pricing, and documentation? Visit the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) page
 
 ## Video tutorial
 

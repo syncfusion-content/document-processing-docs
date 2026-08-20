@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Copy pages in Organize Pages in Angular PDF Viewer | Syncfusion
-description: Learn how to duplicate pages using the Organize Pages UI in the Angular PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Copy Pages in Angular PDF Viewer | Syncfusion
+description: Duplicate pages in the Angular PDF Viewer using the Organize Pages panel to copy one or more pages into the same document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -25,7 +25,7 @@ This guide explains how to duplicate pages within the current PDF using the Orga
 
 1. Open the Organize Pages view
 
-	- Click the **Organize Pages** button in the viewer toolbar to open the Organize Pages dialog.
+	- Click the **Organize Pages** button in the viewer navigation toolbar to open the Organize Pages dialog.
 
 2. Select pages to duplicate
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Fit Modes in React PDF Viewer | How-to Guide | Syncfusion
-description: Learn how to implement fit modes (Fit Page and Fit Width) in the Syncfusion React PDF Viewer component. Control initial view and toggle fit modes.
+title: Fitmode in React PDF Viewer | Syncfusion
+description: Configure fit modes in the React PDF Viewer, including Fit Page and Fit Width, to control the initial view and switch modes at runtime.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -24,7 +24,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -65,7 +65,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -113,7 +113,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -154,7 +154,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -205,7 +205,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -239,7 +239,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -280,7 +280,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -341,7 +341,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -409,7 +409,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);
@@ -472,7 +472,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, Inject } from '@syncfusion/ej2-react-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 function App() {
   const pdfViewerRef = React.useRef(null);

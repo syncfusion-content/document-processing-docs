@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Deploy Document Editor for Mobile in Angular | Syncfusion
-description: Learn here all about Deploy document editor component for mobile in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Deploy Angular DOCX Editor for Mobile | Syncfusion
+description: Deploy the Syncfusion® Angular DOCX Editor for mobile browsers in read-only mode to provide an optimized document viewing experience on mobile devices.
 platform: document-processing
-control: Deploy document editor component for mobile 
+control: Deploy Document Editor component for mobile
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Deploy document editor for mobile in Angular
+# How to Deploy Angular DOCX Editor for Mobile
 
-## Document editor component for Mobile
+## Document Editor component for mobile
 
-At present, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) component is not responsive for mobile, and we haven't ensured the editing functionalities in mobile browsers. Whereas it works properly as a document viewer in mobile browsers.
+At present, Angular Document Editor component is not responsive for mobile, and editing functionalities are not supported in mobile browsers. However, it works properly as a document viewer in mobile browsers.
 
-Hence, it is recommended to switch the Document editor component as read-only in mobile browsers. Also, invoke [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#fitpage) method with [`FitPageWidth`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/pageFitType/) parameter in document change event, such as to display one full page by adjusting the zoom factor.
+Hence, it is recommended to switch the Document Editor component to read-only in mobile browsers. Also, invoke the [`fitPage`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#fitpage) method with `FitPageWidth` parameter in the document change event to display one full page by adjusting the zoom factor.
 
-The following example code illustrates how to deploy Document Editor component for Mobile.
+The following example code illustrates how to deploy the Document Editor component for mobile.
 
 ```typescript
 //Initialize Document Editor Container component.
-import { Component } from '@angular/core';
-import { ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
+import { Component, ViewChild } from '@angular/core';
+import { ToolbarService, DocumentEditorContainerComponent } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
       selector: 'app-container',
       // specifies the template string for the DocumentEditorContainer component
@@ -51,8 +51,8 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 
->Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+N> You can use the [`restrictEditing`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#isreadonly) in DocumentEditor based on your requirement to change the component to read-only mode.

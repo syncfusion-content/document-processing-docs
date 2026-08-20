@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Series | Syncfusion
-description: Learn how to modify the appearance of series in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Series in .NET Word | Syncfusion
+description: Learn how to modify the appearance of legend in a chart in a Word document using Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Series
+# Modify the Appearance of Series in .NET Word
 
 In a chart, a **series** represents a set of related data points, often depicted using lines, bars, or markers to show data trends or comparisons. Using DocIO, you can **customize the series in the chart**.
 
@@ -260,7 +260,7 @@ using (WordDocument document = new WordDocument())
 
     //Sets position of legend.
     chart.Legend.Position = OfficeLegendPosition.Bottom;
-    //Saves the Word document to file stream.
+    //Saves the Word document.
     document.Save("Sample.docx");             
 }
 

@@ -1,28 +1,26 @@
 ---
-title: Working with PowerPoint presentation | Syncfusion
-description: Working with PowerPoint presentation. Cloning the Presentation. Printing the Presentation. Essential<sup>&reg;</sup> Presentation use Points to add slide elements.
+title: Working with PowerPoint Presentation | Syncfusion
+description: Essential® Presentation uses points to position slide elements and supports easy presentation cloning and printing.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Working with PowerPoint presentation
+# Working with PowerPoint Presentation
 
-## Cloning a PowerPoint presentation
+## Cloning a PowerPoint Presentation
 
 To quickly get started with merging PowerPoint presentations, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=EziKdj3FUL8" %}
 
-Cloning a PowerPoint presentation creates a new copy of the PowerPoint presentation and the changes made in the cloned copy of the presentation do not affect the source PowerPoint presentation.
+Cloning a PowerPoint presentation creates a new copy of the PowerPoint presentation, and the changes made in the cloned copy do not affect the source PowerPoint presentation. The `Clone()` method performs a deep copy of slides, layouts, masters, and theme.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Clone-PowerPoint-presentation/.NET/Clone-PowerPoint-presentation/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 //Clones the Presentation
 IPresentation clonedPresentation = pptxDoc.Clone();
-String ContentType=null;
 //Gets the first slide from the cloned PowerPoint presentation
 ISlide firstSlide = clonedPresentation.Slides[0];
 //Adds a textbox in a slide by specifying its position and size
@@ -31,9 +29,12 @@ IShape textShape = firstSlide.AddTextBox(100, 75, 756, 200);
 IParagraph paragraph = textShape.TextBody.AddParagraph();
 //Adds a textPart in the paragraph
 ITextPart textPart = paragraph.AddTextPart("Essential Presentation");
-//Save the PowerPoint Presentation to stream
-FileStream outputStream = new FileStream(outputFileName, FileMode.Create);
-clonedPresentation.SaveAs(outputStream);
+//Saves the PowerPoint Presentation
+clonedPresentation.SaveAs(outputFileName);
+//Closes the cloned PowerPoint presentation
+clonedPresentation.Close();
+//Closes the source PowerPoint presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -73,12 +74,113 @@ clonedPresentation_1.Save("ClonedPresentation.pptx")
 
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Clone-PowerPoint-presentation).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Clone-PowerPoint-presentation/.NET).
 
-## Printing a PowerPoint presentation
+## Splitting a PowerPoint Presentation
+
+Splitting a PowerPoint presentation separates the slides from different sections into individual presentation files. This is useful when you want to organize slides by sections and create independent presentations for each section. The split operation clones the slides from each section and saves them as separate PPTX documents.
+
+The following code example demonstrates how to split a PowerPoint presentation by sections:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Split-PowerPoint-presentation/.NET/Split-PowerPoint-presentation/Program.cs" %}
+//Opens the source PPTX document
+IPresentation sourcePptx = Presentation.Open(Path.GetFullPath(@"Data/Template.pptx"));
+//Iterates through each section
+foreach (ISection section in sourcePptx.Sections)
+{
+    //Creates a destination PPTX document. Existing presentations can also be used here
+    IPresentation destinationPptx = Presentation.Create();
+    //Clones the slides from the section and moves to new PPTX document
+    foreach (ISlide slide in section.Slides)
+    {
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx);
+    }
+    //Saves the destination PPTX document
+    string outputPath = Path.Combine(Path.GetFullPath("Output"), section.Name + "_Slides.pptx");
+    destinationPptx.Save(outputPath);
+    destinationPptx.Close();
+}
+//Closes the PPTX document
+sourcePptx.Close();
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Opens the source PPTX document
+IPresentation sourcePptx = Presentation.Open(fileName);
+//Iterates through each section
+foreach (ISection section in sourcePptx.Sections)
+{
+    //Creates a destination PPTX document. Existing presentations can also be used here
+    IPresentation destinationPptx = Presentation.Create();
+    //Clones the slides from the section and moves to new PPTX document
+    foreach (ISlide slide in section.Slides)
+    {
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx);
+    }
+    //Saves the destination PPTX document
+    string outputPath = Path.Combine("Output", section.Name + "_Slides.pptx");
+    destinationPptx.Save(outputPath);
+    destinationPptx.Close();
+}
+//Closes the PPTX document
+sourcePptx.Close();
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Opens the source PPTX document
+Dim sourcePptx As IPresentation = Presentation.Open(fileName)
+'Iterates through each section
+For Each section As ISection In sourcePptx.Sections
+    'Creates a destination PPTX document. Existing presentations can also be used here
+    Dim destinationPptx As IPresentation = Presentation.Create()
+    'Clones the slides from the section and moves to new PPTX document
+    For Each slide As ISlide In section.Slides
+        destinationPptx.Slides.Add(slide.Clone(), PasteOptions.SourceFormatting, sourcePptx)
+    Next
+    'Saves the destination PPTX document
+    Dim outputPath As String = Path.Combine("Output", section.Name + "_Slides.pptx")
+    destinationPptx.Save(outputPath)
+    destinationPptx.Close()
+Next
+'Closes the PPTX document
+sourcePptx.Close()
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Sections/Split-PowerPoint-by-Sections/.NET).
+
+## Printing a PowerPoint Presentation
 
 You can print the Presentation document by converting the PowerPoint presentation slides to images. For more information about converting the PowerPoint presentation slides to images, see [Conversion](/document-processing/powerpoint/powerpoint-library/net/getting-started). You can use the System.Drawing.Printing.[PrintDocument](https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printdocument?redirectedfrom=MSDN&view=dotnet-plat-ext-7.0) class to print the converted images by the default printer or to any of the available printer with customized settings.
 
+### Prerequisites
+
+Add the following `using` directives at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+ using System.Drawing;
+ using System.Drawing.Printing;
+ using System.Windows.Forms;
+ using Syncfusion.Presentation;
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+ Imports System.Drawing
+ Imports System.Drawing.Printing
+ Imports System.Windows.Forms
+ Imports Syncfusion.Presentation
+
+{% endhighlight %}
+
+{% endtabs %}
 The following code example demonstrates how to convert the slides of a PowerPoint presentation to images.
 
 {% tabs %}
@@ -96,7 +198,7 @@ pptxDoc.Close();
 'Opens a PowerPoint presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Converts the slides to images
-Dim images As Image() = pptxDoc.RenderAsImages(Syncfusion.Drawing. ImageType.Bitmap)
+Dim images As Image() = pptxDoc.RenderAsImages(Syncfusion.Drawing.ImageType.Bitmap)
 'Closes the PowerPoint presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -108,124 +210,127 @@ The following code example demonstrates how to print the converted images.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Initializes the start and page for printing
+//Initializes the start and end page index for printing
 int startPageIndex = 1;
 int endPageIndex = images.Length;
-//Creates new PrintDialog instance.
+//Creates new PrintDialog instance
 System.Windows.Forms.PrintDialog printDialog = new System.Windows.Forms.PrintDialog();
-//Sets new PrintDocument instance to print dialog.
+//Sets new PrintDocument instance to print dialog
 printDialog.Document = new PrintDocument();
-//Enables the print current page option.
+//Enables the print current page option
 printDialog.AllowCurrentPage = true;
-//Enables the print selected pages option.
+//Enables the print selected pages option
 printDialog.AllowSomePages = true;
 //Sets the start and end page index
 printDialog.PrinterSettings.FromPage = 1;
 printDialog.PrinterSettings.ToPage = images.Length;
-//Opens the print dialog box.
+//Opens the print dialog box
 if (printDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 {
     //Checks whether the selected page range is valid or not
     if (printDialog.PrinterSettings.FromPage > 0 && printDialog.PrinterSettings.ToPage <= images.Length)
     {
-        //Updates the start page of the document to print.
+        //Updates the start page of the document to print
         startPageIndex = printDialog.PrinterSettings.FromPage - 1;
-        //Updates the end page of the document to print.
+        //Updates the end page of the document to print
         endPageIndex = printDialog.PrinterSettings.ToPage;
-        //Hooks the PrintPage event to handle be drawing pages for printing.
+        //Hooks the PrintPage event to handle drawing pages for printing
         printDialog.Document.PrintPage += new PrintPageEventHandler(PrintPageMethod);
-        //Prints the document.
+        //Prints the document
         printDialog.Document.Print();
     }
 }
+
 private void PrintPageMethod (object sender, PrintPageEventArgs e)
 {
-    //Gets the print start page width.
+    //Gets the print start page width
     int currentPageWidth = images[startPageIndex].Width;
-    //Gets the print start page height.
+    //Gets the print start page height
     int currentPageHeight = images[startPageIndex].Height;
-    //Gets the visible bounds width for print.
+    //Gets the visible bounds width for print
     int visibleClipBoundsWidth = (int)e.Graphics.VisibleClipBounds.Width;
-    //Gets the visible bounds height for print.
+    //Gets the visible bounds height for print
     int visibleClipBoundsHeight = (int)e.Graphics.VisibleClipBounds.Height;
-    //Checks whether the page layout is landscape or portrait.
+    //Checks whether the page layout is landscape or portrait
     if (currentPageWidth > currentPageHeight)
     {
-        //Translates the position.
+        //Translates the position
         e.Graphics.TranslateTransform(0, visibleClipBoundsHeight);
         //Rotates the object at 270 degrees
         e.Graphics.RotateTransform(270.0f);
-        //Draws the current page image.
+        //Draws the current page image
         e.Graphics.DrawImage(images[startPageIndex], new System.Drawing.Rectangle(0, 0, currentPageWidth, currentPageHeight));
     }
     else
-        //Draws the current page image.
+    {
+        //Draws the current page image
         e.Graphics.DrawImage(images[startPageIndex], new System.Drawing.Rectangle(0, 0, visibleClipBoundsWidth, visibleClipBoundsHeight));
-    //Disposes the current page image after drawing.
+    }
+    //Disposes the current page image after drawing
     images[startPageIndex].Dispose();
-    //Increments the start page index.
+    //Increments the start page index
     startPageIndex++;
-    //Updates whether the document contains more pages to print or not.
-    if (startPageIndex < endPageIndex)
-        e.HasMorePages = true;
-    else
-        startPageIndex = 0;
+    //Updates whether the document contains more pages to print or not
+    e.HasMorePages = startPageIndex < endPageIndex;
 }
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Initializes the start page index for printing
+Dim startPageIndex As Integer = 1
 Dim endPageIndex As Integer = images.Length
-'Creates new PrintDialog instance.
-Dim printDialog As New System.Windows.Forms. PrintDialog()
-'Sets new PrintDocument instance to print dialog.
+'Creates new PrintDialog instance
+Dim printDialog As New System.Windows.Forms.PrintDialog()
+'Sets new PrintDocument instance to print dialog
 printDialog.Document = New PrintDocument()
-'Enables the print current page option.
+'Enables the print current page option
 printDialog.AllowCurrentPage = True
-'Enables the print selected pages option.
+'Enables the print selected pages option
 printDialog.AllowSomePages = True
 'Sets the start and end page index
 printDialog.PrinterSettings.FromPage = 1
 printDialog.PrinterSettings.ToPage = images.Length
-'Opens the print dialog box.
+'Opens the print dialog box
 If printDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-    'Checks whether the selected page range is valid or not.
+    'Checks whether the selected page range is valid or not
     If printDialog.PrinterSettings.FromPage > 0 AndAlso printDialog.PrinterSettings.ToPage <= images.Length Then
-        'Updates the start page of the document to print.
+        'Updates the start page of the document to print
         startPageIndex = printDialog.PrinterSettings.FromPage - 1
-        'Updates the end page of the document to print.
+        'Updates the end page of the document to print
         endPageIndex = printDialog.PrinterSettings.ToPage
-        'Hooks the PrintPage event to handle the drawing pages for printing.
-        printDialog.Document.PrintPage += New PrintPageEventHandler(PrintPageMethod)
-        'Prints the document.
+        'Hooks the PrintPage event to handle drawing pages for printing
+        AddHandler printDialog.Document.PrintPage, AddressOf PrintPageMethod
+        'Prints the document
         printDialog.Document.Print()
     End If
 End If
-Private Sub PrintPageMethod(sender As Object, e As PrintPageEventArgs)
-    'Gets the print start page width.
+
+Private Sub PrintPageMethod(ByVal sender As Object, ByVal e As PrintPageEventArgs)
+    'Gets the print start page width
     Dim currentPageWidth As Integer = images(startPageIndex).Width
-    'Gets the print start page height.
+    'Gets the print start page height
     Dim currentPageHeight As Integer = images(startPageIndex).Height
-    'Gets the visible bounds width for print.
+    'Gets the visible bounds width for print
     Dim visibleClipBoundsWidth As Integer = CInt(e.Graphics.VisibleClipBounds.Width)
-    'Gets the visible bounds height for print.
+    'Gets the visible bounds height for print
     Dim visibleClipBoundsHeight As Integer = CInt(e.Graphics.VisibleClipBounds.Height)
-    'Checks whether the page layout is landscape or portrait.
+    'Checks whether the page layout is landscape or portrait
     If currentPageWidth > currentPageHeight Then
-        'Translates the position.
+        'Translates the position
         e.Graphics.TranslateTransform(0, visibleClipBoundsHeight)
-        'Rotates the object at 270 degrees.
+        'Rotates the object at 270 degrees
         e.Graphics.RotateTransform(270.0F)
-        'Draws the current page image.
-        e.Graphics.DrawImage(images(startPageIndex), New System.Drawing.Rectangle (0, 0, currentPageWidth, currentPageHeight))
+        'Draws the current page image
+        e.Graphics.DrawImage(images(startPageIndex), New System.Drawing.Rectangle(0, 0, currentPageWidth, currentPageHeight))
     Else
-        'Draws the current page image.
-        e.Graphics.DrawImage(images(startPageIndex), New System.Drawing.Rectangle (0, 0, visibleClipBoundsWidth, visibleClipBoundsHeight))
+        'Draws the current page image
+        e.Graphics.DrawImage(images(startPageIndex), New System.Drawing.Rectangle(0, 0, visibleClipBoundsWidth, visibleClipBoundsHeight))
     End If
-    'Disposes the current page image after drawing.
+    'Disposes the current page image after drawing
     images(startPageIndex).Dispose()
-    'Increments the start page index.
+    'Increments the start page index
     startPageIndex += 1
-    'Updates whether the document contains more pages to print or not.
+    'Updates whether the document contains more pages to print or not
     If startPageIndex < endPageIndex Then
         e.HasMorePages = True
     Else
@@ -236,22 +341,45 @@ End Sub
 
 {% endtabs %}
 
+N> In the C# sample, `images` is the `Image[]` array produced by the previous "convert slides to images" snippet. The `PrintPageMethod` must be defined on the form/class hosting the code. If you invoke the print operation multiple times, reset `startPageIndex` and `endPageIndex` between calls.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Print-PowerPoint-presentation).
 
-## Working with PowerPoint presentation properties
+## Working with PowerPoint Presentation Properties
 
-Document properties, also known as meta data, are details about a file that describe or identify it. Document properties are classified into two categories. 
+Document properties, also known as metadata, are details about a file that describe or identify it. Document properties are classified into two categories:
 
-* **Built****-****in** **Document** **Properties** - that include details such as title, author name, subject, and keywords that identify the document's topic or contents.
-* **Custom** **Document** **properties** - define the user-defined document properties.
+* **Built-in Document Properties** — include details such as title, author name, subject, and keywords that identify the document's topic or contents.
+* **Custom Document Properties** — define the user-defined document properties.
 
-**Built****-****in** **Document** **Properties**
+### Built-in Document Properties
 
-You can access and modify the built in document properties of a PowerPoint presentation with Essential<sup>&reg;</sup> Presentation library. The Built-in document properties of a PowerPoint presentation is represented by [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
+You can access and modify the built-in document properties of a PowerPoint presentation with the Essential<sup>&reg;</sup> Presentation library. The built-in document properties of a PowerPoint presentation are represented by the [IBuiltInDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IBuiltInDocumentProperties.html) type.
 
-**Accessing** **and** **Modifying** **Built****-****in** **Document** **Properties**
+The following table lists the available built-in properties and their return types.
 
-The following code example demonstrates how to access the existing built in document property.
+| Property | Type |
+| --- | --- |
+| `ApplicationName` | `string` |
+| `AppVersion` | `string` |
+| `Author` | `string` |
+| `Category` | `string` |
+| `Comments` | `string` |
+| `Company` | `string` |
+| `ContentStatus` | `string` |
+| `Created` | `DateTime` |
+| `Keywords` | `string` |
+| `LastAuthor` | `string` |
+| `LastModified` | `DateTime` |
+| `LastPrinted` | `DateTime` |
+| `Manager` | `string` |
+| `Modified` | `DateTime` |
+| `PresentationRevisionNumber` | `int` |
+| `RevisionNumber` | `int` |
+| `Subject` | `string` |
+| `Template` | `string` |
+| `Title` | `string` |
+| `TotalEditingTime` | `TimeSpan` |
 
 {% tabs %}
 
@@ -269,8 +397,8 @@ pptxDoc.Close();
 'Opens a PowerPoint presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Accesses the built-in document properties
-Console.WriteLine("Title - {0}", presentationDocument.BuiltInDocumentProperties.Title)
-Console.WriteLine("Author - {0}", presentationDocument.BuiltInDocumentProperties.Author)
+Console.WriteLine("Title - {0}", pptxDoc.BuiltInDocumentProperties.Title)
+Console.WriteLine("Author - {0}", pptxDoc.BuiltInDocumentProperties.Author)
 'Closes the PowerPoint presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -279,28 +407,26 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Access-built-in-document-properties).
 
-The following code example demonstrates how to modify the existing built in document property
+The following code example demonstrates how to modify the existing built-in document properties.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-built-in-document-properties/.NET/Modify-built-in-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Modifies the Built-in document properties
+//Opens a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
+//Modifies the built-in document properties
 pptxDoc.BuiltInDocumentProperties.Category = "Sales reports";
 pptxDoc.BuiltInDocumentProperties.Company = "Northwind traders";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the instance of PowerPoint Presentation
+//Saves the PowerPoint Presentation
+pptxDoc.SaveAs(outputFileName);
+//Closes the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Modifies the Built-in document properties
+//Modifies the built-in document properties
 pptxDoc.BuiltInDocumentProperties.Category = "Sales reports";
 pptxDoc.BuiltInDocumentProperties.Company = "Northwind traders";
 //Saves the modified PowerPoint presentation
@@ -312,7 +438,7 @@ pptxDoc.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens a PowerPoint presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Modifies the Built-in document properties
+'Modifies the built-in document properties
 pptxDoc.BuiltInDocumentProperties.Category = "Sales reports"
 pptxDoc.BuiltInDocumentProperties.Company = "Northwind traders"
 'Saves the modified PowerPoint presentation
@@ -325,29 +451,27 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Modify-built-in-document-properties).
 
-## Custom Document properties
+## Custom Document Properties
 
-You can create and modify the custom document properties of a PowerPoint presentation with Essential<sup>&reg;</sup> Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by [ICustomDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ICustomDocumentProperties.html) object. 
+You can create and modify the custom document properties of a PowerPoint presentation with the Essential<sup>&reg;</sup> Presentation library. The collection of custom document properties in a PowerPoint presentation is represented by the [ICustomDocumentProperties](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.ICustomDocumentProperties.html) object. Each property value is exposed as an [IDocumentProperty](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IDocumentProperty.html) and supports the `Text`, `DateTime`, `Number`, `Bool`, or `Blob` representations.
 
-### Adding Custom Document properties
+### Adding Custom Document Properties
 
-The following code example demonstrates how to add new custom document property.
+The following code example demonstrates how to add new custom document properties.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Add-custom-document-properties/.NET/Add-custom-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Adds custom document properties 
+//Opens a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
+//Adds custom document properties
 ICustomDocumentProperties documentProperty = pptxDoc.CustomDocumentProperties;
 documentProperty.Add("PropertyA");
 documentProperty["PropertyA"].Text = "@!123";
 documentProperty.Add("PropertyB");
 documentProperty["PropertyB"].Text = "B";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the PowerPoint presentation
+pptxDoc.SaveAs(outputFileName);
 //Closes the PowerPoint presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -355,7 +479,7 @@ pptxDoc.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Creates a PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
-//Adds custom document properties 
+//Adds custom document properties
 ICustomDocumentProperties documentProperty = pptxDoc.CustomDocumentProperties;
 documentProperty.Add("PropertyA");
 documentProperty["PropertyA"].Text = "@!123";
@@ -386,23 +510,25 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Add-custom-document-properties).
 
+T> Use the overloads of `Add` (for example, `Add(string, string)`, `Add(string, DateTime)`, `Add(string, double)`, `Add(string, bool)`) to register a property with an initial value in a single call.
+
 ### Accessing and Modifying Custom Document Properties
 
-The following code example demonstrates how to access and modify an existing custom document property:
+The following code example demonstrates how to access and modify an existing custom document property.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Modify-custom-document-properties/.NET/Modify-custom-document-properties/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream(inputFileName,FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens a PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open(inputFileName);
 //Accesses an existing custom document property
 IDocumentProperty property = pptxDoc.CustomDocumentProperties["PropertyA"];
 //Modifies the value of DocumentProperty
 property.Value = "Hello world";
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the PowerPoint presentation
+pptxDoc.SaveAs(outputFileName);
+//Closes the PowerPoint presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -435,51 +561,56 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Modify-custom-document-properties).
 
-## Marking a PowerPoint presentation as final
+## Presentation Settings
 
-PowerPoint presentation can be made read-only to prevent the readers from making inadvertent changes to it. However, making presentation as final is not a security feature. Anyone can disable the final status and edit the presentation.
+This section covers presentation-level settings such as marking the presentation as final and configuring the first slide number.
 
-Below code snippet demonstrates how to create a final non – editable presentation,
+### Marking a PowerPoint Presentation as Final
+
+A PowerPoint presentation can be made read-only to prevent readers from making inadvertent changes. However, marking a presentation as final is not a security feature — anyone can disable the final status and edit the presentation. When opened in PowerPoint, the file displays a yellow "Marked as Final" banner with an "Edit Anyway" button.
+
+The `IPresentation.Final` API is available in Syncfusion<sup>&reg;</sup> Presentation version 18.4.0.30 and later.
+
+The following code snippet demonstrates how to create a final, non-editable presentation:
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/Mark-as-final/.NET/Mark-as-final/Program.cs" %}
-//Create an instance for PowerPoint presentation
+//Creates an instance of the PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
-//Add slide to the presentation
+//Adds a slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Mark the presentation as final
+//Marks the presentation as final
 pptxDoc.Final = true;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream(OutputFileName, FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Saves the PowerPoint presentation
+pptxDoc.SaveAs(outputFileName);
+//Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Create an instance for PowerPoint presentation
+//Creates an instance of the PowerPoint presentation
 IPresentation pptxDoc = Presentation.Create();
-//Add slide to the presentation
+//Adds a slide to the presentation
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Mark the presentation as final
+//Marks the presentation as final
 pptxDoc.Final = true;
-//Save the presentation
-pptxDoc.Save("MarkAsFinal.pptx");
-//Close the presentation
+//Saves the presentation
+pptxDoc.Save("Output.pptx");
+//Closes the presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Create an instance for PowerPoint presentation
+'Creates an instance of the PowerPoint presentation
 Dim pptxDoc As IPresentation = Presentation.Create()
-'Add slide to the presentation
+'Adds a slide to the presentation
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
-'Mark the presentation as final
+'Marks the presentation as final
 pptxDoc.Final = True
-'Save the presentation
-pptxDoc.Save("MarkAsFinal.pptx")
-'Close the presentation
+'Saves the presentation
+pptxDoc.Save("Output.pptx")
+'Closes the presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -487,60 +618,52 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PowerPoint-Presentation/Mark-as-final).
 
-## First slide number
+### First Slide Number
 
-Change the first slide number of the PowerPoint presentation using the **FirstSlideNumber** API. 
+You can change the first slide number of the PowerPoint presentation using the [`FirstSlideNumber`](https://help.syncfusion.com/cr/document-processing/Syncfusion.Presentation.IPresentation.html#Syncfusion_Presentation_IPresentation_FirstSlideNumber) API. The default value is `1`. The value affects the number displayed in slide footers, slide-number placeholders, and printed page numbers.
 
 The following code sample illustrates how to modify the first slide number in the PowerPoint presentation.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/PowerPoint-Presentation/First-slide-number/.NET/First-slide-number/Program.cs" %}
 
-//Open an existing PowerPoint Presentation.
-using (FileStream inputStream = new FileStream("Data/Input.pptx", FileMode.Open))
-{
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
-    {
-        //Get the FirstSlideNumber of Presentation.
-        int firstSlideNumber = pptxDoc.FirstSlideNumber;
-
-        //Modify the value for the FirstSlideNumber.
-        pptxDoc.FirstSlideNumber = 10;
-
-        //Save the PowerPoint Presentation.
-        using (FileStream outputStream = new FileStream("Result.pptx", FileMode.Create))
-        {
-            pptxDoc.Save(outputStream);
-        }                       
-    }
-}
+//Opens an existing PowerPoint presentation
+IPresentation pptxDoc = Presentation.Open("Data/Input.pptx");
+//Gets the FirstSlideNumber of the presentation
+int firstSlideNumber = pptxDoc.FirstSlideNumber;
+//Modifies the value for the FirstSlideNumber
+pptxDoc.FirstSlideNumber = 10;
+//Saves the PowerPoint presentation
+pptxDoc.SaveAs("Result.pptx");
+//Closes the PowerPoint presentation
+pptxDoc.Close();
 
 {% endhighlight %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 using (IPresentation pptxDoc = Presentation.Open("Data/Input.pptx"))
 {
-    //Get the FirstSlideNumber of Presentation.
+    //Gets the FirstSlideNumber of the presentation
     int firstSlideNumber = pptxDoc.FirstSlideNumber;
 
-    //Modify the value for the FirstSlideNumber.
+    //Modifies the value for the FirstSlideNumber
     pptxDoc.FirstSlideNumber = 10;
 
-    //Save the PowerPoint Presentation.
-    pptxDoc.Save("Result.pptx");                      
+    //Saves the PowerPoint presentation
+    pptxDoc.Save("Result.pptx");
 }
 
 {% endhighlight %}
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 Using pptxDoc As IPresentation = Presentation.Open("Data/Input.pptx")
-    'Get the FirstSlideNumber of Presentation.
+    'Gets the FirstSlideNumber of the presentation
     Dim firstSlideNumber As Integer = pptxDoc.FirstSlideNumber
 
-    'Modify the value for the FirstSlideNumber.
+    'Modifies the value for the FirstSlideNumber
     pptxDoc.FirstSlideNumber = 10
 
-    'Save the PowerPoint Presentation.
+    'Saves the PowerPoint presentation
     pptxDoc.Save("Result.pptx")
 End Using
 
@@ -553,4 +676,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 * [How to merge or combine multiple PowerPoint files](https://support.syncfusion.com/kb/article/7961/how-to-merge-or-combine-multiple-powerpoint-files-in-c-vb-net)
-* [How to extract text from a PowerPoint presentation?](https://support.syncfusion.com/kb/article/7711/how-to-extract-text-from-a-powerpoint-presentation)
+* [How to extract text from a PowerPoint presentation](https://support.syncfusion.com/kb/article/7711/how-to-extract-text-from-a-powerpoint-presentation)
+* [PowerPoint Presentation Conversion](../../Conversions/overview)

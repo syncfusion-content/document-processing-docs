@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in React PDF Viewer | Syncfusion
-description: Learn about UI interactions like add, edit and modify in Redaction annotations of the Syncfusion React PDF Viewer component.
+title: Ui Interaction in React PDF Viewer | Syncfusion
+description: Add, edit, and modify redaction annotations in the React PDF Viewer through the built-in UI for interactive redaction workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in React PDF Viewer
+# Redaction UI Interactions in React PDF Viewer
 
 ## Overview
 
@@ -57,7 +57,7 @@ This guide explains how to use the Redaction UI in the React PDF Viewer: drawing
 
 	- General tab: set Overlay Text, Repeat Overlay Text, font, and final Fill Color (these values are used when you apply redaction).
 
-	    ![Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
+	    ![Redaction Overlay Text Options](redaction-annotations-images/redaction-overalytext.png)
 
 	    ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 

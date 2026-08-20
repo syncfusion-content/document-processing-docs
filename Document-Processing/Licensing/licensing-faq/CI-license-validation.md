@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion license validation in CI services - Syncfusion
-description: Learn how to register and validate the Syncfusion license key for your application in CI services.
+title: How to register and validate license key in CI | Syncfusion
+description: Learn how to register and validate the license key for Syncfusion Document Processing Solutions in CI services.
 platform: file-formats
 control: Essential Studio
 documentation: ug
@@ -17,7 +17,7 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 </style>
 
 
-# Overview of Syncfusion license validation in CI services
+# How to register and validate license key in CI 
 
 Validating the Syncfusion<sup>&reg;</sup> license key as part of your CI pipeline ensures that Syncfusion<sup>&reg;</sup> Essential Studio components are properly licensed before deployment and helps prevent licensing errors in production. The following sections describe how to validate the license key in Azure Pipelines, GitHub Actions, and Jenkins, and how to validate it programmatically using the `ValidateLicense()` method or a unit test project.
 
@@ -37,7 +37,15 @@ $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"WordToPDF"
 Write-Host $result
 {% endhighlight %}
 
-{% highlight c# tabtitle="Before v34.1.29" %}
+{% highlight c# tabtitle="v31.1.17 to v33.2.3" %}
+# Replace the parameters with the desired platform, version, and actual license key.
+
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"WordToPDF" /version:"31.1.17" /licensekey:"Your License Key"
+
+Write-Host $result
+{% endhighlight %}
+
+{% highlight c# tabtitle="Before v31.1.17" %}
 # Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"FileFormats" /version:"26.2.4" /licensekey:"Your License Key"
@@ -48,7 +56,7 @@ Write-Host $result
 
 * Update the parameters in the script:
   
-  **Platform:** Set /platform:"**WordToPDF**" for v34.1.29 and later, or /platform:"**FileFormats**" for earlier versions (use the relevant Syncfusion platform as needed).
+  **Platform:** Set /platform:"**WordToPDF**" for v34.1.29 and later and v31.1.17 to v33.2.3, or /platform:"**FileFormats**" for before v31.1.17 (use the relevant Syncfusion platform as needed).
 
   **Version:** Change the value for `/version:` to the required version (for example, `26.2.4`).
 
@@ -171,7 +179,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.FileFormats);
 {% endhighlight %}
 {% endtabs %}
 
-N> Use the specific platform enum (`PDF`, `Word`, `Excel`, `PowerPoint`, `WordToPDF`, `ExcelToPDF`, `PowerPointToPDF`, `PDFViewer`, `WordEditor`, or `SpreadsheetEditor`) for license validation from v31.1.17 and later. `Platform.FileFormats` is not supported from v31.1.17 onwards.
+N> Use the specific platform enum (`PDF`, `Word`, `Excel`, `PowerPoint`, `WordToPDF`, `ExcelToPDF`, or `PowerPointToPDF`) for license validation from v31.1.17 and later. `Platform.FileFormats` is not supported from v31.1.17 onwards.
 
 * If the `ValidateLicense()` method returns `true`, the registered license key is valid and the build can proceed with deployment.
 

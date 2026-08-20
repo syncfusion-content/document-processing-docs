@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in Windows Forms | Syncfusion 
-description: Open and save Word document in Windows Forms application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in Windows Forms  | Syncfusion
+description: Open and save Word document in Windows Forms application using Syncfusion® .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and save Word document in Windows Forms
+# Open and save Word document in Windows Forms 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, and edit **Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in Windows Forms**.
 
@@ -71,14 +71,14 @@ private void InitializeComponent()
 
 {% endtabs %}
 
-Step 5: Add the following code in **btnOpenAndSave_Click** to **open an existing Word document in Windows-Forms**.
+Step 5: Add the following code in **btnOpenAndSave_Click** to **open an existing Word document in Windows Forms**.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing Word document.
-WordDocument document = new WordDocument("Input.docx");
-
+using (WordDocument document = new WordDocument("Input.docx"))
+{
 {% endhighlight %}
 
 {% endtabs %}
@@ -95,7 +95,7 @@ IWParagraph paragraph = section.AddParagraph();
 paragraph.ParagraphFormat.FirstLineIndent = 36;
 paragraph.BreakCharacterFormat.FontSize = 12f;
 //Add new text to the paragraph
-WTextRange textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.") as WTextRange;
+IWTextRange textRange = paragraph.AppendText("In 2000, AdventureWorks Cycles bought a small manufacturing plant, Importadores Neptuno, located in Mexico. Importadores Neptuno manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the Bothell location for final product assembly. In 2001, Importadores Neptuno, became the sole manufacturer and distributor of the touring bicycle product group.");
 textRange.CharacterFormat.FontSize = 12f;
 {% endhighlight %}
 
@@ -108,6 +108,7 @@ Step 7: Add below code example to **save the Word document in Windows Forms**.
 {% highlight c# tabtitle="C#" %}
 //Save the Word document.
 document.Save("Sample.docx");
+}
 {% endhighlight %}
 
 {% endtabs %}

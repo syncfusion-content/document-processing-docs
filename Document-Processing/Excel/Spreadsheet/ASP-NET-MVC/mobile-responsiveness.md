@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Mobile Responsiveness in ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn  about Mobile Responsiveness in ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Mobile Responsiveness in ASP.NET MVC Spreadsheet | Syncfusion
+description: Learn how the Syncfusion ASP.NET MVC Spreadsheet adapts seamlessly across mobile devices and screen sizes.
 platform: document-processing
 control: Mobile Responsiveness
 documentation: ug
 ---
 
 
-# Mobile Responsiveness in ASP.NET MVC Syncfusion Spreadsheet Control
+# Mobile Responsiveness in ASP.NET MVC Spreadsheet
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 
-You can see the overflowed items of ribbon header, ribbon content, and sheet tab using touch and swipe action. The right navigation arrow is added at the end of the ribbon content through which the user can navigate towards overflowed items. Once you reached the rightmost end of the ribbon content, the right navigation arrow will change to left navigation arrow through which you can navigate to the left of the ribbon content.
+Use touch or swipe actions to access overflow items in the ribbon header, ribbon content, and sheet tabs. A right navigation arrow appears at the end of the ribbon content and allows you to navigate to the overflow items. When you reach the rightmost item, the right navigation arrow changes to a left navigation arrow, allowing you to navigate back through the ribbon content.
 
 ![Spreadsheet Adaptive Mode](./images/spreadsheet_adaptive_mode.gif)

@@ -1,15 +1,15 @@
 ---
-title: Open and save PDF document in Google App Engine| Syncfusion
-description: Open and save PDF document in Google App Engine using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Google App Engine | Syncfusion
+description: Learn how to open and save PDF documents in Google App Engine using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in Google App Engine
+# Open and Save PDF Document in Google App Engine
 
-The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in Google App Engine**.
 
 ## Set up App Engine
 
@@ -173,7 +173,7 @@ Step 4: Run the following **command** to navigate which sample you want to run.
 {% tabs %}
 {% highlight bash %}
 
-cd Open-and-save-Word-document
+cd Open_and_Save_PDF_GoogleAppEngine
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +260,7 @@ ADD / /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 WORKDIR /app
-ENTRYPOINT [ "dotnet", "Open-and-save-Word-document.dll"]
+ENTRYPOINT [ "dotnet", "Open_and_Save_PDF_GoogleAppEngine.dll"]
 EOT
 
 {% endhighlight %}
@@ -296,5 +296,5 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 ![Output PDF Document](GCP_Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*dk4frx*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY5MDQzMjEyNi4zNzMuMS4xNjkwNDMyMTUwLjM2LjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

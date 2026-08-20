@@ -1,67 +1,66 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> PowerPoint Mac installer - Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint Mac installer after downloading from our Syncfusion<sup>&reg;</sup> website.
+title: How to Install Syncfusion PowerPoint Mac Installer | Syncfusion
+description: Learn how to install the Syncfusion® PowerPoint (Document Processing) Mac Installer after downloading it from the Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PowerPoint Mac installer
+# How to Install Syncfusion PowerPoint Mac Installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 
-   While running Essential Studio<sup>&reg;</sup> PowerPoint Mac Installers on Catalina MacOS or later, the below alert will be displayed.
+While running the Essential Studio<sup>&reg;</sup> PowerPoint (Document Processing) Mac Installer on Catalina macOS or later, the alert below is displayed.
 
-   ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
-     
-   If you receive this alert, follow the below steps for the easiest solution.   
+![Catalina macOS alert](images/Mac_Catalina_MacOS_Alert1.png)
 
-   1.	Right-click the downloaded dmg file.
-   2.	Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
+If you receive this alert, follow the steps below for the easiest solution.
 
-		![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
+Step 1: Right-click the downloaded dmg file.
 
-   3.	When you click "Open" the installer window will be opened.
+Step 2: Select the **Open With** option and choose **DiskImageMounter (Default)**. The following pop-up appears.
 
-## Step-by-Step Installation
+   ![Disk image mounter pop-up](images/Mac_Catalina_MacOS_Alert2.png)
 
-The steps below show how to install Essential Studio<sup>&reg;</sup> PowerPoint Mac installer.
+Step 3: When you click **Open**, confirm the Gatekeeper prompt and the installer window will open.
 
-1. Locate the downloaded dmg file and open the file by double click on it.
+## Step-by-step installation
 
-   ![Welcome wizard](images/Mac_Installer1.png)
-   
+The steps below show how to install the Essential Studio<sup>&reg;</sup> PowerPoint (Document Processing) Mac Installer.
 
-2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
+Step 1: Locate the downloaded dmg file and open the file by double-clicking on it.
 
-   ![license wizard](images/Mac_Installer2.png)   
-   
+   ![DMG file in Finder](images/Mac_Installer1.png)
 
-3. Copy the mounted disk file.
+Step 2: This action automatically mounts the disk image and creates a virtual drive on your desktop or in the Finder sidebar.
 
-   ![License confirmation wizard](images/Mac_Installer3.png)
-   
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Flutter Mac installer can be used for development purposes without registering the Unlock key..
+   ![Mounted disk image](images/Mac_Installer2.png)
 
+Step 3: Open the mounted volume and copy the Syncfusion<sup>&reg;</sup> PowerPoint installer app to the **Applications** folder.
 
-4. And paste it in “Applications” folder shortcut.
+   ![Copy installer from mounted volume](images/Mac_Installer3.png)
 
-   ![license wizard](images/Mac_Installer4.png)
+   > The Unlock key is not required to install the Mac installer. The Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> PowerPoint (Document Processing) Mac Installer can be used for development purposes without registering the Unlock key.
 
+Step 4: Paste the copied installer into the **Applications** folder.
 
-5. Now you can open the folder to explore the Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> Mac installer.
+   ![Pasted installer in Applications](images/Mac_Installer4.png)
 
-   ![Installation type wizard](images/Mac_Installer5.png)
+Step 5: Open the **Applications** folder and double-click the Syncfusion<sup>&reg;</sup> PowerPoint installer to launch the setup wizard.
 
+   ![Installer launched from Applications](images/Mac_Installer5.png)
 
-6. To remove the DMG file, right-click on the virtual drive on your desktop or in the Finder sidebar and select “Eject.” Also delete the folder from the Applications
+Step 6: Follow the on-screen prompts in the installer wizard to complete the installation. When the installation is finished, eject the mounted DMG volume.
 
-   ![Credential wizard](images/Mac_Installer6.png)
+   ![Installation complete](images/Mac_Installer6.png)
+
+Step 7: To remove the DMG file, right-click the virtual drive on your desktop or in the Finder sidebar and select **Eject**.
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio<sup>&reg;</sup> PowerPoint Mac installer, please refer to this.
+After installation, the license key is required to register the demo samples bundled with the Mac installer. To register the license key for the PowerPoint (Document Processing) samples, see [How to Register a Syncfusion License Key in a Document Processing Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application).
 
-* Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
-* Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)
+## Uninstalling the Mac Installer
+
+To uninstall the Syncfusion<sup>&reg;</sup> PowerPoint (Document Processing) Mac Installer, open the **Applications** folder, right-click the Syncfusion<sup>&reg;</sup> PowerPoint installer, and select **Move to Trash**. Empty the Trash to complete the uninstallation.

@@ -1,13 +1,13 @@
 ---
-title: Extract Data from PDF in Windows Forms | Syncfusion
-description: Extract tables, text, and form fields from PDF documents in Windows Forms using the .NET Smart Data Extractor Library.
+title: Getting Started with Windows Forms Smart Data Extractor | Syncfusion
+description: Learn how to get started with the Syncfusion Windows Forms Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 
 ---
 
-# Extract Data in Windows Forms
+# Getting Started with Windows Forms Smart Data Extractor
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor is a .NET library used to extract structured data and document elements from PDFs and images in Windows Forms applications.
 
@@ -32,6 +32,8 @@ Step 2: Name the project.
 Step 3: Install [Syncfusion.SmartDataExtractor.WinForms](https://www.nuget.org/packages/Syncfusion.SmartDataExtractor.WinForms) NuGet package as a reference to your Windows Forms application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.SmartDataExtractor.WinForms NuGet package](GettingStarted_images/Winforms_Nuget.png)
+
+Add the input PDF file named **Input.pdf** to the Data folder before running the sample.
 
 Step 4: Include the following namespaces in the **Form1.cs** file.
 
@@ -94,7 +96,7 @@ Step 6: Add the following code in **btnExtract_Click** to extract data from PDF.
 // Load the existing PDF document
 using (FileStream stream = new FileStream(Path.GetFullPath(@"../../Data/Input.pdf"), FileMode.Open, FileAccess.Read))
 {
-    // Initialize the Smart Data Extractor
+    // Initialize the Data Extractor
     DataExtractor extractor = new DataExtractor();
     // Extract data as JSON string
     string data = extractor.ExtractDataAsJson(stream);

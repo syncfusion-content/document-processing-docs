@@ -1,20 +1,21 @@
 ---
 layout: post
-title: PDF form field flags in the Angular PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion Angular PDF Viewer.
+title: Form Constrain in Angular PDF Viewer | Syncfusion
+description: Configure form field constraints in the Angular PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# PDF form field flags in Angular PDF Viewer
+# PDF Form Field Constraints in Angular PDF Viewer
 
 The Syncfusion **Angular PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
 This topic explains:
 - [Supported form field flags](#supported-pdf-form-field-flags)
 - [How each constraint affects field behavior](#key-actions)
-- [How to apply flags during field creation](#apply-pdf-form-field-flags-using-the-ui)
+- [How to apply flags using the UI](#apply-pdf-form-field-flags-using-the-ui)
 - [How to update flags on existing fields](#update-flags-on-existing-fields-programmatically)
 - [How flags work with validation and printing](#control-print-behavior)
 
@@ -33,8 +34,8 @@ The following flags are supported in the PDF Viewer:
 
 ## Key Actions
 
-### Make Fields Read Only
-Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre filled or calculated values that should not be changed by the user.
+### Make Fields Read-Only
+Use the **isReadOnly** property to prevent users from modifying a form field through the UI. This is useful for displaying pre-filled or calculated values that should not be changed by the user.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -359,7 +360,7 @@ export class AppComponent implements AfterViewInit {
 {% endhighlight %}
 {% endtabs %}
 
-### Update flags on Existing Fields programmatically
+### Update flags on Existing Fields Programmatically
 Use the [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) method to modify constraint values on existing form fields.
 
 {% tabs %}

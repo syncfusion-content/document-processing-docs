@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to deploy documenteditor java web api in azure in Vue Document editor component | Syncfusion
-description: Learn here all about How to deploy documenteditor java web api in azure in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Deploy Vue DOCX Editor Java Web API in Azure App | Syncfusion
+description: Deploy the Syncfusion® Vue DOCX Editor Java Web API in Azure App for scalable and reliable document processing.
 control: How to deploy documenteditor java web api in azure 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy documenteditor java web api in azure in Vue Document editor component
+# How to Deploy Vue DOCX Editor Java Web API in Azure App
 
 ## Prerequisites
 

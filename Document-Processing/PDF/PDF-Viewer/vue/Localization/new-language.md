@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set a New Language in Vue PDF Viewer | Syncfusion
-description: Learn how to localize the Syncfusion Vue PDF Viewer with culture codes using L10n.load and the locale property.
+title: New Language in Vue PDF Viewer | Syncfusion
+description: Localize the Vue PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language in the Vue PDF Viewer
+# Set a New Language in Vue PDF Viewer
 
 Use the Vue PDF Viewer’s [locale](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#locale) property together with `L10n.load` to display UI text, tooltips, and messages in your users’ language. Provide only the keys you need to override; missing keys fall back to the default `en-US` values.
 
@@ -24,7 +24,7 @@ Use the Vue PDF Viewer’s [locale](https://ej2.syncfusion.com/vue/documentation
 
 ## Quick start (set German)
 1. **Load translations** with `L10n.load` at app start (only include the keys you want to change).
-2. **Set the culture** by passing `locale` value to `<PdfViewerComponent/>`.
+2. **Set the culture** by passing the `locale` value to `<PdfViewerComponent/>`.
 3. **Render the viewer** as usual. Missing keys will automatically fall back to `en-US`.
 
 {% tabs %}
@@ -99,7 +99,7 @@ export default {
 L10n.load({
   'de': {
     'PdfViewer': {
-              'PdfViewer': 'PDF-Viewer',
+        'PdfViewer': 'PDF-Viewer',
         'Cancel': 'Abbrechen',
         'Download file': 'Datei herunterladen',
         'Download': 'Herunterladen',

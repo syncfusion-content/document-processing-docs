@@ -1,21 +1,107 @@
 ---
 layout: post
-title: Vue 3 getting started with the Spreadsheet component | Syncfusion
-description:  Check out and learn about Vue 3 getting started with the Vue Spreadsheet component of Syncfusion Spreadsheet Editor SDK and more details.
+title: Getting Started with Vue 3 Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Vue Spreadsheet component in a Vue 3 application. Explore setup and usage examples.
 control: Vue 3 getting started
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with the Vue Spreadsheet Component in Vue 3
+# Getting Started with Vue 3 Spreadsheet
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+{% tabcontents %}
+{% tabcontent Syncfusion CLI %}
+
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
+## Install the Syncfusion CLI 
+
+Install the Syncfusion CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+npm install -g @syncfusion/syncfusion-cli
+{% endhighlight %}
+{% endtabs %}
+
+## Set up the Vite project using Syncfusion CLI
+
+You can create a Vue application with [Vite](https://vite.dev/) using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf new my-project --framework vue --template spreadsheet-editor --theme tailwind3
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates a `Vue` application with Vite and configured it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component. The generated project uses the TypeScript and the Composition API.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+sf
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration options. To create a Vue application with Vite and the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... my-project
+√ Choose Framework: » Vue
+√ Choose Language: » TypeScript
+√ Choose Template: » Spreadsheet Editor
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no      
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate a `Vue` application with Vite and configure it with the Syncfusion<sup style="font-size:70%">&reg;</sup> `Spreadsheet Editor` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+cd my-project
+npm install
+npm run dev
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Spreadsheet Editor](./images/syncfusion-cli.png)
+
+{% endtabcontent %}
+
+{% tabcontent Vite CLI %}
 
 ## Prerequisites
 
 [System requirements for Vue components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Create a Vue application
+## Create a Vue Application
 
 To create a new Vue application, run one of the following commands.
 
@@ -29,36 +115,34 @@ cd spreadsheet-app
 Install the [Vue Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
 ```
-npm install @syncfusion/ej2-vue-spreadsheet --save
+npm install @syncfusion/ej2-vue-spreadsheet
 ```
 
 ## Add CSS references
 
-Add the following Spreadsheet and dependent component style references.
+Add the following Spreadsheet and dependent component styles to `src/style.css` file. Replace the existing content with the theme import code below.
 
 {% tabs %}
 {% highlight html tabtitle="style.css" %}
 
-```css
-  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css";
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-```
+@import "@syncfusion/ej2-base/styles/tailwind3.css";
+@import "@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "@syncfusion/ej2-dropdowns/styles/tailwind3.css";
+@import "@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "@syncfusion/ej2-grids/styles/tailwind3.css";
+@import "@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
+> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a Vue application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component to the application
+## Add the Vue Spreadsheet component to the application
 
-Import and register the Spreadsheet component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
+Import and register the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component directives in the `script` section of **src/App.vue**. If you use the `Composition API`, add the `setup` attribute to the `script` tag. Then, define the component in the `template` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (App.vue)" %}
@@ -110,9 +194,9 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 
 N> The [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`link`](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
 
-## Run the project
+## Run the Application
 
-To run the project, use the following command:
+Run the following command to start the application:
 
 ```
 npm run dev
@@ -122,9 +206,15 @@ After the application starts, open the localhost URL shown in the terminal to vi
 
 ![Output](images/vue3-spreadsheet.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component). Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-the-vue-spreadsheet-component).
+
+N> Looking for the full Vue Spreadsheet component overview, features, pricing, and documentation? Visit the [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) page.
 
 ## See also
 
-* [Data Binding](./data-binding)
 * [Open and Save](./open-save)
+* [Data Binding](./data-binding)

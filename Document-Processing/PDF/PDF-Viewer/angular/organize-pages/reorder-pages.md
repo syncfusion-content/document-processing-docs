@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Reorder pages in Organize Pages in Angular PDF Viewer | Syncfusion
-description: How to rearrange pages using drag-and-drop and grouping in the Organize Pages UI of the Syncfusion Angular PDF Viewer.
+title: Reorder Pages in Angular PDF Viewer | Syncfusion
+description: Reorder pages in the Angular PDF Viewer using drag-and-drop and grouping inside the Organize Pages panel, or through programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view in Angular
+# Reorder Pages in Angular PDF Viewer
 
 ## Overview
 
@@ -53,11 +53,11 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 ## Enable or disable reorder option
 
-To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines
+To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines.
 
 ## Troubleshooting
 
-- **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is is not set to `false`.
+- **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is not set to `false`.
 - **Changes not saved**: Verify [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) (server) or [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) (standalone) is configured correctly.
 
 ## Related topics

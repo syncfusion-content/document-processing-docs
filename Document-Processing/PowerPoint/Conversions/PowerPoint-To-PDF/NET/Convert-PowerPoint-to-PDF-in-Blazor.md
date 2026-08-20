@@ -1,4 +1,4 @@
----
+﻿---
 title: Convert PowerPoint to PDF in Blazor | Syncfusion
 description: Convert PowerPoint presentation to PDF in Blazor using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in Blazor
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a  **convert a PowerPoint to PDF in Blazor**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -34,9 +34,7 @@ Step 1: Create a new C# Blazor Web app project.
 
 ![Select the framework in Blazor Web App Server in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
 
-Step 2: Install the `Syncfusion.PresentationRenderer.Net.Core` NuGet package.
-
-To convert a **PowerPoint presentation to PDF in a Web App Server**, install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to the project from [NuGet.org](https://www.nuget.org/).
+Step 2: To convert a **PowerPoint presentation to PDF in a Blazor Web App Server**, install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
@@ -112,31 +110,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint Presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,9 +175,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -193,7 +188,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -338,31 +333,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -406,9 +398,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -419,7 +411,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -581,31 +573,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint Presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -649,9 +638,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -662,7 +651,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;

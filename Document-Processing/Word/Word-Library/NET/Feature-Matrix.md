@@ -1,12 +1,12 @@
 ---
-title: Feature Matrix in .NET Word Library | Syncfusion
-description: Learn about the supported features of the .NET Word Library (DocIO) for Word 97–2003, Word 2007–2016, and RTF formats.
+title: Feature Matrix in .NET Word | Syncfusion
+description: This section illustrates common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Feature Matrix in .NET Word Library
+# Feature Matrix in .NET Word
 
 Syncfusion® Essential® DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) that provides extensive support for creating, editing, formatting, reviewing, and converting Word documents across multiple formats, including Word 97–2003, Word 2007–2016, and RTF.
 
@@ -48,7 +48,7 @@ The following table outlines the supported features across different Word format
   <tr><td>Update page count.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Access, create, and modify document sections, headers, and footers.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Iterate over document content.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td>Access and move elements between documents.</td><td>No</td><td>Yes</td><td>No</td></tr>
+  <tr><td>Move elements between documents.</td><td>No</td><td>Yes</td><td>No</td></tr>
   <tr><td>Insert HTML text.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 </table>
 
@@ -186,9 +186,9 @@ The following table outlines the supported features across different Word format
   <tr><td>Perform mail merge from any .NET data source such as string array, DataSet, DataTable, DataView, and DataReader.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Perform mail merge from any data source such as IEnumerable collection and dynamic objects.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Format the merged text, images, or other elements during mail merge.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td>Event hander to bind data for unmerged fields.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+  <tr><td>Event handler to bind data for unmerged fields.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Map the merge field names with column names in the data source.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td>Skip to merge particular a image during the mail merge process.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+  <tr><td>Skip merging a particular image during the mail merge process.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
   <tr><td>Start a new page for each group of records.</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
 </table>
 

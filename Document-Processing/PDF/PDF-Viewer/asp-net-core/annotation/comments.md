@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to add, reply to, edit, set status for, delete, and read comments for annotations in the Syncfusion ASP.NET Core PDF Viewer.
+description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the ASP.NET Core PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -77,9 +77,9 @@ You can edit comments in two ways:
 
 ### Add comments and replies programmatically
 
-Comments can be added to the PDF document programmatically using the `editAnnotation` property.
+Comments can be added to the PDF document programmatically using the `editAnnotation` method.
 
-The following example Shows how to add comments and reply in response to a button click.
+The following example shows how to add comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -160,9 +160,9 @@ window.onload = function() {
 
 ### Edit comments and replies programmatically
 
-Comments can be edited in the PDF document programmatically using the `editAnnotation` property.
+Comments can be edited in the PDF document programmatically using the `editAnnotation` method.
 
-The following example Shows how to edit comments and reply in response to a button click.
+The following example shows how to edit comments and reply in response to a button click.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

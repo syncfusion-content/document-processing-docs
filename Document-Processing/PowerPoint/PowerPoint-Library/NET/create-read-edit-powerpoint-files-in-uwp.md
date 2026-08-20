@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in UWP |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in UWP | Syncfusion<sup>&reg;</sup>
 description: A UWP PowerPoint library to create, read and edit PowerPoint files in UWP applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
@@ -16,7 +16,9 @@ Step 1: Create a new C# UWP application project.
 
 ![Create UWP project](Workingwith-UWP/Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.Presentation.UWP](https://www.nuget.org/packages/Syncfusion.Presentation.UWP/) NuGet package as a reference in your UWP application from [NuGet.org](https://www.nuget.org/).
+
+N> The `Syncfusion.Presentation.UWP` package supports UWP projects targeting Windows 10 (min version 14393). Reference the package version that matches your installed Syncfusion Essential Studio version.
 
 ![Install UWP Nuget](Workingwith-UWP/Nuget-Open-and-Save.png)
 
@@ -53,6 +55,10 @@ Step 4: Include the following namespaces in the MainPage.xaml.cs file.
 using Syncfusion.Presentation;
 using Windows.Storage.Pickers;
 using Windows.Storage;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Collections.Generic;
 {% endhighlight %}
 
 {% endtabs %}
@@ -107,6 +113,8 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 
 {% endtabs %}
 
+N> The `TitleOnly` layout exposes the title placeholder as the first shape in the `Shapes` collection. If you use a different layout, adjust the index accordingly.
+
 **Add description content:**
 
 {% tabs %}
@@ -156,6 +164,8 @@ slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 
 {% endtabs %}
 
+N> Ensure that the image (`Image.jpg`) is added to the `Assets` folder of the project and its build action is set to **Embedded Resource**, so that it can be accessed as a manifest resource stream at runtime.
+
 You can download the image used in the sample from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Image-1995521764.zip).
 
 **Add a shape:**
@@ -200,7 +210,9 @@ The output of the above code example will generate the below PowerPoint slide.
 
 ## Read and edit a PowerPoint file in UWP
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample_UWP.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
+
+N> Add the sample PowerPoint file (`Sample_UWP.pptx`) to the `Assets` folder of the project and set its build action to **Embedded Resource** before running the below code.
 
 {% tabs %}
 
@@ -233,6 +245,6 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/UWP/Read-and-edit-PowerPoint-presentation).
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
-An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
+An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

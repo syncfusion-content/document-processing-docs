@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Annotation in Blazor SfPdfViewer Component | Syncfusion
-description: Learn about Annotations and how to add, edit, delete, and configure Annotations in the Blazor SfPdfViewer.
+title: About Annotation in Blazor PDF Viewer Component | Syncfusion
+description: Learn about Syncfusion Blazor PDF Viewer Annotations and how to add, edit, delete, and configure Annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Annotations overview in Blazor SfPdfViewer
+# About Syncfusion Annotation in Blazor PDF Viewer Component
 
 Annotations in the SfPdfViewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. They add context and feedback to PDFs, simplifying collaboration during document reviews.
 
@@ -18,10 +18,10 @@ The Blazor SfPdfViewer provides a complete set of annotation tools for reviewing
 - Text markup: [Highlight](./text-markup/highlight-annotation), [Underline](./text-markup/underline-annotation), [Squiggly](./text-markup/squiggly-annotation), [Strikethrough](./text-markup/strikethrough-annotation)
 - Shapes: [Line](./shape/line-annotation), [Arrow](./shape/arrow-annotation), [Rectangle](./shape/rectangle-annotation), [Circle](./shape/circle-annotation), [Polygon](./shape/polygon-annotation)
 - Free text: [Free Text](./free-text-annotation)
-- Drawing: [Ink](./ink-annotation) (freehand)
+- Drawing: [Ink](./ink-annotation)
 - Stamps: [Standard and custom stamps](./stamp-annotation)
 - Notes: [Sticky Notes](./sticky-notes-annotation)
-- Redaction: [Redact content](./redaction-annotation) (permanent once applied)
+- Redaction: [Redaction](../redaction/overview)
 - Measurement: [Distance](./measurement/distance-annotation), [Perimeter](./measurement/perimeter-annotation), [Area](./measurement/area-annotation), [Radius](./measurement/radius-annotation), [Volume](./measurement/volume-annotation)
 
 ## Annotation manipulation capabilities

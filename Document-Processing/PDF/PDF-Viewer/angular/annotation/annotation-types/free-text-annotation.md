@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Free Text Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Syncfusion Angular PDF Viewer.
+title: Free Text Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the Angular PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Free Text Annotations in Angular PDF Viewer
+# Free Text Annotation in Angular PDF Viewer
 Free Text annotations let users place editable text boxes on a PDF page to add comments, labels, or notes without changing the original document content.
 
 ## Enable Free Text in the Viewer
@@ -62,9 +62,9 @@ export class AppComponent {
 2. Click **Free Text** to enable Free Text mode.
 3. Click on the page to place the text box and start typing.
 
-![Free Text tool](../../../javascript-es6/images/freetext_tool.png)
+![Free Text tool](../../images/freetext_tool.png)
 
-N> When Pan mode is active, choosing Free Text switches the viewer into the appropriate selection/edit workflow for a smoother experience.
+N> When Pan mode is active, selecting Free Text switches the viewer into the appropriate selection/edit workflow for a smoother experience.
 
 ### Enable Free Text Mode
 

@@ -1,39 +1,39 @@
 ---
 layout: post
-title: Disable drag and drop in document editor in React Document editor component | Syncfusion
-description: Learn here all about Disable drag and drop in document editor in Syncfusion React Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Disable Drag and Drop in React DOCX Editor | Syncfusion
+description: Disable drag and drop functionality in Syncfusion® React DOCX Editor to prevent users from moving content within the document editor component.
 platform: document-processing
-control: Disable drag and drop in document editor 
+control: Disable drag and drop in Document Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to disable drag and drop in document editor in React Document editor component
+# How to Disable Drag and Drop in React DOCX Editor
 
-[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support to drag and drop contents within the component and it can be customized(enable and disable) using [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel/#allowdraganddrop)  property in Document editor settings.
+[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support to drag and drop contents within the component and it can be customized (enable and disable) using the [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel#allowdraganddrop) property in Document Editor settings.
 
-The following example illustrates to customize the drag and drop option.
+The following example illustrates how to customize the drag and drop option.
 
 ```typescript
-var settings = { allowDragAndDrop: false };
-var hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+const settings = { allowDragAndDrop: false };
+const hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl={hostUrl} documentEditorSettings={settings}/>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel/#allowdraganddrop) property is `true`.
+N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel#allowdraganddrop) property is `true`.
 
-The following example illustrates to disable the drag and drop option in DocumentEditor.
+The following example illustrates how to disable the drag and drop option in the Document Editor.
 
 ```typescript
-var settings = { allowDragAndDrop: false };
-var hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+const settings = { allowDragAndDrop: false };
+const hostUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
 <DocumentEditorComponent id="container" height={'590px'} documentEditorSettings={settings}/>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: Default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel/#allowdraganddrop) property is `true`.
+N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/documentEditorSettingsModel#allowdraganddrop) property is `true`.

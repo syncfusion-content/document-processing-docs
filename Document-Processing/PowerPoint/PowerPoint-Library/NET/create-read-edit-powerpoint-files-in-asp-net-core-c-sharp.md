@@ -9,7 +9,7 @@ documentation: UG
 
 You can create or edit a PowerPoint file with the Syncfusion<sup>&reg;</sup> [ASP.NET Core PowerPoint library](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-asp-net-core-c-sharp). The below are the steps.
 
-To quickly get started with creating a PowerPoint file in ASP.NET Core, check this video:
+To quickly get started with creating or editing a PowerPoint file in ASP.NET Core, check this video:
 
 {% youtube "https://www.youtube.com/watch?v=OSGwosNnN0o" %}
 
@@ -26,13 +26,13 @@ Step 1: Create a new C# ASP.NET Core Web application project.
 
 ![Create ASP.NET Core Web project for PowerPoint file](Workingwith-Core/Create-Project-Open-and-Save.png)
 
-Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org).
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core/) NuGet package as a reference to your ASP.NET Core project from [NuGet.org](https://www.nuget.org). The examples in this topic use the latest stable version of the package.
 
 ![Install Presentation .Net Core Nuget](Workingwith-Core/Nuget-Package_Open_and_Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Net.Core</li>
 <li>Syncfusion.Licensing</li>
@@ -40,7 +40,15 @@ Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package,
 <li>Syncfusion.Presentation.Portable</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform.
+Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform. Place this code inside an MVC controller action (for example, the `Index` action of `HomeController`). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -95,7 +103,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -128,9 +136,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 FileStream pictureStream = new FileStream("Image.jpg", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -207,13 +214,13 @@ Step 1: Create a new ASP.NET Core Web application project.
 Step 2: To **create a PowerPoint in ASP.NET Core Web app**, install [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) to the ASP.NET Core project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.Presentation.Net.Core` to install the latest version of the NuGet package.
 
 ![Add Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Core/Command-to-add-NuGet-package-AspNetCore.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Net.Core</li>
 <li>Syncfusion.Licensing</li>
@@ -221,7 +228,15 @@ Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package,
 <li>Syncfusion.Presentation.Portable</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform.
+Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform. Place this code inside an MVC controller action (for example, the `Index` action of `HomeController`). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -276,7 +291,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -309,9 +324,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 FileStream pictureStream = new FileStream("Image.jpg", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -380,18 +394,18 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
-Step 1. Open JetBrains Rider and create a new ASP.NET Core Web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET Core Web application project.
 * Launch JetBrains Rider.
-* Click new solution on the welcome screen.
+* Click New Solution on the welcome screen.
 
 ![Launch JetBrains Rider](Console-Images/NET/Launch-JetBrains-Rider.png)
 
 * In the new Solution dialog, select Project Type as Web.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0) and template as **Web App(Model-View-Controller)**. 
 * Enter a project name and specify the location.
-* Click create.
+* Click Create.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Core/Create-ASP.NET-Core-application.png)
 
@@ -407,9 +421,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.Presentation.Net.Core NuGet package](Workingwith-Core/Install-Syncfusion.Presentation.Net.Core-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies were included in our project.
+Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package, the following assemblies are included in our project.
 <ul>
 <li>Syncfusion.Compression.Net.Core</li>
 <li>Syncfusion.Licensing</li>
@@ -417,7 +431,15 @@ Step 3: After installing the **Syncfusion.Presentation.Net.Core** nuget package,
 <li>Syncfusion.Presentation.Portable</li>
 </ul>
 
-Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform.
+Step 4: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Core platform. Place this code inside an MVC controller action (for example, the `Index` action of `HomeController`). Add the following `using` statements at the top of the file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+{% endhighlight %}
+
+{% endtabs %}
 
 **Create Presentation instance:**
 
@@ -472,7 +494,7 @@ titleShape.TextBody.AddParagraph("Company History").HorizontalAlignment = Horizo
 {% highlight c# tabtitle="C#" %}
 //Add description content to the slide by adding a new TextBox
 IShape descriptionShape = slide.AddTextBox(53.22, 141.73, 874.19, 77.70);
-descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and got awards for quality products from reputed organizations.";
+descriptionShape.TextBody.Text = "IMN Solutions PVT LTD is the software company, established in 1987, by George Milton. The company has been listed as the trusted partner for many high-profile organizations since 1988 and received awards for quality products from reputed organizations.";
 {% endhighlight %}
 
 {% endtabs %}
@@ -505,9 +527,8 @@ secondPara.FirstLineIndent = -35;
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-//Gets a picture as stream.
+//Gets a picture as stream and adds it to a slide by specifying its size and position.
 FileStream pictureStream = new FileStream("Image.jpg", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
 slide.Shapes.AddPicture(pictureStream, 499.79, 238.59, 364.54, 192.16);
 {% endhighlight %}
 
@@ -567,28 +588,30 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Read and edit a PowerPoint file in ASP.NET Core
 
-You can edit an existing PowerPoint file using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file using this library. This example assumes that an existing Sample.pptx file is present in the application's working/output directory. The following code snippet demonstrates accessing a shape from a slide and changing its text.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open(new FileStream("Sample.pptx",FileMode.Open));
-//Gets the first slide from the PowerPoint presentation
-ISlide slide = pptxDoc.Slides[0];
-//Gets the first shape of the slide
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape
-if(shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-//Save the PowerPoint presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-outputStream.Position = 0;
-outputStream.Flush();
-outputStream.Dispose();
-//Close the PowerPoint presentation
-pptxDoc.Close();
+using (FileStream inputFileStream = new FileStream("Sample.pptx", FileMode.Open))
+{
+    IPresentation pptxDoc = Presentation.Open(inputFileStream);
+    //Gets the first slide from the PowerPoint presentation
+    ISlide slide = pptxDoc.Slides[0];
+    //Gets the first shape of the slide
+    IShape shape = slide.Shapes[0] as IShape;
+    //Change the text of the shape
+    if (shape.TextBody.Text == "Company History")
+        shape.TextBody.Text = "Company Profile";
+    //Save the PowerPoint presentation as stream
+    using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
+    {
+        pptxDoc.Save(outputStream);
+    }
+    //Close the PowerPoint presentation
+    pptxDoc.Close();
+}
 {% endhighlight %}
 
 {% endtabs %}

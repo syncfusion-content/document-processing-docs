@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use strict CSP in Blazor SfPdfViewer | Syncfusion
-description: Learn how to configure a strict Content Security Policy (CSP) for the Blazor SfPdfViewer, including required directives and their usage.
+title: How to Use strict CSP in Blazor PDF Viewer | Syncfusion
+description: Learn how to configure a strict Content Security Policy (CSP) for the Blazor PDF Viewer, including required directives and their usage.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Use strict CSP in Blazor SfPdfViewer
+# How to Use strict CSP in Blazor PDF Viewer
 
 Content Security Policy (CSP) is a browser security mechanism that mitigates attacks such as cross-site scripting (XSS) and data injection by restricting the allowed sources for loaded content.
 
@@ -38,13 +38,14 @@ Include the following meta tag inside the `<head>` element to address CSP violat
 {% endhighlight %}
 {% endtabs %}
 
-N>The `SfPdfViewer` component requires specific Content Security Policy (CSP) directives to function properly in Blazor WebAssembly applications.
-- In **.NET 9.0**, include `'wasm-unsafe-eval'` in the `script-src` directive to support WebAssembly operations.
-- In **.NET 8.0**, include `'unsafe-eval'` in the `script-src` directive (in addition to `'wasm-unsafe-eval'`) to avoid runtime errors caused by restricted dynamic JavaScript execution.
-- Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.
+N>
+* The `SfPdfViewer` component requires specific Content Security Policy (CSP) directives to function properly in Blazor WebAssembly applications.
+* In **.NET 9.0**, include `'wasm-unsafe-eval'` in the `script-src` directive to support WebAssembly operations.
+* In **.NET 8.0**, include `'unsafe-eval'` in the `script-src` directive (in addition to `'wasm-unsafe-eval'`) to avoid runtime errors caused by restricted dynamic JavaScript execution.
+* Ensure the `worker-src` directive includes `'self'` and `blob:` to enable web worker functionality.
 These directives are essential for correct behavior under strict CSP environments.
 
-### Directive usage
+## Directive usage
 
 | Directive                          | Usage                                                                                                                                                                                                                  |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

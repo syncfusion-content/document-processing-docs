@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Using local resources in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn how to configure the ASP.NET Core PDF Viewer control with local scripts, styles, and resources for offline deployment and restricted CDN access.
+title: How to Load the PDF Viewer with Local Resources | Syncfusion
+description: Configure the ASP.NET Core PDF Viewer to load PDF documents and library files from local resources instead of a CDN for offline or restricted networks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Using local resources in ASP.NET Core PDF Viewer
+# How to Load the PDF Viewer with Local Resources in ASP.NET Core PDF
 
 ## Configuring PDF Viewer with local styles and scripts
 
-For offline deployment or when CDN access is restricted, you can use local resources required for PDF Viewer. To load the PDF Viewer with local resources, follow these steps:
+For offline deployment or when CDN access is restricted, you can use local resources for the PDF Viewer. To load the PDF Viewer with local resources, follow these steps:
 
 **Step 1:** Place the `ej2.min.js` script and the required theme CSS files in the `wwwroot` folder of the ASP.NET Core application.
 

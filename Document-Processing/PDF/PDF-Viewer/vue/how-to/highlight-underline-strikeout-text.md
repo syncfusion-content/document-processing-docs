@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Highlight, underline, and strikeout text in Vue PDF Viewer | Syncfusion
-description: Learn how to programmatically highlight, underline, and strikeout text in the Syncfusion Vue PDF Viewer using setAnnotationMode.
+title: How to Highlight, Underline, or Strike Out Text in Vue | Syncfusion
+description: Highlight, underline, and strike out text in the Vue PDF Viewer using the built-in text markup tools in the annotation toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Highlight, underline, and strikeout text in Vue PDF Viewer
+# How to Highlight, Underline, or Strike Out Text in Vue PDF Viewer
 
-Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
+Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
 
-Step 1: Follow the steps in the [Get started with Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) guide to create a sample.
+Step 1: Follow the steps in the [Get started with Vue PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide to create a sample.
 
 Step 2: Add the following Vue component snippet to enable highlight, underline, and strikeout actions using button clicks.
 
@@ -36,16 +37,19 @@ Step 2: Add the following Vue component snippet to enable highlight, underline, 
 </template>
 
 <script>
-import { PdfViewerComponent } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerComponent, Annotation, Toolbar, TextSelection } from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'AnnotationModesDemo',
   components: { 'ejs-pdfviewer': PdfViewerComponent },
   data() {
     return {
-      serviceUrl: 'https://services.syncfusion.com/js/development/api/pdfviewer',
+      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer',
       documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf'
     };
+  },
+  provide: {
+    PdfViewer: [Annotation, Toolbar, TextSelection]
   },
   methods: {
     getViewer() {
@@ -75,4 +79,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-For the list of available annotation modes, see the [Annotation API](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/).
+For the list of available annotation modes, see the [Annotation API](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation).

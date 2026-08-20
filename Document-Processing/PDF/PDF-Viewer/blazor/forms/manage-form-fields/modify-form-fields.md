@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Modify form fields in the Blazor SfPdfViewer | Syncfusion
-description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Blazor SfPdfViewer.
+title: Modify form fields in the Blazor PDF Viewer | Syncfusion
+description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Modify form fields in the Blazor SfPdfViewer
+# Modify form fields in the Blazor PDF Viewer
 
 Modify form fields using the UI or programmatically via the API. Use the UI to adjust a single field interactively, or use the API to update one or more fields from code.
 

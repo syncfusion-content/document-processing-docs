@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import form data in the Angular PDF Viewer component | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Syncfusion Angular PDF Viewer component.
+title: Import Form Fields in Angular PDF Viewer | Syncfusion
+description: Import PDF form field data into the Angular PDF Viewer from FDF, XFDF, and JSON sources, or directly from a JavaScript object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import PDF Form Data into Angular PDF Viewer
+# Import Form Data in Angular PDF Viewer
 
 This guide shows how to import form field values into an already loaded PDF in the EJ2 Angular PDF Viewer. **Supported import formats**: FDF, XFDF, JSON, and importing from a JavaScript object.
 
@@ -15,7 +15,7 @@ This guide shows how to import form field values into an already loaded PDF in t
 
 1. Import the viewer, inject `FormFieldsService` / `FormDesignerService`, and create a `@ViewChild` to call `importFormFields`.
 
-2. Call [`importFormFields(data, format)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#importformfields) where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. `data` may be a file path (for server/file-based imports) / base64 string or a JavaScript object mapping field names to values.
+2. Call [`importFormFields(data, format)`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#importformfields) where `format` is one of `FormFieldDataFormat.Fdf`, `FormFieldDataFormat.Xfdf`, or `FormFieldDataFormat.Json`. `data` may be a file path (for server/file-based imports), a base64 string, or a JavaScript object mapping field names to values.
 
 3. Verify the form fields are populated after the import completes. For server-backed imports, ensure [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) is configured and the import file is accessible by the server.
 

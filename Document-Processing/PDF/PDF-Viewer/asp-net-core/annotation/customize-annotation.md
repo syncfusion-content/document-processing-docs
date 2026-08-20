@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Customize annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion ASP.NET Core PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+title: Customize Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Customize the appearance and behavior of annotations in the ASP.NET Core PDF Viewer through UI settings and programmatic configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize annotations in ASP.NET Core
+# Customize Annotations in ASP.NET Core PDF Viewer
 
-Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
+Annotation appearance and behavior (for example, color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 
 ## Customize via UI
 
 Use the annotation toolbar after selecting an annotation:
-- Edit color: changes the annotation fill/text color
+- Edit color: changes the annotation fill or text color
 ![Edit color](../images/edit_color.png)
-- Edit stroke color: changes border or line color for shapes and lines types.
+- Edit stroke color: changes border or line color for shapes and lines.
 ![Edit stroke color](../images/shape_strokecolor.png)
 - Edit thickness: adjusts border or line thickness
 ![Edit thickness](../images/shape_thickness.png)
@@ -35,7 +35,7 @@ Text markup annotations:
 - Highlight: Set default properties before creating the control using [`highlightSettings`](./annotation-types/highlight-annotation#set-properties-while-adding-individual-annotation)
 - Strikethrough: Use [`strikethroughSettings`](./annotation-types/strikethrough-annotation#set-properties-while-adding-individual-annotation)
 - Underline: Use [`underlineSettings`](./annotation-types/underline-annotation#set-properties-while-adding-individual-annotation)
-- Squiggly: Use [`squigglySettings`](./annotation-types/Squiggly-annotation#set-properties-while-adding-individual-annotation)
+- Squiggly: Use [`squigglySettings`](./annotation-types/squiggly-annotation#set-properties-while-adding-individual-annotation)
 
 Shape annotations:
 
@@ -107,7 +107,7 @@ N> After changing defaults using UI tools (for example, Edit color or Edit opaci
 
 ## Customize programmatically at runtime
 
-To update an existing annotation from code, modify its properties and call editAnnotation.
+To update an existing annotation from code, modify its properties and call `editAnnotation`.
 
 Example: bulk‑update matching annotations.
 

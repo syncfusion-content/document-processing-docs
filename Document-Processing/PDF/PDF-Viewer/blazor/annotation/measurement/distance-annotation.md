@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Add Distance Annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor SfPdfViewer Component.
+description: Learn how to enable, measure, customize, and manage Distance annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Distance Annotations in Blazor SfPdfViewer Component
+# Add Distance Annotations in Blazor PDF Viewer 
 
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 
@@ -158,15 +158,15 @@ Drag the end handles to adjust the length, or change `VertexPoints` programmatic
 
 Select the Distance annotation first — the annotation toolbar appears below the main toolbar. Use it to change:
 
-- **Fill Color** — pick a new color with the Edit Color tool.
+- **Fill Color**: pick a new color with the Edit Color tool.
   ![Editing Calibrate FillColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-fillcolor.png)
-- **Stroke Color** — change the line color with the Edit Stroke Color tool.
+- **Stroke Color**: change the line color with the Edit Stroke Color tool.
   ![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-stroke-color.png)
-- **Thickness** — adjust the line width with the Edit Thickness tool.
+- **Thickness**: adjust the line width with the Edit Thickness tool.
   ![Editing Calibrate Thickness in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-thickness.png)
-- **Opacity** — change transparency with the Edit Opacity tool.
+- **Opacity**: change transparency with the Edit Opacity tool.
   ![Editing Calibrate Opacity in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-opacity.png)
-- **Line properties** — change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
+- **Line properties**: change the leader style (line only, with arrows, or full dimension lines) with the Edit Property tool.
   ![Editing Calibrate Property in Blazor SfPdfViewer](../../images/blazor-pdfviewer-calibrate-property.png)
 
 #### Edit Distance Annotation Programmatically

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bookmark navigation in UWP PDF Viewer control | Syncfusion
+title: Bookmark navigation in UWP PDF Viewer | Syncfusion
 description: Learn here all about Bookmark navigation support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 ---
 
-# Bookmark navigation in UWP PDF Viewer (SfPdfViewer)
+# Bookmark navigation in UWP PDF Viewer
 
-PDF Viewer allows users to navigate to the bookmarks present in the loaded PDF document. 
+The SfPdfViewer control allows users to navigate to the bookmarks present in the loaded PDF document. This section covers programmatic navigation using the `GoToBookmark` method.
 
 ## Programmatically navigate to a bookmark destination
 
@@ -24,13 +24,15 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument(documentStream);
 //Retrieves the bookmark collection from the loaded PDF document
 PdfBookmarkBase bookmark = loadedDocument.Bookmarks;
 
-//Navigate to the specified bookmark destination offset
+//Navigates to the specified bookmark destination
 pdfViewerControl.GoToBookmark(bookmark[0]);
 
 {% endhighlight %}
 {% endtabs %}
 
 ## See Also
+- [UWP PDF Viewer Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/overview)
 - [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
 - [Hyperlink](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/hyperlink)
 - [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [GoToBookmark API Reference](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html)

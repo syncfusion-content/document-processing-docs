@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in Angular PDF Viewer | Syncfusion
-description: Learn here all about the default language culture and localization in Syncfusion Angular PDF Viewer component.
+title: Default Language in Angular PDF Viewer | Syncfusion
+description: Set the default language for the Angular PDF Viewer UI and learn how localization is applied to all built-in text and messages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in the Angular PDF Viewer
+# Default Language in Angular PDF Viewer
 
 The PDF Viewer supports localization of UI text, tooltips, and messages using culture-specific string collections so the interface matches users' language and regional settings.
 
@@ -137,7 +137,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Highlight context|Highlight|
 |Underline context|Underline|
 |Strikethrough context|Strike through|
-|Server error|Web-service is not listening. PDF Viewer depends on web-service for all it's features. Please start the web service to continue.|
+|Server error|Web-service is not listening. PDF Viewer depends on web-service for all its features. Please start the web service to continue.|
 |Open text|Open|
 |First text|First Page|
 |Previous text|Previous Page|
@@ -152,7 +152,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Annotation Edit text|Edit Annotation|
 |Line Thickness|Line Thickness|
 |Line Properties|Line Properties|
-|Start Arrow|Start Arrow |
+|Start Arrow|Start Arrow|
 |End Arrow|End Arrow|
 |Line Style|Line Style|
 |Fill Color|Fill Color|
@@ -177,15 +177,15 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Add circle|Add Circle|
 |Add polygon|Add Polygon|
 |Add Comments|Add Comments|
-|Comments| Comments|
+|Comments|Comments|
 |No Comments Yet|No Comments Yet|
-|Accepted| Accepted|
-|Completed| Completed|
-|Cancelled| Cancelled|
-|Rejected| Rejected|
+|Accepted|Accepted|
+|Completed|Completed|
+|Cancelled|Cancelled|
+|Rejected|Rejected|
 |Leader Length|Leader Length|
 |Scale Ratio|Scale Ratio|
-|Calibrate| Calibrate|
+|Calibrate|Calibrate|
 |Calibrate Distance|Calibrate Distance|
 |Calibrate Perimeter|Calibrate Perimeter|
 |Calibrate Area|Calibrate Area|
@@ -222,7 +222,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Text Align|Text Align|
 |Text Properties|Text Properties|
 |Draw Signature|Draw Signature|
-|Create| Create|
+|Create|Create|
 |Font family|Font Family|
 |Font size|Font Size|
 |Free Text|Free Text|

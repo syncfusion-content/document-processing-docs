@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Add Free Text Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Syncfusion React PDF Viewer.
+title: Free Text Annotation in React PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the React PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Free Text Annotations in React PDF Viewer
+# Free Text Annotation in React PDF Viewer
 Free Text annotations let users place editable text boxes on a PDF page to add comments, labels, or notes without changing the original document content.
 
 ## Enable Free Text in the Viewer
 
-To enable ink annotations, inject the following modules into the React PDF Viewer:
+To enable Free Text annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -113,7 +113,7 @@ function addFreeTextProgrammatically() {
 
 ## Customize Free Text Appearance
 
-Configure default properties using the [`FreeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property (for example, default **fill color**, **border color**, **font color**, **opacity**, and **auto‑fit**). 
+Configure default properties using the [`freeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property (for example, default **fill color**, **border color**, **font color**, **opacity**, and **auto‑fit**). 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Set a New Language in Angular PDF Viewer | Syncfusion
-description: Learn how to localize the Syncfusion Angular PDF Viewer with culture codes using L10n.load and the locale property.
+title: New Language in Angular PDF Viewer | Syncfusion
+description: Localize the Angular PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Set a new language in the Angular PDF Viewer
+# Set a New Language in Angular PDF Viewer
 
 Use the Angular PDF Viewer's [locale](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#locale) property together with `L10n.load` to display UI text, tooltips, and messages in your users' language. Provide only the keys you need to override; missing keys fall back to the default `en-US` values.
 
@@ -24,7 +24,7 @@ Use the Angular PDF Viewer's [locale](https://ej2.syncfusion.com/angular/documen
 
 ## Quick start (set German)
 1. **Load translations** with `L10n.load` at app start (only include the keys you want to change).
-2. **Set the culture** by passing `locale` value to the PDF Viewer component.
+2. **Set the culture** by adding `locale="de"` to the `<ejs-pdfviewer>` element.
 3. **Render the viewer** as usual. Missing keys will automatically fall back to `en-US`.
 
 {% tabs %}
@@ -48,11 +48,11 @@ import {
   PageOrganizerService
 } from '@syncfusion/ej2-angular-pdfviewer';
 
-/** 1) Provide only the keys you want to override; others fall back to en-US */
+/** Provide translations for the keys you want to override; others fall back to en-US */
 L10n.load({
   'de': {
     'PdfViewer': {
-              'PdfViewer': 'PDF-Viewer',
+        'PdfViewer': 'PDF-Viewer',
         'Cancel': 'Abbrechen',
         'Download file': 'Datei herunterladen',
         'Download': 'Herunterladen',
@@ -91,9 +91,9 @@ L10n.load({
         'Save': 'Speichern',
         'Save As': 'Speichern als',
         'Select All': 'Wählen Sie Alle',
-        'Change Page Zoom': 'Change Page Zoom',
-        'Increase Page Zoom': 'Increase Page Zoom',
-        'Decrease Page Zoom': 'Decrease Page Zoom',
+        'Change Page Zoom': 'Seitenzoom ändern',
+        'Increase Page Zoom': 'Seitenzoom vergrößern',
+        'Decrease Page Zoom': 'Seitenzoom verringern',
         'Password Protected': 'Passwort erforderlich',
         'Copy': 'Kopieren',
         'Text Selection': 'Textauswahltool',
@@ -157,7 +157,7 @@ L10n.load({
         'Diamond Arrow': 'Diamant',
         'Butt': 'Hintern',
         'Cut': 'Schneiden',
-        'Paste': 'Paste',
+        'Paste': 'Einfügen',
         'Delete Context': 'Löschen',
         'Properties': 'Eigenschaften',
         'Add Stamp': 'Stempel hinzufügen',
@@ -194,7 +194,7 @@ L10n.load({
         'Comment': 'Kommentar',
         'Comment Panel': 'Kommentarpanel',
         'Set Status': 'Status festlegen',
-        'Post': 'Post',
+        'Post': 'Beitrag',
         'Page': 'Seite',
         'Add a comment': 'Einen Kommentar hinzufügen',
         'Add a reply': 'Fügen Sie eine Antwort hinzu',
@@ -212,7 +212,7 @@ L10n.load({
         'Subscript': 'Index',
         'Align left': 'Linksbündig',
         'Align right': 'Rechts ausrichten',
-        'Center': 'Center',
+        'Center': 'Zentrum',
         'Justify': 'Rechtfertigen',
         'Font color': 'Schriftfarbe',
         'Text Align': 'Textausrichtung',
@@ -250,7 +250,7 @@ L10n.load({
         'List Box': 'Listenfeld',
         'Signature': 'Unterschrift',
         'Delete FormField': 'Formular löschen',
-        'Textbox Properties': 'Textbox -Eigenschaften',
+        'Textbox Properties': 'Textbox-Eigenschaften',
         'Name': 'Name',
         'Tooltip': 'Tooltip',
         'Value': 'Wert',
@@ -302,12 +302,12 @@ L10n.load({
         'pt': 'pt',
         'cu': 'cu',
         'sq': 'Quadrat',
-        'Initial': 'Initiale',
-        'Extract Pages': 'Extract Pages',
-        'Delete Pages After Extracting': 'Delete Pages After Extracting',
-        'Extract Pages As Separate Files': 'Extract Pages As Separate Files',
-        'Extract': 'Extract',
-        'Example: 1,3,5-12': 'Example: 1,3,5-12',
+        'Initial': 'Anfang',
+        'Extract Pages': 'Seiten extrahieren',
+        'Delete Pages After Extracting': 'Seiten nach dem Extrahieren löschen',
+        'Extract Pages As Separate Files': 'Seiten als separate Dateien extrahieren',
+        'Extract': 'Auszug',
+        'Example: 1,3,5-12': 'Beispiel: 1,3,5-12',
         'No matches': 'Der Viewer hat die Suche im Dokument abgeschlossen. ',
         'No Text Found': 'Kein Text gefunden'
     }

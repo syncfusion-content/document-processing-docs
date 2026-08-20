@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the redaction toolbar in React PDF Viewer | Syncfusion
-description: Learn how to customize the redaction toolbar in the Syncfusion React PDF Viewer by showing or hiding default items.
+title: Toolbar in React PDF Viewer | Syncfusion
+description: Customize the redaction toolbar in the React PDF Viewer by showing or hiding the default redaction actions to fit your scenario.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the redaction toolbar in React PDF Viewer
+# Customize the Redaction Toolbar in React PDF Viewer
 
 This guide shows how to enable and control the redaction toolbar in the React PDF Viewer, including showing/hiding it from the primary toolbar programmatically. 
 
@@ -118,7 +118,7 @@ export default function App() {
 
 ## Troubleshooting
 
-- If redaction icon not visible, ensure if `'RedactionEditTool'` is added to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) is included in `<Inject services=[...] />`.
+- If redaction icon not visible, ensure that `'RedactionEditTool'` is added to [`toolbarSettings.toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbarsettings#toolbaritems) and [`Toolbar`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/toolbar) is included in `<Inject services=[...] />`.
 
 - If toolbar buttons have no effect, verify [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#resourceurl) points to a reachable `ej2-pdfviewer-lib` bundle appropriate for your viewer version.
 
@@ -127,7 +127,7 @@ export default function App() {
 ## Related topics
 
 - [Adding the redaction annotation in PDF viewer](../redaction/overview)
-- [Redaction UI interactions](./ui-interactions)
+- [Redaction UI interactions](./ui-interaction)
 - [Programmatic support](./programmatic-support)
 - [Mobile view](./mobile-view)
 - [Search Text and Redact](./search-redact)

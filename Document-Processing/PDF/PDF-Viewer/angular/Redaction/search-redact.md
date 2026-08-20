@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Search text and redact in Angular PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion Angular PDF Viewer.
+title: Search Redact in Angular PDF Viewer | Syncfusion
+description: Learn about the search redact in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in Angular PDF Viewer
+# Search Redact in Angular PDF Viewer
 
 You can search for a keyword in the loaded PDF and automatically add redaction annotations over each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and places redaction annotations for every result.
 
@@ -67,7 +67,6 @@ import {
     </div>
   `,
   providers: [
-    // Angular DI is the Angular equivalent of PdfViewer.Inject(...)
     LinkAnnotationService,
     BookmarkViewService,
     MagnificationService,
@@ -86,7 +85,7 @@ import {
 export class AppComponent {
   @ViewChild('pdfviewer', { static: true }) pdfViewer!: PdfViewerComponent;
 
-  // Same sources as in your JS
+  // Document and resource URLs
   public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 

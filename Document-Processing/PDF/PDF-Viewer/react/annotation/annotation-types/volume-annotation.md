@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion React PDF Viewer.
+title: Volume Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Volume measurement annotations in the React PDF Viewer to calculate the volume of a 3D region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Volume Measurement Annotations in React PDF Viewer
+# Volume Annotation in React PDF Viewer
 Volume measurement annotations allow users to draw circular regions and calculate the volume visually.
 
 ![Volume overview](../../../javascript-es6/annotations/annotation-images/volume-annot.png)
@@ -81,7 +81,7 @@ function exitVolumeMode() {
 {% endtabs %}
 
 ### Add Volume Programmatically
-Configure default properties using the [`Volume Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use [`addAnnotation()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) to insert a Volume measurement at a specific page location with optional offset, dimensions, and styling.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -118,7 +118,7 @@ Configure default properties using the [`Volume Settings`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-## Manage Volume (Move, Resize, Delete)
+## Manage Volume (Move, Reshape, Delete)
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
@@ -190,7 +190,7 @@ Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.co
 
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
+Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

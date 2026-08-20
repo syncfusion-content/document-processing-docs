@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formula Error Handling in React Spreadsheet component | Syncfusion
-description: Learn here all about formula error handling in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formula Error Handling in React Spreadsheet | Syncfusion
+description: Learn about formula error handling in the Syncfusion React Spreadsheet component and resolve calculation errors effectively.
 control: Formulas 
 platform: document-processing
 documentation: ug
@@ -23,4 +23,4 @@ If you enter an invalid formula in a cell, an error dialog with an error message
 | `We found that you typed a formula with a circular reference` | Occurs when passing a formula with circular cell reference. |
 | `We found that you typed a formula which is invalid` | Except in the cases mentioned above, all other errors will fall into this broad category. |
 
-![Formula Alert Dialog](./images/formula-alert-dialog.png)
+![Formula Alert Dialog](../images/formula-alert-dialog.png)

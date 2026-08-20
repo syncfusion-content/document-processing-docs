@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Eraser in ASP.NET Core PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion ASP.NET Core PDF Viewer with UI and programmatic control.
+title: Ink Eraser in ASP.NET Core PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the ASP.NET Core PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -31,7 +31,7 @@ The Ink Eraser is most useful in these scenarios:
 
 ## Enable Ink Eraser
 
-To enable the Ink Eraser feature, include the Toolbar and Annotation in your ASP.NET Core PDF Viewer:
+The Ink Eraser is available in the annotation toolbar by default. To use it, initialize the PDF Viewer with the **Toolbar** and **Annotation** modules:
 
 - [**Annotation**](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/aspnetcore/documentation/pdfviewer/index-default#toolbar)
@@ -276,7 +276,7 @@ You can programmatically switch between Ink drawing mode and Eraser mode for a s
 - **Partial erasing**: You can erase any portion of an ink stroke without affecting other strokes.
 - **Real-time erasing**: Erased content is immediately removed as the eraser moves across the stroke.
 - **Undo/Redo support**: Eraser actions can be undone and redone using the toolbar buttons or keyboard shortcuts (Ctrl+Z, Ctrl+Y).
-- **Size adjust-ability**: The eraser size can be changed at any time without exiting eraser mode.
+- **Size adjustable**: The eraser size can be changed at any time without exiting eraser mode.
 - **Mouse and touch input**: The eraser works with mouse, stylus, and touch input on supported devices.
 
 ### Programmatic control behavior

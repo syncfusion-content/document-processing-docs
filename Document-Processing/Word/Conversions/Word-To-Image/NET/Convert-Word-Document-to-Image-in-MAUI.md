@@ -1,12 +1,12 @@
 ---
 title: Convert Word to Image in .NET MAUI | Syncfusion
-description: Convert Word to image in .NET MAUI using .NET MAUI Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Convert Word to image in .NET MAUI using .NET MAUI Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in .NET MAUI
+# Convert Word to Image in .NET MAUI
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in .NET MAUI**.
 
@@ -390,7 +390,7 @@ By executing the program, you will get the **image** as follows.
 * Install .NET 8 SDK or later.
 * For more details about installation, refer [here](https://www.jetbrains.com/help/rider/MAUI.html).
 
-Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
+Step 1: Open JetBrains Rider and create a new .NET MAUI App project.
 * Launch JetBrains Rider.
 * Click new solution on the welcome screen.
 
@@ -398,7 +398,7 @@ Step 1. Open JetBrains Rider and create a new .NET MAUI App project.
 
 * In the new Solution dialog, select Project Type as MAUI.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
-* Choose Type as **App**.
+* Choose the **Type** as **App**.
 * Enter a project name and specify the location.
 * Click create.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Migrating from Apryse to Syncfusion React PDF Viewer | Syncfusion
-description: Learn here all about how to migrate from Apryse WebViewer (PDFTron) to Syncfusion React PDF Viewer and Component
+title: Migrating From Apryse in React PDF Viewer | Syncfusion
+description: Migrate an existing application from Apryse WebViewer (PDFTron) to the Syncfusion React PDF Viewer with a clear, side-by-side mapping guide.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
 ---
 
-# Migrating from Apryse WebViewer to React PDF Viewer
+# Migrate from Apryse to React PDF Viewer
 
 This guide assists developers in migrating applications built with [Apryse WebViewer](https://docs.apryse.com/web/guides/get-started/react) to the [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started). It focuses on architectural differences, feature mapping, and required changes in a React environment.
 
@@ -19,7 +19,7 @@ React PDF Viewer provides a **native React component-based PDF viewing experienc
 
 ## Architecture notes
 
-This guide focuses on replacing an Apryse WebViewer integration with a React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and enable feature  and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
+This guide focuses on replacing an Apryse WebViewer integration with a React PDF Viewer component. Key considerations when migrating include the integration pattern (imperative SDK mounts vs. a declarative React component), how UI/tooling is provided (hosted JS modules vs. injected services), and enable features and persistence for annotations and form fields. The instructions below are framed to help migrate code, event handlers, and persistence workflows to the `PdfViewerComponent`.
 
 ## Installation
 
@@ -35,7 +35,7 @@ npm install @pdftron/webviewer
 npm install @syncfusion/ej2-react-pdfviewer
 ```
 
-## Viewer Initialization Comparison
+## Viewer initialization comparison
 
 ### Apryse WebViewer
 
@@ -262,7 +262,7 @@ export default function PdfViewer() {
 - [load()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#load) — programmatically load a PDF.
 - [download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#download) — trigger download of current document.
 - [addAnnotation(annotation: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) — add an annotation programmatically.
-- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string):   — export annotations for persistence.
+- [exportAnnotation(annotationDataFormat)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotation) / [exportAnnotationsAsBase64String()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#exportannotationsasbase64string) — export annotations for persistence.
 - [extractText(pageIndex: number, options?: any)](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#extracttext): — extract text and coordinates.
 - [Events](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#events): [documentLoad](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#documentload), [pageRenderComplete](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagerendercomplete), [pageChange](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#pagechange), [annotationAdd](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationadd), [annotationRemove](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationremove), [toolbarClick](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbarclick).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with WPF PDF Viewer control | Syncfusion&reg;
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup> Essential Studio&reg; WPF PDF Viewer control, its elements and more.
+title: Getting Started with WPF PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion WPF PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -99,8 +99,8 @@ WPF PDF Viewer control can be added to an application either through the designe
 {% tabcontents %}
  
 {% tabcontent Via Designer %}
-1.Open the Visual Studio toolbox.
-2.Navigate to <b>Syncfusion<sup>&reg;</sup> WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window. The required references are automatically added to the current application.
+1. Open the Visual Studio toolbox.
+2. Navigate to <b>Syncfusion<sup>&reg;</sup> WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window. The required references are automatically added to the current application.
 
    ![WPF PDF Viewer in Toolbox](getting-started_images/wpf-pdf-viewer-in-toolbox.png)
    PDF Viewer control in toolbox
@@ -143,8 +143,8 @@ WPF PDF Viewer control can be added to an application either through the designe
 	{% tabcontent Via Coding %}
 To add the control manually from code, follow these steps:
 
-1.Add the required assemblies as a reference to the project.
-2.Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
+1. Add the required assemblies as a reference to the project.
+2. Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
 
 	{% tabs %}
 	{% highlight c# tabtitle="C#" %}

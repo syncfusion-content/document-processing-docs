@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize Print Quality in Angular PDF Viewer | Syncfusion
-description: Learn how to customize print quality for PDF Documents in the Syncfusion Angular PDF Viewer component.
+title: Print Quality in Angular PDF Viewer | Syncfusion
+description: Customize the print quality of PDF documents in the Angular PDF Viewer to balance output fidelity with print performance and size.
 platform: document-processing
 control: Print
 documentation: ug
@@ -16,7 +16,7 @@ This article shows a concise, task-oriented workflow to set and verify print qua
 
 ## Steps
 
-### 1. Choose a target print quality.
+### 1. Choose a target print quality
 
 - Valid [`printScaleFactor`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#printscalefactor) values: **0.5 – 5**. Higher values increase image sharpness and resource use.
 - Default value: **1**.
@@ -96,11 +96,11 @@ export class AppComponent implements OnInit {
 
 ### 3. Set `printScaleFactor` after instantiation
 
-As an alternative option, the [`printScaleFactor`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#printscalefactor) can be dynamically changed during runtime
+As an alternative option, the [`printScaleFactor`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#printscalefactor) can be dynamically changed during runtime.
 
 {% highlight ts %}
 // Update printScaleFactor at runtime
-pdfviewer.printScaleFactor = 2; // increase print resolution for upcoming prints
+this.pdfviewerControl.printScaleFactor = 2; // increase print resolution for upcoming prints
 {% endhighlight %}
 
 ### 4. Verify output

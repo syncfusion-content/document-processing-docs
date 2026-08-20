@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Theme and style in React Spreadsheet component | Syncfusion
-description: Learn here how to use built‑in themes and apply custom styles in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Theme and Style in React Spreadsheet | Syncfusion
+description: Learn about themes and styling options in the Syncfusion React Spreadsheet component for customizing appearance.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# Built in Themes in React Spreadsheet
+# Theme and Style in React Spreadsheet
 
 Our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component provides a comprehensive set of built-in themes to deliver a consistent, modern, and visually appealing appearance across applications. Applying a theme loads the corresponding CSS file and updates the component’s appearance throughout the UI.
 

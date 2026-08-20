@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line angle constraints in React PDF Viewer | Syncfusion
-description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion React PDF Viewer.
+title: Line Angle Constraints in React PDF Viewer | Syncfusion
+description: Enable line angle constraints in the React PDF Viewer so line-type annotations snap to common angles while users draw them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line angle constraints in React PDF Viewer
+# Line Angle Constraints in React PDF Viewer
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
@@ -115,15 +115,15 @@ N> Refer to the React PDF Viewer [feature tour](https://www.syncfusion.com/pdf-v
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Overview](../annotation/overview)
+- [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotations/create-modify-annotation)
-- [Customize Annotation](../annotations/customize-annotation)
-- [Remove Annotation](../annotations/delete-annotation)
-- [Handwritten Signature](../annotations/signature-annotation)
-- [Export and Import Annotation](../annotations/export-import/export-annotation)
-- [Annotation Permission](../annotations/annotation-permission)
-- [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
-- [Annotation Events](../annotations/annotation-event)
-- [Annotation API](../annotations/annotations-api)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Handwritten Signature](../annotation/signature-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation Permission](../annotation/annotation-permission)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)

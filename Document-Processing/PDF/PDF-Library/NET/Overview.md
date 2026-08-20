@@ -1,13 +1,13 @@
 ---
-title: Create, read, edit, convert PDF files in .NET | Syncfusion
+title: About Syncfusion .NET PDF Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
-description: Essential PDF is a .NET PDF library to convert PDF files in Windows Forms, WPF, UWP, ASP.NET Core, ASP.NET MVC, Xamarin, Flutter applications
+description: Learn about the Syncfusion Essential Studio .NET PDF Library, its features, capabilities, and usage details.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Overview of PDF Library
+# About Syncfusion .NET PDF Library
 
 The PDF library is a feature-rich [.NET PDF class library](https://www.syncfusion.com/document-sdk/net-pdf-library) developed with 100% managed C# code that can be used to create, read and write PDF. The library can be used in [Windows Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [WPF](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Web Forms](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET MVC](https://www.syncfusion.com/document-sdk/net-pdf-library), [ASP.NET Core](https://www.syncfusion.com/document-sdk/net-pdf-library), [Blazor](https://www.syncfusion.com/document-sdk/net-pdf-library), [UWP](https://www.syncfusion.com/document-sdk/net-pdf-library), [Flutter](https://www.syncfusion.com/document-sdk/flutter-pdf-library), [WinUI](https://www.syncfusion.com/document-sdk/net-pdf-library) and [.NET MAUI](https://www.syncfusion.com/document-sdk/net-pdf-library) applications and Unity platform without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and the latest PDF 2.0 (ISO 32000-2) specifications.
 
@@ -22,7 +22,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to [compress](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-compression) existing PDF files.
 * Ability to [merge](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/merge-documents) and [split](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/split-documents) PDF files.
 * Support for [Optical Character Recognition](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-ocr/working-with-ocr) by using Tesseract engine. 
-* Ability to convert [HTML](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/converting-html-to-pdf), [RTF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-rtf-documents-to-pdf), [Word](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-word-documents-to-pdf), [Excel](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-excel-documents-to-pdf), [PowerPoint](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/overview) and [XPS](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-xps-document-to-pdf) to PDF.
+* Ability to convert [HTML](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#html-to-pdf), [RTF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-rtf-documents-to-pdf), [Word](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-word-documents-to-pdf), [Excel](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-excel-documents-to-pdf), [PowerPoint](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/overview) and [XPS](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-document-conversions#converting-xps-document-to-pdf) to PDF.
 * Ability to [encrypt and decrypt PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-security) files with advanced standards.
 * Support to add, modify and remove interactive elements such as [bookmarks](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-bookmarks), [annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations) and [attachments](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-attachments).
 * Support to add [1D barcode](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-barcode#adding-a-one-dimensional-barcode-to-the-pdf-document) and [2D barcode](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-barcode#adding-a-two-dimensional-barcode-to-a-pdf-document) in the PDF files.
@@ -53,4 +53,4 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support for .NET Standard 2.0 onwards.
 
 N> 1. Starting with v20.1.0.x, if you reference Syncfusion<sup>&reg;</sup> HTML converter or OCR processor assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
-N> Looking for the full .NET PDF Library overview, features, pricing, and documentation? Visit the [.NET PDF Library](https://www.syncfusion.com/document-sdk/net-pdf-library) page.
+

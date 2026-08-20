@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Localization in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to localize the static text in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages.
@@ -8,11 +8,11 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Localization in .NET MAUI PDF Viewer (SfPdfViewer)
+# Localization in .NET MAUI PDF Viewer
 
-Localization is the process of translating the application resources into a different language for specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
+Localization is the process of translating the application resources into a different language for specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
 
-Follow the instructions given to apply localization to the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+Follow the instructions given to apply localization to the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 ## Change the current user interface culture
 
@@ -709,7 +709,7 @@ The following table contains the default name and value details used in the SfPd
 </tr>
 <tr>
 <td>StickyNoteEditorPlaceholder</td>
-<td>Write Your Notehttps://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui.</td>
+<td>Write Your Note…</td>
 </tr>
 <tr>
 <td>StickyNoteIcons</td>

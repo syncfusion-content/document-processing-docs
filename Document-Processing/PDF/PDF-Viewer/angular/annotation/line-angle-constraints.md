@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line angle constraints in Angular PDF Viewer | Syncfusion
-description: Learn how to enable and configure line angle constraints for line-type annotations in the Syncfusion Angular PDF Viewer.
+title: Line Angle Constraints in Angular PDF Viewer | Syncfusion
+description: Enable line angle constraints in the Angular PDF Viewer so line-type annotations snap to common angles while users draw them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line angle constraints in Angular PDF Viewer
+# Line Angle Constraints in Angular PDF Viewer
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
@@ -70,7 +70,7 @@ export class AppComponent {
 
 When line angle constraints are enabled:
 
-- Start drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- Start drawing a supported annotation (Line, Arrow, Polygon, Distance, or Perimeter).
 - The segment snaps to the nearest allowed angle.
 - A visual indicator reflects snapping in real time.
 - Release to complete the annotation.

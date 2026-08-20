@@ -1,12 +1,12 @@
 ---
-title: Modify the Appearance of Chart Title | Syncfusion
-description: Learn how to modify the appearance of chart title in a chart in a Word document using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word.
+title: Modify the Appearance of Chart Title in .NET Word | Syncfusion
+description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Customize Chart Title
+# Modify the Appearance of Chart Title in .NET Word
 
 Chart title is a concise description at the top of a chart, offering context and clarity for the data displayed. Using DocIO, you can **customize the chart title in the chart**.
 
@@ -227,7 +227,7 @@ using (WordDocument document = new WordDocument())
         chart.ChartData.SetValue(2, 2, 141.396);
         chart.ChartData.SetValue(3, 1, "Stanley Hudson");
         chart.ChartData.SetValue(3, 2, 80.368);
-        //Creates a new chart series with the name “Sales”.
+        //Creates a new chart series with the name "Sales".
         IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
         pieSeries.Values = chart.ChartData[2, 2, 3, 2];
         //Sets category labels.
@@ -261,12 +261,12 @@ using (WordDocument document = new WordDocument())
     chart.ChartData.SetValue(2, 2, 141.396);
     chart.ChartData.SetValue(3, 1, "Stanley Hudson");
     chart.ChartData.SetValue(3, 2, 80.368);
-    //Creates a new chart series with the name “Sales”.
+    //Creates a new chart series with the name "Sales".
     IOfficeChartSerie pieSeries = chart.Series.Add("Sales");
     pieSeries.Values = chart.ChartData[2, 2, 3, 2];
     //Sets category labels.
     chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 3, 1];
-    //Saves the document
+    //Saves the document.
     document.Save("Sample.docx");
     //Closes the document.
     document.Close();
@@ -293,14 +293,14 @@ using (WordDocument document = new WordDocument())
  chart.ChartData.SetValue(2, 2, 141.396)
  chart.ChartData.SetValue(3, 1, "Stanley Hudson")
  chart.ChartData.SetValue(3, 2, 80.368)
-'Creates a new chart series with the name “Sales”.
+'Creates a new chart series with the name "Sales".
  Dim pieSeries As IOfficeChartSerie =  chart.Series.Add("Sales") 
  pieSeries.Values = chart.ChartData(2, 2, 3, 2)
 'Sets category labels.
  chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 3, 1)
-'Saves the document
+'Saves the document.
  document.Save("Sample.docx", FormatType.Docx)
-'Closes the document
+'Closes the document.
  document.Close()
 {% endhighlight %}
 

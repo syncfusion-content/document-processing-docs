@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow Annotation (Shape) in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Arrow Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the ASP.NET Core PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow Annotation (Shape) in ASP.NET Core PDF Viewer
+# Arrow Annotation in ASP.NET Core PDF Viewer
 Arrow annotations let users point, direct attention, or indicate flow on PDFs—useful for callouts, direction markers, and connectors during reviews. You can add arrows from the toolbar, switch to arrow mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Arrow overview](../../../javascript-es6/annotations/annotation-images/arrow-annot.png)
@@ -114,7 +114,7 @@ N> For **Line** and **Arrow** annotations, **Fill Color** is available only when
 ### Edit Arrow 
 
 #### Edit Arrow (UI)
-- Select a Arrow to view resize handles.
+- Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
 

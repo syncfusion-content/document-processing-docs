@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open and Save in Blazor Spreadsheet Component | Syncfusion
-description: Learn how to open and save Excel files in the Syncfusion Blazor Spreadsheet component and more | Syncfusion.
+title: Open and Save in Blazor Spreadsheet | Syncfusion
+description: Learn about how to open, edit, and save Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Open and Save in Blazor Spreadsheet Component
+# Open and Save in Blazor Spreadsheet
 
 The **Open** and **Save** functionalities in the Blazor Spreadsheet component allow for efficient management of Excel files. You can open existing Excel files for analysis and modification, and save new or modified spreadsheets in a compatible format.
 
@@ -428,7 +428,7 @@ Import the required namespaces at the top of the file:
 Add the below code example to download the `Google Drive` file using the Drive API, convert the stream to a byte array, and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DataSource) property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 
@@ -772,7 +772,7 @@ In Blazor WebAssembly, to preserve fonts in exported PDF use the `CustomFonts` p
 
 @using Syncfusion.Blazor.Spreadsheet
      
-<SfSpreadsheet @ref="SpreadsheetRef" CustomFonts="@CustomFonts">
+<SfSpreadsheet @ref="SpreadsheetInstance" CustomFonts="@CustomFonts">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
 

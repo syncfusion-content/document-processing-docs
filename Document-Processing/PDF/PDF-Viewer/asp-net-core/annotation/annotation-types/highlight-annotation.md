@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight Text in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Highlight annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Highlight Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Highlight annotations in the ASP.NET Core PDF Viewer to emphasize important text in a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Annotation (Text Markup) in ASP.NET Core PDF Viewer
+# Highlight Annotation in ASP.NET Core PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Highlight* text markup annotations in the Syncfusion **ASP.NET Core PDF Viewer**.
 You can highlight text using the toolbar or context menu, programmatically invoke highlight mode, customize default settings, handle events, and export the PDF with annotations.
@@ -106,8 +106,7 @@ Configure default highlight settings such as **color**, **opacity**, and **autho
     <ejs-pdfviewer id="pdfviewer"
                    style="height:650px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-                   height="650px">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 <script>
@@ -168,7 +167,7 @@ For detailed behavior, supported deletion workflows, and API reference, see [Del
 
 ### Comments
 
-Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to underline annotations.
+Use the [Comments panel](../comments) to add, view, and reply to threaded discussions linked to highlight annotations.
 It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation‑related notes within the PDF Viewer.
 
 ## Set properties while adding Individual Annotation

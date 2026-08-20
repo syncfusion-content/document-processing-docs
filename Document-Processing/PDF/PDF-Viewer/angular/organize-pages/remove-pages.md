@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove pages using Organize Pages in Angular PDF Viewer | Syncfusion
-description: How to remove one or more pages from a PDF using the Organize Pages view in the Syncfusion Angular PDF Viewer.
+title: Remove Pages in Angular PDF Viewer | Syncfusion
+description: Remove one or more pages from a PDF in the Angular PDF Viewer using the Organize Pages panel, either through the UI or programmatically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove pages using the Organize Pages tool in Angular
+# Remove Pages in Angular PDF Viewer
 
 ## Overview
 
@@ -19,7 +19,7 @@ This guide shows how to delete single or multiple pages from a PDF using the **O
 ## Prerequisites
 
 - EJ2 Angular PDF Viewer installed in your project
-- Basic PDF Viewer setup ([`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) for server-backed mode)
+- Basic PDF Viewer setup: use [`resourceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#resourceurl) for standalone mode or [`serviceUrl`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#serviceurl) for server-backed mode
 
 ## Steps
 

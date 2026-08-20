@@ -1,14 +1,14 @@
 ---
 layout: post
-title: WPF UI Builder Skill with Spreadsheet for AI Assistants | Syncfusion®
-description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with Spreadsheet from natural-language prompts.
+title: UI Builder Skill in WPF Spreadsheet Control | Syncfusion®
+description: Generate production-ready Spreadsheet controls from natural language prompts using the Syncfusion UI Builder Skill for AI assistants.
 control: SfSpreadsheet
 platform: document-processing
 documentation: ug
 keywords: WPF UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
-# Syncfusion® WPF UI Builder Skill with Spreadsheet for AI Assistants
+# UI Builder Skill in WPF Spreadsheet 
 
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates WPF Spreadsheet development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
@@ -31,7 +31,7 @@ Before installing WPF UI Builder Skill with Spreadsheet, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Transforms prompts into fully developed wpf  components rather than just partial code snippets.
+- Transforms prompts into fully developed WPF components rather than just partial code snippets.
 - Automatically selects appropriate Syncfusion® components and features
 - Produces structured, maintainable code
 
@@ -41,17 +41,17 @@ Before installing WPF UI Builder Skill with Spreadsheet, ensure the following:
 - Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
-- Recommended control composition and state management
+- Recommends control composition and state management
 - Event handling aligned with WPF standards
 - Secure and scalable coding patterns
 
 ### **Accessibility & Responsiveness**
-- Windows accessibility guidelines (UIA) and narrator support
+- Windows accessibility guidelines (UIA) and Windows Narrator support
 - Well-structured XAML markup with proper control hierarchy
 - DPI awareness and high-resolution display support
 
 ### **Design-System Integration**
-- Supports Syncfusion® WPF themes including FluentLight/Dark, Material3Light/Dark, Windows11Light/Dark, and Office2019 variants
+- Supports Syncfusion® WPF themes such as FluentLight/Dark, Material3Light/Dark, Windows11Light/Dark, and Office2019 variants
 - Ensures consistent Syncfusion® styling, theme usage, and ResourceDictionary configuration
 
 ## Installation
@@ -120,7 +120,7 @@ Key enforcement points:
 
 - Adds correct theme resources and ResourceDictionary configuration for chosen Syncfusion® themes
 - Injects only the feature modules required by generated controls
-- Generates well-structured XAML with proper accessibility support (UIA and narrator)
+- Generates well-structured XAML with proper accessibility support (UIA and Windows Narrator)
 - Avoids unsupported or deprecated API usages for Syncfusion® controls
 
 > The assistant handles most stages automatically and may request confirmation where required.

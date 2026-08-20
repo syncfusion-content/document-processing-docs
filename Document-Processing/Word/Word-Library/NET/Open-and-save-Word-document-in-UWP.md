@@ -1,12 +1,12 @@
 ---
-title: Open and save Word document in UWP | Syncfusion
-description: Open and save Word document in UWP application using Syncfusion<sup>&reg;</sup> UWP Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in UWP  | Syncfusion
+description: Open and save Word document in UWP application using Syncfusion® UWP Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document in UWP
+# Open and save Word document in UWP 
 
 Syncfusion<sup>&reg;</sup> DocIO is a [UWP Word library](https://www.syncfusion.com/document-processing/word-framework/uwp/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in UWP**.
 
@@ -27,6 +27,9 @@ Step 3: Include the following namespaces in the MainPage.xaml.cs file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System;
+using System.IO;
+using System.Reflection;
 using Syncfusion.DocIO;
 using Syncfusion.DocIO.DLS;
 {% endhighlight %}

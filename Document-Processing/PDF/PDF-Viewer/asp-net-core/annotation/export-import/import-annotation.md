@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion ASP.NET Core PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Import annotations into the ASP.NET Core PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import annotations in ASP.NET Core PDF Viewer
+# Import Annotations in ASP.NET Core PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 
@@ -84,15 +84,15 @@ N> Only objects produced by the viewer (for example, by `exportAnnotationsAsObje
 ## See also
 
 - [Annotation Overview](../../overview)
-- [Annotation Types](../../annotations/annotation-types/area-annotation)
+- [Annotation Types](../../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
+- [Create and Modify Annotation](../../annotation/create-modify-annotation)
+- [Customize Annotation](../../annotation/customize-annotation)
+- [Remove Annotation](../../annotation/delete-annotation)
+- [Handwritten Signature](../../annotation/signature-annotation)
 - [Export Annotation](../export-import/export-annotation)
 - [Import Export Events](../export-import/export-import-events)
-- [Annotation Permission](../../annotations/annotation-permission)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotation API](../../annotations/annotations-api)
+- [Annotation Permission](../../annotation/annotation-permission)
+- [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
+- [Annotation Events](../../annotation/annotation-event)
+- [Annotation API](../../annotation/annotations-api)

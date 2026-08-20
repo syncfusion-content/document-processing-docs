@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Remove annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to remove/delete PDF annotations in Syncfusion Angular PDF Viewer using UI options (context menu, toolbar, Delete key) and programmatic APIs.
+title: Delete Annotation in Angular PDF Viewer | Syncfusion
+description: Remove annotations from PDFs in the Angular PDF Viewer using the context menu, the toolbar, the Delete key, and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Remove annotations in Angular
+# Remove Annotations in Angular PDF Viewer
 
 Annotations can be removed using the built-in UI or programmatically. This page shows common methods to delete annotations in the viewer.
 
@@ -72,7 +72,7 @@ export class AppComponent {
 
 N> Deleting via the API requires the annotation to exist in the current document. Ensure an annotation is selected when using `deleteAnnotation()`, or pass a valid id to `deleteAnnotationById()`.
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## See also
 

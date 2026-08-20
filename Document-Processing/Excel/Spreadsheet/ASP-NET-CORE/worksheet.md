@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Worksheet in EJ2 ASP.NET Core Syncfusion Spreadsheet Component
-description: Learn here all about Worksheet in Syncfusion EJ2 ASP.NET CORE Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet in ASP.NET Core Spreadsheet | Syncfusion
+description: Learn about worksheets in the Syncfusion ASP.NET Core Spreadsheet control, including creating, managing, and organizing sheets.
 platform: document-processing
 control: Worksheet
 documentation: ug
 ---
 
 
-# Worksheet in ASP.NET Core Spreadsheet control
+# Worksheet in ASP.NET Core Spreadsheet
 
-Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
+A worksheet is a collection of cells organized into rows and columns that allows you to store, format, and manipulate data.
 
 ## Add sheet
 
-You can dynamically add or insert a sheet by one of the following ways,
+You can add or insert a worksheet in one of the following ways:
 
-* Click the `Add Sheet` button in the sheet tab. This will add a new empty sheet next to current active sheet.
-* Right-click on the sheet tab, and then select `Insert` option from the context menu to insert a new empty sheet before the current active sheet.
-* Using `insertSheet`method, you can insert one or more sheets at your desired index.
+* Select **Add Sheet** on the sheet tab bar to add an empty worksheet next to the active worksheet.
+* Right-click a sheet tab and choose **Insert** from the context menu to insert an empty worksheet before the active worksheet.
+* Use the `insertSheet()` method to insert one or more worksheets at a specified index.
 
-The following code example shows the insert sheet operation in spreadsheet.
+The following code example demonstrates how to insert a worksheet in the Spreadsheet.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -31,9 +31,9 @@ The following code example shows the insert sheet operation in spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
-### Insert a sheet programmatically and make it active sheet
+### Insert a sheet programmatically and make it active
 
-A sheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data. Using `insertSheet` method, you can insert one or more sheets at the desired index. Then, you can make the inserted sheet as active sheet by focusing the start cell of that sheet using the `goTo` method.
+Use the `insertSheet()` method to insert one or more worksheets at the required index. After inserting a sheet, use the `goTo()` method to focus its first cell and make it the active worksheet.
 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
@@ -49,16 +49,14 @@ The following code example shows how to insert a sheet programmatically and make
 
 ## Delete sheet
 
-The Spreadsheet has support for removing an existing worksheet. You can dynamically delete the existing sheet by the following way,
+You can delete an existing worksheet in one of the following ways:
 
-* Right-click on the sheet tab, and then select `Delete` option from context menu.
-* Using `delete` method to delete the sheets.
+* Right-click the sheet tab and choose **Delete** from the context menu.
+* Use the `delete` method to remove a worksheet programmatically.
 
 ## Rename sheet
 
-You can dynamically rename an existing worksheet in the following way,
-
-* Right-click on the sheet tab, and then select `Rename` option from the context menu.
+* To rename a worksheet, right-click its sheet tab and choose **Rename** from the context menu.
 
 ## Headers
 
@@ -67,12 +65,16 @@ By default, the row and column headers are visible in worksheets. You can dynami
 * Switch to `View` tab, and then select `Hide Headers` option to hide both the row and column headers.
 * Set `showHeaders` property in `sheets` as `true` or `false` to show or hide the headers at initial load. By default, the `showHeaders` property is enabled in each worksheet.
 
+N> The default value of the `showHeaders` property is `true`.
+
 ## Gridlines
 
-Gridlines act as a border like appearance of cells. They are used to distinguish cells on the worksheet. You can dynamically show or hide gridlines by using one of the following ways,
+Gridlines are visual separators that help distinguish cells in a worksheet.You can show or hide gridlines in one of the following ways:
 
 * Switch to `View` tab, and then select `Hide Gridlines` option to hide the gridlines in worksheet.
 * Set `showGridLines` property in `sheets` as `true` or `false` to show or hide the gridlines at initial load. By default, the `showGridLines` property is enabled in each worksheet.
+
+N> The default value of the `showGridLines` property is `true`.
 
 The following code example shows the headers and gridlines operation in spreadsheet.
 
@@ -87,17 +89,15 @@ The following code example shows the headers and gridlines operation in spreadsh
 
 ## Sheet visibility
 
-Hiding a worksheet can help prevent unauthorized or accidental changes to your file.
+Hiding a worksheet can help prevent unauthorized or accidental changes to the Spreadsheet.
 
 There are three visibility state as like Microsoft Excel,
 
 | State | Description |
-|-------|---------|
-| `Visible` | You can see the worksheet once the component is loaded. |
-| `Hidden` | This worksheet is not visible, but you can unhide by selecting the sheet from `List All Sheets`
-dropdown menu. |
-| `VeryHidden` | This worksheet is not visible and cannot be unhidden. Changing the
-state property to `Visible` is the only way to view this sheet. |
+|-------|-------------|
+| `Visible` | The worksheet is visible when the Spreadsheet is loaded. |
+| `Hidden` | The worksheet is hidden but can be displayed by selecting it from the **List All Sheets** drop-down menu. |
+| `VeryHidden` | The worksheet is hidden and cannot be displayed through the user interface. Set its `state` property to `Visible` to display it. |
 
 The following code example shows the three types of sheet visibility state.
 

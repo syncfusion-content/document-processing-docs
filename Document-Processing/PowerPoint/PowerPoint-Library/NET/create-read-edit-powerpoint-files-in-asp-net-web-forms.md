@@ -1,5 +1,5 @@
 ---
-title: Create and edit PowerPoint files in ASP.NET |Syncfusion<sup>&reg;</sup>|
+title: Create and edit PowerPoint files in ASP.NET | Syncfusion
 description: ASP.NET PowerPoint library to create, read, edit and convert PowerPoint files in ASP.NET applications.
 platform: document-processing
 control: PowerPoint
@@ -8,9 +8,9 @@ documentation: ug
 
 # Create, read and edit a PowerPoint file in ASP.NET
 
-You can create or edit a PowerPoint file in ASP.NET with the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
+You can create or edit a PowerPoint file in ASP.NET Web Forms with the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The steps are as follows.
 
-N> This ASP.NET Web Form platform is deprecated, you can use the same product from ASP.NET Core platform. For more information on migrating the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
+N> This ASP.NET Web Forms platform is deprecated. You can use the same product from the ASP.NET Core platform. For more information on migrating the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) from .NET Framework to .NET Core, refer [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/faqs/migrate-from-net-framework-to-net-core).
 
 ## Create a PowerPoint file in ASP.NET
 
@@ -20,15 +20,16 @@ Step 1: Create a new C# ASP.NET Web application project.
 
 Step 2: Select the **Empty** template to create the project.
 
-![Select Web Forms template](Workingwith-Web/Empty-Open-and-Save.png))
+![Select Web Forms template](Workingwith-Web/Empty-Open-and-Save.png)
 
-Step 3: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/) NuGet package as reference to your .NET Standard applications from [NuGet.org](https://www.nuget.org/).
+Step 3: Install the [Syncfusion.Presentation.AspNet](https://www.nuget.org/packages/Syncfusion.Presentation.AspNet/) NuGet package as a reference to your .NET Framework applications from [NuGet.org](https://www.nuget.org/). The package is compatible with .NET Framework 4.0 and later.
 
 ![Install Presentation Web Nuget](Workingwith-Web/Nuget-Open-and-Save.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
 Step 4: After installing the **Syncfusion.Presentation.AspNet** nuget package, the following assemblies were included in our project.
+
 <ul>
 <li>Syncfusion.Compression.Base</li>
 <li>Syncfusion.Licensing</li>
@@ -37,6 +38,15 @@ Step 4: After installing the **Syncfusion.Presentation.AspNet** nuget package, t
 </ul>
 
 Step 5: The below code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET platform.
+
+{% tabs %}
+{% highlight c# tabtitle="C#" %}
+using Syncfusion.Presentation;
+using Syncfusion.Drawing;
+{% endhighlight %}
+{% endtabs %}
+
+The following code snippets demonstrate how to create a PowerPoint Presentation in ASP.NET Web Forms. Place this code in the code-behind of your Web Form (for example, in a button `Click` event handler or `Page_Load`), where the `Response` object is available.
 
 **Create Presentation instance:**
 
@@ -121,6 +131,8 @@ secondPara.FirstLineIndent = -35;
 
 **Add an image:**
 
+Place the `Image.jpg` file in the project root (or `App_Data`) so it is available at runtime.
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -163,7 +175,7 @@ pptxDoc.Close();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/ASP.NET/Create-PowerPoint-presentation).
 
-The output of the above code example will generate the below PowerPoint slide.
+The output of the above code example will generate the following PowerPoint slide.
 
 ![ASP.Net Web Output](Workingwith-Web/GettingStartedSample.png)
 

@@ -1,14 +1,16 @@
 ---
-title: Working with Tables in .NET Markdown library | Syncfusion
-description: Learn to create, format, and modify tables in a Markdown document using Syncfusion .NET Markdown library without any third-party dependencies.
+title: Tables in .NET Markdown library | Syncfusion
+description: Learn how to create, format, and customize tables for presenting structured data in Markdown documents
 platform: document-processing
 control: Markdown
 documentation: UG
 ---
 
-# Working with Tables in Markdown Library
+# Tables in .NET Markdown Library
 
-Tables are essential components in Markdown documents used to organize and present data in a structured format of rows and columns. The Syncfusion<sup>&reg;</sup> Markdown library provides comprehensive support for creating, modifying, and managing tables programmatically in a Markdown document.
+Tables are essential components in Markdown documents used to organize and present data in a structured format of rows and columns. The Syncfusion<sup>&reg;</sup> [.NET Markdown library](https://www.syncfusion.com/document-sdk/net-markdown-library) provides comprehensive support for creating, modifying, and managing tables programmatically in a Markdown document.
+
+A table is represented by the following DOM types:
 
 * **Table**: Represented by `MdTable`, which is the root container for rows.
 * **Rows**: Represented by `MdTableRow`, which contains a collection of cells. A table must contain at least one row (typically the header row).
@@ -18,7 +20,7 @@ The first row in a Markdown table is typically treated as the header row, follow
 
 ## Adding a table
 
-You can add a table to a `MarkdownDocument` by using the `AddTable` method. The alignment for each column can be specified using the `ColumnAlignments` property. The supported alignment options are Left, Center, and Right.
+You can add a table to a `MarkdownDocument` by using the `AddTable` method. The alignment for each column can be specified using the `ColumnAlignments` property. The supported alignment options are `Left`, `Center`, and `Right`.
 
 The following code example demonstrates how to create a table 
 

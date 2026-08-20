@@ -1,13 +1,13 @@
 ---
-title: Open and save PDF document in ASP.NET Core | Syncfusion
-description: Open and save PDF document in ASP.NET Core application using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in ASP.NET Core | Syncfusion
+description: Learn how to open and save PDF documents in ASP.NET Core applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: .net core save pdf, .net core load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in ASP.NET Core
+# Open and Save PDF Document in ASP.NET Core
 
 The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**.
 
@@ -65,25 +65,24 @@ Step 6: Add a new action method **OpenAndSaveDocument** in HomeController.cs and
 
 {% highlight c# tabtitle="C#" %}
 
-//Load PDF document as stream.
-FileStream docStream = new FileStream("Input.docx", FileMode.Open, FileAccess.Read);
+//Load the PDF document as a stream.
+FileStream docStream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read);
 //Load an existing PDF document.
 PdfLoadedDocument document = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-Step 7: Add the below code example to add a table in the PDF document. 
+Step 7: Add the below code example to add a table in the PDF document.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
-
-//Load the existing page.
-PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
-//Create PDF graphics for the page.
-PdfGraphics graphics = loadedPage.Graphics;
 
 //Create a PdfGrid.
 PdfGrid pdfGrid = new PdfGrid();
@@ -114,16 +113,16 @@ Step 8: Add below code example to **save the PDF document in ASP.NET Core**.
 
 {% highlight c# tabtitle="C#" %}
 
-//Create memory stream. 
+//Create a memory stream.
 MemoryStream stream = new MemoryStream();
-//Save the PDF document to stream.
+//Save the PDF document to the stream.
 document.Save(stream);
-//If the position is not set to '0' then the PDF will be empty.
+//If the position is not set to '0', the PDF will be empty.
 stream.Position = 0;
 //Close the document.
 document.Close(true);
-//Creates a FileContentResult object by using the file contents, content type, and file name.
-return File(stream, ""application/pdf, "Sample.pdf");
+//Create a FileContentResult object by using the file contents, content type, and file name.
+return File(stream, "application/pdf", "Sample.pdf");
 
 {% endhighlight %}
 

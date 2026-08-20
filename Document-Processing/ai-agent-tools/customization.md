@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Customization | AI Agent Tools | Syncfusion
+title: Customization in Document SDK AI Agent Tools | Syncfusion
 description: Learn how to extend and customize the Syncfusion Document SDK Agent Tool library by creating custom agent tool classes and registering them with an AI agent.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Customize the AI Agent Tool Library
+# Customization in Document SDK AI Agent Tools 
 
-The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering the tools with an AI agent so they are callable alongside the built-in tools.
+The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library is designed to be extensible. This guide walks you through creating a custom agent tool class and registering it with an AI agent so it is callable alongside the built-in tools.
 
 
 ## Creating a Custom AI Agent Tool Class
 
-Follow these steps to enable new document operations to the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
+Follow these steps to enable new document operations in the [AI agent tool library](https://github.com/syncfusion/document-sdk-ai-agent-tools/tree/master/Syncfusion.DocumentSDK.AI.AgentTools).
 
 **Step 1: Clone the repository**
 
@@ -133,7 +133,7 @@ var agent = openAIClient.AsAIAgent(
     systemPrompt: "You are a helpful document-processing assistant.");
 ```
 
-Your custom tool methods are now callable by the AI agent the same way as all built-in tools.
+Your custom tool methods are now callable by the AI agent in the same way as the built-in tools.
 
 ## Example Prompts
 

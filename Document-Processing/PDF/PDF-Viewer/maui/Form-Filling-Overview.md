@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form Filling Overview in .NET MAUI PDF Viewer | Syncfusion
-description: Learn about the PDF form filling feature and supported form field types in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: About Syncfusion .NET MAUI PDF Viewer Control | Syncfusion
+description: Learn about the introduction and overview of the Syncfusion .NET MAUI PDF Viewer control, its key features, capabilities, and usage.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Form Filling in .NET MAUI PDF Viewer (SfPdfViewer)
+# About Syncfusion .NET MAUI PDF Viewer Control
 
-The .NET MAUI PDF Viewer [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) enables users to view and fill AcroForm-based PDF forms across mobile and desktop apps. It supports interactive form filling through the built-in UI, and developers can access and modify form data programmatically using the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) API.
+The .NET MAUI PDF Viewer [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) enables users to view and fill AcroForm-based PDF forms across mobile and desktop apps. It supports interactive form filling through the built-in UI, and developers can access and modify form data programmatically using the [FormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) API.
 
 The viewer supports saving filled forms, flattening form fields to make them non-editable, and importing or exporting form data in FDF, XFDF, JSON, and XML formats. These capabilities make the viewer ideal for capturing and handling form data efficiently within your application. For saving filled forms, see [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document).
 
@@ -28,7 +28,7 @@ The viewer supports saving filled forms, flattening form fields to make them non
 
 ## XFA forms
 
-The PDF Viewer supports only AcroForms. PDF documents that contain an XFA form cannot be loaded in the PDF Viewer. When you attempt to load a PDF with an XFA form, the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event is raised.
+The PDF Viewer supports only AcroForms. PDF documents that contain an XFA form cannot be loaded in the PDF Viewer. When you attempt to load a PDF with an XFA form, the [DocumentLoadFailed](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event is raised.
 
 {% tabs %}
 {% highlight c# %}

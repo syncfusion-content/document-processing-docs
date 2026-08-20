@@ -10,10 +10,10 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **create a PowerPoint document in AWS Elastic Beanstalk**.
 
-## Steps to create PowerPoint document in AWS Elastic Beanstalk
+## Steps to create a PowerPoint document in AWS Elastic Beanstalk
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
-![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
+![Create an ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
 
 Step 2: Create a project name and select the location.
 ![Configure your new project](Azure-Images/App-Service-Windows/Configuration-Create-PowerPoint-Presentation.png)
@@ -21,7 +21,7 @@ Step 2: Create a project name and select the location.
 Step 3: Click **Create** button.
 ![Additional Information](Azure-Images/App-Service-Linux/Additional_Information_PowerPoint_Presentation_to_PDF.png)
 
-Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/). This package targets .NET 8.0 and later (.NET 8.0 recommended).
 
 ![Install Syncfusion.Presentation.Net.Core Nuget Package](Azure-Images/App-Service-Windows/Nuget-Package-Create-PowerPoint-Presentation.png)
 
@@ -51,11 +51,14 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% highlight c# tabtitle="C#" %}
 
 using Syncfusion.Presentation;
+using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **CreatePowerPoint** in HomeController.cs and include the below code snippet to **create a PowerPoint document**.
+Step 7: Add a folder named **Data** inside the **wwwroot** folder and place an image (for example, `Image.jpg`) into it. The sample code in the next step loads this image from `wwwroot/Data/Image.jpg`.
+
+Step 8: Add a new action method **CreatePowerPoint** in HomeController.cs and include the below code snippet to **create a PowerPoint document**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -108,7 +111,7 @@ MemoryStream pptxStream = new();
 pptxDoc.Save(pptxStream);
 pptxStream.Position = 0;
 
-//Download Powerpoint document in the browser.
+//Download PowerPoint document in the browser.
 return File(pptxStream, "application/powerpoint", "Result.pptx");
 
 {% endhighlight %}
@@ -116,16 +119,18 @@ return File(pptxStream, "application/powerpoint", "Result.pptx");
 
 ## Steps to publish as AWS Elastic Beanstalk
 
+N> Before publishing, ensure you have an active **AWS account**, have installed the **AWS Toolkit for Visual Studio** (from **Extensions > Manage Extensions** or the [AWS download page](https://aws.amazon.com/visualstudio/)), and have configured your AWS credentials in the toolkit.
+
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-PowerPoint.png)
 
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
-![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Create-PowerPoint.png)
+![Deployment Target in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Create-PowerPoint.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
+Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assigned. Check that the URL is available; if so, click **Next**. Otherwise, change the **URL**.
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-PowerPoint.png)
 
-Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.
+Step 4: Select the instance type in **t3a.micro** from the dropdown list and click **Next**.
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Create-PowerPoint.png)
 
 Step 5: Click the **Next** button to proceed further.
@@ -140,7 +145,7 @@ Step 7: Click the **Deploy** button to deploy the sample on AWS Elastic Beanstal
 Step 8: After changing the status from **Updating** to **Environment is healthy**, click the **URL**.
 ![Status check in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Status-Create-PowerPoint.png)
 
-Step 9: After opening the provided **URL**, click **Create PowerPoint** button to download the PowerPoint document.
+Step 9: After opening the provided **URL**, click the **Create PowerPoint** button to download the PowerPoint document.
 ![Click button to Create a PowerPoint document](AWS_Images/Elastic_Beanstalk_Images/Brower-Create-PowerPoint.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Getting-started/AWS/AWS_Elastic_Beanstalk).
@@ -149,6 +154,6 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Create PowerPoint document in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Output-Create-PowerPoint-Presentation.png)
 
-Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
-An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 
+You can also try the [online sample to create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core.

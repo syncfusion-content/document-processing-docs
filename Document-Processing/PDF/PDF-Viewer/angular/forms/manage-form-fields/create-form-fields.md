@@ -1,19 +1,17 @@
 ---
 layout: post
-title: Create form fields in the Angular PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Angular PDF Viewer.
+title: Create Form Fields in Angular PDF Viewer | Syncfusion
+description: Add each PDF form field using the Angular PDF Viewer UI, and learn how to create the same fields programmatically from TypeScript or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF Form Fields in Angular
+# Create Form Fields in Angular PDF Viewer
 
-Create or add new form fields visually with the Form Designer UI or programmatically using the Angular PDF Viewer API. This guide explains both methods and shows field‑specific examples and a complete runnable example.
+Create or add new form fields visually with the Form Designer UI or programmatically using the Angular PDF Viewer API. This guide explains both methods and shows field-specific examples and a complete runnable example.
 
-**Outcome:**
-
-The guide explains the following:
+This guide covers the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
 - How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial.
@@ -360,13 +358,13 @@ export class AppComponent {
     this.pdfviewer.formDesignerModule.addFormField('RadioButton', {
       name: 'Gender',
       value: 'Male',
-      pageNumber: 0,
+      pageNumber: 1,
       bounds: { X: 100, Y: 270, Width: 16, Height: 16 }
     } as any);
     this.pdfviewer.formDesignerModule.addFormField('RadioButton', {
       name: 'Gender',
       value: 'Female',
-      pageNumber: 0,
+      pageNumber: 1,
       bounds: { X: 160, Y: 270, Width: 16, Height: 16 }
     } as any);
   }
@@ -570,8 +568,9 @@ export class AppComponent {
   onDocumentLoad(): void {
     this.pdfviewer.formDesignerModule.addFormField('SignatureField', {
       name: 'Sign',
+      pageNumber: 1,
       bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      tooltip: 'sign Here',
+      tooltip: 'Sign here',
       isRequired: true,
     } as any);
   }
@@ -636,8 +635,9 @@ export class AppComponent {
   onDocumentLoad(): void {
     this.pdfviewer.formDesignerModule.addFormField('InitialField', {
       name: 'Sign',
+      pageNumber: 1,
       bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
-      tooltip: 'sign Here',
+      tooltip: 'Sign here',
       isRequired: true,
     } as any);
   }

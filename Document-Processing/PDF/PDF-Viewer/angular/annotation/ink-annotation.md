@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Ink annotation in Angular PDF Viewer component | Syncfusion
-description: Learn about ink annotations in the Syncfusion Angular PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Ink Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Ink (freehand) annotations in the Angular PDF Viewer for handwritten marks on a PDF page.
 platform: document-processing
 control: Ink annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ink annotation in Angular PDF Viewer component
+# Ink Annotation in Angular PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete ink annotations.
 
@@ -23,8 +23,6 @@ Ink annotations can be added to the PDF document using the annotation toolbar.
 * Draw on any page of the PDF document.
 
 ![Ink tool in the annotation toolbar](../images/ink_tool.png)
-
-Ink tool in the annotation toolbar
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -243,7 +241,7 @@ export class AppComponent implements OnInit {
           var height = viewer.annotationCollection[i].bounds.height;
           viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
           viewer.annotationCollection[i].strokeColor = "#0000FF";
-          viewer.annotationCollection[i].thickness = 2 ;
+          viewer.annotationCollection[i].thickness = 2;
           viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
         }
@@ -292,7 +290,7 @@ export class AppComponent implements OnInit {
           var height = viewer.annotationCollection[i].bounds.height;
           viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height };
           viewer.annotationCollection[i].strokeColor = "#0000FF";
-          viewer.annotationCollection[i].thickness = 2 ;
+          viewer.annotationCollection[i].thickness = 2;
           viewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
         }

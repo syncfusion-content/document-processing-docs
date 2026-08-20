@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Change font family in React PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the React PDF Viewer using typeSignatureFonts and typeInitialFonts.
+title: How to Change the Font for Type Signatures in React PDF | Syncfusion
+description: Change the font family for type signatures and initials in the React PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the font family for type signatures in React
+# How to Change the Font for Type Signatures in React PDF Viewer
 
 Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
 
-### Signature field property
+## Apply custom fonts to the Signature field
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
@@ -35,7 +35,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
 return (<div>
@@ -60,7 +60,7 @@ root.render(<App />);
 {% endtabs %}
 
 
-### Initial field property
+### Apply custom fonts to the Initial field
 
 Use the following code to apply custom fonts to the Initial field.
 
@@ -80,7 +80,7 @@ import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation,
-         FormFields, FormDesigner, PageOrganizer Inject } from '@syncfusion/ej2-react-pdfviewer';
+         FormFields, FormDesigner, PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
 
 export function App() {
 return (<div>

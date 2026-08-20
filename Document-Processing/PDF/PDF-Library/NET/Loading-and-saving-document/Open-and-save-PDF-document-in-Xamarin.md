@@ -1,15 +1,15 @@
 ---
-title: Open and save PDF document in Xamarin | Syncfusion
-description: Open and save PDF document in Xamarin application using Syncfusion Xamarin PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Xamarin | Syncfusion
+description: Learn how to open and save PDF documents in Xamarin applications using Syncfusion Xamarin PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF document in Xamarin
+# Open and Save PDF Document in Xamarin
 
-The [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in Xamarin**.
+The [Xamarin PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Xamarin**.
 
 ## Steps to open and save PDF document programmatically:
 
@@ -92,8 +92,13 @@ Step 7: Include the below code sample in the click event of the button in MainXa
 
 void OnButtonClicked(object sender, EventArgs args)
 {
-  //Load an existing PDF document. 
+  //Load an existing PDF document.
   Stream inputPDFStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.pdf");
+  PdfLoadedDocument document = new PdfLoadedDocument(inputPDFStream);
+  //Get the first page from the document.
+  PdfLoadedPage loadedPage = document.Pages[0] as PdfLoadedPage;
+  //Create PDF graphics for the page.
+  PdfGraphics graphics = loadedPage.Graphics;
 }
 
 {% endhighlight %}
@@ -149,7 +154,7 @@ Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Output.pdf", "applicat
 
 ### Helper files for Xamarin
 
-Step 8: Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Helper_Class1305995392) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing. 
+Step 10: Download the helper files from this [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Helper_Class1305995392) and add them into the mentioned project. These helper files allow you to save the stream as a physical file and open the file for viewing.
 
 <table>
   <tr>

@@ -1,12 +1,12 @@
 ---
-title: Create or Generate PDF file in UWP | Syncfusion
-description: Learn how to create or generate a PDF file in UWP with easy steps using Syncfusion UWP PDF library without depending on Adobe.
+title: Getting Started with .NET PDF Library in UWP | Syncfusion
+description: Learn how to get started with the Syncfusion .NET PDF Library in UWP and create PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Create or Generate PDF file in UWP
+# Getting Started with .NET PDF Library in UWP
 
 The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, work with forms, and secure PDF files.
 
@@ -22,7 +22,7 @@ Step 2: Install the [Syncfusion.Pdf.UWP](https://www.nuget.org/packages/Syncfusi
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the `Syncfusion.Licensing` assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Create button in *MainPage.Xaml* page using below code example and create *Button_Click* event.
+Step 3: Add a button to the *MainPage.xaml* page using the following code example and wire up a *Button_Click* event handler.
 {% tabs %}
 {% highlight XAML %}
 
