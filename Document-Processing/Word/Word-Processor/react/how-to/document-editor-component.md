@@ -1,25 +1,23 @@
 ---
 layout: post
-title: DocumentEditorContainer vs DocumentEditor in React | Syncfusion
-description: Learn the differences between DocumentEditorContainer and DocumentEditor in the Syncfusion React DOCX Editor and learn when to use each component.
+title: How to Choose the Right Editor in React DOCX Editor | Syncfusion
+description: Learn the differences between the standard editor and the customizable editor in the React DOCX Editor and when to use each.
 platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# DocumentEditorContainer vs DocumentEditor in React DOCX Editor
+# How to Choose the Right Editor in React DOCX Editor
 
-In this article, we explain the differences between **DocumentEditorContainer** and **DocumentEditor**, and also describe how to use the **DocumentEditor** component in the React DOCX Editor.
+In this article, we explain the differences between [**DocumentEditorContainer**](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default) and [**DocumentEditor**](https://ej2.syncfusion.com/react/documentation/api/document-editor/index-default), and also describe how to use the **DocumentEditor** component in the React DOCX Editor.
 
 ## Difference between DocumentEditorContainer and DocumentEditor
 
-The **DocumentEditor** component provides a flexible foundation for creating, viewing, and editing Word documents. Unlike **DocumentEditorContainer**, this component allows you to customize the UI options based on your specific requirements.
-
 - **DocumentEditorContainer**: A complete solution with a predefined toolbar and properties pane that provides a comprehensive document editing experience. It allows users to create, view, and edit Word documents with minimal configuration.
-- **DocumentEditor**: A customizable component that provides a flexible foundation for creating, viewing, and editing Word documents. This component allows you to build a user interface based on your specific requirements.
+- **DocumentEditor**: A customizable component that provides a flexible foundation for creating, viewing, and editing Word documents. Unlike **DocumentEditorContainer**, this component allows you to customize the UI options and build a user interface based on your specific requirements.
 
-### When to Use DocumentEditorContainer and DocumentEditor
+### When to use DocumentEditorContainer and DocumentEditor
 
 - Choose **DocumentEditorContainer** for standard document editing scenarios (applications similar to Microsoft Word).
 - Choose **DocumentEditor** for advanced or unique UI/UX requirements where customization is key.
@@ -146,7 +144,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 Add the Document Editor component to your application. In the `src/App.jsx` file, add the following code to initialize the component:
 
 
-```jsx
+```js
 import React from 'react';
 import {
   DocumentEditorComponent,
@@ -258,7 +256,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 {% endtabcontents %}
 
-## See Also
+## See also
 
 * [How to customize toolbar](./customize-tool-bar)
-* [How to use DocumentEditor Container Component](../getting-started.md)
+* [How to use DocumentEditorContainer component](../getting-started.md)
