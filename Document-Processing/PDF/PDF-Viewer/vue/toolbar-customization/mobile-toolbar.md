@@ -184,7 +184,7 @@ export default {
 ## Expected result
 
 - The desktop toolbar appears on mobile devices, showing all toolbar features.
-- Touch scrolling is smooth without jank or interference from text selection.
+- Touch scrolling is smooth without lag or interference from text selection.
 - All toolbar buttons (Zoom, Navigation, Print, Annotations) function correctly on touch devices.
 
 ## Troubleshooting
@@ -202,7 +202,7 @@ export default {
     - **Solution**: confirm [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) points to the correct version of `ej2-pdfviewer-lib` and is reachable from the device.
 
 - Server errors in server-backed mode.
-    - **Cause**: [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) CORS configuration or backend connectivity issue.
+    - **Cause**: [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) CORS configuration or back-end connectivity issue.
     - **Solution**: verify [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) CORS configuration and that the back end is running.
 
 ## Related topics

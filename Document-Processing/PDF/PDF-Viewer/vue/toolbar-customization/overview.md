@@ -30,29 +30,29 @@ This page provides a concise reference describing the toolbars available in the 
 
 The primary toolbar presents core viewer actions such as open/load, page navigation, zoom controls, and print. It appears in standard desktop layouts and at the top of the viewer when `Toolbar` service is provided. Typical actions: page forward/back, zoom in/out, fit-to-page, print.
 
-![primary desktop toolbar](../images/primary-toolbar.png)
+![primary desktop toolbar](../../react/images/primary-toolbar.png)
 
 ### Annotation toolbar
 
 The annotation toolbar surfaces annotation-related tools for adding, editing, and deleting annotations (text markup, shapes, stamps). It appears when annotation services are enabled and when a user opens annotation mode. Typical actions: highlight, underline, draw shape, add sticky note, delete annotation.
 
-![annotation desktop toolbar](../images/annotation-toolbar.png)
+![annotation desktop toolbar](../../react/images/annotation-toolbar.png)
 
 ### Form Designer toolbar
 
 Form designer toolbar provides form-field authoring controls used when designing or editing form fields inside a PDF. It appears when `FormDesigner` is enabled (design mode) and contains actions for adding form field controls.
 
-![form designer toolbar](../images/FormDesigner.png)
+![form designer toolbar](../../react/images/FormDesigner.png)
 
 ### Mobile toolbar
 
 - A compact toolbar layout optimized for small screens and touch interactions. It appears automatically on mobile-sized view ports (or when a mobile layout is explicitly chosen) and contains the most frequently used actions in a space-efficient arrangement.
 
-    ![mobile toolbar](../images/mobile-toolbar.png)
+    ![mobile toolbar](../../react/images/mobile-toolbar.png)
 
 - Annotation toolbar in mobile mode appears at the bottom of the PDF Viewer component.
 
-    ![mobile annotation toolbar](../images/mobile-annotation-toolbar.png)
+    ![mobile annotation toolbar](../../react/images/mobile-annotation-toolbar.png)
 
 ## Show or hide toolbar items
 
