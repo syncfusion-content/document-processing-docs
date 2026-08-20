@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages Events in TypeScript PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the ES6 PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the JavaScript (ES6) PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages Events in TypeScript PDF Viewer
+# Organize Pages Events in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer exposes events for tracking and responding to actions within the page organizer, enabling customization of page manipulation workflows.
 
@@ -16,7 +16,7 @@ The PDF Viewer exposes events for tracking and responding to actions within the 
 
 The `pageOrganizerSaveAs` event is triggered when a save action is performed in the page organizer.
 
--  Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
+- Occurs when the **Save as** button in the page organizer toolbar is clicked after modifying the document structure.
 
 The event arguments provide information about the save event:
 
@@ -45,8 +45,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 The `pageOrganizerZoomChanged` event is triggered when the zoom level of the page organizer is changed.
 
--  This event is fired when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to be visible.
-
+- This event is fired when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to be visible.
 
 Event arguments:
 

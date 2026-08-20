@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Squiggly annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Squiggly text markup annotations in Syncfusion TypeScript PDF Viewer, with UI and programmatic examples.
+title: Squiggly Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Learn about the squiggly annotation in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Squiggly annotation in TypeScript PDF Viewer
+# Squiggly Annotation in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Squiggly text markup annotations on text. You can add squiggles via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 
@@ -250,7 +250,7 @@ Refer to the following code snippet to set the default highlight settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, SquigglySettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -279,7 +279,7 @@ document.getElementById('squiggly')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, SquigglySettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';

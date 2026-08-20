@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Process large PDFs without upping message size | Syncfusion
-description: Learn how to process large PDFs in the Blazor SfPdfViewer by enabling chunk messaging to avoid SignalR hub message size limits.
+title: How to Process large PDFs without upping message size | Syncfusion
+description: Learn how to process large PDFs in the Blazor PDF Viewer by enabling chunk messaging to avoid SignalR hub message size limits.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Process large files without increasing maximum message size
+# How to Process large PDFs without upping message size
 
 The Blazor SfPdfViewer component can process large files under the default SignalR hub maximum receive message size (MaximumReceiveMessageSize, 32 KB) by using chunk messaging.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction in mobile view in JavaScript ES5 PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the Syncfusion JavaScript (ES5) PDF Viewer with a complete toolbar setup and redaction workflow.
+title: Mobile View in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the JavaScript (ES5) PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Redaction in Mobile View in JavaScript (ES5) PdfViewer Component
+# Organize Pages in Mobile View in JavaScript (ES5) PDF Viewer
 
 The Redaction Tool enables permanent marking and removal of sensitive content from PDF documents in mobile view using the JavaScript (ES5) PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 
@@ -52,7 +52,7 @@ When you enter redaction mode in mobile view, a specialized redaction toolbar ap
 
 ### Redaction Annotation Tool
 
-The Redaction Annotation tool is the primary redaction feature that allows you to drawing redaction rectangles on specific content:
+The Redaction Annotation tool is the primary redaction feature that allows you to draw redaction rectangles on specific content:
 
 Function: Creates visual redaction annotations that mark content for permanent removal
 Usage: Touch and drag to draw rectangular redaction overlays on any content area.

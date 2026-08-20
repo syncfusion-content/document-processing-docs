@@ -1,12 +1,12 @@
 ---
-title: Applying Watermark | DocIO | Syncfusion
-description: Learn how to insert text or picture watermark into a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Watermark in .NET Word | Syncfusion
+description: Describe the performance benchmark results of the Syncfusion .NET Word library across various document sizes
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Applying Watermark in Word (DocIO) Library
+# Watermark in .NET Word
 
 Watermarks are text or pictures that appear behind the document text. You can access the watermark in the document by using the [Watermark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Watermark) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 

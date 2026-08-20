@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use extractText in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use the extractText method in the Syncfusion ASP.NET Core PDF Viewer to extract text and bounds from one or more pages.
+title: How to Use the ExtractText Method in ASP.NET Core PDF | Syncfusion
+description: Use the extractText method in the ASP.NET Core PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text from PDFs in ASP.NET Core PDF Viewer
+# How to Use the ExtractText Method in ASP.NET Core PDF Viewer
 
 Retrieve text content from one or more pages using the `extractText` method. The viewer supports both plain text extraction and detailed text extraction with positional bounds information. You can extract text on the server side or client side depending on your use case.
 
@@ -39,7 +39,7 @@ The `extractText()` method in the PDF Viewer retrieves text from a single page o
 
 ### Method parameters
 
-- **startIndex:** The starting page index (0-based).
+- **startIndex (number):** The starting page index (0-based).
 
 - **endIndex or isOptions:** Either the ending page index for multi-page extraction or an option for single-page extraction.
 

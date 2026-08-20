@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Dialog in Angular Document editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in Angular DOCX Editor | Syncfusion
+description: The dialogs in Angular DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
-control: Dialog 
+control: Dialog
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in Angular Document editor component
+# Dialogs in Angular DOCX Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
-## Font Dialog
+## Font dialog
 
-Font dialog allows you to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
+The Font dialog allows you to modify all text properties for selected contents at once, such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
 Refer to the following example.
 
@@ -32,7 +32,7 @@ Refer to the following example.
 
 ## Paragraph dialog
 
-This dialog allows modifying the paragraph formatting for selection at once such as text alignment, indentation, and spacing.
+This dialog allows modifying the paragraph formatting for the selection at once, such as text alignment, indentation, and spacing.
 
 To open this dialog, refer to the following example.
 
@@ -50,7 +50,7 @@ To open this dialog, refer to the following example.
 
 ## Table dialog
 
-This dialog allows creating and inserting a table at cursor position by specifying the required number of rows and columns.
+This dialog allows creating and inserting a table at the cursor position by specifying the required number of rows and columns.
 
 To open this dialog, refer to the following example.
 
@@ -72,8 +72,9 @@ This dialog allows you to perform the following operations:
 
 * View all bookmarks.
 * Navigate to a bookmark.
-* Create a bookmark at current selection.
+* Create a bookmark at the current selection.
 * Delete an existing bookmark.
+
 To open this dialog, refer to the following example.
 
 {% tabs %}
@@ -90,7 +91,7 @@ To open this dialog, refer to the following example.
 
 ## Hyperlink dialog
 
-This dialog allows editing or inserting a hyperlink at cursor position.
+This dialog allows editing or inserting a hyperlink at the cursor position.
 
 To open this dialog, refer to the following example.
 
@@ -108,7 +109,7 @@ To open this dialog, refer to the following example.
 
 ## Table of contents dialog
 
-This dialog allows creating and inserting table of contents at cursor position. If the table of contents already exists at cursor position, you can customize its properties.
+This dialog allows creating and inserting a table of contents at the cursor position. If the table of contents already exists at the cursor position, you can customize its properties.
 
 To open this dialog, refer to the following example.
 
@@ -160,9 +161,9 @@ export class AppComponent {
 }
 ```
 
-## Styles Dialog
+## Styles dialog
 
-This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create new style with the help of ‘Style dialog’. Refer to the following example.
+This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create a new style with the help of the 'Style dialog'. Refer to the following example.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -212,7 +213,7 @@ export class AppComponent {
 
 ## Style dialog
 
-You can directly use this dialog for modifying any existing style or add new style by providing the style name.
+You can directly use this dialog for modifying any existing style or adding a new style by providing the style name.
 
 To open this dialog, refer to the following example.
 
@@ -370,7 +371,7 @@ export class AppComponent {
 
 ## Table options dialog
 
-This dialog allows customizing the default cell margins and spacing between each cells of the selected table.
+This dialog allows customizing the default cell margins and spacing between each cell of the selected table.
 
 To open this dialog, refer to the following example.
 
@@ -480,7 +481,7 @@ export class AppComponent {
 
 ## Page setup dialog
 
-This dialog allows customizing margins, size, and layout options for pages of the section.
+This dialog allows customizing margins, size, and layout options for the pages of the section.
 
 To open this dialog, refer to the following example.
 
@@ -496,6 +497,6 @@ To open this dialog, refer to the following example.
   
 {% previewsample "/document-processing/samples/document-editor/angular/dialog-cs6" %}
 
-## See Also
+## See also
 
-* [Feature module](./feature-module)
+* [Feature modules](./feature-module)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Spreadsheet Component in WASM | Syncfusion
-description: Check out and learn about getting started with Blazor Spreadsheet component in Blazor WebAssembly Application.
+title: Getting Started with Blazor WebAssembly Spreadsheet | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Spreadsheet in a Blazor WebAssembly application.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Getting Started with Blazor Spreadsheet Component
+# Getting Started with Blazor WebAssembly Spreadsheet
 
 This section briefly explains how to include [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) component in your Blazor WebAssembly App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
@@ -188,7 +188,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY
 {% endhighlight %}
 {% endtabs %}
 
-N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://blazor.syncfusion.com/documentation/licensing).
+N> Replace `YOUR_LICENSE_KEY` with your actual Syncfusion license key. For details on generating and registering a license key, see [Licensing](https://help.syncfusion.com/document-processing/licensing/how-to-generate).
 
 ## Add stylesheet resource
 

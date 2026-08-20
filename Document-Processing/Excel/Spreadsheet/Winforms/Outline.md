@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Outline in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Outline support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+description: Group rows and columns in Windows Forms Spreadsheet with outline options to organize and collapse worksheet data.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

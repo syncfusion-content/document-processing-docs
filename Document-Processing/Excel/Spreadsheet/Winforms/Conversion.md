@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conversion in Windows Forms Spreadsheet control | Syncfusion®
-description: Learn about Conversion support in Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+description: Convert workbook content from Windows Forms Spreadsheet into image, PDF, and HTML output while preserving worksheet formatting.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

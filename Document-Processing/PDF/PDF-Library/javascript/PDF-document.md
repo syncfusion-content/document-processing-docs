@@ -1,13 +1,13 @@
 ---
-title: Creating and Configuring PDF Documents | Syncfusion
+title: Create PDF files in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn to create, configure, and manage PDF documents with JavaScript PDF Library, including metadata, settings, updates, and annotation flattening
+description: Programmatically create, configure, and manage PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Creating and Configuring PDF Documents in JavaScript PDF Library
+# Create PDF files in JavaScript PDF
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create, read, and manipulate PDF documents, allowing you to generate high-quality, secure, and feature-rich PDF files programmatically.
 

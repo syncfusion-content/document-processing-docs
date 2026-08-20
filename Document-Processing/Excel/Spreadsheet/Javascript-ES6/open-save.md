@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open save in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Open save in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open and Save in TypeScript Spreadsheet | Syncfusion
+description: Open and save in TypeScript Spreadsheet enable users to import, edit, and export workbook data seamlessly across applications.
 platform: document-processing
 control: Open save
 documentation: ug
 ---
 
-# Open and save in EJ2 TypeScript Spreadsheet control
+# Open and save in TypeScript Spreadsheet 
 
 The native data format for the Spreadsheet is `JSON`. When you open an Excel file, the file must be read and converted into a client-side Spreadsheet model. The converted client-side Spreadsheet model is sent as JSON, which is used to render the Spreadsheet. Similarly, when you save the Spreadsheet, the client-side Spreadsheet model is sent to the server as JSON for processing and saved as an Excel file. [`Server configuration`](./open-save#server-configuration) is used for this process.
 

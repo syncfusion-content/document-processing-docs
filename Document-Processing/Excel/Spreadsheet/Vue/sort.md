@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sort in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Sort in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue Spreadsheet | Syncfusion
+description: Sort spreadsheet data efficiently using built-in sorting features in the Syncfusion Vue Spreadsheet.
 control: Sort 
 platform: document-processing
 documentation: ug
 ---
 
-# Sort in Vue Spreadsheet component
+# Sorting in Vue Spreadsheet
 
 Sorting helps arrange the data in a specific order within a selected range of cells. Use the [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowsorting) property to enable or disable sorting functionality.
 

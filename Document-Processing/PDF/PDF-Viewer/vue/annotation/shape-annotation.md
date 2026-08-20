@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shape annotation in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Shape annotation in Syncfusion Vue PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Shape Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in Vue PDF Viewer control
+# Shape Annotation in Vue PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete shape annotations. Supported shape annotation types include:
 

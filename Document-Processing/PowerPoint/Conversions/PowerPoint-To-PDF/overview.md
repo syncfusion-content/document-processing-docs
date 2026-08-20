@@ -1,12 +1,12 @@
 ---
-title: .NET PowerPoint Framework - Convert PowerPoint to PDF | Syncfusion
-description: This section illustrates how to convert PowerPoint Presentation documents to PDFs in .NET PowerPoint Framework.
+title: About Syncfusion .NET PowerPoint to PDF Library | Syncfusion
+description: Learn about the Syncfusion® .NET PowerPoint to PDF conversion feature and convert PowerPoint presentations to PDF documents.
 platform: document-processing
 control: PowerPoint
 documentation: UG
 ---
 
-# Convert PowerPoint to PDF using Syncfusion® PowerPoint library
+# About Syncfusion .NET PowerPoint to PDF Conversion Library
 
 The [Syncfusion .NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) allows you to convert a PowerPoint presentation to PDF within a few lines of code in .NET applications. It does not require Adobe Acrobat or Microsoft PowerPoint to be installed on the machine. You can create an input PowerPoint presentation from scratch, or load an existing PowerPoint presentation and then convert it to PDF.
 

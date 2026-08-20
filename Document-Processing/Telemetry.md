@@ -1,12 +1,12 @@
 ---
-title: Telemetry in .NET | Syncfusion
-description: Syncfusion® Telemetry collects anonymous usage data in .NET to improve product quality, track feature adoption, and guide product planning.
+title: About Syncfusion .NET Telemetry | Syncfusion
+description: Learn about introduction of Syncfusion Essential Studio .NET Telemetry and more details.
 platform: document-processing
 control: general
 documentation: UG
 ---
 
-# Syncfusion<sup>&reg;</sup> Telemetry  
+# About Syncfusion .NET Telemetry
 
 Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
 
@@ -47,6 +47,10 @@ Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data d
 <td>Syncfusion component being used</td>
 </tr>
 <tr>
+<td>Feature Name</td>
+<td>Syncfusion feature being used</td>
+</tr>
+<tr>
 <td>Assembly Name</td>
 <td>Syncfusion assembly or package in use</td>
 </tr>
@@ -73,6 +77,10 @@ Syncfusion<sup>&reg;</sup> collects only a limited set of anonymous usage data d
 <tr>
 <td>Session ID</td>
 <td>Unique session identifier (hashed value)</td>
+</tr>
+<tr>
+<td>Machine Name</td>
+<td>Hashed value of machine name, so it cannot be traced back</td>
 </tr>
 <tr>
 <td>Event Name</td>

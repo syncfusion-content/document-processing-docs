@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Distance Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion Angular PDF Viewer.
+title: Distance Annotation in Angular PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Distance annotations in the Angular PDF Viewer to measure straight-line distances on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Distance Annotations in Angular PDF Viewer
+# Distance Annotation in Angular PDF Viewer
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 
 ![Distance overview](../../../javascript-es6/annotations/annotation-images/distance-annot.png)

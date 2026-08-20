@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sticky notes annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Sticky Notes annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Sticky Notes Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the sticky notes annotation in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sticky notes annotation in JavaScript PDF Viewer
+# Sticky Notes Annotation in JavaScript (ES5) PDF Viewer
 
 Sticky Notes are comment annotations used to leave notes, replies, and review statuses anywhere on a page.
 
@@ -18,9 +18,9 @@ Sticky Notes are comment annotations used to leave notes, replies, and review st
 
 ### Add annotations in UI
 
-Use the Comments tool to:
+To add a sticky note annotation via the UI:
 - Click the Comments button in the PDF Viewer toolbar.
-- Click on the page where the sticky note should be added.
+- Click the page where the sticky note should be added.
 - The sticky note icon is placed at the clicked position.
 
 ![Sticky notes tool](../../images/stickynotes_tool.png)

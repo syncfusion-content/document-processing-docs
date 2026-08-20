@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export pages as images in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to export pages as Base64-encoded images in the Syncfusion ASP.NET Core PDF Viewer using the ExportAsImage method family.
+title: How to Export Pages as Images in ASP.NET Core PDF Viewer | Syncfusion
+description: Export pages as Base64-encoded images from the ASP.NET Core PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF pages as images in ASP.NET Core PDF Viewer
+# How to Export Pages as Images in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer provides the `ExportAsImage` APIs to convert individual pages or a range of pages into raster images. These images can be saved to disk, processed in-memory, or served as downloads in your application.
 
@@ -53,7 +53,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ### Export a page with custom size
 
-Exports the specified page as image with respect to the specified custom size.
+Exports the specified page as an image using the specified custom size.
 
 ```cs
 
@@ -70,7 +70,7 @@ bitmapimage.Save(@"currentDirectory\..\..\..\..\Images\" + "bitmapImage" + i.ToS
 
 ### Export a page with custom size and DPI
 
-Exports the specified page as image with respect to the custom size and the specified DPI values.
+Exports the specified page as an image using the specified custom size and DPI values.
 
 ```cs
 
@@ -127,7 +127,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ### Export a range with custom size
 
-Exports the specified pages as images with respect to the specified custom size.
+Exports the specified pages as images using the specified custom size.
 
 ```cs
 
@@ -147,7 +147,7 @@ for (int i = 0; i < pdfExportImage.PageCount; i++)
 
 ### Export a range with custom size and DPI
 
-Exports the specified pages as images with respect to the custom size and the specified DPI values.
+Exports the specified pages as images using the specified custom size and DPI values.
 
 ```cs
 

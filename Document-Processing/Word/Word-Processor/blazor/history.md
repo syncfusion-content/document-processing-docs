@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Undo and redo in Syncfusion Blazor DocumentEditor component and more.
+title: History in Blazor DOCX Editor | Syncfusion
+description: History in Blazor DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Undo and Redo in Blazor DocumentEditor Component
+# History in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) automatically tracks the history of all editing actions performed in a document. This history allows users to reverse (undo) their recent actions or re-apply (redo) actions that were undone.
 
@@ -15,12 +15,12 @@ This functionality is enabled by default through the integrated `EditorHistoryMo
 
 ## Enable or disable history
 
-Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module into the application to enable history preservation functionality for the [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
+Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module to enable history tracking for the [`Document Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true">
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
@@ -33,7 +33,7 @@ Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-History preservation for a Document Editor instance can be enabled or disabled at any time using the `EnableEditorHistory` property. Refer to the following sample code.
+Enable or disable history preservation for a Document Editor instance at any time using the `EnableEditorHistory` property. Refer to the following sample code.
 
 ```csharp
 documentEditor.EnableEditorHistory = true;
@@ -41,8 +41,8 @@ documentEditor.EnableEditorHistory = true;
 
 ## Undo and redo
 
-You can perform undo and redo by using `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document editor exposes API to do it programmatically.
-To undo the last editing operation in document editor, refer to the following sample code.
+You can perform undo and redo by using `Ctrl+Z` and `Ctrl+Y` keyboard shortcuts. The Document Editor exposes APIs to do this programmatically.
+To undo the last editing operation in the Document Editor, refer to the following sample code.
 
 ```csharp
 await container.DocumentEditor.EditorHistory.UndoAsync();
@@ -56,7 +56,7 @@ await container.DocumentEditor.EditorHistory.RedoAsync();
 
 ## Stack size
 
-History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, document editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions is maintained in a stack, so that the last item is reverted first. By default, the Document Editor limits the size of the undo and redo stacks to 500 each. However, you can customize this limit. Refer to the following sample code.
 
 ```csharp
 await container.DocumentEditor.EditorHistory.SetRedoLimitAsync(400);

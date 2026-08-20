@@ -1,16 +1,17 @@
 ---
 layout: post
-title: Annotations in mobile view in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Annotations in mobile view in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Annotations in Mobile View in ASP.NET MVC PDF Viewer | Syncfusion
+description: Create, edit, and manage annotations in the ASP.NET MVC PDF Viewer when running on mobile devices with the touch-optimized annotation UI.
 platform: document-processing
-control: Annotations in mobile view
+control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
-# Annotations in mobile view in ASP.NET MVC PDF Viewer control
+# Annotations in Mobile View in ASP.NET MVC PDF Viewer
 
 ## To Open the Annotation Toolbar
 
-**Step 1:** To enable the annotation toolbar, click the editAnnotation toolbar.
+**Step 1:** To enable the annotation toolbar, click the **Edit Annotation** button.
 
 ![Alt text](../images/edit-annotation.png)
 
@@ -20,7 +21,7 @@ documentation: ug
 
 ## To add sticky notes annotation
 
-**Step 1:** click sticky notes icon and then click in the page where you want to add this.
+**Step 1:** click the **Sticky Notes** icon and then click on the page where you want to add this.
 
 ![Alt text](../images/add-sticky-notes.png)
 
@@ -30,7 +31,7 @@ documentation: ug
 
 ## To add text markup annotation
 
-**Step 1:** click any one of the text markup icon, then select the text you want to mark, then touch the selected text to apply the markup annotation.
+**Step 1:** click any one of the text markup icons, then select the text you want to mark, then touch the selected text to apply the markup annotation.
 
 ![Alt text](../images/select-text.png)
 
@@ -64,7 +65,7 @@ documentation: ug
 
 ## To add signature
 
-**Step 1:** click the signature icon. This will open the signature canvas to draw signature. After drawn the sign, should click the create button and touch the viewer to add the signature.
+**Step 1:** click the signature icon. This will open the signature canvas to draw a signature. After drawn the sign, should click the create button and touch the viewer to add the signature.
 
 ![Alt text](../images/add-signature.png)
 
@@ -74,7 +75,7 @@ documentation: ug
 
 ## To add ink annotation
 
-**Step 1:** Click the ink icon tool and draw in the page.
+**Step 1:** Click the ink icon tool and draw on the page.
 
 ![Alt text](../images/open-ink.png)
 
@@ -82,7 +83,7 @@ documentation: ug
 
 ![Alt text](../images/ink-annotation.png)
 
-## Change Annotation Change (Before adding)
+## Change Annotation Property (Before adding)
 
 **Step 1:** We can change the properties before adding the annotation.
 
@@ -94,7 +95,7 @@ documentation: ug
 
 **Step 1:** We can change the annotation property after adding the annotation.
 
-**Step 2:** Select the added annotation, it will show the corresponding property tool. This will help us to change the property of the annotation.
+**Step 2:** Select the added annotation, it will show the corresponding property tool. This will help you to change the property of the annotation.
 
 ![Alt text](../images/change-property.png)
 
@@ -110,7 +111,7 @@ documentation: ug
 
 ![Alt text](../images/open-comment.png)
 
-**Step 1:** After opening the comment panel
+**Step 2:** After opening the comment panel
 
 ![Alt text](../images/comment-panel.png)
 

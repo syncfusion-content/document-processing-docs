@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resolve "Web-service is not listening" error | Syncfusion
-description: Learn how to resolve the "Web-service is not listening" error in React PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the React PDF Viewer with a clear troubleshooting checklist and configuration tips.
 control: How to clear the "Web-service is not listening" error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to resolve the "Web-service is not listening" error in React
+# How to Resolve the Web-Service Is Not Listening Error in React PDF
 
 ![Web-service is not listening error in React PDF Viewer](../images/webservice.png)
 

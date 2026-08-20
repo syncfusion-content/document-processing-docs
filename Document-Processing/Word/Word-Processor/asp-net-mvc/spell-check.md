@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Spell Check in ASP.NET MVC Document Editor Component | Syncfusion
-description: Learn here all about spell check in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in ASP.NET MVC DOCX Editor | Syncfusion
+description: The spell check feature in ASP.NET MVC DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell Check
 documentation: ug
 ---
 
 
-# Spell Check in Document Editor Component
+# Spell Check in ASP.NET MVC DOCX Editor
 
-Document editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu.
+The Document Editor supports spell checking for input text. It provides suggestions for misspelled words through the spell-checker dialog and the context menu.
 
 
 {% tabs %}
@@ -24,21 +24,21 @@ Document editor supports performing spell checking for any input text. You can p
 ## Features
 
 * Supports context menu suggestions.
-* Provides build-in options to Ignore, Ignore All, Change, Change All for error words in spell checker dialog.
+* Provides built-in options to Ignore, Ignore All, Change, and Change All for error words in the spell-checker dialog.
 
-## Enable SpellCheck
+## Enable Spell Check
 
-To enable spell check in DocumentEditor, set `enableSpellCheck` property as `true` and then configure SpellCheckSettings.
+To enable spell check in the Document Editor, set the `enableSpellCheck` property to `true` and then configure `SpellCheckSettings`. The default value of this property is `false`.
 
-## Disable SpellCheck
+## Disable Spell Check
 
-To disable spell check in DocumentEditor, set `enableSpellCheck` property as `false` or remove `enableSpellCheck` property initialization code. The default value of this property is false.
+To disable spell check in the Document Editor, set the `enableSpellCheck` property to `false` or remove the `enableSpellCheck` property initialization code.
 
 ## Spell check settings
 
 ### Remove Underline
 
-By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the `removeUnderline` API and now, the squiggly lines will never be rendered for mis-spelled words.
+By default, misspelled words are marked with a squiggly line. Set the `removeUnderline` API to `false` to prevent squiggly lines from being rendered for misspelled words.
 
 ```typescript
 this.container.documentEditor.spellChecker.removeUnderline = false;
@@ -46,7 +46,7 @@ this.container.documentEditor.spellChecker.removeUnderline = false;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, on performing spell check in Document Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the `allowSpellCheckAndSuggestion` API, which will perform only spell check.
+By default, when a spell check is performed in the Document Editor, both the spelling check and suggestions for misspelled words are retrieved. The misspelled words can be corrected from the context menu suggestions. Set the `allowSpellCheckAndSuggestion` API to `false` to perform only spell checking without suggestions.
 
 ```typescript
 this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -54,7 +54,7 @@ this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### LanguageID
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with `languageID` you pass in the Document Editor.
+The Document Editor supports multi-language spell checking. Add the required language dictionaries on the server side, and use a matching `languageID` in the Document Editor to enable spell checking for that language.
 
 ```typescript
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
@@ -62,7 +62,7 @@ this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 
 ### EnableOptimizedSpellCheck
 
-Document editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
+The Document Editor provides an option to spell check page by page when loading documents. The default value of this property is `false`, so when the document is opened, the spell-check web API is called for each word. Set this property to `true` to optimize the frequency of spell-check web API calls.
 
 ```typescript
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
@@ -70,9 +70,9 @@ this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;
 
 ### Spell check dictionary cache
 
-Starting from `v20.1.0.xx`, the performance and memory usage of spell checker has been optimized by adding a static method to initialize the dictionaries with specified cache count.
+Starting from `v20.1.0.xx`, the performance and memory usage of the spell checker have been optimized by adding a static method to initialize the dictionaries with a specified cache count.
 
-By default, the spell checker holds only one language dictionary in memory. If you want to hold multiple dictionaries in memory, you need to set the cache limit by using `InitializeDictionaries` method as in the below example.
+By default, the spell checker holds only one language dictionary in memory. If you want to hold multiple dictionaries in memory, set the cache limit by using the `InitializeDictionaries` method as shown in the following example.
 
 ```csharp
  List<DictionaryData> spellDictCollection = new List<DictionaryData>();
@@ -82,7 +82,7 @@ By default, the spell checker holds only one language dictionary in memory. If y
  SpellChecker.InitializeDictionaries(spellDictCollection, personalDictPath, cacheCount);
 ```
 
-If dictionaries are initialized using `InitializeDictionaries` method, then default constructor of the `SpellChecker` should be used to check spelling and get suggestion as in the below example code, it will prevent reinitialization of already loaded dictionaries.
+When dictionaries are initialized using the `InitializeDictionaries` method, use the default constructor of the `SpellChecker` to check spelling and get suggestions, as shown in the following example. This prevents reinitialization of already loaded dictionaries.
 
 ```csharp
 public string SpellCheck([FromBody] SpellCheckJsonData spellChecker)
@@ -100,15 +100,16 @@ public string SpellCheck([FromBody] SpellCheckJsonData spellChecker)
 }
 ```
 
-Previously on every `SpellChecker.GetSuggestion()` method call, the `.aff` and dictionary data will be parsed to generate suggestion for miss spelled word. But, starting from `v20.1.0.xx`, the `.aff` and dictionary data will be parsed only for the first time alone while calling `SpellChecker.GetSuggestion()` method.
+Previously, every call to `SpellChecker.GetSuggestion()` re-parsed the `.aff` and dictionary data to generate suggestions for misspelled words. Starting from `v20.1.0.xx`, the `.aff` and dictionary data are parsed only on the first call to `SpellChecker.GetSuggestion()`.
 
 ### Add new root word and possible words to dictionary
 
-If you find any root word is missing in the dictionary file, then you can add that new root word and the rule to form the possible words to dictionary file using `AddNewWord` API in the server-side Spell check library.
+If a root word is missing from the dictionary file, add the new root word and the rule for forming its possible words using the `AddNewWord` API in the server-side Spell-check library.
 
-N>1. The rules are framed automatically using the root word, the possible words and affix file.
-<br/>2. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary.
-<br/>3. This API is included starting from `v20.2.0.xx`.
+N>
+1. The rules are framed automatically using the root word, the possible words, and the affix file.
+2. If you pass `null` for the parameters `affPath` and `possibleWords`, then it will add a single root word to the dictionary.
+3. This API is included starting from `v20.2.0.xx`.
 
 The following code example demonstrates how to add a new root word to the dictionary along with the rule to form the possible words.
 
@@ -120,30 +121,30 @@ spellChecker.AddNewWord("en.dic","en.aff", "construct", new string[] { "construc
 
 ## Context menu
 
-Right click on error word to open the context menu with spell check options.
+Right-click an error word to open the context menu with spell-check options.
 
 ![Spell check option in context menu](images/spell-check-menu.png)
 
 ### Suggestions
 
-Context menu shows the suggestions for mis-spelled words. By clicking on the required word from suggestion, the error word gets replaced automatically.
+The context menu shows suggestions for misspelled words. Clicking a suggestion replaces the error word automatically.
 
 ### Add To Dictionary
 
-Using this option, you can add the current word to the dictionary. So that the spell checker does not consider that word as error in future.
+Use this option to add the current word to the dictionary so that the spell checker does not consider it an error in the future.
 
 ### Ignore Once and Ignore All
 
-If you do not wish to add the word to dictionary and do not want to show error, use Ignore Once or Ignore All options.
+If you do not wish to add the word to the dictionary and do not want to show the error, use the Ignore Once or Ignore All options.
 
-Ignore: ignore only the current occurrence of a word from error.
+**Ignore:** ignores only the current occurrence of a word marked as an error.
 
-Ignore All: ignore all occurrence of a word from error in the entire document.
+**Ignore All:** ignores all occurrences of a word marked as an error in the entire document.
 
 ### Spelling
 
-Using this option, you can open spell check dialog.
+Use this option to open the spell-check dialog.
 
 ![Spell check dialog](images/spell-check-dialog.png)
 
-* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#spell-check) link for configuring spell checker in server-side.
+* Refer to the [Spell checker](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#spell-check) link for configuring the spell checker on the server side.

@@ -1,12 +1,12 @@
 ---
-title: Create Word document in GAE | Syncfusion
-description: Create Word document in Google App Engine using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Create Word document in GAE in Google App Engine | Syncfusion
+description: This section illustrates how to substitute fonts during Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Google App Engine
+# Create Word document in GAE in Google App Engine
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) that allows you to create, read, edit, and convert Word documents programmatically, without the need for **Microsoft Word** or interop dependencies. Using this library, you can **create Word document in Google App Engine**.
 

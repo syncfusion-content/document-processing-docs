@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Performance Best Practices in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn here all about performance best practices in Syncfusion EJ2 ASP.NET MVC Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Improve application performance with best practices and optimization techniques for the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in the EJ2 ASP.NET MVC Spreadsheet control
+# Performance Best Practices in ASP.NET MVC Spreadsheet
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion® ASP.NET MVC Spreadsheet](https://www.syncfusion.com/aspnet-mvc-ui-controls/spreadsheet). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 

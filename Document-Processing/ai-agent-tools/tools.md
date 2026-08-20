@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tools | AI Agent Tools | Syncfusion
+title: Tools available in Document SDK AI Agent Tools | Syncfusion
 description: Complete reference for all Syncfusion Document SDK Agent Tool classes - Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Syncfusion Document SDK AI Agent Tools
+# Tools available in Document SDK AI Agent Tools
 
 [Agent Tools](https://learn.microsoft.com/en-us/agent-framework/get-started/add-tools?pivots=programming-language-csharp) are the callable functions exposed to the AI agent. Each tool class is initialized with the appropriate manager. You can find the available tools below.
 
@@ -158,12 +158,12 @@ Tools are organized into the following categories:
 </table>
 
 
-I> 1. The following tool classes are not supported in Storage mode:
-I>    * [WordDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html)
-I>    * [ExcelWorkbookAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Excel.ExcelWorkbookAgentTools.html)
-I>    * [PdfDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PDF.PdfDocumentAgentTools.html)
-I>    * [PresentationDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PowerPoint.PresentationDocumentAgentTools.html)   
-I> 2. All other tool classes work identically in both modes.
+N> 1. The following tool classes are not supported in Storage mode:
+N>    * [WordDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Word.WordDocumentAgentTools.html)
+N>    * [ExcelWorkbookAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.Excel.ExcelWorkbookAgentTools.html)
+N>    * [PdfDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PDF.PdfDocumentAgentTools.html)
+N>    * [PresentationDocumentAgentTools](https://help.syncfusion.com/cr/document-processing/Syncfusion.AI.AgentTools.PowerPoint.PresentationDocumentAgentTools.html)   
+N> 2. All other tool classes work identically in both modes.
 
 ## Available Document Managers
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Fields API in MVC PDF Viewer | Syncfusion
-description:  Learn How to use Form Fields API to enable, update, retrieve and clear in the Syncfusion MVC PDF Viewer.
+title: Form Fields Api in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the form fields API in the ASP.NET MVC PDF Viewer to enable, update, retrieve, and clear form fields programmatically from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Fields API in MVC PDF Viewer
+# Form Fields API in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides comprehensive APIs to create, edit, validate, navigate, and manage form fields programmatically. The following APIs are available:
 
@@ -324,8 +324,7 @@ Returns true if the loaded document contains one or more form fields.
 
 ## isFormDesignerToolbarVisible
 
-Opens the form designer toolbar when the PDF document is loaded in the PDF Viewer control initially
-and get the form designer Toolbar Visible status.
+Returns whether the Form Designer toolbar is currently visible. The toolbar can be shown or hidden using [enableFormDesignerToolbar](#enableformdesignertoolbar).
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

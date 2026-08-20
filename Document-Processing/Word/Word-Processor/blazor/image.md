@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Images in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Images in Syncfusion Blazor DocumentEditor component and much more.
+title: Images in Blazor DOCX Editor | Syncfusion
+description: Images in Blazor DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Images in Blazor DocumentEditor Component
+# Images in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides robust support for working with images in documents. It supports common raster image formats like PNG, BMP, and JPEG, as well as GIF and SVG images. You can insert an image file or online image in the document using the [`InsertImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
@@ -15,17 +15,17 @@ The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-
 await container.DocumentEditor.Editor.InsertImageAsync("<<base64String>>");
 ```
 
-Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
+Image files are internally converted to a base64 string. However, online images are preserved as a URL.
 
 ## Image resizing
 
-Document editor provides built-in image resizer that can be injected into your application based on the requirements. This allows the image to be resized by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+The Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows the image to be resized by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
-![Image Resizing in Blazor DocumentEditor](images/blazor-document-editor-image-resizing.jpeg)
+![Image Resizing in Blazor Document Editor](images/blazor-document-editor-image-resizing.jpeg)
 
 ## Changing size
 
-Document editor expose API to get or resize the selected image. Refer to the following sample code.
+The Document Editor exposes APIs to get or resize the selected image. Width and height values are in points. Refer to the following sample code.
 
 ```csharp
 int height = await container.DocumentEditor.Selection.ImageFormat.GetHeightAsync();
@@ -39,6 +39,6 @@ Text wrapping refers to how images fit with surrounding text in a document. [Ref
 
 ## Positioning the image
 
-DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+The Document Editor preserves the position properties of the image and displays the image based on the position properties. It does not support modifying the position properties. However, the image will be automatically moved along with the text edited if it is positioned relative to the line or paragraph.
 
 You can also explore our [`Blazor Word Processor`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.

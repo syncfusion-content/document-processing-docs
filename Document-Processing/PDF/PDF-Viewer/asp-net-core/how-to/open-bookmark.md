@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open or close the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to open or close the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by calling the bookmarkViewModule APIs.
+title: How to Open or Hide the Bookmark Pane in ASP.NET Core | Syncfusion
+description: Open or close the bookmark pane programmatically in the ASP.NET Core PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open or close the bookmark pane in ASP.NET Core PDF Viewer
+# How to Open or Hide the Bookmark Pane in ASP.NET Core PDF Viewer
 
 Toggle the bookmark sidebar at runtime using **openBookmarkPane()** and **closeBookmarkPane()** methods. These APIs allow flexible document navigation workflows where bookmarks appear only when needed.
 
@@ -26,14 +26,14 @@ Follow these steps to implement bookmark pane toggling:
     <ejs-pdfviewer id="pdfviewer"
                    style="height:600px"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib"">
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.1.17/dist/ej2-pdfviewer-lib">
     </ejs-pdfviewer>
 </div>
 
 <script>
     function openBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.openBookmarkPane();
+        pdfViewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
 
@@ -53,7 +53,7 @@ Follow these steps to implement bookmark pane toggling:
 <script>
     function openBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.openBookmarkPane();
+        pdfViewer.bookmarkViewModule.openBookmarkPane();
     }
 </script>
 
@@ -80,7 +80,7 @@ To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the follow
 <script>
     function closeBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.closeBookmarkPane();
+        pdfViewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
 {% endhighlight %}
@@ -99,7 +99,7 @@ To hide the bookmark pane, call the `closeBookmarkPane()` method. Use the follow
 <script>
     function closeBookmark() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.bookmarkViewModule.closeBookmarkPane();
+        pdfViewer.bookmarkViewModule.closeBookmarkPane();
     }
 </script>
 

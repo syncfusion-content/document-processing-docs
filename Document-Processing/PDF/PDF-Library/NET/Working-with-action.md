@@ -1,11 +1,11 @@
 ---
-title: Working with Action | Syncfusion
-description: This section explains how to add actions to the document & form fields. Some supported actions are Sound, JavaScript, URI, Launch, Named, Submits & Resets.
+title: Actions in .NET PDF Library | Syncfusion
+description: Learn how to add document and form field actions in the .NET PDF Library, including Sound, JavaScript, URI, Launch, Named, Submit, and Reset.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with Actions
+# Actions in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF supports different actions that can be triggered by different events and user interactions.
 
@@ -810,7 +810,7 @@ The [PdfRemoteGoToAction](https://help.syncfusion.com/cr/document-processing/Syn
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Actions/Add-GoTo-action-to-the-PDF-document/.NET/Add-GoTo-action-to-the-PDF-document/Program.cs" %}
 
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;

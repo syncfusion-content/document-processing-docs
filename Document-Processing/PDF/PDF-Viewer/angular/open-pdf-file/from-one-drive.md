@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF files from One Drive in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Open PDF files from One Drive in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: From One Drive in Angular PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the Angular PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: Open PDF files from One Drive
 documentation: ug

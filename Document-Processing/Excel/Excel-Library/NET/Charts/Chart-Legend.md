@@ -1,12 +1,12 @@
 ---
-title: Chart Legend | Excel library | Syncfusion
-description: In this section, you can learn about the chart legend in an Excel document using the .NET Excel Library with clear guidance and practical examples.
+title: Chart Legend in .NET Excel Library | Syncfusion
+description: Chart legend settings describes how the Syncfusion .NET Excel Library displays and formats legends in Excel charts.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart Legend in an Excel document
+# Chart Legend in .NET Excel Library
 
 Legends are visual pictorial hints that provide a viewer with information that helps them understand a chart. Using XlsIO, you can **customize the legend**.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Save the original document on the server in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to save the original PDF document on the server by calling a custom download action in the Syncfusion ASP.NET Core PDF Viewer.
+title: How to Save the Original PDF on the Server in ASP.NET | Syncfusion
+description: Save the original PDF document on the server side when users annotate it in the ASP.NET Core PDF Viewer, preserving the source file.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save original document at the server side
+# How to Save the Original PDF on the Server in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer can persist the original PDF file on the server by redirecting the download action to a custom controller method. This approach is useful for audit trails, archival policies, or downstream processing that requires access to the unmodified document after the user views it.
 
 Follow these steps to enable server-side persistence:
 
-**Step 1:** Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started/) to configure the necessary scripts, Razor markup, and controller endpoints.
+**Step 1:** Create a PDF Viewer project by following the [ASP.NET Core getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to configure the necessary scripts, Razor markup, and controller endpoints.
 
 **Step 2:** Add a button to the user interface that overrides the download action before invoking the viewer's `download` method. The script below targets the `serverActionSettings.download` endpoint, triggers the download, and then restores the default action.
 
@@ -22,7 +22,7 @@ Follow these steps to enable server-side persistence:
 
 <script>
     function save() {
-        var pdfViewer = document.getElementById('pdfviewer1').ej2_instances[0];
+        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
         pdfViewer.serverActionSettings.download = "SaveDocument";
         pdfViewer.download();
         pdfViewer.serverActionSettings.download = "Download";
