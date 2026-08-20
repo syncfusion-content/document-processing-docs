@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export in Vue DOCX Editor | Syncfusion
+title: Server-side export in Vue DOCX Editor | Syncfusion
 description: Server-side export in Vue DOCX Editor allows documents to be processed and exported using web services.
 control: Server side export 
 platform: document-processing
