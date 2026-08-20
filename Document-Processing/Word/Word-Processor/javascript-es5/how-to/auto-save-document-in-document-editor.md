@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Auto Save to AWS S3 in JavaScript DOCX Editor | Syncfusion
-description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® JavaScript DOCX Editor for reliable cloud-based storage.
+description: Automatically save edited documents to AWS S3 at regular intervals in SyncfusionÂ® JavaScript DOCX Editor for reliable cloud-based storage.
 platform: document-processing
 control: Auto save document in Document Editor 
 documentation: ug
