@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Troubleshoot 'cp' Not Recognized in Syncfusion React PDF Viewer
-description: Use Windows-native alternatives to Unix cp for copying React PDF Viewer assets, with examples using xcopy in CMD and Copy-Item in PowerShell.
+title: Cp Command Not Recognized in React PDF Viewer | Syncfusion
+description: Resolve the cp is not recognized error in the React PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve 'cp' Command Error in Syncfusion React PDF Viewer
+# Resolve cp Not Recognized Error in React PDF Viewer
 
 The Unix `cp` command is not available in the Windows Command Prompt. Use one of the following Windows-native alternatives to copy the required `ej2-pdfviewer-lib` assets into a public or source folder used by the application.
 

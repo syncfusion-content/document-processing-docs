@@ -1,12 +1,12 @@
 ---
-title: Working with Shapes | Syncfusion
-description: This section describes how to work with the shapes and groupshape in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Shapes in Java Word | Syncfusion
+description: This section describes how to work with the shapes and groupshape in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 keywords: 
 ---
-# Working with Shapes in Word document
+# Document Shapes in Java Word
 
 Shapes are drawing objects that include lines, curves, circles, rectangles, etc. It can be preset or custom geometry. You can create and manipulate the pre-defined shape in DOCX and WordML format documents.
 

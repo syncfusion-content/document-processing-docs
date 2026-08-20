@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Customize Context Menu in Document Editor Component | Syncfusion
-description: Learn here all about how to customize context menu in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in ASP.NET Core DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® React DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
-control: Customize Context Menu
+control: Document Editor
 documentation: ug
 ---
 
 
-# Context menu customization
+# How to Customize Context Menu in ASP.NET Core DOCX Editor
 
-## How to customize context menu in Document Editor
+## How to customize the context Menu
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect`.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows you to add a custom option in the context menu. You can achieve this by using the `addCustomMenu()` method, and the custom action is defined using the `customContextMenuSelect` event.
 
-### Add Custom Option
+### Add a custom option
 
 
 {% tabs %}
@@ -28,13 +28,13 @@ documentation: ug
 
 
 
-### Customize custom option in context menu
+### Customize custom options in the context Menu
 
-Document Editor allows to customize the added custom option and also to hide or show default context menu.
+The Document Editor allows you to customize the added custom option and also to hide or show the default context menu.
 
 #### Hide default context menu items
 
-Using `addCustomMenu()` method, you can hide the default context menu, by setting second parameter as true.
+Using the `addCustomMenu()` method, you can hide the default context menu by setting the second parameter to `true`.
 
 
 {% tabs %}
@@ -49,7 +49,7 @@ Using `addCustomMenu()` method, you can hide the default context menu, by settin
 
 #### Customize added context menu items
 
-The following code shows how to hide or show added custom option in context menu using the `customContextMenuBeforeOpen`.
+The following code shows how to hide or show the added custom option in the context menu using the `customContextMenuBeforeOpen` event.
 
 
 {% tabs %}
@@ -62,11 +62,11 @@ The following code shows how to hide or show added custom option in context menu
 {% endtabs %}
 
 
-#### Customize Context Menu with sub-menu items
+#### Customize context menu with sub-menu items
 
-Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the `addCustomMenu()` method.
+The Document Editor allows you to customize the context menu with sub-menu items. You can achieve this by using the `addCustomMenu()` method.
 
-The following code shows how to add a sub items in the custom option in context menu in Document Editor Container.
+The following code shows how to add sub-items to the custom option in the context menu in the Document Editor Container.
 
 
 {% tabs %}
@@ -78,6 +78,6 @@ The following code shows how to add a sub items in the custom option in context 
 {% endhighlight %}
 {% endtabs %}
 
-## Online Demo
+## Online demo
 
-Explore how to customize the context menu in the ASP.NET Core Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/customcontextmenu#/tailwind3).
+Explore how to customize the context menu in the ASP.NET Core Document Editor for working with Word documents in this live [ASP.NET Core Context Menu Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/customcontextmenu#/tailwind3).

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Open Azure Blob Files in ASP.NET MVC Document editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in ASP.NET MVC Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob in ASP.NET MVC DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in ASP.NET MVC DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in ASP.NET MVC Document editor
+# Open Documents from Azure Blob Storage in ASP.NET MVC DOCX Editor
 
-To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
+To load a document from Azure Blob Storage in an [ASP.NET MVC Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), you can follow the steps below.
 
 
 **Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
@@ -19,7 +19,7 @@ Start by following the steps provided in this [link](../getting-started) to crea
 
 
 
-**Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
 * Open the `DocumentEditorController.cs` file in your web service project.
 
@@ -31,7 +31,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-* Add the following private fields and constructor parameters to the `DocumentEditorController` class, In the constructor, assign the values from the configuration to the corresponding fields
+* Add the following private fields and constructor parameters to the `DocumentEditorController` class. In the constructor, assign the values from the configuration to the corresponding fields.
 
 
 ```csharp
@@ -47,22 +47,22 @@ public DocumentEditorController(IConfiguration configuration, ILogger<DocumentEd
 }
 ```
 
-* Modify the `LoadFromAzure()` method to load the document from  Azure Blob Storage
+* Modify the `LoadFromAzure()` method to load the document from Azure Blob Storage.
 
 ```csharp
 
 [HttpPost("LoadFromAzure")]
 [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
 [Route("[controller]/LoadFromAzure")]
-//Post action for Loading the PDF documents 
+//Post action for loading Word documents 
   
 public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObject)
 {
   MemoryStream stream = new MemoryStream();
 
-  if (jsonObject == null && !jsonObject.ContainsKey("documentName"))
+  if (jsonObject == null || !jsonObject.ContainsKey("documentName"))
   {
-     return null
+    return null;
   }
   BlobServiceClient blobServiceClient = new BlobServiceClient(_storageConnectionString);
   string fileName = jsonObject["documentName"];
@@ -77,7 +77,7 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -95,10 +95,9 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:** Modify the Index.cshtml file in the Document Editor sample
 
-In the client-side, the document is returned from the web service is opening using `open` method.
-
+On the client side, the document returned from the web service is opened using `open` method.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}

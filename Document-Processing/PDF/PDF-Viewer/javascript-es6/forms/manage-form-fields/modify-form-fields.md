@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Modify form fields in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Syncfusion TypeScript PDF Viewer.
+title: Modify Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Edit PDF form fields in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Modify PDF form field properties
+# Modify Form Fields in JavaScript (ES6) PDF Viewer
 Form fields can be modified using the UI or API.
 
-## Modify PDF form field properties using the UI
+## Modify Form Fields in JavaScript (ES6) PDF Viewer using the UI
 - Right-click a field → **Properties** to update settings.
 ![Textbox properties panel](../../images/ui-textbox-edit.png)
 - Drag to move; use handles to resize.
 - Use the toolbar to toggle field mode or add new fields.
 
-## Modify PDF form field properties programmatically
+## Modify Form Fields in JavaScript (ES6) PDF Viewer programmatically
 Use [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size):
 
 ```html
@@ -46,7 +46,7 @@ Use [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer
 });
 ```
 
-## Modify PDF form field properties by field type
+## Modify Form Fields in JavaScript (ES6) PDF Viewer by field type
 
 ### Textbox
 - UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
@@ -284,7 +284,7 @@ Use [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)

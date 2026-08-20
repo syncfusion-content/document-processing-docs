@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in Vue DOCX Editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in Vue DOCX Editor | Syncfusion
+description: Global localization in Vue DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 control: Global local 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue Document Editor component
+# Globalization and Localization in Vue DOCX Editor
 
 ## Localization
 

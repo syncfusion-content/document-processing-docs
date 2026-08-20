@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Save PDF to Azure Active Directory in Vue PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion Vue PDF Viewer component and a server-backed web service.
+title: To Azure Active Directory in Vue PDF Viewer | Syncfusion
+description: Learn about the to azure active directory in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Azure Active Directory (AAD) in Vue
+# To Azure Active Directory in Vue PDF Viewer
 
-### **Overview**
+## **Overview**
 
 The Vue PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
-### Steps to open the PDF file from Azure Active Directory
-
----
+### Steps to open and save PDF files from Azure Active Directory
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
 

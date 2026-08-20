@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Custom Data to form fields in Blazor SfPdfViewer | Syncfusion
+title: Add Custom Data to form fields in Blazor PDF Viewer | Syncfusion
 description: Learn how to attach, update, and read custom data on PDF form fields using programmatic APIs in the Blazor SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Add Custom Data to PDF Form Fields in Blazor SfPdfViewer
+# Add Custom Data to form fields in Blazor PDF Viewer
 
 The Blazor `SfPdfViewer` allows you to attach **custom application-specific data** to form fields by using the CustomData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 

@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Saving a Document in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about saving document in Syncfusion Blazor DocumentEditor component and more.
+title: Saving a Document in Blazor DOCX Editor | Syncfusion
+description: Save documents from Blazor DOCX Editor to a server, database, or local file system, and download document copies in supported formats
 platform: document-processing
-control: DocumentEditor
+control: Document Editor
 documentation: ug
 ---
 
-# Saving a Document in Blazor DocumentEditor Component
+# Saving a Document in Blazor DOCX Editor
 
 After composing or editing, a document must be saved to the server, a database, or the local file system.
 
 ## Save document to server
 
-It may be necessary to save the document back to the server. The following code example shows how to save the composed document to server.
+The following code example shows how to save the composed document to the server.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
-@using  System.IO
+@using System.IO
 
 <button @onclick="OnSave">Save</button>
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true"></SfDocumentEditorContainer>
 
 @code {
     SfDocumentEditorContainer container;
@@ -52,7 +52,7 @@ It may be necessary to save the document back to the server. The following code 
 
 ## Save document to database
 
-If you have plenty of documents stored in database and you want to save the composed or updated document back to the database, use the following code example.
+If you have plenty of documents stored in a database and you want to save the composed or updated document back to the database, use the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -92,7 +92,7 @@ If you have plenty of documents stored in database and you want to save the comp
 
 ## Download document as a copy
 
-You can also save or download the document in local file system.
+You can also save or download the document to the local file system.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content control in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Content Control in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Content Controls in Angular DOCX Editor | Syncfusion
+description: The content control feature in Angular DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Control in Angular Document Editor
+# Content Controls in Angular DOCX Editor
 
 [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 

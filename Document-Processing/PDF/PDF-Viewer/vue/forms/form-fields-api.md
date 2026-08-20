@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form Fields API in Vue PDF Viewer | Syncfusion
-description:  Learn How to use Form Fields API to enable, update, retrieve and clear in the Syncfusion Vue PDF Viewer.
+title: Form Fields Api in Vue PDF Viewer | Syncfusion
+description: Use the form fields API in the Vue PDF Viewer to enable, update, retrieve, and clear form fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -561,7 +561,7 @@ export default {
 
 ## isFormDesignerToolbarVisible
 
-Opens the Form Designer toolbar and returns its visibility status.
+Gets whether the Form Designer toolbar is currently visible.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -666,6 +666,13 @@ Enables or disables built-in validation for required and constrained fields.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button id="checkFormFieldDocument">checkFormFieldDocument</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
+  </div>
+</template>
+
 <script>
 import {
   PdfViewerComponent,

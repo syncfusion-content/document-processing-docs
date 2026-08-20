@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion React PDF Viewer component with a server-backed web service.
+title: To Box Cloud File Storage in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Box cloud file storage
+# Save PDF Files to Box Cloud Storage in React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
@@ -150,7 +150,7 @@ root.render(<App />);
 ```
 {% endraw %}
 
-N> Install the Box .NET SDK in the web service project: `dot net add package Box.V2`.
+N> Install the Box .NET SDK in the web service project: `dotnet add package Box.V2`.
 
 N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `React PDF Viewer` component.
 

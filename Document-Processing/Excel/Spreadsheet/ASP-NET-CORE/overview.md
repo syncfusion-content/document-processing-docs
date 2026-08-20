@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of the ASP.NET Core Spreadsheet Control | Syncfusion
-description: Learn here all about Overview of the Syncfusion EJ2 ASP.NET CORE Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: About Syncfusion ASP.NET Core Spreadsheet Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio ASP.NET Core Spreadsheet control and more details.
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
-# Overview of the ASP.NET Core Spreadsheet Control
+# About Syncfusion ASP.NET Core Spreadsheet Control
 
 The [ASP.NET Core Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/asp-net-core-spreadsheet-editor) is a user-interactive component for organizing and analyzing data in a tabular format. It provides various configuration options for customization. The Spreadsheet can load data by importing Excel and CSV files or by binding local and remote data sources, such as JSON, RESTful services, and OData services. The populated data can be exported in XLSX, XLS, CSV, and PDF formats.
 

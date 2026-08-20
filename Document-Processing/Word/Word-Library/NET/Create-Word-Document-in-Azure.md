@@ -1,12 +1,12 @@
 ---
-title: Create Word document in Microsoft Azure | Syncfusion
-description: Learn how to create a Word document in Azure services using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library in C#.
+title: Create Word document in Azure | Syncfusion
+description: This section illustrates how to create Word documents in Azure services using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Create Word document in Microsoft Azure
+# Create Word document in Azure
 
 Syncfusion<sup>&reg;</sup> Essential<sup>&reg;</sup> DocIO is a [.NET Word (DocIO) library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and convert Word documents programmatically without Microsoft Word or interop dependencies. Using this library, you can **create a Word document in Azure services** within a few lines of code.
 

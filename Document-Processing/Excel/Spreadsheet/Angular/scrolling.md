@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Scrolling in Angular Spreadsheet | Syncfusion
+description: Scrolling in Angular Spreadsheet enables smooth navigation across rows and columns, helping users efficiently view and manage large datasets.
 platform: document-processing
 control: Index
 documentation: ug
 ---
 
-# Scrolling in Angular Spreadsheet component
+# Scrolling in Angular Spreadsheet 
 
 Scrolling lets you move quickly across the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowscrolling) property to `true`.
 

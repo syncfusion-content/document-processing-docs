@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction in mobile view in React PDF Viewer | Syncfusion
-description: Learn how to apply redactions in mobile view using the Syncfusion React PDF Viewer with a complete toolbar setup and redaction workflow.
+title: Mobile View in React PDF Viewer | Syncfusion
+description: Apply redactions in the React PDF Viewer on mobile devices, with a complete mobile toolbar setup and a redaction workflow you can copy.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Redaction in mobile view in React PDF Viewer
+# Redaction in Mobile View in React PDF Viewer
 
 ## Overview
 

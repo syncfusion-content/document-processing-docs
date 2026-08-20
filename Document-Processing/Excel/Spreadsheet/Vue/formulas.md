@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Formulas in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formulas in Vue Spreadsheet | Syncfusion
+description: Perform calculations and data analysis using built-in formulas in the Syncfusion Vue Spreadsheet component.
 control: Formulas
 platform: document-processing
 documentation: ug
 ---
 
-# Formulas in Vue Spreadsheet component
+# Formulas in Vue Spreadsheet
 
 Formulas are used to calculate the data in a worksheet. You can refer to a cell reference from the same sheet or from different sheets.
 

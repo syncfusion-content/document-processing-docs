@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Annotation Toolbar  in Vue PDF Viewer component | Syncfusion
-description: Learn how to customize the annotation toolbar in the Syncfusion Vue PDF Viewer component. Show/hide the toolbar and choose which tools to display and in what order.
+title: Annotation Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the annotation toolbar in the Vue PDF Viewer to show, hide, or replace the default annotation actions for your users.
 platform: document-processing
-control: Annotation Toolbar Customization
-publishingplatform: PDF Viewer
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation Toolbar Customization in Vue
+# Customize the Annotation Toolbar in Vue PDF Viewer
 
 The annotation toolbar can be customized by showing or hiding default items and by controlling the order in which they appear.
 

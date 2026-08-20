@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations API in TypeScript PDF Viewer | Syncfusion
-description: Learn how to read and configure annotations using APIs in the Syncfusion TypeScript PDF Viewer.
+title: Annotations Api in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use the annotations API in the JavaScript (ES6) PDF Viewer to read, add, update, and delete annotations programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations API in TypeScript PDF Viewer
+# Annotations API in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides APIs to read the loaded annotations and to configure global defaults for creating/editing annotations.
 
@@ -275,6 +275,7 @@ const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 
+// customStampImageSource must be a valid image URL or a properly base64-encoded PNG.
 pdfviewer.customStamp = [
   {
     customStampName: 'Sample',
@@ -493,11 +494,11 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 
 pdfviewer.enableMultiPageAnnotation = true;
 
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 {% endhighlight %}
 {% endtabs %}
 
@@ -607,11 +608,11 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 
 pdfviewer.enableTextMarkupResizer = true;
 
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 {% endhighlight %}
 {% endtabs %}
 
@@ -823,11 +824,11 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 
 pdfviewer.isAnnotationToolbarVisible = true;
 
 pdfviewer.appendTo('#PdfViewer');
-pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/FormDesigner.pdf';
 {% endhighlight %}
 {% endtabs %}
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Worksheet in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Worksheet in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Worksheet in Angular Spreadsheet | Syncfusion
+description: Worksheets in Angular Spreadsheet enable users to organize, manage, and work with multiple sheets within a single workbook.
 platform: document-processing
 control: Worksheet
 documentation: ug
 ---
 
-# Worksheet in Angular Spreadsheet component
+# Worksheet in Angular Spreadsheet 
 
 Worksheet is a collection of cells organized in the form of rows and columns that allows you to store, format, and manipulate the data.
 
