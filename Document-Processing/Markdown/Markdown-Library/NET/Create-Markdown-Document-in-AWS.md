@@ -15,7 +15,7 @@ N> If this is your first time working with Amazon Web Services (AWS), refer to t
 ## Prerequisites
 
 * An active **Amazon Web Services (AWS) account** is required. If you don't have one, please [create an account](https://aws.amazon.com/) before starting. Ensure your IAM user has the permissions required to deploy and invoke the target AWS service (Lambda or Elastic Beanstalk).
-* **Visual Studio 2022** (or later) with the **.NET Core cross-platform development** workload, and a supported **.NET Core / .NET** SDK. Download it from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
+* **Visual Studio 2022** (or later) with the **.NET Core cross-platform development** workload, and a supported **.NET Core / .NET** SDK. Download it from [visual studio](https://visualstudio.microsoft.com/).
 
 ## Supported AWS services
 
@@ -31,12 +31,12 @@ Amazon Web Services (AWS)<br/></th><th>
 NuGet package name<br/></th></tr></thead>
 <tr>
 <td>
-AWS Lambda<br/></td><td>
+{{'[AWS Lambda](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-aws-lambda)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/> 
 </td></tr>
 <tr>
 <td>
-AWS Elastic Beanstalk<br/></td><td>
+{{'[AWS Elastic Beanstalk](https://help.syncfusion.com/document-processing/markdown/markdown-library/net/create-markdown-document-in-aws-elastic-beanstalk)' | markdownify}} <br/></td><td>
 {{'[Syncfusion.Markdown](https://www.nuget.org/packages/Syncfusion.Markdown)' | markdownify}}<br/> 
 </td></tr>
 </table>
