@@ -10,6 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Add Save Button in Toolbar in JavaScript DOCX Editor
 
+
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/customtoolbaritemmodel) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/javascript/documentation/api/toolbar/clickeventargs).

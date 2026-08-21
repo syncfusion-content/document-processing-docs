@@ -38,6 +38,7 @@ Make sure you build the project using the Build > Build Solution menu command be
 
 **Step 6:** Navigate to Document Editor Web API control `http://ej2-documenteditor-server20200514102909.azurewebsites.net/api/documenteditor`. It returns the default GET method response.
 
+
 Append the app service running URL `http://ej2-documenteditor-server20200514102909.azurewebsites.net/api/documenteditor` to the service URL in the client-side Document Editor control. For more information about how to get started with the Document Editor control, refer to this [`getting started page`](../getting-started).
 
 For more information about the app container service, refer to the [`Azure App Service`](https://docs.microsoft.com/en-us/visualstudio/deployment/) for a production-ready setup.
