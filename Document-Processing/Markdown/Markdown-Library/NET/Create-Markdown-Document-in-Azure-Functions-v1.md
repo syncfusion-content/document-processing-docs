@@ -168,7 +168,7 @@ Step 10: Click the **Create** button.
 
 Step 11: After creating the **App Service**, click the **Finish** button.
 
-![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
+![Creating app service](Azure-Images/Functions-v1/App-Create-Markdown-Document.png)
 
 Step 12: Click the **Publish** button.
 
