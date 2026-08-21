@@ -148,7 +148,7 @@ Step 2: Select **Create a new application environment** as the **Deployment Targ
 
 Step 3: Choose the **Environment Name** from the dropdown list. The **URL** is assigned automatically; verify that the URL is available. If it is available, click **Next**; otherwise, change the **URL**.
 
-![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-Word-Document.png)
+![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Create-Markdown-Document.png)
 
 Step 4: Select **t3a.micro** as the instance type from the dropdown list (sufficient for this lightweight Markdown workload; choose a larger instance for heavier document generation). Configure the platform branch to match your target .NET runtime, then click **Next**.
 
