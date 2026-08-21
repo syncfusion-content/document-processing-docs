@@ -10,22 +10,20 @@ domainurl: ##DomainURL##
 
 # Text Format in JavaScript DOCX Editor
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports several formatting options for text such as bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
-The bold formatting for selected text can be get or set by using the following sample code.
+The bold formatting for selected text can be retrieved or set by using the following sample code.
 
 ```js
-
-//Gets the value for bold formatting of selected text.
-let bold = documenteditor.selection.characterFormat.bold;
-//Sets bold formatting for selected text.
+// Gets the value for bold formatting of selected text.
+var bold = documenteditor.selection.characterFormat.bold;
+// Sets bold formatting for selected text.
 documenteditor.selection.characterFormat.bold = true;
-
 ```
 
-You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the bold formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```js
 documenteditor.editor.toggleBold();
@@ -33,16 +31,16 @@ documenteditor.editor.toggleBold();
 
 ## Italic
 
-The Italic formatting for selected text can be get or set by using the following sample code.
+The italic formatting for selected text can be retrieved or set by using the following sample code.
 
 ```js
-//Gets the value for italic formatting of selected text.
+// Gets the value for italic formatting of selected text.
 var italic = documenteditor.selection.characterFormat.italic;
-//Sets italic formatting for selected text.
-documenteditor.selection.characterFormat.italic = true|false;
+// Sets italic formatting for selected text.
+documenteditor.selection.characterFormat.italic = true;
 ```
 
-You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
+You can toggle the italic formatting based on the existing value at the selection. Refer to the following sample code.
 
 ```js
 documenteditor.editor.toggleItalic();
@@ -50,16 +48,16 @@ documenteditor.editor.toggleItalic();
 
 ## Underline property
 
-The underline style for selected text can be get or set by using the following sample code.
+The underline style for selected text can be retrieved or set by using the following sample code.
 
 ```js
-//Gets the value for underline formatting of selected text.
+// Gets the value for underline formatting of selected text.
 var underline = documenteditor.selection.characterFormat.underline;
-//Sets underline formatting for selected text.
-documenteditor.selection.characterFormat.underline = 'Single' | 'None';
+// Sets underline formatting for selected text.
+documenteditor.selection.characterFormat.underline = 'Single';
 ```
 
-You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the underline style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```js
 documenteditor.editor.toggleUnderline('Single');
@@ -67,16 +65,16 @@ documenteditor.editor.toggleUnderline('Single');
 
 ## Strikethrough property
 
-The strikethrough style for selected text can be get or set by using the following sample code.
+The strikethrough style for selected text can be retrieved or set by using the following sample code.
 
 ```js
-//Gets the value for strikethrough formatting of selected text.
+// Gets the value for strikethrough formatting of selected text.
 var strikethrough = documenteditor.selection.characterFormat.strikethrough;
-//Sets strikethrough formatting for selected text.
-documenteditor.selection.characterFormat.strikethrough = 'Single' | 'Normal';
+// Sets strikethrough formatting for selected text.
+documenteditor.selection.characterFormat.strikethrough = 'Single';
 ```
 
-You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
+You can toggle the strikethrough style of selected text based on the existing value at the selection by specifying a value. Refer to the following sample code.
 
 ```js
 documenteditor.editor.toggleStrikethrough();
@@ -87,9 +85,9 @@ documenteditor.editor.toggleStrikethrough();
 The selected text can be made superscript by using the following sample code.
 
 ```js
-//Gets the value for baselineAlignment formatting of selected text.
+// Gets the value for baselineAlignment formatting of selected text.
 var baselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
-//Sets baselineAlignment formatting for selected text.
+// Sets baselineAlignment formatting for selected text.
 documenteditor.selection.characterFormat.baselineAlignment = 'Superscript';
 ```
 
@@ -104,9 +102,9 @@ documenteditor.editor.toggleSuperscript();
 The selected text can be made subscript by using the following sample code.
 
 ```js
-//Gets the value for baselineAlignment formatting of selected text.
+// Gets the value for baselineAlignment formatting of selected text.
 var baselineAlignment = documenteditor.selection.characterFormat.baselineAlignment;
-//Sets baselineAlignment formatting for selected text.
+// Sets baselineAlignment formatting for selected text.
 documenteditor.selection.characterFormat.baselineAlignment = 'Subscript';
 ```
 
@@ -116,7 +114,7 @@ Toggle the selected text as subscript or normal using the following sample code.
 documenteditor.editor.toggleSubscript();
 ```
 
-You can make a subscript or superscript text as normal using the following code.
+You can reset subscript or superscript text to normal using the following code.
 
 ```js
 documenteditor.selection.characterFormat.baselineAlignment = 'Normal';
@@ -124,20 +122,20 @@ documenteditor.selection.characterFormat.baselineAlignment = 'Normal';
 
 ## Change case
 
-You can apply different case formatting based on the selected text. Refer to the following sample code.
+You can apply different case formatting to the selected text. Refer to the following sample code.
 
 ```js
-documenteditor.editor.changeCase('Uppercase'|'Lowercase'|'SentenceCase'|'ToggleCase'|'CapitalizeEachWord');
+documenteditor.editor.changeCase('Uppercase');
 ```
 
 ## Size
 
-The size of selected text can be get or set using the following code.
+The size of selected text can be retrieved or set using the following code.
 
 ```js
-//Gets the value for fontSize formatting of selected text.
+// Gets the value for fontSize formatting of selected text.
 var fontSize = documenteditor.selection.characterFormat.fontSize;
-//Sets fontSize formatting for selected text.
+// Sets fontSize formatting for selected text.
 documenteditor.selection.characterFormat.fontSize = 32;
 ```
 
@@ -150,56 +148,56 @@ In the Document Editor, the Text Properties pane features two icons for managing
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
 
-This Font Color option appear as follows.
+This Font Color option appears as follows.
 
 ![Font Color](images/fontColor.PNG)
 
 ### Change Font Color by Code
 
-The color of selected text can be get or set using the following code.
+The color of selected text can be retrieved or set using the following code.
 
 ```js
-//Gets the value for fontColor formatting of selected text.
+// Gets the value for fontColor formatting of selected text.
 var fontColor = documenteditor.selection.characterFormat.fontColor;
-//Sets fontColor formatting for selected text.
+// Sets fontColor formatting for selected text.
 documenteditor.selection.characterFormat.fontColor = 'Pink';
 documenteditor.selection.characterFormat.fontColor = '#FFC0CB';
 ```
 
 ## Font
 
-The font style of selected text can be get or set using the following sample code.
+The font style of selected text can be retrieved or set using the following sample code.
 
 ```js
-//Gets the value for fontFamily formatting of selected text.
-var baselineAlignment = documenteditor.selection.characterFormat.fontFamily;
-//Sets fontFamily formatting for selected text.
+// Gets the value for fontFamily formatting of selected text.
+var fontFamily = documenteditor.selection.characterFormat.fontFamily;
+// Sets fontFamily formatting for selected text.
 documenteditor.selection.characterFormat.fontFamily = 'Arial';
 ```
 
 ## Highlight color
 
-The highlight color of the selected text can be get or set using the following sample code.
+The highlight color of the selected text can be retrieved or set using the following sample code.
 
 ```js
-//Gets the value for highlightColor formatting of selected text.
+// Gets the value for highlightColor formatting of selected text.
 var highlightColor = documenteditor.selection.characterFormat.highlightColor;
-//Sets highlightColor formatting for selected text.
+// Sets highlightColor formatting for selected text.
 documenteditor.selection.characterFormat.highlightColor = 'Pink';
 ```
 
-N> 1. Character scaling and spacing present in the input Word document will be preserved in the exported Word document. N> 2. Scaling is implemented using the letterSpacing property, which may present compatibility problems. For more information, please refer to this [link](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing#browser_compatibility)
+N> 1. Character scaling and spacing present in the input Word document are preserved in the exported Word document.
+N> 2. Scaling is implemented using the letterSpacing property, which may present compatibility problems. For more information, please refer to this [link](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/letterSpacing#browser_compatibility).
 
 ## Bidirectional
 
-The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can get or set this property using the following code example.
+The bidi property controls whether selected text is displayed as right-to-left (RTL) or left-to-right (LTR) for proper multilingual formatting. You can retrieve or set this property using the following code example.
 
 ```js
-// Get Bidi value of selected text
+// Gets the value for bidi of selected text.
 var bidi = documenteditor.selection.characterFormat.bidi;
- 
-// Set Bidi for selected text
-documenteditor.selection.characterFormat.bidi= true;
+// Sets bidi for selected text.
+documenteditor.selection.characterFormat.bidi = true;
 ```
 
 ## Toolbar with options for text formatting

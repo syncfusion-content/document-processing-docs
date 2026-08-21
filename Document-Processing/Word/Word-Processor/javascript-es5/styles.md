@@ -14,7 +14,7 @@ Styles are useful for applying a set of formatting consistently throughout the d
 
 ## Styles definition overview
 
-A Style in Document Editor should have the following properties:
+A style in Document Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -24,17 +24,17 @@ A Style in Document Editor should have the following properties:
 * **paragraphFormat**: Specifies the properties of paragraph style.
 * **basedOn**: Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
 
-> The style type should match the inherited style type. For example, it is not possible to have a character style inherit a paragraph style.
+N> The style type should match the inherited style type. For example, it is not possible to have a character style inherit a paragraph style.
 
 ## Default style
 
-The default style for span and paragraph properties is normal. It internally inherits the default style of the document loaded or Document Editor component.
+The default style for span and paragraph properties is Normal. It internally inherits the default style of the loaded document or the Document Editor component.
 
 ## Style hierarchy
 
-Each style initially checks its local value for the property that is being evaluated and turns to the style it is based on. If no local value is found, it turns to its default style.
+Each style initially checks its local value for the property that is being evaluated, and falls back to the style it is based on. If no local value is found, it falls back to its default style.
 
-Style inheritance of different styles are listed as follows:
+Style inheritance of different styles is listed as follows:
 
 ### Character style
 
@@ -54,7 +54,7 @@ When a paragraph style is based on a linked style, the inheritance of the proper
 
 ### Linked style
 
-Linked styles are composite styles and their components are paragraph and character styles with link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from linked character style. Linked styles are based on other linked styles or on paragraph styles.
+Linked styles are composite styles and their components are paragraph and character styles with a link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from the linked character style. Linked styles are based on other linked styles or on paragraph styles.
 
 When a linked style is based on a paragraph style, the hierarchy of the properties is as follows:
 
@@ -68,7 +68,7 @@ When a linked style is based on another linked style, the hierarchy of the prope
 
 ## Defining new styles
 
-New Styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to the parts of a document.
+New styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to document content.
 
 ### Defining a character style
 
@@ -76,7 +76,7 @@ The following example shows how to programmatically create a character style.
 
 ```javascript
 
-//Initialize Document Editor component.
+// Initialize Document Editor component.
 var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true, isReadOnly: false, enableSelection: true });
 
 // Create custom style object.
@@ -94,7 +94,7 @@ var styleJson = {
     }
 };
 
-//Created new style using `createStyle` method.
+// Created new style using `createStyle` method.
 documentEditor.editor.createStyle(JSON.stringify(styleJson));
 ```
 
@@ -104,7 +104,7 @@ The following example shows how to programmatically create a paragraph style.
 
 ```javascript
 
-//Initialize Document Editor component.
+// Initialize Document Editor component.
 var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true, isReadOnly: false, enableSelection: true });
 
 // Create custom style object.
@@ -133,82 +133,82 @@ var styleJson = {
     }
 };
 
-//Created new style using `createStyle` method.
+// Created new style using `createStyle` method.
 documentEditor.editor.createStyle(JSON.stringify(styleJson));
 ```
 
 ### Defining a linked style
 
-The following example shows how to programmatically create linked style.
+The following example shows how to programmatically create a linked style.
 
 ```javascript
 
-//Initialize Document Editor component.
-var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true,isReadOnly: false, enableSelection: true });
+// Initialize Document Editor component.
+var documentEditor = new ej.documenteditor.DocumentEditor({ enableEditor: true, isReadOnly: false, enableSelection: true });
 
 // Create custom style object.
 var styleJson = {
-    "type": "Paragraph",
-    "name": "New Linked",
-    "basedOn": "Normal",
-    "next": "Normal",
-    "link": "New Linked Char",
-    "characterFormat": {
-        "fontSize": 16.0,
-        "fontFamily": "Calibri Light",
-        "fontColor": "#2F5496"
-    },
-    "paragraphFormat": {
-        "leftIndent": 0.0,
-        "rightIndent": 0.0,
-        "firstLineIndent": 0.0,
-        "beforeSpacing": 12.0,
-        "afterSpacing": 0.0,
-        "lineSpacing": 1.0791666507720947,
-        "lineSpacingType": "Multiple",
-        "textAlignment": "Left",
-        "outlineLevel": "Level1"
-    }
+    "type": "Paragraph",
+    "name": "New Linked",
+    "basedOn": "Normal",
+    "next": "Normal",
+    "link": "New Linked Char",
+    "characterFormat": {
+        "fontSize": 16.0,
+        "fontFamily": "Calibri Light",
+        "fontColor": "#2F5496"
+    },
+    "paragraphFormat": {
+        "leftIndent": 0.0,
+        "rightIndent": 0.0,
+        "firstLineIndent": 0.0,
+        "beforeSpacing": 12.0,
+        "afterSpacing": 0.0,
+        "lineSpacing": 1.0791666507720947,
+        "lineSpacingType": "Multiple",
+        "textAlignment": "Left",
+        "outlineLevel": "Level1"
+    }
 };
 
-//Created new style using `createStyle` method.
+// Created new style using `createStyle` method.
 documentEditor.editor.createStyle(JSON.stringify(styleJson));
 ```
 
 ## Applying a style
 
-The styles are applied using the **applyStyle** method of **editorModule**, the parameter should be passed is the **Name** of the Style.
+The styles are applied using the **applyStyle** method of **editorModule**; the parameter to pass is the **Name** of the style.
 
-The styles of the **Character** type is applied to the currently selected part of the document. If there is no selection, the values that will be applied to the word at caret position. The styles of **Paragraph** type follow the same logic and are applied to all paragraphs in the selection or the current paragraph.
+The styles of the **Character** type are applied to the currently selected part of the document. If there is no selection, the values are applied to the word at the caret position. The styles of **Paragraph** type follow the same logic and are applied to all paragraphs in the selection or the current paragraph.
 
-When there is no selection, styles of **Linked** type will change the values of the paragraph, and apply both the Paragraph and Character properties. When there is selection, Linked Style changes only the character properties of the selected text.
+When there is no selection, styles of the **Linked** type change the values of the paragraph and apply both the Paragraph and Character properties. When there is a selection, the Linked style changes only the character properties of the selected text.
 
-For example, the following line will apply the "New Linked" to the current paragraph.
+For example, the following line applies the "New Linked" style to the current paragraph.
 
 ```javascript
-//Apply specified style for selected paragraph.
+// Apply the specified style to the selected paragraph.
 editor.editorModule.applyStyle('New Linked');
 
-//Clear direct formatting and apply the specified style
+// Clear direct formatting and apply the specified style.
 editor.editorModule.applyStyle('New Linked', true);
 ```
 
 ## Get Styles
 
-You can get the styles in the document using the below code snippet.
+You can get the styles in the document using the following code snippet.
 
 ```js
-//Get paragraph styles
+// Get paragraph styles
 var paragraphStyles = documentEditor.getStyles('Paragraph');
-//Get character styles
-var paragraphStyles = documentEditor.getStyles('Character');
+// Get character styles
+var characterStyles = documentEditor.getStyles('Character');
 ```
 
 ## Modify an existing style
 
-You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+You can modify an existing style with the specified style properties using the [`createStyle`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#createStyle) method. If the `modifyExistingStyle` parameter is set to `true`, the style properties are updated in the existing style.
 
-The following illustrate to modify an existing style.
+The following illustrates how to modify an existing style.
 
 ```js
 var styleJson = {
@@ -219,12 +219,12 @@ var styleJson = {
         "fontFamily": "Calibri"
     }
 };
-documentEditor.editor.createStyle(styleName, true);
+documentEditor.editor.createStyle(JSON.stringify(styleJson), true);
 ```
 
-> If modifyExistingStyle parameter is set to true and a style already exists with same name, it modifies the specified properties in the existing style.
-> If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
-> If no style exists with same name, it creates a new style.
+N> 1. If the `modifyExistingStyle` parameter is set to `true` and a style already exists with the same name, it modifies the specified properties in the existing style.
+N> 2. If the `modifyExistingStyle` parameter is set to `false` and a style already exists with the same name, it creates a new style with a unique name by appending `_1`. Hence, the new style will not have the specified name.
+N> 3. If no style exists with the same name, it creates a new style.
 
 ## Online Demo
 
