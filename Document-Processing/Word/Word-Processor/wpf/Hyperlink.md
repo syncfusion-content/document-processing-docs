@@ -4,12 +4,18 @@ description: The hyperlink feature in WPF DOCX Editor offers hyperlink field sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: hyperlink
+keywords: hyperlink,insert-hyperlink,screen-tip,request-navigate
 ---
 # Hyperlinks in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports hyperlink field similar to the Microsoft Word. You can link part of the document content to Internet or file location, mail address or any text.
+The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports hyperlink fields similar to Microsoft Word. You can link part of the document content to the Internet, a file location, an email address, or any other text.
+
+## Insert hyperlink
+
 The following code example illustrates how to insert a hyperlink field.
+
+A HYPERLINK field consists of five parts: [FieldBeginAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FieldBeginAdv.html), the field code text in a [SpanAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SpanAdv.html), [FieldSeparatorAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FieldSeparatorAdv.html), the field result text in another [SpanAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SpanAdv.html), and [FieldEndAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FieldEndAdv.html).
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:ParagraphAdv>
@@ -70,7 +76,7 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to insert hyperlink field into SfRichTextBoxAdv Document through UI command.
+The following code example illustrates how to insert hyperlink field into SfRichTextBoxAdv Document through the [InsertHyperlinkCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_InsertHyperlinkCommand) UI command. The `CommandParameter` accepts a URL string that the hyperlink will point to.
 {% tabs %}
 {% highlight xaml %}
 <Button Content="Insert Hyperlink" Command="RichTextBoxAdv:SfRichTextBoxAdv.InsertHyperlinkCommand" CommandTarget="{Binding ElementName=richTextBoxAdv}" CommandParameter="www.google.com"/>
@@ -82,11 +88,13 @@ The following code example illustrates how to insert hyperlink field into SfRich
 
 ## Hyperlink ScreenTip
 
-In RichTextBox control ToolTip (ScreenTip) shows some information or navigation link, when the mouse hovers over that hyperlink and it disappears when the mouse is moved away from that hyperlink. By default, it shows navigation link of that hyperlink and you can set the text you want to use for your ScreenTip.
+In the SfRichTextBoxAdv control, a ToolTip (ScreenTip) shows additional information, such as the navigation link, when the mouse hovers over a hyperlink, and disappears when the mouse moves away. "ScreenTip" is the WPF RichTextBoxAdv term for the hyperlink tooltip; the underlying WPF `ToolTip` is used to display it. By default, it shows the navigation link of that hyperlink, and you can set the text you want to use for the ScreenTip.
+
+N> In the HYPERLINK field code, the optional switch `\o "<text>"` sets the ScreenTip text for the hyperlink.
 
 <table><tr><td>Without ScreenTipText</td><td>With ScreenTipText</td></tr><tr><td><img src="Hyperlink_images/screentip_ug1.PNG" alt="Hyperlink_images1"/></td><td><img src="Hyperlink_images/screentip_ug2.PNG" alt="Hyperlink_images2"/></td></tr></table>
 
-The following code example illustrates how to insert a hyperlink field with ScreenTip.
+The following code example illustrates how to insert a hyperlink field with a ScreenTip.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:ParagraphAdv>
@@ -149,6 +157,11 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 {% endtabs %}
 
 The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
+
+### Insert with ScreenTip via UI command
+
+The `string[3]` parameter array contains the URL, the display text, and the ScreenTip text, in that order.
+
 {% tabs %}
 {% highlight C# %}
 SfRichTextBoxAdv.InsertHyperlinkCommand.Execute(new string[3] { "www.syncfusion.com", "SfRichTextBoxAdv", "SfRichTextBox" }, richTextBoxAdv);
@@ -175,7 +188,7 @@ The following section illustrates how to insert hyperlink field with ScreenTip i
 
 ![Adding Hyperlink to WPF RichTextBox](Hyperlink_images/wpf-richtextbox-insert-hyperlink.PNG)
 
-In the SfRichTextBoxAdv control, ToolTip (ScreenTip) will be shown by default when the mouse hovers over that hyperlink. You can disable ToolTip by using the [DisplayScreenTips](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_DisplayScreenTips) property of [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class.
+In the SfRichTextBoxAdv control, the ToolTip (ScreenTip) is shown by default when the mouse hovers over a hyperlink. You can disable the ToolTip by setting the [DisplayScreenTips](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_DisplayScreenTips) property of the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. Set it to `false` to disable the ScreenTip; the default is `true`.
 
 The following code example illustrates how to disable the ToolTip of the hyperlink.
 
@@ -202,10 +215,14 @@ richTextBoxAdv.EditorSettings.DisplayScreenTips = False
 
 N> ScreenTip option is supported from V18.4.0.30
 
-## Hyperlink Navigation
+## Hyperlink navigation
 
-The SfRichTextBoxAdv supports event to identify whenever hyperlink navigation is requested. This allows you to easily customize the hyperlink navigation functionality.
+The SfRichTextBoxAdv supports an event that is raised when hyperlink navigation is requested. You can use this event to customize hyperlink navigation.
+
+The [RequestNavigate](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_RequestNavigate) event provides the [RequestNavigateEventArgs](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.RequestNavigateEventArgs.html) which exposes the [Hyperlink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.Hyperlink.html) being navigated to. The following example demonstrates how to handle this event.
+
 The following code example demonstrates how to customize hyperlink navigation functionality for the SfRichTextBoxAdv instance.
+
 {% tabs %}
 {% highlight c# %}
 // Hooks the event handler for RequestNavigate event.
@@ -223,6 +240,8 @@ private void RichTextBoxAdv_RequestNavigate(object obj, Syncfusion.Windows.Contr
     else if (args.Hyperlink.LinkType == HyperlinkType.File && File.Exists(args.Hyperlink.NavigationLink))
          Process.Start(args.Hyperlink.NavigationLink);
 }
+
+N> The available [HyperlinkType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.HyperlinkType.html) values are `Webpage`, `Email`, `File` and  `Bookmark`. The [NavigationLink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.Hyperlink.html#Syncfusion_Windows_Controls_RichTextBoxAdv_Hyperlink_NavigationLink) property contains the destination of the hyperlink as a string.
 
 // Unhooks the event handler for RequestNavigate event.
 richTextBoxAdv.RequestNavigate -= RichTextBoxAdv_RequestNavigate;
@@ -254,4 +273,10 @@ RemoveHandler richTextBoxAdv.RequestNavigate, AddressOf RichTextBoxAdv_RequestNa
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
+## See also
+
+- [Selection in WPF RichTextBox](./Selection)
+- [Commands in WPF RichTextBox](./Commands)
+- [Document Structure in WPF RichTextBox](./Document-Structure)
