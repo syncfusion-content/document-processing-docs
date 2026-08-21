@@ -14,19 +14,19 @@ In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
 
 A style in a document should have the following properties:
 
-**Name** – Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
+**Name** â€“ Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 
-**Type** – Specifies the document elements that the style will target. For example, paragraph or character.
+**Type** â€“ Specifies the document elements that the style will target. For example, paragraph or character.
 
-**Next** – Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
+**Next** â€“ Specifies the style that will be automatically applied to a new paragraph, which is created following a paragraph with the parent paragraph style applied.
 
-**Link** – Provides a relation between the paragraph and character style.
+**Link** â€“ Provides a relation between the paragraph and character style.
 
-**CharacterFormat** – Specifies the properties of paragraph and character style.
+**CharacterFormat** â€“ Specifies the properties of paragraph and character style.
 
-**ParagraphFormat** – Specifies the properties of paragraph style.
+**ParagraphFormat** â€“ Specifies the properties of paragraph style.
 
-**BasedOn** – Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
+**BasedOn** â€“ Specifies that the current style inherits the style set to this property. This is how hierarchical styles are defined. It can be optional.
 
 N> The style type should match the inherited style type. For example, it is not possible to have a character style inherit a paragraph style.
 
