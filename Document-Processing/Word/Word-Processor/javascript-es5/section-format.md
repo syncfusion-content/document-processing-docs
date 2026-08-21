@@ -10,22 +10,23 @@ domainurl: ##DomainURL##
 
 # Section Format in JavaScript DOCX Editor
 
-[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports various section-format options such as page size, page margins, and more.
 
 ## Page size
 
-You can get or set the size of a section at cursor position by using the following sample code.
+You can get or set the size of a section at the cursor position by using the following sample code.
 
 ```js
 documenteditor.selection.sectionFormat.pageWidth = 500;
 documenteditor.selection.sectionFormat.pageHeight = 600;
 ```
 
-You can change the orientation of the page by swapping the values of page width and height respectively.
+You can change the orientation of the page by swapping the values of page width and height.
 
 ## Page margins
 
-Left and right page margin defines the gap between the document content from left and right side of the page respectively. Top and bottom page margins defines the gap between the document content from header and footer of the page respectively.
+The left and right page margins define the gap between the document content and the left and right sides of the page, respectively. The top and bottom page margins define the gap between the document content and the header and footer of the page, respectively.
+
 Refer to the following sample code.
 
 ```js
@@ -35,11 +36,11 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
->Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+N> The maximum value of a margin is 1584, per the Microsoft Word application, and you can set any value up to 1584 for this property. If you set any value greater than 1584, the Syncfusion Document Editor will automatically reset it to 1584.
 
 ## Header distance
 
-You can define the distance of header content from the top of the page by using the following sample code.
+You can define the distance of the header content from the top of the page by using the following sample code.
 
 ```js
 documenteditor.selection.sectionFormat.headerDistance = 72;
@@ -47,7 +48,7 @@ documenteditor.selection.sectionFormat.headerDistance = 72;
 
 ## Footer distance
 
-You can define the distance of footer content from the bottom of the page by using the following sample code.
+You can define the distance of the footer content from the bottom of the page by using the following sample code.
 
 ```js
 documenteditor.selection.sectionFormat.footerDistance = 72;
@@ -57,7 +58,7 @@ documenteditor.selection.sectionFormat.footerDistance = 72;
 
 You can define the number of columns, column width, and space between columns for the pages in a section.
 
-The following code example illustrates how to define the two columns layout for the pages in a section.
+The following code example illustrates how to define a two-column layout for a section.
 
 ```js
 var column = new ej.documenteditor.SelectionColumnFormat(documenteditor.selection);
@@ -67,27 +68,27 @@ documenteditor.selection.sectionFormat.columns = [column, column];
 documenteditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
-### Online Demo
+### Online demo
 
 Explore how to format Word documents with multiple columns using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/multiple-columns.html).
 
 ## Breaks
 
-You can insert column break. The following code example illustrates how to insert a column break.
+You can insert a column break. The following code example illustrates how to insert a column break.
 
 ```js
 container.documentEditor.editor.insertColumnBreak();
 ```
 
-You can insert next page section break to start the new section on the next page.
+You can insert a next-page section break to start the new section on the next page.
 
-The following code example illustrates how to insert a next page section break.
+The following code example illustrates how to insert a next-page section break.
 
 ```js
 container.documentEditor.editor.insertSectionBreak(SectionBreakType.NewPage);
 ```
 
-You can insert continuous section break to start the new section on the same page.
+You can insert a continuous section break to start the new section on the same page.
 
 The following code example illustrates how to insert a continuous section break.
 
@@ -95,11 +96,11 @@ The following code example illustrates how to insert a continuous section break.
 container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 ```
 
-## Online Demo
+## Online demo
 
 Explore how to apply section formatting in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/section-formatting.html).
 
-## See Also
+## See also
 
 * [Page setup dialog](./dialog#page-setup-dialog)
 * [Column dialog](./dialog#column-dialog)
