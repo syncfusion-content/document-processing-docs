@@ -60,25 +60,27 @@ npm install
 {% endhighlight %}
 {% endtabs %}
 
-## Add CSS references
+## Import the required CSS styles
 
-Add the required Syncfusion styles to `src/styles/styles.css`:
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the required PDF Viewer theme style reference to `src/styles/styles.css`:
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-notifications/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, SplitButtons, and Notifications separately.
 
 N> Refer to the [Themes topic](https://ej2.syncfusion.com/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a TypeScript project.
 
