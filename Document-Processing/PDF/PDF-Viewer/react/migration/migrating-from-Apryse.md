@@ -155,15 +155,18 @@ npm install @syncfusion/ej2-react-pdfviewer
 
 2) Add required CSS and resources
 
-Add the Syncfusion CSS imports to your global stylesheet (e.g., `src/index.css`) and decide whether to use the CDN `resourceUrl` or host `ej2-pdfviewer-lib` locally in `public/`.
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+Install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the Syncfusion CSS import to your global stylesheet (e.g., `src/index.css`) and decide whether to use the CDN `resourceUrl` or host `ej2-pdfviewer-lib` locally in `public/`. The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Inputs, Navigations, and Popups separately.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 To host local resources, copy:
