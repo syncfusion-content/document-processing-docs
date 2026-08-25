@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Universal Ssr in Angular PDF Viewer | Syncfusion
+title: Angular Universal SSR in Angular PDF Viewer | Syncfusion
 description: Learn about the angular universal ssr in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Angular Universal Ssr in Angular PDF Viewer
+# Angular Universal SSR in Angular PDF Viewer
 
 This guide shows how to create an Angular Universal SSR application and integrate the Angular PDF Viewer component.
 
@@ -50,7 +50,7 @@ npm install @syncfusion/ej2-angular-pdfviewer
 
 ### Step 4: Add Syncfusion CSS Imports
 
-Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/angular/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/angular/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/theme).
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/angular/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages).
 
 This guide uses the `Tailwind 3` theme as an example. Install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package:
 
