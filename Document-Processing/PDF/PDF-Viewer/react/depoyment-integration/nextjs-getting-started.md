@@ -100,9 +100,15 @@ yarn add @syncfusion/ej2-react-pdfviewer
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import the required CSS styles
 
-React components include built-in themes. Import the PDF Viewer theme and base styles to match the look and feel of the application.
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
 
 Where to add the imports:
 
@@ -112,18 +118,13 @@ Where to add the imports:
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-/* PDF Viewer theme and base styles */
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+/* PDF Viewer theme */
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, and SplitButtons separately.
 
 N> To learn more about built-in themes and CSS references for individual components, see the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) documentation.
 
