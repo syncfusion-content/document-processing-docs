@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Open a Document in Flutter PDF Viewer | Syncfusion
-description: Learn here all about opening a PDF document in Syncfusion® Flutter PDF Viewer (SfPdfViewer) and more.
+description: The PDF opening feature in SfPdfViewer enables users to load and display PDF documents from various sources with ease.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open a Document in Flutter PDF Viewer (SfPdfViewer)
+# Open a Document in Flutter PDF Viewer
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget allows you to open PDF documents from various sources, like local storage, memory, or URLs using respective constructors. It also lets you view password-protected documents.
 

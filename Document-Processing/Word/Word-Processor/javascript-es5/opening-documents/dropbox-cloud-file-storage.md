@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Documents from Dropbox in JavaScript DOCX Editor | Syncfusion
-description: Learn about how to Open document from Dropbox cloud file storage in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
+description: Open documents from Dropbox cloud storage in JavaScript DOCX Editor, enabling cloud-based file access and document management.
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Syncfusion JavaScript PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for JavaScript PDF Viewer.
+title: Mcp in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Set up the Syncfusion JavaScript (ES5) PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion JavaScript PDF Viewer MCP Server
+# JavaScript (ES5) PDF Viewer MCP Server Setup
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript PDF Viewer MCP Server accelerates JavaScript PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

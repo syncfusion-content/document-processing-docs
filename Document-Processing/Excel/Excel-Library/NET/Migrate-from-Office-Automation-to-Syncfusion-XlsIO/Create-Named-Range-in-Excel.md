@@ -1,12 +1,12 @@
 ---
-title: Create Named Range in Excel | Syncfusion
-description: Explains with an example on how to programmatically create a named range in Excel using Interop and XlsIO.
+title: Named Ranges in .NET Excel Library | Syncfusion
+description: Creating Excel named ranges programmatically explains how to define named ranges using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Create Named Range in Excel
+# Named Ranges in .NET Excel Library
 
 Users can assign names to a specific cell, a range of cells, a function, a constant, or a table. Instead of using the cell reference, you can simply use the name assigned to the cell. By using names, you can make the formulas much easier to understand and maintain.
 

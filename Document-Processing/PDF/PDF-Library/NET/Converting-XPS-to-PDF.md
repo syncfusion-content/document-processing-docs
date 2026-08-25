@@ -1,11 +1,11 @@
 ---
-title: Working with XPS document to PDF Conversion | Syncfusion
-description: This section explains how to converting XPS document to PDF document by using Syncfusion .NET PDF library.
+title: Convert XPS to PDF in .NET | Syncfusion
+description: Learn how to convert XPS documents to PDF format easily using the Syncfusion .NET PDF Library with full feature support.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Converting an XPS Document to PDF
+# Convert XPS to PDF in .NET
 
 The XPS (XML Paper Specification) document format is a fixed-document format that consists of structured XML markup defining the layout of a document and the visual appearance of each page, along with rendering rules for distributing, archiving, rendering, processing, and printing the documents.
 

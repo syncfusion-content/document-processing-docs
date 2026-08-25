@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load password-protected PDFs in Blazor SfPdfViewer | Syncfusion
-description: Learn how Blazor SfPdfViewer opens password-protected PDFs, prompts for passwords, and respects document permissions.
+title: Load password-protected documents in Blazor PDF Viewer | Syncfusion
+description: Learn how Blazor PDF Viewer opens password-protected PDFs, prompts for passwords, and respects document permissions.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Password-protected documents
+# Load password-protected PDFs in Blazor PDF Viewer
 
 Some PDFs require a password to open. When a protected document is loaded, the viewer displays a password prompt automatically.
 

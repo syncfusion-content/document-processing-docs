@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Context Menu in Blazor DOCX Editor | Syncfusion
-description: Learn how to customize the context menu in the Syncfusion Blazor Document Editor component, with real-time scenarios like creating a simple word processor.
+title: How to Customize Context Menu in Blazor DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® Blazor DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Context Menu Customization in Blazor Document Editor Component
+# How to Customize Context Menu in Blazor DOCX Editor
 
 ## How to customize the context menu in the Document Editor
 

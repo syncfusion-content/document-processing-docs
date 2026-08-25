@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Free Text Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Free Text Annotations in .NET MAUI PDF Viewer
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify free text annotations in the PDF document. This is useful for adding text notes, comments, or feedback to the PDF pages. This section explains the functions available in the PDF Viewer for working with free text annotations.
 

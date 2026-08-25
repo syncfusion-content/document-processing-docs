@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in a WinForms App | Syncfusion
-description: Learn how to get started with the SfPdfViewer control in a WinForms Blazor Hybrid App to view, comment on, and fill PDF forms.
+title: Getting Started with Blazor Hybrid WinForms PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Hybrid WinForms App PDF Viewer component. Explore view, comment on and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with the PDF Viewer in a WinForms Blazor Hybrid App
+# Getting Started with Blazor Hybrid WinForms PDF Viewer
 
 This section explains how to add the Blazor SfPdfViewer to a WinForms Blazor Hybrid App using [Visual Studio](https://visualstudio.microsoft.com/vs/) or Visual Studio Code. The result is a desktop (WinForms) application that hosts Blazor UI inside a BlazorWebView control.
 

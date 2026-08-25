@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Unsupported features in Vue DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the Vue Document Editor to understand its limitations.
+title: Unsupported Features in Vue DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in Vue DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Navigation in React PDF Viewer | Syncfusion
-description: Learn about page, bookmark, hyperlink, and thumbnail navigation options in the Syncfusion React PDF Viewer for seamless PDF browsing.
+title: About Syncfusion React PDF Viewer Navigation | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Navigation section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Navigation in React PDF Viewer
+# About Syncfusion React PDF Viewer Navigation
 
 The [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) provides multiple navigation options to help users move through PDF documents efficiently. This section covers all available navigation features.
 

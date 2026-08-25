@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events in JavaScript PDF Viewer Component | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion JavaScript PDF Viewer component and more.
+title: Import Export Events in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the JavaScript (ES5) PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form import and export events in JavaScript
+# Form Field Import and Export Events in JavaScript (ES5) PDF Viewer
 
 Import/export events let users track and customize the lifecycle of form data imported into or exported from the PDF Viewer.
 Use these events to:

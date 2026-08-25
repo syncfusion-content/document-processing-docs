@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Global local in React DOCX Editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in React DOCX Editor | Syncfusion
+description: Global localization in React DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 control: Global local 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in React Document Editor component
+# Globalization and Localization in React DOCX Editor
 
 ## Localization
 <!-- todo -->

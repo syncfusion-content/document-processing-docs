@@ -1,11 +1,11 @@
 ---
 title: Download Syncfusion Java packages from Apache Maven | Syncfusion
-description: This section demonstrates how to configure and download required Jars from Apache Maven (Jar configuration)
+description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: general
 documentation: UG
 ---
-# Configure to download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from Apache Maven
+# Download Syncfusion Java packages from Apache Maven
 
 You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
 

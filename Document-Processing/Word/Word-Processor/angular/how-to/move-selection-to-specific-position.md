@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Move Selection to a Position in Angular DOCX Editor | Syncfusion
-description: Learn here all about Move selection to specific position in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+description: Move the document selection to a specific position in Syncfusion® Angular DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: Move selection to specific position 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Move selection to specific position in Angular Document Editor
+# How to Move Selection to a Position in Angular DOCX Editor
 
 Using [`select`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/selection#select) API in selection module, you can set the cursor position anywhere in the document.
 

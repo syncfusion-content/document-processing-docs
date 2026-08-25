@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation Errors in FileFormats - Syncfusion
-description: Learn here about the common installation errors and solution to those errors in Syncfusion FileFormats Components installation.
+title: Installation Errors in FileFormats in Java Word | Syncfusion
+description: Describe common questions and answers related to HTML and EPUB conversions using the Syncfusion .NET Word library
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 ---
 
 
-# Common Installation Errors
+# Installation Errors in FileFormats in Java Word
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 

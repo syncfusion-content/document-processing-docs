@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Eraser in Angular PDF Viewer Component | Syncfusion
-description: Learn how to use the Ink Eraser tool to remove or correct freehand drawing strokes in the Syncfusion Angular PDF Viewer with UI and programmatic control.
+title: Ink Eraser in Angular PDF Viewer | Syncfusion
+description: Use the Ink Eraser tool in the Angular PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

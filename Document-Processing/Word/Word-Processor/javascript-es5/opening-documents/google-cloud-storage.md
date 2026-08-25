@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Document from Google Cloud in JavaScript DOCX Editor | Syncfusion
-description: Learn about how to Open document from Google Cloud Storage in JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more details.
+description: Open documents from Google Cloud Storage in JavaScript DOCX Editor, enabling reliable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug

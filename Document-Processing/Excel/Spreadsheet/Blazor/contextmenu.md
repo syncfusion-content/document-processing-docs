@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Context Menu in Blazor Spreadsheet component | Syncfusion
-description: Explore the context menu for cells, rows, columns, and sheet tabs in the Syncfusion Blazor Spreadsheet component.
+title: Context Menu in Blazor Spreadsheet | Syncfusion
+description: Learn how to use and customize context menus for cells, rows, columns, and sheets in the Syncfusion Blazor Spreadsheet.
 control: Spreadsheet
 documentation: ug
 ---
 
-# Context Menu in Blazor Spreadsheet component
+# Context Menu in Blazor Spreadsheet
 
 The context menu enhances interaction with the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component by displaying a popup with relevant operations when a right-click is performed on elements such as **cells**, **column headers**, **row headers**, or **sheet tabs**. Set [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableContextMenu) to control visibility. The default value is **true**.
 

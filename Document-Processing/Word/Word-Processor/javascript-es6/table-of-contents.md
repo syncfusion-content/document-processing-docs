@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table of contents in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Table of contents in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Table of Contents in TypeScript DOCX Editor | Syncfusion
+description: The Table of Contents feature in TypeScript DOCX Editor enables users to generate and update a structured index for quick document navigation.
 platform: document-processing
 control: Table of contents 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Table of contents in JavaScript (ES6) Document Editor control
+# Table of Contents in TypeScript DOCX Editor
 
 The table of contents in a document is the same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number where that heading starts, with various options to customize the appearance.
 

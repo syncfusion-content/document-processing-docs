@@ -1,12 +1,12 @@
 ---
-title: Working with List in .NET Word (DocIO) library | Syncfusion
-description: Learn how to work with list in a Word document using the .NET Word (DocIO) library, without Microsoft Word.
+title: List in .NET Word library in .NET | Syncfusion
+description: Describe how to create and customize numbered and bulleted lists in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Working with Lists in the Word Library
+# List in .NET Word library in .NET
 
 Lists can organize and format the contents of a document in hierarchical way. There are nine levels in the list, starting from level 0 to level 8. DocIO supports both built-in list styles and custom list styles. The following are the types of list supported in DocIO: 
 

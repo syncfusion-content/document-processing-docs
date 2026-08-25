@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Insert text or image in a table in React DOCX Editor | Syncfusion
-description: Learn here all about Insert text or image in table programmatically in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Insert Text or Image in Table in React DOCX Editor | Syncfusion
+description: Insert text, paragraphs, and rich text content at the current cursor position in Syncfusion® React DOCX Editor using document editing APIs.
 control: Insert text or image in table programmatically
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Insert text or image in a table in React Document Editor
+# How to Insert Text or Image in Table in React DOCX Editor
 
 Using [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) APIs, you can insert [`text`](../how-to/insert-text-in-current-position#insert-text-in-current-cursor-position) or [`image`](../image#images) in a [`table`](../table#create-a-table) programmatically based on your requirement.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Editing in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Editing in TypeScript Spreadsheet | Syncfusion
+description: Editing in TypeScript Spreadsheet allows users to update cell values, formulas, and content efficiently for accurate data management.
 platform: document-processing
 control: Editing
 documentation: ug
 ---
 
-# Editing in EJ2 TypeScript Spreadsheet control
+# Editing in TypeScript Spreadsheet 
 
 You can edit the contents of a cell directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the spreadsheet. Use the [`allowEditing`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowediting) property to enable or disable the editing feature.
 

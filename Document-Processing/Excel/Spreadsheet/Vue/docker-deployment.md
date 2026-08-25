@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Docker image deployment in Vue Spreadsheet component | Syncfusion
-description: Learn here all about Docker image deployment in Syncfusion Vue Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Docker Deployment in Vue Spreadsheet | Syncfusion
+description: Learn how to deploy the Syncfusion Vue Spreadsheet application using Docker containers for scalable and consistent environments.
 platform: document-processing
 control: Docker deployment
 documentation: ug
 ---
 
-# Docker Image Deployment in Vue Spreadsheet Component
+# Docker Deployment in Vue Spreadsheet
 
 The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 
