@@ -87,7 +87,6 @@ TextPosition position = richTextBoxAdv.Document.GetTextPosition("0;0;24");
 
 {% endhighlight %}
 {% highlight VB %}
-'
 ' Gets the text position from the document based on hierarchical index.
 Dim position As TextPosition = richTextBoxAdv.Document.GetTextPosition("0;0;24")
 ' Here text position returned should be first section's first block (which is paragraph) and offset=24.
@@ -442,6 +441,8 @@ Dim isDeleted As Boolean = richTextBoxAdv.Selection.Delete()
 {% endtabs %}
 
 N> This API is supported starting from release version v18.2.0.X.
+
+
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also

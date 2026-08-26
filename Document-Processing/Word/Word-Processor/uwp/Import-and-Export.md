@@ -110,8 +110,8 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-N> When the `SfRichTextBoxAdv` control encounters an unsupported element, it does not render the element. Instead, it continues to the next supported element and renders that. 
-N> Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images.
+N> 1. When the `SfRichTextBoxAdv` control encounters an unsupported element, it does not render the element. Instead, it continues to the next supported element and renders that. 
+N> 2. Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images.
 
 ## Asynchronous loading settings
 
