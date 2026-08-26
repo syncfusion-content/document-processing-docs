@@ -241,8 +241,6 @@ private void RichTextBoxAdv_RequestNavigate(object obj, Syncfusion.Windows.Contr
          Process.Start(args.Hyperlink.NavigationLink);
 }
 
-N> The available [HyperlinkType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.HyperlinkType.html) values are `Webpage`, `Email`, `File` and  `Bookmark`. The [NavigationLink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.Hyperlink.html#Syncfusion_Windows_Controls_RichTextBoxAdv_Hyperlink_NavigationLink) property contains the destination of the hyperlink as a string.
-
 // Unhooks the event handler for RequestNavigate event.
 richTextBoxAdv.RequestNavigate -= RichTextBoxAdv_RequestNavigate;
 
@@ -272,6 +270,9 @@ RemoveHandler richTextBoxAdv.RequestNavigate, AddressOf RichTextBoxAdv_RequestNa
 
 {% endhighlight %}
 {% endtabs %}
+
+N> The available [HyperlinkType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.HyperlinkType.html) values are `Webpage`, `Email`, `File` and  `Bookmark`. The [NavigationLink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.Hyperlink.html#Syncfusion_Windows_Controls_RichTextBoxAdv_Hyperlink_NavigationLink) property contains the destination of the hyperlink as a string.
+
 
 N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
