@@ -18,7 +18,7 @@ N> On Windows Phone devices, the built-in radial menu is not supported.
 
 ## Enable or disable the radial menu
 
-In `SfRichTextBoxAdv`, the built-in radial menu is enabled by default. You can enable or disable the built-in radial menu by setting the [`EnableRadialMenu`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html#enableradialmenu) property. 
+In `SfRichTextBoxAdv`, the built-in radial menu is enabled by default. You can enable or disable the built-in radial menu by setting the [`EnableRadialMenu`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_EnableRadialMenu) property. 
 
 The following code example demonstrates how to disable the built-in radial menu in the `SfRichTextBoxAdv` control.
 
