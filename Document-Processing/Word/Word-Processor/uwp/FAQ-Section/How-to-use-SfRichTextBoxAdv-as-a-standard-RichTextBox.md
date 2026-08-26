@@ -4,7 +4,7 @@ description: Use Syncfusion® UWP DOCX Editor as a standard editor with rich tex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: use-sfrichtextboxadv-like-richtextbox
+keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbar
 ---
 
 # How to Use UWP DOCX Editor as a Standard Editor
@@ -12,7 +12,7 @@ keywords: use-sfrichtextboxadv-like-richtextbox
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <Page
     x:Class="Standard_RichTextBox.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -111,7 +111,12 @@ Use the following code to configure the SfRichTextBoxAdv control as a standard R
 
 {% endtabs %}
 
-When the application is executed, the standard RichTextBox control is displayed as illustrated below.
-![UWP Standard RichTextBox](../Getting-Started_images/uwp-standard-sfrichtextboxadv.png)
+When you run the application, the standard RichTextBox control is displayed as illustrated below.
+![SfRichTextBoxAdv used as a standard RichTextBox with built-in toolbar](../Getting-Started_images/uwp-standard-sfrichtextboxadv.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/UWP-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
+
+## See also
+
+- [UWP RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
+- [UWP RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)
