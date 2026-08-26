@@ -4,46 +4,53 @@ description: Detect when the document viewer reaches the bottom in Syncfusion® 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: scroll-to-bottom
+keywords: scroll-to-bottom,scroll,verticalscrollbar,horizontalscrollbar,scrollbar,scrolling-events
 ---
 
 # How to Detect Scrolling to the Bottom in UWP DOCX Editor
 
-This page explains how to identify whether the viewer is scrolled to the bottom in Syncfusion&reg; UWP SfRichTextBoxAdv.
+This page explains how to identify whether the viewer is scrolled to the bottom in the UWP [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control.
 
-SfRichTextBoxAdv scrollbars can be accessed through the [VerticalScrollBar](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) and [HorizontalScrollBar](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_HorizontalScrollBar) properties of [SfRichTextBoxAdv](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) class. Using these properties, we can identify when the document is scrolled to the bottom of the control. 
+## Detecting scroll-to-bottom
 
-We can use the ValueChanged event of the [VerticalScrollBar](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) for this purpose. Check if the scroll bar's value equals the [VerticalScrollBar](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) Maximum property value, if these values are equal then the vertical scroll bar has been scrolled to the bottom of the control.
+SfRichTextBoxAdv exposes the document scroll bars through the [`VerticalScrollBar`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_VerticalScrollBar) and [`HorizontalScrollBar`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_HorizontalScrollBar) properties of the `SfRichTextBoxAdv` class. Using these properties, you can detect when the document is scrolled to the bottom of the control.
 
-The following code example illustrates to identify whether the viewer is scrolled to the bottom of the SfRichTextBoxAdv.
+Use the `ValueChanged` event of the `VerticalScrollBar` for this purpose. Check whether the scroll bar's value equals the `VerticalScrollBar.Maximum` value; if so, the vertical scroll bar has been scrolled to the bottom of the control.
+
+The following code example illustrates how to identify whether the viewer is scrolled to the bottom of `SfRichTextBoxAdv`.
 
 {% tabs %}
 {% highlight c# %}
 /// <summary>
-///  Occurs when the element is laid out, rendered, and ready for interaction.
+/// Occurs when the SfRichTextBoxAdv is loaded and ready for interaction.
 /// </summary>
 /// <param name="sender">The source of the event.</param>
 /// <param name="e">The RoutedEventArgs instance containing the event data.</param>
- private void RichTextBoxAdv_Loaded(object sender, RoutedEventArgs e)
- {
-     if (richTextBoxAdv.VerticalScrollBar != null)
-     {
-         richTextBoxAdv.VerticalScrollBar.ValueChanged += VerticalScrollBar_ValueChanged;
-     }
- }      
+private void RichTextBoxAdv_Loaded(object sender, RoutedEventArgs e)
+{
+    if (richTextBoxAdv.VerticalScrollBar != null)
+    {
+        richTextBoxAdv.VerticalScrollBar.ValueChanged += VerticalScrollBar_ValueChanged;
+    }
+}
 
 /// <summary>
-/// Occurs when vertical scrollbar value is changed.
+/// Occurs when the vertical scroll bar value changes.
 /// </summary>
 /// <param name="sender">The source of the event.</param>
 /// <param name="e">The RangeBaseValueChangedEventArgs instance containing the event data.</param>
- private void VerticalScrollBar_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
- {
-     if (e.NewValue == richTextBoxAdv.VerticalScrollBar.Maximum)
-     {
-             ///When the scroll bar value and its maximum value are same.
-             ///Then scroll reached the bottom of the control.
-     }
- }
+private void VerticalScrollBar_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+{
+    // When the scroll bar value equals its Maximum, the scroll has reached the bottom of the control.
+    if (e.NewValue == richTextBoxAdv.VerticalScrollBar.Maximum)
+    {
+        // Add your "reached the bottom" logic here.
+    }
+}
 {% endhighlight %}
-{% endtabs %}	
+{% endtabs %}
+
+## See also
+
+- [UWP RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
+- [UWP RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)
