@@ -8,7 +8,7 @@ keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settings
 ---
 # Hyperlinks in UWP DOCX Editor
 
-The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
 
 ## Inserting a hyperlink
 
