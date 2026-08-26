@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print Events in React PDF Viewer | Syncfusion
-description: Learn how to subscribe to print events and implement print workflows in the Syncfusion React PDF Viewer component.
+title: Events in React PDF Viewer | Syncfusion
+description: Subscribe to print events in the React PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in React PDF Viewer
+# Print Events in React PDF Viewer
 
 This page lists each event emitted by the React PDF Viewer's [`Print`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/print) feature, the argument schema, and the minimal behavior notes needed for implementation.
 

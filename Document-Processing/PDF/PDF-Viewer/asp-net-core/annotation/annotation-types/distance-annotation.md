@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Distance Annotations in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Distance Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Distance annotations in the ASP.NET Core PDF Viewer to measure straight-line distances on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Distance Annotations in ASP.NET Core PDF Viewer
+# Distance Annotation in ASP.NET Core PDF Viewer
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 
 ![Distance overview](../../../javascript-es6/annotations/annotation-images/distance-annot.png)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form filling in TypeScript PDF Viewer Control | Syncfusion
-description: Learn to fill, import, and export PDF form fields in the Syncfusion TS PDF Viewer, including handling the validateFormFields event.
+title: Form Filling in JavaScript (ES6) PDF Viewer | Syncfusion
+description: View, fill, import, and export PDF form fields in the JavaScript (ES6) PDF Viewer, with options to disable interaction and handle digital signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF forms in TypeScript PDF Viewer
+# Fill PDF Form Fields in JavaScript (ES6) PDF Viewer
 
 The Syncfusion PDF Viewer supports filling form fields programmatically, via the user interface, or by importing form data from external sources.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling zooming in Vue Document editor component | Syncfusion
-description: Learn here all about Scrolling zooming in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Scrolling and Zooming in Vue DOCX Editor | Syncfusion
+description: The scrolling and zooming in Vue DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 control: Scrolling zooming 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling zooming in Vue Document editor component
+# Scrolling and Zooming in Vue DOCX Editor
 
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) renders the document as page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the page by using ‘scrollToPage()’ method of Document Editor instance. Refer to the following code example.
 

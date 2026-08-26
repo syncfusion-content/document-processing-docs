@@ -1,12 +1,12 @@
 ---
-title: Convert Word to PDF on macOS | Syncfusion
+title: Convert Word to PDF on macOS in .NET Word | Syncfusion
 description: Convert Word documents to PDF in a .NET Core console app on macOS using the Syncfusion DocIO library without Microsoft Word or Office interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF on macOS
+# Convert Word to PDF on macOS in .NET Word
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in a .NET Core application on macOS**.
 

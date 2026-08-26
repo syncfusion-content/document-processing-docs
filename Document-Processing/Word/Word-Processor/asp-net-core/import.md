@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import in DOCX Editor Component | Syncfusion
-description: Learn here all about import in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in ASP.NET Core DOCX Editor | Syncfusion
+description: The Import feature in ASP.NET Core DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import
 documentation: ug
 ---
 
 
-# Import in Document Editor Component
+# Import in ASP.NET Core DOCX Editor
 
 In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in Pdfviewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in Pdfviewer control.
+title: How to Overview of the React PDF Viewer | Syncfusion
+description: How-to overview of the React PDF Viewer in Syncfusion React PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How-to overview for PDF Viewer
+# How to Overview of the React PDF Viewer
 
 The following how-to articles and frequently asked questions for the Syncfusion PDF Viewer are listed below.
 

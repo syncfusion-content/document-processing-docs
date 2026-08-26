@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Set Author Name to Annotation | Syncfusion
-description: Set author name for annotations in Syncfusion PDF Viewer to enhance collaboration and track changes made by different users.
+title: How to Set the Author Name for Annotations in ASP.NET | Syncfusion
+description: Set a custom author name for annotations in the ASP.NET MVC PDF Viewer so they show the correct identity when other users view them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Set Author Name to Annotations
+# How to Set the Author Name for Annotations in ASP.NET MVC PDF Viewer
 
 In the PDF Viewer, you can assign an author name to all annotations within a PDF document. This feature is particularly useful for collaboration and tracking changes made by different users. Use the `author` property within the annotation settings to specify the author's name.
 

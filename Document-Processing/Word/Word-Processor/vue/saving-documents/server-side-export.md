@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Server side export in Vue Document editor component | Syncfusion
-description: Learn here all about Server side export in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Server-side export in Vue DOCX Editor | Syncfusion
+description: Server-side export in Vue DOCX Editor allows documents to be processed and exported using web services.
 control: Server side export 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server side export in Vue Document editor component
+# Server-side export in Vue DOCX Editor
 
 ## SFDT to DOCX export
 
@@ -123,4 +123,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)
+> DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode)

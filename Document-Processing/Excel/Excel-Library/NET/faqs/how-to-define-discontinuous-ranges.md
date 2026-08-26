@@ -1,12 +1,12 @@
 ---
-title: How to define discontinuous ranges | XlsIO | Syncfusion
-description: This page explains with an example to define discontinuous ranges using .NET Excel Library.
+title: How to Define Discontinuous Ranges in .NET Excel Library | Syncfusion
+description: Define discontinuous ranges in Excel worksheets using the Syncfusion .NET Excel Library for non-adjacent cell references.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to define discontinuous ranges?
+# How to define discontinuous ranges in .NET Excel Library
 
 You can define a discontinuous range by adding different ranges to the Range collection. The following code example illustrates this.
 

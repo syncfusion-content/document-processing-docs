@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from Box cloud storage in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Box cloud storage in the Syncfusion Vue PDF Viewer component using a server-backed approach.
+title: From Box Cloud File Storage in Vue PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Box cloud storage in the Vue PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Box cloud storage in Vue
+# Open PDF from Box Cloud Storage in Vue PDF Viewer
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 

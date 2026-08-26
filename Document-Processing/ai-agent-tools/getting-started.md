@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | AI Agent Tools | Syncfusion
+title: Getting Started with Document SDK AI Agent Tools | Syncfusion
 description: Learn how to integrate the Syncfusion Document SDK Agent Tool library with AI agent frameworks such as Microsoft Agents and Microsoft.Extensions.AI.
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Document SDK AI Agent Tool Library
+# Getting Started with Syncfusion Document SDK AI Agent Tools
 
 The [Syncfusion Document SDK AI Agent Tool](https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools) library exposes Word, Excel, PDF, PowerPoint, and Smart Data Extractor operations as AI-callable tools. It integrates with the [Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp) and works with any [IChatClient](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai.ichatclient?view=net-9.0-pp) [provider](https://learn.microsoft.com/en-us/agent-framework/agents/providers/?pivots=programming-language-csharp), such as OpenAI, Claude, or Gemini.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in React | Syncfusion
-description: Learn how to customize the Organize Pages toolbar in the Syncfusion React PDF Viewer component of Syncfusion Essential JS 2.
+title: Toolbar in React PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the React PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize page toolbar customization in React PDF Viewer
+# Customize the Organize Pages Toolbar in React PDF Viewer
 
 The PDF Viewer lets applications customize the Organize Pages toolbar to enable or disable tools according to project requirements. Use the `pageOrganizerSettings` API to control each tool's interactivity and behavior.
 

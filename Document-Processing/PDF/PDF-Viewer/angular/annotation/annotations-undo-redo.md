@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Undo and Redo annotations in Angular PDF Viewer | Syncfusion
-description: Learn to undo and redo annotation changes in Syncfusion Angular PDF Viewer, with UI and programmatic examples.
+title: Annotations Undo Redo in Angular PDF Viewer | Syncfusion
+description: Undo and redo annotation changes in the Angular PDF Viewer from the toolbar, keyboard shortcuts, and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo and redo annotations in Angular PDF Viewer
+# Undo and Redo Annotations in Angular PDF Viewer
 
 The PDF Viewer supports undo and redo for annotations.
 

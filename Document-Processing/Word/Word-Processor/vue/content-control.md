@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Content control in Vue Document editor control | Syncfusion
-description: Learn here all about Content control in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
+title: Content Controls in Vue DOCX Editor | Syncfusion
+description: The content control feature in Vue DOCX Editor provides built-in content controls to create structured and interactive document templates.
 control: Content control 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in Vue Document editor control
+# Content Controls in Vue DOCX Editor
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
-InlineContentControl: Among inline content inside, as a child of a paragraph.
-BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter.
+InlineContentControl: Appears among inline content, as a child of a paragraph.
+BlockContentControl: Appears among paragraphs and tables, as a child of a Body or HeaderFooter.
 
 ## Types of Content Controls
 
@@ -33,7 +33,7 @@ Content control can be inserted using [`insertContentControl`](https://ej2.syncf
 {% highlight ts %}
 //Insert Rich Text Content Control
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('RichText');
-//Insert Rich Text Content Control with default sfdt string
+//Insert Rich Text Content Control with default SFDT value
 var sfdt = {"sections":[{"blocks":[{"inlines":[{"text": "Hello"}]}]}]};
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('RichText', sfdt);
 
@@ -44,7 +44,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Te
 
 //Insert CheckBox Content Control
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('CheckBox');
-//Insert CheckBox Content Control with mention checked state
+//Insert CheckBox Content Control with checked state
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('CheckBox', true);
 
 //Insert ComboBox Content Control
@@ -54,7 +54,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Co
 
 //Insert Date Content Control
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Date');
-//Insert Date Content Control
+//Insert Date Content Control with default date
 this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Date', '01/01/2024');
 
 //Insert DropDownList Content Control
@@ -70,7 +70,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertContentControl('Pi
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contentControlInfo/) and import it using [`importContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#importcontentcontroldata)
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contentControlInfo) and import it using [`importContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#importcontentcontroldata). Use this to apply property values to existing content controls in the document.
 
 {% highlight ts %}
 var data = [];
@@ -80,7 +80,7 @@ this.$refs.container.ej2Instances.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#exportcontentcontroldata)
+Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#exportcontentcontroldata).
 
 {% highlight ts %}
 var contentControlInfos = this.$refs.container.ej2Instances.documentEditor.exportContentControlData();
@@ -88,7 +88,7 @@ var contentControlInfos = this.$refs.container.ej2Instances.documentEditor.expor
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetcontentcontroldata)
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetcontentcontroldata). Use this to revert content controls back to their default property values and clear any previously imported or edited values.
 
 {% highlight ts %}
 var data = [];

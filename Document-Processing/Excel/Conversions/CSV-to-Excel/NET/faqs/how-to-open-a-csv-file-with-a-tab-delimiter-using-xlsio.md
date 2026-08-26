@@ -1,12 +1,12 @@
 ---
-title: How to open a CSV file with a tab delimiter using XlsIO? | Syncfusion
-description: This FAQ explains how to open a CSV file with a tab delimiter using Syncfusion XlsIO Excel library by passing the delimiter as an argument to the Open method.
+title: How to Open Tab-Delimited CSV in .NET Excel Library | Syncfusion
+description: Open a CSV file with a tab delimiter using the Syncfusion .NET Excel Library by passing the delimiter to the Open method.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to open a CSV file with a tab delimiter using XlsIO?
+# How to open tab-delimited CSV files in .NET Excel Library
 
 Syncfusion XlsIO allows you to open CSV files with custom delimiters, including tab delimiters. When opening a CSV file, you can specify the delimiter character as the second parameter in the [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_Syncfusion_XlsIO_ExcelOpenType_) method.
 
@@ -73,4 +73,4 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/997601-CSV-Tab/FAQ/CSV%20With%20Tab/.NET/CSV%20Wtih%20Tab">this GitHub page</a>.
+A complete working example in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/997601-CSV-Tab/FAQ/CSV%20With%20Tab/.NET/CSV%20Wtih%20Tab" aria-label="GitHub demo link">this GitHub page</a>.

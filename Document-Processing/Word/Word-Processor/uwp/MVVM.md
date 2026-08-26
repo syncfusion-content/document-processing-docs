@@ -1,18 +1,18 @@
 ---
-title: MVVM in UWP RichTextBox control | Syncfusion
-description: Learn here all about MVVM support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: MVVM in UWP DOCX Editor | Syncfusion
+description: The MVVM in UWP DOCX Editor offers Model-View-ViewModel pattern support, enabling clean separation through view model implementation for the editor.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: mvvm
+keywords: mvvm,viewmodel,data-binding,contentchanged,extension-class
 ---
-# MVVM in UWP RichTextBox (SfRichTextBoxAdv)
+# MVVM in UWP DOCX Editor
 
-The SfRichTextBoxAdv control can be used with Model-View-View Model (MVVM) pattern. This section will demonstrate how to use the SfRichTextBoxAdv control with MVVM pattern.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern by binding the document's plain text to a view-model property.
 
-## Creating a View Model
+## Creating a view model
 
-The following code example demonstrates how to implement a View Model class that contains properties to preserve the description about some of the animals and the animal that is selected for discussion. Whenever the animal chosen for discussion is changed, previously chosen animal description is updated to the database and newly chosen animal description is updated to the text property.
+The following code example demonstrates how to implement a view-model class that contains properties to preserve the description of some animals and the animal that is selected for discussion. Whenever the animal chosen for discussion is changed, the previously chosen animal's description is updated in the dictionary, and the newly chosen animal's description is assigned to the `Text` property.
 {% tabs %}
 {% highlight c# %}
 /// <summary>
@@ -29,10 +29,10 @@ public class ViewModel : INotifyPropertyChanged
 
     #region Properties
     /// <summary>
-    /// Gets or sets the animal.
+    /// Gets or sets the selected animal.
     /// </summary>
     /// <value>
-    /// The document title.
+    /// The selected animal.
     /// </value>
     public string Animal
     {
@@ -60,10 +60,10 @@ public class ViewModel : INotifyPropertyChanged
         }
     }
     /// <summary>
-    /// Gets or sets the Text.
+    /// Gets or sets the description text for the selected animal.
     /// </summary>
     /// <value>
-    /// The document.
+    /// The description text.
     /// </value>
     public string Text
     {
@@ -124,7 +124,7 @@ public class ViewModel : INotifyPropertyChanged
             Text = animals[animal];
             skipUpdating = false;
         }
-        // Updates the document content, when changes done in view.
+        // Updates the dictionary when changes are made in the view.
         if (propertyName == "Text" && !skipUpdating)
             animals[Animal] = Text;
     }
@@ -136,9 +136,9 @@ public class ViewModel : INotifyPropertyChanged
 
 {% endtabs %}
 
-## Implementing extension class for SfRichTextBoxAdv
+## Implementing an extension class for SfRichTextBoxAdv
 
-The following code example demonstrates how to implement an extension class for SfRichTextBoxAdv with dependency property that supports two way binding.
+The following code example demonstrates how to implement an extension class for SfRichTextBoxAdv with a dependency property that supports two-way binding. The extension class exposes a `Text` property that contains the document's plain text and synchronizes it with the SfRichTextBoxAdv document.
 {% tabs %}
 {% highlight c# %}
 /// <summary>
@@ -152,7 +152,7 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
 
     #region Properties
     /// <summary>
-    /// Gets or Sets the text.
+    /// Gets or sets the document's plain text.
     /// </summary>
     public string Text
     {
@@ -169,50 +169,50 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
 
     #region Constructor
     /// <summary>
-    /// Initializes the instance of SfRichTextBoxAdvExtension class.
+    /// Initializes a new instance of the SfRichTextBoxAdvExtension class.
     /// </summary>
     public SfRichTextBoxAdvExtension()
     {
-        // Wires the ContentChanged event.
+        // Subscribes to the ContentChanged event.
         this.ContentChanged += RicTextBoxAdv_ContentChanged;
     }
     #endregion
 
     #region Static Dependency Properties
     /// <summary>
-    /// Using as a backing store for Text dependency property to enable styling, animation etc.
+    /// Used as a backing store for the Text dependency property to enable styling, animation, and data binding.
     /// </summary>
     public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(SfRichTextBoxAdvExtension), new PropertyMetadata(string.Empty, new PropertyChangedCallback(OnTextChanged)));
     #endregion
 
     #region Static Events
     /// <summary>
-    /// Called when text changed.
+    /// Called when the text changes.
     /// </summary>
-    /// <param name="obj"></param>
-    /// <param name="e"></param>
+    /// <param name="obj">The dependency object whose property changed.</param>
+    /// <param name="e">The event data.</param>
     private static void OnTextChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
     {
         SfRichTextBoxAdvExtension richTextBox = (SfRichTextBoxAdvExtension)obj;
-        //Update the document with the Text.
+        // Updates the document with the new Text value.
         richTextBox.UpdateDocument((string)e.NewValue);
     }
     #endregion
 
     #region Events
     /// <summary>
-    /// Called when content changes in SfRichTextBoxAdv.
+    /// Called when the content changes in SfRichTextBoxAdv.
     /// </summary>
-    /// <param name="obj"></param>
-    /// <param name="args"></param>
+    /// <param name="obj">The source of the event.</param>
+    /// <param name="args">The event data.</param>
     void RicTextBoxAdv_ContentChanged(object obj, ContentChangedEventArgs args)
     {
         if (this.Document != null)
         {
-            // To skip internal updation of document on setting Text property.
+            // Used to skip the internal update of the document when the Text property is set.
             skipUpdating = true;
             Stream stream = new MemoryStream();
-            // Saves the document's text into a Stream.
+            // Saves the document's text into a stream.
             this.Save(stream, FormatType.Txt);
             stream.Position = 0;
             // Reads the text from the stream.
@@ -229,19 +229,19 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
     /// <summary>
     /// Updates the document.
     /// </summary>
-    /// <param name="text"></param>
+    /// <param name="text">The text to load into the document.</param>
     private void UpdateDocument(string text)
     {
-        // If text property is set internally means, skip updating the document.
+        // If the Text property is set internally, skip updating the document.
         if (!skipUpdating && !string.IsNullOrEmpty(text))
         {
             Stream stream = new MemoryStream();
-            // Convert the text to byte array.
+            // Converts the text to a byte array.
             byte[] bytes = Encoding.UTF8.GetBytes(text);
-            // Writes the byte array to stream.
+            // Writes the byte array to the stream.
             stream.Write(bytes, 0, bytes.Length);
             stream.Position = 0;
-            //Load the stream.
+            // Loads the stream into the document.
             Load(stream, FormatType.Txt);
         }
     }
@@ -262,9 +262,9 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
 
 {% endtabs %}
 
-## Creating XAML View
+## Creating the XAML view
 
-The following code example demonstrates how to create XAML view with SfRichTextBoxAdv and UI properties bound to view model properties.
+The following code example demonstrates how to create a XAML view with SfRichTextBoxAdv and UI properties bound to view model properties.
 {% tabs %}
 {% highlight xaml %}
 <Page>
@@ -280,8 +280,8 @@ The following code example demonstrates how to create XAML view with SfRichTextB
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" Margin="4">
-                <TextBlock Text="Animal :"/>
-                <ComboBox IsTabStop="False" ItemsSource="{Binding Animals}" SelectedValue="{Binding Animal, Mode=TwoWay}"/>
+                <TextBlock Text="Animal:" />
+                <ComboBox IsTabStop="False" ItemsSource="{Binding Animals}" SelectedValue="{Binding Animal, Mode=TwoWay}" />
             </StackPanel>
             <Grid Margin="10" Grid.Row="1">
                 <Grid.RowDefinitions>
@@ -302,3 +302,9 @@ The following code example demonstrates how to create XAML view with SfRichTextB
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also
+
+- [Commands in UWP RichTextBox](./Commands)
+- [Document properties in UWP RichTextBox](./Document-Properties)
+- [Getting started with UWP RichTextBox](./Getting-Started)

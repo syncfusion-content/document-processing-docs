@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get current Word/Para in Syncfusion DOCX Editor control | Syncfusion
-description: Learn how to select and retrieve the current word and paragraph from the Syncfusion Document Editor component.
+title: How to Get Current Word in ASP.NET Core DOCX Editor | Syncfusion
+description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® ASP.NET Core DOCX Editor for content processing and analysis.
 platform: document-processing
 control: Get The Current Word And Paragraph
 documentation: ug
 ---
 
-# Get current word and paragraph in Document Editor component
+# How to Get Current Word in ASP.NET Core DOCX Editor
 
 You can get the current word or paragraph content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show bookmark pane in PDF Viewer | Syncfusion
-description: Learn here all about how to Display the bookmark pane in Syncfusion PDF Viewer by enabling the enableBookmark property.
+title: How to Show the Bookmark Pane in ASP.NET MVC PDF Viewer | Syncfusion
+description: Show or hide the bookmark pane in the ASP.NET MVC PDF Viewer using showBookmarkPane to control when users can access document bookmarks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Display bookmark pane
+# How to Show the Bookmark Pane in ASP.NET MVC PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer can display the bookmark pane automatically by setting the [`enableBookmark`](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableBookmark) property to `true`. Use this option when documents rely on bookmark navigation for quick access to chapters or tagged sections.
 

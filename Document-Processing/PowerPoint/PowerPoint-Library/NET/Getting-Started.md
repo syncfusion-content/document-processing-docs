@@ -1,12 +1,12 @@
 ---
-title: Getting Started with PowerPoint Presentation library | Syncfusion
+title: Getting Started with .NET PowerPoint Presentation Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
-description: Getting started with Essential<sup>&reg;</sup> Presentation library; Creating a PowerPoint Presentation; Modifying the existing PowerPoint presentation
+description: Learn how to get started with the Syncfusion® .NET PowerPoint Presentation Library. Explore setup, creation, editing, and customization options.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Getting Started with Essential<sup>&reg;</sup> Presentation Library
+# Getting Started with .NET PowerPoint Presentation Library
 
 ## Creating a simple PowerPoint Presentation with basic elements from scratch
 

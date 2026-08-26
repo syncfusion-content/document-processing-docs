@@ -1,11 +1,11 @@
 ---
-title: Working with ZUGFeRD invoice | Syncfusion
-description: This section explains how to generate,add and extract process on ZUGFeRD invoice and Validating ZUGFeRD invoices using Adobe Acrobat
+title: ZUGFeRD Invoice in .NET PDF Library | Syncfusion
+description: Learn how to generate, add, extract, and validate ZUGFeRD invoices in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with ZUGFeRD invoice 
+# ZUGFeRD Invoice in .NET PDF Library
 
 The ZUGFeRD invoice is one of the uniformed data format for electronic invoices based on the ISO standard PDF/A-3, which is specifically designed for long term archiving. The ZUGFeRD invoice contains both human-readable invoice and machine-readable structured invoice data (XML).
 
@@ -149,10 +149,11 @@ document.Attachments.Add(attachment)
 {% endtabs %}  
 
 N> **XML Naming Guidelines** 
-N> As per the ZUGFeRD standard guidelines, the XML file name must follow the specified format: 
+N> As per the ZUGFeRD / Factur-X standard guidelines, the embedded XML file name must follow the specified format:
 N> 1. **ZUGFeRD 1.0**: The file name should be "ZUGFeRD-invoice.xml". 
 N> 2. **ZUGFeRD 2.0**: The file name should be "zugferd-invoice.xml". 
-N> 3. **Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
+N> 3. **ZUGFeRD 2.1 and later / Factur-X**: The file name should be "factur-x.xml", except for **XRechnung**, where the file name must be "xrechnung.xml".
+N> ZUGFeRD 2.1+ and Factur-X are technically equivalent standards and can be used interchangeably. The term "ZUGFeRD" is commonly used in German-speaking countries, while "Factur-X" is the preferred designation in France and many international contexts.
 
 Using **PDF/A-3b** conformance, you can create a **ZUGFeRD invoice PDF** by specifying the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocument.html#Syncfusion_Pdf_PdfDocument_ZugferdVersion) property as **Factur-X** in the [ZugferdVersion](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.ZugferdVersion.html) Enum.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change search-highlight color in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn how to change the default search highlight color in ASP.NET Core Syncfusion Document Editor component.
+title: Change Search Highlight Color in ASP.NET Core DOCX Editor | Syncfusion
+description: Change the default search highlight color in Syncfusion® ASP.NET Core DOCX Editor using search highlight color property to customize search result highlighting.
 platform: document-processing
 control: Change The Default Search Highlight Color
 documentation: ug
 ---
 
-# Change Search Highlight Color in ASP.NET Core Document Editor
+# How to Change Search Highlight Color in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides an option to change the default search highlight color using [`searchHighlightColor`] in Document Editor settings. The highlight color which is given in [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_DocumentEditorSettings) will be highlighted on the searched text. By default, the search highlight color is `yellow`.
 

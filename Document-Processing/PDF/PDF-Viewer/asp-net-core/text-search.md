@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Search in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn text search in the Syncfusion ASP.NET Core PDF Viewer component, including features, programmatic search, and more.
+description: Learn about the text search in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -81,7 +81,7 @@ The **Match Any Word** option splits the entered text into individual words base
 
 While the PDF Viewer's toolbar provides a user-friendly search interface, you can also trigger and customize searches programmatically using the `textSearch.searchText()` method.
 
-#### Using `searchText`
+### Using `searchText`
 
 The `searchText` method allows you to initiate a search with specific criteria.
 

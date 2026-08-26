@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Windows Forms Spreadsheet control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+title: About Syncfusion Windows Forms Spreadsheet Control | Syncfusion
+description: Learn about the introduction and overview of the Syncfusion Windows Forms Spreadsheet control and its key features for spreadsheet management.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Windows Forms Spreadsheet Overview
+# About Syncfusion Windows Forms Spreadsheet Control
 
 The [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) is an Excel inspired control that allows you to create, edit, view and format the Microsoft Excel files without Excel installed. It provides an easy-to-use UI experience with an integrated ribbon for common business scenarios. Spreadsheet comes with built-in calculation engine with support for 400+ most widely used formulas.
 

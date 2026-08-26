@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion ASP.NET Core PDF Viewer MCP Server Setup | Syncfusion
-description: Discover the MCP server's advantages, installation requirements, and integration guidance for the ASP.NET Core PDF Viewer.
+title: Mcp in ASP.NET Core PDF Viewer | Syncfusion
+description: Set up the Syncfusion ASP.NET Core PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Syncfusion ASP.NET Core PDF Viewer MCP Server
+# ASP.NET Core PDF Viewer MCP Server Setup
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer MCP Server accelerates PDF Viewer application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 

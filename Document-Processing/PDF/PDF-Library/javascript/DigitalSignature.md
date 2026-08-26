@@ -1,13 +1,13 @@
 ---
-title: Digital Signature in JavaScript PDF Library | Syncfusion
+title: PDF Digital Signatures in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to create a digital signature in the PDF document by using JavaScript PDF Library
+description: Learn how to create and apply digital signatures to PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Digital Signature in JavaScript PDF Library
+# PDF Digital Signatures in JavaScript PDF
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides support to create and manage digital signatures in PDF documents, ensuring authenticity, integrity, and security. For more information about the underlying API, see the [PdfSignature](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class reference.
 

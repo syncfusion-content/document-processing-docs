@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Rows and Columns in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Rows and Columns support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Manage rows and columns in the  UWP Spreadsheet control with support for inserting, deleting, resizing, hiding, and unhiding data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Rows and Columns in UWP Spreadsheet (SfSpreadsheet)
+# Rows and Columns in UWP Spreadsheet 
 This section explains operations related to rows and columns in SfSpreadsheet.
 
 ## Insert Rows and Columns

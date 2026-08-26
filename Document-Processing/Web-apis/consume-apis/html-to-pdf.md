@@ -1,5 +1,5 @@
 ---
-title: Convert HTML to PDF Using Syncfusion Web API 
+title: Convert HTML to PDF Using Web API | Syncfusion
 description: Convert HTML with full CSS, JavaScript, and media support into pixel‑perfect PDFs using Syncfusion HTML to PDF Web API for secure, fast and accurate rendering. 
 platform: document-processing
 control: general

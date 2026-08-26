@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about How to in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: How to in TypeScriptDOCX Editor | Syncfusion
+description: Explore Syncfusion TypeScript DOCX Editor how-to guides, UI elements, features, customization options, and document editing workflows.
 platform: document-processing
 control: How to
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to in JavaScript (ES6) Document Editor control
+# How to in TypeScript DOCX Editor Control
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) triggers the [`keyDown`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorKeyDownEventArgs) event every time a key is pressed and provides an instance of `DocumentEditorKeyDownEventArgs`. You can use the `isHandled` property to override the keyboard shortcut behavior.
 

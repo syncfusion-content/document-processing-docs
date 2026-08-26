@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQ Section in ASP.NET Core PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in ASP.NET Core PDF Viewer control.
+title: How to Overview of the ASP.NET Core PDF Viewer | Syncfusion
+description: How-to overview of the ASP.NET Core PDF Viewer in Syncfusion ASP.NET Core PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section in ASP.NET Core PDF Viewer
+# How to Overview of the ASP.NET Core PDF Viewer
 
 The following frequently asked questions address common ASP.NET Core PDF Viewer topics:
 

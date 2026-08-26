@@ -1,12 +1,12 @@
 ---
-title: Find item in Word document in Java | Syncfusion
-description: Find an item in the Word document in Java using Syncfusion Java Word library (Essential DocIO)
+title: Find item in Word document in Java Word | Syncfusion
+description: Learn about Find item in Word document in the Syncfusion Java Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Find item in Word document
+# Find item in Word document in Java Word
 
 Just like you can search for a text in a Word document, you can also search for an item (like image, content control, textbox, and so on). The Java Word library supports to find an item in Word document based on its properties. With this functionality, you can:
 

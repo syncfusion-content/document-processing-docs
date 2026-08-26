@@ -1,12 +1,12 @@
 ---
-title: Does XlsIO support hyperlinks converting Excel to PDF? | Syncfusion
-description: This FAQ explains why hyperlinks in Excel become inactive when converted to PDF using XlsIO, as workbook-level hyperlinks cannot be exported during conversion.
+title: Excel Hyperlinks to PDF in .NET Excel Library | Syncfusion
+description: Hyperlinks in Excel to PDF conversion explains why some workbook-level hyperlinks become inactive when Excel files are converted to PDF.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support hyperlinks when converting Excel to PDF?
+# Hyperlinks in Excel to PDF in .NET Excel Library
 
 In Microsoft Excel, hyperlinks serve as bookmarks for navigating within a workbook. When exporting an Excel file to PDF format, the file links become disabled. This is a known behavior that occurs because XlsIO cannot export workbook-level hyperlinks during the conversion process.
 

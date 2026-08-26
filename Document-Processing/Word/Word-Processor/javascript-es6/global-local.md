@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn how to localize the default text content of Syncfusion JavaScript (ES6) Document Editor to support multiple cultures and languages.
+title: Globalization and Localization in TypeScript DOCX Editor | Syncfusion
+description: Global localization in TypeScript DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global and Local
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in JavaScript (ES6) Document Editor
+# Globalization and Localization in TypeScript DOCX Editor
 
 ## Localization
 

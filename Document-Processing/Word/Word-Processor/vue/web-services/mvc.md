@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Mvc in Vue Document editor component | Syncfusion
-description: Learn here all about Mvc in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: ASP.NET MVC Web Service in Vue DOCX Editor | Syncfusion
+description: Configure ASP.NET MVC web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Mvc 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MVC in Vue Document editor component
+# ASP.NET MVC Web Service in Vue DOCX Editor
 
 DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
 
