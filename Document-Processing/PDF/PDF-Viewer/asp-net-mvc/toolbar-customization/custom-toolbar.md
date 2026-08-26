@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Toolbar in ASP.NET MVC PDF Viewer Component | Syncfusion
-description: Learn here all about custom toolbar in Syncfusion ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
+description: Create a custom toolbar in the ASP.NET MVC PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Custom toolbar in ASP.NET MVC PDF Viewer
+# Custom Toolbar in ASP.NET MVC PDF Viewer
 
 The PDF Viewer exposes APIs for the interactions available in the built-in toolbar. Using these, you can build your own UI for toolbar actions at the application level by hiding the built-in toolbar. Follow these steps to create a custom toolbar for the PDF Viewer:
 

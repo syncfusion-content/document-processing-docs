@@ -1,19 +1,19 @@
 ---
-title: Comment in WPF RichTextBox control | Syncfusion
-description: Learn here all about Comment support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: Comments in WPF DOCX Editor | Syncfusion
+description: The comments feature in WPF DOCX Editor offers note or annotation support, enabling viewing and editing comments in the document review pane.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: comment
 ---
-# Comment in WPF RichTextBox (SfRichTextBoxAdv)
+# Comments in WPF DOCX Editor
 
 A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
 ![WPF RichTextBox with Comment](Comment_images/wpf-richtextbox-comment.jpeg)
 
 N> Currently, the SfRichTextBoxAdv shows review pane only with Pages layout type.
 
-## UI Commands for accessing comment
+## UI commands to access comments
 
 The following operations can be performed through command binding in SfRichTextBoxAdv control:
 
@@ -51,8 +51,10 @@ The following code example demonstrates how to bind commands for accessing comme
 
 ## Customizing comment visual style
 
-The SfRichTextBoxAdv provides event support to notify whenever a comment is added to the document. With the help of it, you can customize the visual style for the comment. You can also set the author and initial of the comment.
+The SfRichTextBoxAdv provides event support to notify whenever a comment is added to the document. With the help of it, you can customize the visual style for the comment using the [`CommentVisualStyle`](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.CommentVisualStyle.html) class. You can also set the author and initial of the comment.
+
 The following code example demonstrates how to customize comment visual style using event.
+
 {% tabs %}
 {% highlight c# %}
 // Hooks the CommentAdding event of RichTextBoxAdv.
@@ -135,4 +137,10 @@ Dim isCommentPaneVisible As Boolean = richTextBoxAdv.EditorSettings.IsCommentPan
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to knows how to render and configure the editing tools.
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+
+## See also
+
+- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Selection in WPF RichTextBox](./Selection)
+- [Commands in WPF RichTextBox](./Commands)

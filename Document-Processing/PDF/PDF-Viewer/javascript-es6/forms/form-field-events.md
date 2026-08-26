@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Field Events in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about different form field in Syncfusion TypeScript PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Form Field Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Subscribe to form field events in the JavaScript (ES6) PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form field events in TypeScript PDF Viewer
+# Form Field Events in JavaScript (ES6) PDF Viewer
 
 The Syncfusion **TypeScript PDF Viewer** exposes form field events that let developers react to user interactions, respond to form changes, and implement custom business logic. Use these events for validation, UI updates, logging, and workflow automation.
 

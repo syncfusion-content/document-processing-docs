@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Comment feature in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Comments in Angular Spreadsheet | Syncfusion
+description: Comments in Angular Spreadsheet allow users to add notes to cells, making it easier to provide context, feedback, and annotations.
 platform: document-processing
 control: Comment 
 documentation: ug
 ---
 
-# Comment in Angular Spreadsheet component
+# Comments in Angular Spreadsheet
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.

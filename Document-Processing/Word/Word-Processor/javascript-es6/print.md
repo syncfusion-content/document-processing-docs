@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn about Print in the Syncfusion JavaScript (ES6) DOCX Editor of Essential JS 2 and more details on how to print Word documents.
+title: Print in TypeScript DOCX Editor | Syncfusion
+description: Print feature in TypeScript DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Print 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in JavaScript (ES6) Document Editor
+# Print in TypeScript DOCX Editor
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/documentation/api/document-editor#print) method from the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) instance.
 

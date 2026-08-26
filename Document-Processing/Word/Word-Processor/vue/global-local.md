@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Global local in Vue Document editor component | Syncfusion
-description: Learn here all about Global local in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Globalization and Localization in Vue DOCX Editor | Syncfusion
+description: Global localization in Vue DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 control: Global local 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Global local in Vue Document editor component
+# Globalization and Localization in Vue DOCX Editor
 
 ## Localization
 
-The Localization library allows you to localize default text content of the Document Editor. The [Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer the sample link [RTL](https://ej2.syncfusion.com/vue/demos/document-editor/right-to-left/)
+The Localization library allows you to localize the default text content of the Document Editor. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that you can change to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and the translation object.
 
-Note: Please refer the [Locale](https://github.com/syncfusion/ej2-locale).
+Note: Please refer to the [Locale](https://github.com/syncfusion/ej2-locale) repository.
 
 ## Document Editor
 
-The following list of properties and its values are used in the document editor.
+The table below lists the locale keywords used by the Document Editor (for find & replace, the context menu, and the built-in dialogs) and their corresponding localized text values.
 
-Locale keywords |Text
------|-----
+Locale keywords | Text
+---|---
 Table | Table
 Row | Row
 Cell | Cell
@@ -365,10 +365,10 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and its values are used in the document editor container.
+The table below lists locale keywords localized by the Document Editor Container (the toolbar, status bar, and the HTML/rich-text rendering surface). The following list of properties and their values are used in the Document Editor container.
 
-Locale keywords |Text
------|-----
+Locale keywords | Text
+---|---
 New | New
 Open | Open
 Undo | Undo
@@ -518,10 +518,10 @@ Show properties pane | Show properties pane
 
 ## Color Picker
 
-The following list of properties and its values are used in the color picker.
+The table below lists locale keywords localized by the color picker (used by the Font Color, Text Highlight, and Shading Fill dialogs). The following list of properties and their values are used in the Color Picker.
 
-Locale keywords |Text
------|-----
+Locale keywords | Text
+---|---
 Apply | Apply
 Cancel | Cancel
 ModeSwitcher | Switch Mode

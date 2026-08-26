@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Line annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Line Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Line annotations in the JavaScript (ES6) PDF Viewer for marking straight paths on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line annotation in TypeScript PDF Viewer
+# Line Annotation in JavaScript (ES6) PDF Viewer
 
 Line is a shape annotation used to mark straight connections or callouts. Common use cases include underline-like rulers, connectors, and measurement guides.
 

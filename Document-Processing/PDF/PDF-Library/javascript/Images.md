@@ -1,13 +1,13 @@
 ---
-title: Images in JavaScript PDF Library | Syncfusion
+title: PDF Images in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Learn to add and insert JPEG and PNG images in PDF documents with JavaScript PDF Library, including drawing, clipping, transparency, and rotation
+description: Add, insert, and customize JPEG and PNG images in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Images in JavaScript PDF Library
+# PDF Images in JavaScript PDF
 
 Syncfusion's [JavaScript PDF library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports adding **JPEG** and **PNG** images.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Java in Vue Document editor component | Syncfusion
-description: Learn here all about Java in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Java Web Service in Vue DOCX Editor | Syncfusion
+description: Configure Java web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Java 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Java in Vue Document editor component
+# Java Web Service in Vue DOCX Editor
 
 This page illustrates how to create a web service in Java for the server-side dependencies of the Word Processor component (a.k.a. Document Editor). Document Editor depends on server-side interactions for the operations listed below, which can be written in Java using the `syncfusion-ej2-wordprocessor.jar` file.
 

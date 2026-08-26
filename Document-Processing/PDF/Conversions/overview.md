@@ -1,13 +1,13 @@
 ---
-title: PDF Document Conversion Library | Syncfusion
-description:  Syncfusion PDF Conversion Library converts file formats like HTML, Word, Excel, PowerPoint, and images to PDF without Microsoft Office or Adobe dependencies.
+title: About Syncfusion PDF Document Conversion Library | Syncfusion
+description: Learn about the Syncfusion PDF Document Conversion Library and convert HTML, Word, Excel, PowerPoint, and images to PDF.
 platform: document-processing
 control: general
 documentation: UG
 keywords: PDF, SDK, Automation, API, convert
 ---
 
-# Welcome to Syncfusion<sup>&reg;</sup> PDF Document Conversion Library
+# About Syncfusion<sup>&reg;</sup> PDF Document Conversion Library
 
 {% doccards %}
 

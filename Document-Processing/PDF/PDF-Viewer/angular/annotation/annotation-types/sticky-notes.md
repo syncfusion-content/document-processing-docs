@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Sticky Notes Annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the Syncfusion Angular PDF Viewer.
+title: Sticky Notes in Angular PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Sticky Notes annotations in the Angular PDF Viewer for short notes placed anywhere on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Sticky Notes Annotations in Angular PDF Viewer
+# Sticky Note Annotation in Angular PDF Viewer
 Sticky Notes allow users to place comment markers on the PDF. When clicked, the note opens a popup containing comments, replies, and discussions. Use them to capture review feedback without altering the original content. 
 
 ![Sticky Notes overview](../../images/stickynotes_annotation.png)

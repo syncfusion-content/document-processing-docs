@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Change author name using annotation settings in React | Syncfusion
-description: Learn how to change the author name and related annotation settings using the annotationSettings API in the React PDF Viewer.
+title: How to Change the Annotation Author Name in React PDF | Syncfusion
+description: Change the author name and related annotation settings in the React PDF Viewer using the annotationSettings API and configuration options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in React PDF Viewer
+# How to Change the Annotation Author Name in React PDF Viewer
 
 The `annotationSettings` API provides a central way to configure properties that apply to all annotations in the viewer.
 

@@ -1,12 +1,12 @@
 ---
-title: Performance Metrics of Syncfusion HTML-to-PDF Conversion
-description: This section provides a detailed overview of the performance metrics and capabilities of the HTML-to-PDF conversion library.
+title: HTML to PDF Performance metrics in .NET PDF Library | Syncfusion
+description: This section provides a detailed overview of the performance metrics and capabilities of the HTML-to-PDF conversion Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# HTML to PDF Performance Benchmarks
+# HTML to PDF Performance metrics in .NET PDF Library 
 
 The [HTML to PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) delivers high-performance APIs to convert web content into PDF documents programmatically. This performance benchmark report highlights the speed and efficiency of HTML-to-PDF conversion, showcasing how the library manages large-scale document rendering in real-world scenarios.
 

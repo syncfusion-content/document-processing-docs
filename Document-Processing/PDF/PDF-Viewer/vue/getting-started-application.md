@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started with Vue 3 PDF Viewer | Syncfusion
-description: Learn how to scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer using the Composition or Options API.
+description: Scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer using the Composition or Options API to render and interact with PDF documents.
 control: Getting Started application
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion PDF Viewer in Vue 3
+# Getting Started with Vue 3 PDF Viewer
 
 This section explains how to create a Vue 3 application with Vite and integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue PDF Viewer component using either the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -205,12 +205,6 @@ After the application starts, open the URL shown in the terminal (typically `htt
 ![Vue PDF Viewer running in a Vite app](./images/Vue3-pdf-viewer-demo.png)
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3%20-%20Standalone).
-
-## Video tutorial
-
-To get started quickly with Vue PDF Viewer, you can watch this video:
-
-{% youtube "https://www.youtube.com/watch?v=17aW6rOoyWQ" %}
 
 ## See also
 

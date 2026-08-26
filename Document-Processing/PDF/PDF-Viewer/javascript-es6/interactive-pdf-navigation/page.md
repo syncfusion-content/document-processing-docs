@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Page Navigation in TypeScript PDF Viewer | Syncfusion
-description: Explore how to navigate pages in the Syncfusion TypeScript PDF Viewer control using built-in options for seamless document viewing.
+title: Page in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use page navigation in the JavaScript (ES6) PDF Viewer to move between pages and programmatically control the current page from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Page navigation in TypeScript PDF Viewer
+# Page Navigation in JavaScript (ES6) PDF Viewer
 
 The JavaScript PDF Viewer supports internal and external navigation.
 

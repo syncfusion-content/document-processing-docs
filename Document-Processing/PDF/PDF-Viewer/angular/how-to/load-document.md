@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load document in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Load document in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Load Documents Dynamically in Angular PDF Viewer | Syncfusion
+description: Load or switch PDF documents dynamically in the Angular PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load PDF documents dynamically
+# How to Load Documents Dynamically in Angular PDF Viewer
 
 The PDF Viewer supports loading or switching PDF documents at runtime after the initial viewer initialization. Use the [load](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#load) method to open a document from a URL or a Base64 string.
 

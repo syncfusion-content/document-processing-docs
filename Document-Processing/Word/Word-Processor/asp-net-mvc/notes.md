@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about notes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in ASP.NET MVC DOCX Editor | Syncfusion
+description: The footnote and endnote support in ASP.NET MVC DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
 
-# Insert footnotes and endnotes in ASP.NET MVC Document Editor Component
+# Footnotes and Endnotes in ASP.NET MVC DOCX Editor
 
 The DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. The DocumentEditor also exposes APIs to insert footnotes and endnotes programmatically.
 

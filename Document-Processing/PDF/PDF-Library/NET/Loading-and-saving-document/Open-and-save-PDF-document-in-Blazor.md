@@ -1,13 +1,13 @@
 ---
-title: Open and save PDF document in Blazor | Syncfusion
-description: Open and save PDF document in Blazor application using Syncfusion Blazor PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Blazor | Syncfusion
+description: Learn how to open and save PDF documents in Blazor applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in Blazor
+# Open and Save PDF Document in Blazor
 
 The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Blazor**.
 

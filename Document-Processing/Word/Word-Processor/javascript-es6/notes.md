@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Notes in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Notes in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in TypeScript DOCX Editor | Syncfusion
+description: The footnote and endnote support in TypeScript DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in JavaScript (ES6) Document Editor control
+# Footnotes and Endnotes in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Core in Vue Document editor component | Syncfusion
-description: Learn here all about Core in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: ASP.NET Core Web Service in Vue DOCX Editor | Syncfusion
+description: Configure ASP.NET Core web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Core 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Core in Vue Document editor component
+# ASP.NET Core Web Service in Vue DOCX Editor
 
 DocumentEditor depends on server-side interactions for the operations listed below, which can be written in ASP.NET Core using [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 

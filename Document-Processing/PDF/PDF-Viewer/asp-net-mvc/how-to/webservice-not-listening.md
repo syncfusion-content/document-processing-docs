@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resolve Web service error in PDF Viewer | Syncfusion
-description: Troubleshoot the Web service error in Syncfusion PDF Viewer by validating requests, cache, and server.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the ASP.NET MVC PDF Viewer with a clear troubleshooting checklist and configuration tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve Web service connectivity error
+# How to Resolve the Web-Service Is Not Listening Error in ASP.NET MVC
 
 ![Browser showing the Web service is not listening error](../images/webservice.png)
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Images and illustrations in React Spreadsheet component | Syncfusion
-description: Learn here how to insert, position, resize, select, and delete images in the Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Images and illustrations in React Spreadsheet | Syncfusion
+description: Learn about images and illustrations in the Syncfusion React Spreadsheet component, including insertion, positioning, resizing, and selection.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Images and Illustrations
+# Images and Illustrations in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component allows you to insert images directly into worksheet cells to enhance visual presentation and provide additional context alongside data. Images such as logos, screenshots, diagrams, or illustrations can be placed within a sheet, positioned as needed, resized, selected, or removed.
 
