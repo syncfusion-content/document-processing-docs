@@ -16,6 +16,10 @@ To save a document to Google Drive, you can follow the steps below.
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
+* Configure the OAuth consent screen and add the authorized redirect URIs and scopes. For more information, refer to the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+
+* Download the OAuth 2.0 Client IDs credentials JSON file from the Google Cloud Console and save it locally. Save the path to this file for use in the `appsettings.json` configuration.
+
 **Step 2:** Create a Simple Document Editor sample in Vue
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
@@ -139,15 +143,14 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
+N> 1. Replace **Your Google Drive Folder ID**, **Your Application name**, and **Your Path to the OAuth 2.0 Client IDs json file** with your actual Google Drive folder ID, your name for your application, and the path for the JSON file.
+N> 2. The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+N> 3. The `CredentialPath` value in `appsettings.json` must point to the full OAuth 2.0 Client IDs credentials JSON file downloaded from the Google Cloud Console. This JSON file contains the unique `Client_ID` and `Client_Secret` used to authenticate with the Google Drive API and securely save files.
+N> 4. The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
 
-N> The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
+**Step 4:**  Modify the index file in the Document Editor sample
 
-N> You must use a unique `Client_ID` from json file to interface your application with the Google Drive API in order to save document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
-
-**Step 4:**  Modify the index File in the Document Editor sample
-
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Drive.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Drive.
 
 ```typescript
 <template>

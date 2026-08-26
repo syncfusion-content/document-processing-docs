@@ -4,23 +4,24 @@ description: The layout types in UWP DOCX Editor offer multiple layout options, 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: layout-types
+keywords: layout-types,pages,continuous,block,forum,blog
 ---
 # Layout Types in UWP DOCX Editor
 
-The SfRichTextBoxAdv control allows you to choose between the following layout types.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control allows you to choose between the following layout types via the [`LayoutType`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_LayoutType) property.
 
-* Pages
-
-* Continuous
-
-* Block
-
+| Layout type | Use case | Behavior |
+| --- | --- | --- |
+| `Pages` | Word-style paginated view | Content is rendered across multiple pages, similar to the Print Layout view of Microsoft Word. |
+| `Continuous` | Forum, blog, or scrolling viewer | Content is rendered as a single scrolling page, similar to the Web Layout view of Microsoft Word. |
+| `Block` | Read-only display of rich content | Content is rendered as a single read-only page; clipboard copy is supported. |
 
 ## Pages
 
-When using Pages layout type, the rich text document content is rendered sequentially in several pages, similar to the Print layout view of Microsoft Word. The size and margin of each page are defined by Section format properties. 
-The following code example demonstrates how to define layout type of SfRichTextBoxAdv control as Pages.
+When using the `Pages` layout type, the rich-text document content is rendered sequentially in several pages, similar to the Print Layout view of Microsoft Word. The size and margin of each page are defined by the section format properties.
+
+The following code example demonstrates how to define the layout type of the `SfRichTextBoxAdv` control as `Pages`.
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" LayoutType="Pages"  xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
@@ -36,14 +37,25 @@ richTextBoxAdv.LayoutType = LayoutType.Pages;
 
 {% endhighlight %}
 
+{% highlight VB %}
+' Initializes a new instance of SfRichTextBoxAdv.
+Dim richTextBoxAdv As New SfRichTextBoxAdv()
+richTextBoxAdv.ManipulationMode = ManipulationModes.All
+' Defines the layout type as Pages.
+richTextBoxAdv.LayoutType = LayoutType.Pages
+
+{% endhighlight %}
+
 {% endtabs %}
 
-![Layout-Types_img1](Layout-Types_images/Layout-Types_img1.jpeg)
+![SfRichTextBoxAdv with the Pages layout type](Layout-Types_images/Layout-Types_img1.jpeg)
 
 ## Continuous
 
-When using Continuous layout type, the entire rich text document content is rendered continuously in a single page, similar to the Web layout view of Microsoft Word. This layout looks like a simple text box with rich-text content and can be used for applications such as forums and blogs.
-The following code example demonstrates how to define layout type of SfRichTextBoxAdv control as Continuous.
+When using the `Continuous` layout type, the entire rich-text document content is rendered continuously in a single page, similar to the Web Layout view of Microsoft Word. This layout looks like a simple text box with rich-text content and can be used for applications such as forums and blogs.
+
+The following code example demonstrates how to define the layout type of the `SfRichTextBoxAdv` control as `Continuous`.
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" LayoutType="Continuous"  xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
@@ -59,14 +71,25 @@ richTextBoxAdv.LayoutType = LayoutType.Continuous;
 
 {% endhighlight %}
 
+{% highlight VB %}
+' Initializes a new instance of SfRichTextBoxAdv.
+Dim richTextBoxAdv As New SfRichTextBoxAdv()
+richTextBoxAdv.ManipulationMode = ManipulationModes.All
+' Defines the layout type as Continuous.
+richTextBoxAdv.LayoutType = LayoutType.Continuous
+
+{% endhighlight %}
+
 {% endtabs %}
 
-![Layout-Types_img2](Layout-Types_images/Layout-Types_img2.jpeg)
+![SfRichTextBoxAdv with the Continuous layout type](Layout-Types_images/Layout-Types_img2.jpeg)
 
 ## Block
 
-When using Block layout type, the rich text content is rendered continuously in a single page as read only. This layout looks like a simple text block with rich text content such as texts, images, and tables. Block Layout also supports copying contents to the clipboard. This can be used for applications such as forums and blogs in order to display the rich-text contents with same look and feel as in the continuous layout type.
-The following code example demonstrates how to define layout type of SfRichTextBoxAdv control as Block.
+When using the `Block` layout type, the rich-text content is rendered continuously in a single page in read-only mode. This layout looks like a simple text block with rich-text content such as text, images, and tables. The `Block` layout also supports copying content to the clipboard. This can be used for applications such as forums and blogs in order to display the rich-text content with the same look and feel as the continuous layout type.
+
+The following code example demonstrates how to define the layout type of the `SfRichTextBoxAdv` control as `Block`.
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" LayoutType="Block"  xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
@@ -82,8 +105,23 @@ richTextBoxAdv.LayoutType = LayoutType.Block;
 
 {% endhighlight %}
 
+{% highlight VB %}
+' Initializes a new instance of SfRichTextBoxAdv.
+Dim richTextBoxAdv As New SfRichTextBoxAdv()
+richTextBoxAdv.ManipulationMode = ManipulationModes.All
+' Defines the layout type as Block.
+richTextBoxAdv.LayoutType = LayoutType.Block
+
+{% endhighlight %}
+
 {% endtabs %}
 
-![Layout-Types_img3](Layout-Types_images/Layout-Types_img3.jpeg)
+![SfRichTextBoxAdv with the Block layout type](Layout-Types_images/Layout-Types_img3.jpeg)
 
-N> In Windows Phone device, the entire rich text content is rendered continuously in a single page as continuous layout type and there is no effect on setting other layout types.
+N> On Windows Phone devices, the entire rich-text content is rendered continuously in a single page as the continuous layout type, regardless of the `LayoutType` setting.
+
+## See also
+
+- [Commands in UWP RichTextBox](./Commands)
+- [Background in UWP RichTextBox](./Background)
+- [Getting started with UWP RichTextBox](./Getting-Started)
