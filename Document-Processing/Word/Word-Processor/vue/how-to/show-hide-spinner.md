@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show hide spinner in Vue Document editor component | Syncfusion
-description: Learn here all about Show hide spinner in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Show and Hide Spinner in Vue DOCX Editor | Syncfusion
+description: Show or hide loading indicators in Syncfusion® Vue DOCX Editor when opening documents and processing content.
 control: Show hide spinner 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show hide spinner in Vue Document editor component
+# How to Show and Hide Spinner in Vue DOCX Editor
 
 Using the [`spinner`](https://ej2.syncfusion.com/documentation/spinner/getting-started#create-the-spinner-globally) component, you can show or hide a spinner while opening a document in the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 

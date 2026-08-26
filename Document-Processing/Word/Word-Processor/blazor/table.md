@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Tables in Blazor DOCX Editor Component | Syncfusion
-description: Checkout and learn here all about Tables in Syncfusion Blazor Document Editor component and much more.
+title: Tables in Blazor DOCX Editor | Syncfusion
+description: Tables in Blazor DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Working with Tables in Blazor Document Editor
+# Tables in Blazor DOCX Editor
 
 Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through a keyboard, mouse, or touch interactions. [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes a rich set of APIs to perform these operations programmatically.
 

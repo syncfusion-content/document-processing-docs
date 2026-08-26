@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize context menu in Vue Document editor component | Syncfusion
-description: Learn here all about Customize context menu in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: How to Customize Context Menu in Vue DOCX Editor | Syncfusion
+description: Customize the context menu in Syncfusion® Vue DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 control: Customize context menu 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize context menu in Vue Document editor component
+# How to Customize Context Menu in Vue DOCX Editor
 
 ## How to customize context menu in Document Editor
 

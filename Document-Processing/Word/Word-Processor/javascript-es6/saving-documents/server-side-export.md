@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Server-side export in JavaScript (ES6) DOCX Editor | Syncfusion
-description: Learn here all about Server-side export in the Syncfusion JavaScript (ES6) Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in TypeScript DOCX Editor | Syncfusion
+description: The export feature in TypeScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Server side export 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Server-side export in JavaScript (ES6) Document Editor
+# Server-side Export in TypeScript DOCX Editor
 
 ## SFDT to DOCX export
 

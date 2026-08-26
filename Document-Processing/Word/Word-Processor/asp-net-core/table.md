@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Table in ASP.NET Core DOCX Editor | Syncfusion
-description: Learn how to create and format tables in the Syncfusion ASP.NET Core Document Editor component and more.
+title: Tables in ASP.NET Core DOCX Editor | Syncfusion
+description: Tables in ASP.NET Core DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table
 documentation: ug
 ---
 
 
-# Tables in ASP.NET Core Document Editor
+# Tables in ASP.NET Core DOCX Editor
 
 Tables are an efficient way to present information. [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
 

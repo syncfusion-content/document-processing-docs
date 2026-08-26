@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Capture current page number in ASP.NET MVC PDF Viewer | Syncfusion
-description: Discover how to read the current page number in the Syncfusion ASP.NET MVC PDF Viewer using built-in properties.
+title: How to Capture the Current Page Number in ASP.NET MVC | Syncfusion
+description: Capture the current page number in the ASP.NET MVC PDF Viewer when users navigate, annotate, or interact with the document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Capture the current page number
+# How to Capture the Current Page Number in ASP.NET MVC PDF Viewer
 
 The Syncfusion ASP.NET MVC PDF Viewer allows you to capture the page number that is currently visible when a PDF document is loaded. Use the [**currentPageNumber**](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_CurrentPageNumber) property to obtain the page that is in view.
 

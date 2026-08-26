@@ -1,12 +1,12 @@
 ---
-title: RTF conversions | Word library | Syncfusion
-description: This section illustrates how to perform RTF to Word conversion and Word to RTF conversions using Syncfusion Word library (Essential DocIO)
+title: Convert Word to RTF and vice versa in Java Word | Syncfusion
+description: This section illustrates how to perform RTF to Word conversion and Word to RTF conversions using Syncfusion Word library 
 platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
-# Word to RTF and RTF to Word Conversions
+# Convert Word to RTF and vice versa in Java Word
 
 ## RTF
 The [Rich Text Format (RTF)](http://en.wikipedia.org/wiki/Rich_Text_Format#) is one of the document formats supported by Microsoft Word and many other Word processing applications. RTF is human readable file format invented for interchanging formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.

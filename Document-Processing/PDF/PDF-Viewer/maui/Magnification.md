@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Magnification in .NET MAUI PDF Viewer (SfPdfViewer)
+# Magnification in .NET MAUI PDF Viewer
 
 Give users precise control over how PDF content is displayed — from pinch-to-zoom on touch screens to setting an exact zoom percentage in code. You can also lock the view to predefined zoom modes like *Fit to Page* or *Fit to Width* to optimize readability for different document types.
 

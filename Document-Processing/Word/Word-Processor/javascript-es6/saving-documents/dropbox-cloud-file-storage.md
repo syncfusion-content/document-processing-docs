@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save document to Dropbox in DOCX Editor | Syncfusion
-description: Learn how to save a document to Dropbox cloud file storage in the Syncfusion JavaScript (ES6) Document Editor of Essential JS 2 and more details.
+title: Save to Dropbox Cloud Storage in TypeScript DOCX Editor | Syncfusion
+description: Save documents to Dropbox cloud storage from TypeScript DOCX Editor, enabling cloud-based file storage and document management.
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save document to Dropbox cloud file storage in JavaScript (ES6)
+# Save Documents to Dropbox Cloud Storage in TypeScript DOCX Editor
 
 To save a document to Dropbox cloud file storage, you can follow the steps below.
 

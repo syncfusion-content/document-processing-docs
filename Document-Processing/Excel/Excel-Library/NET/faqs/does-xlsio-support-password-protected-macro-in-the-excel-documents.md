@@ -1,12 +1,12 @@
 ---
-title: XlsIO support for password protected macro | Syncfusion
-description: This page tells whether the Syncfusion XlsIO supports password protected macro in the Excel documents.
+title: Password Protected Macros in .NET Excel Library | Syncfusion
+description: Password-protected macros explains whether Syncfusion .NET Excel Library can process Excel documents that contain protected macros.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO support password protected macro in the Excel documents?
+# Password-Protected Macros in .NET Excel Library
 Yes. XlsIO preserves the password protection for the macro in the Excel documents for resaving process.  But, it does not have support for remove and modify the password.
 
 ## See Also

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text & Cell Formatting in React Spreadsheet Component | Syncfusion
-description: Learn here all about Text and cell formatting in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Text and Cell Formatting in React Spreadsheet | Syncfusion
+description: Learn about text and cell formatting in the Syncfusion React Spreadsheet component to customize worksheet appearance and layout.
 control: Formatting
 platform: document-processing
 documentation: ug
 ---
 
-# Cell Styling and Text Formatting
+# Text and Cell Formatting in React Spreadsheet
 
 Text and cell formatting improves the appearance of your spreadsheet and helps highlight specific cells or ranges. You can apply formats such as font size, font family, font color, text alignment, borders, and more. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#allowcellformatting) property to enable or disable text and cell formatting in the Spreadsheet.  
 

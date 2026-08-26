@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print Events in Blazor PDF Viewer | Syncfusion
-description: Learn how to configure print events and track usage and implements workflows in the Blazor PDF Viewer component.
+description: Learn how to configure print events and track usage and implements workflows in the Blazor PDF Viewer .
 platform: document-processing
 control: SfPdfViewer
 documentation: ug

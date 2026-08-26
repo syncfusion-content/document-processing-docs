@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line Annotation (Shape) in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, delete, and programmatically manage Line annotations in the Blazor SfPdfViewer.
+title: Line Annotation (Shape) in Blazor PDF Viewer  | Syncfusion
+description: Learn how to add, edit, delete, and programmatically manage Line annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Line Annotation (Shape) in Blazor SfPdfViewer Component
+# Line Annotation (Shape) in Blazor PDF Viewer 
 
 Line annotations let users draw straight connectors or callouts on PDFs for markup and review. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
 

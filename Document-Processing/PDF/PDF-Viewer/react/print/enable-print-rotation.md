@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Enable Print Rotation in React PDF Viewer | Syncfusion
-description: Learn how to enable print rotation for landscape documents in the Syncfusion React PDF Viewer component.
+description: Enable print rotation in the React PDF Viewer so landscape documents are printed in the correct orientation without manual adjustment.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable print rotation in React PDF Viewer
+# Enable Print Rotation in React PDF Viewer
 
 This guide shows how to enable automatic rotation of landscape pages during printing so they match the paper orientation and reduce clipping. Use [`enablePrintRotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#enableprintrotation) (boolean, default `false`) when printing documents that include landscape pages, and you want them rotated to match the printer paper orientation.
 

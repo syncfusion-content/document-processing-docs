@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Formula in WPF Spreadsheet control | Syncfusion®
-description: Learn here all about Custom Formula support in Syncfusion® WPF Spreadsheet (SfSpreadsheet) control and more.
+title: Custom Formula in WPF Spreadsheet Control | Syncfusion®
+description: Create and use custom formulas in the WPF Spreadsheet control to perform calculations with user-defined functions.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Custom Formula in WPF Spreadsheet (SfSpreadsheet)
+# Custom Formula in WPF Spreadsheet 
 
 SfSpreadsheet allows you to add custom formulas to its function library by using the [AddFunction](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html#Syncfusion_UI_Xaml_CellGrid_FormulaEngine_AddFunction_System_String_Syncfusion_UI_Xaml_CellGrid_FormulaEngine_LibraryFunction_) method of [FormulaEngine](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.CellGrid.FormulaEngine.html).
 

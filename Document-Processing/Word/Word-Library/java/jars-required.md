@@ -1,12 +1,12 @@
 ---
-title: Jars Required for Java Word library (DocIO) | Syncfusion
-description: This section illustrates external jars required to use Syncfusion Java Word library (DocIO) in Java application
+title: Jars Required for Java Word library  in Java Word | Syncfusion
+description: This section illustrates external jars required to use Syncfusion Java Word library  in Java application
 platform: document-processing
 control: Word library
 documentation: UG
 ---
 
-# External Jars Required
+# Jars Required for Java Word library  in Java Word
 
 The following jar files are required to be referenced in your Java application.
 

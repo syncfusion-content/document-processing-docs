@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customize annotations in Blazor PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Blazor SfPdfViewer using UI tools and programmatic settings (defaults and runtime edits).
+description: Learn how to customize PDF annotations in Blazor PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Customize Annotations in Blazor SfPdfViewer Component
+# Customize Annotations in Blazor PDF Viewer 
 
 Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built-in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell Check in ASP.NET Core DOCX Editor Component | Syncfusion
-description: Learn how to perform spell checking in the Syncfusion ASP.NET Core Document Editor component and more.
+title: Spell Check in ASP.NET Core DOCX Editor | Syncfusion
+description: The spell check feature in ASP.NET Core DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell Check
 documentation: ug
 ---
 
 
-# Spell Check in ASP.NET Core Document Editor Component
+# Spell Check in ASP.NET Core DOCX Editor
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports performing spell checking for any input text. Spell check is supported on the input text in the Document Editor and provides suggestions for misspelled words through the dialog and the context menu.
 

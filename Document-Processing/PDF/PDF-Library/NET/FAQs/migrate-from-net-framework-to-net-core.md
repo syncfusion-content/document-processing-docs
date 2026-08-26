@@ -1,11 +1,11 @@
 ---
-title: Migrate from .NET Framework to .NET Core | Syncfusion 
-description: This section describes the changes to consider when migrating the Syncfusion .NET PDF library from .NET Framework to .NET Core.
+title: Migration from .NET Framework to .NET Core | Syncfusion
+description: Learn the key changes when migrating the Syncfusion PDF library codes from .NET Framework to .NET Core.
 control: PDF
 documentation: UG
 ---
 
-# Migrate PDF Library from .NET Framework to .NET Core
+# Migration from .NET Framework to .NET Core
 
 This section describes the changes to consider when migrating the Syncfusion<sup>&reg;</sup> .NET PDF library from .NET Framework to .NET Core. .NET Core is the recommended target for all new and existing applications, offering cross-platform support, improved performance, and long-term support from Microsoft.
 
@@ -299,7 +299,7 @@ Sample link: {{'[Here](https://github.com/SyncfusionExamples/PDF-Examples/tree/m
 {{'[Split()](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_)'| markdownify }}
 </td>
 <td>
-Not supported due to .NET Core framework limitations. Alternatively, use the [importing pages from one document to another](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages#importing-pages-from-an-existing-document) approach.
+Not supported due to .NET Core framework limitations. Alternatively, use the {{'[importing pages from one document to another](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-pages#importing-pages-from-an-existing-document)'| markdownify }} approach.
 </td>
 </tr>
 <tr>
@@ -307,8 +307,8 @@ Not supported due to .NET Core framework limitations. Alternatively, use the [im
 {{'[FromRtf(String, Single, PdfImageType)](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfImage.html#Syncfusion_Pdf_Graphics_PdfImage_FromRtf_System_String_System_Single_Syncfusion_Pdf_Graphics_PdfImageType_)'| markdownify }}
 </td>
 <td>
-Not supported due to .NET Core framework limitations. Use the [.NET Word library](https://help.syncfusion.com/document-processing/word/word-library/net/overview) instead.<br/>
-[RTF to PDF](https://support.syncfusion.com/kb/article/7542/how-to-convert-a-word-document-to-pdf-in-aspnet-core)
+Not supported due to .NET Core framework limitations. Use the {{'[.NET Word library](https://help.syncfusion.com/document-processing/word/word-library/net/overview)'| markdownify }} instead.<br/>
+{{'[RTF to PDF](https://support.syncfusion.com/kb/article/7542/how-to-convert-a-word-document-to-pdf-in-aspnet-core)'| markdownify }}
 </td>
 </tr>
 <tr>

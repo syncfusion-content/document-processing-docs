@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Redaction in .NET MAUI PDF Viewer (SfPdfViewer)
+# Redaction in .NET MAUI PDF Viewer
 
 Before sharing a PDF externally, use redaction to permanently remove sensitive data — such as personal details, financial figures, or confidential text — from the document. Unlike simply covering content with a shape or annotation, redaction in [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) eliminates the underlying content entirely once the document is saved, making recovery impossible.
 

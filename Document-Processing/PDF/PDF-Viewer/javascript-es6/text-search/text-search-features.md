@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text search Features in TypeScript PDF Viewer control | Syncfusion
-description: Learn how to configure text search and run programmatic searches in the Syncfusion TypeScript PDF Viewer.
+title: Text Search Features in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Configure text search features in the JavaScript (ES6) PDF Viewer and run programmatic searches to find and highlight text inside a PDF document.
 platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Text search Features in TypeScript PDF Viewer control
+# Text Search in JavaScript (ES6) PDF Viewer
 
 The text search feature in the PDF Viewer locates and highlights matching content within a document. Enable or disable this capability with the following configuration.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy Syncfusion JavaScript (ES6) DOCX Editor in Azure App Service
-description: Learn here all about deploying word processor server docker container in Azure App Service in the Syncfusion JavaScript (ES6) Document Editor.
+title: Deploy TypeScript DOCX Editor Docker image on Azure App | Syncfusion
+description: Deploy the Syncfusion® TypeScript DOCX Editor Docker image to Azure App Service for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy word processor server docker container in azure app service 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Deploy Word Processor Docker Server in Azure App Service
+# How to Deploy TypeScript DOCX Editor Docker image on Azure App
 
 ## Prerequisites
 

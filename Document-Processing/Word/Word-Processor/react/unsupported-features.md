@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Unsupported features in React DOCX Editor component | Syncfusion
-description: Learn about the list of unsupported features in the React Document Editor to understand its limitations.
+title: Unsupported Features in React DOCX Editor | Syncfusion
+description: Explore unsupported and partially supported document formatting options, Word elements, and known limitations in React DOCX Editor.
 control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported features in React Document Editor
+# Unsupported Features in React DOCX Editor
 
 This section describes the unsupported elements in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 

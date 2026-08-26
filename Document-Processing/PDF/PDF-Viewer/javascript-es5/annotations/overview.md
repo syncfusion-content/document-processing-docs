@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Overview of Annotation in JavaScript PDF Viewer control | Syncfusion
-description: Learn about annotations in Syncfusion JavaScript PDF Viewer for reviewing, marking up, and annotating PDF documents.
+title: About Syncfusion JavaScript (ES5) PDF Viewer Annotations | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Annotations section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations overview in JavaScript
+# About Syncfusion JavaScript (ES5) PDF Viewer Annotations
 
 Annotations in the PDF Viewer are interactive elements that allow users to add notes, highlights, or text boxes directly to a PDF document. These annotations add context and feedback to PDF files, simplifying collaboration during document reviews.
 

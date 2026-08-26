@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Content Control in JavaScript (ES6) DOCX Editor control | Syncfusion
-description: Learn here all about Content Control in Syncfusion JavaScript (ES6) Document Editor control of Syncfusion Essential JS 2 and more.
+title: Content Controls in TypeScript DOCX Editor | Syncfusion
+description: The content control feature in TypeScript DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content Control in JavaScript (ES6) Document Editor control
+# Content Controls in TypeScript DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides support for inserting and editing content controls.
 

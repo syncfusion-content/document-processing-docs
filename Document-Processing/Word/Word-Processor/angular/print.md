@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in Angular DOCX Editor component | Syncfusion
-description: Learn here all about Print in Syncfusion Angular Document Editor component of Syncfusion Essential JS 2 and more.
+title: Print in Angular DOCX Editor | Syncfusion
+description: Print feature in Angular DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Print 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in Angular Document Editor component
+# Print in Angular DOCX Editor
 
 To print the document, use the [`print`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#print) method from the Document Editor instance.
 
