@@ -61,7 +61,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [Route("SaveToDropBox")]
 //Post action for uploading the document to Dropbox
 
-public void SaveToDropBox(IFormCollection data)
+public async Task SaveToDropBox(IFormCollection data)
 {
   if (data.Files.Count == 0)
     return;
@@ -73,7 +73,9 @@ public void SaveToDropBox(IFormCollection data)
 
   using (var dropBox = new DropboxClient(_accessToken))
   {
-      Stream stream = new MemoryStream();
+    Stream stream = new MemoryStream();
+    try
+    {
       file.CopyTo(stream);
 
       // Upload the document to Dropbox
@@ -82,6 +84,16 @@ public void SaveToDropBox(IFormCollection data)
         WriteMode.Overwrite.Instance,
         body: stream
       );
+    }
+    catch (Exception ex)
+    {
+      // Log or handle the upload failure (e.g., invalid token, folder not found, permission denied)
+      throw;
+    }
+    finally
+    {
+      stream.Dispose();
+    }
   }
 }
 
@@ -115,7 +127,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
+N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name. The **Dropbox.Api** NuGet package (version 7.x or later) must be installed in your application to use the previous code example.
 
 **Step 4:**  Modify the index file in the Document Editor sample
 
