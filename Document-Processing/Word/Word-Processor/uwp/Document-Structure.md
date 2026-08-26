@@ -8,5 +8,10 @@ keywords: document-structure
 ---
 # Document Structure in UWP DOCX Editor
 
-![Document-Structure_img1](Document-Structure_images/Document-Structure_img1.jpeg)
+![Document structure overview](Document-Structure_images/Document-Structure_img1.jpeg)
 
+## See also
+
+- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Document Properties in UWP RichTextBox](./Document-Properties)
+- [Commands in UWP RichTextBox](./Commands)
