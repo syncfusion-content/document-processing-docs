@@ -118,7 +118,7 @@ N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and
 
 **Step 3:** Modify the index file in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in an AWS S3 Bucket.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in an AWS S3 Bucket.
 
 ```typescript
 <template>

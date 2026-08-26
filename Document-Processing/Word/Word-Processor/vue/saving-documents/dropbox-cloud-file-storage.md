@@ -111,7 +111,7 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-* Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+* Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration.
 
 ```json
 {
@@ -129,9 +129,9 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name. The **Dropbox.Api** NuGet package (version 7.x or later) must be installed in your application to use the previous code example.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index file in the Document Editor sample
 
-On the client-side, to export the document into blob the document using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and sent to server-side for saving in Dropbox cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Dropbox cloud file storage.
 
 ```typescript
 <template>

@@ -14,9 +14,7 @@ To save a document to Box cloud file storage, you can follow the steps below.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials — Client ID and Client Secret — to authenticate and access Box APIs.
-
-N> Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose. After creating the Box application, grant it access to the specific folder where documents will be saved. In the Box Developer Console, navigate to your application's configuration and add the target folder under the authorized folders. This folder authorization is required for App Tokens/JWT authentication to access files.
+To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials, Client ID and Client Secret, to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
 **Step 2:** Create a Simple Document Editor sample in Vue
 
@@ -58,14 +56,14 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 }
 ```
 
-* Create the `SaveToBoxCloud()` method to save the downloaded document to Box cloud file storage bucket
+* Create the `SaveToBoxCloud()` method to save the document to the Box cloud file storage.
 
 ```csharp
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
 [Route("SaveToBoxCloud")]
-//Post action for uploading the document to Box
+//Post action for uploading the document to Box cloud file storage
 
 public async Task SaveToBoxCloud(IFormCollection data)
 {
@@ -125,11 +123,11 @@ private string GetValue(IFormCollection data, string key)
 }
 ```
 
-N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
+N> Replace **Your_Box_Storage_Access_Token** with your actual Box access token, and **Your_Folder_ID** with the ID of the folder in your Box storage where you want to perform specific operations. Remember to use your valid Box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret** are placeholders for your application's API key and secret.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:** Modify the index file in the Document Editor sample
 
-On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Box cloud file storage.
+On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Box cloud file storage.
 
 ```typescript
 <template>
