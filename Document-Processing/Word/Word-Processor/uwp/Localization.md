@@ -19,7 +19,7 @@ The following steps illustrate how to configure the app package for localization
 2. Double-click the **Package.appxmanifest** file. If the manifest file is already open in the XML code view, Visual Studio prompts you to close the file.
 3. On the **Application** tab, specify the **Default language** as required to localize your app. Click **More information** to learn about the supported languages.
 
-![UWP app manifest designer showing the default language setting](Localization_images/Localization_img1.jpeg)
+   ![UWP app manifest designer showing the default language setting](Localization_images/Localization_img1.jpeg)
 
 4. Save the app manifest file after setting the default language.
 
@@ -29,11 +29,11 @@ The following steps illustrate how to configure the app package for localization
 2. Create a folder named after the culture (for example, `en-US`, `fr-FR`) under `Resources` to hold the resource file for that culture.
 3. Add the default English (`en-US`) [`.resw`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Resources_File-1713514901) files for `SfRichTextBoxAdv` and your application — named `Syncfusion.SfRichTextBoxAdv.UWP.Resources.resw`, `Syncfusion.SfRibbon.UWP.Resources.resw`, and `Localization.Resources.resw` respectively — in the `en-US` folder. For reference, a French (`fr-FR`) [`.resw`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Resources2076091381) file.
 
-![UWP project showing the added resource files under the Resources folder](Localization_images/Localization_img2.jpeg)
+   ![UWP project showing the added resource files under the Resources folder](Localization_images/Localization_img2.jpeg)
 
 4. Add the resource name and its corresponding localized value in the Resource Designer of each `.resw` file.
 
-![UWP project showing the resource file list with localized values](Localization_images/Localization_img3.jpeg)
+   ![UWP project showing the resource file list with localized values](Localization_images/Localization_img3.jpeg)
 
 N> If you have not used `SfRibbon` in your application, you can skip the `Syncfusion.SfRibbon.UWP.[Culture name].resw` file mentioned above.
 
