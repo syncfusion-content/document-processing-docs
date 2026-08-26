@@ -5,10 +5,10 @@ description: Install Syncfusion® WPF UI Builder to generate production-ready WP
 control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: WPF UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+keywords: WPF UI Builder,Skills,AI Assistants,DOCX Editor SDK,Agent Skills,installation,configuration,agent,prompt
 ---
 
-# UI Builder Skill with React DOCX Editor
+# UI Builder Skill with WPF DOCX Editor
 
 **Syncfusion® WPF UI Builder Skill** is an AI-powered agent skill that accelerates [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) development by transforming natural-language UI requirements into production-ready code using Syncfusion® WPF components.
 
@@ -22,13 +22,13 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 6
 - WPF application (existing or new); see [Overview](https://help.syncfusion.com/wpf/welcome-to-syncfusion-essential-wpf)
-- A supported AI agent or IDE that integrates with the Skills (VS Code, Cursor, Syncfusion® Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license(any of the following):  
+- A supported AI agent or IDE that integrates with the Skills, such as VS Code, Cursor, or Syncfusion® Code Studio
+- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
   - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
   - [Community License](https://www.syncfusion.com/products/communitylicense)  
   - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
 
-## Key Benefits
+## Key benefits
 
 ### **AI-Driven UI Generation**
 - Transforms prompts into fully developed WPF components rather than just partial code snippets.
@@ -41,7 +41,7 @@ Before installing WPF UI Builder Skill with DOCX Editor, ensure the following:
 - Avoids unsupported or deprecated patterns
 
 ### **Patterns & Best Practices**
-- Recommended control composition and state management
+- Recommends control composition and state management
 - Event handling aligned with WPF standards
 - Secure and scalable coding patterns
 
@@ -102,7 +102,7 @@ Refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targe
 
 > For [Syncfusion® Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/custom-agents#predefined-agents), use the Copilot command above to install the WPF UI Builder.
 
-## How the Syncfusion® WPF UI Builder Skill Works with DOCX Editor
+## How the Syncfusion® WPF UI builder Skill works with DOCX Editor
 
 1. **Intent Analysis** — Parse the user's prompt to identify control types and high-level layout intent.
 2. **Project Detection** — Automatically detects project framework and existing themes.
@@ -125,7 +125,7 @@ Key enforcement points:
 
 > The assistant handles most stages automatically and may request confirmation where required.
 
-## Using the AI Assistant
+## Using the AI assistant
 
 After installing WPF UI Builder with APM, the relevant agent and skill files are added to your project under:
 
@@ -169,9 +169,9 @@ Ensure the interaction between the DataGrid and editor is seamless, and maintain
 
 Generated code follows best practices with well-structured XAML markup, proper event wiring and binding setup, strong C# typing, DPI awareness, and built-in security measures such as input validation and safe data handling.
 
-## Best Practices
+## Best practices
 
-Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready result:
+Follow these guidelines to get the most out of UI Builder and ensure high-quality production-ready results:
 
 - **Stay consistent** — Maintain consistent naming conventions (PascalCase for classes, camelCase for variables), control hierarchies, and XAML patterns throughout your project.
 - **Use advanced AI models** — For best results, use **Claude Sonnet 4.6 or higher** capability models to produce better code quality and more accurate implementations.
