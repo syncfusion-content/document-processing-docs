@@ -365,7 +365,7 @@ View | View
 
 ## Document Editor Container
 
-The following list of properties and its values are used in the DOCX Editor container.
+The following list of properties and its values are used in the Document Editor container.
 
 Locale keywords |Text
 -----|-----

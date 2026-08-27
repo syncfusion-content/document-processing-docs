@@ -44,7 +44,7 @@ Refer to the following example for creating a document and printing it.
 
 The DOCX Editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document Editor settings. The DOCX Editor uses a canvas approach to render content. The canvas is then converted to an image and processed for print. Using the `printDevicePixelRatio` API, you can increase the image quality based on your requirement.
 
-The following example code illustrates how to improve the print quality in the DOCX Editor container.
+The following example code illustrates how to improve the print quality in the Document Editor container.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

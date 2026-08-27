@@ -220,7 +220,7 @@ N> The Web Service link `https://document.syncfusion.com/web-services/docx-edito
 
 The DOCX Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
-The following code shows how to add sub-items inside a custom context menu option in the DOCX Editor container.
+The following code shows how to add sub-items inside a custom context menu option in the Document Editor container.
  
 ```typescript
 import { NgModule } from '@angular/core';

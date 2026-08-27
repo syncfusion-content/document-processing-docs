@@ -44,7 +44,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      // specifies the template string for the DOCX Editor container component
+      // specifies the template string for the Document Editor container component
       template: `<div><button ejs-button (click)="insertText()" >Insert Text</button>
       <ejs-documenteditorcontainer #documenteditor_default serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true (created)="onCreated()"> </ejs-documenteditorcontainer></div>`,
       encapsulation: ViewEncapsulation.None,

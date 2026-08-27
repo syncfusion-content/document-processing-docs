@@ -159,7 +159,7 @@ DOCX Editor provides support for protecting the document with `RevisionsOnly` pr
 
 The DOCX Editor provides an option to protect and unprotect the document using the [enforceProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) APIs.
 
-The following example illustrates how to enforce and stop protection in the DOCX Editor container.
+The following example illustrates how to enforce and stop protection in the Document Editor container.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
