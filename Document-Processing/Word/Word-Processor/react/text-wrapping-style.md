@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text Wrapping Style in React DOCX Editor
 
-Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
+Text wrapping refers to how images and shapes are placed within the surrounding text in a document. Currently, [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) has only preservation support for images and textbox shapes, with the wrapping styles listed below.
 
 ## In-Line with Text
 
@@ -46,6 +46,6 @@ N> Starting from v19.2.0.x, the behind text wrapping style is supported.
 
 In this option, text wraps around the image or text box in a square shape.
 
-N> Tight and Through styles will be preserved as the square wrapping style in the Document Editor, which is supported from v19.2.0.x.
+N> Tight and Through styles will be preserved as the square wrapping style in the DOCX Editor, which is supported from v19.2.0.x.
 
 ![view of shape with square wrapping style in DocumentEditor](images/Text-Wrapping-Style_images/square-textwrapping.PNG)

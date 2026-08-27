@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Localization
 <!-- todo -->
-The `Localization` library allows you to localize default text content of the Document Editor. The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer to the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left)
+The `Localization` library allows you to localize default text content of the DOCX Editor. The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component has static text on some features (like find & replace, context-menu, dialogs) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. Please refer to the sample link [RTL](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left)
 
 N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
-## Document Editor
+## DOCX Editor
 
-The following list of properties and its values are used in the document editor.
+The following list of properties and its values are used in the DOCX Editor.
 
 Locale keywords |Text
 -----|-----

@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Charts in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides chart preservation support. Using the DOCX Editor, you can view chart reports from your Word document.
 
-The following example shows chart preservation in the Document Editor.
+The following example shows chart preservation in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -30,7 +30,7 @@ The following example shows chart preservation in the Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in the Document Editor:
+The following chart types are supported in the DOCX Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -53,4 +53,4 @@ The following chart types are supported in the Document Editor:
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/chart).
+Explore how to preserve charts in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/chart).
