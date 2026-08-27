@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Find and Replace in Angular DOCX Editor
 
-The [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
+The [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component searches a portion of text in the document through a built-in interface called `OptionsPane` or rich APIs. When used in combination with selection, it performs various operations on the search results like replacing it with some other text, highlighting it, making it bolder, and more.
 
 ## Options pane
 
@@ -32,7 +32,7 @@ You can close the options pane by pressing `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search) module of DOCX Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -44,7 +44,7 @@ The [`Search`](https://ej2.syncfusion.com/angular/documentation/api/document-edi
 
 Using [`find()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
-The following example code illustrates how to use find in Document Editor.
+The following example code illustrates how to use find in DOCX Editor.
 
 ```typescript
 this.documenteditor.search.find('Some text', 'None');
@@ -79,7 +79,7 @@ The [`SearchResults`](https://ej2.syncfusion.com/angular/documentation/api/docum
 
 Using [`replaceAll`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/searchResults#replaceall), you can replace all the occurrences with specified text.
 
-The following example code illustrates how to use Replace All in Document Editor.
+The following example code illustrates how to use Replace All in DOCX Editor.
 
 ```typescript
 this.documentEditor.search.findAll ('Some text');
@@ -131,7 +131,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      //specifies the template string for the Document Editor component
+      //specifies the template string for the DOCX Editor component
       template: `<ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true [enableSearch]=true (searchResultsChange)="onSearchResultChange()" > </ejs-documenteditor>`,
       encapsulation: ViewEncapsulation.None,
       providers: [EditorService, SelectionService, SfdtExportService]

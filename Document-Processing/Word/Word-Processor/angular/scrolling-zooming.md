@@ -50,7 +50,7 @@ this.documentEditor.zoomFactor = 3;
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
 
 ```typescript
 this.documentEditor.fitPage('FitPageWidth');
@@ -206,7 +206,7 @@ export class AppComponent {
           },
         ],
       };
-      //Open the document in Document Editor.
+      //Open the document in DOCX Editor.
       (this.documentEditor as DocumentEditorComponent).open(
         JSON.stringify(sfdt)
       );

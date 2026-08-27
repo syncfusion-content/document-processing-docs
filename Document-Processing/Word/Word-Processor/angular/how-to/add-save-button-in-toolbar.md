@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # How to Add Save Button in Toolbar in Angular DOCX Editor
 
-## To add a save button to the existing toolbar in the Document Editor Container
+## To add a save button to the existing toolbar in the DOCX Editor Container
 
-Angular Document Editor Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customToolbarItemModel) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs).
+Angular DOCX Editor Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customToolbarItemModel) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/angular/documentation/api/toolbar/clickEventArgs).
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';

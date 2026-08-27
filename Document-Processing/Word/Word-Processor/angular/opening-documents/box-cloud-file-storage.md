@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Open Documents from Box Cloud File Storage in Angular DOCX Editor
 
-To load a document from Box cloud file storage in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from Box cloud file storage in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials, Client ID and Client Secret, to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create a simple Document Editor sample in Angular
+**Step 2:** Create a simple DOCX Editor sample in Angular
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component. 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -120,7 +120,7 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
 
 > Replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the[`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
@@ -150,7 +150,7 @@ export class AppComponent implements OnInit {
     http.onreadystatechange = () => {
       if (http.readyState === 4) {
         if (http.status === 200 || http.status === 304) {
-          //open the SFDT text in Document Editor
+          //open the SFDT text in DOCX Editor
           this.container.documentEditor.open(http.responseText);
         }
       }

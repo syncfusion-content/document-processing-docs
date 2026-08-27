@@ -16,9 +16,9 @@ To load a document from Google Drive in a [Angular DOCX Editor](https://www.sync
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, refer to the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a simple Document Editor sample in Angular
+**Step 2:** Create a simple DOCX Editor sample in Angular
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -134,7 +134,7 @@ public async Task<string> LoadFromGoogleDrive([FromBody] Dictionary<string, stri
 
 > The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:** Modify the index file in the Document Editor sample
+**Step 4:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
@@ -164,7 +164,7 @@ export class AppComponent implements OnInit {
     http.onreadystatechange = () => {
       if (http.readyState === 4) {
         if (http.status === 200 || http.status === 304) {
-          //open the SFDT text in Document Editor
+          //open the SFDT text in DOCX Editor
           this.container.documentEditor.open(http.responseText);
         }
       }

@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Enable or disable history
 
-Inject the ‘EditorHistory’ module in your application to provide history preservation functionality for the Document Editor. Refer to the following code example.
+Inject the ‘EditorHistory’ module in your application to provide history preservation functionality for the DOCX Editor. Refer to the following code example.
 
 ```typescript
 import { Component, ViewEncapsulation } from '@angular/core';
@@ -22,7 +22,7 @@ import { DocumentEditorComponent, SfdtExportService, SelectionService, EditorSer
 
 @Component({
     selector: 'app-container',
-    //specifies the template string for the Document Editor component
+    //specifies the template string for the DOCX Editor component
     template: `<ejs-documenteditor #document_editor  id="container" style="width: 100%;height: 100%;display:block" [isReadOnly]=false [enableSelection]=true [enableEditor]=true [enableEditorHistory]=true >
     </ejs-documenteditor>`,
     encapsulation: ViewEncapsulation.None,
@@ -35,7 +35,7 @@ export class AppComponent {
 }
 ```
 
-You can enable or disable history preservation for the Document Editor instance at any time using the ‘enableEditorHistory’ property. Refer to the following sample code.
+You can enable or disable history preservation for the DOCX Editor instance at any time using the ‘enableEditorHistory’ property. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.enableEditorHistory = false;
@@ -43,8 +43,8 @@ this.documentEditor.enableEditorHistory = false;
 
 ## Undo and Redo
 
-You can perform undo and redo using the ‘Ctrl+Z’ and ‘Ctrl+Y’ keyboard shortcuts. The Document Editor exposes APIs to do it programmatically.
-To undo the last editing operation in the Document Editor, refer to the following sample code.
+You can perform undo and redo using the ‘Ctrl+Z’ and ‘Ctrl+Y’ keyboard shortcuts. The DOCX Editor exposes APIs to do it programmatically.
+To undo the last editing operation in the DOCX Editor, refer to the following sample code.
 
 ```typescript
 this.documentEditor.editorHistory.undo();
@@ -58,7 +58,7 @@ this.documentEditor.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions is maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions is maintained in a stack, so that the last item will be reverted first. By default, the DOCX Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```typescript
 this.documentEditor.editorHistory.undoLimit = 400;

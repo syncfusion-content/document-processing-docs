@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in Angular DOCX Editor using ASP.NET Core
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+The following are needed to enable collaborative editing in DOCX Editor.
 
 - SignalR
 - Redis
@@ -96,7 +96,7 @@ The configuration and storage size of the Redis cache can be adjusted based on t
 
 Collaborative editing is built using three main components:
 
-### Client (Angular Document Editor)
+### Client (Angular DOCX Editor)
 
 - Captures user edits in the document
 
@@ -122,15 +122,15 @@ Collaborative editing is built using three main components:
 
 ## Integrate collaborative editing in client side
 
-### Step 1: Integrate Document Editor in Angular sample
+### Step 1: Integrate DOCX Editor in Angular sample
 
-Refer to the following documentation to get started with the [Angular Document Editor](https://help.syncfusion.com/document-processing/word/word-processor/angular/getting-started)
+Refer to the following documentation to get started with the [Angular DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/angular/getting-started)
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the DOCX Editor.
 
-The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
+The following code snippet demonstrates how to enable collaborative editing in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -166,7 +166,7 @@ export class App {
   private serviceUrl: string = "http://localhost:5212/";
   
  onCreated() {
-    // Enable collaborative editing in Document Editor.
+    // Enable collaborative editing in DOCX Editor.
     this.container.documentEditor.enableCollaborativeEditing = true;
     this.initializeSignalR();
     this.loadDocumentFromServer();
@@ -179,7 +179,7 @@ export class App {
 
 To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in the Angular application. 
 
-The following code snippet demonstrates how to configure SignalR in the Document Editor.
+The following code snippet demonstrates how to configure SignalR in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -314,7 +314,7 @@ openDocument(responseText: string, roomName: string): void {
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -333,7 +333,7 @@ The complete version of the code discussed above is available at the following [
 
 ## Integrate collaborative editing in server side
 
-### Step 1: Create the Document Editor web service project 
+### Step 1: Create the DOCX Editor web service project 
 
 Create an ASP.NET Core web service to handle server-side operations.
 

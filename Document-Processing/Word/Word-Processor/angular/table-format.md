@@ -98,7 +98,7 @@ this.documentEditor.selection.tableFormat.preferredWidth=300;
 
 ## Apply borders
 
-Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
+DOCX Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
 ```typescript
     import { BorderSettings } from '@syncfusion/ej2-documenteditor';
@@ -116,7 +116,7 @@ Please check the below gif which illustrates how to apply a border for selected 
 
 ## Working with row formatting
 
-Document Editor allows various row formatting such as height and repeat header.
+DOCX Editor allows various row formatting such as height and repeat header.
 
 ### Row height
 
@@ -145,7 +145,7 @@ this.documentEditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
+DOCX Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```typescript
 this.documentEditor.selection.tableFormat.title = 'Shipping Details';
@@ -153,7 +153,7 @@ this.documentEditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
+DOCX Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```typescript
 this.documentEditor.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -161,7 +161,7 @@ this.documentEditor.selection.tableFormat.description = 'Freight cost and shippi
 
 ## Online demo
 
-Explore how to format tables in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-formatting).
+Explore how to format tables in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-formatting).
 
 ## See also
 

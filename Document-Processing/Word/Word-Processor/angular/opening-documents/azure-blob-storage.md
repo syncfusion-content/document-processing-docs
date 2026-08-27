@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open Documents from Azure Blob Storage in Angular DOCX Editor
 
-To load a document from Azure Blob Storage in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from Azure Blob Storage in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Create a simple Document Editor sample in Angular
+**Step 1:** Create a simple DOCX Editor sample in Angular
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component. 
 
 **Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -94,7 +94,7 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
-**Step 3:** Modify the index file in the Document Editor sample
+**Step 3:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 
@@ -124,7 +124,7 @@ export class AppComponent implements OnInit {
     http.onreadystatechange = () => {
       if (http.readyState === 4) {
         if (http.status === 200 || http.status === 304) {
-          //open the SFDT text in Document Editor
+          //open the SFDT text in DOCX Editor
           this.container.documentEditor.open(http.responseText);
         }
       }

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fields in Angular DOCX Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) has preservation support for all types of fields in an existing word document without any data loss.
 
 ## Adding Fields
 
@@ -24,11 +24,11 @@ let fieldResult: string = '«First Name»';
 this.documentEditor.editor.insertField(fieldCode, fieldResult);
 ```
 
-N> Document Editor does not validate/process the field code/field result. It simply inserts the field with specified field information.
+N> DOCX Editor does not validate/process the field code/field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
-Document Editor provides support for updating bookmark cross reference fields. The following example code illustrates how to update bookmark cross reference fields.
+DOCX Editor provides support for updating bookmark cross reference fields. The following example code illustrates how to update bookmark cross reference fields.
 
 ```typescript
 //Update all the bookmark cross reference field in the document.
@@ -39,7 +39,7 @@ Bookmark cross reference fields can be updated through UI by using update fields
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following type of fields are automatically updated in Document Editor.
+The following type of fields are automatically updated in DOCX Editor.
 
 * NUMPAGES
 * SECTION

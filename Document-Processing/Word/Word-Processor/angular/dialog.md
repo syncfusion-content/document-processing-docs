@@ -133,7 +133,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSfdtExport]=true
@@ -185,7 +185,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSfdtExport]=true
@@ -237,7 +237,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSfdtExport]=true
@@ -289,7 +289,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSfdtExport]=true
@@ -341,7 +341,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSfdtExport]=true
@@ -395,7 +395,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false (created)="onCreate()" [enableSfdtExport]=true
@@ -449,7 +449,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the Document Editor component
+  //specifies the template string for the DOCX Editor component
   template: `<div>
       <button ejs-button (click)="btnClick()" >Show Dialog</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false (created)="onCreate()" [enableSfdtExport]=true

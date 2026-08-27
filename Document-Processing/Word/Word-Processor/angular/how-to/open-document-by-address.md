@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
+In this article, we are going to see how to open a document from URL in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor).
 
 Please refer to the example below for the client-side code.
 
@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     http.onreadystatechange = () => {
       if (http.readyState === 4) {
         if (http.status === 200 || http.status === 304) {
-          //open the SFDT text in Document Editor
+          //open the SFDT text in DOCX Editor
           this.container.documentEditor.open(http.responseText);
         }
       }
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Please refer to the example below for the server-side code.
 

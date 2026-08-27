@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Enable Track changes
 
-Track changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the Document Editor.
+Track changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the DOCX Editor.
 
 The following example demonstrates how to enable track changes.
 
@@ -70,7 +70,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept or reject a specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 ```typescript
 /**
@@ -105,13 +105,13 @@ this.documentEditor.selection.navigatePreviousRevision();
 
 ## Filter Changes by User
 
-The built-in review panel in the Document Editor supports filtering changes based on the user.
+The built-in review panel in the DOCX Editor supports filtering changes based on the user.
 
 ![Track changes](images/tracked-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
+The DOCX Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/angular/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
 
 The following example illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -151,15 +151,15 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
-N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the Document Editor component.
+N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-The Document Editor provides an option to protect and unprotect the document using the [enforceProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) APIs.
+The DOCX Editor provides an option to protect and unprotect the document using the [enforceProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#stopprotection) APIs.
 
-The following example illustrates how to enforce and stop protection in the Document Editor container.
+The following example illustrates how to enforce and stop protection in the DOCX Editor container.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -167,7 +167,7 @@ import { DocumentEditorContainerComponent, ToolbarService } from '@syncfusion/ej
 
 @Component({
       selector: 'app-container',
-      // specifies the template string for the Document Editor component
+      // specifies the template string for the DOCX Editor component
       template: `<div><button ejs-button (click)="protectDocument()" >Protect</button>
       <button ejs-button (click)="unProtectDocument()" >Unprotect</button>
       <ejs-documenteditorcontainer #document_editor serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer></div>`,
@@ -248,4 +248,4 @@ export class AppComponent implements OnInit {
 
 ## Online Demo
 
-Explore how to track and review changes in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/track-changes).
+Explore how to track and review changes in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/track-changes).
