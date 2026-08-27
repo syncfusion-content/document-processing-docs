@@ -1,6 +1,6 @@
 ---
 title: Fallback fonts in Word to Image conversion in .NET Word | Syncfusion
-description: Describe how to configure fallback fonts during Word-to-image conversion using the Syncfusion .NET Word library
+description: Explain how to configure fallback fonts for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG

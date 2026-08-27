@@ -1,6 +1,6 @@
 ---
 title: Word to image conversion FAQs in .NET Word | Syncfusion
-description: Describe frequently asked questions and solutions related to Word-to-image conversion using the Syncfusion .NET Word library
+description: Explain frequently asked questions and solutions for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
