@@ -65,7 +65,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-Add the required Spreadsheet theme style reference to `~/src/webparts/app/components/App.tsx` file. Replace the existing content with the theme import code below.
+Add the required Spreadsheet theme style reference to `~/src/webparts/app/components/App.tsx` file.
 
 ```ts
 require('@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css');
