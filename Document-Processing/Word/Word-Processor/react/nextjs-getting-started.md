@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with React DOCX Editor in Next.js | Syncfusion
-description: Learn how to create a Document Editor in a Next.js application using the Syncfusion® Document Editor control to create, edit, and view Word documents.
+description: Learn how to get started with Next.js application using Syncfusion React DOCX Editor control. Explore setup, features, examples, and customization options.
 control: Next.js
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with React Document Editor in Next.js
+# Getting started with React DOCX Editor in Next.js
 
 This section provides a step-by-step guide for setting up a Next.js application and integrating the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component.
 
@@ -100,26 +100,35 @@ Before initializing the React Document Editor control in Next.js, generate a Syn
 
 ## Import the required CSS styles
 
-Add the Document Editor component and its dependent component styles available in the `node_modules/@syncfusion` package folder. Reference these styles in the `app/globals.css` file.
+Themes for DOCX Editor can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
 {% tabs %}
-{% highlight css tabtitle="globals.css" %}
+{% highlight bash tabtitle="NPM" %}
 
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-documenteditor/styles/tailwind3.css';
+npm install @syncfusion/ej2-tailwind3-theme
+
+{% endhighlight %}
+{% highlight bash tabtitle="YARN" %}
+
+yarn add @syncfusion/ej2-tailwind3-theme
 
 {% endhighlight %}
 {% endtabs %}
 
-N> To learn more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
+By default, Vite projects include a `app/global.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `app/global.css` file to prevent style conflicts.
 
+The required styles for the DOCX Editor are imported in the **app/global.css** file:
+
+{% tabs %}
+{% highlight css tabtitle="globals.css" %}
+
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the Document Editor
 

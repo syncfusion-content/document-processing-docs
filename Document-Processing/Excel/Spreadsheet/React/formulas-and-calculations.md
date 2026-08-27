@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Formulas in React Spreadsheet component | Syncfusion
-description: Learn here all about Formulas in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formulas in React Spreadsheet | Syncfusion
+description: Learn about formulas in the Syncfusion React Spreadsheet component, including built-in functions, calculations, and formula support.
 control: Formulas 
 platform: document-processing
 documentation: ug
 ---
 
-# Formulas in React Spreadsheet Component
+# Formulas in React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component supports formulas, allowing you to perform calculations on worksheet data. Formulas can reference cells from the same sheet or from different sheets, enabling dynamic and flexible data analysis.
 

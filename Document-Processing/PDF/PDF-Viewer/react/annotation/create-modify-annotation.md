@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in React PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion React PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in React PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the React PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations in React
+# Create and Modify Annotations in React PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 

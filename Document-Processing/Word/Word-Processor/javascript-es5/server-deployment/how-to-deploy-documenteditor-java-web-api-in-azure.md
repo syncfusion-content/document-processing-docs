@@ -1,62 +1,62 @@
 ---
 layout: post
-title: How to deploy documenteditor java web api in azure in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about How to deploy documenteditor java web api in azure in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Deploy JavaScript DOCX Editor Java API in Azure | Syncfusion
+description: Deploy the Syncfusion® JavaScript DOCX Editor Java Web API in Azure App for scalable and reliable document processing.
 platform: document-processing
 control: How to deploy documenteditor java web api in azure 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# How to deploy documenteditor java web api in azure in JavaScript (ES5) Document editor control
+# How to Deploy JavaScript DOCX Editor Java Web API in Azure App
 
 ## Prerequisites
 
-Have [`Azure account`](https://azure.microsoft.com/en-gb/) and [`Azure CLI`](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) setup in your environment.
+Ensure you have an [`Azure account`](https://azure.microsoft.com/en-gb/) and the [`Azure CLI`](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) installed in your environment.
 
-You can get the example [`web service project from GitHub`](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-Java-WebService) and then perform the following steps to create the packages and host in azure app service.
+You can get the example [`web service project from GitHub`](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-Java-WebService) and then perform the following steps to build the package and host it in an Azure App Service.
 
-**Step 1:** Clean the package using following command.
+**Step 1:** Clean and package the application using the following command.
 
 ```console
 mvn clean package
 ```
 
-**Step 2:** Run the application locally using following command.
+**Step 2:** Run the application locally to verify the build using the following command.
 
 ```console
 mvn spring-boot:run
 ```
 
-**Step 3:** Build the package using following command.
+**Step 3:** Build the final package using the following command.
 
 ```console
 mvn package
 ```
 
-Above package generation command creates the `**tomcat-0.0.1-SNAPSHOT.war**` in the below location in the sample folder.
+The above package-generation command creates the `**tomcat-0.0.1-SNAPSHOT.war**` in the following location in the sample folder.
 
 `target/tomcat-0.0.1-SNAPSHOT.war`
 
-**Step 4:** Create a Azure app service with Java & Tomcat. For example, create the app services name as `documenteditorjava`.
+**Step 4:** Create an Azure App Service with Java & Tomcat. For example, create an App Service named `documenteditorjava`.
 
-**Step 5:** After creating app service, navigate to `Advanced Tools` options under `Development Tools`.
+**Step 5:** After creating the App Service, navigate to the **Advanced Tools** option under **Development Tools**.
 
 ![Advanced tools ](../images/azure_java_advancedtools.png)
 
-Then, click `Go` and select the `CMD` options under `Debug console`.
+Then, click **Go** and select the **CMD** option under **Debug console**.
 
 ![Debug console ](../images/azure_java_debugconsole.png)
 
-**Step 6:** Once the file manager is opened, please navigate to
+**Step 6:** Once the file manager is opened, navigate to
 
 `site -> wwwroot -> webapps`
 
-**Step 7:** Now, upload the generated war file `tomcat-0.0.1-SNAPSHOT.war`. Uploaded war file gets extracted automatically, it will uploaded like below:
+**Step 7:** Now, upload the generated WAR file `tomcat-0.0.1-SNAPSHOT.war`. The uploaded WAR file is extracted automatically, as shown below:
 
 ![Uploaded war](../images/java_azure_uploaded.png)
 
 **Step 8:** Browse to the app.
 
-Browse to the deployed app at `http://<app_name>.azurewebsites.net`, i.e. `http://documenteditorjava.azurewebsites.net`. Browse this link and it navigate to the Document Editor Web API control `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT`. It returns the default get method response.
+Browse to the deployed app at `http://<app_name>.azurewebsites.net` (for example, `http://documenteditorjava.azurewebsites.net`). Navigating to this link opens the Document Editor Web API at `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT`, which returns the default GET-method response.
 
-Append the app service running the URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
+Append the running App Service URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the `serviceUrl` in the client-side Document Editor control. For more information about the Document Editor control, refer to the [`Getting Started` page](../getting-started).

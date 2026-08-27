@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# How to deploy spreadsheet server to AWS EKS Cluster
+# Deploy Spreadsheet Docker to AWS EKS Cluster
 
 ## Prerequisites
 

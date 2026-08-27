@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist in TypeScript Spreadsheet control | Syncfusion
-description: Learn about the AI Assist feature in the Syncfusion TypeScript Spreadsheet control and how to configure it.
+title: About Syncfusion TypeScript Spreadsheet AI Assist | Syncfusion
+description: Learn about the introduction and overview of AI Assist in Syncfusion Essential Studio TypeScript Spreadsheet and more details.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist in TypeScript Spreadsheet control
+# About Syncfusion TypeScript Spreadsheet AI Assist
 
 **AI Assist** brings AI-powered capabilities directly into the [Syncfusion® TypeScript Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). Instead of manually applying formatting, writing formulas, or organizing data, you can describe what you want in plain English — and the AI Assist performs the action for you.
 

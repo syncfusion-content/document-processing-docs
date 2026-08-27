@@ -1,13 +1,13 @@
 ---
-title: Convert HTML to PDF in ASP.NET Core Web API | Syncfusion
-description: Learn here about how to convert HTML to PDF in in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF library without depending on Adobe
+title: HTML to PDF in ASP.NET Core Web API .NET PDF Library | Syncfusion
+description: Learn here about how to convert HTML to PDF in in ASP.NET Core Web API with easy steps using Syncfusion .NET PDF Library without depending on Adobe
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: pdf, aspnet core, web api, csharp, html
 ---
 
-# Convert HTML to PDF file in ASP.NET Core Web API
+# HTML to PDF conversion in ASP.NET Core Web API .NET PDF Library
 
 The [HTML to PDF converter](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) is a .NET library for converting webpages, SVG, MHTML, and HTML to PDF using C#. Using this library, you can convert HTML to PDF documents in ASP.NET Core Web API applications.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Print Modes in Angular PDF Viewer | Syncfusion
-description: Learn how to configure print modes for PDF Documents in the Syncfusion Angular PDF Viewer component and more.
+description: Configure print modes in the Angular PDF Viewer to control how PDF documents are printed and to optimize the output for different scenarios.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Modes in the Angular PDF Viewer
+# Print Modes in Angular PDF Viewer
 
 This guide shows how to set the PDF Viewer [`printMode`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#printmode) so PDFs print from the current window or from a new window/tab.
 

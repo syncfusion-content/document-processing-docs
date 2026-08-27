@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save to Google Cloud Storage in JavaScript (ES5) | Syncfusion
-description: Learn how to save a document to Google Cloud Storage in the Syncfusion JavaScript (ES5) Document Editor of Syncfusion Essential JS 2 and more details.
+title: Save to Google Cloud Storage in JavaScript DOCX Editor | Syncfusion
+description: Save documents to Google Cloud Storage from JavaScript DOCX Editor, enabling reliable cloud storage integration and document management.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save Document To Google Cloud Storage in JavaScript (ES5)
+# Save Documents to Google Cloud Storage in JavaScript DOCX Editor
 
 To save a document to Google Cloud Storage, you can follow the steps below.
 
@@ -121,7 +121,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index file in the Document Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Cloud Storage.
 

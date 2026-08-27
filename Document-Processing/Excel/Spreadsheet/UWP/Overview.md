@@ -1,13 +1,13 @@
 ---
 layout: post
 title: About UWP Spreadsheet control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® UWP Spreadsheet (SfSpreadsheet) control, its elements and more.
+description: Learn about the introduction and overview of Syncfusion Essential Studio UWP Spreadsheet control, its features, capabilities, and spreadsheet editing support.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# UWP Spreadsheet (SfSpreadsheet) Overview
+# About Syncfusion UWP Spreadsheet Control
 
 The [Syncfusion® UWP Spreadsheet (SfSpreadsheet)](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) is an Excel-inspired control that allows you to create, edit, view, and format Microsoft Excel files without Excel installed. It provides an easy-to-use UI experience with an integrated ribbon to cover common business scenarios. SfSpreadsheet comes with a built-in calculation engine that supports 400+ widely used formulas.
 

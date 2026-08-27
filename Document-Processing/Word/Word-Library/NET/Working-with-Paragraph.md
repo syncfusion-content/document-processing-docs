@@ -1,11 +1,11 @@
 ---
-title: Working with Paragraphs in .NET Word library | Syncfusion
-description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word (DocIO) library.
+title: Paragraphs in .NET Word | Syncfusion
+description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Paragraph in Word Library
+# Paragraphs in .NET Word
 
 Paragraph is the basic element in a Word document that contains textual and graphical content. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements such as [WTextRange](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WTextRange.html), [WPicture](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WPicture.html), [Hyperlink](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.Hyperlink.html), and more. The [ParagraphItem](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ParagraphItem.html) is the base class for the child elements of paragraph. The following elements can be the child elements of a paragraph:
 

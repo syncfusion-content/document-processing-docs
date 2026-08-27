@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Charts and visualizations in React Spreadsheet component | Syncfusion
-description: Learn here how to insert, customize, update, and remove charts in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Charts and Visualizations in React Spreadsheet | Syncfusion
+description: Learn about charts and visualizations in the Syncfusion React Spreadsheet component, including chart creation, customization, and management.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Charts and Visualizations
+# Charts and Visualizations in React Spreadsheet
 
 ## Understanding Charts
 

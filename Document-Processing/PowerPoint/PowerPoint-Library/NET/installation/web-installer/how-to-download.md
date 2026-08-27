@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download Syncfusion® PowerPoint Web Installer (46 characters)
-description: Learn here about how to download Syncfusion<sup>&reg;</sup> PowerPoint web installer from our Syncfusion<sup>&reg;</sup> website with license.
+title: How to Download Syncfusion PowerPoint Web Installer | Syncfusion
+description: Learn here about how to download Syncfusion® PowerPoint web installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Downloading Syncfusion<sup>&reg;</sup> PowerPoint Web Installer
+# How to Download Syncfusion PowerPoint Web Installer
 
 [Presentation](https://www.syncfusion.com/document-sdk/net-powerpoint-library) controls are included in the Syncfusion<sup>&reg;</sup> PowerPoint installer. You can either download the licensed installer or try our trial installer, depending on your license. This page describes both download paths and the prerequisites for each.
 

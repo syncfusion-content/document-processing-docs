@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get current word in React DOCX Editor | Syncfusion
-description: Learn here all about Get current word in Syncfusion React Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Get Current Word in React DOCX Editor | Syncfusion
+description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® React DOCX Editor for content processing and analysis.
 control: Get current word
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get current word in React Document Editor component
+# How to Get Current Word in React DOCX Editor
 
 You can get the current word or paragraph content from the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
 

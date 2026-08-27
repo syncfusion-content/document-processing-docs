@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create and modify annotations in Angular PDF Viewer | Syncfusion
-description: Learn how to create and modify annotations in Syncfusion Angular PDF Viewer with UI and programmatic examples, plus quick links to all annotation types.
+title: Create Modify Annotation in Angular PDF Viewer | Syncfusion
+description: Create new annotations and modify existing ones in the Angular PDF Viewer using the built-in UI and programmatic APIs for every supported type.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create and modify annotations in Angular PDF Viewer
+# Create and Modify Annotations in Angular PDF Viewer
 
 The PDF Viewer annotation tools add, edit, and manage markups across documents. This page provides an overview with quick navigation to each annotation type and common creation and modification workflows.
 

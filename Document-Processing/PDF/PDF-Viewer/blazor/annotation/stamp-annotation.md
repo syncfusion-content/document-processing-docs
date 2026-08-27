@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stamp annotations in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add, edit, rotate, and customize stamp annotations in the Blazor SfPdfViewer component.
+title: Stamp annotations in Blazor PDF Viewer  | Syncfusion
+description: Learn how to add, edit, rotate, and customize stamp annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Stamp annotations in Blazor SfPdfViewer Component
+# Stamp annotations in Blazor PDF Viewer 
 
 The SfPdfViewer component provides options to add, edit, delete, and rotate the following stamp annotation types in PDF documents:
 

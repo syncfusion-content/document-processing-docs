@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Standalone ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to integrate the standalone ASP.NET Core PDF Viewer control in your web application. View and annotate with client-side rendering.
+title: Getting Started with ASP.NET Core PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET Core PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting Started with Standalone ASP.NET Core PDF Viewer
+# Getting Started with ASP.NET Core PDF Viewer
 
 This section explains how to add the [Syncfusion® Standalone ASP.NET Core PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk) to a ASP.NET Core Web application using Visual Studio or Visual Studio Code. A fully functional example project is available in the [GitHub repository](https://github.com/SyncfusionExamples/ASP-NET-Core-Getting-Started-Examples/tree/main/PDFViewer/ASP.NET%20Core%20Tag%20Helper%20Examples%20-%20Standalone%20PDF%20Viewer).
 

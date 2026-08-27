@@ -1,12 +1,12 @@
 ---
-title: Create a simple Word document in C#, VB.NET | Syncfusion
+title: Getting Started with .NET Word Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-word-library"
-description: Learn how to use .NET Word (DocIO) library to create Word documents from scratch with basic elements and perform mail merge without Microsoft Word.
+description: Learn how to get started with the Syncfusion .NET Word Library. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Getting Started with a Simple Word Document
+# Loading and Saving Word document in .NET Word
 
 To quickly get started with the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}

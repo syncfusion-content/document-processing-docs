@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Track Changes in React DOCX Editor | Syncfusion
-description: Learn how to enable Track Changes in React Document Editor and manage document revisions by accepting or rejecting edits made by multiple reviewers.
+description: Track changes in React DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 control: Track changes 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track Changes in React Document Editor
+# Track Changes in React DOCX Editor
 
 [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Page Navigation in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn about Page Navigation support in Syncfusion&reg; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Page Navigation in WPF Pdf Viewer control | Syncfusion
+description: Navigate through PDF pages in Syncfusion WPF PDF Viewer using GotoPage method and toolbar controls. Learn programmatic page navigation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

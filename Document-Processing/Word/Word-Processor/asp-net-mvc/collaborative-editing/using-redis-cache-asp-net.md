@@ -2,13 +2,13 @@
 layout: post
 title: Collaborative Editing in ASP.NET MVC DOCX Editor | Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion ASP.NET MVC Document Editor component with Redis in ASP.NET Core of Syncfusion Essential JS 2 and more.
+description: The collaborative editing feature in ASP.NET MVC DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in ASP.NET MVC with Redis in ASP.NET Core
+# Collaborative Editing in ASP.NET MVC DOCX Editor with Redis
 
 [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports collaborative editing, which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Manage local storage in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to control session-specific data storage in the Syncfusion ASP.NET MVC PDF Viewer using the enableLocalStorage property.
+title: How to Enable Local Storage in ASP.NET MVC PDF Viewer | Syncfusion
+description: Control session-specific data storage in the ASP.NET MVC PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Manage local storage in the ASP.NET MVC PDF Viewer
+# How to Enable Local Storage in ASP.NET MVC PDF Viewer
 
 Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
 

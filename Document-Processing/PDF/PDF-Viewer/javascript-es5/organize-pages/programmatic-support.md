@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in JavaScript PDF Viewer control | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Programmatic Support in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the JavaScript (ES5) PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic Support for Organize Pages in JavaScript PDF Viewer control
+# Programmatic Support for Organize Pages in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 

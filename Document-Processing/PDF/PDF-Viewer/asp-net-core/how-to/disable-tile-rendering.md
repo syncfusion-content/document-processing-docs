@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disable tile rendering in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Disable tile rendering in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: How to Disable Tile Rendering in ASP.NET Core PDF Viewer | Syncfusion
+description: Disable tile rendering in the ASP.NET Core PDF Viewer to use the classic full-page rendering mode for simpler PDF display scenarios.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Disable tile rendering in ASP.NET Core PDF Viewer
+# How to Disable Tile Rendering in ASP.NET Core PDF Viewer
 
 Tile rendering is a performance-optimization feature used to display large PDF documents efficiently. In some scenarios, such as when viewing smaller documents or troubleshooting rendering artifacts, disabling this feature will help.
 

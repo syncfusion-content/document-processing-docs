@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from OneDrive in Vue PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion Vue PDF Viewer component using a server-backed approach.
+title: From One Drive in Vue PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the Vue PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from OneDrive in Vue
+# Open PDF from OneDrive in Vue PDF Viewer
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 

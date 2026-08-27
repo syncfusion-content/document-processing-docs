@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open Document by Address in Vue Document Editor Component | Syncfusion
-description: Learn here all about open document by address in Syncfusion Essential Vue Document Editor component, it's elements and more.
+title: How to Open a Document by URL in Vue DOCX Editor | Syncfusion
+description: Open a document from a URL in Syncfusion® Vue DOCX Editor to load and display remote files for viewing and editing.
 control: Open document by address 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open Document by Address in Vue Document Editor Component
+# How to Open a Document by URL in Vue DOCX Editor
 
 ## How to open a document from URL in DocumentEditor
 
-In this article, we are going to see how to open a document from URL in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor)
+In this article, we are going to see how to open a document from URL in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor)  (Document Editor)
 
-please refer below example for client-side code
+Please refer to the example below for the client-side code.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -38,7 +38,7 @@ provide('DocumentEditorContainer', [Toolbar]);
 
 const onClick = function () {
   let http = new XMLHttpRequest();
-  //add your url in which you want to open document inside the ""
+  //add your URL from which you want to open the document inside the ""
   let content = { fileUrl: "" };
   let baseurl = "/api/documenteditor/ImportFileURL";
   http.open("POST", baseurl, true);
@@ -85,7 +85,7 @@ export default {
   methods: {
     onClick: function () {
       let http = new XMLHttpRequest();
-      //add your url in which you want to open document inside the ""
+      //add your URL from which you want to open the document inside the ""
       let content = { fileUrl: "" };
       let baseurl = "/api/documenteditor/ImportFileURL";
       http.open("POST", baseurl, true);
@@ -107,9 +107,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-please refer below example for server-side code
+Please refer to the example below for the server-side code.
 
 ```c#
     [AcceptVerbs("Post")]

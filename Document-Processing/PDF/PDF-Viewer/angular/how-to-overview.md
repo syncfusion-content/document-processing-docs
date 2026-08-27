@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in Angular PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation in Angular PDF Viewer control.
+title: How to Overview of the Angular PDF Viewer | Syncfusion
+description: How-to overview of the Angular PDF Viewer in Syncfusion Angular PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Angular PDF Viewer — Frequently Asked Questions
+# How to Overview of the Angular PDF Viewer
 
 The following FAQ provides concise solutions and links to detailed how-to articles for the Angular PDF Viewer. Each entry links to a step-by-step article with examples and troubleshooting notes.
 

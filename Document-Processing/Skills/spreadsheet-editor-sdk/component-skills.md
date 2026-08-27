@@ -1,13 +1,13 @@
 ---
-title: Spreadsheet Editor SDK Agent Skills for AI Assistants | Syncfusion
-description: Learn how to install and use Syncfusion Spreadsheet Editor SDK Agent Skills to help AI assistants generate accurate code with Syncfusion Spreadsheet components
+title: Agent Skills in Spreadsheet Editor SDK | Syncfusion
+description: Agent Skills in Spreadsheet Editor SDK help AI assistants generate accurate code, implementation guidance, and examples for Syncfusion Spreadsheet components.
 platform: document-processing
 control: Spreadsheet Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
 ---
 
-# Syncfusion Spreadsheet Editor SDK Agent Skills for AI Assistants
+# Agent Skills in Spreadsheet Editor SDK
 
 This guide introduces **Syncfusion Spreadsheet Editor SDK Skills**, a curated knowledge package that empowers AI assistants (such as GitHub Copilot, Code Studio, Cursor, Claude, and others) to generate accurate code for Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet Editor SDK components across supported platforms. 
 
