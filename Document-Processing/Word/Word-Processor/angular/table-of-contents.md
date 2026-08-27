@@ -25,7 +25,7 @@ Angular DOCX Editor exposes an API to insert table of contents at cursor positio
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert a table of contents in the document editor.
+The following code illustrates how to insert a table of contents in the DOCX Editor.
 
 ```typescript
 let tocSettings: TableOfContentsSettings =

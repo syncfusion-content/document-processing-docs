@@ -3,7 +3,7 @@ layout: post
 title: How to Change Cursor Color in Angular DOCX Editor | Syncfusion
 description: Change the default cursor color in Syncfusion® Angular DOCX Editor by overriding CSS properties and customizing the editor appearance.
 platform: document-processing
-control: Change the cursor color in document editor 
+control: Change the cursor color in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -22,4 +22,5 @@ border-left: 1px solid red !important;
 
 Output will be like below:
 
-![Change the cursor color in document editor](../images/cursor-css.png)
+![Change the cursor color in DOCX Editor](../images/cursor-css.png)
+

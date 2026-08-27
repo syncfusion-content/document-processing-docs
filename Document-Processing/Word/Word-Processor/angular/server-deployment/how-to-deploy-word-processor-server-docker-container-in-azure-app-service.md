@@ -41,7 +41,7 @@ az appservice plan create --name documenteditorappservice --resource-group docum
 
 **Step 3:** Create a Docker Compose app.
 
-Create a multi-container [`web app`](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro) in the documenteditorappservice App Service plan with the [`az webapp create`](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) command. The following command creates the web app using the provided Docker Compose file. Refer to the Docker Compose getting started section to create the Docker Compose file for the document editor server and use the created Docker Compose file here.
+Create a multi-container [`web app`](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro) in the documenteditorappservice App Service plan with the [`az webapp create`](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) command. The following command creates the web app using the provided Docker Compose file. Refer to the Docker Compose getting started section to create the Docker Compose file for the DOCX Editor server and use the created Docker Compose file here.
 
 ```
 az webapp create --resource-group documenteditorresourcegroup --plan documenteditorappservice --name documenteditor-server --multicontainer-config-type compose --multicontainer-config-file documenteditor-server-compose.yml

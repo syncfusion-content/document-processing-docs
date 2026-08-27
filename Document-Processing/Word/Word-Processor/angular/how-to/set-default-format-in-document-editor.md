@@ -3,7 +3,7 @@ layout: post
 title: How to Set Default Format in Angular DOCX Editor | Syncfusion
 description: Set default character, paragraph, and section formatting in Syncfusion® Angular DOCX Editor for consistent document styling across documents.
 platform: document-processing
-control: Set default format in document editor 
+control: Set default format in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
