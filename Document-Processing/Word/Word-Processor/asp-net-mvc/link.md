@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Hyperhyperlinks in ASP.NET MVC DOCX Editor
+# Hyperlinks in ASP.NET MVC DOCX Editor
 
 DOCX Editor supports hyperlink fields. You can link a part of the document content to an internet location, a file location, a mail address, or any text within the document.
 
