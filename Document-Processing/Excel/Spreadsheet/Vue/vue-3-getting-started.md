@@ -128,7 +128,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-Add the required Spreadsheet theme style reference to `src/style.css` file:
+Add the required Spreadsheet theme style reference to `src/style.css` file. Replace the existing content with the theme import code below.
 
 {% tabs %}
 {% highlight html tabtitle="style.css" %}
