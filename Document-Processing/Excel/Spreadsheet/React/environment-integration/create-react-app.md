@@ -78,7 +78,7 @@ npm install @syncfusion/ej2-tailwind3-theme
 Add the required Spreadsheet theme style reference to `src/App.css` file:
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
 
 N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
