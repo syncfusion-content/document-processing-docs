@@ -22,7 +22,7 @@ import { DocumentEditorComponent, SfdtExportService, SelectionService, EditorSer
 
 @Component({
     selector: 'app-container',
-    //specifies the template string for the DOCX Editor component
+    //specifies the template string for the Document Editor component
     template: `<ejs-documenteditor #document_editor  id="container" style="width: 100%;height: 100%;display:block" [isReadOnly]=false [enableSelection]=true [enableEditor]=true [enableEditorHistory]=true >
     </ejs-documenteditor>`,
     encapsulation: ViewEncapsulation.None,
