@@ -83,7 +83,7 @@ root.render(<App />);
 ```
 
 By default, **enableLocalPaste** is false.
-When local paste is enabled for a document editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation. Refer to the following sample code.
+When local paste is enabled for a DOCX Editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation. Refer to the following sample code.
 
 ```ts
 documentEditor.editor.paste();

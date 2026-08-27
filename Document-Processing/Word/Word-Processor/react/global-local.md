@@ -18,7 +18,7 @@ N> Please refer to the [Locale](https://github.com/syncfusion/ej2-locale).
 
 ## DOCX Editor
 
-The following list of properties and its values are used in the document editor.
+The following list of properties and its values are used in the DOCX Editor.
 
 Locale keywords |Text
 -----|-----

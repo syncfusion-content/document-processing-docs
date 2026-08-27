@@ -55,7 +55,7 @@ The following example shows how to export documents in the DOCX Editor as Syncfu
 
 >DOCX Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject(SfdtExport)`.
 >
->To enable SFDT export for a document editor instance, set `enableSfdtExport` to true.
+>To enable SFDT export for a DOCX Editor instance, set `enableSfdtExport` to true.
 
 ## Word export
 
@@ -95,7 +95,7 @@ N> The React DOCX Editor component's document pagination (page-by-page display) 
 
 >DOCX Editor features are segregated into individual feature-wise modules. To use Word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
->To enable Word export for a document editor instance, set `enableWordExport` to true.
+>To enable Word export for a DOCX Editor instance, set `enableWordExport` to true.
 
 ## Template export
 
@@ -135,7 +135,7 @@ N> The React DOCX Editor component's document pagination (page-by-page display) 
 
 >DOCX Editor features are segregated into individual feature-wise modules. To use Word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
->To enable Word template export for a document editor instance, set `enableWordExport` to true.
+>To enable Word template export for a DOCX Editor instance, set `enableWordExport` to true.
 
 ## Text export
 
@@ -173,7 +173,7 @@ The following example shows how to export the document as a text document (.txt)
 
 >DOCX Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
 >
->To enable text export for a document editor instance, set `enableTextExport` to true.
+>To enable text export for a DOCX Editor instance, set `enableTextExport` to true.
 
 ## Export as blob
 

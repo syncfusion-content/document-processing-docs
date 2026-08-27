@@ -72,7 +72,7 @@ documenteditor.selection.cellFormat.verticalAlignment='Bottom';
 
 ## Table alignment
 
-The tables are aligned in the document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
+The tables are aligned in the DOCX Editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.tableFormat.tableAlignment='Center';

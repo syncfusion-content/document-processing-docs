@@ -22,4 +22,5 @@ border-left: 1px solid red !important;
 
 Output will be like below:
 
-![Change the cursor color in document editor](../images/cursor-css.png)
+![Change the cursor color in DOCX Editor](../images/cursor-css.png)
+

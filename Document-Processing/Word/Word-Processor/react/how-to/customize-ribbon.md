@@ -124,7 +124,7 @@ You can customize the ribbon tabs in the DOCX Editor by showing, hiding, or addi
 
 ### Show/Hide Tab
 
-Document editor provides the [`showTab`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
+DOCX Editor provides the [`showTab`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
 
 The following code example shows how to show/hide an existing tab using the existing tab type and tab id.
 
