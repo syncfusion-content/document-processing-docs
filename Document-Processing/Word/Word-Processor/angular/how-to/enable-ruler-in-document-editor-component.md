@@ -26,11 +26,11 @@ The following example illustrates how to enable ruler in DOCX Editor
   
 {% previewsample "/document-processing/samples/document-editor/angular/ruler-cs1" %}
 
-## How to enable ruler in Angular DOCX Editor Container component
+## How to enable ruler in Angular Document Editor Container component
 
-The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in DOCX Editor Container.
+The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
 
-The following example illustrates how to enable ruler in DOCX Editor Container.
+The following example illustrates how to enable ruler in Document Editor Container.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}

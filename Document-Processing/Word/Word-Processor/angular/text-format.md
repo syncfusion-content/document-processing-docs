@@ -229,7 +229,7 @@ import { classList, createElement } from '@syncfusion/ej2-base';
   standalone: true,
   selector: 'app-container',
 
-  //specifies the template string for the DOCX Editor Container component
+  //specifies the template string for the Document Editor Container component
   template: `<div style="width:100%;">
       <ejs-documenteditor #document_editor  id="container" height="330px"  
         style="display:block" [isReadOnly]=false [enableEditor]=true [enableSfdtExport]=true [enableEditorHistory]=true

@@ -19,7 +19,7 @@ Hence, it is recommended to switch the DOCX Editor component to read-only in mob
 The following example code illustrates how to deploy the DOCX Editor component for mobile.
 
 ```typescript
-//Initialize DOCX Editor Container component.
+//Initialize Document Editor Container component.
 import { Component, ViewChild } from '@angular/core';
 import { ToolbarService, DocumentEditorContainerComponent } from '@syncfusion/ej2-angular-documenteditor';
 @Component({

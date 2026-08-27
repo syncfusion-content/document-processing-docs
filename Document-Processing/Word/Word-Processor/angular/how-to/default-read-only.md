@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Open Angular DOCX Editor in Read-Only Mode
 
-In this article, we are going to see how to open a document in read-only mode by default in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) & DOCX Editor Container.
+In this article, we are going to see how to open a document in read-only mode by default in [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) & Document Editor Container.
 
 ## Opening a document in read-only mode by default in DocumentEditor
 

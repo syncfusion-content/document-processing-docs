@@ -363,7 +363,7 @@ Reject Changes | Reject Changes
 User | User
 View | View
 
-## DOCX Editor Container
+## Document Editor Container
 
 The following list of properties and its values are used in the DOCX Editor container.
 
