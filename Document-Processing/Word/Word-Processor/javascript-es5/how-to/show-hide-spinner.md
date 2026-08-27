@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Show and Hide Spinner in JavaScript DOCX Editor | Syncfusion
-description: Show or hide loading indicators in Syncfusion® JavaScript DOCX Editor when opening documents and processing content.
+description: Show or hide loading indicators in SyncfusionÂ® JavaScript DOCX Editor when opening documents and processing content.
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
