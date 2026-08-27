@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Tables in Vue DOCX Editor
 
-Tables are an efficient way to present information. [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. Document Editor exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. The Document Editor exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
-You can create and insert a table at cursor position by specifying the required number of rows and columns.
+You can create and insert a table at the cursor position by specifying the required number of rows and columns.
 
 Refer to the following sample code.
 
@@ -37,11 +37,11 @@ const settings = {maximumRows: 4};
 </script>
 ```
 
-When the maximum row limit is reached, an alert will appear, as follow 
+When the maximum row limit is reached, an alert will appear, as follows.
 
-![Row Limit Alert](images/Row_Limit_Alert.PNG) 
+![Row Limit Alert](images/Row_Limit_Alert.PNG)
 
->Note: The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
+N> The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
 
 ## Set the maximum number of Columns when inserting a table
 
@@ -60,30 +60,30 @@ const settings = {maximumColumns: 4};
 </script>
 ```
 
-When the maximum column limit is reached, an alert will appear, as follow 
+When the maximum column limit is reached, an alert will appear, as follows.
 
-![Column Limit Alert](images/Column_Limit_Alert.PNG) 
+![Column Limit Alert](images/Column_Limit_Alert.PNG)
 
->Note: The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
+N> The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the [`insertRow`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertrow) method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at the cursor position by using the [`insertRow`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertrow) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
-above(optional) | boolean | This is optional and if omitted, it takes the value as false and inserts below the row at cursor position.
+above(optional) | boolean | This is optional and if omitted, it takes the value as false and inserts below the row at the cursor position.
 count(optional) | number | This is optional and if omitted, it takes the value as 1.
 
 Refer to the following sample code.
 
 ```ts
-//Inserts a row below the row at cursor position
+//Inserts a row below the row at the cursor position
 this.$refs.documenteditor.ej2Instances.editor.insertRow();
-//Inserts a row above the row at cursor position
-this.$refs.documenteditor.ej2Instances.editor.insertRow(false);
-//Inserts three rows below the row at cursor position
-this.$refs.documenteditor.ej2Instances.editor.insertRow(true, 3)
+//Inserts a row above the row at the cursor position
+this.$refs.documenteditor.ej2Instances.editor.insertRow(true);
+//Inserts three rows below the row at the cursor position
+this.$refs.documenteditor.ej2Instances.editor.insertRow(false, 3);
 ```
 
 ## Insert columns
@@ -92,18 +92,18 @@ You can add a column (or several columns) to the left or right of the column at 
 
 Parameter | Type | Description
 ----------|------|-------------
-left(optional) | boolean| This is optional and if omitted, it takes the value as false and inserts to the right of column at cursor position.
+left(optional) | boolean| This is optional and if omitted, it takes the value as false and inserts to the right of column at the cursor position.
 count(optional) | number |  This is optional and if omitted, it takes the value as 1.
 
 Refer to the following sample code.
 
 ```ts
-//Insert a column to the right of the column at cursor position.
+//Insert a column to the right of the column at the cursor position.
 this.$refs.documenteditor.ej2Instances.editor.insertColumn();
-//Insert a column to the left of the column at cursor position.
-this.$refs.documenteditor.ej2Instances.editor.insertColumn(false);
-//Insert two columns to the left of the column at cursor position.
-this.$refs.documenteditor.ej2Instances.editor.insertColumn(false, 2);
+//Insert a column to the left of the column at the cursor position.
+this.$refs.documenteditor.ej2Instances.editor.insertColumn(true);
+//Insert two columns to the left of the column at the cursor position.
+this.$refs.documenteditor.ej2Instances.editor.insertColumn(true, 2);
 ```
 
 ### Select an entire table
@@ -116,23 +116,23 @@ this.$refs.documenteditor.ej2Instances.selection.selectTable();
 
 ### Select row
 
-You can select the entire row at cursor position by using the following sample code.
+You can select the entire row at the cursor position by using the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.selectRow();
 ```
 
-If current selection spans across cells of different rows, all these rows will be selected.
+If the current selection spans across cells of different rows, all these rows will be selected.
 
 ### Select column
 
-You can select the entire column at cursor position by using the following sample code.
+You can select the entire column at the cursor position by using the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.selectColumn();
 ```
 
-If current selection spans across cells of different columns, all these columns will be selected.
+If the current selection spans across cells of different columns, all these columns will be selected.
 
 ### Select cell
 
@@ -168,7 +168,7 @@ this.$refs.documenteditor.ej2Instances.editor.deleteColumn();
 
 ## Merge cells
 
-You can merge cells vertically, horizontally, or combination of both to a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
+You can merge cells vertically, horizontally, or a combination of both, into a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
 Refer to the following sample code.
 
 ```ts
@@ -236,7 +236,7 @@ const toolbarClickHandler = function (args) {
       documenteditor.value.ej2Instances.editor.insertRow(true, 2);
       break;
     case 'insert_below':
-      //Insert the specified number of rows to the table below to the row at cursor position
+      //Insert the specified number of rows to the table below the row at the cursor position
       documenteditor.value.ej2Instances.editor.insertRow();
       break;
     case 'insert_left':
@@ -338,19 +338,19 @@ export default {
           this.$refs.documenteditor.ej2Instances.editor.insertTable(3, 2);
           break;
         case 'insert_above':
-          //Insert the specified number of rows to the table above to the row at cursor position
+          //Insert the specified number of rows above the row at the cursor position
           this.$refs.documenteditor.ej2Instances.editor.insertRow(true, 2);
           break;
         case 'insert_below':
-          //Insert the specified number of rows to the table below to the row at cursor position
+          //Insert the specified number of rows below the row at the cursor position
           this.$refs.documenteditor.ej2Instances.editor.insertRow();
           break;
         case 'insert_left':
-          //Insert the specified number of columns to the table left to the column at cursor position
+          //Insert the specified number of columns to the left of the column at the cursor position
           this.$refs.documenteditor.ej2Instances.editor.insertColumn(true, 2);
           break;
         case 'insert_right':
-          //Insert the specified number of columns to the table right to the column at cursor position
+          //Insert the specified number of columns to the right of the column at the cursor position
           this.$refs.documenteditor.ej2Instances.editor.insertColumn();
           break;
         case 'delete_table':
@@ -388,7 +388,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)
