@@ -54,7 +54,7 @@ function App() {
                 }
             ]
         }`;
-    //Open the document in DOCX Editor.
+    //Open the document in Document Editor.
     documenteditor.open(sfdt);
   }
 
@@ -213,7 +213,7 @@ function App() {
                 }
             ]
         }`;
-    //Open the document in DOCX Editor.
+    //Open the document in Document Editor.
     documenteditor.open(sfdt);
   }
 

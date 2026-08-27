@@ -102,7 +102,7 @@ function App() {
                 underline: 'Single',
             },
         };
-        //Create style in DOCX Editor.
+        //Create style in Document Editor.
         documenteditor.editor.createStyle(JSON.stringify(styleJson));
     }
     return (
@@ -164,7 +164,7 @@ function App() {
                 outlineLevel: 'Level1',
             },
         };
-        //Create style in DOCX Editor.
+        //Create style in Document Editor.
         documenteditor.editor.createStyle(JSON.stringify(styleJson));
     }
     return (

@@ -44,7 +44,7 @@ function App() {
                     let base64String = frEvent.target.result;
                     let image = document.createElement('img');
                     image.addEventListener('load', function () {
-                        //Insert image in DOCX Editor.
+                        //Insert image in Document Editor.
                         proxy.editor.insertImage(base64String, proxy.editor.width, proxy.editor.height);
                     })
                     image.src = base64String;
@@ -56,7 +56,7 @@ function App() {
         } else {
             let image = document.createElement('img');
             image.addEventListener('load', function () {
-                //Insert image in DOCX Editor.
+                //Insert image in Document Editor.
                 proxy.editor.insertImage(args.target.value);
             })
             image.src = args.target.value;

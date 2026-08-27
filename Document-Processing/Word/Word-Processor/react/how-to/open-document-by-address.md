@@ -37,7 +37,7 @@ function App() {
         http.onreadystatechange = () => {
             if (http.readyState === 4) {
                 if (http.status === 200 || http.status === 304) {
-                    //open the SFDT text in DOCX Editor
+                    //open the SFDT text in Document Editor
                     container.documentEditor.open(http.responseText);
                 }
             }

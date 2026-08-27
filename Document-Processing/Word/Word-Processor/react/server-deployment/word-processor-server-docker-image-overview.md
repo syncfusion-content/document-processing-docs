@@ -162,7 +162,7 @@ function App() {
         httpRequest.onreadystatechange = () => {
             if (httpRequest.readyState === 4) {
                 if (httpRequest.status === 200 || httpRequest.status === 304) {
-                    //Open the document in DOCX Editor.
+                    //Open the document in Document Editor.
                     dataContext.open(httpRequest.responseText);
                 }
             }
