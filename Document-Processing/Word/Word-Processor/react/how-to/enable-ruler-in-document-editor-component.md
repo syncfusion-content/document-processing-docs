@@ -31,11 +31,11 @@ The following example illustrates how to enable ruler in DOCX Editor
 N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 
-## How to enable ruler in React DOCX Editor Container component
+## How to enable ruler in React Document Editor Container component
 
-The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in DOCX Editor Container.
+The ruler helps you set specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
 
-The following example illustrates how to enable ruler in DOCX Editor Container.
+The following example illustrates how to enable ruler in Document Editor Container.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 Two types of save APIs are provided as mentioned below.
 
-|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for DOCX Editor Container|
+|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documentEditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documentEditor.saveAsBlob('Docx')|

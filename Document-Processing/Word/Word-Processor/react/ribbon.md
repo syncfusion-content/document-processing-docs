@@ -51,7 +51,7 @@ DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
     let container = React.useRef(null);
-    // Initialize the DOCX Editor Container with Ribbon mode enabled
+    // Initialize the Document Editor Container with Ribbon mode enabled
     return (
         <div className="control-pane">
             <div className="control-section">
@@ -99,7 +99,7 @@ DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 const Default = () => {
     let hostUrl = "https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/";
     let container = React.useRef(null);
-    // Configure the DOCX Editor Container with the Classic ribbon layout
+    // Configure the Document Editor Container with the Classic ribbon layout
     return (
         <div className="control-pane">
             <div className="control-section">

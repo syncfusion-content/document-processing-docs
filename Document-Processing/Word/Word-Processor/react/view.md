@@ -18,7 +18,7 @@ domainurl: ##DomainURL##
 <DocumentEditorContainerComponent id="container" layoutType={'Continuous'} enableToolbar={true}/>
 ```
 
-N> The default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in the DOCX Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#layouttype) in the Document Editor Container component is [`Pages`](https://ej2.syncfusion.com/react/documentation/api/document-editor/layoutType).
 
 ### Online Demo
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Open React DOCX Editor in Read-Only Mode
 
-In this article, we are going to see how to open a document in read-only mode by default in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) & DOCX Editor Container.
+In this article, we are going to see how to open a document in read-only mode by default in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) & Document Editor Container.
 
 ## Opening a document in read-only mode by default in DocumentEditor
 

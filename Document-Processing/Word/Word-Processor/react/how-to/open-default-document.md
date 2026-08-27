@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Open a Default Document in React DOCX Editor
 
-In this article, we are going to see how to open a default document when DOCX Editor & DOCX Editor Container are initialized.
+In this article, we are going to see how to open a default document when DOCX Editor & Document Editor Container are initialized.
 
 ## Opening a default document in DocumentEditor
 
@@ -38,9 +38,9 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## Opening a default document in DocumentEditorContainer
 
-By default, DOCX Editor Container will open a blank document. You can use [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) API in DOCX Editor to open the SFDT content.
+By default, Document Editor Container will open a blank document. You can use [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) API in DOCX Editor to open the SFDT content.
 
-DOCX Editor Container has [`created`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#created) event which gets triggered once DOCX Editor Container control is created. So, if you want to open the document by default, you can use the `open` and `created` APIs.
+Document Editor Container has [`created`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#created) event which gets triggered once Document Editor Container control is created. So, if you want to open the document by default, you can use the `open` and `created` APIs.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
