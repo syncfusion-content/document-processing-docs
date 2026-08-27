@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 Similarly, you can also use the [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor#documenteditorsettings) property for the standalone DocumentEditor.
 
-The following example code illustrates how to customize the color picker in the DOCX Editor container.
+The following example code illustrates how to customize the color picker in the Document Editor container.
 
 ```ts
 import * as ReactDOM from 'react-dom';

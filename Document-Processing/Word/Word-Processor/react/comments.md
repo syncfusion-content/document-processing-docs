@@ -126,7 +126,7 @@ DOCX Editor provides support for protecting the document with `CommentsOnly` pro
 
 DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in DOCX Editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 ```ts
 import { createRoot } from 'react-dom/client';
