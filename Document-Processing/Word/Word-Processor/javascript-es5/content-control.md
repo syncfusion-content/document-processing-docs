@@ -28,7 +28,7 @@ Content controls can be categorized based on their occurrence in a document as f
 
 ## Insert content control
 
-Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertContentControl) method in editor module.
+Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#insertcontentcontrol) method in editor module.
 
 {% highlight js %}
 //Insert Rich Text Content Control
@@ -70,7 +70,7 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) and imported using the [`importContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importContentControlData) method.
+Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) and imported using the [`importContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importcontentcontroldata) method.
 
 {% highlight js %}
 var data = [];
@@ -81,7 +81,7 @@ container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportContentControlData) method.
+Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportcontentcontroldata) method.
 
 {% highlight js %}
 var contentControlInfos = container.documentEditor.exportContentControlData();
@@ -89,7 +89,7 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 
 ## Reset content control
 
-Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#resetContentControlData) method.
+Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#resetcontentcontroldata) method.
 
 {% highlight js %}
 var data = [];
