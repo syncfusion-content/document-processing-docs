@@ -12,7 +12,7 @@ documentation: ug
 
 The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 
-![Output of ASP.NET Core Document Editor](./images/docx-editor.png)
+![Output of ASP.NET Core DOCX Editor](./images/docx-editor.png)
 
 ## Key Features
 

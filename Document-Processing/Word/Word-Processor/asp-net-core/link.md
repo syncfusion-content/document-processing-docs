@@ -14,7 +14,7 @@ documentation: ug
 
 ## Navigate a hyperlink
 
-Document Editor triggers `requestNavigate` event whenever the user clicks the Ctrl key or taps a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+DOCX Editor triggers `requestNavigate` event whenever the user clicks the Ctrl key or taps a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
@@ -54,7 +54,7 @@ documenteditor.selection.navigateHyperlink();
 
 ## Copy link
 
-Document Editor copies link text of a hyperlink field to the clipboard if the selection is in a hyperlink.
+DOCX Editor copies link text of a hyperlink field to the clipboard if the selection is in a hyperlink.
 
 ```typescript
 documenteditor.selection.copyHyperlink();
@@ -62,7 +62,7 @@ documenteditor.selection.copyHyperlink();
 
 ## Add hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance `http://www.google.com`. Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance `http://www.google.com`. DOCX Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
 N> `<http://>`
 N> `<https://>`
@@ -103,7 +103,7 @@ documenteditor.editor.removeHyperlink();
 
 ## Hyperlink dialog
 
-Document Editor provides dialog support to insert or edit a hyperlink.
+DOCX Editor provides dialog support to insert or edit a hyperlink.
 
 
 {% tabs %}
@@ -124,7 +124,7 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## Online Demo
 
-Explore how to insert and manage hyperlinks in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage hyperlinks in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 
