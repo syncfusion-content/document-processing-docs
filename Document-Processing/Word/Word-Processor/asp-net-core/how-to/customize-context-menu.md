@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Customize Context Menu in ASP.NET Core DOCX Editor | Syncfusion
-description: Customize the context menu in Syncfusion® React DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
+description: Customize the context menu in Syncfusion® ASP .NET Core DOCX Editor by adding custom menu items, modifying existing options, and handling menu actions.
 platform: document-processing
 control: DOCX Editor
 documentation: ug
